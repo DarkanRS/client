@@ -2,6 +2,8 @@ package com.jagex;
 
 public class Node_Sub13 extends Node {
 
+    public static ClanSettings GUEST_CLAN_SETTINGS;
+    public static Defaults8Loader DEFAULTS_LOADER_8;
     int anInt7567;
     int anInt7569;
     int anInt7570;
@@ -19,17 +21,15 @@ public class Node_Sub13 extends Node {
     int anInt7582;
     int anInt7583;
     int anInt7584;
-    public static ClanSettings GUEST_CLAN_SETTINGS;
-    public static Defaults8Loader DEFAULTS_LOADER_8;
     Node_Sub14 aNode_Sub14_7566;
     Node_Sub26_Sub1 aNode_Sub26_Sub1_7565;
     Class110 aClass110_7586;
     Node_Sub15_Sub5 aNode_Sub15_Sub5_7568;
 
     void method12213() {
-        this.aNode_Sub14_7566 = null;
-        this.aNode_Sub26_Sub1_7565 = null;
-        this.aClass110_7586 = null;
-        this.aNode_Sub15_Sub5_7568 = null;
+        aNode_Sub14_7566 = null;
+        aNode_Sub26_Sub1_7565 = null;
+        aClass110_7586 = null;
+        aNode_Sub15_Sub5_7568 = null;
     }
 }

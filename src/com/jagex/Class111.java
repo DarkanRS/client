@@ -2,9 +2,16 @@ package com.jagex;
 
 public class Class111 {
 
+    public static Class111 aClass111_1109 = new Class111(109);
+    public static Class111 aClass111_1219 = new Class111(81);
+    public static Class111 aClass111_1132 = new Class111(10);
+    public static Class111 aClass111_1133 = new Class111(54);
+    public static Class111 aClass111_1134 = new Class111(95);
+    public static Class111 aClass111_1168 = new Class111(94);
+    public static Class111 aClass111_1150 = new Class111(16);
+    public static Class111 aClass111_1182 = new Class111(8);
     static Class111 aClass111_1222 = new Class111(29);
     static Class111 aClass111_1108 = new Class111(63);
-    public static Class111 aClass111_1109 = new Class111(109);
     static Class111 aClass111_1110 = new Class111(89);
     static Class111 aClass111_1111 = new Class111(25);
     static Class111 aClass111_1112 = new Class111(98);
@@ -26,10 +33,6 @@ public class Class111 {
     static Class111 aClass111_1164 = new Class111(27);
     static Class111 aClass111_1175 = new Class111(33);
     static Class111 aClass111_1129 = new Class111(111);
-    public static Class111 aClass111_1219 = new Class111(81);
-    public static Class111 aClass111_1132 = new Class111(10);
-    public static Class111 aClass111_1133 = new Class111(54);
-    public static Class111 aClass111_1134 = new Class111(95);
     static Class111 aClass111_1205 = new Class111(32);
     static Class111 aClass111_1177 = new Class111(80);
     static Class111 aClass111_1137 = new Class111(26);
@@ -43,9 +46,7 @@ public class Class111 {
     static Class111 aClass111_1145 = new Class111(64);
     static Class111 aClass111_1146 = new Class111(75);
     static Class111 aClass111_1196 = new Class111(104);
-    public static Class111 aClass111_1168 = new Class111(94);
     static Class111 aClass111_1149 = new Class111(5);
-    public static Class111 aClass111_1150 = new Class111(16);
     static Class111 aClass111_1176 = new Class111(103);
     static Class111 aClass111_1152 = new Class111(60);
     static Class111 aClass111_1153 = new Class111(3);
@@ -72,7 +73,6 @@ public class Class111 {
     static Class111 aClass111_1174 = new Class111(113);
     static Class111 aClass111_1139 = new Class111(88);
     static Class111 aClass111_1220 = new Class111(22);
-    public static Class111 aClass111_1182 = new Class111(8);
     static Class111 aClass111_1178 = new Class111(36);
     static Class111 aClass111_1179 = new Class111(61);
     static Class111 aClass111_1148 = new Class111(85);
@@ -131,7 +131,7 @@ public class Class111 {
     public int anInt1232;
 
     Class111(int i_1) {
-        this.anInt1232 = i_1;
+        anInt1232 = i_1;
     }
 
     public static void toSortedIndicesArr(String[] strings, int[] ints) {

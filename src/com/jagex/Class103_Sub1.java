@@ -10,97 +10,105 @@ public class Class103_Sub1 extends Class103 {
     Node_Sub21_Sub1 aNode_Sub21_Sub1_9145;
     Node_Sub21_Sub1 aNode_Sub21_Sub1_9149;
     Node_Sub21_Sub1 aNode_Sub21_Sub1_9146;
-    Matrix44Arr aClass384_9147 = new Matrix44Arr();
+    Matrix44 aClass384_9147 = new Matrix44();
 
-    boolean method14483() throws Exception_Sub2 {
-        this.aClass101_9148 = this.aGraphicalRenderer_Sub2_1057.loadShader("Particle");
-        this.aNode_Sub21_Sub1_9144 = this.aClass101_9148.method1691("WVPMatrix", (short) 22417);
-        this.aNode_Sub21_Sub1_9145 = this.aClass101_9148.method1691("DiffuseSampler", (short) 26058);
-        this.aNode_Sub21_Sub1_9149 = this.aClass101_9148.method1691("TexCoordMatrix", (short) 32643);
-        this.aNode_Sub21_Sub1_9146 = this.aClass101_9148.method1691("DiffuseColour", (short) 29027);
-        this.aClass101_9148.method1655(this.aClass101_9148.method1654(-1983174373));
-        return true;
-    }
-
-    public void method1788(Matrix44Arr matrix44arr_1) {
-        this.aClass384_9147.method6562(matrix44arr_1);
-        this.aClass384_9147.method6523(this.aGraphicalRenderer_Sub2_1057.aClass384_8729);
-    }
-
-    public void method1787(int i_1) {
-        this.method14486(2119747101);
-        this.aGraphicalRenderer_Sub2_1057.method14002(Class352.aClass352_4098, 0, i_1 * 4, 0, i_1 * 2);
-    }
-
-    public void method1790() {
-        this.method14486(2135879735);
-        this.aGraphicalRenderer_Sub2_1057.method14150();
-    }
-
-    public void method1789(Matrix44Arr matrix44arr_1) {
-        this.aClass384_9147.method6562(matrix44arr_1);
-        this.aClass384_9147.method6523(this.aGraphicalRenderer_Sub2_1057.aClass384_8729);
-    }
-
-    public void method1786(Matrix44Arr matrix44arr_1) {
-        this.aClass384_9147.method6562(matrix44arr_1);
-        this.aClass384_9147.method6523(this.aGraphicalRenderer_Sub2_1057.aClass384_8729);
-    }
-
-    public void method1785(int i_1) {
-        this.method14486(2127063617);
-        this.aGraphicalRenderer_Sub2_1057.method14002(Class352.aClass352_4098, 0, 4 * i_1, 0, i_1 * 2);
-    }
-
-    public void method1791() {
-        this.method14486(2126455360);
-        this.aGraphicalRenderer_Sub2_1057.method14150();
-    }
-
-    public void method1792() {
-        this.method14486(2147226519);
-        this.aGraphicalRenderer_Sub2_1057.method14150();
-    }
-
-    void method14486(int i_1) {
-        this.aClass101_9148.method1655(this.aClass101_9148.method1654(96252371));
-        this.aClass101_9148.method1646();
-        this.aClass101_9148.method1671(this.aNode_Sub21_Sub1_9145, 0, this.anInterface6_1059);
-        this.aClass101_9148.method1668(this.aNode_Sub21_Sub1_9144, this.aClass384_9147, (byte) -104);
-        this.aClass101_9148.method1667(this.aNode_Sub21_Sub1_9149, this.aClass384_1058, -262849390);
-        this.aClass101_9148.method1696(this.aNode_Sub21_Sub1_9146, this.anInt1056);
-    }
-
-    public Class103_Sub1(GraphicalRenderer_Sub2 class505_sub2_1) throws Exception_Sub2 {
+    public Class103_Sub1(AbstractRenderer_Sub2 class505_sub2_1) throws Exception_Sub2 {
         super(class505_sub2_1);
-        this.method14483();
+        method14483();
     }
 
-    static NativeSprite method14490(byte[] bytes_0, byte b_1) {
+    static NativeSprite method14490(byte[] bytes_0) {
         if (bytes_0 == null) {
             throw new RuntimeException("");
         } else {
             while (true) {
                 try {
                     Image image_3 = Toolkit.getDefaultToolkit().createImage(bytes_0);
-                    MediaTracker mediatracker_4 = new MediaTracker(IFSubNode.anApplet8065);
+                    MediaTracker mediatracker_4 = new MediaTracker(SubInterface.suppliedApplet);
                     mediatracker_4.addImage(image_3, 0);
                     mediatracker_4.waitForAll();
-                    int i_5 = image_3.getWidth(IFSubNode.anApplet8065);
-                    int i_6 = image_3.getHeight(IFSubNode.anApplet8065);
+                    int i_5 = image_3.getWidth(SubInterface.suppliedApplet);
+                    int i_6 = image_3.getHeight(SubInterface.suppliedApplet);
                     if (!mediatracker_4.isErrorAny() && i_5 >= 0 && i_6 >= 0) {
                         int[] ints_7 = new int[i_5 * i_6];
                         PixelGrabber pixelgrabber_8 = new PixelGrabber(image_3, 0, 0, i_5, i_6, ints_7, 0, i_5);
                         pixelgrabber_8.grabPixels();
-                        NativeSprite nativesprite_2 = Renderers.SOFTWARE_RENDERER.createNativeSprite(ints_7, i_5, i_5, i_6, 194479026);
+                        NativeSprite nativesprite_2 = Renderers.SOFTWARE_RENDERER.createNativeSprite(ints_7, i_5, i_5, i_6);
                         return nativesprite_2;
                     }
 
                     throw new RuntimeException("");
-                } catch (InterruptedException interruptedexception_9) {
+                } catch (InterruptedException ignored) {
                 }
             }
         }
+    }
+
+    boolean method14483() throws Exception_Sub2 {
+        aClass101_9148 = aGraphicalRenderer_Sub2_1057.loadShader("Particle");
+        aNode_Sub21_Sub1_9144 = aClass101_9148.method1691("WVPMatrix");
+        aNode_Sub21_Sub1_9145 = aClass101_9148.method1691("DiffuseSampler");
+        aNode_Sub21_Sub1_9149 = aClass101_9148.method1691("TexCoordMatrix");
+        aNode_Sub21_Sub1_9146 = aClass101_9148.method1691("DiffuseColour");
+        aClass101_9148.method1655(aClass101_9148.method1654());
+        return true;
+    }
+
+    @Override
+    public void method1788(Matrix44 matrix44_1) {
+        aClass384_9147.method6562(matrix44_1);
+        aClass384_9147.method6523(aGraphicalRenderer_Sub2_1057.aClass384_8729);
+    }
+
+    @Override
+    public void method1787(int i_1) {
+        method14486();
+        aGraphicalRenderer_Sub2_1057.method14002(Class352.aClass352_4098, 0, i_1 * 4, 0, i_1 * 2);
+    }
+
+    @Override
+    public void method1790() {
+        method14486();
+        aGraphicalRenderer_Sub2_1057.method14150();
+    }
+
+    @Override
+    public void method1789(Matrix44 matrix44_1) {
+        aClass384_9147.method6562(matrix44_1);
+        aClass384_9147.method6523(aGraphicalRenderer_Sub2_1057.aClass384_8729);
+    }
+
+    @Override
+    public void method1786(Matrix44 matrix44_1) {
+        aClass384_9147.method6562(matrix44_1);
+        aClass384_9147.method6523(aGraphicalRenderer_Sub2_1057.aClass384_8729);
+    }
+
+    @Override
+    public void method1785(int i_1) {
+        method14486();
+        aGraphicalRenderer_Sub2_1057.method14002(Class352.aClass352_4098, 0, 4 * i_1, 0, i_1 * 2);
+    }
+
+    @Override
+    public void method1791() {
+        method14486();
+        aGraphicalRenderer_Sub2_1057.method14150();
+    }
+
+    @Override
+    public void method1792() {
+        method14486();
+        aGraphicalRenderer_Sub2_1057.method14150();
+    }
+
+    void method14486() {
+        aClass101_9148.method1655(aClass101_9148.method1654());
+        aClass101_9148.method1646();
+        aClass101_9148.method1671(aNode_Sub21_Sub1_9145, 0, anInterface6_1059);
+        aClass101_9148.method1668(aNode_Sub21_Sub1_9144, aClass384_9147);
+        aClass101_9148.method1667(aNode_Sub21_Sub1_9149, aClass384_1058);
+        aClass101_9148.method1696(aNode_Sub21_Sub1_9146, anInt1056);
     }
 
 }

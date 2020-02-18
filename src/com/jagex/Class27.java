@@ -10,7 +10,7 @@ public class Class27 {
     }
 
     private static int method755(char var_3) {
-        return ('D' & 0xff) << 0 | ('X' & 0xff) << 8 | ('T' & 0xff) << 16 | (var_3 & 0xff) << 24;
+        return 68 | 22528 | 5505024 | (var_3 & 0xff) << 24;
     }
 
 }

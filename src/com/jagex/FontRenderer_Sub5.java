@@ -4,134 +4,14 @@ import jaggl.OpenGL;
 
 public class FontRenderer_Sub5 extends FontRenderer {
 
-    OpenGLGraphicalRenderer aGraphicalRenderer_Sub1_9323;
+    OpenGLHardwareRenderer aGraphicalRenderer_Sub1_9323;
     Class137_Sub1_Sub1 aClass137_Sub1_Sub1_9325;
     boolean aBool9326;
     Class138 aClass138_9324;
 
-    void method374(char var_1, int i_2, int i_3, int i_4, boolean bool_5, Class455 class455_6, int i_7, int i_8) {
-        Class455_Sub2 class455_sub2_9 = (Class455_Sub2) class455_6;
-        Class137_Sub1_Sub1 class137_sub1_sub1_10 = class455_sub2_9.aClass137_Sub1_Sub1_8974;
-        this.aGraphicalRenderer_Sub1_9323.method13606();
-        this.aGraphicalRenderer_Sub1_9323.method13654(this.aClass137_Sub1_Sub1_9325);
-        if (!this.aBool9326 && !bool_5) {
-            this.aGraphicalRenderer_Sub1_9323.method13717(7681, 7681);
-        } else {
-            this.aGraphicalRenderer_Sub1_9323.method13717(7681, 8448);
-            this.aGraphicalRenderer_Sub1_9323.method13595(0, 34168, 768);
-        }
-
-        this.aGraphicalRenderer_Sub1_9323.method13610(1);
-        this.aGraphicalRenderer_Sub1_9323.method13654(class137_sub1_sub1_10);
-        this.aGraphicalRenderer_Sub1_9323.method13717(7681, 8448);
-        this.aGraphicalRenderer_Sub1_9323.method13595(0, 34168, 768);
-        OpenGL.glTexGeni(8192, 9472, 9216);
-        OpenGL.glTexGeni(8193, 9472, 9216);
-        float f_11 = class137_sub1_sub1_10.aFloat10132 / (float) class137_sub1_sub1_10.anInt10136;
-        float f_12 = class137_sub1_sub1_10.aFloat10134 / (float) class137_sub1_sub1_10.anInt10133;
-        OpenGL.glTexGenfv(8192, 9474, new float[]{f_11, 0.0F, 0.0F, (float) (-i_7) * f_11}, 0);
-        OpenGL.glTexGenfv(8193, 9474, new float[]{0.0F, f_12, 0.0F, (float) (-i_8) * f_12}, 0);
-        OpenGL.glEnable(3168);
-        OpenGL.glEnable(3169);
-        OpenGL.glColor4ub((byte) (i_4 >> 16), (byte) (i_4 >> 8), (byte) i_4, (byte) (i_4 >> 24));
-        OpenGL.glTranslatef((float) i_2, (float) i_3, 0.0F);
-        this.aClass138_9324.method2379(var_1);
-        OpenGL.glLoadIdentity();
-        OpenGL.glDisable(3168);
-        OpenGL.glDisable(3169);
-        this.aGraphicalRenderer_Sub1_9323.method13595(0, 5890, 768);
-        this.aGraphicalRenderer_Sub1_9323.method13717(8448, 8448);
-        this.aGraphicalRenderer_Sub1_9323.method13654(null);
-        this.aGraphicalRenderer_Sub1_9323.method13610(0);
-        if (this.aBool9326 || bool_5) {
-            this.aGraphicalRenderer_Sub1_9323.method13595(0, 5890, 768);
-        }
-
-    }
-
-    void method362(char var_1, int i_2, int i_3, int i_4, boolean bool_5, Class455 class455_6, int i_7, int i_8) {
-        Class455_Sub2 class455_sub2_9 = (Class455_Sub2) class455_6;
-        Class137_Sub1_Sub1 class137_sub1_sub1_10 = class455_sub2_9.aClass137_Sub1_Sub1_8974;
-        this.aGraphicalRenderer_Sub1_9323.method13606();
-        this.aGraphicalRenderer_Sub1_9323.method13654(this.aClass137_Sub1_Sub1_9325);
-        if (!this.aBool9326 && !bool_5) {
-            this.aGraphicalRenderer_Sub1_9323.method13717(7681, 7681);
-        } else {
-            this.aGraphicalRenderer_Sub1_9323.method13717(7681, 8448);
-            this.aGraphicalRenderer_Sub1_9323.method13595(0, 34168, 768);
-        }
-
-        this.aGraphicalRenderer_Sub1_9323.method13610(1);
-        this.aGraphicalRenderer_Sub1_9323.method13654(class137_sub1_sub1_10);
-        this.aGraphicalRenderer_Sub1_9323.method13717(7681, 8448);
-        this.aGraphicalRenderer_Sub1_9323.method13595(0, 34168, 768);
-        OpenGL.glTexGeni(8192, 9472, 9216);
-        OpenGL.glTexGeni(8193, 9472, 9216);
-        float f_11 = class137_sub1_sub1_10.aFloat10132 / (float) class137_sub1_sub1_10.anInt10136;
-        float f_12 = class137_sub1_sub1_10.aFloat10134 / (float) class137_sub1_sub1_10.anInt10133;
-        OpenGL.glTexGenfv(8192, 9474, new float[]{f_11, 0.0F, 0.0F, (float) (-i_7) * f_11}, 0);
-        OpenGL.glTexGenfv(8193, 9474, new float[]{0.0F, f_12, 0.0F, (float) (-i_8) * f_12}, 0);
-        OpenGL.glEnable(3168);
-        OpenGL.glEnable(3169);
-        OpenGL.glColor4ub((byte) (i_4 >> 16), (byte) (i_4 >> 8), (byte) i_4, (byte) (i_4 >> 24));
-        OpenGL.glTranslatef((float) i_2, (float) i_3, 0.0F);
-        this.aClass138_9324.method2379(var_1);
-        OpenGL.glLoadIdentity();
-        OpenGL.glDisable(3168);
-        OpenGL.glDisable(3169);
-        this.aGraphicalRenderer_Sub1_9323.method13595(0, 5890, 768);
-        this.aGraphicalRenderer_Sub1_9323.method13717(8448, 8448);
-        this.aGraphicalRenderer_Sub1_9323.method13654(null);
-        this.aGraphicalRenderer_Sub1_9323.method13610(0);
-        if (this.aBool9326 || bool_5) {
-            this.aGraphicalRenderer_Sub1_9323.method13595(0, 5890, 768);
-        }
-
-    }
-
-    void UA(char var_1, int i_2, int i_3, int i_4, boolean bool_5) {
-        this.aGraphicalRenderer_Sub1_9323.method13606();
-        this.aGraphicalRenderer_Sub1_9323.method13654(this.aClass137_Sub1_Sub1_9325);
-        if (!this.aBool9326 && !bool_5) {
-            this.aGraphicalRenderer_Sub1_9323.method13717(7681, 7681);
-        } else {
-            this.aGraphicalRenderer_Sub1_9323.method13717(7681, 8448);
-            this.aGraphicalRenderer_Sub1_9323.method13595(0, 34168, 768);
-        }
-
-        OpenGL.glColor4ub((byte) (i_4 >> 16), (byte) (i_4 >> 8), (byte) i_4, (byte) (i_4 >> 24));
-        OpenGL.glTranslatef((float) i_2, (float) i_3, 0.0F);
-        this.aClass138_9324.method2379(var_1);
-        OpenGL.glLoadIdentity();
-        if (this.aBool9326 || bool_5) {
-            this.aGraphicalRenderer_Sub1_9323.method13595(0, 5890, 768);
-        }
-
-    }
-
-    void c(char var_1, int i_2, int i_3, int i_4, boolean bool_5) {
-        this.aGraphicalRenderer_Sub1_9323.method13606();
-        this.aGraphicalRenderer_Sub1_9323.method13654(this.aClass137_Sub1_Sub1_9325);
-        if (!this.aBool9326 && !bool_5) {
-            this.aGraphicalRenderer_Sub1_9323.method13717(7681, 7681);
-        } else {
-            this.aGraphicalRenderer_Sub1_9323.method13717(7681, 8448);
-            this.aGraphicalRenderer_Sub1_9323.method13595(0, 34168, 768);
-        }
-
-        OpenGL.glColor4ub((byte) (i_4 >> 16), (byte) (i_4 >> 8), (byte) i_4, (byte) (i_4 >> 24));
-        OpenGL.glTranslatef((float) i_2, (float) i_3, 0.0F);
-        this.aClass138_9324.method2379(var_1);
-        OpenGL.glLoadIdentity();
-        if (this.aBool9326 || bool_5) {
-            this.aGraphicalRenderer_Sub1_9323.method13595(0, 5890, 768);
-        }
-
-    }
-
-    FontRenderer_Sub5(OpenGLGraphicalRenderer class505_sub1_1, FontMetrics fontmetrics_2, SpriteDefinitions[] arr_3, boolean bool_4) {
+    FontRenderer_Sub5(OpenGLHardwareRenderer class505_sub1_1, FontMetrics fontmetrics_2, SpriteDefinitions[] arr_3, boolean bool_4) {
         super(class505_sub1_1, fontmetrics_2);
-        this.aGraphicalRenderer_Sub1_9323 = class505_sub1_1;
+        aGraphicalRenderer_Sub1_9323 = class505_sub1_1;
         int i_5 = 0;
 
         int i_6;
@@ -191,8 +71,8 @@ public class FontRenderer_Sub5 extends FontRenderer {
                 }
             }
 
-            this.aClass137_Sub1_Sub1_9325 = Class137_Sub1_Sub1.method15540(class505_sub1_1, Class150.aClass150_1951, Class76.aClass76_751, i_6, i_6, bytes_28, Class150.aClass150_1951);
-            this.aBool9326 = true;
+            aClass137_Sub1_Sub1_9325 = Class137_Sub1_Sub1.method15540(class505_sub1_1, Class150.aClass150_1951, Class76.aClass76_751, i_6, i_6, bytes_28, Class150.aClass150_1951);
+            aBool9326 = true;
         } else {
             int[] ints_29 = new int[i_6 * i_6];
 
@@ -223,7 +103,7 @@ public class FontRenderer_Sub5 extends FontRenderer {
                         for (i_20 = 0; i_20 < i_14; i_20++) {
                             byte b_21;
                             if ((b_21 = bytes_25[i_18++]) != 0) {
-                                ints_29[i_17++] = ~0xffffff | ints_10[b_21 & 0xff];
+                                ints_29[i_17++] = -16777216 | ints_10[b_21 & 0xff];
                             } else {
                                 ++i_17;
                             }
@@ -234,14 +114,14 @@ public class FontRenderer_Sub5 extends FontRenderer {
                 }
             }
 
-            this.aClass137_Sub1_Sub1_9325 = Class137_Sub1_Sub1.method15537(class505_sub1_1, i_6, i_6, ints_29, 0, 0);
-            this.aBool9326 = false;
+            aClass137_Sub1_Sub1_9325 = Class137_Sub1_Sub1.method15537(class505_sub1_1, i_6, i_6, ints_29, 0, 0);
+            aBool9326 = false;
         }
 
-        this.aClass137_Sub1_Sub1_9325.method2351(false);
-        this.aClass138_9324 = new Class138(class505_sub1_1, 256);
-        float f_22 = this.aClass137_Sub1_Sub1_9325.aFloat10132 / (float) this.aClass137_Sub1_Sub1_9325.anInt10136;
-        float f_30 = this.aClass137_Sub1_Sub1_9325.aFloat10134 / (float) this.aClass137_Sub1_Sub1_9325.anInt10133;
+        aClass137_Sub1_Sub1_9325.method2351(false);
+        aClass138_9324 = new Class138(256);
+        float f_22 = aClass137_Sub1_Sub1_9325.aFloat10132 / aClass137_Sub1_Sub1_9325.anInt10136;
+        float f_30 = aClass137_Sub1_Sub1_9325.aFloat10134 / aClass137_Sub1_Sub1_9325.anInt10133;
 
         for (int i_9 = 0; i_9 < 256; i_9++) {
             SpriteDefinitions class91_31 = arr_3[i_9];
@@ -249,44 +129,169 @@ public class FontRenderer_Sub5 extends FontRenderer {
             i_12 = class91_31.width;
             i_13 = class91_31.minY;
             i_14 = class91_31.minX;
-            float f_32 = (float) (i_5 * (i_9 % 16));
-            float f_33 = (float) (i_9 / 16 * i_5);
+            float f_32 = (i_5 * (i_9 % 16));
+            float f_33 = (i_9 / 16 * i_5);
             float f_34 = f_32 * f_22;
             float f_35 = f_33 * f_30;
-            float f_36 = (f_32 + (float) i_12) * f_22;
-            float f_37 = (f_33 + (float) i_11) * f_30;
-            this.aClass138_9324.method2380(i_9);
+            float f_36 = (f_32 + i_12) * f_22;
+            float f_37 = (f_33 + i_11) * f_30;
+            aClass138_9324.method2380(i_9);
             OpenGL.glBegin(7);
-            OpenGL.glTexCoord2f(f_34, this.aClass137_Sub1_Sub1_9325.aFloat10134 - f_35);
+            OpenGL.glTexCoord2f(f_34, aClass137_Sub1_Sub1_9325.aFloat10134 - f_35);
             OpenGL.glVertex2i(i_14, i_13);
-            OpenGL.glTexCoord2f(f_34, this.aClass137_Sub1_Sub1_9325.aFloat10134 - f_37);
+            OpenGL.glTexCoord2f(f_34, aClass137_Sub1_Sub1_9325.aFloat10134 - f_37);
             OpenGL.glVertex2i(i_14, i_13 + i_11);
-            OpenGL.glTexCoord2f(f_36, this.aClass137_Sub1_Sub1_9325.aFloat10134 - f_37);
+            OpenGL.glTexCoord2f(f_36, aClass137_Sub1_Sub1_9325.aFloat10134 - f_37);
             OpenGL.glVertex2i(i_14 + i_12, i_13 + i_11);
-            OpenGL.glTexCoord2f(f_36, this.aClass137_Sub1_Sub1_9325.aFloat10134 - f_35);
+            OpenGL.glTexCoord2f(f_36, aClass137_Sub1_Sub1_9325.aFloat10134 - f_35);
             OpenGL.glVertex2i(i_14 + i_12, i_13);
             OpenGL.glEnd();
-            this.aClass138_9324.method2381();
+            aClass138_9324.method2381();
         }
 
     }
 
-    void t(char var_1, int i_2, int i_3, int i_4, boolean bool_5) {
-        this.aGraphicalRenderer_Sub1_9323.method13606();
-        this.aGraphicalRenderer_Sub1_9323.method13654(this.aClass137_Sub1_Sub1_9325);
-        if (!this.aBool9326 && !bool_5) {
-            this.aGraphicalRenderer_Sub1_9323.method13717(7681, 7681);
+    @Override
+    void method374(char var_1, int i_2, int i_3, int i_4, boolean bool_5, Class455 class455_6, int i_7, int i_8) {
+        Class455_Sub2 class455_sub2_9 = (Class455_Sub2) class455_6;
+        Class137_Sub1_Sub1 class137_sub1_sub1_10 = class455_sub2_9.aClass137_Sub1_Sub1_8974;
+        aGraphicalRenderer_Sub1_9323.method13606();
+        aGraphicalRenderer_Sub1_9323.method13654(aClass137_Sub1_Sub1_9325);
+        if (!aBool9326 && !bool_5) {
+            aGraphicalRenderer_Sub1_9323.method13717(7681, 7681);
         } else {
-            this.aGraphicalRenderer_Sub1_9323.method13717(7681, 8448);
-            this.aGraphicalRenderer_Sub1_9323.method13595(0, 34168, 768);
+            aGraphicalRenderer_Sub1_9323.method13717(7681, 8448);
+            aGraphicalRenderer_Sub1_9323.method13595(0, 34168, 768);
+        }
+
+        aGraphicalRenderer_Sub1_9323.method13610(1);
+        aGraphicalRenderer_Sub1_9323.method13654(class137_sub1_sub1_10);
+        aGraphicalRenderer_Sub1_9323.method13717(7681, 8448);
+        aGraphicalRenderer_Sub1_9323.method13595(0, 34168, 768);
+        OpenGL.glTexGeni(8192, 9472, 9216);
+        OpenGL.glTexGeni(8193, 9472, 9216);
+        float f_11 = class137_sub1_sub1_10.aFloat10132 / class137_sub1_sub1_10.anInt10136;
+        float f_12 = class137_sub1_sub1_10.aFloat10134 / class137_sub1_sub1_10.anInt10133;
+        OpenGL.glTexGenfv(8192, 9474, new float[]{f_11, 0.0F, 0.0F, (-i_7) * f_11}, 0);
+        OpenGL.glTexGenfv(8193, 9474, new float[]{0.0F, f_12, 0.0F, (-i_8) * f_12}, 0);
+        OpenGL.glEnable(3168);
+        OpenGL.glEnable(3169);
+        OpenGL.glColor4ub((byte) (i_4 >> 16), (byte) (i_4 >> 8), (byte) i_4, (byte) (i_4 >> 24));
+        OpenGL.glTranslatef(i_2, i_3, 0.0F);
+        aClass138_9324.method2379(var_1);
+        OpenGL.glLoadIdentity();
+        OpenGL.glDisable(3168);
+        OpenGL.glDisable(3169);
+        aGraphicalRenderer_Sub1_9323.method13595(0, 5890, 768);
+        aGraphicalRenderer_Sub1_9323.method13717(8448, 8448);
+        aGraphicalRenderer_Sub1_9323.method13654(null);
+        aGraphicalRenderer_Sub1_9323.method13610(0);
+        if (aBool9326 || bool_5) {
+            aGraphicalRenderer_Sub1_9323.method13595(0, 5890, 768);
+        }
+
+    }
+
+    @Override
+    void method362(char var_1, int i_2, int i_3, int i_4, boolean bool_5, Class455 class455_6, int i_7, int i_8) {
+        Class455_Sub2 class455_sub2_9 = (Class455_Sub2) class455_6;
+        Class137_Sub1_Sub1 class137_sub1_sub1_10 = class455_sub2_9.aClass137_Sub1_Sub1_8974;
+        aGraphicalRenderer_Sub1_9323.method13606();
+        aGraphicalRenderer_Sub1_9323.method13654(aClass137_Sub1_Sub1_9325);
+        if (!aBool9326 && !bool_5) {
+            aGraphicalRenderer_Sub1_9323.method13717(7681, 7681);
+        } else {
+            aGraphicalRenderer_Sub1_9323.method13717(7681, 8448);
+            aGraphicalRenderer_Sub1_9323.method13595(0, 34168, 768);
+        }
+
+        aGraphicalRenderer_Sub1_9323.method13610(1);
+        aGraphicalRenderer_Sub1_9323.method13654(class137_sub1_sub1_10);
+        aGraphicalRenderer_Sub1_9323.method13717(7681, 8448);
+        aGraphicalRenderer_Sub1_9323.method13595(0, 34168, 768);
+        OpenGL.glTexGeni(8192, 9472, 9216);
+        OpenGL.glTexGeni(8193, 9472, 9216);
+        float f_11 = class137_sub1_sub1_10.aFloat10132 / class137_sub1_sub1_10.anInt10136;
+        float f_12 = class137_sub1_sub1_10.aFloat10134 / class137_sub1_sub1_10.anInt10133;
+        OpenGL.glTexGenfv(8192, 9474, new float[]{f_11, 0.0F, 0.0F, (-i_7) * f_11}, 0);
+        OpenGL.glTexGenfv(8193, 9474, new float[]{0.0F, f_12, 0.0F, (-i_8) * f_12}, 0);
+        OpenGL.glEnable(3168);
+        OpenGL.glEnable(3169);
+        OpenGL.glColor4ub((byte) (i_4 >> 16), (byte) (i_4 >> 8), (byte) i_4, (byte) (i_4 >> 24));
+        OpenGL.glTranslatef(i_2, i_3, 0.0F);
+        aClass138_9324.method2379(var_1);
+        OpenGL.glLoadIdentity();
+        OpenGL.glDisable(3168);
+        OpenGL.glDisable(3169);
+        aGraphicalRenderer_Sub1_9323.method13595(0, 5890, 768);
+        aGraphicalRenderer_Sub1_9323.method13717(8448, 8448);
+        aGraphicalRenderer_Sub1_9323.method13654(null);
+        aGraphicalRenderer_Sub1_9323.method13610(0);
+        if (aBool9326 || bool_5) {
+            aGraphicalRenderer_Sub1_9323.method13595(0, 5890, 768);
+        }
+
+    }
+
+    @Override
+    void UA(char var_1, int i_2, int i_3, int i_4, boolean bool_5) {
+        aGraphicalRenderer_Sub1_9323.method13606();
+        aGraphicalRenderer_Sub1_9323.method13654(aClass137_Sub1_Sub1_9325);
+        if (!aBool9326 && !bool_5) {
+            aGraphicalRenderer_Sub1_9323.method13717(7681, 7681);
+        } else {
+            aGraphicalRenderer_Sub1_9323.method13717(7681, 8448);
+            aGraphicalRenderer_Sub1_9323.method13595(0, 34168, 768);
         }
 
         OpenGL.glColor4ub((byte) (i_4 >> 16), (byte) (i_4 >> 8), (byte) i_4, (byte) (i_4 >> 24));
-        OpenGL.glTranslatef((float) i_2, (float) i_3, 0.0F);
-        this.aClass138_9324.method2379(var_1);
+        OpenGL.glTranslatef(i_2, i_3, 0.0F);
+        aClass138_9324.method2379(var_1);
         OpenGL.glLoadIdentity();
-        if (this.aBool9326 || bool_5) {
-            this.aGraphicalRenderer_Sub1_9323.method13595(0, 5890, 768);
+        if (aBool9326 || bool_5) {
+            aGraphicalRenderer_Sub1_9323.method13595(0, 5890, 768);
+        }
+
+    }
+
+    @Override
+    void c(char var_1, int i_2, int i_3, int i_4, boolean bool_5) {
+        aGraphicalRenderer_Sub1_9323.method13606();
+        aGraphicalRenderer_Sub1_9323.method13654(aClass137_Sub1_Sub1_9325);
+        if (!aBool9326 && !bool_5) {
+            aGraphicalRenderer_Sub1_9323.method13717(7681, 7681);
+        } else {
+            aGraphicalRenderer_Sub1_9323.method13717(7681, 8448);
+            aGraphicalRenderer_Sub1_9323.method13595(0, 34168, 768);
+        }
+
+        OpenGL.glColor4ub((byte) (i_4 >> 16), (byte) (i_4 >> 8), (byte) i_4, (byte) (i_4 >> 24));
+        OpenGL.glTranslatef(i_2, i_3, 0.0F);
+        aClass138_9324.method2379(var_1);
+        OpenGL.glLoadIdentity();
+        if (aBool9326 || bool_5) {
+            aGraphicalRenderer_Sub1_9323.method13595(0, 5890, 768);
+        }
+
+    }
+
+    @Override
+    void t(char var_1, int i_2, int i_3, int i_4, boolean bool_5) {
+        aGraphicalRenderer_Sub1_9323.method13606();
+        aGraphicalRenderer_Sub1_9323.method13654(aClass137_Sub1_Sub1_9325);
+        if (!aBool9326 && !bool_5) {
+            aGraphicalRenderer_Sub1_9323.method13717(7681, 7681);
+        } else {
+            aGraphicalRenderer_Sub1_9323.method13717(7681, 8448);
+            aGraphicalRenderer_Sub1_9323.method13595(0, 34168, 768);
+        }
+
+        OpenGL.glColor4ub((byte) (i_4 >> 16), (byte) (i_4 >> 8), (byte) i_4, (byte) (i_4 >> 24));
+        OpenGL.glTranslatef(i_2, i_3, 0.0F);
+        aClass138_9324.method2379(var_1);
+        OpenGL.glLoadIdentity();
+        if (aBool9326 || bool_5) {
+            aGraphicalRenderer_Sub1_9323.method13595(0, 5890, 768);
         }
 
     }

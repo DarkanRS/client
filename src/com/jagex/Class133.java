@@ -5,20 +5,15 @@ import jaggl.OpenGL;
 public class Class133 {
 
     static int[] anIntArray1599 = new int[1];
-    OpenGLGraphicalRenderer aGraphicalRenderer_Sub1_1597;
+    OpenGLHardwareRenderer aGraphicalRenderer_Sub1_1597;
     int anInt1596;
 
-    Class133(OpenGLGraphicalRenderer class505_sub1_1, int i_3) {
-        this.aGraphicalRenderer_Sub1_1597 = class505_sub1_1;
-        this.anInt1596 = i_3;
+    Class133(OpenGLHardwareRenderer class505_sub1_1, int i_3) {
+        aGraphicalRenderer_Sub1_1597 = class505_sub1_1;
+        anInt1596 = i_3;
     }
 
-    public void finalize() throws Throwable {
-        this.aGraphicalRenderer_Sub1_1597.method13628(this.anInt1596);
-        super.finalize();
-    }
-
-    static Class133 method2321(OpenGLGraphicalRenderer class505_sub1_0, String string_2) {
+    static Class133 method2321(OpenGLHardwareRenderer class505_sub1_0, String string_2) {
         int i_3 = OpenGL.glGenProgramARB();
         OpenGL.glBindProgramARB(34336, i_3);
         OpenGL.glProgramStringARB(34336, 34933, string_2);
@@ -30,6 +25,12 @@ public class Class133 {
             OpenGL.glBindProgramARB(34336, 0);
             return new Class133(class505_sub1_0, i_3);
         }
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        aGraphicalRenderer_Sub1_1597.method13628(anInt1596);
+        super.finalize();
     }
 
 }

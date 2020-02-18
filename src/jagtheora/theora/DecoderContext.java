@@ -29,11 +29,15 @@ public class DecoderContext extends SimplePeer {
 
     public native int setGranulePosition(long l);
 
+    @Override
     protected native void clear();
 
+    @Override
     protected native void q();
 
+    @Override
     protected native void f();
 
+    @Override
     protected native void m();
 }

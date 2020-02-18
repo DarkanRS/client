@@ -11,14 +11,14 @@ public class NewsItem {
     String aString1068;
 
     NewsItem(String string_1, String string_2, String string_3) {
-        this.aString1067 = string_1;
-        this.aString1066 = string_2;
-        this.aString1068 = string_3;
+        aString1067 = string_1;
+        aString1066 = string_2;
+        aString1068 = string_3;
     }
 
     static void method1804(int i_0, String string_1, String string_2) {
         if (client.GAME_CONNECTION_CONTEXT != null) {
-            TCPPacket tcpmessage_4 = Class271.createPacket(ClientPacket.BUG_REPORT, client.GAME_CONNECTION_CONTEXT.isaac);
+            TCPPacket tcpmessage_4 = Class271.createPacket(ClientProt.BUG_REPORT, client.GAME_CONNECTION_CONTEXT.isaac);
             tcpmessage_4.buffer.writeShort(1 + Utils.stringLengthPlus2(string_1) + Utils.stringLengthPlus2(string_2));
             tcpmessage_4.buffer.writeByte(i_0);
             tcpmessage_4.buffer.writeJagString(string_2);
@@ -27,7 +27,7 @@ public class NewsItem {
         }
     }
 
-    public static final void method1805(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5) {
+    public static void method1805(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5) {
         if (i_0 >= Class532_Sub1.anInt7071 && i_1 <= Class532_Sub1.anInt7069 && i_2 >= Class532_Sub1.anInt7070 && i_3 <= Class532_Sub1.anInt7068) {
             if (i_5 == 1) {
                 Class48_Sub2.method14572(i_0, i_1, i_2, i_3, i_4);
@@ -41,14 +41,14 @@ public class NewsItem {
         }
     }
 
-    static void method1806(RsBitsBuffer rsbitsbuffer_0, int i_1, int i_2) {
-        WorldTile coordgrid_3 = IndexLoaders.MAP_REGION_DECODER.getBase();
+    static void method1806(Packet.Bit rsbitsbuffer_0, int i_1) {
+        CoordGrid coordgrid_3 = IndexLoaders.MAP_REGION_DECODER.getBase();
         boolean bool_4 = rsbitsbuffer_0.readBits(1) == 1;
         if (bool_4) {
             Class197.anIntArray2435[++Class197.anInt2434 - 1] = i_1;
         }
         int i_5 = rsbitsbuffer_0.readBits(2);
-        Player player_6 = client.players[i_1];
+        PlayerEntity player_6 = client.players[i_1];
         if (i_5 == 0) {
             if (bool_4) {
                 player_6.aBool10568 = false;
@@ -108,7 +108,7 @@ public class NewsItem {
                     player_6.anInt10570 = i_9;
                     player_6.aBool10568 = true;
                 } else {
-                    player_6.method16129(i_8, i_9, Class197.playerMovementTypes[i_1], 750897153);
+                    player_6.method16129(i_8, i_9, Class197.playerMovementTypes[i_1]);
                 }
             } else if (i_5 == 2) {
                 i_7 = rsbitsbuffer_0.readBits(4);
@@ -164,7 +164,7 @@ public class NewsItem {
                     player_6.anInt10570 = i_9;
                     player_6.aBool10568 = true;
                 } else {
-                    player_6.method16129(i_8, i_9, Class197.playerMovementTypes[i_1], -1678489989);
+                    player_6.method16129(i_8, i_9, Class197.playerMovementTypes[i_1]);
                 }
             } else {
                 i_7 = rsbitsbuffer_0.readBits(1);
@@ -190,11 +190,11 @@ public class NewsItem {
                         player_6.anInt10570 = i_13;
                         player_6.aBool10568 = true;
                     } else {
-                        player_6.method16129(i_12, i_13, Class197.playerMovementTypes[i_1], -1262996328);
+                        player_6.method16129(i_12, i_13, Class197.playerMovementTypes[i_1]);
                     }
                     player_6.plane = player_6.collisionPlane = (byte) (i_9 + player_6.plane & 0x3);
-                    if (IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(i_12, i_13, 1753987250)) {
-                        player_6.collisionPlane = (byte) (player_6.collisionPlane + 1);
+                    if (IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(i_12, i_13)) {
+                        player_6.collisionPlane += 1;
                     }
                     if (client.myPlayerIndex == i_1 && player_6.plane != Class4.MY_PLAYER_PLANE) {
                         Class4.MY_PLAYER_PLANE = player_6.plane;
@@ -211,11 +211,11 @@ public class NewsItem {
                         player_6.anInt10570 = i_13;
                         player_6.aBool10568 = true;
                     } else {
-                        player_6.method16129(i_12, i_13, Class197.playerMovementTypes[i_1], -106492270);
+                        player_6.method16129(i_12, i_13, Class197.playerMovementTypes[i_1]);
                     }
                     player_6.plane = player_6.collisionPlane = (byte) (i_9 + player_6.plane & 0x3);
-                    if (IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(i_12, i_13, 1539369664)) {
-                        player_6.collisionPlane = (byte) (player_6.collisionPlane + 1);
+                    if (IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(i_12, i_13)) {
+                        player_6.collisionPlane += 1;
                     }
                     if (client.myPlayerIndex == i_1) {
                         Class4.MY_PLAYER_PLANE = player_6.plane;
@@ -227,6 +227,6 @@ public class NewsItem {
 
     public static void method1807(int i_0) {
         PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(14, i_0);
-        class282_sub50_sub12_2.method14965((byte) 94);
+        class282_sub50_sub12_2.method14965();
     }
 }

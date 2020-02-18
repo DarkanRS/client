@@ -11,93 +11,13 @@ public class Node_Sub17_Sub6 extends Node_Sub17 {
     byte aByte10018;
     Class348 this$0;
 
-    void method12253(RsByteBuffer rsbytebuffer_1) {
-        this.aBool10016 = rsbytebuffer_1.readUnsignedByte() == 1;
-        this.aByte10015 = rsbytebuffer_1.readByte();
-        this.aByte10014 = rsbytebuffer_1.readByte();
-        this.aByte10017 = rsbytebuffer_1.readByte();
-        this.aByte10018 = rsbytebuffer_1.readByte();
-    }
-
-    void method12252(ClanSettings class61_1) {
-        class61_1.allowGuests = this.aBool10016;
-        class61_1.talkRank = this.aByte10015;
-        class61_1.kickRank = this.aByte10014;
-        class61_1.lootshareRank = this.aByte10017;
-        class61_1.coinShare = this.aByte10018;
-    }
-
-    void method12251(ClanSettings class61_1) {
-        class61_1.allowGuests = this.aBool10016;
-        class61_1.talkRank = this.aByte10015;
-        class61_1.kickRank = this.aByte10014;
-        class61_1.lootshareRank = this.aByte10017;
-        class61_1.coinShare = this.aByte10018;
-    }
-
-    void method12249(RsByteBuffer rsbytebuffer_1) {
-        this.aBool10016 = rsbytebuffer_1.readUnsignedByte() == 1;
-        this.aByte10015 = rsbytebuffer_1.readByte();
-        this.aByte10014 = rsbytebuffer_1.readByte();
-        this.aByte10017 = rsbytebuffer_1.readByte();
-        this.aByte10018 = rsbytebuffer_1.readByte();
-    }
-
-    void method12257(RsByteBuffer rsbytebuffer_1) {
-        this.aBool10016 = rsbytebuffer_1.readUnsignedByte() == 1;
-        this.aByte10015 = rsbytebuffer_1.readByte();
-        this.aByte10014 = rsbytebuffer_1.readByte();
-        this.aByte10017 = rsbytebuffer_1.readByte();
-        this.aByte10018 = rsbytebuffer_1.readByte();
-    }
-
-    void method12250(RsByteBuffer rsbytebuffer_1) {
-        this.aBool10016 = rsbytebuffer_1.readUnsignedByte() == 1;
-        this.aByte10015 = rsbytebuffer_1.readByte();
-        this.aByte10014 = rsbytebuffer_1.readByte();
-        this.aByte10017 = rsbytebuffer_1.readByte();
-        this.aByte10018 = rsbytebuffer_1.readByte();
-    }
-
-    void method12256(ClanSettings class61_1) {
-        class61_1.allowGuests = this.aBool10016;
-        class61_1.talkRank = this.aByte10015;
-        class61_1.kickRank = this.aByte10014;
-        class61_1.lootshareRank = this.aByte10017;
-        class61_1.coinShare = this.aByte10018;
-    }
-
-    void method12258(ClanSettings class61_1) {
-        class61_1.allowGuests = this.aBool10016;
-        class61_1.talkRank = this.aByte10015;
-        class61_1.kickRank = this.aByte10014;
-        class61_1.lootshareRank = this.aByte10017;
-        class61_1.coinShare = this.aByte10018;
-    }
-
-    void method12254(ClanSettings class61_1) {
-        class61_1.allowGuests = this.aBool10016;
-        class61_1.talkRank = this.aByte10015;
-        class61_1.kickRank = this.aByte10014;
-        class61_1.lootshareRank = this.aByte10017;
-        class61_1.coinShare = this.aByte10018;
-    }
-
     Node_Sub17_Sub6(Class348 class348_1) {
-        this.this$0 = class348_1;
+        this$0 = class348_1;
     }
 
-    void method12255(ClanSettings class61_1) {
-        class61_1.allowGuests = this.aBool10016;
-        class61_1.talkRank = this.aByte10015;
-        class61_1.kickRank = this.aByte10014;
-        class61_1.lootshareRank = this.aByte10017;
-        class61_1.coinShare = this.aByte10018;
-    }
-
-    static final byte[] method15438(byte[] data, byte b_1) {
+    static byte[] method15438(byte[] data) {
         try {
-            RsByteBuffer buffer = new RsByteBuffer(data);
+            Packet buffer = new Packet(data);
             int i_3 = buffer.readUnsignedByte();
             int i_4 = buffer.readInt();
             if (i_4 >= 0 && (Index.anInt3689 == 0 || i_4 <= Index.anInt3689)) {
@@ -112,11 +32,11 @@ public class Node_Sub17_Sub6 extends Node_Sub17 {
                     } else {
                         byte[] bytes_6 = new byte[i_8];
                         if (i_3 == 1) {
-                            Class471.method7828(bytes_6, i_8, data, i_4);
+                            Class471.method7828(bytes_6, i_8, data);
                         } else {
                             Class395 class395_7 = Index.aClass395_3684;
                             synchronized (Index.aClass395_3684) {
-                                Index.aClass395_3684.method6767(buffer, bytes_6, -1958864927);
+                                Index.aClass395_3684.method6767(buffer, bytes_6);
                             }
                         }
                         return bytes_6;
@@ -132,5 +52,95 @@ public class Node_Sub17_Sub6 extends Node_Sub17 {
                 throw new RuntimeException();
             }
         }
+    }
+
+    @Override
+    void method12253(Packet rsbytebuffer_1) {
+        aBool10016 = rsbytebuffer_1.readUnsignedByte() == 1;
+        aByte10015 = rsbytebuffer_1.readByte();
+        aByte10014 = rsbytebuffer_1.readByte();
+        aByte10017 = rsbytebuffer_1.readByte();
+        aByte10018 = rsbytebuffer_1.readByte();
+    }
+
+    @Override
+    void method12252(ClanSettings class61_1) {
+        class61_1.allowGuests = aBool10016;
+        class61_1.talkRank = aByte10015;
+        class61_1.kickRank = aByte10014;
+        class61_1.lootshareRank = aByte10017;
+        class61_1.coinShare = aByte10018;
+    }
+
+    @Override
+    void method12251(ClanSettings class61_1) {
+        class61_1.allowGuests = aBool10016;
+        class61_1.talkRank = aByte10015;
+        class61_1.kickRank = aByte10014;
+        class61_1.lootshareRank = aByte10017;
+        class61_1.coinShare = aByte10018;
+    }
+
+    @Override
+    void method12249(Packet rsbytebuffer_1) {
+        aBool10016 = rsbytebuffer_1.readUnsignedByte() == 1;
+        aByte10015 = rsbytebuffer_1.readByte();
+        aByte10014 = rsbytebuffer_1.readByte();
+        aByte10017 = rsbytebuffer_1.readByte();
+        aByte10018 = rsbytebuffer_1.readByte();
+    }
+
+    @Override
+    void method12257(Packet rsbytebuffer_1) {
+        aBool10016 = rsbytebuffer_1.readUnsignedByte() == 1;
+        aByte10015 = rsbytebuffer_1.readByte();
+        aByte10014 = rsbytebuffer_1.readByte();
+        aByte10017 = rsbytebuffer_1.readByte();
+        aByte10018 = rsbytebuffer_1.readByte();
+    }
+
+    @Override
+    void method12250(Packet rsbytebuffer_1) {
+        aBool10016 = rsbytebuffer_1.readUnsignedByte() == 1;
+        aByte10015 = rsbytebuffer_1.readByte();
+        aByte10014 = rsbytebuffer_1.readByte();
+        aByte10017 = rsbytebuffer_1.readByte();
+        aByte10018 = rsbytebuffer_1.readByte();
+    }
+
+    @Override
+    void method12256(ClanSettings class61_1) {
+        class61_1.allowGuests = aBool10016;
+        class61_1.talkRank = aByte10015;
+        class61_1.kickRank = aByte10014;
+        class61_1.lootshareRank = aByte10017;
+        class61_1.coinShare = aByte10018;
+    }
+
+    @Override
+    void method12258(ClanSettings class61_1) {
+        class61_1.allowGuests = aBool10016;
+        class61_1.talkRank = aByte10015;
+        class61_1.kickRank = aByte10014;
+        class61_1.lootshareRank = aByte10017;
+        class61_1.coinShare = aByte10018;
+    }
+
+    @Override
+    void method12254(ClanSettings class61_1) {
+        class61_1.allowGuests = aBool10016;
+        class61_1.talkRank = aByte10015;
+        class61_1.kickRank = aByte10014;
+        class61_1.lootshareRank = aByte10017;
+        class61_1.coinShare = aByte10018;
+    }
+
+    @Override
+    void method12255(ClanSettings class61_1) {
+        class61_1.allowGuests = aBool10016;
+        class61_1.talkRank = aByte10015;
+        class61_1.kickRank = aByte10014;
+        class61_1.lootshareRank = aByte10017;
+        class61_1.coinShare = aByte10018;
     }
 }

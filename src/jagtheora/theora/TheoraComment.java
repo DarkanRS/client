@@ -14,11 +14,15 @@ public class TheoraComment extends SimplePeer {
 
     private native void init();
 
+    @Override
     protected native void clear();
 
+    @Override
     protected native void q();
 
+    @Override
     protected native void f();
 
+    @Override
     protected native void m();
 }

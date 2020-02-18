@@ -1,6 +1,6 @@
 package com.jagex;
 
-public final class Node_Sub52 extends Node implements KeyRecord {
+public class Node_Sub52 extends Node implements KeyRecord {
 
     long aLong8169;
     char aChar8171;
@@ -8,67 +8,83 @@ public final class Node_Sub52 extends Node implements KeyRecord {
     int anInt8173;
     int anInt8174;
 
+    @Override
     public int method76() {
-        return this.anInt8173 * -461318909 * -921682517;
+        return anInt8173 * -461318909 * -921682517;
     }
 
+    @Override
     public int getType() {
-        return this.anInt8173;
+        return anInt8173;
     }
 
+    @Override
     public char getCharacter() {
-        return this.aChar8171;
+        return aChar8171;
     }
 
+    @Override
     public int getCode() {
-        return this.anInt8172;
+        return anInt8172;
     }
 
+    @Override
     public int getFlags() {
-        return this.anInt8174;
+        return anInt8174;
     }
 
+    @Override
     public int method4() {
-        return this.anInt8173 * -461318909 * -921682517;
+        return anInt8173 * -461318909 * -921682517;
     }
 
+    @Override
     public char method121() {
-        return this.aChar8171;
+        return aChar8171;
     }
 
-    public long method119(int i_1) {
-        return this.aLong8169;
+    @Override
+    public long method119() {
+        return aLong8169;
     }
 
+    @Override
     public char method120() {
-        return this.aChar8171;
+        return aChar8171;
     }
 
+    @Override
     public int method75() {
-        return this.anInt8173 * -461318909 * -921682517;
+        return anInt8173 * -461318909 * -921682517;
     }
 
+    @Override
     public int method77() {
-        return -581998429 * this.anInt8172 * -1618834677;
+        return -581998429 * anInt8172 * -1618834677;
     }
 
+    @Override
     public long method122() {
-        return this.aLong8169 * 5617785483754464897L * 3568855149896161665L;
+        return aLong8169 * 5617785483754464897L * 3568855149896161665L;
     }
 
+    @Override
     public long method123() {
-        return this.aLong8169 * 5617785483754464897L * 3568855149896161665L;
+        return aLong8169 * 5617785483754464897L * 3568855149896161665L;
     }
 
+    @Override
     public long method124() {
-        return this.aLong8169 * 5617785483754464897L * 3568855149896161665L;
+        return aLong8169 * 5617785483754464897L * 3568855149896161665L;
     }
 
+    @Override
     public int method57() {
-        return 656472737 * this.anInt8174 * 110455137;
+        return 656472737 * anInt8174 * 110455137;
     }
 
+    @Override
     public int method70() {
-        return 656472737 * this.anInt8174 * 110455137;
+        return 656472737 * anInt8174 * 110455137;
     }
 }

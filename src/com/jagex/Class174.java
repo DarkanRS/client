@@ -17,7 +17,7 @@ public class Class174 {
         throw new Error();
     }
 
-    static boolean method2954(int i_0) {
+    static boolean method2954() {
         boolean bool_1 = true;
         if (aClass91_2141 == null) {
             if (IndexLoaders.SPRITES_INDEX.loadFile(KeyHoldInputSubscriber.anInt2878)) {
@@ -42,7 +42,7 @@ public class Class174 {
         }
         if (Class197.aClass414_2436 == null) {
             if (IndexLoaders.FONT_METRICS_INDEX.loadFile(anInt2137)) {
-                Class197.aClass414_2436 = Class163.method2845(IndexLoaders.FONT_METRICS_INDEX, anInt2137, (byte) 18);
+                Class197.aClass414_2436 = Class163.method2845(IndexLoaders.FONT_METRICS_INDEX, anInt2137);
             } else {
                 bool_1 = false;
             }
@@ -57,19 +57,19 @@ public class Class174 {
         return bool_1;
     }
 
-    static final void animateObject(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
+    static void animateObject(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
         if (i_2 >= 1 && i_3 >= 1 && i_2 <= IndexLoaders.MAP_REGION_DECODER.getSizeX() - 2 && i_3 <= IndexLoaders.MAP_REGION_DECODER.getSizeY() - 2) {
             int i_9 = i_0;
-            if (i_0 < 3 && IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(i_2, i_3, 2056160372)) {
+            if (i_0 < 3 && IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(i_2, i_3)) {
                 i_9 = i_0 + 1;
             }
             if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager() != null) {
                 IndexLoaders.MAP_REGION_DECODER.method4441().method12475(Renderers.SOFTWARE_RENDERER, i_0, i_1, i_2, i_3, IndexLoaders.MAP_REGION_DECODER.getClipMap(i_0));
                 if (i_4 >= 0) {
-                    int i_10 = Class393.preferences.groundDecoration.method12897((byte) 28);
-                    Class393.preferences.setValue(Class393.preferences.groundDecoration, 1);
-                    IndexLoaders.MAP_REGION_DECODER.method4441().method12459(Renderers.SOFTWARE_RENDERER, i_9, i_0, i_2, i_3, i_4, i_5, i_6, IndexLoaders.MAP_REGION_DECODER.getClipMap(i_0), i_7, -1045787010);
-                    Class393.preferences.setValue(Class393.preferences.groundDecoration, i_10);
+                    int i_10 = Class393.preferences.groundDecor.method12897();
+                    Class393.preferences.setValue(Class393.preferences.groundDecor, 1);
+                    IndexLoaders.MAP_REGION_DECODER.method4441().method12459(Renderers.SOFTWARE_RENDERER, i_9, i_0, i_2, i_3, i_4, i_5, i_6, IndexLoaders.MAP_REGION_DECODER.getClipMap(i_0), i_7);
+                    Class393.preferences.setValue(Class393.preferences.groundDecor, i_10);
                 }
             }
         }

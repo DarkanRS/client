@@ -8,7 +8,7 @@ public class Class371 {
         throw new Error();
     }
 
-    static final int method6347(int i_0, int i_1, int i_2, int i_3) {
+    static int method6347(int i_0, int i_1, int i_2) {
         if (i_0 == i_1) {
             return i_0;
         } else {
@@ -20,7 +20,7 @@ public class Class371 {
         }
     }
 
-    public static final int method6348(int i_0, int i_1, int i_2, int i_3) {
+    public static int method6348(int i_0, int i_1, int i_2) {
         if (i_2 > 243) {
             i_1 >>= 4;
         } else if (i_2 > 217) {
@@ -33,7 +33,7 @@ public class Class371 {
         return ((i_0 & 0xff) >> 2 << 10) + (i_2 >> 1) + (i_1 >> 5 << 7);
     }
 
-    public static int method6349(int i_0, int i_1, int i_2) {
+    public static int method6349(int i_0, int i_1) {
         int i_3 = i_0 >>> 31;
         return (i_0 + i_3) / i_1 - i_3;
     }
@@ -44,17 +44,17 @@ public class Class371 {
             double d_1 = 0.7D + (Math.random() * 0.03D - 0.015D);
             int i_3 = 0;
             for (int i_4 = 0; i_4 < 512; i_4++) {
-                float f_5 = 360.0F * ((float) (i_4 >> 3) / 64.0F + 0.0078125F);
-                float f_6 = (float) (i_4 & 0x7) / 8.0F + 0.0625F;
+                float f_5 = 360.0F * ((i_4 >> 3) / 64.0F + 0.0078125F);
+                float f_6 = (i_4 & 0x7) / 8.0F + 0.0625F;
                 for (int i_7 = 0; i_7 < 128; i_7++) {
-                    float f_8 = (float) i_7 / 128.0F;
+                    float f_8 = i_7 / 128.0F;
                     float f_9 = 0.0F;
                     float f_10 = 0.0F;
                     float f_11 = 0.0F;
                     float f_12 = f_5 / 60.0F;
                     int i_13 = (int) f_12;
                     int i_14 = i_13 % 6;
-                    float f_15 = f_12 - (float) i_13;
+                    float f_15 = f_12 - i_13;
                     float f_16 = f_8 * (1.0F - f_6);
                     float f_17 = f_8 * (1.0F - f_6 * f_15);
                     float f_18 = (1.0F - f_6 * (1.0F - f_15)) * f_8;
@@ -104,14 +104,14 @@ public class Class371 {
         return RouteStrategies.GROUND_ITEM;
     }
 
-    public static final void method6353() {
+    public static void method6353() {
         BufferedConnectionContext class184_1 = Preference_Sub20.getConnectionContext();
-        TCPPacket tcpmessage_2 = Class271.createPacket(ClientPacket.FC_JOIN, class184_1.isaac);
+        TCPPacket tcpmessage_2 = Class271.createPacket(ClientProt.FC_JOIN, class184_1.isaac);
         tcpmessage_2.buffer.writeByte(0);
         class184_1.queuePacket(tcpmessage_2);
     }
 
     public static Container getActiveContainer() {
-        return Engine.fullScreenFrame != null ? Engine.fullScreenFrame : (Engine.engineFrame != null ? Engine.engineFrame : IFSubNode.anApplet8065);
+        return Engine.fullScreenFrame != null ? Engine.fullScreenFrame : (Engine.engineFrame != null ? Engine.engineFrame : SubInterface.suppliedApplet);
     }
 }

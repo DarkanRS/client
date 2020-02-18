@@ -4,7 +4,7 @@ import java.util.Iterator;
 
 public class NPCUpdate {
 
-    static final void decode(boolean largeView) {
+    static void decode(boolean largeView) {
         client.anInt7216 = 0;
         client.npcListSize = 0;
         ++client.anInt7332;
@@ -16,37 +16,37 @@ public class NPCUpdate {
         int i_4;
         for (i_3 = 0; i_3 < client.anInt7216; i_3++) {
             i_4 = client.anIntArray7421[i_3];
-            StringNode class282_sub47_5 = (StringNode) client.NPCS.get(i_4);
-            NPC npc_7 = (NPC) class282_sub47_5.anObject8068;
+            ObjectNode class282_sub47_5 = (ObjectNode) client.NPC_MAP.get(i_4);
+            NPCEntity npc_7 = (NPCEntity) class282_sub47_5.anObject8068;
             if (npc_7.lastUpdate != client.anInt7332) {
-                if (Class20.aBool161 && EnumIndexLoader.method7426(i_4, (byte) -86)) {
+                if (Class20.aBool161 && EnumIndexLoader.method7426(i_4)) {
                     Class316.method5594();
                 }
                 if (npc_7.definitions.method6886()) {
                     TextureDetails.method2876(npc_7);
                 }
                 npc_7.setDefinition(null);
-                class282_sub47_5.remove();
+                class282_sub47_5.unlink();
                 bool_2 = true;
             }
         }
         if (bool_2) {
             i_3 = client.anInt7210;
-            client.anInt7210 = client.NPCS.size();
+            client.anInt7210 = client.NPC_MAP.size();
             i_4 = 0;
-            StringNode class282_sub47_9;
-            for (Iterator iterator_8 = client.NPCS.iterator(); iterator_8.hasNext(); client.aNode_Sub47Array7209[i_4++] = class282_sub47_9) {
-                class282_sub47_9 = (StringNode) iterator_8.next();
+            ObjectNode class282_sub47_9;
+            for (Iterator iterator_8 = client.NPC_MAP.iterator(); iterator_8.hasNext(); client.NPC_ARRAY[i_4++] = class282_sub47_9) {
+                class282_sub47_9 = (ObjectNode) iterator_8.next();
             }
             for (int i_6 = client.anInt7210; i_6 < i_3; i_6++) {
-                client.aNode_Sub47Array7209[i_6] = null;
+                client.NPC_ARRAY[i_6] = null;
             }
         }
         if (client.GAME_CONNECTION_CONTEXT.recievedBuffer.index != client.GAME_CONNECTION_CONTEXT.currentPacketSize) {
             throw new RuntimeException(client.GAME_CONNECTION_CONTEXT.recievedBuffer.index + " " + client.GAME_CONNECTION_CONTEXT.currentPacketSize);
         } else {
             for (i_3 = 0; i_3 < client.NPC_UPDATE_INDEX; i_3++) {
-                if (client.NPCS.get(client.NPC_UPDATE_INDICES[i_3]) == null) {
+                if (client.NPC_MAP.get(client.NPC_UPDATE_INDICES[i_3]) == null) {
                     throw new RuntimeException(i_3 + " " + client.NPC_UPDATE_INDEX);
                 }
             }
@@ -54,17 +54,17 @@ public class NPCUpdate {
                 throw new RuntimeException("" + (client.anInt7210 - client.NPC_UPDATE_INDEX));
             } else {
                 for (i_3 = 0; i_3 < client.anInt7210; i_3++) {
-                    if (((Entity) client.aNode_Sub47Array7209[i_3].anObject8068).lastUpdate != client.anInt7332) {
-                        throw new RuntimeException("" + ((Entity) client.aNode_Sub47Array7209[i_3].anObject8068).index);
+                    if (((PathingEntity) client.NPC_ARRAY[i_3].anObject8068).lastUpdate != client.anInt7332) {
+                        throw new RuntimeException("" + ((PathingEntity) client.NPC_ARRAY[i_3].anObject8068).index);
                     }
                 }
             }
         }
     }
 
-    static final void decodeAddRemove() {
-        RsBitsBuffer buffer = client.GAME_CONNECTION_CONTEXT.recievedBuffer;
-        buffer.initBitAccess((byte) 104);
+    static void decodeAddRemove() {
+        Packet.Bit buffer = client.GAME_CONNECTION_CONTEXT.recievedBuffer;
+        buffer.initBitAccess();
         int size = buffer.readBits(8);
         int i;
         if (size < client.NPC_UPDATE_INDEX) {
@@ -80,7 +80,7 @@ public class NPCUpdate {
 
             for (i = 0; i < size; i++) {
                 int key = client.NPC_UPDATE_INDICES[i];
-                NPC npc = (NPC) ((StringNode) client.NPCS.get(key)).anObject8068;
+                NPCEntity npc = (NPCEntity) ((ObjectNode) client.NPC_MAP.get(key)).anObject8068;
                 int needsUpdate = buffer.readBits(1);
                 if (needsUpdate == 0) {
                     client.NPC_UPDATE_INDICES[++client.NPC_UPDATE_INDEX - 1] = key;
@@ -95,7 +95,7 @@ public class NPCUpdate {
                         client.NPC_UPDATE_INDICES[++client.NPC_UPDATE_INDEX - 1] = key;
                         npc.lastUpdate = client.anInt7332;
                         NPCDirection class252_8 = (NPCDirection) Class386.identify(Class46.getDirections(), buffer.readBits(3));
-                        npc.move(class252_8, MovementType.WALKING.id);
+                        npc.move(class252_8, MoveSpeed.WALKING.id);
                         int i_9 = buffer.readBits(1);
                         if (i_9 == 1) {
                             client.NPC_INDICES[++client.npcListSize - 1] = key;
@@ -105,12 +105,12 @@ public class NPCUpdate {
                         npc.lastUpdate = client.anInt7332;
                         if (buffer.readBits(1) == 1) {
                             NPCDirection direction = (NPCDirection) Class386.identify(Class46.getDirections(), buffer.readBits(3));
-                            npc.move(direction, MovementType.RUNNING.id);
+                            npc.move(direction, MoveSpeed.RUNNING.id);
                             NPCDirection class252_10 = (NPCDirection) Class386.identify(Class46.getDirections(), buffer.readBits(3));
-                            npc.move(class252_10, MovementType.RUNNING.id);
+                            npc.move(class252_10, MoveSpeed.RUNNING.id);
                         } else {
                             NPCDirection class252_8 = (NPCDirection) Class386.identify(Class46.getDirections(), buffer.readBits(3));
-                            npc.move(class252_8, MovementType.HALF_WALK.id);
+                            npc.move(class252_8, MoveSpeed.HALF_WALK.id);
                         }
 
                         int i_11 = buffer.readBits(1);
@@ -126,25 +126,25 @@ public class NPCUpdate {
         }
     }
 
-    static final void decodeUpdate(boolean largeView) {
-        RsBitsBuffer rsbitsbuffer_2 = client.GAME_CONNECTION_CONTEXT.recievedBuffer;
+    static void decodeUpdate(boolean largeView) {
+        Packet.Bit rsbitsbuffer_2 = client.GAME_CONNECTION_CONTEXT.recievedBuffer;
         while (rsbitsbuffer_2.readableBits(client.GAME_CONNECTION_CONTEXT.currentPacketSize) >= 15) {
             int i_3 = rsbitsbuffer_2.readBits(15);
             if (i_3 == 32767) {
                 break;
             }
             boolean bool_4 = false;
-            StringNode class282_sub47_5 = (StringNode) client.NPCS.get(i_3);
-            NPC npc_6;
+            ObjectNode class282_sub47_5 = (ObjectNode) client.NPC_MAP.get(i_3);
+            NPCEntity npc_6;
             if (class282_sub47_5 == null) {
-                npc_6 = new NPC(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager());
+                npc_6 = new NPCEntity(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager());
                 npc_6.index = i_3;
-                class282_sub47_5 = new StringNode(npc_6);
-                client.NPCS.put(class282_sub47_5, i_3);
-                client.aNode_Sub47Array7209[++client.anInt7210 - 1] = class282_sub47_5;
+                class282_sub47_5 = new ObjectNode(npc_6);
+                client.NPC_MAP.put(class282_sub47_5, i_3);
+                client.NPC_ARRAY[++client.anInt7210 - 1] = class282_sub47_5;
                 bool_4 = true;
             }
-            npc_6 = (NPC) class282_sub47_5.anObject8068;
+            npc_6 = (NPCEntity) class282_sub47_5.anObject8068;
             client.NPC_UPDATE_INDICES[++client.NPC_UPDATE_INDEX - 1] = i_3;
             npc_6.lastUpdate = client.anInt7332;
             if (npc_6.definitions != null && npc_6.definitions.method6886()) {
@@ -167,7 +167,7 @@ public class NPCUpdate {
                 }
             }
             int i_9 = rsbitsbuffer_2.readBits(3) + 4 << 11 & 0x3fff;
-            npc_6.setDefinition(IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(rsbitsbuffer_2.readBits(15)));
+            npc_6.setDefinition(IndexLoaders.NPC_INDEX_LOADER.getNPCType(rsbitsbuffer_2.readBits(15)));
             int i_10;
             if (largeView) {
                 i_10 = rsbitsbuffer_2.readBits(8);
@@ -189,17 +189,17 @@ public class NPCUpdate {
             }
             npc_6.move(i_12, VertexNormal.MY_PLAYER.regionBaseX[0] + i_10, VertexNormal.MY_PLAYER.regionBaseY[0] + i_8, i_11 == 1, npc_6.getSize());
             if (npc_6.definitions.method6886()) {
-                Static.method6775(npc_6.plane, npc_6.regionBaseX[0], npc_6.regionBaseY[0], 0, null, npc_6, null, 386204149);
+                Static.method6775(npc_6.plane, npc_6.regionBaseX[0], npc_6.regionBaseY[0], 0, null, npc_6, null);
             }
         }
-        rsbitsbuffer_2.finishBitAccess((byte) 35);
+        rsbitsbuffer_2.finishBitAccess();
     }
 
-    static final void decodeMasks() {
-        RsBitsBuffer buffer = client.GAME_CONNECTION_CONTEXT.recievedBuffer;
+    static void decodeMasks() {
+        Packet.Bit buffer = client.GAME_CONNECTION_CONTEXT.recievedBuffer;
         for (int i_1 = 0; i_1 < client.npcListSize; i_1++) {
             int i_2 = client.NPC_INDICES[i_1];
-            NPC npc = (NPC) ((StringNode) client.NPCS.get(i_2)).anObject8068;
+            NPCEntity npc = (NPCEntity) ((ObjectNode) client.NPC_MAP.get(i_2)).anObject8068;
             int i_4 = buffer.readUnsignedByte();
             if ((i_4 & 0x40) != 0) {
                 i_4 += buffer.readUnsignedByte() << 8;
@@ -211,8 +211,8 @@ public class NPCUpdate {
                 i_4 += buffer.readUnsignedByte() << 24;
             }
             if ((i_4 & 0x10) != 0) {
-                int[] ints_5 = new int[MovementType.values().length];
-                for (int i_6 = 0; i_6 < MovementType.values().length; i_6++) {
+                int[] ints_5 = new int[MoveSpeed.values().length];
+                for (int i_6 = 0; i_6 < MoveSpeed.values().length; i_6++) {
                     ints_5[i_6] = buffer.readBigSmart();
                 }
                 int i_6 = buffer.readUnsignedByte();
@@ -253,7 +253,7 @@ public class NPCUpdate {
                             shorts_20[i_12] = (short) buffer.readUnsignedShort();
                         }
                     }
-                    long long_21 = (long) i_2 | (long) (++npc.meshModifierCount - 1) << 32;
+                    long long_21 = i_2 | (long) (++npc.meshModifierCount - 1) << 32;
                     npc.meshModifiers = new NPCMeshModifier(long_21, ints_18, shorts_19, shorts_20);
                 }
             }
@@ -318,7 +318,7 @@ public class NPCUpdate {
                     ints_16[i_9] = buffer.readUnsignedByte();
                     ints_17[i_9] = buffer.readShortLE();
                 }
-                QuickchatCategoryLoader.method5923(npc, ints_15, ints_16, ints_17, -125170497);
+                QuickchatCategoryLoader.method5923(npc, ints_15, ints_16, ints_17);
             }
             if ((i_4 & 0x800) != 0) {
                 int i_14 = buffer.readShortLE();
@@ -378,11 +378,11 @@ public class NPCUpdate {
                 if (npc.definitions.method6886()) {
                     TextureDetails.method2876(npc);
                 }
-                npc.setDefinition(IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(buffer.readBigSmart()));
+                npc.setDefinition(IndexLoaders.NPC_INDEX_LOADER.getNPCType(buffer.readBigSmart()));
                 npc.setBoundSize(npc.definitions.size);
                 npc.anInt10340 = npc.definitions.contrast << 3;
                 if (npc.definitions.method6886()) {
-                    Static.method6775(npc.plane, npc.regionBaseX[0], npc.regionBaseY[0], 0, null, npc, null, 352984427);
+                    Static.method6775(npc.plane, npc.regionBaseX[0], npc.regionBaseY[0], 0, null, npc, null);
                 }
             }
             if ((i_4 & 0x2000000) != 0) {
@@ -442,7 +442,7 @@ public class NPCUpdate {
                             shorts_20[i_12] = (short) buffer.readUnsignedShortLE128();
                         }
                     }
-                    long long_21 = (long) i_2 | (long) (++npc.headMeshModifierCount - 1) << 32;
+                    long long_21 = i_2 | (long) (++npc.headMeshModifierCount - 1) << 32;
                     new NPCMeshModifier(long_21, ints_18, shorts_19, shorts_20);
                 }
             }
@@ -475,7 +475,7 @@ public class NPCUpdate {
             }
             if ((i_4 & 0x800000) != 0) {
                 npc.modifiedName = buffer.readString();
-                if ("".equals(npc.modifiedName) || npc.modifiedName.equals(npc.definitions.name)) {
+                if (npc.modifiedName != null && npc.modifiedName.isEmpty() || npc.modifiedName.equals(npc.definitions.name)) {
                     npc.modifiedName = npc.definitions.name;
                 }
             }

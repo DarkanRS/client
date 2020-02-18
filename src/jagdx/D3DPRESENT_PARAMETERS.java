@@ -7,17 +7,17 @@ import java.awt.*;
 
 public class D3DPRESENT_PARAMETERS {
     public static final int anInt529 = -2147483648;
-    public int BackBufferWidth = 0;
-    public int BackBufferHeight = 0;
-    public int BackBufferFormat = 0;
-    public int BackBufferCount = 0;
-    public int MultiSampleType = 0;
-    public int MultiSampleQuality = 0;
+    public int BackBufferWidth;
+    public int BackBufferHeight;
+    public int BackBufferFormat;
+    public int BackBufferCount;
+    public int MultiSampleType;
+    public int MultiSampleQuality;
     public int SwapEffect = 1;
     public Component DeviceWindow;
     public boolean Windowed;
     public boolean EnableAutoDepthStencil;
-    public int AutoDepthStencilFormat = 0;
+    public int AutoDepthStencilFormat;
     public int Flags;
     public int FullScreen_RefreshRateInHz;
     public int PresentationInterval = -2147483648;

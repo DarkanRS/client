@@ -2,7 +2,7 @@ package com.jagex;
 
 public class PlayerUpdate {
 
-    static final void decode(RsBitsBuffer buffer, int size) {
+    static void decode(Packet.Bit buffer, int size) {
         Class197.anInt2434 = 0;
         decodeUpdate(buffer);
         decodeMasks(buffer);
@@ -11,9 +11,9 @@ public class PlayerUpdate {
         }
     }
 
-    static final void decodeUpdate(RsBitsBuffer rsbitsbuffer_0) {
+    static void decodeUpdate(Packet.Bit bitPacket) {
         int i_2 = 0;
-        rsbitsbuffer_0.initBitAccess((byte) 8);
+        bitPacket.initBitAccess();
         int i_3;
         int i_4;
         int i_5;
@@ -22,93 +22,93 @@ public class PlayerUpdate {
             if ((Class197.aByteArray2424[i_4] & 0x1) == 0) {
                 if (i_2 > 0) {
                     --i_2;
-                    Class197.aByteArray2424[i_4] = (byte) (Class197.aByteArray2424[i_4] | 0x2);
+                    Class197.aByteArray2424[i_4] |= 0x2;
                 } else {
-                    i_5 = rsbitsbuffer_0.readBits(1);
+                    i_5 = bitPacket.readBits(1);
                     if (i_5 == 0) {
-                        i_2 = Class399.decodeSkip(rsbitsbuffer_0);
-                        Class197.aByteArray2424[i_4] = (byte) (Class197.aByteArray2424[i_4] | 0x2);
+                        i_2 = Class399.decodeSkip(bitPacket);
+                        Class197.aByteArray2424[i_4] |= 0x2;
                     } else {
-                        NewsItem.method1806(rsbitsbuffer_0, i_4, 1605181338);
+                        NewsItem.method1806(bitPacket, i_4);
                     }
                 }
             }
         }
-        rsbitsbuffer_0.finishBitAccess((byte) 118);
+        bitPacket.finishBitAccess();
         if (i_2 != 0) {
             throw new RuntimeException();
         } else {
-            rsbitsbuffer_0.initBitAccess((byte) 18);
+            bitPacket.initBitAccess();
             for (i_3 = 0; i_3 < Class197.NUM_PLAYER_INDICES; i_3++) {
                 i_4 = Class197.PLAYER_INDICES[i_3];
                 if ((Class197.aByteArray2424[i_4] & 0x1) != 0) {
                     if (i_2 > 0) {
                         --i_2;
-                        Class197.aByteArray2424[i_4] = (byte) (Class197.aByteArray2424[i_4] | 0x2);
+                        Class197.aByteArray2424[i_4] |= 0x2;
                     } else {
-                        i_5 = rsbitsbuffer_0.readBits(1);
+                        i_5 = bitPacket.readBits(1);
                         if (i_5 == 0) {
-                            i_2 = Class399.decodeSkip(rsbitsbuffer_0);
-                            Class197.aByteArray2424[i_4] = (byte) (Class197.aByteArray2424[i_4] | 0x2);
+                            i_2 = Class399.decodeSkip(bitPacket);
+                            Class197.aByteArray2424[i_4] |= 0x2;
                         } else {
-                            NewsItem.method1806(rsbitsbuffer_0, i_4, 1591127292);
+                            NewsItem.method1806(bitPacket, i_4);
                         }
                     }
                 }
             }
-            rsbitsbuffer_0.finishBitAccess((byte) 89);
+            bitPacket.finishBitAccess();
             if (i_2 != 0) {
                 throw new RuntimeException();
             } else {
-                rsbitsbuffer_0.initBitAccess((byte) 3);
+                bitPacket.initBitAccess();
                 for (i_3 = 0; i_3 < Class197.anInt2431; i_3++) {
                     i_4 = Class197.anIntArray2426[i_3];
                     if ((Class197.aByteArray2424[i_4] & 0x1) != 0) {
                         if (i_2 > 0) {
                             --i_2;
-                            Class197.aByteArray2424[i_4] = (byte) (Class197.aByteArray2424[i_4] | 0x2);
+                            Class197.aByteArray2424[i_4] |= 0x2;
                         } else {
-                            i_5 = rsbitsbuffer_0.readBits(1);
+                            i_5 = bitPacket.readBits(1);
                             if (i_5 == 0) {
-                                i_2 = Class399.decodeSkip(rsbitsbuffer_0);
-                                Class197.aByteArray2424[i_4] = (byte) (Class197.aByteArray2424[i_4] | 0x2);
-                            } else if (QuickChatMessage.method6155(rsbitsbuffer_0, i_4)) {
-                                Class197.aByteArray2424[i_4] = (byte) (Class197.aByteArray2424[i_4] | 0x2);
+                                i_2 = Class399.decodeSkip(bitPacket);
+                                Class197.aByteArray2424[i_4] |= 0x2;
+                            } else if (QuickChatMessage.method6155(bitPacket, i_4)) {
+                                Class197.aByteArray2424[i_4] |= 0x2;
                             }
                         }
                     }
                 }
-                rsbitsbuffer_0.finishBitAccess((byte) 28);
+                bitPacket.finishBitAccess();
                 if (i_2 != 0) {
                     throw new RuntimeException();
                 } else {
-                    rsbitsbuffer_0.initBitAccess((byte) -48);
+                    bitPacket.initBitAccess();
                     for (i_3 = 0; i_3 < Class197.anInt2431; i_3++) {
                         i_4 = Class197.anIntArray2426[i_3];
                         if ((Class197.aByteArray2424[i_4] & 0x1) == 0) {
                             if (i_2 > 0) {
                                 --i_2;
-                                Class197.aByteArray2424[i_4] = (byte) (Class197.aByteArray2424[i_4] | 0x2);
+                                Class197.aByteArray2424[i_4] |= 0x2;
                             } else {
-                                i_5 = rsbitsbuffer_0.readBits(1);
+                                i_5 = bitPacket.readBits(1);
                                 if (i_5 == 0) {
-                                    i_2 = Class399.decodeSkip(rsbitsbuffer_0);
-                                    Class197.aByteArray2424[i_4] = (byte) (Class197.aByteArray2424[i_4] | 0x2);
-                                } else if (QuickChatMessage.method6155(rsbitsbuffer_0, i_4)) {
-                                    Class197.aByteArray2424[i_4] = (byte) (Class197.aByteArray2424[i_4] | 0x2);
+                                    i_2 = Class399.decodeSkip(bitPacket);
+                                    Class197.aByteArray2424[i_4] |= 0x2;
+                                } else if (QuickChatMessage.method6155(bitPacket, i_4)) {
+                                    Class197.aByteArray2424[i_4] |= 0x2;
                                 }
                             }
                         }
                     }
-                    rsbitsbuffer_0.finishBitAccess((byte) 126);
+                    bitPacket.finishBitAccess();
                     if (i_2 != 0) {
                         throw new RuntimeException();
                     } else {
                         Class197.NUM_PLAYER_INDICES = 0;
                         Class197.anInt2431 = 0;
                         for (i_3 = 1; i_3 < 2048; i_3++) {
-                            Class197.aByteArray2424[i_3] = (byte) (Class197.aByteArray2424[i_3] >> 1);
-                            Player player_6 = client.players[i_3];
+                            Class197.aByteArray2424[i_3] >>= 1;
+                            PlayerEntity player_6 = client.players[i_3];
                             if (player_6 != null) {
                                 Class197.PLAYER_INDICES[++Class197.NUM_PLAYER_INDICES - 1] = i_3;
                             } else {
@@ -121,10 +121,10 @@ public class PlayerUpdate {
         }
     }
 
-    static final void decodeMasks(RsBitsBuffer buffer) {
+    static void decodeMasks(Packet.Bit buffer) {
         for (int i_2 = 0; i_2 < Class197.anInt2434; i_2++) {
             int i_3 = Class197.anIntArray2435[i_2];
-            Player player_4 = client.players[i_3];
+            PlayerEntity player_4 = client.players[i_3];
             int i_5 = buffer.readUnsignedByte();
             if ((i_5 & 0x8) != 0) {
                 i_5 += buffer.readUnsignedByte() << 8;
@@ -136,8 +136,8 @@ public class PlayerUpdate {
         }
     }
 
-    static final void decodeMasksBody(RsBitsBuffer stream, int i_1, Player player, int flags) {
-        byte tempMoveType = MovementType.STATIONARY.id;
+    static void decodeMasksBody(Packet.Bit stream, int i_1, PlayerEntity player, int flags) {
+        byte tempMoveType = MoveSpeed.STATIONARY.id;
 
         if ((flags & 0x20000) != 0) {
             player.redAdd = stream.readByte();
@@ -179,7 +179,7 @@ public class PlayerUpdate {
         if ((flags & 0x20) != 0) {
             player.faceDirection = stream.readUnsignedShort128();
             if (player.anInt10355 == 0) {
-                player.method15863(player.faceDirection, 1784401370);
+                player.method15863(player.faceDirection);
                 player.faceDirection = -1;
             }
         }
@@ -307,16 +307,16 @@ public class PlayerUpdate {
         if ((flags & 0x1) != 0) {
             int i_6 = stream.readUnsignedByteC();
             byte[] bytes_21 = new byte[i_6];
-            RsByteBuffer rsbytebuffer_22 = new RsByteBuffer(bytes_21);
+            Packet rsbytebuffer_22 = new Packet(bytes_21);
             stream.readBytes(bytes_21, 0, i_6);
             Class197.aNode_Sub35Array2428[i_1] = rsbytebuffer_22;
             player.decodeAppearance(rsbytebuffer_22);
         }
 
         if ((flags & 0x10) != 0) {
-            int[] ints_23 = new int[MovementType.values().length];
+            int[] ints_23 = new int[MoveSpeed.values().length];
 
-            for (int i_7 = 0; i_7 < MovementType.values().length; i_7++) {
+            for (int i_7 = 0; i_7 < MoveSpeed.values().length; i_7++) {
                 ints_23[i_7] = stream.readBigSmart();
             }
 
@@ -349,7 +349,7 @@ public class PlayerUpdate {
                 ints_17[i_10] = stream.readUnsignedShortLE128();
             }
 
-            QuickchatCategoryLoader.method5923(player, animationIds, ints_15, ints_17, 263851655);
+            QuickchatCategoryLoader.method5923(player, animationIds, ints_15, ints_17);
         }
 
         if ((flags & 0x4) != 0) {
@@ -422,14 +422,14 @@ public class PlayerUpdate {
                 player.move(player.anInt10569, player.anInt10570);
             } else {
                 byte b_20;
-                if (tempMoveType != MovementType.STATIONARY.id) {
+                if (tempMoveType != MoveSpeed.STATIONARY.id) {
                     b_20 = tempMoveType;
                 } else {
                     b_20 = Class197.playerMovementTypes[i_1];
                 }
 
-                Class236.method3985(player, b_20, (byte) -106);
-                player.method16129(player.anInt10569, player.anInt10570, b_20, 2145500163);
+                Class236.method3985(player, b_20);
+                player.method16129(player.anInt10569, player.anInt10570, b_20);
             }
         }
 

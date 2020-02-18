@@ -14,20 +14,12 @@ public class Class256 {
     boolean aBool3160;
     boolean aBool3159;
 
-    public boolean method4401() {
-        return this.aBool3159;
-    }
-
     Class256(boolean bool_1, boolean bool_2) {
-        this.aBool3160 = bool_1;
-        this.aBool3159 = bool_2;
+        aBool3160 = bool_1;
+        aBool3159 = bool_2;
     }
 
-    boolean method4410(byte b_1) {
-        return this.aBool3160;
-    }
-
-    public static void method4412(SongReference class116_0, int volume, int i_2) {
+    public static void method4412(SongReference class116_0, int volume) {
         volume = volume * Class393.preferences.musicVolume.method12714() >> 8;
         if (class116_0 == null) {
             VarBitDefinitions.method3805();
@@ -47,8 +39,8 @@ public class Class256 {
         }
     }
 
-    public static void method4415(int i_0, int i_1, int i_2, ObjectDefinitions objectdefinitions_3) {
-        for (Node_Sub48 class282_sub48_5 = (Node_Sub48) Node_Sub48.aClass482_8073.head(); class282_sub48_5 != null; class282_sub48_5 = (Node_Sub48) Node_Sub48.aClass482_8073.next(-1010635900)) {
+    public static void method4415(int i_0, int i_1, int i_2, LocType objectdefinitions_3) {
+        for (Node_Sub48 class282_sub48_5 = (Node_Sub48) Node_Sub48.aClass482_8073.head(); class282_sub48_5 != null; class282_sub48_5 = (Node_Sub48) Node_Sub48.aClass482_8073.next()) {
             if (i_0 == class282_sub48_5.anInt8076 && class282_sub48_5.anInt8107 == i_1 << 9 && i_2 << 9 == class282_sub48_5.anInt8078 && class282_sub48_5.aClass478_8104.id == objectdefinitions_3.id) {
                 if (class282_sub48_5.aNode_Sub15_Sub5_8099 != null) {
                     Class79.aNode_Sub15_Sub4_783.method15276(class282_sub48_5.aNode_Sub15_Sub5_8099);
@@ -58,7 +50,7 @@ public class Class256 {
                     Class79.aNode_Sub15_Sub4_783.method15276(class282_sub48_5.aNode_Sub15_Sub5_8096);
                     class282_sub48_5.aNode_Sub15_Sub5_8096 = null;
                 }
-                class282_sub48_5.remove();
+                class282_sub48_5.unlink();
                 break;
             }
         }
@@ -68,5 +60,13 @@ public class Class256 {
         Class187.anInt2363 = 0;
         Class187.anInt2361 = -1;
         Class187.anInt2359 = -1;
+    }
+
+    public boolean method4401() {
+        return aBool3159;
+    }
+
+    boolean method4410() {
+        return aBool3160;
     }
 }

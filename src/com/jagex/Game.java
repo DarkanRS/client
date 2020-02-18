@@ -13,9 +13,9 @@ public class Game {
     public int id;
 
     Game(String string_1, String string_2, int i_3) {
-        this.name = string_1;
-        this.formattedName = string_2;
-        this.id = i_3;
+        name = string_1;
+        formattedName = string_2;
+        id = i_3;
     }
 
     public static void method8204(int i_0) {
@@ -24,6 +24,6 @@ public class Game {
 
     public static void method8207(int i_0) {
         PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(16, i_0);
-        class282_sub50_sub12_2.method14965((byte) -1);
+        class282_sub50_sub12_2.method14965();
     }
 }

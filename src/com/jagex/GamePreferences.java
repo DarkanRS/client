@@ -2,8 +2,6 @@ package com.jagex;
 
 public class GamePreferences extends Node {
 
-    Game game;
-    ProcessorSpecs processorSpecs;
     public GraphicsToolkitPreference currentToolkit;
     public Preference_Sub4 antiAliasingDefault;
     public Preference_Sub4 aPreference_Sub4_8223;
@@ -14,7 +12,7 @@ public class GamePreferences extends Node {
     public Preference_Sub26 flickeringEffects;
     public FogPreference fog;
     public Preference_Sub17 groundBlending;
-    public GroundDecorationPreference groundDecoration;
+    public GroundDecorationPreference groundDecor;
     public IdleAnimationsPreference idleAnimations;
     public LightDetailPreference lightDetail;
     public SceneryShadowPreference sceneryShadows;
@@ -42,264 +40,273 @@ public class GamePreferences extends Node {
     public SoundLevelPreference musicVolume;
     public SoundLevelPreference aPreference_Sub13_8229;
     public MonoStereoPreference monoStereo;
+    Game game;
+    ProcessorSpecs processorSpecs;
 
-    public GamePreferences(RsByteBuffer rsbytebuffer_1, Game game_2) {
-        this.game = game_2;
-        this.processorSpecs = new ProcessorSpecs(Engine.MAX_MEMORY, Engine.AVAILABLE_PROCESSORS, Class402.aString4828.indexOf("arm") != -1);
-        this.currentToolkit = new GraphicsToolkitPreference(0, this);
-        this.decode(rsbytebuffer_1);
+    public GamePreferences(Packet rsbytebuffer_1, Game game_2) {
+        game = game_2;
+        processorSpecs = new ProcessorSpecs(Engine.MAX_MEMORY, Engine.AVAILABLE_PROCESSORS, Class402.aString4828.indexOf("arm") != -1);
+        currentToolkit = new GraphicsToolkitPreference(0, this);
+        decode(rsbytebuffer_1);
     }
 
-    void decode(RsByteBuffer rsbytebuffer_1) {
+    public GamePreferences(Game game_1) {
+        game = game_1;
+        processorSpecs = new ProcessorSpecs(Engine.MAX_MEMORY, Engine.AVAILABLE_PROCESSORS, Class402.aString4828.toLowerCase().indexOf("arm") != -1);
+        currentToolkit = new GraphicsToolkitPreference(0, this);
+        method13497(true);
+    }
+
+    void decode(Packet rsbytebuffer_1) {
         if (rsbytebuffer_1 != null && rsbytebuffer_1.buffer != null) {
             int i_3 = rsbytebuffer_1.readUnsignedByte();
             if (i_3 < 23) {
                 try {
-                    this.method13498(rsbytebuffer_1, i_3);
+                    method13498(rsbytebuffer_1, i_3);
                 } catch (Exception exception_5) {
-                    this.method13497(true, 612084272);
+                    method13497(true);
                 }
 
-                this.method13497(false, -226219565);
+                method13497(false);
             } else if (i_3 > 27) {
-                this.method13497(true, 2054281814);
+                method13497(true);
             } else {
-                this.antiAliasingDefault = new Preference_Sub4(rsbytebuffer_1.readUnsignedByte(), this);
-                this.aPreference_Sub4_8223 = new Preference_Sub4(this.antiAliasingDefault.method12641(-1510157435), this);
-                this.bloom = new BloomPreference(rsbytebuffer_1.readUnsignedByte(), this);
-                this.brightness = new BrightnessPreference(rsbytebuffer_1.readUnsignedByte(), this);
-                this.buildArea = new Preference_Sub1(rsbytebuffer_1.readUnsignedByte(), this);
+                antiAliasingDefault = new Preference_Sub4(rsbytebuffer_1.readUnsignedByte(), this);
+                aPreference_Sub4_8223 = new Preference_Sub4(antiAliasingDefault.method12641(), this);
+                bloom = new BloomPreference(rsbytebuffer_1.readUnsignedByte(), this);
+                brightness = new BrightnessPreference(rsbytebuffer_1.readUnsignedByte(), this);
+                buildArea = new Preference_Sub1(rsbytebuffer_1.readUnsignedByte(), this);
                 if (i_3 >= 27) {
-                    this.aPreference_Sub16_8198 = new Preference_Sub16(rsbytebuffer_1.readUnsignedByte(), this);
+                    aPreference_Sub16_8198 = new Preference_Sub16(rsbytebuffer_1.readUnsignedByte(), this);
                 }
 
-                this.flickeringEffects = new Preference_Sub26(rsbytebuffer_1.readUnsignedByte(), this);
-                this.fog = new FogPreference(rsbytebuffer_1.readUnsignedByte(), this);
-                this.groundBlending = new Preference_Sub17(rsbytebuffer_1.readUnsignedByte(), this);
-                this.groundDecoration = new GroundDecorationPreference(rsbytebuffer_1.readUnsignedByte(), this);
-                this.idleAnimations = new IdleAnimationsPreference(rsbytebuffer_1.readUnsignedByte(), this);
-                this.lightDetail = new LightDetailPreference(rsbytebuffer_1.readUnsignedByte(), this);
-                this.sceneryShadows = new SceneryShadowPreference(rsbytebuffer_1.readUnsignedByte(), this);
+                flickeringEffects = new Preference_Sub26(rsbytebuffer_1.readUnsignedByte(), this);
+                fog = new FogPreference(rsbytebuffer_1.readUnsignedByte(), this);
+                groundBlending = new Preference_Sub17(rsbytebuffer_1.readUnsignedByte(), this);
+                groundDecor = new GroundDecorationPreference(rsbytebuffer_1.readUnsignedByte(), this);
+                idleAnimations = new IdleAnimationsPreference(rsbytebuffer_1.readUnsignedByte(), this);
+                lightDetail = new LightDetailPreference(rsbytebuffer_1.readUnsignedByte(), this);
+                sceneryShadows = new SceneryShadowPreference(rsbytebuffer_1.readUnsignedByte(), this);
                 if (i_3 >= 24) {
-                    this.toolkitDefault = new Preference_Sub29(rsbytebuffer_1.readUnsignedByte(), this);
+                    toolkitDefault = new Preference_Sub29(rsbytebuffer_1.readUnsignedByte(), this);
                 }
 
-                this.particles = new Preference_Sub20(rsbytebuffer_1.readUnsignedByte(), this);
-                this.removeRoofs = new Preference_Sub27(rsbytebuffer_1.readUnsignedByte(), this);
-                this.removeRoofsOptionOverride = new Preference_Sub27(this.removeRoofs.method12952((byte) 37), this);
-                this.maxScreenSize = new Preference_Sub7(rsbytebuffer_1.readUnsignedByte(), this);
+                particles = new Preference_Sub20(rsbytebuffer_1.readUnsignedByte(), this);
+                removeRoofs = new Preference_Sub27(rsbytebuffer_1.readUnsignedByte(), this);
+                removeRoofsOptionOverride = new Preference_Sub27(removeRoofs.method12952(), this);
+                maxScreenSize = new Preference_Sub7(rsbytebuffer_1.readUnsignedByte(), this);
                 if (i_3 >= 25) {
-                    this.skyBoxes = new Preference_Sub14(rsbytebuffer_1.readUnsignedByte(), this);
+                    skyBoxes = new Preference_Sub14(rsbytebuffer_1.readUnsignedByte(), this);
                 }
 
-                this.characterShadows = new Preference_Sub28(rsbytebuffer_1.readUnsignedByte(), this);
+                characterShadows = new Preference_Sub28(rsbytebuffer_1.readUnsignedByte(), this);
                 if (i_3 <= 25) {
                     ++rsbytebuffer_1.index;
                 }
 
-                this.textures = new TexturesPreference(rsbytebuffer_1.readUnsignedByte(), this);
-                this.toolKit = new GraphicsToolkitPreference(rsbytebuffer_1.readUnsignedByte(), this);
-                this.currentToolkit = new GraphicsToolkitPreference(this.toolKit.getValue(-958077547), this);
+                textures = new TexturesPreference(rsbytebuffer_1.readUnsignedByte(), this);
+                toolKit = new GraphicsToolkitPreference(rsbytebuffer_1.readUnsignedByte(), this);
+                currentToolkit = new GraphicsToolkitPreference(toolKit.getValue(), this);
                 rsbytebuffer_1.readUnsignedByte();
-                this.water = new WaterPreference(rsbytebuffer_1.readUnsignedByte(), this);
-                this.screenSize = new ScreenSizePreference(rsbytebuffer_1.readUnsignedByte(), this);
-                this.aPreference_Sub9_8218 = new ScreenSizePreference(this.screenSize.method12687(-1215691938), this);
-                this.customCursors = new CustomCursorsPreference(rsbytebuffer_1.readUnsignedByte(), this);
-                this.graphics = new GraphicsPreference(rsbytebuffer_1.readUnsignedByte(), this);
-                this.cpu = new CPUMaxMemoryPreference(rsbytebuffer_1.readUnsignedByte(), this);
-                this.aPreference_Sub11_8217 = new Preference_Sub11(rsbytebuffer_1.readUnsignedByte(), this);
-                this.safeMode = new SafeModePreference(rsbytebuffer_1.readUnsignedByte(), this);
+                water = new WaterPreference(rsbytebuffer_1.readUnsignedByte(), this);
+                screenSize = new ScreenSizePreference(rsbytebuffer_1.readUnsignedByte(), this);
+                aPreference_Sub9_8218 = new ScreenSizePreference(screenSize.method12687(), this);
+                customCursors = new CustomCursorsPreference(this);
+                graphics = new GraphicsPreference(rsbytebuffer_1.readUnsignedByte(), this);
+                cpu = new CPUMaxMemoryPreference(rsbytebuffer_1.readUnsignedByte(), this);
+                aPreference_Sub11_8217 = new Preference_Sub11(rsbytebuffer_1.readUnsignedByte(), this);
+                safeMode = new SafeModePreference(rsbytebuffer_1.readUnsignedByte(), this);
                 if (i_3 >= 26) {
-                    this.aPreference_Sub3_8199 = new Preference_Sub3(rsbytebuffer_1.readUnsignedByte(), this);
+                    aPreference_Sub3_8199 = new Preference_Sub3(rsbytebuffer_1.readUnsignedByte(), this);
                 }
 
-                this.soundEffectVolume = new SoundLevelPreference(rsbytebuffer_1.readUnsignedByte(), this);
-                this.ambientSoundVolume = new SoundLevelPreference(rsbytebuffer_1.readUnsignedByte(), this);
-                this.voiceOverVolume = new SoundLevelPreference(rsbytebuffer_1.readUnsignedByte(), this);
-                this.musicVolume = new SoundLevelPreference(rsbytebuffer_1.readUnsignedByte(), this);
-                this.aPreference_Sub13_8229 = new SoundLevelPreference(rsbytebuffer_1.readUnsignedByte(), this);
-                this.monoStereo = new MonoStereoPreference(rsbytebuffer_1.readUnsignedByte(), this);
-                this.method13497(false, -23246823);
+                soundEffectVolume = new SoundLevelPreference(rsbytebuffer_1.readUnsignedByte(), this);
+                ambientSoundVolume = new SoundLevelPreference(rsbytebuffer_1.readUnsignedByte(), this);
+                voiceOverVolume = new SoundLevelPreference(rsbytebuffer_1.readUnsignedByte(), this);
+                musicVolume = new SoundLevelPreference(rsbytebuffer_1.readUnsignedByte(), this);
+                aPreference_Sub13_8229 = new SoundLevelPreference(rsbytebuffer_1.readUnsignedByte(), this);
+                monoStereo = new MonoStereoPreference(rsbytebuffer_1.readUnsignedByte(), this);
+                method13497(false);
             }
         } else {
-            this.method13497(true, -1548642338);
+            method13497(true);
         }
 
-        this.method13502();
+        method13502();
     }
 
-    void method13497(boolean bool_1, int i_2) {
-        if (bool_1 || this.antiAliasingDefault == null) {
-            this.antiAliasingDefault = new Preference_Sub4(this);
+    void method13497(boolean bool_1) {
+        if (bool_1 || antiAliasingDefault == null) {
+            antiAliasingDefault = new Preference_Sub4(this);
         }
 
-        if (bool_1 || this.aPreference_Sub4_8223 == null) {
-            this.aPreference_Sub4_8223 = new Preference_Sub4(this.antiAliasingDefault.method12641(2142983368), this);
+        if (bool_1 || aPreference_Sub4_8223 == null) {
+            aPreference_Sub4_8223 = new Preference_Sub4(antiAliasingDefault.method12641(), this);
         }
 
-        if (bool_1 || this.bloom == null) {
-            this.bloom = new BloomPreference(this);
+        if (bool_1 || bloom == null) {
+            bloom = new BloomPreference(this);
         }
 
-        if (bool_1 || this.brightness == null) {
-            this.brightness = new BrightnessPreference(this);
+        if (bool_1 || brightness == null) {
+            brightness = new BrightnessPreference(this);
         }
 
-        if (bool_1 || this.buildArea == null) {
-            this.buildArea = new Preference_Sub1(this);
+        if (bool_1 || buildArea == null) {
+            buildArea = new Preference_Sub1(this);
         }
 
-        if (bool_1 || this.aPreference_Sub16_8198 == null) {
-            this.aPreference_Sub16_8198 = new Preference_Sub16(this);
+        if (bool_1 || aPreference_Sub16_8198 == null) {
+            aPreference_Sub16_8198 = new Preference_Sub16(this);
         }
 
-        if (bool_1 || this.flickeringEffects == null) {
-            this.flickeringEffects = new Preference_Sub26(this);
+        if (bool_1 || flickeringEffects == null) {
+            flickeringEffects = new Preference_Sub26(this);
         }
 
-        if (bool_1 || this.fog == null) {
-            this.fog = new FogPreference(this);
+        if (bool_1 || fog == null) {
+            fog = new FogPreference(this);
         }
 
-        if (bool_1 || this.groundBlending == null) {
-            this.groundBlending = new Preference_Sub17(this);
+        if (bool_1 || groundBlending == null) {
+            groundBlending = new Preference_Sub17(this);
         }
 
-        if (bool_1 || this.groundDecoration == null) {
-            this.groundDecoration = new GroundDecorationPreference(this);
+        if (bool_1 || groundDecor == null) {
+            groundDecor = new GroundDecorationPreference(this);
         }
 
-        if (bool_1 || this.idleAnimations == null) {
-            this.idleAnimations = new IdleAnimationsPreference(this);
+        if (bool_1 || idleAnimations == null) {
+            idleAnimations = new IdleAnimationsPreference(this);
         }
 
-        if (bool_1 || this.lightDetail == null) {
-            this.lightDetail = new LightDetailPreference(this);
+        if (bool_1 || lightDetail == null) {
+            lightDetail = new LightDetailPreference(this);
         }
 
-        if (bool_1 || this.sceneryShadows == null) {
-            this.sceneryShadows = new SceneryShadowPreference(this);
+        if (bool_1 || sceneryShadows == null) {
+            sceneryShadows = new SceneryShadowPreference(this);
         }
 
-        if (bool_1 || this.toolkitDefault == null) {
-            this.toolkitDefault = new Preference_Sub29(this);
+        if (bool_1 || toolkitDefault == null) {
+            toolkitDefault = new Preference_Sub29(this);
         }
 
-        if (bool_1 || this.particles == null) {
-            this.particles = new Preference_Sub20(this);
+        if (bool_1 || particles == null) {
+            particles = new Preference_Sub20(this);
         }
 
-        if (bool_1 || this.removeRoofs == null) {
-            this.removeRoofs = new Preference_Sub27(this);
+        if (bool_1 || removeRoofs == null) {
+            removeRoofs = new Preference_Sub27(this);
         }
 
-        if (bool_1 || this.removeRoofsOptionOverride == null) {
-            this.removeRoofsOptionOverride = new Preference_Sub27(this.removeRoofs.method12952((byte) 96), this);
+        if (bool_1 || removeRoofsOptionOverride == null) {
+            removeRoofsOptionOverride = new Preference_Sub27(removeRoofs.method12952(), this);
         }
 
-        if (bool_1 || this.maxScreenSize == null) {
-            this.maxScreenSize = new Preference_Sub7(this);
+        if (bool_1 || maxScreenSize == null) {
+            maxScreenSize = new Preference_Sub7(this);
         }
 
-        if (bool_1 || this.skyBoxes == null) {
-            this.skyBoxes = new Preference_Sub14(this);
+        if (bool_1 || skyBoxes == null) {
+            skyBoxes = new Preference_Sub14(this);
         }
 
-        if (bool_1 || this.characterShadows == null) {
-            this.characterShadows = new Preference_Sub28(this);
+        if (bool_1 || characterShadows == null) {
+            characterShadows = new Preference_Sub28(this);
         }
 
-        if (bool_1 || this.textures == null) {
-            this.textures = new TexturesPreference(this);
+        if (bool_1 || textures == null) {
+            textures = new TexturesPreference(this);
         }
 
-        if (bool_1 || this.toolKit == null) {
-            this.toolKit = new GraphicsToolkitPreference(this);
+        if (bool_1 || toolKit == null) {
+            toolKit = new GraphicsToolkitPreference(this);
         }
 
-        if (bool_1 || this.currentToolkit == null) {
-            this.currentToolkit = new GraphicsToolkitPreference(this.toolKit.getValue(-1125192103), this);
+        if (bool_1 || currentToolkit == null) {
+            currentToolkit = new GraphicsToolkitPreference(toolKit.getValue(), this);
         }
 
-        if (bool_1 || this.water == null) {
-            this.water = new WaterPreference(this);
+        if (bool_1 || water == null) {
+            water = new WaterPreference(this);
         }
 
-        if (bool_1 || this.screenSize == null) {
-            this.screenSize = new ScreenSizePreference(this);
+        if (bool_1 || screenSize == null) {
+            screenSize = new ScreenSizePreference(this);
         }
 
-        if (bool_1 || this.aPreference_Sub9_8218 == null) {
-            this.aPreference_Sub9_8218 = new ScreenSizePreference(this.screenSize.method12687(-1865727854), this);
+        if (bool_1 || aPreference_Sub9_8218 == null) {
+            aPreference_Sub9_8218 = new ScreenSizePreference(screenSize.method12687(), this);
         }
 
-        if (bool_1 || this.customCursors == null) {
-            this.customCursors = new CustomCursorsPreference(this);
+        if (bool_1 || customCursors == null) {
+            customCursors = new CustomCursorsPreference(this);
         }
 
-        if (bool_1 || this.graphics == null) {
-            this.graphics = new GraphicsPreference(this);
+        if (bool_1 || graphics == null) {
+            graphics = new GraphicsPreference(this);
         }
 
-        if (bool_1 || this.cpu == null) {
-            this.cpu = new CPUMaxMemoryPreference(this);
+        if (bool_1 || cpu == null) {
+            cpu = new CPUMaxMemoryPreference(this);
         }
 
-        if (bool_1 || this.aPreference_Sub11_8217 == null) {
-            this.aPreference_Sub11_8217 = new Preference_Sub11(this);
+        if (bool_1 || aPreference_Sub11_8217 == null) {
+            aPreference_Sub11_8217 = new Preference_Sub11(this);
         }
 
-        if (bool_1 || this.safeMode == null) {
-            this.safeMode = new SafeModePreference(this);
+        if (bool_1 || safeMode == null) {
+            safeMode = new SafeModePreference(this);
         }
 
-        if (bool_1 || this.aPreference_Sub3_8199 == null) {
-            this.aPreference_Sub3_8199 = new Preference_Sub3(this);
+        if (bool_1 || aPreference_Sub3_8199 == null) {
+            aPreference_Sub3_8199 = new Preference_Sub3(this);
         }
 
-        if (bool_1 || this.soundEffectVolume == null) {
-            this.soundEffectVolume = new SoundLevelPreference(this);
+        if (bool_1 || soundEffectVolume == null) {
+            soundEffectVolume = new SoundLevelPreference(this);
         }
 
-        if (bool_1 || this.ambientSoundVolume == null) {
-            this.ambientSoundVolume = new SoundLevelPreference(this);
+        if (bool_1 || ambientSoundVolume == null) {
+            ambientSoundVolume = new SoundLevelPreference(this);
         }
 
-        if (bool_1 || this.voiceOverVolume == null) {
-            this.voiceOverVolume = new SoundLevelPreference(this);
+        if (bool_1 || voiceOverVolume == null) {
+            voiceOverVolume = new SoundLevelPreference(this);
         }
 
-        if (bool_1 || this.musicVolume == null) {
-            this.musicVolume = new SoundLevelPreference(this);
+        if (bool_1 || musicVolume == null) {
+            musicVolume = new SoundLevelPreference(this);
         }
 
-        if (bool_1 || this.aPreference_Sub13_8229 == null) {
-            this.aPreference_Sub13_8229 = new SoundLevelPreference(this);
+        if (bool_1 || aPreference_Sub13_8229 == null) {
+            aPreference_Sub13_8229 = new SoundLevelPreference(this);
         }
 
-        if (bool_1 || this.monoStereo == null) {
-            this.monoStereo = new MonoStereoPreference(this);
+        if (bool_1 || monoStereo == null) {
+            monoStereo = new MonoStereoPreference(this);
         }
 
     }
 
-    void method13498(RsByteBuffer rsbytebuffer_1, int i_2) {
-        this.brightness = new BrightnessPreference(rsbytebuffer_1.readUnsignedByte(), this);
+    void method13498(Packet rsbytebuffer_1, int i_2) {
+        brightness = new BrightnessPreference(rsbytebuffer_1.readUnsignedByte(), this);
         ++rsbytebuffer_1.index;
-        this.removeRoofs = new Preference_Sub27(rsbytebuffer_1.readUnsignedByte() + 1, this);
-        this.groundDecoration = new GroundDecorationPreference(rsbytebuffer_1.readUnsignedByte(), this);
+        removeRoofs = new Preference_Sub27(rsbytebuffer_1.readUnsignedByte() + 1, this);
+        groundDecor = new GroundDecorationPreference(rsbytebuffer_1.readUnsignedByte(), this);
         ++rsbytebuffer_1.index;
-        this.idleAnimations = new IdleAnimationsPreference(rsbytebuffer_1.readUnsignedByte(), this);
-        this.flickeringEffects = new Preference_Sub26(rsbytebuffer_1.readUnsignedByte(), this);
+        idleAnimations = new IdleAnimationsPreference(rsbytebuffer_1.readUnsignedByte(), this);
+        flickeringEffects = new Preference_Sub26(rsbytebuffer_1.readUnsignedByte(), this);
         rsbytebuffer_1.readUnsignedByte();
-        this.characterShadows = new Preference_Sub28(rsbytebuffer_1.readUnsignedByte(), this);
+        characterShadows = new Preference_Sub28(rsbytebuffer_1.readUnsignedByte(), this);
         int i_4 = rsbytebuffer_1.readUnsignedByte();
         int i_5 = 0;
         if (i_2 >= 17) {
             i_5 = rsbytebuffer_1.readUnsignedByte();
         }
 
-        this.sceneryShadows = new SceneryShadowPreference(i_4 > i_5 ? i_4 : i_5, this);
+        sceneryShadows = new SceneryShadowPreference(Math.max(i_4, i_5), this);
         boolean bool_6 = true;
         boolean bool_7 = true;
         if (i_2 >= 2) {
@@ -312,24 +319,24 @@ public class GamePreferences extends Node {
             rsbytebuffer_1.readUnsignedByte();
         }
 
-        this.lightDetail = new LightDetailPreference(bool_6 | bool_7 ? 1 : 0, this);
-        this.water = new WaterPreference(rsbytebuffer_1.readUnsignedByte(), this);
-        this.fog = new FogPreference(rsbytebuffer_1.readUnsignedByte(), this);
-        this.antiAliasingDefault = new Preference_Sub4(rsbytebuffer_1.readUnsignedByte(), this);
-        this.monoStereo = new MonoStereoPreference(rsbytebuffer_1.readUnsignedByte(), this);
-        this.soundEffectVolume = new SoundLevelPreference(rsbytebuffer_1.readUnsignedByte(), this);
+        lightDetail = new LightDetailPreference(bool_6 | bool_7 ? 1 : 0, this);
+        water = new WaterPreference(rsbytebuffer_1.readUnsignedByte(), this);
+        fog = new FogPreference(rsbytebuffer_1.readUnsignedByte(), this);
+        antiAliasingDefault = new Preference_Sub4(rsbytebuffer_1.readUnsignedByte(), this);
+        monoStereo = new MonoStereoPreference(rsbytebuffer_1.readUnsignedByte(), this);
+        soundEffectVolume = new SoundLevelPreference(rsbytebuffer_1.readUnsignedByte(), this);
         if (i_2 >= 20) {
-            this.voiceOverVolume = new SoundLevelPreference(rsbytebuffer_1.readUnsignedByte(), this);
+            voiceOverVolume = new SoundLevelPreference(rsbytebuffer_1.readUnsignedByte(), this);
         } else {
-            this.voiceOverVolume = new SoundLevelPreference(this.soundEffectVolume.method12714(), this);
+            voiceOverVolume = new SoundLevelPreference(soundEffectVolume.method12714(), this);
         }
 
-        this.musicVolume = new SoundLevelPreference(rsbytebuffer_1.readUnsignedByte(), this);
-        this.ambientSoundVolume = new SoundLevelPreference(rsbytebuffer_1.readUnsignedByte(), this);
+        musicVolume = new SoundLevelPreference(rsbytebuffer_1.readUnsignedByte(), this);
+        ambientSoundVolume = new SoundLevelPreference(rsbytebuffer_1.readUnsignedByte(), this);
         if (i_2 >= 21) {
-            this.aPreference_Sub13_8229 = new SoundLevelPreference(rsbytebuffer_1.readUnsignedByte(), this);
+            aPreference_Sub13_8229 = new SoundLevelPreference(rsbytebuffer_1.readUnsignedByte(), this);
         } else {
-            this.aPreference_Sub13_8229 = new SoundLevelPreference(this.musicVolume.method12714(), this);
+            aPreference_Sub13_8229 = new SoundLevelPreference(musicVolume.method12714(), this);
         }
 
         if (i_2 >= 1) {
@@ -342,16 +349,16 @@ public class GamePreferences extends Node {
         }
 
         if (i_2 >= 4) {
-            this.particles = new Preference_Sub20(rsbytebuffer_1.readUnsignedByte(), this);
+            particles = new Preference_Sub20(rsbytebuffer_1.readUnsignedByte(), this);
         }
 
         rsbytebuffer_1.readInt();
         if (i_2 >= 6) {
-            this.screenSize = new ScreenSizePreference(rsbytebuffer_1.readUnsignedByte(), this);
+            screenSize = new ScreenSizePreference(rsbytebuffer_1.readUnsignedByte(), this);
         }
 
         if (i_2 >= 7) {
-            this.safeMode = new SafeModePreference(rsbytebuffer_1.readUnsignedByte(), this);
+            safeMode = new SafeModePreference(rsbytebuffer_1.readUnsignedByte(), this);
         }
 
         if (i_2 >= 8) {
@@ -359,192 +366,185 @@ public class GamePreferences extends Node {
         }
 
         if (i_2 >= 9) {
-            this.buildArea = new Preference_Sub1(rsbytebuffer_1.readUnsignedByte(), this);
+            buildArea = new Preference_Sub1(rsbytebuffer_1.readUnsignedByte(), this);
         }
 
         if (i_2 >= 10) {
-            this.bloom = new BloomPreference(rsbytebuffer_1.readUnsignedByte(), this);
+            bloom = new BloomPreference(rsbytebuffer_1.readUnsignedByte(), this);
         }
 
         if (i_2 >= 11) {
-            this.customCursors = new CustomCursorsPreference(rsbytebuffer_1.readUnsignedByte(), this);
+            customCursors = new CustomCursorsPreference(this);
         }
 
         if (i_2 >= 12) {
-            this.idleAnimations = new IdleAnimationsPreference(rsbytebuffer_1.readUnsignedByte(), this);
+            idleAnimations = new IdleAnimationsPreference(rsbytebuffer_1.readUnsignedByte(), this);
         }
 
         if (i_2 >= 13) {
-            this.groundBlending = new Preference_Sub17(rsbytebuffer_1.readUnsignedByte(), this);
+            groundBlending = new Preference_Sub17(rsbytebuffer_1.readUnsignedByte(), this);
         }
 
         if (i_2 >= 14) {
-            this.toolKit = new GraphicsToolkitPreference(rsbytebuffer_1.readUnsignedByte(), this);
+            toolKit = new GraphicsToolkitPreference(rsbytebuffer_1.readUnsignedByte(), this);
         }
 
         if (i_2 >= 15) {
-            this.cpu = new CPUMaxMemoryPreference(rsbytebuffer_1.readUnsignedByte(), this);
+            cpu = new CPUMaxMemoryPreference(rsbytebuffer_1.readUnsignedByte(), this);
         }
 
         if (i_2 >= 16) {
-            this.textures = new TexturesPreference(rsbytebuffer_1.readUnsignedByte(), this);
+            textures = new TexturesPreference(rsbytebuffer_1.readUnsignedByte(), this);
         }
 
         if (i_2 >= 18) {
-            this.graphics = new GraphicsPreference(rsbytebuffer_1.readUnsignedByte(), this);
+            graphics = new GraphicsPreference(rsbytebuffer_1.readUnsignedByte(), this);
         }
 
         if (i_2 >= 19) {
-            this.maxScreenSize = new Preference_Sub7(rsbytebuffer_1.readUnsignedByte(), this);
+            maxScreenSize = new Preference_Sub7(rsbytebuffer_1.readUnsignedByte(), this);
         }
 
         if (i_2 >= 22) {
-            this.aPreference_Sub11_8217 = new Preference_Sub11(rsbytebuffer_1.readUnsignedByte(), this);
+            aPreference_Sub11_8217 = new Preference_Sub11(rsbytebuffer_1.readUnsignedByte(), this);
         }
 
     }
 
-    public RsByteBuffer encode() {
-        RsByteBuffer rsbytebuffer_2 = new RsByteBuffer(40);
+    public Packet encode() {
+        Packet rsbytebuffer_2 = new Packet(40);
         /*0*/
         rsbytebuffer_2.writeByte(27);
         /*1*/
-        rsbytebuffer_2.writeByte(this.antiAliasingDefault.method12641(1497480561));
+        rsbytebuffer_2.writeByte(antiAliasingDefault.method12641());
         /*2*/
-        rsbytebuffer_2.writeByte(this.bloom.method12706((byte) 95));
+        rsbytebuffer_2.writeByte(bloom.method12706());
         /*3*/
-        rsbytebuffer_2.writeByte(this.brightness.method12865());
+        rsbytebuffer_2.writeByte(brightness.method12865());
         /*4*/
-        rsbytebuffer_2.writeByte(this.buildArea.method12615(-462784918));
+        rsbytebuffer_2.writeByte(buildArea.method12615());
         /*5*/
-        rsbytebuffer_2.writeByte(this.aPreference_Sub16_8198.method12750());
+        rsbytebuffer_2.writeByte(aPreference_Sub16_8198.method12750());
         /*6*/
-        rsbytebuffer_2.writeByte(this.flickeringEffects.method12943(975799184));
+        rsbytebuffer_2.writeByte(flickeringEffects.method12943());
         /*7*/
-        rsbytebuffer_2.writeByte(this.fog.method13417(-1899817216));
+        rsbytebuffer_2.writeByte(fog.method13417());
         /*8*/
-        rsbytebuffer_2.writeByte(this.groundBlending.method12762(-140573));
+        rsbytebuffer_2.writeByte(groundBlending.method12762());
         /*9*/
-        rsbytebuffer_2.writeByte(this.groundDecoration.method12897((byte) 75));
+        rsbytebuffer_2.writeByte(groundDecor.method12897());
         /*10*/
-        rsbytebuffer_2.writeByte(this.idleAnimations.getValue());
+        rsbytebuffer_2.writeByte(idleAnimations.getValue());
         /*11*/
-        rsbytebuffer_2.writeByte(this.lightDetail.method12786());
+        rsbytebuffer_2.writeByte(lightDetail.method12786());
         /*12*/
-        rsbytebuffer_2.writeByte(this.sceneryShadows.method12624((byte) -37));
+        rsbytebuffer_2.writeByte(sceneryShadows.method12624());
         /*13*/
-        rsbytebuffer_2.writeByte(this.toolkitDefault.method13050());
+        rsbytebuffer_2.writeByte(toolkitDefault.method13050());
         /*14*/
-        rsbytebuffer_2.writeByte(this.particles.method12794());
+        rsbytebuffer_2.writeByte(particles.method12794());
         /*15*/
-        rsbytebuffer_2.writeByte(this.removeRoofs.method12952((byte) 121));
+        rsbytebuffer_2.writeByte(removeRoofs.method12952());
         /*16*/
-        rsbytebuffer_2.writeByte(this.maxScreenSize.method12666(141061966));
+        rsbytebuffer_2.writeByte(maxScreenSize.method12666());
         /*17*/
-        rsbytebuffer_2.writeByte(this.skyBoxes.method12728());
+        rsbytebuffer_2.writeByte(skyBoxes.method12728());
         /*18*/
-        rsbytebuffer_2.writeByte(this.characterShadows.method12966((byte) -41));
+        rsbytebuffer_2.writeByte(characterShadows.method12966());
         /*19*/
-        rsbytebuffer_2.writeByte(this.textures.method12873(2145197376));
+        rsbytebuffer_2.writeByte(textures.method12873());
         /*20*/
-        rsbytebuffer_2.writeByte(this.toolKit.getValue(-120460114));
+        rsbytebuffer_2.writeByte(toolKit.getValue());
         /*21*/
         rsbytebuffer_2.writeByte(0);
         /*22*/
-        rsbytebuffer_2.writeByte(this.water.getValue());
+        rsbytebuffer_2.writeByte(water.getValue());
         /*23*/
-        rsbytebuffer_2.writeByte(this.screenSize.method12687(416506379));
+        rsbytebuffer_2.writeByte(screenSize.method12687());
         /*24*/
-        rsbytebuffer_2.writeByte(this.customCursors.method12675());
+        rsbytebuffer_2.writeByte(customCursors.method12675());
         /*25*/
-        rsbytebuffer_2.writeByte(this.graphics.method12654());
+        rsbytebuffer_2.writeByte(graphics.method12654());
         /*26*/
-        rsbytebuffer_2.writeByte(this.cpu.getValue());
+        rsbytebuffer_2.writeByte(cpu.getValue());
         /*27*/
-        rsbytebuffer_2.writeByte(this.aPreference_Sub11_8217.method12699((byte) -71));
+        rsbytebuffer_2.writeByte(aPreference_Sub11_8217.method12699());
         /*28*/
-        rsbytebuffer_2.writeByte(this.safeMode.getValue((byte) -54));
+        rsbytebuffer_2.writeByte(safeMode.getValue());
         /*29*/
-        rsbytebuffer_2.writeByte(this.aPreference_Sub3_8199.method12632(793302253));
+        rsbytebuffer_2.writeByte(aPreference_Sub3_8199.method12632());
         /*30*/
-        rsbytebuffer_2.writeByte(this.soundEffectVolume.method12714());
+        rsbytebuffer_2.writeByte(soundEffectVolume.method12714());
         /*31*/
-        rsbytebuffer_2.writeByte(this.ambientSoundVolume.method12714());
+        rsbytebuffer_2.writeByte(ambientSoundVolume.method12714());
         /*32*/
-        rsbytebuffer_2.writeByte(this.voiceOverVolume.method12714());
+        rsbytebuffer_2.writeByte(voiceOverVolume.method12714());
         /*33*/
-        rsbytebuffer_2.writeByte(this.musicVolume.method12714());
+        rsbytebuffer_2.writeByte(musicVolume.method12714());
         /*34*/
-        rsbytebuffer_2.writeByte(this.aPreference_Sub13_8229.method12714());
+        rsbytebuffer_2.writeByte(aPreference_Sub13_8229.method12714());
         /*35*/
-        rsbytebuffer_2.writeByte(this.monoStereo.method12691(-1240240085));
+        rsbytebuffer_2.writeByte(monoStereo.method12691());
         return rsbytebuffer_2;
     }
 
     void method13502() {
-        this.antiAliasingDefault.method12639((byte) -35);
-        this.aPreference_Sub4_8223.method12639((byte) -23);
-        this.bloom.method12703();
-        this.brightness.method12861();
-        this.buildArea.method12616();
-        this.aPreference_Sub16_8198.method12749();
-        this.flickeringEffects.method12941();
-        this.fog.method13415();
-        this.groundBlending.method12767();
-        this.groundDecoration.method12898();
-        this.idleAnimations.method12741();
-        this.lightDetail.method12785();
-        this.sceneryShadows.method12627();
-        this.toolkitDefault.method13048();
-        this.particles.method12793();
-        this.removeRoofs.method12950(1301389562);
-        this.removeRoofsOptionOverride.method12950(221369371);
-        this.maxScreenSize.method12663();
-        this.skyBoxes.method12725();
-        this.characterShadows.method12959();
-        this.textures.method12871();
-        this.toolKit.method12773(-132030593);
-        this.currentToolkit.method12773(-1630198990);
-        this.water.method12918();
-        this.screenSize.method12684((byte) -10);
-        this.aPreference_Sub9_8218.method12684((byte) 105);
-        this.customCursors.method12674();
-        this.graphics.method12653();
-        this.cpu.method12648();
-        this.aPreference_Sub11_8217.method12698();
-        this.safeMode.method12928();
-        this.aPreference_Sub3_8199.method12631();
-        this.soundEffectVolume.method12712((byte) 114);
-        this.ambientSoundVolume.method12712((byte) 41);
-        this.voiceOverVolume.method12712((byte) 85);
-        this.musicVolume.method12712((byte) 78);
-        this.aPreference_Sub13_8229.method12712((byte) 16);
-        this.monoStereo.method12692();
+        antiAliasingDefault.method12639();
+        aPreference_Sub4_8223.method12639();
+        bloom.method12703();
+        brightness.method12861();
+        buildArea.method12616();
+        aPreference_Sub16_8198.method12749();
+        flickeringEffects.method12941();
+        fog.method13415();
+        groundBlending.method12767();
+        groundDecor.method12898();
+        idleAnimations.method12741();
+        lightDetail.method12785();
+        sceneryShadows.method12627();
+        toolkitDefault.method13048();
+        particles.method12793();
+        removeRoofs.method12950();
+        removeRoofsOptionOverride.method12950();
+        maxScreenSize.method12663();
+        skyBoxes.method12725();
+        characterShadows.method12959();
+        textures.method12871();
+        toolKit.method12773();
+        currentToolkit.method12773();
+        water.method12918();
+        screenSize.method12684();
+        aPreference_Sub9_8218.method12684();
+        customCursors.method12674();
+        graphics.method12653();
+        cpu.method12648();
+        aPreference_Sub11_8217.method12698();
+        safeMode.method12928();
+        aPreference_Sub3_8199.method12631();
+        soundEffectVolume.method12712();
+        ambientSoundVolume.method12712();
+        voiceOverVolume.method12712();
+        musicVolume.method12712();
+        aPreference_Sub13_8229.method12712();
+        monoStereo.method12692();
     }
 
     public ProcessorSpecs getProcessorSpecs() {
-        return this.processorSpecs;
+        return processorSpecs;
     }
 
-    public void method13505(GraphicsToolkitPreference class468_sub18_1, boolean bool_2, int i_3) {
+    public void method13505(GraphicsToolkitPreference class468_sub18_1, boolean bool_2) {
         class468_sub18_1.method12783(bool_2);
-        this.method13502();
-    }
-
-    public GamePreferences(Game game_1) {
-        this.game = game_1;
-        this.processorSpecs = new ProcessorSpecs(Engine.MAX_MEMORY, Engine.AVAILABLE_PROCESSORS, Class402.aString4828.toLowerCase().indexOf("arm") != -1);
-        this.currentToolkit = new GraphicsToolkitPreference(0, this);
-        this.method13497(true, 311350524);
+        method13502();
     }
 
     public void setValue(Preference class468_1, int i_2) {
         class468_1.setPref(i_2);
-        this.method13502();
+        method13502();
     }
 
     public Game getGame() {
-        return this.game;
+        return game;
     }
 
 }

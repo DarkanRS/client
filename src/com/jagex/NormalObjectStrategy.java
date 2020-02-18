@@ -1,92 +1,90 @@
 package com.jagex;
 
+import java.util.Calendar;
+
 public class NormalObjectStrategy extends RouteStrategy {
 
     int anInt7971;
-    SceneObjectType aClass458_7972;
+    LocShapes aClass458_7972;
 
-    public boolean canExit(int i_1, int i_2, int i_3, ClipMap clipmap_4) {
-        return clipmap_4.method5986(i_2, i_3, i_1, this.approxDestinationX, this.approxDestinationY, this.aClass458_7972.getValue(), this.anInt7971, (short) -26880);
-    }
-
-    static void method13042(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
+    static void method13042(AbstractRenderer graphicalrenderer_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
         SceneObjectManager sceneobjectmanager_9 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager();
-        SceneObject sceneobject_10 = (SceneObject) sceneobjectmanager_9.getWall(i_1, i_2, i_3, (byte) -80);
-        ObjectDefinitions objectdefinitions_11;
+        Location sceneobject_10 = (Location) sceneobjectmanager_9.getWall(i_1, i_2, i_3);
+        LocType objectdefinitions_11;
         int i_12;
         int i_13;
         int i_14;
         if (sceneobject_10 != null) {
-            objectdefinitions_11 = IndexLoaders.MAP_REGION_DECODER.method4436().getObjectDefinitions(sceneobject_10.getId(1992951281));
-            i_12 = sceneobject_10.method92(-401484615) & 0x3;
-            i_13 = sceneobject_10.method89(2041579125);
+            objectdefinitions_11 = IndexLoaders.MAP_REGION_DECODER.method4436().getLocType(sceneobject_10.getId());
+            i_12 = sceneobject_10.method92() & 0x3;
+            i_13 = sceneobject_10.method89();
             if (objectdefinitions_11.mapSpriteId != -1) {
-                VarcDefinitions.method6997(graphicalrenderer_0, objectdefinitions_11, i_12, i_4, i_5, -1222879504);
+                VarcDefinitions.method6997(graphicalrenderer_0, objectdefinitions_11, i_12, i_4, i_5);
             } else {
                 i_14 = i_6;
                 if (objectdefinitions_11.interactable > 0) {
                     i_14 = i_7;
                 }
-                if (i_13 == SceneObjectType.WALL_STRAIGHT.type || i_13 == SceneObjectType.WALL_WHOLE_CORNER.type) {
+                if (i_13 == LocShapes.WALL_STRAIGHT.type || i_13 == LocShapes.WALL_WHOLE_CORNER.type) {
                     if (i_12 == 0) {
                         graphicalrenderer_0.method8428(i_4, i_5, 4, i_14);
                     } else if (i_12 == 1) {
-                        graphicalrenderer_0.method8659(i_4, i_5, 4, i_14, 2123988868);
+                        graphicalrenderer_0.method8659(i_4, i_5, 4, i_14);
                     } else if (i_12 == 2) {
                         graphicalrenderer_0.method8428(i_4 + 3, i_5, 4, i_14);
                     } else if (i_12 == 3) {
-                        graphicalrenderer_0.method8659(i_4, i_5 + 3, 4, i_14, -1272168357);
+                        graphicalrenderer_0.method8659(i_4, i_5 + 3, 4, i_14);
                     }
                 }
-                if (i_13 == SceneObjectType.WALL_STRAIGHT_CORNER.type) {
+                if (i_13 == LocShapes.WALL_STRAIGHT_CORNER.type) {
                     if (i_12 == 0) {
-                        graphicalrenderer_0.method8425(i_4, i_5, 1, 1, i_14, (byte) -113);
+                        graphicalrenderer_0.method8425(i_4, i_5, 1, 1, i_14);
                     } else if (i_12 == 1) {
-                        graphicalrenderer_0.method8425(i_4 + 3, i_5, 1, 1, i_14, (byte) -40);
+                        graphicalrenderer_0.method8425(i_4 + 3, i_5, 1, 1, i_14);
                     } else if (i_12 == 2) {
-                        graphicalrenderer_0.method8425(i_4 + 3, i_5 + 3, 1, 1, i_14, (byte) -91);
+                        graphicalrenderer_0.method8425(i_4 + 3, i_5 + 3, 1, 1, i_14);
                     } else if (i_12 == 3) {
-                        graphicalrenderer_0.method8425(i_4, i_5 + 3, 1, 1, i_14, (byte) -29);
+                        graphicalrenderer_0.method8425(i_4, i_5 + 3, 1, 1, i_14);
                     }
                 }
-                if (i_13 == SceneObjectType.WALL_WHOLE_CORNER.type) {
+                if (i_13 == LocShapes.WALL_WHOLE_CORNER.type) {
                     if (i_12 == 0) {
-                        graphicalrenderer_0.method8659(i_4, i_5, 4, i_14, 1526236522);
+                        graphicalrenderer_0.method8659(i_4, i_5, 4, i_14);
                     } else if (i_12 == 1) {
                         graphicalrenderer_0.method8428(i_4 + 3, i_5, 4, i_14);
                     } else if (i_12 == 2) {
-                        graphicalrenderer_0.method8659(i_4, i_5 + 3, 4, i_14, 1687799163);
+                        graphicalrenderer_0.method8659(i_4, i_5 + 3, 4, i_14);
                     } else if (i_12 == 3) {
                         graphicalrenderer_0.method8428(i_4, i_5, 4, i_14);
                     }
                 }
             }
         }
-        sceneobject_10 = (SceneObject) sceneobjectmanager_9.getInteractableObject(i_1, i_2, i_3, client.anInterface25_7446);
+        sceneobject_10 = (Location) sceneobjectmanager_9.getInteractableObject(i_1, i_2, i_3, client.anInterface25_7446);
         if (sceneobject_10 != null) {
-            objectdefinitions_11 = IndexLoaders.MAP_REGION_DECODER.method4436().getObjectDefinitions(sceneobject_10.getId(281132177));
-            i_12 = sceneobject_10.method92(-763690677) & 0x3;
-            i_13 = sceneobject_10.method89(1162036783);
+            objectdefinitions_11 = IndexLoaders.MAP_REGION_DECODER.method4436().getLocType(sceneobject_10.getId());
+            i_12 = sceneobject_10.method92() & 0x3;
+            i_13 = sceneobject_10.method89();
             if (objectdefinitions_11.mapSpriteId != -1) {
-                VarcDefinitions.method6997(graphicalrenderer_0, objectdefinitions_11, i_12, i_4, i_5, 1089913418);
-            } else if (i_13 == SceneObjectType.WALL_INTERACT.type) {
+                VarcDefinitions.method6997(graphicalrenderer_0, objectdefinitions_11, i_12, i_4, i_5);
+            } else if (i_13 == LocShapes.WALL_INTERACT.type) {
                 i_14 = -1118482;
                 if (objectdefinitions_11.interactable > 0) {
                     i_14 = -1179648;
                 }
                 if (i_12 != 0 && i_12 != 2) {
-                    graphicalrenderer_0.method8429(i_4, i_5, i_4 + 3, i_5 + 3, i_14, (byte) -70);
+                    graphicalrenderer_0.method8429(i_4, i_5, i_4 + 3, i_5 + 3, i_14);
                 } else {
-                    graphicalrenderer_0.method8429(i_4, i_5 + 3, i_4 + 3, i_5, i_14, (byte) 75);
+                    graphicalrenderer_0.method8429(i_4, i_5 + 3, i_4 + 3, i_5, i_14);
                 }
             }
         }
-        sceneobject_10 = (SceneObject) sceneobjectmanager_9.getGroundDecoration(i_1, i_2, i_3);
+        sceneobject_10 = (Location) sceneobjectmanager_9.getGroundDecoration(i_1, i_2, i_3);
         if (sceneobject_10 != null) {
-            objectdefinitions_11 = IndexLoaders.MAP_REGION_DECODER.method4436().getObjectDefinitions(sceneobject_10.getId(-1741343457));
-            i_12 = sceneobject_10.method92(-1014923705) & 0x3;
+            objectdefinitions_11 = IndexLoaders.MAP_REGION_DECODER.method4436().getLocType(sceneobject_10.getId());
+            i_12 = sceneobject_10.method92() & 0x3;
             if (objectdefinitions_11.mapSpriteId != -1) {
-                VarcDefinitions.method6997(graphicalrenderer_0, objectdefinitions_11, i_12, i_4, i_5, 1254236729);
+                VarcDefinitions.method6997(graphicalrenderer_0, objectdefinitions_11, i_12, i_4, i_5);
             }
         }
     }
@@ -103,10 +101,10 @@ public class NormalObjectStrategy extends RouteStrategy {
 
     public static String method13045(long long_0, int i_2) {
         Class155.method2634(long_0);
-        int i_4 = Class407.aCalendar4848.get(5);
-        int i_5 = Class407.aCalendar4848.get(2);
-        int i_6 = Class407.aCalendar4848.get(1);
-        return i_2 == 3 ? CutsceneEntityMovement.method1578(long_0, i_2) : Integer.toString(i_4 / 10) + i_4 % 10 + "-" + Class407.aStringArrayArray4849[i_2][i_5] + "-" + i_6;
+        int i_4 = Class407.aCalendar4848.get(Calendar.DATE);
+        int i_5 = Class407.aCalendar4848.get(Calendar.MONTH);
+        int i_6 = Class407.aCalendar4848.get(Calendar.YEAR);
+        return i_2 == 3 ? CutsceneEntityMovement.method1578(long_0) : Integer.toString(i_4 / 10) + i_4 % 10 + "-" + Class407.aStringArrayArray4849[i_2][i_5] + "-" + i_6;
     }
 
     public static void method13047(int[] ints_0, int[] ints_1, int i_2, int i_3) {
@@ -137,5 +135,10 @@ public class NormalObjectStrategy extends RouteStrategy {
             method13047(ints_0, ints_1, i_2, i_6 - 1);
             method13047(ints_0, ints_1, i_6 + 1, i_3);
         }
+    }
+
+    @Override
+    public boolean canExit(int i_1, int i_2, int i_3, ClipMap clipmap_4) {
+        return clipmap_4.method5986(i_2, i_3, i_1, approxDestinationX, approxDestinationY, aClass458_7972.getValue(), anInt7971);
     }
 }

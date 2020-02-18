@@ -4,26 +4,21 @@ import java.awt.datatransfer.Clipboard;
 
 public class Class182 {
 
-    static GraphicalRenderer HARDWARE_RENDERER;
-
-    static FontRenderer aFontRenderer_2259;
-
     public static NativeSprite[] aNativeSpriteArray2261;
-
     public static int anInt2262;
-
     public static Clipboard aClipboard2263;
-
+    static AbstractRenderer HARDWARE_RENDERER;
+    static FontRenderer aFontRenderer_2259;
     static NodeCollection ITEMS = new NodeCollection();
 
     Class182() throws Throwable {
         throw new Error();
     }
 
-    public static BuildEnvironment method3040(int i_0, byte b_1) {
-        BuildEnvironment[] arr_2 = EntityNode_Sub6.method12598();
+    public static ModeWhere method3040(int i_0) {
+        ModeWhere[] arr_2 = EntityNode_Sub6.method12598();
         for (int i_3 = 0; i_3 < arr_2.length; i_3++) {
-            BuildEnvironment class472_4 = arr_2[i_3];
+            ModeWhere class472_4 = arr_2[i_3];
             if (i_0 == class472_4.id) {
                 return class472_4;
             }

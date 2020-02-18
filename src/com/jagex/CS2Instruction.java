@@ -1018,13 +1018,8 @@ public enum CS2Instruction {
         }
     }
 
-    public static CS2Instruction getByOpcode(int id) {
-        return OPCODES.get(id);
-    }
-
-    public int opcode;
-    public boolean hasIntConstant;
-
+    public final int opcode;
+    public final boolean hasIntConstant;
     CS2Instruction(int opcode) {
         this(opcode, false);
     }
@@ -1032,6 +1027,10 @@ public enum CS2Instruction {
     CS2Instruction(int opcode, boolean hasIntConstant) {
         this.opcode = opcode;
         this.hasIntConstant = hasIntConstant;
+    }
+
+    public static CS2Instruction getByOpcode(int id) {
+        return OPCODES.get(id);
     }
 
     public int getOpcode() {

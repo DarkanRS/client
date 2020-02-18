@@ -19,7 +19,7 @@ public class Class497 {
             int i_10 = long_7 == Long.MAX_VALUE ? 0 : 1;
 
             for (int i_11 = i_2; i_11 < i_3; i_11++) {
-                if (longs_0[i_11] < (long) (i_11 & i_10) + long_7) {
+                if (longs_0[i_11] < (i_11 & i_10) + long_7) {
                     long long_12 = longs_0[i_11];
                     longs_0[i_11] = longs_0[i_6];
                     longs_0[i_6] = long_12;

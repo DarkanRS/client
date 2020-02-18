@@ -2,7 +2,7 @@ package com.jagex;
 
 public class CS2Script extends CacheableNode {
 
-    public CS2HookEventType aClass397_9527;
+    public ClientTriggerType aClass397_9527;
     public int intLocalsCount;
     public int stringLocalsCount;
     public int longLocalsCount;
@@ -16,18 +16,18 @@ public class CS2Script extends CacheableNode {
     public int[] intOpValues;
     public long[] longOpValues;
 
-    public CS2Script(RsByteBuffer rsbytebuffer_1) {
-        int i_2 = this.decodeHeader(rsbytebuffer_1);
+    public CS2Script(Packet rsbytebuffer_1) {
+        int i_2 = decodeHeader(rsbytebuffer_1);
         int i_3 = 0;
 
         for (; rsbytebuffer_1.index < i_2; i_3++) {
-            CS2Instruction cs2opinfo_5 = this.getOpcode(rsbytebuffer_1);
-            this.decodeInstruction(rsbytebuffer_1, i_3, cs2opinfo_5);
+            CS2Instruction cs2opinfo_5 = getOpcode(rsbytebuffer_1);
+            decodeInstruction(rsbytebuffer_1, i_3, cs2opinfo_5);
         }
 
     }
 
-    CS2Instruction getOpcode(RsByteBuffer rsbytebuffer_1) {
+    CS2Instruction getOpcode(Packet rsbytebuffer_1) {
         int i_3 = rsbytebuffer_1.readUnsignedShort();
         CS2Instruction operation = CS2Instruction.getByOpcode(i_3);
         if (operation != null) {
@@ -37,26 +37,26 @@ public class CS2Script extends CacheableNode {
         }
     }
 
-    int decodeHeader(RsByteBuffer stream) {
+    int decodeHeader(Packet stream) {
         stream.index = stream.buffer.length - 2;
         int i_2 = stream.readUnsignedShort();
         int i_3 = stream.buffer.length - 2 - i_2 - 16;
         stream.index = i_3;
         int i_4 = stream.readInt();
-        this.intLocalsCount = stream.readUnsignedShort();
-        this.stringLocalsCount = stream.readUnsignedShort();
-        this.longLocalsCount = stream.readUnsignedShort();
-        this.intArgsCount = stream.readUnsignedShort();
-        this.stringArgsCount = stream.readUnsignedShort();
-        this.longArgsCount = stream.readUnsignedShort();
+        intLocalsCount = stream.readUnsignedShort();
+        stringLocalsCount = stream.readUnsignedShort();
+        longLocalsCount = stream.readUnsignedShort();
+        intArgsCount = stream.readUnsignedShort();
+        stringArgsCount = stream.readUnsignedShort();
+        longArgsCount = stream.readUnsignedShort();
         int i_5 = stream.readUnsignedByte();
         if (i_5 > 0) {
-            this.switchMaps = new IterableNodeMap[i_5];
+            switchMaps = new IterableNodeMap[i_5];
 
             for (int i_6 = 0; i_6 < i_5; i_6++) {
                 int i_7 = stream.readUnsignedShort();
                 IterableNodeMap iterablenodemap_8 = new IterableNodeMap(Utils.nextPowerOfTwo(i_7));
-                this.switchMaps[i_6] = iterablenodemap_8;
+                switchMaps[i_6] = iterablenodemap_8;
 
                 while (i_7-- > 0) {
                     int i_9 = stream.readInt();
@@ -67,16 +67,16 @@ public class CS2Script extends CacheableNode {
         }
 
         stream.index = 0;
-        this.scriptName = stream.readNullString();
-        this.operations = new CS2Instruction[i_4];
+        scriptName = stream.readNullString();
+        operations = new CS2Instruction[i_4];
         return i_3;
     }
 
-    void decodeInstruction(RsByteBuffer rsbytebuffer_1, int i_2, CS2Instruction cs2opinfo_3) {
-        int i_4 = this.operations.length;
+    void decodeInstruction(Packet rsbytebuffer_1, int i_2, CS2Instruction cs2opinfo_3) {
+        int i_4 = operations.length;
         if (cs2opinfo_3 == CS2Instruction.PUSH_STRING) {
-            if (this.stringOpValues == null) {
-                this.stringOpValues = new String[i_4];
+            if (stringOpValues == null) {
+                stringOpValues = new String[i_4];
             }
 
             String string_5 = rsbytebuffer_1.readString();
@@ -86,26 +86,26 @@ public class CS2Script extends CacheableNode {
                 string_5 = string_5.replace("Runescape", "Darkan");
             }
 
-            this.stringOpValues[i_2] = string_5.intern();
+            stringOpValues[i_2] = string_5.intern();
         } else if (cs2opinfo_3 == CS2Instruction.PUSH_LONG) {
-            if (this.longOpValues == null) {
-                this.longOpValues = new long[i_4];
+            if (longOpValues == null) {
+                longOpValues = new long[i_4];
             }
 
-            this.longOpValues[i_2] = rsbytebuffer_1.readLong();
+            longOpValues[i_2] = rsbytebuffer_1.readLong();
         } else {
-            if (this.intOpValues == null) {
-                this.intOpValues = new int[i_4];
+            if (intOpValues == null) {
+                intOpValues = new int[i_4];
             }
 
             if (cs2opinfo_3.hasIntConstant) {
-                this.intOpValues[i_2] = rsbytebuffer_1.readInt();
+                intOpValues[i_2] = rsbytebuffer_1.readInt();
             } else {
-                this.intOpValues[i_2] = rsbytebuffer_1.readUnsignedByte();
+                intOpValues[i_2] = rsbytebuffer_1.readUnsignedByte();
             }
         }
 
-        this.operations[i_2] = cs2opinfo_3;
+        operations[i_2] = cs2opinfo_3;
     }
 
 }

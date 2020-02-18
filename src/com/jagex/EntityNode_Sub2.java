@@ -2,15 +2,15 @@ package com.jagex;
 
 public class EntityNode_Sub2 extends EntityNode {
 
-    Entity aTransform_Sub1_Sub1_Sub2_7739;
+    static EntityList aClass457_7745 = new EntityList();
+    static int anInt7741;
+    PathingEntity aTransform_Sub1_Sub1_Sub2_7739;
     int anInt7740;
     int anInt7742;
     int anInt7743;
     int anInt7744;
-    static EntityList aClass457_7745 = new EntityList();
-    static int anInt7741 = 0;
 
-    static Class200 method12505(int i_0, int i_1, int i_2, MeshRasterizer meshrasterizer_3, byte b_4) {
+    static Class200 method12505(int i_0, int i_1, int i_2, MeshRasterizer meshrasterizer_3) {
         if (meshrasterizer_3 == null) {
             return null;
         } else {

@@ -7,12 +7,12 @@ public class Class399 {
     public int anInt4816;
 
     Class399(int i_1, int i_2, int i_3) {
-        this.anInt4814 = i_1;
-        this.anInt4815 = i_2;
-        this.anInt4816 = i_3;
+        anInt4814 = i_1;
+        anInt4815 = i_2;
+        anInt4816 = i_3;
     }
 
-    static int decodeSkip(RsBitsBuffer rsbitsbuffer_0) {
+    static int decodeSkip(Packet.Bit rsbitsbuffer_0) {
         int i_2 = rsbitsbuffer_0.readBits(2);
         int i_3;
         if (i_2 == 0) {

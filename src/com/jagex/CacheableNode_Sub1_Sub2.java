@@ -6,25 +6,29 @@ public class CacheableNode_Sub1_Sub2 extends CacheableNode_Sub1 {
 
     SoftReference aSoftReference10403;
 
+    CacheableNode_Sub1_Sub2(Object object_1, int i_2) {
+        super(i_2);
+        aSoftReference10403 = new SoftReference(object_1);
+    }
+
+    @Override
     boolean method14694() {
         return true;
     }
 
+    @Override
     Object method14692() {
-        return this.aSoftReference10403.get();
+        return aSoftReference10403.get();
     }
 
-    boolean method14691(int i_1) {
+    @Override
+    boolean method14691() {
         return true;
     }
 
+    @Override
     Object method14693() {
-        return this.aSoftReference10403.get();
-    }
-
-    CacheableNode_Sub1_Sub2(Object object_1, int i_2) {
-        super(i_2);
-        this.aSoftReference10403 = new SoftReference(object_1);
+        return aSoftReference10403.get();
     }
 
 }

@@ -2,150 +2,153 @@ package com.jagex;
 
 public class ClanSettings {
 
-    long aLong631;
     public static NativeSprite aNativeSprite_647;
     public int currentOwner = -1;
     public int replacementOwner = -1;
     public int banCount;
-    long[] bannedUserHashes;
     public String[] bannedUserNames;
-    IterableNodeMap<Object> variables;
-    int[] sortedAffinedSlots;
     public int memberCount;
-    int updateCount = 0;
-    public String clanName = null;
-    int anInt623 = 0;
-    long[] memberHashes;
+    public String clanName;
     public String[] memberNames;
     public byte[] memberRanks;
-    int[] anIntArray633;
     public int[] anIntArray634;
-    boolean useHashes;
-    boolean useNames;
     public boolean allowGuests;
     public byte talkRank;
     public byte kickRank;
     public byte lootshareRank;
     public byte coinShare;
+    long aLong631;
+    long[] bannedUserHashes;
+    IterableNodeMap<Object> variables;
+    int[] sortedAffinedSlots;
+    int updateCount;
+    int anInt623;
+    long[] memberHashes;
+    int[] anIntArray633;
+    boolean useHashes;
+    boolean useNames;
+
+    public ClanSettings(Packet rsbytebuffer_1) {
+        decode(rsbytebuffer_1);
+    }
 
     public int method1197(String string_1) {
-        if (string_1 != null && string_1.length() != 0) {
-            for (int i_3 = 0; i_3 < this.memberCount; i_3++) {
-                if (this.memberNames[i_3].equals(string_1)) {
+        if (string_1 != null && !string_1.isEmpty()) {
+            for (int i_3 = 0; i_3 < memberCount; i_3++) {
+                if (memberNames[i_3].equals(string_1)) {
                     return i_3;
                 }
             }
-            return -1;
-        } else {
-            return -1;
         }
+        return -1;
     }
 
     public int method1198(int i_1, int i_2, int i_3) {
         int i_5 = i_3 == 31 ? -1 : (1 << i_3 + 1) - 1;
-        return (this.anIntArray633[i_1] & i_5) >>> i_2;
+        return (anIntArray633[i_1] & i_5) >>> i_2;
     }
 
     public Integer getIntVar(int i_1) {
-        if (this.variables == null) {
+        if (variables == null) {
             return null;
         } else {
-            Node<Object> node_3 = this.variables.get(i_1);
-            return node_3 != null && node_3 instanceof IntNode ? new Integer(((IntNode) node_3).value) : null;
+            Node<Object> node_3 = variables.get(i_1);
+            return node_3 instanceof IntNode ? new Integer(((IntNode) node_3).value) : null;
         }
     }
 
     public Long getLongVar(int i_1) {
-        if (this.variables == null) {
+        if (variables == null) {
             return null;
         } else {
-            Node<Object> node_3 = this.variables.get(i_1);
-            return node_3 != null && node_3 instanceof LongNode ? new Long(((LongNode) node_3).aLong8066) : null;
+            Node<Object> node_3 = variables.get(i_1);
+            return node_3 instanceof LongNode ? new Long(((LongNode) node_3).aLong8066) : null;
         }
     }
 
     public String getStringVar(int i_1) {
-        if (this.variables == null) {
+        if (variables == null) {
             return null;
         } else {
-            Node<Object> node_3 = this.variables.get(i_1);
-            return node_3 != null && node_3 instanceof StringNode ? (String) ((StringNode) node_3).anObject8068 : null;
+            Node<Object> node_3 = variables.get(i_1);
+            return node_3 instanceof ObjectNode ? (String) ((ObjectNode) node_3).anObject8068 : null;
         }
     }
 
     void updateOwners() {
-        if (this.memberCount == 0) {
-            this.currentOwner = -1;
-            this.replacementOwner = -1;
+        if (memberCount == 0) {
+            currentOwner = -1;
+            replacementOwner = -1;
         } else {
-            this.currentOwner = -1;
-            this.replacementOwner = -1;
+            currentOwner = -1;
+            replacementOwner = -1;
             int maximumIndex = 0;
-            byte maximum = this.memberRanks[0];
-            for (int i_4 = 1; i_4 < this.memberCount; i_4++) {
-                if (this.memberRanks[i_4] > maximum) {
+            byte maximum = memberRanks[0];
+            for (int i_4 = 1; i_4 < memberCount; i_4++) {
+                if (memberRanks[i_4] > maximum) {
                     if (maximum == 125) {
-                        this.replacementOwner = maximumIndex;
+                        replacementOwner = maximumIndex;
                     }
                     maximumIndex = i_4;
-                    maximum = this.memberRanks[i_4];
-                } else if (this.replacementOwner == -1 && this.memberRanks[i_4] == 125) {
-                    this.replacementOwner = i_4;
+                    maximum = memberRanks[i_4];
+                } else if (replacementOwner == -1 && memberRanks[i_4] == 125) {
+                    replacementOwner = i_4;
                 }
             }
-            this.currentOwner = maximumIndex;
-            if (this.currentOwner != -1) {
-                this.memberRanks[this.currentOwner] = 126;
+            currentOwner = maximumIndex;
+            if (currentOwner != -1) {
+                memberRanks[currentOwner] = 126;
             }
         }
     }
 
-    void method1207(long long_1, String string_3, int i_4) {
-        if (string_3 != null && string_3.length() == 0) {
-            string_3 = null;
+    void method1207(long long_1, String string_3) {
+        String string_31 = string_3;
+        if (string_31 != null && string_31.isEmpty()) {
+            string_31 = null;
         }
-        if (this.useHashes != long_1 > 0L) {
+        if (useHashes != long_1 > 0L) {
             throw new RuntimeException("");
-        } else if (string_3 != null != this.useNames) {
+        } else if (string_31 == null == useNames) {
             throw new RuntimeException("");
         } else {
-            if (long_1 > 0L && (this.bannedUserHashes == null || this.banCount >= this.bannedUserHashes.length) || string_3 != null && (this.bannedUserNames == null || this.banCount >= this.bannedUserNames.length)) {
-                this.method1211(this.banCount + 5);
+            if (long_1 > 0L && (bannedUserHashes == null || banCount >= bannedUserHashes.length) || string_31 != null && (bannedUserNames == null || banCount >= bannedUserNames.length)) {
+                method1211(banCount + 5);
             }
-            if (this.bannedUserHashes != null) {
-                this.bannedUserHashes[this.banCount] = long_1;
+            if (bannedUserHashes != null) {
+                bannedUserHashes[banCount] = long_1;
             }
-            if (this.bannedUserNames != null) {
-                this.bannedUserNames[this.banCount] = string_3;
+            if (bannedUserNames != null) {
+                bannedUserNames[banCount] = string_31;
             }
-            ++this.banCount;
+            ++banCount;
         }
     }
 
-    void method1208(int i_1, int i_2) {
-        --this.banCount;
-        if (this.banCount == 0) {
-            this.bannedUserHashes = null;
-            this.bannedUserNames = null;
+    void method1208(int i_1) {
+        --banCount;
+        if (banCount == 0) {
+            bannedUserHashes = null;
+            bannedUserNames = null;
         } else {
-            if (this.bannedUserHashes != null) {
-                Class503.method8351(this.bannedUserHashes, i_1 + 1, this.bannedUserHashes, i_1, this.banCount - i_1);
+            if (bannedUserHashes != null) {
+                Class503.method8351(bannedUserHashes, i_1 + 1, bannedUserHashes, i_1, banCount - i_1);
             }
-            if (this.bannedUserNames != null) {
-                Class503.method8359(this.bannedUserNames, i_1 + 1, this.bannedUserNames, i_1, this.banCount - i_1);
+            if (bannedUserNames != null) {
+                Class503.method8359(bannedUserNames, i_1 + 1, bannedUserNames, i_1, banCount - i_1);
             }
         }
     }
 
-    int method1209(int i_1, byte b_2, int i_3) {
+    int method1209(int i_1, byte b_2) {
         if (b_2 != 126 && b_2 != 127) {
-            if (this.currentOwner == i_1 && (this.replacementOwner == -1 || this.memberRanks[this.replacementOwner] < 125)) {
+            if (currentOwner == i_1 && (replacementOwner == -1 || memberRanks[replacementOwner] < 125)) {
                 return -1;
-            } else if (this.memberRanks[i_1] == b_2) {
+            } else if (memberRanks[i_1] == b_2) {
                 return -1;
             } else {
-                this.memberRanks[i_1] = b_2;
-                this.updateOwners();
+                memberRanks[i_1] = b_2;
+                updateOwners();
                 return i_1;
             }
         } else {
@@ -153,47 +156,47 @@ public class ClanSettings {
         }
     }
 
-    int method1210(int i_1, int i_2, int i_3, int i_4, byte b_5) {
+    int method1210(int i_1, int i_2, int i_3, int i_4) {
         int i_6 = (1 << i_3) - 1;
         int i_7 = i_4 == 31 ? -1 : (1 << i_4 + 1) - 1;
         int i_8 = i_7 ^ i_6;
         i_2 <<= i_3;
         i_2 &= i_8;
-        int i_9 = this.anIntArray633[i_1];
+        int i_9 = anIntArray633[i_1];
         if ((i_9 & i_8) == i_2) {
             return -1;
         } else {
             i_9 &= ~i_8;
-            this.anIntArray633[i_1] = i_9 | i_2;
+            anIntArray633[i_1] = i_9 | i_2;
             return i_1;
         }
     }
 
     void method1211(int i_1) {
-        if (this.useHashes) {
-            if (this.bannedUserHashes != null) {
-                Class503.method8351(this.bannedUserHashes, 0, this.bannedUserHashes = new long[i_1], 0, this.banCount);
+        if (useHashes) {
+            if (bannedUserHashes != null) {
+                Class503.method8351(bannedUserHashes, 0, bannedUserHashes = new long[i_1], 0, banCount);
             } else {
-                this.bannedUserHashes = new long[i_1];
+                bannedUserHashes = new long[i_1];
             }
         }
-        if (this.useNames) {
-            if (this.bannedUserNames != null) {
-                Class503.method8359(this.bannedUserNames, 0, this.bannedUserNames = new String[i_1], 0, this.banCount);
+        if (useNames) {
+            if (bannedUserNames != null) {
+                Class503.method8359(bannedUserNames, 0, bannedUserNames = new String[i_1], 0, banCount);
             } else {
-                this.bannedUserNames = new String[i_1];
+                bannedUserNames = new String[i_1];
             }
         }
     }
 
-    boolean method1212(int i_1, int i_2, int i_3, int i_4, byte b_5) {
+    boolean method1212(int i_1, int i_2, int i_3, int i_4) {
         int i_6 = (1 << i_3) - 1;
         int i_7 = i_4 == 31 ? -1 : (1 << i_4 + 1) - 1;
         int i_8 = i_7 ^ i_6;
         i_2 <<= i_3;
         i_2 &= i_8;
-        if (this.variables != null) {
-            Node<Object> node_9 = this.variables.get(i_1);
+        if (variables != null) {
+            Node<Object> node_9 = variables.get(i_1);
             if (node_9 != null) {
                 if (node_9 instanceof IntNode) {
                     IntNode class282_sub38_10 = (IntNode) node_9;
@@ -204,18 +207,18 @@ public class ClanSettings {
                     class282_sub38_10.value |= i_2;
                     return true;
                 }
-                node_9.remove();
+                node_9.unlink();
             }
         } else {
-            this.variables = new IterableNodeMap(4);
+            variables = new IterableNodeMap<>(4);
         }
-        this.variables.put(new IntNode(i_2), i_1);
+        variables.put(new IntNode(i_2), i_1);
         return true;
     }
 
     boolean method1213(int i_1, long long_2) {
-        if (this.variables != null) {
-            Node node_4 = this.variables.get(i_1);
+        if (variables != null) {
+            Node<Object> node_4 = variables.get(i_1);
             if (node_4 != null) {
                 if (node_4 instanceof LongNode) {
                     LongNode class282_sub45_5 = (LongNode) node_4;
@@ -225,65 +228,62 @@ public class ClanSettings {
                     class282_sub45_5.aLong8066 = long_2;
                     return true;
                 }
-                node_4.remove();
+                node_4.unlink();
             }
         } else {
-            this.variables = new IterableNodeMap(4);
+            variables = new IterableNodeMap<>(4);
         }
-        this.variables.put(new LongNode(long_2), i_1);
+        variables.put(new LongNode(long_2), i_1);
         return true;
     }
 
     public int[] method1215() {
-        if (this.sortedAffinedSlots == null) {
-            String[] arr_2 = new String[this.memberCount];
-            this.sortedAffinedSlots = new int[this.memberCount];
-            for (int i_3 = 0; i_3 < this.memberCount; this.sortedAffinedSlots[i_3] = i_3++) {
-                arr_2[i_3] = this.memberNames[i_3];
+        if (sortedAffinedSlots == null) {
+            String[] arr_2 = new String[memberCount];
+            sortedAffinedSlots = new int[memberCount];
+            for (int i_3 = 0; i_3 < memberCount; sortedAffinedSlots[i_3] = i_3++) {
+                arr_2[i_3] = memberNames[i_3];
             }
-            Class111.toSortedIndicesArr(arr_2, this.sortedAffinedSlots);
+            Class111.toSortedIndicesArr(arr_2, sortedAffinedSlots);
         }
-        return this.sortedAffinedSlots;
+        return sortedAffinedSlots;
     }
 
-    void method1216(long long_1, String string_3, int i_4, byte b_5) {
-        if (string_3 != null && string_3.length() == 0) {
-            string_3 = null;
+    void method1216(long long_1, String string_3, int i_4) {
+        String string_31 = string_3;
+        if (string_31 != null && string_31.isEmpty()) {
+            string_31 = null;
         }
-        if (long_1 > 0L != this.useHashes) {
+        if (long_1 > 0L != useHashes) {
             throw new RuntimeException("");
-        } else if (this.useNames != (string_3 != null)) {
+        } else if (useNames == (string_31 == null)) {
             throw new RuntimeException("");
         } else {
-            if (long_1 > 0L && (this.memberHashes == null || this.memberCount >= this.memberHashes.length) || string_3 != null && (this.memberNames == null || this.memberCount >= this.memberNames.length)) {
-                this.method1232(this.memberCount + 5);
+            if (long_1 > 0L && (memberHashes == null || memberCount >= memberHashes.length) || string_31 != null && (memberNames == null || memberCount >= memberNames.length)) {
+                method1232(memberCount + 5);
             }
-            if (this.memberHashes != null) {
-                this.memberHashes[this.memberCount] = long_1;
+            if (memberHashes != null) {
+                memberHashes[memberCount] = long_1;
             }
-            if (this.memberNames != null) {
-                this.memberNames[this.memberCount] = string_3;
+            if (memberNames != null) {
+                memberNames[memberCount] = string_31;
             }
-            if (this.currentOwner == -1) {
-                this.currentOwner = this.memberCount;
-                this.memberRanks[this.memberCount] = 126;
+            if (currentOwner == -1) {
+                currentOwner = memberCount;
+                memberRanks[memberCount] = 126;
             } else {
-                this.memberRanks[this.memberCount] = 0;
+                memberRanks[memberCount] = 0;
             }
-            this.anIntArray633[this.memberCount] = 0;
-            this.anIntArray634[this.memberCount] = i_4;
-            ++this.memberCount;
-            this.sortedAffinedSlots = null;
+            anIntArray633[memberCount] = 0;
+            anIntArray634[memberCount] = i_4;
+            ++memberCount;
+            sortedAffinedSlots = null;
         }
     }
 
-    public ClanSettings(RsByteBuffer rsbytebuffer_1) {
-        this.decode(rsbytebuffer_1);
-    }
-
-    boolean method1222(int i_1, int i_2, int i_3) {
-        if (this.variables != null) {
-            Node node_4 = this.variables.get(i_1);
+    boolean method1222(int i_1, int i_2) {
+        if (variables != null) {
+            Node<Object> node_4 = variables.get(i_1);
             if (node_4 != null) {
                 if (node_4 instanceof IntNode) {
                     IntNode class282_sub38_5 = (IntNode) node_4;
@@ -293,51 +293,52 @@ public class ClanSettings {
                     class282_sub38_5.value = i_2;
                     return true;
                 }
-                node_4.remove();
+                node_4.unlink();
             }
         } else {
-            this.variables = new IterableNodeMap(4);
+            variables = new IterableNodeMap<>(4);
         }
-        this.variables.put(new IntNode(i_2), i_1);
+        variables.put(new IntNode(i_2), i_1);
         return true;
     }
 
-    boolean method1224(int i_1, String string_2, byte b_3) {
-        if (string_2 == null) {
-            string_2 = "";
-        } else if (string_2.length() > 80) {
-            string_2 = string_2.substring(0, 80);
+    boolean method1224(int i_1, String string_2) {
+        String string_21 = string_2;
+        if (string_21 == null) {
+            string_21 = "";
+        } else if (string_21.length() > 80) {
+            string_21 = string_21.substring(0, 80);
         }
-        if (this.variables != null) {
-            Node node_4 = this.variables.get(i_1);
+        if (variables != null) {
+            Node<Object> node_4 = variables.get(i_1);
             if (node_4 != null) {
-                if (node_4 instanceof StringNode) {
-                    StringNode class282_sub47_5 = (StringNode) node_4;
+                if (node_4 instanceof ObjectNode) {
+                    ObjectNode class282_sub47_5 = (ObjectNode) node_4;
                     if (class282_sub47_5.anObject8068 instanceof String) {
-                        if (string_2.equals(class282_sub47_5.anObject8068)) {
+                        if (string_21.equals(class282_sub47_5.anObject8068)) {
                             return false;
                         }
-                        class282_sub47_5.remove();
-                        class282_sub47_5.remove();
-                        this.variables.put(new StringNode(string_2), class282_sub47_5.data);
+                        class282_sub47_5.unlink();
+                        class282_sub47_5.unlink();
+                        variables.put(new ObjectNode(string_21), class282_sub47_5.pointer);
                         return true;
                     }
                 }
-                node_4.remove();
+                node_4.unlink();
             }
         } else {
-            this.variables = new IterableNodeMap(4);
+            variables = new IterableNodeMap<>(4);
         }
-        this.variables.put(new StringNode(string_2), i_1);
+        variables.put(new ObjectNode(string_21), i_1);
         return true;
     }
 
     public Integer method1225(int i_1, int i_2, int i_3) {
-        if (this.variables == null) {
+        if (variables == null) {
             return null;
         } else {
-            Node node_5 = this.variables.get(i_1);
-            if (node_5 != null && node_5 instanceof IntNode) {
+            Node<Object> node_5 = variables.get(i_1);
+            if (node_5 instanceof IntNode) {
                 int i_6 = i_3 == 31 ? -1 : (1 << i_3 + 1) - 1;
                 return new Integer((((IntNode) node_5).value & i_6) >>> i_2);
             } else {
@@ -347,61 +348,61 @@ public class ClanSettings {
     }
 
     void method1232(int i_1) {
-        if (this.useHashes) {
-            if (this.memberHashes != null) {
-                Class503.method8351(this.memberHashes, 0, this.memberHashes = new long[i_1], 0, this.memberCount);
+        if (useHashes) {
+            if (memberHashes != null) {
+                Class503.method8351(memberHashes, 0, memberHashes = new long[i_1], 0, memberCount);
             } else {
-                this.memberHashes = new long[i_1];
+                memberHashes = new long[i_1];
             }
         }
-        if (this.useNames) {
-            if (this.memberNames != null) {
-                Class503.method8359(this.memberNames, 0, this.memberNames = new String[i_1], 0, this.memberCount);
+        if (useNames) {
+            if (memberNames != null) {
+                Class503.method8359(memberNames, 0, memberNames = new String[i_1], 0, memberCount);
             } else {
-                this.memberNames = new String[i_1];
+                memberNames = new String[i_1];
             }
         }
-        if (this.memberRanks != null) {
-            Class503.method8352(this.memberRanks, 0, this.memberRanks = new byte[i_1], 0, this.memberCount);
+        if (memberRanks != null) {
+            Class503.method8352(memberRanks, 0, memberRanks = new byte[i_1], 0, memberCount);
         } else {
-            this.memberRanks = new byte[i_1];
+            memberRanks = new byte[i_1];
         }
-        if (this.anIntArray633 != null) {
-            Class503.method8362(this.anIntArray633, 0, this.anIntArray633 = new int[i_1], 0, this.memberCount);
+        if (anIntArray633 != null) {
+            Class503.method8362(anIntArray633, 0, anIntArray633 = new int[i_1], 0, memberCount);
         } else {
-            this.anIntArray633 = new int[i_1];
+            anIntArray633 = new int[i_1];
         }
-        if (this.anIntArray634 != null) {
-            Class503.method8362(this.anIntArray634, 0, this.anIntArray634 = new int[i_1], 0, this.memberCount);
+        if (anIntArray634 != null) {
+            Class503.method8362(anIntArray634, 0, anIntArray634 = new int[i_1], 0, memberCount);
         } else {
-            this.anIntArray634 = new int[i_1];
+            anIntArray634 = new int[i_1];
         }
     }
 
-    void method1233(int i_1, int i_2) {
-        if (i_1 >= 0 && i_1 < this.memberCount) {
-            --this.memberCount;
-            this.sortedAffinedSlots = null;
-            if (this.memberCount == 0) {
-                this.memberHashes = null;
-                this.memberNames = null;
-                this.memberRanks = null;
-                this.anIntArray633 = null;
-                this.anIntArray634 = null;
-                this.currentOwner = -1;
-                this.replacementOwner = -1;
+    void method1233(int i_1) {
+        if (i_1 >= 0 && i_1 < memberCount) {
+            --memberCount;
+            sortedAffinedSlots = null;
+            if (memberCount == 0) {
+                memberHashes = null;
+                memberNames = null;
+                memberRanks = null;
+                anIntArray633 = null;
+                anIntArray634 = null;
+                currentOwner = -1;
+                replacementOwner = -1;
             } else {
-                Class503.method8352(this.memberRanks, i_1 + 1, this.memberRanks, i_1, this.memberCount - i_1);
-                Class503.method8362(this.anIntArray633, i_1 + 1, this.anIntArray633, i_1, this.memberCount - i_1);
-                Class503.method8362(this.anIntArray634, i_1 + 1, this.anIntArray634, i_1, this.memberCount - i_1);
-                if (this.memberHashes != null) {
-                    Class503.method8351(this.memberHashes, i_1 + 1, this.memberHashes, i_1, this.memberCount - i_1);
+                Class503.method8352(memberRanks, i_1 + 1, memberRanks, i_1, memberCount - i_1);
+                Class503.method8362(anIntArray633, i_1 + 1, anIntArray633, i_1, memberCount - i_1);
+                Class503.method8362(anIntArray634, i_1 + 1, anIntArray634, i_1, memberCount - i_1);
+                if (memberHashes != null) {
+                    Class503.method8351(memberHashes, i_1 + 1, memberHashes, i_1, memberCount - i_1);
                 }
-                if (this.memberNames != null) {
-                    Class503.method8359(this.memberNames, i_1 + 1, this.memberNames, i_1, this.memberCount - i_1);
+                if (memberNames != null) {
+                    Class503.method8359(memberNames, i_1 + 1, memberNames, i_1, memberCount - i_1);
                 }
-                if (this.currentOwner == i_1 || this.replacementOwner == i_1) {
-                    this.updateOwners();
+                if (currentOwner == i_1 || replacementOwner == i_1) {
+                    updateOwners();
                 }
             }
         } else {
@@ -409,109 +410,109 @@ public class ClanSettings {
         }
     }
 
-    void decode(RsByteBuffer buffer) {
+    void decode(Packet buffer) {
         int version = buffer.readUnsignedByte();
         if (version >= 1 && version <= 5) {
             int attr = buffer.readUnsignedByte();
             if ((attr & 0x1) != 0) {
-                this.useHashes = true;
+                useHashes = true;
             }
             if ((attr & 0x2) != 0) {
-                this.useNames = true;
+                useNames = true;
             }
-            if (!this.useHashes) {
-                this.memberHashes = null;
-                this.bannedUserHashes = null;
+            if (!useHashes) {
+                memberHashes = null;
+                bannedUserHashes = null;
             }
-            if (!this.useNames) {
-                this.memberNames = null;
-                this.bannedUserNames = null;
+            if (!useNames) {
+                memberNames = null;
+                bannedUserNames = null;
             }
-            this.updateCount = buffer.readInt();
-            this.anInt623 = buffer.readInt();
-            if (version <= 3 && this.anInt623 != 0) {
-                this.anInt623 += 16912800;
+            updateCount = buffer.readInt();
+            anInt623 = buffer.readInt();
+            if (version <= 3 && anInt623 != 0) {
+                anInt623 += 16912800;
             }
-            this.memberCount = buffer.readUnsignedShort();
-            this.banCount = buffer.readUnsignedByte();
-            this.clanName = buffer.readString();
+            memberCount = buffer.readUnsignedShort();
+            banCount = buffer.readUnsignedByte();
+            clanName = buffer.readString();
             if (version >= 4) {
                 buffer.readInt();
             }
-            this.allowGuests = buffer.readUnsignedByte() == 1;
-            this.talkRank = buffer.readByte();
-            this.kickRank = buffer.readByte();
-            this.lootshareRank = buffer.readByte();
-            this.coinShare = buffer.readByte();
+            allowGuests = buffer.readUnsignedByte() == 1;
+            talkRank = buffer.readByte();
+            kickRank = buffer.readByte();
+            lootshareRank = buffer.readByte();
+            coinShare = buffer.readByte();
             int i_5;
-            if (this.memberCount > 0) {
-                if (this.useHashes && (this.memberHashes == null || this.memberHashes.length < this.memberCount)) {
-                    this.memberHashes = new long[this.memberCount];
+            if (memberCount > 0) {
+                if (useHashes && (memberHashes == null || memberHashes.length < memberCount)) {
+                    memberHashes = new long[memberCount];
                 }
-                if (this.useNames && (this.memberNames == null || this.memberNames.length < this.memberCount)) {
-                    this.memberNames = new String[this.memberCount];
+                if (useNames && (memberNames == null || memberNames.length < memberCount)) {
+                    memberNames = new String[memberCount];
                 }
-                if (this.memberRanks == null || this.memberRanks.length < this.memberCount) {
-                    this.memberRanks = new byte[this.memberCount];
+                if (memberRanks == null || memberRanks.length < memberCount) {
+                    memberRanks = new byte[memberCount];
                 }
-                if (this.anIntArray633 == null || this.anIntArray633.length < this.memberCount) {
-                    this.anIntArray633 = new int[this.memberCount];
+                if (anIntArray633 == null || anIntArray633.length < memberCount) {
+                    anIntArray633 = new int[memberCount];
                 }
-                if (this.anIntArray634 == null || this.anIntArray634.length < this.memberCount) {
-                    this.anIntArray634 = new int[this.memberCount];
+                if (anIntArray634 == null || anIntArray634.length < memberCount) {
+                    anIntArray634 = new int[memberCount];
                 }
-                for (i_5 = 0; i_5 < this.memberCount; i_5++) {
-                    if (this.useHashes) {
-                        this.memberHashes[i_5] = buffer.readLong();
+                for (i_5 = 0; i_5 < memberCount; i_5++) {
+                    if (useHashes) {
+                        memberHashes[i_5] = buffer.readLong();
                     }
-                    if (this.useNames) {
-                        this.memberNames[i_5] = buffer.readNullString();
+                    if (useNames) {
+                        memberNames[i_5] = buffer.readNullString();
                     }
-                    this.memberRanks[i_5] = buffer.readByte();
+                    memberRanks[i_5] = buffer.readByte();
                     if (version >= 2) {
-                        this.anIntArray633[i_5] = buffer.readInt();
+                        anIntArray633[i_5] = buffer.readInt();
                     }
                     if (version >= 5) {
-                        this.anIntArray634[i_5] = buffer.readUnsignedShort();
+                        anIntArray634[i_5] = buffer.readUnsignedShort();
                     } else {
-                        this.anIntArray634[i_5] = 0;
+                        anIntArray634[i_5] = 0;
                     }
                 }
-                this.updateOwners();
+                updateOwners();
             }
-            if (this.banCount > 0) {
-                if (this.useHashes && (this.bannedUserHashes == null || this.bannedUserHashes.length < this.banCount)) {
-                    this.bannedUserHashes = new long[this.banCount];
+            if (banCount > 0) {
+                if (useHashes && (bannedUserHashes == null || bannedUserHashes.length < banCount)) {
+                    bannedUserHashes = new long[banCount];
                 }
-                if (this.useNames && (this.bannedUserNames == null || this.bannedUserNames.length < this.banCount)) {
-                    this.bannedUserNames = new String[this.banCount];
+                if (useNames && (bannedUserNames == null || bannedUserNames.length < banCount)) {
+                    bannedUserNames = new String[banCount];
                 }
-                for (i_5 = 0; i_5 < this.banCount; i_5++) {
-                    if (this.useHashes) {
-                        this.bannedUserHashes[i_5] = buffer.readLong();
+                for (i_5 = 0; i_5 < banCount; i_5++) {
+                    if (useHashes) {
+                        bannedUserHashes[i_5] = buffer.readLong();
                     }
-                    if (this.useNames) {
-                        this.bannedUserNames[i_5] = buffer.readNullString();
+                    if (useNames) {
+                        bannedUserNames[i_5] = buffer.readNullString();
                     }
                 }
             }
             if (version >= 3) {
                 i_5 = buffer.readUnsignedShort();
                 if (i_5 > 0) {
-                    this.variables = new IterableNodeMap(i_5 < 16 ? Utils.nextPowerOfTwo(i_5) : 16);
+                    variables = new IterableNodeMap<>(i_5 < 16 ? Utils.nextPowerOfTwo(i_5) : 16);
                     while (i_5-- > 0) {
                         int i_6 = buffer.readInt();
                         int i_7 = i_6 & 0x3fffffff;
                         int i_8 = i_6 >>> 30;
                         if (i_8 == 0) {
                             int i_9 = buffer.readInt();
-                            this.variables.put(new IntNode(i_9), i_7);
+                            variables.put(new IntNode(i_9), i_7);
                         } else if (i_8 == 1) {
                             long long_11 = buffer.readLong();
-                            this.variables.put(new LongNode(long_11), i_7);
+                            variables.put(new LongNode(long_11), i_7);
                         } else if (i_8 == 2) {
                             String string_13 = buffer.readString();
-                            this.variables.put(new StringNode(string_13), i_7);
+                            variables.put(new ObjectNode(string_13), i_7);
                         }
                     }
                 }

@@ -45,10 +45,10 @@ public class IndexReference {
     int indexId;
 
     IndexReference(int i_1) {
-        this.indexId = i_1;
+        indexId = i_1;
     }
 
-    public int method1781(int i_1) {
-        return this.indexId;
+    public int method1781() {
+        return indexId;
     }
 }

@@ -1,18 +1,16 @@
 package com.jagex;
 
-public final class PingRequest {
-
-    public volatile int ping = -1;
-
-    volatile String ip;
+public class PingRequest {
 
     static PingRequest CURRENT_REQUEST;
+    public volatile int ping = -1;
+    volatile String ip;
 
     PingRequest(String string_1) {
-        this.ip = string_1;
+        ip = string_1;
     }
 
-    static final void method8744(byte b_0, int i_1) {
+    static void method8744(byte b_0) {
         byte[][][] bytes_2 = IndexLoaders.MAP_REGION_DECODER.method4532();
         if (bytes_2 == null) {
             bytes_2 = new byte[4][IndexLoaders.MAP_REGION_DECODER.getSizeX()][IndexLoaders.MAP_REGION_DECODER.getSizeY()];

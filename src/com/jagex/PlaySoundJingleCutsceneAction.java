@@ -6,24 +6,16 @@ public class PlaySoundJingleCutsceneAction extends CutsceneAction {
     int anInt9437;
     int anInt9436;
 
-    public void method1592() {
-        Huffman.playSoundJingle(this.anInt9437, 0, this.anInt9436);
-    }
-
-    PlaySoundJingleCutsceneAction(RsByteBuffer rsbytebuffer_1) {
+    PlaySoundJingleCutsceneAction(Packet rsbytebuffer_1) {
         super(rsbytebuffer_1);
-        this.anInt9437 = rsbytebuffer_1.readUnsignedShort();
-        this.anInt9436 = rsbytebuffer_1.readUnsignedByte();
-    }
-
-    public void method1601() {
-        Huffman.playSoundJingle(this.anInt9437 * -576205695 * 865366913, 0, 1859517477 * this.anInt9436 * -1281245267);
+        anInt9437 = rsbytebuffer_1.readUnsignedShort();
+        anInt9436 = rsbytebuffer_1.readUnsignedByte();
     }
 
     public static void method14675(int i_0, int i_1, int i_2, int i_3) {
         Node_Sub48 class282_sub48_5;
-        for (class282_sub48_5 = (Node_Sub48) Node_Sub48.aClass482_8073.head(); class282_sub48_5 != null; class282_sub48_5 = (Node_Sub48) Node_Sub48.aClass482_8073.next(1744342009)) {
-            Class175.method2964(class282_sub48_5, i_0, i_1, i_2, i_3, -1230088474);
+        for (class282_sub48_5 = (Node_Sub48) Node_Sub48.aClass482_8073.head(); class282_sub48_5 != null; class282_sub48_5 = (Node_Sub48) Node_Sub48.aClass482_8073.next()) {
+            Class175.method2964(class282_sub48_5, i_0, i_1, i_2, i_3);
         }
 
         byte b_6;
@@ -31,7 +23,7 @@ public class PlaySoundJingleCutsceneAction extends CutsceneAction {
         int i_8;
         int i_9;
         Vector3 vector3_12;
-        for (class282_sub48_5 = (Node_Sub48) Node_Sub48.aClass482_8074.head(); class282_sub48_5 != null; class282_sub48_5 = (Node_Sub48) Node_Sub48.aClass482_8074.next(1161440846)) {
+        for (class282_sub48_5 = (Node_Sub48) Node_Sub48.aClass482_8074.head(); class282_sub48_5 != null; class282_sub48_5 = (Node_Sub48) Node_Sub48.aClass482_8074.next()) {
             b_6 = 1;
             renderanimdefs_7 = class282_sub48_5.aTransform_Sub1_Sub1_Sub2_Sub2_8085.getRenderAnimDefs();
             i_8 = class282_sub48_5.aTransform_Sub1_Sub1_Sub2_Sub2_8085.aAnimation_Sub3_10337.method7597();
@@ -49,9 +41,9 @@ public class PlaySoundJingleCutsceneAction extends CutsceneAction {
 
             if (b_6 != class282_sub48_5.anInt8091) {
                 i_9 = Node_Sub11_Sub1.method15433(class282_sub48_5.aTransform_Sub1_Sub1_Sub2_Sub2_8085);
-                NPCDefinitions npcdefinitions_10 = class282_sub48_5.aTransform_Sub1_Sub1_Sub2_Sub2_8085.definitions;
+                NPCType npcdefinitions_10 = class282_sub48_5.aTransform_Sub1_Sub1_Sub2_Sub2_8085.definitions;
                 if (npcdefinitions_10.transformTo != null) {
-                    npcdefinitions_10 = npcdefinitions_10.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER);
+                    npcdefinitions_10 = npcdefinitions_10.getMultiNPC(Class158_Sub1.PLAYER_VAR_PROVIDER);
                 }
 
                 if (npcdefinitions_10 != null && i_9 != -1) {
@@ -93,10 +85,10 @@ public class PlaySoundJingleCutsceneAction extends CutsceneAction {
             class282_sub48_5.anInt8078 = (int) vector3_12.z;
             class282_sub48_5.anInt8077 = (int) vector3_12.z + (class282_sub48_5.aTransform_Sub1_Sub1_Sub2_Sub2_8085.getSize() << 8);
             class282_sub48_5.anInt8076 = class282_sub48_5.aTransform_Sub1_Sub1_Sub2_Sub2_8085.plane;
-            Class175.method2964(class282_sub48_5, i_0, i_1, i_2, i_3, -1411599519);
+            Class175.method2964(class282_sub48_5, i_0, i_1, i_2, i_3);
         }
 
-        for (class282_sub48_5 = (Node_Sub48) Node_Sub48.aClass465_8075.method7750(524790011); class282_sub48_5 != null; class282_sub48_5 = (Node_Sub48) Node_Sub48.aClass465_8075.method7751((byte) 99)) {
+        for (class282_sub48_5 = (Node_Sub48) Node_Sub48.aClass465_8075.method7750(); class282_sub48_5 != null; class282_sub48_5 = (Node_Sub48) Node_Sub48.aClass465_8075.method7751()) {
             b_6 = 1;
             renderanimdefs_7 = class282_sub48_5.aTransform_Sub1_Sub1_Sub2_Sub1_8086.getRenderAnimDefs();
             i_8 = class282_sub48_5.aTransform_Sub1_Sub1_Sub2_Sub1_8086.aAnimation_Sub3_10337.method7597();
@@ -113,7 +105,7 @@ public class PlaySoundJingleCutsceneAction extends CutsceneAction {
             }
 
             if (b_6 != class282_sub48_5.anInt8091) {
-                i_9 = Class149_Sub2.method14610(class282_sub48_5.aTransform_Sub1_Sub1_Sub2_Sub1_8086, 1504837662);
+                i_9 = Class149_Sub2.method14610(class282_sub48_5.aTransform_Sub1_Sub1_Sub2_Sub1_8086);
                 if (i_9 == class282_sub48_5.soundEffectId && class282_sub48_5.aTransform_Sub1_Sub1_Sub2_Sub1_8086.isTransformedNPC == class282_sub48_5.aBool8098) {
                     class282_sub48_5.anInt8089 = class282_sub48_5.aTransform_Sub1_Sub1_Sub2_Sub1_8086.specialByte;
                     class282_sub48_5.anInt8091 = b_6;
@@ -147,7 +139,7 @@ public class PlaySoundJingleCutsceneAction extends CutsceneAction {
             class282_sub48_5.anInt8078 = (int) vector3_12.z;
             class282_sub48_5.anInt8077 = (int) vector3_12.z + (class282_sub48_5.aTransform_Sub1_Sub1_Sub2_Sub1_8086.getSize() << 8);
             class282_sub48_5.anInt8076 = class282_sub48_5.aTransform_Sub1_Sub1_Sub2_Sub1_8086.plane;
-            Class175.method2964(class282_sub48_5, i_0, i_1, i_2, i_3, -2031057762);
+            Class175.method2964(class282_sub48_5, i_0, i_1, i_2, i_3);
         }
 
     }
@@ -157,19 +149,29 @@ public class PlaySoundJingleCutsceneAction extends CutsceneAction {
         return bytes_3 == null ? null : new Node_Sub14(bytes_3);
     }
 
-    public static final int method14677(int i_0, int i_1) {
+    public static int method14677(int i_0, int i_1) {
+        int i_11 = i_1;
         if (i_0 == -1) {
             return 12345678;
         } else {
-            i_1 = (i_0 & 0x7f) * i_1 >> 7;
-            if (i_1 < 2) {
-                i_1 = 2;
-            } else if (i_1 > 126) {
-                i_1 = 126;
+            i_11 = (i_0 & 0x7f) * i_11 >> 7;
+            if (i_11 < 2) {
+                i_11 = 2;
+            } else if (i_11 > 126) {
+                i_11 = 126;
             }
 
-            return (i_0 & 0xff80) + i_1;
+            return (i_0 & 0xff80) + i_11;
         }
+    }
+
+    @Override
+    public void method1592() {
+        Huffman.playSoundJingle(anInt9437, anInt9436);
+    }
+
+    public void method1601() {
+        Huffman.playSoundJingle(anInt9437 * -576205695 * 865366913, 1859517477 * anInt9436 * -1281245267);
     }
 
 }

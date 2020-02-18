@@ -9,7 +9,7 @@ public class Class151 {
 
     public static void decodeWorldList(boolean refresh, byte[] data) {
         if (CutsceneAction_Sub20.WORLD_LIST_BUFFER == null) {
-            CutsceneAction_Sub20.WORLD_LIST_BUFFER = new RsByteBuffer(20000);
+            CutsceneAction_Sub20.WORLD_LIST_BUFFER = new Packet(20000);
         }
         CutsceneAction_Sub20.WORLD_LIST_BUFFER.writeBytes(data, 0, data.length);
         if (refresh) {
@@ -17,7 +17,7 @@ public class Class151 {
             Class448.WORLD_DESCRIPTORS_BYID = new WorldDescriptor[Class4.WORLD_LIST_SIZE];
             int i_3 = 0;
             for (int i_4 = Class485.WORLD_LIST_START; i_4 <= Class244.WORLD_LIST_SIZEPLUS1; i_4++) {
-                WorldDescriptor world = ObjectIndexLoader.getWorld(i_4);
+                WorldDescriptor world = LocationIndexLoader.getWorld(i_4);
                 if (world != null) {
                     Class448.WORLD_DESCRIPTORS_BYID[i_3++] = world;
                 }
@@ -28,10 +28,10 @@ public class Class151 {
         }
     }
 
-    static void method2590(IComponentDefinitions icomponentdefinitions_0) {
+    static void method2590(Component icomponentdefinitions_0) {
         if (client.aBool7344) {
             if (icomponentdefinitions_0.anObjectArray1393 != null) {
-                IComponentDefinitions icomponentdefinitions_2 = Index.getIComponentDefinitions(client.anInt56, client.anInt7345);
+                Component icomponentdefinitions_2 = Index.getIComponentDefinitions(client.anInt56, client.anInt7345);
                 if (icomponentdefinitions_2 != null) {
                     HookRequest hookrequest_3 = new HookRequest();
                     hookrequest_3.source = icomponentdefinitions_0;
@@ -40,7 +40,7 @@ public class Class151 {
                     CS2Executor.executeHookInner(hookrequest_3);
                 }
             }
-            TCPPacket tcpmessage_4 = Class271.createPacket(ClientPacket.IF_ON_IF, client.GAME_CONNECTION_CONTEXT.isaac);
+            TCPPacket tcpmessage_4 = Class271.createPacket(ClientProt.IF_ON_IF, client.GAME_CONNECTION_CONTEXT.isaac);
             tcpmessage_4.buffer.writeShortLE128(icomponentdefinitions_0.slotId);
             tcpmessage_4.buffer.writeShortLE(client.anInt7345);
             tcpmessage_4.buffer.writeShortLE128(icomponentdefinitions_0.containerItemId);
@@ -51,17 +51,17 @@ public class Class151 {
         }
     }
 
-    static final void method2591(IComponentDefinitions[] arr_0, int i_1, byte b_2) {
+    static void method2591(Component[] arr_0, int i_1) {
         for (int i_3 = 0; i_3 < arr_0.length; i_3++) {
-            IComponentDefinitions icomponentdefinitions_4 = arr_0[i_3];
+            Component icomponentdefinitions_4 = arr_0[i_3];
             if (icomponentdefinitions_4 != null) {
                 if (icomponentdefinitions_4.type == ComponentType.CONTAINER) {
                     if (icomponentdefinitions_4.itemSlots != null) {
-                        method2591(icomponentdefinitions_4.itemSlots, i_1, (byte) -28);
+                        method2591(icomponentdefinitions_4.itemSlots, i_1);
                     }
-                    IFSubNode class282_sub44_5 = (IFSubNode) client.OPEN_INTERFACES.get(icomponentdefinitions_4.idHash);
+                    SubInterface class282_sub44_5 = (SubInterface) client.OPEN_INTERFACES.get(icomponentdefinitions_4.idHash);
                     if (class282_sub44_5 != null) {
-                        Class383.method6514(class282_sub44_5.interfaceId, i_1, -138211954);
+                        Class383.method6514(class282_sub44_5.interfaceId, i_1);
                     }
                 }
                 HookRequest hookrequest_6;
@@ -73,7 +73,7 @@ public class Class151 {
                 }
                 if (i_1 == 1 && icomponentdefinitions_4.anObjectArray1346 != null) {
                     if (icomponentdefinitions_4.slotId >= 0) {
-                        IComponentDefinitions icomponentdefinitions_7 = IComponentDefinitions.getDefs(icomponentdefinitions_4.idHash);
+                        Component icomponentdefinitions_7 = Component.getDefs(icomponentdefinitions_4.idHash);
                         if (icomponentdefinitions_7 == null || icomponentdefinitions_7.slotChildren == null || icomponentdefinitions_4.slotId >= icomponentdefinitions_7.slotChildren.length || icomponentdefinitions_4 != icomponentdefinitions_7.slotChildren[icomponentdefinitions_4.slotId]) {
                             continue;
                         }
@@ -87,17 +87,17 @@ public class Class151 {
         }
     }
 
-    static final void method2592(byte b_0) {
+    static void method2592() {
         if (!Node_Sub17.inLobby(client.gameState) && !Class97.loggedOutState(client.gameState)) {
             ClanVarSettingsIndexLoader.aClass202_2883 = client.GAME_CONNECTION_CONTEXT.getConnection();
             client.GAME_CONNECTION_CONTEXT.reset();
             Class365.setGameState(10);
         } else {
-            CursorIndexLoader.method7333(false, 2084407063);
+            CursorIndexLoader.method7333(false);
         }
     }
 
-    public static void method2594(String string_0, Throwable throwable_1, byte b_2) {
+    public static void method2594(String string_0, Throwable throwable_1) {
         try {
             String str_3 = "";
             if (throwable_1 != null) {
@@ -105,21 +105,21 @@ public class Class151 {
             }
             if (string_0 != null) {
                 if (throwable_1 != null) {
-                    str_3 = str_3 + " | ";
+                    str_3 += " | ";
                 }
-                str_3 = str_3 + string_0;
+                str_3 += string_0;
             }
             CS2Executor.method11251(str_3);
-            str_3 = Class475.method7926(str_3, -53160653);
+            str_3 = Class475.method7926(str_3);
             if (RuntimeException_Sub3.anApplet10460 != null) {
                 String str_4 = "Unknown";
                 String str_5 = "1.1";
                 try {
                     str_4 = System.getProperty("java.vendor");
                     str_5 = System.getProperty("java.version");
-                } catch (Exception exception_8) {
+                } catch (Exception ignored) {
                 }
-                URL url_6 = new URL(RuntimeException_Sub3.anApplet10460.getCodeBase(), "clienterror.ws?c=" + RuntimeException_Sub3.anInt10457 + "&cs=" + InventoriesIndexLoader.anInt4781 + "&u=" + (RuntimeException_Sub3.MY_PLAYER_USERNAME != null ? Class475.method7926(RuntimeException_Sub3.MY_PLAYER_USERNAME, -790911814) : "" + RuntimeException_Sub3.aLong10459) + "&v1=" + Class475.method7926(str_4, 553035872) + "&v2=" + Class475.method7926(str_5, 72672054) + "&e=" + str_3);
+                URL url_6 = new URL(RuntimeException_Sub3.anApplet10460.getCodeBase(), "clienterror.ws?c=" + RuntimeException_Sub3.anInt10457 + "&cs=" + InventoriesIndexLoader.anInt4781 + "&u=" + (RuntimeException_Sub3.MY_PLAYER_USERNAME != null ? Class475.method7926(RuntimeException_Sub3.MY_PLAYER_USERNAME) : "" + RuntimeException_Sub3.aLong10459) + "&v1=" + Class475.method7926(str_4) + "&v2=" + Class475.method7926(str_5) + "&e=" + str_3);
                 DataInputStream datainputstream_7 = new DataInputStream(url_6.openStream());
                 datainputstream_7.read();
                 datainputstream_7.close();

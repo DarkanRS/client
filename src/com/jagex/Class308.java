@@ -5,80 +5,80 @@ public class Class308 {
     public static client aclient3620;
     public static short[] CS2_QUERY_RESULTS;
     static Node_Sub16 aNode_Sub16_3618 = new Node_Sub16(0, 0);
+    public boolean aBool3619;
     Node_Sub16[] aNode_Sub16Array3615;
     int[][][] anIntArrayArrayArray3614;
     LinkedNodeList aClass473_3612 = new LinkedNodeList();
-    public boolean aBool3619 = false;
-    int anInt3617 = 0;
+    int anInt3617;
     int anInt3616 = -1;
     int anInt3611;
     int anInt3613;
 
-    final void method5462() {
-        for (int i_2 = 0; i_2 < this.anInt3613; i_2++) {
-            this.anIntArrayArrayArray3614[i_2][0] = null;
-            this.anIntArrayArrayArray3614[i_2][1] = null;
-            this.anIntArrayArrayArray3614[i_2][2] = null;
-            this.anIntArrayArrayArray3614[i_2] = null;
-        }
-        this.aNode_Sub16Array3615 = null;
-        this.anIntArrayArrayArray3614 = null;
-        this.aClass473_3612.clear();
-        this.aClass473_3612 = null;
+    Class308(int i_1, int i_2, int i_3) {
+        anInt3611 = i_2;
+        anInt3613 = i_1;
+        anIntArrayArrayArray3614 = new int[anInt3613][3][i_3];
+        aNode_Sub16Array3615 = new Node_Sub16[anInt3611];
     }
 
-    public final int[][] method5463(int i_1, int i_2) {
-        if (this.anInt3611 != this.anInt3613) {
-            if (this.anInt3613 != 1) {
-                Node_Sub16 class282_sub16_3 = this.aNode_Sub16Array3615[i_1];
+    public static boolean isWall(int i_0) {
+        return i_0 >= LocShapes.WALL_STRAIGHT.type && i_0 <= LocShapes.WALL_STRAIGHT_CORNER.type || i_0 == LocShapes.WALL_INTERACT.type;
+    }
+
+    void method5462() {
+        for (int i_2 = 0; i_2 < anInt3613; i_2++) {
+            anIntArrayArrayArray3614[i_2][0] = null;
+            anIntArrayArrayArray3614[i_2][1] = null;
+            anIntArrayArrayArray3614[i_2][2] = null;
+            anIntArrayArrayArray3614[i_2] = null;
+        }
+        aNode_Sub16Array3615 = null;
+        anIntArrayArrayArray3614 = null;
+        aClass473_3612.clear();
+        aClass473_3612 = null;
+    }
+
+    public int[][] method5463(int i_1) {
+        if (anInt3611 != anInt3613) {
+            if (anInt3613 != 1) {
+                Node_Sub16 class282_sub16_3 = aNode_Sub16Array3615[i_1];
                 if (class282_sub16_3 == null) {
-                    this.aBool3619 = true;
-                    if (this.anInt3617 >= this.anInt3613) {
-                        Node_Sub16 class282_sub16_4 = (Node_Sub16) this.aClass473_3612.getNext();
+                    aBool3619 = true;
+                    if (anInt3617 >= anInt3613) {
+                        Node_Sub16 class282_sub16_4 = (Node_Sub16) aClass473_3612.getNext();
                         class282_sub16_3 = new Node_Sub16(i_1, class282_sub16_4.anInt7602);
-                        this.aNode_Sub16Array3615[class282_sub16_4.anInt7603] = null;
-                        class282_sub16_4.remove();
+                        aNode_Sub16Array3615[class282_sub16_4.anInt7603] = null;
+                        class282_sub16_4.unlink();
                     } else {
-                        class282_sub16_3 = new Node_Sub16(i_1, this.anInt3617);
-                        ++this.anInt3617;
+                        class282_sub16_3 = new Node_Sub16(i_1, anInt3617);
+                        ++anInt3617;
                     }
-                    this.aNode_Sub16Array3615[i_1] = class282_sub16_3;
+                    aNode_Sub16Array3615[i_1] = class282_sub16_3;
                 } else {
-                    this.aBool3619 = false;
+                    aBool3619 = false;
                 }
-                this.aClass473_3612.insertFront(class282_sub16_3);
-                return this.anIntArrayArrayArray3614[class282_sub16_3.anInt7602];
+                aClass473_3612.insertFront(class282_sub16_3);
+                return anIntArrayArrayArray3614[class282_sub16_3.anInt7602];
             } else {
-                this.aBool3619 = this.anInt3616 != i_1;
-                this.anInt3616 = i_1;
-                return this.anIntArrayArrayArray3614[0];
+                aBool3619 = anInt3616 != i_1;
+                anInt3616 = i_1;
+                return anIntArrayArrayArray3614[0];
             }
         } else {
-            this.aBool3619 = this.aNode_Sub16Array3615[i_1] == null;
-            this.aNode_Sub16Array3615[i_1] = aNode_Sub16_3618;
-            return this.anIntArrayArrayArray3614[i_1];
+            aBool3619 = aNode_Sub16Array3615[i_1] == null;
+            aNode_Sub16Array3615[i_1] = aNode_Sub16_3618;
+            return anIntArrayArrayArray3614[i_1];
         }
     }
 
-    public final int[][][] method5464() {
-        if (this.anInt3613 != this.anInt3611) {
+    public int[][][] method5464() {
+        if (anInt3613 != anInt3611) {
             throw new RuntimeException();
         } else {
-            for (int i_2 = 0; i_2 < this.anInt3613; i_2++) {
-                this.aNode_Sub16Array3615[i_2] = aNode_Sub16_3618;
+            for (int i_2 = 0; i_2 < anInt3613; i_2++) {
+                aNode_Sub16Array3615[i_2] = aNode_Sub16_3618;
             }
-            return this.anIntArrayArrayArray3614;
+            return anIntArrayArrayArray3614;
         }
-    }
-
-    Class308(int i_1, int i_2, int i_3) {
-        this.anInt3611 = i_2;
-        this.anInt3613 = i_1;
-        this.anIntArrayArrayArray3614 = new int[this.anInt3613][3][i_3];
-        this.aNode_Sub16Array3615 = new Node_Sub16[this.anInt3611];
-    }
-
-    public static boolean isWall(int i_0, int i_1) {
-        return i_0 >= SceneObjectType.WALL_STRAIGHT.type && i_0 <= SceneObjectType.WALL_STRAIGHT_CORNER.type || i_0 == SceneObjectType.WALL_INTERACT.type;
     }
 }

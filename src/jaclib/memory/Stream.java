@@ -3,13 +3,13 @@
  */
 package jaclib.memory;
 
-public final class Stream {
+public class Stream {
+    private static final boolean aBool2125 = getLSB(-65536) == -1;
+    private final byte[] aByteArray2124;
     private Buffer aBuffer2120;
     private int anInt2121;
     private int anInt2122;
     private int anInt2123;
-    private final byte[] aByteArray2124;
-    private static final boolean aBool2125 = getLSB(-65536) == -1;
 
     public Stream() {
         this(4096);
@@ -24,15 +24,27 @@ public final class Stream {
     }
 
     public Stream(Buffer buffer, int i_0_) {
-        this(buffer.method1() < 4096 ? buffer.method1() : 4096);
+        this(Math.min(4096, buffer.method1()));
         method2917(buffer, i_0_);
+    }
+
+    public static boolean method2926() {
+        return aBool2125;
+    }
+
+    public static native int floatToRawIntBits(float f);
+
+    private static native byte getLSB(int i);
+
+    public static boolean method2942() {
+        return aBool2125;
     }
 
     private void method2917(Buffer buffer, int i_1_) {
         method2925();
         aBuffer2120 = buffer;
-        anInt2122 = -1706667277 * 0;
-        anInt2121 = (i_1_ + 0) * -946986007;
+        anInt2122 = 0;
+        anInt2121 = (i_1_) * -946986007;
         if (-863312807 * anInt2121 > buffer.method1())
             throw new RuntimeException();
     }
@@ -99,14 +111,6 @@ public final class Stream {
             anInt2123 = 0;
         }
     }
-
-    public static final boolean method2926() {
-        return aBool2125;
-    }
-
-    public static native int floatToRawIntBits(float f);
-
-    private static final native byte getLSB(int i);
 
     private void method2927(Buffer buffer, int i, int i_2_) {
         method2925();
@@ -223,9 +227,5 @@ public final class Stream {
             anInt2122 += anInt2123 * 1269928059;
             anInt2123 = 0;
         }
-    }
-
-    public static final boolean method2942() {
-        return aBool2125;
     }
 }

@@ -3,9 +3,9 @@
  */
 package jaclib.memory.heap;
 
-public final class NativeHeap {
-    long peer;
+public class NativeHeap {
     private final int anInt347;
+    long peer;
     private boolean aBool348;
 
     public NativeHeap(int i) {
@@ -46,6 +46,7 @@ public final class NativeHeap {
 
     public synchronized native void copy(long l, long l_6_, int i);
 
+    @Override
     protected synchronized void finalize() throws Throwable {
         super.finalize();
         method760();

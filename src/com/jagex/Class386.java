@@ -6,7 +6,7 @@ public class Class386 {
         throw new Error();
     }
 
-    public static Class467[] method6671(Class470 class470_0, int i_1) {
+    public static Class467[] method6671(Class470 class470_0) {
         int[] ints_2 = class470_0.method7807();
         Class467[] arr_3 = new Class467[ints_2.length >> 2];
         for (int i_4 = 0; i_4 < arr_3.length; i_4++) {
@@ -31,7 +31,7 @@ public class Class386 {
         return null;
     }
 
-    public static void method6673(int i_0) {
+    public static void method6673() {
         if (Class302.anInterface27Array3559 != null) {
             Interface27[] arr_1 = Class302.anInterface27Array3559;
             for (int i_2 = 0; i_2 < arr_1.length; i_2++) {

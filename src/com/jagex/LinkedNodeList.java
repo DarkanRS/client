@@ -5,95 +5,15 @@ public class LinkedNodeList {
     public static EquipmentDefaults EQUIPMENT_DEFAULTS;
 
     static int anInt5606;
-
+    public Node head = new Node();
     Node current;
 
-    public Node head = new Node();
-
-    public void clear() {
-        while (true) {
-            Node node_1 = this.head.next;
-            if (node_1 == this.head) {
-                this.current = null;
-                return;
-            }
-            node_1.remove();
-        }
-    }
-
-    public Node getPrevious() {
-        Node node_1 = this.current;
-        if (node_1 == this.head) {
-            this.current = null;
-            return null;
-        } else {
-            this.current = node_1.next;
-            return node_1;
-        }
-    }
-
-    public Node popTail() {
-        Node node_1 = this.head.next;
-        if (node_1 == this.head) {
-            return null;
-        } else {
-            node_1.remove();
-            return node_1;
-        }
-    }
-
-    public Node getBack() {
-        Node node_1 = this.head.next;
-        if (node_1 == this.head) {
-            this.current = null;
-            return null;
-        } else {
-            this.current = node_1.next;
-            return node_1;
-        }
-    }
-
     public LinkedNodeList() {
-        this.head.next = this.head;
-        this.head.prev = this.head;
+        head.next = head;
+        head.previous = head;
     }
 
-    public boolean method7861() {
-        return this.head.next == this.head;
-    }
-
-    public Node getNext() {
-        Node node_1 = this.head.prev;
-        if (node_1 == this.head) {
-            this.current = null;
-            return null;
-        } else {
-            this.current = node_1.prev;
-            return node_1;
-        }
-    }
-
-    public void insertFront(Node node_1) {
-        if (node_1.prev != null) {
-            node_1.remove();
-        }
-        node_1.prev = this.head;
-        node_1.next = this.head.next;
-        node_1.prev.next = node_1;
-        node_1.next.prev = node_1;
-    }
-
-    public void insertBack(Node node_1) {
-        if (node_1.prev != null) {
-            node_1.remove();
-        }
-        node_1.prev = this.head.prev;
-        node_1.next = this.head;
-        node_1.prev.next = node_1;
-        node_1.next.prev = node_1;
-    }
-
-    public static byte[] method7885(CharSequence charsequence_0, byte b_1) {
+    public static byte[] method7885(CharSequence charsequence_0) {
         int i_2 = charsequence_0.length();
         byte[] bytes_3 = new byte[i_2];
         for (int i_4 = 0; i_4 < i_2; i_4++) {
@@ -161,12 +81,12 @@ public class LinkedNodeList {
         return bytes_3;
     }
 
-    public static final void method7886() {
-        TCPPacket tcpmessage_2 = Class271.createPacket(ClientPacket.CLOSE_INTERFACE, client.GAME_CONNECTION_CONTEXT.isaac);
+    public static void method7886() {
+        TCPPacket tcpmessage_2 = Class271.createPacket(ClientProt.CLOSE_INTERFACE, client.GAME_CONNECTION_CONTEXT.isaac);
         client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_2);
-        for (IFSubNode class282_sub44_3 = (IFSubNode) client.OPEN_INTERFACES.method7750(1343073416); class282_sub44_3 != null; class282_sub44_3 = (IFSubNode) client.OPEN_INTERFACES.method7751((byte) 30)) {
-            if (!class282_sub44_3.isLinked()) {
-                class282_sub44_3 = (IFSubNode) client.OPEN_INTERFACES.method7750(861555487);
+        for (SubInterface class282_sub44_3 = (SubInterface) client.OPEN_INTERFACES.method7750(); class282_sub44_3 != null; class282_sub44_3 = (SubInterface) client.OPEN_INTERFACES.method7751()) {
+            if (!class282_sub44_3.linked()) {
+                class282_sub44_3 = (SubInterface) client.OPEN_INTERFACES.method7750();
                 if (class282_sub44_3 == null) {
                     break;
                 }
@@ -183,15 +103,93 @@ public class LinkedNodeList {
 
     public static void method7887() {
         Node_Sub48 class282_sub48_1;
-        for (class282_sub48_1 = (Node_Sub48) Node_Sub48.aClass482_8073.head(); class282_sub48_1 != null; class282_sub48_1 = (Node_Sub48) Node_Sub48.aClass482_8073.next(-1229768145)) {
+        for (class282_sub48_1 = (Node_Sub48) Node_Sub48.aClass482_8073.head(); class282_sub48_1 != null; class282_sub48_1 = (Node_Sub48) Node_Sub48.aClass482_8073.next()) {
             if (class282_sub48_1.aBool8092) {
                 class282_sub48_1.method13426();
             }
         }
-        for (class282_sub48_1 = (Node_Sub48) Node_Sub48.aClass482_8074.head(); class282_sub48_1 != null; class282_sub48_1 = (Node_Sub48) Node_Sub48.aClass482_8074.next(893135123)) {
+        for (class282_sub48_1 = (Node_Sub48) Node_Sub48.aClass482_8074.head(); class282_sub48_1 != null; class282_sub48_1 = (Node_Sub48) Node_Sub48.aClass482_8074.next()) {
             if (class282_sub48_1.aBool8092) {
                 class282_sub48_1.method13426();
             }
         }
+    }
+
+    public void clear() {
+        while (true) {
+            Node node_1 = head.next;
+            if (node_1 == head) {
+                current = null;
+                return;
+            }
+            node_1.unlink();
+        }
+    }
+
+    public Node getPrevious() {
+        Node node_1 = current;
+        if (node_1 == head) {
+            current = null;
+            return null;
+        } else {
+            current = node_1.next;
+            return node_1;
+        }
+    }
+
+    public Node popTail() {
+        Node node_1 = head.next;
+        if (node_1 == head) {
+            return null;
+        } else {
+            node_1.unlink();
+            return node_1;
+        }
+    }
+
+    public Node getBack() {
+        Node node_1 = head.next;
+        if (node_1 == head) {
+            current = null;
+            return null;
+        } else {
+            current = node_1.next;
+            return node_1;
+        }
+    }
+
+    public boolean method7861() {
+        return head.next == head;
+    }
+
+    public Node getNext() {
+        Node node_1 = head.previous;
+        if (node_1 == head) {
+            current = null;
+            return null;
+        } else {
+            current = node_1.previous;
+            return node_1;
+        }
+    }
+
+    public void insertFront(Node node_1) {
+        if (node_1.previous != null) {
+            node_1.unlink();
+        }
+        node_1.previous = head;
+        node_1.next = head.next;
+        node_1.previous.next = node_1;
+        node_1.next.previous = node_1;
+    }
+
+    public void insertBack(Node node_1) {
+        if (node_1.previous != null) {
+            node_1.unlink();
+        }
+        node_1.previous = head.previous;
+        node_1.next = head;
+        node_1.previous.next = node_1;
+        node_1.next.previous = node_1;
     }
 }

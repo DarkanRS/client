@@ -10,9 +10,9 @@ public class Class195 {
     }
 
     Class195(Class195 class195_1) {
-        this.anInt2410 = class195_1.anInt2410;
-        this.anInt2411 = class195_1.anInt2411;
-        this.anInt2412 = class195_1.anInt2412;
+        anInt2410 = class195_1.anInt2410;
+        anInt2411 = class195_1.anInt2411;
+        anInt2412 = class195_1.anInt2412;
     }
 
 }

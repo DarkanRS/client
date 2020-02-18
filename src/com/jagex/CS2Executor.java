@@ -4,24 +4,24 @@ import java.util.ArrayList;
 
 public class CS2Executor {
 
-    static int CURRENT_CS2_EXEC_IDX = 0;
-    static ArrayList CS2_EXECUTORS = new ArrayList();
-    static int anInt5904 = 0;
-    static String aString5897 = null;
-    static boolean aBool5898 = false;
+    static int CURRENT_CS2_EXEC_IDX;
+    static ArrayList<CS2Executor> CS2_EXECUTORS = new ArrayList<CS2Executor>();
+    static int anInt5904;
+    static String aString5897;
+    static boolean aBool5898;
     static int[] anIntArray5900 = new int[3];
-    static int anInt5906 = 0;
+    static int anInt5906;
 
     int[] intLocals;
     long[] longLocals;
     int anInt7004;
     CS2Instruction[] operations;
-    Entity currentEntity;
+    PathingEntity currentEntity;
     Class191 aClass191_7008;
     QuickChatMessage currentQuickChatMessage;
     ClanSettings currentClanSettings;
     ClanChannel clanChannel;
-    SceneObject currentSceneObject;
+    Location currentLocation;
     GroundItem currentGroundItem;
     Object[] objectLocals;
     int[] intOpValues;
@@ -31,40 +31,40 @@ public class CS2Executor {
     int[][] globalArrays = new int[5][5000];
 
     int[] intStack = new int[1000];
-    int intStackPtr = 0;
+    int intStackPtr;
     long[] longStack = new long[1000];
-    int longStackPtr = 0;
+    int longStackPtr;
     Object[] stringStack = new Object[1000];
-    int stringStackPtr = 0;
+    int stringStackPtr;
 
-    int returnValuesPtr = 0;
+    int returnValuesPtr;
     CS2ReturnValue[] returnValues = new CS2ReturnValue[50];
     CS2Interface hookedInterface1 = new CS2Interface();
     CS2Interface hookedInterface2 = new CS2Interface();
-    int hookRequestCount = 0;
+    int hookRequestCount;
     int instrPtr = -1;
 
-    static final void method11250(int i_0, int i_1, int i_2, int i_3) {
+    static void method11250(int i_0, int i_1, int i_2, int i_3) {
         if (i_2 >= Class532_Sub2.anInt7070 && i_2 <= Class532_Sub2.anInt7068) {
-            i_0 = EntityNode.method4890(i_0, Class532_Sub2.anInt7071, Class532_Sub2.anInt7069, -1202150111);
-            i_1 = EntityNode.method4890(i_1, Class532_Sub2.anInt7071, Class532_Sub2.anInt7069, 23945710);
+            i_0 = EntityNode.method4890(i_0, Class532_Sub2.anInt7071, Class532_Sub2.anInt7069);
+            i_1 = EntityNode.method4890(i_1, Class532_Sub2.anInt7071, Class532_Sub2.anInt7069);
             Class16.method568(i_0, i_1, i_2, i_3);
         }
     }
 
-    static final void method11251(String string_0) {
+    static void method11251(String string_0) {
         System.out.println("Error: " + CutsceneAction.method1609(string_0, "%0a", "\n"));
     }
 
-    static void method1834(CS2HookEventType class397_0, int i_1, int i_2, CS2Executor cs2executor_3, byte b_4) {
+    static void method1834(ClientTriggerType class397_0, int i_1, int i_2, CS2Executor cs2executor_3) {
         CS2Script cs2script_5 = FixedTileStrategy.getScript(class397_0, i_1, i_2);
         if (cs2script_5 == null) {
             decrementCS2ExecIdx();
         } else {
             cs2executor_3.intLocals = new int[cs2script_5.intLocalsCount];
             cs2executor_3.objectLocals = new Object[cs2script_5.stringLocalsCount];
-            if (cs2script_5.aClass397_9527 != CS2HookEventType.aClass397_4797 && cs2script_5.aClass397_9527 != CS2HookEventType.aClass397_4805 && cs2script_5.aClass397_9527 != CS2HookEventType.aClass397_4798) {
-                if (cs2script_5.aClass397_9527 == CS2HookEventType.aClass397_4806) {
+            if (cs2script_5.aClass397_9527 != ClientTriggerType.aClass397_4797 && cs2script_5.aClass397_9527 != ClientTriggerType.aClass397_4805 && cs2script_5.aClass397_9527 != ClientTriggerType.aClass397_4798) {
+                if (cs2script_5.aClass397_9527 == ClientTriggerType.aClass397_4806) {
                     cs2executor_3.intLocals[0] = cs2executor_3.anInt7004;
                 }
             } else {
@@ -111,12 +111,12 @@ public class CS2Executor {
                 }
             } catch (Exception exception_8) {
                 StringBuilder stringbuilder_6 = new StringBuilder(30);
-                stringbuilder_6.append(cs2executor_2.current.data).append(" ");
+                stringbuilder_6.append(cs2executor_2.current.pointer).append(" ");
                 for (int i_7 = cs2executor_2.returnValuesPtr - 1; i_7 >= 0; --i_7) {
-                    stringbuilder_6.append(cs2executor_2.returnValues[i_7].aCacheableNode_Sub5_5869.data).append(" ");
+                    stringbuilder_6.append(cs2executor_2.returnValues[i_7].aCacheableNode_Sub5_5869.pointer).append(" ");
                 }
                 stringbuilder_6.append(Integer.valueOf(cs2opinfo_4.opcode));
-                Class151.method2594(stringbuilder_6.toString(), exception_8, (byte) -32);
+                Class151.method2594(stringbuilder_6.toString(), exception_8);
                 decrementCS2ExecIdx();
             }
         } catch (Exception exception_9) {
@@ -183,7 +183,7 @@ public class CS2Executor {
                     executor.intLocals[intLocalCount++] = intLocal;
                 } else if (params[paramIdx] instanceof String) {
                     String string_13 = (String) params[paramIdx];
-                    if (string_13.equals("event_opbase")) {
+                    if ("event_opbase".equals(string_13)) {
                         string_13 = hook.opName;
                     }
 
@@ -199,8 +199,8 @@ public class CS2Executor {
         }
     }
 
-    public static void method3661(int i_0, String string_1, int i_2, byte b_3) {
-        CS2Script cs2script_4 = FixedTileStrategy.getScript(CS2HookEventType.aClass397_4792, i_0, -1);
+    public static void method3661(int i_0, String string_1, int i_2) {
+        CS2Script cs2script_4 = FixedTileStrategy.getScript(ClientTriggerType.aClass397_4792, i_0, -1);
         if (cs2script_4 != null) {
             CS2Executor cs2executor_5 = getNextScriptExecutor();
             cs2executor_5.intLocals = new int[cs2script_4.intLocalsCount];
@@ -211,18 +211,18 @@ public class CS2Executor {
         }
     }
 
-    static final void decrementCS2ExecIdx() {
+    static void decrementCS2ExecIdx() {
         --CURRENT_CS2_EXEC_IDX;
     }
 
-    static final CS2Executor getNextScriptExecutor() {
+    static CS2Executor getNextScriptExecutor() {
         if (CURRENT_CS2_EXEC_IDX == CS2_EXECUTORS.size()) {
             CS2_EXECUTORS.add(new CS2Executor());
         }
-        return (CS2Executor) CS2_EXECUTORS.get(CURRENT_CS2_EXEC_IDX++);
+        return CS2_EXECUTORS.get(CURRENT_CS2_EXEC_IDX++);
     }
 
-    static final long method1480() {
+    static long method1480() {
         return (long) (++anInt5906 - 1) << 32 | 0xffffffffL;
     }
 }

@@ -1,12 +1,12 @@
 package com.jagex;
 
-public final class Class484 {
+public class Class484 {
 
     Class484() throws Throwable {
         throw new Error();
     }
 
-    static void initSizes(IComponentDefinitions iCompDef, int i_1, int i_2, boolean bool_3, int i_4) {
+    static void initSizes(Component iCompDef, int i_1, int i_2, boolean bool_3) {
         int i_5 = iCompDef.width;
         int i_6 = iCompDef.height;
         if (iCompDef.aspectWidthType == 0) {
@@ -42,7 +42,7 @@ public final class Class484 {
                 }
             }
         }
-        if (iCompDef.contentType == IComponentDefinitions.CONTENT_TYPE_1337) {
+        if (iCompDef.contentType == Component.CONTENT_TYPE_1337) {
             client.GAME_SCREEN_INTERFACE = iCompDef;
         }
         if (bool_3 && iCompDef.anObjectArray1271 != null && (i_5 != iCompDef.width || i_6 != iCompDef.height)) {

@@ -18,7 +18,7 @@ public class Class272 {
     }
 
     static boolean method4841(CharSequence charsequence_0) {
-        if (10 >= 2 && 10 <= 36) {
+        if (true) {
             boolean bool_4 = false;
             boolean bool_5 = false;
             int i_6 = 0;
@@ -60,7 +60,7 @@ public class Class272 {
             }
             return bool_5;
         } else {
-            throw new IllegalArgumentException("" + 10);
+            throw new IllegalArgumentException("10");
         }
     }
 }

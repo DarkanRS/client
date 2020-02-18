@@ -1,6 +1,6 @@
 package com.jagex;
 
-public final class Class112 {
+public class Class112 {
 
     Class112() throws Throwable {
         throw new Error();
@@ -15,7 +15,7 @@ public final class Class112 {
         return i_2 == 0 ? i_0 : (i_2 == 1 ? i_1 : (i_2 == 2 ? 7 - i_0 : 7 - i_1));
     }
 
-    public static int findRoute(int i_0, int i_1, int i_2, RouteStrategy routestrategy_3, ClipMap clipmap_4, boolean bool_5, int[] ints_6, int[] ints_7, int i_8) {
+    public static int findRoute(int i_0, int i_1, int i_2, RouteStrategy routestrategy_3, ClipMap clipmap_4, boolean bool_5, int[] ints_6, int[] ints_7) {
         int i_10;
         for (int i_9 = 0; i_9 < 128; i_9++) {
             for (i_10 = 0; i_10 < 128; i_10++) {

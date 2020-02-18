@@ -2,10 +2,15 @@ package com.jagex;
 
 public class Node_Sub20_Sub30 extends Node_Sub20 {
 
+    public Node_Sub20_Sub30() {
+        super(1, true);
+    }
+
+    @Override
     int[] method12319(int i_1) {
-        int[] ints_3 = this.aClass320_7667.method5721(i_1, -1856155747);
-        if (this.aClass320_7667.aBool3722) {
-            int[][] ints_4 = this.method12333(0, i_1);
+        int[] ints_3 = aClass320_7667.method5721(i_1);
+        if (aClass320_7667.aBool3722) {
+            int[][] ints_4 = method12333(0, i_1);
             int[] ints_5 = ints_4[0];
             int[] ints_6 = ints_4[1];
             int[] ints_7 = ints_4[2];
@@ -14,9 +19,5 @@ public class Node_Sub20_Sub30 extends Node_Sub20 {
             }
         }
         return ints_3;
-    }
-
-    public Node_Sub20_Sub30() {
-        super(1, true);
     }
 }

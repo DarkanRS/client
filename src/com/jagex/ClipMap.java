@@ -4,13 +4,12 @@ import java.util.ArrayList;
 
 public class ClipMap {
 
+    static int anInt3968;
     public int[][] map;
     public int offsetX;
     public int offsetY;
     int sizeX;
     int sizeY;
-
-    static int anInt3968;
 
     public static ArrayList<ClipFlag> getFlags(int value) {
         ArrayList<ClipFlag> flags = new ArrayList<>();
@@ -21,13 +20,63 @@ public class ClipMap {
         return flags;
     }
 
+    public static boolean notFlagged(int value, ClipFlag... flags) {
+        int flag = 0;
+        for (ClipFlag f : flags)
+            flag |= f.flag;
+        return (value & flag) == 0;
+    }
+
+    static void method6007(int i_0, int[] ints_1) {
+        if (MovingAnimation.isInterfaceLoaded(i_0, ints_1)) {
+            Component[] arr_3 = CustomCursorsPreference.INTERFACES[i_0].components;
+            for (int i_4 = 0; i_4 < arr_3.length; i_4++) {
+                Component icomponentdefinitions_5 = arr_3[i_4];
+                if (icomponentdefinitions_5 != null && icomponentdefinitions_5.anim != null) {
+                    icomponentdefinitions_5.anim.method7582();
+                }
+            }
+        }
+    }
+
+    public static void method6008(boolean bool_0) {
+        Node_Sub48 class282_sub48_2;
+        for (class282_sub48_2 = (Node_Sub48) Node_Sub48.aClass482_8073.head(); class282_sub48_2 != null; class282_sub48_2 = (Node_Sub48) Node_Sub48.aClass482_8073.next()) {
+            if (class282_sub48_2.aNode_Sub15_Sub5_8099 != null) {
+                Class79.aNode_Sub15_Sub4_783.method15276(class282_sub48_2.aNode_Sub15_Sub5_8099);
+                class282_sub48_2.aNode_Sub15_Sub5_8099 = null;
+            }
+            if (class282_sub48_2.aNode_Sub15_Sub5_8096 != null) {
+                Class79.aNode_Sub15_Sub4_783.method15276(class282_sub48_2.aNode_Sub15_Sub5_8096);
+                class282_sub48_2.aNode_Sub15_Sub5_8096 = null;
+            }
+            class282_sub48_2.unlink();
+        }
+        if (bool_0) {
+            for (class282_sub48_2 = (Node_Sub48) Node_Sub48.aClass482_8074.head(); class282_sub48_2 != null; class282_sub48_2 = (Node_Sub48) Node_Sub48.aClass482_8074.next()) {
+                if (class282_sub48_2.aNode_Sub15_Sub5_8099 != null) {
+                    Class79.aNode_Sub15_Sub4_783.method15276(class282_sub48_2.aNode_Sub15_Sub5_8099);
+                    class282_sub48_2.aNode_Sub15_Sub5_8099 = null;
+                }
+                class282_sub48_2.unlink();
+            }
+            for (class282_sub48_2 = (Node_Sub48) Node_Sub48.aClass465_8075.method7750(); class282_sub48_2 != null; class282_sub48_2 = (Node_Sub48) Node_Sub48.aClass465_8075.method7751()) {
+                if (class282_sub48_2.aNode_Sub15_Sub5_8099 != null) {
+                    Class79.aNode_Sub15_Sub4_783.method15276(class282_sub48_2.aNode_Sub15_Sub5_8099);
+                    class282_sub48_2.aNode_Sub15_Sub5_8099 = null;
+                }
+                class282_sub48_2.unlink();
+            }
+        }
+    }
+
     public void initEmpty() {
-        for (int x = 0; x < this.sizeX; x++) {
-            for (int y = 0; y < this.sizeY; y++) {
-                if (x != 0 && y != 0 && x < this.sizeX - 5 && y < this.sizeY - 5) {
-                    this.map[x][y] = ClipFlag.BLOCKED.flag;
+        for (int x = 0; x < sizeX; x++) {
+            for (int y = 0; y < sizeY; y++) {
+                if (x != 0 && y != 0 && x < sizeX - 5 && y < sizeY - 5) {
+                    map[x][y] = ClipFlag.BLOCKED.flag;
                 } else {
-                    this.map[x][y] = ClipFlag.EMPTY.flag;
+                    map[x][y] = ClipFlag.EMPTY.flag;
                 }
             }
         }
@@ -41,8 +90,8 @@ public class ClipMap {
         if (notAlt) {
             flag |= ClipFlag.ALT_OBJ.flag;
         }
-        x -= this.offsetX;
-        y -= this.offsetY;
+        x -= offsetX;
+        y -= offsetY;
         for (int tileX = x; tileX < x + sizeX; tileX++) {
             if (tileX >= 0 && tileX < this.sizeX) {
                 for (int tileY = y; tileY < y + sizeY; tileY++) {
@@ -55,6 +104,8 @@ public class ClipMap {
     }
 
     public void removeObject(int x, int y, int sizeX, int sizeY, int rotation, boolean blocked, boolean notAlt) {
+        int sizeX1 = sizeX;
+        int sizeY1 = sizeY;
         int flag = ClipFlag.OBJ.flag;
         if (blocked) {
             flag |= ClipFlag.BLOCKED_OBJ.flag;
@@ -62,17 +113,17 @@ public class ClipMap {
         if (notAlt) {
             flag |= ClipFlag.ALT_OBJ.flag;
         }
-        x -= this.offsetX;
-        y -= this.offsetY;
+        x -= offsetX;
+        y -= offsetY;
         int tileX;
         if (rotation == 1 || rotation == 3) {
-            tileX = sizeX;
-            sizeX = sizeY;
-            sizeY = tileX;
+            tileX = sizeX1;
+            sizeX1 = sizeY1;
+            sizeY1 = tileX;
         }
-        for (tileX = x; tileX < sizeX + x; tileX++) {
+        for (tileX = x; tileX < sizeX1 + x; tileX++) {
             if (tileX >= 0 && tileX < this.sizeX) {
-                for (int tileY = y; tileY < y + sizeY; tileY++) {
+                for (int tileY = y; tileY < y + sizeY1; tileY++) {
                     if (tileY >= 0 && tileY < this.sizeY) {
                         removeFlag(tileX, tileY, flag);
                     }
@@ -82,8 +133,8 @@ public class ClipMap {
     }
 
     public void addWall(int x, int y, int type, int rotation, boolean blocks, boolean alt) {
-        x -= this.offsetX;
-        y -= this.offsetY;
+        x -= offsetX;
+        y -= offsetY;
         if (type == 0) {
             if (rotation == 0) {
                 addFlag(x, y, ClipFlag.W_OBJ);
@@ -265,35 +316,35 @@ public class ClipMap {
     }
 
     public void addBlockFloorDeco(int i_1, int i_2) {
-        i_1 -= this.offsetX;
-        i_2 -= this.offsetY;
-        this.map[i_1][i_2] |= ClipFlag.BLOCKED_DECO.flag;
+        i_1 -= offsetX;
+        i_2 -= offsetY;
+        map[i_1][i_2] |= ClipFlag.BLOCKED_DECO.flag;
     }
 
     public void removeBlockFloorDeco(int i_1, int i_2) {
-        i_1 -= this.offsetX;
-        i_2 -= this.offsetY;
-        this.map[i_1][i_2] &= ~ClipFlag.BLOCKED_DECO.flag;
+        i_1 -= offsetX;
+        i_2 -= offsetY;
+        map[i_1][i_2] &= ~ClipFlag.BLOCKED_DECO.flag;
     }
 
     public void addBlockedTile(int i_1, int i_2) {
-        i_1 -= this.offsetX;
-        i_2 -= this.offsetY;
-        this.map[i_1][i_2] |= ClipFlag.BLOCKED.flag;
+        i_1 -= offsetX;
+        i_2 -= offsetY;
+        map[i_1][i_2] |= ClipFlag.BLOCKED.flag;
     }
 
     public void removeBlockedTile(int i_1, int i_2) {
-        i_1 -= this.offsetX;
-        i_2 -= this.offsetY;
-        this.map[i_1][i_2] &= ~ClipFlag.BLOCKED.flag;
+        i_1 -= offsetX;
+        i_2 -= offsetY;
+        map[i_1][i_2] &= ~ClipFlag.BLOCKED.flag;
     }
 
     void removeFlag(int i_1, int i_2, int i_3) {
-        this.map[i_1][i_2] &= ~i_3;
+        map[i_1][i_2] &= ~i_3;
     }
 
     void addFlag(int i_1, int i_2, int i_3) {
-        this.map[i_1][i_2] |= i_3;
+        map[i_1][i_2] |= i_3;
     }
 
     void removeFlag(int i_1, int i_2, ClipFlag... flags) {
@@ -310,13 +361,6 @@ public class ClipMap {
         addFlag(i_1, i_2, flag);
     }
 
-    public static boolean notFlagged(int value, ClipFlag... flags) {
-        int flag = 0;
-        for (ClipFlag f : flags)
-            flag |= f.flag;
-        return (value & flag) == 0;
-    }
-
     public boolean method5978(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9) {
         int i_11 = i_3 + i_1;
         int i_12 = i_2 + i_4;
@@ -325,30 +369,30 @@ public class ClipMap {
         int i_15;
         int i_16;
         if (i_13 == i_1 && notFlagged(i_9, ClipFlag.N_OBJ)) {
-            i_15 = i_2 > i_6 ? i_2 : i_6;
-            for (i_16 = i_12 < i_14 ? i_12 : i_14; i_15 < i_16; i_15++) {
-                if (notFlagged(this.map[i_13 - 1 - this.offsetX][i_15 - this.offsetY], ClipFlag.E_OBJ)) {
+            i_15 = Math.max(i_2, i_6);
+            for (i_16 = Math.min(i_12, i_14); i_15 < i_16; i_15++) {
+                if (notFlagged(map[i_13 - 1 - offsetX][i_15 - offsetY], ClipFlag.E_OBJ)) {
                     return true;
                 }
             }
         } else if (i_5 == i_11 && notFlagged(i_9, ClipFlag.E_OBJ)) {
-            i_15 = i_2 > i_6 ? i_2 : i_6;
-            for (i_16 = i_12 < i_14 ? i_12 : i_14; i_15 < i_16; i_15++) {
-                if (notFlagged(this.map[i_5 - this.offsetX][i_15 - this.offsetY], ClipFlag.W_OBJ)) {
+            i_15 = Math.max(i_2, i_6);
+            for (i_16 = Math.min(i_12, i_14); i_15 < i_16; i_15++) {
+                if (notFlagged(map[i_5 - offsetX][i_15 - offsetY], ClipFlag.W_OBJ)) {
                     return true;
                 }
             }
         } else if (i_14 == i_2 && notFlagged(i_9, ClipFlag.NW_OBJ)) {
-            i_15 = i_1 > i_5 ? i_1 : i_5;
-            for (i_16 = i_11 < i_13 ? i_11 : i_13; i_15 < i_16; i_15++) {
-                if (notFlagged(this.map[i_15 - this.offsetX][i_14 - 1 - this.offsetY], ClipFlag.N_OBJ)) {
+            i_15 = Math.max(i_1, i_5);
+            for (i_16 = Math.min(i_11, i_13); i_15 < i_16; i_15++) {
+                if (notFlagged(map[i_15 - offsetX][i_14 - 1 - offsetY], ClipFlag.N_OBJ)) {
                     return true;
                 }
             }
         } else if (i_12 == i_6 && notFlagged(i_9, ClipFlag.NE_OBJ)) {
-            i_15 = i_1 > i_5 ? i_1 : i_5;
-            for (i_16 = i_11 < i_13 ? i_11 : i_13; i_15 < i_16; i_15++) {
-                if (notFlagged(this.map[i_15 - this.offsetX][i_6 - this.offsetY], ClipFlag.S_OBJ)) {
+            i_15 = Math.max(i_1, i_5);
+            for (i_16 = Math.min(i_11, i_13); i_15 < i_16; i_15++) {
+                if (notFlagged(map[i_15 - offsetX][i_6 - offsetY], ClipFlag.S_OBJ)) {
                     return true;
                 }
             }
@@ -356,7 +400,7 @@ public class ClipMap {
         return false;
     }
 
-    public boolean method5986(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, short s_8) {
+    public boolean method5986(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
         if (i_3 == 1) {
             if (i_4 == i_1 && i_5 == i_2) {
                 return true;
@@ -364,50 +408,50 @@ public class ClipMap {
         } else if (i_4 >= i_1 && i_4 <= i_3 + i_1 - 1 && i_5 >= i_5 && i_5 <= i_3 + i_5 - 1) {
             return true;
         }
-        i_1 -= this.offsetX;
-        i_2 -= this.offsetY;
-        i_4 -= this.offsetX;
-        i_5 -= this.offsetY;
+        i_1 -= offsetX;
+        i_2 -= offsetY;
+        i_4 -= offsetX;
+        i_5 -= offsetY;
         if (i_3 == 1) {
             if (i_6 == 0) {
                 if (i_7 == 0) {
                     if (i_4 - 1 == i_1 && i_5 == i_2) {
                         return true;
                     }
-                    if (i_4 == i_1 && i_5 + 1 == i_2 && notFlagged(this.map[i_1][i_2], ClipFlag.S_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
+                    if (i_4 == i_1 && i_5 + 1 == i_2 && notFlagged(map[i_1][i_2], ClipFlag.S_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
-                    if (i_4 == i_1 && i_2 == i_5 - 1 && notFlagged(this.map[i_1][i_2], ClipFlag.N_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
+                    if (i_4 == i_1 && i_2 == i_5 - 1 && notFlagged(map[i_1][i_2], ClipFlag.N_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
                 } else if (i_7 == 1) {
                     if (i_4 == i_1 && i_5 + 1 == i_2) {
                         return true;
                     }
-                    if (i_4 - 1 == i_1 && i_5 == i_2 && notFlagged(this.map[i_1][i_2], ClipFlag.E_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
+                    if (i_4 - 1 == i_1 && i_5 == i_2 && notFlagged(map[i_1][i_2], ClipFlag.E_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
-                    if (i_4 + 1 == i_1 && i_5 == i_2 && notFlagged(this.map[i_1][i_2], ClipFlag.W_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
+                    if (i_4 + 1 == i_1 && i_5 == i_2 && notFlagged(map[i_1][i_2], ClipFlag.W_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
                 } else if (i_7 == 2) {
                     if (i_4 + 1 == i_1 && i_5 == i_2) {
                         return true;
                     }
-                    if (i_4 == i_1 && i_2 == i_5 + 1 && notFlagged(this.map[i_1][i_2], ClipFlag.S_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
+                    if (i_4 == i_1 && i_2 == i_5 + 1 && notFlagged(map[i_1][i_2], ClipFlag.S_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
-                    if (i_4 == i_1 && i_2 == i_5 - 1 && notFlagged(this.map[i_1][i_2], ClipFlag.N_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
+                    if (i_4 == i_1 && i_2 == i_5 - 1 && notFlagged(map[i_1][i_2], ClipFlag.N_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
                 } else if (i_7 == 3) {
                     if (i_4 == i_1 && i_2 == i_5 - 1) {
                         return true;
                     }
-                    if (i_4 - 1 == i_1 && i_5 == i_2 && notFlagged(this.map[i_1][i_2], ClipFlag.E_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
+                    if (i_4 - 1 == i_1 && i_5 == i_2 && notFlagged(map[i_1][i_2], ClipFlag.E_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
-                    if (i_4 + 1 == i_1 && i_5 == i_2 && notFlagged(this.map[i_1][i_2], ClipFlag.W_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
+                    if (i_4 + 1 == i_1 && i_5 == i_2 && notFlagged(map[i_1][i_2], ClipFlag.W_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
                 }
@@ -420,14 +464,14 @@ public class ClipMap {
                     if (i_4 == i_1 && i_5 + 1 == i_2) {
                         return true;
                     }
-                    if (i_4 + 1 == i_1 && i_5 == i_2 && notFlagged(this.map[i_1][i_2], ClipFlag.W_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
+                    if (i_4 + 1 == i_1 && i_5 == i_2 && notFlagged(map[i_1][i_2], ClipFlag.W_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
-                    if (i_4 == i_1 && i_2 == i_5 - 1 && notFlagged(this.map[i_1][i_2], ClipFlag.N_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
+                    if (i_4 == i_1 && i_2 == i_5 - 1 && notFlagged(map[i_1][i_2], ClipFlag.N_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
                 } else if (i_7 == 1) {
-                    if (i_4 - 1 == i_1 && i_5 == i_2 && notFlagged(this.map[i_1][i_2], ClipFlag.E_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
+                    if (i_4 - 1 == i_1 && i_5 == i_2 && notFlagged(map[i_1][i_2], ClipFlag.E_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
                     if (i_4 == i_1 && i_5 + 1 == i_2) {
@@ -436,14 +480,14 @@ public class ClipMap {
                     if (i_4 + 1 == i_1 && i_5 == i_2) {
                         return true;
                     }
-                    if (i_4 == i_1 && i_2 == i_5 - 1 && notFlagged(this.map[i_1][i_2], ClipFlag.N_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
+                    if (i_4 == i_1 && i_2 == i_5 - 1 && notFlagged(map[i_1][i_2], ClipFlag.N_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
                 } else if (i_7 == 2) {
-                    if (i_4 - 1 == i_1 && i_5 == i_2 && notFlagged(this.map[i_1][i_2], ClipFlag.E_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
+                    if (i_4 - 1 == i_1 && i_5 == i_2 && notFlagged(map[i_1][i_2], ClipFlag.E_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
-                    if (i_4 == i_1 && i_2 == i_5 + 1 && notFlagged(this.map[i_1][i_2], ClipFlag.S_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
+                    if (i_4 == i_1 && i_2 == i_5 + 1 && notFlagged(map[i_1][i_2], ClipFlag.S_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
                     if (i_4 + 1 == i_1 && i_5 == i_2) {
@@ -456,10 +500,10 @@ public class ClipMap {
                     if (i_4 - 1 == i_1 && i_5 == i_2) {
                         return true;
                     }
-                    if (i_4 == i_1 && i_2 == i_5 + 1 && notFlagged(this.map[i_1][i_2], ClipFlag.S_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
+                    if (i_4 == i_1 && i_2 == i_5 + 1 && notFlagged(map[i_1][i_2], ClipFlag.S_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
-                    if (i_4 + 1 == i_1 && i_5 == i_2 && notFlagged(this.map[i_1][i_2], ClipFlag.W_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
+                    if (i_4 + 1 == i_1 && i_5 == i_2 && notFlagged(map[i_1][i_2], ClipFlag.W_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
                     if (i_4 == i_1 && i_2 == i_5 - 1) {
@@ -468,16 +512,16 @@ public class ClipMap {
                 }
             }
             if (i_6 == 9) {
-                if (i_4 == i_1 && i_2 == i_5 + 1 && notFlagged(this.map[i_1][i_2], ClipFlag.S_OBJ)) {
+                if (i_4 == i_1 && i_2 == i_5 + 1 && notFlagged(map[i_1][i_2], ClipFlag.S_OBJ)) {
                     return true;
                 }
-                if (i_4 == i_1 && i_2 == i_5 - 1 && notFlagged(this.map[i_1][i_2], ClipFlag.N_OBJ)) {
+                if (i_4 == i_1 && i_2 == i_5 - 1 && notFlagged(map[i_1][i_2], ClipFlag.N_OBJ)) {
                     return true;
                 }
-                if (i_4 - 1 == i_1 && i_5 == i_2 && notFlagged(this.map[i_1][i_2], ClipFlag.E_OBJ)) {
+                if (i_4 - 1 == i_1 && i_5 == i_2 && notFlagged(map[i_1][i_2], ClipFlag.E_OBJ)) {
                     return true;
                 }
-                return i_4 + 1 == i_1 && i_5 == i_2 && notFlagged(this.map[i_1][i_2], ClipFlag.W_OBJ);
+                return i_4 + 1 == i_1 && i_5 == i_2 && notFlagged(map[i_1][i_2], ClipFlag.W_OBJ);
             }
         } else {
             int i_9 = i_3 + i_1 - 1;
@@ -487,40 +531,40 @@ public class ClipMap {
                     if (i_4 - i_3 == i_1 && i_5 >= i_2 && i_5 <= i_10) {
                         return true;
                     }
-                    if (i_4 >= i_1 && i_4 <= i_9 && i_2 == i_5 + 1 && notFlagged(this.map[i_4][i_2], ClipFlag.S_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
+                    if (i_4 >= i_1 && i_4 <= i_9 && i_2 == i_5 + 1 && notFlagged(map[i_4][i_2], ClipFlag.S_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
-                    if (i_4 >= i_1 && i_4 <= i_9 && i_5 - i_3 == i_2 && notFlagged(this.map[i_4][i_10], ClipFlag.N_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
+                    if (i_4 >= i_1 && i_4 <= i_9 && i_5 - i_3 == i_2 && notFlagged(map[i_4][i_10], ClipFlag.N_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
                 } else if (i_7 == 1) {
                     if (i_4 >= i_1 && i_4 <= i_9 && i_5 + 1 == i_2) {
                         return true;
                     }
-                    if (i_4 - i_3 == i_1 && i_5 >= i_2 && i_5 <= i_10 && notFlagged(this.map[i_9][i_5], ClipFlag.E_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
+                    if (i_4 - i_3 == i_1 && i_5 >= i_2 && i_5 <= i_10 && notFlagged(map[i_9][i_5], ClipFlag.E_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
-                    if (i_4 + 1 == i_1 && i_5 >= i_2 && i_5 <= i_10 && notFlagged(this.map[i_1][i_5], ClipFlag.W_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
+                    if (i_4 + 1 == i_1 && i_5 >= i_2 && i_5 <= i_10 && notFlagged(map[i_1][i_5], ClipFlag.W_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
                 } else if (i_7 == 2) {
                     if (i_4 + 1 == i_1 && i_5 >= i_2 && i_5 <= i_10) {
                         return true;
                     }
-                    if (i_4 >= i_1 && i_4 <= i_9 && i_5 + 1 == i_2 && notFlagged(this.map[i_4][i_2], ClipFlag.S_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
+                    if (i_4 >= i_1 && i_4 <= i_9 && i_5 + 1 == i_2 && notFlagged(map[i_4][i_2], ClipFlag.S_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
-                    if (i_4 >= i_1 && i_4 <= i_9 && i_5 - i_3 == i_2 && notFlagged(this.map[i_4][i_10], ClipFlag.N_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
+                    if (i_4 >= i_1 && i_4 <= i_9 && i_5 - i_3 == i_2 && notFlagged(map[i_4][i_10], ClipFlag.N_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
                 } else if (i_7 == 3) {
                     if (i_4 >= i_1 && i_4 <= i_9 && i_5 - i_3 == i_2) {
                         return true;
                     }
-                    if (i_4 - i_3 == i_1 && i_5 >= i_2 && i_5 <= i_10 && notFlagged(this.map[i_9][i_5], ClipFlag.E_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
+                    if (i_4 - i_3 == i_1 && i_5 >= i_2 && i_5 <= i_10 && notFlagged(map[i_9][i_5], ClipFlag.E_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
-                    if (i_4 + 1 == i_1 && i_5 >= i_2 && i_5 <= i_10 && notFlagged(this.map[i_1][i_5], ClipFlag.W_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
+                    if (i_4 + 1 == i_1 && i_5 >= i_2 && i_5 <= i_10 && notFlagged(map[i_1][i_5], ClipFlag.W_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
                 }
@@ -533,14 +577,14 @@ public class ClipMap {
                     if (i_4 >= i_1 && i_4 <= i_9 && i_5 + 1 == i_2) {
                         return true;
                     }
-                    if (i_4 + 1 == i_1 && i_5 >= i_2 && i_5 <= i_10 && notFlagged(this.map[i_1][i_5], ClipFlag.W_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
+                    if (i_4 + 1 == i_1 && i_5 >= i_2 && i_5 <= i_10 && notFlagged(map[i_1][i_5], ClipFlag.W_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
-                    if (i_4 >= i_1 && i_4 <= i_9 && i_5 - i_3 == i_2 && notFlagged(this.map[i_4][i_10], ClipFlag.N_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
+                    if (i_4 >= i_1 && i_4 <= i_9 && i_5 - i_3 == i_2 && notFlagged(map[i_4][i_10], ClipFlag.N_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
                 } else if (i_7 == 1) {
-                    if (i_4 - i_3 == i_1 && i_5 >= i_2 && i_5 <= i_10 && notFlagged(this.map[i_9][i_5], ClipFlag.E_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
+                    if (i_4 - i_3 == i_1 && i_5 >= i_2 && i_5 <= i_10 && notFlagged(map[i_9][i_5], ClipFlag.E_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
                     if (i_4 >= i_1 && i_4 <= i_9 && i_5 + 1 == i_2) {
@@ -549,14 +593,14 @@ public class ClipMap {
                     if (i_4 + 1 == i_1 && i_5 >= i_2 && i_5 <= i_10) {
                         return true;
                     }
-                    if (i_4 >= i_1 && i_4 <= i_9 && i_5 - i_3 == i_2 && notFlagged(this.map[i_4][i_10], ClipFlag.N_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
+                    if (i_4 >= i_1 && i_4 <= i_9 && i_5 - i_3 == i_2 && notFlagged(map[i_4][i_10], ClipFlag.N_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
                 } else if (i_7 == 2) {
-                    if (i_4 - i_3 == i_1 && i_5 >= i_2 && i_5 <= i_10 && notFlagged(this.map[i_9][i_5], ClipFlag.E_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
+                    if (i_4 - i_3 == i_1 && i_5 >= i_2 && i_5 <= i_10 && notFlagged(map[i_9][i_5], ClipFlag.E_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
-                    if (i_4 >= i_1 && i_4 <= i_9 && i_5 + 1 == i_2 && notFlagged(this.map[i_4][i_2], ClipFlag.S_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
+                    if (i_4 >= i_1 && i_4 <= i_9 && i_5 + 1 == i_2 && notFlagged(map[i_4][i_2], ClipFlag.S_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
                     if (i_4 + 1 == i_1 && i_5 >= i_2 && i_5 <= i_10) {
@@ -569,10 +613,10 @@ public class ClipMap {
                     if (i_4 - i_3 == i_1 && i_5 >= i_2 && i_5 <= i_10) {
                         return true;
                     }
-                    if (i_4 >= i_1 && i_4 <= i_9 && i_2 == i_5 + 1 && notFlagged(this.map[i_4][i_2], ClipFlag.S_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
+                    if (i_4 >= i_1 && i_4 <= i_9 && i_2 == i_5 + 1 && notFlagged(map[i_4][i_2], ClipFlag.S_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
-                    if (i_4 + 1 == i_1 && i_5 >= i_2 && i_5 <= i_10 && notFlagged(this.map[i_1][i_5], ClipFlag.W_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
+                    if (i_4 + 1 == i_1 && i_5 >= i_2 && i_5 <= i_10 && notFlagged(map[i_1][i_5], ClipFlag.W_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
                     if (i_4 >= i_1 && i_4 <= i_9 && i_5 - i_3 == i_2) {
@@ -581,34 +625,34 @@ public class ClipMap {
                 }
             }
             if (i_6 == 9) {
-                if (i_4 >= i_1 && i_4 <= i_9 && i_5 + 1 == i_2 && notFlagged(this.map[i_4][i_2], ClipFlag.S_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
+                if (i_4 >= i_1 && i_4 <= i_9 && i_5 + 1 == i_2 && notFlagged(map[i_4][i_2], ClipFlag.S_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                     return true;
                 }
-                if (i_4 >= i_1 && i_4 <= i_9 && i_5 - i_3 == i_2 && notFlagged(this.map[i_4][i_10], ClipFlag.N_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
+                if (i_4 >= i_1 && i_4 <= i_9 && i_5 - i_3 == i_2 && notFlagged(map[i_4][i_10], ClipFlag.N_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                     return true;
                 }
-                if (i_4 - i_3 == i_1 && i_5 >= i_2 && i_5 <= i_10 && notFlagged(this.map[i_9][i_5], ClipFlag.E_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
+                if (i_4 - i_3 == i_1 && i_5 >= i_2 && i_5 <= i_10 && notFlagged(map[i_9][i_5], ClipFlag.E_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                     return true;
                 }
-                return i_4 + 1 == i_1 && i_5 >= i_2 && i_5 <= i_10 && notFlagged(this.map[i_1][i_5], ClipFlag.W_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED);
+                return i_4 + 1 == i_1 && i_5 >= i_2 && i_5 <= i_10 && notFlagged(map[i_1][i_5], ClipFlag.W_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED);
             }
         }
         return false;
     }
 
-    public boolean method5988(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, byte b_9) {
+    public boolean method5988(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
         if (i_3 > 1) {
-            return Class325.method5790(i_1, i_2, i_3, i_3, i_4, i_5, i_6, i_7, -386839744) || this.method5978(i_1, i_2, i_3, i_3, i_4, i_5, i_6, i_7, i_8);
+            return Class325.method5790(i_1, i_2, i_3, i_3, i_4, i_5, i_6, i_7) || method5978(i_1, i_2, i_3, i_3, i_4, i_5, i_6, i_7, i_8);
         } else {
             int i_10 = i_4 + i_6 - 1;
             int i_11 = i_5 + i_7 - 1;
-            return i_1 >= i_4 && i_1 <= i_10 && i_2 >= i_5 && i_2 <= i_11 || (i_4 - 1 == i_1 && i_2 >= i_5 && i_2 <= i_11 && notFlagged(this.map[i_1 - this.offsetX][i_2 - this.offsetY], ClipFlag.E_OBJ) && notFlagged(i_8, ClipFlag.E_OBJ) || (i_10 + 1 == i_1 && i_2 >= i_5 && i_2 <= i_11 && notFlagged(this.map[i_1 - this.offsetX][i_2 - this.offsetY], ClipFlag.W_OBJ) && notFlagged(i_8, ClipFlag.N_OBJ) || (i_2 == i_5 - 1 && i_1 >= i_4 && i_1 <= i_10 && notFlagged(this.map[i_1 - this.offsetX][i_2 - this.offsetY], ClipFlag.N_OBJ) && notFlagged(i_8, ClipFlag.NE_OBJ) || i_2 == i_11 + 1 && i_1 >= i_4 && i_1 <= i_10 && notFlagged(this.map[i_1 - this.offsetX][i_2 - this.offsetY], ClipFlag.S_OBJ) && notFlagged(i_8, ClipFlag.NW_OBJ))));
+            return i_1 >= i_4 && i_1 <= i_10 && i_2 >= i_5 && i_2 <= i_11 || (i_4 - 1 == i_1 && i_2 >= i_5 && i_2 <= i_11 && notFlagged(map[i_1 - offsetX][i_2 - offsetY], ClipFlag.E_OBJ) && notFlagged(i_8, ClipFlag.E_OBJ) || (i_10 + 1 == i_1 && i_2 >= i_5 && i_2 <= i_11 && notFlagged(map[i_1 - offsetX][i_2 - offsetY], ClipFlag.W_OBJ) && notFlagged(i_8, ClipFlag.N_OBJ) || (i_2 == i_5 - 1 && i_1 >= i_4 && i_1 <= i_10 && notFlagged(map[i_1 - offsetX][i_2 - offsetY], ClipFlag.N_OBJ) && notFlagged(i_8, ClipFlag.NE_OBJ) || i_2 == i_11 + 1 && i_1 >= i_4 && i_1 <= i_10 && notFlagged(map[i_1 - offsetX][i_2 - offsetY], ClipFlag.S_OBJ) && notFlagged(i_8, ClipFlag.NW_OBJ))));
         }
     }
 
     public void removeWall(int x, int y, int type, int rotation, boolean blocks, boolean notAlternative) {
-        x -= this.offsetX;
-        y -= this.offsetY;
+        x -= offsetX;
+        y -= offsetY;
         if (type == 0) {
             if (rotation == 0) {
                 removeFlag(x, y, ClipFlag.W_OBJ);
@@ -785,49 +829,6 @@ public class ClipMap {
                     removeFlag(x, y - 1, ClipFlag.N_ALT_OBJ);
                     removeFlag(x - 1, y, ClipFlag.E_ALT_OBJ);
                 }
-            }
-        }
-    }
-
-    static final void method6007(int i_0, int[] ints_1, int i_2) {
-        if (MovingAnimation.isInterfaceLoaded(i_0, ints_1, 214426228)) {
-            IComponentDefinitions[] arr_3 = CustomCursorsPreference.INTERFACES[i_0].components;
-            for (int i_4 = 0; i_4 < arr_3.length; i_4++) {
-                IComponentDefinitions icomponentdefinitions_5 = arr_3[i_4];
-                if (icomponentdefinitions_5 != null && icomponentdefinitions_5.anim != null) {
-                    icomponentdefinitions_5.anim.method7582((byte) -62);
-                }
-            }
-        }
-    }
-
-    public static void method6008(boolean bool_0) {
-        Node_Sub48 class282_sub48_2;
-        for (class282_sub48_2 = (Node_Sub48) Node_Sub48.aClass482_8073.head(); class282_sub48_2 != null; class282_sub48_2 = (Node_Sub48) Node_Sub48.aClass482_8073.next(-128319020)) {
-            if (class282_sub48_2.aNode_Sub15_Sub5_8099 != null) {
-                Class79.aNode_Sub15_Sub4_783.method15276(class282_sub48_2.aNode_Sub15_Sub5_8099);
-                class282_sub48_2.aNode_Sub15_Sub5_8099 = null;
-            }
-            if (class282_sub48_2.aNode_Sub15_Sub5_8096 != null) {
-                Class79.aNode_Sub15_Sub4_783.method15276(class282_sub48_2.aNode_Sub15_Sub5_8096);
-                class282_sub48_2.aNode_Sub15_Sub5_8096 = null;
-            }
-            class282_sub48_2.remove();
-        }
-        if (bool_0) {
-            for (class282_sub48_2 = (Node_Sub48) Node_Sub48.aClass482_8074.head(); class282_sub48_2 != null; class282_sub48_2 = (Node_Sub48) Node_Sub48.aClass482_8074.next(-938773769)) {
-                if (class282_sub48_2.aNode_Sub15_Sub5_8099 != null) {
-                    Class79.aNode_Sub15_Sub4_783.method15276(class282_sub48_2.aNode_Sub15_Sub5_8099);
-                    class282_sub48_2.aNode_Sub15_Sub5_8099 = null;
-                }
-                class282_sub48_2.remove();
-            }
-            for (class282_sub48_2 = (Node_Sub48) Node_Sub48.aClass465_8075.method7750(856415350); class282_sub48_2 != null; class282_sub48_2 = (Node_Sub48) Node_Sub48.aClass465_8075.method7751((byte) 62)) {
-                if (class282_sub48_2.aNode_Sub15_Sub5_8099 != null) {
-                    Class79.aNode_Sub15_Sub4_783.method15276(class282_sub48_2.aNode_Sub15_Sub5_8099);
-                    class282_sub48_2.aNode_Sub15_Sub5_8099 = null;
-                }
-                class282_sub48_2.remove();
             }
         }
     }

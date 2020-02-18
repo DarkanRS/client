@@ -14,47 +14,47 @@ public class Class462 {
 
     AnimationFrameSet animationFrameSet;
 
-    boolean aBool5544 = false;
+    boolean aBool5544;
 
-    final boolean method7707(AnimationIndexLoader animationindexloader_1, AnimationDefinitions animationdefinitions_2, int i_3, int i_4, int[] ints_5, int i_6) {
-        if (!this.aBool5544) {
+    boolean method7707(AnimationIndexLoader animationindexloader_1, AnimationDefinitions animationdefinitions_2, int i_3, int i_4, int[] ints_5) {
+        if (!aBool5544) {
             if (i_3 >= ints_5.length) {
                 return false;
             } else {
-                this.anInt5542 = ints_5[i_3];
-                this.aCacheableNode_Sub13_5545 = animationindexloader_1.getAnimationFrame(this.anInt5542 >> 16);
-                this.anInt5542 &= 0xffff;
-                if (this.aCacheableNode_Sub13_5545 != null) {
+                anInt5542 = ints_5[i_3];
+                aCacheableNode_Sub13_5545 = animationindexloader_1.getAnimationFrame(anInt5542 >> 16);
+                anInt5542 &= 0xffff;
+                if (aCacheableNode_Sub13_5545 != null) {
                     if (animationdefinitions_2.tweened && i_4 != -1 && i_4 < ints_5.length) {
-                        this.anInt5547 = ints_5[i_4];
-                        this.animationFrameSet = animationindexloader_1.getAnimationFrame(this.anInt5547 >> 16);
-                        this.anInt5547 &= 0xffff;
+                        anInt5547 = ints_5[i_4];
+                        animationFrameSet = animationindexloader_1.getAnimationFrame(anInt5547 >> 16);
+                        anInt5547 &= 0xffff;
                     }
                     if (animationdefinitions_2.aBool5923) {
-                        this.anInt5543 |= 0x200;
+                        anInt5543 |= 0x200;
                     }
-                    if (this.aCacheableNode_Sub13_5545.method15080(this.anInt5542, -1144516636)) {
-                        this.anInt5543 |= 0x80;
+                    if (aCacheableNode_Sub13_5545.method15080(anInt5542)) {
+                        anInt5543 |= 0x80;
                     }
-                    if (this.aCacheableNode_Sub13_5545.method15079(this.anInt5542)) {
-                        this.anInt5543 |= 0x100;
+                    if (aCacheableNode_Sub13_5545.method15079(anInt5542)) {
+                        anInt5543 |= 0x100;
                     }
-                    if (this.aCacheableNode_Sub13_5545.method15081(this.anInt5542)) {
-                        this.anInt5543 |= 0x400;
+                    if (aCacheableNode_Sub13_5545.method15081(anInt5542)) {
+                        anInt5543 |= 0x400;
                     }
-                    if (this.animationFrameSet != null) {
-                        if (this.animationFrameSet.method15080(this.anInt5547, -2104215933)) {
-                            this.anInt5543 |= 0x80;
+                    if (animationFrameSet != null) {
+                        if (animationFrameSet.method15080(anInt5547)) {
+                            anInt5543 |= 0x80;
                         }
-                        if (this.animationFrameSet.method15079(this.anInt5547)) {
-                            this.anInt5543 |= 0x100;
+                        if (animationFrameSet.method15079(anInt5547)) {
+                            anInt5543 |= 0x100;
                         }
-                        if (this.animationFrameSet.method15081(this.anInt5547)) {
-                            this.anInt5543 |= 0x400;
+                        if (animationFrameSet.method15081(anInt5547)) {
+                            anInt5543 |= 0x400;
                         }
                     }
-                    this.anInt5543 |= 0x20;
-                    this.aBool5544 = true;
+                    anInt5543 |= 0x20;
+                    aBool5544 = true;
                     return true;
                 } else {
                     return false;
@@ -65,10 +65,10 @@ public class Class462 {
         }
     }
 
-    final void method7708() {
-        this.aBool5544 = false;
-        this.anInt5543 = 0;
-        this.animationFrameSet = null;
-        this.aCacheableNode_Sub13_5545 = null;
+    void method7708() {
+        aBool5544 = false;
+        anInt5543 = 0;
+        animationFrameSet = null;
+        aCacheableNode_Sub13_5545 = null;
     }
 }

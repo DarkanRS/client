@@ -13,36 +13,36 @@ public class MeshModifier {
     public short[] modifiedTextures;
 
     MeshModifier(ItemDefinitions defs) {
-        this.maleBody[0] = defs.maleEquip1;
-        this.maleBody[1] = defs.maleEquip2;
-        this.maleBody[2] = defs.maleEquip3;
-        this.femaleBody[0] = defs.femaleEquip1;
-        this.femaleBody[1] = defs.femaleEquip2;
-        this.femaleBody[2] = defs.femaleEquip3;
-        this.maleHeads[0] = defs.maleHead1;
-        this.maleHeads[1] = defs.maleHead2;
-        this.femaleHeads[0] = defs.femaleHead1;
-        this.femaleHeads[1] = defs.femaleHead2;
+        maleBody[0] = defs.maleEquip1;
+        maleBody[1] = defs.maleEquip2;
+        maleBody[2] = defs.maleEquip3;
+        femaleBody[0] = defs.femaleEquip1;
+        femaleBody[1] = defs.femaleEquip2;
+        femaleBody[2] = defs.femaleEquip3;
+        maleHeads[0] = defs.maleHead1;
+        maleHeads[1] = defs.maleHead2;
+        femaleHeads[0] = defs.femaleHead1;
+        femaleHeads[1] = defs.femaleHead2;
         if (defs.modifiedModelColors != null) {
-            this.modifiedColors = new short[defs.modifiedModelColors.length];
-            System.arraycopy(defs.modifiedModelColors, 0, this.modifiedColors, 0, this.modifiedColors.length);
+            modifiedColors = new short[defs.modifiedModelColors.length];
+            System.arraycopy(defs.modifiedModelColors, 0, modifiedColors, 0, modifiedColors.length);
         }
         if (defs.modifiedTextureIds != null) {
-            this.modifiedTextures = new short[defs.modifiedTextureIds.length];
-            System.arraycopy(defs.modifiedTextureIds, 0, this.modifiedTextures, 0, this.modifiedTextures.length);
+            modifiedTextures = new short[defs.modifiedTextureIds.length];
+            System.arraycopy(defs.modifiedTextureIds, 0, modifiedTextures, 0, modifiedTextures.length);
         }
     }
 
-    public static void method7041(byte b_0) {
-        CustomCursorsPreference.INTERFACES = new RSInterface[Class388.INTERFACE_INDEX.containersCount()];
+    public static void method7041() {
+        CustomCursorsPreference.INTERFACES = new Interface[Class388.INTERFACE_INDEX.containersCount()];
         MapAreaIndexLoader.INTERFACES_LOADED = new boolean[Class388.INTERFACE_INDEX.containersCount()];
     }
 
     public static void method7042() {
         int i_1 = Class337.aLinkedList3969.size();
-        Iterator iterator_2 = Class337.aLinkedList3969.iterator();
+        Iterator<MIDIInstrument> iterator_2 = Class337.aLinkedList3969.iterator();
         while (iterator_2.hasNext()) {
-            MIDIInstrument class282_sub18_3 = (MIDIInstrument) iterator_2.next();
+            MIDIInstrument class282_sub18_3 = iterator_2.next();
             class282_sub18_3.method12296(class282_sub18_3.method12275() + class282_sub18_3.method12277() / (2 * i_1));
             if (!class282_sub18_3.method12276()) {
                 iterator_2.remove();

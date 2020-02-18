@@ -8,35 +8,17 @@ public class RegionMap {
 
     public byte[][][] tileMasks;
 
-    public void reset() {
-        for (int i_2 = 0; i_2 < this.tileMasks.length; i_2++) {
-            for (int i_3 = 0; i_3 < this.tileMasks[0].length; i_3++) {
-                for (int i_4 = 0; i_4 < this.tileMasks[0][0].length; i_4++) {
-                    this.tileMasks[i_2][i_3][i_4] = 0;
-                }
-            }
-        }
+    public RegionMap(int i_2, int i_3) {
+        tileMasks = new byte[4][i_2][i_3];
     }
 
-    public boolean is0x2(int i_1, int i_2, int i_3) {
-        return (i_1 >= 0 && i_2 >= 0 && i_1 < this.tileMasks[1].length && i_2 < this.tileMasks[1][i_1].length) && (this.tileMasks[1][i_1][i_2] & 0x2) != 0;
-    }
-
-    public boolean method5498(int i_1, int i_2, int i_3, int i_4, short s_5) {
-        return (this.tileMasks[0][i_3][i_4] & 0x2) != 0 || ((this.tileMasks[i_2][i_3][i_4] & 0x10) == 0 && this.method5499(i_2, i_3, i_4) == i_1);
-    }
-
-    int method5499(int i_1, int i_2, int i_3) {
-        return (this.tileMasks[i_1][i_2][i_3] & 0x8) != 0 ? 0 : (i_1 > 0 && (this.tileMasks[1][i_2][i_3] & 0x2) != 0 ? i_1 - 1 : i_1);
-    }
-
-    public static final int decodeLandscapeData(ObjectIndexLoader objectindexloader_0, byte[] bytes_1, int i_2, int i_3, int i_4, int i_5) {
+    public static int decodeLandscapeData(LocationIndexLoader objectindexloader_0, byte[] bytes_1, int i_2, int i_3, int i_4, int i_5) {
         int i_7 = 0;
-        RsByteBuffer rsbytebuffer_8 = new RsByteBuffer(bytes_1);
+        Packet rsbytebuffer_8 = new Packet(bytes_1);
         int i_9 = -1;
         label56:
         while (true) {
-            int i_10 = rsbytebuffer_8.readSum(-1436314957);
+            int i_10 = rsbytebuffer_8.readSum();
             if (i_10 == 0) {
                 return i_7;
             }
@@ -57,8 +39,8 @@ public class RegionMap {
                     int i_17 = i_15 + i_2;
                     int i_18 = i_3 + i_14;
                     if (i_17 > 0 && i_18 > 0 && i_17 < i_4 - 1 && i_18 < i_5 - 1) {
-                        ObjectDefinitions objectdefinitions_19 = objectindexloader_0.getObjectDefinitions(i_9);
-                        if (i_16 != SceneObjectType.GROUND_DECORATION.type || Class393.preferences.groundDecoration.method12897((byte) 59) != 0 || objectdefinitions_19.interactable != 0 || objectdefinitions_19.clipType == 1 || objectdefinitions_19.obstructsGround) {
+                        LocType objectdefinitions_19 = objectindexloader_0.getLocType(i_9);
+                        if (i_16 != LocShapes.GROUND_DECORATION.type || Class393.preferences.groundDecor.method12897() != 0 || objectdefinitions_19.interactable != 0 || objectdefinitions_19.clipType == 1 || objectdefinitions_19.obstructsGround) {
                             if (!objectdefinitions_19.method7968()) {
                                 ++i_7;
                             }
@@ -75,12 +57,30 @@ public class RegionMap {
         }
     }
 
-    public RegionMap(int i_2, int i_3) {
-        this.tileMasks = new byte[4][i_2][i_3];
+    public static void method5513(int i_0, int i_1) {
+        PulseEvent class282_sub50_sub12_3 = PulseEvent.createPulseEvent(18, (long) i_1 << 32 | i_0);
+        class282_sub50_sub12_3.method14965();
     }
 
-    public static void method5513(int i_0, int i_1) {
-        PulseEvent class282_sub50_sub12_3 = PulseEvent.createPulseEvent(18, (long) i_1 << 32 | (long) i_0);
-        class282_sub50_sub12_3.method14965((byte) -18);
+    public void reset() {
+        for (int i_2 = 0; i_2 < tileMasks.length; i_2++) {
+            for (int i_3 = 0; i_3 < tileMasks[0].length; i_3++) {
+                for (int i_4 = 0; i_4 < tileMasks[0][0].length; i_4++) {
+                    tileMasks[i_2][i_3][i_4] = 0;
+                }
+            }
+        }
+    }
+
+    public boolean is0x2(int i_1, int i_2) {
+        return (i_1 >= 0 && i_2 >= 0 && i_1 < tileMasks[1].length && i_2 < tileMasks[1][i_1].length) && (tileMasks[1][i_1][i_2] & 0x2) != 0;
+    }
+
+    public boolean method5498(int i_1, int i_2, int i_3, int i_4) {
+        return (tileMasks[0][i_3][i_4] & 0x2) != 0 || ((tileMasks[i_2][i_3][i_4] & 0x10) == 0 && method5499(i_2, i_3, i_4) == i_1);
+    }
+
+    int method5499(int i_1, int i_2, int i_3) {
+        return (tileMasks[i_1][i_2][i_3] & 0x8) != 0 ? 0 : (i_1 > 0 && (tileMasks[1][i_2][i_3] & 0x2) != 0 ? i_1 - 1 : i_1);
     }
 }

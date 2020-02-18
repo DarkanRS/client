@@ -16,35 +16,52 @@ public abstract class Class534 {
 
     NodeCollection aClass482_7077 = new NodeCollection();
 
-    int method11408(MouseRecord class282_sub53_1, int i_2, int i_3) {
+    static void method11441() {
+        if (Class179.anInt2226 > 0) {
+            int i_1 = 0;
+            for (int i_2 = 0; i_2 < Class13.aStringArray129.length; i_2++) {
+                if (Class13.aStringArray129[i_2].indexOf("--> ") != -1) {
+                    ++i_1;
+                    if (i_1 == Class179.anInt2226) {
+                        Class179.aString2225 = Class13.aStringArray129[i_2].substring(Class13.aStringArray129[i_2].indexOf(62) + 2);
+                        break;
+                    }
+                }
+            }
+        } else {
+            Class179.aString2225 = "";
+        }
+    }
+
+    int method11408(MouseRecord class282_sub53_1, int i_2) {
         long long_4;
-        if (this.aLong7074 == -1L) {
+        if (aLong7074 == -1L) {
             long_4 = i_2;
         } else {
-            long_4 = class282_sub53_1.method13471() - this.aLong7074;
-            if (long_4 > (long) i_2) {
+            long_4 = class282_sub53_1.method13471() - aLong7074;
+            if (long_4 > i_2) {
                 long_4 = i_2;
             }
         }
-        this.aLong7074 = class282_sub53_1.method13471();
+        aLong7074 = class282_sub53_1.method13471();
         return (int) long_4;
     }
 
     void method11409() {
-        this.aClass482_7077.removeAll();
-        this.aLong7074 = -1L;
-        this.aLong7076 = -1L;
-        this.anInt7075 = -1;
-        this.anInt7078 = -1;
+        aClass482_7077.removeAll();
+        aLong7074 = -1L;
+        aLong7076 = -1L;
+        anInt7075 = -1;
+        anInt7078 = -1;
     }
 
     void method11410(MouseRecord class282_sub53_1) {
-        this.aClass482_7077.append(class282_sub53_1);
+        aClass482_7077.append(class282_sub53_1);
     }
 
     abstract int method11412();
 
-    abstract void method11413(RsByteBuffer var1, MouseRecord var2);
+    abstract void method11413(Packet var1, MouseRecord var2);
 
     abstract void method11414();
 
@@ -52,13 +69,13 @@ public abstract class Class534 {
 
     abstract TCPPacket method11416();
 
-    void method11417(int i_1) {
-        if (this.method11423()) {
+    void method11417() {
+        if (method11423()) {
             TCPPacket tcpmessage_2 = null;
             int i_3 = 0;
             int i_4 = 0;
             int i_5 = 0;
-            Iterator iterator_6 = this.aClass482_7077.iterator();
+            Iterator iterator_6 = aClass482_7077.iterator();
             label105:
             while (true) {
                 while (true) {
@@ -66,10 +83,10 @@ public abstract class Class534 {
                         break label105;
                     }
                     MouseRecord class282_sub53_13 = (MouseRecord) iterator_6.next();
-                    if (tcpmessage_2 != null && tcpmessage_2.buffer.index - i_3 >= 252 - (6 + this.method11412())) {
+                    if (tcpmessage_2 != null && tcpmessage_2.buffer.index - i_3 >= 252 - (6 + method11412())) {
                         break label105;
                     }
-                    class282_sub53_13.remove();
+                    class282_sub53_13.unlink();
                     int i_8 = class282_sub53_13.getY();
                     if (i_8 < -1) {
                         i_8 = -1;
@@ -82,11 +99,9 @@ public abstract class Class534 {
                     } else if (i_9 > 65534) {
                         i_9 = 65534;
                     }
-                    if (i_9 == this.anInt7075 && i_8 == this.anInt7078) {
-                        class282_sub53_13.cache();
-                    } else {
+                    if (i_9 != anInt7075 || i_8 != anInt7078) {
                         if (tcpmessage_2 == null) {
-                            tcpmessage_2 = this.method11416();
+                            tcpmessage_2 = method11416();
                             tcpmessage_2.buffer.writeByte(0);
                             i_3 = tcpmessage_2.buffer.index;
                             tcpmessage_2.buffer.index += 2;
@@ -96,18 +111,18 @@ public abstract class Class534 {
                         int i_10;
                         int i_11;
                         int i_12;
-                        if (this.aLong7076 != -1L) {
-                            i_10 = i_9 - this.anInt7075;
-                            i_11 = i_8 - this.anInt7078;
-                            i_12 = (int) ((class282_sub53_13.method13471() - this.aLong7076) / 20L);
-                            i_4 = (int) ((long) i_4 + (class282_sub53_13.method13471() - this.aLong7076) % 20L);
+                        if (aLong7076 != -1L) {
+                            i_10 = i_9 - anInt7075;
+                            i_11 = i_8 - anInt7078;
+                            i_12 = (int) ((class282_sub53_13.method13471() - aLong7076) / 20L);
+                            i_4 = (int) (i_4 + (class282_sub53_13.method13471() - aLong7076) % 20L);
                         } else {
                             i_10 = i_9;
                             i_11 = i_8;
                             i_12 = Integer.MAX_VALUE;
                         }
-                        this.anInt7075 = i_9;
-                        this.anInt7078 = i_8;
+                        anInt7075 = i_9;
+                        anInt7078 = i_8;
                         if (i_12 < 8 && i_10 >= -32 && i_10 <= 31 && i_11 >= -32 && i_11 <= 31) {
                             i_10 += 32;
                             i_11 += 32;
@@ -133,10 +148,10 @@ public abstract class Class534 {
                             }
                         }
                         ++i_5;
-                        this.method11413(tcpmessage_2.buffer, class282_sub53_13);
-                        this.aLong7076 = class282_sub53_13.method13471();
-                        class282_sub53_13.cache();
+                        method11413(tcpmessage_2.buffer, class282_sub53_13);
+                        aLong7076 = class282_sub53_13.method13471();
                     }
+                    class282_sub53_13.cache();
                 }
             }
             if (tcpmessage_2 != null) {
@@ -149,7 +164,7 @@ public abstract class Class534 {
                 client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_2);
             }
         }
-        this.method11414();
+        method11414();
     }
 
     abstract void method11418();
@@ -166,30 +181,13 @@ public abstract class Class534 {
 
     abstract int method11425();
 
-    abstract void method11426(RsByteBuffer var1, MouseRecord var2);
+    abstract void method11426(Packet var1, MouseRecord var2);
 
-    abstract void method11427(RsByteBuffer var1, MouseRecord var2);
+    abstract void method11427(Packet var1, MouseRecord var2);
 
     abstract TCPPacket method11428();
 
     abstract void method11431();
 
     abstract boolean method11434();
-
-    static void method11441(byte b_0) {
-        if (Class179.anInt2226 > 0) {
-            int i_1 = 0;
-            for (int i_2 = 0; i_2 < Class13.aStringArray129.length; i_2++) {
-                if (Class13.aStringArray129[i_2].indexOf("--> ") != -1) {
-                    ++i_1;
-                    if (i_1 == Class179.anInt2226) {
-                        Class179.aString2225 = Class13.aStringArray129[i_2].substring(Class13.aStringArray129[i_2].indexOf(62) + 2);
-                        break;
-                    }
-                }
-            }
-        } else {
-            Class179.aString2225 = "";
-        }
-    }
 }

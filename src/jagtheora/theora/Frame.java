@@ -6,6 +6,10 @@ package jagtheora.theora;
 import jagtheora.misc.SimplePeer;
 
 public class Frame extends SimplePeer {
+    static {
+        init();
+    }
+
     public int anInt9119;
     public int anInt9120;
     public int[] pixels;
@@ -18,15 +22,15 @@ public class Frame extends SimplePeer {
 
     private static native void init();
 
+    @Override
     protected native void clear();
 
-    static {
-        init();
-    }
-
+    @Override
     protected native void q();
 
+    @Override
     protected native void f();
 
+    @Override
     protected native void m();
 }

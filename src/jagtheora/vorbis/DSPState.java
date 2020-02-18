@@ -22,11 +22,15 @@ public class DSPState extends SimplePeer {
 
     public native double granuleTime();
 
+    @Override
     protected native void clear();
 
+    @Override
     protected native void q();
 
+    @Override
     protected native void f();
 
+    @Override
     protected native void m();
 }

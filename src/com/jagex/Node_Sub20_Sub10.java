@@ -8,13 +8,29 @@ public class Node_Sub20_Sub10 extends Node_Sub20 {
     int[][] anIntArrayArray9800;
     int[] anIntArray9798;
     int[] anIntArray9796;
-    int anInt9799 = 0;
+    int anInt9799;
     short[] aShortArray9801 = new short[257];
 
+    public Node_Sub20_Sub10() {
+        super(1, true);
+    }
+
+    static Node_Sub15_Sub2 method15262(Node_Sub15_Sub2 class282_sub15_sub2_0) {
+        Node_Sub15_Sub2 class282_sub15_sub2_2 = class282_sub15_sub2_0 == null ? new Node_Sub15_Sub2() : new Node_Sub15_Sub2(class282_sub15_sub2_0);
+        class282_sub15_sub2_2.method15137();
+        return class282_sub15_sub2_2;
+    }
+
+    public static void method15263(int i_0) {
+        PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(2, i_0);
+        class282_sub50_sub12_2.method14965();
+    }
+
+    @Override
     int[] method12319(int i_1) {
-        int[] ints_3 = this.aClass320_7667.method5721(i_1, -2005829703);
-        if (this.aClass320_7667.aBool3722) {
-            int[] ints_4 = this.method12317(0, i_1, 2064121299);
+        int[] ints_3 = aClass320_7667.method5721(i_1);
+        if (aClass320_7667.aBool3722) {
+            int[] ints_4 = method12317(0, i_1);
 
             for (int i_5 = 0; i_5 < Class316.anInt3670; i_5++) {
                 int i_6 = ints_4[i_5] >> 4;
@@ -26,31 +42,32 @@ public class Node_Sub20_Sub10 extends Node_Sub20 {
                     i_6 = 256;
                 }
 
-                ints_3[i_5] = this.aShortArray9801[i_6];
+                ints_3[i_5] = aShortArray9801[i_6];
             }
         }
 
         return ints_3;
     }
 
-    final int[] method15257(int i_1, int i_2) {
-        return i_1 < 0 ? this.anIntArray9798 : (i_1 >= this.anIntArrayArray9800.length ? this.anIntArray9796 : this.anIntArrayArray9800[i_1]);
+    int[] method15257(int i_1) {
+        return i_1 < 0 ? anIntArray9798 : (i_1 >= anIntArrayArray9800.length ? anIntArray9796 : anIntArrayArray9800[i_1]);
     }
 
-    void method12321(int i_1) {
-        if (this.anIntArrayArray9800 == null) {
-            this.anIntArrayArray9800 = new int[][]{new int[2], {4096, 4096}};
+    @Override
+    void method12321() {
+        if (anIntArrayArray9800 == null) {
+            anIntArrayArray9800 = new int[][]{new int[2], {4096, 4096}};
         }
 
-        if (this.anIntArrayArray9800.length < 2) {
+        if (anIntArrayArray9800.length < 2) {
             throw new RuntimeException();
         } else {
-            if (this.anInt9799 == 2) {
-                this.method15259();
+            if (anInt9799 == 2) {
+                method15259();
             }
 
-            Class316.method5586((byte) -8);
-            this.method15258();
+            Class316.method5586();
+            method15258();
         }
     }
 
@@ -64,16 +81,16 @@ public class Node_Sub20_Sub10 extends Node_Sub20 {
         int i_8;
         int i_9;
         int i_10;
-        switch (this.anInt9799) {
+        switch (anInt9799) {
             case 1:
                 for (i_2 = 0; i_2 < 257; i_2++) {
                     i_3 = i_2 << 4;
 
-                    for (i_4 = 1; i_4 < this.anIntArrayArray9800.length - 1 && this.anIntArrayArray9800[i_4][0] <= i_3; i_4++) {
+                    for (i_4 = 1; i_4 < anIntArrayArray9800.length - 1 && anIntArrayArray9800[i_4][0] <= i_3; i_4++) {
                     }
 
-                    ints_5 = this.anIntArrayArray9800[i_4 - 1];
-                    ints_6 = this.anIntArrayArray9800[i_4];
+                    ints_5 = anIntArrayArray9800[i_4 - 1];
+                    ints_6 = anIntArrayArray9800[i_4];
                     i_7 = (i_3 - ints_5[0] << 12) / (ints_6[0] - ints_5[0]);
                     i_8 = 4096 - Class316.anIntArray3675[i_7 >> 5 & 0xff] >> 1;
                     i_9 = 4096 - i_8;
@@ -86,7 +103,7 @@ public class Node_Sub20_Sub10 extends Node_Sub20 {
                         i_10 = 32767;
                     }
 
-                    this.aShortArray9801[i_2] = (short) i_10;
+                    aShortArray9801[i_2] = (short) i_10;
                 }
 
                 return;
@@ -94,15 +111,15 @@ public class Node_Sub20_Sub10 extends Node_Sub20 {
                 for (i_2 = 0; i_2 < 257; i_2++) {
                     i_3 = i_2 << 4;
 
-                    for (i_4 = 1; i_4 < this.anIntArrayArray9800.length - 1 && this.anIntArrayArray9800[i_4][0] <= i_3; i_4++) {
+                    for (i_4 = 1; i_4 < anIntArrayArray9800.length - 1 && anIntArrayArray9800[i_4][0] <= i_3; i_4++) {
                     }
 
-                    ints_5 = this.anIntArrayArray9800[i_4 - 1];
-                    ints_6 = this.anIntArrayArray9800[i_4];
-                    i_7 = this.method15257(i_4 - 2, 1838320651)[1];
+                    ints_5 = anIntArrayArray9800[i_4 - 1];
+                    ints_6 = anIntArrayArray9800[i_4];
+                    i_7 = method15257(i_4 - 2)[1];
                     i_8 = ints_5[1];
                     i_9 = ints_6[1];
-                    i_10 = this.method15257(i_4 + 1, 1394468294)[1];
+                    i_10 = method15257(i_4 + 1)[1];
                     int i_11 = (i_3 - ints_5[0] << 12) / (ints_6[0] - ints_5[0]);
                     int i_12 = i_11 * i_11 >> 12;
                     int i_13 = i_8 + (i_10 - i_9 - i_7);
@@ -120,7 +137,7 @@ public class Node_Sub20_Sub10 extends Node_Sub20 {
                         i_20 = 32767;
                     }
 
-                    this.aShortArray9801[i_2] = (short) i_20;
+                    aShortArray9801[i_2] = (short) i_20;
                 }
 
                 return;
@@ -128,11 +145,11 @@ public class Node_Sub20_Sub10 extends Node_Sub20 {
                 for (i_2 = 0; i_2 < 257; i_2++) {
                     i_3 = i_2 << 4;
 
-                    for (i_4 = 1; i_4 < this.anIntArrayArray9800.length - 1 && this.anIntArrayArray9800[i_4][0] <= i_3; i_4++) {
+                    for (i_4 = 1; i_4 < anIntArrayArray9800.length - 1 && anIntArrayArray9800[i_4][0] <= i_3; i_4++) {
                     }
 
-                    ints_5 = this.anIntArrayArray9800[i_4 - 1];
-                    ints_6 = this.anIntArrayArray9800[i_4];
+                    ints_5 = anIntArrayArray9800[i_4 - 1];
+                    ints_6 = anIntArrayArray9800[i_4];
                     i_7 = (i_3 - ints_5[0] << 12) / (ints_6[0] - ints_5[0]);
                     i_8 = 4096 - i_7;
                     i_9 = i_7 * ints_6[1] + i_8 * ints_5[1] >> 12;
@@ -144,47 +161,33 @@ public class Node_Sub20_Sub10 extends Node_Sub20 {
                         i_9 = 32767;
                     }
 
-                    this.aShortArray9801[i_2] = (short) i_9;
+                    aShortArray9801[i_2] = (short) i_9;
                 }
 
         }
     }
 
-    final void method15259() {
-        int[] ints_2 = this.anIntArrayArray9800[0];
-        int[] ints_3 = this.anIntArrayArray9800[1];
-        int[] ints_4 = this.anIntArrayArray9800[this.anIntArrayArray9800.length - 2];
-        int[] ints_5 = this.anIntArrayArray9800[this.anIntArrayArray9800.length - 1];
-        this.anIntArray9798 = new int[]{ints_2[0] - ints_3[0] + ints_2[0], ints_2[1] - ints_3[1] + ints_2[1]};
-        this.anIntArray9796 = new int[]{ints_4[0] - ints_5[0] + ints_4[0], ints_4[1] - ints_5[1] + ints_4[1]};
+    void method15259() {
+        int[] ints_2 = anIntArrayArray9800[0];
+        int[] ints_3 = anIntArrayArray9800[1];
+        int[] ints_4 = anIntArrayArray9800[anIntArrayArray9800.length - 2];
+        int[] ints_5 = anIntArrayArray9800[anIntArrayArray9800.length - 1];
+        anIntArray9798 = new int[]{ints_2[0] - ints_3[0] + ints_2[0], ints_2[1] - ints_3[1] + ints_2[1]};
+        anIntArray9796 = new int[]{ints_4[0] - ints_5[0] + ints_4[0], ints_4[1] - ints_5[1] + ints_4[1]};
     }
 
-    void method12322(int i_1, RsByteBuffer rsbytebuffer_2) {
+    @Override
+    void method12322(int i_1, Packet rsbytebuffer_2) {
         if (i_1 == 0) {
-            this.anInt9799 = rsbytebuffer_2.readUnsignedByte();
-            this.anIntArrayArray9800 = new int[rsbytebuffer_2.readUnsignedByte()][2];
+            anInt9799 = rsbytebuffer_2.readUnsignedByte();
+            anIntArrayArray9800 = new int[rsbytebuffer_2.readUnsignedByte()][2];
 
-            for (int i_4 = 0; i_4 < this.anIntArrayArray9800.length; i_4++) {
-                this.anIntArrayArray9800[i_4][0] = rsbytebuffer_2.readUnsignedShort();
-                this.anIntArrayArray9800[i_4][1] = rsbytebuffer_2.readUnsignedShort();
+            for (int i_4 = 0; i_4 < anIntArrayArray9800.length; i_4++) {
+                anIntArrayArray9800[i_4][0] = rsbytebuffer_2.readUnsignedShort();
+                anIntArrayArray9800[i_4][1] = rsbytebuffer_2.readUnsignedShort();
             }
         }
 
-    }
-
-    public Node_Sub20_Sub10() {
-        super(1, true);
-    }
-
-    static Node_Sub15_Sub2 method15262(Node_Sub15_Sub2 class282_sub15_sub2_0, int i_1) {
-        Node_Sub15_Sub2 class282_sub15_sub2_2 = class282_sub15_sub2_0 == null ? new Node_Sub15_Sub2() : new Node_Sub15_Sub2(class282_sub15_sub2_0);
-        class282_sub15_sub2_2.method15137(-240032763);
-        return class282_sub15_sub2_2;
-    }
-
-    public static void method15263(int i_0) {
-        PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(2, i_0);
-        class282_sub50_sub12_2.method14965((byte) 22);
     }
 
 }

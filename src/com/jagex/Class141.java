@@ -2,7 +2,11 @@ package com.jagex;
 
 public abstract class Class141 {
 
-    OpenGLGraphicalRenderer aGraphicalRenderer_Sub1_1664;
+    OpenGLHardwareRenderer aGraphicalRenderer_Sub1_1664;
+
+    Class141(OpenGLHardwareRenderer class505_sub1_1) {
+        aGraphicalRenderer_Sub1_1664 = class505_sub1_1;
+    }
 
     abstract void method2394(Class137 var1, int var2);
 
@@ -24,19 +28,15 @@ public abstract class Class141 {
 
     abstract void method2403(boolean var1);
 
-    abstract void method2404(boolean var1);
+    abstract void method2404();
 
-    abstract void method2405(boolean var1);
+    abstract void method2405();
 
-    abstract void method2406(boolean var1);
+    abstract void method2406();
 
-    abstract void method2407(boolean var1);
+    abstract void method2407();
 
-    abstract void method2408(boolean var1);
-
-    Class141(OpenGLGraphicalRenderer class505_sub1_1) {
-        this.aGraphicalRenderer_Sub1_1664 = class505_sub1_1;
-    }
+    abstract void method2408();
 
     abstract void method2409(int var1, int var2);
 

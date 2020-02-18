@@ -4,61 +4,14 @@ public class Preference_Sub20 extends Preference {
 
     static int[] anIntArray7920;
 
-    int method7787() {
-        return this.manager.getProcessorSpecs().getMaxMemory() < 245 ? 0 : 2;
-    }
-
     public Preference_Sub20(int i_1, GamePreferences class282_sub54_2) {
         super(i_1, class282_sub54_2);
-        Class15.method540(this.anInt5578, (byte) 115);
-    }
-
-    public void method12793() {
-        if (this.manager.getProcessorSpecs().getMaxMemory() < 245) {
-            this.anInt5578 = 0;
-        }
-        if (this.anInt5578 < 0 || this.anInt5578 > 2) {
-            this.anInt5578 = this.getDefaultValue();
-        }
-    }
-
-    int getDefaultValue() {
-        return this.manager.getProcessorSpecs().getMaxMemory() < 245 ? 0 : 2;
-    }
-
-    public int method12794() {
-        return this.anInt5578;
-    }
-
-    public int checkValid(int i_1) {
-        return this.manager.getProcessorSpecs().getMaxMemory() < 245 ? 3 : 1;
-    }
-
-    void setValue(int i_1) {
-        this.anInt5578 = i_1;
-        Class15.method540(this.anInt5578, (byte) 23);
-    }
-
-    void method7780(int i_1) {
-        this.anInt5578 = -754033619 * i_1 * -859024475;
-        Class15.method540(this.anInt5578 * -754033619 * -859024475, (byte) 31);
-    }
-
-    int method7786() {
-        return this.manager.getProcessorSpecs().getMaxMemory() < 245 ? 0 : 2;
-    }
-
-    public boolean method12797() {
-        return this.manager.getProcessorSpecs().getMaxMemory() >= 245;
-    }
-
-    public int method7784(int i_1) {
-        return this.manager.getProcessorSpecs().getMaxMemory() < 245 ? 3 : 1;
+        Class15.method540(anInt5578);
     }
 
     public Preference_Sub20(GamePreferences class282_sub54_1) {
         super(class282_sub54_1);
-        Class15.method540(this.anInt5578, (byte) 39);
+        Class15.method540(anInt5578);
     }
 
     static short[][] method12805(float[][] floats_0, short[][] shorts_1) {
@@ -96,7 +49,7 @@ public class Preference_Sub20 extends Preference {
             Class302.aLong3562 = Utils.time();
         }
         if (Comparable_Sub1.aClass306_3771 == null) {
-            Class165.method2852(-536830752);
+            Class165.method2852();
         }
         LoadingStage xloadingstage_1 = IndexLoaders.LOADING_STAGE;
         int i_2 = IndexLoaders.initializeGame();
@@ -122,10 +75,10 @@ public class Preference_Sub20 extends Preference {
             }
         }
         if (Comparable_Sub1.aClass306_3771 != null) {
-            Comparable_Sub1.aClass306_3771.method5422(Class302.aLong3562, Class380.aString4636, Class302.anInt3563, IndexLoaders.LOADING_STAGE, -361143334);
+            Comparable_Sub1.aClass306_3771.method5422(Class302.aLong3562, Class380.aString4636, Class302.anInt3563, IndexLoaders.LOADING_STAGE);
             if (Class302.anInterface27Array3559 != null) {
                 for (int i_3 = Class302.anInt3560 + 1; i_3 < Class302.anInterface27Array3559.length; i_3++) {
-                    if (Class302.anInterface27Array3559[i_3].method191(1666965000) >= 100 && i_3 - 1 == Class302.anInt3560 && client.gameState != 4 && Comparable_Sub1.aClass306_3771.method5450()) {
+                    if (Class302.anInterface27Array3559[i_3].method191() >= 100 && i_3 - 1 == Class302.anInt3560 && client.gameState != 4 && Comparable_Sub1.aClass306_3771.method5450()) {
                         try {
                             Class302.anInterface27Array3559[i_3].method161();
                         } catch (Exception exception_5) {
@@ -135,11 +88,61 @@ public class Preference_Sub20 extends Preference {
                         Comparable_Sub1.aClass306_3771.method5445(Class302.anInterface27Array3559[i_3]);
                         ++Class302.anInt3560;
                         if (Class302.anInt3560 >= Class302.anInterface27Array3559.length - 1 && Class302.anInterface27Array3559.length > 1) {
-                            Class302.anInt3560 = EntityNode_Sub7.GAME_TIPS_LOADER.method6790(512238595) ? 0 : -1;
+                            Class302.anInt3560 = EntityNode_Sub7.GAME_TIPS_LOADER.method6790() ? 0 : -1;
                         }
                     }
                 }
             }
         }
+    }
+
+    int method7787() {
+        return manager.getProcessorSpecs().getMaxMemory() < 245 ? 0 : 2;
+    }
+
+    public void method12793() {
+        if (manager.getProcessorSpecs().getMaxMemory() < 245) {
+            anInt5578 = 0;
+        }
+        if (anInt5578 < 0 || anInt5578 > 2) {
+            anInt5578 = getDefaultValue();
+        }
+    }
+
+    @Override
+    int getDefaultValue() {
+        return manager.getProcessorSpecs().getMaxMemory() < 245 ? 0 : 2;
+    }
+
+    public int method12794() {
+        return anInt5578;
+    }
+
+    @Override
+    public int checkValid(int i_1) {
+        return manager.getProcessorSpecs().getMaxMemory() < 245 ? 3 : 1;
+    }
+
+    @Override
+    void setValue(int i_1) {
+        anInt5578 = i_1;
+        Class15.method540(anInt5578);
+    }
+
+    void method7780(int i_1) {
+        anInt5578 = -754033619 * i_1 * -859024475;
+        Class15.method540(anInt5578 * -754033619 * -859024475);
+    }
+
+    int method7786() {
+        return manager.getProcessorSpecs().getMaxMemory() < 245 ? 0 : 2;
+    }
+
+    public boolean method12797() {
+        return manager.getProcessorSpecs().getMaxMemory() >= 245;
+    }
+
+    public int method7784() {
+        return manager.getProcessorSpecs().getMaxMemory() < 245 ? 3 : 1;
     }
 }

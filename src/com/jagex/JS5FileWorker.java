@@ -2,7 +2,11 @@ package com.jagex;
 
 public abstract class JS5FileWorker {
 
-    abstract ReferenceTable getReferenceTable(int var1);
+    static InputSubscriberType[] method5815() {
+        return new InputSubscriberType[]{InputSubscriberType.KEY_HOLD, InputSubscriberType.KEY_PRESS, InputSubscriberType.COMBINED};
+    }
+
+    abstract ReferenceTable getReferenceTable();
 
     abstract byte[] method5804(int var1);
 
@@ -23,8 +27,4 @@ public abstract class JS5FileWorker {
     abstract void method5812(int var1);
 
     abstract byte[] method5813(int var1);
-
-    static InputSubscriberType[] method5815() {
-        return new InputSubscriberType[]{InputSubscriberType.KEY_HOLD, InputSubscriberType.KEY_PRESS, InputSubscriberType.COMBINED};
-    }
 }

@@ -2,10 +2,8 @@ package com.jagex;
 
 public class IndexLoaders {
 
-    static LoadingStage LOADING_STAGE;
     public static MapRegion MAP_REGION_DECODER;
     public static MapRegionLoaderTask MAP_REGION_LOADER_THREAD;
-    static boolean USING_JAGEX_IMAGE_FORMAT;
     public static Index SPRITES_INDEX;
     public static Index ANIMATION_FRAME_SET_INDEX;
     public static Index ANIMATION_FRAME_BASE_INDEX;
@@ -50,16 +48,16 @@ public class IndexLoaders {
     public static EnumIndexLoader ENUM_LOADER;
     public static OverlayIndexLoader OVERLAY_LOADER;
     public static UnderlayIndexLoader UNDERLAY_LOADER;
-    public static HitsplatIndexLoader HITSPLAT_LOADER;
-    public static HitbarIndexLoader HITBAR_LOADER;
+    public static ScriptRunner HITSPLAT_LOADER;
+    public static HeadbarIndexLoader HITBAR_LOADER;
     public static IdentiKitIndexLoader IDENTIKIT_LOADER;
     public static InventoriesIndexLoader INVENTORY_LOADER;
     public static LightIntensityIndexLoader LIGHT_INTENSITY_LOADER;
-    public static ObjectIndexLoader OBJECT_LOADER;
+    public static LocationIndexLoader OBJECT_LOADER;
     public static MapAreaIndexLoader WORLD_MAP_LOADER;
     public static MapSpriteIndexLoader MAP_SPRITE_LOADER;
     public static NPCIndexLoader NPC_INDEX_LOADER;
-    public static ItemIndexLoader ITEM_LOADER;
+    public static ObjectIndexLoader ITEM_LOADER;
     public static QuestIndexLoader QUEST_LOADER;
     public static AnimationIndexLoader ANIMATION_LOADER;
     public static SkyboxIndexLoader SKYBOX_LOADER;
@@ -76,10 +74,12 @@ public class IndexLoaders {
     public static ClanVarSettingsIndexLoader CLAN_VAR_SETTINGS_LOADER;
     public static QuickchatCategoryLoader QUICK_CHAT_CATEGORY_LOADER;
     public static QuickchatMessageLoader QUICK_CHAT_MESSAGE_LOADER;
+    static LoadingStage LOADING_STAGE;
+    static boolean USING_JAGEX_IMAGE_FORMAT;
 
     public static int initializeGame() {
         int i;
-        if (Class393.preferences.safeMode.getValue((byte) 1) == 0) {
+        if (Class393.preferences.safeMode.getValue() == 0) {
             for (i = 0; i < client.anInt7193; i++) {
                 if (client.KEYS_PRESSED[i].getCharacter() == 115 || client.KEYS_PRESSED[i].getCharacter() == 83) {
                     Class393.preferences.setValue(Class393.preferences.safeMode, 1);
@@ -98,20 +98,20 @@ public class IndexLoaders {
                 return 0;
             }
 
-            Node_Sub17_Sub1.method15402(0, null, true, 1056006027);
+            Node_Sub17_Sub1.method15402(0, null, true);
             USING_JAGEX_IMAGE_FORMAT = !NodeCollection.method8145();
-            LOADING_FONT_INDEX = loadIndex(USING_JAGEX_IMAGE_FORMAT ? IndexReference.INDEX_34 : IndexReference.INDEX_32, false, 1, true);
-            GAME_TIPS_INDEX = loadIndex(IndexReference.INDEX_33, false, 1, true);
-            FONT_METRICS_INDEX = loadIndex(IndexReference.INDEX_13, false, 1, true);
+            LOADING_FONT_INDEX = loadIndex(USING_JAGEX_IMAGE_FORMAT ? IndexReference.INDEX_34 : IndexReference.INDEX_32, false, 1);
+            GAME_TIPS_INDEX = loadIndex(IndexReference.INDEX_33, false, 1);
+            FONT_METRICS_INDEX = loadIndex(IndexReference.INDEX_13, false, 1);
         }
 
         int i_2;
         boolean bool_10;
         if (LoadingStage.aClass387_4695 == LOADING_STAGE) {
             bool_10 = GAME_TIPS_INDEX.isValid();
-            i_2 = Class492.aClass327_Sub1Array5777[IndexReference.INDEX_33.method1781(-1788134814)].method12543(-1386827058);
-            i_2 += Class492.aClass327_Sub1Array5777[USING_JAGEX_IMAGE_FORMAT ? IndexReference.INDEX_34.method1781(-1812792223) : IndexReference.INDEX_32.method1781(-1188170232)].method12543(-1418980679);
-            i_2 += Class492.aClass327_Sub1Array5777[IndexReference.INDEX_13.method1781(308835858)].method12543(-1132280394);
+            i_2 = Class492.aClass327_Sub1Array5777[IndexReference.INDEX_33.method1781()].method12543();
+            i_2 += Class492.aClass327_Sub1Array5777[USING_JAGEX_IMAGE_FORMAT ? IndexReference.INDEX_34.method1781() : IndexReference.INDEX_32.method1781()].method12543();
+            i_2 += Class492.aClass327_Sub1Array5777[IndexReference.INDEX_13.method1781()].method12543();
             i_2 += bool_10 ? 100 : GAME_TIPS_INDEX.getCompletion();
             if (i_2 != 400) {
                 return i_2 / 4;
@@ -120,11 +120,11 @@ public class IndexLoaders {
             CutsceneAction_Sub10_Sub1.anInt10159 = LOADING_FONT_INDEX.getCrc();
             Class302.anInt3561 = GAME_TIPS_INDEX.getCrc();
             Queue.loadFontArchiveIds(LOADING_FONT_INDEX);
-            int i_3 = Class393.preferences.aPreference_Sub11_8217.method12699((byte) -106);
-            EntityNode_Sub7.GAME_TIPS_LOADER = new GameTipsLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, GAME_TIPS_INDEX);
-            Class399[] arr_4 = EntityNode_Sub7.GAME_TIPS_LOADER.method6786(i_3, -1983202433);
+            int i_3 = Class393.preferences.aPreference_Sub11_8217.method12699();
+            EntityNode_Sub7.GAME_TIPS_LOADER = new GameTipsLoader(GAME_TIPS_INDEX);
+            Class399[] arr_4 = EntityNode_Sub7.GAME_TIPS_LOADER.method6786(i_3);
             if (arr_4.length == 0) {
-                arr_4 = EntityNode_Sub7.GAME_TIPS_LOADER.method6786(0, 462233129);
+                arr_4 = EntityNode_Sub7.GAME_TIPS_LOADER.method6786(0);
             }
 
             Class29 class29_5 = new Class29(LOADING_FONT_INDEX, FONT_METRICS_INDEX);
@@ -143,7 +143,7 @@ public class IndexLoaders {
 
         if (LoadingStage.aClass387_4702 == LOADING_STAGE) {
             i = Class487.aClass378_5752.method6404();
-            i_2 = Class487.aClass378_5752.method6422(-1970261338);
+            i_2 = Class487.aClass378_5752.method6422();
             if (i < i_2) {
                 return i * 100 / i_2;
             }
@@ -151,54 +151,54 @@ public class IndexLoaders {
 
         if (LOADING_STAGE == LoadingStage.aClass387_4708) {
             if (Class302.anInterface27Array3559 != null && Class302.anInterface27Array3559.length > 0) {
-                if (Class302.anInterface27Array3559[0].method191(-155060841) < 100) {
+                if (Class302.anInterface27Array3559[0].method191() < 100) {
                     return 0;
                 }
 
-                if (Class302.anInterface27Array3559.length > 1 && EntityNode_Sub7.GAME_TIPS_LOADER.method6790(906509340) && Class302.anInterface27Array3559[1].method191(1471914500) < 100) {
+                if (Class302.anInterface27Array3559.length > 1 && EntityNode_Sub7.GAME_TIPS_LOADER.method6790() && Class302.anInterface27Array3559[1].method191() < 100) {
                     return 0;
                 }
             }
 
             Class487.aClass378_5752.method6403(client.anInterface35_7206);
-            Node_Sub11_Sub3.method15476(Renderers.SOFTWARE_RENDERER, 425996443);
+            Node_Sub11_Sub3.method15476();
             Class365.setGameState(15);
         }
 
         if (LOADING_STAGE == LoadingStage.aClass387_4699) {
-            SPRITES_INDEX = loadIndex(IndexReference.INDEX_8, false, 1, false);
-            ANIMATION_FRAME_SET_INDEX = loadIndex(IndexReference.INDEX_0, false, 1, false);
-            ANIMATION_FRAME_BASE_INDEX = loadIndex(IndexReference.INDEX_1, false, 1, false);
-            CONFIG_INDEX = loadIndex(IndexReference.INDEX_2, false, 1, true);
-            INTERFACE_INDEX = loadIndex(IndexReference.INDEX_3, false, 1, true);
-            SOUND_EFFECT_INDEX = loadIndex(IndexReference.INDEX_4, false, 1, false);
-            MAP_INDEX = loadIndex(IndexReference.INDEX_5, true, 1, false);
-            MUSIC_INDEX = loadIndex(IndexReference.INDEX_6, true, 1, false);
-            MESH_INDEX = loadIndex(IndexReference.INDEX_7, false, 1, false);
-            TEXTURE_INDEX = loadIndex(IndexReference.INDEX_9, false, 1, true);
-            HUFFMAN_INDEX = loadIndex(IndexReference.INDEX_10, false, 1, false);
-            MUSIC2_INDEX = loadIndex(IndexReference.INDEX_11, false, 1, false);
-            CS2_SCRIPTS_INDEX = loadIndex(IndexReference.INDEX_12, false, 1, true);
-            MIDI_INSTRUMENT_INDEX = loadIndex(IndexReference.INDEX_14, false, 1, false);
-            SOUND_MIDI_INDEX = loadIndex(IndexReference.INDEX_15, false, 1, false);
-            OBJECT_INDEX = loadIndex(IndexReference.INDEX_16, false, 1, true);
-            ENUM_INDEX = loadIndex(IndexReference.INDEX_17, false, 1, true);
-            NPC_INDEX = loadIndex(IndexReference.INDEX_18, false, 1, true);
-            ITEM_INDEX = loadIndex(IndexReference.INDEX_19, false, 1, true);
-            ANIMATION_INDEX = loadIndex(IndexReference.INDEX_20, false, 1, true);
-            SPOTANIM_INDEX = loadIndex(IndexReference.INDEX_21, false, 1, true);
-            VARBIT_INDEX = loadIndex(IndexReference.INDEX_22, false, 1, true);
-            WORLD_MAP_INDEX = loadIndex(IndexReference.INDEX_23, true, 1, false);
-            QC_MESSAGES_INDEX = loadIndex(IndexReference.INDEX_24, false, 1, true);
-            QC_MENU_INDEX = loadIndex(IndexReference.INDEX_25, false, 1, true);
-            TEXTURE_DEFINITION_INDEX = loadIndex(IndexReference.INDEX_26, true, 1, true);
-            PARTICLE_INDEX = loadIndex(IndexReference.INDEX_27, false, 1, true);
-            DEFAULTS_INDEX = loadIndex(IndexReference.INDEX_28, true, 1, true);
-            BILLBOARD_INDEX = loadIndex(IndexReference.INDEX_29, false, 1, true);
-            CUTSCENE_INDEX = loadIndex(IndexReference.INDEX_35, true, 1, false);
-            NATIVE_LIBRARY_INDEX = loadIndex(IndexReference.INDEX_30, true, 1, false);
-            SHADER_INDEX = loadIndex(IndexReference.INDEX_31, true, 1, true);
-            VORBIS_INDEX = loadIndex(IndexReference.INDEX_36, true, 2, false);
+            SPRITES_INDEX = loadIndex(IndexReference.INDEX_8, false, 1);
+            ANIMATION_FRAME_SET_INDEX = loadIndex(IndexReference.INDEX_0, false, 1);
+            ANIMATION_FRAME_BASE_INDEX = loadIndex(IndexReference.INDEX_1, false, 1);
+            CONFIG_INDEX = loadIndex(IndexReference.INDEX_2, false, 1);
+            INTERFACE_INDEX = loadIndex(IndexReference.INDEX_3, false, 1);
+            SOUND_EFFECT_INDEX = loadIndex(IndexReference.INDEX_4, false, 1);
+            MAP_INDEX = loadIndex(IndexReference.INDEX_5, true, 1);
+            MUSIC_INDEX = loadIndex(IndexReference.INDEX_6, true, 1);
+            MESH_INDEX = loadIndex(IndexReference.INDEX_7, false, 1);
+            TEXTURE_INDEX = loadIndex(IndexReference.INDEX_9, false, 1);
+            HUFFMAN_INDEX = loadIndex(IndexReference.INDEX_10, false, 1);
+            MUSIC2_INDEX = loadIndex(IndexReference.INDEX_11, false, 1);
+            CS2_SCRIPTS_INDEX = loadIndex(IndexReference.INDEX_12, false, 1);
+            MIDI_INSTRUMENT_INDEX = loadIndex(IndexReference.INDEX_14, false, 1);
+            SOUND_MIDI_INDEX = loadIndex(IndexReference.INDEX_15, false, 1);
+            OBJECT_INDEX = loadIndex(IndexReference.INDEX_16, false, 1);
+            ENUM_INDEX = loadIndex(IndexReference.INDEX_17, false, 1);
+            NPC_INDEX = loadIndex(IndexReference.INDEX_18, false, 1);
+            ITEM_INDEX = loadIndex(IndexReference.INDEX_19, false, 1);
+            ANIMATION_INDEX = loadIndex(IndexReference.INDEX_20, false, 1);
+            SPOTANIM_INDEX = loadIndex(IndexReference.INDEX_21, false, 1);
+            VARBIT_INDEX = loadIndex(IndexReference.INDEX_22, false, 1);
+            WORLD_MAP_INDEX = loadIndex(IndexReference.INDEX_23, true, 1);
+            QC_MESSAGES_INDEX = loadIndex(IndexReference.INDEX_24, false, 1);
+            QC_MENU_INDEX = loadIndex(IndexReference.INDEX_25, false, 1);
+            TEXTURE_DEFINITION_INDEX = loadIndex(IndexReference.INDEX_26, true, 1);
+            PARTICLE_INDEX = loadIndex(IndexReference.INDEX_27, false, 1);
+            DEFAULTS_INDEX = loadIndex(IndexReference.INDEX_28, true, 1);
+            BILLBOARD_INDEX = loadIndex(IndexReference.INDEX_29, false, 1);
+            CUTSCENE_INDEX = loadIndex(IndexReference.INDEX_35, true, 1);
+            NATIVE_LIBRARY_INDEX = loadIndex(IndexReference.INDEX_30, true, 1);
+            SHADER_INDEX = loadIndex(IndexReference.INDEX_31, true, 1);
+            VORBIS_INDEX = loadIndex(IndexReference.INDEX_36, true, 2);
         }
 
         if (LOADING_STAGE == LoadingStage.aClass387_4700) {
@@ -206,7 +206,7 @@ public class IndexLoaders {
 
             for (i_2 = 0; i_2 < Class492.aClass327_Sub1Array5777.length; i_2++) {
                 if (Class492.aClass327_Sub1Array5777[i_2] != null) {
-                    i += Class492.aClass327_Sub1Array5777[i_2].method12543(-1380150804) * Class302.anIntArray3558[i_2] / 100;
+                    i += Class492.aClass327_Sub1Array5777[i_2].method12543() * Class302.anIntArray3558[i_2] / 100;
                 }
             }
 
@@ -264,42 +264,42 @@ public class IndexLoaders {
             }
 
             IMAGE_LOADER = new ImageIndexLoader(TEXTURE_DEFINITION_INDEX, TEXTURE_INDEX, SPRITES_INDEX);
-            PARAM_LOADER = new ParamIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
-            RENDER_ANIM_LOADER = new RenderAnimIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, LinkedNodeList.EQUIPMENT_DEFAULTS);
-            CURSOR_LOADER = new CursorIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, SPRITES_INDEX);
-            ENUM_LOADER = new EnumIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, ENUM_INDEX);
-            OVERLAY_LOADER = new OverlayIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
-            UNDERLAY_LOADER = new UnderlayIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
-            HITSPLAT_LOADER = new HitsplatIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, SPRITES_INDEX);
-            HITBAR_LOADER = new HitbarIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, SPRITES_INDEX);
-            IDENTIKIT_LOADER = new IdentiKitIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, MESH_INDEX);
-            INVENTORY_LOADER = new InventoriesIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
-            LIGHT_INTENSITY_LOADER = new LightIntensityIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
-            OBJECT_LOADER = new ObjectIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, OBJECT_INDEX, MESH_INDEX);
+            PARAM_LOADER = new ParamIndexLoader(CONFIG_INDEX);
+            RENDER_ANIM_LOADER = new RenderAnimIndexLoader(CONFIG_INDEX, LinkedNodeList.EQUIPMENT_DEFAULTS);
+            CURSOR_LOADER = new CursorIndexLoader(CONFIG_INDEX, SPRITES_INDEX);
+            ENUM_LOADER = new EnumIndexLoader(ENUM_INDEX);
+            OVERLAY_LOADER = new OverlayIndexLoader(CONFIG_INDEX);
+            UNDERLAY_LOADER = new UnderlayIndexLoader(CONFIG_INDEX);
+            HITSPLAT_LOADER = new ScriptRunner(CONFIG_INDEX, SPRITES_INDEX);
+            HITBAR_LOADER = new HeadbarIndexLoader(CONFIG_INDEX, SPRITES_INDEX);
+            IDENTIKIT_LOADER = new IdentiKitIndexLoader(CONFIG_INDEX, MESH_INDEX);
+            INVENTORY_LOADER = new InventoriesIndexLoader(CONFIG_INDEX);
+            LIGHT_INTENSITY_LOADER = new LightIntensityIndexLoader(CONFIG_INDEX);
+            OBJECT_LOADER = new LocationIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, OBJECT_INDEX, MESH_INDEX);
             MAP_REGION_DECODER.setObjectIndexLoader(OBJECT_LOADER);
-            MAP_REGION_LOADER_THREAD.setObjectIndexLoader(new ObjectIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, OBJECT_INDEX, MESH_INDEX));
-            WORLD_MAP_LOADER = new MapAreaIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, SPRITES_INDEX);
-            MAP_SPRITE_LOADER = new MapSpriteIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, SPRITES_INDEX);
+            MAP_REGION_LOADER_THREAD.setObjectIndexLoader(new LocationIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, OBJECT_INDEX, MESH_INDEX));
+            WORLD_MAP_LOADER = new MapAreaIndexLoader(CONFIG_INDEX, SPRITES_INDEX);
+            MAP_SPRITE_LOADER = new MapSpriteIndexLoader(CONFIG_INDEX, SPRITES_INDEX);
             NPC_INDEX_LOADER = new NPCIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, NPC_INDEX, MESH_INDEX);
-            ITEM_LOADER = new ItemIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, PARAM_LOADER, ITEM_INDEX, MESH_INDEX);
-            QUEST_LOADER = new QuestIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
-            ANIMATION_LOADER = new AnimationIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, ANIMATION_INDEX, ANIMATION_FRAME_SET_INDEX, ANIMATION_FRAME_BASE_INDEX);
-            SKYBOX_LOADER = new SkyboxIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
-            SUN_LOADER = new SunIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
-            SPOT_ANIM_LOADER = new SpotAnimIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, SPOTANIM_INDEX, MESH_INDEX);
-            STRUCT_LOADER = new StructIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
-            VARC_STRING_LOADER = new VarcStringIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
-            VARC_LOADER = new VarcIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
-            VARBIT_LOADER = new VarBitIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, VARBIT_INDEX);
-            VAR_LOADER = new VarDefinitionLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
-            VARN_LOADER = new VarnIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
-            VARNBIT_LOADER = new VarnBitIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
-            CLAN_VAR_LOADER = new ClanVarIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
-            CLAN_VAR_SETTINGS_LOADER = new ClanVarSettingsIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
-            Class403.method6803(INTERFACE_INDEX, MESH_INDEX, SPRITES_INDEX, FONT_METRICS_INDEX);
+            ITEM_LOADER = new ObjectIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, PARAM_LOADER, ITEM_INDEX, MESH_INDEX);
+            QUEST_LOADER = new QuestIndexLoader(CONFIG_INDEX);
+            ANIMATION_LOADER = new AnimationIndexLoader(ANIMATION_INDEX, ANIMATION_FRAME_SET_INDEX, ANIMATION_FRAME_BASE_INDEX);
+            SKYBOX_LOADER = new SkyboxIndexLoader(CONFIG_INDEX);
+            SUN_LOADER = new SunIndexLoader(CONFIG_INDEX);
+            SPOT_ANIM_LOADER = new SpotAnimIndexLoader(SPOTANIM_INDEX, MESH_INDEX);
+            STRUCT_LOADER = new StructIndexLoader(CONFIG_INDEX);
+            VARC_STRING_LOADER = new VarcStringIndexLoader(CONFIG_INDEX);
+            VARC_LOADER = new VarcIndexLoader(CONFIG_INDEX);
+            VARBIT_LOADER = new VarBitIndexLoader(VARBIT_INDEX);
+            VAR_LOADER = new VarDefinitionLoader(CONFIG_INDEX);
+            VARN_LOADER = new VarnIndexLoader(CONFIG_INDEX);
+            VARNBIT_LOADER = new VarnBitIndexLoader(CONFIG_INDEX);
+            CLAN_VAR_LOADER = new ClanVarIndexLoader(CONFIG_INDEX);
+            CLAN_VAR_SETTINGS_LOADER = new ClanVarSettingsIndexLoader(CONFIG_INDEX);
+            Class403.method6803(INTERFACE_INDEX, MESH_INDEX, SPRITES_INDEX);
             JS5StandardRequester.setBillboardIndex(BILLBOARD_INDEX);
-            QUICK_CHAT_CATEGORY_LOADER = new QuickchatCategoryLoader(Class223.CURRENT_LANGUAGE, QC_MESSAGES_INDEX, QC_MENU_INDEX);
-            QUICK_CHAT_MESSAGE_LOADER = new QuickchatMessageLoader(Class223.CURRENT_LANGUAGE, QC_MESSAGES_INDEX, QC_MENU_INDEX, new QuickchatFiller());
+            QUICK_CHAT_CATEGORY_LOADER = new QuickchatCategoryLoader(QC_MESSAGES_INDEX, QC_MENU_INDEX);
+            QUICK_CHAT_MESSAGE_LOADER = new QuickchatMessageLoader(QC_MESSAGES_INDEX, QC_MENU_INDEX, new QuickchatFiller());
             Class158_Sub1.PLAYER_VAR_PROVIDER = new PlayerVarProvider();
             Class94.method1589();
             CutsceneCameraMovement.method1369(ANIMATION_LOADER);
@@ -312,8 +312,8 @@ public class IndexLoaders {
         }
 
         if (LoadingStage.aClass387_4705 == LOADING_STAGE) {
-            i = ParticleProducerDefinition.method1159(SPRITES_INDEX) + Class487.aClass378_5752.method6405(true, 1940883220);
-            i_2 = Class109_Sub1.method14651() + Class487.aClass378_5752.method6422(-167054108);
+            i = ParticleProducerDefinition.method1159(SPRITES_INDEX) + Class487.aClass378_5752.method6405(true);
+            i_2 = Class109_Sub1.method14651() + Class487.aClass378_5752.method6422();
             if (i < i_2) {
                 return i * 100 / i_2;
             }
@@ -329,7 +329,7 @@ public class IndexLoaders {
             Class462.VARC_STRING = new String[VARC_STRING_LOADER.size];
 
             for (i = 0; i < VARC_LOADER.size; i++) {
-                if (VARC_LOADER.method6873(i, (byte) 124).anInt4983 == 0) {
+                if (VARC_LOADER.method6873(i).anInt4983 == 0) {
                     Node_Sub17_Sub2.VARC_BOOL[i] = true;
                     ++client.anInt7399;
                 }
@@ -347,14 +347,14 @@ public class IndexLoaders {
         }
 
         if (LOADING_STAGE == LoadingStage.aClass387_4713) {
-            if (!MovingAnimation.isInterfaceLoaded(QuickchatFiller.ENTITY_DEFAULTS.loginWindow, null, -402984376)) {
+            if (!MovingAnimation.isInterfaceLoaded(QuickchatFiller.ENTITY_DEFAULTS.loginWindow, null)) {
                 return 0;
             }
 
             bool_10 = true;
 
             for (i_2 = 0; i_2 < CustomCursorsPreference.INTERFACES[QuickchatFiller.ENTITY_DEFAULTS.loginWindow].components.length; i_2++) {
-                IComponentDefinitions icomponentdefinitions_8 = CustomCursorsPreference.INTERFACES[QuickchatFiller.ENTITY_DEFAULTS.loginWindow].components[i_2];
+                Component icomponentdefinitions_8 = CustomCursorsPreference.INTERFACES[QuickchatFiller.ENTITY_DEFAULTS.loginWindow].components[i_2];
                 if (icomponentdefinitions_8.type == ComponentType.SPRITE && icomponentdefinitions_8.spriteId != -1 && !SPRITES_INDEX.load(icomponentdefinitions_8.spriteId, 0)) {
                     bool_10 = false;
                 }
@@ -366,11 +366,11 @@ public class IndexLoaders {
         }
 
         if (LoadingStage.aClass387_4698 == LOADING_STAGE) {
-            Class348.method6175(true, -1140561340);
+            Class348.method6175(true);
         }
 
         if (LoadingStage.aClass387_4710 == LOADING_STAGE) {
-            Comparable_Sub1.aClass306_3771.method5437(1971285079);
+            Comparable_Sub1.aClass306_3771.method5437();
 
             try {
                 VarDefinitionLoader.aThread4520.join();
@@ -385,7 +385,7 @@ public class IndexLoaders {
             EntityNode_Sub7.GAME_TIPS_LOADER = null;
             Class302.anInterface27Array3559 = null;
             Class358.method6234();
-            client.aBool7465 = Class393.preferences.safeMode.getValue((byte) -77) == 1;
+            client.aBool7465 = Class393.preferences.safeMode.getValue() == 1;
             Class393.preferences.setValue(Class393.preferences.safeMode, 1);
             if (client.aBool7465) {
                 Class393.preferences.setValue(Class393.preferences.toolKit, 0);
@@ -393,30 +393,30 @@ public class IndexLoaders {
                 Class393.preferences.setValue(Class393.preferences.toolKit, 0);
             }
 
-            Class190.savePreferences((byte) 125);
+            Class190.savePreferences();
             if (client.aBool7465) {
                 ParticleProducer.method11500(0, false);
             } else {
-                ParticleProducer.method11500(Class393.preferences.toolKit.getValue(2116214746), false);
+                ParticleProducer.method11500(Class393.preferences.toolKit.getValue(), false);
             }
 
-            UID192.method7373(Class393.preferences.screenSize.method12687(-2050547783), -1, -1, false, (byte) 65);
+            UID192.method7373(Class393.preferences.screenSize.method12687(), -1, -1, false);
             Class487.aClass378_5752.method6403(client.anInterface35_7206);
-            Node_Sub11_Sub3.method15476(Renderers.SOFTWARE_RENDERER, -2058774683);
+            Node_Sub11_Sub3.method15476();
             Class188.method3139(Renderers.SOFTWARE_RENDERER, SPRITES_INDEX);
-            Class122.method2109(Class182.aNativeSpriteArray2261, (byte) -7);
+            Class122.method2109(Class182.aNativeSpriteArray2261);
         }
 
         return Class152.method2604();
     }
 
-    public static Index loadIndex(IndexReference indexreference_0, boolean bool_1, int i_2, boolean bool_3) {
+    public static Index loadIndex(IndexReference indexreference_0, boolean bool_1, int i_2) {
         if (Class492.aClass327_Sub1Array5777 == null) {
             Class492.aClass327_Sub1Array5777 = new JS5GrabWorker[Class123.method2149()];
         }
 
         JS5CacheFile js5cachefile_4 = null;
-        int i_5 = indexreference_0.method1781(-333623124);
+        int i_5 = indexreference_0.method1781();
         if (client.aClass440_3270 != null) {
             js5cachefile_4 = new JS5CacheFile(i_5, client.aClass440_3270, Class97.aClass440Array996[i_5]);
         }

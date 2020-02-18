@@ -6,37 +6,23 @@ import java.util.Iterator;
 public class Class291 {
 
     public static float aFloat3462;
-    protected static byte[][][] aByteArrayArrayArray3464;
     public static float aFloat3468;
-    protected static int anInt3469;
-    protected static Class283 aClass283_3470;
     public static int anInt3472;
     public static int anInt3473;
+    public static CacheableNode_Sub6 aCacheableNode_Sub6_3491;
+    protected static byte[][][] aByteArrayArrayArray3464;
+    protected static int anInt3469;
+    protected static Class283 aClass283_3470;
     protected static int xLength;
     protected static int yLength;
-    static IterableNodeMap aClass465_3461 = new IterableNodeMap(16);
     protected static int anInt3454 = (int) (Math.random() * 11.0D) - 5;
     protected static int anInt3463 = (int) (Math.random() * 17.0D) - 8;
-    static int[] anIntArray3466 = new int[1];
-    static byte[] aByteArray3467 = new byte[1];
     protected static NodeCollection aClass482_3459 = new NodeCollection();
     protected static Index MAP_AREA_INDEX;
-    static OverlayIndexLoader OVERLAY_LOADER;
-    static UnderlayIndexLoader UNDERLAY_LOADER;
-    protected static ObjectIndexLoader OBJECT_LOADER;
+    protected static LocationIndexLoader OBJECT_LOADER;
     protected static MapAreaIndexLoader MAP_AREA_LOADER;
     protected static MapSpriteIndexLoader MAP_SPRITE_LOADER;
     protected static VarProvider PLAYER_VAR_PROVIDER;
-    static byte[] underlayData;
-    static byte[] aByteArray3453;
-    static byte[] aByteArray3487;
-    static Object[] anObjectArray3488;
-    static byte[] aByteArray3475;
-    static ArrayList[][][] anArrayListArrayArrayArray3484;
-    static int[] anIntArray3481;
-    public static CacheableNode_Sub6 aCacheableNode_Sub6_3491;
-    static byte[] rgbColors;
-    static short[] aShortArray3479;
     protected static int anInt3485;
     protected static int anInt3486;
     protected static int anInt3480;
@@ -45,8 +31,26 @@ public class Class291 {
     protected static int anInt3490;
     protected static int anInt3476;
     protected static int anInt3492;
+    static IterableNodeMap aClass465_3461 = new IterableNodeMap(16);
+    static int[] anIntArray3466 = new int[1];
+    static byte[] aByteArray3467 = new byte[1];
+    static OverlayIndexLoader OVERLAY_LOADER;
+    static UnderlayIndexLoader UNDERLAY_LOADER;
+    static byte[] underlayData;
+    static byte[] aByteArray3453;
+    static byte[] aByteArray3487;
+    static Object[] anObjectArray3488;
+    static byte[] aByteArray3475;
+    static ArrayList[][][] anArrayListArrayArrayArray3484;
+    static int[] anIntArray3481;
+    static byte[] rgbColors;
+    static short[] aShortArray3479;
 
-    public static void method5125(Index index_0, OverlayIndexLoader class536_1, UnderlayIndexLoader underlayindexloader_2, ObjectIndexLoader objectindexloader_3, MapAreaIndexLoader worldmapindexloader_4, MapSpriteIndexLoader class427_5, VarProvider interface42_6) {
+    Class291() throws Throwable {
+        throw new Error();
+    }
+
+    public static void method5125(Index index_0, OverlayIndexLoader class536_1, UnderlayIndexLoader underlayindexloader_2, LocationIndexLoader objectindexloader_3, MapAreaIndexLoader worldmapindexloader_4, MapSpriteIndexLoader class427_5, VarProvider interface42_6) {
         MAP_AREA_INDEX = index_0;
         OVERLAY_LOADER = class536_1;
         UNDERLAY_LOADER = underlayindexloader_2;
@@ -54,7 +58,7 @@ public class Class291 {
         MAP_AREA_LOADER = worldmapindexloader_4;
         MAP_SPRITE_LOADER = class427_5;
         PLAYER_VAR_PROVIDER = interface42_6;
-        aClass465_3461.method7749(1876923510);
+        aClass465_3461.method7749();
         int i_7 = MAP_AREA_INDEX.getArchiveId("details");
         int[] ints_8 = MAP_AREA_INDEX.getValidFileIds(i_7);
         if (ints_8 != null) {
@@ -64,7 +68,7 @@ public class Class291 {
             }
         }
 
-        SunDefinitions.method854(true, false, -1938566313);
+        SunDefinitions.method854(true, false);
     }
 
     static void method5126() {
@@ -80,7 +84,7 @@ public class Class291 {
     public static Queue method5127(int i_0, int i_1) {
         Queue class477_2 = new Queue();
 
-        for (CacheableNode_Sub6 class282_sub50_sub6_3 = (CacheableNode_Sub6) aClass465_3461.method7750(1631315315); class282_sub50_sub6_3 != null; class282_sub50_sub6_3 = (CacheableNode_Sub6) aClass465_3461.method7751((byte) 13)) {
+        for (CacheableNode_Sub6 class282_sub50_sub6_3 = (CacheableNode_Sub6) aClass465_3461.method7750(); class282_sub50_sub6_3 != null; class282_sub50_sub6_3 = (CacheableNode_Sub6) aClass465_3461.method7751()) {
             if (class282_sub50_sub6_3.aBool9543 && class282_sub50_sub6_3.method14784(i_0, i_1)) {
                 class477_2.method7936(class282_sub50_sub6_3);
             }
@@ -97,7 +101,7 @@ public class Class291 {
         return (CacheableNode_Sub6) aClass465_3461.get(i_0);
     }
 
-    static void renderMap(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2) {
+    static void renderMap(AbstractRenderer graphicalrenderer_0, int i_1, int i_2) {
         int i_5 = anInt3480 - anInt3485;
         int i_6 = anInt3486 - anInt3465;
         if (anInt3480 < xLength) {
@@ -120,15 +124,15 @@ public class Class291 {
         int i_16;
         int i_19;
         for (i_7 = 0; i_7 < i_5; i_7++) {
-            i_8 = (0 + i_7 * i_1 >> 16) + anInt3489;
-            i_9 = (0 + (i_7 + 1) * i_1 >> 16) + anInt3489;
+            i_8 = (i_7 * i_1 >> 16) + anInt3489;
+            i_9 = ((i_7 + 1) * i_1 >> 16) + anInt3489;
             i_10 = i_9 - i_8;
             if (i_10 > 0) {
                 i_11 = i_7 + anInt3485;
                 if (i_11 >= 0 && i_11 < xLength) {
                     for (i_12 = 0; i_12 < i_6; i_12++) {
-                        i_13 = anInt3492 - (i_2 * (i_12 + 1) + 0 >> 16);
-                        i_14 = anInt3492 - (i_12 * i_2 + 0 >> 16);
+                        i_13 = anInt3492 - (i_2 * (i_12 + 1) >> 16);
+                        i_14 = anInt3492 - (i_12 * i_2 >> 16);
                         i_15 = i_14 - i_13;
                         if (i_15 > 0) {
                             i_16 = i_12 + anInt3465;
@@ -139,7 +143,7 @@ public class Class291 {
                             if (i_16 >= 0 && i_16 < yLength) {
                                 i_18 = (rgbColors[i_17] & 0xff) << 16 | aShortArray3479[i_17] & 0xffff;
                                 if (i_18 != 0) {
-                                    i_18 |= ~0xffffff;
+                                    i_18 |= -16777216;
                                 }
 
                                 i_19 = aByteArray3453[i_17] & 0xff;
@@ -148,7 +152,7 @@ public class Class291 {
 
                             if (i_18 == 0 && i_19 == 0 && object_20 == null) {
                                 if (aCacheableNode_Sub6_3491.anInt9538 != -1) {
-                                    i_18 = ~0xffffff | aCacheableNode_Sub6_3491.anInt9538;
+                                    i_18 = -16777216 | aCacheableNode_Sub6_3491.anInt9538;
                                 } else if ((i_7 + anInt3485 & 0x4) != (i_12 + anInt3486 & 0x4)) {
                                     i_18 = -11840664;
                                 } else {
@@ -179,11 +183,11 @@ public class Class291 {
                     }
                 } else {
                     for (i_12 = 0; i_12 < i_6; i_12++) {
-                        i_13 = anInt3492 - (i_2 * (i_12 + 1) + 0 >> 16);
-                        i_14 = anInt3492 - (i_12 * i_2 + 0 >> 16);
+                        i_13 = anInt3492 - (i_2 * (i_12 + 1) >> 16);
+                        i_14 = anInt3492 - (i_12 * i_2 >> 16);
                         i_15 = i_14 - i_13;
                         if (aCacheableNode_Sub6_3491.anInt9538 != -1) {
-                            i_16 = ~0xffffff | aCacheableNode_Sub6_3491.anInt9538;
+                            i_16 = -16777216 | aCacheableNode_Sub6_3491.anInt9538;
                         } else if ((i_7 + anInt3485 & 0x4) != (i_12 + anInt3486 & 0x4)) {
                             i_16 = -11840664;
                         } else {
@@ -201,15 +205,15 @@ public class Class291 {
         }
 
         for (i_7 = -16; i_7 < i_5 + 16; i_7++) {
-            i_8 = (0 + i_7 * i_1 >> 16) + anInt3489;
-            i_9 = (0 + (i_7 + 1) * i_1 >> 16) + anInt3489;
+            i_8 = (i_7 * i_1 >> 16) + anInt3489;
+            i_9 = ((i_7 + 1) * i_1 >> 16) + anInt3489;
             i_10 = i_9 - i_8;
             if (i_10 > 0) {
                 i_11 = i_7 + anInt3485;
                 if (i_11 >= 0 && i_11 < xLength) {
                     for (i_12 = -16; i_12 < i_6 + 16; i_12++) {
-                        i_13 = anInt3492 - (i_2 * (i_12 + 1) + 0 >> 16);
-                        i_14 = anInt3492 - (i_12 * i_2 + 0 >> 16);
+                        i_13 = anInt3492 - (i_2 * (i_12 + 1) >> 16);
+                        i_14 = anInt3492 - (i_12 * i_2 >> 16);
                         i_15 = i_14 - i_13;
                         if (i_15 > 0) {
                             i_16 = i_12 + anInt3465;
@@ -278,10 +282,10 @@ public class Class291 {
                             class269_32 = (Class269) iterator_30.next();
                             i_19 = i_15 + class269_32.aByte3311 - anInt3472 - anInt3485;
                             i_28 = i_16 + class269_32.aByte3309 - anInt3473 - anInt3465;
-                            i_21 = (0 + i_19 * i_1 >> 16) + anInt3489;
-                            i_22 = (0 + (i_19 + 1) * i_1 >> 16) + anInt3489;
-                            i_23 = anInt3492 - (i_2 * (i_28 + 1) + 0 >> 16);
-                            i_24 = anInt3492 - (i_28 * i_2 + 0 >> 16);
+                            i_21 = (i_19 * i_1 >> 16) + anInt3489;
+                            i_22 = ((i_19 + 1) * i_1 >> 16) + anInt3489;
+                            i_23 = anInt3492 - (i_2 * (i_28 + 1) >> 16);
+                            i_24 = anInt3492 - (i_28 * i_2 >> 16);
                             renderUnderlay(graphicalrenderer_0, i_21, i_23, i_22 - i_21, i_24 - i_23, class269_32.anInt3310, class269_32.aByte3308 & 0xff, class269_32.aByte3312, class269_32.anIntArray3313, class269_32.aByteArray3314, false);
                         }
                     }
@@ -300,10 +304,10 @@ public class Class291 {
                             class269_32 = (Class269) iterator_30.next();
                             i_19 = i_15 + class269_32.aByte3311 - anInt3472 - anInt3485;
                             i_28 = i_16 + class269_32.aByte3309 - anInt3473 - anInt3465;
-                            i_21 = (0 + i_19 * i_1 >> 16) + anInt3489;
-                            i_22 = (0 + (i_19 + 1) * i_1 >> 16) + anInt3489;
-                            i_23 = anInt3492 - (i_2 * (i_28 + 1) + 0 >> 16);
-                            i_24 = anInt3492 - (i_28 * i_2 + 0 >> 16);
+                            i_21 = (i_19 * i_1 >> 16) + anInt3489;
+                            i_22 = ((i_19 + 1) * i_1 >> 16) + anInt3489;
+                            i_23 = anInt3492 - (i_2 * (i_28 + 1) >> 16);
+                            i_24 = anInt3492 - (i_28 * i_2 >> 16);
                             renderObjectSprites(graphicalrenderer_0, i_21, i_23, i_22 - i_21, i_24 - i_23, class269_32.anIntArray3313, class269_32.aByteArray3314);
                         }
                     }
@@ -320,12 +324,12 @@ public class Class291 {
 
     }
 
-    static NodeCollection method5135(GraphicalRenderer graphicalrenderer_0) {
+    static NodeCollection method5135() {
         int i_1 = anInt3480 - anInt3485;
         int i_2 = anInt3486 - anInt3465;
         int i_3 = (anInt3476 - anInt3489 << 16) / i_1;
         int i_4 = (anInt3492 - anInt3490 << 16) / i_2;
-        return method5179(graphicalrenderer_0, i_3, i_4);
+        return method5179(i_3, i_4);
     }
 
     static void method5136() {
@@ -340,10 +344,10 @@ public class Class291 {
                         Node_Sub49 class282_sub49_14 = (Node_Sub49) object_2;
                         if (class282_sub49_14 != null) {
                             for (int i_4 = 0; i_4 < class282_sub49_14.anIntArray8109.length; i_4++) {
-                                ObjectDefinitions objectdefinitions_12 = OBJECT_LOADER.getObjectDefinitions(class282_sub49_14.anIntArray8109[i_4]);
+                                LocType objectdefinitions_12 = OBJECT_LOADER.getLocType(class282_sub49_14.anIntArray8109[i_4]);
                                 i_13 = objectdefinitions_12.mapIcon;
                                 if (objectdefinitions_12.transformTo != null) {
-                                    objectdefinitions_12 = objectdefinitions_12.getTransformed(PLAYER_VAR_PROVIDER);
+                                    objectdefinitions_12 = objectdefinitions_12.getMultiLoc(PLAYER_VAR_PROVIDER);
                                     if (objectdefinitions_12 != null) {
                                         i_13 = objectdefinitions_12.mapIcon;
                                     }
@@ -359,10 +363,10 @@ public class Class291 {
                         }
                     } else {
                         Integer integer_3 = (Integer) object_2;
-                        ObjectDefinitions objectdefinitions_10 = OBJECT_LOADER.getObjectDefinitions(integer_3.intValue());
+                        LocType objectdefinitions_10 = OBJECT_LOADER.getLocType(integer_3.intValue());
                         int i_5 = objectdefinitions_10.mapIcon;
                         if (objectdefinitions_10.transformTo != null) {
-                            objectdefinitions_10 = objectdefinitions_10.getTransformed(PLAYER_VAR_PROVIDER);
+                            objectdefinitions_10 = objectdefinitions_10.getMultiLoc(PLAYER_VAR_PROVIDER);
                             if (objectdefinitions_10 != null) {
                                 i_5 = objectdefinitions_10.mapIcon;
                             }
@@ -398,10 +402,10 @@ public class Class291 {
                             } while (class269_18.anIntArray3313 == null);
 
                             for (i_13 = 0; i_13 < class269_18.anIntArray3313.length; i_13++) {
-                                ObjectDefinitions objectdefinitions_16 = OBJECT_LOADER.getObjectDefinitions(class269_18.anIntArray3313[i_13]);
+                                LocType objectdefinitions_16 = OBJECT_LOADER.getLocType(class269_18.anIntArray3313[i_13]);
                                 int i_8 = objectdefinitions_16.mapIcon;
                                 if (objectdefinitions_16.transformTo != null) {
-                                    objectdefinitions_16 = objectdefinitions_16.getTransformed(PLAYER_VAR_PROVIDER);
+                                    objectdefinitions_16 = objectdefinitions_16.getMultiLoc(PLAYER_VAR_PROVIDER);
                                     if (objectdefinitions_16 != null) {
                                         i_8 = objectdefinitions_16.mapIcon;
                                     }
@@ -445,7 +449,7 @@ public class Class291 {
         anInt3492 = i_7;
     }
 
-    static void renderUnderlay(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int[] ints_8, byte[] bytes_9, boolean bool_10) {
+    static void renderUnderlay(AbstractRenderer graphicalrenderer_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int[] ints_8, byte[] bytes_9, boolean bool_10) {
         int i_11;
         int i_12;
         if (bool_10 || i_5 != 0 || i_6 > 0) {
@@ -480,8 +484,8 @@ public class Class291 {
 
             for (int i_13 = 0; i_13 < ints_8.length; i_13++) {
                 int i_14 = bytes_9[i_13] & 0x3f;
-                if (i_14 == SceneObjectType.WALL_STRAIGHT.type || i_14 == SceneObjectType.WALL_WHOLE_CORNER.type || i_14 == SceneObjectType.WALL_STRAIGHT_CORNER.type || i_14 == SceneObjectType.WALL_INTERACT.type) {
-                    ObjectDefinitions objectdefinitions_15 = OBJECT_LOADER.getObjectDefinitions(ints_8[i_13]);
+                if (i_14 == LocShapes.WALL_STRAIGHT.type || i_14 == LocShapes.WALL_WHOLE_CORNER.type || i_14 == LocShapes.WALL_STRAIGHT_CORNER.type || i_14 == LocShapes.WALL_INTERACT.type) {
+                    LocType objectdefinitions_15 = OBJECT_LOADER.getLocType(ints_8[i_13]);
                     if (objectdefinitions_15.mapSpriteId == -1) {
                         int i_16 = -3355444;
                         if (objectdefinitions_15.interactable == 1) {
@@ -489,7 +493,7 @@ public class Class291 {
                         }
 
                         int i_17 = bytes_9[i_13] >> 6 & 0x3;
-                        if (i_14 == SceneObjectType.WALL_STRAIGHT.type) {
+                        if (i_14 == LocShapes.WALL_STRAIGHT.type) {
                             if (i_17 == 0) {
                                 graphicalrenderer_0.G(i_1, i_2, i_4, i_16, 0);
                             } else if (i_17 == 1) {
@@ -499,7 +503,7 @@ public class Class291 {
                             } else {
                                 graphicalrenderer_0.XA(i_1, i_12, i_3, i_16, 0);
                             }
-                        } else if (i_14 == SceneObjectType.WALL_WHOLE_CORNER.type) {
+                        } else if (i_14 == LocShapes.WALL_WHOLE_CORNER.type) {
                             if (i_17 == 0) {
                                 graphicalrenderer_0.G(i_1, i_2, i_4, -1, 0);
                                 graphicalrenderer_0.XA(i_1, i_2, i_3, i_16, 0);
@@ -513,7 +517,7 @@ public class Class291 {
                                 graphicalrenderer_0.G(i_1, i_2, i_4, -1, 0);
                                 graphicalrenderer_0.XA(i_1, i_12, i_3, i_16, 0);
                             }
-                        } else if (i_14 == SceneObjectType.WALL_STRAIGHT_CORNER.type) {
+                        } else if (i_14 == LocShapes.WALL_STRAIGHT_CORNER.type) {
                             if (i_17 == 0) {
                                 graphicalrenderer_0.XA(i_1, i_2, 1, i_16, 0);
                             } else if (i_17 == 1) {
@@ -523,7 +527,7 @@ public class Class291 {
                             } else {
                                 graphicalrenderer_0.XA(i_1, i_12, 1, i_16, 0);
                             }
-                        } else if (i_14 == SceneObjectType.WALL_INTERACT.type) {
+                        } else if (i_14 == LocShapes.WALL_INTERACT.type) {
                             int i_18;
                             if (i_17 != 0 && i_17 != 2) {
                                 for (i_18 = 0; i_18 < i_4; i_18++) {
@@ -546,7 +550,7 @@ public class Class291 {
         int[] ints_0 = new int[3];
 
         for (int i_1 = 0; i_1 < aClass283_3470.anInt3382; i_1++) {
-            boolean bool_2 = aCacheableNode_Sub6_3491.method14778(aClass283_3470.anIntArray3381[i_1] >> 28 & 0x3, aClass283_3470.anIntArray3381[i_1] >> 14 & 0x3fff, aClass283_3470.anIntArray3381[i_1] & 0x3fff, ints_0, -1151155270);
+            boolean bool_2 = aCacheableNode_Sub6_3491.method14778(aClass283_3470.anIntArray3381[i_1] >> 28 & 0x3, aClass283_3470.anIntArray3381[i_1] >> 14 & 0x3fff, aClass283_3470.anIntArray3381[i_1] & 0x3fff, ints_0);
             if (bool_2) {
                 Node_Sub36 class282_sub36_3 = new Node_Sub36(aClass283_3470.anIntArray3383[i_1]);
                 class282_sub36_3.anInt7987 = ints_0[1] - anInt3472;
@@ -557,12 +561,12 @@ public class Class291 {
 
     }
 
-    static void method5146(GraphicalRenderer graphicalrenderer_0, Node_Sub36 class282_sub36_1, int i_2, int i_3) {
-        class282_sub36_1.anInt7990 = (0 + i_2 * (class282_sub36_1.anInt7987 - anInt3485) >> 16) + anInt3489;
-        class282_sub36_1.anInt7992 = anInt3492 - (0 + i_3 * (class282_sub36_1.anInt7993 - anInt3465) >> 16);
+    static void method5146(Node_Sub36 class282_sub36_1, int i_2, int i_3) {
+        class282_sub36_1.anInt7990 = (i_2 * (class282_sub36_1.anInt7987 - anInt3485) >> 16) + anInt3489;
+        class282_sub36_1.anInt7992 = anInt3492 - (i_3 * (class282_sub36_1.anInt7993 - anInt3465) >> 16);
     }
 
-    static void method5147(GraphicalRenderer graphicalrenderer_0, Node_Sub36 class282_sub36_1, MapAreaDefinitions worldmapareadefs_2) {
+    static void method5147(AbstractRenderer graphicalrenderer_0, Node_Sub36 class282_sub36_1, MapAreaDefinitions worldmapareadefs_2) {
         if (worldmapareadefs_2.anIntArray2717 != null) {
             int[] ints_3 = new int[worldmapareadefs_2.anIntArray2717.length];
 
@@ -622,20 +626,16 @@ public class Class291 {
                 graphicalrenderer_0.method8435(i_4, i_5, i_6, i_7, worldmapareadefs_2.anIntArray2738[worldmapareadefs_2.aByteArray2754[worldmapareadefs_2.aByteArray2754.length - 1] & 0xff], worldmapareadefs_2.anInt2748, worldmapareadefs_2.anInt2749, worldmapareadefs_2.anInt2756);
             } else {
                 for (i_4 = 0; i_4 < ints_3.length / 2 - 1; i_4++) {
-                    graphicalrenderer_0.method8429(ints_3[i_4 * 2], ints_3[i_4 * 2 + 1], ints_3[(i_4 + 1) * 2], ints_3[(i_4 + 1) * 2 + 1], worldmapareadefs_2.anIntArray2738[worldmapareadefs_2.aByteArray2754[i_4] & 0xff], (byte) 46);
+                    graphicalrenderer_0.method8429(ints_3[i_4 * 2], ints_3[i_4 * 2 + 1], ints_3[(i_4 + 1) * 2], ints_3[(i_4 + 1) * 2 + 1], worldmapareadefs_2.anIntArray2738[worldmapareadefs_2.aByteArray2754[i_4] & 0xff]);
                 }
 
-                graphicalrenderer_0.method8429(ints_3[ints_3.length - 2], ints_3[ints_3.length - 1], ints_3[0], ints_3[1], worldmapareadefs_2.anIntArray2738[worldmapareadefs_2.aByteArray2754[worldmapareadefs_2.aByteArray2754.length - 1] & 0xff], (byte) 3);
+                graphicalrenderer_0.method8429(ints_3[ints_3.length - 2], ints_3[ints_3.length - 1], ints_3[0], ints_3[1], worldmapareadefs_2.anIntArray2738[worldmapareadefs_2.aByteArray2754[worldmapareadefs_2.aByteArray2754.length - 1] & 0xff]);
             }
         }
 
     }
 
-    Class291() throws Throwable {
-        throw new Error();
-    }
-
-    static void method5162(GraphicalRenderer graphicalrenderer_0, RsByteBuffer rsbytebuffer_1, int i_2, int i_3, int i_4, int i_5, int[] ints_6, int[] ints_7) {
+    static void method5162(Packet rsbytebuffer_1, int i_2, int i_3, int i_4, int i_5, int[] ints_6, int[] ints_7) {
         int i_8 = rsbytebuffer_1.readUnsignedByte();
         if ((i_8 & 0x1) == 0) {
             boolean bool_9 = (i_8 & 0x2) == 0;
@@ -747,9 +747,9 @@ public class Class291 {
                 }
 
                 i_9 = i_8 + (i_7 + i_2 & 0xfc00) + (i_7 & 0x380);
-                i_6 = ~0xffffff | Class335.anIntArray3916[Class372.method6362(QuestIndexLoader.method4162(i_9, 96, (byte) -73), 475535484) & 0xffff];
+                i_6 = -16777216 | Class335.anIntArray3916[Class372.method6362(QuestIndexLoader.method4162(i_9, 96)) & 0xffff];
             } else if (i_5 >= 0) {
-                i_6 = ~0xffffff | Class335.anIntArray3916[Class372.method6362(QuestIndexLoader.method4162(interface22_0.method144(i_5).color, 96, (byte) -53), 390293203) & 0xffff];
+                i_6 = -16777216 | Class335.anIntArray3916[Class372.method6362(QuestIndexLoader.method4162(interface22_0.method144(i_5).color, 96)) & 0xffff];
             } else if (overlaydef_4.primaryRGB == -1) {
                 i_6 = 0;
             } else {
@@ -762,21 +762,21 @@ public class Class291 {
                 }
 
                 i_9 = i_8 + (i_7 + i_2 & 0xfc00) + (i_7 & 0x380);
-                i_6 = ~0xffffff | Class335.anIntArray3916[Class372.method6362(QuestIndexLoader.method4162(i_9, 96, (byte) -9), 941984440) & 0xffff];
+                i_6 = -16777216 | Class335.anIntArray3916[Class372.method6362(QuestIndexLoader.method4162(i_9, 96)) & 0xffff];
             }
 
             return i_6;
         }
     }
 
-    static void renderObjectSprites(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2, int i_3, int i_4, int[] ints_5, byte[] bytes_6) {
+    static void renderObjectSprites(AbstractRenderer graphicalrenderer_0, int i_1, int i_2, int i_3, int i_4, int[] ints_5, byte[] bytes_6) {
         if (ints_5 != null) {
             for (int i_7 = 0; i_7 < ints_5.length; i_7++) {
-                ObjectDefinitions objectdefinitions_8 = OBJECT_LOADER.getObjectDefinitions(ints_5[i_7]);
+                LocType objectdefinitions_8 = OBJECT_LOADER.getLocType(ints_5[i_7]);
                 int i_9 = objectdefinitions_8.mapSpriteId;
                 if (i_9 != -1) {
                     MapSpriteDefinitions class418_10 = MAP_SPRITE_LOADER.method7172(i_9);
-                    NativeSprite nativesprite_11 = class418_10.method7010(graphicalrenderer_0, objectdefinitions_8.adjustMapSceneRotation ? bytes_6[i_7] >> 6 & 0x3 : 0, objectdefinitions_8.flipMapSprite && objectdefinitions_8.inverted, (byte) 70);
+                    NativeSprite nativesprite_11 = class418_10.method7010(graphicalrenderer_0, objectdefinitions_8.adjustMapSceneRotation ? bytes_6[i_7] >> 6 & 0x3 : 0, objectdefinitions_8.flipMapSprite && objectdefinitions_8.inverted);
                     if (nativesprite_11 != null) {
                         int i_12 = i_3 * nativesprite_11.scaleWidth() >> 2;
                         int i_13 = i_4 * nativesprite_11.method2748() >> 2;
@@ -795,7 +795,7 @@ public class Class291 {
 
                         if (i_12 != 0 && i_13 != 0) {
                             if (class418_10.anInt4997 != 0) {
-                                nativesprite_11.method2754(i_1, i_4 + (i_2 - i_13), i_12, i_13, 0, ~0xffffff | class418_10.anInt4997, 1);
+                                nativesprite_11.method2754(i_1, i_4 + (i_2 - i_13), i_12, i_13, 0, -16777216 | class418_10.anInt4997, 1);
                             } else {
                                 nativesprite_11.method2789(i_1, i_4 + (i_2 - i_13), i_12, i_13);
                             }
@@ -808,7 +808,7 @@ public class Class291 {
     }
 
     public static CacheableNode_Sub6 method5175(int i_0, int i_1) {
-        for (CacheableNode_Sub6 class282_sub50_sub6_2 = (CacheableNode_Sub6) aClass465_3461.method7750(1754886727); class282_sub50_sub6_2 != null; class282_sub50_sub6_2 = (CacheableNode_Sub6) aClass465_3461.method7751((byte) 66)) {
+        for (CacheableNode_Sub6 class282_sub50_sub6_2 = (CacheableNode_Sub6) aClass465_3461.method7750(); class282_sub50_sub6_2 != null; class282_sub50_sub6_2 = (CacheableNode_Sub6) aClass465_3461.method7751()) {
             if (class282_sub50_sub6_2.aBool9543 && class282_sub50_sub6_2.method14784(i_0, i_1)) {
                 return class282_sub50_sub6_2;
             }
@@ -817,15 +817,15 @@ public class Class291 {
         return null;
     }
 
-    static NodeCollection method5179(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2) {
-        for (Node_Sub36 class282_sub36_5 = (Node_Sub36) aClass482_3459.head(); class282_sub36_5 != null; class282_sub36_5 = (Node_Sub36) aClass482_3459.next(-413792246)) {
-            method5146(graphicalrenderer_0, class282_sub36_5, i_1, i_2);
+    static NodeCollection method5179(int i_1, int i_2) {
+        for (Node_Sub36 class282_sub36_5 = (Node_Sub36) aClass482_3459.head(); class282_sub36_5 != null; class282_sub36_5 = (Node_Sub36) aClass482_3459.next()) {
+            method5146(class282_sub36_5, i_1, i_2);
         }
 
         return aClass482_3459;
     }
 
-    static void renderMap(GraphicalRenderer graphicalrenderer_0) {
+    static void renderMap(AbstractRenderer graphicalrenderer_0) {
         int i_1 = anInt3480 - anInt3485;
         int i_2 = anInt3486 - anInt3465;
         int i_3 = (anInt3476 - anInt3489 << 16) / i_1;
@@ -833,8 +833,8 @@ public class Class291 {
         renderMap(graphicalrenderer_0, i_3, i_4);
     }
 
-    static void method5183(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2) {
-        RsByteBuffer rsbytebuffer_3 = new RsByteBuffer(MAP_AREA_INDEX.getFileByName(aCacheableNode_Sub6_3491.aString9533, "area"));
+    static void method5183(int i_1, int i_2) {
+        Packet rsbytebuffer_3 = new Packet(MAP_AREA_INDEX.getFileByName(aCacheableNode_Sub6_3491.aString9533, "area"));
         int i_4 = rsbytebuffer_3.readUnsignedByte();
         int[] ints_5 = new int[i_4];
 
@@ -866,7 +866,7 @@ public class Class291 {
                         for (i_11 = 0; i_11 < 64; i_11++) {
                             i_12 = i_8 * 64 + i_18 - anInt3472;
                             i_13 = i_9 * 64 + i_11 - anInt3473;
-                            method5162(graphicalrenderer_0, rsbytebuffer_3, i_8, i_9, i_12, i_13, ints_5, ints_7);
+                            method5162(rsbytebuffer_3, i_8, i_9, i_12, i_13, ints_5, ints_7);
                         }
                     }
                 } else {
@@ -879,7 +879,7 @@ public class Class291 {
                         for (i_13 = 0; i_13 < 8; i_13++) {
                             int i_20 = i_8 * 64 + i_12 + i_18 * 8 - anInt3472;
                             int i_15 = i_9 * 64 + i_13 + i_11 * 8 - anInt3473;
-                            method5162(graphicalrenderer_0, rsbytebuffer_3, i_8, i_9, i_20, i_15, ints_5, ints_7);
+                            method5162(rsbytebuffer_3, i_8, i_9, i_20, i_15, ints_5, ints_7);
                         }
                     }
                 }
@@ -919,7 +919,7 @@ public class Class291 {
                                 int i_16 = i_11 * 64 + class269_21.aByte3311 + (i_12 * 64 + class269_21.aByte3309) * xLength;
                                 class269_21.anInt3310 = (rgbColors[i_16] & 0xff) << 16 | aShortArray3479[i_16] & 0xffff;
                                 if (class269_21.anInt3310 != 0) {
-                                    class269_21.anInt3310 |= ~0xffffff;
+                                    class269_21.anInt3310 |= -16777216;
                                 }
                             }
                         }
@@ -1007,7 +1007,7 @@ public class Class291 {
                             bytes_1[i_21] = 0;
                             shorts_2[i_21] = 0;
                         } else {
-                            i_21 = i_16 == 0 ? 0 : Class371.method6348(i_13 * 256 / i_16, i_14 / i_17, i_15 / i_17, -517505406);
+                            i_21 = i_16 == 0 ? 0 : Class371.method6348(i_13 * 256 / i_16, i_14 / i_17, i_15 / i_17);
                             int i_22 = (i_21 & 0x7f) + i_4;
                             if (i_22 < 0) {
                                 i_22 = 0;
@@ -1017,7 +1017,7 @@ public class Class291 {
 
                             int i_23 = i_22 + (i_3 + i_21 & 0xfc00) + (i_21 & 0x380);
                             int i_24 = i_10 + i_18 * xLength;
-                            int i_25 = Class335.anIntArray3916[Class372.method6362(PlaySoundJingleCutsceneAction.method14677(i_23, 96), 880885246) & 0xffff];
+                            int i_25 = Class335.anIntArray3916[Class372.method6362(PlaySoundJingleCutsceneAction.method14677(i_23, 96)) & 0xffff];
                             bytes_1[i_24] = (byte) (i_25 >> 16 & 0xff);
                             shorts_2[i_24] = (short) (i_25 & 0xffff);
                         }

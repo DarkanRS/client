@@ -1,95 +1,26 @@
 package com.jagex;
 
-public final class CutsceneEntity {
+public class CutsceneEntity {
 
     static Index aClass317_746;
     static int anInt747;
-    public boolean initialized = false;
-    Player player = null;
-    NPC npc = null;
+    public boolean initialized;
+    public int id;
+    PlayerEntity player;
+    NPCEntity npc;
     int[] animations;
     int index;
-    public int id;
 
-    void move(int y, int plane, int x, int direction) {
-        if (!this.initialized) {
-            this.initialized = true;
-            if (this.id >= 0) {
-                this.npc = new NPC(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager());
-                this.npc.index = this.index;
-                this.npc.lastUpdate = client.cycles;
-                this.npc.setDefinition(IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(this.id));
-                this.npc.setBoundSize(this.npc.definitions.size);
-                this.npc.anInt10340 = this.npc.definitions.contrast << 3;
-                this.npc.drawPriority = ++Class86.anInt819 - 1;
-            } else {
-                this.player = new Player(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager());
-                this.player.decodeAppearance(Class276.aNode_Sub35_3346);
-                this.player.index = this.index;
-                this.player.lastUpdate = client.cycles;
-                this.player.drawPriority = ++Class86.anInt819 - 1;
-            }
-        }
-        if (this.id >= 0) {
-            this.npc.move(x, y, plane, true, this.npc.getSize());
-            this.npc.turn(direction, true);
-        } else {
-            this.player.plane = this.player.collisionPlane = (byte) x;
-            this.player.move(y, plane);
-            this.player.turn(direction, true);
-        }
-    }
-
-    void method1337(int i_1) {
-        this.npc = null;
-        this.player = null;
-        this.initialized = false;
-    }
-
-    void method1338(int i_1, int i_2, int i_3) {
-        if (this.npc != null) {
-            this.npc.move(i_1, i_2, i_3, true, this.npc.getSize());
-        } else {
-            this.player.plane = this.player.collisionPlane = (byte) i_1;
-            this.player.move(i_2, i_3);
-        }
-    }
-
-    boolean ready() {
-        if (this.id < 0) {
-            return true;
-        } else {
-            NPCDefinitions npcdefinitions_2 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(this.id);
-            boolean bool_3 = npcdefinitions_2.method6881();
-            if (this.animations == null) {
-                BASDefinitions renderanimdefs_4 = IndexLoaders.RENDER_ANIM_LOADER.getBASDefs(npcdefinitions_2.renderEmote, (byte) -42);
-                this.animations = renderanimdefs_4.method3828();
-            }
-            int[] ints_7 = this.animations;
-            for (int i_5 = 0; i_5 < ints_7.length; i_5++) {
-                int i_6 = ints_7[i_5];
-                bool_3 &= IndexLoaders.ANIMATION_LOADER.getAnimDefs(i_6, (byte) 91).ready();
-            }
-            return bool_3;
-        }
-    }
-
-    public Entity method1342(byte b_1) {
-        return this.npc != null ? this.npc : this.player;
-    }
-
-    CutsceneEntity(RsByteBuffer buffer, int index) {
+    CutsceneEntity(Packet buffer, int index) {
         this.index = index;
         int type = buffer.readUnsignedByte();
         switch (type) {
             case 0:
-                this.id = buffer.readBigSmart();
+                id = buffer.readBigSmart();
                 break;
             case 1:
-                this.id = -1;
-                break;
             default:
-                this.id = -1;
+                id = -1;
         }
         buffer.readString();
     }
@@ -142,5 +73,72 @@ public final class CutsceneEntity {
 
     static String method1354(CacheableNode_Sub15 class282_sub50_sub15_0) {
         return class282_sub50_sub15_0.aString9771 + Utils.rgbToColHexShortcut(16777215) + " >";
+    }
+
+    void move(int y, int plane, int x, int direction) {
+        if (!initialized) {
+            initialized = true;
+            if (id >= 0) {
+                npc = new NPCEntity(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager());
+                npc.index = index;
+                npc.lastUpdate = client.cycles;
+                npc.setDefinition(IndexLoaders.NPC_INDEX_LOADER.getNPCType(id));
+                npc.setBoundSize(npc.definitions.size);
+                npc.anInt10340 = npc.definitions.contrast << 3;
+                npc.drawPriority = ++Class86.anInt819 - 1;
+            } else {
+                player = new PlayerEntity(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager());
+                player.decodeAppearance(Class276.aNode_Sub35_3346);
+                player.index = index;
+                player.lastUpdate = client.cycles;
+                player.drawPriority = ++Class86.anInt819 - 1;
+            }
+        }
+        if (id >= 0) {
+            npc.move(x, y, plane, true, npc.getSize());
+            npc.turn(direction, true);
+        } else {
+            player.plane = player.collisionPlane = (byte) x;
+            player.move(y, plane);
+            player.turn(direction, true);
+        }
+    }
+
+    void method1337() {
+        npc = null;
+        player = null;
+        initialized = false;
+    }
+
+    void method1338(int i_1, int i_2, int i_3) {
+        if (npc != null) {
+            npc.move(i_1, i_2, i_3, true, npc.getSize());
+        } else {
+            player.plane = player.collisionPlane = (byte) i_1;
+            player.move(i_2, i_3);
+        }
+    }
+
+    boolean ready() {
+        if (id < 0) {
+            return true;
+        } else {
+            NPCType npcdefinitions_2 = IndexLoaders.NPC_INDEX_LOADER.getNPCType(id);
+            boolean bool_3 = npcdefinitions_2.method6881();
+            if (animations == null) {
+                BASDefinitions renderanimdefs_4 = IndexLoaders.RENDER_ANIM_LOADER.getBASDefs(npcdefinitions_2.renderEmote);
+                animations = renderanimdefs_4.method3828();
+            }
+            int[] ints_7 = animations;
+            for (int i_5 = 0; i_5 < ints_7.length; i_5++) {
+                int i_6 = ints_7[i_5];
+                bool_3 &= IndexLoaders.ANIMATION_LOADER.getAnimDefs(i_6).ready();
+            }
+            return bool_3;
+        }
+    }
+
+    public PathingEntity method1342() {
+        return npc != null ? npc : player;
     }
 }

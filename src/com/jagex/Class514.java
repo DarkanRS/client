@@ -1,6 +1,6 @@
 package com.jagex;
 
-public final class Class514 {
+public class Class514 {
 
     static int anInt5887;
 
@@ -8,11 +8,11 @@ public final class Class514 {
         throw new Error();
     }
 
-    static int method8840(char var_0, int i_1) {
+    static int method8840(char var_0) {
         return var_0 >= 0 && var_0 < Class480.anIntArray5715.length ? Class480.anIntArray5715[var_0] : -1;
     }
 
-    public static final void method8841(int i_0) {
+    public static void method8841() {
         for (int i_1 = 0; i_1 < 5; i_1++) {
             client.CAM_SHAKING[i_1] = false;
         }
@@ -25,7 +25,7 @@ public final class Class514 {
         PingRequester.anInt5864 = -1;
     }
 
-    static Class149_Sub2 method8842(RsByteBuffer rsbytebuffer_0) {
+    static Class149_Sub2 method8842(Packet rsbytebuffer_0) {
         return new Class149_Sub2(rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.read24BitUnsignedInteger(), rsbytebuffer_0.readUnsignedByte());
     }
 }

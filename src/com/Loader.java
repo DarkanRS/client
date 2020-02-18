@@ -12,26 +12,25 @@ import java.net.URL;
 import java.util.Properties;
 
 public class Loader extends Applet implements AppletStub {
-
     private static final long serialVersionUID = 1L;
 
     public static final int MAJOR_BUILD = 727;
     public static final int MINOR_BUILD = 1;
     public static final int CLIENT_BUILD = 6;
-
-    public static String IP_ADDRESS = "127.0.0.1"; //"axios.trentonkress.com";
     public static final int LOBBY_PORT = 5555;
-
     public static final BigInteger RSA_PUBLIC_MODULUS = new BigInteger("117525752735533423040644219776209926525585489242340044375332234679786347045466594509203355398209678968096551043842518449703703964361320462967286756268851663407950384008240524570966471744081769815157355561961607944067477858512067883877129283799853947605780903005188603658779539811385137666347647991072028080201");
     public static final BigInteger RSA_PUBLIC_EXPONENT = new BigInteger("65537");
-
     public static final boolean USING_ISAAC = false;
     public static final boolean LOBBY_ENABLED = true;
     public static final boolean DISABLE_XTEA_CRASH = true;
-
+    public static String IP_ADDRESS = /*"127.0.0.1";*/ "axios.trentonkress.com";
     public static Properties clientParams = new Properties();
 
-    public JFrame clientFrame = null;
+    static {
+        loadParams();
+    }
+
+    public JFrame clientFrame;
 
     public static void main(String[] arg0) {
         if (arg0 != null && arg0.length > 0 && arg0[0] != null) {
@@ -39,21 +38,6 @@ public class Loader extends Applet implements AppletStub {
             loadParams();
         }
         new Loader().doFrame();
-    }
-
-    @Override
-    public void init() {
-        doApplet();
-    }
-
-    private void doApplet() {
-        startClient();
-    }
-
-    private void doFrame() {
-        openFrame();
-        startClient();
-        clientFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     public static void loadParams() {
@@ -99,14 +83,25 @@ public class Loader extends Applet implements AppletStub {
         clientParams.put("29", "false");
     }
 
-    static {
-        loadParams();
+    @Override
+    public void init() {
+        doApplet();
+    }
+
+    private void doApplet() {
+        startClient();
+    }
+
+    private void doFrame() {
+        openFrame();
+        startClient();
+        clientFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     private void openFrame() {
         clientFrame = new JFrame("Darkan Client");
         clientFrame.setLayout(new BorderLayout());
-        final JPanel client_panel = new JPanel();
+        JPanel client_panel = new JPanel();
         client_panel.setLayout(new BorderLayout());
         client_panel.add(this);
         client_panel.setPreferredSize(new Dimension(765, 553));

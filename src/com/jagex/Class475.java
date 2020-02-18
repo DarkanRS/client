@@ -1,18 +1,16 @@
 package com.jagex;
 
-public final class Class475 {
-
-    static int anInt5622;
+public class Class475 {
 
     public static int anInt5624;
-
     public static boolean supportsFullScreen = true;
+    static int anInt5622;
 
     Class475() throws Throwable {
         throw new Error();
     }
 
-    public static String method7926(CharSequence charsequence_0, int i_1) {
+    public static String method7926(CharSequence charsequence_0) {
         int i_2 = charsequence_0.length();
         StringBuilder stringbuilder_3 = new StringBuilder(i_2);
         for (int i_4 = 0; i_4 < i_2; i_4++) {

@@ -11,34 +11,37 @@ public class Preference_Sub14 extends Preference {
     }
 
     public void method12725() {
-        if (this.anInt5578 < 0 || this.anInt5578 > 1) {
-            this.anInt5578 = this.getDefaultValue();
+        if (anInt5578 < 0 || anInt5578 > 1) {
+            anInt5578 = getDefaultValue();
         }
 
     }
 
     public boolean method12727() {
-        return Class60.method1166(this.manager.currentToolkit.getValue(-1914029751), -830025324);
+        return Class60.method1166(manager.currentToolkit.getValue());
     }
 
+    @Override
     public int checkValid(int i_1) {
-        return !Class60.method1166(this.manager.currentToolkit.getValue(1687107728), 131652836) ? 3 : 1;
+        return !Class60.method1166(manager.currentToolkit.getValue()) ? 3 : 1;
     }
 
+    @Override
     void setValue(int i_1) {
-        this.anInt5578 = i_1;
+        anInt5578 = i_1;
     }
 
+    @Override
     int getDefaultValue() {
         return 1;
     }
 
-    public int method7784(int i_1) {
-        return !Class60.method1166(this.manager.currentToolkit.getValue(1589425094), -1916831439) ? 3 : 1;
+    public int method7784() {
+        return !Class60.method1166(manager.currentToolkit.getValue()) ? 3 : 1;
     }
 
     public int method12728() {
-        return this.anInt5578;
+        return anInt5578;
     }
 
     int method7786() {
@@ -50,7 +53,7 @@ public class Preference_Sub14 extends Preference {
     }
 
     void method7780(int i_1) {
-        this.anInt5578 = -754033619 * i_1 * -859024475;
+        anInt5578 = -754033619 * i_1 * -859024475;
     }
 
 }

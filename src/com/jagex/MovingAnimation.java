@@ -2,19 +2,12 @@ package com.jagex;
 
 public class MovingAnimation extends Animation {
 
-    public boolean aBool7891 = false;
-    Entity aTransform_Sub1_Sub1_Sub2_7892;
+    public boolean aBool7891;
+    PathingEntity aTransform_Sub1_Sub1_Sub2_7892;
 
-    void method7586(AnimationDefinitions animationdefinitions_1, int i_2, int i_3) {
-        if (!this.aBool7891 || !this.aTransform_Sub1_Sub1_Sub2_7892.currentAnimation.hasDefs() || this.aTransform_Sub1_Sub1_Sub2_7892.currentAnimation.hasSpeed(801437187)) {
-            World.method3662(animationdefinitions_1, i_2, this.aTransform_Sub1_Sub1_Sub2_7892);
-        }
-
-    }
-
-    MovingAnimation(Entity animable_1) {
+    MovingAnimation(PathingEntity animable_1) {
         super(false);
-        this.aTransform_Sub1_Sub1_Sub2_7892 = animable_1;
+        aTransform_Sub1_Sub1_Sub2_7892 = animable_1;
     }
 
     public static String[] method12681(String string_0, char var_1) {
@@ -36,11 +29,11 @@ public class MovingAnimation extends Animation {
         return arr_4;
     }
 
-    public static boolean isInterfaceLoaded(int interfaceId, int[] xteas, int i_2) {
+    public static boolean isInterfaceLoaded(int interfaceId, int[] xteas) {
         if (MapAreaIndexLoader.INTERFACES_LOADED[interfaceId]) {
             return true;
         } else {
-            CustomCursorsPreference.INTERFACES[interfaceId] = SkyboxIndexLoader.getInterface(interfaceId, xteas, CustomCursorsPreference.INTERFACES[interfaceId], false, (byte) -15);
+            CustomCursorsPreference.INTERFACES[interfaceId] = SkyboxIndexLoader.getInterface(interfaceId, xteas, CustomCursorsPreference.INTERFACES[interfaceId], false);
             if (CustomCursorsPreference.INTERFACES[interfaceId] == null) {
                 return false;
             } else {
@@ -48,6 +41,14 @@ public class MovingAnimation extends Animation {
                 return true;
             }
         }
+    }
+
+    @Override
+    void method7586(AnimationDefinitions animationdefinitions_1, int i_2) {
+        if (!aBool7891 || !aTransform_Sub1_Sub1_Sub2_7892.currentAnimation.hasDefs() || aTransform_Sub1_Sub1_Sub2_7892.currentAnimation.hasSpeed()) {
+            World.method3662(animationdefinitions_1, i_2, aTransform_Sub1_Sub1_Sub2_7892);
+        }
+
     }
 
 }

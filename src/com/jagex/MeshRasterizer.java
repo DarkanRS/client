@@ -2,7 +2,7 @@ package com.jagex;
 
 public abstract class MeshRasterizer {
 
-    protected boolean aBool7023 = false;
+    protected boolean aBool7023;
 
     public abstract void bc(int var1, int var2, Ground var3, Ground var4, int var5, int var6, int var7);
 
@@ -21,9 +21,9 @@ public abstract class MeshRasterizer {
         i_1 -= i_4;
         i_2 -= i_5;
         i_3 -= i_6;
-        float f_14 = (float) i_1 * floats_8[0] + (float) i_2 * floats_8[1] + (float) i_3 * floats_8[2];
-        float f_15 = (float) i_1 * floats_8[3] + (float) i_2 * floats_8[4] + (float) i_3 * floats_8[5];
-        float f_16 = (float) i_1 * floats_8[6] + (float) i_2 * floats_8[7] + (float) i_3 * floats_8[8];
+        float f_14 = i_1 * floats_8[0] + i_2 * floats_8[1] + i_3 * floats_8[2];
+        float f_15 = i_1 * floats_8[3] + i_2 * floats_8[4] + i_3 * floats_8[5];
+        float f_16 = i_1 * floats_8[6] + i_2 * floats_8[7] + i_3 * floats_8[8];
         float f_17;
         float f_18;
         if (i_7 == 0) {
@@ -155,24 +155,24 @@ public abstract class MeshRasterizer {
                             f_26 = 1.0F;
                         } else if (i_20 > 0) {
                             f_24 = 1.0F;
-                            f_26 = (float) i_20 / 1024.0F;
+                            f_26 = i_20 / 1024.0F;
                         } else {
                             f_26 = 1.0F;
-                            f_24 = (float) (-i_20) / 1024.0F;
+                            f_24 = (-i_20) / 1024.0F;
                         }
 
-                        f_25 = 64.0F / (float) rsmesh_1.particleDirectionY[i_15];
+                        f_25 = 64.0F / rsmesh_1.particleDirectionY[i_15];
                     } else if (b_23 == 2) {
-                        f_24 = 64.0F / (float) rsmesh_1.particleDirectionX[i_15];
-                        f_25 = 64.0F / (float) rsmesh_1.particleDirectionY[i_15];
-                        f_26 = 64.0F / (float) rsmesh_1.particleDirectionZ[i_15];
+                        f_24 = 64.0F / rsmesh_1.particleDirectionX[i_15];
+                        f_25 = 64.0F / rsmesh_1.particleDirectionY[i_15];
+                        f_26 = 64.0F / rsmesh_1.particleDirectionZ[i_15];
                     } else {
-                        f_24 = (float) rsmesh_1.particleDirectionX[i_15] / 1024.0F;
-                        f_25 = (float) rsmesh_1.particleDirectionY[i_15] / 1024.0F;
-                        f_26 = (float) rsmesh_1.particleDirectionZ[i_15] / 1024.0F;
+                        f_24 = rsmesh_1.particleDirectionX[i_15] / 1024.0F;
+                        f_25 = rsmesh_1.particleDirectionY[i_15] / 1024.0F;
+                        f_26 = rsmesh_1.particleDirectionZ[i_15] / 1024.0F;
                     }
 
-                    floats_7[i_15] = this.method11257(rsmesh_1.texTriX[i_15], rsmesh_1.texTriY[i_15], rsmesh_1.texTriZ[i_15], rsmesh_1.particleLifespanX[i_15] & 0xff, f_24, f_25, f_26);
+                    floats_7[i_15] = method11257(rsmesh_1.texTriX[i_15], rsmesh_1.texTriY[i_15], rsmesh_1.texTriZ[i_15], rsmesh_1.particleLifespanX[i_15] & 0xff, f_24, f_25, f_26);
                 }
             }
         }
@@ -183,8 +183,8 @@ public abstract class MeshRasterizer {
     float[] method11257(int i_1, int i_2, int i_3, int i_4, float f_5, float f_6, float f_7) {
         float[] floats_8 = new float[9];
         float[] floats_9 = new float[9];
-        float f_10 = (float) Math.cos((float) i_4 * 0.024543693F);
-        float f_11 = (float) Math.sin((float) i_4 * 0.024543693F);
+        float f_10 = (float) Math.cos(i_4 * 0.024543693F);
+        float f_11 = (float) Math.sin(i_4 * 0.024543693F);
         float f_12 = 1.0F - f_10;
         floats_8[0] = f_10;
         floats_8[1] = 0.0F;
@@ -198,7 +198,7 @@ public abstract class MeshRasterizer {
         float[] floats_13 = new float[9];
         float f_14 = 1.0F;
         float f_15 = 0.0F;
-        f_10 = (float) i_2 / 32767.0F;
+        f_10 = i_2 / 32767.0F;
         f_11 = -((float) Math.sqrt(1.0F - f_10 * f_10));
         f_12 = 1.0F - f_10;
         float f_16 = (float) Math.sqrt(i_3 * i_3 + i_1 * i_1);
@@ -206,8 +206,8 @@ public abstract class MeshRasterizer {
             floats_9 = floats_8;
         } else {
             if (f_16 != 0.0F) {
-                f_14 = (float) (-i_3) / f_16;
-                f_15 = (float) i_1 / f_16;
+                f_14 = (-i_3) / f_16;
+                f_15 = i_1 / f_16;
             }
 
             floats_13[0] = f_10 + f_14 * f_14 * f_12;
@@ -244,11 +244,11 @@ public abstract class MeshRasterizer {
 
     public abstract void ia(int var1, int var2, int var3);
 
-    public final void method11258(AnimationFrameSet animationskeleton_1, int i_2, AnimationFrameSet animationskeleton_3, int i_4, int i_5, int i_6, int i_8, boolean bool_9, int[] ints_10) {
+    public void method11258(AnimationFrameSet animationskeleton_1, int i_2, AnimationFrameSet animationskeleton_3, int i_4, int i_5, int i_6, int i_8, boolean bool_9, int[] ints_10) {
         if (i_2 != -1) {
-            this.method11260();
-            if (!this.ea()) {
-                this.method11261();
+            method11260();
+            if (!ea()) {
+                method11261();
             } else {
                 AnimationFrame animationskin_11 = animationskeleton_1.frames[i_2];
                 AnimationFrameBase animationskinnode_12 = animationskin_11.frameBaseList;
@@ -260,9 +260,9 @@ public abstract class MeshRasterizer {
                     }
                 }
 
-                this.method11266(animationskinnode_12, animationskin_11, animationskin_13, i_5, i_6, 0, null, false, bool_9, i_8, ints_10);
-                this.ka();
-                this.method11261();
+                method11266(animationskinnode_12, animationskin_11, animationskin_13, i_5, i_6, 0, null, false, bool_9, i_8, ints_10);
+                ka();
+                method11261();
             }
         }
 
@@ -294,11 +294,11 @@ public abstract class MeshRasterizer {
 
     abstract void method11261();
 
-    public final void method11262(AnimationFrameSet animationskeleton_1, int i_2, AnimationFrameSet animationskeleton_3, int i_4, int i_5, int i_6, int i_7, boolean bool_8) {
+    public void method11262(AnimationFrameSet animationskeleton_1, int i_2, AnimationFrameSet animationskeleton_3, int i_4, int i_5, int i_6, int i_7, boolean bool_8) {
         if (i_2 != -1) {
-            this.method11260();
-            if (!this.ea()) {
-                this.method11261();
+            method11260();
+            if (!ea()) {
+                method11261();
             } else {
                 AnimationFrame animationskin_9 = animationskeleton_1.frames[i_2];
                 AnimationFrameBase animationskinnode_10 = animationskin_9.frameBaseList;
@@ -310,9 +310,9 @@ public abstract class MeshRasterizer {
                     }
                 }
 
-                this.method11266(animationskinnode_10, animationskin_9, animationskin_11, i_5, i_6, i_7, null, false, bool_8, 65535, null);
-                this.ka();
-                this.method11261();
+                method11266(animationskinnode_10, animationskin_9, animationskin_11, i_5, i_6, i_7, null, false, bool_8, 65535, null);
+                ka();
+                method11261();
             }
         }
 
@@ -320,12 +320,12 @@ public abstract class MeshRasterizer {
 
     public abstract void method11263(Matrix44Var var1, int var2, boolean var3);
 
-    public final void method11264(AnimationFrameSet animationskeleton_1, int i_2, AnimationFrameSet animationskeleton_3, int i_4, int i_5, int i_6, AnimationFrameSet animationskeleton_7, int i_8, AnimationFrameSet animationskeleton_9, int i_10, int i_11, int i_12, boolean[] bools_13, boolean bool_14) {
+    public void method11264(AnimationFrameSet animationskeleton_1, int i_2, AnimationFrameSet animationskeleton_3, int i_4, int i_5, int i_6, AnimationFrameSet animationskeleton_7, int i_8, AnimationFrameSet animationskeleton_9, int i_10, int i_11, int i_12, boolean[] bools_13, boolean bool_14) {
         if (i_2 != -1) {
             if (bools_13 != null && i_8 != -1) {
-                this.method11260();
-                if (!this.ea()) {
-                    this.method11261();
+                method11260();
+                if (!ea()) {
+                    method11261();
                 } else {
                     AnimationFrame animationskin_15 = animationskeleton_1.frames[i_2];
                     AnimationFrameBase animationskinnode_16 = animationskin_15.frameBaseList;
@@ -337,7 +337,7 @@ public abstract class MeshRasterizer {
                         }
                     }
 
-                    this.method11266(animationskinnode_16, animationskin_15, animationskin_17, i_5, i_6, 0, bools_13, false, bool_14, 65535, null);
+                    method11266(animationskinnode_16, animationskin_15, animationskin_17, i_5, i_6, 0, bools_13, false, bool_14, 65535, null);
                     AnimationFrame animationskin_18 = animationskeleton_7.frames[i_8];
                     AnimationFrame animationskin_19 = null;
                     if (animationskeleton_9 != null) {
@@ -347,13 +347,13 @@ public abstract class MeshRasterizer {
                         }
                     }
 
-                    this.method11268(0, new int[0], 0, 0, 0, 0, bool_14);
-                    this.method11266(animationskin_18.frameBaseList, animationskin_18, animationskin_19, i_11, i_12, 0, bools_13, true, bool_14, 65535, null);
-                    this.ka();
-                    this.method11261();
+                    method11268(0, new int[0], 0, 0, 0, 0, bool_14);
+                    method11266(animationskin_18.frameBaseList, animationskin_18, animationskin_19, i_11, i_12, 0, bools_13, true, bool_14, 65535, null);
+                    ka();
+                    method11261();
                 }
             } else {
-                this.method11262(animationskeleton_1, i_2, animationskeleton_3, i_4, i_5, i_6, 0, bool_14);
+                method11262(animationskeleton_1, i_2, animationskeleton_3, i_4, i_5, i_6, 0, bool_14);
             }
         }
 
@@ -486,12 +486,12 @@ public abstract class MeshRasterizer {
                         }
 
                         if (primaryVertexSkin != -1) {
-                            this.method11267(0, animFrameBase.labels[primaryVertexSkin], 0, 0, 0, i_6, bool_9, modelIndex & animFrameBase.anIntArray7561[primaryVertexSkin], ints_11);
+                            method11267(0, animFrameBase.labels[primaryVertexSkin], 0, 0, 0, i_6, bool_9, modelIndex & animFrameBase.anIntArray7561[primaryVertexSkin], ints_11);
                         } else if (s_27 != -1) {
-                            this.method11267(0, animFrameBase.labels[s_27], 0, 0, 0, i_6, bool_9, modelIndex & animFrameBase.anIntArray7561[s_27], ints_11);
+                            method11267(0, animFrameBase.labels[s_27], 0, 0, 0, i_6, bool_9, modelIndex & animFrameBase.anIntArray7561[s_27], ints_11);
                         }
 
-                        this.method11267(i_18, animFrameBase.labels[i_36], i_29, i_30, i_31, i_6, bool_9, modelIndex & animFrameBase.anIntArray7561[i_36], ints_11);
+                        method11267(i_18, animFrameBase.labels[i_36], i_29, i_30, i_31, i_6, bool_9, modelIndex & animFrameBase.anIntArray7561[i_36], ints_11);
                     }
                 }
             }
@@ -501,10 +501,10 @@ public abstract class MeshRasterizer {
                 if (bools_7 == null || bools_7[s_13] == bool_8 || animFrameBase.transformationTypes[s_13] == 0) {
                     short s_14 = animFrame1.skippedReferences[i_12];
                     if (s_14 != -1) {
-                        this.method11267(0, animFrameBase.labels[s_14], 0, 0, 0, i_6, bool_9, modelIndex & animFrameBase.anIntArray7561[s_14], ints_11);
+                        method11267(0, animFrameBase.labels[s_14], 0, 0, 0, i_6, bool_9, modelIndex & animFrameBase.anIntArray7561[s_14], ints_11);
                     }
 
-                    this.method11267(animFrameBase.transformationTypes[s_13], animFrameBase.labels[s_13], animFrame1.transformationX[i_12], animFrame1.transformationY[i_12], animFrame1.transformationZ[i_12], i_6, bool_9, modelIndex & animFrameBase.anIntArray7561[s_13], ints_11);
+                    method11267(animFrameBase.transformationTypes[s_13], animFrameBase.labels[s_13], animFrame1.transformationX[i_12], animFrame1.transformationY[i_12], animFrame1.transformationZ[i_12], i_6, bool_9, modelIndex & animFrameBase.anIntArray7561[s_13], ints_11);
                 }
             }
         }
@@ -512,55 +512,57 @@ public abstract class MeshRasterizer {
     }
 
     void method11267(int i_1, int[] ints_2, int i_3, int i_4, int i_5, int i_6, boolean bool_7, int i_8, int[] ints_9) {
+        int i_31 = i_3;
+        int i_51 = i_5;
         int i_10;
         if (i_6 == 1) {
             if (i_1 != 0 && i_1 != 1) {
                 if (i_1 == 3) {
-                    i_10 = i_3;
-                    i_3 = i_5;
-                    i_5 = i_10;
+                    i_10 = i_31;
+                    i_31 = i_51;
+                    i_51 = i_10;
                 } else if (i_1 == 2) {
-                    i_10 = i_3;
-                    i_3 = -i_5 & 0x3fff;
-                    i_5 = i_10 & 0x3fff;
+                    i_10 = i_31;
+                    i_31 = -i_51 & 0x3fff;
+                    i_51 = i_10 & 0x3fff;
                 }
             } else {
-                i_10 = -i_3;
-                i_3 = i_5;
-                i_5 = i_10;
+                i_10 = -i_31;
+                i_31 = i_51;
+                i_51 = i_10;
             }
         } else if (i_6 == 2) {
             if (i_1 != 0 && i_1 != 1) {
                 if (i_1 == 2) {
-                    i_3 = -i_3 & 0x3fff;
-                    i_5 = -i_5 & 0x3fff;
+                    i_31 = -i_31 & 0x3fff;
+                    i_51 = -i_51 & 0x3fff;
                 }
             } else {
-                i_3 = -i_3;
-                i_5 = -i_5;
+                i_31 = -i_31;
+                i_51 = -i_51;
             }
         } else if (i_6 == 3) {
             if (i_1 != 0 && i_1 != 1) {
                 if (i_1 == 3) {
-                    i_10 = i_3;
-                    i_3 = i_5;
-                    i_5 = i_10;
+                    i_10 = i_31;
+                    i_31 = i_51;
+                    i_51 = i_10;
                 } else if (i_1 == 2) {
-                    i_10 = i_3;
-                    i_3 = i_5 & 0x3fff;
-                    i_5 = -i_10 & 0x3fff;
+                    i_10 = i_31;
+                    i_31 = i_51 & 0x3fff;
+                    i_51 = -i_10 & 0x3fff;
                 }
             } else {
-                i_10 = i_3;
-                i_3 = -i_5;
-                i_5 = i_10;
+                i_10 = i_31;
+                i_31 = -i_51;
+                i_51 = i_10;
             }
         }
 
         if (i_8 != 65535) {
-            this.e(i_1, ints_2, i_3, i_4, i_5, bool_7, i_8, ints_9);
+            e(i_1, ints_2, i_31, i_4, i_51, bool_7, i_8, ints_9);
         } else {
-            this.method11268(i_1, ints_2, i_3, i_4, i_5, i_6, bool_7);
+            method11268(i_1, ints_2, i_31, i_4, i_51, i_6, bool_7);
         }
 
     }
@@ -613,9 +615,9 @@ public abstract class MeshRasterizer {
         i_1 -= i_4;
         i_2 -= i_5;
         i_3 -= i_6;
-        float f_11 = (float) i_1 * floats_7[0] + (float) i_2 * floats_7[1] + (float) i_3 * floats_7[2];
-        float f_12 = (float) i_1 * floats_7[3] + (float) i_2 * floats_7[4] + (float) i_3 * floats_7[5];
-        float f_13 = (float) i_1 * floats_7[6] + (float) i_2 * floats_7[7] + (float) i_3 * floats_7[8];
+        float f_11 = i_1 * floats_7[0] + i_2 * floats_7[1] + i_3 * floats_7[2];
+        float f_12 = i_1 * floats_7[3] + i_2 * floats_7[4] + i_3 * floats_7[5];
+        float f_13 = i_1 * floats_7[6] + i_2 * floats_7[7] + i_3 * floats_7[8];
         float f_14 = (float) Math.sqrt(f_11 * f_11 + f_12 * f_12 + f_13 * f_13);
         float f_15 = (float) Math.atan2(f_11, f_13) / 6.2831855F + 0.5F;
         float f_16 = (float) Math.asin(f_12 / f_14) / 3.1415927F + 0.5F + f_9;
@@ -671,20 +673,20 @@ public abstract class MeshRasterizer {
         boolean bool_11 = false;
         int i_12 = -i_5 / 2;
         int i_13 = -i_6 / 2;
-        int i_14 = class390_1.averageHeight(i_12 + i_2, i_13 + i_4, 2029342916);
+        int i_14 = class390_1.averageHeight(i_12 + i_2, i_13 + i_4);
         int i_15 = i_5 / 2;
         int i_16 = -i_6 / 2;
-        int i_17 = class390_1.averageHeight(i_15 + i_2, i_16 + i_4, 211604312);
+        int i_17 = class390_1.averageHeight(i_15 + i_2, i_16 + i_4);
         int i_18 = -i_5 / 2;
         int i_19 = i_6 / 2;
-        int i_20 = class390_1.averageHeight(i_18 + i_2, i_19 + i_4, -1995785916);
+        int i_20 = class390_1.averageHeight(i_18 + i_2, i_19 + i_4);
         int i_21 = i_5 / 2;
         int i_22 = i_6 / 2;
-        int i_23 = class390_1.averageHeight(i_21 + i_2, i_22 + i_4, 1123501570);
-        int i_24 = i_14 < i_17 ? i_14 : i_17;
-        int i_25 = i_20 < i_23 ? i_20 : i_23;
-        int i_26 = i_17 < i_23 ? i_17 : i_23;
-        int i_27 = i_14 < i_20 ? i_14 : i_20;
+        int i_23 = class390_1.averageHeight(i_21 + i_2, i_22 + i_4);
+        int i_24 = Math.min(i_14, i_17);
+        int i_25 = Math.min(i_20, i_23);
+        int i_26 = Math.min(i_17, i_23);
+        int i_27 = Math.min(i_14, i_20);
         int i_28;
         int i_29;
         if (i_6 != 0) {
@@ -701,7 +703,7 @@ public abstract class MeshRasterizer {
                     }
                 }
 
-                this.t(i_28);
+                t(i_28);
             }
         }
 
@@ -719,7 +721,7 @@ public abstract class MeshRasterizer {
                     }
                 }
 
-                this.EA(i_28);
+                EA(i_28);
             }
         }
 
@@ -730,7 +732,7 @@ public abstract class MeshRasterizer {
 
         i_28 = (i_28 >> 1) - i_3;
         if (i_28 != 0) {
-            this.ia(0, i_28, 0);
+            ia(0, i_28, 0);
         }
 
     }
@@ -763,11 +765,11 @@ public abstract class MeshRasterizer {
 
     public abstract void be();
 
-    public final void method11284(AnimationFrameSet animationskeleton_1, int i_2) {
+    public void method11284(AnimationFrameSet animationskeleton_1, int i_2) {
         if (i_2 != -1) {
-            this.method11260();
-            if (!this.ea()) {
-                this.method11261();
+            method11260();
+            if (!ea()) {
+                method11261();
             } else {
                 AnimationFrame animationskin_3 = animationskeleton_1.frames[i_2];
                 AnimationFrameBase animationskinnode_4 = animationskin_3.frameBaseList;
@@ -776,15 +778,15 @@ public abstract class MeshRasterizer {
                     short s_6 = animationskin_3.transformationIndices[i_5];
                     if (animationskinnode_4.aBoolArray7563[s_6]) {
                         if (animationskin_3.skippedReferences[i_5] != -1) {
-                            this.w(0, 0, 0, 0);
+                            w(0, 0, 0, 0);
                         }
 
-                        this.w(animationskinnode_4.transformationTypes[s_6], animationskin_3.transformationX[i_5], animationskin_3.transformationY[i_5], animationskin_3.transformationZ[i_5]);
+                        w(animationskinnode_4.transformationTypes[s_6], animationskin_3.transformationX[i_5], animationskin_3.transformationY[i_5], animationskin_3.transformationZ[i_5]);
                     }
                 }
 
-                this.ka();
-                this.method11261();
+                ka();
+                method11261();
             }
         }
 
@@ -882,9 +884,9 @@ public abstract class MeshRasterizer {
         i_1 -= i_4;
         i_2 -= i_5;
         i_3 -= i_6;
-        float f_12 = (float) i_1 * floats_7[0] + (float) i_2 * floats_7[1] + (float) i_3 * floats_7[2];
-        float f_13 = (float) i_1 * floats_7[3] + (float) i_2 * floats_7[4] + (float) i_3 * floats_7[5];
-        float f_14 = (float) i_1 * floats_7[6] + (float) i_2 * floats_7[7] + (float) i_3 * floats_7[8];
+        float f_12 = i_1 * floats_7[0] + i_2 * floats_7[1] + i_3 * floats_7[2];
+        float f_13 = i_1 * floats_7[3] + i_2 * floats_7[4] + i_3 * floats_7[5];
+        float f_14 = i_1 * floats_7[6] + i_2 * floats_7[7] + i_3 * floats_7[8];
         float f_15 = (float) Math.atan2(f_12, f_14) / 6.2831855F + 0.5F;
         if (f_8 != 1.0F) {
             f_15 *= f_8;

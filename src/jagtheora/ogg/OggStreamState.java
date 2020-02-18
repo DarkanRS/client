@@ -29,11 +29,15 @@ public class OggStreamState extends SimplePeer {
 
     public native boolean reset();
 
+    @Override
     protected native void clear();
 
+    @Override
     protected native void q();
 
+    @Override
     protected native void f();
 
+    @Override
     protected native void m();
 }

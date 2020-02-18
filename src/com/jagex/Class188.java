@@ -2,17 +2,17 @@ package com.jagex;
 
 public class Class188 {
 
-    public static boolean aBool2378 = false;
+    public static boolean aBool2378;
 
-    public static boolean aBool2377 = false;
+    public static boolean aBool2377;
 
-    public static boolean aBool2372 = false;
+    public static boolean aBool2372;
 
     Class188() throws Throwable {
         throw new Error();
     }
 
-    public static void method3139(GraphicalRenderer graphicalrenderer_0, Index index_1) {
+    public static void method3139(AbstractRenderer graphicalrenderer_0, Index index_1) {
         SpriteDefinitions[] arr_3 = SpriteDefinitions.method1514(index_1, Class165.anInt2035);
         Node_Sub21.aNativeSpriteArray7673 = new NativeSprite[arr_3.length];
         int i_4;
@@ -39,7 +39,7 @@ public class Class188 {
         byte b_6 = 25;
         int i_5;
         for (i_5 = 0; i_5 < arr_3.length; i_5++) {
-            arr_3[i_5].method1529(-b_6 + (int) (Math.random() * (double) b_6 * 2.0D), -b_6 + (int) (Math.random() * (double) b_6 * 2.0D), -b_6 + (int) (Math.random() * (double) b_6 * 2.0D));
+            arr_3[i_5].method1529(-b_6 + (int) (Math.random() * b_6 * 2.0D), -b_6 + (int) (Math.random() * b_6 * 2.0D), -b_6 + (int) (Math.random() * b_6 * 2.0D));
             Class16.aNativeSpriteArray145[i_5] = graphicalrenderer_0.method8444(arr_3[i_5], true);
         }
         arr_3 = SpriteDefinitions.method1514(index_1, BloomPreference.anInt7899);
@@ -51,14 +51,14 @@ public class Class188 {
         Class250.aNativeSpriteArray3092 = new NativeSprite[arr_3.length];
         b_6 = 12;
         for (i_5 = 0; i_5 < arr_3.length; i_5++) {
-            arr_3[i_5].method1529(-b_6 + (int) (Math.random() * (double) b_6 * 2.0D), -b_6 + (int) (Math.random() * (double) b_6 * 2.0D), -b_6 + (int) (Math.random() * (double) b_6 * 2.0D));
+            arr_3[i_5].method1529(-b_6 + (int) (Math.random() * b_6 * 2.0D), -b_6 + (int) (Math.random() * b_6 * 2.0D), -b_6 + (int) (Math.random() * b_6 * 2.0D));
             Class250.aNativeSpriteArray3092[i_5] = graphicalrenderer_0.method8444(arr_3[i_5], true);
         }
         arr_3 = SpriteDefinitions.method1514(index_1, Class16.anInt143);
         Class182.aNativeSpriteArray2261 = new NativeSprite[arr_3.length];
         b_6 = 12;
         for (i_5 = 0; i_5 < arr_3.length; i_5++) {
-            arr_3[i_5].method1529(-b_6 + (int) (Math.random() * (double) b_6 * 2.0D), -b_6 + (int) (Math.random() * (double) b_6 * 2.0D), -b_6 + (int) (Math.random() * (double) b_6 * 2.0D));
+            arr_3[i_5].method1529(-b_6 + (int) (Math.random() * b_6 * 2.0D), -b_6 + (int) (Math.random() * b_6 * 2.0D), -b_6 + (int) (Math.random() * b_6 * 2.0D));
             Class182.aNativeSpriteArray2261[i_5] = graphicalrenderer_0.method8444(arr_3[i_5], true);
         }
         Class16.aNativeSprite_146 = graphicalrenderer_0.method8444(SpriteDefinitions.getSprite(index_1, Class16.anInt141, 0), true);
@@ -71,20 +71,20 @@ public class Class188 {
     }
 
     static void method3140() {
-        SoftCache softcache_1 = Class13.aClass229_127;
+        LRUCache softcache_1 = Class13.aClass229_127;
         synchronized (Class13.aClass229_127) {
             Class13.aClass229_127.method3859();
         }
     }
 
-    public static void method3142(int i_0) {
-        if (NamedFileReference.method867(1523656747) != Class279.aClass279_3368) {
+    public static void method3142() {
+        if (NamedFileReference.method867() != Class279.aClass279_3368) {
             try {
-                String string_1 = IFSubNode.anApplet8065.getParameter(Class358.aClass358_4144.aString4159);
+                String string_1 = SubInterface.suppliedApplet.getParameter(Class358.aClass358_4144.aString4159);
                 int i_2 = (int) (Utils.time() / 86400000L) - 11745;
                 String string_3 = "usrdob=" + i_2 + "; version=1; path=/; domain=" + string_1;
-                Class441.method7376(IFSubNode.anApplet8065, "document.cookie=\"" + string_3 + "\"", (byte) 18);
-            } catch (Throwable throwable_4) {
+                Class441.method7376(SubInterface.suppliedApplet, "document.cookie=\"" + string_3 + "\"");
+            } catch (Throwable ignored) {
             }
         }
     }

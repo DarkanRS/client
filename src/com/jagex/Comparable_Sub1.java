@@ -4,39 +4,19 @@ import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 
-public final class Comparable_Sub1 implements Comparable {
-
-    long aLong3767;
-
-    long aLong3769;
+public class Comparable_Sub1 implements Comparable {
 
     public static Class306 aClass306_3771;
+    static Component[] aClass118Array3772;
+    long aLong3767;
+    long aLong3769;
+    Node_Sub39 anObject3768;
 
-    static IComponentDefinitions[] aClass118Array3772;
+    Long anObject3770;
 
-    Object anObject3768;
-
-    Object anObject3770;
-
-    public boolean equals(Object object_1) {
-        if (object_1 instanceof Comparable_Sub1) {
-            return this.anObject3770.equals(((Comparable_Sub1) object_1).anObject3770);
-        } else {
-            throw new IllegalArgumentException();
-        }
-    }
-
-    public int compareTo(Object object_1) {
-        return this.method5822((Comparable_Sub1) object_1);
-    }
-
-    int method5822(Comparable_Sub1 class328_1) {
-        return this.aLong3769 < class328_1.aLong3769 ? -1 : (this.aLong3769 > class328_1.aLong3769 ? 1 : 0);
-    }
-
-    Comparable_Sub1(Object object_1, Object object_2) {
-        this.anObject3768 = object_1;
-        this.anObject3770 = object_2;
+    Comparable_Sub1(Node_Sub39 object_1, Long object_2) {
+        anObject3768 = object_1;
+        anObject3770 = object_2;
     }
 
     static void method5827() {
@@ -66,7 +46,24 @@ public final class Comparable_Sub1 implements Comparable {
                 randomaccessfile_5.close();
                 Engine.PLAYER_UID192 = new UID192(new Class442(file_1, 25L), 24);
             }
-        } catch (IOException ioexception_6) {
+        } catch (IOException ignored) {
         }
+    }
+
+    public boolean equals(Object object_1) {
+        if (object_1 instanceof Comparable_Sub1) {
+            return anObject3770.equals(((Comparable_Sub1) object_1).anObject3770);
+        } else {
+            throw new IllegalArgumentException();
+        }
+    }
+
+    @Override
+    public int compareTo(Object object_1) {
+        return method5822((Comparable_Sub1) object_1);
+    }
+
+    int method5822(Comparable_Sub1 class328_1) {
+        return aLong3769 < class328_1.aLong3769 ? -1 : (aLong3769 > class328_1.aLong3769 ? 1 : 0);
     }
 }

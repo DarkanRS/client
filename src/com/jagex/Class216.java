@@ -12,13 +12,13 @@ public class Class216 {
 
     static void method3675() {
         if (Class260.aClass116_3229 != null && !Class260.aClass116_3229.isLoaded() && Class260.aClass116_3229.method1963()) {
-            TCPPacket tcpmessage_1 = Class271.createPacket(ClientPacket.SONG_LOADED, client.GAME_CONNECTION_CONTEXT.isaac);
+            TCPPacket tcpmessage_1 = Class271.createPacket(ClientProt.SONG_LOADED, client.GAME_CONNECTION_CONTEXT.isaac);
             tcpmessage_1.buffer.writeInt(Class260.aClass116_3229.musicId);
             client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_1);
         }
     }
 
-    static boolean method3677(int i_0) {
+    static boolean method3677() {
         return Class20.anInt169 > 0;
     }
 }

@@ -4,8 +4,8 @@ public abstract class Node_Sub26_Sub1 extends Node_Sub26 {
 
     public int anInt9749;
     public int anInt9750;
-    int anInt9751;
     public boolean aBool9752;
+    int anInt9751;
 
     public abstract int method15223();
 

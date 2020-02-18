@@ -2,32 +2,32 @@ package com.jagex;
 
 public class Class190 {
 
-    static boolean aBool2383 = false;
+    static boolean aBool2383;
 
     Class190() throws Throwable {
         throw new Error();
     }
 
-    public static void savePreferences(byte b_0) {
+    public static void savePreferences() {
         Class442 class442_1 = null;
 
         try {
             class442_1 = ParticleArchive1Def.method6137("", client.CURRENT_GAME.name, true);
-            RsByteBuffer rsbytebuffer_2 = Class393.preferences.encode();
-            class442_1.method7386(rsbytebuffer_2.buffer, 0, rsbytebuffer_2.index, -1686459180);
-        } catch (Exception exception_4) {
+            Packet rsbytebuffer_2 = Class393.preferences.encode();
+            class442_1.method7386(rsbytebuffer_2.buffer, 0, rsbytebuffer_2.index);
+        } catch (Exception ignored) {
         }
 
         try {
             if (class442_1 != null) {
-                class442_1.method7385((short) 27366);
+                class442_1.method7385();
             }
-        } catch (Exception exception_3) {
+        } catch (Exception ignored) {
         }
 
     }
 
-    static void method3149(IComponentDefinitions icomponentdefinitions_0, Class455 class455_1, int i_2, int i_3, int i_4, int i_5, NativeSprite nativesprite_6, int i_7) {
+    static void method3149(Component icomponentdefinitions_0, Class455 class455_1, int i_2, int i_3, int i_4, int i_5, NativeSprite nativesprite_6) {
         if (nativesprite_6 != null) {
             int i_8;
             if (NativeLibraryLoader.anInt3240 == 4) {
@@ -63,7 +63,7 @@ public class Class190 {
         return RouteStrategies.NPC;
     }
 
-    static void method3151(int i_0, int i_1, IComponentDefinitions icomponentdefinitions_2, Class119 class119_3, int i_4, int i_5) {
+    static void method3151(int i_0, int i_1, Component icomponentdefinitions_2, Class119 class119_3, int i_4, int i_5) {
         HintArrow[] hintArrows = client.HINT_ARROWS;
 
         for (int i_8 = 0; i_8 < hintArrows.length; i_8++) {
@@ -71,9 +71,9 @@ public class Class190 {
             if (arrow != null && arrow.targetType != 0 && client.cycles % 20 < 10) {
                 int i_13;
                 if (arrow.targetType == 1) {
-                    StringNode class282_sub47_10 = (StringNode) client.NPCS.get(arrow.targetIndex);
+                    ObjectNode class282_sub47_10 = (ObjectNode) client.NPC_MAP.get(arrow.targetIndex);
                     if (class282_sub47_10 != null) {
-                        NPC npc_11 = (NPC) class282_sub47_10.anObject8068;
+                        NPCEntity npc_11 = (NPCEntity) class282_sub47_10.anObject8068;
                         Vector3 vector3_12 = npc_11.method11166().coords;
                         i_13 = (int) vector3_12.x / 128 - i_0 / 128;
                         int i_14 = (int) vector3_12.z / 128 - i_1 / 128;
@@ -90,7 +90,7 @@ public class Class190 {
                 }
 
                 if (arrow.targetType == 10 && arrow.targetIndex >= 0 && arrow.targetIndex < client.players.length) {
-                    Player player_20 = client.players[arrow.targetIndex];
+                    PlayerEntity player_20 = client.players[arrow.targetIndex];
                     if (player_20 != null) {
                         Vector3 vector3_21 = player_20.method11166().coords;
                         int i_19 = (int) vector3_21.x / 128 - i_0 / 128;
@@ -105,10 +105,10 @@ public class Class190 {
 
     static void method3152() {
         if (client.gameState == 17) {
-            Class42_Sub1.method14562(733346392);
+            Class42_Sub1.method14562();
         }
 
-        Class186.method3083(619410098);
+        Class186.method3083();
         client.LOBBY_CONNECTION_CONTEXT.method3051();
         IFSubObjectPosition.appletHasFocus = true;
         Class250.method4296();
@@ -119,13 +119,13 @@ public class Class190 {
         }
 
         client.aBool7344 = false;
-        Class16.method566(2012843625);
+        Class16.method566();
         client.anInt7248 = (int) (Math.random() * 100.0D) - 50;
         client.anInt7250 = (int) (Math.random() * 110.0D) - 55;
         client.anInt7343 = (int) (Math.random() * 80.0D) - 40;
         client.anInt7255 = (int) (Math.random() * 120.0D) - 60;
         client.anInt7203 = (int) (Math.random() * 30.0D) - 20;
-        client.camAngleY = (float) ((int) (Math.random() * 160.0D) - 80 & 0x3fff);
+        client.camAngleY = ((int) (Math.random() * 160.0D) - 80 & 0x3fff);
         ClanVarIndexLoader.method6763();
 
         for (i_1 = 0; i_1 < 2048; i_1++) {
@@ -135,17 +135,17 @@ public class Class190 {
         VertexNormal.MY_PLAYER = null;
         client.NPC_UPDATE_INDEX = 0;
         client.anInt7210 = 0;
-        client.NPCS.method7749(1966305284);
+        client.NPC_MAP.method7749();
         client.PROJECTILES.removeAll();
-        client.aClass465_7334.method7749(1935752602);
+        client.aClass465_7334.method7749();
         client.aClass457_7335.method7651();
-        client.aClass465_7414.method7749(828403909);
+        client.aClass465_7414.method7749();
         Node_Sub31.aClass482_7775 = new NodeCollection();
         Node_Sub31.aClass482_7776 = new NodeCollection();
-        Class158_Sub1.PLAYER_VAR_PROVIDER.method265(-1043684196);
+        Class158_Sub1.PLAYER_VAR_PROVIDER.method265();
         FontRenderer_Sub3.method14341();
         Class296.CAM_MOVE_LOCALX = 0;
-        IFSubNode.CAM_MOVE_LOCALY = 0;
+        SubInterface.CAM_MOVE_LOCALY = 0;
         SpotAnimDefinitions.CAM_MOVE_Z = 0;
         Class454.CAM_MOVE_CONST_SPEED = 0;
         Class115.CAM_MOVE_VAR_SPEED = 0;
@@ -162,12 +162,12 @@ public class Class190 {
         }
 
         if (client.BASE_WINDOW_ID != -1) {
-            Class337.unloadInterface(client.BASE_WINDOW_ID, 1308673999);
+            Class337.unloadInterface(client.BASE_WINDOW_ID);
         }
 
-        for (IFSubNode class282_sub44_2 = (IFSubNode) client.OPEN_INTERFACES.method7750(774217336); class282_sub44_2 != null; class282_sub44_2 = (IFSubNode) client.OPEN_INTERFACES.method7751((byte) 87)) {
-            if (!class282_sub44_2.isLinked()) {
-                class282_sub44_2 = (IFSubNode) client.OPEN_INTERFACES.method7750(-1913243579);
+        for (SubInterface class282_sub44_2 = (SubInterface) client.OPEN_INTERFACES.method7750(); class282_sub44_2 != null; class282_sub44_2 = (SubInterface) client.OPEN_INTERFACES.method7751()) {
+            if (!class282_sub44_2.linked()) {
+                class282_sub44_2 = (SubInterface) client.OPEN_INTERFACES.method7750();
                 if (class282_sub44_2 == null) {
                     break;
                 }
@@ -178,7 +178,7 @@ public class Class190 {
 
         client.BASE_WINDOW_ID = -1;
         client.OPEN_INTERFACES = new IterableNodeMap(8);
-        MeshModifier.method7041((byte) -126);
+        MeshModifier.method7041();
         client.aClass118_7352 = null;
 
         for (i_1 = 0; i_1 < 8; i_1++) {
@@ -187,7 +187,7 @@ public class Class190 {
             client.PLAYER_OPTION_CURSORS[i_1] = -1;
         }
 
-        FontRenderer_Sub2.method14262(-19282159);
+        FontRenderer_Sub2.method14262();
         client.aBool7172 = true;
 
         for (i_1 = 0; i_1 < 107; i_1++) {
@@ -200,12 +200,12 @@ public class Class190 {
 
         IndexLoaders.MAP_REGION_DECODER.method4435().method4048();
         client.aBool7371 = true;
-        Class455.aShortArray5452 = ObjectDefinitions.aShortArray5691 = NPCDefinitions.aShortArray4862 = ItemDefinitions.staticColorArr256 = new short[256];
-        Class85.aString817 = Message.WALK_HERE.translate(Class223.CURRENT_LANGUAGE);
-        Class393.preferences.setValue(Class393.preferences.removeRoofsOptionOverride, Class393.preferences.removeRoofs.method12952((byte) 104));
+        Class455.aShortArray5452 = LocType.aShortArray5691 = NPCType.aShortArray4862 = ItemDefinitions.staticColorArr256 = new short[256];
+        Class85.aString817 = LocalizedText.WALK_HERE.translate(Class223.CURRENT_LANGUAGE);
+        Class393.preferences.setValue(Class393.preferences.removeRoofsOptionOverride, Class393.preferences.removeRoofs.method12952());
         client.anInt7221 = 0;
-        Class350.method6189((byte) 111);
-        Class388.method6692(2043592347);
+        Class350.method6189();
+        Class388.method6692();
         PingRequest.CURRENT_REQUEST = null;
         Class28.aLong351 = 0L;
     }

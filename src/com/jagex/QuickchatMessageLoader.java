@@ -2,67 +2,29 @@ package com.jagex;
 
 public class QuickchatMessageLoader {
 
-    public int anInt5130 = 0;
-    public int anInt5133 = 0;
-    SoftCache aClass229_5131 = new SoftCache(64);
-    Interface19 anInterface19_5134 = null;
+    public int anInt5130;
+    public int anInt5133;
+    LRUCache aClass229_5131 = new LRUCache(64);
+    Interface19 anInterface19_5134;
     Index messagesIndex;
     Index menusIndex;
 
-    public QuickchatMessageLoader(Language xlanguage_1, Index index_2, Index index_3, Interface19 interface19_4) {
-        this.messagesIndex = index_2;
-        this.menusIndex = index_3;
-        this.anInterface19_5134 = interface19_4;
-        if (this.messagesIndex != null) {
-            this.anInt5130 = this.messagesIndex.filesCount(1);
+    public QuickchatMessageLoader(Index index_2, Index index_3, Interface19 interface19_4) {
+        messagesIndex = index_2;
+        menusIndex = index_3;
+        anInterface19_5134 = interface19_4;
+        if (messagesIndex != null) {
+            anInt5130 = messagesIndex.filesCount(1);
         }
 
-        if (this.menusIndex != null) {
-            this.anInt5133 = this.menusIndex.filesCount(1);
+        if (menusIndex != null) {
+            anInt5133 = menusIndex.filesCount(1);
         }
 
     }
 
-    String method7212(QuickChatValueType value, int[] configs, long data) {
-        if (this.anInterface19_5134 != null) {
-            String string_5 = this.anInterface19_5134.method135(value, configs, data);
-            if (string_5 != null) {
-                return string_5;
-            }
-        }
-
-        return Long.toString(data);
-    }
-
-    public QuickchatMessageDefinitions getMessageDefinitions(int id) {
-        QuickchatMessageDefinitions quickchatdefinitions_3 = (QuickchatMessageDefinitions) this.aClass229_5131.get(id);
-        if (quickchatdefinitions_3 != null) {
-            return quickchatdefinitions_3;
-        } else {
-            byte[] bytes_4;
-            if (id >= 32768) {
-                bytes_4 = this.menusIndex.getFile(1, id & 0x7fff);
-            } else {
-                bytes_4 = this.messagesIndex.getFile(1, id);
-            }
-
-            quickchatdefinitions_3 = new QuickchatMessageDefinitions();
-            quickchatdefinitions_3.aClass429_9623 = this;
-            if (bytes_4 != null) {
-                quickchatdefinitions_3.method14913(new RsByteBuffer(bytes_4));
-            }
-
-            if (id >= 32768) {
-                quickchatdefinitions_3.method14912();
-            }
-
-            this.aClass229_5131.put(quickchatdefinitions_3, id);
-            return quickchatdefinitions_3;
-        }
-    }
-
-    static final void method7215() {
-        if (Class393.preferences.removeRoofsOptionOverride.method12952((byte) 89) == 2) {
+    static void method7215() {
+        if (Class393.preferences.removeRoofsOptionOverride.method12952() == 2) {
             byte[][][] bytes_1 = IndexLoaders.MAP_REGION_DECODER.method4532();
             byte b_2 = (byte) (client.anInt7286 - 4 & 0xff);
             int i_3 = client.anInt7286 % IndexLoaders.MAP_REGION_DECODER.getSizeX();
@@ -93,7 +55,7 @@ public class QuickchatMessageLoader {
                 if (NativeLibraryLoader.anInt3240 != 2 && PingRequester.anInt5864 == -1) {
                     i_9 = Class504.getTerrainHeightAtPos(IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX, Class246.CAM_MOVE_ABSOLUTEY, Class4.MY_PLAYER_PLANE);
                     if (i_9 - Class109_Sub1.CAM_MOVE_ABSOLUTEZ < 3200 && (regionmap_7.tileMasks[Class4.MY_PLAYER_PLANE][IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX >> 9][Class246.CAM_MOVE_ABSOLUTEY >> 9] & 0x4) != 0) {
-                        JS5Manager.method5492(sceneobjectmanager_8.aClass293ArrayArrayArray2604, 1, IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX >> 9, Class246.CAM_MOVE_ABSOLUTEY >> 9, false, (byte) -37);
+                        JS5Manager.method5492(sceneobjectmanager_8.aClass293ArrayArrayArray2604, 1, IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX >> 9, Class246.CAM_MOVE_ABSOLUTEY >> 9, false);
                     }
                 } else {
                     if (NativeLibraryLoader.anInt3240 != 2) {
@@ -102,7 +64,7 @@ public class QuickchatMessageLoader {
                     }
 
                     if ((regionmap_7.tileMasks[Class4.MY_PLAYER_PLANE][i_5 >> 9][i_6 >> 9] & 0x4) != 0) {
-                        JS5Manager.method5492(sceneobjectmanager_8.aClass293ArrayArrayArray2604, 0, i_5 >> 9, i_6 >> 9, false, (byte) 46);
+                        JS5Manager.method5492(sceneobjectmanager_8.aClass293ArrayArrayArray2604, 0, i_5 >> 9, i_6 >> 9, false);
                     } else if (Class293.anInt3512 < 2560) {
                         i_9 = IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX >> 9;
                         int i_10 = Class246.CAM_MOVE_ABSOLUTEY >> 9;
@@ -137,7 +99,7 @@ public class QuickchatMessageLoader {
                                     }
 
                                     if ((regionmap_7.tileMasks[Class4.MY_PLAYER_PLANE][i_9][i_10] & 0x4) != 0) {
-                                        JS5Manager.method5492(sceneobjectmanager_8.aClass293ArrayArrayArray2604, 1, i_9, i_10, false, (byte) -61);
+                                        JS5Manager.method5492(sceneobjectmanager_8.aClass293ArrayArrayArray2604, 1, i_9, i_10, false);
                                         break;
                                     }
 
@@ -151,7 +113,7 @@ public class QuickchatMessageLoader {
                                         }
 
                                         if ((regionmap_7.tileMasks[Class4.MY_PLAYER_PLANE][i_9][i_10] & 0x4) != 0) {
-                                            JS5Manager.method5492(sceneobjectmanager_8.aClass293ArrayArrayArray2604, 1, i_9, i_10, false, (byte) 49);
+                                            JS5Manager.method5492(sceneobjectmanager_8.aClass293ArrayArrayArray2604, 1, i_9, i_10, false);
                                             break;
                                         }
                                     }
@@ -168,7 +130,7 @@ public class QuickchatMessageLoader {
                                     }
 
                                     if ((regionmap_7.tileMasks[Class4.MY_PLAYER_PLANE][i_9][i_10] & 0x4) != 0) {
-                                        JS5Manager.method5492(sceneobjectmanager_8.aClass293ArrayArrayArray2604, 1, i_9, i_10, false, (byte) -10);
+                                        JS5Manager.method5492(sceneobjectmanager_8.aClass293ArrayArrayArray2604, 1, i_9, i_10, false);
                                         break;
                                     }
 
@@ -182,21 +144,57 @@ public class QuickchatMessageLoader {
                                         }
 
                                         if ((regionmap_7.tileMasks[Class4.MY_PLAYER_PLANE][i_9][i_10] & 0x4) != 0) {
-                                            JS5Manager.method5492(sceneobjectmanager_8.aClass293ArrayArrayArray2604, 1, i_9, i_10, false, (byte) 56);
+                                            JS5Manager.method5492(sceneobjectmanager_8.aClass293ArrayArrayArray2604, 1, i_9, i_10, false);
                                             break;
                                         }
                                     }
                                 }
                             }
                         } else {
-                            WorldTile coordgrid_15 = IndexLoaders.MAP_REGION_DECODER.getBase();
-                            Class151.method2594(i_9 + "," + i_10 + " " + i_11 + "," + i_12 + " " + coordgrid_15.x + "," + coordgrid_15.y, new RuntimeException(), (byte) -63);
+                            CoordGrid coordgrid_15 = IndexLoaders.MAP_REGION_DECODER.getBase();
+                            Class151.method2594(i_9 + "," + i_10 + " " + i_11 + "," + i_12 + " " + coordgrid_15.x + "," + coordgrid_15.y, new RuntimeException());
                         }
                     }
                 }
             }
         }
 
+    }
+
+    String method7212(QuickChatValueType value, int[] configs, long data) {
+        if (anInterface19_5134 != null) {
+            String string_5 = anInterface19_5134.method135(value, configs, data);
+            if (string_5 != null) {
+                return string_5;
+            }
+        }
+
+        return Long.toString(data);
+    }
+
+    public QuickchatMessageDefinitions getMessageDefinitions(int id) {
+        QuickchatMessageDefinitions quickchatdefinitions_3 = (QuickchatMessageDefinitions) aClass229_5131.get(id);
+        if (quickchatdefinitions_3 == null) {
+            byte[] bytes_4;
+            if (id >= 32768) {
+                bytes_4 = menusIndex.getFile(1, id & 0x7fff);
+            } else {
+                bytes_4 = messagesIndex.getFile(1, id);
+            }
+
+            quickchatdefinitions_3 = new QuickchatMessageDefinitions();
+            quickchatdefinitions_3.aClass429_9623 = this;
+            if (bytes_4 != null) {
+                quickchatdefinitions_3.method14913(new Packet(bytes_4));
+            }
+
+            if (id >= 32768) {
+                quickchatdefinitions_3.method14912();
+            }
+
+            aClass229_5131.put(quickchatdefinitions_3, id);
+        }
+        return quickchatdefinitions_3;
     }
 
 }

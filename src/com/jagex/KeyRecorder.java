@@ -8,7 +8,7 @@ public abstract class KeyRecorder {
 
     public abstract boolean held(int var1);
 
-    public abstract KeyRecord getNext(int var1);
+    public abstract KeyRecord getNext();
 
     public abstract void method3238();
 

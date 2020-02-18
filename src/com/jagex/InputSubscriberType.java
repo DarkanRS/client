@@ -4,7 +4,7 @@ public class InputSubscriberType {
 
     public static int EMAIL_STATUS;
 
-    static IComponentDefinitions aClass118_2763;
+    static Component aClass118_2763;
 
     static InputSubscriberType COMBINED = new InputSubscriberType(0);
     static InputSubscriberType KEY_PRESS = new InputSubscriberType(1);
@@ -13,7 +13,7 @@ public class InputSubscriberType {
     int anInt2758;
 
     InputSubscriberType(int i_1) {
-        this.anInt2758 = i_1;
+        anInt2758 = i_1;
     }
 
     static void method3751(int i_0, int i_1, int i_2, int i_3, int i_4) {
@@ -32,7 +32,7 @@ public class InputSubscriberType {
         int i_18 = ((i_3 << 1) - 3) * i_11;
         int i_19 = i_16 * (i_6 + 1);
         int i_20 = i_15 * (i_3 - 1);
-        KeyHoldInputSubscriber.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_1], i_0 - i_2, i_0 + i_2, i_4, (byte) 72);
+        KeyHoldInputSubscriber.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_1], i_0 - i_2, i_0 + i_2, i_4);
         while (i_7 > 0) {
             if (i_13 < 0) {
                 while (i_13 < 0) {
@@ -59,8 +59,8 @@ public class InputSubscriberType {
             int i_22 = i_7 + i_1;
             int i_23 = i_0 + i_6;
             int i_24 = i_0 - i_6;
-            KeyHoldInputSubscriber.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_21], i_24, i_23, i_4, (byte) 0);
-            KeyHoldInputSubscriber.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_22], i_24, i_23, i_4, (byte) 13);
+            KeyHoldInputSubscriber.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_21], i_24, i_23, i_4);
+            KeyHoldInputSubscriber.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_22], i_24, i_23, i_4);
         }
     }
 

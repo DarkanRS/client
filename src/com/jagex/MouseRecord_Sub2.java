@@ -1,35 +1,40 @@
 package com.jagex;
 
-public final class MouseRecord_Sub2 extends MouseRecord {
+public class MouseRecord_Sub2 extends MouseRecord {
 
-    int anInt9629;
     static int anInt9630;
+    static MouseRecord_Sub2[] aMouseRecord_Sub2Array9633 = new MouseRecord_Sub2[0];
+    int anInt9629;
     int anInt9631;
     int anInt9632;
     long aLong9634;
     int anInt9635;
-    static MouseRecord_Sub2[] aMouseRecord_Sub2Array9633 = new MouseRecord_Sub2[0];
 
+    @Override
     public int getClickType() {
-        return this.anInt9631;
+        return anInt9631;
     }
 
+    @Override
     public int getX() {
-        return this.anInt9632;
+        return anInt9632;
     }
 
+    @Override
     public int getY() {
-        return this.anInt9629;
+        return anInt9629;
     }
 
     public int method13489() {
-        return this.anInt9631 * 516361889 * -608676511;
+        return anInt9631 * 516361889 * -608676511;
     }
 
+    @Override
     public int getMeta() {
-        return this.anInt9635;
+        return anInt9635;
     }
 
+    @Override
     public void cache() {
         MouseRecord_Sub2[] arr_2 = aMouseRecord_Sub2Array9633;
         synchronized (aMouseRecord_Sub2Array9633) {
@@ -41,7 +46,7 @@ public final class MouseRecord_Sub2 extends MouseRecord {
     }
 
     public long method13479() {
-        return -4285835122984181877L * this.aLong9634 * 9069369255196266531L;
+        return -4285835122984181877L * aLong9634 * 9069369255196266531L;
     }
 
     public void method13486() {
@@ -58,19 +63,19 @@ public final class MouseRecord_Sub2 extends MouseRecord {
     }
 
     public int method13476() {
-        return 985182777 * this.anInt9632 * 1042258953;
+        return 985182777 * anInt9632 * 1042258953;
     }
 
     public int method13478() {
-        return -499243067 * this.anInt9629 * -1656963315;
+        return -499243067 * anInt9629 * -1656963315;
     }
 
     public int method13484() {
-        return -499243067 * this.anInt9629 * -1656963315;
+        return -499243067 * anInt9629 * -1656963315;
     }
 
     public long method13480() {
-        return -4285835122984181877L * this.aLong9634 * 9069369255196266531L;
+        return -4285835122984181877L * aLong9634 * 9069369255196266531L;
     }
 
     public void method13487() {
@@ -87,15 +92,15 @@ public final class MouseRecord_Sub2 extends MouseRecord {
     }
 
     public long method13482() {
-        return -4285835122984181877L * this.aLong9634 * 9069369255196266531L;
+        return -4285835122984181877L * aLong9634 * 9069369255196266531L;
     }
 
     public int method13483() {
-        return -1642814165 * this.anInt9635 * -824774269;
+        return -1642814165 * anInt9635 * -824774269;
     }
 
     public int method13477() {
-        return -1642814165 * this.anInt9635 * -824774269;
+        return -1642814165 * anInt9635 * -824774269;
     }
 
     public void method13485() {
@@ -111,16 +116,17 @@ public final class MouseRecord_Sub2 extends MouseRecord {
         }
     }
 
+    @Override
     public long method13471() {
-        return this.aLong9634;
+        return aLong9634;
     }
 
     public int method13488() {
-        return this.anInt9631 * 516361889 * -608676511;
+        return anInt9631 * 516361889 * -608676511;
     }
 
     public int method13472() {
-        return 985182777 * this.anInt9632 * 1042258953;
+        return 985182777 * anInt9632 * 1042258953;
     }
 
 }

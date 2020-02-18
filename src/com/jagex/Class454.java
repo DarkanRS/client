@@ -10,7 +10,7 @@ public class Class454 {
         System.nanoTime();
     }
 
-    public long method7548(byte b_1) {
+    public long method7548() {
         return System.nanoTime();
     }
 }

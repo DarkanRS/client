@@ -4,34 +4,34 @@ public abstract class Class455 {
 
     public static short[] aShortArray5452;
 
-    static void iComponentOnIComponent(IComponentDefinitions icomponentdefinitions_0, int i_1, int i_2) {
+    static void iComponentOnIComponent(Component icomponentdefinitions_0) {
         if (client.aBool7344) {
             ParamDefinitions attributedefault_4 = CutsceneAction_Sub12.USE_INTERFACE_ID != -1 ? IndexLoaders.PARAM_LOADER.getParam(CutsceneAction_Sub12.USE_INTERFACE_ID) : null;
-            if (client.getIComponentSettings(icomponentdefinitions_0).bit22Enabled() && (Class506.USE_OPTIONS_FLAGS & 0x20) != 0 && (attributedefault_4 == null || icomponentdefinitions_0.method1997(CutsceneAction_Sub12.USE_INTERFACE_ID, attributedefault_4.defaultInt, 1315662275) != attributedefault_4.defaultInt)) {
-                PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + icomponentdefinitions_0.useOnName, Defaults8Loader.anInt5932, 58, icomponentdefinitions_0.containerItemId, 0L, icomponentdefinitions_0.slotId, icomponentdefinitions_0.idHash, true, false, icomponentdefinitions_0.slotId << 32 | icomponentdefinitions_0.idHash, false, -1704442537);
+            if (client.getIComponentSettings(icomponentdefinitions_0).bit22Enabled() && (Class506.USE_OPTIONS_FLAGS & 0x20) != 0 && (attributedefault_4 == null || icomponentdefinitions_0.method1997(CutsceneAction_Sub12.USE_INTERFACE_ID, attributedefault_4.defaultInt) != attributedefault_4.defaultInt)) {
+                PlayerModel.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + icomponentdefinitions_0.useOnName, Defaults8Loader.anInt5932, 58, icomponentdefinitions_0.containerItemId, 0L, icomponentdefinitions_0.slotId, icomponentdefinitions_0.idHash, true, false, icomponentdefinitions_0.slotId << 0 | icomponentdefinitions_0.idHash, false);
             }
         }
         for (int i_7 = 9; i_7 >= 5; --i_7) {
-            String string_8 = ItemIndexLoader.method7171(icomponentdefinitions_0, i_7, (byte) -85);
+            String string_8 = ObjectIndexLoader.method7171(icomponentdefinitions_0, i_7);
             if (string_8 != null) {
-                PlayerAppearance.method4032(string_8, icomponentdefinitions_0.useOnName, Class520.method11163(icomponentdefinitions_0, i_7, 556653013), 1007, icomponentdefinitions_0.containerItemId, i_7 + 1, icomponentdefinitions_0.slotId, icomponentdefinitions_0.idHash, true, false, icomponentdefinitions_0.slotId << 32 | icomponentdefinitions_0.idHash, false, -976206052);
+                PlayerModel.method4032(string_8, icomponentdefinitions_0.useOnName, Class520.method11163(icomponentdefinitions_0, i_7), 1007, icomponentdefinitions_0.containerItemId, i_7 + 1, icomponentdefinitions_0.slotId, icomponentdefinitions_0.idHash, true, false, icomponentdefinitions_0.slotId << 0 | icomponentdefinitions_0.idHash, false);
             }
         }
-        String string_9 = QuickChatMessage.method6157(icomponentdefinitions_0, -948753255);
+        String string_9 = QuickChatMessage.method6157(icomponentdefinitions_0);
         if (string_9 != null) {
-            PlayerAppearance.method4032(string_9, icomponentdefinitions_0.useOnName, icomponentdefinitions_0.anInt1378, 25, icomponentdefinitions_0.containerItemId, 0L, icomponentdefinitions_0.slotId, icomponentdefinitions_0.idHash, true, false, icomponentdefinitions_0.slotId << 32 | icomponentdefinitions_0.idHash, false, -1589662667);
+            PlayerModel.method4032(string_9, icomponentdefinitions_0.useOnName, icomponentdefinitions_0.anInt1378, 25, icomponentdefinitions_0.containerItemId, 0L, icomponentdefinitions_0.slotId, icomponentdefinitions_0.idHash, true, false, icomponentdefinitions_0.slotId << 0 | icomponentdefinitions_0.idHash, false);
         }
         for (int i_5 = 4; i_5 >= 0; --i_5) {
-            String string_6 = ItemIndexLoader.method7171(icomponentdefinitions_0, i_5, (byte) 19);
+            String string_6 = ObjectIndexLoader.method7171(icomponentdefinitions_0, i_5);
             if (string_6 != null) {
-                PlayerAppearance.method4032(string_6, icomponentdefinitions_0.useOnName, Class520.method11163(icomponentdefinitions_0, i_5, 1809769976), 57, icomponentdefinitions_0.containerItemId, i_5 + 1, icomponentdefinitions_0.slotId, icomponentdefinitions_0.idHash, true, false, icomponentdefinitions_0.slotId << 32 | icomponentdefinitions_0.idHash, false, -1644118104);
+                PlayerModel.method4032(string_6, icomponentdefinitions_0.useOnName, Class520.method11163(icomponentdefinitions_0, i_5), 57, icomponentdefinitions_0.containerItemId, i_5 + 1, icomponentdefinitions_0.slotId, icomponentdefinitions_0.idHash, true, false, icomponentdefinitions_0.slotId << 0 | icomponentdefinitions_0.idHash, false);
             }
         }
         if (client.getIComponentSettings(icomponentdefinitions_0).continueOptionEnabled()) {
             if (icomponentdefinitions_0.opName != null) {
-                PlayerAppearance.method4032(icomponentdefinitions_0.opName, "", -1, 30, icomponentdefinitions_0.containerItemId, 0L, icomponentdefinitions_0.slotId, icomponentdefinitions_0.idHash, true, false, icomponentdefinitions_0.slotId << 32 | icomponentdefinitions_0.idHash, false, -1336342241);
+                PlayerModel.method4032(icomponentdefinitions_0.opName, "", -1, 30, icomponentdefinitions_0.containerItemId, 0L, icomponentdefinitions_0.slotId, icomponentdefinitions_0.idHash, true, false, icomponentdefinitions_0.slotId << 0 | icomponentdefinitions_0.idHash, false);
             } else {
-                PlayerAppearance.method4032(Message.CONTINUE.translate(Class223.CURRENT_LANGUAGE), "", -1, 30, icomponentdefinitions_0.containerItemId, 0L, icomponentdefinitions_0.slotId, icomponentdefinitions_0.idHash, true, false, icomponentdefinitions_0.slotId << 32 | icomponentdefinitions_0.idHash, false, -1542959326);
+                PlayerModel.method4032(LocalizedText.CONTINUE.translate(Class223.CURRENT_LANGUAGE), "", -1, 30, icomponentdefinitions_0.containerItemId, 0L, icomponentdefinitions_0.slotId, icomponentdefinitions_0.idHash, true, false, icomponentdefinitions_0.slotId << 0 | icomponentdefinitions_0.idHash, false);
             }
         }
     }
@@ -64,15 +64,15 @@ public abstract class Class455 {
             } else {
                 var_15 = charsequence_1.charAt(i_7++);
             }
-            var_8 = Class466.method7778(var_10, -1430101456);
-            var_9 = Class466.method7778(var_15, 1240929738);
+            var_8 = Class466.method7778(var_10);
+            var_9 = Class466.method7778(var_15);
             var_10 = Class152.method2599(var_10, xlanguage_2);
             var_15 = Class152.method2599(var_15, xlanguage_2);
             if (var_10 != var_15 && Character.toUpperCase(var_10) != Character.toUpperCase(var_15)) {
                 var_10 = Character.toLowerCase(var_10);
                 var_15 = Character.toLowerCase(var_15);
                 if (var_15 != var_10) {
-                    return FogPreference.method13422(var_10, xlanguage_2) - FogPreference.method13422(var_15, xlanguage_2);
+                    return FogPreference.method13422(var_10) - FogPreference.method13422(var_15);
                 }
             }
         }
@@ -93,7 +93,7 @@ public abstract class Class455 {
                 var_17 = Character.toLowerCase(var_17);
                 var_13 = Character.toLowerCase(var_13);
                 if (var_17 != var_13) {
-                    return FogPreference.method13422(var_17, xlanguage_2) - FogPreference.method13422(var_13, xlanguage_2);
+                    return FogPreference.method13422(var_17) - FogPreference.method13422(var_13);
                 }
             }
         }
@@ -105,7 +105,7 @@ public abstract class Class455 {
                 var_13 = charsequence_0.charAt(i_19);
                 char var_14 = charsequence_1.charAt(i_19);
                 if (var_13 != var_14) {
-                    return FogPreference.method13422(var_13, xlanguage_2) - FogPreference.method13422(var_14, xlanguage_2);
+                    return FogPreference.method13422(var_13) - FogPreference.method13422(var_14);
                 }
             }
             return 0;
@@ -121,26 +121,26 @@ public abstract class Class455 {
         Class9.aString99 = string_2;
         Class9.aString102 = string_3;
         Class9.aLong77 = long_4;
-        if (Class9.aBool74 || !Class9.aString99.equals("") && !Class9.aString102.equals("")) {
+        if (Class9.aBool74 || !Class9.aString99.isEmpty() && !Class9.aString102.isEmpty()) {
             if (Class9.lobbyStage != 140) {
                 Class9.anInt103 = 0;
                 Class9.anInt112 = -1;
                 Class9.anInt94 = -1;
             }
             Class9.CURRENT_CONNECTION_CONTEXT.aBool2298 = false;
-            FontRenderer_Sub1.method13784(-3, -416283097);
+            FontRenderer_Sub1.method13784(-3);
             Class9.loginStage = 18;
             Class9.anInt90 = 0;
             Class9.anInt104 = 0;
         } else {
-            FontRenderer_Sub1.method13784(3, 737925306);
+            FontRenderer_Sub1.method13784(3);
         }
     }
 
     static int getCRC(byte[] data, int start, int end) {
         int i_3 = -1;
         for (int i_4 = start; i_4 < end; i_4++) {
-            i_3 = i_3 >>> 8 ^ RsByteBuffer.anIntArray7986[(i_3 ^ data[i_4]) & 0xff];
+            i_3 = i_3 >>> 8 ^ Packet.anIntArray7986[(i_3 ^ data[i_4]) & 0xff];
         }
         i_3 = ~i_3;
         return i_3;

@@ -9,9 +9,9 @@ public class Class271 {
 
     static int anInt3330;
 
-    static boolean aBool3328 = false;
+    static boolean aBool3328;
 
-    static Hashtable aHashtable3329 = new Hashtable(16);
+    static Hashtable<String, File> aHashtable3329 = new Hashtable<>(16);
 
     Class271() throws Throwable {
         throw new Error();
@@ -53,11 +53,7 @@ public class Class271 {
             } else if (i_8 < 248) {
                 if (i_6 + 2 < i_7 && (bytes_0[i_6] & 0xc0) == 128 && (bytes_0[i_6 + 1] & 0xc0) == 128 && (bytes_0[i_6 + 2] & 0xc0) == 128) {
                     i_9 = (i_8 & 0x7) << 18 | (bytes_0[i_6++] & 0x3f) << 12 | (bytes_0[i_6++] & 0x3f) << 6 | bytes_0[i_6++] & 0x3f;
-                    if (i_9 >= 65536 && i_9 <= 1114111) {
-                        i_9 = 65533;
-                    } else {
-                        i_9 = 65533;
-                    }
+                    i_9 = 65533;
                 } else {
                     i_9 = 65533;
                 }
@@ -72,23 +68,23 @@ public class Class271 {
         Class109.method1859(index_0, i_1, i_2, i_3, bool_4);
     }
 
-    public static TCPPacket createPacket(ClientPacket outgoingpacket_0, IsaacCipher isaaccipher_1) {
+    public static TCPPacket createPacket(ClientProt outgoingpacket_0, Isaac isaaccipher_1) {
         TCPPacket tcpmessage_3 = Class158_Sub2.method14356();
         tcpmessage_3.packet = outgoingpacket_0;
         tcpmessage_3.anInt7678 = outgoingpacket_0.size;
         if (tcpmessage_3.anInt7678 == -1) {
-            tcpmessage_3.buffer = new RsBitsBuffer(260);
+            tcpmessage_3.buffer = new Packet.Bit(260);
         } else if (tcpmessage_3.anInt7678 == -2) {
-            tcpmessage_3.buffer = new RsBitsBuffer(10000);
+            tcpmessage_3.buffer = new Packet.Bit(10000);
         } else if (tcpmessage_3.anInt7678 <= 18) {
-            tcpmessage_3.buffer = new RsBitsBuffer(20);
+            tcpmessage_3.buffer = new Packet.Bit(20);
         } else if (tcpmessage_3.anInt7678 <= 98) {
-            tcpmessage_3.buffer = new RsBitsBuffer(100);
+            tcpmessage_3.buffer = new Packet.Bit(100);
         } else {
-            tcpmessage_3.buffer = new RsBitsBuffer(260);
+            tcpmessage_3.buffer = new Packet.Bit(260);
         }
-        tcpmessage_3.buffer.setIsaacCipher(isaaccipher_1, 351906319);
-        tcpmessage_3.buffer.writeIsaacByte(tcpmessage_3.packet.id, 328020366);
+        tcpmessage_3.buffer.setIsaacCipher(isaaccipher_1);
+        tcpmessage_3.buffer.writeIsaacByte(tcpmessage_3.packet.id);
         tcpmessage_3.anInt7680 = 0;
         return tcpmessage_3;
     }

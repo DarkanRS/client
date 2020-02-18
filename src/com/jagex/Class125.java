@@ -12,47 +12,13 @@ public class Class125 implements Interface8 {
 
     float[] aFloatArray1570;
 
-    public void method32() {
-    }
-
-    public int method1() {
-        return this.anInt1568;
-    }
-
-    public int method74() {
-        return this.anInt1569;
-    }
-
-    public void method26() {
-    }
-
     Class125(int i_1, int i_2) {
-        this.anInt1568 = i_1;
-        this.anInt1569 = i_2;
-        this.aFloatArray1570 = new float[this.anInt1568 * this.anInt1569];
+        anInt1568 = i_1;
+        anInt1569 = i_2;
+        aFloatArray1570 = new float[anInt1568 * anInt1569];
     }
 
-    public int method76() {
-        return this.anInt1568 * -1553362033 * -2020594833;
-    }
-
-    public int method75() {
-        return this.anInt1568 * -1553362033 * -2020594833;
-    }
-
-    public int method73() {
-        return this.anInt1569 * -2091052327 * 946359657;
-    }
-
-    public int method77() {
-        return this.anInt1569 * -2091052327 * 946359657;
-    }
-
-    public int method39() {
-        return this.anInt1569 * -2091052327 * 946359657;
-    }
-
-    static final int method2172(int i_0) {
+    static int method2172(int i_0) {
         int i_2 = i_0 & 0x3f;
         int i_3 = i_0 >> 6 & 0x3;
         if (i_2 == 18) {
@@ -85,7 +51,50 @@ public class Class125 implements Interface8 {
         return 0;
     }
 
-    public static CacheableNode_Sub6 method2173(int i_0) {
+    public static CacheableNode_Sub6 method2173() {
         return Class291_Sub1.aCacheableNode_Sub6_3491;
+    }
+
+    @Override
+    public void method32() {
+    }
+
+    @Override
+    public int method1() {
+        return anInt1568;
+    }
+
+    @Override
+    public int method74() {
+        return anInt1569;
+    }
+
+    @Override
+    public void method26() {
+    }
+
+    @Override
+    public int method76() {
+        return anInt1568 * -1553362033 * -2020594833;
+    }
+
+    @Override
+    public int method75() {
+        return anInt1568 * -1553362033 * -2020594833;
+    }
+
+    @Override
+    public int method73() {
+        return anInt1569 * -2091052327 * 946359657;
+    }
+
+    @Override
+    public int method77() {
+        return anInt1569 * -2091052327 * 946359657;
+    }
+
+    @Override
+    public int method39() {
+        return anInt1569 * -2091052327 * 946359657;
     }
 }

@@ -36,7 +36,7 @@ public enum ClipFlag {
     W_ALT_OBJ(0x20000000), // 536870912
     ALT_OBJ(0x40000000); // 1073741824
 
-    public int flag;
+    public final int flag;
 
     ClipFlag(int flag) {
         this.flag = flag;

@@ -6,10 +6,15 @@ public class Node_Sub20_Sub35 extends Node_Sub20 {
     int anInt9970 = 4096;
     int anInt9968 = 4096;
 
-    int[][] method12320(int i_1, int i_2) {
-        int[][] ints_3 = this.aClass308_7670.method5463(i_1, 1471629074);
-        if (this.aClass308_7670.aBool3619) {
-            int[][] ints_4 = this.method12333(0, i_1);
+    public Node_Sub20_Sub35() {
+        super(1, false);
+    }
+
+    @Override
+    int[][] method12320(int i_1) {
+        int[][] ints_3 = aClass308_7670.method5463(i_1);
+        if (aClass308_7670.aBool3619) {
+            int[][] ints_4 = method12333(0, i_1);
             int[] ints_5 = ints_4[0];
             int[] ints_6 = ints_4[1];
             int[] ints_7 = ints_4[2];
@@ -22,13 +27,13 @@ public class Node_Sub20_Sub35 extends Node_Sub20 {
                 int i_13 = ints_7[i_11];
                 int i_14 = ints_6[i_11];
                 if (i_12 == i_13 && i_14 == i_13) {
-                    ints_8[i_11] = i_12 * this.anInt9971 >> 12;
-                    ints_9[i_11] = i_13 * this.anInt9970 >> 12;
-                    ints_10[i_11] = i_14 * this.anInt9968 >> 12;
+                    ints_8[i_11] = i_12 * anInt9971 >> 12;
+                    ints_9[i_11] = i_13 * anInt9970 >> 12;
+                    ints_10[i_11] = i_14 * anInt9968 >> 12;
                 } else {
-                    ints_8[i_11] = this.anInt9971;
-                    ints_9[i_11] = this.anInt9970;
-                    ints_10[i_11] = this.anInt9968;
+                    ints_8[i_11] = anInt9971;
+                    ints_9[i_11] = anInt9970;
+                    ints_10[i_11] = anInt9968;
                 }
             }
         }
@@ -36,20 +41,17 @@ public class Node_Sub20_Sub35 extends Node_Sub20 {
         return ints_3;
     }
 
-    public Node_Sub20_Sub35() {
-        super(1, false);
-    }
-
-    void method12322(int i_1, RsByteBuffer rsbytebuffer_2) {
+    @Override
+    void method12322(int i_1, Packet rsbytebuffer_2) {
         switch (i_1) {
             case 0:
-                this.anInt9971 = rsbytebuffer_2.readUnsignedShort();
+                anInt9971 = rsbytebuffer_2.readUnsignedShort();
                 break;
             case 1:
-                this.anInt9970 = rsbytebuffer_2.readUnsignedShort();
+                anInt9970 = rsbytebuffer_2.readUnsignedShort();
                 break;
             case 2:
-                this.anInt9968 = rsbytebuffer_2.readUnsignedShort();
+                anInt9968 = rsbytebuffer_2.readUnsignedShort();
         }
 
     }

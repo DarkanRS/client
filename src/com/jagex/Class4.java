@@ -2,21 +2,15 @@ package com.jagex;
 
 public class Class4 {
 
+    public static int WORLD_LIST_SIZE;
+    public static int MY_PLAYER_PLANE;
     boolean aBool29;
-
     int anInt30;
-
     int anInt31;
-
     int anInt32;
-
     boolean aBool33;
 
-    public static int WORLD_LIST_SIZE;
-
-    public static int MY_PLAYER_PLANE;
-
-    static float method288(float f_0, float f_1, float f_2, float f_3, float f_4, float f_5, int i_6, int i_7) {
+    static float method288(float f_0, float f_1, float f_2, float f_3, float f_4, float f_5, int i_6) {
         float f_8 = 0.0F;
         float f_9 = f_3 - f_0;
         float f_10 = f_4 - f_1;
@@ -35,10 +29,10 @@ public class Class4 {
                 if (i_21 < 3 && (IndexLoaders.MAP_REGION_DECODER.method4433().tileMasks[1][i_19][i_20] & 0x2) != 0) {
                     ++i_21;
                 }
-                int i_22 = sceneobjectmanager_15.aGroundArray2607[i_21].averageHeight((int) f_16, (int) f_18, 1453959191);
-                if ((float) i_22 < f_17) {
+                int i_22 = sceneobjectmanager_15.aGroundArray2607[i_21].averageHeight((int) f_16, (int) f_18);
+                if (i_22 < f_17) {
                     if (i_6 >= 2) {
-                        return f_8 - 0.1F + method288(f_12, f_13, f_14, f_16, f_17, f_18, i_6 - 1, -1906772657) * 0.1F;
+                        return f_8 - 0.1F + method288(f_12, f_13, f_14, f_16, f_17, f_18, i_6 - 1) * 0.1F;
                     }
                     return f_8;
                 }
@@ -47,6 +41,6 @@ public class Class4 {
             f_13 = f_17;
             f_14 = f_18;
         }
-        return -1.0F;
+        return -1.0f;
     }
 }

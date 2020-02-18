@@ -2,13 +2,13 @@ package com.jagex;
 
 public class VarcStringIndexLoader {
 
-    static IComponentDefinitions aClass118_4825;
-    Index configIndex;
+    static Component aClass118_4825;
     public int size;
+    Index configIndex;
 
-    public VarcStringIndexLoader(Game game_1, Language xlanguage_2, Index index_3) {
-        new SoftCache(64);
-        this.configIndex = index_3;
-        this.size = this.configIndex.filesCount(SharedConfigsType.VARC_STRING.id);
+    public VarcStringIndexLoader(Index index_3) {
+        new LRUCache(64);
+        configIndex = index_3;
+        size = configIndex.filesCount(SharedConfigsType.VARC_STRING.id);
     }
 }

@@ -4,11 +4,7 @@ public class GroundItemStrategy extends RouteStrategy {
 
     public static String aString8069;
 
-    public boolean canExit(int i_1, int i_2, int i_3, ClipMap clipmap_4) {
-        return Class325.method5790(i_2, i_3, i_1, i_1, this.approxDestinationX, this.approxDestinationY, this.approxDestinationSizeX, this.approxDestinationSizeY, -1229597907);
-    }
-
-    static final void method13411(int i_0, int i_1, int i_2, int i_3, byte b_4) {
+    static void method13411(int i_0, int i_1, int i_2, int i_3) {
         int i_5;
         if (i_1 > i_2) {
             for (i_5 = i_2; i_5 < i_1; i_5++) {
@@ -36,5 +32,10 @@ public class GroundItemStrategy extends RouteStrategy {
         Class16.aNativeSprite_146 = null;
         Exception_Sub1.aNativeSprite_10075 = null;
         Class245.aNativeSpriteArray3027 = null;
+    }
+
+    @Override
+    public boolean canExit(int i_1, int i_2, int i_3, ClipMap clipmap_4) {
+        return Class325.method5790(i_2, i_3, i_1, i_1, approxDestinationX, approxDestinationY, approxDestinationSizeX, approxDestinationSizeY);
     }
 }

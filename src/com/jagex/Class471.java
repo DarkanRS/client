@@ -1,10 +1,14 @@
 package com.jagex;
 
-public final class Class471 {
+public class Class471 {
 
     static Class459 aClass459_5588 = new Class459();
 
-    public static int method7828(byte[] bytes_0, int i_1, byte[] bytes_2, int i_3) {
+    Class471() throws Throwable {
+        throw new Error();
+    }
+
+    public static int method7828(byte[] bytes_0, int i_1, byte[] bytes_2) {
         Class459 class459_5 = aClass459_5588;
         synchronized (aClass459_5588) {
             aClass459_5588.aByteArray5502 = bytes_2;
@@ -137,14 +141,7 @@ public final class Class471 {
                 ++i_3;
                 if (b_12 != i_4) {
                     i_4 = b_12;
-                    if (i_9 == 0) {
-                        i_2 = 1;
-                        break label56;
-                    }
 
-                    bytes_7[i_8] = b_1;
-                    ++i_8;
-                    --i_9;
                 } else {
                     if (i_3 != i_11) {
                         i_2 = 2;
@@ -181,15 +178,14 @@ public final class Class471 {
                         continue label56;
                     }
 
-                    if (i_9 == 0) {
-                        i_2 = 1;
-                        break label56;
-                    }
-
-                    bytes_7[i_8] = b_1;
-                    ++i_8;
-                    --i_9;
                 }
+                if (i_9 == 0) {
+                    i_2 = 1;
+                    break label56;
+                }
+                bytes_7[i_8] = b_1;
+                ++i_8;
+                --i_9;
             }
 
             i_2 = 0;
@@ -197,7 +193,7 @@ public final class Class471 {
         }
 
         int i_13 = class459_0.anInt5508;
-        class459_0.anInt5508 += i_9 - i_9;
+        class459_0.anInt5508 += 0;
         int i_10000 = class459_0.anInt5508 * -1541698763;
         class459_0.aByte5509 = b_1;
         class459_0.anInt5496 = i_2;
@@ -208,10 +204,6 @@ public final class Class471 {
         class459_0.aByteArray5526 = bytes_7;
         class459_0.anInt5506 = i_8;
         class459_0.anInt5507 = i_9;
-    }
-
-    Class471() throws Throwable {
-        throw new Error();
     }
 
     static void method7844(Class459 class459_0) {

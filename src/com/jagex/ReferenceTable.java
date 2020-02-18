@@ -34,73 +34,100 @@ public class ReferenceTable {
 
     byte[] headerWhirlpool;
 
+    ReferenceTable(byte[] data, int crcCheck, byte[] whirlpool) {
+        headerCrc = Class285.getCRC(data, data.length);
+        if (crcCheck != headerCrc) {
+            throw new RuntimeException();
+        } else {
+            if (whirlpool != null) {
+                if (whirlpool.length != 64) {
+                    throw new RuntimeException();
+                }
+                headerWhirlpool = Class361.getWhirlpool(data, 0, data.length);
+                for (int i = 0; i < 64; i++) {
+                    if (whirlpool[i] != headerWhirlpool[i]) {
+                        throw new RuntimeException();
+                    }
+                }
+            }
+            decodeHeader(data);
+        }
+    }
+
+    static void method5768() {
+        LRUCache softcache_2 = Class13.aClass229_127;
+        synchronized (Class13.aClass229_127) {
+            Class13.aClass229_127.method3858(5);
+        }
+    }
+
     void decodeHeader(byte[] bytes_1) {
-        RsByteBuffer stream = new RsByteBuffer(Node_Sub17_Sub6.method15438(bytes_1, (byte) 90));
+        Packet stream = new Packet(Node_Sub17_Sub6.method15438(bytes_1));
         int protocol = stream.readUnsignedByte();
         if (protocol >= 5 && protocol <= 7) {
             if (protocol >= 6) {
-                this.revision = stream.readInt();
+                revision = stream.readInt();
             } else {
-                this.revision = 0;
+                revision = 0;
             }
             int flags = stream.readUnsignedByte();
             boolean named = (flags & 0x1) != 0;
             boolean usesWhirpool = (flags & 0x2) != 0;
             if (protocol >= 7) {
-                this.numValidArchives = stream.readUnsignedBigSmart();
+                numValidArchives = stream.readUnsignedBigSmart();
             } else {
-                this.numValidArchives = stream.readUnsignedShort();
+                numValidArchives = stream.readUnsignedShort();
             }
             int i_7 = 0;
             int i_8 = -1;
-            this.validArchiveIds = new int[this.numValidArchives];
+            validArchiveIds = new int[numValidArchives];
             int i_9;
             if (protocol >= 7) {
-                for (i_9 = 0; i_9 < this.numValidArchives; i_9++) {
-                    this.validArchiveIds[i_9] = i_7 += stream.readUnsignedBigSmart();
-                    if (this.validArchiveIds[i_9] > i_8) {
-                        i_8 = this.validArchiveIds[i_9];
+                for (i_9 = 0; i_9 < numValidArchives; i_9++) {
+                    validArchiveIds[i_9] = i_7 += stream.readUnsignedBigSmart();
+                    if (validArchiveIds[i_9] > i_8) {
+                        i_8 = validArchiveIds[i_9];
                     }
                 }
             } else {
-                for (i_9 = 0; i_9 < this.numValidArchives; i_9++) {
-                    this.validArchiveIds[i_9] = i_7 += stream.readUnsignedShort();
-                    if (this.validArchiveIds[i_9] > i_8) {
-                        i_8 = this.validArchiveIds[i_9];
+                for (i_9 = 0; i_9 < numValidArchives; i_9++) {
+                    validArchiveIds[i_9] = i_7 += stream.readUnsignedShort();
+                    if (validArchiveIds[i_9] > i_8) {
+                        i_8 = validArchiveIds[i_9];
                     }
                 }
             }
-            this.archiveCount = i_8 + 1;
-            this.crcs = new int[this.archiveCount];
+            archiveCount = i_8 + 1;
+            crcs = new int[archiveCount];
             if (usesWhirpool) {
-                this.whirlpool = new byte[this.archiveCount][];
+                whirlpool = new byte[archiveCount][];
             }
-            this.versions = new int[this.archiveCount];
-            this.validFileIdSizes = new int[this.archiveCount];
-            this.validFileIds = new int[this.archiveCount][];
-            this.fileCounts = new int[this.archiveCount];
+            versions = new int[archiveCount];
+            validFileIdSizes = new int[archiveCount];
+            validFileIds = new int[archiveCount][];
+            fileCounts = new int[archiveCount];
             if (named) {
-                this.nameHashes = new int[this.archiveCount];
-                for (i_9 = 0; i_9 < this.archiveCount; i_9++) {
-                    this.nameHashes[i_9] = -1;
+                nameHashes = new int[archiveCount];
+                for (i_9 = 0; i_9 < archiveCount; i_9++) {
+                    nameHashes[i_9] = -1;
                 }
-                for (i_9 = 0; i_9 < this.numValidArchives; i_9++) {
-                    this.nameHashes[this.validArchiveIds[i_9]] = stream.readInt();
+                for (i_9 = 0; i_9 < numValidArchives; i_9++) {
+                    nameHashes[validArchiveIds[i_9]] = stream.readInt();
                 }
-                this.archiveName = new NamedFileReference(this.nameHashes);
+                archiveName = new NamedFileReference(nameHashes);
             }
-            for (i_9 = 0; i_9 < this.numValidArchives; i_9++) {
-                this.crcs[this.validArchiveIds[i_9]] = stream.readInt();
+            for (i_9 = 0; i_9 < numValidArchives; i_9++) {
+                crcs[validArchiveIds[i_9]] = stream.readInt();
             }
             if (usesWhirpool) {
-                for (i_9 = 0; i_9 < this.numValidArchives; i_9++) {
+                for (i_9 = 0; i_9 < numValidArchives; i_9++) {
                     byte[] bytes_15 = new byte[64];
                     stream.readBytes(bytes_15, 0, 64);
-                    this.whirlpool[this.validArchiveIds[i_9]] = bytes_15;
+                    whirlpool[validArchiveIds[i_9]] = bytes_15;
                 }
             }
-            for (i_9 = 0; i_9 < this.numValidArchives; i_9++) {
-                this.versions[this.validArchiveIds[i_9]] = stream.readInt();
+            for (i_9 = 0; i_9 < numValidArchives; i_9++) {
+                versions[validArchiveIds[i_9]] = stream.readInt();
             }
             int i_10;
             int i_11;
@@ -108,98 +135,71 @@ public class ReferenceTable {
             int i_13;
             int i_14;
             if (protocol >= 7) {
-                for (i_9 = 0; i_9 < this.numValidArchives; i_9++) {
-                    this.validFileIdSizes[this.validArchiveIds[i_9]] = stream.readUnsignedBigSmart();
+                for (i_9 = 0; i_9 < numValidArchives; i_9++) {
+                    validFileIdSizes[validArchiveIds[i_9]] = stream.readUnsignedBigSmart();
                 }
-                for (i_9 = 0; i_9 < this.numValidArchives; i_9++) {
-                    i_10 = this.validArchiveIds[i_9];
-                    i_11 = this.validFileIdSizes[i_10];
+                for (i_9 = 0; i_9 < numValidArchives; i_9++) {
+                    i_10 = validArchiveIds[i_9];
+                    i_11 = validFileIdSizes[i_10];
                     i_7 = 0;
                     i_12 = -1;
-                    this.validFileIds[i_10] = new int[i_11];
+                    validFileIds[i_10] = new int[i_11];
                     for (i_13 = 0; i_13 < i_11; i_13++) {
-                        i_14 = this.validFileIds[i_10][i_13] = i_7 += stream.readUnsignedBigSmart();
+                        i_14 = validFileIds[i_10][i_13] = i_7 += stream.readUnsignedBigSmart();
                         if (i_14 > i_12) {
                             i_12 = i_14;
                         }
                     }
-                    this.fileCounts[i_10] = i_12 + 1;
+                    fileCounts[i_10] = i_12 + 1;
                     if (i_11 == i_12 + 1) {
-                        this.validFileIds[i_10] = null;
+                        validFileIds[i_10] = null;
                     }
                 }
             } else {
-                for (i_9 = 0; i_9 < this.numValidArchives; i_9++) {
-                    this.validFileIdSizes[this.validArchiveIds[i_9]] = stream.readUnsignedShort();
+                for (i_9 = 0; i_9 < numValidArchives; i_9++) {
+                    validFileIdSizes[validArchiveIds[i_9]] = stream.readUnsignedShort();
                 }
-                for (i_9 = 0; i_9 < this.numValidArchives; i_9++) {
-                    i_10 = this.validArchiveIds[i_9];
-                    i_11 = this.validFileIdSizes[i_10];
+                for (i_9 = 0; i_9 < numValidArchives; i_9++) {
+                    i_10 = validArchiveIds[i_9];
+                    i_11 = validFileIdSizes[i_10];
                     i_7 = 0;
                     i_12 = -1;
-                    this.validFileIds[i_10] = new int[i_11];
+                    validFileIds[i_10] = new int[i_11];
                     for (i_13 = 0; i_13 < i_11; i_13++) {
-                        i_14 = this.validFileIds[i_10][i_13] = i_7 += stream.readUnsignedShort();
+                        i_14 = validFileIds[i_10][i_13] = i_7 += stream.readUnsignedShort();
                         if (i_14 > i_12) {
                             i_12 = i_14;
                         }
                     }
-                    this.fileCounts[i_10] = i_12 + 1;
+                    fileCounts[i_10] = i_12 + 1;
                     if (i_11 == i_12 + 1) {
-                        this.validFileIds[i_10] = null;
+                        validFileIds[i_10] = null;
                     }
                 }
             }
             if (named) {
-                this.fileNameHashes = new int[i_8 + 1][];
-                this.namedFiles = new NamedFileReference[i_8 + 1];
-                for (i_9 = 0; i_9 < this.numValidArchives; i_9++) {
-                    i_10 = this.validArchiveIds[i_9];
-                    i_11 = this.validFileIdSizes[i_10];
-                    this.fileNameHashes[i_10] = new int[this.fileCounts[i_10]];
-                    for (i_12 = 0; i_12 < this.fileCounts[i_10]; i_12++) {
-                        this.fileNameHashes[i_10][i_12] = -1;
+                fileNameHashes = new int[i_8 + 1][];
+                namedFiles = new NamedFileReference[i_8 + 1];
+                for (i_9 = 0; i_9 < numValidArchives; i_9++) {
+                    i_10 = validArchiveIds[i_9];
+                    i_11 = validFileIdSizes[i_10];
+                    fileNameHashes[i_10] = new int[fileCounts[i_10]];
+                    for (i_12 = 0; i_12 < fileCounts[i_10]; i_12++) {
+                        fileNameHashes[i_10][i_12] = -1;
                     }
                     for (i_12 = 0; i_12 < i_11; i_12++) {
-                        if (this.validFileIds[i_10] != null) {
-                            i_13 = this.validFileIds[i_10][i_12];
+                        if (validFileIds[i_10] != null) {
+                            i_13 = validFileIds[i_10][i_12];
                         } else {
                             i_13 = i_12;
                         }
-                        this.fileNameHashes[i_10][i_13] = stream.readInt();
+                        fileNameHashes[i_10][i_13] = stream.readInt();
                     }
-                    this.namedFiles[i_10] = new NamedFileReference(this.fileNameHashes[i_10]);
+                    namedFiles[i_10] = new NamedFileReference(fileNameHashes[i_10]);
                 }
             }
         } else {
             throw new RuntimeException();
-        }
-    }
-
-    ReferenceTable(byte[] data, int crcCheck, byte[] whirlpool) {
-        this.headerCrc = Class285.getCRC(data, data.length);
-        if (crcCheck != this.headerCrc) {
-            throw new RuntimeException();
-        } else {
-            if (whirlpool != null) {
-                if (whirlpool.length != 64) {
-                    throw new RuntimeException();
-                }
-                this.headerWhirlpool = Class361.getWhirlpool(data, 0, data.length);
-                for (int i = 0; i < 64; i++) {
-                    if (whirlpool[i] != this.headerWhirlpool[i]) {
-                        throw new RuntimeException();
-                    }
-                }
-            }
-            this.decodeHeader(data);
-        }
-    }
-
-    static void method5768() {
-        SoftCache softcache_2 = Class13.aClass229_127;
-        synchronized (Class13.aClass229_127) {
-            Class13.aClass229_127.method3858(5);
         }
     }
 }

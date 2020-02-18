@@ -4,9 +4,8 @@ import java.util.Iterator;
 
 public class BASDefinitions {
 
-    public int renderAnimId;
-    RenderAnimIndexLoader aClass211_2788;
     static int anInt2831;
+    public int renderAnimId;
     public int standAnimation = -1;
     public int walkAnimation = -1;
     public int teleportingAnimation = -1;
@@ -17,18 +16,18 @@ public class BASDefinitions {
     public int runDir3 = -1;
     public int runDir2 = -1;
     public int runDir1 = -1;
-    public int anInt2786 = 0;
-    public int anInt2829 = 0;
+    public int anInt2786;
+    public int anInt2829;
     public int[] anIntArray2811;
     public int[][] anIntArrayArray2802;
-    public int anInt2820 = 0;
-    public int anInt2804 = 0;
-    public int anInt2825 = 0;
-    public int anInt2823 = 0;
-    public int anInt2824 = 0;
-    public int anInt2816 = 0;
-    public int anInt2815 = 0;
-    public int anInt2827 = 0;
+    public int anInt2820;
+    public int anInt2804;
+    public int anInt2825;
+    public int anInt2823;
+    public int anInt2824;
+    public int anInt2816;
+    public int anInt2815;
+    public int anInt2827;
     public int anInt2826 = -1;
     public int standTurn1 = -1;
     public int standTurn2 = -1;
@@ -42,164 +41,165 @@ public class BASDefinitions {
     public int runTurn2 = -1;
     public int walkTurn1 = -1;
     public int walkTurn2 = -1;
-    public int[] randomStandAnimations = null;
-    public int[] randomStandAnimationChances = null;
+    public int[] randomStandAnimations;
+    public int[] randomStandAnimationChances;
     public boolean aBool2787 = true;
-    public int anInt2813 = 0;
-    public int anInt2790 = 0;
-    int totalChance = 0;
+    public int anInt2813;
+    public int anInt2790;
     public int[] anIntArray2818;
     public int[][] anIntArrayArray2791;
+    RenderAnimIndexLoader aClass211_2788;
+    int totalChance;
     Matrix44Var[] matrices;
 
-    void method3808(RsByteBuffer rsbytebuffer_1, int i_2) {
+    void method3808(Packet rsbytebuffer_1, int i_2) {
         if (i_2 == 1) {
-            this.standAnimation = rsbytebuffer_1.readBigSmart();
-            this.walkAnimation = rsbytebuffer_1.readBigSmart();
+            standAnimation = rsbytebuffer_1.readBigSmart();
+            walkAnimation = rsbytebuffer_1.readBigSmart();
         } else if (i_2 == 2) {
-            this.teleportingAnimation = rsbytebuffer_1.readBigSmart();
+            teleportingAnimation = rsbytebuffer_1.readBigSmart();
         } else if (i_2 == 3) {
-            this.teleDir3 = rsbytebuffer_1.readBigSmart();
+            teleDir3 = rsbytebuffer_1.readBigSmart();
         } else if (i_2 == 4) {
-            this.teleDir2 = rsbytebuffer_1.readBigSmart();
+            teleDir2 = rsbytebuffer_1.readBigSmart();
         } else if (i_2 == 5) {
-            this.teleDir1 = rsbytebuffer_1.readBigSmart();
+            teleDir1 = rsbytebuffer_1.readBigSmart();
         } else if (i_2 == 6) {
-            this.runningAnimation = rsbytebuffer_1.readBigSmart();
+            runningAnimation = rsbytebuffer_1.readBigSmart();
         } else if (i_2 == 7) {
-            this.runDir3 = rsbytebuffer_1.readBigSmart();
+            runDir3 = rsbytebuffer_1.readBigSmart();
         } else if (i_2 == 8) {
-            this.runDir2 = rsbytebuffer_1.readBigSmart();
+            runDir2 = rsbytebuffer_1.readBigSmart();
         } else if (i_2 == 9) {
-            this.runDir1 = rsbytebuffer_1.readBigSmart();
+            runDir1 = rsbytebuffer_1.readBigSmart();
         } else if (i_2 == 26) {
-            this.anInt2786 = (short) (rsbytebuffer_1.readUnsignedByte() * 4);
-            this.anInt2829 = (short) (rsbytebuffer_1.readUnsignedByte() * 4);
+            anInt2786 = (short) (rsbytebuffer_1.readUnsignedByte() * 4);
+            anInt2829 = (short) (rsbytebuffer_1.readUnsignedByte() * 4);
         } else {
             int i_4;
             int i_5;
             if (i_2 == 27) {
-                if (this.anIntArrayArray2802 == null) {
-                    this.anIntArrayArray2802 = new int[this.aClass211_2788.aClass526_2672.hidden.length][];
+                if (anIntArrayArray2802 == null) {
+                    anIntArrayArray2802 = new int[aClass211_2788.aClass526_2672.hidden.length][];
                 }
                 i_4 = rsbytebuffer_1.readUnsignedByte();
-                this.anIntArrayArray2802[i_4] = new int[6];
+                anIntArrayArray2802[i_4] = new int[6];
                 for (i_5 = 0; i_5 < 6; i_5++) {
-                    this.anIntArrayArray2802[i_4][i_5] = rsbytebuffer_1.readShort();
+                    anIntArrayArray2802[i_4][i_5] = rsbytebuffer_1.readShort();
                 }
             } else if (i_2 == 28) {
                 i_4 = rsbytebuffer_1.readUnsignedByte();
-                this.anIntArray2811 = new int[i_4];
+                anIntArray2811 = new int[i_4];
                 for (i_5 = 0; i_5 < i_4; i_5++) {
-                    this.anIntArray2811[i_5] = rsbytebuffer_1.readUnsignedByte();
-                    if (this.anIntArray2811[i_5] == 255) {
-                        this.anIntArray2811[i_5] = -1;
+                    anIntArray2811[i_5] = rsbytebuffer_1.readUnsignedByte();
+                    if (anIntArray2811[i_5] == 255) {
+                        anIntArray2811[i_5] = -1;
                     }
                 }
             } else if (i_2 == 29) {
-                this.anInt2820 = rsbytebuffer_1.readUnsignedByte();
+                anInt2820 = rsbytebuffer_1.readUnsignedByte();
             } else if (i_2 == 30) {
-                this.anInt2804 = rsbytebuffer_1.readUnsignedShort();
+                anInt2804 = rsbytebuffer_1.readUnsignedShort();
             } else if (i_2 == 31) {
-                this.anInt2825 = rsbytebuffer_1.readUnsignedByte();
+                anInt2825 = rsbytebuffer_1.readUnsignedByte();
             } else if (i_2 == 32) {
-                this.anInt2823 = rsbytebuffer_1.readUnsignedShort();
+                anInt2823 = rsbytebuffer_1.readUnsignedShort();
             } else if (i_2 == 33) {
-                this.anInt2824 = rsbytebuffer_1.readShort();
+                anInt2824 = rsbytebuffer_1.readShort();
             } else if (i_2 == 34) {
-                this.anInt2816 = rsbytebuffer_1.readUnsignedByte();
+                anInt2816 = rsbytebuffer_1.readUnsignedByte();
             } else if (i_2 == 35) {
-                this.anInt2815 = rsbytebuffer_1.readUnsignedShort();
+                anInt2815 = rsbytebuffer_1.readUnsignedShort();
             } else if (i_2 == 36) {
-                this.anInt2827 = rsbytebuffer_1.readShort();
+                anInt2827 = rsbytebuffer_1.readShort();
             } else if (i_2 == 37) {
-                this.anInt2826 = rsbytebuffer_1.readUnsignedByte();
+                anInt2826 = rsbytebuffer_1.readUnsignedByte();
             } else if (i_2 == 38) {
-                this.standTurn1 = rsbytebuffer_1.readBigSmart();
+                standTurn1 = rsbytebuffer_1.readBigSmart();
             } else if (i_2 == 39) {
-                this.standTurn2 = rsbytebuffer_1.readBigSmart();
+                standTurn2 = rsbytebuffer_1.readBigSmart();
             } else if (i_2 == 40) {
-                this.walkDir3 = rsbytebuffer_1.readBigSmart();
+                walkDir3 = rsbytebuffer_1.readBigSmart();
             } else if (i_2 == 41) {
-                this.walkDir2 = rsbytebuffer_1.readBigSmart();
+                walkDir2 = rsbytebuffer_1.readBigSmart();
             } else if (i_2 == 42) {
-                this.walkDir1 = rsbytebuffer_1.readBigSmart();
+                walkDir1 = rsbytebuffer_1.readBigSmart();
             } else if (i_2 == 43) {
                 rsbytebuffer_1.readUnsignedShort();
             } else if (i_2 == 44) {
                 rsbytebuffer_1.readUnsignedShort();
             } else if (i_2 == 45) {
-                this.anInt2798 = rsbytebuffer_1.readUnsignedShort();
+                anInt2798 = rsbytebuffer_1.readUnsignedShort();
             } else if (i_2 == 46) {
-                this.teleTurn1 = rsbytebuffer_1.readBigSmart();
+                teleTurn1 = rsbytebuffer_1.readBigSmart();
             } else if (i_2 == 47) {
-                this.teleTurn2 = rsbytebuffer_1.readBigSmart();
+                teleTurn2 = rsbytebuffer_1.readBigSmart();
             } else if (i_2 == 48) {
-                this.runTurn1 = rsbytebuffer_1.readBigSmart();
+                runTurn1 = rsbytebuffer_1.readBigSmart();
             } else if (i_2 == 49) {
-                this.runTurn2 = rsbytebuffer_1.readBigSmart();
+                runTurn2 = rsbytebuffer_1.readBigSmart();
             } else if (i_2 == 50) {
-                this.walkTurn1 = rsbytebuffer_1.readBigSmart();
+                walkTurn1 = rsbytebuffer_1.readBigSmart();
             } else if (i_2 == 51) {
-                this.walkTurn2 = rsbytebuffer_1.readBigSmart();
+                walkTurn2 = rsbytebuffer_1.readBigSmart();
             } else if (i_2 == 52) {
                 i_4 = rsbytebuffer_1.readUnsignedByte();
-                this.randomStandAnimations = new int[i_4];
-                this.randomStandAnimationChances = new int[i_4];
+                randomStandAnimations = new int[i_4];
+                randomStandAnimationChances = new int[i_4];
                 for (i_5 = 0; i_5 < i_4; i_5++) {
-                    this.randomStandAnimations[i_5] = rsbytebuffer_1.readBigSmart();
+                    randomStandAnimations[i_5] = rsbytebuffer_1.readBigSmart();
                     int i_6 = rsbytebuffer_1.readUnsignedByte();
-                    this.randomStandAnimationChances[i_5] = i_6;
-                    this.totalChance += i_6;
+                    randomStandAnimationChances[i_5] = i_6;
+                    totalChance += i_6;
                 }
             } else if (i_2 == 53) {
-                this.aBool2787 = false;
+                aBool2787 = false;
             } else if (i_2 == 54) {
-                this.anInt2813 = rsbytebuffer_1.readUnsignedByte() << 6;
-                this.anInt2790 = rsbytebuffer_1.readUnsignedByte() << 6;
+                anInt2813 = rsbytebuffer_1.readUnsignedByte() << 6;
+                anInt2790 = rsbytebuffer_1.readUnsignedByte() << 6;
             } else if (i_2 == 55) {
-                if (this.anIntArray2818 == null) {
-                    this.anIntArray2818 = new int[this.aClass211_2788.aClass526_2672.hidden.length];
+                if (anIntArray2818 == null) {
+                    anIntArray2818 = new int[aClass211_2788.aClass526_2672.hidden.length];
                 }
                 i_4 = rsbytebuffer_1.readUnsignedByte();
-                this.anIntArray2818[i_4] = rsbytebuffer_1.readUnsignedShort();
+                anIntArray2818[i_4] = rsbytebuffer_1.readUnsignedShort();
             } else if (i_2 == 56) {
-                if (this.anIntArrayArray2791 == null) {
-                    this.anIntArrayArray2791 = new int[this.aClass211_2788.aClass526_2672.hidden.length][];
+                if (anIntArrayArray2791 == null) {
+                    anIntArrayArray2791 = new int[aClass211_2788.aClass526_2672.hidden.length][];
                 }
                 i_4 = rsbytebuffer_1.readUnsignedByte();
-                this.anIntArrayArray2791[i_4] = new int[3];
+                anIntArrayArray2791[i_4] = new int[3];
                 for (i_5 = 0; i_5 < 3; i_5++) {
-                    this.anIntArrayArray2791[i_4][i_5] = rsbytebuffer_1.readShort();
+                    anIntArrayArray2791[i_4][i_5] = rsbytebuffer_1.readShort();
                 }
             }
         }
     }
 
     public int getStandAnimation() {
-        if (this.standAnimation != -1) {
-            return this.standAnimation;
-        } else if (this.randomStandAnimations == null) {
+        if (standAnimation != -1) {
+            return standAnimation;
+        } else if (randomStandAnimations == null) {
             return -1;
         } else {
-            int i_2 = (int) (Math.random() * (double) this.totalChance);
+            int i_2 = (int) (Math.random() * totalChance);
             int i_3;
-            for (i_3 = 0; i_2 >= this.randomStandAnimationChances[i_3]; i_3++) {
-                i_2 -= this.randomStandAnimationChances[i_3];
+            for (i_3 = 0; i_2 >= randomStandAnimationChances[i_3]; i_3++) {
+                i_2 -= randomStandAnimationChances[i_3];
             }
-            return this.randomStandAnimations[i_3];
+            return randomStandAnimations[i_3];
         }
     }
 
     public boolean method3810(int i_1) {
         if (i_1 == -1) {
             return false;
-        } else if (this.standAnimation == i_1) {
+        } else if (standAnimation == i_1) {
             return true;
         } else {
-            if (this.randomStandAnimations != null) {
-                for (int i_3 = 0; i_3 < this.randomStandAnimations.length; i_3++) {
-                    if (this.randomStandAnimations[i_3] == i_1) {
+            if (randomStandAnimations != null) {
+                for (int i_3 = 0; i_3 < randomStandAnimations.length; i_3++) {
+                    if (randomStandAnimations[i_3] == i_1) {
                         return true;
                     }
                 }
@@ -209,29 +209,29 @@ public class BASDefinitions {
     }
 
     public Matrix44Var[] method3811() {
-        if (this.matrices != null) {
-            return this.matrices;
-        } else if (this.anIntArrayArray2802 == null) {
+        if (matrices != null) {
+            return matrices;
+        } else if (anIntArrayArray2802 == null) {
             return null;
         } else {
-            this.matrices = new Matrix44Var[this.anIntArrayArray2802.length];
-            for (int i = 0; i < this.anIntArrayArray2802.length; i++) {
+            matrices = new Matrix44Var[anIntArrayArray2802.length];
+            for (int i = 0; i < anIntArrayArray2802.length; i++) {
                 int i_3 = 0;
                 int i_4 = 0;
                 int i_5 = 0;
                 int xRot = 0;
                 int yRot = 0;
                 int zRot = 0;
-                if (this.anIntArrayArray2802[i] != null) {
-                    i_3 = this.anIntArrayArray2802[i][0];
-                    i_4 = this.anIntArrayArray2802[i][1];
-                    i_5 = this.anIntArrayArray2802[i][2];
-                    xRot = this.anIntArrayArray2802[i][3] << 3;
-                    yRot = this.anIntArrayArray2802[i][4] << 3;
-                    zRot = this.anIntArrayArray2802[i][5] << 3;
+                if (anIntArrayArray2802[i] != null) {
+                    i_3 = anIntArrayArray2802[i][0];
+                    i_4 = anIntArrayArray2802[i][1];
+                    i_5 = anIntArrayArray2802[i][2];
+                    xRot = anIntArrayArray2802[i][3] << 3;
+                    yRot = anIntArrayArray2802[i][4] << 3;
+                    zRot = anIntArrayArray2802[i][5] << 3;
                 }
                 if (i_3 != 0 || i_4 != 0 || i_5 != 0 || xRot != 0 || yRot != 0 || zRot != 0) {
-                    Matrix44Var matrix = this.matrices[i] = new Matrix44Var();
+                    Matrix44Var matrix = matrices[i] = new Matrix44Var();
                     if (zRot != 0) {
                         matrix.rotation(0.0F, 0.0F, 1.0F, Class382.method6508(zRot));
                     }
@@ -241,59 +241,59 @@ public class BASDefinitions {
                     if (yRot != 0) {
                         matrix.rotation(0.0F, 1.0F, 0.0F, Class382.method6508(yRot));
                     }
-                    matrix.method5219((float) i_3, (float) i_4, (float) i_5);
+                    matrix.method5219(i_3, i_4, i_5);
                 }
             }
-            return this.matrices;
+            return matrices;
         }
     }
 
-    void method3821(RsByteBuffer rsbytebuffer_1) {
+    void method3821(Packet rsbytebuffer_1) {
         while (true) {
             int i_3 = rsbytebuffer_1.readUnsignedByte();
             if (i_3 == 0) {
                 return;
             }
-            this.method3808(rsbytebuffer_1, i_3);
+            method3808(rsbytebuffer_1, i_3);
         }
     }
 
     public int[] method3828() {
-        IterableNodeMap iterablenodemap_2 = new IterableNodeMap(16);
-        AccountCreationStage.method253(this.standAnimation, iterablenodemap_2, 1339333196);
+        IterableNodeMap<Node> iterablenodemap_2 = new IterableNodeMap<>(16);
+        AccountCreationStage.method253(standAnimation, iterablenodemap_2);
         int[] ints_3;
         int i_4;
-        if (this.randomStandAnimations != null) {
-            ints_3 = this.randomStandAnimations;
+        if (randomStandAnimations != null) {
+            ints_3 = randomStandAnimations;
             for (i_4 = 0; i_4 < ints_3.length; i_4++) {
                 int i_7 = ints_3[i_4];
-                AccountCreationStage.method253(i_7, iterablenodemap_2, -371482637);
+                AccountCreationStage.method253(i_7, iterablenodemap_2);
             }
         }
-        AccountCreationStage.method253(this.standTurn1, iterablenodemap_2, 936766272);
-        AccountCreationStage.method253(this.standTurn2, iterablenodemap_2, 617830168);
-        AccountCreationStage.method253(this.walkAnimation, iterablenodemap_2, 622026359);
-        AccountCreationStage.method253(this.walkDir3, iterablenodemap_2, -1286273225);
-        AccountCreationStage.method253(this.walkDir2, iterablenodemap_2, 1136269352);
-        AccountCreationStage.method253(this.walkDir1, iterablenodemap_2, 981784054);
-        AccountCreationStage.method253(this.runningAnimation, iterablenodemap_2, -432276567);
-        AccountCreationStage.method253(this.runDir3, iterablenodemap_2, -24099782);
-        AccountCreationStage.method253(this.runDir2, iterablenodemap_2, -472783883);
-        AccountCreationStage.method253(this.runDir1, iterablenodemap_2, 843907387);
-        AccountCreationStage.method253(this.teleportingAnimation, iterablenodemap_2, -622930621);
-        AccountCreationStage.method253(this.teleDir3, iterablenodemap_2, -405283185);
-        AccountCreationStage.method253(this.teleDir2, iterablenodemap_2, -576014447);
-        AccountCreationStage.method253(this.teleDir1, iterablenodemap_2, 1786049859);
-        AccountCreationStage.method253(this.teleTurn1, iterablenodemap_2, 918825528);
-        AccountCreationStage.method253(this.teleTurn2, iterablenodemap_2, 854789085);
-        AccountCreationStage.method253(this.runTurn1, iterablenodemap_2, 230817910);
-        AccountCreationStage.method253(this.runTurn2, iterablenodemap_2, -1749638);
-        AccountCreationStage.method253(this.walkTurn1, iterablenodemap_2, 2115368709);
-        AccountCreationStage.method253(this.walkTurn2, iterablenodemap_2, -1020829225);
+        AccountCreationStage.method253(standTurn1, iterablenodemap_2);
+        AccountCreationStage.method253(standTurn2, iterablenodemap_2);
+        AccountCreationStage.method253(walkAnimation, iterablenodemap_2);
+        AccountCreationStage.method253(walkDir3, iterablenodemap_2);
+        AccountCreationStage.method253(walkDir2, iterablenodemap_2);
+        AccountCreationStage.method253(walkDir1, iterablenodemap_2);
+        AccountCreationStage.method253(runningAnimation, iterablenodemap_2);
+        AccountCreationStage.method253(runDir3, iterablenodemap_2);
+        AccountCreationStage.method253(runDir2, iterablenodemap_2);
+        AccountCreationStage.method253(runDir1, iterablenodemap_2);
+        AccountCreationStage.method253(teleportingAnimation, iterablenodemap_2);
+        AccountCreationStage.method253(teleDir3, iterablenodemap_2);
+        AccountCreationStage.method253(teleDir2, iterablenodemap_2);
+        AccountCreationStage.method253(teleDir1, iterablenodemap_2);
+        AccountCreationStage.method253(teleTurn1, iterablenodemap_2);
+        AccountCreationStage.method253(teleTurn2, iterablenodemap_2);
+        AccountCreationStage.method253(runTurn1, iterablenodemap_2);
+        AccountCreationStage.method253(runTurn2, iterablenodemap_2);
+        AccountCreationStage.method253(walkTurn1, iterablenodemap_2);
+        AccountCreationStage.method253(walkTurn2, iterablenodemap_2);
         ints_3 = new int[iterablenodemap_2.size()];
         i_4 = 0;
         Node node_6;
-        for (Iterator iterator_5 = iterablenodemap_2.iterator(); iterator_5.hasNext(); ints_3[i_4++] = (int) node_6.data) {
+        for (Iterator<Node> iterator_5 = iterablenodemap_2.iterator(); iterator_5.hasNext(); ints_3[i_4++] = (int) node_6.pointer) {
             node_6 = (Node) iterator_5.next();
         }
         return ints_3;

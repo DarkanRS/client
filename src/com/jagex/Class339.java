@@ -3,13 +3,9 @@ package com.jagex;
 public class Class339 {
 
     public static byte[][] aByteArrayArray3986;
-
-    static Class339 aClass339_3984 = new Class339();
-
     public static Class339 aClass339_3985 = new Class339();
-
     public static Class339 aClass339_3983 = new Class339();
-
+    static Class339 aClass339_3984 = new Class339();
     static Class339 aClass339_3982 = new Class339();
 
     public static void method6047(Index index_1, int i_2, int i_4) {

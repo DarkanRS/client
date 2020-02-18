@@ -11,13 +11,13 @@ public class Class269 {
     byte[] aByteArray3314;
 
     Class269(int i_1, int i_2, int i_3, int i_4, int i_5, int[] ints_6, byte[] bytes_7) {
-        this.aByte3311 = (byte) i_1;
-        this.aByte3309 = (byte) i_2;
-        this.anInt3310 = i_3;
-        this.aByte3308 = (byte) i_4;
-        this.aByte3312 = (byte) i_5;
-        this.anIntArray3313 = ints_6;
-        this.aByteArray3314 = bytes_7;
+        aByte3311 = (byte) i_1;
+        aByte3309 = (byte) i_2;
+        anInt3310 = i_3;
+        aByte3308 = (byte) i_4;
+        aByte3312 = (byte) i_5;
+        anIntArray3313 = ints_6;
+        aByteArray3314 = bytes_7;
     }
 
 }

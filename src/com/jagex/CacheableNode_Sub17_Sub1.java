@@ -8,19 +8,24 @@ public class CacheableNode_Sub17_Sub1 extends Shadow {
     int anInt10296;
     int anInt10294;
 
-    static final void method15709(byte[] bytes_0, int i_1, int i_2, int i_3, int i_4) {
+    CacheableNode_Sub17_Sub1(int i_2, int i_3) {
+        aByteArray10297 = new byte[i_3 * i_2];
+    }
+
+    static void method15709(byte[] bytes_0, int i_1, int i_2, int i_3, int i_4) {
+        int i_21 = i_2;
         if (i_3 < i_4) {
             i_1 += i_3;
-            i_2 = i_4 - i_3 >> 2;
+            i_21 = i_4 - i_3 >> 2;
 
             while (true) {
-                --i_2;
-                if (i_2 < 0) {
-                    i_2 = i_4 - i_3 & 0x3;
+                --i_21;
+                if (i_21 < 0) {
+                    i_21 = i_4 - i_3 & 0x3;
 
                     while (true) {
-                        --i_2;
-                        if (i_2 < 0) {
+                        --i_21;
+                        if (i_21 < 0) {
                             return;
                         }
 
@@ -39,469 +44,471 @@ public class CacheableNode_Sub17_Sub1 extends Shadow {
     void method15712() {
         int i_1 = -1;
 
-        for (int i_2 = this.aByteArray10297.length - 8; i_1 < i_2; this.aByteArray10297[i_1] = 0) {
+        for (int i_2 = aByteArray10297.length - 8; i_1 < i_2; aByteArray10297[i_1] = 0) {
             ++i_1;
-            this.aByteArray10297[i_1] = 0;
+            aByteArray10297[i_1] = 0;
             ++i_1;
-            this.aByteArray10297[i_1] = 0;
+            aByteArray10297[i_1] = 0;
             ++i_1;
-            this.aByteArray10297[i_1] = 0;
+            aByteArray10297[i_1] = 0;
             ++i_1;
-            this.aByteArray10297[i_1] = 0;
+            aByteArray10297[i_1] = 0;
             ++i_1;
-            this.aByteArray10297[i_1] = 0;
+            aByteArray10297[i_1] = 0;
             ++i_1;
-            this.aByteArray10297[i_1] = 0;
+            aByteArray10297[i_1] = 0;
             ++i_1;
-            this.aByteArray10297[i_1] = 0;
+            aByteArray10297[i_1] = 0;
             ++i_1;
         }
 
-        while (i_1 < this.aByteArray10297.length - 1) {
+        while (i_1 < aByteArray10297.length - 1) {
             ++i_1;
-            this.aByteArray10297[i_1] = 0;
+            aByteArray10297[i_1] = 0;
         }
 
     }
 
     void method15713(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
+        int i_61 = i_6;
+        int i_51 = i_5;
+        int i_11 = i_1;
+        int i_41 = i_4;
+        int i_31 = i_3;
+        int i_21 = i_2;
         int i_7 = 0;
-        if (i_2 != i_1) {
-            i_7 = (i_5 - i_4 << 16) / (i_2 - i_1);
+        if (i_21 != i_11) {
+            i_7 = (i_51 - i_41 << 16) / (i_21 - i_11);
         }
 
         int i_8 = 0;
-        if (i_3 != i_2) {
-            i_8 = (i_6 - i_5 << 16) / (i_3 - i_2);
+        if (i_31 != i_21) {
+            i_8 = (i_61 - i_51 << 16) / (i_31 - i_21);
         }
 
         int i_9 = 0;
-        if (i_3 != i_1) {
-            i_9 = (i_4 - i_6 << 16) / (i_1 - i_3);
+        if (i_31 != i_11) {
+            i_9 = (i_41 - i_61 << 16) / (i_11 - i_31);
         }
 
-        if (i_1 <= i_2 && i_1 <= i_3) {
-            if (i_2 < i_3) {
-                i_6 = i_4 <<= 16;
-                if (i_1 < 0) {
-                    i_6 -= i_9 * i_1;
-                    i_4 -= i_7 * i_1;
-                    i_1 = 0;
+        if (i_11 <= i_21 && i_11 <= i_31) {
+            if (i_21 < i_31) {
+                i_61 = i_41 <<= 16;
+                if (i_11 < 0) {
+                    i_61 -= i_9 * i_11;
+                    i_41 -= i_7 * i_11;
+                    i_11 = 0;
                 }
 
-                i_5 <<= 16;
-                if (i_2 < 0) {
-                    i_5 -= i_8 * i_2;
-                    i_2 = 0;
+                i_51 <<= 16;
+                if (i_21 < 0) {
+                    i_51 -= i_8 * i_21;
+                    i_21 = 0;
                 }
 
-                if (i_2 != i_1 && i_9 < i_7 || i_2 == i_1 && i_9 > i_8) {
-                    i_3 -= i_2;
-                    i_2 -= i_1;
-                    i_1 = this.anInt10296 * i_1;
+                if (i_21 != i_11 ? i_9 < i_7 : i_9 > i_8) {
+                    i_31 -= i_21;
+                    i_21 -= i_11;
+                    i_11 = anInt10296 * i_11;
 
                     while (true) {
-                        --i_2;
-                        if (i_2 < 0) {
+                        --i_21;
+                        if (i_21 < 0) {
                             while (true) {
-                                --i_3;
-                                if (i_3 < 0) {
+                                --i_31;
+                                if (i_31 < 0) {
                                     return;
                                 }
 
-                                method15709(this.aByteArray10297, i_1, 0, i_6 >> 16, i_5 >> 16);
-                                i_6 += i_9;
-                                i_5 += i_8;
-                                i_1 += this.anInt10296;
+                                method15709(aByteArray10297, i_11, 0, i_61 >> 16, i_51 >> 16);
+                                i_61 += i_9;
+                                i_51 += i_8;
+                                i_11 += anInt10296;
                             }
                         }
 
-                        method15709(this.aByteArray10297, i_1, 0, i_6 >> 16, i_4 >> 16);
-                        i_6 += i_9;
-                        i_4 += i_7;
-                        i_1 += this.anInt10296;
+                        method15709(aByteArray10297, i_11, 0, i_61 >> 16, i_41 >> 16);
+                        i_61 += i_9;
+                        i_41 += i_7;
+                        i_11 += anInt10296;
                     }
                 } else {
-                    i_3 -= i_2;
-                    i_2 -= i_1;
-                    i_1 = this.anInt10296 * i_1;
+                    i_31 -= i_21;
+                    i_21 -= i_11;
+                    i_11 = anInt10296 * i_11;
 
                     while (true) {
-                        --i_2;
-                        if (i_2 < 0) {
+                        --i_21;
+                        if (i_21 < 0) {
                             while (true) {
-                                --i_3;
-                                if (i_3 < 0) {
+                                --i_31;
+                                if (i_31 < 0) {
                                     return;
                                 }
 
-                                method15709(this.aByteArray10297, i_1, 0, i_5 >> 16, i_6 >> 16);
-                                i_6 += i_9;
-                                i_5 += i_8;
-                                i_1 += this.anInt10296;
+                                method15709(aByteArray10297, i_11, 0, i_51 >> 16, i_61 >> 16);
+                                i_61 += i_9;
+                                i_51 += i_8;
+                                i_11 += anInt10296;
                             }
                         }
 
-                        method15709(this.aByteArray10297, i_1, 0, i_4 >> 16, i_6 >> 16);
-                        i_6 += i_9;
-                        i_4 += i_7;
-                        i_1 += this.anInt10296;
+                        method15709(aByteArray10297, i_11, 0, i_41 >> 16, i_61 >> 16);
+                        i_61 += i_9;
+                        i_41 += i_7;
+                        i_11 += anInt10296;
                     }
                 }
             } else {
-                i_5 = i_4 <<= 16;
-                if (i_1 < 0) {
-                    i_5 -= i_9 * i_1;
-                    i_4 -= i_7 * i_1;
-                    i_1 = 0;
+                i_51 = i_41 <<= 16;
+                if (i_11 < 0) {
+                    i_51 -= i_9 * i_11;
+                    i_41 -= i_7 * i_11;
+                    i_11 = 0;
                 }
 
-                i_6 <<= 16;
-                if (i_3 < 0) {
-                    i_6 -= i_3 * i_8;
-                    i_3 = 0;
+                i_61 <<= 16;
+                if (i_31 < 0) {
+                    i_61 -= i_31 * i_8;
+                    i_31 = 0;
                 }
 
-                if ((i_3 == i_1 || i_9 >= i_7) && (i_3 != i_1 || i_8 <= i_7)) {
-                    i_2 -= i_3;
-                    i_3 -= i_1;
-                    i_1 = this.anInt10296 * i_1;
+                if ((i_31 == i_11 || i_9 >= i_7) && (i_31 != i_11 || i_8 <= i_7)) {
+                    i_21 -= i_31;
+                    i_31 -= i_11;
+                    i_11 = anInt10296 * i_11;
 
                     while (true) {
-                        --i_3;
-                        if (i_3 < 0) {
+                        --i_31;
+                        if (i_31 < 0) {
                             while (true) {
-                                --i_2;
-                                if (i_2 < 0) {
+                                --i_21;
+                                if (i_21 < 0) {
                                     return;
                                 }
 
-                                method15709(this.aByteArray10297, i_1, 0, i_4 >> 16, i_6 >> 16);
-                                i_6 += i_8;
-                                i_4 += i_7;
-                                i_1 += this.anInt10296;
+                                method15709(aByteArray10297, i_11, 0, i_41 >> 16, i_61 >> 16);
+                                i_61 += i_8;
+                                i_41 += i_7;
+                                i_11 += anInt10296;
                             }
                         }
 
-                        method15709(this.aByteArray10297, i_1, 0, i_4 >> 16, i_5 >> 16);
-                        i_5 += i_9;
-                        i_4 += i_7;
-                        i_1 += this.anInt10296;
+                        method15709(aByteArray10297, i_11, 0, i_41 >> 16, i_51 >> 16);
+                        i_51 += i_9;
+                        i_41 += i_7;
+                        i_11 += anInt10296;
                     }
                 } else {
-                    i_2 -= i_3;
-                    i_3 -= i_1;
-                    i_1 = this.anInt10296 * i_1;
+                    i_21 -= i_31;
+                    i_31 -= i_11;
+                    i_11 = anInt10296 * i_11;
 
                     while (true) {
-                        --i_3;
-                        if (i_3 < 0) {
+                        --i_31;
+                        if (i_31 < 0) {
                             while (true) {
-                                --i_2;
-                                if (i_2 < 0) {
+                                --i_21;
+                                if (i_21 < 0) {
                                     return;
                                 }
 
-                                method15709(this.aByteArray10297, i_1, 0, i_6 >> 16, i_4 >> 16);
-                                i_6 += i_8;
-                                i_4 += i_7;
-                                i_1 += this.anInt10296;
+                                method15709(aByteArray10297, i_11, 0, i_61 >> 16, i_41 >> 16);
+                                i_61 += i_8;
+                                i_41 += i_7;
+                                i_11 += anInt10296;
                             }
                         }
 
-                        method15709(this.aByteArray10297, i_1, 0, i_5 >> 16, i_4 >> 16);
-                        i_5 += i_9;
-                        i_4 += i_7;
-                        i_1 += this.anInt10296;
+                        method15709(aByteArray10297, i_11, 0, i_51 >> 16, i_41 >> 16);
+                        i_51 += i_9;
+                        i_41 += i_7;
+                        i_11 += anInt10296;
                     }
                 }
             }
-        } else if (i_2 <= i_3) {
-            if (i_3 < i_1) {
-                i_4 = i_5 <<= 16;
-                if (i_2 < 0) {
-                    i_4 -= i_7 * i_2;
-                    i_5 -= i_8 * i_2;
-                    i_2 = 0;
+        } else if (i_21 <= i_31) {
+            if (i_31 < i_11) {
+                i_41 = i_51 <<= 16;
+                if (i_21 < 0) {
+                    i_41 -= i_7 * i_21;
+                    i_51 -= i_8 * i_21;
+                    i_21 = 0;
                 }
 
-                i_6 <<= 16;
-                if (i_3 < 0) {
-                    i_6 -= i_3 * i_9;
-                    i_3 = 0;
+                i_61 <<= 16;
+                if (i_31 < 0) {
+                    i_61 -= i_31 * i_9;
+                    i_31 = 0;
                 }
 
-                if ((i_3 == i_2 || i_7 >= i_8) && (i_3 != i_2 || i_7 <= i_9)) {
-                    i_1 -= i_3;
-                    i_3 -= i_2;
-                    i_2 *= this.anInt10296;
+                if ((i_31 == i_21 || i_7 >= i_8) && (i_31 != i_21 || i_7 <= i_9)) {
+                    i_11 -= i_31;
+                    i_31 -= i_21;
+                    i_21 *= anInt10296;
 
                     while (true) {
-                        --i_3;
-                        if (i_3 < 0) {
+                        --i_31;
+                        if (i_31 < 0) {
                             while (true) {
-                                --i_1;
-                                if (i_1 < 0) {
+                                --i_11;
+                                if (i_11 < 0) {
                                     return;
                                 }
 
-                                method15709(this.aByteArray10297, i_2, 0, i_6 >> 16, i_4 >> 16);
-                                i_4 += i_7;
-                                i_6 += i_9;
-                                i_2 += this.anInt10296;
+                                method15709(aByteArray10297, i_21, 0, i_61 >> 16, i_41 >> 16);
+                                i_41 += i_7;
+                                i_61 += i_9;
+                                i_21 += anInt10296;
                             }
                         }
 
-                        method15709(this.aByteArray10297, i_2, 0, i_5 >> 16, i_4 >> 16);
-                        i_4 += i_7;
-                        i_5 += i_8;
-                        i_2 += this.anInt10296;
+                        method15709(aByteArray10297, i_21, 0, i_51 >> 16, i_41 >> 16);
+                        i_41 += i_7;
+                        i_51 += i_8;
+                        i_21 += anInt10296;
                     }
                 } else {
-                    i_1 -= i_3;
-                    i_3 -= i_2;
-                    i_2 *= this.anInt10296;
+                    i_11 -= i_31;
+                    i_31 -= i_21;
+                    i_21 *= anInt10296;
 
                     while (true) {
-                        --i_3;
-                        if (i_3 < 0) {
+                        --i_31;
+                        if (i_31 < 0) {
                             while (true) {
-                                --i_1;
-                                if (i_1 < 0) {
+                                --i_11;
+                                if (i_11 < 0) {
                                     return;
                                 }
 
-                                method15709(this.aByteArray10297, i_2, 0, i_4 >> 16, i_6 >> 16);
-                                i_4 += i_7;
-                                i_6 += i_9;
-                                i_2 += this.anInt10296;
+                                method15709(aByteArray10297, i_21, 0, i_41 >> 16, i_61 >> 16);
+                                i_41 += i_7;
+                                i_61 += i_9;
+                                i_21 += anInt10296;
                             }
                         }
 
-                        method15709(this.aByteArray10297, i_2, 0, i_4 >> 16, i_5 >> 16);
-                        i_4 += i_7;
-                        i_5 += i_8;
-                        i_2 += this.anInt10296;
+                        method15709(aByteArray10297, i_21, 0, i_41 >> 16, i_51 >> 16);
+                        i_41 += i_7;
+                        i_51 += i_8;
+                        i_21 += anInt10296;
                     }
                 }
             } else {
-                i_6 = i_5 <<= 16;
-                if (i_2 < 0) {
-                    i_6 -= i_7 * i_2;
-                    i_5 -= i_8 * i_2;
-                    i_2 = 0;
+                i_61 = i_51 <<= 16;
+                if (i_21 < 0) {
+                    i_61 -= i_7 * i_21;
+                    i_51 -= i_8 * i_21;
+                    i_21 = 0;
                 }
 
-                i_4 <<= 16;
-                if (i_1 < 0) {
-                    i_4 -= i_9 * i_1;
-                    i_1 = 0;
+                i_41 <<= 16;
+                if (i_11 < 0) {
+                    i_41 -= i_9 * i_11;
+                    i_11 = 0;
                 }
 
                 if (i_7 < i_8) {
-                    i_3 -= i_1;
-                    i_1 -= i_2;
-                    i_2 *= this.anInt10296;
+                    i_31 -= i_11;
+                    i_11 -= i_21;
+                    i_21 *= anInt10296;
 
                     while (true) {
-                        --i_1;
-                        if (i_1 < 0) {
+                        --i_11;
+                        if (i_11 < 0) {
                             while (true) {
-                                --i_3;
-                                if (i_3 < 0) {
+                                --i_31;
+                                if (i_31 < 0) {
                                     return;
                                 }
 
-                                method15709(this.aByteArray10297, i_2, 0, i_4 >> 16, i_5 >> 16);
-                                i_4 += i_9;
-                                i_5 += i_8;
-                                i_2 += this.anInt10296;
+                                method15709(aByteArray10297, i_21, 0, i_41 >> 16, i_51 >> 16);
+                                i_41 += i_9;
+                                i_51 += i_8;
+                                i_21 += anInt10296;
                             }
                         }
 
-                        method15709(this.aByteArray10297, i_2, 0, i_6 >> 16, i_5 >> 16);
-                        i_6 += i_7;
-                        i_5 += i_8;
-                        i_2 += this.anInt10296;
+                        method15709(aByteArray10297, i_21, 0, i_61 >> 16, i_51 >> 16);
+                        i_61 += i_7;
+                        i_51 += i_8;
+                        i_21 += anInt10296;
                     }
                 } else {
-                    i_3 -= i_1;
-                    i_1 -= i_2;
-                    i_2 *= this.anInt10296;
+                    i_31 -= i_11;
+                    i_11 -= i_21;
+                    i_21 *= anInt10296;
 
                     while (true) {
-                        --i_1;
-                        if (i_1 < 0) {
+                        --i_11;
+                        if (i_11 < 0) {
                             while (true) {
-                                --i_3;
-                                if (i_3 < 0) {
+                                --i_31;
+                                if (i_31 < 0) {
                                     return;
                                 }
 
-                                method15709(this.aByteArray10297, i_2, 0, i_5 >> 16, i_4 >> 16);
-                                i_4 += i_9;
-                                i_5 += i_8;
-                                i_2 += this.anInt10296;
+                                method15709(aByteArray10297, i_21, 0, i_51 >> 16, i_41 >> 16);
+                                i_41 += i_9;
+                                i_51 += i_8;
+                                i_21 += anInt10296;
                             }
                         }
 
-                        method15709(this.aByteArray10297, i_2, 0, i_5 >> 16, i_6 >> 16);
-                        i_6 += i_7;
-                        i_5 += i_8;
-                        i_2 += this.anInt10296;
+                        method15709(aByteArray10297, i_21, 0, i_51 >> 16, i_61 >> 16);
+                        i_61 += i_7;
+                        i_51 += i_8;
+                        i_21 += anInt10296;
                     }
                 }
             }
-        } else if (i_1 < i_2) {
-            i_5 = i_6 <<= 16;
-            if (i_3 < 0) {
-                i_5 -= i_3 * i_8;
-                i_6 -= i_3 * i_9;
-                i_3 = 0;
+        } else if (i_11 < i_21) {
+            i_51 = i_61 <<= 16;
+            if (i_31 < 0) {
+                i_51 -= i_31 * i_8;
+                i_61 -= i_31 * i_9;
+                i_31 = 0;
             }
 
-            i_4 <<= 16;
-            if (i_1 < 0) {
-                i_4 -= i_7 * i_1;
-                i_1 = 0;
+            i_41 <<= 16;
+            if (i_11 < 0) {
+                i_41 -= i_7 * i_11;
+                i_11 = 0;
             }
 
             if (i_8 < i_9) {
-                i_2 -= i_1;
-                i_1 -= i_3;
-                i_3 *= this.anInt10296;
+                i_21 -= i_11;
+                i_11 -= i_31;
+                i_31 *= anInt10296;
 
                 while (true) {
-                    --i_1;
-                    if (i_1 < 0) {
+                    --i_11;
+                    if (i_11 < 0) {
                         while (true) {
-                            --i_2;
-                            if (i_2 < 0) {
+                            --i_21;
+                            if (i_21 < 0) {
                                 return;
                             }
 
-                            method15709(this.aByteArray10297, i_3, 0, i_5 >> 16, i_4 >> 16);
-                            i_5 += i_8;
-                            i_4 += i_7;
-                            i_3 += this.anInt10296;
+                            method15709(aByteArray10297, i_31, 0, i_51 >> 16, i_41 >> 16);
+                            i_51 += i_8;
+                            i_41 += i_7;
+                            i_31 += anInt10296;
                         }
                     }
 
-                    method15709(this.aByteArray10297, i_3, 0, i_5 >> 16, i_6 >> 16);
-                    i_5 += i_8;
-                    i_6 += i_9;
-                    i_3 += this.anInt10296;
+                    method15709(aByteArray10297, i_31, 0, i_51 >> 16, i_61 >> 16);
+                    i_51 += i_8;
+                    i_61 += i_9;
+                    i_31 += anInt10296;
                 }
             } else {
-                i_2 -= i_1;
-                i_1 -= i_3;
-                i_3 *= this.anInt10296;
+                i_21 -= i_11;
+                i_11 -= i_31;
+                i_31 *= anInt10296;
 
                 while (true) {
-                    --i_1;
-                    if (i_1 < 0) {
+                    --i_11;
+                    if (i_11 < 0) {
                         while (true) {
-                            --i_2;
-                            if (i_2 < 0) {
+                            --i_21;
+                            if (i_21 < 0) {
                                 return;
                             }
 
-                            method15709(this.aByteArray10297, i_3, 0, i_4 >> 16, i_5 >> 16);
-                            i_5 += i_8;
-                            i_4 += i_7;
-                            i_3 += this.anInt10296;
+                            method15709(aByteArray10297, i_31, 0, i_41 >> 16, i_51 >> 16);
+                            i_51 += i_8;
+                            i_41 += i_7;
+                            i_31 += anInt10296;
                         }
                     }
 
-                    method15709(this.aByteArray10297, i_3, 0, i_6 >> 16, i_5 >> 16);
-                    i_5 += i_8;
-                    i_6 += i_9;
-                    i_3 += this.anInt10296;
+                    method15709(aByteArray10297, i_31, 0, i_61 >> 16, i_51 >> 16);
+                    i_51 += i_8;
+                    i_61 += i_9;
+                    i_31 += anInt10296;
                 }
             }
         } else {
-            i_4 = i_6 <<= 16;
-            if (i_3 < 0) {
-                i_4 -= i_3 * i_8;
-                i_6 -= i_3 * i_9;
-                i_3 = 0;
+            i_41 = i_61 <<= 16;
+            if (i_31 < 0) {
+                i_41 -= i_31 * i_8;
+                i_61 -= i_31 * i_9;
+                i_31 = 0;
             }
 
-            i_5 <<= 16;
-            if (i_2 < 0) {
-                i_5 -= i_7 * i_2;
-                i_2 = 0;
+            i_51 <<= 16;
+            if (i_21 < 0) {
+                i_51 -= i_7 * i_21;
+                i_21 = 0;
             }
 
             if (i_8 < i_9) {
-                i_1 -= i_2;
-                i_2 -= i_3;
-                i_3 *= this.anInt10296;
+                i_11 -= i_21;
+                i_21 -= i_31;
+                i_31 *= anInt10296;
 
                 while (true) {
-                    --i_2;
-                    if (i_2 < 0) {
+                    --i_21;
+                    if (i_21 < 0) {
                         while (true) {
-                            --i_1;
-                            if (i_1 < 0) {
+                            --i_11;
+                            if (i_11 < 0) {
                                 return;
                             }
 
-                            method15709(this.aByteArray10297, i_3, 0, i_5 >> 16, i_6 >> 16);
-                            i_5 += i_7;
-                            i_6 += i_9;
-                            i_3 += this.anInt10296;
+                            method15709(aByteArray10297, i_31, 0, i_51 >> 16, i_61 >> 16);
+                            i_51 += i_7;
+                            i_61 += i_9;
+                            i_31 += anInt10296;
                         }
                     }
 
-                    method15709(this.aByteArray10297, i_3, 0, i_4 >> 16, i_6 >> 16);
-                    i_4 += i_8;
-                    i_6 += i_9;
-                    i_3 += this.anInt10296;
+                    method15709(aByteArray10297, i_31, 0, i_41 >> 16, i_61 >> 16);
+                    i_41 += i_8;
+                    i_61 += i_9;
+                    i_31 += anInt10296;
                 }
             } else {
-                i_1 -= i_2;
-                i_2 -= i_3;
-                i_3 *= this.anInt10296;
+                i_11 -= i_21;
+                i_21 -= i_31;
+                i_31 *= anInt10296;
 
                 while (true) {
-                    --i_2;
-                    if (i_2 < 0) {
+                    --i_21;
+                    if (i_21 < 0) {
                         while (true) {
-                            --i_1;
-                            if (i_1 < 0) {
+                            --i_11;
+                            if (i_11 < 0) {
                                 return;
                             }
 
-                            method15709(this.aByteArray10297, i_3, 0, i_6 >> 16, i_5 >> 16);
-                            i_5 += i_7;
-                            i_6 += i_9;
-                            i_3 += this.anInt10296;
+                            method15709(aByteArray10297, i_31, 0, i_61 >> 16, i_51 >> 16);
+                            i_51 += i_7;
+                            i_61 += i_9;
+                            i_31 += anInt10296;
                         }
                     }
 
-                    method15709(this.aByteArray10297, i_3, 0, i_6 >> 16, i_4 >> 16);
-                    i_4 += i_8;
-                    i_6 += i_9;
-                    i_3 += this.anInt10296;
+                    method15709(aByteArray10297, i_31, 0, i_61 >> 16, i_41 >> 16);
+                    i_41 += i_8;
+                    i_61 += i_9;
+                    i_31 += anInt10296;
                 }
             }
         }
     }
 
     boolean method15716(int i_1, int i_2) {
-        return this.aByteArray10297.length >= i_2 * i_1;
-    }
-
-    CacheableNode_Sub17_Sub1(OpenGLGraphicalRenderer class505_sub1_1, int i_2, int i_3) {
-        this.aByteArray10297 = new byte[i_3 * i_2];
+        return aByteArray10297.length >= i_2 * i_1;
     }
 
     void method15721(int i_1, int i_2, int i_3, int i_4) {
-        this.anInt10293 = i_1;
-        this.anInt10295 = i_2;
-        this.anInt10296 = i_3 - i_1;
-        this.anInt10294 = i_4 - i_2;
+        anInt10293 = i_1;
+        anInt10295 = i_2;
+        anInt10296 = i_3 - i_1;
+        anInt10294 = i_4 - i_2;
     }
 
 }

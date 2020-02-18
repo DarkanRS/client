@@ -6,6 +6,10 @@ package jagtheora.theora;
 import jagtheora.misc.SimplePeer;
 
 public class TheoraInfo extends SimplePeer {
+    static {
+        initFields();
+    }
+
     public byte versionMajor;
     public byte versionMinor;
     public byte versionSubMinor;
@@ -32,15 +36,15 @@ public class TheoraInfo extends SimplePeer {
 
     private native void init();
 
+    @Override
     protected native void clear();
 
-    static {
-        initFields();
-    }
-
+    @Override
     protected native void q();
 
+    @Override
     protected native void f();
 
+    @Override
     protected native void m();
 }

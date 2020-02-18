@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class MIDIInstrument extends Node {
 
-    static boolean aBool7611 = false;
+    static boolean aBool7611;
     static int anInt7635;
     static int anInt7637;
     static float[] aFloatArray7612;
@@ -36,9 +36,13 @@ public class MIDIInstrument extends Node {
     int anInt7624;
     boolean aBool7625;
     float[] aFloatArray7608;
-    int anInt7636 = 0;
+    int anInt7636;
     int anInt7626;
-    int anInt7638 = 0;
+    int anInt7638;
+
+    MIDIInstrument(byte[] bytes_1) throws IOException {
+        method12265(bytes_1);
+    }
 
     static void method12261(byte[] bytes_0) {
         method12262(bytes_0);
@@ -59,26 +63,26 @@ public class MIDIInstrument extends Node {
             float[] floats_12 = new float[i_3];
 
             for (int i_7 = 0; i_7 < i_4; i_7++) {
-                floats_12[i_7 * 2] = (float) Math.cos((double) (i_7 * 4) * 3.141592653589793D / (double) i_2);
-                floats_12[i_7 * 2 + 1] = -((float) Math.sin((double) (i_7 * 4) * 3.141592653589793D / (double) i_2));
+                floats_12[i_7 * 2] = (float) Math.cos((i_7 * 4) * 3.141592653589793D / i_2);
+                floats_12[i_7 * 2 + 1] = -((float) Math.sin((i_7 * 4) * 3.141592653589793D / i_2));
             }
 
             float[] floats_13 = new float[i_3];
 
             for (int i_8 = 0; i_8 < i_4; i_8++) {
-                floats_13[i_8 * 2] = (float) Math.cos((double) (i_8 * 2 + 1) * 3.141592653589793D / (double) (i_2 * 2));
-                floats_13[i_8 * 2 + 1] = (float) Math.sin((double) (i_8 * 2 + 1) * 3.141592653589793D / (double) (i_2 * 2));
+                floats_13[i_8 * 2] = (float) Math.cos((i_8 * 2 + 1) * 3.141592653589793D / (i_2 * 2));
+                floats_13[i_8 * 2 + 1] = (float) Math.sin((i_8 * 2 + 1) * 3.141592653589793D / (i_2 * 2));
             }
 
             float[] floats_14 = new float[i_4];
 
             for (int i_9 = 0; i_9 < i_5; i_9++) {
-                floats_14[i_9 * 2] = (float) Math.cos((double) (i_9 * 4 + 2) * 3.141592653589793D / (double) i_2);
-                floats_14[i_9 * 2 + 1] = -((float) Math.sin((double) (i_9 * 4 + 2) * 3.141592653589793D / (double) i_2));
+                floats_14[i_9 * 2] = (float) Math.cos((i_9 * 4 + 2) * 3.141592653589793D / i_2);
+                floats_14[i_9 * 2 + 1] = -((float) Math.sin((i_9 * 4 + 2) * 3.141592653589793D / i_2));
             }
 
             int[] ints_15 = new int[i_5];
-            int i_10 = Class159.method2739(i_5 - 1, 548668392);
+            int i_10 = Class159.method2739(i_5 - 1);
 
             for (int i_11 = 0; i_11 < i_5; i_11++) {
                 ints_15[i_11] = PlayerVarProvider.method285(i_11, i_10);
@@ -182,22 +186,90 @@ public class MIDIInstrument extends Node {
         return i_1;
     }
 
+    static boolean method12268(Index index_0) {
+        if (!aBool7611) {
+            byte[] bytes_1 = index_0.getFile(0, 0);
+            if (bytes_1 == null) {
+                return false;
+            }
+
+            method12261(bytes_1);
+        }
+
+        return true;
+    }
+
+    public static MIDIInstrument method12270(Index index_0, int i_1) {
+        if (!method12268(index_0)) {
+            index_0.loadFile(i_1);
+            return null;
+        } else {
+            byte[] bytes_2 = index_0.getFile(i_1);
+            if (bytes_2 == null) {
+                return null;
+            } else {
+                MIDIInstrument class282_sub18_3 = null;
+
+                try {
+                    class282_sub18_3 = new MIDIInstrument(bytes_2);
+                } catch (IOException ioexception_5) {
+                    ioexception_5.printStackTrace();
+                }
+
+                return class282_sub18_3;
+            }
+        }
+    }
+
+    static MIDIInstrument method12271(Index index_0, int i_1, int i_2) {
+        if (!method12268(index_0)) {
+            index_0.load(i_1, i_2);
+            return null;
+        } else {
+            byte[] bytes_3 = index_0.getFile(i_1, i_2);
+            if (bytes_3 == null) {
+                return null;
+            } else {
+                MIDIInstrument class282_sub18_4 = null;
+
+                try {
+                    class282_sub18_4 = new MIDIInstrument(bytes_3);
+                } catch (IOException ioexception_6) {
+                    ioexception_6.printStackTrace();
+                }
+
+                return class282_sub18_4;
+            }
+        }
+    }
+
+    static float method12300(int i_0) {
+        int i_1 = i_0 & 0x1fffff;
+        int i_2 = i_0 & -2147483648;
+        int i_3 = (i_0 & 0x7fe00000) >> 21;
+        if (i_2 != 0) {
+            i_1 = -i_1;
+        }
+
+        return (float) (i_1 * Math.pow(2.0D, i_3 - 788));
+    }
+
     void method12265(byte[] bytes_1) throws IOException {
-        RsByteBuffer rsbytebuffer_2 = new RsByteBuffer(bytes_1);
-        this.anInt7605 = rsbytebuffer_2.readInt();
-        this.anInt7620 = rsbytebuffer_2.readInt();
-        this.anInt7616 = rsbytebuffer_2.readInt();
-        this.anInt7604 = rsbytebuffer_2.readInt();
-        if (this.anInt7604 < 0) {
-            this.anInt7604 = ~this.anInt7604;
-            this.aBool7609 = true;
+        Packet rsbytebuffer_2 = new Packet(bytes_1);
+        anInt7605 = rsbytebuffer_2.readInt();
+        anInt7620 = rsbytebuffer_2.readInt();
+        anInt7616 = rsbytebuffer_2.readInt();
+        anInt7604 = rsbytebuffer_2.readInt();
+        if (anInt7604 < 0) {
+            anInt7604 = ~anInt7604;
+            aBool7609 = true;
         }
 
         int i_3 = rsbytebuffer_2.readInt();
         if (i_3 < 0) {
             throw new IOException();
         } else {
-            this.aByteArrayArray7606 = new byte[i_3][];
+            aByteArrayArray7606 = new byte[i_3][];
 
             for (int i_4 = 0; i_4 < i_3; i_4++) {
                 int i_5 = 0;
@@ -210,16 +282,16 @@ public class MIDIInstrument extends Node {
 
                 byte[] bytes_7 = new byte[i_5];
                 rsbytebuffer_2.readBytes(bytes_7, 0, i_5);
-                this.aByteArrayArray7606[i_4] = bytes_7;
+                aByteArrayArray7606[i_4] = bytes_7;
             }
 
         }
     }
 
     float[] method12267(int i_1) {
-        method12262(this.aByteArrayArray7606[i_1]);
+        method12262(aByteArrayArray7606[i_1]);
         method12263();
-        int i_2 = method12264(Class159.method2739(anIntArray7621.length - 1, -908362072));
+        int i_2 = method12264(Class159.method2739(anIntArray7621.length - 1));
         boolean bool_3 = aBoolArray7619[i_2];
         int i_4 = bool_3 ? anInt7637 : anInt7635;
         boolean bool_5 = false;
@@ -330,7 +402,7 @@ public class MIDIInstrument extends Node {
                 floats_43[i_26 * 4 + 1] = (f_28 - f_30) * f_31 + (f_27 - f_29) * f_32;
             }
 
-            i_26 = Class159.method2739(i_4 - 1, -537302823);
+            i_26 = Class159.method2739(i_4 - 1);
 
             int i_45;
             int i_46;
@@ -428,25 +500,25 @@ public class MIDIInstrument extends Node {
             }
 
             for (i_45 = i_8; i_45 < i_9; i_45++) {
-                f_28 = (float) Math.sin(((double) (i_45 - i_8) + 0.5D) / (double) i_10 * 0.5D * 3.141592653589793D);
-                aFloatArray7612[i_45] *= (float) Math.sin(1.5707963267948966D * (double) f_28 * (double) f_28);
+                f_28 = (float) Math.sin(((i_45 - i_8) + 0.5D) / i_10 * 0.5D * 3.141592653589793D);
+                aFloatArray7612[i_45] *= (float) Math.sin(1.5707963267948966D * f_28 * f_28);
             }
 
             for (i_45 = i_11; i_45 < i_12; i_45++) {
-                f_28 = (float) Math.sin(((double) (i_45 - i_11) + 0.5D) / (double) i_13 * 0.5D * 3.141592653589793D + 1.5707963267948966D);
-                aFloatArray7612[i_45] *= (float) Math.sin(1.5707963267948966D * (double) f_28 * (double) f_28);
+                f_28 = (float) Math.sin(((i_45 - i_11) + 0.5D) / i_13 * 0.5D * 3.141592653589793D + 1.5707963267948966D);
+                aFloatArray7612[i_45] *= (float) Math.sin(1.5707963267948966D * f_28 * f_28);
             }
         }
 
         float[] floats_53 = null;
-        if (this.anInt7623 > 0) {
-            i_20 = i_4 + this.anInt7623 >> 2;
+        if (anInt7623 > 0) {
+            i_20 = i_4 + anInt7623 >> 2;
             floats_53 = new float[i_20];
             int i_21;
-            if (!this.aBool7625) {
-                for (i_21 = 0; i_21 < this.anInt7624; i_21++) {
-                    i_22 = i_21 + (this.anInt7623 >> 1);
-                    floats_53[i_21] += this.aFloatArray7622[i_22];
+            if (!aBool7625) {
+                for (i_21 = 0; i_21 < anInt7624; i_21++) {
+                    i_22 = i_21 + (anInt7623 >> 1);
+                    floats_53[i_21] += aFloatArray7622[i_22];
                 }
             }
 
@@ -458,102 +530,45 @@ public class MIDIInstrument extends Node {
             }
         }
 
-        floats_42 = this.aFloatArray7622;
-        this.aFloatArray7622 = aFloatArray7612;
+        floats_42 = aFloatArray7622;
+        aFloatArray7622 = aFloatArray7612;
         aFloatArray7612 = floats_42;
-        this.anInt7623 = i_4;
-        this.anInt7624 = i_12 - (i_4 >> 1);
-        this.aBool7625 = bool_17;
+        anInt7623 = i_4;
+        anInt7624 = i_12 - (i_4 >> 1);
+        aBool7625 = bool_17;
         return floats_53;
-    }
-
-    static boolean method12268(Index index_0) {
-        if (!aBool7611) {
-            byte[] bytes_1 = index_0.getFile(0, 0);
-            if (bytes_1 == null) {
-                return false;
-            }
-
-            method12261(bytes_1);
-        }
-
-        return true;
-    }
-
-    public static MIDIInstrument method12270(Index index_0, int i_1) {
-        if (!method12268(index_0)) {
-            index_0.loadFile(i_1);
-            return null;
-        } else {
-            byte[] bytes_2 = index_0.getFile(i_1);
-            if (bytes_2 == null) {
-                return null;
-            } else {
-                MIDIInstrument class282_sub18_3 = null;
-
-                try {
-                    class282_sub18_3 = new MIDIInstrument(bytes_2);
-                } catch (IOException ioexception_5) {
-                    ioexception_5.printStackTrace();
-                }
-
-                return class282_sub18_3;
-            }
-        }
-    }
-
-    static MIDIInstrument method12271(Index index_0, int i_1, int i_2) {
-        if (!method12268(index_0)) {
-            index_0.load(i_1, i_2);
-            return null;
-        } else {
-            byte[] bytes_3 = index_0.getFile(i_1, i_2);
-            if (bytes_3 == null) {
-                return null;
-            } else {
-                MIDIInstrument class282_sub18_4 = null;
-
-                try {
-                    class282_sub18_4 = new MIDIInstrument(bytes_3);
-                } catch (IOException ioexception_6) {
-                    ioexception_6.printStackTrace();
-                }
-
-                return class282_sub18_4;
-            }
-        }
     }
 
     public Node_Sub26_Sub1_Sub1 method12272() {
         Class2.method263(this);
-        return !this.method12276() || this.anInt7636 > this.anInt7605 && this.anInt7638 > this.anInt7605 / Class204.method3363(1396511710) ? new Node_Sub26_Sub1_Sub1(this.anInt7605, this, this.aFloatArray7608, this.anInt7616, this.anInt7604, this.aBool7609) : null;
+        return !method12276() || anInt7636 > anInt7605 && anInt7638 > anInt7605 / Class204.method3363() ? new Node_Sub26_Sub1_Sub1(anInt7605, aFloatArray7608, anInt7616, anInt7604, aBool7609) : null;
     }
 
     int method12273(int i_1) {
         int i_2 = 0;
-        if (this.aFloatArray7608 == null) {
-            this.anInt7623 = 0;
-            this.aFloatArray7622 = new float[anInt7637];
-            this.aFloatArray7608 = new float[this.anInt7620];
-            this.anInt7636 = 0;
-            this.anInt7626 = 0;
+        if (aFloatArray7608 == null) {
+            anInt7623 = 0;
+            aFloatArray7622 = new float[anInt7637];
+            aFloatArray7608 = new float[anInt7620];
+            anInt7636 = 0;
+            anInt7626 = 0;
         }
 
-        for (; i_1 > this.anInt7636 && this.anInt7626 < this.aByteArrayArray7606.length; this.anInt7626++) {
-            float[] floats_3 = this.method12267(this.anInt7626);
+        for (; i_1 > anInt7636 && anInt7626 < aByteArrayArray7606.length; anInt7626++) {
+            float[] floats_3 = method12267(anInt7626);
             if (floats_3 != null) {
-                int i_4 = this.anInt7636;
+                int i_4 = anInt7636;
                 int i_5 = floats_3.length;
-                if (i_5 > this.anInt7620 - i_4) {
-                    i_5 = this.anInt7620 - i_4;
+                if (i_5 > anInt7620 - i_4) {
+                    i_5 = anInt7620 - i_4;
                 }
 
                 for (int i_6 = 0; i_6 < i_5; i_6++) {
-                    this.aFloatArray7608[i_4++] = floats_3[i_6];
+                    aFloatArray7608[i_4++] = floats_3[i_6];
                 }
 
-                i_2 += i_4 - this.anInt7636;
-                this.anInt7636 = i_4;
+                i_2 += i_4 - anInt7636;
+                anInt7636 = i_4;
             }
         }
 
@@ -561,47 +576,33 @@ public class MIDIInstrument extends Node {
     }
 
     int method12275() {
-        return this.anInt7636;
+        return anInt7636;
     }
 
     boolean method12276() {
-        return this.anInt7636 < this.anInt7620 - 1;
+        return anInt7636 < anInt7620 - 1;
     }
 
     int method12277() {
-        return this.anInt7605;
-    }
-
-    MIDIInstrument(byte[] bytes_1) throws IOException {
-        this.method12265(bytes_1);
+        return anInt7605;
     }
 
     void method12296(int i_1) {
-        if (i_1 > this.anInt7620 - 1) {
-            i_1 = this.anInt7620 - 1;
+        int i_11 = i_1;
+        if (i_11 > anInt7620 - 1) {
+            i_11 = anInt7620 - 1;
         }
 
-        if (i_1 > this.anInt7636) {
-            this.anInt7638 = this.method12273(i_1);
+        if (i_11 > anInt7636) {
+            anInt7638 = method12273(i_11);
         } else {
-            this.anInt7638 = 0;
+            anInt7638 = 0;
         }
 
-        if (!this.method12276()) {
-            this.aFloatArray7622 = null;
+        if (!method12276()) {
+            aFloatArray7622 = null;
         }
 
-    }
-
-    static float method12300(int i_0) {
-        int i_1 = i_0 & 0x1fffff;
-        int i_2 = i_0 & ~0x7fffffff;
-        int i_3 = (i_0 & 0x7fe00000) >> 21;
-        if (i_2 != 0) {
-            i_1 = -i_1;
-        }
-
-        return (float) ((double) i_1 * Math.pow(2.0D, i_3 - 788));
     }
 
 }

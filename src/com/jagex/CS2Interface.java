@@ -1,49 +1,49 @@
 package com.jagex;
 
 public class CS2Interface {
-    RSInterface inter;
-    IComponentDefinitions defs;
+    Interface inter;
+    Component defs;
+
+    static void method8777(int i_0) {
+        if (MovingAnimation.isInterfaceLoaded(i_0, null)) {
+            Class464.method7743(CustomCursorsPreference.INTERFACES[i_0].components, -1);
+        }
+
+    }
 
     boolean setChild(int ifComp, int slotId) {
-        IComponentDefinitions def = Index.getIComponentDefinitions(ifComp, slotId);
+        Component def = Index.getIComponentDefinitions(ifComp, slotId);
         if (def != null) {
-            this.inter = CustomCursorsPreference.INTERFACES[ifComp >> 16];
-            this.defs = def;
+            inter = CustomCursorsPreference.INTERFACES[ifComp >> 16];
+            defs = def;
             return true;
         } else {
-            this.method8768();
+            method8768();
             return false;
         }
     }
 
-    boolean method8766(RSInterface interface_1, int i_2, int i_3) {
+    boolean method8766(Interface interface_1, int i_2) {
         if (interface_1 != null) {
-            IComponentDefinitions icomponentdefinitions_5 = interface_1.getComponent(i_2);
+            Component icomponentdefinitions_5 = interface_1.getComponent(i_2);
             if (icomponentdefinitions_5 != null) {
-                this.inter = interface_1;
-                this.defs = icomponentdefinitions_5;
+                inter = interface_1;
+                defs = icomponentdefinitions_5;
                 return true;
             }
         }
 
-        this.method8768();
+        method8768();
         return false;
     }
 
     void method8768() {
-        this.inter = null;
-        this.defs = null;
+        inter = null;
+        defs = null;
     }
 
-    IComponentDefinitions method8772() {
-        return this.inter.getComponent(this.defs.idHash);
-    }
-
-    static final void method8777(int i_0, byte b_1) {
-        if (MovingAnimation.isInterfaceLoaded(i_0, null, -1514339264)) {
-            Class464.method7743(CustomCursorsPreference.INTERFACES[i_0].components, -1);
-        }
-
+    Component method8772() {
+        return inter.getComponent(defs.idHash);
     }
 
 }

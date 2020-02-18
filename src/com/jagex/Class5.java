@@ -8,10 +8,10 @@ public class Class5 {
         throw new Error();
     }
 
-    public static int method294(int i_0, byte b_1) {
-        double d_2 = (double) (i_0 >> 16 & 0xff) / 256.0D;
-        double d_4 = (double) (i_0 >> 8 & 0xff) / 256.0D;
-        double d_6 = (double) (i_0 & 0xff) / 256.0D;
+    public static int method294(int i_0) {
+        double d_2 = (i_0 >> 16 & 0xff) / 256.0D;
+        double d_4 = (i_0 >> 8 & 0xff) / 256.0D;
+        double d_6 = (i_0 & 0xff) / 256.0D;
         double d_8 = d_2;
         if (d_4 < d_2) {
             d_8 = d_4;
@@ -81,10 +81,10 @@ public class Class5 {
         return null;
     }
 
-    static void method297(int i_0) {
+    static void method297() {
         client.LOBBY_CONNECTION_CONTEXT.method3051();
         if (Class14.anInt134 < 2) {
-            Class448.LOBBY_CONNECTION_INFO.swap(876652608);
+            Class448.LOBBY_CONNECTION_INFO.swap();
             Class14.anInt133 = 0;
             ++Class14.anInt134;
             Class192.ACCOUNT_CREATION_STAGE = AccountCreationStage.REQUEST;

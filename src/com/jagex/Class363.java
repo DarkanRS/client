@@ -8,7 +8,7 @@ public class Class363 {
         throw new Error();
     }
 
-    static final void method6286(long long_0) {
+    static void method6286(long long_0) {
         Vector3 vector3_2 = VertexNormal.MY_PLAYER.method11166().coords;
         int i_3 = (int) vector3_2.x + client.anInt7248;
         int i_4 = (int) vector3_2.z + client.anInt7250;
@@ -20,7 +20,7 @@ public class Class363 {
         int i_6;
         if (i_3 != Class11.anInt122) {
             i_5 = i_3 - Class11.anInt122;
-            i_6 = (int) (long_0 * (long) i_5 / 320L);
+            i_6 = (int) (long_0 * i_5 / 320L);
             if (i_5 > 0) {
                 if (i_6 == 0) {
                     i_6 = 1;
@@ -36,7 +36,7 @@ public class Class363 {
         }
         if (i_4 != Class266.anInt3289) {
             i_5 = i_4 - Class266.anInt3289;
-            i_6 = (int) (long_0 * (long) i_5 / 320L);
+            i_6 = (int) (long_0 * i_5 / 320L);
             if (i_5 > 0) {
                 if (i_6 == 0) {
                     i_6 = 1;
@@ -50,13 +50,13 @@ public class Class363 {
             }
             Class266.anInt3289 += i_6;
         }
-        client.camAngleY += client.aFloat7266 * (float) long_0 / 6.0F;
-        client.camAngleX += client.aFloat7284 * (float) long_0 / 6.0F;
-        IsaacCipher.processCamera();
+        client.camAngleY += client.aFloat7266 * long_0 / 6.0F;
+        client.camAngleX += client.aFloat7284 * long_0 / 6.0F;
+        Isaac.processCamera();
     }
 
-    static final void method6287(Entity animable_0, boolean bool_1, int i_2) {
-        int moveType = MovementType.STATIONARY.id;
+    static void method6287(PathingEntity animable_0, boolean bool_1) {
+        int moveType = MoveSpeed.STATIONARY.id;
         int i_4 = 0;
         if (animable_0.forceMovementT1Delay > client.cycles) {
             Static.method4281(animable_0);
@@ -78,9 +78,9 @@ public class Class363 {
             animable_0.currentAnimations = null;
             animable_0.forceMovementT1Delay = 0;
             animable_0.forceMovementT2Delay = 0;
-            moveType = MovementType.STATIONARY.id;
+            moveType = MoveSpeed.STATIONARY.id;
             i_4 = 0;
-            animable_0.method11172((float) (512 * animable_0.regionBaseX[0] + animable_0.getSize() * 256), vector3_5.y, (float) (animable_0.regionBaseY[0] * 512 + animable_0.getSize() * 256));
+            animable_0.method11172((512 * animable_0.regionBaseX[0] + animable_0.getSize() * 256), vector3_5.y, (animable_0.regionBaseY[0] * 512 + animable_0.getSize() * 256));
             animable_0.method15801();
         }
         if (VertexNormal.MY_PLAYER == animable_0 && ((int) vector3_5.x < 6144 || (int) vector3_5.z < 6144 || (int) vector3_5.x >= (IndexLoaders.MAP_REGION_DECODER.getSizeX() - 12) * 512 || (int) vector3_5.z >= (IndexLoaders.MAP_REGION_DECODER.getSizeY() - 12) * 512)) {
@@ -92,16 +92,16 @@ public class Class363 {
             animable_0.currentAnimations = null;
             animable_0.forceMovementT1Delay = 0;
             animable_0.forceMovementT2Delay = 0;
-            moveType = MovementType.STATIONARY.id;
+            moveType = MoveSpeed.STATIONARY.id;
             i_4 = 0;
-            animable_0.method11172((float) (animable_0.regionBaseX[0] * 512 + animable_0.getSize() * 256), vector3_5.y, (float) (512 * animable_0.regionBaseY[0] + animable_0.getSize() * 256));
+            animable_0.method11172((animable_0.regionBaseX[0] * 512 + animable_0.getSize() * 256), vector3_5.y, (512 * animable_0.regionBaseY[0] + animable_0.getSize() * 256));
             animable_0.method15801();
         }
         i_6 = MapSpriteIndexLoader.method7188(animable_0);
         WallDecoration.method16087(animable_0);
-        Class302.handleMovementAnimations(animable_0, moveType, i_4, i_6, 1792753982);
-        Class236.method3985(animable_0, moveType, (byte) -27);
-        Class150.method2581(animable_0, -1454383651);
+        Class302.handleMovementAnimations(animable_0, moveType, i_4, i_6);
+        Class236.method3985(animable_0, moveType);
+        Class150.method2581(animable_0);
         Quaternion quaternion_7 = Quaternion.create();
         quaternion_7.romYawPitchRoll(Class382.method6508(animable_0.aClass19_10359.method578()), Class382.method6508(animable_0.aClass19_10330.method578()), Class382.method6508(animable_0.aClass19_10360.method578()));
         animable_0.method11187(quaternion_7);

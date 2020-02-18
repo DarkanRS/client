@@ -4,14 +4,18 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
-public final class Class78 {
+public class Class78 {
 
-    static HashMap aHashMap768 = new HashMap();
+    static HashMap<String, TimeZone> aHashMap768 = new HashMap<>();
 
-    static Map aMap766;
+    static Map<Language, ConcurrentLinkedQueue<SimpleDateFormat>> aMap766;
 
     static {
-        Calendar.getInstance(method1375(184912342));
+        Calendar.getInstance(method1375());
+    }
+
+    Class78() throws Throwable {
+        throw new Error();
     }
 
     public static String method1372(Date date_0, String string_1) {
@@ -19,17 +23,13 @@ public final class Class78 {
     }
 
     static TimeZone method1373() {
-        return method1375(-669580467);
+        return method1375();
     }
 
-    Class78() throws Throwable {
-        throw new Error();
-    }
-
-    static TimeZone method1375(int i_1) {
-        HashMap hashmap_2 = aHashMap768;
+    static TimeZone method1375() {
+        HashMap<String, TimeZone> hashmap_2 = aHashMap768;
         synchronized (aHashMap768) {
-            TimeZone timezone_3 = (TimeZone) aHashMap768.get("Europe/London");
+            TimeZone timezone_3 = aHashMap768.get("Europe/London");
             if (timezone_3 == null) {
                 timezone_3 = TimeZone.getTimeZone("Europe/London");
                 aHashMap768.put("Europe/London", timezone_3);
@@ -40,15 +40,15 @@ public final class Class78 {
 
     static String method1382(Date date_0, String string_1, TimeZone timezone_2, Language xlanguage_3) {
         if (aMap766 == null) {
-            aMap766 = new HashMap(6);
+            aMap766 = new HashMap<>(6);
             Language[] arr_5 = Language.values();
             for (int i_6 = 0; i_6 < arr_5.length; i_6++) {
                 Language xlanguage_7 = arr_5[i_6];
-                aMap766.put(xlanguage_7, new ConcurrentLinkedQueue());
+                aMap766.put(xlanguage_7, new ConcurrentLinkedQueue<SimpleDateFormat>());
             }
         }
-        ConcurrentLinkedQueue concurrentlinkedqueue_9 = (ConcurrentLinkedQueue) aMap766.get(xlanguage_3);
-        SimpleDateFormat simpledateformat_8 = (SimpleDateFormat) concurrentlinkedqueue_9.poll();
+        ConcurrentLinkedQueue<SimpleDateFormat> concurrentlinkedqueue_9 = aMap766.get(xlanguage_3);
+        SimpleDateFormat simpledateformat_8 = concurrentlinkedqueue_9.poll();
         if (simpledateformat_8 == null) {
             simpledateformat_8 = new SimpleDateFormat(string_1, xlanguage_3.method8293());
         } else {
@@ -66,11 +66,11 @@ public final class Class78 {
         } else if (Class9.anInt76 != -1) {
             Class14.method537();
         } else {
-            ParticleArchive1Def.worldLogin(Class9.aString99, Class9.aString102, 2140005303);
+            ParticleArchive1Def.worldLogin(Class9.aString99, Class9.aString102);
         }
     }
 
-    static final int method1386(Class413 class413_0) {
+    static int method1386(Class413 class413_0) {
         if (class413_0 == null) {
             return 12;
         } else {
@@ -84,50 +84,54 @@ public final class Class78 {
     }
 
     static void method1388(int i_0, int i_1, int i_2, int i_3, int i_4) {
-        if (i_2 <= Class532_Sub1.anInt7068 && i_3 >= Class532_Sub1.anInt7070) {
+        int i_01 = i_0;
+        int i_11 = i_1;
+        int i_21 = i_2;
+        int i_31 = i_3;
+        if (i_21 <= Class532_Sub1.anInt7068 && i_31 >= Class532_Sub1.anInt7070) {
             boolean bool_6;
-            if (i_0 < Class532_Sub1.anInt7071) {
-                i_0 = Class532_Sub1.anInt7071;
+            if (i_01 < Class532_Sub1.anInt7071) {
+                i_01 = Class532_Sub1.anInt7071;
                 bool_6 = false;
-            } else if (i_0 > Class532_Sub1.anInt7069) {
-                i_0 = Class532_Sub1.anInt7069;
+            } else if (i_01 > Class532_Sub1.anInt7069) {
+                i_01 = Class532_Sub1.anInt7069;
                 bool_6 = false;
             } else {
                 bool_6 = true;
             }
             boolean bool_7;
-            if (i_1 < Class532_Sub1.anInt7071) {
-                i_1 = Class532_Sub1.anInt7071;
+            if (i_11 < Class532_Sub1.anInt7071) {
+                i_11 = Class532_Sub1.anInt7071;
                 bool_7 = false;
-            } else if (i_1 > Class532_Sub1.anInt7069) {
-                i_1 = Class532_Sub1.anInt7069;
+            } else if (i_11 > Class532_Sub1.anInt7069) {
+                i_11 = Class532_Sub1.anInt7069;
                 bool_7 = false;
             } else {
                 bool_7 = true;
             }
-            if (i_2 >= Class532_Sub1.anInt7070) {
-                KeyHoldInputSubscriber.method3922(Class532_Sub1.anIntArrayArray7072[i_2++], i_0, i_1, i_4, (byte) -14);
+            if (i_21 >= Class532_Sub1.anInt7070) {
+                KeyHoldInputSubscriber.method3922(Class532_Sub1.anIntArrayArray7072[i_21++], i_01, i_11, i_4);
             } else {
-                i_2 = Class532_Sub1.anInt7070;
+                i_21 = Class532_Sub1.anInt7070;
             }
-            if (i_3 <= Class532_Sub1.anInt7068) {
-                KeyHoldInputSubscriber.method3922(Class532_Sub1.anIntArrayArray7072[i_3--], i_0, i_1, i_4, (byte) 40);
+            if (i_31 <= Class532_Sub1.anInt7068) {
+                KeyHoldInputSubscriber.method3922(Class532_Sub1.anIntArrayArray7072[i_31--], i_01, i_11, i_4);
             } else {
-                i_3 = Class532_Sub1.anInt7068;
+                i_31 = Class532_Sub1.anInt7068;
             }
             int i_8;
             if (bool_6 && bool_7) {
-                for (i_8 = i_2; i_8 <= i_3; i_8++) {
+                for (i_8 = i_21; i_8 <= i_31; i_8++) {
                     int[] ints_9 = Class532_Sub1.anIntArrayArray7072[i_8];
-                    ints_9[i_0] = ints_9[i_1] = i_4;
+                    ints_9[i_01] = ints_9[i_11] = i_4;
                 }
             } else if (bool_6) {
-                for (i_8 = i_2; i_8 <= i_3; i_8++) {
-                    Class532_Sub1.anIntArrayArray7072[i_8][i_0] = i_4;
+                for (i_8 = i_21; i_8 <= i_31; i_8++) {
+                    Class532_Sub1.anIntArrayArray7072[i_8][i_01] = i_4;
                 }
             } else if (bool_7) {
-                for (i_8 = i_2; i_8 <= i_3; i_8++) {
-                    Class532_Sub1.anIntArrayArray7072[i_8][i_1] = i_4;
+                for (i_8 = i_21; i_8 <= i_31; i_8++) {
+                    Class532_Sub1.anIntArrayArray7072[i_8][i_11] = i_4;
                 }
             }
         }
@@ -135,6 +139,6 @@ public final class Class78 {
 
     public static void method1389(int i_0) {
         PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(7, i_0);
-        class282_sub50_sub12_2.method14965((byte) 5);
+        class282_sub50_sub12_2.method14965();
     }
 }

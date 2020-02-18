@@ -6,64 +6,12 @@ public class Node_Sub20_Sub7 extends Node_Sub20 {
     int anInt9759 = 1024;
     int anInt9760 = 3072;
 
-    int[][] method12320(int i_1, int i_2) {
-        int[][] ints_3 = this.aClass308_7670.method5463(i_1, 1866699649);
-        if (this.aClass308_7670.aBool3619) {
-            int[][] ints_4 = this.method12333(0, i_1);
-            int[] ints_5 = ints_4[0];
-            int[] ints_6 = ints_4[1];
-            int[] ints_7 = ints_4[2];
-            int[] ints_8 = ints_3[0];
-            int[] ints_9 = ints_3[1];
-            int[] ints_10 = ints_3[2];
-
-            for (int i_11 = 0; i_11 < Class316.anInt3670; i_11++) {
-                ints_8[i_11] = (this.anInt9761 * ints_5[i_11] >> 12) + this.anInt9759;
-                ints_9[i_11] = (this.anInt9761 * ints_6[i_11] >> 12) + this.anInt9759;
-                ints_10[i_11] = (this.anInt9761 * ints_7[i_11] >> 12) + this.anInt9759;
-            }
-        }
-
-        return ints_3;
-    }
-
-    void method12321(int i_1) {
-        this.anInt9761 = this.anInt9760 - this.anInt9759;
-    }
-
-    void method12322(int i_1, RsByteBuffer rsbytebuffer_2) {
-        switch (i_1) {
-            case 0:
-                this.anInt9759 = rsbytebuffer_2.readUnsignedShort();
-                break;
-            case 1:
-                this.anInt9760 = rsbytebuffer_2.readUnsignedShort();
-                break;
-            case 2:
-                this.aBool7669 = rsbytebuffer_2.readUnsignedByte() == 1;
-        }
-
-    }
-
     public Node_Sub20_Sub7() {
         super(1, false);
     }
 
-    int[] method12319(int i_1) {
-        int[] ints_3 = this.aClass320_7667.method5721(i_1, 699794774);
-        if (this.aClass320_7667.aBool3722) {
-            int[] ints_4 = this.method12317(0, i_1, 1949629181);
-
-            for (int i_5 = 0; i_5 < Class316.anInt3670; i_5++) {
-                ints_3[i_5] = (this.anInt9761 * ints_4[i_5] >> 12) + this.anInt9759;
-            }
-        }
-
-        return ints_3;
-    }
-
-    static final void method15240() {
-        Message.method7275(Renderers.SOFTWARE_RENDERER);
+    static void method15240() {
+        LocalizedText.method7275(Renderers.SOFTWARE_RENDERER);
         if (client.anInt7472 != Class4.MY_PLAYER_PLANE) {
             ClanVarDefinitions.method6823();
         }
@@ -103,9 +51,9 @@ public class Node_Sub20_Sub7 extends Node_Sub20 {
         int i_37 = i_30;
         int i_38 = i_29 * (i_12 - 1);
         int[] ints_39 = Class532_Sub3_Sub1.anIntArrayArray7072[i_1];
-        KeyHoldInputSubscriber.method3922(ints_39, i_0 - i_2, i_0 - i_11, i_5, (byte) -38);
-        KeyHoldInputSubscriber.method3922(ints_39, i_0 - i_11, i_0 + i_11, i_4, (byte) -68);
-        KeyHoldInputSubscriber.method3922(ints_39, i_0 + i_11, i_0 + i_2, i_5, (byte) -67);
+        KeyHoldInputSubscriber.method3922(ints_39, i_0 - i_2, i_0 - i_11, i_5);
+        KeyHoldInputSubscriber.method3922(ints_39, i_0 - i_11, i_0 + i_11, i_4);
+        KeyHoldInputSubscriber.method3922(ints_39, i_0 + i_11, i_0 + i_2, i_5);
 
         while (i_9 > 0) {
             boolean bool_40 = i_9 <= i_12;
@@ -164,18 +112,74 @@ public class Node_Sub20_Sub7 extends Node_Sub20 {
             if (bool_40) {
                 int i_45 = i_0 + i_10;
                 int i_46 = i_0 - i_10;
-                KeyHoldInputSubscriber.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_41], i_44, i_46, i_5, (byte) -12);
-                KeyHoldInputSubscriber.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_41], i_46, i_45, i_4, (byte) 11);
-                KeyHoldInputSubscriber.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_41], i_45, i_43, i_5, (byte) 16);
-                KeyHoldInputSubscriber.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_42], i_44, i_46, i_5, (byte) 2);
-                KeyHoldInputSubscriber.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_42], i_46, i_45, i_4, (byte) 84);
-                KeyHoldInputSubscriber.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_42], i_45, i_43, i_5, (byte) -100);
+                KeyHoldInputSubscriber.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_41], i_44, i_46, i_5);
+                KeyHoldInputSubscriber.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_41], i_46, i_45, i_4);
+                KeyHoldInputSubscriber.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_41], i_45, i_43, i_5);
+                KeyHoldInputSubscriber.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_42], i_44, i_46, i_5);
+                KeyHoldInputSubscriber.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_42], i_46, i_45, i_4);
+                KeyHoldInputSubscriber.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_42], i_45, i_43, i_5);
             } else {
-                KeyHoldInputSubscriber.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_41], i_44, i_43, i_5, (byte) -49);
-                KeyHoldInputSubscriber.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_42], i_44, i_43, i_5, (byte) 59);
+                KeyHoldInputSubscriber.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_41], i_44, i_43, i_5);
+                KeyHoldInputSubscriber.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_42], i_44, i_43, i_5);
             }
         }
 
+    }
+
+    @Override
+    int[][] method12320(int i_1) {
+        int[][] ints_3 = aClass308_7670.method5463(i_1);
+        if (aClass308_7670.aBool3619) {
+            int[][] ints_4 = method12333(0, i_1);
+            int[] ints_5 = ints_4[0];
+            int[] ints_6 = ints_4[1];
+            int[] ints_7 = ints_4[2];
+            int[] ints_8 = ints_3[0];
+            int[] ints_9 = ints_3[1];
+            int[] ints_10 = ints_3[2];
+
+            for (int i_11 = 0; i_11 < Class316.anInt3670; i_11++) {
+                ints_8[i_11] = (anInt9761 * ints_5[i_11] >> 12) + anInt9759;
+                ints_9[i_11] = (anInt9761 * ints_6[i_11] >> 12) + anInt9759;
+                ints_10[i_11] = (anInt9761 * ints_7[i_11] >> 12) + anInt9759;
+            }
+        }
+
+        return ints_3;
+    }
+
+    @Override
+    void method12321() {
+        anInt9761 = anInt9760 - anInt9759;
+    }
+
+    @Override
+    void method12322(int i_1, Packet rsbytebuffer_2) {
+        switch (i_1) {
+            case 0:
+                anInt9759 = rsbytebuffer_2.readUnsignedShort();
+                break;
+            case 1:
+                anInt9760 = rsbytebuffer_2.readUnsignedShort();
+                break;
+            case 2:
+                aBool7669 = rsbytebuffer_2.readUnsignedByte() == 1;
+        }
+
+    }
+
+    @Override
+    int[] method12319(int i_1) {
+        int[] ints_3 = aClass320_7667.method5721(i_1);
+        if (aClass320_7667.aBool3722) {
+            int[] ints_4 = method12317(0, i_1);
+
+            for (int i_5 = 0; i_5 < Class316.anInt3670; i_5++) {
+                ints_3[i_5] = (anInt9761 * ints_4[i_5] >> 12) + anInt9759;
+            }
+        }
+
+        return ints_3;
     }
 
 }

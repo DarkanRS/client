@@ -12,17 +12,17 @@ public enum ComponentType {
     TYPE_8(8),
     LINE(9);
 
+    private final int id;
+
+    ComponentType(int id) {
+        this.id = id;
+    }
+
     public static ComponentType forId(int id) {
         for (ComponentType t : ComponentType.values()) {
             if (t.id == id)
                 return t;
         }
         return null;
-    }
-
-    private final int id;
-
-    ComponentType(int id) {
-        this.id = id;
     }
 }

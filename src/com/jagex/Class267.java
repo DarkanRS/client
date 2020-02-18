@@ -1,14 +1,17 @@
 package com.jagex;
 
 import java.awt.*;
+import java.awt.Component;
 import java.awt.image.BufferedImage;
 
 public class Class267 {
-
     Robot aRobot3290 = new Robot();
 
+    public Class267() throws Exception {
+    }
+
     public void moveMouse(int i_1, int i_2) {
-        this.aRobot3290.mouseMove(i_1, i_2);
+        aRobot3290.mouseMove(i_1, i_2);
     }
 
     public void setCustomCursor(Component component_1, int[] ints_2, int i_3, int i_4, Point point_5) {
@@ -20,9 +23,6 @@ public class Class267 {
             component_1.setCursor(null);
         }
 
-    }
-
-    public Class267() throws Exception {
     }
 
 }

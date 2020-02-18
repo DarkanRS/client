@@ -2,57 +2,28 @@ package com.jagex;
 
 public class Node_Sub27 extends Node {
 
+    static int[] anIntArray7696;
     int anInt7692;
     boolean aBool7693;
-    static int[] anIntArray7696;
     int[] anIntArray7694;
     int anInt7695;
     int anInt7691;
 
-    void method12403(int i_1, int i_2) {
-        if (i_1 != 0 || i_2 != 0) {
-            if (anIntArray7696 == null || anIntArray7696.length != this.anIntArray7694.length) {
-                anIntArray7696 = new int[this.anIntArray7694.length];
-            }
-
-            int i_3 = this.anIntArray7694.length;
-            int i_4 = i_1;
-            int i_5 = this.anInt7691 - 1;
-            int i_6 = i_2 * this.anInt7691;
-            int i_7 = i_3 - 1;
-
-            for (int i_8 = 0; i_8 < i_3; i_8 += this.anInt7691) {
-                int i_9 = i_8 + i_6 & i_7;
-
-                for (int i_10 = 0; i_10 < this.anInt7691; i_10++) {
-                    int i_11 = i_8 + i_10;
-                    int i_12 = i_9 + (i_10 + i_4 & i_5);
-                    anIntArray7696[i_11] = this.anIntArray7694[i_12];
-                }
-            }
-
-            int[] ints_13 = this.anIntArray7694;
-            this.anIntArray7694 = anIntArray7696;
-            anIntArray7696 = ints_13;
-        }
-
-    }
-
     Node_Sub27(int i_1, int i_2, int[] ints_3, boolean bool_4) {
-        this.anInt7695 = i_1;
-        this.anInt7691 = i_2;
-        this.anIntArray7694 = ints_3;
+        anInt7695 = i_1;
+        anInt7691 = i_2;
+        anIntArray7694 = ints_3;
         if (bool_4) {
-            int[] ints_5 = new int[this.anInt7691];
-            int[] ints_6 = new int[this.anInt7691];
-            int[] ints_7 = new int[this.anInt7691];
-            int[] ints_8 = new int[this.anInt7691];
-            if (anIntArray7696 == null || anIntArray7696.length != this.anIntArray7694.length) {
-                anIntArray7696 = new int[this.anIntArray7694.length];
+            int[] ints_5 = new int[anInt7691];
+            int[] ints_6 = new int[anInt7691];
+            int[] ints_7 = new int[anInt7691];
+            int[] ints_8 = new int[anInt7691];
+            if (anIntArray7696 == null || anIntArray7696.length != anIntArray7694.length) {
+                anIntArray7696 = new int[anIntArray7694.length];
             }
 
-            int i_9 = this.anInt7691;
-            int i_10 = this.anInt7691;
+            int i_9 = anInt7691;
+            int i_10 = anInt7691;
             int i_11 = i_9 - 1;
             int i_12 = i_10 - 1;
             int i_13 = i_9 * i_10;
@@ -65,7 +36,7 @@ public class Node_Sub27 extends Node {
             for (i_16 = 2; i_16 >= 0; --i_16) {
                 for (i_17 = i_11; i_17 >= 0; --i_17) {
                     --i_14;
-                    i_18 = this.anIntArray7694[i_14];
+                    i_18 = anIntArray7694[i_14];
                     ints_5[i_17] += i_18 >> 24 & 0xff;
                     ints_6[i_17] += i_18 >> 16 & 0xff;
                     ints_7[i_17] += i_18 >> 8 & 0xff;
@@ -125,9 +96,9 @@ public class Node_Sub27 extends Node {
 
                 for (i_24 = i_11; i_24 >= 0; --i_24) {
                     --i_14;
-                    i_25 = this.anIntArray7694[i_14];
+                    i_25 = anIntArray7694[i_14];
                     --i_15;
-                    i_26 = this.anIntArray7694[i_15];
+                    i_26 = anIntArray7694[i_15];
                     ints_5[i_24] += (i_25 >> 24 & 0xff) - (i_26 >> 24 & 0xff);
                     ints_6[i_24] += (i_25 >> 16 & 0xff) - (i_26 >> 16 & 0xff);
                     ints_7[i_24] += (i_25 >> 8 & 0xff) - (i_26 >> 8 & 0xff);
@@ -143,15 +114,44 @@ public class Node_Sub27 extends Node {
                 }
             }
 
-            int[] ints_29 = this.anIntArray7694;
-            this.anIntArray7694 = anIntArray7696;
+            int[] ints_29 = anIntArray7694;
+            anIntArray7694 = anIntArray7696;
             anIntArray7696 = ints_29;
         }
 
     }
 
+    void method12403(int i_1, int i_2) {
+        if (i_1 != 0 || i_2 != 0) {
+            if (anIntArray7696 == null || anIntArray7696.length != anIntArray7694.length) {
+                anIntArray7696 = new int[anIntArray7694.length];
+            }
+
+            int i_3 = anIntArray7694.length;
+            int i_4 = i_1;
+            int i_5 = anInt7691 - 1;
+            int i_6 = i_2 * anInt7691;
+            int i_7 = i_3 - 1;
+
+            for (int i_8 = 0; i_8 < i_3; i_8 += anInt7691) {
+                int i_9 = i_8 + i_6 & i_7;
+
+                for (int i_10 = 0; i_10 < anInt7691; i_10++) {
+                    int i_11 = i_8 + i_10;
+                    int i_12 = i_9 + (i_10 + i_4 & i_5);
+                    anIntArray7696[i_11] = anIntArray7694[i_12];
+                }
+            }
+
+            int[] ints_13 = anIntArray7694;
+            anIntArray7694 = anIntArray7696;
+            anIntArray7696 = ints_13;
+        }
+
+    }
+
     int[] method12406() {
-        return this.anIntArray7694;
+        return anIntArray7694;
     }
 
 }

@@ -8,46 +8,56 @@ public class AnimationFrameSet extends CacheableNode {
     byte[][] frameData;
     AnimationFrame[] frames;
 
-    public boolean method15079(int i_1) {
-        return this.frames[i_1].modifiesAlpha;
+    public AnimationFrameSet(int i_1) {
+        id = i_1;
     }
 
-    public boolean method15080(int i_1, int i_2) {
-        return this.frames[i_1].modifiesColor;
+    public static byte[] method15090(byte[] bytes_0) {
+        if (bytes_0 == null) {
+            return null;
+        } else {
+            byte[] bytes_2 = new byte[bytes_0.length];
+            System.arraycopy(bytes_0, 0, bytes_2, 0, bytes_0.length);
+            return bytes_2;
+        }
+    }
+
+    public boolean method15079(int i_1) {
+        return frames[i_1].modifiesAlpha;
+    }
+
+    public boolean method15080(int i_1) {
+        return frames[i_1].modifiesColor;
     }
 
     public boolean method15081(int i_1) {
-        return this.frames[i_1].aBool988;
-    }
-
-    public AnimationFrameSet(int i_1) {
-        this.id = i_1;
+        return frames[i_1].aBool988;
     }
 
     public boolean decodeFrameData() {
-        if (this.frames != null) {
+        if (frames != null) {
             return true;
         } else {
-            if (this.frameData == null) {
+            if (frameData == null) {
                 synchronized (ANIMATION_FRAMESET_INDEX) {
-                    if (!ANIMATION_FRAMESET_INDEX.loadArchive(this.id)) {
+                    if (!ANIMATION_FRAMESET_INDEX.loadArchive(id)) {
                         return false;
                     }
 
-                    int[] fileIds = ANIMATION_FRAMESET_INDEX.getValidFileIds(this.id);
-                    this.frameData = new byte[fileIds.length][];
+                    int[] fileIds = ANIMATION_FRAMESET_INDEX.getValidFileIds(id);
+                    frameData = new byte[fileIds.length][];
 
                     for (int i_3 = 0; i_3 < fileIds.length; i_3++) {
-                        this.frameData[i_3] = ANIMATION_FRAMESET_INDEX.getFile(this.id, fileIds[i_3]);
+                        frameData[i_3] = ANIMATION_FRAMESET_INDEX.getFile(id, fileIds[i_3]);
                     }
                 }
             }
 
             boolean loaded = true;
 
-            for (int i_11 = 0; i_11 < this.frameData.length; i_11++) {
-                byte[] bytes_12 = this.frameData[i_11];
-                RsByteBuffer buffer = new RsByteBuffer(bytes_12);
+            for (int i_11 = 0; i_11 < frameData.length; i_11++) {
+                byte[] bytes_12 = frameData[i_11];
+                Packet buffer = new Packet(bytes_12);
                 buffer.index = 1;
                 int frameId = buffer.readUnsignedShort();
                 synchronized (ANIMATION_FRAME_INDEX) {
@@ -61,14 +71,14 @@ public class AnimationFrameSet extends CacheableNode {
                 LinkedNodeList frameBaseList = new LinkedNodeList();
                 int[] fileIds;
                 synchronized (ANIMATION_FRAMESET_INDEX) {
-                    int fileCount = ANIMATION_FRAMESET_INDEX.filesCount(this.id);
-                    this.frames = new AnimationFrame[fileCount];
-                    fileIds = ANIMATION_FRAMESET_INDEX.getValidFileIds(this.id);
+                    int fileCount = ANIMATION_FRAMESET_INDEX.filesCount(id);
+                    frames = new AnimationFrame[fileCount];
+                    fileIds = ANIMATION_FRAMESET_INDEX.getValidFileIds(id);
                 }
 
                 for (int i = 0; i < fileIds.length; i++) {
                     byte[] frameData = this.frameData[i];
-                    RsByteBuffer frameBuffer = new RsByteBuffer(frameData);
+                    Packet frameBuffer = new Packet(frameData);
                     frameBuffer.index = 1;
                     int frameId = frameBuffer.readUnsignedShort();
                     AnimationFrameBase frameBase = null;
@@ -88,22 +98,12 @@ public class AnimationFrameSet extends CacheableNode {
                         frameBaseList.insertBack(frameBase);
                     }
 
-                    this.frames[fileIds[i]] = new AnimationFrame(frameData, frameBase);
+                    frames[fileIds[i]] = new AnimationFrame(frameData, frameBase);
                 }
 
-                this.frameData = null;
+                frameData = null;
                 return true;
             }
-        }
-    }
-
-    public static byte[] method15090(byte[] bytes_0, int i_1) {
-        if (bytes_0 == null) {
-            return null;
-        } else {
-            byte[] bytes_2 = new byte[bytes_0.length];
-            System.arraycopy(bytes_0, 0, bytes_2, 0, bytes_0.length);
-            return bytes_2;
         }
     }
 

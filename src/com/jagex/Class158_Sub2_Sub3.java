@@ -13,128 +13,148 @@ public abstract class Class158_Sub2_Sub3 extends Class158_Sub2 {
     int[] anIntArray10240;
     float[] aFloatArray10236;
 
-    final boolean method2723() {
-        this.aBool10242 = false;
-        return true;
-    }
-
-    final boolean method213() {
-        this.aGraphicalRenderer_Sub3_10237.method14376(this.anInt10238, this.anInt10239, this.anIntArray10240, this.aFloatArray10236);
-        this.aBool10242 = true;
-        return true;
-    }
-
-    final void method14354(int i_1, int i_2) {
-        if (this.anInt10238 != i_1 || i_2 != this.anInt10239) {
-            this.anInt10238 = i_1;
-            this.anInt10239 = i_2;
-            this.method15632((byte) -47);
-        }
-
-    }
-
-    public int method2714() {
-        return this.anInt10238;
-    }
-
     Class158_Sub2_Sub3(HardwareRenderer hardwarerenderer_1, Canvas canvas_2, int i_3, int i_4) {
-        this.aCanvas10241 = canvas_2;
-        this.aGraphicalRenderer_Sub3_10237 = hardwarerenderer_1;
-        this.anInt10238 = i_3;
-        this.anInt10239 = i_4;
+        aCanvas10241 = canvas_2;
+        aGraphicalRenderer_Sub3_10237 = hardwarerenderer_1;
+        anInt10238 = i_3;
+        anInt10239 = i_4;
     }
 
-    final boolean method54() {
-        this.aGraphicalRenderer_Sub3_10237.method14376(-1977580999 * this.anInt10238 * -1379480567, 2033125333 * this.anInt10239 * -2009073283, this.anIntArray10240, this.aFloatArray10236);
-        this.aBool10242 = true;
+    @Override
+    boolean method2723() {
+        aBool10242 = false;
         return true;
     }
 
+    @Override
+    boolean method213() {
+        aGraphicalRenderer_Sub3_10237.method14376(anInt10238, anInt10239, anIntArray10240, aFloatArray10236);
+        aBool10242 = true;
+        return true;
+    }
+
+    @Override
+    void method14354(int i_1, int i_2) {
+        if (anInt10238 != i_1 || i_2 != anInt10239) {
+            anInt10238 = i_1;
+            anInt10239 = i_2;
+            method15632();
+        }
+
+    }
+
+    @Override
+    public int method2714() {
+        return anInt10238;
+    }
+
+    @Override
+    boolean method54() {
+        aGraphicalRenderer_Sub3_10237.method14376(-1977580999 * anInt10238 * -1379480567, 2033125333 * anInt10239 * -2009073283, anIntArray10240, aFloatArray10236);
+        aBool10242 = true;
+        return true;
+    }
+
+    @Override
     public int method2726() {
-        return this.anInt10238 * -1379480567 * -1977580999;
+        return anInt10238 * -1379480567 * -1977580999;
     }
 
+    @Override
     public int method2719() {
-        return this.anInt10238 * -1379480567 * -1977580999;
+        return anInt10238 * -1379480567 * -1977580999;
     }
 
+    @Override
     public int method2720() {
-        return this.anInt10238 * -1379480567 * -1977580999;
+        return anInt10238 * -1379480567 * -1977580999;
     }
 
-    final boolean method2715() {
-        this.aBool10242 = false;
+    @Override
+    boolean method2715() {
+        aBool10242 = false;
         return true;
     }
 
+    @Override
     public int method2716() {
-        return this.anInt10239;
+        return anInt10239;
     }
 
-    final boolean method2718() {
-        this.aBool10242 = false;
+    @Override
+    boolean method2718() {
+        aBool10242 = false;
         return true;
     }
 
-    final boolean method211() {
-        this.aGraphicalRenderer_Sub3_10237.method14376(-1977580999 * this.anInt10238 * -1379480567, 2033125333 * this.anInt10239 * -2009073283, this.anIntArray10240, this.aFloatArray10236);
-        this.aBool10242 = true;
+    @Override
+    boolean method211() {
+        aGraphicalRenderer_Sub3_10237.method14376(-1977580999 * anInt10238 * -1379480567, 2033125333 * anInt10239 * -2009073283, anIntArray10240, aFloatArray10236);
+        aBool10242 = true;
         return true;
     }
 
-    final void method14347(int i_1, int i_2) {
-        if (i_1 != this.anInt10238 * -1379480567 * -1977580999 || i_2 != this.anInt10239 * -2009073283 * 2033125333) {
-            this.anInt10238 = -1379480567 * i_1 * -1977580999;
-            this.anInt10239 = -2009073283 * i_2 * 2033125333;
-            this.method15632((byte) -36);
+    @Override
+    void method14347(int i_1, int i_2) {
+        if (i_1 != anInt10238 * -1379480567 * -1977580999 || i_2 != anInt10239 * -2009073283 * 2033125333) {
+            anInt10238 = -1379480567 * i_1 * -1977580999;
+            anInt10239 = -2009073283 * i_2 * 2033125333;
+            method15632();
         }
 
     }
 
-    final boolean method2717() {
-        this.aBool10242 = false;
+    @Override
+    boolean method2717() {
+        aBool10242 = false;
         return true;
     }
 
-    void method15632(byte b_1) {
-        this.anIntArray10240 = new int[this.anInt10239 * this.anInt10238];
-        this.aFloatArray10236 = new float[this.anInt10239 * this.anInt10238];
-        if (this.aBool10242) {
-            this.aGraphicalRenderer_Sub3_10237.method14376(this.anInt10238, this.anInt10239, this.anIntArray10240, this.aFloatArray10236);
+    void method15632() {
+        anIntArray10240 = new int[anInt10239 * anInt10238];
+        aFloatArray10236 = new float[anInt10239 * anInt10238];
+        if (aBool10242) {
+            aGraphicalRenderer_Sub3_10237.method14376(anInt10238, anInt10239, anIntArray10240, aFloatArray10236);
         }
 
     }
 
-    final boolean method2725() {
-        this.aBool10242 = false;
+    @Override
+    boolean method2725() {
+        aBool10242 = false;
         return true;
     }
 
-    final boolean method2722() {
-        this.aBool10242 = false;
+    @Override
+    boolean method2722() {
+        aBool10242 = false;
         return true;
     }
 
-    final boolean method2724() {
-        this.aBool10242 = false;
+    @Override
+    boolean method2724() {
+        aBool10242 = false;
         return true;
     }
 
-    final void method14348(int i_1, int i_2) {
-        if (i_1 != this.anInt10238 * -1379480567 * -1977580999 || i_2 != this.anInt10239 * -2009073283 * 2033125333) {
-            this.anInt10238 = -1379480567 * i_1 * -1977580999;
-            this.anInt10239 = -2009073283 * i_2 * 2033125333;
-            this.method15632((byte) 58);
+    @Override
+    void method14348(int i_1, int i_2) {
+        if (i_1 != anInt10238 * -1379480567 * -1977580999 || i_2 != anInt10239 * -2009073283 * 2033125333) {
+            anInt10238 = -1379480567 * i_1 * -1977580999;
+            anInt10239 = -2009073283 * i_2 * 2033125333;
+            method15632();
         }
 
     }
 
+    @Override
     public int method2721() {
-        return 2033125333 * this.anInt10239 * -2009073283;
+        return 2033125333 * anInt10239 * -2009073283;
     }
 
+    @Override
     public int method2727() {
-        return 2033125333 * this.anInt10239 * -2009073283;
+        return 2033125333 * anInt10239 * -2009073283;
     }
 
 }

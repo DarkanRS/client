@@ -5,21 +5,30 @@ import java.util.Random;
 public class Node_Sub20_Sub9 extends Node_Sub20 {
 
     public static int anInt9792;
-    int anInt9782 = 0;
+    int anInt9782;
     int anInt9791 = 1024;
     int anInt9784 = 2048;
     int anInt9772 = 409;
     int anInt9786 = 819;
     int anInt9787 = 1024;
-    int anInt9788 = 0;
+    int anInt9788;
     int anInt9780 = 1024;
     int anInt9790 = 1024;
     int anInt9789;
 
-    final void method15253(Random random_1, int[][] ints_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
-        int i_8 = this.anInt9790 > 0 ? 4096 - Class476.method7931(random_1, this.anInt9790, -664753074) : 4096;
-        int i_9 = this.anInt9780 * this.anInt9789 >> 12;
-        int i_10 = this.anInt9789 - (i_9 > 0 ? Class476.method7931(random_1, i_9, 1861509778) : 0);
+    public Node_Sub20_Sub9() {
+        super(0, true);
+    }
+
+    static void method15255() {
+        PulseEvent class282_sub50_sub12_1 = PulseEvent.createPulseEvent(15, 0L);
+        class282_sub50_sub12_1.method14965();
+    }
+
+    void method15253(Random random_1, int[][] ints_2, int i_3, int i_4, int i_5, int i_6) {
+        int i_8 = anInt9790 > 0 ? 4096 - Class476.method7931(random_1, anInt9790) : 4096;
+        int i_9 = anInt9780 * anInt9789 >> 12;
+        int i_10 = anInt9789 - (i_9 > 0 ? Class476.method7931(random_1, i_9) : 0);
         if (i_3 >= Class316.anInt3670) {
             i_3 -= Class316.anInt3670;
         }
@@ -29,8 +38,8 @@ public class Node_Sub20_Sub9 extends Node_Sub20 {
             if (i_6 > 0 && i_5 > 0) {
                 i_11 = i_5 / 2;
                 i_12 = i_6 / 2;
-                int i_13 = i_11 < i_10 ? i_11 : i_10;
-                int i_14 = i_12 < i_10 ? i_12 : i_10;
+                int i_13 = Math.min(i_11, i_10);
+                int i_14 = Math.min(i_12, i_10);
                 int i_15 = i_3 + i_13;
                 int i_16 = i_5 - i_13 * 2;
                 for (int i_17 = 0; i_17 < i_6; i_17++) {
@@ -40,7 +49,7 @@ public class Node_Sub20_Sub9 extends Node_Sub20 {
                     int i_21;
                     if (i_17 < i_14) {
                         i_19 = i_8 * i_17 / i_14;
-                        if (this.anInt9788 == 0) {
+                        if (anInt9788 == 0) {
                             for (i_20 = 0; i_20 < i_13; i_20++) {
                                 i_21 = i_8 * i_20 / i_13;
                                 ints_18[i_3 + i_20 & Class316.anInt3669] = ints_18[i_3 + i_5 - i_20 - 1 & Class316.anInt3669] = i_21 * i_19 >> 12;
@@ -48,7 +57,7 @@ public class Node_Sub20_Sub9 extends Node_Sub20 {
                         } else {
                             for (i_20 = 0; i_20 < i_13; i_20++) {
                                 i_21 = i_20 * i_8 / i_13;
-                                ints_18[i_3 + i_20 & Class316.anInt3669] = ints_18[i_3 + i_5 - i_20 - 1 & Class316.anInt3669] = i_21 < i_19 ? i_21 : i_19;
+                                ints_18[i_3 + i_20 & Class316.anInt3669] = ints_18[i_3 + i_5 - i_20 - 1 & Class316.anInt3669] = Math.min(i_21, i_19);
                             }
                         }
                         if (i_16 + i_15 > Class316.anInt3670) {
@@ -63,7 +72,7 @@ public class Node_Sub20_Sub9 extends Node_Sub20 {
                         if (i_19 < i_14) {
                             i_20 = i_8 * i_19 / i_14;
                             int i_22;
-                            if (this.anInt9788 == 0) {
+                            if (anInt9788 == 0) {
                                 for (i_21 = 0; i_21 < i_13; i_21++) {
                                     i_22 = i_21 * i_8 / i_13;
                                     ints_18[i_3 + i_21 & Class316.anInt3669] = ints_18[i_3 + i_5 - i_21 - 1 & Class316.anInt3669] = i_20 * i_22 >> 12;
@@ -71,7 +80,7 @@ public class Node_Sub20_Sub9 extends Node_Sub20 {
                             } else {
                                 for (i_21 = 0; i_21 < i_13; i_21++) {
                                     i_22 = i_21 * i_8 / i_13;
-                                    ints_18[i_3 + i_21 & Class316.anInt3669] = ints_18[i_3 + i_5 - i_21 - 1 & Class316.anInt3669] = i_22 < i_20 ? i_22 : i_20;
+                                    ints_18[i_3 + i_21 & Class316.anInt3669] = ints_18[i_3 + i_5 - i_21 - 1 & Class316.anInt3669] = Math.min(i_22, i_20);
                                 }
                             }
                             if (i_16 + i_15 > Class316.anInt3670) {
@@ -110,48 +119,47 @@ public class Node_Sub20_Sub9 extends Node_Sub20 {
         }
     }
 
-    public Node_Sub20_Sub9() {
-        super(0, true);
-    }
-
-    void method12322(int i_1, RsByteBuffer rsbytebuffer_2) {
+    @Override
+    void method12322(int i_1, Packet rsbytebuffer_2) {
         switch (i_1) {
             case 0:
-                this.anInt9782 = rsbytebuffer_2.readUnsignedByte();
+                anInt9782 = rsbytebuffer_2.readUnsignedByte();
                 break;
             case 1:
-                this.anInt9791 = rsbytebuffer_2.readUnsignedShort();
+                anInt9791 = rsbytebuffer_2.readUnsignedShort();
                 break;
             case 2:
-                this.anInt9784 = rsbytebuffer_2.readUnsignedShort();
+                anInt9784 = rsbytebuffer_2.readUnsignedShort();
                 break;
             case 3:
-                this.anInt9772 = rsbytebuffer_2.readUnsignedShort();
+                anInt9772 = rsbytebuffer_2.readUnsignedShort();
                 break;
             case 4:
-                this.anInt9786 = rsbytebuffer_2.readUnsignedShort();
+                anInt9786 = rsbytebuffer_2.readUnsignedShort();
                 break;
             case 5:
-                this.anInt9787 = rsbytebuffer_2.readUnsignedShort();
+                anInt9787 = rsbytebuffer_2.readUnsignedShort();
                 break;
             case 6:
-                this.anInt9788 = rsbytebuffer_2.readUnsignedByte();
+                anInt9788 = rsbytebuffer_2.readUnsignedByte();
                 break;
             case 7:
-                this.anInt9780 = rsbytebuffer_2.readUnsignedShort();
+                anInt9780 = rsbytebuffer_2.readUnsignedShort();
                 break;
             case 8:
-                this.anInt9790 = rsbytebuffer_2.readUnsignedShort();
+                anInt9790 = rsbytebuffer_2.readUnsignedShort();
         }
     }
 
-    void method12321(int i_1) {
+    @Override
+    void method12321() {
     }
 
+    @Override
     int[] method12319(int i_1) {
-        int[] ints_3 = this.aClass320_7667.method5721(i_1, -1227771715);
-        if (this.aClass320_7667.aBool3722) {
-            int[][] ints_4 = this.aClass320_7667.method5722();
+        int[] ints_3 = aClass320_7667.method5721(i_1);
+        if (aClass320_7667.aBool3722) {
+            int[][] ints_4 = aClass320_7667.method5722();
             int i_5 = 0;
             int i_6 = 0;
             int i_7 = 0;
@@ -161,22 +169,22 @@ public class Node_Sub20_Sub9 extends Node_Sub20 {
             boolean bool_11 = true;
             int i_12 = 0;
             int i_13 = 0;
-            int i_14 = this.anInt9791 * Class316.anInt3670 >> 12;
-            int i_15 = this.anInt9784 * Class316.anInt3670 >> 12;
-            int i_16 = this.anInt9772 * Class316.anInt3671 >> 12;
-            int i_17 = this.anInt9786 * Class316.anInt3671 >> 12;
+            int i_14 = anInt9791 * Class316.anInt3670 >> 12;
+            int i_15 = anInt9784 * Class316.anInt3670 >> 12;
+            int i_16 = anInt9772 * Class316.anInt3671 >> 12;
+            int i_17 = anInt9786 * Class316.anInt3671 >> 12;
             if (i_17 <= 1) {
                 return ints_4[i_1];
             } else {
-                this.anInt9789 = Class316.anInt3670 / 8 * this.anInt9787 >> 12;
+                anInt9789 = Class316.anInt3670 / 8 * anInt9787 >> 12;
                 int i_18 = Class316.anInt3670 / i_14 + 1;
                 int[][] ints_19 = new int[i_18][3];
                 int[][] ints_20 = new int[i_18][3];
-                Random random_21 = new Random(this.anInt9782);
+                Random random_21 = new Random(anInt9782);
                 while (true) {
                     while (true) {
-                        int i_22 = i_14 + Class476.method7931(random_21, i_15 - i_14, 43789865);
-                        int i_23 = i_16 + Class476.method7931(random_21, i_17 - i_16, -1448566396);
+                        int i_22 = i_14 + Class476.method7931(random_21, i_15 - i_14);
+                        int i_23 = i_16 + Class476.method7931(random_21, i_17 - i_16);
                         int i_24 = i_22 + i_8;
                         if (i_24 > Class316.anInt3670) {
                             i_22 = Class316.anInt3670 - i_8;
@@ -233,7 +241,7 @@ public class Node_Sub20_Sub9 extends Node_Sub20 {
                                                     i_36 = Math.max(i_38, i_34);
                                                     i_37 = Class316.anInt3670;
                                                 }
-                                                this.method15253(random_21, ints_4, i_36 + i_7, i_33, i_37 - i_36, i_25 - i_33, 212976521);
+                                                method15253(random_21, ints_4, i_36 + i_7, i_33, i_37 - i_36, i_25 - i_33);
                                             }
                                         }
                                     }
@@ -254,7 +262,7 @@ public class Node_Sub20_Sub9 extends Node_Sub20 {
                         }
                         int[] ints_39;
                         if (i_24 == Class316.anInt3670) {
-                            this.method15253(random_21, ints_4, i_6 + i_8, i_25, i_22, i_23, -946908989);
+                            method15253(random_21, ints_4, i_6 + i_8, i_25, i_22, i_23);
                             if (bool_10) {
                                 return ints_3;
                             }
@@ -269,7 +277,7 @@ public class Node_Sub20_Sub9 extends Node_Sub20 {
                             i_12 = i_13;
                             i_13 = 0;
                             i_7 = i_6;
-                            i_6 = Class476.method7931(random_21, Class316.anInt3670, 1102098553);
+                            i_6 = Class476.method7931(random_21, Class316.anInt3670);
                             i_5 = i_6 - i_7;
                             i_8 = 0;
                             i_28 = i_5;
@@ -296,7 +304,7 @@ public class Node_Sub20_Sub9 extends Node_Sub20 {
                             ints_39[0] = i_8;
                             ints_39[1] = i_24;
                             ints_39[2] = i_23 + i_25;
-                            this.method15253(random_21, ints_4, i_6 + i_8, i_25, i_22, i_23, -1730721144);
+                            method15253(random_21, ints_4, i_6 + i_8, i_25, i_22, i_23);
                             i_8 = i_24;
                         }
                     }
@@ -305,10 +313,5 @@ public class Node_Sub20_Sub9 extends Node_Sub20 {
         } else {
             return ints_3;
         }
-    }
-
-    static void method15255(short s_0) {
-        PulseEvent class282_sub50_sub12_1 = PulseEvent.createPulseEvent(15, 0L);
-        class282_sub50_sub12_1.method14965((byte) 18);
     }
 }

@@ -4,20 +4,23 @@ public class aa extends Shadow implements Interface40 {
 
     long nativeid;
 
+    aa() {
+    }
+
+    @Override
     public native void ma(boolean var1);
 
-    public void finalize() {
-        if (this.nativeid != 0L) {
-            Class156.method2642(this, (byte) 6);
+    @Override
+    protected void finalize() {
+        if (nativeid != 0L) {
+            Class156.method2642(this);
         }
-
     }
 
-    aa(ja ja_1) {
-    }
-
+    @Override
     public native void y(boolean var1);
 
+    @Override
     public native void x(boolean var1);
 
 }

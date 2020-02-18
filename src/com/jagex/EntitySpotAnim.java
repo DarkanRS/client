@@ -12,11 +12,11 @@ public class EntitySpotAnim {
 
     public Animation animation;
 
-    EntitySpotAnim(Entity animable_1) {
-        this.animation = new Animation_Sub2(animable_1);
+    EntitySpotAnim(PathingEntity animable_1) {
+        animation = new Animation_Sub2(animable_1);
     }
 
-    static final void method2827(int i_0) {
+    static void method2827() {
         Class109.redrawComponent(client.aClass118_7257);
         ++SendFinishedCutsceneAction.anInt8308;
         if (client.aBool7369 && client.aBool7403) {
@@ -61,10 +61,10 @@ public class EntitySpotAnim {
                     if (client.aClass118_7370 != null && client.method11634(client.aClass118_7257) != null) {
                         Class119.method2076(client.aClass118_7257, client.aClass118_7370);
                     }
-                } else if ((client.anInt7339 == 1 || JS5GrabWorker.method12562(-285174833)) && Class20.anInt169 > 2) {
-                    QuestIndexLoader.method4164(client.anInt7361 + client.anInt7252, client.anInt7215 + client.anInt7362, -85284222);
-                } else if (Class216.method3677(575398960)) {
-                    QuestIndexLoader.method4164(client.anInt7252 + client.anInt7361, client.anInt7215 + client.anInt7362, 405616760);
+                } else if ((client.anInt7339 == 1 || JS5GrabWorker.method12562()) && Class20.anInt169 > 2) {
+                    QuestIndexLoader.method4164(client.anInt7361 + client.anInt7252, client.anInt7215 + client.anInt7362);
+                } else if (Class216.method3677()) {
+                    QuestIndexLoader.method4164(client.anInt7252 + client.anInt7361, client.anInt7215 + client.anInt7362);
                 }
                 client.aClass118_7257 = null;
                 client.aClass118_7247 = null;

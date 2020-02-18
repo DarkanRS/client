@@ -14,10 +14,6 @@ public class ParticleTriangle {
     int centerX;
     int anInt2895;
 
-    boolean equals(ParticleTriangle class234_1) {
-        return this.centerX == class234_1.centerX && this.centerZ == class234_1.centerZ && this.centerY == class234_1.centerY;
-    }
-
     public static void method3953() {
         Class86.aShort828 = client.aShort7214;
         Class86.aShort829 = client.aShort7474;
@@ -29,5 +25,9 @@ public class ParticleTriangle {
             client.aShort7441 = 334;
             client.aShort7474 = client.aShort7214 = (short) (Class86.anInt824 * 512 / Class86.anInt825);
         }
+    }
+
+    boolean equals(ParticleTriangle class234_1) {
+        return centerX == class234_1.centerX && centerZ == class234_1.centerZ && centerY == class234_1.centerY;
     }
 }

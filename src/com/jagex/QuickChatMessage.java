@@ -5,10 +5,10 @@ import java.util.Arrays;
 
 public class QuickChatMessage {
 
+    static NodeCollection aClass482_4049;
     public int[] anIntArray4046;
     public QuickchatMessageDefinitions qcMessageDefs;
     public int qcMessageId;
-    static NodeCollection aClass482_4049;
 
     public static byte[] method6154(Object object_0, boolean bool_1) {
         if (object_0 == null) {
@@ -27,7 +27,7 @@ public class QuickChatMessage {
         }
     }
 
-    static boolean method6155(RsBitsBuffer rsbitsbuffer_0, int i_1) {
+    static boolean method6155(Packet.Bit rsbitsbuffer_0, int i_1) {
         int i_3 = rsbitsbuffer_0.readBits(2);
         int i_4;
         int i_5;
@@ -48,7 +48,7 @@ public class QuickChatMessage {
                 throw new RuntimeException();
             } else {
                 Class4 class4_7 = Class197.aClass4Array2430[i_1];
-                Player player_8 = client.players[i_1] = new Player(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager());
+                PlayerEntity player_8 = client.players[i_1] = new PlayerEntity(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager());
                 player_8.index = i_1;
                 if (Class197.aNode_Sub35Array2428[i_1] != null) {
                     player_8.decodeAppearance(Class197.aNode_Sub35Array2428[i_1]);
@@ -59,15 +59,15 @@ public class QuickChatMessage {
                 i_10 = i_9 >> 28;
                 i_11 = i_9 >> 14 & 0xff;
                 int i_12 = i_9 & 0xff;
-                WorldTile coordgrid_13 = IndexLoaders.MAP_REGION_DECODER.getBase();
+                CoordGrid coordgrid_13 = IndexLoaders.MAP_REGION_DECODER.getBase();
                 int i_14 = i_4 + (i_11 << 6) - coordgrid_13.x;
                 int i_15 = i_5 + (i_12 << 6) - coordgrid_13.y;
                 player_8.aBool10571 = class4_7.aBool29;
                 player_8.aBool10550 = class4_7.aBool33;
                 player_8.walkTypes[0] = Class197.playerMovementTypes[i_1];
                 player_8.plane = player_8.collisionPlane = (byte) i_10;
-                if (IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(i_14, i_15, 1509882915)) {
-                    player_8.collisionPlane = (byte) (player_8.collisionPlane + 1);
+                if (IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(i_14, i_15)) {
+                    player_8.collisionPlane += 1;
                 }
                 player_8.move(i_14, i_15);
                 player_8.aBool10568 = false;
@@ -120,7 +120,6 @@ public class QuickChatMessage {
                     ++i_10;
                 }
                 Class197.aClass4Array2430[i_1].anInt31 = (i_9 << 14) + i_10 + (i_17 << 28);
-                return false;
             } else {
                 i_4 = rsbitsbuffer_0.readBits(18);
                 i_5 = i_4 >> 16;
@@ -131,8 +130,8 @@ public class QuickChatMessage {
                 i_10 = i_6 + (i_17 >> 14) & 0xff;
                 i_11 = i_16 + i_17 & 0xff;
                 Class197.aClass4Array2430[i_1].anInt31 = (i_10 << 14) + i_11 + (i_9 << 28);
-                return false;
             }
+            return false;
         }
     }
 
@@ -148,11 +147,11 @@ public class QuickChatMessage {
         return null;
     }
 
-    static String method6157(IComponentDefinitions icomponentdefinitions_0, int i_1) {
-        return client.getIComponentSettings(icomponentdefinitions_0).getUseOptionFlags() == 0 ? null : (icomponentdefinitions_0.useOptionString != null && icomponentdefinitions_0.useOptionString.trim().length() != 0 ? icomponentdefinitions_0.useOptionString : (client.aBool7168 ? "Hidden-use" : null));
+    static String method6157(Component icomponentdefinitions_0) {
+        return client.getIComponentSettings(icomponentdefinitions_0).getUseOptionFlags() == 0 ? null : (icomponentdefinitions_0.useOptionString != null && !icomponentdefinitions_0.useOptionString.trim().isEmpty() ? icomponentdefinitions_0.useOptionString : (client.aBool7168 ? "Hidden-use" : null));
     }
 
-    public static final void method6159(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5) {
+    public static void method6159(int i_0, int i_1, int i_2, int i_3, int i_4) {
         int i_6 = i_2 - i_0;
         int i_7 = i_3 - i_1;
         if (i_6 == 0) {
@@ -202,7 +201,7 @@ public class QuickChatMessage {
                 i_12 = Class532_Sub2.anInt7068;
                 i_13 = (Class532_Sub2.anInt7068 - i_9 << 12) / i_8;
             }
-            AnimationIndexLoader.method11220(i_11, i_10, i_13, i_12, i_4, (byte) 12);
+            AnimationIndexLoader.method11220(i_11, i_10, i_13, i_12, i_4);
         }
     }
 
@@ -210,12 +209,12 @@ public class QuickChatMessage {
         Class9.lobbyStage = 140;
         Class9.CURRENT_CONNECTION_CONTEXT = client.LOBBY_CONNECTION_CONTEXT;
         if (client.aByteArray7152 != null) {
-            RsByteBuffer rsbytebuffer_1 = new RsByteBuffer(client.aByteArray7152);
+            Packet rsbytebuffer_1 = new Packet(client.aByteArray7152);
             Class9.aLong77 = rsbytebuffer_1.readLong();
             Class9.aLong86 = rsbytebuffer_1.readLong();
         }
         if (Class9.aLong77 < 0L) {
-            FontRenderer_Sub1.method13784(35, 776111623);
+            FontRenderer_Sub1.method13784(35);
         } else {
             Class455.method7558(false, true, "", "", Class9.aLong77);
         }
@@ -224,11 +223,11 @@ public class QuickChatMessage {
     static void method6161(boolean bool_0) {
         if (bool_0) {
             if (client.BASE_WINDOW_ID != -1) {
-                Class337.unloadInterface(client.BASE_WINDOW_ID, -650534239);
+                Class337.unloadInterface(client.BASE_WINDOW_ID);
             }
-            for (IFSubNode class282_sub44_2 = (IFSubNode) client.OPEN_INTERFACES.method7750(-649341183); class282_sub44_2 != null; class282_sub44_2 = (IFSubNode) client.OPEN_INTERFACES.method7751((byte) 6)) {
-                if (!class282_sub44_2.isLinked()) {
-                    class282_sub44_2 = (IFSubNode) client.OPEN_INTERFACES.method7750(439080271);
+            for (SubInterface class282_sub44_2 = (SubInterface) client.OPEN_INTERFACES.method7750(); class282_sub44_2 != null; class282_sub44_2 = (SubInterface) client.OPEN_INTERFACES.method7751()) {
+                if (!class282_sub44_2.linked()) {
+                    class282_sub44_2 = (SubInterface) client.OPEN_INTERFACES.method7750();
                     if (class282_sub44_2 == null) {
                         break;
                     }
@@ -237,11 +236,11 @@ public class QuickChatMessage {
             }
             client.BASE_WINDOW_ID = -1;
             client.OPEN_INTERFACES = new IterableNodeMap(8);
-            MeshModifier.method7041((byte) -97);
+            MeshModifier.method7041();
             client.BASE_WINDOW_ID = QuickchatFiller.ENTITY_DEFAULTS.lobbyWindow;
             Class516.method8867(false);
             Static.method6378();
-            Class150.method2582(client.BASE_WINDOW_ID, null, -1429871398);
+            Class150.method2582(client.BASE_WINDOW_ID, null);
         }
         Class9.aBool71 = true;
     }

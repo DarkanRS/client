@@ -6,50 +6,11 @@ public class BrightnessPreference extends Preference {
         super(i_1, class282_sub54_2);
     }
 
-    public void method12861() {
-        if (this.anInt5578 < 0 || this.anInt5578 > 4) {
-            this.anInt5578 = this.getDefaultValue();
-        }
-
-    }
-
-    int checkValid(int i_1) {
-        return 1;
-    }
-
     public BrightnessPreference(GamePreferences class282_sub54_1) {
         super(class282_sub54_1);
     }
 
-    int method7784(int i_1) {
-        return 1;
-    }
-
-    void method7780(int i_1) {
-        this.anInt5578 = -754033619 * i_1 * -859024475;
-    }
-
-    public int method12865() {
-        return this.anInt5578;
-    }
-
-    int getDefaultValue() {
-        return 3;
-    }
-
-    void setValue(int i_1) {
-        this.anInt5578 = i_1;
-    }
-
-    int method7786() {
-        return 3;
-    }
-
-    int method7787() {
-        return 3;
-    }
-
-    public static void method12869(boolean bool_0, int i_1) {
+    public static void method12869(boolean bool_0) {
         if (client.anInt7341 != 2 && client.anInt7341 != 1) {
             if (!bool_0) {
                 CutsceneAction[] arr_2 = Class86.aCutsceneActionArray822;
@@ -64,12 +25,54 @@ public class BrightnessPreference extends Preference {
             NativeLibraryLoader.CUTSCENE_MAP_XTEAS = null;
             Class276.aNode_Sub35_3346 = null;
             client.aBool7321 = false;
-            Class79.method1390(2119033925);
-            TCPPacket tcpmessage_5 = Class271.createPacket(ClientPacket.CUTSCENE_FINISHED, client.GAME_CONNECTION_CONTEXT.isaac);
+            Class79.method1390();
+            TCPPacket tcpmessage_5 = Class271.createPacket(ClientProt.CUTSCENE_FINISHED, client.GAME_CONNECTION_CONTEXT.isaac);
             tcpmessage_5.buffer.writeByte(bool_0 ? 1 : 0);
             client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_5);
         }
 
+    }
+
+    public void method12861() {
+        if (anInt5578 < 0 || anInt5578 > 4) {
+            anInt5578 = getDefaultValue();
+        }
+
+    }
+
+    @Override
+    int checkValid(int i_1) {
+        return 1;
+    }
+
+    int method7784() {
+        return 1;
+    }
+
+    void method7780(int i_1) {
+        anInt5578 = -754033619 * i_1 * -859024475;
+    }
+
+    public int method12865() {
+        return anInt5578;
+    }
+
+    @Override
+    int getDefaultValue() {
+        return 3;
+    }
+
+    @Override
+    void setValue(int i_1) {
+        anInt5578 = i_1;
+    }
+
+    int method7786() {
+        return 3;
+    }
+
+    int method7787() {
+        return 3;
     }
 
 }

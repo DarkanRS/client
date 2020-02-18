@@ -4,7 +4,7 @@ public interface Interface2 {
 
     boolean method9();
 
-    boolean method10(int var1);
+    boolean method10();
 
     void method11(boolean var1);
 
@@ -24,7 +24,7 @@ public interface Interface2 {
 
     void method19();
 
-    void method20(boolean var1, int var2);
+    void method20(boolean var1);
 
     boolean method21();
 

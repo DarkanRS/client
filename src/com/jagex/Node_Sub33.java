@@ -13,15 +13,11 @@ public class Node_Sub33 extends Node {
     int anInt7827 = Integer.MIN_VALUE;
     Node_Sub36 aNode_Sub36_7835;
 
-    boolean method12577(int i_1, int i_2) {
-        return i_1 >= this.anInt7830 && i_1 <= this.anInt7828 && i_2 >= this.anInt7834 && i_2 <= this.anInt7833 || i_1 >= this.anInt7829 && i_1 <= this.anInt7832 && i_2 >= this.anInt7831 && i_2 <= this.anInt7827;
-    }
-
     Node_Sub33(Node_Sub36 class282_sub36_1) {
-        this.aNode_Sub36_7835 = class282_sub36_1;
+        aNode_Sub36_7835 = class282_sub36_1;
     }
 
-    static String method12582(RsByteBuffer rsbytebuffer_0) {
+    static String method12582(Packet rsbytebuffer_0) {
         try {
             int i_4 = rsbytebuffer_0.readUnsignedSmart();
             if (i_4 > 32767) {
@@ -34,5 +30,9 @@ public class Node_Sub33 extends Node {
         } catch (Exception exception_8) {
             return "Cabbage";
         }
+    }
+
+    boolean method12577(int i_1, int i_2) {
+        return i_1 >= anInt7830 && i_1 <= anInt7828 && i_2 >= anInt7834 && i_2 <= anInt7833 || i_1 >= anInt7829 && i_1 <= anInt7832 && i_2 >= anInt7831 && i_2 <= anInt7827;
     }
 }

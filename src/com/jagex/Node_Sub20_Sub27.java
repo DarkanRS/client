@@ -1,20 +1,42 @@
 package com.jagex;
 
+import java.awt.*;
 import java.awt.event.ActionEvent;
 
 public class Node_Sub20_Sub27 extends Node_Sub20 {
 
     int anInt9895 = 6;
 
+    public Node_Sub20_Sub27() {
+        super(2, false);
+    }
+
+    public static void method15395(Canvas object_0) {
+        if (Shadow.anEventQueue10074 != null) {
+            for (int i_2 = 0; i_2 < 50 && Shadow.anEventQueue10074.peekEvent() != null; i_2++) {
+                Class89.sleep(1L);
+            }
+
+            try {
+                if (object_0 != null) {
+                    Shadow.anEventQueue10074.postEvent(new ActionEvent(object_0, 1001, "dummy"));
+                }
+            } catch (Exception ignored) {
+            }
+        }
+
+    }
+
+    @Override
     int[] method12319(int i_1) {
-        int[] ints_3 = this.aClass320_7667.method5721(i_1, -1371799795);
-        if (this.aClass320_7667.aBool3722) {
-            int[] ints_4 = this.method12317(0, i_1, 1969632876);
-            int[] ints_5 = this.method12317(1, i_1, 2021330645);
+        int[] ints_3 = aClass320_7667.method5721(i_1);
+        if (aClass320_7667.aBool3722) {
+            int[] ints_4 = method12317(0, i_1);
+            int[] ints_5 = method12317(1, i_1);
             int i_6;
             int i_7;
             int i_8;
-            switch (this.anInt9895) {
+            switch (anInt9895) {
                 case 1:
                     for (i_6 = 0; i_6 < Class316.anInt3670; i_6++) {
                         ints_3[i_6] = ints_5[i_6] + ints_4[i_6];
@@ -71,7 +93,7 @@ public class Node_Sub20_Sub27 extends Node_Sub20 {
                     for (i_6 = 0; i_6 < Class316.anInt3670; i_6++) {
                         i_7 = ints_4[i_6];
                         i_8 = ints_5[i_6];
-                        ints_3[i_6] = i_7 < i_8 ? i_7 : i_8;
+                        ints_3[i_6] = Math.min(i_7, i_8);
                     }
 
                     return ints_3;
@@ -79,7 +101,7 @@ public class Node_Sub20_Sub27 extends Node_Sub20 {
                     for (i_6 = 0; i_6 < Class316.anInt3670; i_6++) {
                         i_7 = ints_4[i_6];
                         i_8 = ints_5[i_6];
-                        ints_3[i_6] = i_7 > i_8 ? i_7 : i_8;
+                        ints_3[i_6] = Math.max(i_7, i_8);
                     }
 
                     return ints_3;
@@ -103,11 +125,12 @@ public class Node_Sub20_Sub27 extends Node_Sub20 {
         return ints_3;
     }
 
-    int[][] method12320(int i_1, int i_2) {
-        int[][] ints_3 = this.aClass308_7670.method5463(i_1, 1113233210);
-        if (this.aClass308_7670.aBool3619) {
-            int[][] ints_4 = this.method12333(0, i_1);
-            int[][] ints_5 = this.method12333(1, i_1);
+    @Override
+    int[][] method12320(int i_1) {
+        int[][] ints_3 = aClass308_7670.method5463(i_1);
+        if (aClass308_7670.aBool3619) {
+            int[][] ints_4 = method12333(0, i_1);
+            int[][] ints_5 = method12333(1, i_1);
             int[] ints_6 = ints_3[0];
             int[] ints_7 = ints_3[1];
             int[] ints_8 = ints_3[2];
@@ -124,7 +147,7 @@ public class Node_Sub20_Sub27 extends Node_Sub20 {
             int i_19;
             int i_20;
             int i_21;
-            switch (this.anInt9895) {
+            switch (anInt9895) {
                 case 1:
                     for (i_15 = 0; i_15 < Class316.anInt3670; i_15++) {
                         ints_6[i_15] = ints_9[i_15] + ints_12[i_15];
@@ -209,9 +232,9 @@ public class Node_Sub20_Sub27 extends Node_Sub20 {
                         i_19 = ints_12[i_15];
                         i_20 = ints_13[i_15];
                         i_21 = ints_14[i_15];
-                        ints_6[i_15] = i_16 < i_19 ? i_16 : i_19;
-                        ints_7[i_15] = i_17 < i_20 ? i_17 : i_20;
-                        ints_8[i_15] = i_18 < i_21 ? i_18 : i_21;
+                        ints_6[i_15] = Math.min(i_16, i_19);
+                        ints_7[i_15] = Math.min(i_17, i_20);
+                        ints_8[i_15] = Math.min(i_18, i_21);
                     }
 
                     return ints_3;
@@ -223,9 +246,9 @@ public class Node_Sub20_Sub27 extends Node_Sub20 {
                         i_19 = ints_12[i_15];
                         i_20 = ints_13[i_15];
                         i_21 = ints_14[i_15];
-                        ints_6[i_15] = i_16 > i_19 ? i_16 : i_19;
-                        ints_7[i_15] = i_17 > i_20 ? i_17 : i_20;
-                        ints_8[i_15] = i_18 > i_21 ? i_18 : i_21;
+                        ints_6[i_15] = Math.max(i_16, i_19);
+                        ints_7[i_15] = Math.max(i_17, i_20);
+                        ints_8[i_15] = Math.max(i_18, i_21);
                     }
 
                     return ints_3;
@@ -261,33 +284,14 @@ public class Node_Sub20_Sub27 extends Node_Sub20 {
         return ints_3;
     }
 
-    void method12322(int i_1, RsByteBuffer rsbytebuffer_2) {
+    @Override
+    void method12322(int i_1, Packet rsbytebuffer_2) {
         switch (i_1) {
             case 0:
-                this.anInt9895 = rsbytebuffer_2.readUnsignedByte();
+                anInt9895 = rsbytebuffer_2.readUnsignedByte();
                 break;
             case 1:
-                this.aBool7669 = rsbytebuffer_2.readUnsignedByte() == 1;
-        }
-
-    }
-
-    public Node_Sub20_Sub27() {
-        super(2, false);
-    }
-
-    public static void method15395(Object object_0, int i_1) {
-        if (Shadow.anEventQueue10074 != null) {
-            for (int i_2 = 0; i_2 < 50 && Shadow.anEventQueue10074.peekEvent() != null; i_2++) {
-                Class89.sleep(1L);
-            }
-
-            try {
-                if (object_0 != null) {
-                    Shadow.anEventQueue10074.postEvent(new ActionEvent(object_0, 1001, "dummy"));
-                }
-            } catch (Exception exception_4) {
-            }
+                aBool7669 = rsbytebuffer_2.readUnsignedByte() == 1;
         }
 
     }

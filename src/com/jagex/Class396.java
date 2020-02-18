@@ -12,37 +12,37 @@ public class Class396 {
         String str_0 = "Unknown";
         try {
             str_0 = System.getProperty("java.vendor").toLowerCase();
-        } catch (Exception exception_7) {
+        } catch (Exception ignored) {
         }
         str_0.toLowerCase();
         str_0 = "Unknown";
         try {
             str_0 = System.getProperty("java.version").toLowerCase();
-        } catch (Exception exception_6) {
+        } catch (Exception ignored) {
         }
         str_0.toLowerCase();
         str_0 = "Unknown";
         try {
             str_0 = System.getProperty("os.name").toLowerCase();
-        } catch (Exception exception_5) {
+        } catch (Exception ignored) {
         }
         OS_NAME = str_0.toLowerCase();
         str_0 = "Unknown";
         try {
             str_0 = System.getProperty("os.arch").toLowerCase();
-        } catch (Exception exception_4) {
+        } catch (Exception ignored) {
         }
         OS_ARCHITECTURE = str_0.toLowerCase();
         str_0 = "Unknown";
         try {
             str_0 = System.getProperty("os.version").toLowerCase();
-        } catch (Exception exception_3) {
+        } catch (Exception ignored) {
         }
         str_0.toLowerCase();
         str_0 = "~/";
         try {
             str_0 = System.getProperty("user.home").toLowerCase();
-        } catch (Exception exception_2) {
+        } catch (Exception ignored) {
         }
         new File(str_0);
     }
@@ -53,6 +53,6 @@ public class Class396 {
 
     public static void method6774(int i_0) {
         PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(11, i_0);
-        class282_sub50_sub12_2.method14965((byte) 58);
+        class282_sub50_sub12_2.method14965();
     }
 }

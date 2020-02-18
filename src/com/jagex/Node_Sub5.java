@@ -3,17 +3,17 @@ package com.jagex;
 public abstract class Node_Sub5 extends Node {
 
     boolean aBool7506;
-    OpenGLGraphicalRenderer aGraphicalRenderer_Sub1_7507;
+    OpenGLHardwareRenderer aGraphicalRenderer_Sub1_7507;
 
-    Node_Sub5(OpenGLGraphicalRenderer class505_sub1_1) {
-        this.aGraphicalRenderer_Sub1_7507 = class505_sub1_1;
+    Node_Sub5(OpenGLHardwareRenderer class505_sub1_1) {
+        aGraphicalRenderer_Sub1_7507 = class505_sub1_1;
     }
 
-    abstract void method12119(int var1, Class137_Sub1 var2, Class137_Sub1 var3);
+    abstract void method12119(Class137_Sub1 var2);
 
     abstract void method12120();
 
-    abstract void method12121(int var1);
+    abstract void method12121();
 
     abstract void method12122(int var1, int var2);
 
@@ -34,7 +34,7 @@ public abstract class Node_Sub5 extends Node {
     abstract boolean method12128();
 
     boolean method12129() {
-        return this.aBool7506;
+        return aBool7506;
     }
 
     abstract boolean method12130();
@@ -43,11 +43,11 @@ public abstract class Node_Sub5 extends Node {
 
     abstract void method12132(int var1, int var2);
 
-    abstract void method12133(int var1, Class137_Sub1 var2, Class137_Sub1 var3);
+    abstract void method12133(Class137_Sub1 var2);
 
-    abstract void method12134(int var1, Class137_Sub1 var2, Class137_Sub1 var3);
+    abstract void method12134(Class137_Sub1 var2);
 
-    abstract void method12135(int var1);
+    abstract void method12135();
 
     abstract boolean method12136();
 

@@ -1,20 +1,17 @@
 package com.jagex;
 
-public final class Class354 {
+public class Class354 {
 
     public static NativeSprite aNativeSprite_4110;
-
-    static World[] WORLDS;
-
     public static int JCOINS;
-
+    static World[] WORLDS;
     Object anObject4109;
 
     int anInt4108;
 
     Class354(Object object_1, int i_2) {
-        this.anObject4109 = object_1;
-        this.anInt4108 = i_2;
+        anObject4109 = object_1;
+        anInt4108 = i_2;
     }
 
     public static int method6214(int i_0, int i_1, int i_2) {
@@ -23,13 +20,13 @@ public final class Class354 {
     }
 
     static void method6215() {
-        SoftCache softcache_1 = Class13.aClass229_127;
+        LRUCache softcache_1 = Class13.aClass229_127;
         synchronized (Class13.aClass229_127) {
             Class13.aClass229_127.method3863();
         }
     }
 
-    static void method6216(GraphicalRenderer graphicalrenderer_0) {
+    static void method6216(AbstractRenderer graphicalrenderer_0) {
         if (!Class20.aBool187) {
             Class277.method4908(graphicalrenderer_0);
         } else {

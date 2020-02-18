@@ -12,16 +12,16 @@ public class Class56 {
     boolean aBool522;
     int anInt523;
 
-    Class56(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, boolean bool_10, boolean bool_11, int i_12) {
-        this.anInt518 = i_1;
-        this.anInt517 = i_2;
-        this.anInt515 = i_3;
-        this.anInt521 = i_4;
-        this.aShort519 = (short) i_5;
-        this.aShort520 = (short) i_6;
-        this.aShort516 = (short) i_7;
-        this.aBool522 = bool_11;
-        this.anInt523 = i_12;
+    Class56(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, boolean bool_11, int i_12) {
+        anInt518 = i_1;
+        anInt517 = i_2;
+        anInt515 = i_3;
+        anInt521 = i_4;
+        aShort519 = (short) i_5;
+        aShort520 = (short) i_6;
+        aShort516 = (short) i_7;
+        aBool522 = bool_11;
+        anInt523 = i_12;
     }
 
 }

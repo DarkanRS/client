@@ -9,8 +9,8 @@ public class Class142 {
         double d_0 = 3.834951969714103E-4D;
 
         for (int i_2 = 0; i_2 < 16384; i_2++) {
-            aFloatArray1666[i_2] = (float) Math.sin((double) i_2 * d_0);
-            aFloatArray1665[i_2] = (float) Math.cos((double) i_2 * d_0);
+            aFloatArray1666[i_2] = (float) Math.sin(i_2 * d_0);
+            aFloatArray1665[i_2] = (float) Math.cos(i_2 * d_0);
         }
 
     }

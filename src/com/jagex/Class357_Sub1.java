@@ -4,20 +4,12 @@ public class Class357_Sub1 extends Class357 {
 
     public int anInt7808;
 
-    public Class60 method24() {
-        return Class60.aClass60_607;
-    }
-
     Class357_Sub1(int i_1, Class356 class356_2, Class353 class353_3, int i_4, int i_5, int i_6) {
         super(i_1, class356_2, class353_3, i_4, i_5);
-        this.anInt7808 = i_6;
+        anInt7808 = i_6;
     }
 
-    public Class60 method25() {
-        return Class60.aClass60_607;
-    }
-
-    static final void method12565() {
+    static void method12565() {
         IndexLoaders.OVERLAY_LOADER.method11478();
         IndexLoaders.UNDERLAY_LOADER.method8032();
         IndexLoaders.IDENTIKIT_LOADER.method803();
@@ -50,6 +42,16 @@ public class Class357_Sub1 extends Class357 {
         client.aClass229_7204.method3863();
         Class20.aClass229_191.method3863();
         client.aClass229_5901.method3863();
+    }
+
+    @Override
+    public Class60 method24() {
+        return Class60.aClass60_607;
+    }
+
+    @Override
+    public Class60 method25() {
+        return Class60.aClass60_607;
     }
 
 }

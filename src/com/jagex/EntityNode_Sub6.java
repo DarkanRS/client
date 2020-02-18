@@ -10,7 +10,7 @@ public class EntityNode_Sub6 extends EntityNode {
     int anInt7859;
     String aString7860;
 
-    static BuildEnvironment[] method12598() {
-        return new BuildEnvironment[]{BuildEnvironment.BUILD_LIVE, BuildEnvironment.WIP, BuildEnvironment.INT_BETA, BuildEnvironment.LIVE, BuildEnvironment.RC};
+    static ModeWhere[] method12598() {
+        return new ModeWhere[]{ModeWhere.BUILD_LIVE, ModeWhere.WIP, ModeWhere.INT_BETA, ModeWhere.LIVE, ModeWhere.RC};
     }
 }

@@ -38,11 +38,11 @@ public class CutsceneActionType {
     int anInt4957;
 
     CutsceneActionType(int i_1, int i_2) {
-        this.id = i_1;
-        this.anInt4957 = i_2;
+        id = i_1;
+        anInt4957 = i_2;
     }
 
-    static void decodeWorldList(RsByteBuffer buffer) {
+    static void decodeWorldList(Packet buffer) {
         int size = buffer.readUnsignedSmart();
         Class354.WORLDS = new World[size];
         for (int i = 0; i < size; i++) {
@@ -69,10 +69,10 @@ public class CutsceneActionType {
 
     public static void method6914(int i_0) {
         PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(9, i_0);
-        class282_sub50_sub12_2.method14965((byte) -16);
+        class282_sub50_sub12_2.method14965();
     }
 
-    public static Class350 method6915(RsByteBuffer rsbytebuffer_0) {
+    public static Class350 method6915(Packet rsbytebuffer_0) {
         Class350 class350_2 = Class383.method6512(rsbytebuffer_0);
         int i_3 = rsbytebuffer_0.readInt();
         int i_4 = rsbytebuffer_0.readInt();

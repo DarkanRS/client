@@ -3,29 +3,9 @@ package com.jagex;
 public class Class372 implements Definition {
 
     public char aChar4328;
-    public int anInt4327 = 0;
+    public int anInt4327;
 
-    void method6356(RsByteBuffer rsbytebuffer_1) {
-        while (true) {
-            int i_3 = rsbytebuffer_1.readUnsignedByte();
-            if (i_3 == 0) {
-                return;
-            }
-
-            this.method6357(rsbytebuffer_1, i_3);
-        }
-    }
-
-    void method6357(RsByteBuffer rsbytebuffer_1, int i_2) {
-        if (i_2 == 1) {
-            this.aChar4328 = Utils.cp1252ToChar(rsbytebuffer_1.readByte());
-        } else if (i_2 == 5) {
-            this.anInt4327 = rsbytebuffer_1.readUnsignedShort();
-        }
-
-    }
-
-    public static short method6362(int i_0, int i_1) {
+    public static short method6362(int i_0) {
         int i_2 = i_0 >> 10 & 0x3f;
         int i_3 = i_0 >> 3 & 0x70;
         int i_4 = i_0 & 0x7f;
@@ -39,6 +19,26 @@ public class Class372 implements Definition {
         }
 
         return (short) (i_2 << 10 | i_6 >> 4 << 7 | i_5);
+    }
+
+    void method6356(Packet rsbytebuffer_1) {
+        while (true) {
+            int i_3 = rsbytebuffer_1.readUnsignedByte();
+            if (i_3 == 0) {
+                return;
+            }
+
+            method6357(rsbytebuffer_1, i_3);
+        }
+    }
+
+    void method6357(Packet rsbytebuffer_1, int i_2) {
+        if (i_2 == 1) {
+            aChar4328 = Utils.cp1252ToChar(rsbytebuffer_1.readByte());
+        } else if (i_2 == 5) {
+            anInt4327 = rsbytebuffer_1.readUnsignedShort();
+        }
+
     }
 
 }

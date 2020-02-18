@@ -3,9 +3,9 @@ package com.jagex;
 public class CircularBuffer {
 
     static int[] anIntArray5773;
-    static int anInt5768 = 0;
-    static int anInt5769 = 0;
-    static int anInt5772 = 0;
+    static int anInt5768;
+    static int anInt5769;
+    static int anInt5772;
     static byte[][] aByteArrayArray5767 = new byte[1000][];
     static byte[][] aByteArrayArray5771 = new byte[250][];
     static byte[][] aByteArrayArray5770 = new byte[50][];
@@ -129,10 +129,8 @@ public class CircularBuffer {
                         bytes_5[i_6] = -1;
                     }
 
-                    ++i_6;
-                } else {
-                    ++i_6;
                 }
+                ++i_6;
             }
         }
 

@@ -10,44 +10,36 @@ public class Class351 implements Interface3 {
 
     public int anInt4095;
 
-    public Class60 method25() {
-        return Class60.aClass60_601;
-    }
-
     Class351(int i_1) {
-        this.anInt4095 = i_1;
+        anInt4095 = i_1;
     }
 
-    public Class60 method24() {
-        return Class60.aClass60_601;
-    }
-
-    public static final void closeChildren(IFSubNode parentInterface, boolean unload, boolean bool_2) {
+    public static void closeChildren(SubInterface parentInterface, boolean unload, boolean bool_2) {
         int i_4 = parentInterface.interfaceId;
-        int interfaceHash = (int) parentInterface.data;
-        parentInterface.remove();
+        int interfaceHash = (int) parentInterface.pointer;
+        parentInterface.unlink();
         if (unload) {
-            Class337.unloadInterface(i_4, -775991491);
+            Class337.unloadInterface(i_4);
         }
         Class109_Sub1.method14650(i_4);
-        IComponentDefinitions component = IComponentDefinitions.getDefs(interfaceHash);
+        Component component = Component.getDefs(interfaceHash);
         if (component != null) {
             Class109.redrawComponent(component);
         }
-        OutputStream_Sub1.method12938((byte) 7);
+        OutputStream_Sub1.method12938();
         if (!bool_2 && client.BASE_WINDOW_ID != -1) {
-            Class383.method6514(client.BASE_WINDOW_ID, 1, 772605854);
+            Class383.method6514(client.BASE_WINDOW_ID, 1);
         }
         HashTableIterator itr = new HashTableIterator(client.OPEN_INTERFACES);
-        for (IFSubNode class282_sub44_8 = (IFSubNode) itr.first(); class282_sub44_8 != null; class282_sub44_8 = (IFSubNode) itr.next()) {
-            if (!class282_sub44_8.isLinked()) {
-                class282_sub44_8 = (IFSubNode) itr.first();
+        for (SubInterface class282_sub44_8 = (SubInterface) itr.first(); class282_sub44_8 != null; class282_sub44_8 = (SubInterface) itr.next()) {
+            if (!class282_sub44_8.linked()) {
+                class282_sub44_8 = (SubInterface) itr.first();
                 if (class282_sub44_8 == null) {
                     break;
                 }
             }
             if (class282_sub44_8.overlay == 3) {
-                int i_9 = (int) class282_sub44_8.data;
+                int i_9 = (int) class282_sub44_8.pointer;
                 if (i_9 >>> 16 == i_4) {
                     closeChildren(class282_sub44_8, true, bool_2);
                 }
@@ -70,5 +62,15 @@ public class Class351 implements Interface3 {
                 }
             }
         }
+    }
+
+    @Override
+    public Class60 method25() {
+        return Class60.aClass60_601;
+    }
+
+    @Override
+    public Class60 method24() {
+        return Class60.aClass60_601;
     }
 }

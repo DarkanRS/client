@@ -23,15 +23,15 @@ public class QuickChatValueType {
     public int paramCount;
 
     QuickChatValueType(int i_1, int i_2, int i_3, int i_4) {
-        this.id = i_1;
-        this.clientTransmitSize = i_2;
-        this.serverTransmitSize = i_3;
-        this.paramCount = i_4;
+        id = i_1;
+        clientTransmitSize = i_2;
+        serverTransmitSize = i_3;
+        paramCount = i_4;
     }
 
-    static final void method4179(int i_0, int i_1, int i_2, int i_3, Class476 class476_4, byte b_5) {
+    static void method4179(int i_0, int i_1, int i_2, int i_3, Class476 class476_4) {
         if (i_2 >= 1 && i_3 >= 1 && i_2 <= IndexLoaders.MAP_REGION_DECODER.getSizeX() - 2 && i_3 <= IndexLoaders.MAP_REGION_DECODER.getSizeY() - 2 && IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager() != null) {
-            SceneObject sceneobject_6 = IndexLoaders.MAP_REGION_DECODER.method4441().method12467(i_0, i_1, i_2, i_3, 2009974413);
+            Location sceneobject_6 = IndexLoaders.MAP_REGION_DECODER.method4441().method12467(i_0, i_1, i_2, i_3);
             if (sceneobject_6 != null) {
                 if (sceneobject_6 instanceof InteractableObject) {
                     ((InteractableObject) sceneobject_6).method16096(class476_4);

@@ -2,43 +2,8 @@ package com.jagex;
 
 public class Preference_Sub11 extends Preference {
 
-    void setValue(int i_1) {
-        this.anInt5578 = i_1;
-    }
-
-    int method7784(int i_1) {
-        return 1;
-    }
-
-    int getDefaultValue() {
-        return 0;
-    }
-
-    int checkValid(int i_1) {
-        return 1;
-    }
-
     public Preference_Sub11(int i_1, GamePreferences class282_sub54_2) {
         super(i_1, class282_sub54_2);
-    }
-
-    public void method12698() {
-    }
-
-    public int method12699(byte b_1) {
-        return this.anInt5578;
-    }
-
-    void method7780(int i_1) {
-        this.anInt5578 = i_1 * -754033619 * -859024475;
-    }
-
-    int method7786() {
-        return 0;
-    }
-
-    int method7787() {
-        return 0;
     }
 
     public Preference_Sub11(GamePreferences class282_sub54_1) {
@@ -54,7 +19,7 @@ public class Preference_Sub11 extends Preference {
             int i_6 = i_1 - Class291_Sub1.anInt3472;
             int i_7 = i_2 - Class291_Sub1.anInt3473;
 
-            for (Node_Sub36 class282_sub36_8 = (Node_Sub36) Class291_Sub1.aClass482_3459.head(); class282_sub36_8 != null; class282_sub36_8 = (Node_Sub36) Class291_Sub1.aClass482_3459.next(317938751)) {
+            for (Node_Sub36 class282_sub36_8 = (Node_Sub36) Class291_Sub1.aClass482_3459.head(); class282_sub36_8 != null; class282_sub36_8 = (Node_Sub36) Class291_Sub1.aClass482_3459.next()) {
                 if (i_0 == class282_sub36_8.anInt7991) {
                     int i_9 = class282_sub36_8.anInt7987;
                     int i_10 = class282_sub36_8.anInt7993;
@@ -69,6 +34,44 @@ public class Preference_Sub11 extends Preference {
 
             return i_4;
         }
+    }
+
+    @Override
+    void setValue(int i_1) {
+        anInt5578 = i_1;
+    }
+
+    int method7784() {
+        return 1;
+    }
+
+    @Override
+    int getDefaultValue() {
+        return 0;
+    }
+
+    @Override
+    int checkValid(int i_1) {
+        return 1;
+    }
+
+    public void method12698() {
+    }
+
+    public int method12699() {
+        return anInt5578;
+    }
+
+    void method7780(int i_1) {
+        anInt5578 = i_1 * -754033619 * -859024475;
+    }
+
+    int method7786() {
+        return 0;
+    }
+
+    int method7787() {
+        return 0;
     }
 
 }

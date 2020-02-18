@@ -13,13 +13,14 @@ public enum AccountCreationResponseOpcodes implements Identifiable {
     aClass483_5733(9),
     CLIENT_HAS_BEEN_UPDATED(37);
 
-    int opcode;
+    final int opcode;
 
     AccountCreationResponseOpcodes(int i_1) {
-        this.opcode = i_1;
+        opcode = i_1;
     }
 
+    @Override
     public int getValue() {
-        return this.opcode;
+        return opcode;
     }
 }

@@ -3,66 +3,35 @@ package com.jagex;
 public class SongReference {
 
     public static long MEMBERSHIP_END;
-    Class250 aClass250_1257 = null;
-    int loadedStage = 0;
-    Index musicIndex;
     public int musicId;
+    Class250 aClass250_1257;
+    int loadedStage;
+    Index musicIndex;
     Node_Sub15_Sub2 aNode_Sub15_Sub2_1256;
     Node_Sub7 aNode_Sub7_1255;
 
-    Node_Sub15_Sub2 method1954() {
-        return this.aNode_Sub15_Sub2_1256;
-    }
-
-    Node_Sub7 method1955() {
-        return this.aNode_Sub7_1255;
-    }
-
     public SongReference(Index index_1, int i_2) {
-        this.musicIndex = index_1;
-        this.musicId = i_2;
-        this.aNode_Sub15_Sub2_1256 = new Node_Sub15_Sub2();
-        this.aNode_Sub15_Sub2_1256.method15137(-1186547906);
+        musicIndex = index_1;
+        musicId = i_2;
+        aNode_Sub15_Sub2_1256 = new Node_Sub15_Sub2();
+        aNode_Sub15_Sub2_1256.method15137();
     }
 
-    public boolean isLoaded() {
-        return this.loadedStage == 2;
+    public static boolean method1966() {
+        return Class148.anInt1730 != 0 || Class148.aNode_Sub15_Sub2_1735.method15103();
     }
 
-    public boolean method1963() {
-        Class332.method5929(263587449);
-        if (this.loadedStage == 0) {
-            this.aNode_Sub7_1255 = Node_Sub7.method12164(this.musicIndex, this.musicId, 0);
-            if (this.aNode_Sub7_1255 == null) {
-                return false;
-            }
-            this.aClass250_1257 = new Class250(Class148.aClass317_1732, Class148.aClass317_1731);
-            this.loadedStage = 1;
-        }
-        if (this.loadedStage == 1) {
-            if (!this.aNode_Sub15_Sub2_1256.method15182(this.aNode_Sub7_1255, Class148.aClass317_1737, this.aClass250_1257, 1813033404)) {
-                return false;
-            }
-            this.loadedStage = 2;
-        }
-        return true;
-    }
-
-    public static boolean method1966(int i_0) {
-        return Class148.anInt1730 != 0 || Class148.aNode_Sub15_Sub2_1735.method15103(1586124800);
-    }
-
-    public static MeshRasterizer method1969(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2, int i_3, int i_4, int i_5, MeshRasterizer meshrasterizer_6, int i_7, int i_8, int i_9, int i_10, Animation animation_11) {
+    public static MeshRasterizer method1969(AbstractRenderer graphicalrenderer_0, int i_2, int i_3, int i_4, int i_5, MeshRasterizer meshrasterizer_6, int i_7, int i_8, int i_9, int i_10, Animation animation_11) {
         if (meshrasterizer_6 == null) {
             return null;
         } else {
             int i_13 = 2055;
             if (animation_11 != null) {
-                i_13 |= animation_11.method7640(-2080241294);
-                i_13 &= ~0x200;
+                i_13 |= animation_11.method7640();
+                i_13 &= -513;
             }
-            long long_14 = ((long) i_8 << 48) + ((long) i_7 << 32) + (long) (i_5 + (i_9 << 16) + (i_10 << 24));
-            SoftCache softcache_17 = Class13.aClass229_127;
+            long long_14 = ((long) i_8 << 48) + ((long) i_7 << 32) + (i_5 + (i_9 << 16) + (i_10 << 24));
+            LRUCache softcache_17 = Class13.aClass229_127;
             MeshRasterizer meshrasterizer_16;
             synchronized (Class13.aClass229_127) {
                 meshrasterizer_16 = (MeshRasterizer) Class13.aClass229_127.get(long_14);
@@ -84,7 +53,7 @@ public class SongReference {
                     b_30 = 21;
                 }
                 byte b_18 = 3;
-                int[] ints_19 = new int[]{64, 96, 128};
+                int[] ints_19 = {64, 96, 128};
                 RSMesh rsmesh_20 = new RSMesh(b_18 * b_30 + 1, b_30 * b_18 * 2 - b_30, 0);
                 int i_21 = rsmesh_20.method2662(0, 0, 0);
                 int[][] ints_22 = new int[b_18][b_30];
@@ -117,7 +86,7 @@ public class SongReference {
                     }
                 }
                 meshrasterizer_16 = graphicalrenderer_0.createMeshRasterizer(rsmesh_20, i_13, Class13.anInt128, 64, 768);
-                SoftCache softcache_31 = Class13.aClass229_127;
+                LRUCache softcache_31 = Class13.aClass229_127;
                 synchronized (Class13.aClass229_127) {
                     Class13.aClass229_127.put(meshrasterizer_16, long_14);
                 }
@@ -147,5 +116,36 @@ public class SongReference {
             }
             return meshrasterizer_16;
         }
+    }
+
+    Node_Sub15_Sub2 method1954() {
+        return aNode_Sub15_Sub2_1256;
+    }
+
+    Node_Sub7 method1955() {
+        return aNode_Sub7_1255;
+    }
+
+    public boolean isLoaded() {
+        return loadedStage == 2;
+    }
+
+    public boolean method1963() {
+        Class332.method5929();
+        if (loadedStage == 0) {
+            aNode_Sub7_1255 = Node_Sub7.method12164(musicIndex, musicId, 0);
+            if (aNode_Sub7_1255 == null) {
+                return false;
+            }
+            aClass250_1257 = new Class250(Class148.aClass317_1732, Class148.aClass317_1731);
+            loadedStage = 1;
+        }
+        if (loadedStage == 1) {
+            if (!aNode_Sub15_Sub2_1256.method15182(aNode_Sub7_1255, Class148.aClass317_1737, aClass250_1257)) {
+                return false;
+            }
+            loadedStage = 2;
+        }
+        return true;
     }
 }

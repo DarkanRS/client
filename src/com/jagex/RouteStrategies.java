@@ -1,6 +1,6 @@
 package com.jagex;
 
-public final class RouteStrategies {
+public class RouteStrategies {
 
     static FixedTileStrategy FIXED_TILE = new FixedTileStrategy();
     static GroundItemStrategy GROUND_ITEM = new GroundItemStrategy();
@@ -13,7 +13,7 @@ public final class RouteStrategies {
         throw new Error();
     }
 
-    public static void method3782(CacheableNode cacheablenode_0, CacheableNode cacheablenode_1, int i_2) {
+    public static void method3782(CacheableNode cacheablenode_0, CacheableNode cacheablenode_1) {
         if (cacheablenode_0.current != null) {
             cacheablenode_0.method13452();
         }
@@ -23,7 +23,7 @@ public final class RouteStrategies {
         cacheablenode_0.aCacheableNode_8119.current = cacheablenode_0;
     }
 
-    public static Class366 method3784(RsByteBuffer rsbytebuffer_0) {
+    public static Class366 method3784(Packet rsbytebuffer_0) {
         int i_2 = rsbytebuffer_0.readInt();
         return new Class366(i_2);
     }

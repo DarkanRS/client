@@ -10,31 +10,11 @@ public class Class274 {
     int anInt3335;
     String name;
 
-    int method4868() {
-        return this.anInt3333;
-    }
-
-    String getName() {
-        return this.name;
-    }
-
-    int getWidth() {
-        return this.width;
-    }
-
-    int method4872() {
-        return this.anInt3335;
-    }
-
-    int getHeight() {
-        return this.height;
-    }
-
     public Class274(int width, int height, int i_3, int i_4, String name) {
         this.width = width;
         this.height = height;
-        this.anInt3333 = i_3;
-        this.anInt3335 = i_4;
+        anInt3333 = i_3;
+        anInt3335 = i_4;
         this.name = name;
     }
 
@@ -42,5 +22,25 @@ public class Class274 {
         if (Class448.CONNECTION_INFO.worldId != -1) {
             Class62.setGameHost(Class448.CONNECTION_INFO.worldId, Class448.CONNECTION_INFO.host);
         }
+    }
+
+    int method4868() {
+        return anInt3333;
+    }
+
+    String getName() {
+        return name;
+    }
+
+    int getWidth() {
+        return width;
+    }
+
+    int method4872() {
+        return anInt3335;
+    }
+
+    int getHeight() {
+        return height;
     }
 }

@@ -7,20 +7,11 @@ public class EntityNode {
     public EntityNode aEntityNode_3339;
     public EntityNode aEntityNode_3340;
 
-    public void method4887() {
-        if (this.aEntityNode_3340 != null) {
-            this.aEntityNode_3340.aEntityNode_3339 = this.aEntityNode_3339;
-            this.aEntityNode_3339.aEntityNode_3340 = this.aEntityNode_3340;
-            this.aEntityNode_3339 = null;
-            this.aEntityNode_3340 = null;
-        }
+    static int method4890(int i_0, int i_1, int i_2) {
+        return i_0 < i_1 ? i_1 : (Math.min(i_0, i_2));
     }
 
-    static final int method4890(int i_0, int i_1, int i_2, int i_3) {
-        return i_0 < i_1 ? i_1 : (i_0 > i_2 ? i_2 : i_0);
-    }
-
-    public static void method4891(byte b_0) {
+    public static void method4891() {
         if (client.fullScreenFrame == null) {
             int i_1 = client.GAME_CANVAS_X;
             int i_2 = client.GAME_CANVAS_Y;
@@ -50,9 +41,18 @@ public class EntityNode {
                     if (i_4 > 0) {
                         graphics_10.fillRect(i_6, i_7 + Class107.anInt1082 - i_4, SunIndexLoader.anInt434, i_4);
                     }
-                } catch (Exception exception_9) {
+                } catch (Exception ignored) {
                 }
             }
+        }
+    }
+
+    public void method4887() {
+        if (aEntityNode_3340 != null) {
+            aEntityNode_3340.aEntityNode_3339 = aEntityNode_3339;
+            aEntityNode_3339.aEntityNode_3340 = aEntityNode_3340;
+            aEntityNode_3339 = null;
+            aEntityNode_3340 = null;
         }
     }
 }

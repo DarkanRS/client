@@ -3,69 +3,22 @@ package com.jagex;
 public class VarDefinitionLoader implements IndexLoader {
 
     static Thread aThread4520;
-    SoftCache aClass229_4517 = new SoftCache(64);
-    Index varIndex;
     public int size;
+    LRUCache aClass229_4517 = new LRUCache(64);
+    Index varIndex;
 
-    public VarDefinitionLoader(Game game_1, Language xlanguage_2, Index index_3) {
-        this.varIndex = index_3;
-        if (this.varIndex != null) {
-            this.size = this.varIndex.filesCount(SharedConfigsType.VARS.id);
+    public VarDefinitionLoader(Index index_3) {
+        varIndex = index_3;
+        if (varIndex != null) {
+            size = varIndex.filesCount(SharedConfigsType.VARS.id);
         } else {
-            this.size = 0;
+            size = 0;
         }
     }
 
-    public Class372 method6384(int i_1, int i_2) {
-        SoftCache softcache_4 = this.aClass229_4517;
-        Class372 class372_3;
-        synchronized (this.aClass229_4517) {
-            class372_3 = (Class372) this.aClass229_4517.get(i_1);
-        }
-        if (class372_3 != null) {
-            return class372_3;
-        } else {
-            Index index_5 = this.varIndex;
-            byte[] bytes_10;
-            synchronized (this.varIndex) {
-                bytes_10 = this.varIndex.getFile(SharedConfigsType.VARS.id, i_1);
-            }
-            class372_3 = new Class372();
-            if (bytes_10 != null) {
-                class372_3.method6356(new RsByteBuffer(bytes_10));
-            }
-            SoftCache softcache_9 = this.aClass229_4517;
-            synchronized (this.aClass229_4517) {
-                this.aClass229_4517.put(class372_3, i_1);
-                return class372_3;
-            }
-        }
-    }
-
-    public void method6386() {
-        SoftCache softcache_3 = this.aClass229_4517;
-        synchronized (this.aClass229_4517) {
-            this.aClass229_4517.method3858(5);
-        }
-    }
-
-    public void method6388() {
-        SoftCache softcache_2 = this.aClass229_4517;
-        synchronized (this.aClass229_4517) {
-            this.aClass229_4517.method3859();
-        }
-    }
-
-    public void method6390() {
-        SoftCache softcache_2 = this.aClass229_4517;
-        synchronized (this.aClass229_4517) {
-            this.aClass229_4517.method3863();
-        }
-    }
-
-    static void method6394(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_7) {
-        graphicalrenderer_0.method8425(i_1, i_2, i_3, i_4, i_5, (byte) -74);
-        graphicalrenderer_0.method8425(i_1 + 1, i_2 + 1, i_3 - 2, 16, -16777216, (byte) -67);
+    static void method6394(AbstractRenderer graphicalrenderer_0, int i_1, int i_2, int i_3, int i_4, int i_5) {
+        graphicalrenderer_0.method8425(i_1, i_2, i_3, i_4, i_5);
+        graphicalrenderer_0.method8425(i_1 + 1, i_2 + 1, i_3 - 2, 16, -16777216);
         graphicalrenderer_0.method8562(i_1 + 1, i_2 + 18, i_3 - 2, i_4 - 19, -16777216);
     }
 
@@ -99,7 +52,7 @@ public class VarDefinitionLoader implements IndexLoader {
         }
     }
 
-    public static Class62 method6401(RsByteBuffer rsbytebuffer_0) {
+    public static Class62 method6401(Packet rsbytebuffer_0) {
         String string_2 = rsbytebuffer_0.readString();
         Class356 class356_3 = Class356.values()[rsbytebuffer_0.readUnsignedByte()];
         Class353 class353_4 = Class353.values()[rsbytebuffer_0.readUnsignedByte()];
@@ -114,5 +67,52 @@ public class VarDefinitionLoader implements IndexLoader {
         int i_13 = rsbytebuffer_0.readInt();
         int i_14 = rsbytebuffer_0.readInt();
         return new Class62(string_2, class356_3, class353_4, i_5, i_6, i_7, i_8, i_9, i_10, i_11, i_12, i_13, i_14);
+    }
+
+    public Class372 method6384(int i_1) {
+        LRUCache softcache_4 = aClass229_4517;
+        Class372 class372_3;
+        synchronized (aClass229_4517) {
+            class372_3 = (Class372) aClass229_4517.get(i_1);
+        }
+        if (class372_3 != null) {
+            return class372_3;
+        } else {
+            Index index_5 = varIndex;
+            byte[] bytes_10;
+            synchronized (varIndex) {
+                bytes_10 = varIndex.getFile(SharedConfigsType.VARS.id, i_1);
+            }
+            class372_3 = new Class372();
+            if (bytes_10 != null) {
+                class372_3.method6356(new Packet(bytes_10));
+            }
+            LRUCache softcache_9 = aClass229_4517;
+            synchronized (aClass229_4517) {
+                aClass229_4517.put(class372_3, i_1);
+                return class372_3;
+            }
+        }
+    }
+
+    public void method6386() {
+        LRUCache softcache_3 = aClass229_4517;
+        synchronized (aClass229_4517) {
+            aClass229_4517.method3858(5);
+        }
+    }
+
+    public void method6388() {
+        LRUCache softcache_2 = aClass229_4517;
+        synchronized (aClass229_4517) {
+            aClass229_4517.method3859();
+        }
+    }
+
+    public void method6390() {
+        LRUCache softcache_2 = aClass229_4517;
+        synchronized (aClass229_4517) {
+            aClass229_4517.method3863();
+        }
     }
 }

@@ -2,9 +2,9 @@ package com.jagex;
 
 public class Class119 {
 
-    static Class344 aClass344_1460;
     public static HostNameIdentifier HOSTNAME_IDENTIFIER;
     public static JS5StandardRequester JS5_STANDARD_REQUESTER;
+    static Class344 aClass344_1460;
     public int anInt1458;
     public int anInt1454;
     public int[] anIntArray1455;
@@ -12,27 +12,18 @@ public class Class119 {
     public Class455 aClass455_1456;
     int anInt1459;
 
-    public boolean method2073(int i_1, int i_2, int i_3) {
-        if (i_2 >= 0 && i_2 < this.anIntArray1457.length) {
-            int i_4 = this.anIntArray1457[i_2];
-            return i_1 >= i_4 && i_1 <= i_4 + this.anIntArray1455[i_2];
-        }
-
-        return false;
-    }
-
     Class119(int i_1, int i_2, int[] ints_3, int[] ints_4, Class455 class455_5, int i_6) {
-        this.anInt1458 = i_1;
-        this.anInt1454 = i_2;
-        this.anIntArray1455 = ints_3;
-        this.anIntArray1457 = ints_4;
-        this.aClass455_1456 = class455_5;
-        this.anInt1459 = i_6;
+        anInt1458 = i_1;
+        anInt1454 = i_2;
+        anIntArray1455 = ints_3;
+        anIntArray1457 = ints_4;
+        aClass455_1456 = class455_5;
+        anInt1459 = i_6;
     }
 
     public static void method2074(String string_0, String string_1, int i_2, boolean bool_3) {
         if (client.gameState == 3) {
-            TCPPacket tcpmessage_5 = Class271.createPacket(ClientPacket.SEND_SIGN_UP_FORM, client.LOBBY_CONNECTION_CONTEXT.isaac);
+            TCPPacket tcpmessage_5 = Class271.createPacket(ClientProt.SEND_SIGN_UP_FORM, client.LOBBY_CONNECTION_CONTEXT.isaac);
             tcpmessage_5.buffer.writeShort(0);
             int i_6 = tcpmessage_5.buffer.index;
             tcpmessage_5.buffer.writeString(string_0);
@@ -45,7 +36,7 @@ public class Class119 {
             client.LOBBY_CONNECTION_CONTEXT.queuePacket(tcpmessage_5);
             if (i_2 < 13) {
                 client.aBool7189 = true;
-                Class188.method3142(-1273118938);
+                Class188.method3142();
             }
 
             Class237.aClass494_2916 = Class494.aClass494_5790;
@@ -59,21 +50,21 @@ public class Class119 {
         boolean bool_5 = false;
 
         for (int i_6 = 0; i_6 < i_3; i_6++) {
-            Player player_7 = client.players[ints_4[i_6]];
+            PlayerEntity player_7 = client.players[ints_4[i_6]];
             if (player_7 != null && player_7 != VertexNormal.MY_PLAYER && player_7.displayName != null && player_7.displayName.equalsIgnoreCase(string_1)) {
-                ClientPacket outgoingpacket_8 = null;
+                ClientProt outgoingpacket_8 = null;
                 if (i_0 == 1) {
-                    outgoingpacket_8 = ClientPacket.PLAYER_OP1;
+                    outgoingpacket_8 = ClientProt.PLAYER_OP1;
                 } else if (i_0 == 4) {
-                    outgoingpacket_8 = ClientPacket.PLAYER_OP4;
+                    outgoingpacket_8 = ClientProt.PLAYER_OP4;
                 } else if (i_0 == 5) {
-                    outgoingpacket_8 = ClientPacket.PLAYER_OP5;
+                    outgoingpacket_8 = ClientProt.PLAYER_OP5;
                 } else if (i_0 == 6) {
-                    outgoingpacket_8 = ClientPacket.PLAYER_OP6;
+                    outgoingpacket_8 = ClientProt.PLAYER_OP6;
                 } else if (i_0 == 7) {
-                    outgoingpacket_8 = ClientPacket.PLAYER_OP7;
+                    outgoingpacket_8 = ClientProt.PLAYER_OP7;
                 } else if (i_0 == 9) {
-                    outgoingpacket_8 = ClientPacket.PLAYER_OP9;
+                    outgoingpacket_8 = ClientProt.PLAYER_OP9;
                 }
 
                 if (outgoingpacket_8 != null) {
@@ -89,26 +80,26 @@ public class Class119 {
         }
 
         if (!bool_5) {
-            ChatLine.appendGameMessage(Message.UNABLE_TO_FIND.translate(Class223.CURRENT_LANGUAGE) + string_1);
+            ChatLine.appendGameMessage(LocalizedText.UNABLE_TO_FIND.translate(Class223.CURRENT_LANGUAGE) + string_1);
         }
 
     }
 
-    static void method2076(IComponentDefinitions icomponentdefinitions_0, IComponentDefinitions icomponentdefinitions_1) {
-        TCPPacket tcpmessage_3 = Class271.createPacket(ClientPacket.IF_DRAG_ONTO_IF, client.GAME_CONNECTION_CONTEXT.isaac);
+    static void method2076(Component icomponentdefinitions_0, Component icomponentdefinitions_1) {
+        TCPPacket tcpmessage_3 = Class271.createPacket(ClientProt.IF_DRAG_ONTO_IF, client.GAME_CONNECTION_CONTEXT.isaac);
         tcpmessage_3.buffer.writeShortLE128(icomponentdefinitions_1.slotId);
         tcpmessage_3.buffer.writeShortLE(icomponentdefinitions_0.slotId);
         tcpmessage_3.buffer.writeShort(icomponentdefinitions_1.containerItemId);
         tcpmessage_3.buffer.writeShortLE128(icomponentdefinitions_0.containerItemId);
-        tcpmessage_3.buffer.writeIntV1(icomponentdefinitions_0.idHash, -1596162032);
+        tcpmessage_3.buffer.writeIntV1(icomponentdefinitions_0.idHash);
         tcpmessage_3.buffer.writeIntLE(icomponentdefinitions_1.idHash);
         client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_3);
     }
 
-    public static void method2077(int i_0) {
+    public static void method2077() {
         Class393.preferences.setValue(Class393.preferences.removeRoofs, 1);
         Class393.preferences.setValue(Class393.preferences.removeRoofsOptionOverride, 1);
-        Class393.preferences.setValue(Class393.preferences.groundDecoration, 1);
+        Class393.preferences.setValue(Class393.preferences.groundDecor, 1);
         Class393.preferences.setValue(Class393.preferences.groundBlending, 1);
         Class393.preferences.setValue(Class393.preferences.idleAnimations, 0);
         Class393.preferences.setValue(Class393.preferences.flickeringEffects, 0);
@@ -124,12 +115,21 @@ public class Class119 {
         Class393.preferences.setValue(Class393.preferences.buildArea, MapSize.aClass106_1075.anInt1071);
         Class393.preferences.setValue(Class393.preferences.bloom, 0);
         Class393.preferences.setValue(Class393.preferences.skyBoxes, 0);
-        ImageIndexLoader.method5777(1139653705);
+        ImageIndexLoader.method5777();
         Class393.preferences.setValue(Class393.preferences.maxScreenSize, 2);
         Class393.preferences.setValue(Class393.preferences.graphics, 2);
         Class94.method1589();
         IndexLoaders.MAP_REGION_DECODER.method4435().method4048();
         client.aBool7185 = true;
+    }
+
+    public boolean method2073(int i_1, int i_2) {
+        if (i_2 >= 0 && i_2 < anIntArray1457.length) {
+            int i_4 = anIntArray1457[i_2];
+            return i_1 >= i_4 && i_1 <= i_4 + anIntArray1455[i_2];
+        }
+
+        return false;
     }
 
 }

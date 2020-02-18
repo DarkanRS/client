@@ -6,23 +6,23 @@ public interface Interface27 {
 
     void method161();
 
-    void method187(boolean var1);
+    void method187();
 
     void method188();
 
     boolean method189(long var1);
 
-    int method190(int var1);
+    int method190();
 
-    void x(boolean var1);
+    void x();
 
-    int method191(int var1);
+    int method191();
 
-    void method192(boolean var1);
+    void method192();
 
     boolean method193(long var1);
 
-    void method194(boolean var1);
+    void method194();
 
     int method71();
 

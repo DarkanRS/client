@@ -7,13 +7,11 @@ public class CacheableNode extends Node {
     public CacheableNode current;
 
     public void method13452() {
-        if (this.current != null) {
-            this.current.aCacheableNode_8119 = this.aCacheableNode_8119;
-            this.aCacheableNode_8119.current = this.current;
-            this.aCacheableNode_8119 = null;
-            this.current = null;
+        if (current != null) {
+            current.aCacheableNode_8119 = aCacheableNode_8119;
+            aCacheableNode_8119.current = current;
+            aCacheableNode_8119 = null;
+            current = null;
         }
-
     }
-
 }

@@ -6,8 +6,10 @@ public interface Interface26 extends Interface9 {
 
     long method2();
 
+    @Override
     void method26();
 
+    @Override
     void method32();
 
     void method185();

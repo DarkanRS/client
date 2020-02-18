@@ -8,7 +8,7 @@ public class Class159 {
         throw new Error();
     }
 
-    public static final boolean method2734(String string_0, String string_1, String string_2, String string_3, byte b_4) {
+    public static boolean method2734(String string_0, String string_1, String string_2, String string_3, byte b_4) {
         if (string_0 != null) {
             if (string_2 != null) {
                 if (!string_0.startsWith("#")) {
@@ -30,7 +30,7 @@ public class Class159 {
         return false;
     }
 
-    static final int method2735(int i_0, int i_1, int i_2) {
+    static int method2735(int i_0, int i_1, int i_2) {
         int i_4 = i_0 / i_2;
         int i_5 = i_0 & i_2 - 1;
         int i_6 = i_1 / i_2;
@@ -39,16 +39,16 @@ public class Class159 {
         int i_9 = Class241.method4151(i_4 + 1, i_6);
         int i_10 = Class241.method4151(i_4, i_6 + 1);
         int i_11 = Class241.method4151(i_4 + 1, i_6 + 1);
-        int i_12 = Class430.method7220(i_8, i_9, i_5, i_2, -1918782622);
-        int i_13 = Class430.method7220(i_10, i_11, i_5, i_2, -1190208643);
-        return Class430.method7220(i_12, i_13, i_7, i_2, -1754820522);
+        int i_12 = Class430.method7220(i_8, i_9, i_5, i_2);
+        int i_13 = Class430.method7220(i_10, i_11, i_5, i_2);
+        return Class430.method7220(i_12, i_13, i_7, i_2);
     }
 
     public static void method2736(long[] longs_0, int[] ints_1) {
         Class497.method8316(longs_0, ints_1, 0, longs_0.length - 1);
     }
 
-    public static int method2739(int i_0, int i_1) {
+    public static int method2739(int i_0) {
         int i_2 = 0;
         if (i_0 < 0 || i_0 >= 65536) {
             i_0 >>>= 16;

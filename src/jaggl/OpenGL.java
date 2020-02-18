@@ -5,12 +5,9 @@ package jaggl;
 
 import java.awt.*;
 import java.util.Hashtable;
+import java.util.function.Predicate;
 
 public class OpenGL {
-    long peer;
-    private Hashtable aHashtable1747;
-    private Thread aThread1748;
-    private static final Hashtable aHashtable1749 = new Hashtable();
     public static final int anInt1750 = 5120;
     public static final int anInt1751 = 5121;
     public static final int anInt1752 = 5122;
@@ -109,7 +106,6 @@ public class OpenGL {
     public static final int anInt1845 = 9217;
     public static final int anInt1846 = 9473;
     public static final int anInt1847 = 9216;
-    public static final int anInt1848 = 9474;
     public static final int anInt1849 = 8448;
     public static final int anInt1850 = 9728;
     public static final int anInt1851 = 10497;
@@ -122,7 +118,6 @@ public class OpenGL {
     public static final int anInt1858 = 7936;
     public static final int anInt1859 = 7937;
     public static final int anInt1860 = 7938;
-    private static final int anInt1861 = 7939;
     public static final int anInt1862 = 256;
     public static final int anInt1863 = 1024;
     public static final int anInt1864 = 2048;
@@ -209,76 +204,11 @@ public class OpenGL {
     public static final int anInt1945 = 36161;
     public static final int anInt1946 = 36008;
     public static final int anInt1947 = 36219;
-
-    public native long init(Canvas canvas, int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_);
-
-    public native boolean arePbuffersAvailable();
-
-    public boolean method2569(String string) {
-        if (aHashtable1747 == null) {
-            aHashtable1747 = new Hashtable();
-            String string_5_ = glGetString(7939);
-            int i = 0;
-            for (; ; ) {
-                int i_6_ = string_5_.indexOf(' ', i);
-                if (i_6_ == -1)
-                    break;
-                String string_7_ = string_5_.substring(i, i_6_).trim();
-                if (string_7_.length() != 0)
-                    aHashtable1747.put(string_7_, string_7_);
-                i = 1 + i_6_;
-            }
-            String string_8_ = string_5_.substring(i).trim();
-            if (string_8_.length() != 0)
-                aHashtable1747.put(string_8_, string_8_);
-        }
-        return aHashtable1747.containsKey(string);
-    }
-
-    public synchronized boolean method2570() {
-        Thread thread = Thread.currentThread();
-        if (attachPeer()) {
-            OpenGL opengl_9_ = (OpenGL) aHashtable1749.put(thread, this);
-            if (null != opengl_9_)
-                opengl_9_.aThread1748 = null;
-            aThread1748 = thread;
-            return true;
-        }
-        return false;
-    }
-
-    public synchronized boolean method2571() {
-        if (aThread1748 != Thread.currentThread())
-            return false;
-        detachPeer();
-        aHashtable1749.remove(aThread1748);
-        aThread1748 = null;
-        return true;
-    }
-
-    private native boolean attachPeer();
-
-    private native void detachPeer();
-
-    public native long prepareSurface(Canvas canvas);
-
-    public native void surfaceResized(long l);
-
-    public native void releaseSurface(Canvas canvas, long l);
-
-    public native boolean setSurface(long l);
-
-    public native long createPbuffer(int i, int i_10_);
-
-    public native void releasePbuffer(long l);
-
-    public native void setPbuffer(long l);
-
-    public native void swapBuffers(long l);
-
-    public native void setSwapInterval(int i);
-
-    public native void release();
+    private static final Hashtable<Thread, OpenGL> associatedThreads = new Hashtable<>();
+    private static final int anInt1861 = 7939;
+    long peer;
+    private Hashtable<String, String> aHashtable1747;
+    private Thread threadPeer;
 
     public static native void glEnable(int i);
 
@@ -648,141 +578,79 @@ public class OpenGL {
 
     public static native void glStencilOp(int i, int i_353_, int i_354_);
 
-    public boolean method2572(String string) {
+    public native long init(Canvas canvas, int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_);
+
+    public native boolean arePbuffersAvailable();
+
+    public boolean supportsExtension(String extensionName) {
         if (aHashtable1747 == null) {
-            aHashtable1747 = new Hashtable();
-            String string_355_ = glGetString(7939);
-            int i = 0;
-            for (; ; ) {
-                int i_356_ = string_355_.indexOf(' ', i);
-                if (i_356_ == -1)
+            aHashtable1747 = new Hashtable<>();
+            String oglString = glGetString(7939);
+            int charIndex = 0;
+            while (true) {
+                int oglWord = oglString.indexOf(' ', charIndex);
+                if (oglWord == -1) {
                     break;
-                String string_357_ = string_355_.substring(i, i_356_).trim();
-                if (string_357_.length() != 0)
-                    aHashtable1747.put(string_357_, string_357_);
-                i = 1 + i_356_;
+                }
+                String oglWord2 = oglString.substring(charIndex, oglWord).trim();
+                if (!oglWord2.isEmpty()) {
+                    aHashtable1747.put(oglWord2, oglWord2);
+                };
+                charIndex = 1 + oglWord;
             }
-            String string_358_ = string_355_.substring(i).trim();
-            if (string_358_.length() != 0)
-                aHashtable1747.put(string_358_, string_358_);
+            String string_8_ = oglString.substring(charIndex).trim();
+            if (!string_8_.isEmpty()) {
+                aHashtable1747.put(string_8_, string_8_);
+            }
         }
-        return aHashtable1747.containsKey(string);
+        return aHashtable1747.containsKey(extensionName);
     }
 
-    public boolean method2573(String string) {
-        if (aHashtable1747 == null) {
-            aHashtable1747 = new Hashtable();
-            String string_359_ = glGetString(7939);
-            int i = 0;
-            for (; ; ) {
-                int i_360_ = string_359_.indexOf(' ', i);
-                if (i_360_ == -1)
-                    break;
-                String string_361_ = string_359_.substring(i, i_360_).trim();
-                if (string_361_.length() != 0)
-                    aHashtable1747.put(string_361_, string_361_);
-                i = 1 + i_360_;
-            }
-            String string_362_ = string_359_.substring(i).trim();
-            if (string_362_.length() != 0)
-                aHashtable1747.put(string_362_, string_362_);
-        }
-        return aHashtable1747.containsKey(string);
-    }
-
-    public boolean method2574(String string) {
-        if (aHashtable1747 == null) {
-            aHashtable1747 = new Hashtable();
-            String string_363_ = glGetString(7939);
-            int i = 0;
-            for (; ; ) {
-                int i_364_ = string_363_.indexOf(' ', i);
-                if (i_364_ == -1)
-                    break;
-                String string_365_ = string_363_.substring(i, i_364_).trim();
-                if (string_365_.length() != 0)
-                    aHashtable1747.put(string_365_, string_365_);
-                i = 1 + i_364_;
-            }
-            String string_366_ = string_363_.substring(i).trim();
-            if (string_366_.length() != 0)
-                aHashtable1747.put(string_366_, string_366_);
-        }
-        return aHashtable1747.containsKey(string);
-    }
-
-    public boolean method2575(String string) {
-        if (aHashtable1747 == null) {
-            aHashtable1747 = new Hashtable();
-            String string_367_ = glGetString(7939);
-            int i = 0;
-            for (; ; ) {
-                int i_368_ = string_367_.indexOf(' ', i);
-                if (i_368_ == -1)
-                    break;
-                String string_369_ = string_367_.substring(i, i_368_).trim();
-                if (string_369_.length() != 0)
-                    aHashtable1747.put(string_369_, string_369_);
-                i = 1 + i_368_;
-            }
-            String string_370_ = string_367_.substring(i).trim();
-            if (string_370_.length() != 0)
-                aHashtable1747.put(string_370_, string_370_);
-        }
-        return aHashtable1747.containsKey(string);
-    }
-
-    public boolean method2576(String string) {
-        if (aHashtable1747 == null) {
-            aHashtable1747 = new Hashtable();
-            String string_371_ = glGetString(7939);
-            int i = 0;
-            for (; ; ) {
-                int i_372_ = string_371_.indexOf(' ', i);
-                if (i_372_ == -1)
-                    break;
-                String string_373_ = string_371_.substring(i, i_372_).trim();
-                if (string_373_.length() != 0)
-                    aHashtable1747.put(string_373_, string_373_);
-                i = 1 + i_372_;
-            }
-            String string_374_ = string_371_.substring(i).trim();
-            if (string_374_.length() != 0)
-                aHashtable1747.put(string_374_, string_374_);
-        }
-        return aHashtable1747.containsKey(string);
-    }
-
-    public synchronized boolean method2577() {
+    public synchronized boolean method2570() {
         Thread thread = Thread.currentThread();
         if (attachPeer()) {
-            OpenGL opengl_375_ = (OpenGL) aHashtable1749.put(thread, this);
-            if (null != opengl_375_)
-                opengl_375_.aThread1748 = null;
-            aThread1748 = thread;
+            OpenGL released = associatedThreads.put(thread, this);
+            if (released != null) {
+                released.threadPeer = null;
+            }
+            threadPeer = thread;
             return true;
         }
         return false;
     }
 
-    public synchronized boolean method2578() {
-        Thread thread = Thread.currentThread();
-        if (attachPeer()) {
-            OpenGL opengl_376_ = (OpenGL) aHashtable1749.put(thread, this);
-            if (null != opengl_376_)
-                opengl_376_.aThread1748 = null;
-            aThread1748 = thread;
-            return true;
-        }
-        return false;
-    }
-
-    public synchronized boolean method2579() {
-        if (aThread1748 != Thread.currentThread())
+    public synchronized boolean method2571() {
+        if (threadPeer != Thread.currentThread()) {
             return false;
+        }
         detachPeer();
-        aHashtable1749.remove(aThread1748);
-        aThread1748 = null;
+        associatedThreads.remove(threadPeer);
+        threadPeer = null;
         return true;
     }
+
+    private native boolean attachPeer();
+
+    private native void detachPeer();
+
+    public native long prepareSurface(Canvas canvas);
+
+    public native void surfaceResized(long l);
+
+    public native void releaseSurface(Canvas canvas, long l);
+
+    public native boolean setSurface(long l);
+
+    public native long createPbuffer(int i, int i_10_);
+
+    public native void releasePbuffer(long l);
+
+    public native void setPbuffer(long l);
+
+    public native void swapBuffers(long l);
+
+    public native void setSwapInterval(int i);
+
+    public native void release();
+
 }

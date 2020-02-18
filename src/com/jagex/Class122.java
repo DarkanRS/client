@@ -2,41 +2,15 @@ package com.jagex;
 
 public class Class122 {
 
+    public int[] anIntArray1531;
+    public int[] anIntArray1534;
     Class111 aClass111_1529;
-
     Class111 aClass111_1533;
-
     int anInt1528 = -1;
-
     String aString1530;
-
     String aString1532;
 
-    public int[] anIntArray1531;
-
-    public int[] anIntArray1534;
-
-    void method2105(ShaderDecoder class100_1, byte b_2) {
-        int i_3 = class100_1.getNextStringLength();
-        this.aClass111_1529 = NPCIndexLoader.method6852(-1465285148)[i_3];
-        int i_4;
-        if (this.aClass111_1529 == Class111.aClass111_1109) {
-            i_4 = class100_1.getNextStringLength();
-            this.aClass111_1533 = NPCIndexLoader.method6852(-2096161358)[i_4];
-            this.anInt1528 = class100_1.getNextStringLength();
-        }
-        this.aString1530 = class100_1.readString();
-        this.aString1532 = class100_1.readString();
-        i_4 = class100_1.getNextStringLength();
-        this.anIntArray1531 = new int[i_4];
-        this.anIntArray1534 = new int[i_4];
-        for (int i_5 = 0; i_5 < i_4; i_5++) {
-            this.anIntArray1531[i_5] = class100_1.getNextStringLength();
-            this.anIntArray1534[i_5] = class100_1.getNextStringLength();
-        }
-    }
-
-    public static void method2109(NativeSprite[] arr_0, byte b_1) {
+    public static void method2109(NativeSprite[] arr_0) {
         Class20.anInt186 = arr_0.length;
         Class115.aNativeSpriteArray1248 = new NativeSprite[Class20.anInt186 + 10];
         Class20.anIntArray177 = new int[Class20.anInt186 + 10];
@@ -103,17 +77,37 @@ public class Class122 {
         ShaderLoader.aClass194_1243 = null;
         DefaultsFile.aClass194_6967 = null;
         RouteFinder.aClass194_3103 = null;
-        Transform_Sub1_Sub5_Sub1.aClass194_10527 = null;
+        GraphNode_Sub1_Sub5_Sub1.aClass194_10527 = null;
         if (Class291_Sub1.MAP_AREA_LOADER != null) {
             Class291_Sub1.MAP_AREA_LOADER.method3699();
-            Class291_Sub1.MAP_AREA_LOADER.method3697(128, 64, 1766469976);
+            Class291_Sub1.MAP_AREA_LOADER.method3697(128, 64);
         }
         if (Class291_Sub1.MAP_SPRITE_LOADER != null) {
-            Class291_Sub1.MAP_SPRITE_LOADER.method7175(64, 64, 1145501351);
+            Class291_Sub1.MAP_SPRITE_LOADER.method7175(64, 64);
         }
         if (Class291_Sub1.OBJECT_LOADER != null) {
             Class291_Sub1.OBJECT_LOADER.method7899(256);
         }
         IndexLoaders.VARBIT_LOADER.method3906(64);
+    }
+
+    void method2105(ShaderDecoder class100_1) {
+        int i_3 = class100_1.getNextStringLength();
+        aClass111_1529 = NPCIndexLoader.method6852()[i_3];
+        int i_4;
+        if (aClass111_1529 == Class111.aClass111_1109) {
+            i_4 = class100_1.getNextStringLength();
+            aClass111_1533 = NPCIndexLoader.method6852()[i_4];
+            anInt1528 = class100_1.getNextStringLength();
+        }
+        aString1530 = class100_1.readString();
+        aString1532 = class100_1.readString();
+        i_4 = class100_1.getNextStringLength();
+        anIntArray1531 = new int[i_4];
+        anIntArray1534 = new int[i_4];
+        for (int i_5 = 0; i_5 < i_4; i_5++) {
+            anIntArray1531[i_5] = class100_1.getNextStringLength();
+            anIntArray1534[i_5] = class100_1.getNextStringLength();
+        }
     }
 }

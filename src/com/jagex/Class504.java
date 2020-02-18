@@ -8,11 +8,11 @@ public abstract class Class504 {
         throw new Error();
     }
 
-    static boolean loadingState(int i_0, byte b_1) {
+    static boolean loadingState(int i_0) {
         return i_0 == 4 || i_0 == 15 || i_0 == 1;
     }
 
-    public static final int getTerrainHeightAtPos(int i_0, int i_1, int i_2) {
+    public static int getTerrainHeightAtPos(int i_0, int i_1, int i_2) {
         if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager() == null) {
             return 0;
         } else {
@@ -23,7 +23,7 @@ public abstract class Class504 {
                 if (i_2 < 3 && (IndexLoaders.MAP_REGION_DECODER.method4433().tileMasks[1][i_4][i_5] & 0x2) != 0) {
                     i_6 = i_2 + 1;
                 }
-                return IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().aGroundArray2591[i_6].averageHeight(i_0, i_1, 1879647652);
+                return IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().aGroundArray2591[i_6].averageHeight(i_0, i_1);
             } else {
                 return 0;
             }

@@ -58,43 +58,43 @@ public class Class480 {
         throw new Error();
     }
 
-    public static final void method8043(int i_0) {
+    public static void method8043() {
         String string_1 = Class445.aString5384 != null ? Class445.aString5384 : MapAreaDefinitions.method3741();
-        CacheableNode_Sub6.method14788(string_1, false, Class393.preferences.currentToolkit.getValue(375740834) == 5, client.aBool7158, client.aBool7159, (byte) -111);
+        CacheableNode_Sub6.method14788(string_1, false, client.aBool7158);
     }
 
-    static void method8044(IComponentDefinitions[] arr_0, IComponentDefinitions icomponentdefinitions_1, boolean bool_2, byte b_3) {
+    static void method8044(Component[] arr_0, Component icomponentdefinitions_1, boolean bool_2) {
         int i_4 = icomponentdefinitions_1.scrollWidth != 0 ? icomponentdefinitions_1.scrollWidth : icomponentdefinitions_1.width;
         int i_5 = icomponentdefinitions_1.scrollHeight != 0 ? icomponentdefinitions_1.scrollHeight : icomponentdefinitions_1.height;
-        InteractableObject.method16099(arr_0, icomponentdefinitions_1.idHash, i_4, i_5, bool_2, (byte) 29);
+        InteractableObject.method16099(arr_0, icomponentdefinitions_1.idHash, i_4, i_5, bool_2);
         if (icomponentdefinitions_1.itemSlots != null) {
-            InteractableObject.method16099(icomponentdefinitions_1.itemSlots, icomponentdefinitions_1.idHash, i_4, i_5, bool_2, (byte) 17);
+            InteractableObject.method16099(icomponentdefinitions_1.itemSlots, icomponentdefinitions_1.idHash, i_4, i_5, bool_2);
         }
-        IFSubNode class282_sub44_6 = (IFSubNode) client.OPEN_INTERFACES.get(icomponentdefinitions_1.idHash);
+        SubInterface class282_sub44_6 = (SubInterface) client.OPEN_INTERFACES.get(icomponentdefinitions_1.idHash);
         if (class282_sub44_6 != null) {
-            Class442.method7403(class282_sub44_6.interfaceId, i_4, i_5, bool_2, 1720687852);
+            Class442.method7403(class282_sub44_6.interfaceId, i_4, i_5, bool_2);
         }
         if (icomponentdefinitions_1 == client.GAME_SCREEN_INTERFACE) {
             int i_7 = Class197.NUM_PLAYER_INDICES;
             int[] ints_8 = Class197.PLAYER_INDICES;
             int i_9;
             for (i_9 = 0; i_9 < i_7; i_9++) {
-                Player player_12 = client.players[ints_8[i_9]];
+                PlayerEntity player_12 = client.players[ints_8[i_9]];
                 if (player_12 != null) {
-                    player_12.method15795(i_4, i_5, bool_2, (byte) 27);
+                    player_12.method15795(i_4, i_5, bool_2);
                 }
             }
             for (i_9 = 0; i_9 < client.NPC_UPDATE_INDEX; i_9++) {
                 int i_10 = client.NPC_UPDATE_INDICES[i_9];
-                StringNode class282_sub47_11 = (StringNode) client.NPCS.get(i_10);
+                ObjectNode class282_sub47_11 = (ObjectNode) client.NPC_MAP.get(i_10);
                 if (class282_sub47_11 != null) {
-                    ((Entity) class282_sub47_11.anObject8068).method15795(i_4, i_5, bool_2, (byte) -94);
+                    ((PathingEntity) class282_sub47_11.anObject8068).method15795(i_4, i_5, bool_2);
                 }
             }
         }
     }
 
-    public static MapSize getMapSize(int i_0, byte b_1) {
+    public static MapSize getMapSize(int i_0) {
         MapSize[] arr_2 = IFSubObjectPosition.method11352();
         for (int i_3 = 0; i_3 < arr_2.length; i_3++) {
             MapSize class106_4 = arr_2[i_3];

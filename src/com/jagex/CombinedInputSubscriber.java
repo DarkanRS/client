@@ -7,33 +7,12 @@ public class CombinedInputSubscriber implements InputSubscriber {
     int[] requiredKeys;
 
     CombinedInputSubscriber(int i_1, int i_2, int[] ints_3) {
-        this.clickType = i_1;
-        this.minimumClicks = i_2;
-        this.requiredKeys = ints_3;
+        clickType = i_1;
+        minimumClicks = i_2;
+        requiredKeys = ints_3;
     }
 
-    public boolean valid(MouseRecord class282_sub53_1, KeyRecord[] arr_2, int i_3, KeyRecorder class199_4) {
-        if (class282_sub53_1 == null) {
-            return this.clickType == -1;
-        } else {
-            if (this.clickType != class282_sub53_1.getClickType()) {
-                return false;
-            }
-            if (this.minimumClicks > class282_sub53_1.getMeta()) {
-                return false;
-            }
-            int[] ints_6 = this.requiredKeys;
-            for (int i_7 = 0; i_7 < ints_6.length; i_7++) {
-                int i_8 = ints_6[i_7];
-                if (!class199_4.held(i_8)) {
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
-
-    static CombinedInputSubscriber decode(RsByteBuffer rsbytebuffer_0) {
+    static CombinedInputSubscriber decode(Packet rsbytebuffer_0) {
         int clickType = rsbytebuffer_0.readUnsignedByte();
         int minimumClicks = rsbytebuffer_0.readUnsignedByte();
         int count = rsbytebuffer_0.readUnsignedByte();
@@ -80,9 +59,7 @@ public class CombinedInputSubscriber implements InputSubscriber {
                 }
                 if (numResults >= results.length) {
                     short[] newResults = new short[results.length * 2];
-                    for (int j = 0; j < numResults; j++) {
-                        newResults[j] = results[j];
-                    }
+                    System.arraycopy(results, 0, newResults, 0, numResults);
                     results = newResults;
                 }
                 results[numResults++] = (short) i;
@@ -96,5 +73,27 @@ public class CombinedInputSubscriber implements InputSubscriber {
             resultNames[i_12] = IndexLoaders.ITEM_LOADER.getItemDefinitions(results[i_12]).name;
         }
         ShaderDecoder.sortAlphabetically(resultNames, Class308.CS2_QUERY_RESULTS);
+    }
+
+    @Override
+    public boolean valid(MouseRecord class282_sub53_1, KeyRecord[] arr_2, int i_3, KeyRecorder class199_4) {
+        if (class282_sub53_1 == null) {
+            return clickType == -1;
+        } else {
+            if (clickType != class282_sub53_1.getClickType()) {
+                return false;
+            }
+            if (minimumClicks > class282_sub53_1.getMeta()) {
+                return false;
+            }
+            int[] ints_6 = requiredKeys;
+            for (int i_7 = 0; i_7 < ints_6.length; i_7++) {
+                int i_8 = ints_6[i_7];
+                if (!class199_4.held(i_8)) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 }

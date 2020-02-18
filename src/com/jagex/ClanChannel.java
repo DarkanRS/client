@@ -4,101 +4,22 @@ import java.util.BitSet;
 
 public class ClanChannel extends Node {
 
-    boolean namesAsString = true;
-    public int numPlayers = 0;
-    public String clanName = null;
-    int[] sortedNameIndices;
-    public ClanChannelPlayer[] players;
-    boolean namesAsLong;
-    long nextUpdateNumber;
-    public byte minRankToKick;
-    public byte guestsTalk;
-
     static {
         new BitSet(65536);
     }
 
-    public ClanChannel(RsByteBuffer buffer) {
-        this.decode(buffer);
-    }
+    public int numPlayers;
+    public String clanName;
+    public ClanChannelPlayer[] players;
+    public byte minRankToKick;
+    public byte guestsTalk;
+    boolean namesAsString = true;
+    int[] sortedNameIndices;
+    boolean namesAsLong;
+    long nextUpdateNumber;
 
-    public int[] getSortedPlayersByName() {
-        if (this.sortedNameIndices == null) {
-            String[] playerNames = new String[this.numPlayers];
-            this.sortedNameIndices = new int[this.numPlayers];
-            for (int i_3 = 0; i_3 < this.numPlayers; this.sortedNameIndices[i_3] = i_3++) {
-                playerNames[i_3] = this.players[i_3].name;
-            }
-            Class111.toSortedIndicesArr(playerNames, this.sortedNameIndices);
-        }
-        return this.sortedNameIndices;
-    }
-
-    void method12096(int i_1) {
-        --this.numPlayers;
-        if (this.numPlayers == 0) {
-            this.players = null;
-        } else {
-            Class503.method8359(this.players, i_1 + 1, this.players, i_1, this.numPlayers - i_1);
-        }
-        this.sortedNameIndices = null;
-    }
-
-    public int getUserSlot(String string_1) {
-        for (int i_3 = 0; i_3 < this.numPlayers; i_3++) {
-            if (this.players[i_3].name.equalsIgnoreCase(string_1)) {
-                return i_3;
-            }
-        }
-        return -1;
-    }
-
-    void decode(RsByteBuffer buffer) {
-        int nameTypeFlag = buffer.readUnsignedByte();
-        if ((nameTypeFlag & 0x1) != 0) {
-            this.namesAsLong = true;
-        }
-        if ((nameTypeFlag & 0x2) != 0) {
-            this.namesAsString = true;
-        }
-        this.data = buffer.readLong();
-        this.nextUpdateNumber = buffer.readLong();
-        this.clanName = buffer.readString();
-        buffer.readUnsignedByte();
-        this.minRankToKick = buffer.readByte();
-        this.guestsTalk = buffer.readByte();
-        this.numPlayers = buffer.readUnsignedShort();
-        if (this.numPlayers > 0) {
-            this.players = new ClanChannelPlayer[this.numPlayers];
-            for (int i_4 = 0; i_4 < this.numPlayers; i_4++) {
-                ClanChannelPlayer player = new ClanChannelPlayer();
-                if (this.namesAsLong) {
-                    buffer.readLong();
-                }
-                if (this.namesAsString) {
-                    player.name = buffer.readString();
-                }
-                player.rank = buffer.readByte();
-                player.world = buffer.readUnsignedShort();
-                this.players[i_4] = player;
-            }
-        }
-    }
-
-    void method12105(ClanChannelPlayer class57_1) {
-        if (this.players == null || this.numPlayers >= this.players.length) {
-            this.method12112(this.numPlayers + 5);
-        }
-        this.players[++this.numPlayers - 1] = class57_1;
-        this.sortedNameIndices = null;
-    }
-
-    void method12112(int i_1) {
-        if (this.players != null) {
-            Class503.method8359(this.players, 0, this.players = new ClanChannelPlayer[i_1], 0, this.numPlayers);
-        } else {
-            this.players = new ClanChannelPlayer[i_1];
-        }
+    public ClanChannel(Packet buffer) {
+        decode(buffer);
     }
 
     public static void method12114(int i_0) {
@@ -119,7 +40,7 @@ public class ClanChannel extends Node {
 
     static void method12117(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
         if (i_0 == i_2 && i_3 == i_1 && i_4 == i_6 && i_5 == i_7) {
-            AnimationIndexLoader.method11220(i_0, i_1, i_6, i_7, i_8, (byte) 47);
+            AnimationIndexLoader.method11220(i_0, i_1, i_6, i_7, i_8);
         } else {
             int i_10 = i_0;
             int i_11 = i_1;
@@ -146,10 +67,89 @@ public class ClanChannel extends Node {
                 int i_32 = i_24 * i_23;
                 int i_33 = i_0 + (i_29 + i_27 + i_31 >> 12);
                 int i_34 = (i_28 + i_30 + i_32 >> 12) + i_1;
-                AnimationIndexLoader.method11220(i_10, i_11, i_33, i_34, i_8, (byte) 85);
+                AnimationIndexLoader.method11220(i_10, i_11, i_33, i_34, i_8);
                 i_10 = i_33;
                 i_11 = i_34;
             }
+        }
+    }
+
+    public int[] getSortedPlayersByName() {
+        if (sortedNameIndices == null) {
+            String[] playerNames = new String[numPlayers];
+            sortedNameIndices = new int[numPlayers];
+            for (int i_3 = 0; i_3 < numPlayers; sortedNameIndices[i_3] = i_3++) {
+                playerNames[i_3] = players[i_3].name;
+            }
+            Class111.toSortedIndicesArr(playerNames, sortedNameIndices);
+        }
+        return sortedNameIndices;
+    }
+
+    void method12096(int i_1) {
+        --numPlayers;
+        if (numPlayers == 0) {
+            players = null;
+        } else {
+            Class503.method8359(players, i_1 + 1, players, i_1, numPlayers - i_1);
+        }
+        sortedNameIndices = null;
+    }
+
+    public int getUserSlot(String string_1) {
+        for (int i_3 = 0; i_3 < numPlayers; i_3++) {
+            if (players[i_3].name.equalsIgnoreCase(string_1)) {
+                return i_3;
+            }
+        }
+        return -1;
+    }
+
+    void decode(Packet buffer) {
+        int nameTypeFlag = buffer.readUnsignedByte();
+        if ((nameTypeFlag & 0x1) != 0) {
+            namesAsLong = true;
+        }
+        if ((nameTypeFlag & 0x2) != 0) {
+            namesAsString = true;
+        }
+        pointer = buffer.readLong();
+        nextUpdateNumber = buffer.readLong();
+        clanName = buffer.readString();
+        buffer.readUnsignedByte();
+        minRankToKick = buffer.readByte();
+        guestsTalk = buffer.readByte();
+        numPlayers = buffer.readUnsignedShort();
+        if (numPlayers > 0) {
+            players = new ClanChannelPlayer[numPlayers];
+            for (int i_4 = 0; i_4 < numPlayers; i_4++) {
+                ClanChannelPlayer player = new ClanChannelPlayer();
+                if (namesAsLong) {
+                    buffer.readLong();
+                }
+                if (namesAsString) {
+                    player.name = buffer.readString();
+                }
+                player.rank = buffer.readByte();
+                player.world = buffer.readUnsignedShort();
+                players[i_4] = player;
+            }
+        }
+    }
+
+    void method12105(ClanChannelPlayer class57_1) {
+        if (players == null || numPlayers >= players.length) {
+            method12112(numPlayers + 5);
+        }
+        players[++numPlayers - 1] = class57_1;
+        sortedNameIndices = null;
+    }
+
+    void method12112(int i_1) {
+        if (players != null) {
+            Class503.method8359(players, 0, players = new ClanChannelPlayer[i_1], 0, numPlayers);
+        } else {
+            players = new ClanChannelPlayer[i_1];
         }
     }
 }

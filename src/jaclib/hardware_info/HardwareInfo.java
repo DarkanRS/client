@@ -8,13 +8,13 @@ public class HardwareInfo {
         throw new Error();
     }
 
-    public static final native int[] getCPUInfo();
+    public static native int[] getCPUInfo();
 
-    public static final native int[] getRawCPUInfo();
+    public static native int[] getRawCPUInfo();
 
-    public static final native String[] getDXDiagSystemProps();
+    public static native String[] getDXDiagSystemProps();
 
-    public static final native String[][] getDXDiagDisplayDevicesProps();
+    public static native String[][] getDXDiagDisplayDevicesProps();
 
-    public static final native String[] getOpenGLProps();
+    public static native String[] getOpenGLProps();
 }

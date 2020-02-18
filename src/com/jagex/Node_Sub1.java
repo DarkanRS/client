@@ -3,7 +3,7 @@ package com.jagex;
 public abstract class Node_Sub1 extends Node {
 
     public static void method11614(int i_0) {
-        if (Class388.method6693(2080572135)) {
+        if (Class388.method6693()) {
             if (i_0 != Class9.anInt76) {
                 Class9.aLong77 = -1L;
             }
@@ -21,16 +21,16 @@ public abstract class Node_Sub1 extends Node {
             Node_Sub33.aNode_Sub15_Sub2_7836 = null;
             Class158_Sub2_Sub3.anInt10243 = i_4;
             Class152.aBool1962 = false;
-            CutsceneAction_Sub22.anInt9440 = Class148.aNode_Sub15_Sub2_1735.method15123(-1727708848) / i_0;
+            CutsceneAction_Sub22.anInt9440 = Class148.aNode_Sub15_Sub2_1735.method15123() / i_0;
             if (CutsceneAction_Sub22.anInt9440 < 1) {
                 CutsceneAction_Sub22.anInt9440 = 1;
             }
             Class11.aClass109_121 = class109_6;
         } else {
             if (class109_6 != null) {
-                class109_6.method1849((byte) -109);
+                class109_6.method1849();
             }
-            Class11.method13400(index_1, i_2, i_4, (byte) -106);
+            Class11.method13400(index_1, i_2, i_4);
         }
     }
 }

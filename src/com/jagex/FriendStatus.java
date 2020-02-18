@@ -11,21 +11,21 @@ public class FriendStatus {
     public int id;
 
     FriendStatus(int i_1) {
-        this.id = i_1;
+        id = i_1;
     }
 
     public static int method7702() {
         if (Class296.anInt3532 == 0) {
-            Class446.aClass446_5412.initializeIndexLoader(new Class301("jaclib"), (byte) -15);
-            if (Class446.aClass446_5412.method7443(1803519499).getCompletion() != 100) {
+            Class446.aClass446_5412.initializeIndexLoader(new Class301("jaclib"));
+            if (Class446.aClass446_5412.method7443().getCompletion() != 100) {
                 return 1;
             }
-            if (!((Class301) Class446.aClass446_5412.method7443(954726291)).method5328((byte) -93)) {
+            if (!((Class301) Class446.aClass446_5412.method7443()).method5328()) {
                 Class308.aclient3620.method4681();
                 Class223.method3770();
                 try {
                     Ping.init();
-                } catch (Throwable throwable_12) {
+                } catch (Throwable ignored) {
                 }
             }
             Class296.anInt3532 = 1;
@@ -34,34 +34,34 @@ public class FriendStatus {
         int i_9;
         if (Class296.anInt3532 == 1) {
             Class296.aClass446Array3531 = Class446.method7436();
-            Class446.aClass446_5386.initializeIndexLoader(new Class298(IndexLoaders.DEFAULTS_INDEX), (byte) -56);
-            Class446.aClass446_5387.initializeIndexLoader(new Class301("jaggl"), (byte) 11);
-            Class446.aClass446_5388.initializeIndexLoader(new Class301("jagdx"), (byte) -60);
-            Class446.aClass446_5389.initializeIndexLoader(new Class301("sw3d"), (byte) 6);
-            Class446.aClass446_5415.initializeIndexLoader(new Class301("hw3d"), (byte) 11);
-            Class446.aClass446_5385.initializeIndexLoader(new Class301("jagtheora"), (byte) -30);
-            Class446.aClass446_5392.initializeIndexLoader(new Class298(IndexLoaders.SHADER_INDEX), (byte) 101);
-            Class446.aClass446_5390.initializeIndexLoader(new Class298(IndexLoaders.TEXTURE_DEFINITION_INDEX), (byte) 65);
-            Class446.aClass446_5394.initializeIndexLoader(new Class298(IndexLoaders.CONFIG_INDEX), (byte) -20);
-            Class446.aClass446_5395.initializeIndexLoader(new Class298(IndexLoaders.OBJECT_INDEX), (byte) 17);
-            Class446.aClass446_5397.initializeIndexLoader(new Class298(IndexLoaders.ENUM_INDEX), (byte) -64);
-            Class446.aClass446_5393.initializeIndexLoader(new Class298(IndexLoaders.NPC_INDEX), (byte) 7);
-            Class446.aClass446_5413.initializeIndexLoader(new Class298(IndexLoaders.ITEM_INDEX), (byte) 16);
-            Class446.aClass446_5399.initializeIndexLoader(new Class298(IndexLoaders.ANIMATION_INDEX), (byte) 16);
-            Class446.aClass446_5400.initializeIndexLoader(new Class298(IndexLoaders.SPOTANIM_INDEX), (byte) 4);
-            Class446.aClass446_5401.initializeIndexLoader(new Class298(IndexLoaders.VARBIT_INDEX), (byte) -28);
-            Class446.aClass446_5402.initializeIndexLoader(new Class298(IndexLoaders.QC_MESSAGES_INDEX), (byte) 9);
-            Class446.aClass446_5403.initializeIndexLoader(new Class298(IndexLoaders.QC_MENU_INDEX), (byte) -25);
-            Class446.TEXTURE_INDEX_LOADER.initializeIndexLoader(new Class298(IndexLoaders.TEXTURE_INDEX), (byte) 75);
-            Class446.aClass446_5405.initializeIndexLoader(new Class298(IndexLoaders.PARTICLE_INDEX), (byte) 60);
-            Class446.aClass446_5410.initializeIndexLoader(new Class298(IndexLoaders.BILLBOARD_INDEX), (byte) -44);
-            Class446.aClass446_5407.initializeIndexLoader(new Class383(IndexLoaders.HUFFMAN_INDEX), (byte) -27);
-            Class446.aClass446_5391.initializeIndexLoader(new Class298(IndexLoaders.INTERFACE_INDEX), (byte) -5);
-            Class446.aClass446_5409.initializeIndexLoader(new Class298(IndexLoaders.CS2_SCRIPTS_INDEX), (byte) -83);
-            Class446.aClass446_5398.initializeIndexLoader(new Class298(IndexLoaders.FONT_METRICS_INDEX), (byte) -104);
-            Class446.aClass446_5411.initializeIndexLoader(new Class388(IndexLoaders.WORLD_MAP_INDEX), (byte) -79);
+            Class446.aClass446_5386.initializeIndexLoader(new Class298(IndexLoaders.DEFAULTS_INDEX));
+            Class446.aClass446_5387.initializeIndexLoader(new Class301("jaggl"));
+            Class446.aClass446_5388.initializeIndexLoader(new Class301("jagdx"));
+            Class446.aClass446_5389.initializeIndexLoader(new Class301("sw3d"));
+            Class446.aClass446_5415.initializeIndexLoader(new Class301("hw3d"));
+            Class446.aClass446_5385.initializeIndexLoader(new Class301("jagtheora"));
+            Class446.aClass446_5392.initializeIndexLoader(new Class298(IndexLoaders.SHADER_INDEX));
+            Class446.aClass446_5390.initializeIndexLoader(new Class298(IndexLoaders.TEXTURE_DEFINITION_INDEX));
+            Class446.aClass446_5394.initializeIndexLoader(new Class298(IndexLoaders.CONFIG_INDEX));
+            Class446.aClass446_5395.initializeIndexLoader(new Class298(IndexLoaders.OBJECT_INDEX));
+            Class446.aClass446_5397.initializeIndexLoader(new Class298(IndexLoaders.ENUM_INDEX));
+            Class446.aClass446_5393.initializeIndexLoader(new Class298(IndexLoaders.NPC_INDEX));
+            Class446.aClass446_5413.initializeIndexLoader(new Class298(IndexLoaders.ITEM_INDEX));
+            Class446.aClass446_5399.initializeIndexLoader(new Class298(IndexLoaders.ANIMATION_INDEX));
+            Class446.aClass446_5400.initializeIndexLoader(new Class298(IndexLoaders.SPOTANIM_INDEX));
+            Class446.aClass446_5401.initializeIndexLoader(new Class298(IndexLoaders.VARBIT_INDEX));
+            Class446.aClass446_5402.initializeIndexLoader(new Class298(IndexLoaders.QC_MESSAGES_INDEX));
+            Class446.aClass446_5403.initializeIndexLoader(new Class298(IndexLoaders.QC_MENU_INDEX));
+            Class446.TEXTURE_INDEX_LOADER.initializeIndexLoader(new Class298(IndexLoaders.TEXTURE_INDEX));
+            Class446.aClass446_5405.initializeIndexLoader(new Class298(IndexLoaders.PARTICLE_INDEX));
+            Class446.aClass446_5410.initializeIndexLoader(new Class298(IndexLoaders.BILLBOARD_INDEX));
+            Class446.aClass446_5407.initializeIndexLoader(new Class383(IndexLoaders.HUFFMAN_INDEX));
+            Class446.aClass446_5391.initializeIndexLoader(new Class298(IndexLoaders.INTERFACE_INDEX));
+            Class446.aClass446_5409.initializeIndexLoader(new Class298(IndexLoaders.CS2_SCRIPTS_INDEX));
+            Class446.aClass446_5398.initializeIndexLoader(new Class298(IndexLoaders.FONT_METRICS_INDEX));
+            Class446.aClass446_5411.initializeIndexLoader(new Class388(IndexLoaders.WORLD_MAP_INDEX));
             for (i_9 = 0; i_9 < Class296.aClass446Array3531.length; i_9++) {
-                if (Class296.aClass446Array3531[i_9].method7443(-1578202194) == null) {
+                if (Class296.aClass446Array3531[i_9].method7443() == null) {
                     throw new RuntimeException();
                 }
             }
@@ -70,7 +70,7 @@ public class FriendStatus {
             for (int i_3 = 0; i_3 < arr_2.length; i_3++) {
                 Class446 class446_4 = arr_2[i_3];
                 i_5 = class446_4.method7432();
-                int i_6 = class446_4.method7443(1059684891).getCompletion();
+                int i_6 = class446_4.method7443().getCompletion();
                 i_9 += i_6 * i_5 / 100;
             }
             Class296.anInt3533 = i_9;
@@ -86,7 +86,7 @@ public class FriendStatus {
             for (i_5 = 0; i_5 < arr_14.length; i_5++) {
                 Class446 class446_11 = arr_14[i_5];
                 int i_7 = class446_11.method7432();
-                int i_8 = class446_11.method7443(-673812975).getCompletion();
+                int i_8 = class446_11.method7443().getCompletion();
                 if (i_8 < 100) {
                     bool_13 = false;
                 }
@@ -94,7 +94,7 @@ public class FriendStatus {
                 i_10 += i_7 * i_8 / 100;
             }
             if (bool_13) {
-                if (!((Class301) Class446.aClass446_5385.method7443(98634719)).method5328((byte) -96)) {
+                if (!((Class301) Class446.aClass446_5385.method7443()).method5328()) {
                     client.aBool7393 = Class308.aclient3620.method4662();
                 }
                 Class296.aClass446Array3531 = null;
@@ -111,17 +111,17 @@ public class FriendStatus {
 
     static void method7703() {
         if (client.CURRENT_CUTSCENE < 0) {
-            FontMetrics fontmetrics_1 = ShaderLoader.method1887(-785695641);
+            FontMetrics fontmetrics_1 = ShaderLoader.method1887();
             if (!Class20.aBool161) {
                 Class20.aBool162 = Class20.anInt198 != -1 && Class20.anInt169 >= Class20.anInt198 || (Class20.aBool187 ? 26 : 22) + Class20.anInt178 * Class20.anInt169 > Engine.anInt3243 * -969250379;
             }
             Class20.aClass482_174.removeAll();
             Class20.aClass482_175.removeAll();
             int i_3;
-            for (CacheableNode_Sub7 class282_sub50_sub7_2 = (CacheableNode_Sub7) Class20.aClass482_171.head(); class282_sub50_sub7_2 != null; class282_sub50_sub7_2 = (CacheableNode_Sub7) Class20.aClass482_171.next(1807139429)) {
+            for (CacheableNode_Sub7 class282_sub50_sub7_2 = (CacheableNode_Sub7) Class20.aClass482_171.head(); class282_sub50_sub7_2 != null; class282_sub50_sub7_2 = (CacheableNode_Sub7) Class20.aClass482_171.next()) {
                 i_3 = class282_sub50_sub7_2.clickType;
                 if (i_3 < 1000) {
-                    class282_sub50_sub7_2.remove();
+                    class282_sub50_sub7_2.unlink();
                     if (i_3 != 59 && i_3 != 2 && i_3 != 8 && i_3 != 17 && i_3 != 15 && i_3 != 16 && i_3 != 58) {
                         Class20.aClass482_174.append(class282_sub50_sub7_2);
                     } else {
@@ -136,14 +136,14 @@ public class FriendStatus {
                 AccountCreationStage.aCacheableNode_Sub7_12 = null;
                 Class20.aCacheableNode_Sub7_168 = null;
             } else {
-                if (Preference_Sub1.method12619(694674525) && Class20.anInt169 > 2) {
-                    CutsceneAction_Sub23.aCacheableNode_Sub7_9445 = (CacheableNode_Sub7) Class20.aClass482_171.tail.prev.prev;
+                if (Preference_Sub1.method12619() && Class20.anInt169 > 2) {
+                    CutsceneAction_Sub23.aCacheableNode_Sub7_9445 = (CacheableNode_Sub7) Class20.aClass482_171.tail.previous.previous;
                 } else {
-                    CutsceneAction_Sub23.aCacheableNode_Sub7_9445 = (CacheableNode_Sub7) Class20.aClass482_171.tail.prev;
+                    CutsceneAction_Sub23.aCacheableNode_Sub7_9445 = (CacheableNode_Sub7) Class20.aClass482_171.tail.previous;
                 }
-                AccountCreationStage.aCacheableNode_Sub7_12 = (CacheableNode_Sub7) Class20.aClass482_171.tail.prev;
+                AccountCreationStage.aCacheableNode_Sub7_12 = (CacheableNode_Sub7) Class20.aClass482_171.tail.previous;
                 if (Class20.anInt169 > 2) {
-                    Class20.aCacheableNode_Sub7_168 = (CacheableNode_Sub7) AccountCreationStage.aCacheableNode_Sub7_12.prev;
+                    Class20.aCacheableNode_Sub7_168 = (CacheableNode_Sub7) AccountCreationStage.aCacheableNode_Sub7_12.previous;
                 } else {
                     Class20.aCacheableNode_Sub7_168 = null;
                 }
@@ -165,7 +165,7 @@ public class FriendStatus {
                     int i_5;
                     CacheableNode_Sub7 class282_sub50_sub7_8;
                     Class469 class469_15;
-                    if (Class20.aCacheableNode_Sub15_163 != null && i_3 >= Class341.anInt3996 && i_3 <= Class341.anInt3996 + ObjectAnimationCutsceneAction.anInt8518 && i_4 >= CacheableNode_Sub2.anInt9471 && i_4 <= Transform_Sub1_Sub5_Sub1.anInt10526 + CacheableNode_Sub2.anInt9471) {
+                    if (Class20.aCacheableNode_Sub15_163 != null && i_3 >= Class341.anInt3996 && i_3 <= Class341.anInt3996 + ObjectAnimationCutsceneAction.anInt8518 && i_4 >= CacheableNode_Sub2.anInt9471 && i_4 <= GraphNode_Sub1_Sub5_Sub1.anInt10526 + CacheableNode_Sub2.anInt9471) {
                         i_5 = -1;
                         for (i_6 = 0; i_6 < Class20.aCacheableNode_Sub15_163.anInt9769; i_6++) {
                             if (Class20.aBool187) {
@@ -185,7 +185,7 @@ public class FriendStatus {
                             class469_15 = new Class469(Class20.aCacheableNode_Sub15_163.aClass477_9770);
                             for (class282_sub50_sub7_8 = (CacheableNode_Sub7) class469_15.method7790(); class282_sub50_sub7_8 != null; class282_sub50_sub7_8 = (CacheableNode_Sub7) class469_15.next()) {
                                 if (i_5 == i_6) {
-                                    CutsceneAction_Sub4.method13789(class282_sub50_sub7_8, i_3, i_4, 951380502);
+                                    CutsceneAction_Sub4.method13789(class282_sub50_sub7_8, i_3, i_4);
                                     break;
                                 }
                                 ++i_6;
@@ -211,9 +211,9 @@ public class FriendStatus {
                             if (i_5 != -1) {
                                 i_6 = 0;
                                 NodeIterator nodeiterator_7 = new NodeIterator(Class20.aClass482_171);
-                                for (class282_sub50_sub7_8 = (CacheableNode_Sub7) nodeiterator_7.method7683(-1181797643); class282_sub50_sub7_8 != null; class282_sub50_sub7_8 = (CacheableNode_Sub7) nodeiterator_7.next()) {
+                                for (class282_sub50_sub7_8 = (CacheableNode_Sub7) nodeiterator_7.method7683(); class282_sub50_sub7_8 != null; class282_sub50_sub7_8 = (CacheableNode_Sub7) nodeiterator_7.next()) {
                                     if (i_6 == i_5) {
-                                        CutsceneAction_Sub4.method13789(class282_sub50_sub7_8, i_3, i_4, 1995969005);
+                                        CutsceneAction_Sub4.method13789(class282_sub50_sub7_8, i_3, i_4);
                                         break;
                                     }
                                     ++i_6;
@@ -242,7 +242,7 @@ public class FriendStatus {
                                 class469_15 = new Class469(Class20.aClass477_182);
                                 for (CacheableNode_Sub15 class282_sub50_sub15_17 = (CacheableNode_Sub15) class469_15.method7790(); class282_sub50_sub15_17 != null; class282_sub50_sub15_17 = (CacheableNode_Sub15) class469_15.next()) {
                                     if (i_5 == i_6) {
-                                        CutsceneAction_Sub4.method13789((CacheableNode_Sub7) class282_sub50_sub15_17.aClass477_9770.aCacheableNode_5629.aCacheableNode_8119, i_3, i_4, 1026140504);
+                                        CutsceneAction_Sub4.method13789((CacheableNode_Sub7) class282_sub50_sub15_17.aClass477_9770.aCacheableNode_5629.aCacheableNode_8119, i_3, i_4);
                                         Class316.method5594();
                                         break;
                                     }
@@ -254,10 +254,10 @@ public class FriendStatus {
                 } else {
                     bool_16 = false;
                     if (Class20.aCacheableNode_Sub15_163 != null) {
-                        if (i_3 >= Class341.anInt3996 - 10 && i_3 <= ObjectAnimationCutsceneAction.anInt8518 + Class341.anInt3996 + 10 && i_4 >= CacheableNode_Sub2.anInt9471 - 10 && i_4 <= Transform_Sub1_Sub5_Sub1.anInt10526 + CacheableNode_Sub2.anInt9471 + 10) {
+                        if (i_3 >= Class341.anInt3996 - 10 && i_3 <= ObjectAnimationCutsceneAction.anInt8518 + Class341.anInt3996 + 10 && i_4 >= CacheableNode_Sub2.anInt9471 - 10 && i_4 <= GraphNode_Sub1_Sub5_Sub1.anInt10526 + CacheableNode_Sub2.anInt9471 + 10) {
                             bool_16 = true;
                         } else {
-                            Class404.method6810(988728251);
+                            Class404.method6810();
                         }
                     }
                     if (!bool_16) {
@@ -307,18 +307,18 @@ public class FriendStatus {
                 bool_16 = Friend.method302(Class149_Sub2.DEFAULTS_LOADER_7.anInterface17_5878, class282_sub53_14);
                 boolean bool_18 = Friend.method302(Class149_Sub2.DEFAULTS_LOADER_7.anInterface17_5874, class282_sub53_14);
                 boolean bool_20 = Friend.method302(Class149_Sub2.DEFAULTS_LOADER_7.anInterface17_5875, class282_sub53_14);
-                if ((bool_16 || bool_18) && (client.anInt7339 == 1 && Class20.anInt169 > 2 || JS5GrabWorker.method12562(-269769835))) {
+                if ((bool_16 || bool_18) && (client.anInt7339 == 1 && Class20.anInt169 > 2 || JS5GrabWorker.method12562())) {
                     bool_20 = true;
                 }
                 if (bool_20 && Class20.anInt169 > 0) {
                     if (client.aClass118_7257 == null && client.anInt7184 == 0) {
-                        NativeLibraryLoader.method4653(i_3, i_4, 272985628);
+                        NativeLibraryLoader.method4653(i_3, i_4);
                     } else {
                         Class20.anInt167 = 2;
                     }
                 } else if (bool_18) {
                     if (Class20.aCacheableNode_Sub7_168 != null) {
-                        CutsceneAction_Sub4.method13789(Class20.aCacheableNode_Sub7_168, i_3, i_4, -619125547);
+                        CutsceneAction_Sub4.method13789(Class20.aCacheableNode_Sub7_168, i_3, i_4);
                     }
                 } else if (bool_16) {
                     if (CutsceneAction_Sub23.aCacheableNode_Sub7_9445 == null) {
@@ -331,7 +331,7 @@ public class FriendStatus {
                             Class20.anInt167 = 1;
                             Class46.aCacheableNode_Sub7_438 = CutsceneAction_Sub23.aCacheableNode_Sub7_9445;
                         } else {
-                            CutsceneAction_Sub4.method13789(CutsceneAction_Sub23.aCacheableNode_Sub7_9445, i_3, i_4, 1860097874);
+                            CutsceneAction_Sub4.method13789(CutsceneAction_Sub23.aCacheableNode_Sub7_9445, i_3, i_4);
                         }
                     }
                 }
@@ -344,6 +344,6 @@ public class FriendStatus {
     }
 
     static byte method7705(int i_0, int i_1) {
-        return (byte) (i_0 != SceneObjectType.WALL_INTERACT.type ? 0 : ((i_1 & 0x1) == 0 ? 1 : 2));
+        return (byte) (i_0 != LocShapes.WALL_INTERACT.type ? 0 : ((i_1 & 0x1) == 0 ? 1 : 2));
     }
 }

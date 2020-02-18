@@ -35,11 +35,11 @@ public abstract class Node_Sub15 extends Node {
 
     abstract Node_Sub15 method12236();
 
-    final void method12237(int[] ints_1, int i_2, int i_3) {
-        if (this.aBool7600) {
-            this.method12230(ints_1, i_2, i_3);
+    void method12237(int[] ints_1, int i_2, int i_3) {
+        if (aBool7600) {
+            method12230(ints_1, i_2, i_3);
         } else {
-            this.method12231(i_3);
+            method12231(i_3);
         }
 
     }

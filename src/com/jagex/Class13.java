@@ -8,18 +8,18 @@ public class Class13 {
 
     static int anInt130;
 
-    static SoftCache aClass229_127 = new SoftCache(32);
+    static LRUCache aClass229_127 = new LRUCache(32);
 
     Class13() throws Throwable {
         throw new Error();
     }
 
-    static void method503(CacheableNode_Sub15 class282_sub50_sub15_0, int i_1) {
+    static void method503(CacheableNode_Sub15 class282_sub50_sub15_0) {
         boolean bool_2 = false;
         class282_sub50_sub15_0.method13452();
-        for (CacheableNode_Sub15 class282_sub50_sub15_3 = (CacheableNode_Sub15) Class20.aClass477_182.method7941(); class282_sub50_sub15_3 != null; class282_sub50_sub15_3 = (CacheableNode_Sub15) Class20.aClass477_182.method7955(-1642244739)) {
-            if (Class301.method5334(class282_sub50_sub15_0.method15244((byte) 107), class282_sub50_sub15_3.method15244((byte) 59), 993157847)) {
-                RouteStrategies.method3782(class282_sub50_sub15_0, class282_sub50_sub15_3, -1979656463);
+        for (CacheableNode_Sub15 class282_sub50_sub15_3 = (CacheableNode_Sub15) Class20.aClass477_182.method7941(); class282_sub50_sub15_3 != null; class282_sub50_sub15_3 = (CacheableNode_Sub15) Class20.aClass477_182.method7955()) {
+            if (Class301.method5334(class282_sub50_sub15_0.method15244(), class282_sub50_sub15_3.method15244())) {
+                RouteStrategies.method3782(class282_sub50_sub15_0, class282_sub50_sub15_3);
                 bool_2 = true;
                 break;
             }
@@ -29,7 +29,7 @@ public class Class13 {
         }
     }
 
-    public static final int method507(int i_0, int i_1, int i_2, int i_3, int i_4, byte b_5) {
+    public static int method507(int i_0, int i_1, int i_2, int i_3, int i_4) {
         if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager() == null) {
             return 0;
         } else if (i_4 < 3) {
@@ -58,7 +58,7 @@ public class Class13 {
                     if (bool_9) {
                         ++i_4;
                     }
-                    return IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().aGroundArray2591[i_4].averageHeight(i_0, i_1, -1580541166);
+                    return IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().aGroundArray2591[i_4].averageHeight(i_0, i_1);
                 } else {
                     return 0;
                 }
@@ -66,11 +66,11 @@ public class Class13 {
                 return 0;
             }
         } else {
-            return IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().aGroundArray2591[i_4].averageHeight(i_0, i_1, -1580541166);
+            return IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().aGroundArray2591[i_4].averageHeight(i_0, i_1);
         }
     }
 
-    public static void method508(boolean bool_0, boolean bool_1, int i_2) {
+    public static void method508(boolean bool_0, boolean bool_1) {
         if (bool_0) {
             --Class540.anInt7137;
             if (Class540.anInt7137 == 0) {

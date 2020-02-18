@@ -5,10 +5,15 @@ import jaggl.OpenGL;
 public class Class128 {
 
     static int[] anIntArray1582 = new int[2];
-    OpenGLGraphicalRenderer aGraphicalRenderer_Sub1_1581;
+    OpenGLHardwareRenderer aGraphicalRenderer_Sub1_1581;
     int anInt1583;
 
-    static Class128 method2174(OpenGLGraphicalRenderer class505_sub1_0, Class140[] arr_1) {
+    Class128(OpenGLHardwareRenderer class505_sub1_1, int i_2) {
+        aGraphicalRenderer_Sub1_1581 = class505_sub1_1;
+        anInt1583 = i_2;
+    }
+
+    static Class128 method2174(OpenGLHardwareRenderer class505_sub1_0, Class140[] arr_1) {
         int i_2;
         for (i_2 = 0; i_2 < arr_1.length; i_2++) {
             if (arr_1[i_2] == null || arr_1[i_2].anInt1663 <= 0) {
@@ -43,17 +48,13 @@ public class Class128 {
             }
         }
 
-        return new Class128(class505_sub1_0, i_2, arr_1);
+        return new Class128(class505_sub1_0, i_2);
     }
 
-    public void finalize() throws Throwable {
-        this.aGraphicalRenderer_Sub1_1581.method13627(this.anInt1583);
+    @Override
+    protected void finalize() throws Throwable {
+        aGraphicalRenderer_Sub1_1581.method13627(anInt1583);
         super.finalize();
-    }
-
-    Class128(OpenGLGraphicalRenderer class505_sub1_1, int i_2, Class140[] arr_3) {
-        this.aGraphicalRenderer_Sub1_1581 = class505_sub1_1;
-        this.anInt1583 = i_2;
     }
 
 }

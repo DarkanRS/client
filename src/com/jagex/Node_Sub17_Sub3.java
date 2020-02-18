@@ -5,52 +5,8 @@ public class Node_Sub17_Sub3 extends Node_Sub17 {
     String aString9935;
     Class348 this$0;
 
-    void method12251(ClanSettings class61_1) {
-        class61_1.clanName = this.aString9935;
-    }
-
-    void method12250(RsByteBuffer rsbytebuffer_1) {
-        this.aString9935 = rsbytebuffer_1.readString();
-        rsbytebuffer_1.readInt();
-    }
-
     Node_Sub17_Sub3(Class348 class348_1) {
-        this.this$0 = class348_1;
-    }
-
-    void method12257(RsByteBuffer rsbytebuffer_1) {
-        this.aString9935 = rsbytebuffer_1.readString();
-        rsbytebuffer_1.readInt();
-    }
-
-    void method12252(ClanSettings class61_1) {
-        class61_1.clanName = this.aString9935;
-    }
-
-    void method12253(RsByteBuffer rsbytebuffer_1) {
-        this.aString9935 = rsbytebuffer_1.readString();
-        rsbytebuffer_1.readInt();
-    }
-
-    void method12254(ClanSettings class61_1) {
-        class61_1.clanName = this.aString9935;
-    }
-
-    void method12258(ClanSettings class61_1) {
-        class61_1.clanName = this.aString9935;
-    }
-
-    void method12256(ClanSettings class61_1) {
-        class61_1.clanName = this.aString9935;
-    }
-
-    void method12249(RsByteBuffer rsbytebuffer_1) {
-        this.aString9935 = rsbytebuffer_1.readString();
-        rsbytebuffer_1.readInt();
-    }
-
-    void method12255(ClanSettings class61_1) {
-        class61_1.clanName = this.aString9935;
+        this$0 = class348_1;
     }
 
     static void method15405(int i_0, int i_1, int i_2, int i_3, int i_4) {
@@ -72,9 +28,9 @@ public class Node_Sub17_Sub3 extends Node_Sub17 {
         int i_21;
         int i_22;
         if (i_1 >= Class532_Sub3_Sub1.anInt7070 && i_1 <= Class532_Sub3_Sub1.anInt7068) {
-            i_21 = EntityNode.method4890(i_0 + i_2, Class532_Sub3_Sub1.anInt7071, Class532_Sub3_Sub1.anInt7069, -2092614922);
-            i_22 = EntityNode.method4890(i_0 - i_2, Class532_Sub3_Sub1.anInt7071, Class532_Sub3_Sub1.anInt7069, 107584630);
-            KeyHoldInputSubscriber.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_1], i_22, i_21, i_4, (byte) -117);
+            i_21 = EntityNode.method4890(i_0 + i_2, Class532_Sub3_Sub1.anInt7071, Class532_Sub3_Sub1.anInt7069);
+            i_22 = EntityNode.method4890(i_0 - i_2, Class532_Sub3_Sub1.anInt7071, Class532_Sub3_Sub1.anInt7069);
+            KeyHoldInputSubscriber.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_1], i_22, i_21, i_4);
         }
         while (i_7 > 0) {
             if (i_13 < 0) {
@@ -101,15 +57,69 @@ public class Node_Sub17_Sub3 extends Node_Sub17 {
             i_21 = i_1 - i_7;
             i_22 = i_7 + i_1;
             if (i_22 >= Class532_Sub3_Sub1.anInt7070 && i_21 <= Class532_Sub3_Sub1.anInt7068) {
-                int i_23 = EntityNode.method4890(i_0 + i_6, Class532_Sub3_Sub1.anInt7071, Class532_Sub3_Sub1.anInt7069, 1305925887);
-                int i_24 = EntityNode.method4890(i_0 - i_6, Class532_Sub3_Sub1.anInt7071, Class532_Sub3_Sub1.anInt7069, 923847581);
+                int i_23 = EntityNode.method4890(i_0 + i_6, Class532_Sub3_Sub1.anInt7071, Class532_Sub3_Sub1.anInt7069);
+                int i_24 = EntityNode.method4890(i_0 - i_6, Class532_Sub3_Sub1.anInt7071, Class532_Sub3_Sub1.anInt7069);
                 if (i_21 >= Class532_Sub3_Sub1.anInt7070) {
-                    KeyHoldInputSubscriber.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_21], i_24, i_23, i_4, (byte) 40);
+                    KeyHoldInputSubscriber.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_21], i_24, i_23, i_4);
                 }
                 if (i_22 <= Class532_Sub3_Sub1.anInt7068) {
-                    KeyHoldInputSubscriber.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_22], i_24, i_23, i_4, (byte) 68);
+                    KeyHoldInputSubscriber.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_22], i_24, i_23, i_4);
                 }
             }
         }
+    }
+
+    @Override
+    void method12251(ClanSettings class61_1) {
+        class61_1.clanName = aString9935;
+    }
+
+    @Override
+    void method12250(Packet rsbytebuffer_1) {
+        aString9935 = rsbytebuffer_1.readString();
+        rsbytebuffer_1.readInt();
+    }
+
+    @Override
+    void method12257(Packet rsbytebuffer_1) {
+        aString9935 = rsbytebuffer_1.readString();
+        rsbytebuffer_1.readInt();
+    }
+
+    @Override
+    void method12252(ClanSettings class61_1) {
+        class61_1.clanName = aString9935;
+    }
+
+    @Override
+    void method12253(Packet rsbytebuffer_1) {
+        aString9935 = rsbytebuffer_1.readString();
+        rsbytebuffer_1.readInt();
+    }
+
+    @Override
+    void method12254(ClanSettings class61_1) {
+        class61_1.clanName = aString9935;
+    }
+
+    @Override
+    void method12258(ClanSettings class61_1) {
+        class61_1.clanName = aString9935;
+    }
+
+    @Override
+    void method12256(ClanSettings class61_1) {
+        class61_1.clanName = aString9935;
+    }
+
+    @Override
+    void method12249(Packet rsbytebuffer_1) {
+        aString9935 = rsbytebuffer_1.readString();
+        rsbytebuffer_1.readInt();
+    }
+
+    @Override
+    void method12255(ClanSettings class61_1) {
+        class61_1.clanName = aString9935;
     }
 }

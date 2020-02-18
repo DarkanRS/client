@@ -12,45 +12,8 @@ public class Node_Sub14 extends Node {
     byte[] aByteArray7595 = new byte[128];
     int anInt7593;
 
-    boolean method12216(Class250 class250_1, byte[] bytes_2, int[] ints_3) {
-        boolean bool_5 = true;
-        int i_6 = 0;
-        Object obj_7 = null;
-
-        for (int i_8 = 0; i_8 < 128; i_8++) {
-            if (bytes_2 == null || bytes_2[i_8] != 0) {
-                int i_9 = this.anIntArray7596[i_8];
-                if (i_9 != 0) {
-                    if (i_9 != i_6) {
-                        i_6 = i_9--;
-                        if ((i_9 & 0x1) == 0) {
-                            obj_7 = class250_1.method4290(i_9 >> 2, ints_3);
-                        } else {
-                            obj_7 = class250_1.method4287(i_9 >> 2, ints_3);
-                        }
-
-                        if (obj_7 == null) {
-                            bool_5 = false;
-                        }
-                    }
-
-                    if (obj_7 != null) {
-                        this.aNode_Sub26_Sub1Array7589[i_8] = (Node_Sub26_Sub1) obj_7;
-                        this.anIntArray7596[i_8] = 0;
-                    }
-                }
-            }
-        }
-
-        return bool_5;
-    }
-
-    void method12217() {
-        this.anIntArray7596 = null;
-    }
-
     Node_Sub14(byte[] bytes_1) {
-        RsByteBuffer rsbytebuffer_2 = new RsByteBuffer(bytes_1);
+        Packet rsbytebuffer_2 = new Packet(bytes_1);
 
         int i_3;
         for (i_3 = 0; rsbytebuffer_2.buffer[i_3 + rsbytebuffer_2.index] != 0; i_3++) {
@@ -161,14 +124,14 @@ public class Node_Sub14 extends Node {
         int i_20;
         for (i_20 = 0; i_20 < 128; i_20++) {
             i_19 += rsbytebuffer_2.readUnsignedByte();
-            this.aShortArray7590[i_20] = (short) i_19;
+            aShortArray7590[i_20] = (short) i_19;
         }
 
         i_19 = 0;
 
         for (i_20 = 0; i_20 < 128; i_20++) {
             i_19 += rsbytebuffer_2.readUnsignedByte();
-            this.aShortArray7590[i_20] = (short) (this.aShortArray7590[i_20] + (i_19 << 8));
+            aShortArray7590[i_20] += (i_19 << 8);
         }
 
         i_20 = 0;
@@ -184,11 +147,11 @@ public class Node_Sub14 extends Node {
                     i_20 = -1;
                 }
 
-                i_22 = rsbytebuffer_2.method13099(774797043);
+                i_22 = rsbytebuffer_2.method13099();
             }
 
-            this.aShortArray7590[i_23] = (short) (this.aShortArray7590[i_23] + ((i_22 - 1 & 0x2) << 14));
-            this.anIntArray7596[i_23] = i_22;
+            aShortArray7590[i_23] += ((i_22 - 1 & 0x2) << 14);
+            anIntArray7596[i_23] = i_22;
             --i_20;
         }
 
@@ -198,7 +161,7 @@ public class Node_Sub14 extends Node {
 
         int i_24;
         for (i_24 = 0; i_24 < 128; i_24++) {
-            if (this.anIntArray7596[i_24] != 0) {
+            if (anIntArray7596[i_24] != 0) {
                 if (i_20 == 0) {
                     if (i_21 < bytes_4.length) {
                         i_20 = bytes_4[i_21++];
@@ -209,7 +172,7 @@ public class Node_Sub14 extends Node {
                     i_23 = rsbytebuffer_2.buffer[i_5++] - 1;
                 }
 
-                this.aByteArray7595[i_24] = (byte) i_23;
+                aByteArray7595[i_24] = (byte) i_23;
                 --i_20;
             }
         }
@@ -219,7 +182,7 @@ public class Node_Sub14 extends Node {
         i_24 = 0;
 
         for (int i_25 = 0; i_25 < 128; i_25++) {
-            if (this.anIntArray7596[i_25] != 0) {
+            if (anIntArray7596[i_25] != 0) {
                 if (i_20 == 0) {
                     if (i_21 < bytes_7.length) {
                         i_20 = bytes_7[i_21++];
@@ -230,7 +193,7 @@ public class Node_Sub14 extends Node {
                     i_24 = rsbytebuffer_2.buffer[i_8++] + 16 << 2;
                 }
 
-                this.aByteArray7591[i_25] = (byte) i_24;
+                aByteArray7591[i_25] = (byte) i_24;
                 --i_20;
             }
         }
@@ -241,7 +204,7 @@ public class Node_Sub14 extends Node {
 
         int i_26;
         for (i_26 = 0; i_26 < 128; i_26++) {
-            if (this.anIntArray7596[i_26] != 0) {
+            if (anIntArray7596[i_26] != 0) {
                 if (i_20 == 0) {
                     class110_38 = arr_37[bytes_36[i_21]];
                     if (i_21 < bytes_10.length) {
@@ -251,7 +214,7 @@ public class Node_Sub14 extends Node {
                     }
                 }
 
-                this.aClass110Array7594[i_26] = class110_38;
+                aClass110Array7594[i_26] = class110_38;
                 --i_20;
             }
         }
@@ -269,16 +232,16 @@ public class Node_Sub14 extends Node {
                     i_20 = -1;
                 }
 
-                if (this.anIntArray7596[i_27] > 0) {
+                if (anIntArray7596[i_27] > 0) {
                     i_26 = rsbytebuffer_2.readUnsignedByte() + 1;
                 }
             }
 
-            this.aByteArray7592[i_27] = (byte) i_26;
+            aByteArray7592[i_27] = (byte) i_26;
             --i_20;
         }
 
-        this.anInt7593 = rsbytebuffer_2.readUnsignedByte() + 1;
+        anInt7593 = rsbytebuffer_2.readUnsignedByte() + 1;
 
         int i_29;
         Class110 class110_42;
@@ -327,7 +290,7 @@ public class Node_Sub14 extends Node {
                 i_19 = 0;
 
                 for (i_29 = 2; i_29 < class110_42.aByteArray1097.length; i_29 += 2) {
-                    i_19 = i_19 + 1 + rsbytebuffer_2.readUnsignedByte();
+                    i_19 += 1 + rsbytebuffer_2.readUnsignedByte();
                     class110_42.aByteArray1097[i_29] = (byte) i_19;
                 }
             }
@@ -352,7 +315,7 @@ public class Node_Sub14 extends Node {
             byte b_28 = bytes_43[1];
 
             for (i_29 = 0; i_29 < b_47; i_29++) {
-                this.aByteArray7592[i_29] = (byte) (b_28 * this.aByteArray7592[i_29] + 32 >> 6);
+                aByteArray7592[i_29] = (byte) (b_28 * aByteArray7592[i_29] + 32 >> 6);
             }
 
             for (i_29 = 2; i_29 < bytes_43.length; i_29 += 2) {
@@ -361,8 +324,8 @@ public class Node_Sub14 extends Node {
                 i_32 = b_28 * (b_30 - b_47) + (b_30 - b_47) / 2;
 
                 for (i_33 = b_47; i_33 < b_30; i_33++) {
-                    i_34 = Class371.method6349(i_32, b_30 - b_47, 1314552472);
-                    this.aByteArray7592[i_33] = (byte) (i_34 * this.aByteArray7592[i_33] + 32 >> 6);
+                    i_34 = Class371.method6349(i_32, b_30 - b_47);
+                    aByteArray7592[i_33] = (byte) (i_34 * aByteArray7592[i_33] + 32 >> 6);
                     i_32 += b_31 - b_28;
                 }
 
@@ -371,7 +334,7 @@ public class Node_Sub14 extends Node {
             }
 
             for (i_29 = b_47; i_29 < 128; i_29++) {
-                this.aByteArray7592[i_29] = (byte) (b_28 * this.aByteArray7592[i_29] + 32 >> 6);
+                aByteArray7592[i_29] = (byte) (b_28 * aByteArray7592[i_29] + 32 >> 6);
             }
 
             obj_39 = null;
@@ -391,7 +354,7 @@ public class Node_Sub14 extends Node {
 
             int i_45;
             for (i_29 = 0; i_29 < b_47; i_29++) {
-                i_45 = i_44 + (this.aByteArray7591[i_29] & 0xff);
+                i_45 = i_44 + (aByteArray7591[i_29] & 0xff);
                 if (i_45 < 0) {
                     i_45 = 0;
                 }
@@ -400,7 +363,7 @@ public class Node_Sub14 extends Node {
                     i_45 = 128;
                 }
 
-                this.aByteArray7591[i_29] = (byte) i_45;
+                aByteArray7591[i_29] = (byte) i_45;
             }
 
             for (i_29 = 2; i_29 < bytes_16.length; i_29 += 2) {
@@ -409,8 +372,8 @@ public class Node_Sub14 extends Node {
                 i_32 = i_44 * (b_30 - b_47) + (b_30 - b_47) / 2;
 
                 for (i_33 = b_47; i_33 < b_30; i_33++) {
-                    i_34 = Class371.method6349(i_32, b_30 - b_47, -95801299);
-                    int i_35 = i_34 + (this.aByteArray7591[i_33] & 0xff);
+                    i_34 = Class371.method6349(i_32, b_30 - b_47);
+                    int i_35 = i_34 + (aByteArray7591[i_33] & 0xff);
                     if (i_35 < 0) {
                         i_35 = 0;
                     }
@@ -419,7 +382,7 @@ public class Node_Sub14 extends Node {
                         i_35 = 128;
                     }
 
-                    this.aByteArray7591[i_33] = (byte) i_35;
+                    aByteArray7591[i_33] = (byte) i_35;
                     i_32 += i_46 - i_44;
                 }
 
@@ -428,7 +391,7 @@ public class Node_Sub14 extends Node {
             }
 
             for (i_29 = b_47; i_29 < 128; i_29++) {
-                i_45 = i_44 + (this.aByteArray7591[i_29] & 0xff);
+                i_45 = i_44 + (aByteArray7591[i_29] & 0xff);
                 if (i_45 < 0) {
                     i_45 = 0;
                 }
@@ -437,7 +400,7 @@ public class Node_Sub14 extends Node {
                     i_45 = 128;
                 }
 
-                this.aByteArray7591[i_29] = (byte) i_45;
+                aByteArray7591[i_29] = (byte) i_45;
             }
 
             obj_39 = null;
@@ -482,8 +445,8 @@ public class Node_Sub14 extends Node {
 
     }
 
-    public static final void method12221(IComponentDefinitions icomponentdefinitions_0, int i_1, int i_2, int i_3) {
-        if (client.aClass118_7257 == null && !Class20.aBool161 && icomponentdefinitions_0 != null && ApplyHitmarkCutsceneAction.method14643(icomponentdefinitions_0, 735931958)) {
+    public static void method12221(Component icomponentdefinitions_0, int i_1, int i_2) {
+        if (client.aClass118_7257 == null && !Class20.aBool161 && icomponentdefinitions_0 != null && ApplyHitmarkCutsceneAction.method14643(icomponentdefinitions_0)) {
             client.aClass118_7257 = icomponentdefinitions_0;
             client.aClass118_7247 = TexturesPreference.method12880(icomponentdefinitions_0);
             client.anInt7361 = i_1;
@@ -499,7 +462,44 @@ public class Node_Sub14 extends Node {
 
     public static void method12223(int i_0) {
         PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(6, i_0);
-        class282_sub50_sub12_2.method14965((byte) -46);
+        class282_sub50_sub12_2.method14965();
+    }
+
+    boolean method12216(Class250 class250_1, byte[] bytes_2, int[] ints_3) {
+        boolean bool_5 = true;
+        int i_6 = 0;
+        Node_Sub26_Sub1 obj_7 = null;
+
+        for (int i_8 = 0; i_8 < 128; i_8++) {
+            if (bytes_2 == null || bytes_2[i_8] != 0) {
+                int i_9 = anIntArray7596[i_8];
+                if (i_9 != 0) {
+                    if (i_9 != i_6) {
+                        i_6 = i_9--;
+                        if ((i_9 & 0x1) == 0) {
+                            obj_7 = class250_1.method4290(i_9 >> 2, ints_3);
+                        } else {
+                            obj_7 = class250_1.method4287(i_9 >> 2, ints_3);
+                        }
+
+                        if (obj_7 == null) {
+                            bool_5 = false;
+                        }
+                    }
+
+                    if (obj_7 != null) {
+                        aNode_Sub26_Sub1Array7589[i_8] = obj_7;
+                        anIntArray7596[i_8] = 0;
+                    }
+                }
+            }
+        }
+
+        return bool_5;
+    }
+
+    void method12217() {
+        anIntArray7596 = null;
     }
 
 }

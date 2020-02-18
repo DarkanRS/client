@@ -2,31 +2,22 @@ package com.jagex;
 
 public class Class76 {
 
-    static Class76 aClass76_753 = new Class76(6, 1);
-
-    static Class76 aClass76_756 = new Class76(0, 2);
-
-    static Class76 aClass76_750 = new Class76(7, 4);
-
     public static Class76 aClass76_751 = new Class76(4, 1);
-
     public static Class76 aClass76_752 = new Class76(5, 2);
-
     public static Class76 aClass76_749 = new Class76(1, 3);
-
-    static Class76 aClass76_754 = new Class76(2, 4);
-
     public static Class76 aClass76_755 = new Class76(8, 2);
-
     public static Class76 aClass76_758 = new Class76(3, 4);
-
+    static Class76 aClass76_753 = new Class76(6, 1);
+    static Class76 aClass76_756 = new Class76(0, 2);
+    static Class76 aClass76_750 = new Class76(7, 4);
+    static Class76 aClass76_754 = new Class76(2, 4);
     public int anInt757;
 
     public int anInt748;
 
     Class76(int i_1, int i_2) {
-        this.anInt757 = i_1;
-        this.anInt748 = i_2;
+        anInt757 = i_1;
+        anInt748 = i_2;
     }
 
     static int method1356(int i_0, int i_1) {
@@ -48,7 +39,7 @@ public class Class76 {
         int i_6 = (bool_1 ? IndexLoaders.QUICK_CHAT_MESSAGE_LOADER.anInt5133 : IndexLoaders.QUICK_CHAT_MESSAGE_LOADER.anInt5130) + i_5;
         for (int i_7 = i_5; i_7 < i_6; i_7++) {
             QuickchatMessageDefinitions quickchatdefinitions_12 = IndexLoaders.QUICK_CHAT_MESSAGE_LOADER.getMessageDefinitions(i_7);
-            if (quickchatdefinitions_12.searchable && quickchatdefinitions_12.method14898(409119349).toLowerCase().indexOf(string_0) != -1) {
+            if (quickchatdefinitions_12.searchable && quickchatdefinitions_12.method14898().toLowerCase().indexOf(string_0) != -1) {
                 if (i_4 >= 50) {
                     VarcDefinitions.CS2_QUERY_RESULTS_LEN = -1;
                     Class308.CS2_QUERY_RESULTS = null;
@@ -56,9 +47,7 @@ public class Class76 {
                 }
                 if (i_4 >= shorts_3.length) {
                     short[] shorts_9 = new short[shorts_3.length * 2];
-                    for (int i_10 = 0; i_10 < i_4; i_10++) {
-                        shorts_9[i_10] = shorts_3[i_10];
-                    }
+                    System.arraycopy(shorts_3, 0, shorts_9, 0, i_4);
                     shorts_3 = shorts_9;
                 }
                 shorts_3[i_4++] = (short) i_7;
@@ -69,13 +58,13 @@ public class Class76 {
         VarcDefinitions.CS2_QUERY_RESULTS_LEN = i_4;
         String[] arr_11 = new String[VarcDefinitions.CS2_QUERY_RESULTS_LEN];
         for (int i_8 = 0; i_8 < VarcDefinitions.CS2_QUERY_RESULTS_LEN; i_8++) {
-            arr_11[i_8] = IndexLoaders.QUICK_CHAT_MESSAGE_LOADER.getMessageDefinitions(shorts_3[i_8]).method14898(-47369611);
+            arr_11[i_8] = IndexLoaders.QUICK_CHAT_MESSAGE_LOADER.getMessageDefinitions(shorts_3[i_8]).method14898();
         }
         ShaderDecoder.sortAlphabetically(arr_11, Class308.CS2_QUERY_RESULTS);
     }
 
-    public static void method1361(byte b_0) {
-        CutsceneAction.method1607((byte) 74);
+    public static void method1361() {
+        CutsceneAction.method1607();
         Class115.aNativeSpriteArray1248 = null;
     }
 }

@@ -7,72 +7,14 @@ public class Node_Sub11_Sub1 extends Node_Sub11 {
     byte aByte10000;
     Class349 this$0;
 
-    void method12204(ClanChannel class282_sub4_1) {
-        class282_sub4_1.clanName = this.aString10001;
-        if (this.aString10001 != null) {
-            class282_sub4_1.guestsTalk = this.aByte9999;
-            class282_sub4_1.minRankToKick = this.aByte10000;
-        }
-
-    }
-
-    void method12203(RsByteBuffer rsbytebuffer_1) {
-        this.aString10001 = rsbytebuffer_1.readNullString();
-        if (this.aString10001 != null) {
-            rsbytebuffer_1.readUnsignedByte();
-            this.aByte9999 = rsbytebuffer_1.readByte();
-            this.aByte10000 = rsbytebuffer_1.readByte();
-        }
-
-    }
-
-    void method12206(RsByteBuffer rsbytebuffer_1) {
-        this.aString10001 = rsbytebuffer_1.readNullString();
-        if (this.aString10001 != null) {
-            rsbytebuffer_1.readUnsignedByte();
-            this.aByte9999 = rsbytebuffer_1.readByte();
-            this.aByte10000 = rsbytebuffer_1.readByte();
-        }
-
-    }
-
-    void method12205(ClanChannel class282_sub4_1) {
-        class282_sub4_1.clanName = this.aString10001;
-        if (this.aString10001 != null) {
-            class282_sub4_1.guestsTalk = this.aByte9999;
-            class282_sub4_1.minRankToKick = this.aByte10000;
-        }
-
-    }
-
-    void method12208(RsByteBuffer rsbytebuffer_1) {
-        this.aString10001 = rsbytebuffer_1.readNullString();
-        if (this.aString10001 != null) {
-            rsbytebuffer_1.readUnsignedByte();
-            this.aByte9999 = rsbytebuffer_1.readByte();
-            this.aByte10000 = rsbytebuffer_1.readByte();
-        }
-
-    }
-
-    void method12207(RsByteBuffer rsbytebuffer_1) {
-        this.aString10001 = rsbytebuffer_1.readNullString();
-        if (this.aString10001 != null) {
-            rsbytebuffer_1.readUnsignedByte();
-            this.aByte9999 = rsbytebuffer_1.readByte();
-            this.aByte10000 = rsbytebuffer_1.readByte();
-        }
-
-    }
-
     Node_Sub11_Sub1(Class349 class349_1) {
-        this.this$0 = class349_1;
+        this$0 = class349_1;
     }
 
-    static int method15433(NPC npc_0) {
-        NPCDefinitions npcdefinitions_2 = npc_0.definitions;
+    static int method15433(NPCEntity npc_0) {
+        NPCType npcdefinitions_2 = npc_0.definitions;
         if (npcdefinitions_2.transformTo != null) {
-            npcdefinitions_2 = npcdefinitions_2.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER);
+            npcdefinitions_2 = npcdefinitions_2.getMultiNPC(Class158_Sub1.PLAYER_VAR_PROVIDER);
             if (npcdefinitions_2 == null) {
                 return -1;
             }
@@ -98,19 +40,81 @@ public class Node_Sub11_Sub1 extends Node_Sub11 {
 
     public static ParticleProducerDefinition getParticleProducerDefs(int i_0) {
         ParticleProducerDefinition defs = (ParticleProducerDefinition) ParticleProducerDefinition.aClass229_533.get(i_0);
-        if (defs != null) {
-            return defs;
-        } else {
-            byte[] bytes_3 = WorldTile.PARTICLE_INDEX.getFile(0, i_0);
+        if (defs == null) {
+            byte[] bytes_3 = CoordGrid.PARTICLE_INDEX.getFile(0, i_0);
             defs = new ParticleProducerDefinition();
             if (bytes_3 != null) {
-                defs.decode(new RsByteBuffer(bytes_3));
+                defs.decode(new Packet(bytes_3));
             }
 
             defs.init();
             ParticleProducerDefinition.aClass229_533.put(defs, i_0);
-            return defs;
         }
+        return defs;
+    }
+
+    @Override
+    void method12204(ClanChannel class282_sub4_1) {
+        class282_sub4_1.clanName = aString10001;
+        if (aString10001 != null) {
+            class282_sub4_1.guestsTalk = aByte9999;
+            class282_sub4_1.minRankToKick = aByte10000;
+        }
+
+    }
+
+    @Override
+    void method12203(Packet rsbytebuffer_1) {
+        aString10001 = rsbytebuffer_1.readNullString();
+        if (aString10001 != null) {
+            rsbytebuffer_1.readUnsignedByte();
+            aByte9999 = rsbytebuffer_1.readByte();
+            aByte10000 = rsbytebuffer_1.readByte();
+        }
+
+    }
+
+    @Override
+    void method12206(Packet rsbytebuffer_1) {
+        aString10001 = rsbytebuffer_1.readNullString();
+        if (aString10001 != null) {
+            rsbytebuffer_1.readUnsignedByte();
+            aByte9999 = rsbytebuffer_1.readByte();
+            aByte10000 = rsbytebuffer_1.readByte();
+        }
+
+    }
+
+    @Override
+    void method12205(ClanChannel class282_sub4_1) {
+        class282_sub4_1.clanName = aString10001;
+        if (aString10001 != null) {
+            class282_sub4_1.guestsTalk = aByte9999;
+            class282_sub4_1.minRankToKick = aByte10000;
+        }
+
+    }
+
+    @Override
+    void method12208(Packet rsbytebuffer_1) {
+        aString10001 = rsbytebuffer_1.readNullString();
+        if (aString10001 != null) {
+            rsbytebuffer_1.readUnsignedByte();
+            aByte9999 = rsbytebuffer_1.readByte();
+            aByte10000 = rsbytebuffer_1.readByte();
+        }
+
+    }
+
+    @Override
+    void method12207(Packet rsbytebuffer_1) {
+        aString10001 = rsbytebuffer_1.readNullString();
+        if (aString10001 != null) {
+            rsbytebuffer_1.readUnsignedByte();
+            aByte9999 = rsbytebuffer_1.readByte();
+            aByte10000 = rsbytebuffer_1.readByte();
+        }
+
     }
 
 }

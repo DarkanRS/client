@@ -14,7 +14,7 @@ public class Class148 {
 
     static long aLong1740;
 
-    static int anInt1730 = 0;
+    static int anInt1730;
 
     Class148() throws Throwable {
         throw new Error();
@@ -23,10 +23,10 @@ public class Class148 {
     public static String method2550(int i_0) {
         VorbisNode class282_sub37_2 = (VorbisNode) Class492.INDEX36_FILE_CACHE.get(i_0);
         if (class282_sub37_2 != null) {
-            Node_Sub41_Sub2 class282_sub41_sub2_3 = class282_sub37_2.reference.method4935();
+            Node_Sub41_Sub2 class282_sub41_sub2_3 = class282_sub37_2.vfReference.method4935();
             if (class282_sub41_sub2_3 != null) {
-                double d_4 = class282_sub37_2.reference.method4923(1997080101);
-                if ((double) class282_sub41_sub2_3.method14702() <= d_4 && (double) class282_sub41_sub2_3.method14705((byte) 5) >= d_4) {
+                double d_4 = class282_sub37_2.vfReference.method4923();
+                if (class282_sub41_sub2_3.method14702() <= d_4 && class282_sub41_sub2_3.method14705() >= d_4) {
                     return class282_sub41_sub2_3.method14704();
                 }
             }
@@ -34,7 +34,7 @@ public class Class148 {
         return null;
     }
 
-    public static RouteStrategy method2551(int i_0, int i_1, SceneObjectType sceneobjecttype_4, int i_5) {
+    public static RouteStrategy method2551(int i_0, int i_1, LocShapes sceneobjecttype_4, int i_5) {
         RouteStrategies.NORMAL_OBJECT.approxDestinationX = i_0;
         RouteStrategies.NORMAL_OBJECT.approxDestinationY = i_1;
         RouteStrategies.NORMAL_OBJECT.approxDestinationSizeX = 0;
@@ -44,7 +44,7 @@ public class Class148 {
         return RouteStrategies.NORMAL_OBJECT;
     }
 
-    static Class method2553(String string_0, short s_1) throws ClassNotFoundException {
-        return string_0.equals("B") ? Byte.TYPE : (string_0.equals("I") ? Integer.TYPE : (string_0.equals("S") ? Short.TYPE : (string_0.equals("J") ? Long.TYPE : (string_0.equals("Z") ? Boolean.TYPE : (string_0.equals("F") ? Float.TYPE : (string_0.equals("D") ? Double.TYPE : (string_0.equals("C") ? Character.TYPE : (string_0.equals("void") ? Void.TYPE : Class.forName(string_0)))))))));
+    static Class method2553(String string_0) throws ClassNotFoundException {
+        return "B".equals(string_0) ? Byte.TYPE : ("I".equals(string_0) ? Integer.TYPE : ("S".equals(string_0) ? Short.TYPE : ("J".equals(string_0) ? Long.TYPE : ("Z".equals(string_0) ? Boolean.TYPE : ("F".equals(string_0) ? Float.TYPE : ("D".equals(string_0) ? Double.TYPE : ("C".equals(string_0) ? Character.TYPE : ("void".equals(string_0) ? Void.TYPE : Class.forName(string_0)))))))));
     }
 }

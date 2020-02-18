@@ -5,20 +5,15 @@ import jaggl.OpenGL;
 public class Class140 {
 
     static int[] anIntArray1661 = new int[2];
-    OpenGLGraphicalRenderer aGraphicalRenderer_Sub1_1662;
+    OpenGLHardwareRenderer aGraphicalRenderer_Sub1_1662;
     int anInt1663;
 
-    Class140(OpenGLGraphicalRenderer class505_sub1_1, int i_2, int i_3) {
-        this.aGraphicalRenderer_Sub1_1662 = class505_sub1_1;
-        this.anInt1663 = i_2;
+    Class140(OpenGLHardwareRenderer class505_sub1_1, int i_2) {
+        aGraphicalRenderer_Sub1_1662 = class505_sub1_1;
+        anInt1663 = i_2;
     }
 
-    public void finalize() throws Throwable {
-        this.aGraphicalRenderer_Sub1_1662.method13627(this.anInt1663);
-        super.finalize();
-    }
-
-    static Class140 method2393(OpenGLGraphicalRenderer class505_sub1_0, int i_1, String string_2) {
+    static Class140 method2393(OpenGLHardwareRenderer class505_sub1_0, int i_1, String string_2) {
         int i_3 = OpenGL.glCreateShader(i_1);
         OpenGL.glShaderSource(i_3, string_2);
         OpenGL.glCompileShader(i_3);
@@ -41,7 +36,13 @@ public class Class140 {
             }
         }
 
-        return new Class140(class505_sub1_0, i_3, i_1);
+        return new Class140(class505_sub1_0, i_3);
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        aGraphicalRenderer_Sub1_1662.method13627(anInt1663);
+        super.finalize();
     }
 
 }

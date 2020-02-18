@@ -2,75 +2,73 @@ package com.jagex;
 
 public class OverlayDef {
 
-    int anInt7053;
-
-    OverlayIndexLoader aClass536_7062;
-
     public int anInt7052 = 8;
-    public int primaryRGB = 0;
+    public int primaryRGB;
     public int texture = -1;
     public boolean aBool7056 = true;
     public int secondaryRGB = -1;
     public int anInt7057 = 512;
     public boolean aBool7059 = true;
-    public boolean aBool7061 = false;
+    public boolean aBool7061;
     public int waterColour = 1190717;
     public int waterScale = 512;
     public int waterIntensity = 255;
     public int anInt7065 = 63;
-    public int anInt7055 = 0;
+    public int anInt7055;
     public int anInt7067 = 64;
+    int anInt7053;
+    OverlayIndexLoader aClass536_7062;
 
     void method11356() {
-        this.anInt7052 = this.anInt7052 << 8 | this.anInt7053;
+        anInt7052 = anInt7052 << 8 | anInt7053;
     }
 
-    void method11357(RsByteBuffer rsbytebuffer_1) {
+    void method11357(Packet rsbytebuffer_1) {
         while (true) {
             int i_3 = rsbytebuffer_1.readUnsignedByte();
             if (i_3 == 0) {
                 return;
             }
-            this.method11364(rsbytebuffer_1, i_3);
+            method11364(rsbytebuffer_1, i_3);
         }
     }
 
-    void method11364(RsByteBuffer rsbytebuffer_1, int i_2) {
+    void method11364(Packet rsbytebuffer_1, int i_2) {
         if (i_2 == 1) {
-            this.primaryRGB = IdentikitDefinition.method912(rsbytebuffer_1.read24BitUnsignedInteger());
+            primaryRGB = IdentikitDefinition.method912(rsbytebuffer_1.read24BitUnsignedInteger());
         } else if (i_2 == 2) {
-            this.texture = rsbytebuffer_1.readUnsignedByte();
+            texture = rsbytebuffer_1.readUnsignedByte();
         } else if (i_2 == 3) {
-            this.texture = rsbytebuffer_1.readUnsignedShort();
-            if (this.texture == 65535) {
-                this.texture = -1;
+            texture = rsbytebuffer_1.readUnsignedShort();
+            if (texture == 65535) {
+                texture = -1;
             }
         } else if (i_2 == 5) {
-            this.aBool7056 = false;
+            aBool7056 = false;
         } else if (i_2 == 7) {
-            this.secondaryRGB = IdentikitDefinition.method912(rsbytebuffer_1.read24BitUnsignedInteger());
+            secondaryRGB = IdentikitDefinition.method912(rsbytebuffer_1.read24BitUnsignedInteger());
         } else if (i_2 == 8) {
-            this.aClass536_7062.anInt7093 = this.anInt7053;
+            aClass536_7062.anInt7093 = anInt7053;
         } else if (i_2 == 9) {
-            this.anInt7057 = rsbytebuffer_1.readUnsignedShort() << 2;
+            anInt7057 = rsbytebuffer_1.readUnsignedShort() << 2;
         } else if (i_2 == 10) {
-            this.aBool7059 = false;
+            aBool7059 = false;
         } else if (i_2 == 11) {
-            this.anInt7052 = rsbytebuffer_1.readUnsignedByte();
+            anInt7052 = rsbytebuffer_1.readUnsignedByte();
         } else if (i_2 == 12) {
-            this.aBool7061 = true;
+            aBool7061 = true;
         } else if (i_2 == 13) {
-            this.waterColour = rsbytebuffer_1.read24BitUnsignedInteger();
+            waterColour = rsbytebuffer_1.read24BitUnsignedInteger();
         } else if (i_2 == 14) {
-            this.waterScale = (rsbytebuffer_1.readUnsignedByte() << 2);
+            waterScale = (rsbytebuffer_1.readUnsignedByte() << 2);
         } else if (i_2 == 16) {
-            this.waterIntensity = rsbytebuffer_1.readUnsignedByte();
+            waterIntensity = rsbytebuffer_1.readUnsignedByte();
         } else if (i_2 == 20) {
-            this.anInt7065 = rsbytebuffer_1.readUnsignedShort();
+            anInt7065 = rsbytebuffer_1.readUnsignedShort();
         } else if (i_2 == 21) {
-            this.anInt7055 = rsbytebuffer_1.readUnsignedByte();
+            anInt7055 = rsbytebuffer_1.readUnsignedByte();
         } else if (i_2 == 22) {
-            this.anInt7067 = rsbytebuffer_1.readUnsignedShort();
+            anInt7067 = rsbytebuffer_1.readUnsignedShort();
         }
     }
 }

@@ -6,52 +6,60 @@ public class CacheableNode_Sub11_Sub2 extends JS5CacheRequest {
     int anInt10467;
     byte[] aByteArray10469;
 
-    int getCompletion(int i_1) {
-        return this.waiting ? 0 : 100;
+    @Override
+    int getCompletion() {
+        return waiting ? 0 : 100;
     }
 
+    @Override
     byte[] method14944() {
-        if (this.waiting) {
+        if (waiting) {
             throw new RuntimeException();
         } else {
-            return this.aByteArray10469;
+            return aByteArray10469;
         }
     }
 
+    @Override
     int method14947() {
-        return this.waiting ? 0 : 100;
+        return waiting ? 0 : 100;
     }
 
-    byte[] getData(int i_1) {
-        if (this.waiting) {
+    @Override
+    byte[] getData() {
+        if (waiting) {
             throw new RuntimeException();
         } else {
-            return this.aByteArray10469;
+            return aByteArray10469;
         }
     }
 
+    @Override
     byte[] method14941() {
-        if (this.waiting) {
+        if (waiting) {
             throw new RuntimeException();
         } else {
-            return this.aByteArray10469;
+            return aByteArray10469;
         }
     }
 
+    @Override
     byte[] method14945() {
-        if (this.waiting) {
+        if (waiting) {
             throw new RuntimeException();
         } else {
-            return this.aByteArray10469;
+            return aByteArray10469;
         }
     }
 
+    @Override
     int method14946() {
-        return this.waiting ? 0 : 100;
+        return waiting ? 0 : 100;
     }
 
+    @Override
     int method14948() {
-        return this.waiting ? 0 : 100;
+        return waiting ? 0 : 100;
     }
 
 }

@@ -6,19 +6,15 @@ public class Node_Sub39 extends Node {
     double aDouble8004;
 
     Node_Sub39(short[][] shorts_1, double d_2) {
-        this.aShortArrayArray8003 = shorts_1;
-        this.aDouble8004 = d_2;
+        aShortArrayArray8003 = shorts_1;
+        aDouble8004 = d_2;
     }
 
-    long method13294() {
-        return this.aShortArrayArray8003.length << 32 | this.aShortArrayArray8003[0].length;
+    static void method13296(Matrix44 matrix44_0) {
+        Class20.aClass384_185.method6562(matrix44_0);
     }
 
-    static void method13296(Matrix44Arr matrix44arr_0) {
-        Class20.aClass384_185.method6562(matrix44arr_0);
-    }
-
-    static void method13297(GraphicalRenderer graphicalrenderer_0, Node_Sub36 class282_sub36_1, MapAreaDefinitions worldmapareadefs_2) {
+    static void method13297(AbstractRenderer graphicalrenderer_0, Node_Sub36 class282_sub36_1, MapAreaDefinitions worldmapareadefs_2) {
         NativeSprite nativesprite_4 = worldmapareadefs_2.method3729(graphicalrenderer_0);
         if (nativesprite_4 != null) {
             int i_5 = nativesprite_4.method2747();
@@ -71,7 +67,7 @@ public class Node_Sub39 extends Node {
             }
 
             i_14 = (int) (Math.atan2(i_7 - class282_sub36_1.anInt7990, i_8 - class282_sub36_1.anInt7992) / 3.141592653589793D * 32767.0D) & 0xffff;
-            nativesprite_4.method2758((float) i_7 + (float) i_5 / 2.0F, (float) i_5 / 2.0F + (float) i_8, 4096, i_14);
+            nativesprite_4.method2758(i_7 + i_5 / 2.0F, i_5 / 2.0F + i_8, 4096, i_14);
             int i_15 = -2;
             int i_16 = -2;
             int i_17 = -2;
@@ -82,7 +78,7 @@ public class Node_Sub39 extends Node {
                 i_17 = i_15 + i_10 + 10;
                 i_18 = i_13 + Class291_Sub1.aClass194_8023.method3173() * i_9 + 3;
                 if (worldmapareadefs_2.anInt2726 != 0) {
-                    graphicalrenderer_0.method8425(i_15, i_13, i_17 - i_15, i_18 - i_13, worldmapareadefs_2.anInt2726, (byte) -24);
+                    graphicalrenderer_0.method8425(i_15, i_13, i_17 - i_15, i_18 - i_13, worldmapareadefs_2.anInt2726);
                 }
 
                 if (worldmapareadefs_2.anInt2727 != 0) {
@@ -115,6 +111,10 @@ public class Node_Sub39 extends Node {
             }
         }
 
+    }
+
+    long method13294() {
+        return aShortArrayArray8003.length << 0 | aShortArrayArray8003[0].length;
     }
 
 }

@@ -17,13 +17,14 @@ public enum Class494 implements Identifiable {
     aClass494_5779(34),
     aClass494_5791(38);
 
-    int anInt5793;
-
-    public int getValue() {
-        return this.anInt5793;
-    }
+    final int anInt5793;
 
     Class494(int i_1) {
-        this.anInt5793 = i_1;
+        anInt5793 = i_1;
+    }
+
+    @Override
+    public int getValue() {
+        return anInt5793;
     }
 }

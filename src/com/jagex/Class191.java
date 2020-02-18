@@ -6,14 +6,25 @@ import java.io.File;
 
 public class Class191 implements Runnable {
 
-    File aFile2385 = null;
+    File aFile2385;
 
-    boolean aBool2387 = false;
+    boolean aBool2387;
 
     String aString2384;
 
     boolean aBool2386;
 
+    public Class191(String string_1) {
+        aString2384 = string_1;
+        aBool2386 = true;
+        (new Thread(this)).start();
+    }
+
+    public static void method3166() {
+        ParticleProducerDefinition.aClass229_533.method3859();
+    }
+
+    @Override
     public void run() {
         Container container_1 = Class371.getActiveContainer();
         Frame frame_2 = null;
@@ -32,37 +43,27 @@ public class Class191 implements Runnable {
             throw new RuntimeException("");
         } else {
             JFileChooser jfilechooser_3 = new JFileChooser("");
-            jfilechooser_3.setDialogTitle(this.aString2384);
+            jfilechooser_3.setDialogTitle(aString2384);
             jfilechooser_3.setFileFilter(new FileFilter_Sub1(this, this));
-            jfilechooser_3.setFileSelectionMode(1);
+            jfilechooser_3.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
             jfilechooser_3.setAcceptAllFileFilterUsed(false);
             int i_4 = jfilechooser_3.showOpenDialog(frame_2);
             if (i_4 == 0) {
-                this.aFile2385 = jfilechooser_3.getSelectedFile();
+                aFile2385 = jfilechooser_3.getSelectedFile();
             }
-            this.aBool2387 = true;
+            aBool2387 = true;
         }
     }
 
-    public Class191(String string_1) {
-        this.aString2384 = string_1;
-        this.aBool2386 = true;
-        (new Thread(this)).start();
-    }
-
     public boolean method3154() {
-        return this.aBool2387;
+        return aBool2387;
     }
 
-    boolean method3156(int i_1) {
-        return this.aBool2386;
+    boolean method3156() {
+        return aBool2386;
     }
 
     public File method3161() {
-        return this.aFile2385;
-    }
-
-    public static void method3166() {
-        ParticleProducerDefinition.aClass229_533.method3859();
+        return aFile2385;
     }
 }

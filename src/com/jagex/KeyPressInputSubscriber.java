@@ -4,22 +4,12 @@ public class KeyPressInputSubscriber implements InputSubscriber {
     int code;
     int flags;
 
-    public boolean valid(MouseRecord class282_sub53_1, KeyRecord[] arr_2, int i_3, KeyRecorder class199_4) {
-        for (int i_6 = 0; i_6 < i_3 && i_6 < arr_2.length; i_6++) {
-            KeyRecord interface16_7 = arr_2[i_6];
-            if (interface16_7 != null && interface16_7.getCode() == this.code && interface16_7.getFlags() == this.flags) {
-                return true;
-            }
-        }
-        return false;
-    }
-
     KeyPressInputSubscriber(int i_1, int i_2) {
-        this.code = i_1;
-        this.flags = i_2;
+        code = i_1;
+        flags = i_2;
     }
 
-    static KeyPressInputSubscriber decode(RsByteBuffer rsbytebuffer_0) {
+    static KeyPressInputSubscriber decode(Packet rsbytebuffer_0) {
         int code = rsbytebuffer_0.readUnsignedByte();
         int flags = rsbytebuffer_0.readUnsignedByte();
         return new KeyPressInputSubscriber(code, flags);
@@ -31,9 +21,9 @@ public class KeyPressInputSubscriber implements InputSubscriber {
         } else {
             int i_3 = 0;
             int i_4;
-            for (i_4 = charsequence_0.length(); i_3 < i_4 && SoftwareItemRender.method7035(charsequence_0.charAt(i_3), 1817858874); i_3++) {
+            for (i_4 = charsequence_0.length(); i_3 < i_4 && SoftwareItemRender.method7035(charsequence_0.charAt(i_3)); i_3++) {
             }
-            while (i_4 > i_3 && SoftwareItemRender.method7035(charsequence_0.charAt(i_4 - 1), 1764637813)) {
+            while (i_4 > i_3 && SoftwareItemRender.method7035(charsequence_0.charAt(i_4 - 1))) {
                 --i_4;
             }
             int i_5 = i_4 - i_3;
@@ -60,12 +50,25 @@ public class KeyPressInputSubscriber implements InputSubscriber {
     }
 
     public static int method3756(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5) {
+        int i_31 = i_3;
+        int i_41 = i_4;
         if ((i_5 & 0x1) == 1) {
-            int i_7 = i_3;
-            i_3 = i_4;
-            i_4 = i_7;
+            int i_7 = i_31;
+            i_31 = i_41;
+            i_41 = i_7;
         }
         i_2 &= 0x3;
-        return i_2 == 0 ? i_0 : (i_2 == 1 ? i_1 : (i_2 == 2 ? 7 - i_0 - (i_3 - 1) : 7 - i_1 - (i_4 - 1)));
+        return i_2 == 0 ? i_0 : (i_2 == 1 ? i_1 : (i_2 == 2 ? 7 - i_0 - (i_31 - 1) : 7 - i_1 - (i_41 - 1)));
+    }
+
+    @Override
+    public boolean valid(MouseRecord class282_sub53_1, KeyRecord[] arr_2, int i_3, KeyRecorder class199_4) {
+        for (int i_6 = 0; i_6 < i_3 && i_6 < arr_2.length; i_6++) {
+            KeyRecord interface16_7 = arr_2[i_6];
+            if (interface16_7 != null && interface16_7.getCode() == code && interface16_7.getFlags() == flags) {
+                return true;
+            }
+        }
+        return false;
     }
 }

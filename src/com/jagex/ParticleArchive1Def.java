@@ -5,93 +5,25 @@ import java.io.IOException;
 
 public class ParticleArchive1Def {
 
-    static Index PARTICLE_INDEX;
-    public int anInt4032;
     public static ParticleArchive1Def[] aClass345Array4025 = new ParticleArchive1Def[16];
-    static int anInt4028 = 0;
     public static IterableNodeMap aClass465_4029 = new IterableNodeMap(16);
-    static SoftCache aClass229_4031 = new SoftCache(64);
-    int anInt4034;
+    static Index PARTICLE_INDEX;
+    static int anInt4028;
+    static LRUCache aClass229_4031 = new LRUCache(64);
+    public int anInt4032;
     public int anInt4038;
     public int anInt4035;
     public int anInt4027;
     public int anInt4036;
     public int anInt4037;
     public int anInt4041;
-    public int anInt4039 = 0;
-    public int anInt4040 = 0;
-    boolean aBool4042 = false;
+    public int anInt4039;
+    public int anInt4040;
     public int anInt4024;
     public int anInt4033;
     public long aLong4044;
-
-    void method6124(RsByteBuffer rsbytebuffer_1) {
-        while (true) {
-            int i_3 = rsbytebuffer_1.readUnsignedByte();
-            if (i_3 == 0) {
-                return;
-            }
-            this.method6125(rsbytebuffer_1, i_3);
-        }
-    }
-
-    void method6125(RsByteBuffer rsbytebuffer_1, int i_2) {
-        if (i_2 == 1) {
-            if ((byte) 45 == -1) {
-                throw new IllegalStateException();
-            }
-            this.anInt4034 = rsbytebuffer_1.readUnsignedShort();
-        } else if (i_2 == 2) {
-            rsbytebuffer_1.readUnsignedByte();
-        } else if (i_2 == 3) {
-            if ((byte) 45 == -1) {
-                throw new IllegalStateException();
-            }
-            this.anInt4027 = rsbytebuffer_1.readInt();
-            this.anInt4036 = rsbytebuffer_1.readInt();
-            this.anInt4037 = rsbytebuffer_1.readInt();
-        } else if (i_2 == 4) {
-            if ((byte) 45 == -1)
-                this.anInt4038 = rsbytebuffer_1.readUnsignedByte();
-            this.anInt4035 = rsbytebuffer_1.readInt();
-        } else if (i_2 == 6) {
-            if ((byte) 45 == -1) {
-                throw new IllegalStateException();
-            }
-            this.anInt4041 = rsbytebuffer_1.readUnsignedByte();
-        } else if (i_2 == 8) {
-            if ((byte) 45 != -1) {
-                this.anInt4040 = 1;
-            }
-        } else if (i_2 == 9) {
-            this.anInt4039 = 1;
-        } else if (i_2 == 10) {
-            if ((byte) 45 == -1)
-                this.aBool4042 = true;
-        }
-    }
-
-    void method6128() {
-        this.anInt4024 = Class382.COSINE[this.anInt4034 << 3];
-        long long_2 = this.anInt4027;
-        long long_4 = this.anInt4036;
-        long long_6 = this.anInt4037;
-        this.anInt4033 = (int) Math.sqrt((double) (long_2 * long_2 + long_4 * long_4 + long_6 * long_6));
-        if (this.anInt4035 == 0) {
-            this.anInt4035 = 1;
-        }
-        if (this.anInt4038 == 0) {
-            this.aLong4044 = 2147483647L;
-        } else if (this.anInt4038 == 1) {
-            this.aLong4044 = this.anInt4033 * 8 / this.anInt4035;
-            this.aLong4044 *= this.aLong4044;
-        } else if (this.anInt4038 == 2) {
-            this.aLong4044 = this.anInt4033 * 8 / this.anInt4035;
-        }
-        if (this.aBool4042) {
-            this.anInt4033 *= -1;
-        }
-    }
+    int anInt4034;
+    boolean aBool4042;
 
     public static Class442 method6137(String string_0, String string_1, boolean bool_2) {
         File file_4 = new File(Engine.aFile3264, "preferences" + string_0 + ".dat");
@@ -99,7 +31,7 @@ public class ParticleArchive1Def {
             try {
                 Class442 class442_12 = new Class442(file_4, 10000L);
                 return class442_12;
-            } catch (IOException ioexception_11) {
+            } catch (IOException ignored) {
             }
         }
         String str_5 = "";
@@ -114,7 +46,7 @@ public class ParticleArchive1Def {
             try {
                 class442_8 = new Class442(file_6, 10000L);
                 return class442_8;
-            } catch (IOException ioexception_10) {
+            } catch (IOException ignored) {
             }
         }
         try {
@@ -134,9 +66,77 @@ public class ParticleArchive1Def {
         ItemContainer.aClass229_7712.method3859();
     }
 
-    static void worldLogin(String string_0, String string_1, int i_2) {
+    static void worldLogin(String string_0, String string_1) {
         Class9.lobbyStage = 273;
         Class9.CURRENT_CONNECTION_CONTEXT = client.GAME_CONNECTION_CONTEXT;
         Class455.method7558(false, false, string_0, string_1, -1L);
+    }
+
+    void method6124(Packet rsbytebuffer_1) {
+        while (true) {
+            int i_3 = rsbytebuffer_1.readUnsignedByte();
+            if (i_3 == 0) {
+                return;
+            }
+            method6125(rsbytebuffer_1, i_3);
+        }
+    }
+
+    void method6125(Packet rsbytebuffer_1, int i_2) {
+        if (i_2 == 1) {
+            if (false) {
+                throw new IllegalStateException();
+            }
+            anInt4034 = rsbytebuffer_1.readUnsignedShort();
+        } else if (i_2 == 2) {
+            rsbytebuffer_1.readUnsignedByte();
+        } else if (i_2 == 3) {
+            if (false) {
+                throw new IllegalStateException();
+            }
+            anInt4027 = rsbytebuffer_1.readInt();
+            anInt4036 = rsbytebuffer_1.readInt();
+            anInt4037 = rsbytebuffer_1.readInt();
+        } else if (i_2 == 4) {
+            if (false)
+                anInt4038 = rsbytebuffer_1.readUnsignedByte();
+            anInt4035 = rsbytebuffer_1.readInt();
+        } else if (i_2 == 6) {
+            if (false) {
+                throw new IllegalStateException();
+            }
+            anInt4041 = rsbytebuffer_1.readUnsignedByte();
+        } else if (i_2 == 8) {
+            if (true) {
+                anInt4040 = 1;
+            }
+        } else if (i_2 == 9) {
+            anInt4039 = 1;
+        } else if (i_2 == 10) {
+            if (false)
+                aBool4042 = true;
+        }
+    }
+
+    void method6128() {
+        anInt4024 = Class382.COSINE[anInt4034 << 3];
+        long long_2 = anInt4027;
+        long long_4 = anInt4036;
+        long long_6 = anInt4037;
+        anInt4033 = (int) Math.sqrt((long_2 * long_2 + long_4 * long_4 + long_6 * long_6));
+        if (anInt4035 == 0) {
+            anInt4035 = 1;
+        }
+        if (anInt4038 == 0) {
+            aLong4044 = 2147483647L;
+        } else if (anInt4038 == 1) {
+            aLong4044 = anInt4033 * 8 / anInt4035;
+            aLong4044 *= aLong4044;
+        } else if (anInt4038 == 2) {
+            aLong4044 = anInt4033 * 8 / anInt4035;
+        }
+        if (aBool4042) {
+            anInt4033 *= -1;
+        }
     }
 }

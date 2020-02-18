@@ -9,203 +9,223 @@ public class Class300 implements Interface4 {
 
     int anInt3550;
     byte aByte3547;
-    long aLong3549 = 0L;
+    long aLong3549;
     int anInt3548;
-    GraphicalRenderer_Sub2_Sub2 aGraphicalRenderer_Sub2_Sub2_3551;
+    AbstractRenderer_Sub2_Sub2 aGraphicalRenderer_Sub2_Sub2_3551;
     boolean aBool3552;
 
-    public boolean method27(int i_1, int i_2, Source source_3) {
-        return this.method31(i_1, i_2) && Class25.gtOrEqualToZero(IDirect3DVertexBuffer.Upload(this.aLong3549, 0, this.anInt3550, this.aBool3552 ? 8192 : 0, source_3.method2()));
+    Class300(AbstractRenderer_Sub2_Sub2 class505_sub2_sub2_1, boolean bool_2) {
+        aGraphicalRenderer_Sub2_Sub2_3551 = class505_sub2_sub2_1;
+        aBool3552 = bool_2;
+        aGraphicalRenderer_Sub2_Sub2_3551.method13901(this);
     }
 
+    @Override
+    public boolean method27(int i_1, int i_2, Source source_3) {
+        return method31(i_1, i_2) && Class25.gtOrEqualToZero(IDirect3DVertexBuffer.Upload(aLong3549, 0, anInt3550, aBool3552 ? 8192 : 0, source_3.method2()));
+    }
+
+    @Override
     public boolean method29(int i_1, int i_2) {
-        this.anInt3550 = i_1;
-        this.aByte3547 = (byte) i_2;
-        if (this.anInt3550 > this.anInt3548) {
+        anInt3550 = i_1;
+        aByte3547 = (byte) i_2;
+        if (anInt3550 > anInt3548) {
             int i_3 = 8;
             byte b_4;
-            if (this.aBool3552) {
+            if (aBool3552) {
                 b_4 = 0;
                 i_3 |= 0x200;
             } else {
                 b_4 = 1;
             }
 
-            if (this.aLong3549 != 0L) {
-                IUnknown.Release(this.aLong3549);
+            if (aLong3549 != 0L) {
+                IUnknown.Release(aLong3549);
             }
 
-            this.aLong3549 = IDirect3DDevice.CreateVertexBuffer(this.aGraphicalRenderer_Sub2_Sub2_3551.aLong10252, this.anInt3550, i_3, 0, b_4);
-            this.anInt3548 = this.anInt3550;
+            aLong3549 = IDirect3DDevice.CreateVertexBuffer(aGraphicalRenderer_Sub2_Sub2_3551.aLong10252, anInt3550, i_3, 0, b_4);
+            anInt3548 = anInt3550;
         }
 
-        return this.aLong3549 != 0L;
+        return aLong3549 != 0L;
     }
 
     int method5317() {
-        return this.aByte3547;
+        return aByte3547;
     }
 
+    @Override
     public boolean method31(int i_1, int i_2) {
-        this.anInt3550 = i_1;
-        this.aByte3547 = (byte) i_2;
-        if (this.anInt3550 > this.anInt3548) {
+        anInt3550 = i_1;
+        aByte3547 = (byte) i_2;
+        if (anInt3550 > anInt3548) {
             int i_3 = 8;
             byte b_4;
-            if (this.aBool3552) {
+            if (aBool3552) {
                 b_4 = 0;
                 i_3 |= 0x200;
             } else {
                 b_4 = 1;
             }
 
-            if (this.aLong3549 != 0L) {
-                IUnknown.Release(this.aLong3549);
+            if (aLong3549 != 0L) {
+                IUnknown.Release(aLong3549);
             }
 
-            this.aLong3549 = IDirect3DDevice.CreateVertexBuffer(this.aGraphicalRenderer_Sub2_Sub2_3551.aLong10252, this.anInt3550, i_3, 0, b_4);
-            this.anInt3548 = this.anInt3550;
+            aLong3549 = IDirect3DDevice.CreateVertexBuffer(aGraphicalRenderer_Sub2_Sub2_3551.aLong10252, anInt3550, i_3, 0, b_4);
+            anInt3548 = anInt3550;
         }
 
-        return this.aLong3549 != 0L;
+        return aLong3549 != 0L;
     }
 
+    @Override
     public long method40(int i_1, int i_2) {
-        return IDirect3DVertexBuffer.Lock(this.aLong3549, i_1, i_2, this.aBool3552 ? 8192 : 0);
+        return IDirect3DVertexBuffer.Lock(aLong3549, i_1, i_2, aBool3552 ? 8192 : 0);
     }
 
+    @Override
     public void method38() {
-        IDirect3DVertexBuffer.Unlock(this.aLong3549);
+        IDirect3DVertexBuffer.Unlock(aLong3549);
     }
 
+    @Override
     public boolean method42(int i_1, int i_2, long long_3) {
-        return Class25.gtOrEqualToZero(IDirect3DVertexBuffer.Upload(this.aLong3549, i_1, i_2, this.aBool3552 ? 8192 : 0, long_3));
+        return Class25.gtOrEqualToZero(IDirect3DVertexBuffer.Upload(aLong3549, i_1, i_2, aBool3552 ? 8192 : 0, long_3));
     }
 
+    @Override
     public void method26() {
-        if (this.aLong3549 != 0L) {
-            IUnknown.Release(this.aLong3549);
-            this.aLong3549 = 0L;
+        if (aLong3549 != 0L) {
+            IUnknown.Release(aLong3549);
+            aLong3549 = 0L;
         }
 
-        this.anInt3548 = 0;
-        this.anInt3550 = 0;
-        this.aGraphicalRenderer_Sub2_Sub2_3551.method13885(this);
+        anInt3548 = 0;
+        anInt3550 = 0;
+        aGraphicalRenderer_Sub2_Sub2_3551.method13885(this);
     }
 
     void method5319() {
-        if (this.aLong3549 != 0L) {
-            this.aGraphicalRenderer_Sub2_Sub2_3551.method15650(this.aLong3549);
-            this.aLong3549 = 0L;
-            this.anInt3548 = 0;
-            this.anInt3550 = 0;
+        if (aLong3549 != 0L) {
+            aGraphicalRenderer_Sub2_Sub2_3551.method15650(aLong3549);
+            aLong3549 = 0L;
+            anInt3548 = 0;
+            anInt3550 = 0;
         }
 
     }
 
+    @Override
     public void method32() {
-        if (this.aLong3549 != 0L) {
-            IUnknown.Release(this.aLong3549);
-            this.aLong3549 = 0L;
+        if (aLong3549 != 0L) {
+            IUnknown.Release(aLong3549);
+            aLong3549 = 0L;
         }
 
-        this.anInt3548 = 0;
-        this.anInt3550 = 0;
-        this.aGraphicalRenderer_Sub2_Sub2_3551.method13885(this);
+        anInt3548 = 0;
+        anInt3550 = 0;
+        aGraphicalRenderer_Sub2_Sub2_3551.method13885(this);
     }
 
-    public void finalize() {
-        this.method5319();
+    @Override
+    protected void finalize() {
+        method5319();
     }
 
+    @Override
     public boolean method28(int i_1, int i_2) {
-        this.anInt3550 = i_1;
-        this.aByte3547 = (byte) i_2;
-        if (this.anInt3550 > this.anInt3548) {
+        anInt3550 = i_1;
+        aByte3547 = (byte) i_2;
+        if (anInt3550 > anInt3548) {
             int i_3 = 8;
             byte b_4;
-            if (this.aBool3552) {
+            if (aBool3552) {
                 b_4 = 0;
                 i_3 |= 0x200;
             } else {
                 b_4 = 1;
             }
 
-            if (this.aLong3549 != 0L) {
-                IUnknown.Release(this.aLong3549);
+            if (aLong3549 != 0L) {
+                IUnknown.Release(aLong3549);
             }
 
-            this.aLong3549 = IDirect3DDevice.CreateVertexBuffer(this.aGraphicalRenderer_Sub2_Sub2_3551.aLong10252, this.anInt3550, i_3, 0, b_4);
-            this.anInt3548 = this.anInt3550;
+            aLong3549 = IDirect3DDevice.CreateVertexBuffer(aGraphicalRenderer_Sub2_Sub2_3551.aLong10252, anInt3550, i_3, 0, b_4);
+            anInt3548 = anInt3550;
         }
 
-        return this.aLong3549 != 0L;
+        return aLong3549 != 0L;
     }
 
+    @Override
     public boolean method30(int i_1, int i_2) {
-        this.anInt3550 = i_1;
-        this.aByte3547 = (byte) i_2;
-        if (this.anInt3550 > this.anInt3548) {
+        anInt3550 = i_1;
+        aByte3547 = (byte) i_2;
+        if (anInt3550 > anInt3548) {
             int i_3 = 8;
             byte b_4;
-            if (this.aBool3552) {
+            if (aBool3552) {
                 b_4 = 0;
                 i_3 |= 0x200;
             } else {
                 b_4 = 1;
             }
 
-            if (this.aLong3549 != 0L) {
-                IUnknown.Release(this.aLong3549);
+            if (aLong3549 != 0L) {
+                IUnknown.Release(aLong3549);
             }
 
-            this.aLong3549 = IDirect3DDevice.CreateVertexBuffer(this.aGraphicalRenderer_Sub2_Sub2_3551.aLong10252, this.anInt3550, i_3, 0, b_4);
-            this.anInt3548 = this.anInt3550;
+            aLong3549 = IDirect3DDevice.CreateVertexBuffer(aGraphicalRenderer_Sub2_Sub2_3551.aLong10252, anInt3550, i_3, 0, b_4);
+            anInt3548 = anInt3550;
         }
 
-        return this.aLong3549 != 0L;
+        return aLong3549 != 0L;
     }
 
-    Class300(GraphicalRenderer_Sub2_Sub2 class505_sub2_sub2_1, boolean bool_2) {
-        this.aGraphicalRenderer_Sub2_Sub2_3551 = class505_sub2_sub2_1;
-        this.aBool3552 = bool_2;
-        this.aGraphicalRenderer_Sub2_Sub2_3551.method13901(this);
-    }
-
+    @Override
     public boolean method33(int i_1, int i_2, Source source_3) {
-        return this.method31(i_1, i_2) && Class25.gtOrEqualToZero(IDirect3DVertexBuffer.Upload(this.aLong3549, 0, this.anInt3550, this.aBool3552 ? 8192 : 0, source_3.method2()));
+        return method31(i_1, i_2) && Class25.gtOrEqualToZero(IDirect3DVertexBuffer.Upload(aLong3549, 0, anInt3550, aBool3552 ? 8192 : 0, source_3.method2()));
     }
 
+    @Override
     public boolean method34(int i_1, int i_2, Source source_3) {
-        return this.method31(i_1, i_2) && Class25.gtOrEqualToZero(IDirect3DVertexBuffer.Upload(this.aLong3549, 0, this.anInt3550, this.aBool3552 ? 8192 : 0, source_3.method2()));
+        return method31(i_1, i_2) && Class25.gtOrEqualToZero(IDirect3DVertexBuffer.Upload(aLong3549, 0, anInt3550, aBool3552 ? 8192 : 0, source_3.method2()));
     }
 
+    @Override
     public int method36() {
-        return this.anInt3550;
+        return anInt3550;
     }
 
+    @Override
     public int method39() {
-        return this.anInt3550;
+        return anInt3550;
     }
 
+    @Override
     public long method41(int i_1, int i_2) {
-        return IDirect3DVertexBuffer.Lock(this.aLong3549, i_1, i_2, this.aBool3552 ? 8192 : 0);
+        return IDirect3DVertexBuffer.Lock(aLong3549, i_1, i_2, aBool3552 ? 8192 : 0);
     }
 
+    @Override
     public long method37(int i_1, int i_2) {
-        return IDirect3DVertexBuffer.Lock(this.aLong3549, i_1, i_2, this.aBool3552 ? 8192 : 0);
+        return IDirect3DVertexBuffer.Lock(aLong3549, i_1, i_2, aBool3552 ? 8192 : 0);
     }
 
+    @Override
     public void method43() {
-        IDirect3DVertexBuffer.Unlock(this.aLong3549);
+        IDirect3DVertexBuffer.Unlock(aLong3549);
     }
 
+    @Override
     public void method44() {
-        IDirect3DVertexBuffer.Unlock(this.aLong3549);
+        IDirect3DVertexBuffer.Unlock(aLong3549);
     }
 
+    @Override
     public boolean method35(int i_1, int i_2, long long_3) {
-        return Class25.gtOrEqualToZero(IDirect3DVertexBuffer.Upload(this.aLong3549, i_1, i_2, this.aBool3552 ? 8192 : 0, long_3));
+        return Class25.gtOrEqualToZero(IDirect3DVertexBuffer.Upload(aLong3549, i_1, i_2, aBool3552 ? 8192 : 0, long_3));
     }
 
 }

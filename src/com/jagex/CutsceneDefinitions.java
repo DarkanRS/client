@@ -4,7 +4,7 @@ public class CutsceneDefinitions {
 
     public static boolean method6684(int cutsceneId) {
         if (cutsceneId != Class86.anInt831 || ReflectionCheck.aClass85_8039 == null) {
-            Class79.method1390(769951591);
+            Class79.method1390();
             ReflectionCheck.aClass85_8039 = Class85.aClass85_815;
             Class86.anInt831 = cutsceneId;
         }
@@ -13,7 +13,7 @@ public class CutsceneDefinitions {
             if (data == null) {
                 return false;
             }
-            RsByteBuffer buffer = new RsByteBuffer(data);
+            Packet buffer = new Packet(data);
             readValueLoop(buffer);
             int numAreas = buffer.readUnsignedByte();
             for (int i = 0; i < numAreas; i++) {
@@ -80,10 +80,10 @@ public class CutsceneDefinitions {
         return true;
     }
 
-    static CutsceneAction decodeMiscActions(RsByteBuffer buffer) {
+    static CutsceneAction decodeMiscActions(Packet buffer) {
         int i_2 = buffer.readUnsignedByte();
         CutsceneActionType type = QuickChatMessage.method6156(i_2);
-        Object action = null;
+        CutsceneAction action = null;
         switch (type.id) {
             case 0:
                 action = new CutsceneAction_Sub15(buffer);
@@ -173,10 +173,10 @@ public class CutsceneDefinitions {
             case 30:
                 action = new CutsceneAction_Sub23(buffer);
         }
-        return (CutsceneAction) action;
+        return action;
     }
 
-    static void readValueLoop(RsByteBuffer rsbytebuffer_0) {
+    static void readValueLoop(Packet rsbytebuffer_0) {
         while (true) {
             int i_2 = rsbytebuffer_0.readUnsignedByte();
             switch (i_2) {

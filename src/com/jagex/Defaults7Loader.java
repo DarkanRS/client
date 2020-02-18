@@ -16,43 +16,7 @@ public class Defaults7Loader {
 
     public Defaults7Loader(Index index_1) {
         byte[] bytes_2 = index_1.getFile(DefaultsFile.FILE_7.fileId);
-        this.method8746(new RsByteBuffer(bytes_2));
-    }
-
-    void method8746(RsByteBuffer rsbytebuffer_1) {
-        while (true) {
-            int i_3 = rsbytebuffer_1.readUnsignedByte();
-            if (i_3 == 0) {
-                return;
-            }
-            if (i_3 == 1) {
-                this.anInterface17_5878 = InputSubscriber.decode(rsbytebuffer_1);
-            } else if (i_3 == 2) {
-                this.anInterface17_5874 = InputSubscriber.decode(rsbytebuffer_1);
-            } else if (i_3 == 3) {
-                this.anInterface17_5875 = InputSubscriber.decode(rsbytebuffer_1);
-            } else if (i_3 == 4) {
-                this.anInterface17_5882 = InputSubscriber.decode(rsbytebuffer_1);
-            } else if (i_3 == 5) {
-                this.aClass232_5877 = KeyHoldInputSubscriber.decode(rsbytebuffer_1);
-            } else if (i_3 == 6) {
-                this.aClass232_5873 = KeyHoldInputSubscriber.decode(rsbytebuffer_1);
-            } else if (i_3 == 7) {
-                this.aClass232_5879 = KeyHoldInputSubscriber.decode(rsbytebuffer_1);
-            } else if (i_3 == 8) {
-                InputSubscriber.decode(rsbytebuffer_1);
-            } else if (i_3 == 9) {
-                InputSubscriber.decode(rsbytebuffer_1);
-            } else if (i_3 == 10) {
-                InputSubscriber.decode(rsbytebuffer_1);
-            } else if (i_3 == 11) {
-                this.aBool5876 = true;
-            } else if (i_3 == 12) {
-                this.membersTooltipColor = rsbytebuffer_1.readInt();
-            } else if (i_3 == 13) {
-                this.f2pTooltipColor = rsbytebuffer_1.readInt();
-            }
-        }
+        method8746(new Packet(bytes_2));
     }
 
     public static void method8751(CacheableNode cacheablenode_0, CacheableNode cacheablenode_1) {
@@ -65,7 +29,7 @@ public class Defaults7Loader {
         cacheablenode_0.aCacheableNode_8119.current = cacheablenode_0;
     }
 
-    public static MeshRasterizer method8752(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2, int i_3, int i_4, int i_5) {
+    public static MeshRasterizer method8752(AbstractRenderer graphicalrenderer_0, int i_1, int i_2, int i_3, int i_4, int i_5) {
         long long_7 = i_5;
         MeshRasterizer meshrasterizer_9 = (MeshRasterizer) HintArrow.aClass229_2245.get(long_7);
         short s_10 = 2055;
@@ -96,7 +60,43 @@ public class Defaults7Loader {
         return meshrasterizer_9;
     }
 
-    public static String method8755(RsByteBuffer rsbytebuffer_0) {
+    public static String method8755(Packet rsbytebuffer_0) {
         return Node_Sub33.method12582(rsbytebuffer_0);
+    }
+
+    void method8746(Packet rsbytebuffer_1) {
+        while (true) {
+            int i_3 = rsbytebuffer_1.readUnsignedByte();
+            if (i_3 == 0) {
+                return;
+            }
+            if (i_3 == 1) {
+                anInterface17_5878 = InputSubscriber.decode(rsbytebuffer_1);
+            } else if (i_3 == 2) {
+                anInterface17_5874 = InputSubscriber.decode(rsbytebuffer_1);
+            } else if (i_3 == 3) {
+                anInterface17_5875 = InputSubscriber.decode(rsbytebuffer_1);
+            } else if (i_3 == 4) {
+                anInterface17_5882 = InputSubscriber.decode(rsbytebuffer_1);
+            } else if (i_3 == 5) {
+                aClass232_5877 = KeyHoldInputSubscriber.decode(rsbytebuffer_1);
+            } else if (i_3 == 6) {
+                aClass232_5873 = KeyHoldInputSubscriber.decode(rsbytebuffer_1);
+            } else if (i_3 == 7) {
+                aClass232_5879 = KeyHoldInputSubscriber.decode(rsbytebuffer_1);
+            } else if (i_3 == 8) {
+                InputSubscriber.decode(rsbytebuffer_1);
+            } else if (i_3 == 9) {
+                InputSubscriber.decode(rsbytebuffer_1);
+            } else if (i_3 == 10) {
+                InputSubscriber.decode(rsbytebuffer_1);
+            } else if (i_3 == 11) {
+                aBool5876 = true;
+            } else if (i_3 == 12) {
+                membersTooltipColor = rsbytebuffer_1.readInt();
+            } else if (i_3 == 13) {
+                f2pTooltipColor = rsbytebuffer_1.readInt();
+            }
+        }
     }
 }

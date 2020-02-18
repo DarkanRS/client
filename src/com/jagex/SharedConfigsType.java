@@ -59,7 +59,8 @@ public enum SharedConfigsType {
     SCT_73(73),
     SCT_74(74);
 
-    public int id, bit;
+    public final int id;
+    public final int bit;
 
     SharedConfigsType(int id) {
         this(id, 0);
@@ -71,14 +72,14 @@ public enum SharedConfigsType {
     }
 
     public int filesPerContainer() {
-        return 1 << this.bit;
+        return 1 << bit;
     }
 
     public int containerId(int containerId) {
-        return containerId >>> this.bit;
+        return containerId >>> bit;
     }
 
     public int fileId(int fileId) {
-        return fileId & (1 << this.bit) - 1;
+        return fileId & (1 << bit) - 1;
     }
 }

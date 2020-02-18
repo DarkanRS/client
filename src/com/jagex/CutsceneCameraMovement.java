@@ -16,38 +16,23 @@ public class CutsceneCameraMovement {
 
     int[] anIntArray765;
 
-    void method1363(int i_1, int i_2) {
-        int[][] ints_3 = new int[this.anIntArray763.length << 1][4];
-        for (int i_4 = 0; i_4 < this.anIntArray763.length; i_4++) {
-            ints_3[i_4 * 2][0] = this.anIntArray763[i_4];
-            ints_3[i_4 * 2][1] = this.anIntArray760[i_4];
-            ints_3[i_4 * 2][2] = this.anIntArray762[i_4];
-            ints_3[i_4 * 2][3] = this.anIntArray759[i_4];
-            ints_3[i_4 * 2 + 1][0] = this.anIntArray761[i_4];
-            ints_3[i_4 * 2 + 1][1] = this.anIntArray764[i_4];
-            ints_3[i_4 * 2 + 1][2] = this.anIntArray765[i_4];
-            ints_3[i_4 * 2 + 1][3] = this.anIntArray759[i_4];
-        }
-        client.anIntArrayArrayArray7302[i_1] = ints_3;
-    }
-
-    CutsceneCameraMovement(RsByteBuffer rsbytebuffer_1) {
+    CutsceneCameraMovement(Packet rsbytebuffer_1) {
         int i_2 = rsbytebuffer_1.readUnsignedSmart();
-        this.anIntArray763 = new int[i_2];
-        this.anIntArray760 = new int[i_2];
-        this.anIntArray762 = new int[i_2];
-        this.anIntArray759 = new int[i_2];
-        this.anIntArray761 = new int[i_2];
-        this.anIntArray764 = new int[i_2];
-        this.anIntArray765 = new int[i_2];
+        anIntArray763 = new int[i_2];
+        anIntArray760 = new int[i_2];
+        anIntArray762 = new int[i_2];
+        anIntArray759 = new int[i_2];
+        anIntArray761 = new int[i_2];
+        anIntArray764 = new int[i_2];
+        anIntArray765 = new int[i_2];
         for (int i_3 = 0; i_3 < i_2; i_3++) {
-            this.anIntArray763[i_3] = rsbytebuffer_1.readUnsignedShort() - 5120;
-            this.anIntArray762[i_3] = rsbytebuffer_1.readUnsignedShort() - 5120;
-            this.anIntArray760[i_3] = rsbytebuffer_1.readShort();
-            this.anIntArray761[i_3] = rsbytebuffer_1.readUnsignedShort() - 5120;
-            this.anIntArray765[i_3] = rsbytebuffer_1.readUnsignedShort() - 5120;
-            this.anIntArray764[i_3] = rsbytebuffer_1.readShort();
-            this.anIntArray759[i_3] = rsbytebuffer_1.readShort();
+            anIntArray763[i_3] = rsbytebuffer_1.readUnsignedShort() - 5120;
+            anIntArray762[i_3] = rsbytebuffer_1.readUnsignedShort() - 5120;
+            anIntArray760[i_3] = rsbytebuffer_1.readShort();
+            anIntArray761[i_3] = rsbytebuffer_1.readUnsignedShort() - 5120;
+            anIntArray765[i_3] = rsbytebuffer_1.readUnsignedShort() - 5120;
+            anIntArray764[i_3] = rsbytebuffer_1.readShort();
+            anIntArray759[i_3] = rsbytebuffer_1.readShort();
         }
     }
 
@@ -57,9 +42,9 @@ public class CutsceneCameraMovement {
             EnumIndexLoader.anIntArray5379 = new int[65536];
             double d_1 = 0.7D + (Math.random() * 0.03D - 0.015D);
             for (int i_3 = 0; i_3 < 65536; i_3++) {
-                double d_4 = (double) (i_3 >> 10 & 0x3f) / 64.0D + 0.0078125D;
-                double d_6 = 0.0625D + (double) (i_3 >> 7 & 0x7) / 8.0D;
-                double d_8 = (double) (i_3 & 0x7f) / 128.0D;
+                double d_4 = (i_3 >> 10 & 0x3f) / 64.0D + 0.0078125D;
+                double d_6 = 0.0625D + (i_3 >> 7 & 0x7) / 8.0D;
+                double d_8 = (i_3 & 0x7f) / 128.0D;
                 double d_10 = d_8;
                 double d_12 = d_8;
                 double d_14 = d_8;
@@ -127,5 +112,20 @@ public class CutsceneCameraMovement {
 
     public static void method1369(AnimationIndexLoader animationindexloader_0) {
         NamedFileReference.ANIMATION_INDEX_LOADER = animationindexloader_0;
+    }
+
+    void method1363(int i_1) {
+        int[][] ints_3 = new int[anIntArray763.length << 1][4];
+        for (int i_4 = 0; i_4 < anIntArray763.length; i_4++) {
+            ints_3[i_4 * 2][0] = anIntArray763[i_4];
+            ints_3[i_4 * 2][1] = anIntArray760[i_4];
+            ints_3[i_4 * 2][2] = anIntArray762[i_4];
+            ints_3[i_4 * 2][3] = anIntArray759[i_4];
+            ints_3[i_4 * 2 + 1][0] = anIntArray761[i_4];
+            ints_3[i_4 * 2 + 1][1] = anIntArray764[i_4];
+            ints_3[i_4 * 2 + 1][2] = anIntArray765[i_4];
+            ints_3[i_4 * 2 + 1][3] = anIntArray759[i_4];
+        }
+        client.anIntArrayArrayArray7302[i_1] = ints_3;
     }
 }

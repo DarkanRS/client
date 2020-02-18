@@ -37,7 +37,7 @@ public class Class186 {
             }
         } else if (i_1 == 1) {
             try {
-                Object object_5 = Class441.method7375(IFSubNode.anApplet8065, string_2, new Object[]{(new URL(IFSubNode.anApplet8065.getCodeBase(), string_0)).toString()}, 161008971);
+                Object object_5 = Class441.method7375(SubInterface.suppliedApplet, string_2, new Object[]{(new URL(SubInterface.suppliedApplet.getCodeBase(), string_0)).toString()});
                 bool_4 = object_5 != null;
                 return bool_4;
             } catch (Throwable throwable_8) {
@@ -45,7 +45,7 @@ public class Class186 {
             }
         } else if (i_1 == 2) {
             try {
-                IFSubNode.anApplet8065.getAppletContext().showDocument(new URL(IFSubNode.anApplet8065.getCodeBase(), string_0), "_blank");
+                SubInterface.suppliedApplet.getAppletContext().showDocument(new URL(SubInterface.suppliedApplet.getCodeBase(), string_0), "_blank");
                 bool_4 = true;
                 return bool_4;
             } catch (Exception exception_9) {
@@ -53,12 +53,12 @@ public class Class186 {
             }
         } else if (i_1 == 3) {
             try {
-                Class441.method7377(IFSubNode.anApplet8065, "loggedout", 1762272883);
-            } catch (Throwable throwable_11) {
+                Class441.method7377(SubInterface.suppliedApplet, "loggedout");
+            } catch (Throwable ignored) {
             }
 
             try {
-                IFSubNode.anApplet8065.getAppletContext().showDocument(new URL(IFSubNode.anApplet8065.getCodeBase(), string_0), "_top");
+                SubInterface.suppliedApplet.getAppletContext().showDocument(new URL(SubInterface.suppliedApplet.getCodeBase(), string_0), "_top");
                 bool_4 = true;
                 return bool_4;
             } catch (Exception exception_10) {
@@ -69,7 +69,7 @@ public class Class186 {
         }
     }
 
-    static void method3083(int i_0) {
+    static void method3083() {
         Class9.CURRENT_CONNECTION_CONTEXT.clearAllQueuedPackets();
         Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer.index = 0;
         Class9.CURRENT_CONNECTION_CONTEXT.lastPacket = null;
@@ -100,7 +100,7 @@ public class Class186 {
 
         for (int i_1 = 0; i_1 < 2048; i_1++) {
             Class197.aNode_Sub35Array2428[i_1] = null;
-            Class197.playerMovementTypes[i_1] = MovementType.WALKING.id;
+            Class197.playerMovementTypes[i_1] = MoveSpeed.WALKING.id;
             Class197.aClass4Array2430[i_1] = null;
         }
 

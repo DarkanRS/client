@@ -5,13 +5,13 @@ public class Class179 {
     static int anInt2222;
     static int anInt2230;
     static long aLong2232;
-    static int anInt2227 = 0;
-    static int anInt2223 = 0;
+    static int anInt2227;
+    static int anInt2223;
     static String aString2225 = "";
-    static int anInt2226 = 0;
-    static int anInt2220 = 0;
-    static int anInt2221 = 0;
-    static boolean aBool2229 = false;
+    static int anInt2226;
+    static int anInt2220;
+    static int anInt2221;
+    static boolean aBool2229;
     static int anInt2231 = -1;
 
     Class179() throws Throwable {

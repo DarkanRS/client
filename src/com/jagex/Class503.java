@@ -2,6 +2,10 @@ package com.jagex;
 
 public class Class503 {
 
+    Class503() throws Throwable {
+        throw new Error();
+    }
+
     public static void method8351(long[] longs_0, int i_1, long[] longs_2, int i_3, int i_4) {
         if (longs_2 == longs_0) {
             if (i_3 == i_1) {
@@ -84,10 +88,6 @@ public class Class503 {
         for (i_4 += 7; i_1 < i_4; bytes_2[i_3++] = bytes_0[i_1++]) {
         }
 
-    }
-
-    Class503() throws Throwable {
-        throw new Error();
     }
 
     public static void method8356(float[] floats_0, int i_1, float[] floats_2, int i_3, int i_4) {

@@ -7,7 +7,7 @@ public class Class236 {
 
     static long aLong2910 = -1L;
 
-    static int anInt2912 = 0;
+    static int anInt2912;
 
     static boolean aBool2909 = true;
 
@@ -15,15 +15,15 @@ public class Class236 {
 
     static Class534_Sub1 aClass534_Sub1_2913 = new Class534_Sub1();
 
-    static Queue aQueue2914 = new LinkedList();
+    static Queue<MouseRecord_Sub1> aQueue2914 = new LinkedList<MouseRecord_Sub1>();
 
     Class236() throws Throwable {
         throw new Error();
     }
 
-    static void method3985(Entity animable_0, int i_1, byte b_2) {
+    static void method3985(PathingEntity animable_0, int i_1) {
         if (animable_0.currentAnimations != null) {
-            MovementType class249_3 = (MovementType) Class386.identify(MovementType.values(), i_1);
+            MoveSpeed class249_3 = (MoveSpeed) Class386.identify(MoveSpeed.values(), i_1);
             int i_4 = animable_0.currentAnimations[class249_3.getValueIncr()];
             if (i_4 != animable_0.currentAnimation.method7597()) {
                 animable_0.currentAnimation.method7615(i_4, animable_0.currentAnimation.getSpeed());

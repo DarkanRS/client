@@ -1,7 +1,10 @@
 package com.jagex;
 
-public final class Node_Sub31 extends Node {
+public class Node_Sub31 extends Node {
 
+    public static NodeCollection aClass482_7775 = new NodeCollection();
+    public static NodeCollection aClass482_7776 = new NodeCollection();
+    static long aLong7777 = 1L;
     public int anInt7762;
     public int anInt7763;
     int anInt7764;
@@ -13,9 +16,6 @@ public final class Node_Sub31 extends Node {
     int anInt7770;
     int anInt7771;
     int anInt7772;
-    public static NodeCollection aClass482_7775 = new NodeCollection();
-    public static NodeCollection aClass482_7776 = new NodeCollection();
-    static long aLong7777 = 1L;
     boolean aBool7773 = true;
-    boolean aBool7774 = false;
+    boolean aBool7774;
 }

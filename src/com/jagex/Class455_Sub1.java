@@ -4,17 +4,17 @@ public class Class455_Sub1 extends Class455 {
 
     Interface6 anInterface6_8508;
 
-    Class455_Sub1(GraphicalRenderer_Sub2 class505_sub2_1, int i_2, int i_3, byte[] bytes_4) {
-        this.anInterface6_8508 = class505_sub2_1.method13957(Class150.aClass150_1951, i_2, i_3, false, bytes_4);
-        this.anInterface6_8508.method50(false, false);
+    Class455_Sub1(AbstractRenderer_Sub2 class505_sub2_1, int i_2, int i_3, byte[] bytes_4) {
+        anInterface6_8508 = class505_sub2_1.method13957(Class150.aClass150_1951, i_2, i_3, false, bytes_4);
+        anInterface6_8508.method50(false, false);
     }
 
-    Class455_Sub1(GraphicalRenderer_Sub2 class505_sub2_1, int i_2, int i_3, int[] ints_4) {
-        this.anInterface6_8508 = class505_sub2_1.method14024(i_2, i_3, false, ints_4);
-        this.anInterface6_8508.method50(false, false);
+    Class455_Sub1(AbstractRenderer_Sub2 class505_sub2_1, int i_2, int i_3, int[] ints_4) {
+        anInterface6_8508 = class505_sub2_1.method14024(i_2, i_3, false, ints_4);
+        anInterface6_8508.method50(false, false);
     }
 
-    static Class455_Sub1 method13769(GraphicalRenderer_Sub2 class505_sub2_0, int i_1, int i_2, int[] ints_3, int[] ints_4) {
+    static Class455_Sub1 method13769(AbstractRenderer_Sub2 class505_sub2_0, int i_1, int i_2, int[] ints_3, int[] ints_4) {
         int i_6;
         int i_7;
         int i_8;

@@ -12,7 +12,7 @@ public interface KeyRecord {
 
     int getCode();
 
-    long method119(int var1);
+    long method119();
 
     int method70();
 

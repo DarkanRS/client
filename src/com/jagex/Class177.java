@@ -12,6 +12,6 @@ public class Class177 {
     byte aByte2210;
     int anInt2211;
     short aShort2212;
-    int anInt2203 = 0;
+    int anInt2203;
 
 }

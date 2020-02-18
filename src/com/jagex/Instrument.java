@@ -13,23 +13,6 @@ public class Instrument {
     static int[] volumeStep;
     static int[] pitchStep;
     static int[] pitchBaseStep;
-    Envelope pitch;
-    Envelope volume;
-    Envelope pitchModifier;
-    Envelope pitchModifierAmplitude;
-    Envelope volumeMultiplier;
-    Envelope volumeAmplitude;
-    Envelope release;
-    Envelope attack;
-    int delayTime = 0;
-    int delayDecay = 100;
-    int duration = 500;
-    int offset = 0;
-    Filter filter;
-    Envelope filterEnvelope;
-    int[] oscillatorVolume = new int[5];
-    int[] oscillatorPitch = new int[5];
-    int[] oscillatorDelays = new int[5];
 
     static {
         Random rand = new Random(0L);
@@ -41,7 +24,7 @@ public class Instrument {
         sine = new int[32768];
 
         for (int i = 0; i < 32768; i++) {
-            sine[i] = (int) (Math.sin((double) i / 5215.1903D) * 16384.0D);
+            sine[i] = (int) (Math.sin(i / 5215.1903D) * 16384.0D);
         }
 
         output = new int[220500];
@@ -52,86 +35,102 @@ public class Instrument {
         pitchBaseStep = new int[5];
     }
 
-    final int[] synthesize(int mixDuration, int instrDuration) {
+    Envelope pitch;
+    Envelope volume;
+    Envelope pitchModifier;
+    Envelope pitchModifierAmplitude;
+    Envelope volumeMultiplier;
+    Envelope volumeAmplitude;
+    Envelope release;
+    Envelope attack;
+    int delayTime;
+    int delayDecay = 100;
+    int duration = 500;
+    int offset;
+    Filter filter;
+    Envelope filterEnvelope;
+    int[] oscillatorVolume = new int[5];
+    int[] oscillatorPitch = new int[5];
+    int[] oscillatorDelays = new int[5];
+
+    int[] synthesize(int mixDuration, int instrDuration) {
         Arrays.fill(output, 0, mixDuration, 0);
-        if (instrDuration < 10) {
-            return output;
-        } else {
-            double fs = (double) mixDuration / ((double) instrDuration + 0.0D);
-            this.pitch.reset();
-            this.volume.reset();
+        if (instrDuration >= 10) {
+            double fs = mixDuration / (instrDuration + 0.0D);
+            pitch.reset();
+            volume.reset();
             int pitchModStep = 0;
             int pitchModBaseStep = 0;
             int pitchModPhase = 0;
-            if (this.pitchModifier != null) {
-                this.pitchModifier.reset();
-                this.pitchModifierAmplitude.reset();
-                pitchModStep = (int) ((double) (this.pitchModifier.end - this.pitchModifier.start) * 32.768D / fs);
-                pitchModBaseStep = (int) ((double) this.pitchModifier.start * 32.768D / fs);
+            if (pitchModifier != null) {
+                pitchModifier.reset();
+                pitchModifierAmplitude.reset();
+                pitchModStep = (int) ((pitchModifier.end - pitchModifier.start) * 32.768D / fs);
+                pitchModBaseStep = (int) (pitchModifier.start * 32.768D / fs);
             }
 
             int volumeModStep = 0;
             int volumeModBaseStep = 0;
             int volumeModPhase = 0;
-            if (this.volumeMultiplier != null) {
-                this.volumeMultiplier.reset();
-                this.volumeAmplitude.reset();
-                volumeModStep = (int) ((double) (this.volumeMultiplier.end - this.volumeMultiplier.start) * 32.768D / fs);
-                volumeModBaseStep = (int) ((double) this.volumeMultiplier.start * 32.768D / fs);
+            if (volumeMultiplier != null) {
+                volumeMultiplier.reset();
+                volumeAmplitude.reset();
+                volumeModStep = (int) ((volumeMultiplier.end - volumeMultiplier.start) * 32.768D / fs);
+                volumeModBaseStep = (int) (volumeMultiplier.start * 32.768D / fs);
             }
 
             for (int i = 0; i < 5; i++) {
-                if (this.oscillatorVolume[i] != 0) {
+                if (oscillatorVolume[i] != 0) {
                     phases[i] = 0;
-                    delays[i] = (int) ((double) this.oscillatorDelays[i] * fs);
-                    volumeStep[i] = (this.oscillatorVolume[i] << 14) / 100;
-                    pitchStep[i] = (int) ((double) (this.pitch.end - this.pitch.start) * 32.768D * Math.pow(1.0057929410678534D, this.oscillatorPitch[i]) / fs);
-                    pitchBaseStep[i] = (int) ((double) this.pitch.start * 32.768D / fs);
+                    delays[i] = (int) (oscillatorDelays[i] * fs);
+                    volumeStep[i] = (oscillatorVolume[i] << 14) / 100;
+                    pitchStep[i] = (int) ((pitch.end - pitch.start) * 32.768D * Math.pow(1.0057929410678534D, oscillatorPitch[i]) / fs);
+                    pitchBaseStep[i] = (int) (pitch.start * 32.768D / fs);
                 }
             }
 
             for (int i = 0; i < mixDuration; i++) {
-                int pitchChange = this.pitch.step(mixDuration);
-                int volumeChange = this.volume.step(mixDuration);
-                if (this.pitchModifier != null) {
-                    int mod = this.pitchModifier.step(mixDuration);
-                    int modAmplitude = this.pitchModifierAmplitude.step(mixDuration);
-                    pitchChange += this.evaluateWave(pitchModPhase, modAmplitude, this.pitchModifier.form) >> 1;
-                    pitchModPhase = pitchModPhase + pitchModBaseStep + (mod * pitchModStep >> 16);
+                int pitchChange = pitch.step(mixDuration);
+                int volumeChange = volume.step(mixDuration);
+                if (pitchModifier != null) {
+                    int mod = pitchModifier.step(mixDuration);
+                    int modAmplitude = pitchModifierAmplitude.step(mixDuration);
+                    pitchChange += evaluateWave(pitchModPhase, modAmplitude, pitchModifier.form) >> 1;
+                    pitchModPhase += pitchModBaseStep + (mod * pitchModStep >> 16);
                 }
 
-                if (this.volumeMultiplier != null) {
-                    int mod = this.volumeMultiplier.step(mixDuration);
-                    int modAmplitude = this.volumeAmplitude.step(mixDuration);
-                    volumeChange = volumeChange * ((this.evaluateWave(volumeModPhase, modAmplitude, this.volumeMultiplier.form) >> 1) + 32768) >> 15;
-                    volumeModPhase = volumeModPhase + volumeModBaseStep + (mod * volumeModStep >> 16);
+                if (volumeMultiplier != null) {
+                    int mod = volumeMultiplier.step(mixDuration);
+                    int modAmplitude = volumeAmplitude.step(mixDuration);
+                    volumeChange = volumeChange * ((evaluateWave(volumeModPhase, modAmplitude, volumeMultiplier.form) >> 1) + 32768) >> 15;
+                    volumeModPhase += volumeModBaseStep + (mod * volumeModStep >> 16);
                 }
 
                 for (int j = 0; j < 5; j++) {
-                    if (this.oscillatorVolume[j] != 0) {
+                    if (oscillatorVolume[j] != 0) {
                         int i_15 = delays[j] + i;
                         if (i_15 < mixDuration) {
-                            output[i_15] += this.evaluateWave(phases[j], volumeChange * volumeStep[j] >> 15, this.pitch.form);
+                            output[i_15] += evaluateWave(phases[j], volumeChange * volumeStep[j] >> 15, pitch.form);
                             phases[j] += (pitchChange * pitchStep[j] >> 16) + pitchBaseStep[j];
                         }
                     }
                 }
             }
 
-            if (this.release != null) {
-                this.release.reset();
-                this.attack.reset();
+            if (release != null) {
+                release.reset();
+                attack.reset();
                 int counter = 0;
                 boolean muted = true;
 
                 for (int i = 0; i < mixDuration; i++) {
-                    int onStep = this.release.step(mixDuration);
-                    int offStep = this.attack.step(mixDuration);
+                    int onStep = release.step(mixDuration);
+                    int offStep = attack.step(mixDuration);
                     int threshold;
                     if (muted) {
-                        threshold = (onStep * (this.release.end - this.release.start) >> 8) + this.release.start;
+                        threshold = (onStep * (release.end - release.start) >> 8) + release.start;
                     } else {
-                        threshold = (offStep * (this.release.end - this.release.start) >> 8) + this.release.start;
+                        threshold = (offStep * (release.end - release.start) >> 8) + release.start;
                     }
 
                     counter += 256;
@@ -146,19 +145,19 @@ public class Instrument {
                 }
             }
 
-            if (this.delayTime > 0 && this.delayDecay > 0) {
-                int delay = (int) ((double) this.delayTime * fs);
+            if (delayTime > 0 && delayDecay > 0) {
+                int delay = (int) (delayTime * fs);
 
                 for (int i = delay; i < mixDuration; i++) {
-                    output[i] += output[i - delay] * this.delayDecay / 100;
+                    output[i] += output[i - delay] * delayDecay / 100;
                 }
             }
 
-            if (this.filter.numPairs[0] > 0 || this.filter.numPairs[1] > 0) {
-                this.filterEnvelope.reset();
-                int t = this.filterEnvelope.step(mixDuration + 1);
-                int M = this.filter.compute(0, (float) t / 65536.0F);
-                int N = this.filter.compute(1, (float) t / 65536.0F);
+            if (filter.numPairs[0] > 0 || filter.numPairs[1] > 0) {
+                filterEnvelope.reset();
+                int t = filterEnvelope.step(mixDuration + 1);
+                int M = filter.compute(0, t / 65536.0F);
+                int N = filter.compute(1, t / 65536.0F);
                 if (mixDuration >= M + N) {
                     int n = 0;
                     int delay = N;
@@ -167,18 +166,18 @@ public class Instrument {
                     }
 
                     while (n < delay) {
-                        int y = (int) ((long) output[n + M] * (long) Filter.invUnity_int >> 16);
+                        int y = (int) ((long) output[n + M] * Filter.invUnity_int >> 16);
 
                         for (int i_17 = 0; i_17 < M; i_17++) {
-                            y += (int) ((long) output[n + M - 1 - i_17] * (long) Filter.coefficient_int[0][i_17] >> 16);
+                            y += (int) ((long) output[n + M - 1 - i_17] * Filter.coefficient_int[0][i_17] >> 16);
                         }
 
                         for (int i_17 = 0; i_17 < n; i_17++) {
-                            y -= (int) ((long) output[n - 1 - i_17] * (long) Filter.coefficient_int[1][i_17] >> 16);
+                            y -= (int) ((long) output[n - 1 - i_17] * Filter.coefficient_int[1][i_17] >> 16);
                         }
 
                         output[n] = y;
-                        t = this.filterEnvelope.step(mixDuration + 1);
+                        t = filterEnvelope.step(mixDuration + 1);
                         ++n;
                     }
 
@@ -190,18 +189,18 @@ public class Instrument {
                         }
 
                         while (n < delay) {
-                            int y = (int) ((long) output[n + M] * (long) Filter.invUnity_int >> 16);
+                            int y = (int) ((long) output[n + M] * Filter.invUnity_int >> 16);
 
                             for (int i = 0; i < M; i++) {
-                                y += (int) ((long) output[n + M - 1 - i] * (long) Filter.coefficient_int[0][i] >> 16);
+                                y += (int) ((long) output[n + M - 1 - i] * Filter.coefficient_int[0][i] >> 16);
                             }
 
                             for (int i = 0; i < N; i++) {
-                                y -= (int) ((long) output[n - 1 - i] * (long) Filter.coefficient_int[1][i] >> 16);
+                                y -= (int) ((long) output[n - 1 - i] * Filter.coefficient_int[1][i] >> 16);
                             }
 
                             output[n] = y;
-                            t = this.filterEnvelope.step(mixDuration + 1);
+                            t = filterEnvelope.step(mixDuration + 1);
                             ++n;
                         }
 
@@ -210,22 +209,22 @@ public class Instrument {
                                 int y = 0;
 
                                 for (int i = n + M - mixDuration; i < M; i++) {
-                                    y += (int) ((long) output[n + M - 1 - i] * (long) Filter.coefficient_int[0][i] >> 16);
+                                    y += (int) ((long) output[n + M - 1 - i] * Filter.coefficient_int[0][i] >> 16);
                                 }
 
                                 for (int i = 0; i < N; i++) {
-                                    y -= (int) ((long) output[n - 1 - i] * (long) Filter.coefficient_int[1][i] >> 16);
+                                    y -= (int) ((long) output[n - 1 - i] * Filter.coefficient_int[1][i] >> 16);
                                 }
 
                                 output[n] = y;
-                                this.filterEnvelope.step(mixDuration + 1);
+                                filterEnvelope.step(mixDuration + 1);
                                 ++n;
                             }
                             break;
                         }
 
-                        M = this.filter.compute(0, (float) t / 65536.0F);
-                        N = this.filter.compute(1, (float) t / 65536.0F);
+                        M = filter.compute(0, t / 65536.0F);
+                        N = filter.compute(1, t / 65536.0F);
                         delay += 128;
                     }
                 }
@@ -241,44 +240,44 @@ public class Instrument {
                 }
             }
 
-            return output;
         }
+        return output;
     }
 
-    final int evaluateWave(int table, int phase, int amplitude) {
+    int evaluateWave(int table, int phase, int amplitude) {
         return amplitude == 1 ? ((table & 0x7fff) < 16384 ? phase : -phase) : (amplitude == 2 ? sine[table & 0x7fff] * phase >> 14 : (amplitude == 3 ? (phase * (table & 0x7fff) >> 14) - phase : (amplitude == 4 ? phase * noise[table / 2607 & 0x7fff] : 0)));
     }
 
-    final void decodeInstruments(RsByteBuffer buffer) {
-        this.pitch = new Envelope();
-        this.pitch.decode(buffer);
-        this.volume = new Envelope();
-        this.volume.decode(buffer);
+    void decodeInstruments(Packet buffer) {
+        pitch = new Envelope();
+        pitch.decode(buffer);
+        volume = new Envelope();
+        volume.decode(buffer);
         int option = buffer.readUnsignedByte();
         if (option != 0) {
             --buffer.index;
-            this.pitchModifier = new Envelope();
-            this.pitchModifier.decode(buffer);
-            this.pitchModifierAmplitude = new Envelope();
-            this.pitchModifierAmplitude.decode(buffer);
+            pitchModifier = new Envelope();
+            pitchModifier.decode(buffer);
+            pitchModifierAmplitude = new Envelope();
+            pitchModifierAmplitude.decode(buffer);
         }
 
         option = buffer.readUnsignedByte();
         if (option != 0) {
             --buffer.index;
-            this.volumeMultiplier = new Envelope();
-            this.volumeMultiplier.decode(buffer);
-            this.volumeAmplitude = new Envelope();
-            this.volumeAmplitude.decode(buffer);
+            volumeMultiplier = new Envelope();
+            volumeMultiplier.decode(buffer);
+            volumeAmplitude = new Envelope();
+            volumeAmplitude.decode(buffer);
         }
 
         option = buffer.readUnsignedByte();
         if (option != 0) {
             --buffer.index;
-            this.release = new Envelope();
-            this.release.decode(buffer);
-            this.attack = new Envelope();
-            this.attack.decode(buffer);
+            release = new Envelope();
+            release.decode(buffer);
+            attack = new Envelope();
+            attack.decode(buffer);
         }
 
         for (int i = 0; i < 10; i++) {
@@ -287,18 +286,18 @@ public class Instrument {
                 break;
             }
 
-            this.oscillatorVolume[i] = volume;
-            this.oscillatorPitch[i] = buffer.readSignedSmart();
-            this.oscillatorDelays[i] = buffer.readUnsignedSmart();
+            oscillatorVolume[i] = volume;
+            oscillatorPitch[i] = buffer.readSignedSmart();
+            oscillatorDelays[i] = buffer.readUnsignedSmart();
         }
 
-        this.delayTime = buffer.readUnsignedSmart();
-        this.delayDecay = buffer.readUnsignedSmart();
-        this.duration = buffer.readUnsignedShort();
-        this.offset = buffer.readUnsignedShort();
-        this.filter = new Filter();
-        this.filterEnvelope = new Envelope();
-        this.filter.decode(buffer, this.filterEnvelope);
+        delayTime = buffer.readUnsignedSmart();
+        delayDecay = buffer.readUnsignedSmart();
+        duration = buffer.readUnsignedShort();
+        offset = buffer.readUnsignedShort();
+        filter = new Filter();
+        filterEnvelope = new Envelope();
+        filter.decode(buffer, filterEnvelope);
     }
 
 }

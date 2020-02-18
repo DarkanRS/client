@@ -8,11 +8,11 @@ public class AnimationFrame {
     static short[] bufferZ = new short[500];
     static short[] skipped = new short[500];
     static byte[] flagsBuffer = new byte[500];
-    AnimationFrameBase frameBaseList = null;
-    int transformationCount = 0;
-    boolean modifiesAlpha = false;
-    boolean modifiesColor = false;
-    boolean aBool988 = false;
+    AnimationFrameBase frameBaseList;
+    int transformationCount;
+    boolean modifiesAlpha;
+    boolean modifiesColor;
+    boolean aBool988;
     short[] transformationIndices;
     short[] transformationX;
     short[] transformationY;
@@ -21,11 +21,11 @@ public class AnimationFrame {
     byte[] transformationFlags;
 
     AnimationFrame(byte[] data, AnimationFrameBase frameList) {
-        this.frameBaseList = frameList;
+        frameBaseList = frameList;
 
         try {
-            RsByteBuffer attribBuffer = new RsByteBuffer(data);
-            RsByteBuffer transformationBuffer = new RsByteBuffer(data);
+            Packet attribBuffer = new Packet(data);
+            Packet transformationBuffer = new Packet(data);
             attribBuffer.readUnsignedByte();
             attribBuffer.index += 2;
             int count = attribBuffer.readUnsignedByte();
@@ -36,7 +36,7 @@ public class AnimationFrame {
 
             int index;
             for (index = 0; index < count; index++) {
-                int type = this.frameBaseList.transformationTypes[index];
+                int type = frameBaseList.transformationTypes[index];
                 if (type == 0) {
                     last = index;
                 }
@@ -81,11 +81,11 @@ public class AnimationFrame {
                     skipped[used] = -1;
                     if (type != 1 && type != 2 && type != 3) {
                         if (type == 5) {
-                            this.modifiesAlpha = true;
+                            modifiesAlpha = true;
                         } else if (type == 7) {
-                            this.modifiesColor = true;
+                            modifiesColor = true;
                         } else if (type == 9 || type == 10 || type == 8) {
-                            this.aBool988 = true;
+                            aBool988 = true;
                         }
                     } else if (last > lastUsed) {
                         skipped[used] = (short) last;
@@ -100,26 +100,26 @@ public class AnimationFrame {
                 throw new RuntimeException();
             }
 
-            this.transformationCount = used;
-            this.transformationIndices = new short[used];
-            this.transformationX = new short[used];
-            this.transformationY = new short[used];
-            this.transformationZ = new short[used];
-            this.skippedReferences = new short[used];
-            this.transformationFlags = new byte[used];
+            transformationCount = used;
+            transformationIndices = new short[used];
+            transformationX = new short[used];
+            transformationY = new short[used];
+            transformationZ = new short[used];
+            skippedReferences = new short[used];
+            transformationFlags = new byte[used];
 
             for (index = 0; index < used; index++) {
-                this.transformationIndices[index] = indicesBuffer[index];
-                this.transformationX[index] = bufferX[index];
-                this.transformationY[index] = bufferY[index];
-                this.transformationZ[index] = bufferZ[index];
-                this.skippedReferences[index] = skipped[index];
-                this.transformationFlags[index] = flagsBuffer[index];
+                transformationIndices[index] = indicesBuffer[index];
+                transformationX[index] = bufferX[index];
+                transformationY[index] = bufferY[index];
+                transformationZ[index] = bufferZ[index];
+                skippedReferences[index] = skipped[index];
+                transformationFlags[index] = flagsBuffer[index];
             }
         } catch (Exception exception_13) {
-            this.transformationCount = 0;
-            this.modifiesAlpha = false;
-            this.modifiesColor = false;
+            transformationCount = 0;
+            modifiesAlpha = false;
+            modifiesColor = false;
         }
 
     }

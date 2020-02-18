@@ -12,23 +12,19 @@ public class Class430 {
 
     int anInt5136;
 
-    public int hashCode() {
-        return this.anInt5135;
-    }
-
     Class430(int i_1, int i_2, int i_3, int i_4, int i_5) {
-        this.anInt5135 = i_1;
-        this.anInt5139 = i_2;
-        this.anInt5137 = i_3;
-        this.anInt5138 = i_4;
-        this.anInt5136 = i_5;
+        anInt5135 = i_1;
+        anInt5139 = i_2;
+        anInt5137 = i_3;
+        anInt5138 = i_4;
+        anInt5136 = i_5;
     }
 
     public static void method7217() {
         Class506.CS2_CACHE.method3760();
     }
 
-    static final int method7220(int i_0, int i_1, int i_2, int i_3, int i_4) {
+    static int method7220(int i_0, int i_1, int i_2, int i_3) {
         int i_5 = 65536 - Class382.COSINE[i_2 * 8192 / i_3] >> 1;
         return ((65536 - i_5) * i_0 >> 16) + (i_5 * i_1 >> 16);
     }
@@ -46,5 +42,9 @@ public class Class430 {
         CanvasKeyRecorder.anIntArray8044[192] = 28;
         CanvasKeyRecorder.anIntArray8044[222] = 58;
         CanvasKeyRecorder.anIntArray8044[520] = 59;
+    }
+
+    public int hashCode() {
+        return anInt5135;
     }
 }

@@ -2,11 +2,15 @@ package com.jagex;
 
 public abstract class Class41 {
 
-    protected GraphicalRenderer_Sub2 aGraphicalRenderer_Sub2_413;
+    protected AbstractRenderer_Sub2 aGraphicalRenderer_Sub2_413;
+
+    Class41(AbstractRenderer_Sub2 class505_sub2_1) {
+        aGraphicalRenderer_Sub2_413 = class505_sub2_1;
+    }
 
     abstract void method873();
 
-    void method875(int i_1) {
+    void method875() {
     }
 
     void method876() {
@@ -19,10 +23,6 @@ public abstract class Class41 {
     }
 
     abstract void method879();
-
-    Class41(GraphicalRenderer_Sub2 class505_sub2_1) {
-        this.aGraphicalRenderer_Sub2_413 = class505_sub2_1;
-    }
 
     abstract void method885();
 

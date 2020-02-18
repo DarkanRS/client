@@ -3,14 +3,9 @@ package com.jagex;
 public class Node_Sub7 extends Node {
 
     byte[] aByteArray7522;
-    IterableNodeMap aClass465_7521;
+    IterableNodeMap<Object> aClass465_7521;
 
-    static Node_Sub7 method12164(Index index_0, int i_1, int i_2) {
-        byte[] bytes_3 = index_0.getFile(i_1, i_2);
-        return bytes_3 == null ? null : new Node_Sub7(new RsByteBuffer(bytes_3));
-    }
-
-    Node_Sub7(RsByteBuffer rsbytebuffer_1) {
+    Node_Sub7(Packet rsbytebuffer_1) {
         rsbytebuffer_1.index = rsbytebuffer_1.buffer.length - 3;
         int i_2 = rsbytebuffer_1.readUnsignedByte();
         int i_3 = rsbytebuffer_1.readUnsignedShort();
@@ -68,12 +63,12 @@ public class Node_Sub7 extends Node {
 
         i_4 += i_5 * 5;
         i_4 += (i_7 + i_8 + i_6 + i_9 + i_11) * 2;
-        i_4 = i_4 + i_10 + i_12;
+        i_4 += i_10 + i_12;
         i_13 = rsbytebuffer_1.index;
         i_14 = i_2 + i_5 + i_6 + i_7 + i_8 + i_9 + i_10 + i_11 + i_12;
 
         for (i_15 = 0; i_15 < i_14; i_15++) {
-            rsbytebuffer_1.method13099(-488336599);
+            rsbytebuffer_1.method13099();
         }
 
         i_4 += rsbytebuffer_1.index - i_13;
@@ -169,8 +164,8 @@ public class Node_Sub7 extends Node {
         rsbytebuffer_1.index += i_25;
         int i_50 = rsbytebuffer_1.index;
         rsbytebuffer_1.index += i_5 * 3;
-        this.aByteArray7522 = new byte[i_4];
-        RsByteBuffer rsbytebuffer_51 = new RsByteBuffer(this.aByteArray7522);
+        aByteArray7522 = new byte[i_4];
+        Packet rsbytebuffer_51 = new Packet(aByteArray7522);
         rsbytebuffer_51.writeInt(1297377380);
         rsbytebuffer_51.writeInt(6);
         rsbytebuffer_51.writeShort(i_2 > 1 ? 1 : 0);
@@ -196,8 +191,8 @@ public class Node_Sub7 extends Node {
 
             while (true) {
                 while (true) {
-                    int i_63 = rsbytebuffer_1.method13099(715822037);
-                    rsbytebuffer_51.method13077(i_63, 1439203286);
+                    int i_63 = rsbytebuffer_1.method13099();
+                    rsbytebuffer_51.method13077(i_63);
                     int i_64 = rsbytebuffer_1.buffer[i_29++] & 0xff;
                     boolean bool_65 = i_64 != i_62;
                     i_62 = i_64 & 0xf;
@@ -326,14 +321,19 @@ public class Node_Sub7 extends Node {
 
     }
 
+    static Node_Sub7 method12164(Index index_0, int i_1, int i_2) {
+        byte[] bytes_3 = index_0.getFile(i_1, i_2);
+        return bytes_3 == null ? null : new Node_Sub7(new Packet(bytes_3));
+    }
+
     void method12165() {
-        if (this.aClass465_7521 == null) {
-            this.aClass465_7521 = new IterableNodeMap(16);
+        if (aClass465_7521 == null) {
+            aClass465_7521 = new IterableNodeMap<>(16);
             int[] ints_1 = new int[16];
             int[] ints_2 = new int[16];
             ints_2[9] = 128;
             ints_1[9] = 128;
-            Class80 class80_4 = new Class80(this.aByteArray7522);
+            Class80 class80_4 = new Class80(aByteArray7522);
             int i_5 = class80_4.method1397();
 
             int i_6;
@@ -367,11 +367,11 @@ public class Node_Sub7 extends Node {
                             i_11 = i_8 >> 8 & 0x7f;
                             i_12 = i_8 >> 16 & 0x7f;
                             if (i_11 == 0) {
-                                ints_1[i_10] = (i_12 << 14) + (ints_1[i_10] & ~0x1fc000);
+                                ints_1[i_10] = (i_12 << 14) + (ints_1[i_10] & -2080769);
                             }
 
                             if (i_11 == 32) {
-                                ints_1[i_10] = (ints_1[i_10] & ~0x3f80) + (i_12 << 7);
+                                ints_1[i_10] = (ints_1[i_10] & -16257) + (i_12 << 7);
                             }
                         }
 
@@ -387,10 +387,10 @@ public class Node_Sub7 extends Node {
                             i_12 = i_8 >> 16 & 0x7f;
                             if (i_12 > 0) {
                                 int i_13 = ints_2[i_10];
-                                StringNode class282_sub47_14 = (StringNode) this.aClass465_7521.get(i_13);
+                                ObjectNode class282_sub47_14 = (ObjectNode) aClass465_7521.get(i_13);
                                 if (class282_sub47_14 == null) {
-                                    class282_sub47_14 = new StringNode(new byte[128]);
-                                    this.aClass465_7521.put(class282_sub47_14, i_13);
+                                    class282_sub47_14 = new ObjectNode(new byte[128]);
+                                    aClass465_7521.put(class282_sub47_14, i_13);
                                 }
 
                                 ((byte[]) class282_sub47_14.anObject8068)[i_11] = 1;
@@ -407,7 +407,7 @@ public class Node_Sub7 extends Node {
     }
 
     void method12167() {
-        this.aClass465_7521 = null;
+        aClass465_7521 = null;
     }
 
 }

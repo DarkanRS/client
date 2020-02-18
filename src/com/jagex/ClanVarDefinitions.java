@@ -7,42 +7,20 @@ public class ClanVarDefinitions {
     public int startBit;
     public int endBit;
 
-    void method6814(RsByteBuffer rsbytebuffer_1, int i_2) {
-        if (i_2 == 1) {
-            this.aChar4832 = Utils.cp1252ToChar(rsbytebuffer_1.readByte());
-        } else if (i_2 == 3) {
-            this.baseVar = rsbytebuffer_1.readUnsignedShort();
-            this.startBit = rsbytebuffer_1.readUnsignedByte();
-            this.endBit = rsbytebuffer_1.readUnsignedByte();
-        }
-
-    }
-
-    void method6816(RsByteBuffer rsbytebuffer_1) {
-        while (true) {
-            int i_3 = rsbytebuffer_1.readUnsignedByte();
-            if (i_3 == 0) {
-                return;
-            }
-
-            this.method6814(rsbytebuffer_1, i_3);
-        }
-    }
-
-    public static final void method6823() {
-        int i_1 = Class393.preferences.removeRoofsOptionOverride.method12952((byte) 47);
+    public static void method6823() {
+        int i_1 = Class393.preferences.removeRoofsOptionOverride.method12952();
         if (i_1 == 0) {
             IndexLoaders.MAP_REGION_DECODER.method4440(null);
-            Class534_Sub2.method12847(0, (byte) 57);
+            Class534_Sub2.method12847(0);
         } else if (i_1 == 1) {
-            PingRequest.method8744((byte) 0, -1832206339);
-            Class534_Sub2.method12847(512, (byte) 105);
+            PingRequest.method8744((byte) 0);
+            Class534_Sub2.method12847(512);
             if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager() != null) {
                 Class17.method570();
             }
         } else {
-            PingRequest.method8744((byte) (client.anInt7286 - 4 & 0xff), 688949228);
-            Class534_Sub2.method12847(2, (byte) 69);
+            PingRequest.method8744((byte) (client.anInt7286 - 4 & 0xff));
+            Class534_Sub2.method12847(2);
         }
 
         client.anInt7472 = Class4.MY_PLAYER_PLANE;
@@ -86,13 +64,13 @@ public class ClanVarDefinitions {
         int i_43;
         if (i_1 >= Class532_Sub3_Sub1.anInt7070 && i_1 <= Class532_Sub3_Sub1.anInt7068) {
             int[] ints_39 = Class532_Sub3_Sub1.anIntArrayArray7072[i_1];
-            i_40 = EntityNode.method4890(i_0 - i_2, Class532_Sub3_Sub1.anInt7071, Class532_Sub3_Sub1.anInt7069, 1055094720);
-            i_41 = EntityNode.method4890(i_0 + i_2, Class532_Sub3_Sub1.anInt7071, Class532_Sub3_Sub1.anInt7069, 651225496);
-            i_42 = EntityNode.method4890(i_0 - i_11, Class532_Sub3_Sub1.anInt7071, Class532_Sub3_Sub1.anInt7069, 568370220);
-            i_43 = EntityNode.method4890(i_0 + i_11, Class532_Sub3_Sub1.anInt7071, Class532_Sub3_Sub1.anInt7069, -475666035);
-            KeyHoldInputSubscriber.method3922(ints_39, i_40, i_42, i_5, (byte) -27);
-            KeyHoldInputSubscriber.method3922(ints_39, i_42, i_43, i_4, (byte) -31);
-            KeyHoldInputSubscriber.method3922(ints_39, i_43, i_41, i_5, (byte) 16);
+            i_40 = EntityNode.method4890(i_0 - i_2, Class532_Sub3_Sub1.anInt7071, Class532_Sub3_Sub1.anInt7069);
+            i_41 = EntityNode.method4890(i_0 + i_2, Class532_Sub3_Sub1.anInt7071, Class532_Sub3_Sub1.anInt7069);
+            i_42 = EntityNode.method4890(i_0 - i_11, Class532_Sub3_Sub1.anInt7071, Class532_Sub3_Sub1.anInt7069);
+            i_43 = EntityNode.method4890(i_0 + i_11, Class532_Sub3_Sub1.anInt7071, Class532_Sub3_Sub1.anInt7069);
+            KeyHoldInputSubscriber.method3922(ints_39, i_40, i_42, i_5);
+            KeyHoldInputSubscriber.method3922(ints_39, i_42, i_43, i_4);
+            KeyHoldInputSubscriber.method3922(ints_39, i_43, i_41, i_5);
         }
 
         while (i_9 > 0) {
@@ -148,32 +126,32 @@ public class ClanVarDefinitions {
             i_40 = i_1 - i_9;
             i_41 = i_9 + i_1;
             if (i_41 >= Class532_Sub3_Sub1.anInt7070 && i_40 <= Class532_Sub3_Sub1.anInt7068) {
-                i_42 = EntityNode.method4890(i_0 + i_8, Class532_Sub3_Sub1.anInt7071, Class532_Sub3_Sub1.anInt7069, 682389056);
-                i_43 = EntityNode.method4890(i_0 - i_8, Class532_Sub3_Sub1.anInt7071, Class532_Sub3_Sub1.anInt7069, 304939185);
+                i_42 = EntityNode.method4890(i_0 + i_8, Class532_Sub3_Sub1.anInt7071, Class532_Sub3_Sub1.anInt7069);
+                i_43 = EntityNode.method4890(i_0 - i_8, Class532_Sub3_Sub1.anInt7071, Class532_Sub3_Sub1.anInt7069);
                 if (bool_47) {
-                    int i_44 = EntityNode.method4890(i_0 + i_10, Class532_Sub3_Sub1.anInt7071, Class532_Sub3_Sub1.anInt7069, -849253478);
-                    int i_45 = EntityNode.method4890(i_0 - i_10, Class532_Sub3_Sub1.anInt7071, Class532_Sub3_Sub1.anInt7069, -1762410169);
+                    int i_44 = EntityNode.method4890(i_0 + i_10, Class532_Sub3_Sub1.anInt7071, Class532_Sub3_Sub1.anInt7069);
+                    int i_45 = EntityNode.method4890(i_0 - i_10, Class532_Sub3_Sub1.anInt7071, Class532_Sub3_Sub1.anInt7069);
                     int[] ints_46;
                     if (i_40 >= Class532_Sub3_Sub1.anInt7070) {
                         ints_46 = Class532_Sub3_Sub1.anIntArrayArray7072[i_40];
-                        KeyHoldInputSubscriber.method3922(ints_46, i_43, i_45, i_5, (byte) -1);
-                        KeyHoldInputSubscriber.method3922(ints_46, i_45, i_44, i_4, (byte) 59);
-                        KeyHoldInputSubscriber.method3922(ints_46, i_44, i_42, i_5, (byte) -30);
+                        KeyHoldInputSubscriber.method3922(ints_46, i_43, i_45, i_5);
+                        KeyHoldInputSubscriber.method3922(ints_46, i_45, i_44, i_4);
+                        KeyHoldInputSubscriber.method3922(ints_46, i_44, i_42, i_5);
                     }
 
                     if (i_41 <= Class532_Sub3_Sub1.anInt7068) {
                         ints_46 = Class532_Sub3_Sub1.anIntArrayArray7072[i_41];
-                        KeyHoldInputSubscriber.method3922(ints_46, i_43, i_45, i_5, (byte) -15);
-                        KeyHoldInputSubscriber.method3922(ints_46, i_45, i_44, i_4, (byte) 5);
-                        KeyHoldInputSubscriber.method3922(ints_46, i_44, i_42, i_5, (byte) 62);
+                        KeyHoldInputSubscriber.method3922(ints_46, i_43, i_45, i_5);
+                        KeyHoldInputSubscriber.method3922(ints_46, i_45, i_44, i_4);
+                        KeyHoldInputSubscriber.method3922(ints_46, i_44, i_42, i_5);
                     }
                 } else {
                     if (i_40 >= Class532_Sub3_Sub1.anInt7070) {
-                        KeyHoldInputSubscriber.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_40], i_43, i_42, i_5, (byte) 66);
+                        KeyHoldInputSubscriber.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_40], i_43, i_42, i_5);
                     }
 
                     if (i_41 <= Class532_Sub3_Sub1.anInt7068) {
-                        KeyHoldInputSubscriber.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_41], i_43, i_42, i_5, (byte) 92);
+                        KeyHoldInputSubscriber.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_41], i_43, i_42, i_5);
                     }
                 }
             }
@@ -181,12 +159,12 @@ public class ClanVarDefinitions {
 
     }
 
-    public static Class467[] method6825(byte b_0) {
+    public static Class467[] method6825() {
         if (Class149_Sub3.aClass467Array9380 == null) {
-            Class467[] arr_1 = Class386.method6671(Class274.aClass470_3336, 1629641091);
+            Class467[] arr_1 = Class386.method6671(Class274.aClass470_3336);
             Class467[] arr_2 = new Class467[arr_1.length];
             int i_3 = 0;
-            int i_4 = Class393.preferences.maxScreenSize.method12666(527706569);
+            int i_4 = Class393.preferences.maxScreenSize.method12666();
 
             label70:
             for (int i_5 = 0; i_5 < arr_1.length; i_5++) {
@@ -220,6 +198,28 @@ public class ClanVarDefinitions {
         }
 
         return Class149_Sub3.aClass467Array9380;
+    }
+
+    void method6814(Packet rsbytebuffer_1, int i_2) {
+        if (i_2 == 1) {
+            aChar4832 = Utils.cp1252ToChar(rsbytebuffer_1.readByte());
+        } else if (i_2 == 3) {
+            baseVar = rsbytebuffer_1.readUnsignedShort();
+            startBit = rsbytebuffer_1.readUnsignedByte();
+            endBit = rsbytebuffer_1.readUnsignedByte();
+        }
+
+    }
+
+    void method6816(Packet rsbytebuffer_1) {
+        while (true) {
+            int i_3 = rsbytebuffer_1.readUnsignedByte();
+            if (i_3 == 0) {
+                return;
+            }
+
+            method6814(rsbytebuffer_1, i_3);
+        }
     }
 
 }

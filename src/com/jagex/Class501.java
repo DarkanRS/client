@@ -24,7 +24,7 @@ public class Class501 {
         Class9.CURRENT_CONNECTION_CONTEXT.currentPacketSize = 0;
         Class9.CURRENT_CONNECTION_CONTEXT.idleReadPulses = 0;
         client.REBOOT_TIMER = 0;
-        Class350.method6189((byte) 111);
+        Class350.method6189();
         Class256.method4416();
 
         int i_1;
@@ -35,13 +35,13 @@ public class Class501 {
         VertexNormal.MY_PLAYER = null;
 
         for (i_1 = 0; i_1 < client.anInt7210; i_1++) {
-            Entity animable_2 = (Entity) client.aNode_Sub47Array7209[i_1].anObject8068;
+            PathingEntity animable_2 = (PathingEntity) client.NPC_ARRAY[i_1].anObject8068;
             if (animable_2 != null) {
                 animable_2.faceEntity = -1;
             }
         }
 
-        FontRenderer_Sub2.method14262(882795829);
+        FontRenderer_Sub2.method14262();
         NativeLibraryLoader.anInt3240 = 2;
         Class86.anInt833 = -1;
         PingRequester.anInt5864 = -1;
@@ -51,7 +51,7 @@ public class Class501 {
             client.aBoolArray7443[i_1] = true;
         }
 
-        Class388.method6692(1016678349);
+        Class388.method6692();
         PingRequest.CURRENT_REQUEST = null;
         Class28.aLong351 = 0L;
         FontMetrics.method6989();

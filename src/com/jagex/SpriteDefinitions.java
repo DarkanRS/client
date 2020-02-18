@@ -23,7 +23,7 @@ public class SpriteDefinitions {
     }
 
     public static SpriteDefinitions[] decode(byte[] data) {
-        RsByteBuffer stream = new RsByteBuffer(data);
+        Packet stream = new Packet(data);
         stream.index = data.length - 2;
         int count = stream.readUnsignedShort();
         SpriteDefinitions[] sprites = new SpriteDefinitions[count];
@@ -128,65 +128,70 @@ public class SpriteDefinitions {
         return sprites;
     }
 
-    public int method1519() {
-        return this.width + this.minX + this.anInt958;
-    }
-
-    public int method1520() {
-        return this.height + this.minY + this.anInt953;
-    }
-
     public static SpriteDefinitions getSprite(Index index, int archiveId, int fileId) {
         byte[] data = index.getFile(archiveId, fileId);
         return data == null ? null : decode(data)[0];
     }
 
+    public static SpriteDefinitions[] method1534(Index index_0, int i_1) {
+        byte[] bytes_2 = index_0.getFile(i_1);
+        return bytes_2 == null ? null : decode(bytes_2);
+    }
+
+    public int method1519() {
+        return width + minX + anInt958;
+    }
+
+    public int method1520() {
+        return height + minY + anInt953;
+    }
+
     public void method1523() {
-        int i_1 = this.method1519();
-        int i_2 = this.method1520();
-        if (i_1 != this.width || i_2 != this.height) {
+        int i_1 = method1519();
+        int i_2 = method1520();
+        if (i_1 != width || i_2 != height) {
             byte[] bytes_3 = new byte[i_1 * i_2];
             int i_5;
             int i_6;
             int i_7;
-            if (this.alpha != null) {
+            if (alpha != null) {
                 byte[] bytes_4 = new byte[i_1 * i_2];
                 i_5 = 0;
 
                 while (true) {
-                    if (i_5 >= this.height) {
-                        this.alpha = bytes_4;
+                    if (i_5 >= height) {
+                        alpha = bytes_4;
                         break;
                     }
 
-                    i_6 = i_5 * this.width;
-                    i_7 = i_1 * (i_5 + this.minY) + this.minX;
+                    i_6 = i_5 * width;
+                    i_7 = i_1 * (i_5 + minY) + minX;
 
-                    for (int i_8 = 0; i_8 < this.width; i_8++) {
-                        bytes_3[i_7] = this.pixels[i_6];
-                        bytes_4[i_7++] = this.alpha[i_6++];
+                    for (int i_8 = 0; i_8 < width; i_8++) {
+                        bytes_3[i_7] = pixels[i_6];
+                        bytes_4[i_7++] = alpha[i_6++];
                     }
 
                     ++i_5;
                 }
             } else {
-                for (int i_9 = 0; i_9 < this.height; i_9++) {
-                    i_5 = i_9 * this.width;
-                    i_6 = i_1 * (i_9 + this.minY) + this.minX;
+                for (int i_9 = 0; i_9 < height; i_9++) {
+                    i_5 = i_9 * width;
+                    i_6 = i_1 * (i_9 + minY) + minX;
 
-                    for (i_7 = 0; i_7 < this.width; i_7++) {
-                        bytes_3[i_6++] = this.pixels[i_5++];
+                    for (i_7 = 0; i_7 < width; i_7++) {
+                        bytes_3[i_6++] = pixels[i_5++];
                     }
                 }
             }
 
-            this.anInt953 = 0;
-            this.minY = 0;
-            this.anInt958 = 0;
-            this.minX = 0;
-            this.width = i_1;
-            this.height = i_2;
-            this.pixels = bytes_3;
+            anInt953 = 0;
+            minY = 0;
+            anInt958 = 0;
+            minX = 0;
+            width = i_1;
+            height = i_2;
+            pixels = bytes_3;
         }
 
     }
@@ -196,19 +201,19 @@ public class SpriteDefinitions {
         int i_3;
         int i_4;
         int i_5;
-        if (this.pallete.length < 255) {
-            for (i_3 = 0; i_3 < this.pallete.length; i_3++) {
-                if (this.pallete[i_3] == i_1) {
+        if (pallete.length < 255) {
+            for (i_3 = 0; i_3 < pallete.length; i_3++) {
+                if (pallete[i_3] == i_1) {
                     i_2 = i_3;
                     break;
                 }
             }
 
             if (i_2 == -1) {
-                i_2 = this.pallete.length;
-                int[] ints_16 = new int[this.pallete.length + 1];
-                Class503.method8362(this.pallete, 0, ints_16, 0, this.pallete.length);
-                this.pallete = ints_16;
+                i_2 = pallete.length;
+                int[] ints_16 = new int[pallete.length + 1];
+                Class503.method8362(pallete, 0, ints_16, 0, pallete.length);
+                pallete = ints_16;
                 ints_16[i_2] = i_1;
             }
         } else {
@@ -217,8 +222,8 @@ public class SpriteDefinitions {
             i_5 = i_1 >> 8 & 0xff;
             int i_6 = i_1 & 0xff;
 
-            for (int i_7 = 0; i_7 < this.pallete.length; i_7++) {
-                int i_8 = this.pallete[i_7];
+            for (int i_7 = 0; i_7 < pallete.length; i_7++) {
+                int i_8 = pallete[i_7];
                 int i_9 = i_8 >> 16 & 0xff;
                 int i_10 = i_8 >> 8 & 0xff;
                 int i_11 = i_8 & 0xff;
@@ -245,12 +250,12 @@ public class SpriteDefinitions {
             }
         }
 
-        for (i_3 = this.height - 1; i_3 > 0; --i_3) {
-            i_4 = i_3 * this.width;
+        for (i_3 = height - 1; i_3 > 0; --i_3) {
+            i_4 = i_3 * width;
 
-            for (i_5 = this.width - 1; i_5 > 0; --i_5) {
-                if (this.pallete[this.pixels[i_5 + i_4] & 0xff] == 0 && this.pallete[this.pixels[i_5 + i_4 - 1 - this.width] & 0xff] != 0) {
-                    this.pixels[i_5 + i_4] = (byte) i_2;
+            for (i_5 = width - 1; i_5 > 0; --i_5) {
+                if (pallete[pixels[i_5 + i_4] & 0xff] == 0 && pallete[pixels[i_5 + i_4 - 1 - width] & 0xff] != 0) {
+                    pixels[i_5 + i_4] = (byte) i_2;
                 }
             }
         }
@@ -258,15 +263,15 @@ public class SpriteDefinitions {
     }
 
     public void method1525() {
-        byte[] bytes_1 = this.pixels;
+        byte[] bytes_1 = pixels;
         int i_2;
         int i_3;
         int i_4;
-        if (this.alpha == null) {
-            for (i_2 = this.height - 1; i_2 >= 0; --i_2) {
-                i_3 = i_2 * this.width;
+        if (alpha == null) {
+            for (i_2 = height - 1; i_2 >= 0; --i_2) {
+                i_3 = i_2 * width;
 
-                for (i_4 = (i_2 + 1) * this.width; i_3 < i_4; i_3++) {
+                for (i_4 = (i_2 + 1) * width; i_3 < i_4; i_3++) {
                     --i_4;
                     byte b_5 = bytes_1[i_3];
                     bytes_1[i_3] = bytes_1[i_4];
@@ -274,12 +279,12 @@ public class SpriteDefinitions {
                 }
             }
         } else {
-            byte[] bytes_7 = this.alpha;
+            byte[] bytes_7 = alpha;
 
-            for (i_3 = this.height - 1; i_3 >= 0; --i_3) {
-                i_4 = i_3 * this.width;
+            for (i_3 = height - 1; i_3 >= 0; --i_3) {
+                i_4 = i_3 * width;
 
-                for (int i_8 = (i_3 + 1) * this.width; i_4 < i_8; i_4++) {
+                for (int i_8 = (i_3 + 1) * width; i_4 < i_8; i_4++) {
                     --i_8;
                     byte b_6 = bytes_1[i_4];
                     bytes_1[i_4] = bytes_1[i_8];
@@ -291,23 +296,23 @@ public class SpriteDefinitions {
             }
         }
 
-        i_2 = this.minX;
-        this.minX = this.anInt958;
-        this.anInt958 = i_2;
+        i_2 = minX;
+        minX = anInt958;
+        anInt958 = i_2;
     }
 
     public void method1526() {
-        byte[] bytes_1 = this.pixels;
+        byte[] bytes_1 = pixels;
         int i_2;
         int i_3;
         int i_4;
         int i_5;
-        if (this.alpha == null) {
-            for (i_2 = (this.height >> 1) - 1; i_2 >= 0; --i_2) {
-                i_3 = i_2 * this.width;
-                i_4 = (this.height - i_2 - 1) * this.width;
+        if (alpha == null) {
+            for (i_2 = (height >> 1) - 1; i_2 >= 0; --i_2) {
+                i_3 = i_2 * width;
+                i_4 = (height - i_2 - 1) * width;
 
-                for (i_5 = -this.width; i_5 < 0; i_5++) {
+                for (i_5 = -width; i_5 < 0; i_5++) {
                     byte b_6 = bytes_1[i_3];
                     bytes_1[i_3] = bytes_1[i_4];
                     bytes_1[i_4] = b_6;
@@ -316,13 +321,13 @@ public class SpriteDefinitions {
                 }
             }
         } else {
-            byte[] bytes_8 = this.alpha;
+            byte[] bytes_8 = alpha;
 
-            for (i_3 = (this.height >> 1) - 1; i_3 >= 0; --i_3) {
-                i_4 = i_3 * this.width;
-                i_5 = (this.height - i_3 - 1) * this.width;
+            for (i_3 = (height >> 1) - 1; i_3 >= 0; --i_3) {
+                i_4 = i_3 * width;
+                i_5 = (height - i_3 - 1) * width;
 
-                for (int i_9 = -this.width; i_9 < 0; i_9++) {
+                for (int i_9 = -width; i_9 < 0; i_9++) {
                     byte b_7 = bytes_1[i_4];
                     bytes_1[i_4] = bytes_1[i_5];
                     bytes_1[i_5] = b_7;
@@ -335,74 +340,74 @@ public class SpriteDefinitions {
             }
         }
 
-        i_2 = this.minY;
-        this.minY = this.anInt953;
-        this.anInt953 = i_2;
+        i_2 = minY;
+        minY = anInt953;
+        anInt953 = i_2;
     }
 
     public void method1527() {
-        byte[] bytes_1 = new byte[this.width * this.height];
+        byte[] bytes_1 = new byte[width * height];
         int i_2 = 0;
         int i_3;
         int i_4;
-        if (this.alpha == null) {
-            for (i_3 = 0; i_3 < this.width; i_3++) {
-                for (i_4 = this.height - 1; i_4 >= 0; --i_4) {
-                    bytes_1[i_2++] = this.pixels[i_3 + i_4 * this.width];
+        if (alpha == null) {
+            for (i_3 = 0; i_3 < width; i_3++) {
+                for (i_4 = height - 1; i_4 >= 0; --i_4) {
+                    bytes_1[i_2++] = pixels[i_3 + i_4 * width];
                 }
             }
 
-            this.pixels = bytes_1;
+            pixels = bytes_1;
         } else {
-            byte[] bytes_6 = new byte[this.width * this.height];
+            byte[] bytes_6 = new byte[width * height];
 
-            for (i_4 = 0; i_4 < this.width; i_4++) {
-                for (int i_5 = this.height - 1; i_5 >= 0; --i_5) {
-                    bytes_1[i_2] = this.pixels[i_4 + i_5 * this.width];
-                    bytes_6[i_2++] = this.alpha[i_4 + i_5 * this.width];
+            for (i_4 = 0; i_4 < width; i_4++) {
+                for (int i_5 = height - 1; i_5 >= 0; --i_5) {
+                    bytes_1[i_2] = pixels[i_4 + i_5 * width];
+                    bytes_6[i_2++] = alpha[i_4 + i_5 * width];
                 }
             }
 
-            this.pixels = bytes_1;
-            this.alpha = bytes_6;
+            pixels = bytes_1;
+            alpha = bytes_6;
         }
 
-        i_3 = this.minY;
-        this.minY = this.minX;
-        this.minX = this.anInt953;
-        this.anInt953 = this.anInt958;
-        this.anInt958 = this.minY;
-        i_3 = this.height;
-        this.height = this.width;
-        this.width = i_3;
+        i_3 = minY;
+        minY = minX;
+        minX = anInt953;
+        anInt953 = anInt958;
+        anInt958 = minY;
+        i_3 = height;
+        height = width;
+        width = i_3;
     }
 
     public int[] method1528() {
-        int i_1 = this.method1519();
-        int[] ints_2 = new int[i_1 * this.method1520()];
+        int i_1 = method1519();
+        int[] ints_2 = new int[i_1 * method1520()];
         int i_3;
         int i_4;
         int i_5;
         int i_6;
-        if (this.alpha != null) {
-            for (i_3 = 0; i_3 < this.height; i_3++) {
-                i_4 = i_3 * this.width;
-                i_5 = i_1 * (i_3 + this.minY) + this.minX;
+        if (alpha != null) {
+            for (i_3 = 0; i_3 < height; i_3++) {
+                i_4 = i_3 * width;
+                i_5 = i_1 * (i_3 + minY) + minX;
 
-                for (i_6 = 0; i_6 < this.width; i_6++) {
-                    ints_2[i_5++] = this.alpha[i_4] << 24 | this.pallete[this.pixels[i_4] & 0xff];
+                for (i_6 = 0; i_6 < width; i_6++) {
+                    ints_2[i_5++] = alpha[i_4] << 24 | pallete[pixels[i_4] & 0xff];
                     ++i_4;
                 }
             }
         } else {
-            for (i_3 = 0; i_3 < this.height; i_3++) {
-                i_4 = i_3 * this.width;
-                i_5 = i_1 * (i_3 + this.minY) + this.minX;
+            for (i_3 = 0; i_3 < height; i_3++) {
+                i_4 = i_3 * width;
+                i_5 = i_1 * (i_3 + minY) + minX;
 
-                for (i_6 = 0; i_6 < this.width; i_6++) {
-                    int i_7 = this.pallete[this.pixels[i_4++] & 0xff];
+                for (i_6 = 0; i_6 < width; i_6++) {
+                    int i_7 = pallete[pixels[i_4++] & 0xff];
                     if (i_7 != 0) {
-                        ints_2[i_5++] = ~0xffffff | i_7;
+                        ints_2[i_5++] = -16777216 | i_7;
                     } else {
                         ints_2[i_5++] = 0;
                     }
@@ -414,9 +419,9 @@ public class SpriteDefinitions {
     }
 
     public void method1529(int i_1, int i_2, int i_3) {
-        for (int i_4 = 1; i_4 < this.pallete.length; i_4++) {
-            if (this.pallete[i_4] != 1 && this.pallete[i_4] != 16711935) {
-                int i_5 = this.pallete[i_4] >> 16 & 0xff;
+        for (int i_4 = 1; i_4 < pallete.length; i_4++) {
+            if (pallete[i_4] != 1 && pallete[i_4] != 16711935) {
+                int i_5 = pallete[i_4] >> 16 & 0xff;
                 i_5 += i_1;
                 if (i_5 < 0) {
                     i_5 = 0;
@@ -424,7 +429,7 @@ public class SpriteDefinitions {
                     i_5 = 255;
                 }
 
-                int i_6 = this.pallete[i_4] >> 8 & 0xff;
+                int i_6 = pallete[i_4] >> 8 & 0xff;
                 i_6 += i_2;
                 if (i_6 < 0) {
                     i_6 = 0;
@@ -432,7 +437,7 @@ public class SpriteDefinitions {
                     i_6 = 255;
                 }
 
-                int i_7 = this.pallete[i_4] >> 0 & 0xff;
+                int i_7 = pallete[i_4] & 0xff;
                 i_7 += i_3;
                 if (i_7 < 0) {
                     i_7 = 0;
@@ -440,15 +445,10 @@ public class SpriteDefinitions {
                     i_7 = 255;
                 }
 
-                this.pallete[i_4] = i_5 << 16 | i_6 << 8 | i_7;
+                pallete[i_4] = i_5 << 16 | i_6 << 8 | i_7;
             }
         }
 
-    }
-
-    public static SpriteDefinitions[] method1534(Index index_0, int i_1) {
-        byte[] bytes_2 = index_0.getFile(i_1);
-        return bytes_2 == null ? null : decode(bytes_2);
     }
 
     public void method1536(int i_1) {
@@ -457,19 +457,19 @@ public class SpriteDefinitions {
         int i_5;
         int i_6;
         int i_7;
-        if (this.pallete.length < 255) {
-            for (i_3 = 0; i_3 < this.pallete.length; i_3++) {
-                if (this.pallete[i_3] == i_1) {
+        if (pallete.length < 255) {
+            for (i_3 = 0; i_3 < pallete.length; i_3++) {
+                if (pallete[i_3] == i_1) {
                     i_2 = i_3;
                     break;
                 }
             }
 
             if (i_2 == -1) {
-                i_2 = this.pallete.length;
-                int[] ints_16 = new int[this.pallete.length + 1];
-                Class503.method8362(this.pallete, 0, ints_16, 0, this.pallete.length);
-                this.pallete = ints_16;
+                i_2 = pallete.length;
+                int[] ints_16 = new int[pallete.length + 1];
+                Class503.method8362(pallete, 0, ints_16, 0, pallete.length);
+                pallete = ints_16;
                 ints_16[i_2] = i_1;
             }
         } else {
@@ -478,8 +478,8 @@ public class SpriteDefinitions {
             i_5 = i_1 >> 8 & 0xff;
             i_6 = i_1 & 0xff;
 
-            for (i_7 = 0; i_7 < this.pallete.length; i_7++) {
-                int i_8 = this.pallete[i_7];
+            for (i_7 = 0; i_7 < pallete.length; i_7++) {
+                int i_8 = pallete[i_7];
                 int i_9 = i_8 >> 16 & 0xff;
                 int i_10 = i_8 >> 8 & 0xff;
                 int i_11 = i_8 & 0xff;
@@ -507,19 +507,19 @@ public class SpriteDefinitions {
         }
 
         i_3 = 0;
-        byte[] bytes_4 = new byte[this.width * this.height];
+        byte[] bytes_4 = new byte[width * height];
 
-        for (i_5 = 0; i_5 < this.height; i_5++) {
-            for (i_6 = 0; i_6 < this.width; i_6++) {
-                i_7 = this.pixels[i_3] & 0xff;
-                if (this.pallete[i_7] == 0) {
-                    if (i_6 > 0 && this.pallete[this.pixels[i_3 - 1] & 0xff] != 0) {
+        for (i_5 = 0; i_5 < height; i_5++) {
+            for (i_6 = 0; i_6 < width; i_6++) {
+                i_7 = pixels[i_3] & 0xff;
+                if (pallete[i_7] == 0) {
+                    if (i_6 > 0 && pallete[pixels[i_3 - 1] & 0xff] != 0) {
                         i_7 = i_2;
-                    } else if (i_5 > 0 && this.pallete[this.pixels[i_3 - this.width] & 0xff] != 0) {
+                    } else if (i_5 > 0 && pallete[pixels[i_3 - width] & 0xff] != 0) {
                         i_7 = i_2;
-                    } else if (i_6 < this.width - 1 && this.pallete[this.pixels[i_3 + 1] & 0xff] != 0) {
+                    } else if (i_6 < width - 1 && pallete[pixels[i_3 + 1] & 0xff] != 0) {
                         i_7 = i_2;
-                    } else if (i_5 < this.height - 1 && this.pallete[this.pixels[i_3 + this.width] & 0xff] != 0) {
+                    } else if (i_5 < height - 1 && pallete[pixels[i_3 + width] & 0xff] != 0) {
                         i_7 = i_2;
                     }
                 }
@@ -528,46 +528,46 @@ public class SpriteDefinitions {
             }
         }
 
-        this.pixels = bytes_4;
+        pixels = bytes_4;
     }
 
     public void method1554(int i_1) {
-        int i_2 = this.method1519();
-        int i_3 = this.method1520();
-        if (i_2 != this.width || i_3 != this.height) {
+        int i_2 = method1519();
+        int i_3 = method1520();
+        if (i_2 != width || i_3 != height) {
             int i_4 = i_1;
-            if (i_1 > this.minX) {
-                i_4 = this.minX;
+            if (i_1 > minX) {
+                i_4 = minX;
             }
 
             int i_5 = i_1;
-            if (i_1 + this.minX + this.width > i_2) {
-                i_5 = i_2 - this.minX - this.width;
+            if (i_1 + minX + width > i_2) {
+                i_5 = i_2 - minX - width;
             }
 
             int i_6 = i_1;
-            if (i_1 > this.minY) {
-                i_6 = this.minY;
+            if (i_1 > minY) {
+                i_6 = minY;
             }
 
             int i_7 = i_1;
-            if (i_1 + this.minY + this.height > i_3) {
-                i_7 = i_3 - this.minY - this.height;
+            if (i_1 + minY + height > i_3) {
+                i_7 = i_3 - minY - height;
             }
 
-            int i_8 = i_4 + i_5 + this.width;
-            int i_9 = i_6 + i_7 + this.height;
+            int i_8 = i_4 + i_5 + width;
+            int i_9 = i_6 + i_7 + height;
             byte[] bytes_10 = new byte[i_8 * i_9];
             int i_12;
             int i_13;
             int i_14;
-            if (this.alpha == null) {
-                for (int i_11 = 0; i_11 < this.height; i_11++) {
-                    i_12 = i_11 * this.width;
+            if (alpha == null) {
+                for (int i_11 = 0; i_11 < height; i_11++) {
+                    i_12 = i_11 * width;
                     i_13 = i_8 * (i_11 + i_6) + i_4;
 
-                    for (i_14 = 0; i_14 < this.width; i_14++) {
-                        bytes_10[i_13++] = this.pixels[i_12++];
+                    for (i_14 = 0; i_14 < width; i_14++) {
+                        bytes_10[i_13++] = pixels[i_12++];
                     }
                 }
             } else {
@@ -575,30 +575,30 @@ public class SpriteDefinitions {
                 i_12 = 0;
 
                 while (true) {
-                    if (i_12 >= this.height) {
-                        this.alpha = bytes_16;
+                    if (i_12 >= height) {
+                        alpha = bytes_16;
                         break;
                     }
 
-                    i_13 = i_12 * this.width;
+                    i_13 = i_12 * width;
                     i_14 = i_8 * (i_12 + i_6) + i_4;
 
-                    for (int i_15 = 0; i_15 < this.width; i_15++) {
-                        bytes_16[i_14] = this.alpha[i_13];
-                        bytes_10[i_14++] = this.pixels[i_13++];
+                    for (int i_15 = 0; i_15 < width; i_15++) {
+                        bytes_16[i_14] = alpha[i_13];
+                        bytes_10[i_14++] = pixels[i_13++];
                     }
 
                     ++i_12;
                 }
             }
 
-            this.minX -= i_4;
-            this.minY -= i_6;
-            this.anInt958 -= i_5;
-            this.anInt953 -= i_7;
-            this.width = i_8;
-            this.height = i_9;
-            this.pixels = bytes_10;
+            minX -= i_4;
+            minY -= i_6;
+            anInt958 -= i_5;
+            anInt953 -= i_7;
+            width = i_8;
+            height = i_9;
+            pixels = bytes_10;
         }
 
     }

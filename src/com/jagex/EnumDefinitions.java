@@ -9,47 +9,51 @@ public class EnumDefinitions {
     public char valueType;
     String defaultStringValue = "null";
     int defaultIntValue;
-    int size = 0;
+    int size;
     Map aMap5144;
     Object[] values;
     HashMap aHashMap5147;
 
-    public int getSize() {
-        return this.size;
+    static boolean isObjectClickType(int i_0) {
+        return i_0 == 3 || i_0 == 4 || i_0 == 5 || i_0 == 6 || i_0 == 1001 || i_0 == 1002 || i_0 == 2;
     }
 
-    void method7224(RsByteBuffer stream, int opcode) {
+    public int getSize() {
+        return size;
+    }
+
+    void method7224(Packet stream, int opcode) {
         if (opcode == 1) {
-            this.keyType = Utils.cp1252ToChar(stream.readByte());
+            keyType = Utils.cp1252ToChar(stream.readByte());
         } else if (opcode == 2) {
-            this.valueType = Utils.cp1252ToChar(stream.readByte());
+            valueType = Utils.cp1252ToChar(stream.readByte());
         } else if (opcode == 3) {
-            this.defaultStringValue = stream.readString();
+            defaultStringValue = stream.readString();
         } else if (opcode == 4) {
-            this.defaultIntValue = stream.readInt();
+            defaultIntValue = stream.readInt();
         } else {
             int i_4;
             int i_5;
             if (opcode != 5 && opcode != 6) {
                 if (opcode == 7 || opcode == 8) {
                     i_4 = stream.readUnsignedShort();
-                    this.size = stream.readUnsignedShort();
-                    this.values = new Object[i_4];
+                    size = stream.readUnsignedShort();
+                    values = new Object[i_4];
 
-                    for (i_5 = 0; i_5 < this.size; i_5++) {
+                    for (i_5 = 0; i_5 < size; i_5++) {
                         int i_7 = stream.readUnsignedShort();
                         if (opcode == 7) {
-                            this.values[i_7] = stream.readString();
+                            values[i_7] = stream.readString();
                         } else {
-                            this.values[i_7] = new Integer(stream.readInt());
+                            values[i_7] = new Integer(stream.readInt());
                         }
                     }
                 }
             } else {
-                this.size = stream.readUnsignedShort();
-                this.aMap5144 = new HashMap(this.size);
+                size = stream.readUnsignedShort();
+                aMap5144 = new HashMap(size);
 
-                for (i_4 = 0; i_4 < this.size; i_4++) {
+                for (i_4 = 0; i_4 < size; i_4++) {
                     i_5 = stream.readInt();
                     Object obj_6;
                     if (opcode == 5) {
@@ -58,7 +62,7 @@ public class EnumDefinitions {
                         obj_6 = new Integer(stream.readInt());
                     }
 
-                    this.aMap5144.put(new Integer(i_5), obj_6);
+                    aMap5144.put(new Integer(i_5), obj_6);
                 }
             }
         }
@@ -66,40 +70,40 @@ public class EnumDefinitions {
     }
 
     Object getValue(int key) {
-        return this.values != null ? (key >= 0 && key < this.values.length ? this.values[key] : null) : (this.aMap5144 != null ? this.aMap5144.get(new Integer(key)) : null);
+        return values != null ? (key >= 0 && key < values.length ? values[key] : null) : (aMap5144 != null ? aMap5144.get(new Integer(key)) : null);
     }
 
     public String getStringValue(int i_1) {
-        Object object_3 = this.getValue(i_1);
-        return object_3 == null ? this.defaultStringValue : (String) object_3;
+        Object object_3 = getValue(i_1);
+        return object_3 == null ? defaultStringValue : (String) object_3;
     }
 
-    void method7227(RsByteBuffer rsbytebuffer_1) {
+    void method7227(Packet rsbytebuffer_1) {
         while (true) {
             int i_3 = rsbytebuffer_1.readUnsignedByte();
             if (i_3 == 0) {
                 return;
             }
 
-            this.method7224(rsbytebuffer_1, i_3);
+            method7224(rsbytebuffer_1, i_3);
         }
     }
 
-    public boolean containsKey(Object object_1) {
-        if (this.size == 0) {
+    public boolean containsKey(java.io.Serializable object_1) {
+        if (size == 0) {
             return false;
         } else {
-            if (this.aHashMap5147 == null) {
-                this.method7233();
+            if (aHashMap5147 == null) {
+                method7233();
             }
 
-            return this.aHashMap5147.containsKey(object_1);
+            return aHashMap5147.containsKey(object_1);
         }
     }
 
     public int getIntValue(int i_1) {
-        Object object_3 = this.getValue(i_1);
-        return object_3 == null ? this.defaultIntValue : ((Integer) object_3).intValue();
+        Object object_3 = getValue(i_1);
+        return object_3 == null ? defaultIntValue : ((Integer) object_3).intValue();
     }
 
     void method7233() {
@@ -107,10 +111,10 @@ public class EnumDefinitions {
         Object obj_5;
         Iterator iterator_10;
         Entry map$entry_11;
-        if (this.values != null) {
-            for (int i_3 = 0; i_3 < this.values.length; i_3++) {
-                if (this.values[i_3] != null) {
-                    Object object_4 = this.values[i_3];
+        if (values != null) {
+            for (int i_3 = 0; i_3 < values.length; i_3++) {
+                if (values[i_3] != null) {
+                    Object object_4 = values[i_3];
                     obj_5 = hashmap_2.get(object_4);
                     if (obj_5 == null) {
                         obj_5 = new LinkedList();
@@ -121,12 +125,12 @@ public class EnumDefinitions {
                 }
             }
         } else {
-            if (this.aMap5144 == null) {
+            if (aMap5144 == null) {
                 throw new IllegalStateException();
             }
 
             Object obj_6;
-            for (iterator_10 = this.aMap5144.entrySet().iterator(); iterator_10.hasNext(); ((List) obj_6).add(map$entry_11.getKey())) {
+            for (iterator_10 = aMap5144.entrySet().iterator(); iterator_10.hasNext(); ((List) obj_6).add(map$entry_11.getKey())) {
                 map$entry_11 = (Entry) iterator_10.next();
                 obj_5 = map$entry_11.getValue();
                 obj_6 = hashmap_2.get(obj_5);
@@ -137,10 +141,10 @@ public class EnumDefinitions {
             }
         }
 
-        this.aHashMap5147 = new HashMap();
+        aHashMap5147 = new HashMap();
 
         int[] ints_13;
-        for (iterator_10 = hashmap_2.entrySet().iterator(); iterator_10.hasNext(); this.aHashMap5147.put(map$entry_11.getKey(), ints_13)) {
+        for (iterator_10 = hashmap_2.entrySet().iterator(); iterator_10.hasNext(); aHashMap5147.put(map$entry_11.getKey(), ints_13)) {
             map$entry_11 = (Entry) iterator_10.next();
             List list_12 = (List) map$entry_11.getValue();
             ints_13 = new int[list_12.size()];
@@ -151,27 +155,23 @@ public class EnumDefinitions {
                 integer_9 = (Integer) iterator_8.next();
             }
 
-            if (this.values == null) {
+            if (values == null) {
                 Arrays.sort(ints_13);
             }
         }
 
     }
 
-    public int[] method7251(Object object_1) {
-        if (this.size == 0) {
+    public int[] method7251(java.io.Serializable object_1) {
+        if (size == 0) {
             return null;
         } else {
-            if (this.aHashMap5147 == null) {
-                this.method7233();
+            if (aHashMap5147 == null) {
+                method7233();
             }
 
-            return (int[]) this.aHashMap5147.get(object_1);
+            return (int[]) aHashMap5147.get(object_1);
         }
-    }
-
-    static boolean isObjectClickType(int i_0) {
-        return i_0 == 3 || i_0 == 4 || i_0 == 5 || i_0 == 6 || i_0 == 1001 || i_0 == 1002 || i_0 == 2;
     }
 
 }

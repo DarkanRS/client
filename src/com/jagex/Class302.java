@@ -7,7 +7,7 @@ public class Class302 {
     static int anInt3561;
     static long aLong3562;
     static int anInt3563;
-    static int[] anIntArray3558 = new int[]{4, 4, 1, 2, 6, 4, 2, 44, 2, 2, 2, 2, 2, 1, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1};
+    static int[] anIntArray3558 = {4, 4, 1, 2, 6, 4, 2, 44, 2, 2, 2, 2, 2, 1, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1};
     static int anInt3560 = -1;
     static int anInt3564 = -1;
 
@@ -20,11 +20,11 @@ public class Class302 {
         return (i_0 + (i_0 >>> 31)) % i_1 + i_3;
     }
 
-    static void handleMovementAnimations(Entity animable, int moveType, int i_2, int i_3, int i_4) {
+    static void handleMovementAnimations(PathingEntity animable, int moveType, int i_2, int i_3) {
         BASDefinitions renderAnim = animable.getRenderAnimDefs();
         MovingAnimation animation = animable.aAnimation_Sub3_10337;
         int turnDirection = animable.turnDirection - animable.aClass19_10359.turnDirection & 0x3fff;
-        if (moveType == MovementType.STATIONARY.id) {
+        if (moveType == MoveSpeed.STATIONARY.id) {
             if (turnDirection == 0 && animable.turningTicks <= 25) {
                 if (!animation.aBool7891 || !renderAnim.method3810(animation.method7597())) {
                     animation.animate(renderAnim.getStandAnimation());
@@ -42,16 +42,15 @@ public class Class302 {
             }
         } else if (animable.faceEntity == -1 || turnDirection < 10240 && turnDirection > 2048) {
             if (turnDirection == 0 && animable.turningTicks <= 25) {
-                if (moveType == MovementType.RUNNING.id && renderAnim.runningAnimation != -1) {
+                if (moveType == MoveSpeed.RUNNING.id && renderAnim.runningAnimation != -1) {
                     animation.animate(renderAnim.runningAnimation);
-                } else if (moveType == MovementType.HALF_WALK.id && renderAnim.teleportingAnimation != -1) {
+                } else if (moveType == MoveSpeed.HALF_WALK.id && renderAnim.teleportingAnimation != -1) {
                     animation.animate(renderAnim.teleportingAnimation);
                 } else {
                     animation.animate(renderAnim.walkAnimation);
                 }
-                animation.aBool7891 = false;
             } else {
-                if (moveType == MovementType.RUNNING.id && renderAnim.runningAnimation != -1) {
+                if (moveType == MoveSpeed.RUNNING.id && renderAnim.runningAnimation != -1) {
                     if (i_3 < 0 && renderAnim.runTurn1 != -1) {
                         animation.animate(renderAnim.runTurn1);
                     } else if (i_3 > 0 && renderAnim.runTurn2 != -1) {
@@ -59,7 +58,7 @@ public class Class302 {
                     } else {
                         animation.animate(renderAnim.runningAnimation);
                     }
-                } else if (moveType == MovementType.HALF_WALK.id && renderAnim.teleportingAnimation != -1) {
+                } else if (moveType == MoveSpeed.HALF_WALK.id && renderAnim.teleportingAnimation != -1) {
                     if (i_3 < 0 && renderAnim.teleTurn1 != -1) {
                         animation.animate(renderAnim.teleTurn1);
                     } else if (i_3 > 0 && renderAnim.teleTurn2 != -1) {
@@ -74,11 +73,11 @@ public class Class302 {
                 } else {
                     animation.animate(renderAnim.walkAnimation);
                 }
-                animation.aBool7891 = false;
             }
+            animation.aBool7891 = false;
         } else {
             int walkDirection = client.NPC_TURN_DIRECTIONS[i_2] - animable.aClass19_10359.turnDirection & 0x3fff;
-            if (moveType == MovementType.RUNNING.id && renderAnim.runningAnimation != -1) {
+            if (moveType == MoveSpeed.RUNNING.id && renderAnim.runningAnimation != -1) {
                 if (walkDirection > 2048 && walkDirection <= 6144 && renderAnim.runDir1 != -1) {
                     animation.animate(renderAnim.runDir1);
                 } else if (walkDirection >= 10240 && walkDirection < 14336 && renderAnim.runDir2 != -1) {
@@ -88,7 +87,7 @@ public class Class302 {
                 } else {
                     animation.animate(renderAnim.runningAnimation);
                 }
-            } else if (moveType == MovementType.HALF_WALK.id && renderAnim.teleportingAnimation != -1) {
+            } else if (moveType == MoveSpeed.HALF_WALK.id && renderAnim.teleportingAnimation != -1) {
                 if (walkDirection > 2048 && walkDirection <= 6144 && renderAnim.teleDir1 != -1) {
                     animation.animate(renderAnim.teleDir1);
                 } else if (walkDirection >= 10240 && walkDirection < 14336 && renderAnim.teleDir2 != -1) {
@@ -111,8 +110,8 @@ public class Class302 {
         }
     }
 
-    public static long method5363(int i_0, int i_1) {
-        return (long) (i_0 + 11745) * 86400000L;
+    public static long method5363(int i_0) {
+        return (i_0 + 11745) * 86400000L;
     }
 
     public static int method5364(int i_0, int i_1, float f_2) {

@@ -2,9 +2,8 @@ package com.jagex;
 
 public class Class246 {
 
-    static String[] aStringArray3028;
-
     public static int CAM_MOVE_ABSOLUTEY;
+    static String[] aStringArray3028;
 
     Class246() throws Throwable {
         throw new Error();
@@ -21,7 +20,7 @@ public class Class246 {
         return null;
     }
 
-    static void method4204(IComponentDefinitions icomponentdefinitions_0, int i_1, int i_2, int i_3) {
+    static void method4204(Component icomponentdefinitions_0, int i_1, int i_2) {
         if (icomponentdefinitions_0.aspectXType == 0) {
             icomponentdefinitions_0.x = icomponentdefinitions_0.basePositionX;
         } else if (icomponentdefinitions_0.aspectXType == 1) {

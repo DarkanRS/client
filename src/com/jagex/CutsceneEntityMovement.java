@@ -1,62 +1,43 @@
 package com.jagex;
 
+import java.util.Calendar;
+
 public class CutsceneEntityMovement {
 
     int[] movementTypes;
     int[] movementCoordinates;
 
-    CutsceneEntityMovement(RsByteBuffer rsbytebuffer_1) {
+    CutsceneEntityMovement(Packet rsbytebuffer_1) {
         int i_2 = rsbytebuffer_1.readUnsignedSmart();
-        this.movementTypes = new int[i_2];
-        this.movementCoordinates = new int[i_2];
+        movementTypes = new int[i_2];
+        movementCoordinates = new int[i_2];
         for (int i_3 = 0; i_3 < i_2; i_3++) {
             int i_4 = rsbytebuffer_1.readUnsignedByte();
-            this.movementTypes[i_3] = i_4;
+            movementTypes[i_3] = i_4;
             int i_5 = rsbytebuffer_1.readUnsignedShort();
             int i_6 = rsbytebuffer_1.readUnsignedShort();
-            this.movementCoordinates[i_3] = i_6 + (i_5 << 16);
-        }
-    }
-
-    void method1566(CutsceneEntity entity, int i_2, int i_3) {
-        int i_4 = this.movementCoordinates[0];
-        entity.method1338(i_2, i_4 >>> 16, i_4 & 0xffff);
-        Entity animable_5 = entity.method1342((byte) 51);
-        animable_5.anInt10355 = 0;
-        for (int i_6 = this.movementTypes.length - 1; i_6 >= 0; --i_6) {
-            int i_7 = this.movementTypes[i_6];
-            int i_8 = this.movementCoordinates[i_6];
-            animable_5.regionBaseX[animable_5.anInt10355] = i_8 >> 16;
-            animable_5.regionBaseY[animable_5.anInt10355] = i_8 & 0xffff;
-            byte b_9 = MovementType.WALKING.id;
-            if (i_7 == 0) {
-                b_9 = MovementType.HALF_WALK.id;
-            } else if (i_7 == 2) {
-                b_9 = MovementType.RUNNING.id;
-            }
-            animable_5.walkTypes[animable_5.anInt10355] = b_9;
-            ++animable_5.anInt10355;
+            movementCoordinates[i_3] = i_6 + (i_5 << 16);
         }
     }
 
     public static void method1568() {
-        SoftCache softcache_1 = PlayerAppearance.aClass229_2920;
-        synchronized (PlayerAppearance.aClass229_2920) {
-            PlayerAppearance.aClass229_2920.method3863();
+        LRUCache softcache_1 = PlayerModel.aClass229_2920;
+        synchronized (PlayerModel.aClass229_2920) {
+            PlayerModel.aClass229_2920.method3863();
         }
-        softcache_1 = PlayerAppearance.aClass229_2930;
-        synchronized (PlayerAppearance.aClass229_2930) {
-            PlayerAppearance.aClass229_2930.method3863();
+        softcache_1 = PlayerModel.aClass229_2930;
+        synchronized (PlayerModel.aClass229_2930) {
+            PlayerModel.aClass229_2930.method3863();
         }
     }
 
     public static void method1575(int fileId, int i_1, boolean bool_2) {
         if (Class492.INDEX36_FILE_CACHE.get(fileId) == null) {
             if (!client.aBool7393) {
-                Class62.method1260(fileId, bool_2, 860609292);
+                Class62.method1260(fileId, bool_2);
             } else {
                 VorbisNode class282_sub37_4 = new VorbisNode(fileId, new VorbisFileReference(IndexLoaders.VORBIS_INDEX, fileId), i_1, bool_2);
-                class282_sub37_4.reference.method4915(Class223.CURRENT_LANGUAGE.method8276(1496562454), 47217972);
+                class282_sub37_4.vfReference.method4915(Class223.CURRENT_LANGUAGE.method8276());
                 Class492.INDEX36_FILE_CACHE.put(class282_sub37_4, fileId);
             }
         }
@@ -82,8 +63,8 @@ public class CutsceneEntityMovement {
         }
     }
 
-    static boolean method1577(SceneObject sceneobject_0, int i_1) {
-        ObjectDefinitions objectdefinitions_2 = IndexLoaders.MAP_REGION_DECODER.method4436().getObjectDefinitions(sceneobject_0.getId(-1594739949));
+    static boolean method1577(Location sceneobject_0) {
+        LocType objectdefinitions_2 = IndexLoaders.MAP_REGION_DECODER.method4436().getLocType(sceneobject_0.getId());
         if (objectdefinitions_2.mapSpriteId == -1) {
             return true;
         } else {
@@ -92,11 +73,32 @@ public class CutsceneEntityMovement {
         }
     }
 
-    static String method1578(long long_0, int i_2) {
+    static String method1578(long long_0) {
         Class155.method2634(long_0);
-        int i_4 = Class407.aCalendar4848.get(5);
-        int i_5 = Class407.aCalendar4848.get(2) + 1;
-        int i_6 = Class407.aCalendar4848.get(1);
+        int i_4 = Class407.aCalendar4848.get(Calendar.DATE);
+        int i_5 = Class407.aCalendar4848.get(Calendar.MONTH) + 1;
+        int i_6 = Class407.aCalendar4848.get(Calendar.YEAR);
         return Integer.toString(i_4 / 10) + i_4 % 10 + "/" + i_5 / 10 + i_5 % 10 + "/" + i_6 % 100 / 10 + i_6 % 10;
+    }
+
+    void method1566(CutsceneEntity entity, int i_2) {
+        int i_4 = movementCoordinates[0];
+        entity.method1338(i_2, i_4 >>> 16, i_4 & 0xffff);
+        PathingEntity animable_5 = entity.method1342();
+        animable_5.anInt10355 = 0;
+        for (int i_6 = movementTypes.length - 1; i_6 >= 0; --i_6) {
+            int i_7 = movementTypes[i_6];
+            int i_8 = movementCoordinates[i_6];
+            animable_5.regionBaseX[animable_5.anInt10355] = i_8 >> 16;
+            animable_5.regionBaseY[animable_5.anInt10355] = i_8 & 0xffff;
+            byte b_9 = MoveSpeed.WALKING.id;
+            if (i_7 == 0) {
+                b_9 = MoveSpeed.HALF_WALK.id;
+            } else if (i_7 == 2) {
+                b_9 = MoveSpeed.RUNNING.id;
+            }
+            animable_5.walkTypes[animable_5.anInt10355] = b_9;
+            ++animable_5.anInt10355;
+        }
     }
 }

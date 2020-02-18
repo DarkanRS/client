@@ -22,169 +22,175 @@ public class Node_Sub41_Sub4 extends Node_Sub41 {
         super(oggstreamstate_1);
     }
 
+    @Override
     void method13362(OggPacket oggpacket_1) {
-        if (this.anInt8031 < 3) {
-            int i_3 = this.aVorbisInfo9605.headerIn(this.aVorbisComment9599, oggpacket_1);
+        if (anInt8031 < 3) {
+            int i_3 = aVorbisInfo9605.headerIn(aVorbisComment9599, oggpacket_1);
             if (i_3 < 0) {
                 throw new IllegalStateException("" + i_3);
             }
-            if (this.anInt8031 == 2) {
-                if (this.aVorbisInfo9605.channels > 2 || this.aVorbisInfo9605.channels < 1) {
-                    throw new RuntimeException("" + this.aVorbisInfo9605.channels);
+            if (anInt8031 == 2) {
+                if (aVorbisInfo9605.channels > 2 || aVorbisInfo9605.channels < 1) {
+                    throw new RuntimeException("" + aVorbisInfo9605.channels);
                 }
-                this.aDSPState9600 = new DSPState(this.aVorbisInfo9605);
-                this.aVorbisBlock9601 = new VorbisBlock(this.aDSPState9600);
-                this.aClass344_9598 = new Class344(this.aVorbisInfo9605.rate, Class253.anInt3129);
-                this.aNode_Sub15_Sub1_9603 = new Node_Sub15_Sub1(this.aVorbisInfo9605.channels);
+                aDSPState9600 = new DSPState(aVorbisInfo9605);
+                aVorbisBlock9601 = new VorbisBlock(aDSPState9600);
+                aClass344_9598 = new Class344(aVorbisInfo9605.rate, Class253.anInt3129);
+                aNode_Sub15_Sub1_9603 = new Node_Sub15_Sub1(aVorbisInfo9605.channels);
             }
         } else {
-            if (this.aVorbisBlock9601.synthesis(oggpacket_1) == 0) {
-                this.aDSPState9600.blockIn(this.aVorbisBlock9601);
+            if (aVorbisBlock9601.synthesis(oggpacket_1) == 0) {
+                aDSPState9600.blockIn(aVorbisBlock9601);
             }
-            float[][] floats_6 = this.aDSPState9600.pcmOut(this.aVorbisInfo9605.channels);
-            this.aDouble9604 = this.aDSPState9600.granuleTime();
-            if (this.aDouble9604 == -1.0D) {
-                this.aDouble9604 = (float) this.anInt9602 / (float) this.aVorbisInfo9605.rate;
+            float[][] floats_6 = aDSPState9600.pcmOut(aVorbisInfo9605.channels);
+            aDouble9604 = aDSPState9600.granuleTime();
+            if (aDouble9604 == -1.0) {
+                aDouble9604 = (float) anInt9602 / aVorbisInfo9605.rate;
             }
-            this.aDSPState9600.read(floats_6[0].length);
-            this.anInt9602 += floats_6[0].length;
-            Node_Sub39 class282_sub39_4 = this.aNode_Sub15_Sub1_9603.method14814(floats_6[0].length, this.aDouble9604);
+            aDSPState9600.read(floats_6[0].length);
+            anInt9602 += floats_6[0].length;
+            Node_Sub39 class282_sub39_4 = aNode_Sub15_Sub1_9603.method14814(floats_6[0].length, aDouble9604);
             Preference_Sub20.method12805(floats_6, class282_sub39_4.aShortArrayArray8003);
-            for (int i_5 = 0; i_5 < this.aVorbisInfo9605.channels; i_5++) {
-                class282_sub39_4.aShortArrayArray8003[i_5] = this.aClass344_9598.method6111(class282_sub39_4.aShortArrayArray8003[i_5]);
+            for (int i_5 = 0; i_5 < aVorbisInfo9605.channels; i_5++) {
+                class282_sub39_4.aShortArrayArray8003[i_5] = aClass344_9598.method6111(class282_sub39_4.aShortArrayArray8003[i_5]);
             }
-            this.aNode_Sub15_Sub1_9603.method14815(class282_sub39_4, 2051042203);
+            aNode_Sub15_Sub1_9603.method14815(class282_sub39_4);
         }
     }
 
-    public Node_Sub15_Sub1 method14845(int i_1) {
-        return this.aNode_Sub15_Sub1_9603;
+    public Node_Sub15_Sub1 method14845() {
+        return aNode_Sub15_Sub1_9603;
     }
 
+    @Override
     void method13364() {
-        if (this.aVorbisBlock9601 != null) {
-            this.aVorbisBlock9601.method6699();
+        if (aVorbisBlock9601 != null) {
+            aVorbisBlock9601.method6699();
         }
-        if (this.aDSPState9600 != null) {
-            this.aDSPState9600.method6699();
+        if (aDSPState9600 != null) {
+            aDSPState9600.method6699();
         }
-        this.aVorbisComment9599.method6699();
-        this.aVorbisInfo9605.method6699();
-        if (this.aNode_Sub15_Sub1_9603 != null) {
-            this.aNode_Sub15_Sub1_9603.method14808((byte) -65);
+        aVorbisComment9599.method6699();
+        aVorbisInfo9605.method6699();
+        if (aNode_Sub15_Sub1_9603 != null) {
+            aNode_Sub15_Sub1_9603.method14808();
         }
     }
 
-    int method14847(int i_1) {
-        return this.aNode_Sub15_Sub1_9603 == null ? 0 : this.aNode_Sub15_Sub1_9603.method14811();
+    int method14847() {
+        return aNode_Sub15_Sub1_9603 == null ? 0 : aNode_Sub15_Sub1_9603.method14811();
     }
 
+    @Override
     void method13363(OggPacket oggpacket_1) {
-        if (this.anInt8031 * 1669091145 * -509226247 < 3) {
-            int i_2 = this.aVorbisInfo9605.headerIn(this.aVorbisComment9599, oggpacket_1);
+        if (anInt8031 * 1669091145 * -509226247 < 3) {
+            int i_2 = aVorbisInfo9605.headerIn(aVorbisComment9599, oggpacket_1);
             if (i_2 < 0) {
                 throw new IllegalStateException("" + i_2);
             }
-            if (-509226247 * this.anInt8031 * 1669091145 == 2) {
-                if (this.aVorbisInfo9605.channels > 2 || this.aVorbisInfo9605.channels < 1) {
-                    throw new RuntimeException("" + this.aVorbisInfo9605.channels);
+            if (-509226247 * anInt8031 * 1669091145 == 2) {
+                if (aVorbisInfo9605.channels > 2 || aVorbisInfo9605.channels < 1) {
+                    throw new RuntimeException("" + aVorbisInfo9605.channels);
                 }
-                this.aDSPState9600 = new DSPState(this.aVorbisInfo9605);
-                this.aVorbisBlock9601 = new VorbisBlock(this.aDSPState9600);
-                this.aClass344_9598 = new Class344(this.aVorbisInfo9605.rate, Class253.anInt3129);
-                this.aNode_Sub15_Sub1_9603 = new Node_Sub15_Sub1(this.aVorbisInfo9605.channels);
+                aDSPState9600 = new DSPState(aVorbisInfo9605);
+                aVorbisBlock9601 = new VorbisBlock(aDSPState9600);
+                aClass344_9598 = new Class344(aVorbisInfo9605.rate, Class253.anInt3129);
+                aNode_Sub15_Sub1_9603 = new Node_Sub15_Sub1(aVorbisInfo9605.channels);
             }
         } else {
-            if (this.aVorbisBlock9601.synthesis(oggpacket_1) == 0) {
-                this.aDSPState9600.blockIn(this.aVorbisBlock9601);
+            if (aVorbisBlock9601.synthesis(oggpacket_1) == 0) {
+                aDSPState9600.blockIn(aVorbisBlock9601);
             }
-            float[][] floats_5 = this.aDSPState9600.pcmOut(this.aVorbisInfo9605.channels);
-            this.aDouble9604 = this.aDSPState9600.granuleTime();
-            if (this.aDouble9604 == -1.0D) {
-                this.aDouble9604 = (float) (this.anInt9602 * -1560334429 * 1938979851) / (float) this.aVorbisInfo9605.rate;
+            float[][] floats_5 = aDSPState9600.pcmOut(aVorbisInfo9605.channels);
+            aDouble9604 = aDSPState9600.granuleTime();
+            if (aDouble9604 == -1.0) {
+                aDouble9604 = (float) (anInt9602 * -1560334429 * 1938979851) / aVorbisInfo9605.rate;
             }
-            this.aDSPState9600.read(floats_5[0].length);
-            this.anInt9602 = (this.anInt9602 * -1560334429 + -1560334429 * floats_5[0].length) * 1938979851;
-            Node_Sub39 class282_sub39_3 = this.aNode_Sub15_Sub1_9603.method14814(floats_5[0].length, this.aDouble9604);
+            aDSPState9600.read(floats_5[0].length);
+            anInt9602 = (anInt9602 * -1560334429 + -1560334429 * floats_5[0].length) * 1938979851;
+            Node_Sub39 class282_sub39_3 = aNode_Sub15_Sub1_9603.method14814(floats_5[0].length, aDouble9604);
             Preference_Sub20.method12805(floats_5, class282_sub39_3.aShortArrayArray8003);
-            for (int i_4 = 0; i_4 < this.aVorbisInfo9605.channels; i_4++) {
-                class282_sub39_3.aShortArrayArray8003[i_4] = this.aClass344_9598.method6111(class282_sub39_3.aShortArrayArray8003[i_4]);
+            for (int i_4 = 0; i_4 < aVorbisInfo9605.channels; i_4++) {
+                class282_sub39_3.aShortArrayArray8003[i_4] = aClass344_9598.method6111(class282_sub39_3.aShortArrayArray8003[i_4]);
             }
-            this.aNode_Sub15_Sub1_9603.method14815(class282_sub39_3, -881464025);
+            aNode_Sub15_Sub1_9603.method14815(class282_sub39_3);
         }
     }
 
+    @Override
     void method13366(OggPacket oggpacket_1) {
-        if (this.anInt8031 * 1669091145 * -509226247 < 3) {
-            int i_2 = this.aVorbisInfo9605.headerIn(this.aVorbisComment9599, oggpacket_1);
+        if (anInt8031 * 1669091145 * -509226247 < 3) {
+            int i_2 = aVorbisInfo9605.headerIn(aVorbisComment9599, oggpacket_1);
             if (i_2 < 0) {
                 throw new IllegalStateException("" + i_2);
             }
-            if (-509226247 * this.anInt8031 * 1669091145 == 2) {
-                if (this.aVorbisInfo9605.channels > 2 || this.aVorbisInfo9605.channels < 1) {
-                    throw new RuntimeException("" + this.aVorbisInfo9605.channels);
+            if (-509226247 * anInt8031 * 1669091145 == 2) {
+                if (aVorbisInfo9605.channels > 2 || aVorbisInfo9605.channels < 1) {
+                    throw new RuntimeException("" + aVorbisInfo9605.channels);
                 }
-                this.aDSPState9600 = new DSPState(this.aVorbisInfo9605);
-                this.aVorbisBlock9601 = new VorbisBlock(this.aDSPState9600);
-                this.aClass344_9598 = new Class344(this.aVorbisInfo9605.rate, Class253.anInt3129);
-                this.aNode_Sub15_Sub1_9603 = new Node_Sub15_Sub1(this.aVorbisInfo9605.channels);
+                aDSPState9600 = new DSPState(aVorbisInfo9605);
+                aVorbisBlock9601 = new VorbisBlock(aDSPState9600);
+                aClass344_9598 = new Class344(aVorbisInfo9605.rate, Class253.anInt3129);
+                aNode_Sub15_Sub1_9603 = new Node_Sub15_Sub1(aVorbisInfo9605.channels);
             }
         } else {
-            if (this.aVorbisBlock9601.synthesis(oggpacket_1) == 0) {
-                this.aDSPState9600.blockIn(this.aVorbisBlock9601);
+            if (aVorbisBlock9601.synthesis(oggpacket_1) == 0) {
+                aDSPState9600.blockIn(aVorbisBlock9601);
             }
-            float[][] floats_5 = this.aDSPState9600.pcmOut(this.aVorbisInfo9605.channels);
-            this.aDouble9604 = this.aDSPState9600.granuleTime();
-            if (this.aDouble9604 == -1.0D) {
-                this.aDouble9604 = (float) (this.anInt9602 * -1560334429 * 1938979851) / (float) this.aVorbisInfo9605.rate;
+            float[][] floats_5 = aDSPState9600.pcmOut(aVorbisInfo9605.channels);
+            aDouble9604 = aDSPState9600.granuleTime();
+            if (aDouble9604 == -1.0) {
+                aDouble9604 = (float) (anInt9602 * -1560334429 * 1938979851) / aVorbisInfo9605.rate;
             }
-            this.aDSPState9600.read(floats_5[0].length);
-            this.anInt9602 = (this.anInt9602 * -1560334429 + -1560334429 * floats_5[0].length) * 1938979851;
-            Node_Sub39 class282_sub39_3 = this.aNode_Sub15_Sub1_9603.method14814(floats_5[0].length, this.aDouble9604);
+            aDSPState9600.read(floats_5[0].length);
+            anInt9602 = (anInt9602 * -1560334429 + -1560334429 * floats_5[0].length) * 1938979851;
+            Node_Sub39 class282_sub39_3 = aNode_Sub15_Sub1_9603.method14814(floats_5[0].length, aDouble9604);
             Preference_Sub20.method12805(floats_5, class282_sub39_3.aShortArrayArray8003);
-            for (int i_4 = 0; i_4 < this.aVorbisInfo9605.channels; i_4++) {
-                class282_sub39_3.aShortArrayArray8003[i_4] = this.aClass344_9598.method6111(class282_sub39_3.aShortArrayArray8003[i_4]);
+            for (int i_4 = 0; i_4 < aVorbisInfo9605.channels; i_4++) {
+                class282_sub39_3.aShortArrayArray8003[i_4] = aClass344_9598.method6111(class282_sub39_3.aShortArrayArray8003[i_4]);
             }
-            this.aNode_Sub15_Sub1_9603.method14815(class282_sub39_3, -1788254103);
+            aNode_Sub15_Sub1_9603.method14815(class282_sub39_3);
         }
     }
 
+    @Override
     void method13365() {
-        if (this.aVorbisBlock9601 != null) {
-            this.aVorbisBlock9601.method6699();
+        if (aVorbisBlock9601 != null) {
+            aVorbisBlock9601.method6699();
         }
-        if (this.aDSPState9600 != null) {
-            this.aDSPState9600.method6699();
+        if (aDSPState9600 != null) {
+            aDSPState9600.method6699();
         }
-        this.aVorbisComment9599.method6699();
-        this.aVorbisInfo9605.method6699();
-        if (this.aNode_Sub15_Sub1_9603 != null) {
-            this.aNode_Sub15_Sub1_9603.method14808((byte) -71);
+        aVorbisComment9599.method6699();
+        aVorbisInfo9605.method6699();
+        if (aNode_Sub15_Sub1_9603 != null) {
+            aNode_Sub15_Sub1_9603.method14808();
         }
     }
 
     double method14848() {
-        double d_2 = this.aDouble9604;
-        if (this.aNode_Sub15_Sub1_9603 != null) {
-            d_2 = this.aNode_Sub15_Sub1_9603.method14819();
+        double d_2 = aDouble9604;
+        if (aNode_Sub15_Sub1_9603 != null) {
+            d_2 = aNode_Sub15_Sub1_9603.method14819();
             if (d_2 < 0.0D) {
-                d_2 = this.aDouble9604;
+                d_2 = aDouble9604;
             }
         }
-        return d_2 - (double) (256.0F / (float) Class253.anInt3129);
+        return d_2 - (256.0F / Class253.anInt3129);
     }
 
+    @Override
     void method13360() {
-        if (this.aVorbisBlock9601 != null) {
-            this.aVorbisBlock9601.method6699();
+        if (aVorbisBlock9601 != null) {
+            aVorbisBlock9601.method6699();
         }
-        if (this.aDSPState9600 != null) {
-            this.aDSPState9600.method6699();
+        if (aDSPState9600 != null) {
+            aDSPState9600.method6699();
         }
-        this.aVorbisComment9599.method6699();
-        this.aVorbisInfo9605.method6699();
-        if (this.aNode_Sub15_Sub1_9603 != null) {
-            this.aNode_Sub15_Sub1_9603.method14808((byte) -52);
+        aVorbisComment9599.method6699();
+        aVorbisInfo9605.method6699();
+        if (aNode_Sub15_Sub1_9603 != null) {
+            aNode_Sub15_Sub1_9603.method14808();
         }
     }
 }

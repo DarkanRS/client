@@ -10,54 +10,27 @@ public enum NPCDirection implements Identifiable {
     NORTH_EAST(5, 6),
     SOUTH_WEST(1, 7);
 
-    public int value;
-    int direction;
-
-    public NPCDirection method4317() {
-        switch (this.value) {
-            case 0:
-                return SOUTH;
-            case 1:
-                return NORTH_WEST;
-            case 2:
-                return WEST;
-            case 3:
-                return NORTH_EAST;
-            case 4:
-                return EAST;
-            case 5:
-                return SOUTH_EAST;
-            case 6:
-                return NORTH;
-            case 7:
-                return SOUTH_WEST;
-            default:
-                throw new IllegalStateException();
-        }
-    }
+    public final int value;
+    final int direction;
 
     NPCDirection(int i_1, int i_2) {
-        this.value = i_1;
-        this.direction = i_2;
-    }
-
-    public int getValue() {
-        return this.direction;
+        value = i_1;
+        direction = i_2;
     }
 
     static int method4325(WorldDescriptor class217_sub1_0, WorldDescriptor class217_sub1_1, int i_2, boolean bool_3, int i_4, boolean bool_5) {
-        int i_7 = Preference_Sub1.method12620(class217_sub1_0, class217_sub1_1, i_2, bool_3, -1139598282);
+        int i_7 = Preference_Sub1.method12620(class217_sub1_0, class217_sub1_1, i_2, bool_3);
         if (i_7 != 0) {
             return bool_3 ? -i_7 : i_7;
         } else if (i_4 == -1) {
             return 0;
         } else {
-            int i_8 = Preference_Sub1.method12620(class217_sub1_0, class217_sub1_1, i_4, bool_5, 502697852);
+            int i_8 = Preference_Sub1.method12620(class217_sub1_0, class217_sub1_1, i_4, bool_5);
             return bool_5 ? -i_8 : i_8;
         }
     }
 
-    static void drawDebugInformation(int x, int y, IComponentDefinitions inter) {
+    static void drawDebugInformation(int x, int y, Component inter) {
         int currDrawX = inter.width + x;
         int currDrawY = y + 15;
         if (client.DRAW_DEBUG) {
@@ -112,7 +85,7 @@ public enum NPCDirection implements Identifiable {
             }
             i_23 = i_22 * 100 / i_20;
             int i_24 = i_21 * 10000 / i_20;
-            String string_25 = "Cache:" + Connection.method3342(i_24, 2, true, Language.ENGLISH, (byte) 28) + "% (" + i_23 + "%)";
+            String string_25 = "Cache:" + Connection.method3342(i_24, 2, true, Language.ENGLISH) + "% (" + i_23 + "%)";
             Renderers.FONT_RENDERER.drawText(string_25, currDrawX, currDrawY, -256, -1);
             currDrawY += 12;
         }
@@ -224,5 +197,33 @@ public enum NPCDirection implements Identifiable {
             default:
                 return null;
         }
+    }
+
+    public NPCDirection method4317() {
+        switch (value) {
+            case 0:
+                return SOUTH;
+            case 1:
+                return NORTH_WEST;
+            case 2:
+                return WEST;
+            case 3:
+                return NORTH_EAST;
+            case 4:
+                return EAST;
+            case 5:
+                return SOUTH_EAST;
+            case 6:
+                return NORTH;
+            case 7:
+                return SOUTH_WEST;
+            default:
+                throw new IllegalStateException();
+        }
+    }
+
+    @Override
+    public int getValue() {
+        return direction;
     }
 }

@@ -9,8 +9,8 @@ public class Class382 {
         double step = 3.834951969714103E-4D;
 
         for (int i = 0; i < 16384; i++) {
-            SINE[i] = (int) (16384.0D * Math.sin((double) i * step));
-            COSINE[i] = (int) (16384.0D * Math.cos((double) i * step));
+            SINE[i] = (int) (16384.0D * Math.sin(i * step));
+            COSINE[i] = (int) (16384.0D * Math.cos(i * step));
         }
 
     }
@@ -21,7 +21,7 @@ public class Class382 {
 
     public static float method6508(int i_0) {
         i_0 &= 0x3fff;
-        return (float) ((double) ((float) i_0 / 16384.0F) * 6.283185307179586D);
+        return (float) ((i_0 / 16384.0F) * 6.283185307179586D);
     }
 
 }

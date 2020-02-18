@@ -9,7 +9,7 @@ public class Class67 {
     public int anInt681;
 
     Class67(int i_1) {
-        this.anInt681 = i_1;
+        anInt681 = i_1;
     }
 
 }

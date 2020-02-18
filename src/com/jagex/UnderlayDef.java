@@ -6,16 +6,16 @@ public class UnderlayDef {
     public int b;
     public int a;
     public int r;
-    int rgb = 0;
     public int texture = -1;
     public int scale = 512;
     public boolean blockShadow = true;
     public boolean aBool5722 = true;
+    int rgb;
 
     void method8048(int i_1) {
-        double d_3 = (double) (i_1 >> 16 & 0xff) / 256.0D;
-        double d_5 = (double) (i_1 >> 8 & 0xff) / 256.0D;
-        double d_7 = (double) (i_1 & 0xff) / 256.0D;
+        double d_3 = (i_1 >> 16 & 0xff) / 256.0D;
+        double d_5 = (i_1 >> 8 & 0xff) / 256.0D;
+        double d_7 = (i_1 & 0xff) / 256.0D;
         double d_9 = d_3;
         if (d_5 < d_3) {
             d_9 = d_5;
@@ -56,60 +56,59 @@ public class UnderlayDef {
         }
 
         d_13 /= 6.0D;
-        this.g = (int) (d_15 * 256.0D);
-        this.b = (int) (256.0D * d_17);
-        if (this.g < 0) {
-            this.g = 0;
-        } else if (this.g > 255) {
-            this.g = 255;
+        g = (int) (d_15 * 256.0D);
+        b = (int) (256.0D * d_17);
+        if (g < 0) {
+            g = 0;
+        } else if (g > 255) {
+            g = 255;
         }
 
-        if (this.b < 0) {
-            this.b = 0;
-        } else if (this.b > 255) {
-            this.b = 255;
+        if (b < 0) {
+            b = 0;
+        } else if (b > 255) {
+            b = 255;
         }
 
         if (d_17 > 0.5D) {
-            this.a = (int) (d_15 * (1.0D - d_17) * 512.0D);
+            a = (int) (d_15 * (1.0D - d_17) * 512.0D);
         } else {
-            this.a = (int) (d_15 * d_17 * 512.0D);
+            a = (int) (d_15 * d_17 * 512.0D);
         }
 
-        if (this.a < 1) {
-            this.a = 1;
+        if (a < 1) {
+            a = 1;
         }
 
-        this.r = (int) (d_13 * (double) this.a);
+        r = (int) (d_13 * a);
     }
 
-    void method8049(RsByteBuffer rsbytebuffer_1, int i_2) {
-        if (i_2 == 1) {
-            this.rgb = rsbytebuffer_1.read24BitUnsignedInteger();
-            this.method8048(this.rgb);
-        } else if (i_2 == 2) {
-            this.texture = rsbytebuffer_1.readUnsignedShort();
-            if (this.texture == 65535) {
-                this.texture = -1;
+    void decodeOpcode(Packet packet, int opcode) {
+        if (opcode == 1) {
+            rgb = packet.read24BitUnsignedInteger();
+            method8048(rgb);
+        } else if (opcode == 2) {
+            texture = packet.readUnsignedShort();
+            if (texture == 65535) {
+                texture = -1;
             }
-        } else if (i_2 == 3) {
-            this.scale = rsbytebuffer_1.readUnsignedShort() << 2;
-        } else if (i_2 == 4) {
-            this.blockShadow = false;
-        } else if (i_2 == 5) {
-            this.aBool5722 = false;
+        } else if (opcode == 3) {
+            scale = packet.readUnsignedShort() << 2;
+        } else if (opcode == 4) {
+            blockShadow = false;
+        } else if (opcode == 5) {
+            aBool5722 = false;
         }
 
     }
 
-    void method8050(RsByteBuffer rsbytebuffer_1) {
+    void decode(Packet packet) {
         while (true) {
-            int i_3 = rsbytebuffer_1.readUnsignedByte();
+            int i_3 = packet.readUnsignedByte();
             if (i_3 == 0) {
                 return;
             }
-
-            this.method8049(rsbytebuffer_1, i_3);
+            decodeOpcode(packet, i_3);
         }
     }
 

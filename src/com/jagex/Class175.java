@@ -6,7 +6,7 @@ public class Class175 {
         throw new Error();
     }
 
-    public static QuickChatMessage decodeQuickchatMessage(RsByteBuffer buffer) {
+    public static QuickChatMessage decodeQuickchatMessage(Packet buffer) {
         QuickChatMessage message = new QuickChatMessage();
         message.qcMessageId = buffer.readUnsignedShort();
         message.qcMessageDefs = IndexLoaders.QUICK_CHAT_MESSAGE_LOADER.getMessageDefinitions(message.qcMessageId);
@@ -30,7 +30,7 @@ public class Class175 {
         }
     }
 
-    static void method2964(Node_Sub48 class282_sub48_0, int i_1, int i_2, int i_3, int i_4, int i_5) {
+    static void method2964(Node_Sub48 class282_sub48_0, int i_1, int i_2, int i_3, int i_4) {
         if (class282_sub48_0.soundEffectId != -1 || class282_sub48_0.anIntArray8102 != null) {
             int i_6 = 0;
             int i_7 = class282_sub48_0.anInt8089 * Class393.preferences.ambientSoundVolume.method12714() >> 8;
@@ -111,15 +111,15 @@ public class Class175 {
                         }
                     }
                 } else {
-                    class282_sub48_0.aNode_Sub15_Sub5_8099.method15312(i_9, (byte) 58);
-                    class282_sub48_0.aNode_Sub15_Sub5_8099.method15340(i_11, -1345145813);
+                    class282_sub48_0.aNode_Sub15_Sub5_8099.method15312(i_9);
+                    class282_sub48_0.aNode_Sub15_Sub5_8099.method15340(i_11);
                 }
                 if (class282_sub48_0.aNode_Sub15_Sub5_8096 == null) {
                     if (class282_sub48_0.anIntArray8102 != null && (class282_sub48_0.anInt8080 -= i_4) <= 0) {
-                        i_12 = class282_sub48_0.anInt8094 == 256 && class282_sub48_0.anInt8093 == 256 ? 256 : (int) (Math.random() * (double) (class282_sub48_0.anInt8094 - class282_sub48_0.anInt8093)) + class282_sub48_0.anInt8093;
+                        i_12 = class282_sub48_0.anInt8094 == 256 && class282_sub48_0.anInt8093 == 256 ? 256 : (int) (Math.random() * (class282_sub48_0.anInt8094 - class282_sub48_0.anInt8093)) + class282_sub48_0.anInt8093;
                         if (class282_sub48_0.aBool8103) {
                             if (class282_sub48_0.aNode_Sub18_8087 == null) {
-                                i_13 = (int) (Math.random() * (double) class282_sub48_0.anIntArray8102.length);
+                                i_13 = (int) (Math.random() * class282_sub48_0.anIntArray8102.length);
                                 class282_sub48_0.aNode_Sub18_8087 = MIDIInstrument.method12270(IndexLoaders.MIDI_INSTRUMENT_INDEX, class282_sub48_0.anIntArray8102[i_13]);
                             }
                             if (class282_sub48_0.aNode_Sub18_8087 != null) {
@@ -131,11 +131,11 @@ public class Class175 {
                                     class282_sub15_sub5_sub1_14.method15325(0);
                                     Class79.aNode_Sub15_Sub4_783.method15275(class282_sub15_sub5_sub1_14);
                                     class282_sub48_0.aNode_Sub15_Sub5_8096 = class282_sub15_sub5_sub1_14;
-                                    class282_sub48_0.anInt8080 = class282_sub48_0.anInt8072 + (int) (Math.random() * (double) (class282_sub48_0.anInt8101 - class282_sub48_0.anInt8072));
+                                    class282_sub48_0.anInt8080 = class282_sub48_0.anInt8072 + (int) (Math.random() * (class282_sub48_0.anInt8101 - class282_sub48_0.anInt8072));
                                 }
                             }
                         } else {
-                            i_13 = (int) (Math.random() * (double) class282_sub48_0.anIntArray8102.length);
+                            i_13 = (int) (Math.random() * class282_sub48_0.anIntArray8102.length);
                             class343_19 = SoundEffect.getSoundEffect(IndexLoaders.SOUND_EFFECT_INDEX, class282_sub48_0.anIntArray8102[i_13], 0);
                             if (class343_19 != null) {
                                 class282_sub26_sub1_sub2_15 = class343_19.getMixedAudio().method16062(Class119.aClass344_1460);
@@ -143,14 +143,14 @@ public class Class175 {
                                 class282_sub15_sub5_sub2_16.method15325(0);
                                 Class79.aNode_Sub15_Sub4_783.method15275(class282_sub15_sub5_sub2_16);
                                 class282_sub48_0.aNode_Sub15_Sub5_8096 = class282_sub15_sub5_sub2_16;
-                                class282_sub48_0.anInt8080 = class282_sub48_0.anInt8072 + (int) (Math.random() * (double) (class282_sub48_0.anInt8101 - class282_sub48_0.anInt8072));
+                                class282_sub48_0.anInt8080 = class282_sub48_0.anInt8072 + (int) (Math.random() * (class282_sub48_0.anInt8101 - class282_sub48_0.anInt8072));
                             }
                         }
                     }
                 } else {
-                    class282_sub48_0.aNode_Sub15_Sub5_8096.method15312(i_9, (byte) 125);
-                    class282_sub48_0.aNode_Sub15_Sub5_8096.method15340(i_11, -1828796659);
-                    if (!class282_sub48_0.aNode_Sub15_Sub5_8096.isLinked()) {
+                    class282_sub48_0.aNode_Sub15_Sub5_8096.method15312(i_9);
+                    class282_sub48_0.aNode_Sub15_Sub5_8096.method15340(i_11);
+                    if (!class282_sub48_0.aNode_Sub15_Sub5_8096.linked()) {
                         class282_sub48_0.aNode_Sub15_Sub5_8096 = null;
                         class282_sub48_0.aNode_Sub18_8087 = null;
                         class282_sub48_0.aNode_Sub26_Sub1_Sub1_8106 = null;

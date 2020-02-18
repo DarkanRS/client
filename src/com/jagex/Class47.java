@@ -7,13 +7,13 @@ public abstract class Class47 {
     public Interface4 anInterface4_445;
     public int anInt446;
     public Class70 aClass70_447;
-    public Matrix44Arr aClass384_442 = new Matrix44Arr();
-    public Matrix44Arr aClass384_440 = new Matrix44Arr();
-    public Matrix44Arr aClass384_444 = new Matrix44Arr();
-    protected GraphicalRenderer_Sub2 aGraphicalRenderer_Sub2_439;
+    public Matrix44 aClass384_442 = new Matrix44();
+    public Matrix44 aClass384_440 = new Matrix44();
+    public Matrix44 aClass384_444 = new Matrix44();
+    protected AbstractRenderer_Sub2 aGraphicalRenderer_Sub2_439;
 
-    Class47(GraphicalRenderer_Sub2 class505_sub2_1) {
-        this.aGraphicalRenderer_Sub2_439 = class505_sub2_1;
+    Class47(AbstractRenderer_Sub2 class505_sub2_1) {
+        aGraphicalRenderer_Sub2_439 = class505_sub2_1;
     }
 
     public abstract void method936();

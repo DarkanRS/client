@@ -13,56 +13,56 @@ public class Envelope {
     int[] phaseDuration = new int[2];
     int[] phasePeak = new int[2];
 
-    final void decode(RsByteBuffer buffer) {
-        this.form = buffer.readUnsignedByte();
-        this.start = buffer.readInt();
-        this.end = buffer.readInt();
-        this.decodeShape(buffer);
-    }
-
-    final void reset() {
-        this.critical = 0;
-        this.phaseIndex = 0;
-        this.step = 0;
-        this.amplitude = 0;
-        this.ticks = 0;
-    }
-
     Envelope() {
-        this.phaseDuration[0] = 0;
-        this.phaseDuration[1] = 65535;
-        this.phasePeak[0] = 0;
-        this.phasePeak[1] = 65535;
+        phaseDuration[0] = 0;
+        phaseDuration[1] = 65535;
+        phasePeak[0] = 0;
+        phasePeak[1] = 65535;
     }
 
-    final void decodeShape(RsByteBuffer buffer) {
-        this.numPhases = buffer.readUnsignedByte();
-        this.phaseDuration = new int[this.numPhases];
-        this.phasePeak = new int[this.numPhases];
+    void decode(Packet buffer) {
+        form = buffer.readUnsignedByte();
+        start = buffer.readInt();
+        end = buffer.readInt();
+        decodeShape(buffer);
+    }
 
-        for (int i = 0; i < this.numPhases; i++) {
-            this.phaseDuration[i] = buffer.readUnsignedShort();
-            this.phasePeak[i] = buffer.readUnsignedShort();
+    void reset() {
+        critical = 0;
+        phaseIndex = 0;
+        step = 0;
+        amplitude = 0;
+        ticks = 0;
+    }
+
+    void decodeShape(Packet buffer) {
+        numPhases = buffer.readUnsignedByte();
+        phaseDuration = new int[numPhases];
+        phasePeak = new int[numPhases];
+
+        for (int i = 0; i < numPhases; i++) {
+            phaseDuration[i] = buffer.readUnsignedShort();
+            phasePeak[i] = buffer.readUnsignedShort();
         }
 
     }
 
-    final int step(int period) {
-        if (this.ticks >= this.critical) {
-            this.amplitude = this.phasePeak[this.phaseIndex++] << 15;
-            if (this.phaseIndex >= this.numPhases) {
-                this.phaseIndex = this.numPhases - 1;
+    int step(int period) {
+        if (ticks >= critical) {
+            amplitude = phasePeak[phaseIndex++] << 15;
+            if (phaseIndex >= numPhases) {
+                phaseIndex = numPhases - 1;
             }
 
-            this.critical = (int) ((double) this.phaseDuration[this.phaseIndex] / 65536.0D * (double) period);
-            if (this.critical > this.ticks) {
-                this.step = ((this.phasePeak[this.phaseIndex] << 15) - this.amplitude) / (this.critical - this.ticks);
+            critical = (int) (phaseDuration[phaseIndex] / 65536.0D * period);
+            if (critical > ticks) {
+                step = ((phasePeak[phaseIndex] << 15) - amplitude) / (critical - ticks);
             }
         }
 
-        this.amplitude += this.step;
-        ++this.ticks;
-        return this.amplitude - this.step >> 15;
+        amplitude += step;
+        ++ticks;
+        return amplitude - step >> 15;
     }
 
 }

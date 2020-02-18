@@ -6,11 +6,11 @@ public class Class25 {
         throw new Error();
     }
 
-    public static final boolean lessThanZero(int i_0) {
+    public static boolean lessThanZero(int i_0) {
         return i_0 < 0;
     }
 
-    public static final boolean gtOrEqualToZero(int i_0) {
+    public static boolean gtOrEqualToZero(int i_0) {
         return i_0 >= 0;
     }
 

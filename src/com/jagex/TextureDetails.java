@@ -22,18 +22,18 @@ public class TextureDetails {
     public byte textureSpeedV;
     public int combineMode;
 
-    public static boolean method2875(int i_0, int i_1) {
+    public static boolean method2875(int i_0) {
         return i_0 == 13 || i_0 == 18 || i_0 == 12;
     }
 
-    public static void method2876(NPC npc_0) {
-        for (Node_Sub48 class282_sub48_2 = (Node_Sub48) Node_Sub48.aClass482_8074.head(); class282_sub48_2 != null; class282_sub48_2 = (Node_Sub48) Node_Sub48.aClass482_8074.next(1114732326)) {
+    public static void method2876(NPCEntity npc_0) {
+        for (Node_Sub48 class282_sub48_2 = (Node_Sub48) Node_Sub48.aClass482_8074.head(); class282_sub48_2 != null; class282_sub48_2 = (Node_Sub48) Node_Sub48.aClass482_8074.next()) {
             if (class282_sub48_2.aTransform_Sub1_Sub1_Sub2_Sub2_8085 == npc_0) {
                 if (class282_sub48_2.aNode_Sub15_Sub5_8099 != null) {
                     Class79.aNode_Sub15_Sub4_783.method15276(class282_sub48_2.aNode_Sub15_Sub5_8099);
                     class282_sub48_2.aNode_Sub15_Sub5_8099 = null;
                 }
-                class282_sub48_2.remove();
+                class282_sub48_2.unlink();
                 break;
             }
         }

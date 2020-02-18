@@ -4,17 +4,18 @@ import java.awt.*;
 
 public class MouseRecord_Sub1 extends MouseRecord {
 
+    static MouseRecord_Sub1[] aMouseRecord_Sub1Array9497 = new MouseRecord_Sub1[0];
     int anInt9513;
     int anInt9514;
     long time;
-    static MouseRecord_Sub1[] aMouseRecord_Sub1Array9497 = new MouseRecord_Sub1[0];
     int x;
     int y;
 
     public int method14729() {
-        return this.anInt9514;
+        return anInt9514;
     }
 
+    @Override
     public void cache() {
         MouseRecord_Sub1[] arr_2 = aMouseRecord_Sub1Array9497;
         synchronized (aMouseRecord_Sub1Array9497) {
@@ -24,16 +25,17 @@ public class MouseRecord_Sub1 extends MouseRecord {
         }
     }
 
+    @Override
     public int getX() {
-        return this.x;
+        return x;
     }
 
     public int method14730() {
-        return this.anInt9513;
+        return anInt9513;
     }
 
     public boolean method14731() {
-        switch (this.anInt9513) {
+        switch (anInt9513) {
             case 160:
             case 161:
             case 162:
@@ -57,8 +59,9 @@ public class MouseRecord_Sub1 extends MouseRecord {
         }
     }
 
+    @Override
     public int getMeta() {
-        switch (this.anInt9513) {
+        switch (anInt9513) {
             case 160:
             case 512:
                 return 0;
@@ -76,17 +79,19 @@ public class MouseRecord_Sub1 extends MouseRecord {
         }
     }
 
+    @Override
     public long method13471() {
-        return this.time;
+        return time;
     }
 
     public void method14732(Point point_1) {
-        this.x -= point_1.x;
-        this.y -= point_1.y;
+        x -= point_1.x;
+        y -= point_1.y;
     }
 
+    @Override
     public int getClickType() {
-        switch (this.anInt9513) {
+        switch (anInt9513) {
             case 160:
             case 512:
                 return -1;
@@ -122,7 +127,8 @@ public class MouseRecord_Sub1 extends MouseRecord {
         }
     }
 
+    @Override
     public int getY() {
-        return this.y;
+        return y;
     }
 }

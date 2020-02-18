@@ -12,152 +12,182 @@ public class Class158_Sub2_Sub2_Sub1 extends Class158_Sub2_Sub2 {
     int anInt10298;
     int anInt10301;
 
+    Class158_Sub2_Sub2_Sub1(AbstractRenderer_Sub2_Sub1 class505_sub2_sub1_1, Canvas canvas_2, long long_3) {
+        super(class505_sub2_sub1_1);
+        aCanvas10302 = canvas_2;
+        anOpenGL10299 = class505_sub2_sub1_1.anOpenGL10191;
+        aLong10300 = long_3;
+        method15723();
+    }
+
+    Class158_Sub2_Sub2_Sub1(AbstractRenderer_Sub2_Sub1 class505_sub2_sub1_1, Canvas canvas_2) {
+        this(class505_sub2_sub1_1, canvas_2, class505_sub2_sub1_1.anOpenGL10191.prepareSurface(canvas_2));
+    }
+
+    @Override
     public int method14345(int i_1, int i_2) {
         return 0;
     }
 
-    Class158_Sub2_Sub2_Sub1(GraphicalRenderer_Sub2_Sub1 class505_sub2_sub1_1, Canvas canvas_2, long long_3) {
-        super(class505_sub2_sub1_1);
-        this.aCanvas10302 = canvas_2;
-        this.anOpenGL10299 = class505_sub2_sub1_1.anOpenGL10191;
-        this.aLong10300 = long_3;
-        this.method15723();
-    }
-
+    @Override
     public int method14352(int i_1, int i_2) {
         return 0;
     }
 
+    @Override
     public int method2716() {
-        return this.anInt10298;
+        return anInt10298;
     }
 
+    @Override
     void method14348(int i_1, int i_2) {
-        this.anOpenGL10299.surfaceResized(this.aLong10300);
-        this.method15723();
+        anOpenGL10299.surfaceResized(aLong10300);
+        method15723();
         super.method14354(i_1, i_2);
     }
 
     void method15723() {
-        Dimension dimension_1 = this.aCanvas10302.getSize();
-        this.anInt10298 = dimension_1.height;
-        this.anInt10301 = dimension_1.width;
+        Dimension dimension_1 = aCanvas10302.getSize();
+        anInt10298 = dimension_1.height;
+        anInt10301 = dimension_1.width;
     }
 
+    @Override
     public int method14344() {
-        this.anOpenGL10299.swapBuffers(this.aLong10300);
+        anOpenGL10299.swapBuffers(aLong10300);
         return 0;
     }
 
+    @Override
     public int method14353(int i_1, int i_2) {
         return 0;
     }
 
+    @Override
     boolean method213() {
-        return this.anOpenGL10299.setSurface(this.aLong10300) && super.method213();
+        return anOpenGL10299.setSurface(aLong10300) && super.method213();
     }
 
+    @Override
     boolean method2724() {
         return true;
     }
 
+    @Override
     public void method212() {
-        this.anOpenGL10299.releaseSurface(this.aCanvas10302, this.aLong10300);
+        anOpenGL10299.releaseSurface(aCanvas10302, aLong10300);
     }
 
+    @Override
     public int method14349() {
-        this.anOpenGL10299.swapBuffers(this.aLong10300);
+        anOpenGL10299.swapBuffers(aLong10300);
         return 0;
     }
 
+    @Override
     public int method2720() {
-        return this.anInt10301;
+        return anInt10301;
     }
 
+    @Override
     public int method2719() {
-        return this.anInt10301;
+        return anInt10301;
     }
 
+    @Override
     boolean method2717() {
         return true;
     }
 
+    @Override
     boolean method54() {
-        return this.anOpenGL10299.setSurface(this.aLong10300) && super.method213();
+        return anOpenGL10299.setSurface(aLong10300) && super.method213();
     }
 
+    @Override
     boolean method2723() {
         return true;
     }
 
+    @Override
     boolean method2715() {
         return true;
     }
 
+    @Override
     void method14347(int i_1, int i_2) {
-        this.anOpenGL10299.surfaceResized(this.aLong10300);
-        this.method15723();
+        anOpenGL10299.surfaceResized(aLong10300);
+        method15723();
         super.method14354(i_1, i_2);
     }
 
+    @Override
     void method14354(int i_1, int i_2) {
-        this.anOpenGL10299.surfaceResized(this.aLong10300);
-        this.method15723();
+        anOpenGL10299.surfaceResized(aLong10300);
+        method15723();
         super.method14354(i_1, i_2);
     }
 
+    @Override
     boolean method2725() {
         return true;
     }
 
+    @Override
     boolean method2722() {
         return true;
     }
 
+    @Override
     boolean method2718() {
         return true;
     }
 
-    Class158_Sub2_Sub2_Sub1(GraphicalRenderer_Sub2_Sub1 class505_sub2_sub1_1, Canvas canvas_2) {
-        this(class505_sub2_sub1_1, canvas_2, class505_sub2_sub1_1.anOpenGL10191.prepareSurface(canvas_2));
-    }
-
+    @Override
     public int method2726() {
-        return this.anInt10301;
+        return anInt10301;
     }
 
+    @Override
     public int method2727() {
-        return this.anInt10298;
+        return anInt10298;
     }
 
+    @Override
     public int method2721() {
-        return this.anInt10298;
+        return anInt10298;
     }
 
+    @Override
     public int method14350() {
-        this.anOpenGL10299.swapBuffers(this.aLong10300);
+        anOpenGL10299.swapBuffers(aLong10300);
         return 0;
     }
 
+    @Override
     public int method14346() {
-        this.anOpenGL10299.swapBuffers(this.aLong10300);
+        anOpenGL10299.swapBuffers(aLong10300);
         return 0;
     }
 
+    @Override
     public void method186() {
-        this.anOpenGL10299.releaseSurface(this.aCanvas10302, this.aLong10300);
+        anOpenGL10299.releaseSurface(aCanvas10302, aLong10300);
     }
 
+    @Override
     public int method2714() {
-        return this.anInt10301;
+        return anInt10301;
     }
 
+    @Override
     public int method14351(int i_1, int i_2) {
         return 0;
     }
 
+    @Override
     boolean method211() {
-        return this.anOpenGL10299.setSurface(this.aLong10300) && super.method213();
+        return anOpenGL10299.setSurface(aLong10300) && super.method213();
     }
 
 }

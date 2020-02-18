@@ -8,5 +8,5 @@ public class DirectBufferHelper {
         throw new Error();
     }
 
-    public static native long getDirectBufferAddress(Object object);
+    public static native long getDirectBufferAddress(java.nio.ByteBuffer object);
 }

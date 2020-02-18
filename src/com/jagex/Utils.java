@@ -5,7 +5,7 @@ public class Utils {
     public static char cp1252ToChar(byte b) {
         int val = b & 0xff;
         if (val == 0) {
-            throw new IllegalArgumentException("" + Integer.toString(val, 16));
+            throw new IllegalArgumentException("" + Integer.toString(0, 16));
         } else {
             if (val >= 128 && val < 160) {
                 char charValue = Class490.aCharArray5766[val - 128];
@@ -85,7 +85,7 @@ public class Utils {
         return "<col=" + Integer.toHexString(i_0) + ">";
     }
 
-    public static final synchronized long time() {
+    public static synchronized long time() {
         long long_1 = System.currentTimeMillis();
         if (long_1 < Class97.aLong993) {
             Class97.aLong994 += Class97.aLong993 - long_1;

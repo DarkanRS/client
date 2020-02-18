@@ -12,18 +12,18 @@ public enum ModelType {
     ITEM_CONTAINER_MALE(8),
     ITEM_CONTAINER_FEMALE(9);
 
+    private final int id;
+
+    ModelType(int id) {
+        this.id = id;
+    }
+
     public static ModelType forId(int id) {
         for (ModelType t : ModelType.values()) {
             if (t.id == id)
                 return t;
         }
         return null;
-    }
-
-    private final int id;
-
-    ModelType(int id) {
-        this.id = id;
     }
 
     public int getId() {

@@ -6,7 +6,7 @@ public class CacheableNode_Sub2 extends CacheableNode {
     byte[] aByteArray9472;
 
     CacheableNode_Sub2(byte[] bytes_1) {
-        this.aByteArray9472 = bytes_1;
+        aByteArray9472 = bytes_1;
     }
 
 }

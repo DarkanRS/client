@@ -4,12 +4,12 @@ import java.nio.ByteBuffer;
 
 public class Class71 {
 
-    boolean aBool710 = true;
-    int anInt715 = -1;
     static int[] anIntArray721;
     static byte[] aByteArray722;
+    boolean aBool710 = true;
+    int anInt715 = -1;
     Interface6 anInterface6_714;
-    GraphicalRenderer_Sub2 aGraphicalRenderer_Sub2_708;
+    AbstractRenderer_Sub2 aGraphicalRenderer_Sub2_708;
     Class74 aClass74_711;
     int anInt712;
     int anInt718;
@@ -18,17 +18,79 @@ public class Class71 {
     int anInt719;
     Interface32 anInterface32_717;
 
+    Class71(AbstractRenderer_Sub2 class505_sub2_1, Class74 class74_2, HardwareGround class390_sub1_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
+        aGraphicalRenderer_Sub2_708 = class505_sub2_1;
+        aClass74_711 = class74_2;
+        anInt712 = i_7;
+        anInt718 = i_8;
+        int i_9 = 1 << i_6;
+        int i_10 = 0;
+        int i_11 = i_4 << i_6;
+        int i_12 = i_5 << i_6;
+
+        int i_14;
+        int i_15;
+        for (int i_13 = 0; i_13 < i_9; i_13++) {
+            i_14 = class390_sub1_3.width * (i_12 + i_13) + i_11;
+
+            for (i_15 = 0; i_15 < i_9; i_15++) {
+                short[] shorts_21 = class390_sub1_3.aShortArrayArray8534[i_14++];
+                if (shorts_21 != null) {
+                    i_10 += shorts_21.length;
+                }
+            }
+        }
+
+        if (i_10 > 0) {
+            anInt709 = Integer.MIN_VALUE;
+            anInt719 = Integer.MAX_VALUE;
+            anInterface32_717 = aGraphicalRenderer_Sub2_708.method13993(false);
+            anInterface32_717.method208(i_10);
+            ByteBuffer bytebuffer_20 = aGraphicalRenderer_Sub2_708.aByteBuffer8838;
+            bytebuffer_20.clear();
+
+            for (i_14 = 0; i_14 < i_9; i_14++) {
+                i_15 = class390_sub1_3.width * (i_12 + i_14) + i_11;
+
+                for (int i_16 = 0; i_16 < i_9; i_16++) {
+                    short[] shorts_17 = class390_sub1_3.aShortArrayArray8534[i_15++];
+                    if (shorts_17 != null) {
+                        for (int i_18 = 0; i_18 < shorts_17.length; i_18++) {
+                            int i_19 = shorts_17[i_18] & 0xffff;
+                            if (i_19 < anInt719) {
+                                anInt719 = i_19;
+                            }
+
+                            if (i_19 > anInt709) {
+                                anInt709 = i_19;
+                            }
+
+                            bytebuffer_20.putShort((short) i_19);
+                        }
+                    }
+                }
+            }
+
+            anInterface32_717.method42(0, bytebuffer_20.position(), aGraphicalRenderer_Sub2_708.aLong8695);
+            anInt716 = i_10 / 3;
+        } else {
+            anInt716 = 0;
+            anInterface6_714 = null;
+        }
+
+    }
+
     void method1288(Class48 class48_1) {
-        this.method1290(class48_1, this.anInterface32_717, 0, this.anInt716);
+        method1290(class48_1, anInterface32_717, 0, anInt716);
     }
 
     void method1290(Class48 class48_1, Interface32 interface32_2, int i_3, int i_4) {
         if (i_4 > 0) {
-            this.method1293();
-            this.aGraphicalRenderer_Sub2_708.method13997(interface32_2);
-            class48_1.anInterface6_452 = this.anInterface6_714;
-            class48_1.anInt467 = this.anInt719;
-            class48_1.anInt468 = this.anInt709 - this.anInt719 + 1;
+            method1293();
+            aGraphicalRenderer_Sub2_708.method13997(interface32_2);
+            class48_1.anInterface6_452 = anInterface6_714;
+            class48_1.anInt467 = anInt719;
+            class48_1.anInt468 = anInt709 - anInt719 + 1;
             class48_1.anInt469 = i_3;
             class48_1.anInt470 = i_4;
             class48_1.method965(0);
@@ -37,12 +99,12 @@ public class Class71 {
     }
 
     void method1293() {
-        if (this.aBool710) {
-            this.aBool710 = false;
-            byte[] bytes_1 = this.aClass74_711.aByteArray736;
+        if (aBool710) {
+            aBool710 = false;
+            byte[] bytes_1 = aClass74_711.aByteArray736;
             int i_2 = 0;
-            int i_3 = this.aClass74_711.anInt732;
-            int i_4 = this.anInt712 + this.aClass74_711.anInt732 * this.anInt718;
+            int i_3 = aClass74_711.anInt732;
+            int i_4 = anInt712 + aClass74_711.anInt732 * anInt718;
 
             int i_5;
             for (i_5 = -128; i_5 < 0; i_5++) {
@@ -57,16 +119,16 @@ public class Class71 {
                 i_4 += i_3 - 128;
             }
 
-            if (this.anInterface6_714 != null && i_2 == this.anInt715) {
-                this.aBool710 = false;
+            if (anInterface6_714 != null && i_2 == anInt715) {
+                aBool710 = false;
             } else {
-                this.anInt715 = i_2;
+                anInt715 = i_2;
                 i_5 = 0;
-                i_4 = i_3 * this.anInt718 + this.anInt712;
+                i_4 = i_3 * anInt718 + anInt712;
                 int i_7;
                 int i_8;
                 int i_9;
-                if (this.aGraphicalRenderer_Sub2_708.method13954(Class150.aClass150_1951, Class76.aClass76_751)) {
+                if (aGraphicalRenderer_Sub2_708.method13954(Class150.aClass150_1951, Class76.aClass76_751)) {
                     if (aByteArray722 == null) {
                         aByteArray722 = new byte[16384];
                     }
@@ -101,14 +163,14 @@ public class Class71 {
                             ++i_4;
                         }
 
-                        i_4 += this.aClass74_711.anInt732 - 128;
+                        i_4 += aClass74_711.anInt732 - 128;
                     }
 
-                    if (this.anInterface6_714 == null) {
-                        this.anInterface6_714 = this.aGraphicalRenderer_Sub2_708.method13957(Class150.aClass150_1951, 128, 128, false, aByteArray722);
-                        this.anInterface6_714.method50(false, false);
+                    if (anInterface6_714 == null) {
+                        anInterface6_714 = aGraphicalRenderer_Sub2_708.method13957(Class150.aClass150_1951, 128, 128, false, aByteArray722);
+                        anInterface6_714.method50(false, false);
                     } else {
-                        this.anInterface6_714.method52(0, 0, 128, 128, aByteArray722, Class150.aClass150_1951, 0, 128);
+                        anInterface6_714.method52(0, 0, 128, 128, aByteArray722, Class150.aClass150_1951, 0, 128);
                     }
                 } else {
                     if (anIntArray721 == null) {
@@ -145,79 +207,17 @@ public class Class71 {
                             ++i_4;
                         }
 
-                        i_4 += this.aClass74_711.anInt732 - 128;
+                        i_4 += aClass74_711.anInt732 - 128;
                     }
 
-                    if (this.anInterface6_714 == null) {
-                        this.anInterface6_714 = this.aGraphicalRenderer_Sub2_708.method14024(128, 128, false, anIntArray721);
-                        this.anInterface6_714.method50(false, false);
+                    if (anInterface6_714 == null) {
+                        anInterface6_714 = aGraphicalRenderer_Sub2_708.method14024(128, 128, false, anIntArray721);
+                        anInterface6_714.method50(false, false);
                     } else {
-                        this.anInterface6_714.method48(0, 0, 128, 128, anIntArray721, 0, 128);
+                        anInterface6_714.method48(0, 0, 128, 128, anIntArray721, 0, 128);
                     }
                 }
             }
-        }
-
-    }
-
-    Class71(GraphicalRenderer_Sub2 class505_sub2_1, Class74 class74_2, HardwareGround class390_sub1_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
-        this.aGraphicalRenderer_Sub2_708 = class505_sub2_1;
-        this.aClass74_711 = class74_2;
-        this.anInt712 = i_7;
-        this.anInt718 = i_8;
-        int i_9 = 1 << i_6;
-        int i_10 = 0;
-        int i_11 = i_4 << i_6;
-        int i_12 = i_5 << i_6;
-
-        int i_14;
-        int i_15;
-        for (int i_13 = 0; i_13 < i_9; i_13++) {
-            i_14 = class390_sub1_3.width * (i_12 + i_13) + i_11;
-
-            for (i_15 = 0; i_15 < i_9; i_15++) {
-                short[] shorts_21 = class390_sub1_3.aShortArrayArray8534[i_14++];
-                if (shorts_21 != null) {
-                    i_10 += shorts_21.length;
-                }
-            }
-        }
-
-        if (i_10 > 0) {
-            this.anInt709 = Integer.MIN_VALUE;
-            this.anInt719 = Integer.MAX_VALUE;
-            this.anInterface32_717 = this.aGraphicalRenderer_Sub2_708.method13993(false);
-            this.anInterface32_717.method208(i_10);
-            ByteBuffer bytebuffer_20 = this.aGraphicalRenderer_Sub2_708.aByteBuffer8838;
-            bytebuffer_20.clear();
-
-            for (i_14 = 0; i_14 < i_9; i_14++) {
-                i_15 = class390_sub1_3.width * (i_12 + i_14) + i_11;
-
-                for (int i_16 = 0; i_16 < i_9; i_16++) {
-                    short[] shorts_17 = class390_sub1_3.aShortArrayArray8534[i_15++];
-                    if (shorts_17 != null) {
-                        for (int i_18 = 0; i_18 < shorts_17.length; i_18++) {
-                            int i_19 = shorts_17[i_18] & 0xffff;
-                            if (i_19 < this.anInt719) {
-                                this.anInt719 = i_19;
-                            }
-
-                            if (i_19 > this.anInt709) {
-                                this.anInt709 = i_19;
-                            }
-
-                            bytebuffer_20.putShort((short) i_19);
-                        }
-                    }
-                }
-            }
-
-            this.anInterface32_717.method42(0, bytebuffer_20.position(), this.aGraphicalRenderer_Sub2_708.aLong8695);
-            this.anInt716 = i_10 / 3;
-        } else {
-            this.anInt716 = 0;
-            this.anInterface6_714 = null;
         }
 
     }

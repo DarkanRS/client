@@ -4,10 +4,6 @@ import java.io.IOException;
 
 public class FixedTileStrategy extends RouteStrategy {
 
-    public boolean canExit(int i_1, int i_2, int i_3, ClipMap clipmap_4) {
-        return i_2 == this.approxDestinationX && i_3 == this.approxDestinationY;
-    }
-
     static GamePreferences method12791() {
         Class442 class442_1 = null;
         GamePreferences class282_sub54_2 = new GamePreferences(client.CURRENT_GAME);
@@ -18,27 +14,27 @@ public class FixedTileStrategy extends RouteStrategy {
 
             int i_4;
             for (int i_5 = 0; i_5 < bytes_3.length; i_5 += i_4) {
-                i_4 = class442_1.method7389(bytes_3, i_5, bytes_3.length - i_5, (byte) -21);
+                i_4 = class442_1.method7389(bytes_3, i_5, bytes_3.length - i_5);
                 if (i_4 == -1) {
                     throw new IOException();
                 }
             }
 
-            class282_sub54_2 = new GamePreferences(new RsByteBuffer(bytes_3), client.CURRENT_GAME);
-        } catch (Exception exception_7) {
+            class282_sub54_2 = new GamePreferences(new Packet(bytes_3), client.CURRENT_GAME);
+        } catch (Exception ignored) {
         }
 
         try {
             if (class442_1 != null) {
-                class442_1.method7385((short) 15234);
+                class442_1.method7385();
             }
-        } catch (Exception exception_6) {
+        } catch (Exception ignored) {
         }
 
         return class282_sub54_2;
     }
 
-    static CS2Script getScript(CS2HookEventType event, int scriptId, int i_2) {
+    static CS2Script getScript(ClientTriggerType event, int scriptId, int i_2) {
         int i_4 = event.id | scriptId << 10;
         CS2Script cs2script_5 = (CS2Script) Class506.CS2_CACHE.get((long) i_4 << 16);
         if (cs2script_5 != null) {
@@ -50,7 +46,7 @@ public class FixedTileStrategy extends RouteStrategy {
                     return null;
                 } else {
                     try {
-                        cs2script_5 = GraphicalRenderer.method8699(bytes_6, 887206826);
+                        cs2script_5 = AbstractRenderer.method8699(bytes_6);
                     } catch (Exception exception_8) {
                         throw new RuntimeException(exception_8.getMessage() + " " + i_4);
                     }
@@ -71,7 +67,7 @@ public class FixedTileStrategy extends RouteStrategy {
                             return null;
                         } else {
                             try {
-                                cs2script_5 = GraphicalRenderer.method8699(bytes_6, 163170026);
+                                cs2script_5 = AbstractRenderer.method8699(bytes_6);
                             } catch (Exception exception_9) {
                                 throw new RuntimeException(exception_9.getMessage() + " " + i_4);
                             }
@@ -92,7 +88,7 @@ public class FixedTileStrategy extends RouteStrategy {
                                     return null;
                                 } else {
                                     try {
-                                        cs2script_5 = GraphicalRenderer.method8699(bytes_6, -517791588);
+                                        cs2script_5 = AbstractRenderer.method8699(bytes_6);
                                     } catch (Exception exception_10) {
                                         throw new RuntimeException(exception_10.getMessage() + " " + i_4);
                                     }
@@ -109,6 +105,11 @@ public class FixedTileStrategy extends RouteStrategy {
                 }
             }
         }
+    }
+
+    @Override
+    public boolean canExit(int i_1, int i_2, int i_3, ClipMap clipmap_4) {
+        return i_2 == approxDestinationX && i_3 == approxDestinationY;
     }
 
 }
