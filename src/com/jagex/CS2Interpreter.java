@@ -11198,7 +11198,7 @@ public class CS2Interpreter {
         for (int i = params.length - 1; i >= 1; --i) {
             if (paramTypes.charAt(i - 1) == 's') {
                 params[i] = executor.stringStack[--executor.stringStackPtr];
-            } else if (paramTypes.charAt(i - 1) == 'ï¿½') {
+            } else if (paramTypes.charAt(i - 1) == 'º') {
                 params[i] = new Long(executor.longStack[--executor.longStackPtr]);
             } else {
                 params[i] = new Integer(executor.intStack[--executor.intStackPtr]);
