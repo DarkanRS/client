@@ -63,7 +63,7 @@ public class Class122 {
         Class291_Sub1.aCacheableNode_Sub6_3491 = null;
         QuickChatMessage.aClass482_4049 = null;
         Class291_Sub1.anInt8015 = 0;
-        Node_Sub20_Sub24.aClass118_9884 = null;
+        MaterialPropTexture.aClass118_9884 = null;
         Class291_Sub1.method5137();
         Class291_Sub1.aClass482_3459.removeAll();
         Class291_Sub1.aClass283_3470 = null;

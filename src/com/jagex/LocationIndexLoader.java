@@ -73,7 +73,7 @@ public class LocationIndexLoader {
             objectdefinitions_3.loader = this;
             objectdefinitions_3.options = defaultOptions.clone();
             if (bytes_9 != null) {
-                objectdefinitions_3.method7964(new Packet(bytes_9));
+                objectdefinitions_3.method7964(new ByteBuf(bytes_9));
             }
             objectdefinitions_3.method7966();
             if (objectdefinitions_3.alt) {

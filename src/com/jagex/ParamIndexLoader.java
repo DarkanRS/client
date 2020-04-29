@@ -124,7 +124,7 @@ public class ParamIndexLoader {
             }
             attributedefault_3 = new ParamDefinitions();
             if (bytes_10 != null) {
-                attributedefault_3.method7315(new Packet(bytes_10));
+                attributedefault_3.method7315(new ByteBuf(bytes_10));
             }
             LRUCache softcache_9 = aClass229_5028;
             synchronized (aClass229_5028) {

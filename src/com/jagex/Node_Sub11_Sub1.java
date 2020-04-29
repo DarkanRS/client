@@ -44,7 +44,7 @@ public class Node_Sub11_Sub1 extends Node_Sub11 {
             byte[] bytes_3 = CoordGrid.PARTICLE_INDEX.getFile(0, i_0);
             defs = new ParticleProducerDefinition();
             if (bytes_3 != null) {
-                defs.decode(new Packet(bytes_3));
+                defs.decode(new ByteBuf(bytes_3));
             }
 
             defs.init();
@@ -64,7 +64,7 @@ public class Node_Sub11_Sub1 extends Node_Sub11 {
     }
 
     @Override
-    void method12203(Packet rsbytebuffer_1) {
+    void method12203(ByteBuf rsbytebuffer_1) {
         aString10001 = rsbytebuffer_1.readNullString();
         if (aString10001 != null) {
             rsbytebuffer_1.readUnsignedByte();
@@ -75,7 +75,7 @@ public class Node_Sub11_Sub1 extends Node_Sub11 {
     }
 
     @Override
-    void method12206(Packet rsbytebuffer_1) {
+    void method12206(ByteBuf rsbytebuffer_1) {
         aString10001 = rsbytebuffer_1.readNullString();
         if (aString10001 != null) {
             rsbytebuffer_1.readUnsignedByte();
@@ -96,7 +96,7 @@ public class Node_Sub11_Sub1 extends Node_Sub11 {
     }
 
     @Override
-    void method12208(Packet rsbytebuffer_1) {
+    void method12208(ByteBuf rsbytebuffer_1) {
         aString10001 = rsbytebuffer_1.readNullString();
         if (aString10001 != null) {
             rsbytebuffer_1.readUnsignedByte();
@@ -107,7 +107,7 @@ public class Node_Sub11_Sub1 extends Node_Sub11 {
     }
 
     @Override
-    void method12207(Packet rsbytebuffer_1) {
+    void method12207(ByteBuf rsbytebuffer_1) {
         aString10001 = rsbytebuffer_1.readNullString();
         if (aString10001 != null) {
             rsbytebuffer_1.readUnsignedByte();

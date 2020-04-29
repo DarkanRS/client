@@ -41,7 +41,7 @@ public class IndexLoaders {
     public static Index GAME_TIPS_INDEX;
     public static Index FONT_METRICS_INDEX;
     public static NativeLibraryLoader NATIVE_LIBRARY_LOADER;
-    public static Interface22 IMAGE_LOADER;
+    public static ImageLoader IMAGE_LOADER;
     public static ParamIndexLoader PARAM_LOADER;
     public static RenderAnimIndexLoader RENDER_ANIM_LOADER;
     public static CursorIndexLoader CURSOR_LOADER;

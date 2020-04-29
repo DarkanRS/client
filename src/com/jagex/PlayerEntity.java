@@ -813,7 +813,7 @@ public class PlayerEntity extends PathingEntity {
         return null;
     }
 
-    public void decodeAppearance(Packet buffer) {
+    public void decodeAppearance(ByteBuf buffer) {
         buffer.index = 0;
         int flags = buffer.readUnsignedByte();
         male = (byte) (flags & 0x1);

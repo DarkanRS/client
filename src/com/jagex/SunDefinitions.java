@@ -156,7 +156,7 @@ public class SunDefinitions {
         class282_sub50_sub12_3.string = string_1;
     }
 
-    void method843(Packet stream, int opcode) {
+    void method843(ByteBuf stream, int opcode) {
         if (opcode == 1) {
             anInt396 = stream.readUnsignedShort();
         } else if (opcode == 2) {
@@ -178,7 +178,7 @@ public class SunDefinitions {
         }
     }
 
-    void method850(Packet rsbytebuffer_1) {
+    void method850(ByteBuf rsbytebuffer_1) {
         while (true) {
             int i_3 = rsbytebuffer_1.readUnsignedByte();
             if (i_3 == 0) {

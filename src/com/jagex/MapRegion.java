@@ -67,7 +67,7 @@ public class MapRegion {
                     Class187.anInt2361 = client.walkStepsX[i_7 - 1];
                     Class187.anInt2359 = client.walkStepsY[i_7 - 1];
                     Class187.aBool2360 = false;
-                    Node_Sub20_Sub9.method15255();
+                    MaterialProp28.method15255();
                     return true;
                 }
             } else {
@@ -103,7 +103,7 @@ public class MapRegion {
         class282_sub50_sub12_3.string = string_1;
     }
 
-    public static Class350 method4564(Packet rsbytebuffer_0) {
+    public static Class350 method4564(ByteBuf rsbytebuffer_0) {
         Class350 class350_2 = Class383.method6512(rsbytebuffer_0);
         int i_3 = rsbytebuffer_0.readInt();
         int i_4 = rsbytebuffer_0.readInt();
@@ -218,7 +218,7 @@ public class MapRegion {
     void method4432(Class329_Sub1 class329_sub1_1, byte[][] bytes_2) {
         for (int i_4 = 0; i_4 < class329_sub1_1.anInt3845; i_4++) {
             if (!aBool3171) {
-                Node_Sub20_Sub24.method15391();
+                MaterialPropTexture.method15391();
             }
             for (int i_5 = 0; i_5 < sizeX >> 3; i_5++) {
                 for (int i_6 = 0; i_6 < sizeY >> 3; i_6++) {
@@ -266,7 +266,7 @@ public class MapRegion {
         return anIntArrayArray3186;
     }
 
-    void method4439(Packet.Bit rsbitsbuffer_1) {
+    void method4439(ByteBuf.Bit rsbitsbuffer_1) {
         int forceRefresh = rsbitsbuffer_1.readUnsignedByteC();
         boolean bool_4 = (forceRefresh & 0x1) != 0;
         int type = rsbitsbuffer_1.readUnsigned128Byte();
@@ -397,7 +397,7 @@ public class MapRegion {
         return sizeY;
     }
 
-    void method4452(Packet.Bit rsbitsbuffer_1) {
+    void method4452(ByteBuf.Bit rsbitsbuffer_1) {
         int i_2 = rsbitsbuffer_1.readUnsignedByte();
         int i_3 = rsbitsbuffer_1.readUnsignedShort();
         int i_4 = rsbitsbuffer_1.readUnsignedShort();
@@ -786,7 +786,7 @@ public class MapRegion {
                 }
                 aClass339_3188 = Class339.aClass339_3982;
                 if (!aBool3171) {
-                    Node_Sub20_Sub24.method15391();
+                    MaterialPropTexture.method15391();
                 }
                 if (!aBool3171) {
                     for (i_2 = 0; i_2 < 2048; i_2++) {
@@ -961,7 +961,7 @@ public class MapRegion {
                     method4459(18);
                     method4457();
                 } else {
-                    Node_Sub20_Sub24.method15391();
+                    MaterialPropTexture.method15391();
                     aClass239_3175.method4075();
                     Node_Sub15_Sub1.method14840();
                 }
@@ -1046,13 +1046,13 @@ public class MapRegion {
         for (i_5 = 0; i_5 < i_4; i_5++) {
             byte[] bytes_6 = bytes_2[i_5];
             if (bytes_6 != null) {
-                Packet rsbytebuffer_7 = new Packet(bytes_6);
+                ByteBuf rsbytebuffer_7 = new ByteBuf(bytes_6);
                 int i_8 = regionIds[i_5] >> 8;
                 int i_9 = regionIds[i_5] & 0xff;
                 int i_10 = i_8 * 64 - coordGrid.x;
                 int i_11 = i_9 * 64 - coordGrid.y;
                 if (!aBool3171) {
-                    Node_Sub20_Sub24.method15391();
+                    MaterialPropTexture.method15391();
                 }
                 class329_sub1_1.decodeTileMasksUnderlay(rsbytebuffer_7, i_10, i_11, coordGrid.x, coordGrid.y, clipMaps);
                 class329_sub1_1.method12471(Renderers.SOFTWARE_RENDERER, rsbytebuffer_7, i_10, i_11);
@@ -1064,7 +1064,7 @@ public class MapRegion {
             byte[] bytes_14 = bytes_2[i_5];
             if (bytes_14 == null && anInt3207 < 800) {
                 if (!aBool3171) {
-                    Node_Sub20_Sub24.method15391();
+                    MaterialPropTexture.method15391();
                 }
                 class329_sub1_1.method5890(i_12, i_13);
             }
@@ -1074,7 +1074,7 @@ public class MapRegion {
     void method4464(Class329_Sub1 class329_sub1_1, byte[][] bytes_2) {
         for (int i_4 = 0; i_4 < class329_sub1_1.anInt3845; i_4++) {
             if (!aBool3171) {
-                Node_Sub20_Sub24.method15391();
+                MaterialPropTexture.method15391();
             }
             for (int x = 0; x < sizeX >> 3; x++) {
                 for (int y = 0; y < sizeY >> 3; y++) {
@@ -1088,7 +1088,7 @@ public class MapRegion {
                             int i_12 = (realX / 8 << 8) + realY / 8;
                             for (int i_13 = 0; i_13 < regionIds.length; i_13++) {
                                 if (i_12 == regionIds[i_13] && bytes_2[i_13] != null) {
-                                    Packet rsbytebuffer_14 = new Packet(bytes_2[i_13]);
+                                    ByteBuf rsbytebuffer_14 = new ByteBuf(bytes_2[i_13]);
                                     class329_sub1_1.method5841(rsbytebuffer_14, i_4, x * 8, y * 8, plane, realX, realY, rotation, clipMaps);
                                     class329_sub1_1.method12460(Renderers.SOFTWARE_RENDERER, rsbytebuffer_14, i_4, x * 8, y * 8, plane, realX, realY, rotation);
                                     break;
@@ -1101,7 +1101,7 @@ public class MapRegion {
         }
         for (int i_4 = 0; i_4 < class329_sub1_1.anInt3845; i_4++) {
             if (!aBool3171) {
-                Node_Sub20_Sub24.method15391();
+                MaterialPropTexture.method15391();
             }
             for (int i_5 = 0; i_5 < sizeX >> 3; i_5++) {
                 for (int i_6 = 0; i_6 < sizeY >> 3; i_6++) {
@@ -1122,7 +1122,7 @@ public class MapRegion {
                 int i_7 = (regionIds[i_5] >> 8) * 64 - coordGrid.x;
                 int i_8 = (regionIds[i_5] & 0xff) * 64 - coordGrid.y;
                 if (!aBool3171) {
-                    Node_Sub20_Sub24.method15391();
+                    MaterialPropTexture.method15391();
                 }
                 class329_sub1_1.method12461(Renderers.SOFTWARE_RENDERER, bytes_6, i_7, i_8, clipMaps);
                 if (aBool3171) {
@@ -1147,7 +1147,7 @@ public class MapRegion {
                     client.anIntArray7228[client.anInt7234] = regionIds[i_3];
                     i_4 = ++client.anInt7234 - 1;
                 }
-                Packet rsbytebuffer_18 = new Packet(npcSpawnBuffer[i_3]);
+                ByteBuf rsbytebuffer_18 = new ByteBuf(npcSpawnBuffer[i_3]);
                 int i_6 = 0;
                 while (rsbytebuffer_18.index < npcSpawnBuffer[i_3].length && i_6 < 511 && client.NPC_UPDATE_INDEX < 1023) {
                     int i_7 = i_4 | i_6++ << 6;

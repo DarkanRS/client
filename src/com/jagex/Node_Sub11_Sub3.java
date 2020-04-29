@@ -27,7 +27,7 @@ public class Node_Sub11_Sub3 extends Node_Sub11 {
     }
 
     @Override
-    void method12206(Packet rsbytebuffer_1) {
+    void method12206(ByteBuf rsbytebuffer_1) {
         anInt10061 = rsbytebuffer_1.readUnsignedShort() * -800503111 * -1538155639;
         aByte10062 = rsbytebuffer_1.readByte();
         anInt10063 = rsbytebuffer_1.readUnsignedShort() * 1544248451 * 415027755;
@@ -36,7 +36,7 @@ public class Node_Sub11_Sub3 extends Node_Sub11 {
     }
 
     @Override
-    void method12208(Packet rsbytebuffer_1) {
+    void method12208(ByteBuf rsbytebuffer_1) {
         anInt10061 = rsbytebuffer_1.readUnsignedShort() * -800503111 * -1538155639;
         aByte10062 = rsbytebuffer_1.readByte();
         anInt10063 = rsbytebuffer_1.readUnsignedShort() * 1544248451 * 415027755;
@@ -53,7 +53,7 @@ public class Node_Sub11_Sub3 extends Node_Sub11 {
     }
 
     @Override
-    void method12203(Packet rsbytebuffer_1) {
+    void method12203(ByteBuf rsbytebuffer_1) {
         anInt10061 = rsbytebuffer_1.readUnsignedShort();
         aByte10062 = rsbytebuffer_1.readByte();
         anInt10063 = rsbytebuffer_1.readUnsignedShort();
@@ -62,7 +62,7 @@ public class Node_Sub11_Sub3 extends Node_Sub11 {
     }
 
     @Override
-    void method12207(Packet rsbytebuffer_1) {
+    void method12207(ByteBuf rsbytebuffer_1) {
         anInt10061 = rsbytebuffer_1.readUnsignedShort() * -800503111 * -1538155639;
         aByte10062 = rsbytebuffer_1.readByte();
         anInt10063 = rsbytebuffer_1.readUnsignedShort() * 1544248451 * 415027755;

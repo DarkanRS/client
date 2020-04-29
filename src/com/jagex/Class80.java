@@ -10,7 +10,7 @@ public class Class80 {
     int[] anIntArray787;
     int[] anIntArray788;
     int[] anIntArray796;
-    Packet aNode_Sub35_792 = new Packet(null);
+    ByteBuf aNode_Sub35_792 = new ByteBuf(null);
 
     Class80(byte[] bytes_1) {
         method1394(bytes_1);

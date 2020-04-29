@@ -4,7 +4,7 @@ public class CacheableNode_Sub4 extends CacheableNode {
 
     IterableNodeMap aClass465_9518;
 
-    void method14747(Packet rsbytebuffer_1, int i_2) {
+    void method14747(ByteBuf rsbytebuffer_1, int i_2) {
         if (i_2 == 249) {
             int i_4 = rsbytebuffer_1.readUnsignedByte();
             int i_5;
@@ -29,7 +29,7 @@ public class CacheableNode_Sub4 extends CacheableNode {
 
     }
 
-    void method14748(Packet rsbytebuffer_1) {
+    void method14748(ByteBuf rsbytebuffer_1) {
         while (true) {
             int i_3 = rsbytebuffer_1.readUnsignedByte();
             if (i_3 == 0) {

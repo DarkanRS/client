@@ -76,7 +76,7 @@ public class RenderAnimIndexLoader {
             renderanimdefs_3.renderAnimId = i_1;
             renderanimdefs_3.aClass211_2788 = this;
             if (bytes_10 != null) {
-                renderanimdefs_3.method3821(new Packet(bytes_10));
+                renderanimdefs_3.method3821(new ByteBuf(bytes_10));
             }
             LRUCache softcache_9 = renderAnimCache;
             synchronized (renderAnimCache) {

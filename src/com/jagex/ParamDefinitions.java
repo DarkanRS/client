@@ -48,7 +48,7 @@ public class ParamDefinitions {
         }
     }
 
-    void method7315(Packet rsbytebuffer_1) {
+    void method7315(ByteBuf rsbytebuffer_1) {
         while (true) {
             int i_3 = rsbytebuffer_1.readUnsignedByte();
             if (i_3 == 0) {
@@ -58,7 +58,7 @@ public class ParamDefinitions {
         }
     }
 
-    void method7316(Packet buffer, int i_2) {
+    void method7316(ByteBuf buffer, int i_2) {
         if (i_2 == 1) {
             typeChar = Utils.cp1252ToChar(buffer.readByte());
         } else if (i_2 == 2) {

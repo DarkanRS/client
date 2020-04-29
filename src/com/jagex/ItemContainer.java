@@ -151,7 +151,7 @@ public class ItemContainer extends Node {
     }
 
     long method12444(int[] ints_1, int i_2, int[] ints_3, boolean bool_4) {
-        long[] longs_6 = Packet.aLongArray7979;
+        long[] longs_6 = ByteBuf.aLongArray7979;
         long long_7 = -1L;
         long_7 = long_7 >>> 8 ^ longs_6[(int) ((long_7 ^ (i_2 >> 8)) & 0xffL)];
         long_7 = long_7 >>> 8 ^ longs_6[(int) ((long_7 ^ i_2) & 0xffL)];

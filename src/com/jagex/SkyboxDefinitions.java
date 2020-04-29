@@ -17,11 +17,11 @@ public class SkyboxDefinitions {
         TCPPacket tcpmessage_1 = Class158_Sub2.method14356();
         tcpmessage_1.packet = null;
         tcpmessage_1.anInt7678 = 0;
-        tcpmessage_1.buffer = new Packet.Bit(5000);
+        tcpmessage_1.buffer = new ByteBuf.Bit(5000);
         return tcpmessage_1;
     }
 
-    void method3549(Packet rsbytebuffer_1) {
+    void method3549(ByteBuf rsbytebuffer_1) {
         while (true) {
             int i_3 = rsbytebuffer_1.readUnsignedByte();
             if (i_3 == 0) {
@@ -31,7 +31,7 @@ public class SkyboxDefinitions {
         }
     }
 
-    void method3552(Packet buffer, int opcode) {
+    void method3552(ByteBuf buffer, int opcode) {
         if (opcode == 1) {
             anInt2653 = buffer.readUnsignedShort();
         } else if (opcode == 2) {

@@ -24,12 +24,12 @@ public class LRUCache {
     }
 
     static void method3895(double d_0) {
-        if (d_0 != TextureDefinition.aDouble9479) {
+        if (d_0 != MaterialDefinitions.aDouble9479) {
             for (int i_2 = 0; i_2 < 256; i_2++) {
                 int i_3 = (int) (Math.pow(i_2 / 255.0D, d_0) * 255.0D);
-                TextureDefinition.anIntArray9474[i_2] = Math.min(255, i_3);
+                MaterialDefinitions.anIntArray9474[i_2] = Math.min(255, i_3);
             }
-            TextureDefinition.aDouble9479 = d_0;
+            MaterialDefinitions.aDouble9479 = d_0;
         }
     }
 

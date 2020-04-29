@@ -7,7 +7,7 @@ public class CutsceneAction_Sub7 extends CutsceneAction {
     int anInt9176;
     int anInt9174;
 
-    CutsceneAction_Sub7(Packet rsbytebuffer_1) {
+    CutsceneAction_Sub7(ByteBuf rsbytebuffer_1) {
         super(rsbytebuffer_1);
         anInt9177 = rsbytebuffer_1.readUnsignedShort();
         aString9175 = rsbytebuffer_1.readString();

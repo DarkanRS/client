@@ -41,7 +41,7 @@ public class Node_Sub3 extends Node {
         int i_6;
         int i_7;
         if (anInt7493 != -1) {
-            TextureDetails class169_5 = aGraphicalRenderer_Sub1_7494.anInterface22_5834.method144(anInt7493);
+            TextureDetails class169_5 = aGraphicalRenderer_Sub1_7494.textureCache.getTextureDetails(anInt7493);
             i_6 = class169_5.shadowFactor & 0xff;
             int i_9;
             if (i_6 != 0 && class169_5.effectId != 4) {

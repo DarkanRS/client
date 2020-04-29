@@ -43,7 +43,7 @@ public class NPCMeshModifier {
             byte[] bytes_3 = BillboardDefinitions.BILLBOARD_INDEX.getFile(0, id);
             defs = new BillboardDefinitions();
             if (bytes_3 != null) {
-                defs.decode(new Packet(bytes_3));
+                defs.decode(new ByteBuf(bytes_3));
             }
             BillboardDefinitions.BILLBOARD_CACHE.put(defs, id);
         }

@@ -5,7 +5,7 @@ public class Node_Sub7 extends Node {
     byte[] aByteArray7522;
     IterableNodeMap<Object> aClass465_7521;
 
-    Node_Sub7(Packet rsbytebuffer_1) {
+    Node_Sub7(ByteBuf rsbytebuffer_1) {
         rsbytebuffer_1.index = rsbytebuffer_1.buffer.length - 3;
         int i_2 = rsbytebuffer_1.readUnsignedByte();
         int i_3 = rsbytebuffer_1.readUnsignedShort();
@@ -165,7 +165,7 @@ public class Node_Sub7 extends Node {
         int i_50 = rsbytebuffer_1.index;
         rsbytebuffer_1.index += i_5 * 3;
         aByteArray7522 = new byte[i_4];
-        Packet rsbytebuffer_51 = new Packet(aByteArray7522);
+        ByteBuf rsbytebuffer_51 = new ByteBuf(aByteArray7522);
         rsbytebuffer_51.writeInt(1297377380);
         rsbytebuffer_51.writeInt(6);
         rsbytebuffer_51.writeShort(i_2 > 1 ? 1 : 0);
@@ -323,7 +323,7 @@ public class Node_Sub7 extends Node {
 
     static Node_Sub7 method12164(Index index_0, int i_1, int i_2) {
         byte[] bytes_3 = index_0.getFile(i_1, i_2);
-        return bytes_3 == null ? null : new Node_Sub7(new Packet(bytes_3));
+        return bytes_3 == null ? null : new Node_Sub7(new ByteBuf(bytes_3));
     }
 
     void method12165() {

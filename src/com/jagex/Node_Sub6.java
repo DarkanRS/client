@@ -30,7 +30,7 @@ public class Node_Sub6 extends Node {
         anIntArray7515 = new int[aGround_Sub1_7509.width * aGround_Sub1_7509.length];
         byte b_5 = 10;
         if (i_2 >= 0) {
-            TextureDetails class169_6 = aGraphicalRenderer_Sub2_7518.anInterface22_5834.method144(i_2);
+            TextureDetails class169_6 = aGraphicalRenderer_Sub2_7518.textureCache.getTextureDetails(i_2);
             if (class169_6.effectId > 0) {
                 b_5 = class169_6.effectId;
             }
@@ -50,7 +50,7 @@ public class Node_Sub6 extends Node {
         int i_6;
         int i_7;
         if (anInt7510 != -1) {
-            TextureDetails class169_5 = aGraphicalRenderer_Sub2_7518.anInterface22_5834.method144(anInt7510);
+            TextureDetails class169_5 = aGraphicalRenderer_Sub2_7518.textureCache.getTextureDetails(anInt7510);
             i_6 = class169_5.shadowFactor & 0xff;
             int i_9;
             if (i_6 != 0 && class169_5.effectId != 4) {

@@ -7,7 +7,7 @@ public class ChatLine {
     public static String aString1093;
     static int NUM_CHAT_LINES;
     static ChatLine[] CHAT_LINES = new ChatLine[100];
-    public int anInt1085 = Node_Sub20_Sub28.method15396();
+    public int anInt1085 = MaterialProp25.method15396();
     public int time;
     public int type;
     public int effectFlags;
@@ -59,8 +59,8 @@ public class ChatLine {
         return string_0.length() + 1;
     }
 
-    static Packet getLoginMod() {
-        Packet rsbytebuffer_0 = Class94.method1587();
+    static ByteBuf getLoginMod() {
+        ByteBuf rsbytebuffer_0 = Class94.method1587();
         rsbytebuffer_0.writeLong(0L);
         rsbytebuffer_0.writeString(Class9.aString102);
         rsbytebuffer_0.writeLong(Class9.aLong86);
@@ -78,7 +78,7 @@ public class ChatLine {
     }
 
     void set(int type, int i_2, String string_3, String string_4, String string_5, String string_6, int i_7, String string_8) {
-        anInt1085 = Node_Sub20_Sub28.method15396();
+        anInt1085 = MaterialProp25.method15396();
         time = client.cycles;
         this.type = type;
         effectFlags = i_2;

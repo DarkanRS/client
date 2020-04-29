@@ -61,7 +61,7 @@ public abstract class Class534 {
 
     abstract int method11412();
 
-    abstract void method11413(Packet var1, MouseRecord var2);
+    abstract void method11413(ByteBuf var1, MouseRecord var2);
 
     abstract void method11414();
 
@@ -181,9 +181,9 @@ public abstract class Class534 {
 
     abstract int method11425();
 
-    abstract void method11426(Packet var1, MouseRecord var2);
+    abstract void method11426(ByteBuf var1, MouseRecord var2);
 
-    abstract void method11427(Packet var1, MouseRecord var2);
+    abstract void method11427(ByteBuf var1, MouseRecord var2);
 
     abstract TCPPacket method11428();
 

@@ -38,7 +38,7 @@ public class AbstractRenderer_Sub2_Sub1 extends AbstractRenderer_Sub2 {
     boolean aBool10183;
     int anInt10181;
 
-    AbstractRenderer_Sub2_Sub1(OpenGL opengl_1, Canvas canvas_2, long long_3, Interface22 interface22_5, Index index_6, int i_7) {
+    AbstractRenderer_Sub2_Sub1(OpenGL opengl_1, Canvas canvas_2, long long_3, ImageLoader interface22_5, Index index_6, int i_7) {
         super(interface22_5, index_6, i_7, 1);
         new MapBuffer();
         new MapBuffer();
@@ -1186,8 +1186,8 @@ public class AbstractRenderer_Sub2_Sub1 extends AbstractRenderer_Sub2 {
     @Override
     void method8596(int i_1, int i_2) throws Exception_Sub3 {
         aClass158_Sub2_5841.method14344();
-        if (anInterface22_5834 != null) {
-            anInterface22_5834.method161();
+        if (textureCache != null) {
+            textureCache.method161();
         }
 
     }
@@ -1733,8 +1733,8 @@ public class AbstractRenderer_Sub2_Sub1 extends AbstractRenderer_Sub2 {
     @Override
     void method8555() throws Exception_Sub3 {
         aClass158_Sub2_5841.method14344();
-        if (anInterface22_5834 != null) {
-            anInterface22_5834.method161();
+        if (textureCache != null) {
+            textureCache.method161();
         }
 
     }

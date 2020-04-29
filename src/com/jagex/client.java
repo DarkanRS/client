@@ -1310,7 +1310,7 @@ public class client extends Engine {
                                 }
 
                                 if (iCompDef.contentType == Component.CONTENT_TYPE_1400) {
-                                    Node_Sub20_Sub24.aClass118_9884 = iCompDef;
+                                    MaterialPropTexture.aClass118_9884 = iCompDef;
                                     if (bool_48) {
                                         Class291_Sub1.aBool8022 = true;
                                     }
@@ -2029,7 +2029,7 @@ public class client extends Engine {
             } else if (gameState == 12) {
                 Login.method5018();
             } else if (TextureDetails.method2875(gameState) && !Class464.method7742(gameState)) {
-                Node_Sub20_Sub22.method15386();
+                MaterialProp23.method15386();
             } else if (gameState == 10 || gameState == 17) {
                 Login.method5018();
                 if (Class9.anInt106 != -3 && Class9.anInt106 != 2 && Class9.anInt106 != 15) {
@@ -2321,14 +2321,14 @@ public class client extends Engine {
         } else {
             try {
                 if (updateStage == 0) {
-                    Node_Sub20_Sub10.clientSocket = Class159.GAME_CONNECTION_INFO.createSocket();
+                    MaterialProp8.clientSocket = Class159.GAME_CONNECTION_INFO.createSocket();
                     ++updateStage;
                 }
 
                 if (updateStage == 1) {
-                    Class47_Sub1.updateConnection = SunDefinitions.createAsyncConnection(Node_Sub20_Sub10.clientSocket, 125000);
+                    Class47_Sub1.updateConnection = SunDefinitions.createAsyncConnection(MaterialProp8.clientSocket, 125000);
                     int length = 13 + aString7164.length();
-                    Packet stream = new Packet(length + 4);
+                    ByteBuf stream = new ByteBuf(length + 4);
                     stream.writeByte(LoginProt.INIT_JS5REMOTE_CONNECTION.id);
                     stream.writeByte(length);
                     stream.writeInt(Loader.CLIENT_BUILD);
@@ -2365,7 +2365,7 @@ public class client extends Engine {
                     Class446[] arr_10 = Class446.method7436();
                     reponse = arr_10.length * 4;
                     if (Class47_Sub1.updateConnection.available(reponse)) {
-                        Packet rsbytebuffer_4 = new Packet(reponse);
+                        ByteBuf rsbytebuffer_4 = new ByteBuf(reponse);
                         Class47_Sub1.updateConnection.read(rsbytebuffer_4.buffer, 0, rsbytebuffer_4.buffer.length);
 
                         for (int i_5 = 0; i_5 < arr_10.length; i_5++) {
@@ -2374,7 +2374,7 @@ public class client extends Engine {
 
                         boolean loggedOut = Class504.loadingState(gameState) || Class97.loggedOutState(gameState) || Node_Sub17.inLobby(gameState);
                         Class119.JS5_STANDARD_REQUESTER.init(Class47_Sub1.updateConnection, !loggedOut);
-                        Node_Sub20_Sub10.clientSocket = null;
+                        MaterialProp8.clientSocket = null;
                         Class47_Sub1.updateConnection = null;
                         updateStage = 0;
                     }
@@ -2387,7 +2387,7 @@ public class client extends Engine {
     }
 
     void updateNetStatus(int i_1) {
-        Node_Sub20_Sub10.clientSocket = null;
+        MaterialProp8.clientSocket = null;
         Class47_Sub1.updateConnection = null;
         updateStage = 0;
         ++Class119.JS5_STANDARD_REQUESTER.anInt3657;

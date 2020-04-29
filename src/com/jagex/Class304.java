@@ -58,7 +58,7 @@ public class Class304 implements Interface27 {
 
     public static int[][] method5410() {
         int[][] ints_9 = new int[256][64];
-        Node_Sub20_Sub4 class282_sub20_sub4_10 = new Node_Sub20_Sub4();
+        MaterialProp34 class282_sub20_sub4_10 = new MaterialProp34();
         class282_sub20_sub4_10.aBool9726 = false;
         class282_sub20_sub4_10.anInt9725 = 4;
         class282_sub20_sub4_10.anInt9735 = 4;

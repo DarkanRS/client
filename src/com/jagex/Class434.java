@@ -60,7 +60,7 @@ public abstract class Class434 {
             tcpmessage_1 = Class271.createPacket(ClientProt.SEND_PREFERENCES, client.GAME_CONNECTION_CONTEXT.isaac);
             tcpmessage_1.buffer.writeByte(0);
             i_2 = tcpmessage_1.buffer.index;
-            Packet rsbytebuffer_6 = Class393.preferences.encode();
+            ByteBuf rsbytebuffer_6 = Class393.preferences.encode();
             tcpmessage_1.buffer.writeBytes(rsbytebuffer_6.buffer, 0, rsbytebuffer_6.index);
             tcpmessage_1.buffer.writeIndex(tcpmessage_1.buffer.index - i_2);
             client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_1);

@@ -52,7 +52,7 @@ public class FontRenderer_Sub2 extends FontRenderer {
         Class291_Sub1.anInt8016 = i_1 - Class291_Sub1.anInt3473;
     }
 
-    public static void method14264(Packet.Bit rsbitsbuffer_0) {
+    public static void method14264(ByteBuf.Bit rsbitsbuffer_0) {
         ReflectionCheck class282_sub42_2 = (ReflectionCheck) Class435.PENDING_REFLECTION_CHECKS.head();
         if (class282_sub42_2 != null) {
             int i_3 = rsbitsbuffer_0.index;

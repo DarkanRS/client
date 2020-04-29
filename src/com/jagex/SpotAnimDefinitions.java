@@ -34,7 +34,7 @@ public class SpotAnimDefinitions {
         }
     }
 
-    void method11226(Packet rsbytebuffer_1) {
+    void method11226(ByteBuf rsbytebuffer_1) {
         while (true) {
             int i_3 = rsbytebuffer_1.readUnsignedByte();
             if (i_3 == 0) {
@@ -44,7 +44,7 @@ public class SpotAnimDefinitions {
         }
     }
 
-    void method11227(Packet rsbytebuffer_1, int i_2) {
+    void method11227(ByteBuf rsbytebuffer_1, int i_2) {
         if (i_2 == 1) {
             defaultModel = rsbytebuffer_1.readBigSmart();
         } else if (i_2 == 2) {

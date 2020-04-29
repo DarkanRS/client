@@ -12,7 +12,7 @@ public class ApplyHitmarkCutsceneAction extends CutsceneAction {
 
     int anInt9372;
 
-    ApplyHitmarkCutsceneAction(Packet rsbytebuffer_1) {
+    ApplyHitmarkCutsceneAction(ByteBuf rsbytebuffer_1) {
         super(rsbytebuffer_1);
         anInt9369 = rsbytebuffer_1.readUnsignedShort();
         int i_2 = rsbytebuffer_1.readUnsignedByte();

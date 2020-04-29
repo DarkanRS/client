@@ -14,7 +14,7 @@ public class Particle extends PointEntity {
     int speed;
     int intermediateColour;
 
-    Particle(ParticleProducer class538_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, int i_10, int i_11, int i_12, boolean bool_14) {
+    Particle(ParticleProducer class538_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, int i_10, int i_11, int texId, boolean bool_14) {
         producer = class538_1;
         x = i_2 << 12;
         z = i_3 << 12;
@@ -22,7 +22,7 @@ public class Particle extends PointEntity {
         color = i_10;
         lifespan = lifetime = (short) i_9;
         size = i_11;
-        rotation = i_12;
+        textureId = texId;
         aBool10210 = bool_14;
         aShort10431 = (short) i_5;
         aShort10424 = (short) i_6;
@@ -52,7 +52,7 @@ public class Particle extends PointEntity {
         color = i_10;
         lifespan = lifetime = (short) i_9;
         size = i_11;
-        rotation = i_12;
+        textureId = i_12;
         aBool10210 = bool_14;
         aShort10431 = (short) i_5;
         aShort10424 = (short) i_6;

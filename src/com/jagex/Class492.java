@@ -84,7 +84,7 @@ public class Class492 {
 
     public static int[] method8266() {
         int[] ints_8 = new int[2048];
-        Node_Sub20_Sub4 class282_sub20_sub4_9 = new Node_Sub20_Sub4();
+        MaterialProp34 class282_sub20_sub4_9 = new MaterialProp34();
         class282_sub20_sub4_9.anInt9733 = 35;
         class282_sub20_sub4_9.aBool9726 = true;
         class282_sub20_sub4_9.anInt9725 = 8;

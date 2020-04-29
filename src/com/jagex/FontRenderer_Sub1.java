@@ -39,7 +39,7 @@ public class FontRenderer_Sub1 extends FontRenderer {
             Class119.method2077();
             b_3 = 2;
         } else {
-            Node_Sub20_Sub25.method15393();
+            MaterialProp14.method15393();
             b_3 = 1;
         }
 

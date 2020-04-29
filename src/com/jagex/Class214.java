@@ -6,7 +6,7 @@ public class Class214 {
         throw new Error();
     }
 
-    public static Class351 method3668(Packet rsbytebuffer_0) {
+    public static Class351 method3668(ByteBuf rsbytebuffer_0) {
         int i_2 = rsbytebuffer_0.readBigSmart();
         return new Class351(i_2);
     }

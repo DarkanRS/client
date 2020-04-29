@@ -14,7 +14,7 @@ public class Class163 {
         return fontmetrics_1.getTextWidth(string_3, Class115.aNativeSpriteArray1248);
     }
 
-    public static Class350 method2843(Packet rsbytebuffer_0) {
+    public static Class350 method2843(ByteBuf rsbytebuffer_0) {
         Class350 class350_2 = Class383.method6512(rsbytebuffer_0);
         int i_3 = rsbytebuffer_0.readBigSmart();
         int i_4 = rsbytebuffer_0.readBigSmart();

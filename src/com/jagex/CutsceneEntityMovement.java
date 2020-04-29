@@ -7,8 +7,8 @@ public class CutsceneEntityMovement {
     int[] movementTypes;
     int[] movementCoordinates;
 
-    CutsceneEntityMovement(Packet rsbytebuffer_1) {
-        int i_2 = rsbytebuffer_1.readUnsignedSmart();
+    CutsceneEntityMovement(ByteBuf rsbytebuffer_1) {
+        int i_2 = rsbytebuffer_1.readSmart();
         movementTypes = new int[i_2];
         movementCoordinates = new int[i_2];
         for (int i_3 = 0; i_3 < i_2; i_3++) {

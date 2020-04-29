@@ -45,7 +45,7 @@ public class NodeCollection implements Collection {
     public static void method8148() {
         Class253.method4330(Class393.preferences.monoStereo.method12691() == 1);
         Class320.aClass253_3723 = Class253.method4331(0, 22050);
-        Class42_Sub1.method14563(Node_Sub20_Sub10.method15262(null));
+        Class42_Sub1.method14563(MaterialProp8.method15262(null));
         ShaderDecoder.aClass253_1008 = Class253.method4331(1, 2048);
         Class79.aNode_Sub15_Sub4_783 = new Node_Sub15_Sub4();
         ShaderDecoder.aClass253_1008.method4329(Class79.aNode_Sub15_Sub4_783);

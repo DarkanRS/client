@@ -24,7 +24,7 @@ public class IFSubObjectPosition {
         return new Class204[]{Class204.aClass204_2578, Class204.aClass204_2579};
     }
 
-    public static Class357 method11354(Packet rsbytebuffer_0) {
+    public static Class357 method11354(ByteBuf rsbytebuffer_0) {
         Class357 class357_2 = Class258.method4570(rsbytebuffer_0);
         int i_3 = rsbytebuffer_0.read24BitInteger();
         return new Class357_Sub1(class357_2.anInt4124, class357_2.aClass356_4121, class357_2.aClass353_4122, class357_2.anInt4123, class357_2.anInt4120, i_3);

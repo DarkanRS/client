@@ -21,7 +21,7 @@ public class StructIndexLoader {
 
             CacheableNode_Sub4 class282_sub50_sub4_9 = new CacheableNode_Sub4();
             if (bytes_6 != null) {
-                class282_sub50_sub4_9.method14748(new Packet(bytes_6));
+                class282_sub50_sub4_9.method14748(new ByteBuf(bytes_6));
             }
 
             aCacheableNode_Sub4Array5012[i_5] = class282_sub50_sub4_9;

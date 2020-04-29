@@ -2,7 +2,7 @@ package com.jagex;
 
 public class PlayerUpdate {
 
-    static void decode(Packet.Bit buffer, int size) {
+    static void decode(ByteBuf.Bit buffer, int size) {
         Class197.anInt2434 = 0;
         decodeUpdate(buffer);
         decodeMasks(buffer);
@@ -11,7 +11,7 @@ public class PlayerUpdate {
         }
     }
 
-    static void decodeUpdate(Packet.Bit bitPacket) {
+    static void decodeUpdate(ByteBuf.Bit bitPacket) {
         int i_2 = 0;
         bitPacket.initBitAccess();
         int i_3;
@@ -121,7 +121,7 @@ public class PlayerUpdate {
         }
     }
 
-    static void decodeMasks(Packet.Bit buffer) {
+    static void decodeMasks(ByteBuf.Bit buffer) {
         for (int i_2 = 0; i_2 < Class197.anInt2434; i_2++) {
             int i_3 = Class197.anIntArray2435[i_2];
             PlayerEntity player_4 = client.players[i_3];
@@ -136,7 +136,7 @@ public class PlayerUpdate {
         }
     }
 
-    static void decodeMasksBody(Packet.Bit stream, int i_1, PlayerEntity player, int flags) {
+    static void decodeMasksBody(ByteBuf.Bit stream, int i_1, PlayerEntity player, int flags) {
         byte tempMoveType = MoveSpeed.STATIONARY.id;
 
         if ((flags & 0x20000) != 0) {
@@ -269,20 +269,20 @@ public class PlayerUpdate {
                     boolean bool_18 = true;
                     int i_10 = -1;
                     int i_9 = -1;
-                    int i_19 = stream.readUnsignedSmart();
+                    int i_19 = stream.readSmart();
                     if (i_19 == 32767) {
-                        i_19 = stream.readUnsignedSmart();
-                        i_9 = stream.readUnsignedSmart();
-                        i_8 = stream.readUnsignedSmart();
-                        i_10 = stream.readUnsignedSmart();
+                        i_19 = stream.readSmart();
+                        i_9 = stream.readSmart();
+                        i_8 = stream.readSmart();
+                        i_10 = stream.readSmart();
                     } else if (i_19 == 32766) {
                         i_19 = -1;
                         i_9 = stream.readUnsignedByteC();
                     } else {
-                        i_9 = stream.readUnsignedSmart();
+                        i_9 = stream.readSmart();
                     }
 
-                    i_12 = stream.readUnsignedSmart();
+                    i_12 = stream.readSmart();
                     player.applyHit(i_19, i_9, i_8, i_10, client.cycles, i_12);
                 }
             }
@@ -290,10 +290,10 @@ public class PlayerUpdate {
             int i_7 = stream.readUnsignedByte();
             if (i_7 > 0) {
                 for (int i_8 = 0; i_8 < i_7; i_8++) {
-                    int i_9 = stream.readUnsignedSmart();
-                    int i_10 = stream.readUnsignedSmart();
+                    int i_9 = stream.readSmart();
+                    int i_10 = stream.readSmart();
                     if (i_10 != 32767) {
-                        int i_19 = stream.readUnsignedSmart();
+                        int i_19 = stream.readSmart();
                         i_12 = stream.readUnsigned128Byte();
                         int i_13 = i_10 > 0 ? stream.readUnsignedByte128() : i_12;
                         player.displayHitbar(i_9, client.cycles, i_10, i_19, i_12, i_13);
@@ -307,7 +307,7 @@ public class PlayerUpdate {
         if ((flags & 0x1) != 0) {
             int i_6 = stream.readUnsignedByteC();
             byte[] bytes_21 = new byte[i_6];
-            Packet rsbytebuffer_22 = new Packet(bytes_21);
+            ByteBuf rsbytebuffer_22 = new ByteBuf(bytes_21);
             stream.readBytes(bytes_21, 0, i_6);
             Class197.aNode_Sub35Array2428[i_1] = rsbytebuffer_22;
             player.decodeAppearance(rsbytebuffer_22);

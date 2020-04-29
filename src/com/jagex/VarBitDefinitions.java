@@ -13,7 +13,7 @@ public class VarBitDefinitions implements Definition {
         Node_Sub33.aNode_Sub15_Sub2_7836 = null;
     }
 
-    void method3795(Packet rsbytebuffer_1) {
+    void method3795(ByteBuf rsbytebuffer_1) {
         while (true) {
             int i_3 = rsbytebuffer_1.readUnsignedByte();
             if (i_3 == 0) {
@@ -23,7 +23,7 @@ public class VarBitDefinitions implements Definition {
         }
     }
 
-    void method3796(Packet rsbytebuffer_1, int i_2) {
+    void method3796(ByteBuf rsbytebuffer_1, int i_2) {
         if (i_2 == 1) {
             baseVar = rsbytebuffer_1.readUnsignedShort();
             startBit = rsbytebuffer_1.readUnsignedByte();

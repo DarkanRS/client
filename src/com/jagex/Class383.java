@@ -35,7 +35,7 @@ public class Class383 implements Interface41 {
         }
     }
 
-    static Class350 method6512(Packet rsbytebuffer_0) {
+    static Class350 method6512(ByteBuf rsbytebuffer_0) {
         Class356 class356_2 = Class356.values()[rsbytebuffer_0.readUnsignedByte()];
         Class353 class353_3 = Class353.values()[rsbytebuffer_0.readUnsignedByte()];
         int i_4 = rsbytebuffer_0.readShort();

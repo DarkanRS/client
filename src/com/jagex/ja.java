@@ -47,7 +47,7 @@ public class ja extends AbstractRenderer implements Interface40 {
     Matrix44 ao;
     Matrix44 aw;
 
-    public ja(Canvas canvas_1, Interface22 interface22_2, int i_3, int i_4) {
+    public ja(Canvas canvas_1, ImageLoader interface22_2, int i_3, int i_4) {
         super(interface22_2);
 
         try {
@@ -55,7 +55,7 @@ public class ja extends AbstractRenderer implements Interface40 {
                 throw new RuntimeException("");
             } else {
                 Class156.method2643();
-                q(anInterface22_5834, anInterface22_5834.method84(), 0);
+                q(textureCache, textureCache.method84(), 0);
                 SunDefinitions.method854(false, true);
                 bm = true;
                 af = new Matrix44();
@@ -74,10 +74,10 @@ public class ja extends AbstractRenderer implements Interface40 {
                     method8412(canvas_1);
                 }
 
-                int i_5 = anInterface22_5834.method84();
+                int i_5 = textureCache.method84();
 
                 for (short s_6 = 0; s_6 < i_5; s_6++) {
-                    TextureDetails class169_7 = anInterface22_5834.method144(s_6);
+                    TextureDetails class169_7 = textureCache.getTextureDetails(s_6);
                     if (class169_7 != null) {
                         V(s_6, class169_7.color, class169_7.blendType, class169_7.effectId, class169_7.effectParam1, class169_7.effectParam2, class169_7.isHalfSize, class169_7.shadowFactor, class169_7.brightness, class169_7.textureSpeedU, class169_7.textureSpeedV, class169_7.isGroundMesh, class169_7.skipTriangles, class169_7.aBool2087, class169_7.repeatS, class169_7.repeatT, class169_7.useMipmaps, class169_7.hdr, class169_7.isBrickTile, class169_7.combineMode);
                     }
@@ -92,7 +92,7 @@ public class ja extends AbstractRenderer implements Interface40 {
 
     native void op(za var1);
 
-    native void q(Interface22 var1, int var2, int var3);
+    native void q(ImageLoader var1, int var2, int var3);
 
     @Override
     public void method8618(Node_Sub1 class282_sub1_1) {
@@ -664,8 +664,8 @@ public class ja extends AbstractRenderer implements Interface40 {
             throw new IllegalStateException();
         } else {
             za_3.method14353(i_1, i_2);
-            if (anInterface22_5834 != null) {
-                anInterface22_5834.method161();
+            if (textureCache != null) {
+                textureCache.method161();
             }
 
         }
@@ -787,8 +787,8 @@ public class ja extends AbstractRenderer implements Interface40 {
             throw new IllegalStateException();
         } else {
             za_3.method14353(0, 0);
-            if (anInterface22_5834 != null) {
-                anInterface22_5834.method161();
+            if (textureCache != null) {
+                textureCache.method161();
             }
 
         }
@@ -1009,7 +1009,7 @@ public class ja extends AbstractRenderer implements Interface40 {
             bi[i_3++] = class275_sub1_sub1_8.z;
             bi[i_3++] = class275_sub1_sub1_8.y;
             bw[i_4++] = class275_sub1_sub1_8.color;
-            bz[i_6++] = (short) class275_sub1_sub1_8.rotation;
+            bz[i_6++] = (short) class275_sub1_sub1_8.textureId;
             bx[i_5++] = class275_sub1_sub1_8.size;
         }
 
@@ -1896,7 +1896,7 @@ public class ja extends AbstractRenderer implements Interface40 {
     @Override
     public native void fc(int var1, int var2, int var3, int var4);
 
-    native void ng(Interface22 var1, int var2, int var3);
+    native void ng(ImageLoader var1, int var2, int var3);
 
     @Override
     public void method8530(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9) {
@@ -2005,7 +2005,7 @@ public class ja extends AbstractRenderer implements Interface40 {
         return new wa(this, z, i_1, i_2, ints_3, ints_4);
     }
 
-    native void no(Interface22 var1, int var2, int var3);
+    native void no(ImageLoader var1, int var2, int var3);
 
     native void oa(int var1, int var2, int var3, int var4);
 

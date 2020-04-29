@@ -6,7 +6,7 @@ public class CutsceneAction_Sub16 extends CutsceneAction {
 
     int anInt9381;
 
-    CutsceneAction_Sub16(Packet rsbytebuffer_1, boolean bool_2) {
+    CutsceneAction_Sub16(ByteBuf rsbytebuffer_1, boolean bool_2) {
         super(rsbytebuffer_1);
         int i_3 = rsbytebuffer_1.readUnsignedShort();
         if (bool_2) {

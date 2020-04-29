@@ -26,7 +26,7 @@ public class QuestIndexLoader {
             }
             QuestDefinitions questdefinitions_9 = new QuestDefinitions();
             if (bytes_6 != null) {
-                questdefinitions_9.method4119(new Packet(bytes_6));
+                questdefinitions_9.method4119(new ByteBuf(bytes_6));
             }
             questdefinitions_9.method4095();
             questDefinitions[i_5] = questdefinitions_9;
@@ -132,7 +132,7 @@ public class QuestIndexLoader {
         Class46.aCacheableNode_Sub7_438 = null;
     }
 
-    static Class149_Sub3 method4165(Packet rsbytebuffer_0) {
+    static Class149_Sub3 method4165(ByteBuf rsbytebuffer_0) {
         return new Class149_Sub3(rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.read24BitUnsignedInteger(), rsbytebuffer_0.readUnsignedByte());
     }
 

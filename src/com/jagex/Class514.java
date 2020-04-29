@@ -25,7 +25,7 @@ public class Class514 {
         PingRequester.anInt5864 = -1;
     }
 
-    static Class149_Sub2 method8842(Packet rsbytebuffer_0) {
+    static Class149_Sub2 method8842(ByteBuf rsbytebuffer_0) {
         return new Class149_Sub2(rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.read24BitUnsignedInteger(), rsbytebuffer_0.readUnsignedByte());
     }
 }

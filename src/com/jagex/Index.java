@@ -385,7 +385,7 @@ public class Index {
                     bytes_22 = QuickChatMessage.method6154(archives[i_1], false);
                 } else {
                     bytes_22 = QuickChatMessage.method6154(archives[i_1], true);
-                    Packet rsbytebuffer_23 = new Packet(bytes_22);
+                    ByteBuf rsbytebuffer_23 = new ByteBuf(bytes_22);
                     rsbytebuffer_23.method13249(ints_3, rsbytebuffer_23.buffer.length);
                 }
                 byte[] bytes_27 = Node_Sub17_Sub6.method15438(bytes_22);
@@ -395,7 +395,7 @@ public class Index {
                 int i_11;
                 if (i_5 > 1) {
                     int i_12;
-                    Packet rsbytebuffer_13;
+                    ByteBuf rsbytebuffer_13;
                     int i_15;
                     int i_16;
                     int i_17;
@@ -406,7 +406,7 @@ public class Index {
                         --i_11;
                         i_12 = bytes_27[i_11] & 0xff;
                         i_11 -= i_12 * i_5 * 4;
-                        rsbytebuffer_13 = new Packet(bytes_27);
+                        rsbytebuffer_13 = new ByteBuf(bytes_27);
                         int[] ints_14 = new int[i_5];
                         rsbytebuffer_13.index = i_11;
                         for (i_15 = 0; i_15 < i_12; i_15++) {
@@ -449,7 +449,7 @@ public class Index {
                         --i_11;
                         i_12 = bytes_27[i_11] & 0xff;
                         i_11 -= i_12 * i_5 * 4;
-                        rsbytebuffer_13 = new Packet(bytes_27);
+                        rsbytebuffer_13 = new ByteBuf(bytes_27);
                         int i_25 = 0;
                         i_15 = 0;
                         rsbytebuffer_13.index = i_11;

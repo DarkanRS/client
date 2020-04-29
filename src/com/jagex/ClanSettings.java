@@ -28,7 +28,7 @@ public class ClanSettings {
     boolean useHashes;
     boolean useNames;
 
-    public ClanSettings(Packet rsbytebuffer_1) {
+    public ClanSettings(ByteBuf rsbytebuffer_1) {
         decode(rsbytebuffer_1);
     }
 
@@ -410,7 +410,7 @@ public class ClanSettings {
         }
     }
 
-    void decode(Packet buffer) {
+    void decode(ByteBuf buffer) {
         int version = buffer.readUnsignedByte();
         if (version >= 1 && version <= 5) {
             int attr = buffer.readUnsignedByte();

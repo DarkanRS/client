@@ -12,7 +12,7 @@ public class GameTipsLoader {
 
     public GameTipsLoader(Index index_3) {
         tipsIndex = index_3;
-        Packet buffer = new Packet(tipsIndex.getFile(0, 0));
+        ByteBuf buffer = new ByteBuf(tipsIndex.getFile(0, 0));
         int i_5 = buffer.buffer != null && buffer.buffer.length >= 1 ? buffer.readUnsignedByte() : -1;
         if (i_5 < 4) {
             aClass402Array4818 = new Class402[0];
@@ -154,7 +154,7 @@ public class GameTipsLoader {
     public Class393 method6785(int i_1) {
         byte[] bytes_3 = tipsIndex.getFile(i_1, 0);
         Class393 class393_4 = new Class393();
-        class393_4.method6743(new Packet(bytes_3));
+        class393_4.method6743(new ByteBuf(bytes_3));
         return class393_4;
     }
 

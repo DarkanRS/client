@@ -17,7 +17,7 @@ public class VarNPCMap {
             return overlaydef_1.secondaryRGB;
         } else {
             if (overlaydef_1.texture != -1) {
-                TextureDetails class169_3 = graphicalrenderer_0.anInterface22_5834.method144(overlaydef_1.texture);
+                TextureDetails class169_3 = graphicalrenderer_0.textureCache.getTextureDetails(overlaydef_1.texture);
                 if (!class169_3.isGroundMesh) {
                     return class169_3.color;
                 }

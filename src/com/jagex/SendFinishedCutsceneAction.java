@@ -5,7 +5,7 @@ public class SendFinishedCutsceneAction extends CutsceneAction {
     public static int anInt8307;
     static int anInt8308;
 
-    SendFinishedCutsceneAction(Packet rsbytebuffer_1) {
+    SendFinishedCutsceneAction(ByteBuf rsbytebuffer_1) {
         super(rsbytebuffer_1);
     }
 

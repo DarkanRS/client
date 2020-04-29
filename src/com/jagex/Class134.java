@@ -102,12 +102,12 @@ public class Class134 {
                     for (; class275_sub1_21 != class275_sub1_10; class275_sub1_21 = class275_sub1_21.aEntityNode_Sub1_7706) {
                         PointEntity class275_sub1_sub1_22 = (PointEntity) class275_sub1_21;
                         if (bool_16) {
-                            i_14 = class275_sub1_sub1_22.rotation;
+                            i_14 = class275_sub1_sub1_22.textureId;
                             bool_15 = class275_sub1_sub1_22.aBool10210;
                             bool_16 = false;
                         }
 
-                        if (i_7 > 0 && (i_14 != class275_sub1_sub1_22.rotation || bool_15 != class275_sub1_sub1_22.aBool10210)) {
+                        if (i_7 > 0 && (i_14 != class275_sub1_sub1_22.textureId || bool_15 != class275_sub1_sub1_22.aBool10210)) {
                             bool_16 = true;
                             break;
                         }

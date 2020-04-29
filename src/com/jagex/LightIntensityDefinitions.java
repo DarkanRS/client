@@ -7,7 +7,7 @@ public class LightIntensityDefinitions {
     public int anInt4988 = 2048;
     public int anInt4989 = 2048;
 
-    void method6999(Packet rsbytebuffer_1) {
+    void method6999(ByteBuf rsbytebuffer_1) {
         while (true) {
             int i_3 = rsbytebuffer_1.readUnsignedByte();
             if (i_3 == 0) {
@@ -18,7 +18,7 @@ public class LightIntensityDefinitions {
         }
     }
 
-    void method7004(Packet rsbytebuffer_1, int i_2) {
+    void method7004(ByteBuf rsbytebuffer_1, int i_2) {
         if (i_2 == 1) {
             anInt4986 = rsbytebuffer_1.readUnsignedByte();
         } else if (i_2 == 2) {

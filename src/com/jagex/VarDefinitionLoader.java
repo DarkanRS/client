@@ -52,7 +52,7 @@ public class VarDefinitionLoader implements IndexLoader {
         }
     }
 
-    public static Class62 method6401(Packet rsbytebuffer_0) {
+    public static Class62 method6401(ByteBuf rsbytebuffer_0) {
         String string_2 = rsbytebuffer_0.readString();
         Class356 class356_3 = Class356.values()[rsbytebuffer_0.readUnsignedByte()];
         Class353 class353_4 = Class353.values()[rsbytebuffer_0.readUnsignedByte()];
@@ -85,7 +85,7 @@ public class VarDefinitionLoader implements IndexLoader {
             }
             class372_3 = new Class372();
             if (bytes_10 != null) {
-                class372_3.method6356(new Packet(bytes_10));
+                class372_3.method6356(new ByteBuf(bytes_10));
             }
             LRUCache softcache_9 = aClass229_4517;
             synchronized (aClass229_4517) {

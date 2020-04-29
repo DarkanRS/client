@@ -7,7 +7,7 @@ public class ClanVarSettingsDefinitions {
     public int startBit;
     public int endBit;
 
-    void method11487(Packet rsbytebuffer_1) {
+    void method11487(ByteBuf rsbytebuffer_1) {
         while (true) {
             int i_3 = rsbytebuffer_1.readUnsignedByte();
             if (i_3 == 0) {
@@ -17,7 +17,7 @@ public class ClanVarSettingsDefinitions {
         }
     }
 
-    void method11488(Packet rsbytebuffer_1, int i_2) {
+    void method11488(ByteBuf rsbytebuffer_1, int i_2) {
         if (i_2 == 1) {
             aChar7096 = Utils.cp1252ToChar(rsbytebuffer_1.readByte());
         } else if (i_2 == 2) {

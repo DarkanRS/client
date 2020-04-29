@@ -10,7 +10,7 @@ public class Class89 {
     }
 
     static void method1496(byte[] bytes_0) {
-        Packet rsbytebuffer_2 = new Packet(bytes_0);
+        ByteBuf rsbytebuffer_2 = new ByteBuf(bytes_0);
         while (true) {
             int i_3 = rsbytebuffer_2.readUnsignedByte();
             if (i_3 == 0) {

@@ -14,7 +14,7 @@ public class PlaySynthCutsceneAction extends CutsceneAction {
 
     int anInt9366;
 
-    PlaySynthCutsceneAction(Packet rsbytebuffer_1) {
+    PlaySynthCutsceneAction(ByteBuf rsbytebuffer_1) {
         super(rsbytebuffer_1);
         anInt9363 = rsbytebuffer_1.readUnsignedShort();
         anInt9365 = rsbytebuffer_1.readUnsignedByte();

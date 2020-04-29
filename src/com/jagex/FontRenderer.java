@@ -36,7 +36,7 @@ public abstract class FontRenderer {
         Class209.printConsoleMessage(LocalizedText.DEVELOPER_CONSOLE_INTRO.translate(Class223.CURRENT_LANGUAGE));
     }
 
-    public static AbstractRenderer method404(Canvas canvas_0, Interface22 interface22_1, int i_2, int i_3) {
+    public static AbstractRenderer method404(Canvas canvas_0, ImageLoader interface22_1, int i_2, int i_3) {
         return new ja(canvas_0, interface22_1, i_2, i_3);
     }
 

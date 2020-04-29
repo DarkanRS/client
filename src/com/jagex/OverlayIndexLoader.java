@@ -30,7 +30,7 @@ public class OverlayIndexLoader {
             overlaydef_3.aClass536_7062 = this;
             overlaydef_3.anInt7053 = i_1;
             if (bytes_10 != null) {
-                overlaydef_3.method11357(new Packet(bytes_10));
+                overlaydef_3.method11357(new ByteBuf(bytes_10));
             }
             overlaydef_3.method11356();
             LRUCache softcache_9 = aClass229_7092;

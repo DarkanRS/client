@@ -12,7 +12,7 @@ public class MapSpriteDefinitions {
         Class9.lobbyStage = 273;
         Class9.CURRENT_CONNECTION_CONTEXT = client.GAME_CONNECTION_CONTEXT;
         if (client.aByteArray7152 != null) {
-            Packet rsbytebuffer_1 = new Packet(client.aByteArray7152);
+            ByteBuf rsbytebuffer_1 = new ByteBuf(client.aByteArray7152);
             Class9.aLong77 = rsbytebuffer_1.readLong();
             Class9.aLong86 = rsbytebuffer_1.readLong();
         }
@@ -23,7 +23,7 @@ public class MapSpriteDefinitions {
         }
     }
 
-    void method7008(Packet rsbytebuffer_1) {
+    void method7008(ByteBuf rsbytebuffer_1) {
         while (true) {
             int i_3 = rsbytebuffer_1.readUnsignedByte();
             if (i_3 == 0) {
@@ -33,7 +33,7 @@ public class MapSpriteDefinitions {
         }
     }
 
-    void method7009(Packet rsbytebuffer_1, int i_2) {
+    void method7009(ByteBuf rsbytebuffer_1, int i_2) {
         if (i_2 == 1) {
             anInt4995 = rsbytebuffer_1.readBigSmart();
         } else if (i_2 == 2) {

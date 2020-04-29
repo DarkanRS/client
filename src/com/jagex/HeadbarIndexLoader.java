@@ -42,7 +42,7 @@ public class HeadbarIndexLoader {
             hitbardefinitions_3 = new HitbarDefinitions();
             hitbardefinitions_3.aClass290_2437 = this;
             if (bytes_10 != null) {
-                hitbardefinitions_3.method3210(new Packet(bytes_10));
+                hitbardefinitions_3.method3210(new ByteBuf(bytes_10));
             }
             LRUCache softcache_9 = aClass229_3449;
             synchronized (aClass229_3449) {

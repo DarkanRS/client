@@ -231,7 +231,7 @@ public class ItemDefinitions implements Definition {
     void postDecode() {
     }
 
-    void decode(Packet rsbytebuffer_1) {
+    void decode(ByteBuf rsbytebuffer_1) {
         while (true) {
             int i_3 = rsbytebuffer_1.readUnsignedByte();
             if (i_3 == 0) {
@@ -306,7 +306,7 @@ public class ItemDefinitions implements Definition {
         stackable = 1;
     }
 
-    void decode(Packet stream, int opcode) {
+    void decode(ByteBuf stream, int opcode) {
         if (opcode == 1) {
             modelId = stream.readBigSmart();
         } else if (opcode == 2) {

@@ -264,7 +264,7 @@ public class Class334 {
     boolean method5942(AbstractRenderer graphicalrenderer_1, Class334 class334_2) {
         if (aNativeSprite_3910 == null) {
             if (anInt3887 == 0) {
-                if (Class247.TEXTURE_LOADER.method139(anInt3893)) {
+                if (Class247.TEXTURE_LOADER.loadTexture(anInt3893)) {
                     int[] ints_3 = Class247.TEXTURE_LOADER.method141(anInt3893, anInt3902, anInt3902);
                     aNativeSprite_3910 = graphicalrenderer_1.createNativeSprite(ints_3, anInt3902, anInt3902, anInt3902);
                 }

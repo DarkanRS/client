@@ -4,7 +4,7 @@ import java.awt.*;
 
 public class Class532_Sub1 extends Class532 {
 
-    public static Interface22 anInterface22_7922;
+    public static ImageLoader IMAGE_LOADER;
 
     Class532_Sub1() throws Throwable {
         throw new Error();

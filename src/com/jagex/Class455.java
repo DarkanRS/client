@@ -140,7 +140,7 @@ public abstract class Class455 {
     static int getCRC(byte[] data, int start, int end) {
         int i_3 = -1;
         for (int i_4 = start; i_4 < end; i_4++) {
-            i_3 = i_3 >>> 8 ^ Packet.anIntArray7986[(i_3 ^ data[i_4]) & 0xff];
+            i_3 = i_3 >>> 8 ^ ByteBuf.anIntArray7986[(i_3 ^ data[i_4]) & 0xff];
         }
         i_3 = ~i_3;
         return i_3;

@@ -16,7 +16,7 @@ public class Defaults7Loader {
 
     public Defaults7Loader(Index index_1) {
         byte[] bytes_2 = index_1.getFile(DefaultsFile.FILE_7.fileId);
-        method8746(new Packet(bytes_2));
+        method8746(new ByteBuf(bytes_2));
     }
 
     public static void method8751(CacheableNode cacheablenode_0, CacheableNode cacheablenode_1) {
@@ -60,11 +60,11 @@ public class Defaults7Loader {
         return meshrasterizer_9;
     }
 
-    public static String method8755(Packet rsbytebuffer_0) {
+    public static String method8755(ByteBuf rsbytebuffer_0) {
         return Node_Sub33.method12582(rsbytebuffer_0);
     }
 
-    void method8746(Packet rsbytebuffer_1) {
+    void method8746(ByteBuf rsbytebuffer_1) {
         while (true) {
             int i_3 = rsbytebuffer_1.readUnsignedByte();
             if (i_3 == 0) {

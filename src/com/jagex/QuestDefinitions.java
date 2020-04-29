@@ -30,7 +30,7 @@ public class QuestDefinitions {
         return locShape >= LocShapes.STRAIGHT_SLOPE_ROOF.type && locShape <= LocShapes.STRAIGHT_FLAT_ROOF.type;
     }
 
-    static void writeCRCs(Packet.Bit rsbitsbuffer_0) {
+    static void writeCRCs(ByteBuf.Bit rsbitsbuffer_0) {
         rsbitsbuffer_0.writeInt(IndexLoaders.ANIMATION_FRAME_SET_INDEX.getCrc());
         rsbitsbuffer_0.writeInt(IndexLoaders.ANIMATION_FRAME_BASE_INDEX.getCrc());
         rsbitsbuffer_0.writeInt(IndexLoaders.CONFIG_INDEX.getCrc());
@@ -114,7 +114,7 @@ public class QuestDefinitions {
         }
     }
 
-    void method4094(Packet rsbytebuffer_1, int i_2) {
+    void method4094(ByteBuf rsbytebuffer_1, int i_2) {
         if (i_2 == 1) {
             name = rsbytebuffer_1.readGJString();
         } else if (i_2 == 2) {
@@ -301,7 +301,7 @@ public class QuestDefinitions {
         return (levelRequirements != null && i_2 >= 0 && i_2 < levelRequirements.length) && ints_1[levelRequirements[i_2][0]] >= levelRequirements[i_2][1];
     }
 
-    void method4119(Packet rsbytebuffer_1) {
+    void method4119(ByteBuf rsbytebuffer_1) {
         while (true) {
             int i_3 = rsbytebuffer_1.readUnsignedByte();
             if (i_3 == 0) {

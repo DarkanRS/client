@@ -63,7 +63,7 @@ public class NPCIndexLoader {
             npcdefinitions_3.npcLoader = this;
             npcdefinitions_3.options = aStringArray4840.clone();
             if (bytes_10 != null) {
-                npcdefinitions_3.method6874(new Packet(bytes_10));
+                npcdefinitions_3.method6874(new ByteBuf(bytes_10));
             }
             npcdefinitions_3.method6877();
             LRUCache softcache_9 = aClass229_4841;

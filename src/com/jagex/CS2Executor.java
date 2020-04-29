@@ -70,9 +70,9 @@ public class CS2Executor {
             } else {
                 int i_6 = 0;
                 int i_7 = 0;
-                if (Node_Sub20_Sub24.aClass118_9884 != null) {
-                    i_6 = Node_Sub20_Sub24.aClass118_9884.x;
-                    i_7 = Node_Sub20_Sub24.aClass118_9884.y;
+                if (MaterialPropTexture.aClass118_9884 != null) {
+                    i_6 = MaterialPropTexture.aClass118_9884.x;
+                    i_7 = MaterialPropTexture.aClass118_9884.y;
                 }
                 cs2executor_3.intLocals[0] = Class163.mouseRecorder.getMouseX() - i_6;
                 cs2executor_3.intLocals[1] = Class163.mouseRecorder.getMouseY() - i_7;

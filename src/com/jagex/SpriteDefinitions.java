@@ -23,7 +23,7 @@ public class SpriteDefinitions {
     }
 
     public static SpriteDefinitions[] decode(byte[] data) {
-        Packet stream = new Packet(data);
+        ByteBuf stream = new ByteBuf(data);
         stream.index = data.length - 2;
         int count = stream.readUnsignedShort();
         SpriteDefinitions[] sprites = new SpriteDefinitions[count];
@@ -138,17 +138,17 @@ public class SpriteDefinitions {
         return bytes_2 == null ? null : decode(bytes_2);
     }
 
-    public int method1519() {
+    public int getMaxWidth() {
         return width + minX + anInt958;
     }
 
-    public int method1520() {
+    public int getMaxHeight() {
         return height + minY + anInt953;
     }
 
-    public void method1523() {
-        int i_1 = method1519();
-        int i_2 = method1520();
+    public void load() {
+        int i_1 = getMaxWidth();
+        int i_2 = getMaxHeight();
         if (i_1 != width || i_2 != height) {
             byte[] bytes_3 = new byte[i_1 * i_2];
             int i_5;
@@ -382,9 +382,9 @@ public class SpriteDefinitions {
         width = i_3;
     }
 
-    public int[] method1528() {
-        int i_1 = method1519();
-        int[] ints_2 = new int[i_1 * method1520()];
+    public int[] getPixels() {
+        int i_1 = getMaxWidth();
+        int[] ints_2 = new int[i_1 * getMaxHeight()];
         int i_3;
         int i_4;
         int i_5;
@@ -532,8 +532,8 @@ public class SpriteDefinitions {
     }
 
     public void method1554(int i_1) {
-        int i_2 = method1519();
-        int i_3 = method1520();
+        int i_2 = getMaxWidth();
+        int i_3 = getMaxHeight();
         if (i_2 != width || i_3 != height) {
             int i_4 = i_1;
             if (i_1 > minX) {

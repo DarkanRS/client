@@ -8,7 +8,7 @@ public abstract class CutsceneAction_Sub10 extends CutsceneAction {
 
     int anInt9295;
 
-    CutsceneAction_Sub10(Packet rsbytebuffer_1) {
+    CutsceneAction_Sub10(ByteBuf rsbytebuffer_1) {
         super(rsbytebuffer_1);
         anInt9296 = rsbytebuffer_1.readUnsignedShort();
         anInt9297 = rsbytebuffer_1.readUnsignedShort();

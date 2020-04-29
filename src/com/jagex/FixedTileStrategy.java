@@ -20,7 +20,7 @@ public class FixedTileStrategy extends RouteStrategy {
                 }
             }
 
-            class282_sub54_2 = new GamePreferences(new Packet(bytes_3), client.CURRENT_GAME);
+            class282_sub54_2 = new GamePreferences(new ByteBuf(bytes_3), client.CURRENT_GAME);
         } catch (Exception ignored) {
         }
 

@@ -43,7 +43,7 @@ public class SkyboxIndexLoader {
                     if (bytes_8 != null) {
                         Component component = interface_21.components[i] = new Component();
                         component.idHash = i + (interfaceId << 16);
-                        component.readValues(new Packet(bytes_8));
+                        component.readValues(new ByteBuf(bytes_8));
                     }
                 }
             }
@@ -88,7 +88,7 @@ public class SkyboxIndexLoader {
             }
             class207_3 = new SkyboxDefinitions();
             if (bytes_10 != null) {
-                class207_3.method3549(new Packet(bytes_10));
+                class207_3.method3549(new ByteBuf(bytes_10));
             }
             LRUCache softcache_9 = aClass229_3437;
             synchronized (aClass229_3437) {

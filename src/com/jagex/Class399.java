@@ -12,7 +12,7 @@ public class Class399 {
         anInt4816 = i_3;
     }
 
-    static int decodeSkip(Packet.Bit rsbitsbuffer_0) {
+    static int decodeSkip(ByteBuf.Bit rsbitsbuffer_0) {
         int i_2 = rsbitsbuffer_0.readBits(2);
         int i_3;
         if (i_2 == 0) {

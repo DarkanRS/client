@@ -17,7 +17,7 @@ public class Node_Sub17_Sub6 extends Node_Sub17 {
 
     static byte[] method15438(byte[] data) {
         try {
-            Packet buffer = new Packet(data);
+            ByteBuf buffer = new ByteBuf(data);
             int i_3 = buffer.readUnsignedByte();
             int i_4 = buffer.readInt();
             if (i_4 >= 0 && (Index.anInt3689 == 0 || i_4 <= Index.anInt3689)) {
@@ -55,7 +55,7 @@ public class Node_Sub17_Sub6 extends Node_Sub17 {
     }
 
     @Override
-    void method12253(Packet rsbytebuffer_1) {
+    void method12253(ByteBuf rsbytebuffer_1) {
         aBool10016 = rsbytebuffer_1.readUnsignedByte() == 1;
         aByte10015 = rsbytebuffer_1.readByte();
         aByte10014 = rsbytebuffer_1.readByte();
@@ -82,7 +82,7 @@ public class Node_Sub17_Sub6 extends Node_Sub17 {
     }
 
     @Override
-    void method12249(Packet rsbytebuffer_1) {
+    void method12249(ByteBuf rsbytebuffer_1) {
         aBool10016 = rsbytebuffer_1.readUnsignedByte() == 1;
         aByte10015 = rsbytebuffer_1.readByte();
         aByte10014 = rsbytebuffer_1.readByte();
@@ -91,7 +91,7 @@ public class Node_Sub17_Sub6 extends Node_Sub17 {
     }
 
     @Override
-    void method12257(Packet rsbytebuffer_1) {
+    void method12257(ByteBuf rsbytebuffer_1) {
         aBool10016 = rsbytebuffer_1.readUnsignedByte() == 1;
         aByte10015 = rsbytebuffer_1.readByte();
         aByte10014 = rsbytebuffer_1.readByte();
@@ -100,7 +100,7 @@ public class Node_Sub17_Sub6 extends Node_Sub17 {
     }
 
     @Override
-    void method12250(Packet rsbytebuffer_1) {
+    void method12250(ByteBuf rsbytebuffer_1) {
         aBool10016 = rsbytebuffer_1.readUnsignedByte() == 1;
         aByte10015 = rsbytebuffer_1.readByte();
         aByte10014 = rsbytebuffer_1.readByte();

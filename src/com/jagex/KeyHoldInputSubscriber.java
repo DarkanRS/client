@@ -10,7 +10,7 @@ public class KeyHoldInputSubscriber implements InputSubscriber {
         requiredKeys = ints_1;
     }
 
-    public static KeyHoldInputSubscriber decode(Packet rsbytebuffer_0) {
+    public static KeyHoldInputSubscriber decode(ByteBuf rsbytebuffer_0) {
         int count = rsbytebuffer_0.readUnsignedByte();
         int[] requiredKeys = new int[count];
         for (int i_4 = 0; i_4 < count; i_4++) {

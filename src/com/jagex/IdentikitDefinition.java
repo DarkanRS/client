@@ -66,7 +66,7 @@ public class IdentikitDefinition implements Definition {
         return rsmesh_8;
     }
 
-    void method897(Packet buffer, int opcode) {
+    void method897(ByteBuf buffer, int opcode) {
         if (opcode == 1) {
             buffer.readUnsignedByte();
         } else if (opcode == 2) {
@@ -169,7 +169,7 @@ public class IdentikitDefinition implements Definition {
         }
     }
 
-    void method909(Packet rsbytebuffer_1) {
+    void method909(ByteBuf rsbytebuffer_1) {
         while (true) {
             int i_3 = rsbytebuffer_1.readUnsignedByte();
             if (i_3 == 0) {

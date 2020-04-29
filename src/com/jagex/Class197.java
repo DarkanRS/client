@@ -5,7 +5,7 @@ public class Class197 {
     static FontMetrics aClass414_2436;
     static byte[] aByteArray2424 = new byte[2048];
     static byte[] playerMovementTypes = new byte[2048];
-    static Packet[] aNode_Sub35Array2428 = new Packet[2048];
+    static ByteBuf[] aNode_Sub35Array2428 = new ByteBuf[2048];
     static int NUM_PLAYER_INDICES;
     static int[] PLAYER_INDICES = new int[2048];
     static int anInt2431;
@@ -18,7 +18,7 @@ public class Class197 {
         throw new Error();
     }
 
-    static void method3203(Packet.Bit packet) {
+    static void method3203(ByteBuf.Bit packet) {
         packet.initBitAccess();
         int i_2 = client.myPlayerIndex;
         PlayerEntity player_3 = VertexNormal.MY_PLAYER = client.players[i_2] = new PlayerEntity(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager());

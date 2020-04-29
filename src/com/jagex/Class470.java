@@ -39,7 +39,7 @@ public class Class470 {
             Class119.method2077();
             b_2 = 2;
         } else {
-            Node_Sub20_Sub25.method15393();
+            MaterialProp14.method15393();
             b_2 = 1;
         }
         if (Class393.preferences.currentToolkit.getValue() != 2) {

@@ -26,7 +26,7 @@ public class Class152_Sub1_Sub1 extends Class152_Sub1 {
     @Override
     Class137_Sub2 method13519() {
         if (aClass137_Sub2_10077 == null) {
-            Interface22 interface22_1 = aGraphicalRenderer_Sub1_10079.anInterface22_5834;
+            ImageLoader interface22_1 = aGraphicalRenderer_Sub1_10079.textureCache;
             anIntArray10082[0] = anInt10081;
             anIntArray10082[1] = anInt10084;
             anIntArray10082[2] = anInt10080;
@@ -38,11 +38,11 @@ public class Class152_Sub1_Sub1 extends Class152_Sub1 {
 
             int i_4;
             for (i_4 = 0; i_4 < 6; i_4++) {
-                if (!interface22_1.method139(anIntArray10082[i_4])) {
+                if (!interface22_1.loadTexture(anIntArray10082[i_4])) {
                     return null;
                 }
 
-                TextureDetails class169_5 = interface22_1.method144(anIntArray10082[i_4]);
+                TextureDetails class169_5 = interface22_1.getTextureDetails(anIntArray10082[i_4]);
                 int i_6 = class169_5.isHalfSize ? 64 : 128;
                 if (i_6 > i_3) {
                     i_3 = i_6;
@@ -54,7 +54,7 @@ public class Class152_Sub1_Sub1 extends Class152_Sub1 {
             }
 
             for (i_4 = 0; i_4 < 6; i_4++) {
-                anIntArrayArray10076[i_4] = interface22_1.method140(anIntArray10082[i_4], 1.0F, i_3, i_3, false);
+                anIntArrayArray10076[i_4] = interface22_1.renderTexturePixels(anIntArray10082[i_4], 1.0F, i_3, i_3, false);
             }
 
             aClass137_Sub2_10077 = new Class137_Sub2(aGraphicalRenderer_Sub1_10079, Class150.aClass150_1950, Class76.aClass76_751, i_3, bool_2, anIntArrayArray10076);
@@ -66,7 +66,7 @@ public class Class152_Sub1_Sub1 extends Class152_Sub1 {
     @Override
     Class137_Sub2 method13520() {
         if (aClass137_Sub2_10077 == null) {
-            Interface22 interface22_1 = aGraphicalRenderer_Sub1_10079.anInterface22_5834;
+            ImageLoader interface22_1 = aGraphicalRenderer_Sub1_10079.textureCache;
             anIntArray10082[0] = anInt10081;
             anIntArray10082[1] = anInt10084;
             anIntArray10082[2] = anInt10080;
@@ -78,11 +78,11 @@ public class Class152_Sub1_Sub1 extends Class152_Sub1 {
 
             int i_4;
             for (i_4 = 0; i_4 < 6; i_4++) {
-                if (!interface22_1.method139(anIntArray10082[i_4])) {
+                if (!interface22_1.loadTexture(anIntArray10082[i_4])) {
                     return null;
                 }
 
-                TextureDetails class169_5 = interface22_1.method144(anIntArray10082[i_4]);
+                TextureDetails class169_5 = interface22_1.getTextureDetails(anIntArray10082[i_4]);
                 int i_6 = class169_5.isHalfSize ? 64 : 128;
                 if (i_6 > i_3) {
                     i_3 = i_6;
@@ -94,7 +94,7 @@ public class Class152_Sub1_Sub1 extends Class152_Sub1 {
             }
 
             for (i_4 = 0; i_4 < 6; i_4++) {
-                anIntArrayArray10076[i_4] = interface22_1.method140(anIntArray10082[i_4], 1.0F, i_3, i_3, false);
+                anIntArrayArray10076[i_4] = interface22_1.renderTexturePixels(anIntArray10082[i_4], 1.0F, i_3, i_3, false);
             }
 
             aClass137_Sub2_10077 = new Class137_Sub2(aGraphicalRenderer_Sub1_10079, Class150.aClass150_1950, Class76.aClass76_751, i_3, bool_2, anIntArrayArray10076);
@@ -106,7 +106,7 @@ public class Class152_Sub1_Sub1 extends Class152_Sub1 {
     @Override
     Class137_Sub2 method13521() {
         if (aClass137_Sub2_10077 == null) {
-            Interface22 interface22_1 = aGraphicalRenderer_Sub1_10079.anInterface22_5834;
+            ImageLoader interface22_1 = aGraphicalRenderer_Sub1_10079.textureCache;
             anIntArray10082[0] = anInt10081;
             anIntArray10082[1] = anInt10084;
             anIntArray10082[2] = anInt10080;
@@ -118,11 +118,11 @@ public class Class152_Sub1_Sub1 extends Class152_Sub1 {
 
             int i_4;
             for (i_4 = 0; i_4 < 6; i_4++) {
-                if (!interface22_1.method139(anIntArray10082[i_4])) {
+                if (!interface22_1.loadTexture(anIntArray10082[i_4])) {
                     return null;
                 }
 
-                TextureDetails class169_5 = interface22_1.method144(anIntArray10082[i_4]);
+                TextureDetails class169_5 = interface22_1.getTextureDetails(anIntArray10082[i_4]);
                 int i_6 = class169_5.isHalfSize ? 64 : 128;
                 if (i_6 > i_3) {
                     i_3 = i_6;
@@ -134,7 +134,7 @@ public class Class152_Sub1_Sub1 extends Class152_Sub1 {
             }
 
             for (i_4 = 0; i_4 < 6; i_4++) {
-                anIntArrayArray10076[i_4] = interface22_1.method140(anIntArray10082[i_4], 1.0F, i_3, i_3, false);
+                anIntArrayArray10076[i_4] = interface22_1.renderTexturePixels(anIntArray10082[i_4], 1.0F, i_3, i_3, false);
             }
 
             aClass137_Sub2_10077 = new Class137_Sub2(aGraphicalRenderer_Sub1_10079, Class150.aClass150_1950, Class76.aClass76_751, i_3, bool_2, anIntArrayArray10076);

@@ -24,7 +24,7 @@ public class GroundItemStrategy extends RouteStrategy {
         Node_Sub21.aNativeSpriteArray7673 = null;
         Class16.aNativeSpriteArray138 = null;
         Class391.HINT_ARROW_SPRITES = null;
-        Node_Sub20_Sub15.aNativeSpriteArray9838 = null;
+        MaterialProp19.aNativeSpriteArray9838 = null;
         Class16.aNativeSpriteArray145 = null;
         Node_Sub36.aNativeSpriteArray7994 = null;
         Class250.aNativeSpriteArray3092 = null;

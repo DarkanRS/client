@@ -107,7 +107,7 @@ public class GroundDecoration extends SceneObjectNode implements Location {
                             }
                             if (inter.contentType == Component.CONTENT_TYPE_1338 && client.anInt7341 == 1) {
                                 if (inter.method2046(Renderers.SOFTWARE_RENDERER) != null) {
-                                    Node_Sub20_Sub24.method15391();
+                                    MaterialPropTexture.method15391();
                                     Item.method12574(Renderers.SOFTWARE_RENDERER, inter, drawX, drawY);
                                     Renderers.SOFTWARE_RENDERER.r(i_2, i_3, i_4, i_5);
                                 }

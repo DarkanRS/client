@@ -20,7 +20,7 @@ public class Node_Sub41_Sub2 extends Node_Sub41 {
     @Override
     void method13362(OggPacket oggpacket_1) {
         if (anInt8031 <= 0 || "SUB".equals(aString9469)) {
-            Packet rsbytebuffer_3 = new Packet(oggpacket_1.getData());
+            ByteBuf rsbytebuffer_3 = new ByteBuf(oggpacket_1.getData());
             int i_4 = rsbytebuffer_3.readUnsignedByte();
             if (anInt8031 <= 8) {
                 if ((i_4 | 0x80) == 0) {
@@ -35,7 +35,7 @@ public class Node_Sub41_Sub2 extends Node_Sub41 {
                         throw new IllegalStateException();
                     }
 
-                    Packet rsbytebuffer_12 = new Packet(16);
+                    ByteBuf rsbytebuffer_12 = new ByteBuf(16);
                     rsbytebuffer_3.readBytes(rsbytebuffer_12.buffer, 0, 16);
                     aString9466 = rsbytebuffer_12.readString();
                     rsbytebuffer_12.index = 0;
@@ -80,7 +80,7 @@ public class Node_Sub41_Sub2 extends Node_Sub41 {
     @Override
     void method13366(OggPacket oggpacket_1) {
         if (anInt8031 * 1669091145 * -509226247 <= 0 || "SUB".equals(aString9469)) {
-            Packet rsbytebuffer_2 = new Packet(oggpacket_1.getData());
+            ByteBuf rsbytebuffer_2 = new ByteBuf(oggpacket_1.getData());
             int i_3 = rsbytebuffer_2.readUnsignedByte();
             if (-509226247 * anInt8031 * 1669091145 <= 8) {
                 if ((i_3 | 0x80) == 0) {
@@ -95,7 +95,7 @@ public class Node_Sub41_Sub2 extends Node_Sub41 {
                         throw new IllegalStateException();
                     }
 
-                    Packet rsbytebuffer_11 = new Packet(16);
+                    ByteBuf rsbytebuffer_11 = new ByteBuf(16);
                     rsbytebuffer_2.readBytes(rsbytebuffer_11.buffer, 0, 16);
                     aString9466 = rsbytebuffer_11.readString();
                     rsbytebuffer_11.index = 0;
@@ -148,7 +148,7 @@ public class Node_Sub41_Sub2 extends Node_Sub41 {
     @Override
     void method13363(OggPacket oggpacket_1) {
         if (anInt8031 * 1669091145 * -509226247 <= 0 || "SUB".equals(aString9469)) {
-            Packet rsbytebuffer_2 = new Packet(oggpacket_1.getData());
+            ByteBuf rsbytebuffer_2 = new ByteBuf(oggpacket_1.getData());
             int i_3 = rsbytebuffer_2.readUnsignedByte();
             if (-509226247 * anInt8031 * 1669091145 <= 8) {
                 if ((i_3 | 0x80) == 0) {
@@ -163,7 +163,7 @@ public class Node_Sub41_Sub2 extends Node_Sub41 {
                         throw new IllegalStateException();
                     }
 
-                    Packet rsbytebuffer_11 = new Packet(16);
+                    ByteBuf rsbytebuffer_11 = new ByteBuf(16);
                     rsbytebuffer_2.readBytes(rsbytebuffer_11.buffer, 0, 16);
                     aString9466 = rsbytebuffer_11.readString();
                     rsbytebuffer_11.index = 0;

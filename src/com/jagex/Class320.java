@@ -28,7 +28,7 @@ public class Class320 {
         Class260.aClass277_3234 = new Class277(i_1 << 9, i_2 << 9, i_3 << 8, i_4 * 8);
     }
 
-    public static AbstractRenderer createRenderer(int i_0, Canvas canvas_1, Interface22 interface22_2, Index index_3, int i_4) {
+    public static AbstractRenderer createRenderer(int i_0, Canvas canvas_1, ImageLoader interface22_2, Index index_3, int i_4) {
         int i_6 = 0;
         int i_7 = 0;
         if (canvas_1 != null) {

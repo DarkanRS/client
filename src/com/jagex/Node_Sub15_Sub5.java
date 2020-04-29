@@ -257,7 +257,7 @@ public abstract class Node_Sub15_Sub5 extends Node_Sub15 {
             method15364(i_2, i_3);
         } else {
             int i_5 = HostNameIdentifier.method488(i_2, i_3);
-            int i_6 = Node_Sub20_Sub24.method15390(i_2, i_3);
+            int i_6 = MaterialPropTexture.method15390(i_2, i_3);
             if (i_5 == anInt9845 && i_6 == anInt9850) {
                 anInt9858 = 0;
             } else {
@@ -366,7 +366,7 @@ public abstract class Node_Sub15_Sub5 extends Node_Sub15 {
             i_2 = 0;
         } else {
             i_3 = HostNameIdentifier.method488(i_2, anInt9847);
-            i_4 = Node_Sub20_Sub24.method15390(i_2, anInt9847);
+            i_4 = MaterialPropTexture.method15390(i_2, anInt9847);
         }
 
         if (i_2 == anInt9848 && i_3 == anInt9845 && i_4 == anInt9850) {
@@ -803,7 +803,7 @@ public abstract class Node_Sub15_Sub5 extends Node_Sub15 {
     void method15332() {
         anInt9848 = anInt9846;
         anInt9845 = HostNameIdentifier.method488(anInt9846, anInt9847);
-        anInt9850 = Node_Sub20_Sub24.method15390(anInt9846, anInt9847);
+        anInt9850 = MaterialPropTexture.method15390(anInt9846, anInt9847);
     }
 
     @Override

@@ -12,7 +12,7 @@ public class GrandExchangeSlot {
     public GrandExchangeSlot() {
     }
 
-    public GrandExchangeSlot(Packet buffer) {
+    public GrandExchangeSlot(ByteBuf buffer) {
         progress = buffer.readByte();
         itemId = buffer.readUnsignedShort();
         price = buffer.readInt();

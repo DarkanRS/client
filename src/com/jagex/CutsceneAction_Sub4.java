@@ -8,14 +8,14 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
     int anInt8522;
     int anInt8523;
 
-    CutsceneAction_Sub4(Packet rsbytebuffer_1) {
+    CutsceneAction_Sub4(ByteBuf rsbytebuffer_1) {
         super(rsbytebuffer_1);
         anInt8520 = rsbytebuffer_1.readUnsignedShort();
         int i_2 = rsbytebuffer_1.readInt();
         anInt8519 = i_2 >>> 16;
         anInt8521 = i_2 & 0xffff;
         anInt8522 = rsbytebuffer_1.readUnsignedByte();
-        anInt8523 = rsbytebuffer_1.readSignedSmart();
+        anInt8523 = rsbytebuffer_1.readUnsignedSmart();
     }
 
     static boolean method13788(int i_0) {

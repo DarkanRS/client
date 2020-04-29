@@ -40,7 +40,7 @@ public class AnimationDefinitions {
         }
     }
 
-    void method11130(Packet rsbytebuffer_1) {
+    void method11130(ByteBuf rsbytebuffer_1) {
         while (true) {
             int i_3 = rsbytebuffer_1.readUnsignedByte();
             if (i_3 == 0) {
@@ -50,7 +50,7 @@ public class AnimationDefinitions {
         }
     }
 
-    void method11131(Packet rsbytebuffer_1, int i_2) {
+    void method11131(ByteBuf rsbytebuffer_1, int i_2) {
         int i_4;
         int i_5;
         if (i_2 == 1) {

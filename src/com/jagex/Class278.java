@@ -35,20 +35,6 @@ public abstract class Class278 {
         }
     }
 
-    static Node_Sub20 method4963(Packet rsbytebuffer_0) {
-        rsbytebuffer_0.readUnsignedByte();
-        int i_2 = rsbytebuffer_0.readUnsignedByte();
-        Node_Sub20 class282_sub20_3 = NPCDirection.method4328(i_2);
-        class282_sub20_3.anInt7668 = rsbytebuffer_0.readUnsignedByte();
-        int i_4 = rsbytebuffer_0.readUnsignedByte();
-        for (int i_5 = 0; i_5 < i_4; i_5++) {
-            int i_6 = rsbytebuffer_0.readUnsignedByte();
-            class282_sub20_3.method12322(i_6, rsbytebuffer_0);
-        }
-        class282_sub20_3.method12321();
-        return class282_sub20_3;
-    }
-
     boolean method4910() {
         if (aNode_Sub41_Sub4_3366 != null) {
             return !aNode_Sub41_Sub3_3363.method14794() || method4923() > aNode_Sub41_Sub3_3363.method14792();

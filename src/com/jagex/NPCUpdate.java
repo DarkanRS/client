@@ -63,7 +63,7 @@ public class NPCUpdate {
     }
 
     static void decodeAddRemove() {
-        Packet.Bit buffer = client.GAME_CONNECTION_CONTEXT.recievedBuffer;
+        ByteBuf.Bit buffer = client.GAME_CONNECTION_CONTEXT.recievedBuffer;
         buffer.initBitAccess();
         int size = buffer.readBits(8);
         int i;
@@ -127,7 +127,7 @@ public class NPCUpdate {
     }
 
     static void decodeUpdate(boolean largeView) {
-        Packet.Bit rsbitsbuffer_2 = client.GAME_CONNECTION_CONTEXT.recievedBuffer;
+        ByteBuf.Bit rsbitsbuffer_2 = client.GAME_CONNECTION_CONTEXT.recievedBuffer;
         while (rsbitsbuffer_2.readableBits(client.GAME_CONNECTION_CONTEXT.currentPacketSize) >= 15) {
             int i_3 = rsbitsbuffer_2.readBits(15);
             if (i_3 == 32767) {
@@ -196,7 +196,7 @@ public class NPCUpdate {
     }
 
     static void decodeMasks() {
-        Packet.Bit buffer = client.GAME_CONNECTION_CONTEXT.recievedBuffer;
+        ByteBuf.Bit buffer = client.GAME_CONNECTION_CONTEXT.recievedBuffer;
         for (int i_1 = 0; i_1 < client.npcListSize; i_1++) {
             int i_2 = client.NPC_INDICES[i_1];
             NPCEntity npc = (NPCEntity) ((ObjectNode) client.NPC_MAP.get(i_2)).anObject8068;
@@ -342,29 +342,29 @@ public class NPCUpdate {
                         int i_7 = -1;
                         int i_8;
                         int i_9 = -1;
-                        int i_10 = buffer.readUnsignedSmart();
+                        int i_10 = buffer.readSmart();
                         if (i_10 == 32767) {
-                            i_10 = buffer.readUnsignedSmart();
-                            i_8 = buffer.readUnsignedSmart();
-                            i_7 = buffer.readUnsignedSmart();
-                            i_9 = buffer.readUnsignedSmart();
+                            i_10 = buffer.readSmart();
+                            i_8 = buffer.readSmart();
+                            i_7 = buffer.readSmart();
+                            i_9 = buffer.readSmart();
                         } else if (i_10 != 32766) {
-                            i_8 = buffer.readUnsignedSmart();
+                            i_8 = buffer.readSmart();
                         } else {
                             i_10 = -1;
                             i_8 = buffer.readUnsignedByte();
                         }
-                        int i_11 = buffer.readUnsignedSmart();
+                        int i_11 = buffer.readSmart();
                         npc.applyHit(i_10, i_8, i_7, i_9, client.cycles, i_11);
                     }
                 }
                 int i_6 = buffer.readUnsignedByte128();
                 if (i_6 > 0) {
                     for (int i_7 = 0; i_7 < i_6; i_7++) {
-                        int i_8 = buffer.readUnsignedSmart();
-                        int i_9 = buffer.readUnsignedSmart();
+                        int i_8 = buffer.readSmart();
+                        int i_9 = buffer.readSmart();
                         if (i_9 != 32767) {
-                            int i_10 = buffer.readUnsignedSmart();
+                            int i_10 = buffer.readSmart();
                             int i_11 = buffer.readUnsigned128Byte();
                             int i_12 = i_9 > 0 ? buffer.readUnsignedByte128() : i_11;
                             npc.displayHitbar(i_8, client.cycles, i_9, i_10, i_11, i_12);

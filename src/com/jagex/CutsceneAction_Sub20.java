@@ -2,11 +2,11 @@ package com.jagex;
 
 public class CutsceneAction_Sub20 extends CutsceneAction {
 
-    static Packet WORLD_LIST_BUFFER;
+    static ByteBuf WORLD_LIST_BUFFER;
 
     int anInt9414;
 
-    CutsceneAction_Sub20(Packet rsbytebuffer_1) {
+    CutsceneAction_Sub20(ByteBuf rsbytebuffer_1) {
         super(rsbytebuffer_1);
         anInt9414 = rsbytebuffer_1.readUnsignedShort();
     }

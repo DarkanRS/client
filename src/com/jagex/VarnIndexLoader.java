@@ -30,7 +30,7 @@ public class VarnIndexLoader {
             byte[] bytes_8 = aClass317_5418.getFile(SharedConfigsType.VARN.id, i_1);
             class449_3 = new VarnDefinitions();
             if (bytes_8 != null) {
-                class449_3.method7487(new Packet(bytes_8));
+                class449_3.method7487(new ByteBuf(bytes_8));
             }
             LRUCache softcache_5 = aClass229_5417;
             synchronized (aClass229_5417) {

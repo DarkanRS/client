@@ -59,7 +59,7 @@ public class Class299 implements Interface27 {
         if (i_3 == i_2) {
             Class532_Sub1.method12838(i_0, i_1, i_2, i_4, i_5, i_6);
         } else if (i_0 - i_2 >= Class532_Sub3_Sub1.anInt7071 && i_0 + i_2 <= Class532_Sub3_Sub1.anInt7069 && i_1 - i_3 >= Class532_Sub3_Sub1.anInt7070 && i_3 + i_1 <= Class532_Sub3_Sub1.anInt7068) {
-            Node_Sub20_Sub7.method15241(i_0, i_1, i_2, i_3, i_4, i_5, i_6);
+            MaterialProp30.method15241(i_0, i_1, i_2, i_3, i_4, i_5, i_6);
         } else {
             ClanVarDefinitions.method6824(i_0, i_1, i_2, i_3, i_4, i_5, i_6);
         }

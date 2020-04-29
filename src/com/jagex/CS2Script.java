@@ -16,7 +16,7 @@ public class CS2Script extends CacheableNode {
     public int[] intOpValues;
     public long[] longOpValues;
 
-    public CS2Script(Packet rsbytebuffer_1) {
+    public CS2Script(ByteBuf rsbytebuffer_1) {
         int i_2 = decodeHeader(rsbytebuffer_1);
         int i_3 = 0;
 
@@ -27,7 +27,7 @@ public class CS2Script extends CacheableNode {
 
     }
 
-    CS2Instruction getOpcode(Packet rsbytebuffer_1) {
+    CS2Instruction getOpcode(ByteBuf rsbytebuffer_1) {
         int i_3 = rsbytebuffer_1.readUnsignedShort();
         CS2Instruction operation = CS2Instruction.getByOpcode(i_3);
         if (operation != null) {
@@ -37,7 +37,7 @@ public class CS2Script extends CacheableNode {
         }
     }
 
-    int decodeHeader(Packet stream) {
+    int decodeHeader(ByteBuf stream) {
         stream.index = stream.buffer.length - 2;
         int i_2 = stream.readUnsignedShort();
         int i_3 = stream.buffer.length - 2 - i_2 - 16;
@@ -72,7 +72,7 @@ public class CS2Script extends CacheableNode {
         return i_3;
     }
 
-    void decodeInstruction(Packet rsbytebuffer_1, int i_2, CS2Instruction cs2opinfo_3) {
+    void decodeInstruction(ByteBuf rsbytebuffer_1, int i_2, CS2Instruction cs2opinfo_3) {
         int i_4 = operations.length;
         if (cs2opinfo_3 == CS2Instruction.PUSH_STRING) {
             if (stringOpValues == null) {

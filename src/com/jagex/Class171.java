@@ -8,7 +8,7 @@ public class Class171 {
         throw new Error();
     }
 
-    public static AbstractRenderer method2909(Canvas canvas_0, Interface22 interface22_1, int i_2) {
+    public static AbstractRenderer method2909(Canvas canvas_0, ImageLoader interface22_1, int i_2) {
         return new OpenGLHardwareRenderer(canvas_0, interface22_1, i_2);
     }
 

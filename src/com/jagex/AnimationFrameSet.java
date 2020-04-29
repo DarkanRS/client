@@ -57,7 +57,7 @@ public class AnimationFrameSet extends CacheableNode {
 
             for (int i_11 = 0; i_11 < frameData.length; i_11++) {
                 byte[] bytes_12 = frameData[i_11];
-                Packet buffer = new Packet(bytes_12);
+                ByteBuf buffer = new ByteBuf(bytes_12);
                 buffer.index = 1;
                 int frameId = buffer.readUnsignedShort();
                 synchronized (ANIMATION_FRAME_INDEX) {
@@ -78,7 +78,7 @@ public class AnimationFrameSet extends CacheableNode {
 
                 for (int i = 0; i < fileIds.length; i++) {
                     byte[] frameData = this.frameData[i];
-                    Packet frameBuffer = new Packet(frameData);
+                    ByteBuf frameBuffer = new ByteBuf(frameData);
                     frameBuffer.index = 1;
                     int frameId = frameBuffer.readUnsignedShort();
                     AnimationFrameBase frameBase = null;

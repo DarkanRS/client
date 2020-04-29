@@ -38,13 +38,13 @@ public class Class277 {
     }
 
     static void method4907() {
-        if (TextureDefinition.aFileOutputStream9481 != null) {
+        if (MaterialDefinitions.aFileOutputStream9481 != null) {
             try {
-                TextureDefinition.aFileOutputStream9481.close();
+                MaterialDefinitions.aFileOutputStream9481.close();
             } catch (IOException ignored) {
             }
         }
-        TextureDefinition.aFileOutputStream9481 = null;
+        MaterialDefinitions.aFileOutputStream9481 = null;
     }
 
     static void method4908(AbstractRenderer graphicalrenderer_0) {

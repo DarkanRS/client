@@ -16,8 +16,8 @@ public class BufferedConnectionContext {
     int readDataSize;
     Connection connection;
     NodeCollection queuedPackets = new NodeCollection();
-    Packet writeBuffer = new Packet(1600);
-    Packet.Bit recievedBuffer = new Packet.Bit(15000);
+    ByteBuf writeBuffer = new ByteBuf(1600);
+    ByteBuf.Bit recievedBuffer = new ByteBuf.Bit(15000);
     ServerProt currentPacket;
     int currentPacketSize;
     boolean aBool2288 = true;

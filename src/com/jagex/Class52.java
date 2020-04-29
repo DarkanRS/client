@@ -42,7 +42,7 @@ public abstract class Class52 implements Interface2 {
     }
 
     static CacheableNode_Sub6 method1087(Index index_0, int i_1, int i_2) {
-        Packet rsbytebuffer_4 = new Packet(index_0.getFile(i_1, i_2));
+        ByteBuf rsbytebuffer_4 = new ByteBuf(index_0.getFile(i_1, i_2));
         CacheableNode_Sub6 class282_sub50_sub6_5 = new CacheableNode_Sub6(i_2, rsbytebuffer_4.readString(), rsbytebuffer_4.readString(), rsbytebuffer_4.readInt(), rsbytebuffer_4.readInt(), rsbytebuffer_4.readUnsignedByte() == 1, rsbytebuffer_4.readUnsignedByte(), rsbytebuffer_4.readUnsignedByte());
         int i_6 = rsbytebuffer_4.readUnsignedByte();
         for (int i_7 = 0; i_7 < i_6; i_7++) {

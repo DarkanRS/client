@@ -17,7 +17,7 @@ public class Node_Sub19 extends Node {
     Interface14 anInterface14_7649;
     OpenGlArrayBufferPointer aClass143_7647;
     OpenGlArrayBufferPointer aClass143_7643;
-    Packet aNode_Sub35_7655;
+    ByteBuf aNode_Sub35_7655;
     Node_Sub35_Sub1 aNode_Sub35_Sub1_7651;
     HashTable aClass453_7657;
     int anInt7640;
@@ -91,7 +91,7 @@ public class Node_Sub19 extends Node {
         }
 
         if (anInt7640 > 0) {
-            aNode_Sub35_7655 = new Packet(anInt7640 * 2);
+            aNode_Sub35_7655 = new ByteBuf(anInt7640 * 2);
             aNode_Sub35_Sub1_7651 = new Node_Sub35_Sub1(anInt7640 * 16);
             aClass453_7657 = new HashTable(Utils.nextPowerOfTwo(anInt7640));
             i_9 = 0;

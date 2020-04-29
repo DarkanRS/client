@@ -270,7 +270,7 @@ public class Class329 {
         }
     }
 
-    public void decodeTileMasksUnderlay(Packet rsbytebuffer_1, int i_2, int i_3, int i_4, int i_5, ClipMap[] arr_6) {
+    public void decodeTileMasksUnderlay(ByteBuf rsbytebuffer_1, int i_2, int i_3, int i_4, int i_5, ClipMap[] arr_6) {
         int i_8;
         int i_10;
         int i_11;
@@ -300,7 +300,7 @@ public class Class329 {
         }
     }
 
-    public void method5841(Packet rsbytebuffer_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, ClipMap[] arr_9) {
+    public void method5841(ByteBuf rsbytebuffer_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, ClipMap[] arr_9) {
         int i_11 = (i_6 & 0x7) * 8;
         int i_12 = (i_7 & 0x7) * 8;
         int i_14;
@@ -1403,7 +1403,7 @@ public class Class329 {
         }
     }
 
-    void decodeTileMasks(Packet rsbytebuffer_1, int plane, int x, int y, int i_5, int i_6, int i_7, int i_8, int i_9, boolean bool_10) {
+    void decodeTileMasks(ByteBuf rsbytebuffer_1, int plane, int x, int y, int i_5, int i_6, int i_7, int i_8, int i_9, boolean bool_10) {
         int i_61 = i_6;
         int i_51 = i_5;
         if (i_9 == 1) {

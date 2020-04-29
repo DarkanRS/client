@@ -632,12 +632,12 @@ public class RouteFinder {
                             return;
                         }
                     }
-                    if (TextureDefinition.aFileOutputStream9481 != null) {
-                        TextureDefinition.aFileOutputStream9481.close();
-                        TextureDefinition.aFileOutputStream9481 = null;
+                    if (MaterialDefinitions.aFileOutputStream9481 != null) {
+                        MaterialDefinitions.aFileOutputStream9481.close();
+                        MaterialDefinitions.aFileOutputStream9481 = null;
                     }
                     try {
-                        TextureDefinition.aFileOutputStream9481 = new FileOutputStream(file_20);
+                        MaterialDefinitions.aFileOutputStream9481 = new FileOutputStream(file_20);
                     } catch (FileNotFoundException filenotfoundexception_15) {
                         Class209.printConsoleMessage("Could not create " + file_20.getName());
                     } catch (SecurityException securityexception_16) {
@@ -646,10 +646,10 @@ public class RouteFinder {
                     return;
                 }
                 if ("closeoutput".equals(string_0)) {
-                    if (TextureDefinition.aFileOutputStream9481 != null) {
-                        TextureDefinition.aFileOutputStream9481.close();
+                    if (MaterialDefinitions.aFileOutputStream9481 != null) {
+                        MaterialDefinitions.aFileOutputStream9481.close();
                     }
-                    TextureDefinition.aFileOutputStream9481 = null;
+                    MaterialDefinitions.aFileOutputStream9481 = null;
                     return;
                 }
                 if (string_0.startsWith("runscript ")) {

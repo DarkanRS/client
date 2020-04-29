@@ -30,7 +30,7 @@ public class QuickchatMessageDefinitions extends CacheableNode {
         return bool_5;
     }
 
-    void decode(Packet buffer, int opcode) {
+    void decode(ByteBuf buffer, int opcode) {
         if (opcode == 1) {
             message = MovingAnimation.method12681(buffer.readString(), '<');
         } else if (opcode == 2) {
@@ -62,7 +62,7 @@ public class QuickchatMessageDefinitions extends CacheableNode {
         }
     }
 
-    public void method14896(Packet rsbytebuffer_1, int[] ints_2) {
+    public void method14896(ByteBuf rsbytebuffer_1, int[] ints_2) {
         if (types != null) {
             for (int i_4 = 0; i_4 < types.length && i_4 < ints_2.length; i_4++) {
                 int i_5 = method14918(i_4).clientTransmitSize;
@@ -74,7 +74,7 @@ public class QuickchatMessageDefinitions extends CacheableNode {
 
     }
 
-    public String fillDynamicValues(Packet rsbytebuffer_1) {
+    public String fillDynamicValues(ByteBuf rsbytebuffer_1) {
         StringBuilder stringbuilder_3 = new StringBuilder(80);
         if (types != null) {
             for (int i_4 = 0; i_4 < types.length; i_4++) {
@@ -119,7 +119,7 @@ public class QuickchatMessageDefinitions extends CacheableNode {
 
     }
 
-    void method14913(Packet rsbytebuffer_1) {
+    void method14913(ByteBuf rsbytebuffer_1) {
         while (true) {
             int i_3 = rsbytebuffer_1.readUnsignedByte();
             if (i_3 == 0) {

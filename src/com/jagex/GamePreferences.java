@@ -43,7 +43,7 @@ public class GamePreferences extends Node {
     Game game;
     ProcessorSpecs processorSpecs;
 
-    public GamePreferences(Packet rsbytebuffer_1, Game game_2) {
+    public GamePreferences(ByteBuf rsbytebuffer_1, Game game_2) {
         game = game_2;
         processorSpecs = new ProcessorSpecs(Engine.MAX_MEMORY, Engine.AVAILABLE_PROCESSORS, Class402.aString4828.indexOf("arm") != -1);
         currentToolkit = new GraphicsToolkitPreference(0, this);
@@ -57,7 +57,7 @@ public class GamePreferences extends Node {
         method13497(true);
     }
 
-    void decode(Packet rsbytebuffer_1) {
+    void decode(ByteBuf rsbytebuffer_1) {
         if (rsbytebuffer_1 != null && rsbytebuffer_1.buffer != null) {
             int i_3 = rsbytebuffer_1.readUnsignedByte();
             if (i_3 < 23) {
@@ -290,7 +290,7 @@ public class GamePreferences extends Node {
 
     }
 
-    void method13498(Packet rsbytebuffer_1, int i_2) {
+    void method13498(ByteBuf rsbytebuffer_1, int i_2) {
         brightness = new BrightnessPreference(rsbytebuffer_1.readUnsignedByte(), this);
         ++rsbytebuffer_1.index;
         removeRoofs = new Preference_Sub27(rsbytebuffer_1.readUnsignedByte() + 1, this);
@@ -411,8 +411,8 @@ public class GamePreferences extends Node {
 
     }
 
-    public Packet encode() {
-        Packet rsbytebuffer_2 = new Packet(40);
+    public ByteBuf encode() {
+        ByteBuf rsbytebuffer_2 = new ByteBuf(40);
         /*0*/
         rsbytebuffer_2.writeByte(27);
         /*1*/

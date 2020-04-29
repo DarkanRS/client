@@ -7,8 +7,8 @@ public class VorbisFileReference extends Class278 {
     int[] values;
     int anInt8115;
     byte[][] aByteArrayArray8111 = new byte[10][];
-    Packet aNode_Sub35_8112 = new Packet(null);
-    Packet byteBuffer = new Packet(null);
+    ByteBuf aNode_Sub35_8112 = new ByteBuf(null);
+    ByteBuf byteBuffer = new ByteBuf(null);
     Index index;
     int fileId;
 

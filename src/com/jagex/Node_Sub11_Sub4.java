@@ -34,7 +34,7 @@ public class Node_Sub11_Sub4 extends Node_Sub11 {
     }
 
     @Override
-    void method12203(Packet rsbytebuffer_1) {
+    void method12203(ByteBuf rsbytebuffer_1) {
         if (rsbytebuffer_1.readUnsignedByte() != 255) {
             --rsbytebuffer_1.index;
             rsbytebuffer_1.readLong();
@@ -46,7 +46,7 @@ public class Node_Sub11_Sub4 extends Node_Sub11 {
     }
 
     @Override
-    void method12206(Packet rsbytebuffer_1) {
+    void method12206(ByteBuf rsbytebuffer_1) {
         if (rsbytebuffer_1.readUnsignedByte() != 255) {
             rsbytebuffer_1.index = (rsbytebuffer_1.index * -1115476867 - -1115476867) * -1990677291;
             rsbytebuffer_1.readLong();
@@ -58,7 +58,7 @@ public class Node_Sub11_Sub4 extends Node_Sub11 {
     }
 
     @Override
-    void method12207(Packet rsbytebuffer_1) {
+    void method12207(ByteBuf rsbytebuffer_1) {
         if (rsbytebuffer_1.readUnsignedByte() != 255) {
             rsbytebuffer_1.index = (rsbytebuffer_1.index * -1115476867 - -1115476867) * -1990677291;
             rsbytebuffer_1.readLong();
@@ -70,7 +70,7 @@ public class Node_Sub11_Sub4 extends Node_Sub11 {
     }
 
     @Override
-    void method12208(Packet rsbytebuffer_1) {
+    void method12208(ByteBuf rsbytebuffer_1) {
         if (rsbytebuffer_1.readUnsignedByte() != 255) {
             rsbytebuffer_1.index = (rsbytebuffer_1.index * -1115476867 - -1115476867) * -1990677291;
             rsbytebuffer_1.readLong();

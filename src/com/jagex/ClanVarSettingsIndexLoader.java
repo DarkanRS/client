@@ -58,7 +58,7 @@ public class ClanVarSettingsIndexLoader {
             }
             class537_3 = new ClanVarSettingsDefinitions();
             if (bytes_10 != null) {
-                class537_3.method11487(new Packet(bytes_10));
+                class537_3.method11487(new ByteBuf(bytes_10));
             }
             LRUCache softcache_9 = aClass229_2881;
             synchronized (aClass229_2881) {

@@ -10,7 +10,7 @@ public class PacketDecoder {
 
     static boolean decode(BufferedConnectionContext context) throws IOException {
         Connection connection = context.getConnection();
-        Packet.Bit buffer = context.recievedBuffer;
+        ByteBuf.Bit buffer = context.recievedBuffer;
         if (connection == null)
             return false;
         if (context.currentPacket == null) {
@@ -484,7 +484,7 @@ public class PacketDecoder {
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.GAME_MESSAGE) {
-            int type = buffer.readUnsignedSmart();
+            int type = buffer.readSmart();
             int effectFlags = buffer.readInt();
             int flags = buffer.readUnsignedByte();
             String nameSimple = "";
@@ -522,7 +522,7 @@ public class PacketDecoder {
             byte[] bytes = new byte[context.currentPacketSize - 1];
             boolean bool_66 = buffer.readUnsignedByte() == 1;
             buffer.readBytes(bytes, context.currentPacketSize - 1);
-            Packet rsbytebuffer_127 = new Packet(bytes);
+            ByteBuf rsbytebuffer_127 = new ByteBuf(bytes);
             String url = rsbytebuffer_127.readString();
             if (bool_66) {
                 String string_137 = rsbytebuffer_127.readString();
@@ -632,7 +632,7 @@ public class PacketDecoder {
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.DYNAMIC_MAP_REGION) {
-            Packet.Bit rsbitsbuffer_65 = new Packet.Bit(context.currentPacketSize);
+            ByteBuf.Bit rsbitsbuffer_65 = new ByteBuf.Bit(context.currentPacketSize);
             System.arraycopy(context.recievedBuffer.buffer, context.recievedBuffer.index, rsbitsbuffer_65.buffer, 0, context.currentPacketSize);
             FontMetrics.method6989();
             if (Class393.preferences.aPreference_Sub3_8199.method12632() == 1) {
@@ -1357,7 +1357,7 @@ public class PacketDecoder {
             int flags = buffer.readUnsignedByte();
             int i_7, i_8, i_9;
             for (boolean isNegativeKey = (flags & 0x1) == 1; buffer.index < context.currentPacketSize; Node_Sub21.setItemInContainer(key, i_7, i_8 - 1, i_9, isNegativeKey)) {
-                i_7 = buffer.readUnsignedSmart();
+                i_7 = buffer.readSmart();
                 i_8 = buffer.readUnsignedShort();
                 i_9 = 0;
                 if (i_8 != 0) {
@@ -1494,7 +1494,7 @@ public class PacketDecoder {
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.REGION) {
-            Packet.Bit rsbitsbuffer_65 = new Packet.Bit(context.currentPacketSize);
+            ByteBuf.Bit rsbitsbuffer_65 = new ByteBuf.Bit(context.currentPacketSize);
             System.arraycopy(context.recievedBuffer.buffer, context.recievedBuffer.index, rsbitsbuffer_65.buffer, 0, context.currentPacketSize);
             FontMetrics.method6989();
             if (Class393.preferences.aPreference_Sub3_8199.method12632() == 1) {
@@ -2095,7 +2095,7 @@ public class PacketDecoder {
                 }
             }
             int i_6 = buffer.readUnsignedByte();
-            Class276.aNode_Sub35_3346 = new Packet(i_6);
+            Class276.aNode_Sub35_3346 = new ByteBuf(i_6);
             Class276.aNode_Sub35_3346.writeBytes(buffer.buffer, buffer.index, i_6);
             buffer.index += i_6;
             context.currentPacket = null;
@@ -2335,7 +2335,7 @@ public class PacketDecoder {
     }
 
     static void decodeTilestreamPacket(UpdateZonePacket packet) {
-        Packet.Bit buffer = client.GAME_CONNECTION_CONTEXT.recievedBuffer;
+        ByteBuf.Bit buffer = client.GAME_CONNECTION_CONTEXT.recievedBuffer;
         if (packet == UpdateZonePacket.GROUND_ITEM_COUNT) {
             int i_3 = buffer.readUnsignedByte();
             CoordGrid coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getBase();

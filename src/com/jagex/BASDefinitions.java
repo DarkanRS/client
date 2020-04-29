@@ -52,7 +52,7 @@ public class BASDefinitions {
     int totalChance;
     Matrix44Var[] matrices;
 
-    void method3808(Packet rsbytebuffer_1, int i_2) {
+    void method3808(ByteBuf rsbytebuffer_1, int i_2) {
         if (i_2 == 1) {
             standAnimation = rsbytebuffer_1.readBigSmart();
             walkAnimation = rsbytebuffer_1.readBigSmart();
@@ -248,7 +248,7 @@ public class BASDefinitions {
         }
     }
 
-    void method3821(Packet rsbytebuffer_1) {
+    void method3821(ByteBuf rsbytebuffer_1) {
         while (true) {
             int i_3 = rsbytebuffer_1.readUnsignedByte();
             if (i_3 == 0) {

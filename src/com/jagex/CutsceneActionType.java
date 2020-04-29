@@ -42,20 +42,20 @@ public class CutsceneActionType {
         anInt4957 = i_2;
     }
 
-    static void decodeWorldList(Packet buffer) {
-        int size = buffer.readUnsignedSmart();
+    static void decodeWorldList(ByteBuf buffer) {
+        int size = buffer.readSmart();
         Class354.WORLDS = new World[size];
         for (int i = 0; i < size; i++) {
             Class354.WORLDS[i] = new World();
-            Class354.WORLDS[i].countryId = buffer.readUnsignedSmart();
+            Class354.WORLDS[i].countryId = buffer.readSmart();
             Class354.WORLDS[i].activity = buffer.readGJString();
         }
-        Class485.WORLD_LIST_START = buffer.readUnsignedSmart();
-        Class244.WORLD_LIST_SIZEPLUS1 = buffer.readUnsignedSmart();
-        Class4.WORLD_LIST_SIZE = buffer.readUnsignedSmart();
+        Class485.WORLD_LIST_START = buffer.readSmart();
+        Class244.WORLD_LIST_SIZEPLUS1 = buffer.readSmart();
+        Class4.WORLD_LIST_SIZE = buffer.readSmart();
         Class244.WORLD_LIST_DESCRIPTORS = new WorldDescriptor[Class244.WORLD_LIST_SIZEPLUS1 - Class485.WORLD_LIST_START + 1];
         for (int i = 0; i < Class4.WORLD_LIST_SIZE; i++) {
-            int id = buffer.readUnsignedSmart();
+            int id = buffer.readSmart();
             WorldDescriptor world = Class244.WORLD_LIST_DESCRIPTORS[id] = new WorldDescriptor();
             world.worldIndex = buffer.readUnsignedByte();
             world.flags = buffer.readInt();
@@ -72,7 +72,7 @@ public class CutsceneActionType {
         class282_sub50_sub12_2.method14965();
     }
 
-    public static Class350 method6915(Packet rsbytebuffer_0) {
+    public static Class350 method6915(ByteBuf rsbytebuffer_0) {
         Class350 class350_2 = Class383.method6512(rsbytebuffer_0);
         int i_3 = rsbytebuffer_0.readInt();
         int i_4 = rsbytebuffer_0.readInt();

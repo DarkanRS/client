@@ -348,50 +348,49 @@ public class RSMesh {
     }
 
     void decodeNewFormat(byte[] data) {
-        Packet buffer1 = new Packet(data);
-        Packet buffer2 = new Packet(data);
-        Packet buffer3 = new Packet(data);
-        Packet buffer4 = new Packet(data);
-        Packet buffer5 = new Packet(data);
-        Packet buffer6 = new Packet(data);
-        Packet buffer7 = new Packet(data);
-        buffer1.index = data.length - 23;
-        vertexCount = buffer1.readUnsignedShort();
-        faceCount = buffer1.readUnsignedShort();
-        texturedFaceCount = buffer1.readUnsignedByte();
-        int i_9 = buffer1.readUnsignedByte();
+        ByteBuf first = new ByteBuf(data);
+        ByteBuf second = new ByteBuf(data);
+        ByteBuf third = new ByteBuf(data);
+        ByteBuf fourth = new ByteBuf(data);
+        ByteBuf fifth = new ByteBuf(data);
+        ByteBuf sixth = new ByteBuf(data);
+        ByteBuf seventh = new ByteBuf(data);
+        first.index = data.length - 23;
+        vertexCount = first.readUnsignedShort();
+        faceCount = first.readUnsignedShort();
+        texturedFaceCount = first.readUnsignedByte();
+        int i_9 = first.readUnsignedByte();
         boolean hasFaceRenderTypes = (i_9 & 0x1) == 1;
         boolean hasParticleEffects = (i_9 & 0x2) == 2;
         boolean hasBillboards = (i_9 & 0x4) == 4;
-        boolean bool_13 = (i_9 & 0x8) == 8;
-        if (bool_13) {
-            buffer1.index -= 7;
-            version = buffer1.readUnsignedByte();
-            buffer1.index += 6;
+        boolean hasVersion = (i_9 & 0x8) == 8;
+        if (hasVersion) {
+            first.index -= 7;
+            version = first.readUnsignedByte();
+            first.index += 6;
         }
 
-        int modelPriority = buffer1.readUnsignedByte();
-        int i_15 = buffer1.readUnsignedByte();
-        int i_16 = buffer1.readUnsignedByte();
-        int i_17 = buffer1.readUnsignedByte();
-        int modelSkins = buffer1.readUnsignedByte();
-        int i_19 = buffer1.readUnsignedShort();
-        int i_20 = buffer1.readUnsignedShort();
-        int i_21 = buffer1.readUnsignedShort();
-        int i_22 = buffer1.readUnsignedShort();
-        int i_23 = buffer1.readUnsignedShort();
-        int textureCount = 0;
+        int modelPriority = first.readUnsignedByte();
+        int hasFaceAlpha = first.readUnsignedByte();
+        int hasFaceSkins = first.readUnsignedByte();
+        int hasFaceTextures = first.readUnsignedByte();
+        int hasVertexSkins = first.readUnsignedByte();
+        int modelVerticesX = first.readUnsignedShort();
+        int modelVerticesY = first.readUnsignedShort();
+        int modelVerticesZ = first.readUnsignedShort();
+        int faceIndices = first.readUnsignedShort();
+        int textureIndices = first.readUnsignedShort();
+        int numVertexSkins = 0;
         int i_25 = 0;
         int i_26 = 0;
-        int i_27;
         if (texturedFaceCount > 0) {
             textureRenderTypes = new byte[texturedFaceCount];
-            buffer1.index = 0;
+            first.index = 0;
 
-            for (i_27 = 0; i_27 < texturedFaceCount; i_27++) {
-                byte b_28 = textureRenderTypes[i_27] = buffer1.readByte();
+            for (int i = 0; i < texturedFaceCount; i++) {
+                byte b_28 = textureRenderTypes[i] = first.readByte();
                 if (b_28 == 0) {
-                    ++textureCount;
+                    ++numVertexSkins;
                 }
 
                 if (b_28 >= 1 && b_28 <= 3) {
@@ -404,57 +403,57 @@ public class RSMesh {
             }
         }
 
-        i_27 = texturedFaceCount;
-        int i_59 = i_27;
-        i_27 += vertexCount;
-        int i_29 = i_27;
+        int totalFaces = texturedFaceCount;
+        int flagBufferOffset = totalFaces;
+        totalFaces += vertexCount;
+        int i_29 = totalFaces;
         if (hasFaceRenderTypes) {
-            i_27 += faceCount;
+            totalFaces += faceCount;
         }
 
-        int i_30 = i_27;
-        i_27 += faceCount;
-        int i_31 = i_27;
+        int i_30 = totalFaces;
+        totalFaces += faceCount;
+        int i_31 = totalFaces;
         if (modelPriority == 255) {
-            i_27 += faceCount;
+            totalFaces += faceCount;
         }
 
-        int i_32 = i_27;
-        if (i_16 == 1) {
-            i_27 += faceCount;
+        int i_32 = totalFaces;
+        if (hasFaceSkins == 1) {
+            totalFaces += faceCount;
         }
 
-        int i_33 = i_27;
-        if (modelSkins == 1) {
-            i_27 += vertexCount;
+        int vertSkinsBufferOffset = totalFaces;
+        if (hasVertexSkins == 1) {
+            totalFaces += vertexCount;
         }
 
-        int i_34 = i_27;
-        if (i_15 == 1) {
-            i_27 += faceCount;
+        int i_34 = totalFaces;
+        if (hasFaceAlpha == 1) {
+            totalFaces += faceCount;
         }
 
-        int i_35 = i_27;
-        i_27 += i_22;
-        int i_36 = i_27;
-        if (i_17 == 1) {
-            i_27 += faceCount * 2;
+        int i_35 = totalFaces;
+        totalFaces += faceIndices;
+        int i_36 = totalFaces;
+        if (hasFaceTextures == 1) {
+            totalFaces += faceCount * 2;
         }
 
-        int i_37 = i_27;
-        i_27 += i_23;
-        int i_38 = i_27;
-        i_27 += faceCount * 2;
-        int i_39 = i_27;
-        i_27 += i_19;
-        int i_40 = i_27;
-        i_27 += i_20;
-        int i_41 = i_27;
-        i_27 += i_21;
-        int simple_tex_pmn_offset = i_27;
-        i_27 += textureCount * 6;
-        int i_43 = i_27;
-        i_27 += i_25 * 6;
+        int i_37 = totalFaces;
+        totalFaces += textureIndices;
+        int i_38 = totalFaces;
+        totalFaces += faceCount * 2;
+        int vertXBufferOffset = totalFaces;
+        totalFaces += modelVerticesX;
+        int vertYBufferOffset = totalFaces;
+        totalFaces += modelVerticesY;
+        int vertZBufferOffset = totalFaces;
+        totalFaces += modelVerticesZ;
+        int simple_tex_pmn_offset = totalFaces;
+        totalFaces += numVertexSkins * 6;
+        int i_43 = totalFaces;
+        totalFaces += i_25 * 6;
         byte b_44 = 6;
         if (version == 14) {
             b_44 = 7;
@@ -462,21 +461,21 @@ public class RSMesh {
             b_44 = 9;
         }
 
-        int i_45 = i_27;
-        i_27 += i_25 * b_44;
-        int i_46 = i_27;
-        i_27 += i_25;
-        int i_47 = i_27;
-        i_27 += i_25;
-        int i_48 = i_27;
-        i_27 = i_26 * 2 + i_27 + i_25;
+        int i_45 = totalFaces;
+        totalFaces += i_25 * b_44;
+        int i_46 = totalFaces;
+        totalFaces += i_25;
+        int i_47 = totalFaces;
+        totalFaces += i_25;
+        int i_48 = totalFaces;
+        totalFaces = i_26 * 2 + totalFaces + i_25;
         vertexX = new int[vertexCount];
         vertexY = new int[vertexCount];
         vertexZ = new int[vertexCount];
         triangleX = new short[faceCount];
         triangleY = new short[faceCount];
         triangleZ = new short[faceCount];
-        if (modelSkins == 1) {
+        if (hasVertexSkins == 1) {
             vertexSkins = new int[vertexCount];
         }
 
@@ -490,19 +489,19 @@ public class RSMesh {
             priority = (byte) modelPriority;
         }
 
-        if (i_15 == 1) {
+        if (hasFaceAlpha == 1) {
             faceAlphas = new byte[faceCount];
         }
 
-        if (i_16 == 1) {
+        if (hasFaceSkins == 1) {
             textureSkins = new int[faceCount];
         }
 
-        if (i_17 == 1) {
+        if (hasFaceTextures == 1) {
             faceTextures = new short[faceCount];
         }
 
-        if (i_17 == 1 && texturedFaceCount > 0) {
+        if (hasFaceTextures == 1 && texturedFaceCount > 0) {
             texturePos = new byte[faceCount];
         }
 
@@ -526,76 +525,76 @@ public class RSMesh {
             }
         }
 
-        buffer1.index = i_59;
-        buffer2.index = i_39;
-        buffer3.index = i_40;
-        buffer4.index = i_41;
-        buffer5.index = i_33;
-        int i_50 = 0;
-        int i_51 = 0;
-        int i_52 = 0;
+        first.index = flagBufferOffset;
+        second.index = vertXBufferOffset;
+        third.index = vertYBufferOffset;
+        fourth.index = vertZBufferOffset;
+        fifth.index = vertSkinsBufferOffset;
+        int baseX = 0;
+        int baseY = 0;
+        int baseZ = 0;
 
-        for (int i_53 = 0; i_53 < vertexCount; i_53++) {
-            int offsetFlags = buffer1.readUnsignedByte();
+        for (int vertex = 0; vertex < vertexCount; vertex++) {
+            int offsetFlags = first.readUnsignedByte();
             int vertextOffsetX = 0;
             if ((offsetFlags & 0x1) != 0) {
-                vertextOffsetX = buffer2.readSignedSmart();
+                vertextOffsetX = second.readUnsignedSmart();
             }
 
             int vertextOffsetY = 0;
             if ((offsetFlags & 0x2) != 0) {
-                vertextOffsetY = buffer3.readSignedSmart();
+                vertextOffsetY = third.readUnsignedSmart();
             }
 
             int vertetxOffsetZ = 0;
             if ((offsetFlags & 0x4) != 0) {
-                vertetxOffsetZ = buffer4.readSignedSmart();
+                vertetxOffsetZ = fourth.readUnsignedSmart();
             }
 
-            vertexX[i_53] = i_50 + vertextOffsetX;
-            vertexY[i_53] = i_51 + vertextOffsetY;
-            vertexZ[i_53] = i_52 + vertetxOffsetZ;
-            i_50 = vertexX[i_53];
-            i_51 = vertexY[i_53];
-            i_52 = vertexZ[i_53];
-            if (modelSkins == 1) {
-                vertexSkins[i_53] = buffer5.readUnsignedByte();
+            vertexX[vertex] = baseX + vertextOffsetX;
+            vertexY[vertex] = baseY + vertextOffsetY;
+            vertexZ[vertex] = baseZ + vertetxOffsetZ;
+            baseX = vertexX[vertex];
+            baseY = vertexY[vertex];
+            baseZ = vertexZ[vertex];
+            if (hasVertexSkins == 1) {
+                vertexSkins[vertex] = fifth.readUnsignedByte();
             }
         }
 
-        buffer1.index = i_38;
-        buffer2.index = i_29;
-        buffer3.index = i_31;
-        buffer4.index = i_34;
-        buffer5.index = i_32;
-        buffer6.index = i_36;
-        buffer7.index = i_37;
+        first.index = i_38;
+        second.index = i_29;
+        third.index = i_31;
+        fourth.index = i_34;
+        fifth.index = i_32;
+        sixth.index = i_36;
+        seventh.index = i_37;
 
         for (int i_53 = 0; i_53 < faceCount; i_53++) {
-            faceColor[i_53] = (short) buffer1.readUnsignedShort();
+            faceColor[i_53] = (short) first.readUnsignedShort();
             if (hasFaceRenderTypes) {
-                faceType[i_53] = buffer2.readByte();
+                faceType[i_53] = second.readByte();
             }
 
             if (modelPriority == 255) {
-                facePriorities[i_53] = buffer3.readByte();
+                facePriorities[i_53] = third.readByte();
             }
 
-            if (i_15 == 1) {
-                faceAlphas[i_53] = buffer4.readByte();
+            if (hasFaceAlpha == 1) {
+                faceAlphas[i_53] = fourth.readByte();
             }
 
-            if (i_16 == 1) {
-                textureSkins[i_53] = buffer5.readUnsignedByte();
+            if (hasFaceSkins == 1) {
+                textureSkins[i_53] = fifth.readUnsignedByte();
             }
 
-            if (i_17 == 1) {
-                faceTextures[i_53] = (short) (buffer6.readUnsignedShort() - 1);
+            if (hasFaceTextures == 1) {
+                faceTextures[i_53] = (short) (sixth.readUnsignedShort() - 1);
             }
 
             if (texturePos != null) {
                 if (faceTextures[i_53] != -1) {
-                    texturePos[i_53] = (byte) (buffer7.readUnsignedByte() - 1);
+                    texturePos[i_53] = (byte) (seventh.readUnsignedByte() - 1);
                 } else {
                     texturePos[i_53] = -1;
                 }
@@ -603,25 +602,25 @@ public class RSMesh {
         }
 
         maxDepth = -1;
-        buffer1.index = i_35;
-        buffer2.index = i_30;
-        calculateMaxDepth(buffer1, buffer2);
-        buffer1.index = simple_tex_pmn_offset;
-        buffer2.index = i_43;
-        buffer3.index = i_45;
-        buffer4.index = i_46;
-        buffer5.index = i_47;
-        buffer6.index = i_48;
-        decodeTexturedTriangles(buffer1, buffer2, buffer3, buffer4, buffer5, buffer6);
-        buffer1.index = i_27;
+        first.index = i_35;
+        second.index = i_30;
+        calculateMaxDepth(first, second);
+        first.index = simple_tex_pmn_offset;
+        second.index = i_43;
+        third.index = i_45;
+        fourth.index = i_46;
+        fifth.index = i_47;
+        sixth.index = i_48;
+        decodeTexturedTriangles(first, second, third, fourth, fifth, sixth);
+        first.index = totalFaces;
         if (hasParticleEffects) {
-            int emitterCount = buffer1.readUnsignedByte();
+            int emitterCount = first.readUnsignedByte();
             if (emitterCount > 0) {
                 particleConfig = new ParticleEmitterConfig[emitterCount];
 
                 for (int i = 0; i < emitterCount; i++) {
-                    int particleId = buffer1.readUnsignedShort();
-                    int faceIdx = buffer1.readUnsignedShort();
+                    int particleId = first.readUnsignedShort();
+                    int faceIdx = first.readUnsignedShort();
                     byte b_60;
                     if (modelPriority == 255) {
                         b_60 = facePriorities[faceIdx];
@@ -633,28 +632,28 @@ public class RSMesh {
                 }
             }
 
-            int surfaceSkinCount = buffer1.readUnsignedByte();
+            int surfaceSkinCount = first.readUnsignedByte();
             if (surfaceSkinCount > 0) {
                 surfaceSkins = new SurfaceSkin[surfaceSkinCount];
 
                 for (int i = 0; i < surfaceSkinCount; i++) {
-                    int x = buffer1.readUnsignedShort();
-                    int y = buffer1.readUnsignedShort();
+                    int x = first.readUnsignedShort();
+                    int y = first.readUnsignedShort();
                     surfaceSkins[i] = new SurfaceSkin(x, y);
                 }
             }
         }
 
         if (hasBillboards) {
-            int i_53 = buffer1.readUnsignedByte();
+            int i_53 = first.readUnsignedByte();
             if (i_53 > 0) {
                 isolatedVertexNormals = new VertexNormal[i_53];
 
                 for (int i = 0; i < i_53; i++) {
-                    int vertextOffsetX = buffer1.readUnsignedShort();
-                    int vertextOffsetY = buffer1.readUnsignedShort();
-                    int vertetxOffsetZ = buffer1.readUnsignedByte();
-                    byte b_58 = buffer1.readByte();
+                    int vertextOffsetX = first.readUnsignedShort();
+                    int vertextOffsetY = first.readUnsignedShort();
+                    int vertetxOffsetZ = first.readUnsignedByte();
+                    byte b_58 = first.readByte();
                     isolatedVertexNormals[i] = new VertexNormal(vertextOffsetX, vertextOffsetY, vertetxOffsetZ, b_58);
                 }
             }
@@ -662,7 +661,7 @@ public class RSMesh {
 
     }
 
-    void calculateMaxDepth(Packet rsbytebuffer_1, Packet rsbytebuffer_2) {
+    void calculateMaxDepth(ByteBuf rsbytebuffer_1, ByteBuf rsbytebuffer_2) {
         short s_3 = 0;
         short s_4 = 0;
         short s_5 = 0;
@@ -671,9 +670,9 @@ public class RSMesh {
         for (int i_7 = 0; i_7 < faceCount; i_7++) {
             int i_8 = rsbytebuffer_2.readUnsignedByte();
             if (i_8 == 1) {
-                s_3 = (short) (rsbytebuffer_1.readSignedSmart() + s_6);
-                s_4 = (short) (rsbytebuffer_1.readSignedSmart() + s_3);
-                s_5 = (short) (rsbytebuffer_1.readSignedSmart() + s_4);
+                s_3 = (short) (rsbytebuffer_1.readUnsignedSmart() + s_6);
+                s_4 = (short) (rsbytebuffer_1.readUnsignedSmart() + s_3);
+                s_5 = (short) (rsbytebuffer_1.readUnsignedSmart() + s_4);
                 s_6 = s_5;
                 triangleX[i_7] = s_3;
                 triangleY[i_7] = s_4;
@@ -693,7 +692,7 @@ public class RSMesh {
 
             if (i_8 == 2) {
                 s_4 = s_5;
-                s_5 = (short) (rsbytebuffer_1.readSignedSmart() + s_6);
+                s_5 = (short) (rsbytebuffer_1.readUnsignedSmart() + s_6);
                 s_6 = s_5;
                 triangleX[i_7] = s_3;
                 triangleY[i_7] = s_4;
@@ -705,7 +704,7 @@ public class RSMesh {
 
             if (i_8 == 3) {
                 s_3 = s_5;
-                s_5 = (short) (rsbytebuffer_1.readSignedSmart() + s_6);
+                s_5 = (short) (rsbytebuffer_1.readUnsignedSmart() + s_6);
                 s_6 = s_5;
                 triangleX[i_7] = s_3;
                 triangleY[i_7] = s_4;
@@ -719,7 +718,7 @@ public class RSMesh {
                 short s_9 = s_3;
                 s_3 = s_4;
                 s_4 = s_9;
-                s_5 = (short) (rsbytebuffer_1.readSignedSmart() + s_6);
+                s_5 = (short) (rsbytebuffer_1.readUnsignedSmart() + s_6);
                 s_6 = s_5;
                 triangleX[i_7] = s_3;
                 triangleY[i_7] = s_9;
@@ -733,7 +732,7 @@ public class RSMesh {
         ++maxDepth;
     }
 
-    void decodeTexturedTriangles(Packet rsbytebuffer_1, Packet rsbytebuffer_2, Packet rsbytebuffer_3, Packet rsbytebuffer_4, Packet rsbytebuffer_5, Packet rsbytebuffer_6) {
+    void decodeTexturedTriangles(ByteBuf rsbytebuffer_1, ByteBuf rsbytebuffer_2, ByteBuf rsbytebuffer_3, ByteBuf rsbytebuffer_4, ByteBuf rsbytebuffer_5, ByteBuf rsbytebuffer_6) {
         for (int i_7 = 0; i_7 < texturedFaceCount; i_7++) {
             int i_8 = textureRenderTypes[i_7] & 0xff;
             if (i_8 == 0) {
@@ -1023,11 +1022,11 @@ public class RSMesh {
     void decodeOldFormat(byte[] bytes_1) {
         boolean bool_2 = false;
         boolean bool_3 = false;
-        Packet rsbytebuffer_4 = new Packet(bytes_1);
-        Packet rsbytebuffer_5 = new Packet(bytes_1);
-        Packet rsbytebuffer_6 = new Packet(bytes_1);
-        Packet rsbytebuffer_7 = new Packet(bytes_1);
-        Packet rsbytebuffer_8 = new Packet(bytes_1);
+        ByteBuf rsbytebuffer_4 = new ByteBuf(bytes_1);
+        ByteBuf rsbytebuffer_5 = new ByteBuf(bytes_1);
+        ByteBuf rsbytebuffer_6 = new ByteBuf(bytes_1);
+        ByteBuf rsbytebuffer_7 = new ByteBuf(bytes_1);
+        ByteBuf rsbytebuffer_8 = new ByteBuf(bytes_1);
         rsbytebuffer_4.index = bytes_1.length - 18;
         vertexCount = rsbytebuffer_4.readUnsignedShort();
         faceCount = rsbytebuffer_4.readUnsignedShort();
@@ -1135,17 +1134,17 @@ public class RSMesh {
             i_36 = rsbytebuffer_4.readUnsignedByte();
             int i_37 = 0;
             if ((i_36 & 0x1) != 0) {
-                i_37 = rsbytebuffer_5.readSignedSmart();
+                i_37 = rsbytebuffer_5.readUnsignedSmart();
             }
 
             int i_38 = 0;
             if ((i_36 & 0x2) != 0) {
-                i_38 = rsbytebuffer_6.readSignedSmart();
+                i_38 = rsbytebuffer_6.readUnsignedSmart();
             }
 
             i_39 = 0;
             if ((i_36 & 0x4) != 0) {
-                i_39 = rsbytebuffer_7.readSignedSmart();
+                i_39 = rsbytebuffer_7.readUnsignedSmart();
             }
 
             vertexX[i_35] = i_32 + i_37;
@@ -1214,9 +1213,9 @@ public class RSMesh {
         for (i_39 = 0; i_39 < faceCount; i_39++) {
             i_40 = rsbytebuffer_5.readUnsignedByte();
             if (i_40 == 1) {
-                s_43 = (short) (rsbytebuffer_4.readSignedSmart() + s_46);
-                s_44 = (short) (rsbytebuffer_4.readSignedSmart() + s_43);
-                s_45 = (short) (rsbytebuffer_4.readSignedSmart() + s_44);
+                s_43 = (short) (rsbytebuffer_4.readUnsignedSmart() + s_46);
+                s_44 = (short) (rsbytebuffer_4.readUnsignedSmart() + s_43);
+                s_45 = (short) (rsbytebuffer_4.readUnsignedSmart() + s_44);
                 s_46 = s_45;
                 triangleX[i_39] = s_43;
                 triangleY[i_39] = s_44;
@@ -1236,7 +1235,7 @@ public class RSMesh {
 
             if (i_40 == 2) {
                 s_44 = s_45;
-                s_45 = (short) (rsbytebuffer_4.readSignedSmart() + s_46);
+                s_45 = (short) (rsbytebuffer_4.readUnsignedSmart() + s_46);
                 s_46 = s_45;
                 triangleX[i_39] = s_43;
                 triangleY[i_39] = s_44;
@@ -1248,7 +1247,7 @@ public class RSMesh {
 
             if (i_40 == 3) {
                 s_43 = s_45;
-                s_45 = (short) (rsbytebuffer_4.readSignedSmart() + s_46);
+                s_45 = (short) (rsbytebuffer_4.readUnsignedSmart() + s_46);
                 s_46 = s_45;
                 triangleX[i_39] = s_43;
                 triangleY[i_39] = s_44;
@@ -1262,7 +1261,7 @@ public class RSMesh {
                 short s_41 = s_43;
                 s_43 = s_44;
                 s_44 = s_41;
-                s_45 = (short) (rsbytebuffer_4.readSignedSmart() + s_46);
+                s_45 = (short) (rsbytebuffer_4.readUnsignedSmart() + s_46);
                 s_46 = s_45;
                 triangleX[i_39] = s_43;
                 triangleY[i_39] = s_41;

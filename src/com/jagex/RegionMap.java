@@ -14,7 +14,7 @@ public class RegionMap {
 
     public static int decodeLandscapeData(LocationIndexLoader objectindexloader_0, byte[] bytes_1, int i_2, int i_3, int i_4, int i_5) {
         int i_7 = 0;
-        Packet rsbytebuffer_8 = new Packet(bytes_1);
+        ByteBuf rsbytebuffer_8 = new ByteBuf(bytes_1);
         int i_9 = -1;
         label56:
         while (true) {
@@ -28,7 +28,7 @@ public class RegionMap {
             while (true) {
                 int i_13;
                 while (!bool_12) {
-                    i_13 = rsbytebuffer_8.readUnsignedSmart();
+                    i_13 = rsbytebuffer_8.readSmart();
                     if (i_13 == 0) {
                         continue label56;
                     }
@@ -48,7 +48,7 @@ public class RegionMap {
                         }
                     }
                 }
-                i_13 = rsbytebuffer_8.readUnsignedSmart();
+                i_13 = rsbytebuffer_8.readSmart();
                 if (i_13 == 0) {
                     break;
                 }

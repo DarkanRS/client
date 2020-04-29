@@ -27,7 +27,7 @@ public class Class301 implements Interface41 {
             int i_8 = 0;
             while (true) {
                 while (i_7 < class283_6.anInt3382) {
-                    Packet rsbytebuffer_9 = new Packet(index_0.getFile(i_4, ints_5[i_8++]));
+                    ByteBuf rsbytebuffer_9 = new ByteBuf(index_0.getFile(i_4, ints_5[i_8++]));
                     int i_10 = rsbytebuffer_9.readInt();
                     int i_11 = rsbytebuffer_9.readUnsignedShort();
                     int i_12 = rsbytebuffer_9.readUnsignedByte();

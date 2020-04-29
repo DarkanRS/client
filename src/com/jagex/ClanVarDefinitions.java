@@ -200,7 +200,7 @@ public class ClanVarDefinitions {
         return Class149_Sub3.aClass467Array9380;
     }
 
-    void method6814(Packet rsbytebuffer_1, int i_2) {
+    void method6814(ByteBuf rsbytebuffer_1, int i_2) {
         if (i_2 == 1) {
             aChar4832 = Utils.cp1252ToChar(rsbytebuffer_1.readByte());
         } else if (i_2 == 3) {
@@ -211,7 +211,7 @@ public class ClanVarDefinitions {
 
     }
 
-    void method6816(Packet rsbytebuffer_1) {
+    void method6816(ByteBuf rsbytebuffer_1) {
         while (true) {
             int i_3 = rsbytebuffer_1.readUnsignedByte();
             if (i_3 == 0) {

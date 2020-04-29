@@ -17,9 +17,9 @@ public class HintTrail {
 
     int[] yLocs;
 
-    public HintTrail(AbstractRenderer graphicalrenderer_1, Packet rsbytebuffer_2, int i_3) {
+    public HintTrail(AbstractRenderer graphicalrenderer_1, ByteBuf rsbytebuffer_2, int i_3) {
         modelId = i_3;
-        length = rsbytebuffer_2.readSignedSmart();
+        length = rsbytebuffer_2.readUnsignedSmart();
         xLocs = new int[length];
         yLocs = new int[length];
         int i_4 = rsbytebuffer_2.readUnsignedShort();

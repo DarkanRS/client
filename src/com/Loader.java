@@ -33,10 +33,11 @@ public class Loader extends Applet implements AppletStub {
     public JFrame clientFrame;
 
     public static void main(String[] arg0) {
-        if (arg0 != null && arg0.length > 0 && arg0[0] != null) {
-            IP_ADDRESS = "127.0.0.1";
-            loadParams();
-        }
+		Runtime.getRuntime().addShutdownHook(new Thread() {
+			public void run() {
+				System.err.println("ayy");
+			}
+		});
         new Loader().doFrame();
     }
 

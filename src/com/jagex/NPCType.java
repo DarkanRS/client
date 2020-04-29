@@ -89,7 +89,7 @@ public class NPCType {
         Renderers.SOFTWARE_RENDERER.ba(2, 0);
     }
 
-    void method6874(Packet rsbytebuffer_1) {
+    void method6874(ByteBuf rsbytebuffer_1) {
         while (true) {
             int i_3 = rsbytebuffer_1.readUnsignedByte();
             if (i_3 == 0) {
@@ -534,7 +534,7 @@ public class NPCType {
         }
     }
 
-    void decode(Packet stream, int opcode) {
+    void decode(ByteBuf stream, int opcode) {
         if (opcode == 1) {
             int i_4 = stream.readUnsignedByte();
             modelIds = new int[i_4];

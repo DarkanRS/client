@@ -4,7 +4,7 @@ public abstract class CutsceneAction {
 
     public int anInt992;
 
-    CutsceneAction(Packet rsbytebuffer_1) {
+    CutsceneAction(ByteBuf rsbytebuffer_1) {
         anInt992 = rsbytebuffer_1.readUnsignedShort();
     }
 

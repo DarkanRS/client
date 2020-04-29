@@ -11,7 +11,7 @@ public class MonoStereoPreference extends Preference {
     }
 
     public static boolean decodeWorldList(byte[] data) {
-        Packet buffer = new Packet(data);
+        ByteBuf buffer = new ByteBuf(data);
         int two = buffer.readUnsignedByte();
         if (two != 2) {
             return false;
@@ -26,7 +26,7 @@ public class MonoStereoPreference extends Preference {
         }
     }
 
-    static void method12696(Packet rsbytebuffer_0) {
+    static void method12696(ByteBuf rsbytebuffer_0) {
         if (rsbytebuffer_0.buffer.length - rsbytebuffer_0.index >= 1) {
             int i_2 = rsbytebuffer_0.readUnsignedByte();
             if (i_2 >= 0 && i_2 <= 1 && rsbytebuffer_0.buffer.length - rsbytebuffer_0.index >= 2) {

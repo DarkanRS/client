@@ -68,7 +68,7 @@ public class ParticleProducer {
         }
 
         Renderers.SOFTWARE_RENDERER.L();
-        Node_Sub20_Sub33.method15411(Renderers.SOFTWARE_RENDERER);
+        MaterialProp21.method15411(Renderers.SOFTWARE_RENDERER);
         i_1 = QuickchatFiller.method1141();
         if (i_1 == -1) {
             i_1 = client.anInt7427;
@@ -225,18 +225,18 @@ public class ParticleProducer {
                         i_26 = (int) (definition.anInt565 + Math.random() * definition.anInt581) << 16 | (int) (definition.anInt551 + Math.random() * definition.anInt584) << 8 | (int) (definition.anInt585 + Math.random() * definition.anInt587) | (int) (definition.anInt588 + Math.random() * definition.anInt590) << 24;
                     }
 
-                    int i_30 = definition.anInt554;
+                    int spriteId = definition.textureId;
                     if (!graphicalrenderer_1.method8406() && !definition.aBool574) {
-                        i_30 = -1;
+                        spriteId = -1;
                     }
 
                     Particle class275_sub1_sub1_sub1_28;
                     if (Class235.anInt2905 != Class235.anInt2902) {
                         class275_sub1_sub1_sub1_28 = Class235.aEntityNode_Sub1_Sub1_Sub1Array2897[Class235.anInt2902];
                         Class235.anInt2902 = Class235.anInt2902 + 1 & 0x3ff;
-                        class275_sub1_sub1_sub1_28.reset(this, i_20, i_21, i_22, i_14, i_15, i_16, i_35, i_24, i_26, i_25, i_30, definition.aBool534);
+                        class275_sub1_sub1_sub1_28.reset(this, i_20, i_21, i_22, i_14, i_15, i_16, i_35, i_24, i_26, i_25, spriteId, definition.aBool534);
                     } else {
-                        class275_sub1_sub1_sub1_28 = new Particle(this, i_20, i_21, i_22, i_14, i_15, i_16, i_35, i_24, i_26, i_25, i_30, definition.aBool534);
+                        class275_sub1_sub1_sub1_28 = new Particle(this, i_20, i_21, i_22, i_14, i_15, i_16, i_35, i_24, i_26, i_25, spriteId, definition.aBool534);
                     }
 
                     if (i_12 > 256) {

@@ -109,7 +109,7 @@ public class CursorIndexLoader {
             class419_3 = new CursorDefintions();
             class419_3.loader = this;
             if (bytes_10 != null) {
-                class419_3.method7024(new Packet(bytes_10));
+                class419_3.method7024(new ByteBuf(bytes_10));
             }
             LRUCache softcache_9 = aClass229_5344;
             synchronized (aClass229_5344) {

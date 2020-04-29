@@ -6,7 +6,7 @@ public class Class175 {
         throw new Error();
     }
 
-    public static QuickChatMessage decodeQuickchatMessage(Packet buffer) {
+    public static QuickChatMessage decodeQuickchatMessage(ByteBuf buffer) {
         QuickChatMessage message = new QuickChatMessage();
         message.qcMessageId = buffer.readUnsignedShort();
         message.qcMessageDefs = IndexLoaders.QUICK_CHAT_MESSAGE_LOADER.getMessageDefinitions(message.qcMessageId);

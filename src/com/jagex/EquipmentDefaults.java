@@ -10,7 +10,7 @@ public class EquipmentDefaults {
 
     public EquipmentDefaults(Index index_1) {
         byte[] bytes_2 = index_1.getFile(DefaultsFile.EQUIPMENT.fileId);
-        decode(new Packet(bytes_2));
+        decode(new ByteBuf(bytes_2));
         if (hidden == null) {
             throw new RuntimeException("");
         }
@@ -43,7 +43,7 @@ public class EquipmentDefaults {
         client.aBool7185 = true;
     }
 
-    void decode(Packet buffer) {
+    void decode(ByteBuf buffer) {
         while (true) {
             int opcode = buffer.readUnsignedByte();
             if (opcode == 0) {

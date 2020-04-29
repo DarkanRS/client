@@ -4,9 +4,9 @@ public class Class66 {
 
     LRUCache aClass229_674 = new LRUCache(256);
     AbstractRenderer_Sub2 aGraphicalRenderer_Sub2_676;
-    Interface22 anInterface22_675;
+    ImageLoader anInterface22_675;
 
-    Class66(AbstractRenderer_Sub2 class505_sub2_1, Interface22 interface22_2) {
+    Class66(AbstractRenderer_Sub2 class505_sub2_1, ImageLoader interface22_2) {
         aGraphicalRenderer_Sub2_676 = class505_sub2_1;
         anInterface22_675 = interface22_2;
     }
@@ -17,10 +17,10 @@ public class Class66 {
         Object object_5 = aClass229_674.get(long_3);
         if (object_5 != null) {
             return (Interface6) object_5;
-        } else if (!anInterface22_675.method139(i_1)) {
+        } else if (!anInterface22_675.loadTexture(i_1)) {
             return null;
         } else {
-            TextureDetails class169_6 = anInterface22_675.method144(i_1);
+            TextureDetails class169_6 = anInterface22_675.getTextureDetails(i_1);
             if (i_21 == -1) {
                 i_21 = class169_6.isHalfSize ? 64 : aGraphicalRenderer_Sub2_676.anInt8821;
             }
@@ -32,7 +32,7 @@ public class Class66 {
             } else {
                 int[] ints_8;
                 if (class169_6.blendType != 2 && Node_Sub41.method13367(class169_6.effectId)) {
-                    ints_8 = anInterface22_675.method140(i_1, 0.7F, i_21, i_21, true);
+                    ints_8 = anInterface22_675.renderTexturePixels(i_1, 0.7F, i_21, i_21, true);
                 } else {
                     ints_8 = anInterface22_675.method141(i_1, i_21, i_21);
                 }

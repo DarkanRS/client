@@ -167,7 +167,7 @@ public class Ground_Sub3 extends Ground {
 
                 i_23 = ints_12[i_22];
                 if (i_23 != -1) {
-                    TextureDetails class169_24 = aGraphicalRenderer_Sub3_9353.anInterface22_5834.method144(i_23);
+                    TextureDetails class169_24 = aGraphicalRenderer_Sub3_9353.textureCache.getTextureDetails(i_23);
                     if (!class169_24.isGroundMesh) {
                         bool_30 = true;
                         if (method14620(class169_24.effectId) || class169_24.textureSpeedU != 0 || class169_24.textureSpeedV != 0) {
@@ -210,7 +210,7 @@ public class Ground_Sub3 extends Ground {
                     class183_25.aShortArray2266[class183_25.aShort2269] = (short) ints_8[i_22];
                     class183_25.aShortArray2273[class183_25.aShort2269] = (short) ints_9[i_22];
                     if (bool_30) {
-                        if (ints_12[i_22] != -1 && !aGraphicalRenderer_Sub3_9353.anInterface22_5834.method144(ints_12[i_22]).isGroundMesh) {
+                        if (ints_12[i_22] != -1 && !aGraphicalRenderer_Sub3_9353.textureCache.getTextureDetails(ints_12[i_22]).isGroundMesh) {
                             class183_25.aShortArray2270[class183_25.aShort2269] = (short) ints_12[i_22];
                             class183_25.aShortArray2275[class183_25.aShort2269] = (short) ints_13[i_22];
                         } else {
@@ -228,7 +228,7 @@ public class Ground_Sub3 extends Ground {
             i_18 = ints_10[0];
             i_19 = ints_12[0];
             if (ints_11 != null) {
-                class178_32.anInt2213 = Node_Sub20_Sub2.method15076(Class372.method6362(ints_11[0]), aByteArrayArray9355[i_1][i_2] - aByteArrayArray9356[i_1][i_2]);
+                class178_32.anInt2213 = MaterialProp20.method15076(Class372.method6362(ints_11[0]), aByteArrayArray9355[i_1][i_2] - aByteArrayArray9356[i_1][i_2]);
                 if (i_18 == -1) {
                     class178_32.aByte2219 |= 0x2;
                 }
@@ -240,7 +240,7 @@ public class Ground_Sub3 extends Ground {
 
             TextureDetails class169_26 = null;
             if (i_19 != -1) {
-                class169_26 = aGraphicalRenderer_Sub3_9353.anInterface22_5834.method144(i_19);
+                class169_26 = aGraphicalRenderer_Sub3_9353.textureCache.getTextureDetails(i_19);
             }
 
             if (class169_26 != null && (class178_32.aByte2219 & 0x2) == 0 && !class169_26.isGroundMesh) {
@@ -254,10 +254,10 @@ public class Ground_Sub3 extends Ground {
                 }
             } else {
                 short s_31 = Class372.method6362(i_18);
-                class178_32.aShort2214 = (short) Node_Sub20_Sub2.method15076(s_31, aByteArrayArray9355[i_1][i_2] - aByteArrayArray9356[i_1][i_2]);
-                class178_32.aShort2217 = (short) Node_Sub20_Sub2.method15076(s_31, aByteArrayArray9355[i_1 + 1][i_2] - aByteArrayArray9356[i_1 + 1][i_2]);
-                class178_32.aShort2216 = (short) Node_Sub20_Sub2.method15076(s_31, aByteArrayArray9355[i_1 + 1][i_2 + 1] - aByteArrayArray9356[i_1 + 1][i_2 + 1]);
-                class178_32.aShort2218 = (short) Node_Sub20_Sub2.method15076(s_31, aByteArrayArray9355[i_1][i_2 + 1] - aByteArrayArray9356[i_1][i_2 + 1]);
+                class178_32.aShort2214 = (short) MaterialProp20.method15076(s_31, aByteArrayArray9355[i_1][i_2] - aByteArrayArray9356[i_1][i_2]);
+                class178_32.aShort2217 = (short) MaterialProp20.method15076(s_31, aByteArrayArray9355[i_1 + 1][i_2] - aByteArrayArray9356[i_1 + 1][i_2]);
+                class178_32.aShort2216 = (short) MaterialProp20.method15076(s_31, aByteArrayArray9355[i_1 + 1][i_2 + 1] - aByteArrayArray9356[i_1 + 1][i_2 + 1]);
+                class178_32.aShort2218 = (short) MaterialProp20.method15076(s_31, aByteArrayArray9355[i_1][i_2 + 1] - aByteArrayArray9356[i_1][i_2 + 1]);
                 class178_32.aShort2215 = -1;
             }
 
@@ -365,7 +365,7 @@ public class Ground_Sub3 extends Ground {
                         }
 
                         i_34 = -16777216;
-                        if (ints_9[i_15] != -1 && method14620(aGraphicalRenderer_Sub3_9353.anInterface22_5834.method144(ints_9[i_15]).effectId)) {
+                        if (ints_9[i_15] != -1 && method14620(aGraphicalRenderer_Sub3_9353.textureCache.getTextureDetails(ints_9[i_15]).effectId)) {
                             i_34 = -1694498816;
                         }
 
@@ -479,7 +479,7 @@ public class Ground_Sub3 extends Ground {
                         class177_30.aByte2210 |= 0x1;
                     }
 
-                    if (i_21 != -1 && (class177_30.aByte2210 & 0x2) == 0 && !aGraphicalRenderer_Sub3_9353.anInterface22_5834.method144(i_21).isGroundMesh) {
+                    if (i_21 != -1 && (class177_30.aByte2210 & 0x2) == 0 && !aGraphicalRenderer_Sub3_9353.textureCache.getTextureDetails(i_21).isGroundMesh) {
                         if (ints_6 != null && class90_11.scale != 0) {
                             i_22 = ints_6[i_15] * 255 / class90_11.scale;
                             if (i_22 < 0) {
@@ -690,7 +690,7 @@ public class Ground_Sub3 extends Ground {
                     boolean bool_33 = false;
 
                     for (i_21 = 0; i_21 < class196_38.aShort2415; i_21++) {
-                        if (ints_9[i_21 * 3] != -1 && !aGraphicalRenderer_Sub3_9353.anInterface22_5834.method144(ints_9[i_21 * 3]).isGroundMesh) {
+                        if (ints_9[i_21 * 3] != -1 && !aGraphicalRenderer_Sub3_9353.textureCache.getTextureDetails(ints_9[i_21 * 3]).isGroundMesh) {
                             bool_33 = true;
                         }
                     }
@@ -716,21 +716,21 @@ public class Ground_Sub3 extends Ground {
                             boolean bool_36 = false;
                             boolean bool_37 = true;
                             i_27 = ints_9[i_22];
-                            if (i_27 != -1 && !aGraphicalRenderer_Sub3_9353.anInterface22_5834.method144(i_27).isGroundMesh) {
+                            if (i_27 != -1 && !aGraphicalRenderer_Sub3_9353.textureCache.getTextureDetails(i_27).isGroundMesh) {
                                 bool_36 = true;
                             } else {
                                 bool_37 = false;
                             }
 
                             i_27 = ints_9[i_34];
-                            if (i_27 != -1 && !aGraphicalRenderer_Sub3_9353.anInterface22_5834.method144(i_27).isGroundMesh) {
+                            if (i_27 != -1 && !aGraphicalRenderer_Sub3_9353.textureCache.getTextureDetails(i_27).isGroundMesh) {
                                 bool_36 = true;
                             } else {
                                 bool_37 = false;
                             }
 
                             i_27 = ints_9[i_24];
-                            if (i_27 != -1 && !aGraphicalRenderer_Sub3_9353.anInterface22_5834.method144(i_27).isGroundMesh) {
+                            if (i_27 != -1 && !aGraphicalRenderer_Sub3_9353.textureCache.getTextureDetails(i_27).isGroundMesh) {
                                 bool_36 = true;
                             } else {
                                 bool_37 = false;
@@ -742,18 +742,18 @@ public class Ground_Sub3 extends Ground {
                             } else {
                                 if (bool_36) {
                                     i_27 = ints_9[i_22];
-                                    if (i_27 != -1 && !aGraphicalRenderer_Sub3_9353.anInterface22_5834.method144(i_27).isGroundMesh) {
-                                        class196_38.anIntArray2420[i_22] = Class335.anIntArray3916[Class372.method6362(aGraphicalRenderer_Sub3_9353.anInterface22_5834.method144(i_27).color & 0xffff) & 0xffff];
+                                    if (i_27 != -1 && !aGraphicalRenderer_Sub3_9353.textureCache.getTextureDetails(i_27).isGroundMesh) {
+                                        class196_38.anIntArray2420[i_22] = Class335.anIntArray3916[Class372.method6362(aGraphicalRenderer_Sub3_9353.textureCache.getTextureDetails(i_27).color & 0xffff) & 0xffff];
                                     }
 
                                     i_27 = ints_9[i_34];
-                                    if (i_27 != -1 && !aGraphicalRenderer_Sub3_9353.anInterface22_5834.method144(i_27).isGroundMesh) {
-                                        class196_38.anIntArray2420[i_34] = Class335.anIntArray3916[Class372.method6362(aGraphicalRenderer_Sub3_9353.anInterface22_5834.method144(i_27).color & 0xffff) & 0xffff];
+                                    if (i_27 != -1 && !aGraphicalRenderer_Sub3_9353.textureCache.getTextureDetails(i_27).isGroundMesh) {
+                                        class196_38.anIntArray2420[i_34] = Class335.anIntArray3916[Class372.method6362(aGraphicalRenderer_Sub3_9353.textureCache.getTextureDetails(i_27).color & 0xffff) & 0xffff];
                                     }
 
                                     i_27 = ints_9[i_24];
-                                    if (i_27 != -1 && !aGraphicalRenderer_Sub3_9353.anInterface22_5834.method144(i_27).isGroundMesh) {
-                                        class196_38.anIntArray2420[i_24] = Class335.anIntArray3916[Class372.method6362(aGraphicalRenderer_Sub3_9353.anInterface22_5834.method144(i_27).color & 0xffff) & 0xffff];
+                                    if (i_27 != -1 && !aGraphicalRenderer_Sub3_9353.textureCache.getTextureDetails(i_27).isGroundMesh) {
+                                        class196_38.anIntArray2420[i_24] = Class335.anIntArray3916[Class372.method6362(aGraphicalRenderer_Sub3_9353.textureCache.getTextureDetails(i_27).color & 0xffff) & 0xffff];
                                     }
                                 }
 
@@ -1060,7 +1060,7 @@ public class Ground_Sub3 extends Ground {
                     f_36 = choppyitemfixclass_5.aFloat1680 + choppyitemfixclass_5.aFloat1702 * f_52 / f_24;
                 }
 
-                boolean bool_59 = class177_12.aShort2212 != -1 && method14620(aGraphicalRenderer_Sub3_9353.anInterface22_5834.method144(class177_12.aShort2212).effectId);
+                boolean bool_59 = class177_12.aShort2212 != -1 && method14620(aGraphicalRenderer_Sub3_9353.textureCache.getTextureDetails(class177_12.aShort2212).effectId);
                 f_60 = f_18 + f_19 + f_20;
                 if ((f_33 - f_35) * (f_32 - f_36) - (f_34 - f_36) * (f_31 - f_35) > 0.0F) {
                     choppyitemfixclass_5.aBool1708 = f_33 < 0.0F || f_35 < 0.0F || f_31 < 0.0F || f_33 > choppyitemfixclass_5.anInt1684 || f_35 > choppyitemfixclass_5.anInt1684 || f_31 > choppyitemfixclass_5.anInt1684;
@@ -1223,13 +1223,13 @@ public class Ground_Sub3 extends Ground {
                                 if (f_24 > 0.0F) {
                                     if (s_57 != -1) {
                                         i_58 = -16777216;
-                                        if (s_57 != -1 && method14620(aGraphicalRenderer_Sub3_9353.anInterface22_5834.method144(s_57).effectId)) {
+                                        if (s_57 != -1 && method14620(aGraphicalRenderer_Sub3_9353.textureCache.getTextureDetails(s_57).effectId)) {
                                             i_58 = -1694498816;
                                         }
 
                                         choppyitemfixclass_5.method2424(true, true, false, f_21, f_22, f_23, f_18, f_19, f_20, floats_8[i_15], floats_8[i_16], floats_8[i_55], floats_9[i_15], floats_9[i_16], floats_9[i_55], (float) class196_54.aShortArray2416[i_15] / tileUnits, (float) class196_54.aShortArray2416[i_16] / tileUnits, (float) class196_54.aShortArray2416[i_55] / tileUnits, (float) class196_54.aShortArray2418[i_15] / tileUnits, (float) class196_54.aShortArray2418[i_16] / tileUnits, (float) class196_54.aShortArray2418[i_55] / tileUnits, i_58 | class196_54.anIntArray2420[i_15] & 0xffffff, i_58 | class196_54.anIntArray2420[i_16] & 0xffffff, i_58 | class196_54.anIntArray2420[i_55] & 0xffffff, class185_4.anInt2307, floats_10[i_15] * 255.0F, floats_10[i_16] * 255.0F, floats_10[i_55] * 255.0F, s_57);
                                     } else if ((class196_54.anIntArray2420[i_15] & 0xffffff) != 0) {
-                                        if (s_57 != -1 && method14620(aGraphicalRenderer_Sub3_9353.anInterface22_5834.method144(s_57).effectId)) {
+                                        if (s_57 != -1 && method14620(aGraphicalRenderer_Sub3_9353.textureCache.getTextureDetails(s_57).effectId)) {
                                             choppyitemfixclass_5.anInt1674 = -1694498816;
                                         }
 
@@ -1238,13 +1238,13 @@ public class Ground_Sub3 extends Ground {
                                     }
                                 } else if (s_57 != -1) {
                                     i_58 = -16777216;
-                                    if (s_57 != -1 && method14620(aGraphicalRenderer_Sub3_9353.anInterface22_5834.method144(s_57).effectId)) {
+                                    if (s_57 != -1 && method14620(aGraphicalRenderer_Sub3_9353.textureCache.getTextureDetails(s_57).effectId)) {
                                         i_58 = -1694498816;
                                     }
 
                                     choppyitemfixclass_5.method2424(true, true, false, f_21, f_22, f_23, f_18, f_19, f_20, floats_8[i_15], floats_8[i_16], floats_8[i_55], floats_9[i_15], floats_9[i_16], floats_9[i_55], (float) class196_54.aShortArray2416[i_15] / tileUnits, (float) class196_54.aShortArray2416[i_16] / tileUnits, (float) class196_54.aShortArray2416[i_55] / tileUnits, (float) class196_54.aShortArray2418[i_15] / tileUnits, (float) class196_54.aShortArray2418[i_16] / tileUnits, (float) class196_54.aShortArray2418[i_55] / tileUnits, i_58 | class196_54.anIntArray2420[i_15] & 0xffffff, i_58 | class196_54.anIntArray2420[i_16] & 0xffffff, i_58 | class196_54.anIntArray2420[i_55] & 0xffffff, 0, 0.0F, 0.0F, 0.0F, s_57);
                                 } else if ((class196_54.anIntArray2420[i_15] & 0xffffff) != 0) {
-                                    if (s_57 != -1 && method14620(aGraphicalRenderer_Sub3_9353.anInterface22_5834.method144(s_57).effectId)) {
+                                    if (s_57 != -1 && method14620(aGraphicalRenderer_Sub3_9353.textureCache.getTextureDetails(s_57).effectId)) {
                                         choppyitemfixclass_5.anInt1674 = -1694498816;
                                     }
 
@@ -1360,8 +1360,8 @@ public class Ground_Sub3 extends Ground {
                             Class177 class177_33 = aClass177ArrayArray9336[i_18][i_19];
                             if (class177_33.aShort2212 != -1 && (class177_33.aByte2210 & 0x2) == 0 && class177_33.anInt2203 == 0) {
                                 i_21 = aGraphicalRenderer_Sub3_9353.method14362(class177_33.aShort2212);
-                                choppyitemfixclass_10.method2426(true, true, false, (i_17 - i_14), (i_17 - i_14), i_17, (i_16 + i_14), i_16, (i_16 + i_14), 100.0F, 100.0F, 100.0F, Node_Sub20_Sub2.method15076(i_21, class177_33.anInt2211), Node_Sub20_Sub2.method15076(i_21, class177_33.anInt2206), Node_Sub20_Sub2.method15076(i_21, class177_33.anInt2204));
-                                choppyitemfixclass_10.method2426(true, true, false, i_17, i_17, (i_17 - i_14), i_16, (i_16 + i_14), i_16, 100.0F, 100.0F, 100.0F, Node_Sub20_Sub2.method15076(i_21, class177_33.anInt2209), Node_Sub20_Sub2.method15076(i_21, class177_33.anInt2204), Node_Sub20_Sub2.method15076(i_21, class177_33.anInt2206));
+                                choppyitemfixclass_10.method2426(true, true, false, (i_17 - i_14), (i_17 - i_14), i_17, (i_16 + i_14), i_16, (i_16 + i_14), 100.0F, 100.0F, 100.0F, MaterialProp20.method15076(i_21, class177_33.anInt2211), MaterialProp20.method15076(i_21, class177_33.anInt2206), MaterialProp20.method15076(i_21, class177_33.anInt2204));
+                                choppyitemfixclass_10.method2426(true, true, false, i_17, i_17, (i_17 - i_14), i_16, (i_16 + i_14), i_16, 100.0F, 100.0F, 100.0F, MaterialProp20.method15076(i_21, class177_33.anInt2209), MaterialProp20.method15076(i_21, class177_33.anInt2204), MaterialProp20.method15076(i_21, class177_33.anInt2206));
                             } else if (class177_33.anInt2203 == 0) {
                                 choppyitemfixclass_10.method2425(true, true, false, (i_17 - i_14), (i_17 - i_14), i_17, (i_16 + i_14), i_16, (i_16 + i_14), 100.0F, 100.0F, 100.0F, class177_33.anInt2211, class177_33.anInt2206, class177_33.anInt2204);
                                 choppyitemfixclass_10.method2425(true, true, false, i_17, i_17, (i_17 - i_14), i_16, (i_16 + i_14), i_16, 100.0F, 100.0F, 100.0F, class177_33.anInt2209, class177_33.anInt2204, class177_33.anInt2206);
@@ -1547,8 +1547,8 @@ public class Ground_Sub3 extends Ground {
                         Class178 class178_32 = aClass178ArrayArray9352[i_18][i_19];
                         if (class178_32.aShort2215 != -1 && (class178_32.aByte2219 & 0x2) == 0 && class178_32.anInt2213 == -1) {
                             i_21 = aGraphicalRenderer_Sub3_9353.method14362(class178_32.aShort2215);
-                            choppyitemfixclass_10.method2426(true, true, false, (i_17 - i_14), (i_17 - i_14), i_17, (i_16 + i_14), i_16, (i_16 + i_14), 100.0F, 100.0F, 100.0F, Node_Sub20_Sub2.method15076(i_21, class178_32.aShort2216 & 0xffff), Node_Sub20_Sub2.method15076(i_21, class178_32.aShort2218 & 0xffff), Node_Sub20_Sub2.method15076(i_21, class178_32.aShort2217 & 0xffff));
-                            choppyitemfixclass_10.method2426(true, true, false, i_17, i_17, (i_17 - i_14), i_16, (i_16 + i_14), i_16, 100.0F, 100.0F, 100.0F, Node_Sub20_Sub2.method15076(i_21, class178_32.aShort2214 & 0xffff), Node_Sub20_Sub2.method15076(i_21, class178_32.aShort2217 & 0xffff), Node_Sub20_Sub2.method15076(i_21, class178_32.aShort2218 & 0xffff));
+                            choppyitemfixclass_10.method2426(true, true, false, (i_17 - i_14), (i_17 - i_14), i_17, (i_16 + i_14), i_16, (i_16 + i_14), 100.0F, 100.0F, 100.0F, MaterialProp20.method15076(i_21, class178_32.aShort2216 & 0xffff), MaterialProp20.method15076(i_21, class178_32.aShort2218 & 0xffff), MaterialProp20.method15076(i_21, class178_32.aShort2217 & 0xffff));
+                            choppyitemfixclass_10.method2426(true, true, false, i_17, i_17, (i_17 - i_14), i_16, (i_16 + i_14), i_16, 100.0F, 100.0F, 100.0F, MaterialProp20.method15076(i_21, class178_32.aShort2214 & 0xffff), MaterialProp20.method15076(i_21, class178_32.aShort2217 & 0xffff), MaterialProp20.method15076(i_21, class178_32.aShort2218 & 0xffff));
                         } else if (class178_32.anInt2213 == -1) {
                             choppyitemfixclass_10.method2426(true, true, false, (i_17 - i_14), (i_17 - i_14), i_17, (i_16 + i_14), i_16, (i_16 + i_14), 100.0F, 100.0F, 100.0F, (class178_32.aShort2216 & 0xffff), (class178_32.aShort2218 & 0xffff), (class178_32.aShort2217 & 0xffff));
                             choppyitemfixclass_10.method2426(true, true, false, i_17, i_17, (i_17 - i_14), i_16, (i_16 + i_14), i_16, 100.0F, 100.0F, 100.0F, (class178_32.aShort2214 & 0xffff), (class178_32.aShort2217 & 0xffff), (class178_32.aShort2218 & 0xffff));
@@ -1578,13 +1578,13 @@ public class Ground_Sub3 extends Ground {
                             int i_31;
                             if (class183_20.anIntArray2277 != null && class183_20.anIntArray2277[i_21] != -1) {
                                 i_31 = class183_20.anIntArray2277[i_21];
-                                choppyitemfixclass_10.method2426(true, true, false, f_28, f_29, f_30, f_25, f_26, f_27, 100.0F, 100.0F, 100.0F, Node_Sub20_Sub2.method15076(i_31, class183_20.aShortArray2274[s_22]), Node_Sub20_Sub2.method15076(i_31, class183_20.aShortArray2274[s_23]), Node_Sub20_Sub2.method15076(i_31, class183_20.aShortArray2274[s_24]));
+                                choppyitemfixclass_10.method2426(true, true, false, f_28, f_29, f_30, f_25, f_26, f_27, 100.0F, 100.0F, 100.0F, MaterialProp20.method15076(i_31, class183_20.aShortArray2274[s_22]), MaterialProp20.method15076(i_31, class183_20.aShortArray2274[s_23]), MaterialProp20.method15076(i_31, class183_20.aShortArray2274[s_24]));
                             } else if (class183_20.aShortArray2270 != null && class183_20.aShortArray2270[i_21] != -1) {
                                 i_31 = aGraphicalRenderer_Sub3_9353.method14362(class183_20.aShortArray2270[i_21]);
-                                choppyitemfixclass_10.method2426(true, true, false, f_28, f_29, f_30, f_25, f_26, f_27, 100.0F, 100.0F, 100.0F, Node_Sub20_Sub2.method15076(i_31, class183_20.aShortArray2274[s_22]), Node_Sub20_Sub2.method15076(i_31, class183_20.aShortArray2274[s_23]), Node_Sub20_Sub2.method15076(i_31, class183_20.aShortArray2274[s_24]));
+                                choppyitemfixclass_10.method2426(true, true, false, f_28, f_29, f_30, f_25, f_26, f_27, 100.0F, 100.0F, 100.0F, MaterialProp20.method15076(i_31, class183_20.aShortArray2274[s_22]), MaterialProp20.method15076(i_31, class183_20.aShortArray2274[s_23]), MaterialProp20.method15076(i_31, class183_20.aShortArray2274[s_24]));
                             } else {
                                 i_31 = class183_20.anIntArray2272[i_21];
-                                choppyitemfixclass_10.method2426(true, true, false, f_28, f_29, f_30, f_25, f_26, f_27, 100.0F, 100.0F, 100.0F, Node_Sub20_Sub2.method15076(i_31, class183_20.aShortArray2274[s_22]), Node_Sub20_Sub2.method15076(i_31, class183_20.aShortArray2274[s_23]), Node_Sub20_Sub2.method15076(i_31, class183_20.aShortArray2274[s_24]));
+                                choppyitemfixclass_10.method2426(true, true, false, f_28, f_29, f_30, f_25, f_26, f_27, 100.0F, 100.0F, 100.0F, MaterialProp20.method15076(i_31, class183_20.aShortArray2274[s_22]), MaterialProp20.method15076(i_31, class183_20.aShortArray2274[s_23]), MaterialProp20.method15076(i_31, class183_20.aShortArray2274[s_24]));
                             }
                         }
                     }
@@ -1769,7 +1769,7 @@ public class Ground_Sub3 extends Ground {
                         }
 
                         i_34 = -16777216;
-                        if (ints_9[i_15] != -1 && method14620(aGraphicalRenderer_Sub3_9353.anInterface22_5834.method144(ints_9[i_15]).effectId)) {
+                        if (ints_9[i_15] != -1 && method14620(aGraphicalRenderer_Sub3_9353.textureCache.getTextureDetails(ints_9[i_15]).effectId)) {
                             i_34 = -1694498816;
                         }
 
@@ -1883,7 +1883,7 @@ public class Ground_Sub3 extends Ground {
                         class177_30.aByte2210 |= 0x1;
                     }
 
-                    if (i_21 != -1 && (class177_30.aByte2210 & 0x2) == 0 && !aGraphicalRenderer_Sub3_9353.anInterface22_5834.method144(i_21).isGroundMesh) {
+                    if (i_21 != -1 && (class177_30.aByte2210 & 0x2) == 0 && !aGraphicalRenderer_Sub3_9353.textureCache.getTextureDetails(i_21).isGroundMesh) {
                         if (ints_6 != null && class90_11.scale != 0) {
                             i_22 = 255 * ints_6[i_15] / (class90_11.scale);
                             if (i_22 < 0) {
@@ -2094,7 +2094,7 @@ public class Ground_Sub3 extends Ground {
                     boolean bool_33 = false;
 
                     for (i_21 = 0; i_21 < class196_38.aShort2415; i_21++) {
-                        if (ints_9[i_21 * 3] != -1 && !aGraphicalRenderer_Sub3_9353.anInterface22_5834.method144(ints_9[i_21 * 3]).isGroundMesh) {
+                        if (ints_9[i_21 * 3] != -1 && !aGraphicalRenderer_Sub3_9353.textureCache.getTextureDetails(ints_9[i_21 * 3]).isGroundMesh) {
                             bool_33 = true;
                         }
                     }
@@ -2120,21 +2120,21 @@ public class Ground_Sub3 extends Ground {
                             boolean bool_36 = false;
                             boolean bool_37 = true;
                             i_27 = ints_9[i_22];
-                            if (i_27 != -1 && !aGraphicalRenderer_Sub3_9353.anInterface22_5834.method144(i_27).isGroundMesh) {
+                            if (i_27 != -1 && !aGraphicalRenderer_Sub3_9353.textureCache.getTextureDetails(i_27).isGroundMesh) {
                                 bool_36 = true;
                             } else {
                                 bool_37 = false;
                             }
 
                             i_27 = ints_9[i_34];
-                            if (i_27 != -1 && !aGraphicalRenderer_Sub3_9353.anInterface22_5834.method144(i_27).isGroundMesh) {
+                            if (i_27 != -1 && !aGraphicalRenderer_Sub3_9353.textureCache.getTextureDetails(i_27).isGroundMesh) {
                                 bool_36 = true;
                             } else {
                                 bool_37 = false;
                             }
 
                             i_27 = ints_9[i_24];
-                            if (i_27 != -1 && !aGraphicalRenderer_Sub3_9353.anInterface22_5834.method144(i_27).isGroundMesh) {
+                            if (i_27 != -1 && !aGraphicalRenderer_Sub3_9353.textureCache.getTextureDetails(i_27).isGroundMesh) {
                                 bool_36 = true;
                             } else {
                                 bool_37 = false;
@@ -2146,18 +2146,18 @@ public class Ground_Sub3 extends Ground {
                             } else {
                                 if (bool_36) {
                                     i_27 = ints_9[i_22];
-                                    if (i_27 != -1 && !aGraphicalRenderer_Sub3_9353.anInterface22_5834.method144(i_27).isGroundMesh) {
-                                        class196_38.anIntArray2420[i_22] = Class335.anIntArray3916[Class372.method6362(aGraphicalRenderer_Sub3_9353.anInterface22_5834.method144(i_27).color & 0xffff) & 0xffff];
+                                    if (i_27 != -1 && !aGraphicalRenderer_Sub3_9353.textureCache.getTextureDetails(i_27).isGroundMesh) {
+                                        class196_38.anIntArray2420[i_22] = Class335.anIntArray3916[Class372.method6362(aGraphicalRenderer_Sub3_9353.textureCache.getTextureDetails(i_27).color & 0xffff) & 0xffff];
                                     }
 
                                     i_27 = ints_9[i_34];
-                                    if (i_27 != -1 && !aGraphicalRenderer_Sub3_9353.anInterface22_5834.method144(i_27).isGroundMesh) {
-                                        class196_38.anIntArray2420[i_34] = Class335.anIntArray3916[Class372.method6362(aGraphicalRenderer_Sub3_9353.anInterface22_5834.method144(i_27).color & 0xffff) & 0xffff];
+                                    if (i_27 != -1 && !aGraphicalRenderer_Sub3_9353.textureCache.getTextureDetails(i_27).isGroundMesh) {
+                                        class196_38.anIntArray2420[i_34] = Class335.anIntArray3916[Class372.method6362(aGraphicalRenderer_Sub3_9353.textureCache.getTextureDetails(i_27).color & 0xffff) & 0xffff];
                                     }
 
                                     i_27 = ints_9[i_24];
-                                    if (i_27 != -1 && !aGraphicalRenderer_Sub3_9353.anInterface22_5834.method144(i_27).isGroundMesh) {
-                                        class196_38.anIntArray2420[i_24] = Class335.anIntArray3916[Class372.method6362(aGraphicalRenderer_Sub3_9353.anInterface22_5834.method144(i_27).color & 0xffff) & 0xffff];
+                                    if (i_27 != -1 && !aGraphicalRenderer_Sub3_9353.textureCache.getTextureDetails(i_27).isGroundMesh) {
+                                        class196_38.anIntArray2420[i_24] = Class335.anIntArray3916[Class372.method6362(aGraphicalRenderer_Sub3_9353.textureCache.getTextureDetails(i_27).color & 0xffff) & 0xffff];
                                     }
                                 }
 
@@ -2308,7 +2308,7 @@ public class Ground_Sub3 extends Ground {
 
                 i_23 = ints_12[i_22];
                 if (i_23 != -1) {
-                    TextureDetails class169_24 = aGraphicalRenderer_Sub3_9353.anInterface22_5834.method144(i_23);
+                    TextureDetails class169_24 = aGraphicalRenderer_Sub3_9353.textureCache.getTextureDetails(i_23);
                     if (!class169_24.isGroundMesh) {
                         bool_30 = true;
                         if (method14620(class169_24.effectId) || class169_24.textureSpeedU != 0 || class169_24.textureSpeedV != 0) {
@@ -2351,7 +2351,7 @@ public class Ground_Sub3 extends Ground {
                     class183_25.aShortArray2266[class183_25.aShort2269] = (short) ints_8[i_22];
                     class183_25.aShortArray2273[class183_25.aShort2269] = (short) ints_9[i_22];
                     if (bool_30) {
-                        if (ints_12[i_22] != -1 && !aGraphicalRenderer_Sub3_9353.anInterface22_5834.method144(ints_12[i_22]).isGroundMesh) {
+                        if (ints_12[i_22] != -1 && !aGraphicalRenderer_Sub3_9353.textureCache.getTextureDetails(ints_12[i_22]).isGroundMesh) {
                             class183_25.aShortArray2270[class183_25.aShort2269] = (short) ints_12[i_22];
                             class183_25.aShortArray2275[class183_25.aShort2269] = (short) ints_13[i_22];
                         } else {
@@ -2369,7 +2369,7 @@ public class Ground_Sub3 extends Ground {
             i_18 = ints_10[0];
             i_19 = ints_12[0];
             if (ints_11 != null) {
-                class178_32.anInt2213 = Node_Sub20_Sub2.method15076(Class372.method6362(ints_11[0]), aByteArrayArray9355[i_1][i_2] - aByteArrayArray9356[i_1][i_2]);
+                class178_32.anInt2213 = MaterialProp20.method15076(Class372.method6362(ints_11[0]), aByteArrayArray9355[i_1][i_2] - aByteArrayArray9356[i_1][i_2]);
                 if (i_18 == -1) {
                     class178_32.aByte2219 |= 0x2;
                 }
@@ -2381,7 +2381,7 @@ public class Ground_Sub3 extends Ground {
 
             TextureDetails class169_26 = null;
             if (i_19 != -1) {
-                class169_26 = aGraphicalRenderer_Sub3_9353.anInterface22_5834.method144(i_19);
+                class169_26 = aGraphicalRenderer_Sub3_9353.textureCache.getTextureDetails(i_19);
             }
 
             if (class169_26 != null && (class178_32.aByte2219 & 0x2) == 0 && !class169_26.isGroundMesh) {
@@ -2395,10 +2395,10 @@ public class Ground_Sub3 extends Ground {
                 }
             } else {
                 short s_31 = Class372.method6362(i_18);
-                class178_32.aShort2214 = (short) Node_Sub20_Sub2.method15076(s_31, aByteArrayArray9355[i_1][i_2] - aByteArrayArray9356[i_1][i_2]);
-                class178_32.aShort2217 = (short) Node_Sub20_Sub2.method15076(s_31, aByteArrayArray9355[i_1 + 1][i_2] - aByteArrayArray9356[i_1 + 1][i_2]);
-                class178_32.aShort2216 = (short) Node_Sub20_Sub2.method15076(s_31, aByteArrayArray9355[i_1 + 1][i_2 + 1] - aByteArrayArray9356[i_1 + 1][i_2 + 1]);
-                class178_32.aShort2218 = (short) Node_Sub20_Sub2.method15076(s_31, aByteArrayArray9355[i_1][i_2 + 1] - aByteArrayArray9356[i_1][i_2 + 1]);
+                class178_32.aShort2214 = (short) MaterialProp20.method15076(s_31, aByteArrayArray9355[i_1][i_2] - aByteArrayArray9356[i_1][i_2]);
+                class178_32.aShort2217 = (short) MaterialProp20.method15076(s_31, aByteArrayArray9355[i_1 + 1][i_2] - aByteArrayArray9356[i_1 + 1][i_2]);
+                class178_32.aShort2216 = (short) MaterialProp20.method15076(s_31, aByteArrayArray9355[i_1 + 1][i_2 + 1] - aByteArrayArray9356[i_1 + 1][i_2 + 1]);
+                class178_32.aShort2218 = (short) MaterialProp20.method15076(s_31, aByteArrayArray9355[i_1][i_2 + 1] - aByteArrayArray9356[i_1][i_2 + 1]);
                 class178_32.aShort2215 = -1;
             }
 
@@ -2637,7 +2637,7 @@ public class Ground_Sub3 extends Ground {
                             } else {
                                 int i_55 = class183_48.anIntArray2272[i_12];
                                 if (i_55 != -1) {
-                                    choppyitemfixclass_3.method2426(true, true, false, f_19, f_20, f_21, f_16, f_17, f_18, floats_6[s_49], floats_6[s_50], floats_6[s_52], Node_Sub20_Sub2.method15076(i_55, class183_48.aShortArray2274[s_49]), Node_Sub20_Sub2.method15076(i_55, class183_48.aShortArray2274[s_50]), Node_Sub20_Sub2.method15076(i_55, class183_48.aShortArray2274[s_52]));
+                                    choppyitemfixclass_3.method2426(true, true, false, f_19, f_20, f_21, f_16, f_17, f_18, floats_6[s_49], floats_6[s_50], floats_6[s_52], MaterialProp20.method15076(i_55, class183_48.aShortArray2274[s_49]), MaterialProp20.method15076(i_55, class183_48.aShortArray2274[s_50]), MaterialProp20.method15076(i_55, class183_48.aShortArray2274[s_52]));
                                 }
                             }
                         }
@@ -2657,7 +2657,7 @@ public class Ground_Sub3 extends Ground {
                             int i_54 = class183_48.anIntArray2272[i_12];
                             if (i_54 != -1) {
                                 choppyitemfixclass_3.aBool1708 = f_16 < 0.0F || f_17 < 0.0F || f_18 < 0.0F || f_16 > choppyitemfixclass_3.anInt1684 || f_17 > choppyitemfixclass_3.anInt1684 || f_18 > choppyitemfixclass_3.anInt1684;
-                                choppyitemfixclass_3.method2426(true, true, false, f_19, f_20, f_21, f_16, f_17, f_18, floats_6[s_49], floats_6[s_50], floats_6[s_52], Node_Sub20_Sub2.method15076(i_54, class183_48.aShortArray2274[s_49]), Node_Sub20_Sub2.method15076(i_54, class183_48.aShortArray2274[s_50]), Node_Sub20_Sub2.method15076(i_54, class183_48.aShortArray2274[s_52]));
+                                choppyitemfixclass_3.method2426(true, true, false, f_19, f_20, f_21, f_16, f_17, f_18, floats_6[s_49], floats_6[s_50], floats_6[s_52], MaterialProp20.method15076(i_54, class183_48.aShortArray2274[s_49]), MaterialProp20.method15076(i_54, class183_48.aShortArray2274[s_50]), MaterialProp20.method15076(i_54, class183_48.aShortArray2274[s_52]));
                             }
                         }
                     }

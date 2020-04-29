@@ -121,7 +121,7 @@ public class AnimationIndexLoader {
             animationdefinitions_3.anInt5909 = i_1;
             animationdefinitions_3.animationIndexLoader = this;
             if (bytes_10 != null) {
-                animationdefinitions_3.method11130(new Packet(bytes_10));
+                animationdefinitions_3.method11130(new ByteBuf(bytes_10));
             }
             animationdefinitions_3.method11143();
             LRUCache softcache_9 = aClass229_6955;

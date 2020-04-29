@@ -10,7 +10,7 @@ public class Class506 {
         throw new Error();
     }
 
-    public static MeshModifier decodeItemEffects(ItemDefinitions defs, Packet stream) {
+    public static MeshModifier decodeItemEffects(ItemDefinitions defs, ByteBuf stream) {
         MeshModifier meshModifier = new MeshModifier(defs);
         int flags = stream.readUnsignedByte();
         boolean bodyModels = (flags & 0x1) != 0;

@@ -12,7 +12,7 @@ public class CombinedInputSubscriber implements InputSubscriber {
         requiredKeys = ints_3;
     }
 
-    static CombinedInputSubscriber decode(Packet rsbytebuffer_0) {
+    static CombinedInputSubscriber decode(ByteBuf rsbytebuffer_0) {
         int clickType = rsbytebuffer_0.readUnsignedByte();
         int minimumClicks = rsbytebuffer_0.readUnsignedByte();
         int count = rsbytebuffer_0.readUnsignedByte();

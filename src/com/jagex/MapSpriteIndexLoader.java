@@ -66,7 +66,7 @@ public class MapSpriteIndexLoader {
         }
     }
 
-    public static int method7189(Packet rsbytebuffer_0, String string_1) {
+    public static int method7189(ByteBuf rsbytebuffer_0, String string_1) {
         int i_3 = rsbytebuffer_0.index;
         byte[] bytes_4 = LinkedNodeList.method7885(string_1);
         rsbytebuffer_0.method13076(bytes_4.length);
@@ -91,7 +91,7 @@ public class MapSpriteIndexLoader {
             class418_3 = new MapSpriteDefinitions();
             class418_3.aClass427_4998 = this;
             if (bytes_10 != null) {
-                class418_3.method7008(new Packet(bytes_10));
+                class418_3.method7008(new ByteBuf(bytes_10));
             }
             LRUCache softcache_9 = aClass229_5117;
             synchronized (aClass229_5117) {

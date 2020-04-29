@@ -6,7 +6,7 @@ public class SoundEffect {
     int loopBegin;
     int loopEnd;
 
-    SoundEffect(Packet buffer) {
+    SoundEffect(ByteBuf buffer) {
         for (int i_2 = 0; i_2 < 10; i_2++) {
             int hasInstruments = buffer.readUnsignedByte();
             if (hasInstruments != 0) {
@@ -22,7 +22,7 @@ public class SoundEffect {
 
     public static SoundEffect getSoundEffect(Index index_0, int i_1, int i_2) {
         byte[] data = index_0.getFile(i_1, i_2);
-        return data == null ? null : new SoundEffect(new Packet(data));
+        return data == null ? null : new SoundEffect(new ByteBuf(data));
     }
 
     public Node_Sub26_Sub1_Sub2 getMixedAudio() {

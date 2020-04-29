@@ -255,7 +255,7 @@ public class MIDIInstrument extends Node {
     }
 
     void method12265(byte[] bytes_1) throws IOException {
-        Packet rsbytebuffer_2 = new Packet(bytes_1);
+        ByteBuf rsbytebuffer_2 = new ByteBuf(bytes_1);
         anInt7605 = rsbytebuffer_2.readInt();
         anInt7620 = rsbytebuffer_2.readInt();
         anInt7616 = rsbytebuffer_2.readInt();

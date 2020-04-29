@@ -10,8 +10,8 @@ public class Class94 {
         return Class396.OS_NAME.startsWith("win") ? string_0 + ".dll" : (Class396.OS_NAME.startsWith("linux") ? "lib" + string_0 + ".so" : (Class396.OS_NAME.startsWith("mac") ? "lib" + string_0 + ".dylib" : null));
     }
 
-    static Packet method1587() {
-        Packet rsbytebuffer_1 = new Packet(518);
+    static ByteBuf method1587() {
+        ByteBuf rsbytebuffer_1 = new ByteBuf(518);
         Class500.anIntArray5827 = new int[4];
         Class500.anIntArray5827[0] = (int) (Math.random() * 9.9999999E7D);
         Class500.anIntArray5827[1] = (int) (Math.random() * 9.9999999E7D);

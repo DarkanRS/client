@@ -298,7 +298,7 @@ public class MapAreaDefinitions {
         }
     }
 
-    void method3716(Packet rsbytebuffer_1) {
+    void method3716(ByteBuf rsbytebuffer_1) {
         while (true) {
             int i_3 = rsbytebuffer_1.readUnsignedByte();
             if (i_3 == 0) {
@@ -308,7 +308,7 @@ public class MapAreaDefinitions {
         }
     }
 
-    void method3717(Packet rsbytebuffer_1, int i_2) {
+    void method3717(ByteBuf rsbytebuffer_1, int i_2) {
         if (i_2 == 1) {
             anInt2719 = rsbytebuffer_1.readBigSmart();
         } else if (i_2 == 2) {

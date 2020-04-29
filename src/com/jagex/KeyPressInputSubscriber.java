@@ -9,7 +9,7 @@ public class KeyPressInputSubscriber implements InputSubscriber {
         flags = i_2;
     }
 
-    static KeyPressInputSubscriber decode(Packet rsbytebuffer_0) {
+    static KeyPressInputSubscriber decode(ByteBuf rsbytebuffer_0) {
         int code = rsbytebuffer_0.readUnsignedByte();
         int flags = rsbytebuffer_0.readUnsignedByte();
         return new KeyPressInputSubscriber(code, flags);

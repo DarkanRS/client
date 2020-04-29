@@ -248,7 +248,7 @@ public class Instrument {
         return amplitude == 1 ? ((table & 0x7fff) < 16384 ? phase : -phase) : (amplitude == 2 ? sine[table & 0x7fff] * phase >> 14 : (amplitude == 3 ? (phase * (table & 0x7fff) >> 14) - phase : (amplitude == 4 ? phase * noise[table / 2607 & 0x7fff] : 0)));
     }
 
-    void decodeInstruments(Packet buffer) {
+    void decodeInstruments(ByteBuf buffer) {
         pitch = new Envelope();
         pitch.decode(buffer);
         volume = new Envelope();
@@ -281,18 +281,18 @@ public class Instrument {
         }
 
         for (int i = 0; i < 10; i++) {
-            int volume = buffer.readUnsignedSmart();
+            int volume = buffer.readSmart();
             if (volume == 0) {
                 break;
             }
 
             oscillatorVolume[i] = volume;
-            oscillatorPitch[i] = buffer.readSignedSmart();
-            oscillatorDelays[i] = buffer.readUnsignedSmart();
+            oscillatorPitch[i] = buffer.readUnsignedSmart();
+            oscillatorDelays[i] = buffer.readSmart();
         }
 
-        delayTime = buffer.readUnsignedSmart();
-        delayDecay = buffer.readUnsignedSmart();
+        delayTime = buffer.readSmart();
+        delayDecay = buffer.readSmart();
         duration = buffer.readUnsignedShort();
         offset = buffer.readUnsignedShort();
         filter = new Filter();

@@ -14,9 +14,9 @@ public abstract class JS5StandardRequester {
     Queue waitingPriorities = new Queue();
     Queue extras = new Queue();
     Queue waitingExtras = new Queue();
-    Packet aNode_Sub35_3655 = new Packet(6);
+    ByteBuf aNode_Sub35_3655 = new ByteBuf(6);
     byte aByte3656;
-    Packet aNode_Sub35_3647 = new Packet(10);
+    ByteBuf aNode_Sub35_3647 = new ByteBuf(10);
 
     public static void method5558() {
         Class9.loginStage = 2;
@@ -28,7 +28,7 @@ public abstract class JS5StandardRequester {
         BillboardDefinitions.BILLBOARD_INDEX = index_0;
     }
 
-    public static void method5560(Packet rsbytebuffer_0) {
+    public static void method5560(ByteBuf rsbytebuffer_0) {
         ReflectionCheck class282_sub42_3 = new ReflectionCheck();
         class282_sub42_3.anInt8033 = rsbytebuffer_0.readUnsignedByte();
         class282_sub42_3.anInt8038 = rsbytebuffer_0.readInt();

@@ -72,7 +72,7 @@ public class Login {
                         if (Class9.lobbyStage == 273) {
                             tcpmessage_2.buffer.writeByte(client.gameState == 10 ? 1 : 0);
                         }
-                        Packet rsbytebuffer_4 = Class94.method1587();
+                        ByteBuf rsbytebuffer_4 = Class94.method1587();
                         rsbytebuffer_4.writeByte(Class9.anInt76);
                         rsbytebuffer_4.writeShort((int) (Math.random() * 9.9999999E7D));
                         rsbytebuffer_4.writeByte(Class223.CURRENT_LANGUAGE.getValue());
@@ -158,14 +158,14 @@ public class Login {
                     Class9.aLong86 = Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer.readLong();
                     Class9.loginStage = 80;
                 }
-                Packet.Bit rsbitsbuffer_22;
+                ByteBuf.Bit rsbitsbuffer_22;
                 if (Class9.loginStage == 80) {
                     Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer.index = 0;
                     Class9.CURRENT_CONNECTION_CONTEXT.clearAllQueuedPackets();
                     tcpmessage_2 = SkyboxDefinitions.method3558();
                     rsbitsbuffer_22 = tcpmessage_2.buffer;
                     int i_6;
-                    Packet rsbytebuffer_7;
+                    ByteBuf rsbytebuffer_7;
                     LoginProt outgoingloginpacket_20;
                     if (Class9.lobbyStage == 273) {
                         if (Class9.socialNetworkLogin) {
@@ -203,7 +203,7 @@ public class Login {
                         rsbitsbuffer_22.writeByte(rsbytebuffer_7.index);
                         rsbitsbuffer_22.writeBytes(rsbytebuffer_7.buffer, 0, rsbytebuffer_7.index);
                         client.aBool7175 = true;
-                        Packet rsbytebuffer_8 = new Packet(Class11.SYSTEM_INFO.method13454());
+                        ByteBuf rsbytebuffer_8 = new ByteBuf(Class11.SYSTEM_INFO.method13454());
                         Class11.SYSTEM_INFO.writeMachineInformation(rsbytebuffer_8);
                         rsbitsbuffer_22.writeBytes(rsbytebuffer_8.buffer, 0, rsbytebuffer_8.buffer.length);
                         rsbitsbuffer_22.writeInt(client.anInt7221);
@@ -378,7 +378,7 @@ public class Login {
                         Class9.loginStage = 140;
                     }
                 } else {
-                    Packet.Bit buffer;
+                    ByteBuf.Bit buffer;
                     if (Class9.loginStage == 140) {
                         buffer = Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer;
                         if (Class9.lobbyStage == 273) {
@@ -512,7 +512,7 @@ public class Login {
                             Class190.method3152();
                             Class197.method3203(Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer);
                             i_3 = i_10 - Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer.index;
-                            Packet.Bit rsbitsbuffer_21 = new Packet.Bit(i_3);
+                            ByteBuf.Bit rsbitsbuffer_21 = new ByteBuf.Bit(i_3);
                             System.arraycopy(Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer.buffer, Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer.index, rsbitsbuffer_21.buffer, 0, i_3);
                             Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer.index += i_3;
                             if (Class9.CURRENT_CONNECTION_CONTEXT.currentPacket == ServerProt.DYNAMIC_MAP_REGION) {

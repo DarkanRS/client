@@ -39,14 +39,14 @@ public class VarnDefinitions {
         }
     }
 
-    void method7485(Packet rsbytebuffer_1, int i_2) {
+    void method7485(ByteBuf rsbytebuffer_1, int i_2) {
         if (i_2 == 1) {
             aChar5431 = Utils.cp1252ToChar(rsbytebuffer_1.readByte());
         }
 
     }
 
-    void method7487(Packet rsbytebuffer_1) {
+    void method7487(ByteBuf rsbytebuffer_1) {
         while (true) {
             int i_3 = rsbytebuffer_1.readUnsignedByte();
             if (i_3 == 0) {

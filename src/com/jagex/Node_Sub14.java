@@ -13,7 +13,7 @@ public class Node_Sub14 extends Node {
     int anInt7593;
 
     Node_Sub14(byte[] bytes_1) {
-        Packet rsbytebuffer_2 = new Packet(bytes_1);
+        ByteBuf rsbytebuffer_2 = new ByteBuf(bytes_1);
 
         int i_3;
         for (i_3 = 0; rsbytebuffer_2.buffer[i_3 + rsbytebuffer_2.index] != 0; i_3++) {

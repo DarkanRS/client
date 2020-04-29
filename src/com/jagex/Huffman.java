@@ -80,7 +80,7 @@ public class Huffman {
             if (!Class260.aBool3220 && Class260.anInt3223 != -1 && SongReference.method1966() && !ParticleArchive1Def.method6140()) {
                 Class260.aNode_Sub15_Sub2_3231 = LocalizedText.method7272();
                 VarBitIndexLoader.method3912();
-                Node_Sub15_Sub2 class282_sub15_sub2_4 = Node_Sub20_Sub10.method15262(Class260.aNode_Sub15_Sub2_3231);
+                Node_Sub15_Sub2 class282_sub15_sub2_4 = MaterialProp8.method15262(Class260.aNode_Sub15_Sub2_3231);
                 Class42_Sub1.method14563(class282_sub15_sub2_4);
             }
             Class11.method13400(IndexLoaders.MUSIC2_INDEX, i_0, i_2);

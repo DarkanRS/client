@@ -118,10 +118,10 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
         Class514.anInt5887 = i_3;
         RuntimeException_Sub3.anInt10457 = 727;
         InventoriesIndexLoader.anInt4781 = 1;
-        Node_Sub20_Sub34.aString9967 = "Unknown";
+        MaterialProp15.aString9967 = "Unknown";
         ChatLine.aString1093 = "1.1";
         try {
-            Node_Sub20_Sub34.aString9967 = System.getProperty("java.vendor");
+            MaterialProp15.aString9967 = System.getProperty("java.vendor");
             ChatLine.aString1093 = System.getProperty("java.version");
         } catch (Exception ignored) {
         }
@@ -237,8 +237,8 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
         if (Canvas_Sub1.aFile9453.exists()) {
             try {
                 Class442 class442_9 = new Class442(Canvas_Sub1.aFile9453, 10000L);
-                Packet rsbytebuffer_11;
-                for (rsbytebuffer_11 = new Packet((int) class442_9.method7388()); rsbytebuffer_11.index < rsbytebuffer_11.buffer.length; rsbytebuffer_11.index += i_10) {
+                ByteBuf rsbytebuffer_11;
+                for (rsbytebuffer_11 = new ByteBuf((int) class442_9.method7388()); rsbytebuffer_11.index < rsbytebuffer_11.buffer.length; rsbytebuffer_11.index += i_10) {
                     i_10 = class442_9.method7389(rsbytebuffer_11.buffer, rsbytebuffer_11.index, rsbytebuffer_11.buffer.length - rsbytebuffer_11.index);
                     if (i_10 == -1) {
                         throw new IOException();
@@ -343,7 +343,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
     void method4659(File file_1, File file_2) {
         try {
             Class442 class442_4 = new Class442(Canvas_Sub1.aFile9453, 10000L);
-            Packet rsbytebuffer_5 = new Packet(500);
+            ByteBuf rsbytebuffer_5 = new ByteBuf(500);
             rsbytebuffer_5.writeByte(3);
             rsbytebuffer_5.writeByte(file_2 != null ? 1 : 0);
             rsbytebuffer_5.method13071(file_1.getPath());
@@ -800,8 +800,8 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
     }
 
     void method4745() {
-        if (Node_Sub20_Sub34.aString9967 != null) {
-            String string_2 = Node_Sub20_Sub34.aString9967.toLowerCase();
+        if (MaterialProp15.aString9967 != null) {
+            String string_2 = MaterialProp15.aString9967.toLowerCase();
             if (string_2.indexOf("sun") != -1 || string_2.indexOf("apple") != -1) {
                 String string_3 = ChatLine.aString1093;
                 if ("1.1".equals(string_3) || string_3.startsWith("1.1.") || "1.2".equals(string_3) || string_3.startsWith("1.2.") || "1.3".equals(string_3) || string_3.startsWith("1.3.") || "1.4".equals(string_3) || string_3.startsWith("1.4.") || "1.5".equals(string_3) || string_3.startsWith("1.5.") || "1.6.0".equals(string_3)) {
@@ -832,7 +832,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
                 method4667();
             }
             method4668();
-            Node_Sub20_Sub27.method15395(Class351.gameCanvas);
+            MaterialProp7.method15395(Class351.gameCanvas);
         }
     }
 

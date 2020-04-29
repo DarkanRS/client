@@ -9,7 +9,7 @@ public class Class151 {
 
     public static void decodeWorldList(boolean refresh, byte[] data) {
         if (CutsceneAction_Sub20.WORLD_LIST_BUFFER == null) {
-            CutsceneAction_Sub20.WORLD_LIST_BUFFER = new Packet(20000);
+            CutsceneAction_Sub20.WORLD_LIST_BUFFER = new ByteBuf(20000);
         }
         CutsceneAction_Sub20.WORLD_LIST_BUFFER.writeBytes(data, 0, data.length);
         if (refresh) {

@@ -58,7 +58,7 @@ public class HitbarDefinitions {
                 if (VertexNormal.MY_PLAYER != null && (int) vector3_6.x - (VertexNormal.MY_PLAYER.getSize() - 1) * 256 >> 9 == Class187.anInt2361 && (int) vector3_6.z - (VertexNormal.MY_PLAYER.getSize() - 1) * 256 >> 9 == Class187.anInt2359) {
                     Class187.anInt2361 = -1;
                     Class187.anInt2359 = -1;
-                    Node_Sub20_Sub9.method15255();
+                    MaterialProp28.method15255();
                 }
                 Class52_Sub3.method14519();
                 if (!bool_4) {
@@ -163,7 +163,7 @@ public class HitbarDefinitions {
                 byte b_15 = Class393.preferences.removeRoofsOptionOverride.method12952() == 2 ? (byte) client.anInt7286 : 1;
                 IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().method3447(client.cycles, IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX, Class109_Sub1.CAM_MOVE_ABSOLUTEZ, Class246.CAM_MOVE_ABSOLUTEY, IndexLoaders.MAP_REGION_DECODER.method4532(), client.anIntArray7198, client.anIntArray7303, client.anIntArray7194, client.anIntArray7305, client.anIntArray7306, VertexNormal.MY_PLAYER.plane + 1, b_15, Class393.preferences.flickeringEffects.method12943() == 0);
                 ++client.anInt7396;
-                Node_Sub20_Sub24.method15391();
+                MaterialPropTexture.method15391();
                 if (client.gameState == 13) {
                     Class423.method7066(i_01, i_13);
                     Class250.method4298(i_01, i_13, i_21, i_31);
@@ -190,7 +190,7 @@ public class HitbarDefinitions {
         }
     }
 
-    void method3206(Packet stream, int opcode) {
+    void method3206(ByteBuf stream, int opcode) {
         if (opcode == 1) {
             stream.readUnsignedShort();
         } else if (opcode == 2) {
@@ -242,7 +242,7 @@ public class HitbarDefinitions {
         }
     }
 
-    void method3210(Packet rsbytebuffer_1) {
+    void method3210(ByteBuf rsbytebuffer_1) {
         while (true) {
             int i_3 = rsbytebuffer_1.readUnsignedByte();
             if (i_3 == 0) {

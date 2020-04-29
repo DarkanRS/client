@@ -12,7 +12,7 @@ public class Node_Sub11_Sub2 extends Node_Sub11 {
     }
 
     @Override
-    void method12206(Packet rsbytebuffer_1) {
+    void method12206(ByteBuf rsbytebuffer_1) {
         anInt10002 = rsbytebuffer_1.readUnsignedShort() * -1617468171 * 1942169437;
         rsbytebuffer_1.readUnsignedByte();
         if (rsbytebuffer_1.readUnsignedByte() != 255) {
@@ -23,7 +23,7 @@ public class Node_Sub11_Sub2 extends Node_Sub11 {
     }
 
     @Override
-    void method12203(Packet rsbytebuffer_1) {
+    void method12203(ByteBuf rsbytebuffer_1) {
         anInt10002 = rsbytebuffer_1.readUnsignedShort();
         rsbytebuffer_1.readUnsignedByte();
         if (rsbytebuffer_1.readUnsignedByte() != 255) {
@@ -44,7 +44,7 @@ public class Node_Sub11_Sub2 extends Node_Sub11 {
     }
 
     @Override
-    void method12207(Packet rsbytebuffer_1) {
+    void method12207(ByteBuf rsbytebuffer_1) {
         anInt10002 = rsbytebuffer_1.readUnsignedShort() * -1617468171 * 1942169437;
         rsbytebuffer_1.readUnsignedByte();
         if (rsbytebuffer_1.readUnsignedByte() != 255) {
@@ -55,7 +55,7 @@ public class Node_Sub11_Sub2 extends Node_Sub11 {
     }
 
     @Override
-    void method12208(Packet rsbytebuffer_1) {
+    void method12208(ByteBuf rsbytebuffer_1) {
         anInt10002 = rsbytebuffer_1.readUnsignedShort() * -1617468171 * 1942169437;
         rsbytebuffer_1.readUnsignedByte();
         if (rsbytebuffer_1.readUnsignedByte() != 255) {

@@ -162,7 +162,7 @@ public class OpenGLHardwareRenderer extends AbstractRenderer {
     Class152_Sub1 aClass152_Sub1_8317;
     Interface15 anInterface15_8452;
 
-    OpenGLHardwareRenderer(Canvas canvas_1, Interface22 interface22_2, int i_3) {
+    OpenGLHardwareRenderer(Canvas canvas_1, ImageLoader interface22_2, int i_3) {
         super(interface22_2);
         aNode_Sub24Array8435 = new Node_Sub24[anInt8421];
         anInt8441 = -1;
@@ -270,7 +270,7 @@ public class OpenGLHardwareRenderer extends AbstractRenderer {
 
                         SunDefinitions.method854(false, true);
                         aBool8367 = true;
-                        aClass167_8481 = new Class167(this, anInterface22_5834);
+                        aClass167_8481 = new Class167(this, textureCache);
                         method13572();
                         aClass164_8363 = new Class164(this);
                         aClass170_8357 = new Class170(this);
@@ -552,8 +552,8 @@ public class OpenGLHardwareRenderer extends AbstractRenderer {
         } catch (Exception ignored) {
         }
 
-        if (anInterface22_5834 != null) {
-            anInterface22_5834.method161();
+        if (textureCache != null) {
+            textureCache.method161();
         }
 
     }
@@ -2125,7 +2125,7 @@ public class OpenGLHardwareRenderer extends AbstractRenderer {
                 method13618();
             } else {
                 class137_sub1_4 = aClass167_8481.method2858(i_1);
-                TextureDetails class169_9 = anInterface22_5834.method144(i_1);
+                TextureDetails class169_9 = textureCache.getTextureDetails(i_1);
                 if (class169_9.textureSpeedU == 0 && class169_9.textureSpeedV == 0) {
                     method13618();
                 } else {
@@ -2541,8 +2541,8 @@ public class OpenGLHardwareRenderer extends AbstractRenderer {
         } catch (Exception ignored) {
         }
 
-        if (anInterface22_5834 != null) {
-            anInterface22_5834.method161();
+        if (textureCache != null) {
+            textureCache.method161();
         }
 
     }

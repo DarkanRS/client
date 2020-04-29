@@ -16,7 +16,7 @@ public class IdentiKitIndexLoader implements IndexLoader {
         aClass317_358.filesCount(SharedConfigsType.IdentiKit.id);
     }
 
-    public static void method809(Packet rsbytebuffer_0) {
+    public static void method809(ByteBuf rsbytebuffer_0) {
         byte[] bytes_2 = new byte[24];
         try {
             Engine.PLAYER_UID192.method7347(0L);
@@ -109,7 +109,7 @@ public class IdentiKitIndexLoader implements IndexLoader {
             class44_3 = new IdentikitDefinition();
             class44_3.aClass31_429 = this;
             if (bytes_10 != null) {
-                class44_3.method909(new Packet(bytes_10));
+                class44_3.method909(new ByteBuf(bytes_10));
             }
             LRUCache softcache_9 = aClass229_360;
             synchronized (aClass229_360) {

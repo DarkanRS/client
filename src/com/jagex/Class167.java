@@ -4,9 +4,9 @@ public class Class167 {
 
     LRUCache aClass229_2044 = new LRUCache(256);
     OpenGLHardwareRenderer aGraphicalRenderer_Sub1_2042;
-    Interface22 anInterface22_2043;
+    ImageLoader anInterface22_2043;
 
-    Class167(OpenGLHardwareRenderer class505_sub1_1, Interface22 interface22_2) {
+    Class167(OpenGLHardwareRenderer class505_sub1_1, ImageLoader interface22_2) {
         aGraphicalRenderer_Sub1_2042 = class505_sub1_1;
         anInterface22_2043 = interface22_2;
     }
@@ -16,10 +16,10 @@ public class Class167 {
         Object object_3 = aClass229_2044.get(i_1);
         if (object_3 != null) {
             return (Class137_Sub1) object_3;
-        } else if (!anInterface22_2043.method139(i_1)) {
+        } else if (!anInterface22_2043.loadTexture(i_1)) {
             return null;
         } else {
-            TextureDetails class169_4 = anInterface22_2043.method144(i_1);
+            TextureDetails class169_4 = anInterface22_2043.getTextureDetails(i_1);
             if (i_21 == -1) {
                 i_21 = class169_4.isHalfSize ? 64 : aGraphicalRenderer_Sub1_2042.anInt8349;
             }
@@ -31,7 +31,7 @@ public class Class167 {
             } else {
                 int[] ints_6;
                 if (class169_4.blendType != 2 && Node_Sub41.method13367(class169_4.effectId)) {
-                    ints_6 = anInterface22_2043.method140(i_1, 0.7F, i_21, i_21, true);
+                    ints_6 = anInterface22_2043.renderTexturePixels(i_1, 0.7F, i_21, i_21, true);
                 } else {
                     ints_6 = anInterface22_2043.method141(i_1, i_21, i_21);
                 }

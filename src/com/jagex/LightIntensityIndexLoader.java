@@ -40,7 +40,7 @@ public class LightIntensityIndexLoader {
 
             class416_3 = new LightIntensityDefinitions();
             if (bytes_10 != null) {
-                class416_3.method6999(new Packet(bytes_10));
+                class416_3.method6999(new ByteBuf(bytes_10));
             }
 
             LRUCache softcache_9 = aClass229_5334;

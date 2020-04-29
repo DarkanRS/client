@@ -168,7 +168,7 @@ public abstract class AbstractRenderer_Sub2 extends AbstractRenderer {
     NativeSprite_Sub3 aNativeSprite_Sub3_8791;
     Interface4 anInterface4_8693;
 
-    AbstractRenderer_Sub2(Interface22 interface22_1, Index index_2, int i_3, int i_4) {
+    AbstractRenderer_Sub2(ImageLoader interface22_1, Index index_2, int i_3, int i_4) {
         super(interface22_1);
         anInt8696 = 4194304;
         aClass473_8700 = new LinkedNodeList();
@@ -263,8 +263,8 @@ public abstract class AbstractRenderer_Sub2 extends AbstractRenderer {
             anInt8709 = i_3;
             anInt8824 = i_4;
             SunDefinitions.method854(false, true);
-            if (anInterface22_5834 != null) {
-                aClass66_8787 = new Class66(this, anInterface22_5834);
+            if (textureCache != null) {
+                aClass66_8787 = new Class66(this, textureCache);
             } else {
                 aClass66_8787 = null;
             }

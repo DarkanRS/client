@@ -12,7 +12,7 @@ public class CutsceneAction_Sub5 extends CutsceneAction {
 
     int anInt8849;
 
-    CutsceneAction_Sub5(Packet rsbytebuffer_1) {
+    CutsceneAction_Sub5(ByteBuf rsbytebuffer_1) {
         super(rsbytebuffer_1);
         anInt8845 = rsbytebuffer_1.readUnsignedShort();
         anInt8847 = rsbytebuffer_1.readUnsignedShort();

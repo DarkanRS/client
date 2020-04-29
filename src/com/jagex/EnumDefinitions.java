@@ -22,7 +22,7 @@ public class EnumDefinitions {
         return size;
     }
 
-    void method7224(Packet stream, int opcode) {
+    void method7224(ByteBuf stream, int opcode) {
         if (opcode == 1) {
             keyType = Utils.cp1252ToChar(stream.readByte());
         } else if (opcode == 2) {
@@ -78,7 +78,7 @@ public class EnumDefinitions {
         return object_3 == null ? defaultStringValue : (String) object_3;
     }
 
-    void method7227(Packet rsbytebuffer_1) {
+    void method7227(ByteBuf rsbytebuffer_1) {
         while (true) {
             int i_3 = rsbytebuffer_1.readUnsignedByte();
             if (i_3 == 0) {

@@ -12,7 +12,7 @@ public class PlaySoundVorbisCutsceneAction extends CutsceneAction {
 
     int anInt9268;
 
-    PlaySoundVorbisCutsceneAction(Packet rsbytebuffer_1) {
+    PlaySoundVorbisCutsceneAction(ByteBuf rsbytebuffer_1) {
         super(rsbytebuffer_1);
         anInt9270 = rsbytebuffer_1.readUnsignedShort();
         anInt9269 = rsbytebuffer_1.readUnsignedByte();

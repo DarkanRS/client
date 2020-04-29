@@ -23,7 +23,7 @@ public class UnderlayIndexLoader {
                 CursorDefintions class419_2 = IndexLoaders.CURSOR_LOADER.method7325(i_01);
                 SpriteDefinitions class91_3 = class419_2.getSprite();
                 if (class91_3 != null) {
-                    MeshModifier.aClass267_5026.setCustomCursor(Class351.gameCanvas, class91_3.method1528(), class91_3.method1519(), class91_3.method1520(), new Point(class419_2.anInt5002, class419_2.anInt5000));
+                    MeshModifier.aClass267_5026.setCustomCursor(Class351.gameCanvas, class91_3.getPixels(), class91_3.getMaxWidth(), class91_3.getMaxHeight(), new Point(class419_2.anInt5002, class419_2.anInt5000));
                     client.CURRENT_CURSOR = i_01;
                 } else {
                     i_01 = -1;
@@ -56,7 +56,7 @@ public class UnderlayIndexLoader {
             }
             underlaydef_3 = new UnderlayDef();
             if (bytes_10 != null) {
-                underlaydef_3.decode(new Packet(bytes_10));
+                underlaydef_3.decode(new ByteBuf(bytes_10));
             }
             LRUCache softcache_9 = cache;
             synchronized (cache) {

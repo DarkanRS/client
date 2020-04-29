@@ -26,7 +26,7 @@ public class Class152_Sub2_Sub1 extends Class152_Sub2 {
     @Override
     Interface31 method14242() {
         if (anInterface31_10161 == null) {
-            Interface22 interface22_1 = aGraphicalRenderer_Sub2_10168.anInterface22_5834;
+            ImageLoader interface22_1 = aGraphicalRenderer_Sub2_10168.textureCache;
             anIntArray10169[0] = anInt10163;
             anIntArray10169[1] = anInt10164;
             anIntArray10169[2] = anInt10165;
@@ -38,11 +38,11 @@ public class Class152_Sub2_Sub1 extends Class152_Sub2 {
 
             int i_4;
             for (i_4 = 0; i_4 < 6; i_4++) {
-                if (!interface22_1.method139(anIntArray10169[i_4])) {
+                if (!interface22_1.loadTexture(anIntArray10169[i_4])) {
                     return null;
                 }
 
-                TextureDetails class169_5 = interface22_1.method144(anIntArray10169[i_4]);
+                TextureDetails class169_5 = interface22_1.getTextureDetails(anIntArray10169[i_4]);
                 int i_6 = class169_5.isHalfSize ? 64 : 128;
                 if (i_6 > i_3) {
                     i_3 = i_6;
@@ -54,7 +54,7 @@ public class Class152_Sub2_Sub1 extends Class152_Sub2 {
             }
 
             for (i_4 = 0; i_4 < 6; i_4++) {
-                anIntArrayArray10170[i_4] = interface22_1.method140(anIntArray10169[i_4], 1.0F, i_3, i_3, false);
+                anIntArrayArray10170[i_4] = interface22_1.renderTexturePixels(anIntArray10169[i_4], 1.0F, i_3, i_3, false);
             }
 
             anInterface31_10161 = aGraphicalRenderer_Sub2_10168.method14034(i_3, bool_2, anIntArrayArray10170);
@@ -66,7 +66,7 @@ public class Class152_Sub2_Sub1 extends Class152_Sub2 {
     @Override
     Interface31 method14241() {
         if (anInterface31_10161 == null) {
-            Interface22 interface22_1 = aGraphicalRenderer_Sub2_10168.anInterface22_5834;
+            ImageLoader interface22_1 = aGraphicalRenderer_Sub2_10168.textureCache;
             anIntArray10169[0] = anInt10163;
             anIntArray10169[1] = anInt10164;
             anIntArray10169[2] = anInt10165;
@@ -78,11 +78,11 @@ public class Class152_Sub2_Sub1 extends Class152_Sub2 {
 
             int i_4;
             for (i_4 = 0; i_4 < 6; i_4++) {
-                if (!interface22_1.method139(anIntArray10169[i_4])) {
+                if (!interface22_1.loadTexture(anIntArray10169[i_4])) {
                     return null;
                 }
 
-                TextureDetails class169_5 = interface22_1.method144(anIntArray10169[i_4]);
+                TextureDetails class169_5 = interface22_1.getTextureDetails(anIntArray10169[i_4]);
                 int i_6 = class169_5.isHalfSize ? 64 : 128;
                 if (i_6 > i_3) {
                     i_3 = i_6;
@@ -94,7 +94,7 @@ public class Class152_Sub2_Sub1 extends Class152_Sub2 {
             }
 
             for (i_4 = 0; i_4 < 6; i_4++) {
-                anIntArrayArray10170[i_4] = interface22_1.method140(anIntArray10169[i_4], 1.0F, i_3, i_3, false);
+                anIntArrayArray10170[i_4] = interface22_1.renderTexturePixels(anIntArray10169[i_4], 1.0F, i_3, i_3, false);
             }
 
             anInterface31_10161 = aGraphicalRenderer_Sub2_10168.method14034(i_3, bool_2, anIntArrayArray10170);

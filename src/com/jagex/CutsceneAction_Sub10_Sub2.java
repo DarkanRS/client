@@ -6,7 +6,7 @@ public class CutsceneAction_Sub10_Sub2 extends CutsceneAction_Sub10 {
     int anInt10222;
     int anInt10224;
 
-    CutsceneAction_Sub10_Sub2(Packet rsbytebuffer_1) {
+    CutsceneAction_Sub10_Sub2(ByteBuf rsbytebuffer_1) {
         super(rsbytebuffer_1);
         int i_2 = rsbytebuffer_1.readInt();
         anInt10223 = i_2 >>> 16;

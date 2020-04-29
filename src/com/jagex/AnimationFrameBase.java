@@ -11,7 +11,7 @@ public class AnimationFrameBase extends Node {
 
     AnimationFrameBase(int id, byte[] bytes_2) {
         this.id = id;
-        Packet rsbytebuffer_3 = new Packet(bytes_2);
+        ByteBuf rsbytebuffer_3 = new ByteBuf(bytes_2);
         count = rsbytebuffer_3.readUnsignedByte();
         transformationTypes = new int[count];
         labels = new int[count][];

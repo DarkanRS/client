@@ -73,15 +73,15 @@ public class Class271 {
         tcpmessage_3.packet = outgoingpacket_0;
         tcpmessage_3.anInt7678 = outgoingpacket_0.size;
         if (tcpmessage_3.anInt7678 == -1) {
-            tcpmessage_3.buffer = new Packet.Bit(260);
+            tcpmessage_3.buffer = new ByteBuf.Bit(260);
         } else if (tcpmessage_3.anInt7678 == -2) {
-            tcpmessage_3.buffer = new Packet.Bit(10000);
+            tcpmessage_3.buffer = new ByteBuf.Bit(10000);
         } else if (tcpmessage_3.anInt7678 <= 18) {
-            tcpmessage_3.buffer = new Packet.Bit(20);
+            tcpmessage_3.buffer = new ByteBuf.Bit(20);
         } else if (tcpmessage_3.anInt7678 <= 98) {
-            tcpmessage_3.buffer = new Packet.Bit(100);
+            tcpmessage_3.buffer = new ByteBuf.Bit(100);
         } else {
-            tcpmessage_3.buffer = new Packet.Bit(260);
+            tcpmessage_3.buffer = new ByteBuf.Bit(260);
         }
         tcpmessage_3.buffer.setIsaacCipher(isaaccipher_1);
         tcpmessage_3.buffer.writeIsaacByte(tcpmessage_3.packet.id);

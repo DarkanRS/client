@@ -317,7 +317,7 @@ public class Class291 {
 
     }
 
-    static void method5132(Interface22 interface22_0, int i_1, int i_2) {
+    static void method5132(ImageLoader interface22_0, int i_1, int i_2) {
         for (int i_3 = 0; i_3 < OVERLAY_LOADER.anInt7094; i_3++) {
             anIntArray3481[i_3 + 1] = method5164(interface22_0, i_3, i_1, i_2);
         }
@@ -635,7 +635,7 @@ public class Class291 {
 
     }
 
-    static void method5162(Packet rsbytebuffer_1, int i_2, int i_3, int i_4, int i_5, int[] ints_6, int[] ints_7) {
+    static void method5162(ByteBuf rsbytebuffer_1, int i_2, int i_3, int i_4, int i_5, int[] ints_6, int[] ints_7) {
         int i_8 = rsbytebuffer_1.readUnsignedByte();
         if ((i_8 & 0x1) == 0) {
             boolean bool_9 = (i_8 & 0x2) == 0;
@@ -723,13 +723,13 @@ public class Class291 {
 
     }
 
-    static int method5164(Interface22 interface22_0, int i_1, int i_2, int i_3) {
+    static int method5164(ImageLoader interface22_0, int i_1, int i_2, int i_3) {
         OverlayDef overlaydef_4 = OVERLAY_LOADER.getOverlayDef(i_1);
         if (overlaydef_4 == null) {
             return 0;
         } else {
             int i_5 = overlaydef_4.texture;
-            if (i_5 >= 0 && interface22_0.method144(i_5).isGroundMesh) {
+            if (i_5 >= 0 && interface22_0.getTextureDetails(i_5).isGroundMesh) {
                 i_5 = -1;
             }
 
@@ -749,7 +749,7 @@ public class Class291 {
                 i_9 = i_8 + (i_7 + i_2 & 0xfc00) + (i_7 & 0x380);
                 i_6 = -16777216 | Class335.anIntArray3916[Class372.method6362(QuestIndexLoader.method4162(i_9, 96)) & 0xffff];
             } else if (i_5 >= 0) {
-                i_6 = -16777216 | Class335.anIntArray3916[Class372.method6362(QuestIndexLoader.method4162(interface22_0.method144(i_5).color, 96)) & 0xffff];
+                i_6 = -16777216 | Class335.anIntArray3916[Class372.method6362(QuestIndexLoader.method4162(interface22_0.getTextureDetails(i_5).color, 96)) & 0xffff];
             } else if (overlaydef_4.primaryRGB == -1) {
                 i_6 = 0;
             } else {
@@ -834,7 +834,7 @@ public class Class291 {
     }
 
     static void method5183(int i_1, int i_2) {
-        Packet rsbytebuffer_3 = new Packet(MAP_AREA_INDEX.getFileByName(aCacheableNode_Sub6_3491.aString9533, "area"));
+        ByteBuf rsbytebuffer_3 = new ByteBuf(MAP_AREA_INDEX.getFileByName(aCacheableNode_Sub6_3491.aString9533, "area"));
         int i_4 = rsbytebuffer_3.readUnsignedByte();
         int[] ints_5 = new int[i_4];
 

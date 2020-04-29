@@ -73,11 +73,11 @@ public class SystemInfo extends Node {
                 osVendor = 23;
             }
         }
-        if (Node_Sub20_Sub34.aString9967.toLowerCase().indexOf("sun") != -1) {
+        if (MaterialProp15.aString9967.toLowerCase().indexOf("sun") != -1) {
             javaVersion = 1;
-        } else if (Node_Sub20_Sub34.aString9967.toLowerCase().indexOf("microsoft") != -1) {
+        } else if (MaterialProp15.aString9967.toLowerCase().indexOf("microsoft") != -1) {
             javaVersion = 2;
-        } else if (Node_Sub20_Sub34.aString9967.toLowerCase().indexOf("apple") != -1) {
+        } else if (MaterialProp15.aString9967.toLowerCase().indexOf("apple") != -1) {
             javaVersion = 3;
         } else {
             javaVersion = 4;
@@ -157,7 +157,7 @@ public class SystemInfo extends Node {
                 }
                 Class430 class430_15 = hashmap_6.get(Integer.valueOf(0));
                 if (class430_15 != null) {
-                    Packet rsbytebuffer_16 = new Packet(13);
+                    ByteBuf rsbytebuffer_16 = new ByteBuf(13);
                     rsbytebuffer_16.method13232(class430_15.anInt5137);
                     rsbytebuffer_16.method13232(class430_15.anInt5136);
                     rsbytebuffer_16.method13232(class430_15.anInt5138);
@@ -176,7 +176,7 @@ public class SystemInfo extends Node {
                 if (class430_17 != null) {
                     rawCPUInformationData[2] = class430_17.anInt5136;
                 }
-                Packet rsbytebuffer_18 = new Packet(49);
+                ByteBuf rsbytebuffer_18 = new ByteBuf(49);
                 for (i_11 = -2147483646; i_11 <= -2147483644; i_11++) {
                     Class430 class430_19 = hashmap_6.get(Integer.valueOf(i_11));
                     if (class430_19 != null) {
@@ -471,7 +471,7 @@ public class SystemInfo extends Node {
         }
     }
 
-    public void writeMachineInformation(Packet rsbytebuffer_1) {
+    public void writeMachineInformation(ByteBuf rsbytebuffer_1) {
         rsbytebuffer_1.writeByte(6);
         rsbytebuffer_1.writeByte(operatingSystem);
         rsbytebuffer_1.writeByte(x64os ? 1 : 0);

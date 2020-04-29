@@ -6,7 +6,7 @@ public abstract class Node_Sub11 extends Node {
         Class442 class442_1 = null;
         try {
             class442_1 = ParticleArchive1Def.method6137("2", client.CURRENT_GAME.name, true);
-            Packet rsbytebuffer_2 = new Packet(client.anInt7399 * 6 + 3);
+            ByteBuf rsbytebuffer_2 = new ByteBuf(client.anInt7399 * 6 + 3);
             rsbytebuffer_2.writeByte(1);
             rsbytebuffer_2.writeShort(client.anInt7399);
             for (int i_3 = 0; i_3 < Class320.VARC_INT.length; i_3++) {
@@ -28,15 +28,15 @@ public abstract class Node_Sub11 extends Node {
         client.aBool7400 = false;
     }
 
-    abstract void method12203(Packet var1);
+    abstract void method12203(ByteBuf var1);
 
     abstract void method12204(ClanChannel var1);
 
     abstract void method12205(ClanChannel var1);
 
-    abstract void method12206(Packet var1);
+    abstract void method12206(ByteBuf var1);
 
-    abstract void method12207(Packet var1);
+    abstract void method12207(ByteBuf var1);
 
-    abstract void method12208(Packet var1);
+    abstract void method12208(ByteBuf var1);
 }

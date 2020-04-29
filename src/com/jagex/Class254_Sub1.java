@@ -17,7 +17,7 @@ public class Class254_Sub1 extends Class254 {
                     }
 
                     Class89.sleep(10L);
-                    Node_Sub20_Sub27.method15395(null);
+                    MaterialProp7.method15395(null);
                 }
             } catch (Exception exception_4) {
                 Class151.method2594(null, exception_4);

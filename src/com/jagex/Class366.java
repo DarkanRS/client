@@ -45,7 +45,7 @@ public class Class366 implements Interface3 {
         return long_2;
     }
 
-    public static Class365 method6303(Packet rsbytebuffer_0) {
+    public static Class365 method6303(ByteBuf rsbytebuffer_0) {
         int i_2 = rsbytebuffer_0.readUnsignedByte();
         Class356 class356_3 = Class356.values()[rsbytebuffer_0.readUnsignedByte()];
         Class353 class353_4 = Class353.values()[rsbytebuffer_0.readUnsignedByte()];

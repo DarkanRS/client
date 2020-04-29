@@ -229,7 +229,7 @@ public class Component {
         return CustomCursorsPreference.INTERFACES[interfaceId].getComponent(hash);
     }
 
-    void readValues(Packet rsbytebuffer_1) {
+    void readValues(ByteBuf rsbytebuffer_1) {
         int i_3 = rsbytebuffer_1.readUnsignedByte();
         if (i_3 == 255) {
             i_3 = -1;
@@ -471,7 +471,7 @@ public class Component {
         anIntArray1406 = decodeScript3(rsbytebuffer_1);
     }
 
-    int[] decodeScript3(Packet rsbytebuffer_1) {
+    int[] decodeScript3(ByteBuf rsbytebuffer_1) {
         int i_3 = rsbytebuffer_1.readUnsignedByte();
         if (i_3 == 0) {
             return null;
@@ -536,7 +536,7 @@ public class Component {
         return fontmetrics_4;
     }
 
-    Object[] decodeScript(Packet rsbytebuffer_1) {
+    Object[] decodeScript(ByteBuf rsbytebuffer_1) {
         int i_3 = rsbytebuffer_1.readUnsignedByte();
         if (i_3 == 0) {
             return null;
@@ -642,7 +642,7 @@ public class Component {
                 i_2 |= animation_9.method7640();
             }
             long long_13 = -1L;
-            long[] longs_26 = Packet.aLongArray7979;
+            long[] longs_26 = ByteBuf.aLongArray7979;
             int i_16;
             if (colorsToReplace != null) {
                 for (i_16 = 0; i_16 < colorsToReplace.length; i_16++) {

@@ -1,6 +1,6 @@
 package com.jagex;
 
-public class ImageIndexLoader implements Interface22 {
+public class ImageIndexLoader implements ImageLoader {
 
     Class223 aClass223_3754 = new Class223(256);
 
@@ -15,7 +15,7 @@ public class ImageIndexLoader implements Interface22 {
     public ImageIndexLoader(Index textureDefIndex, Index textureIndex, Index spriteIndex) {
         this.textureIndex = textureIndex;
         this.spriteIndex = spriteIndex;
-        Packet stream = new Packet(textureDefIndex.getFile(0, 0));
+        ByteBuf stream = new ByteBuf(textureDefIndex.getFile(0, 0));
         textureDefSize = stream.readUnsignedShort();
         textures = new TextureDetails[textureDefSize];
         int i_5;
@@ -136,17 +136,17 @@ public class ImageIndexLoader implements Interface22 {
         }
     }
 
-    TextureDefinition method5770(int i_1) {
-        CacheableNode cacheablenode_3 = aClass223_3754.get(i_1);
+    MaterialDefinitions getMaterialDefinitions(int textureId) {
+        CacheableNode cacheablenode_3 = aClass223_3754.get(textureId);
         if (cacheablenode_3 != null) {
-            return (TextureDefinition) cacheablenode_3;
+            return (MaterialDefinitions) cacheablenode_3;
         } else {
-            byte[] bytes_4 = textureIndex.getFile(i_1);
+            byte[] bytes_4 = textureIndex.getFile(textureId);
             if (bytes_4 == null) {
                 return null;
             } else {
-                TextureDefinition texturedefinition_5 = new TextureDefinition(new Packet(bytes_4));
-                aClass223_3754.put(texturedefinition_5, i_1);
+                MaterialDefinitions texturedefinition_5 = new MaterialDefinitions(new ByteBuf(bytes_4));
+                aClass223_3754.put(texturedefinition_5, textureId);
                 return texturedefinition_5;
             }
         }
@@ -158,7 +158,7 @@ public class ImageIndexLoader implements Interface22 {
     }
 
     @Override
-    public TextureDetails method144(int i_1) {
+    public TextureDetails getTextureDetails(int i_1) {
         return textures[i_1];
     }
 
@@ -167,27 +167,27 @@ public class ImageIndexLoader implements Interface22 {
     }
 
     @Override
-    public int[] method141(int i_1, int i_3, int i_4) {
-        int[] ints_7 = method5770(i_1).method14719(spriteIndex, this, (float) 0.7, i_3, i_4, textures[i_1].isBrickTile);
+    public int[] method141(int textureId, int i_3, int i_4) {
+        int[] ints_7 = getMaterialDefinitions(textureId).method14719(spriteIndex, this, (float) 0.7, i_3, i_4, textures[textureId].isBrickTile);
         return ints_7;
     }
 
     @Override
     public float[] method145(int i_1, int i_3, int i_4) {
-        float[] floats_7 = method5770(i_1).method14723(spriteIndex, this, i_3, i_4, textures[i_1].isBrickTile);
+        float[] floats_7 = getMaterialDefinitions(i_1).method14723(spriteIndex, this, i_3, i_4, textures[i_1].isBrickTile);
         return floats_7;
     }
 
     @Override
-    public boolean method139(int i_1) {
-        TextureDefinition texturedefinition_3 = method5770(i_1);
-        return texturedefinition_3 != null && texturedefinition_3.method14717(spriteIndex, this);
+    public boolean loadTexture(int i_1) {
+        MaterialDefinitions material = getMaterialDefinitions(i_1);
+        return material != null && material.loadImageFiles(spriteIndex, this);
     }
 
     @Override
-    public int[] method140(int i_1, float f_2, int i_3, int i_4, boolean bool_5) {
-        int[] ints_7 = method5770(i_1).method14718(spriteIndex, this, f_2, i_3, i_4, bool_5, textures[i_1].isBrickTile);
-        return ints_7;
+    public int[] renderTexturePixels(int i_1, float f_2, int i_3, int i_4, boolean bool_5) {
+        int[] pixels = getMaterialDefinitions(i_1).method14718(spriteIndex, this, f_2, i_3, i_4, bool_5, textures[i_1].isBrickTile);
+        return pixels;
     }
 
 }

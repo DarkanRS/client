@@ -13,36 +13,36 @@ public class CutsceneDefinitions {
             if (data == null) {
                 return false;
             }
-            Packet buffer = new Packet(data);
+            ByteBuf buffer = new ByteBuf(data);
             readValueLoop(buffer);
             int numAreas = buffer.readUnsignedByte();
             for (int i = 0; i < numAreas; i++) {
                 Class86.CUTSCENE_AREAS.append(new CutsceneArea(buffer));
             }
-            int i_5 = buffer.readUnsignedSmart();
+            int i_5 = buffer.readSmart();
             Class86.CUTSCENE_CAMERA_MOVEMENTS = new CutsceneCameraMovement[i_5];
             for (int i_6 = 0; i_6 < i_5; i_6++) {
                 Class86.CUTSCENE_CAMERA_MOVEMENTS[i_6] = new CutsceneCameraMovement(buffer);
             }
-            int i_6 = buffer.readUnsignedSmart();
+            int i_6 = buffer.readSmart();
             Class82.CUTSCENE_ENTITIES = new CutsceneEntity[i_6];
             int i_14;
             for (i_14 = 0; i_14 < i_6; i_14++) {
                 Class82.CUTSCENE_ENTITIES[i_14] = new CutsceneEntity(buffer, i_14);
             }
-            i_14 = buffer.readUnsignedSmart();
+            i_14 = buffer.readSmart();
             Class86.CUTSCENE_OBJECTS = new CutsceneObject[i_14];
             int i_8;
             for (i_8 = 0; i_8 < i_14; i_8++) {
                 Class86.CUTSCENE_OBJECTS[i_8] = new CutsceneObject(buffer);
             }
-            i_8 = buffer.readUnsignedSmart();
+            i_8 = buffer.readSmart();
             Class86.aClass93Array821 = new CutsceneEntityMovement[i_8];
             int i_9;
             for (i_9 = 0; i_9 < i_8; i_9++) {
                 Class86.aClass93Array821[i_9] = new CutsceneEntityMovement(buffer);
             }
-            i_9 = buffer.readUnsignedSmart();
+            i_9 = buffer.readSmart();
             Class86.aCutsceneActionArray822 = new CutsceneAction[i_9];
             for (int i_10 = 0; i_10 < i_9; i_10++) {
                 Class86.aCutsceneActionArray822[i_10] = decodeMiscActions(buffer);
@@ -80,7 +80,7 @@ public class CutsceneDefinitions {
         return true;
     }
 
-    static CutsceneAction decodeMiscActions(Packet buffer) {
+    static CutsceneAction decodeMiscActions(ByteBuf buffer) {
         int i_2 = buffer.readUnsignedByte();
         CutsceneActionType type = QuickChatMessage.method6156(i_2);
         CutsceneAction action = null;
@@ -176,7 +176,7 @@ public class CutsceneDefinitions {
         return action;
     }
 
-    static void readValueLoop(Packet rsbytebuffer_0) {
+    static void readValueLoop(ByteBuf rsbytebuffer_0) {
         while (true) {
             int i_2 = rsbytebuffer_0.readUnsignedByte();
             switch (i_2) {

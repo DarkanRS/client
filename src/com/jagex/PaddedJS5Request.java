@@ -5,7 +5,7 @@ public class PaddedJS5Request extends JS5CacheRequest {
     static Index TEXTURED_MESH_INDEX;
     byte padding;
     int anInt10377;
-    Packet stream;
+    ByteBuf stream;
 
     @Override
     int method14947() {

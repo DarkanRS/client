@@ -43,7 +43,7 @@ public abstract class Ground {
             }
             int i_13 = i_12 * i_4 + i_5 * i_11 >> 14;
             int i_14 = i_5 * i_12 - i_11 * i_4 >> 14;
-            NativeSprite nativesprite_15 = Node_Sub20_Sub15.aNativeSpriteArray9838[i_6];
+            NativeSprite nativesprite_15 = MaterialProp19.aNativeSpriteArray9838[i_6];
             int i_16 = nativesprite_15.method2747();
             int i_17 = nativesprite_15.method2793();
             int i_18 = i_13 + icomponentdefinitions_0.width / 2 - i_16 / 2;

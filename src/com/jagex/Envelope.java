@@ -20,7 +20,7 @@ public class Envelope {
         phasePeak[1] = 65535;
     }
 
-    void decode(Packet buffer) {
+    void decode(ByteBuf buffer) {
         form = buffer.readUnsignedByte();
         start = buffer.readInt();
         end = buffer.readInt();
@@ -35,7 +35,7 @@ public class Envelope {
         ticks = 0;
     }
 
-    void decodeShape(Packet buffer) {
+    void decodeShape(ByteBuf buffer) {
         numPhases = buffer.readUnsignedByte();
         phaseDuration = new int[numPhases];
         phasePeak = new int[numPhases];

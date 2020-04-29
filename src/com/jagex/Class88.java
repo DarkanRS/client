@@ -8,7 +8,7 @@ public class Class88 {
         throw new Error();
     }
 
-    static synchronized AbstractRenderer method1493(int i_0, Canvas canvas_1, Interface22 interface22_2, Index index_3, int i_4, int i_5, int i_6) {
+    static synchronized AbstractRenderer method1493(int i_0, Canvas canvas_1, ImageLoader interface22_2, Index index_3, int i_4, int i_5, int i_6) {
         if (i_0 == 0) {
             return Class109_Sub1.method14652(canvas_1, interface22_2, i_5, i_6);
         } else if (i_0 == 2) {

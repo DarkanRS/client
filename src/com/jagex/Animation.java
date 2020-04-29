@@ -25,7 +25,7 @@ public class Animation {
         }
     }
 
-    static Class149_Sub1 method7644(Packet rsbytebuffer_0) {
+    static Class149_Sub1 method7644(ByteBuf rsbytebuffer_0) {
         return new Class149_Sub1(rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.read24BitUnsignedInteger(), rsbytebuffer_0.read24BitUnsignedInteger(), rsbytebuffer_0.readUnsignedByte());
     }
 

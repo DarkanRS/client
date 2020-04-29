@@ -18,7 +18,7 @@ public abstract class Class152 {
                     throw new IOException();
                 }
             }
-            MonoStereoPreference.method12696(new Packet(bytes_2));
+            MonoStereoPreference.method12696(new ByteBuf(bytes_2));
         } catch (Exception ignored) {
         }
         try {
@@ -129,7 +129,7 @@ public abstract class Class152 {
             StructIndexLoader.method7039();
         }
         Renderers.SOFTWARE_RENDERER.L();
-        Node_Sub20_Sub33.method15411(Renderers.SOFTWARE_RENDERER);
+        MaterialProp21.method15411(Renderers.SOFTWARE_RENDERER);
         i_2 = QuickchatFiller.method1141();
         if (i_2 == -1) {
             i_2 = client.anInt7427;

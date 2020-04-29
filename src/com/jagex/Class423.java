@@ -13,7 +13,7 @@ public class Class423 {
             class345_2 = new ParticleArchive1Def();
             class345_2.anInt4032 = i_0;
             if (bytes_3 != null) {
-                class345_2.method6124(new Packet(bytes_3));
+                class345_2.method6124(new ByteBuf(bytes_3));
             }
 
             class345_2.method6128();

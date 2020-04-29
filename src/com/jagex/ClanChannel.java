@@ -18,7 +18,7 @@ public class ClanChannel extends Node {
     boolean namesAsLong;
     long nextUpdateNumber;
 
-    public ClanChannel(Packet buffer) {
+    public ClanChannel(ByteBuf buffer) {
         decode(buffer);
     }
 
@@ -105,7 +105,7 @@ public class ClanChannel extends Node {
         return -1;
     }
 
-    void decode(Packet buffer) {
+    void decode(ByteBuf buffer) {
         int nameTypeFlag = buffer.readUnsignedByte();
         if ((nameTypeFlag & 0x1) != 0) {
             namesAsLong = true;

@@ -47,7 +47,7 @@ public class VarcDefinitions {
         }
     }
 
-    void method6990(Packet rsbytebuffer_1) {
+    void method6990(ByteBuf rsbytebuffer_1) {
         while (true) {
             int i_3 = rsbytebuffer_1.readUnsignedByte();
             if (i_3 == 0) {
@@ -57,7 +57,7 @@ public class VarcDefinitions {
         }
     }
 
-    void method6991(Packet stream, int opcode) {
+    void method6991(ByteBuf stream, int opcode) {
         if (opcode == 1) {
             aChar4984 = Utils.cp1252ToChar(stream.readByte());
         } else if (opcode == 2) {

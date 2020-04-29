@@ -62,7 +62,7 @@ public class ReferenceTable {
     }
 
     void decodeHeader(byte[] bytes_1) {
-        Packet stream = new Packet(Node_Sub17_Sub6.method15438(bytes_1));
+        ByteBuf stream = new ByteBuf(Node_Sub17_Sub6.method15438(bytes_1));
         int protocol = stream.readUnsignedByte();
         if (protocol >= 5 && protocol <= 7) {
             if (protocol >= 6) {

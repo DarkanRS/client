@@ -14,7 +14,7 @@ public class CutsceneObject {
 
     int anInt967;
 
-    CutsceneObject(Packet rsbytebuffer_1) {
+    CutsceneObject(ByteBuf rsbytebuffer_1) {
         objectId = rsbytebuffer_1.readBigSmart();
         type = (LocShapes) Class386.identify(LocShapes.method262(), rsbytebuffer_1.readUnsignedByte());
     }

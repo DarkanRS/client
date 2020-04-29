@@ -2,7 +2,7 @@ package com.jagex;
 
 import jaclib.memory.Stream;
 
-public class Node_Sub35_Sub1 extends Packet {
+public class Node_Sub35_Sub1 extends ByteBuf {
 
     Node_Sub35_Sub1(int i_1) {
         super(i_1);

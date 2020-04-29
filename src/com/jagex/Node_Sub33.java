@@ -17,9 +17,9 @@ public class Node_Sub33 extends Node {
         aNode_Sub36_7835 = class282_sub36_1;
     }
 
-    static String method12582(Packet rsbytebuffer_0) {
+    static String method12582(ByteBuf rsbytebuffer_0) {
         try {
-            int i_4 = rsbytebuffer_0.readUnsignedSmart();
+            int i_4 = rsbytebuffer_0.readSmart();
             if (i_4 > 32767) {
                 i_4 = 32767;
             }

@@ -317,7 +317,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
 
                                 int i_16 = i_10 == 0 ? 5 : 9;
                                 current = class282_sub50_sub11_sub1_15;
-                                current.stream = new Packet(i_16 + i_9 + current.padding);
+                                current.stream = new ByteBuf(i_16 + i_9 + current.padding);
                                 current.stream.writeByte(i_10);
                                 current.stream.writeInt(i_9);
                                 current.anInt10377 = -131722454 * -5971791;
@@ -485,7 +485,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
 
                                 int i_16 = i_10 == 0 ? 5 : 9;
                                 current = class282_sub50_sub11_sub1_15;
-                                current.stream = new Packet(i_16 + i_9 + current.padding);
+                                current.stream = new ByteBuf(i_16 + i_9 + current.padding);
                                 current.stream.writeByte(i_10);
                                 current.stream.writeInt(i_9);
                                 current.anInt10377 = -131722454 * -5971791;
@@ -785,7 +785,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
 
                                 int i_17 = i_11 == 0 ? 5 : 9;
                                 current = class282_sub50_sub11_sub1_16;
-                                current.stream = new Packet(current.padding + i_17 + i_10);
+                                current.stream = new ByteBuf(current.padding + i_17 + i_10);
                                 current.stream.writeByte(i_11);
                                 current.stream.writeInt(i_10);
                                 current.anInt10377 = 10;
@@ -961,7 +961,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
 
                                 int i_16 = i_10 == 0 ? 5 : 9;
                                 current = class282_sub50_sub11_sub1_15;
-                                current.stream = new Packet(i_16 + i_9 + current.padding);
+                                current.stream = new ByteBuf(i_16 + i_9 + current.padding);
                                 current.stream.writeByte(i_10);
                                 current.stream.writeInt(i_9);
                                 current.anInt10377 = -131722454 * -5971791;

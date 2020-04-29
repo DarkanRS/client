@@ -832,7 +832,7 @@ public class OpenGLGround extends Ground {
 
     @Override
     public void method6707(int i_1, int i_2, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, HDWaterTile class90_11, boolean bool_12) {
-        Interface22 interface22_13 = renderer.anInterface22_5834;
+        ImageLoader interface22_13 = renderer.textureCache;
         if (ints_6 != null && anIntArrayArrayArray8662 == null) {
             anIntArrayArrayArray8662 = new int[width][length][];
         }
@@ -858,7 +858,7 @@ public class OpenGLGround extends Ground {
         for (int i_15 = 0; i_15 < ints_7.length; i_15++) {
             int i_16 = ints_9[i_15];
             int i_17 = ints_10[i_15];
-            if ((flags & 0x20) != 0 && i_16 != -1 && interface22_13.method144(i_16).isGroundMesh) {
+            if ((flags & 0x20) != 0 && i_16 != -1 && interface22_13.getTextureDetails(i_16).isGroundMesh) {
                 i_17 = 128;
                 i_16 = -1;
             }
@@ -978,7 +978,7 @@ public class OpenGLGround extends Ground {
 
     @Override
     public void method6706(int i_1, int i_2, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, HDWaterTile class90_11, boolean bool_12) {
-        Interface22 interface22_13 = renderer.anInterface22_5834;
+        ImageLoader interface22_13 = renderer.textureCache;
         if (ints_6 != null && anIntArrayArrayArray8662 == null) {
             anIntArrayArrayArray8662 = new int[width][length][];
         }
@@ -1004,7 +1004,7 @@ public class OpenGLGround extends Ground {
         for (int i_15 = 0; i_15 < ints_7.length; i_15++) {
             int i_16 = ints_9[i_15];
             int i_17 = ints_10[i_15];
-            if ((flags & 0x20) != 0 && i_16 != -1 && interface22_13.method144(i_16).isGroundMesh) {
+            if ((flags & 0x20) != 0 && i_16 != -1 && interface22_13.getTextureDetails(i_16).isGroundMesh) {
                 i_17 = 128;
                 i_16 = -1;
             }

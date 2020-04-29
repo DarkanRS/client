@@ -28,7 +28,7 @@ public class Filter {
         return normalize(_f);
     }
 
-    void decode(Packet buffer, Envelope envelope) {
+    void decode(ByteBuf buffer, Envelope envelope) {
         int count = buffer.readUnsignedByte();
         numPairs[0] = count >> 4;
         numPairs[1] = count & 0xf;

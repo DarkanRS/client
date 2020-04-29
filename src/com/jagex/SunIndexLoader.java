@@ -29,7 +29,7 @@ public class SunIndexLoader {
             }
             class38_3 = new SunDefinitions();
             if (bytes_10 != null) {
-                class38_3.method850(new Packet(bytes_10));
+                class38_3.method850(new ByteBuf(bytes_10));
             }
             LRUCache softcache_9 = aClass229_432;
             synchronized (aClass229_432) {

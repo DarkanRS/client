@@ -78,7 +78,7 @@ public class ObjectIndexLoader implements IndexLoader {
             itemdefinitions_3.groundOptions = defaultGroundOptions.clone();
             itemdefinitions_3.inventoryOptions = defaultInventoryOptions.clone();
             if (bytes_12 != null) {
-                itemdefinitions_3.decode(new Packet(bytes_12));
+                itemdefinitions_3.decode(new ByteBuf(bytes_12));
             }
 
             itemdefinitions_3.postDecode();

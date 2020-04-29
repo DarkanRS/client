@@ -62,7 +62,7 @@ public class Class534_Sub1 extends Class534 {
         }
     }
 
-    void method12810(Packet rsbytebuffer_1, MouseRecord_Sub1 class282_sub53_sub1_2) {
+    void method12810(ByteBuf rsbytebuffer_1, MouseRecord_Sub1 class282_sub53_sub1_2) {
         rsbytebuffer_1.writeByte(class282_sub53_sub1_2.method14729());
     }
 
@@ -77,12 +77,12 @@ public class Class534_Sub1 extends Class534 {
     }
 
     @Override
-    void method11427(Packet rsbytebuffer_1, MouseRecord class282_sub53_2) {
+    void method11427(ByteBuf rsbytebuffer_1, MouseRecord class282_sub53_2) {
         method12810(rsbytebuffer_1, (MouseRecord_Sub1) class282_sub53_2);
     }
 
     @Override
-    void method11426(Packet rsbytebuffer_1, MouseRecord class282_sub53_2) {
+    void method11426(ByteBuf rsbytebuffer_1, MouseRecord class282_sub53_2) {
         method12810(rsbytebuffer_1, (MouseRecord_Sub1) class282_sub53_2);
     }
 
@@ -148,7 +148,7 @@ public class Class534_Sub1 extends Class534 {
     }
 
     @Override
-    void method11413(Packet rsbytebuffer_1, MouseRecord class282_sub53_2) {
+    void method11413(ByteBuf rsbytebuffer_1, MouseRecord class282_sub53_2) {
         method12810(rsbytebuffer_1, (MouseRecord_Sub1) class282_sub53_2);
     }
 

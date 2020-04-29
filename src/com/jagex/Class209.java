@@ -20,9 +20,9 @@ public abstract class Class209 {
             if (Class179.anInt2227 >= 0)
                 System.arraycopy(Class13.aStringArray129, 0, Class13.aStringArray129, 1, Class179.anInt2227);
             Class13.aStringArray129[0] = string_5 + ": " + arr_6[i_7];
-            if (TextureDefinition.aFileOutputStream9481 != null) {
+            if (MaterialDefinitions.aFileOutputStream9481 != null) {
                 try {
-                    TextureDefinition.aFileOutputStream9481.write(LinkedNodeList.method7885(Class13.aStringArray129[0] + "\n"));
+                    MaterialDefinitions.aFileOutputStream9481.write(LinkedNodeList.method7885(Class13.aStringArray129[0] + "\n"));
                 } catch (IOException ignored) {
                 }
             }

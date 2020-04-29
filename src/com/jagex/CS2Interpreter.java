@@ -3642,7 +3642,7 @@ public class CS2Interpreter {
     static void storeVarc(CS2Executor executor) {
         int i_2 = executor.intOpValues[executor.instrPtr];
         Class320.VARC_INT[i_2] = executor.intStack[--executor.intStackPtr];
-        Node_Sub20_Sub11.method15264(i_2);
+        MaterialProp26.method15264(i_2);
         client.aBool7400 |= Node_Sub17_Sub2.VARC_BOOL[i_2];
     }
 
@@ -4047,7 +4047,7 @@ public class CS2Interpreter {
     static void storeVarcString(CS2Executor executor) {
         int i_2 = executor.intOpValues[executor.instrPtr];
         Class462.VARC_STRING[i_2] = (String) executor.stringStack[--executor.stringStackPtr];
-        Node_Sub20_Sub10.method15263(i_2);
+        MaterialProp8.method15263(i_2);
     }
 
     static void hideComp(CS2Executor executor) {
@@ -4585,7 +4585,7 @@ public class CS2Interpreter {
         int i_3 = executor.intStack[executor.intStackPtr];
         int i_4 = executor.intStack[executor.intStackPtr + 1];
         int i_5 = executor.intStack[executor.intStackPtr + 2];
-        Node_Sub20_Sub8.queryItemParamInt(string_2, i_3 == 1, i_4, i_5);
+        MaterialProp16.queryItemParamInt(string_2, i_3 == 1, i_4, i_5);
         executor.intStack[++executor.intStackPtr - 1] = VarcDefinitions.CS2_QUERY_RESULTS_LEN;
     }
 
@@ -4763,7 +4763,7 @@ public class CS2Interpreter {
     static void method5691(CS2Executor executor) {
         String itemName = (String) executor.stringStack[--executor.stringStackPtr];
         int tradeableOnly = executor.intStack[--executor.intStackPtr];
-        Node_Sub20_Sub36.queryItemNoParams(itemName, tradeableOnly == 1);
+        MaterialProp33.queryItemNoParams(itemName, tradeableOnly == 1);
         executor.intStack[++executor.intStackPtr - 1] = VarcDefinitions.CS2_QUERY_RESULTS_LEN;
     }
 
@@ -6015,7 +6015,7 @@ public class CS2Interpreter {
 
     static void method6396(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
-        Node_Sub20_Sub38.method15430(i_2);
+        MaterialProp13.method15430(i_2);
     }
 
     static void method6397(CS2Executor executor) {
@@ -6827,7 +6827,7 @@ public class CS2Interpreter {
 
     static void method3942(CS2Executor executor) {
         Class393.preferences.setValue(Class393.preferences.monoStereo, executor.intStack[--executor.intStackPtr] == 1 ? 1 : 0);
-        Node_Sub20_Sub36.method15418();
+        MaterialProp33.method15418();
         Class190.savePreferences();
         client.aBool7175 = false;
     }
@@ -7705,7 +7705,7 @@ public class CS2Interpreter {
     }
 
     static void method6239() {
-        Node_Sub20_Sub25.method15393();
+        MaterialProp14.method15393();
         IndexLoaders.MAP_REGION_DECODER.method4547();
         Class190.savePreferences();
         client.aBool7175 = false;
@@ -8994,7 +8994,7 @@ public class CS2Interpreter {
         executor.intStackPtr -= 12;
         Class316.method5594();
         CutsceneAction.method1607();
-        Node_Sub20_Sub9.anInt9792 = executor.intStack[executor.intStackPtr];
+        MaterialProp28.anInt9792 = executor.intStack[executor.intStackPtr];
         Class301.anInt3556 = executor.intStack[executor.intStackPtr + 1];
         Class20.anInt188 = executor.intStack[executor.intStackPtr + 2];
         Class182.anInt2262 = executor.intStack[executor.intStackPtr + 3];

@@ -59,7 +59,7 @@ public class HitsplatDefinitions {
         }
     }
 
-    void method3833(Packet stream, int opcode) {
+    void method3833(ByteBuf stream, int opcode) {
         if (opcode == 1) {
             anInt2849 = stream.readBigSmart();
         } else if (opcode == 2) {
@@ -120,7 +120,7 @@ public class HitsplatDefinitions {
         }
     }
 
-    void method3837(Packet rsbytebuffer_1) {
+    void method3837(ByteBuf rsbytebuffer_1) {
         while (true) {
             int i_3 = rsbytebuffer_1.readUnsignedByte();
             if (i_3 == 0) {

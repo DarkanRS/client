@@ -7,7 +7,7 @@ import java.util.Hashtable;
 public abstract class AbstractRenderer {
 
     static boolean[] aBoolArray5839 = new boolean[8];
-    public Interface22 anInterface22_5834;
+    public ImageLoader textureCache;
     public int rendererId;
     protected Class158 aClass158_5853;
     protected Class158_Sub2 aClass158_Sub2_5841;
@@ -15,8 +15,8 @@ public abstract class AbstractRenderer {
     int anInt5854 = -1;
     Class158_Sub1[] aClass158_Sub1Array5833 = new Class158_Sub1[4];
 
-    AbstractRenderer(Interface22 interface22_1) {
-        anInterface22_5834 = interface22_1;
+    AbstractRenderer(ImageLoader interface22_1) {
+        textureCache = interface22_1;
         int i_2 = -1;
         for (int i_3 = 0; i_3 < 8; i_3++) {
             if (!aBoolArray5839[i_3]) {
@@ -54,7 +54,7 @@ public abstract class AbstractRenderer {
     }
 
     static CS2Script method8699(byte[] bytes_0) {
-        return new CS2Script(new Packet(bytes_0));
+        return new CS2Script(new ByteBuf(bytes_0));
     }
 
     public abstract RendererInfo method8392();

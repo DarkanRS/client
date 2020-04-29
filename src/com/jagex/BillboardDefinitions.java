@@ -93,7 +93,7 @@ public class BillboardDefinitions {
         }
     }
 
-    void decode(Packet rsbytebuffer_1) {
+    void decode(ByteBuf rsbytebuffer_1) {
         while (true) {
             int i_4 = rsbytebuffer_1.readUnsignedByte();
             if (i_4 == 0) {
@@ -103,7 +103,7 @@ public class BillboardDefinitions {
         }
     }
 
-    void method6164(Packet rsbytebuffer_1, int i_2) {
+    void method6164(ByteBuf rsbytebuffer_1, int i_2) {
         if (i_2 == 1) {
             anInt4055 = rsbytebuffer_1.readUnsignedShort();
             if (anInt4055 == 65535) {

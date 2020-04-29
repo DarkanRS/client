@@ -16,7 +16,7 @@ public class SoftwareItemRender implements Interface18 {
 
     boolean hasPlayerAppearance;
 
-    static Class149_Sub4 method7033(Packet rsbytebuffer_0) {
+    static Class149_Sub4 method7033(ByteBuf rsbytebuffer_0) {
         return new Class149_Sub4(rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.read24BitUnsignedInteger(), rsbytebuffer_0.read24BitUnsignedInteger(), rsbytebuffer_0.readUnsignedByte());
     }
 
@@ -71,7 +71,7 @@ public class SoftwareItemRender implements Interface18 {
 
     @Override
     public long method109() {
-        long[] longs_1 = Packet.aLongArray7979;
+        long[] longs_1 = ByteBuf.aLongArray7979;
         long long_2 = -1L;
         long_2 = long_2 >>> 8 ^ longs_1[(int) ((long_2 ^ (362003861 * rendererId * 785163709)) & 0xffL)];
         long_2 = long_2 >>> 8 ^ longs_1[(int) ((long_2 ^ (-2122717931 * itemId * 412172861 >> 8)) & 0xffL)];
@@ -92,7 +92,7 @@ public class SoftwareItemRender implements Interface18 {
 
     @Override
     public long method130() {
-        long[] longs_1 = Packet.aLongArray7979;
+        long[] longs_1 = ByteBuf.aLongArray7979;
         long long_2 = -1L;
         long_2 = long_2 >>> 8 ^ longs_1[(int) ((long_2 ^ rendererId) & 0xffL)];
         long_2 = long_2 >>> 8 ^ longs_1[(int) ((long_2 ^ (itemId >> 8)) & 0xffL)];

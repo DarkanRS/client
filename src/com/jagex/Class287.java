@@ -14,7 +14,7 @@ public class Class287 {
     int anInt3409;
     int anInt3432;
 
-    public Class287(AbstractRenderer graphicalrenderer_1, int i_2, Packet rsbytebuffer_3) {
+    public Class287(AbstractRenderer graphicalrenderer_1, int i_2, ByteBuf rsbytebuffer_3) {
         if (Preference_Sub20.anIntArray7920 == null) {
             FontRenderer_Sub1.method13783();
         }

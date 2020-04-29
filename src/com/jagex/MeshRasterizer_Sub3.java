@@ -82,14 +82,14 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 
     MeshRasterizer_Sub3(AbstractRenderer_Sub2 class505_sub2_1, RSMesh rsmesh_2, int i_3, int i_4, int i_5, int i_6) {
         this(class505_sub2_1, i_3, i_6, true, false);
-        Interface22 interface22_7 = class505_sub2_1.anInterface22_5834;
+        ImageLoader interface22_7 = class505_sub2_1.textureCache;
         int[] ints_8 = new int[rsmesh_2.faceCount];
         anIntArray8947 = new int[rsmesh_2.maxDepth + 1];
 
         for (int i_9 = 0; i_9 < rsmesh_2.faceCount; i_9++) {
             if (rsmesh_2.faceType == null || rsmesh_2.faceType[i_9] != 2) {
                 if (rsmesh_2.faceTextures != null && rsmesh_2.faceTextures[i_9] != -1) {
-                    TextureDetails class169_70 = interface22_7.method144(rsmesh_2.faceTextures[i_9] & 0xffff);
+                    TextureDetails class169_70 = interface22_7.getTextureDetails(rsmesh_2.faceTextures[i_9] & 0xffff);
                     if (((anInt8896 & 0x40) == 0 || !class169_70.isGroundMesh) && class169_70.skipTriangles) {
                         continue;
                     }
@@ -131,7 +131,7 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
                         }
 
                         if (class347_77.anInt4055 != -1) {
-                            class169_69 = interface22_7.method144(class347_77.anInt4055);
+                            class169_69 = interface22_7.getTextureDetails(class347_77.anInt4055);
                             if (class169_69.blendType == 2) {
                                 aBool8959 = true;
                             }
@@ -150,7 +150,7 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
             if (rsmesh_2.faceTextures != null) {
                 s_82 = rsmesh_2.faceTextures[i_12];
                 if (s_82 != -1) {
-                    class169_65 = interface22_7.method144(s_82 & 0xffff);
+                    class169_65 = interface22_7.getTextureDetails(s_82 & 0xffff);
                     if ((anInt8896 & 0x40) != 0 && class169_65.isGroundMesh) {
                         s_82 = -1;
                         class169_65 = null;
@@ -328,7 +328,7 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 
             s_86 = rsmesh_2.faceTextures == null ? -1 : rsmesh_2.faceTextures[i_81];
             if (s_86 != -1 && (anInt8896 & 0x40) != 0) {
-                class169_69 = interface22_7.method144(s_86 & 0xffff);
+                class169_69 = interface22_7.getTextureDetails(s_86 & 0xffff);
                 if (class169_69.isGroundMesh) {
                     s_86 = -1;
                 }
@@ -785,7 +785,7 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 
     @Override
     public void di(short s_1, short s_2) {
-        Interface22 interface22_3 = aGraphicalRenderer_Sub2_8917.anInterface22_5834;
+        ImageLoader interface22_3 = aGraphicalRenderer_Sub2_8917.textureCache;
 
         for (int i_4 = 0; i_4 < anInt8916 * 3 * -1431655765; i_4++) {
             if (aShortArray8923[i_4] == s_1) {
@@ -796,7 +796,7 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
         byte b_13 = 0;
         byte b_5 = 0;
         if (s_1 != -1) {
-            TextureDetails class169_6 = interface22_3.method144(s_1 & 0xffff);
+            TextureDetails class169_6 = interface22_3.getTextureDetails(s_1 & 0xffff);
             b_13 = class169_6.shadowFactor;
             b_5 = class169_6.brightness;
         }
@@ -804,7 +804,7 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
         byte b_11 = 0;
         byte b_7 = 0;
         if (s_2 != -1) {
-            TextureDetails class169_8 = interface22_3.method144(s_2 & 0xffff);
+            TextureDetails class169_8 = interface22_3.getTextureDetails(s_2 & 0xffff);
             b_11 = class169_8.shadowFactor;
             b_7 = class169_8.brightness;
             if (class169_8.textureSpeedU != 0 || class169_8.textureSpeedV != 0) {
@@ -2037,7 +2037,7 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 
     @Override
     public void W(short s_1, short s_2) {
-        Interface22 interface22_3 = aGraphicalRenderer_Sub2_8917.anInterface22_5834;
+        ImageLoader interface22_3 = aGraphicalRenderer_Sub2_8917.textureCache;
 
         for (int i_4 = 0; i_4 < anInt8916; i_4++) {
             if (aShortArray8923[i_4] == s_1) {
@@ -2048,7 +2048,7 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
         byte b_13 = 0;
         byte b_5 = 0;
         if (s_1 != -1) {
-            TextureDetails class169_6 = interface22_3.method144(s_1 & 0xffff);
+            TextureDetails class169_6 = interface22_3.getTextureDetails(s_1 & 0xffff);
             b_13 = class169_6.shadowFactor;
             b_5 = class169_6.brightness;
         }
@@ -2056,7 +2056,7 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
         byte b_11 = 0;
         byte b_7 = 0;
         if (s_2 != -1) {
-            TextureDetails class169_8 = interface22_3.method144(s_2 & 0xffff);
+            TextureDetails class169_8 = interface22_3.getTextureDetails(s_2 & 0xffff);
             b_11 = class169_8.shadowFactor;
             b_7 = class169_8.brightness;
             if (class169_8.textureSpeedU != 0 || class169_8.textureSpeedV != 0) {
@@ -3192,7 +3192,7 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
                     boolean bool_17 = false;
                     if (i_6 != 65535) {
                         class48_2.anInterface6_452 = aGraphicalRenderer_Sub2_8917.aClass66_8787.method1283(i_6);
-                        TextureDetails class169_8 = aGraphicalRenderer_Sub2_8917.anInterface22_5834.method144(i_6);
+                        TextureDetails class169_8 = aGraphicalRenderer_Sub2_8917.textureCache.getTextureDetails(i_6);
                         bool_17 = !Node_Sub41.method13367(class169_8.effectId);
                         class48_2.aClass384_454.buf[12] = (aGraphicalRenderer_Sub2_8917.anInt8820 % 128000) / 1000.0F * class169_8.textureSpeedU / 64.0F % 1.0F;
                         class48_2.aClass384_454.buf[13] = (aGraphicalRenderer_Sub2_8917.anInt8820 % 128000) / 1000.0F * class169_8.textureSpeedV / 64.0F % 1.0F;
@@ -3254,7 +3254,7 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
                     byte b_19 = 11;
                     if (i_15 != 65535) {
                         class48_2.anInterface6_452 = aGraphicalRenderer_Sub2_8917.aClass66_8787.method1283(i_15);
-                        TextureDetails class169_10 = aGraphicalRenderer_Sub2_8917.anInterface22_5834.method144(i_15);
+                        TextureDetails class169_10 = aGraphicalRenderer_Sub2_8917.textureCache.getTextureDetails(i_15);
                         b_19 = class169_10.effectId;
                         class48_2.method944(class169_10);
                         class48_2.aClass384_454.buf[12] = (aGraphicalRenderer_Sub2_8917.anInt8820 % 128000) / 1000.0F * class169_10.textureSpeedU / 64.0F % 1.0F;
@@ -3285,7 +3285,7 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
                         case 5:
                             if (!aGraphicalRenderer_Sub2_8917.aBool8692) {
                                 Class41_Sub1_Sub2 class41_sub1_sub2_21 = aGraphicalRenderer_Sub2_8917.aClass41_Sub1_Sub2_8798;
-                                TextureDetails class169_11 = aGraphicalRenderer_Sub2_8917.anInterface22_5834.method144(i_15);
+                                TextureDetails class169_11 = aGraphicalRenderer_Sub2_8917.textureCache.getTextureDetails(i_15);
                                 class41_sub1_sub2_21.method15550(class169_11.effectParam1);
                                 class41_sub1_sub2_21.aClass384_10146.fromVarMatrix44(matrix44var_1);
                                 class41_sub1_sub2_21.aClass384_10138.fromVarMatrix44(matrix44var_1);
@@ -4101,7 +4101,7 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
     int method14282(int i_1, short s_2, int i_3) {
         int i_4 = aGraphicalRenderer_Sub2_8917.anIntArray8803[method14290(i_1, i_3)];
         if (s_2 != -1) {
-            TextureDetails class169_5 = aGraphicalRenderer_Sub2_8917.anInterface22_5834.method144(s_2 & 0xffff);
+            TextureDetails class169_5 = aGraphicalRenderer_Sub2_8917.textureCache.getTextureDetails(s_2 & 0xffff);
             int i_6 = class169_5.shadowFactor & 0xff;
             int i_7;
             int i_9;
@@ -5966,7 +5966,7 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
     public boolean successful() {
         if (aShortArray8923 != null) {
             for (int i_1 = 0; i_1 < aShortArray8923.length; i_1++) {
-                if (aShortArray8923[i_1] != -1 && !aGraphicalRenderer_Sub2_8917.anInterface22_5834.method139(aShortArray8923[i_1])) {
+                if (aShortArray8923[i_1] != -1 && !aGraphicalRenderer_Sub2_8917.textureCache.loadTexture(aShortArray8923[i_1])) {
                     return false;
                 }
             }
@@ -6071,7 +6071,7 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
     public boolean method11303() {
         if (aShortArray8923 != null) {
             for (int i_1 = 0; i_1 < aShortArray8923.length; i_1++) {
-                if (aShortArray8923[i_1] != -1 && !aGraphicalRenderer_Sub2_8917.anInterface22_5834.method139(aShortArray8923[i_1])) {
+                if (aShortArray8923[i_1] != -1 && !aGraphicalRenderer_Sub2_8917.textureCache.loadTexture(aShortArray8923[i_1])) {
                     return false;
                 }
             }
@@ -6735,7 +6735,7 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 
     @Override
     public void df(short s_1, short s_2) {
-        Interface22 interface22_3 = aGraphicalRenderer_Sub2_8917.anInterface22_5834;
+        ImageLoader interface22_3 = aGraphicalRenderer_Sub2_8917.textureCache;
 
         for (int i_4 = 0; i_4 < anInt8916 * 3 * -1431655765; i_4++) {
             if (aShortArray8923[i_4] == s_1) {
@@ -6746,7 +6746,7 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
         byte b_13 = 0;
         byte b_5 = 0;
         if (s_1 != -1) {
-            TextureDetails class169_6 = interface22_3.method144(s_1 & 0xffff);
+            TextureDetails class169_6 = interface22_3.getTextureDetails(s_1 & 0xffff);
             b_13 = class169_6.shadowFactor;
             b_5 = class169_6.brightness;
         }
@@ -6754,7 +6754,7 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
         byte b_11 = 0;
         byte b_7 = 0;
         if (s_2 != -1) {
-            TextureDetails class169_8 = interface22_3.method144(s_2 & 0xffff);
+            TextureDetails class169_8 = interface22_3.getTextureDetails(s_2 & 0xffff);
             b_11 = class169_8.shadowFactor;
             b_7 = class169_8.brightness;
             if (class169_8.textureSpeedU != 0 || class169_8.textureSpeedV != 0) {

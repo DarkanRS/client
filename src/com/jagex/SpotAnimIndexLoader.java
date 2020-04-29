@@ -125,7 +125,7 @@ public class SpotAnimIndexLoader {
             spotanimdefinitions_3.aClass515_6973 = this;
             spotanimdefinitions_3.anInt6969 = i_1;
             if (bytes_10 != null) {
-                spotanimdefinitions_3.method11226(new Packet(bytes_10));
+                spotanimdefinitions_3.method11226(new ByteBuf(bytes_10));
             }
             LRUCache softcache_9 = aClass229_5891;
             synchronized (aClass229_5891) {

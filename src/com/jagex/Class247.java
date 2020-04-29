@@ -2,7 +2,7 @@ package com.jagex;
 
 public class Class247 {
 
-    static Interface22 TEXTURE_LOADER;
+    static ImageLoader TEXTURE_LOADER;
 
     int anInt3053;
 
@@ -117,9 +117,9 @@ public class Class247 {
             graphicalrenderer_1.ba(2, 0);
             i_8 = i_8 + i_2 & 0x3fff;
             if (anInt3031 != -1 && anInt3034 != 0) {
-                TextureDetails class169_16 = TEXTURE_LOADER.method144(anInt3031);
-                if (aNativeSprite_3030 == null && TEXTURE_LOADER.method139(anInt3031)) {
-                    int[] ints_17 = class169_16.blendType == 2 ? TEXTURE_LOADER.method141(anInt3031, anInt3034, anInt3034) : TEXTURE_LOADER.method140(anInt3031, 0.7F, anInt3034, anInt3034, false);
+                TextureDetails class169_16 = TEXTURE_LOADER.getTextureDetails(anInt3031);
+                if (aNativeSprite_3030 == null && TEXTURE_LOADER.loadTexture(anInt3031)) {
+                    int[] ints_17 = class169_16.blendType == 2 ? TEXTURE_LOADER.method141(anInt3031, anInt3034, anInt3034) : TEXTURE_LOADER.renderTexturePixels(anInt3031, 0.7F, anInt3034, anInt3034, false);
                     anInt3053 = ints_17[0];
                     anInt3044 = ints_17[ints_17.length - 1];
                     aNativeSprite_3030 = graphicalrenderer_1.createNativeSprite(ints_17, anInt3034, anInt3034, anInt3034);

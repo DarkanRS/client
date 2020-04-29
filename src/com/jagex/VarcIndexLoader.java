@@ -29,7 +29,7 @@ public class VarcIndexLoader {
 
             class415_3 = new VarcDefinitions();
             if (bytes_10 != null) {
-                class415_3.method6990(new Packet(bytes_10));
+                class415_3.method6990(new ByteBuf(bytes_10));
             }
 
             LRUCache softcache_9 = aClass229_4850;

@@ -185,7 +185,7 @@ public class QuickchatMessageLoader {
             quickchatdefinitions_3 = new QuickchatMessageDefinitions();
             quickchatdefinitions_3.aClass429_9623 = this;
             if (bytes_4 != null) {
-                quickchatdefinitions_3.method14913(new Packet(bytes_4));
+                quickchatdefinitions_3.method14913(new ByteBuf(bytes_4));
             }
 
             if (id >= 32768) {

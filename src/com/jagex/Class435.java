@@ -59,7 +59,7 @@ public class Class435 {
 
     }
 
-    static void method7302(AbstractRenderer graphicalrenderer_0, Interface22 interface22_1) {
+    static void method7302(AbstractRenderer graphicalrenderer_0, ImageLoader interface22_1) {
         if (Class291_Sub1.aCacheableNode_Sub6_3491 != null) {
             Utils.time();
             Utils.time();

@@ -10,7 +10,7 @@ public class ItemContainerDefinitions extends CacheableNode implements Definitio
 
     public int[] amounts;
 
-    void method15690(Packet rsbytebuffer_1) {
+    void method15690(ByteBuf rsbytebuffer_1) {
         while (true) {
             int i_3 = rsbytebuffer_1.readUnsignedByte();
             if (i_3 == 0) {
@@ -20,7 +20,7 @@ public class ItemContainerDefinitions extends CacheableNode implements Definitio
         }
     }
 
-    void method15691(Packet rsbytebuffer_1, int i_2) {
+    void method15691(ByteBuf rsbytebuffer_1, int i_2) {
         if (i_2 == 2) {
             maxSize = rsbytebuffer_1.readUnsignedShort();
         } else if (i_2 == 4) {

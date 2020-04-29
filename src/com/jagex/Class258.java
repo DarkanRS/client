@@ -18,7 +18,7 @@ public class Class258 {
         }
     }
 
-    public static Class357 method4570(Packet rsbytebuffer_0) {
+    public static Class357 method4570(ByteBuf rsbytebuffer_0) {
         int i_2 = rsbytebuffer_0.readBigSmart();
         Class356 class356_3 = Class356.values()[rsbytebuffer_0.readUnsignedByte()];
         Class353 class353_4 = Class353.values()[rsbytebuffer_0.readUnsignedByte()];

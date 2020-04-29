@@ -2,7 +2,7 @@ package com.jagex;
 
 public class Class276 {
 
-    public static Packet aNode_Sub35_3346;
+    public static ByteBuf aNode_Sub35_3346;
     static String[] aStringArray3345;
 
     Class276() throws Throwable {

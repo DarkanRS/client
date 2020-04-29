@@ -22,10 +22,10 @@ public class EntityDefaults {
     public short[][][] replacementColours;
 
     public EntityDefaults(Index index_1) {
-        decode(new Packet(index_1.getFile(DefaultsFile.ENTITY.fileId)));
+        decode(new ByteBuf(index_1.getFile(DefaultsFile.ENTITY.fileId)));
     }
 
-    void decode(Packet buffer) {
+    void decode(ByteBuf buffer) {
         boolean loadedOffsets = false;
         while (true) {
             int opcode = buffer.readUnsignedByte();

@@ -12,7 +12,7 @@ public class CutsceneArea extends Node {
     public int anInt7483;
     public int anInt7486;
 
-    CutsceneArea(Packet buffer) {
+    CutsceneArea(ByteBuf buffer) {
         int position = buffer.readInt();
         plane = position >>> 28;
         regionX = position >>> 14 & 0x3fff;
@@ -42,7 +42,7 @@ public class CutsceneArea extends Node {
         Class187.anInt2361 = i_0;
         Class187.anInt2359 = i_1;
         Class187.aBool2360 = false;
-        Node_Sub20_Sub9.method15255();
+        MaterialProp28.method15255();
         return tcpmessage_4;
     }
 

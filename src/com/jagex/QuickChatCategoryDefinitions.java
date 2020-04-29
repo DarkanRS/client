@@ -8,7 +8,7 @@ public class QuickChatCategoryDefinitions extends CacheableNode {
     public int[] messages;
     public char[] messageHotkeys;
 
-    void method15209(Packet rsbytebuffer_1) {
+    void method15209(ByteBuf rsbytebuffer_1) {
         while (true) {
             int i_3 = rsbytebuffer_1.readUnsignedByte();
             if (i_3 == 0) {
@@ -19,7 +19,7 @@ public class QuickChatCategoryDefinitions extends CacheableNode {
         }
     }
 
-    void method15210(Packet buffer, int opcode) {
+    void method15210(ByteBuf buffer, int opcode) {
         if (opcode == 1) {
             name = buffer.readString();
         } else if (opcode == 2) {

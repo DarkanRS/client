@@ -155,7 +155,7 @@ public class Class329_Sub1 extends Class329 {
         }
     }
 
-    public void method12460(AbstractRenderer graphicalrenderer_1, Packet rsbytebuffer_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9) {
+    public void method12460(AbstractRenderer graphicalrenderer_1, ByteBuf rsbytebuffer_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9) {
         if (!overlayHidden) {
             boolean bool_11 = false;
             Class535 class535_12 = null;
@@ -193,7 +193,7 @@ public class Class329_Sub1 extends Class329 {
                                         i_29 = class282_sub24_28.method12368() >> 9;
                                         i_21 = class282_sub24_28.method12394() >> 9;
                                         if (class287_25.anInt3419 == i_6 && i_29 >= i_13 && i_29 < i_13 + 8 && i_21 >= i_14 && i_21 < i_14 + 8) {
-                                            i_22 = (i_4 << 9) + Node_Sub20_Sub39.method15436(class282_sub24_28.method12368() & 0xfff, class282_sub24_28.method12394() & 0xfff, i_9);
+                                            i_22 = (i_4 << 9) + MaterialProp38.method15436(class282_sub24_28.method12368() & 0xfff, class282_sub24_28.method12394() & 0xfff, i_9);
                                             i_23 = (i_5 << 9) + Class354.method6214(class282_sub24_28.method12368() & 0xfff, class282_sub24_28.method12394() & 0xfff, i_9);
                                             i_29 = i_22 >> 9;
                                             i_21 = i_23 >> 9;
@@ -308,7 +308,7 @@ public class Class329_Sub1 extends Class329 {
     }
 
     public void method12461(AbstractRenderer graphicalrenderer_1, byte[] bytes_2, int i_3, int i_4, ClipMap[] arr_5) {
-        Packet rsbytebuffer_7 = new Packet(bytes_2);
+        ByteBuf rsbytebuffer_7 = new ByteBuf(bytes_2);
         int i_8 = -1;
         while (true) {
             int i_9 = rsbytebuffer_7.readSum();
@@ -318,7 +318,7 @@ public class Class329_Sub1 extends Class329 {
             i_8 += i_9;
             int i_10 = 0;
             while (true) {
-                int i_11 = rsbytebuffer_7.readUnsignedSmart();
+                int i_11 = rsbytebuffer_7.readSmart();
                 if (i_11 == 0) {
                     break;
                 }
@@ -349,7 +349,7 @@ public class Class329_Sub1 extends Class329 {
     }
 
     public void method12462(AbstractRenderer graphicalrenderer_1, byte[] bytes_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, ClipMap[] arr_10) {
-        Packet rsbytebuffer_12 = new Packet(bytes_2);
+        ByteBuf rsbytebuffer_12 = new ByteBuf(bytes_2);
         int i_13 = -1;
         while (true) {
             int i_14 = rsbytebuffer_12.readSum();
@@ -359,7 +359,7 @@ public class Class329_Sub1 extends Class329 {
             i_13 += i_14;
             int i_15 = 0;
             while (true) {
-                int i_16 = rsbytebuffer_12.readUnsignedSmart();
+                int i_16 = rsbytebuffer_12.readSmart();
                 if (i_16 == 0) {
                     break;
                 }
@@ -761,7 +761,7 @@ public class Class329_Sub1 extends Class329 {
         return sceneobject_6;
     }
 
-    public void method12471(AbstractRenderer graphicalrenderer_1, Packet rsbytebuffer_2, int i_3, int i_4) {
+    public void method12471(AbstractRenderer graphicalrenderer_1, ByteBuf rsbytebuffer_2, int i_3, int i_4) {
         if (!overlayHidden) {
             boolean bool_6 = false;
             Class535 class535_7 = null;

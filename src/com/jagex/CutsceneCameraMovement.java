@@ -16,8 +16,8 @@ public class CutsceneCameraMovement {
 
     int[] anIntArray765;
 
-    CutsceneCameraMovement(Packet rsbytebuffer_1) {
-        int i_2 = rsbytebuffer_1.readUnsignedSmart();
+    CutsceneCameraMovement(ByteBuf rsbytebuffer_1) {
+        int i_2 = rsbytebuffer_1.readSmart();
         anIntArray763 = new int[i_2];
         anIntArray760 = new int[i_2];
         anIntArray762 = new int[i_2];

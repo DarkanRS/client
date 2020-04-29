@@ -46,7 +46,7 @@ public class VarnBitIndexLoader {
             byte[] bytes_8 = aClass317_5823.getFile(SharedConfigsType.VARNBIT.id, i_1);
             class489_3 = new VarnBitDefinitions();
             if (bytes_8 != null) {
-                class489_3.method8213(new Packet(bytes_8));
+                class489_3.method8213(new ByteBuf(bytes_8));
             }
             LRUCache softcache_5 = aClass229_5824;
             synchronized (aClass229_5824) {

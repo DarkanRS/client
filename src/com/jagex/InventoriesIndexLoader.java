@@ -56,7 +56,7 @@ public class InventoriesIndexLoader implements IndexLoader {
             }
             inventorydef_3 = new ItemContainerDefinitions();
             if (bytes_10 != null) {
-                inventorydef_3.method15690(new Packet(bytes_10));
+                inventorydef_3.method15690(new ByteBuf(bytes_10));
             }
             LRUCache softcache_9 = cached;
             synchronized (cached) {

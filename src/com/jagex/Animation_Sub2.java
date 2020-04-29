@@ -23,7 +23,7 @@ public class Animation_Sub2 extends Animation {
                 class91_13.method1525();
                 Class60.aNativeSprite_612 = graphicalrenderer_0.method8444(class91_13, true);
             } else {
-                graphicalrenderer_0.B(i_1, i_2, i_3, i_5, i_10 << 24 | Node_Sub20_Sub9.anInt9792, 1);
+                graphicalrenderer_0.B(i_1, i_2, i_3, i_5, i_10 << 24 | MaterialProp28.anInt9792, 1);
             }
         }
 
@@ -37,7 +37,7 @@ public class Animation_Sub2 extends Animation {
         }
 
         fontrenderer_6.renderText(string_8, i_1 + 3, (20 - fontmetrics_7.topPadding) / 2 + i_2 + fontmetrics_7.topPadding, Class388.anInt4722 | -16777216, -1);
-        graphicalrenderer_0.B(i_1, i_5 + i_2, i_3, i_4 - i_5, i_10 << 24 | Node_Sub20_Sub9.anInt9792, 1);
+        graphicalrenderer_0.B(i_1, i_5 + i_2, i_3, i_4 - i_5, i_10 << 24 | MaterialProp28.anInt9792, 1);
     }
 
     @Override

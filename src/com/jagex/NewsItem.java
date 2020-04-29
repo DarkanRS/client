@@ -41,7 +41,7 @@ public class NewsItem {
         }
     }
 
-    static void method1806(Packet.Bit rsbitsbuffer_0, int i_1) {
+    static void method1806(ByteBuf.Bit rsbitsbuffer_0, int i_1) {
         CoordGrid coordgrid_3 = IndexLoaders.MAP_REGION_DECODER.getBase();
         boolean bool_4 = rsbitsbuffer_0.readBits(1) == 1;
         if (bool_4) {

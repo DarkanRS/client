@@ -12,7 +12,7 @@ public class CutsceneAction_Sub18 extends CutsceneAction {
 
     int anInt9398;
 
-    CutsceneAction_Sub18(Packet rsbytebuffer_1) {
+    CutsceneAction_Sub18(ByteBuf rsbytebuffer_1) {
         super(rsbytebuffer_1);
         anInt9395 = rsbytebuffer_1.readUnsignedShort();
         anIntArray9397 = new int[MoveSpeed.values().length];

@@ -23,7 +23,7 @@ public class OverlayDef {
         anInt7052 = anInt7052 << 8 | anInt7053;
     }
 
-    void method11357(Packet rsbytebuffer_1) {
+    void method11357(ByteBuf rsbytebuffer_1) {
         while (true) {
             int i_3 = rsbytebuffer_1.readUnsignedByte();
             if (i_3 == 0) {
@@ -33,7 +33,7 @@ public class OverlayDef {
         }
     }
 
-    void method11364(Packet rsbytebuffer_1, int i_2) {
+    void method11364(ByteBuf rsbytebuffer_1, int i_2) {
         if (i_2 == 1) {
             primaryRGB = IdentikitDefinition.method912(rsbytebuffer_1.read24BitUnsignedInteger());
         } else if (i_2 == 2) {

@@ -32,7 +32,7 @@ public class ParticleProducerDefinition {
     public int anInt591 = -2;
     public int anInt600 = -2;
     public int anInt557;
-    public int anInt554 = -1;
+    public int textureId = -1;
     public int anInt573 = -1;
     public int fadeColor;
     public boolean activeFirst = true;
@@ -139,7 +139,7 @@ public class ParticleProducerDefinition {
         client.aClass457_7335.offer(class275_sub6_8);
     }
 
-    void readValues(Packet buffer, int opcode) {
+    void readValues(ByteBuf buffer, int opcode) {
         if (opcode == 1) {
             minimumAngleH = (short) buffer.readUnsignedShort();
             maximumAngleH = (short) buffer.readUnsignedShort();
@@ -191,7 +191,7 @@ public class ParticleProducerDefinition {
             } else if (opcode == 14) {
                 anInt557 = buffer.readUnsignedShort();
             } else if (opcode == 15) {
-                anInt554 = buffer.readUnsignedShort();
+                textureId = buffer.readUnsignedShort();
             } else if (opcode == 16) {
                 activeFirst = buffer.readUnsignedByte() == 1;
                 anInt537 = buffer.readUnsignedShort();
@@ -292,7 +292,7 @@ public class ParticleProducerDefinition {
         }
     }
 
-    void decode(Packet rsbytebuffer_1) {
+    void decode(ByteBuf rsbytebuffer_1) {
         while (true) {
             int i_3 = rsbytebuffer_1.readUnsignedByte();
             if (i_3 == 0) {

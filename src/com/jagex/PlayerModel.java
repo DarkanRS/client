@@ -49,7 +49,7 @@ public class PlayerModel {
     }
 
     void refresh() {
-        long[] longs_2 = Packet.aLongArray7979;
+        long[] longs_2 = ByteBuf.aLongArray7979;
         aLong2926 = -1L;
         aLong2926 = aLong2926 >>> 8 ^ longs_2[(int) ((aLong2926 ^ (anInt2925 >> 8)) & 0xffL)];
         aLong2926 = aLong2926 >>> 8 ^ longs_2[(int) ((aLong2926 ^ anInt2925) & 0xffL)];

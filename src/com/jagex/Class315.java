@@ -10,7 +10,7 @@ public class Class315 {
         throw new Error();
     }
 
-    public static AbstractRenderer getOpenGLRenderer(Canvas canvas_0, Interface22 interface22_1, Index index_2, int i_3) {
+    public static AbstractRenderer getOpenGLRenderer(Canvas canvas_0, ImageLoader interface22_1, Index index_2, int i_3) {
         try {
             boolean bool_5 = AbstractRenderer_Sub2.method13893();
             if (!bool_5) {

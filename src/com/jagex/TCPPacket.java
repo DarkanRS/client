@@ -5,7 +5,7 @@ public class TCPPacket extends Node {
     static TCPPacket[] OUTGOING_PACKETS = new TCPPacket[300];
     static int index;
     public int anInt7680;
-    public Packet.Bit buffer;
+    public ByteBuf.Bit buffer;
     int anInt7678;
     ClientProt packet;
 

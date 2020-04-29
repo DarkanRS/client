@@ -10,11 +10,11 @@ public class Class349 {
 
     NodeCollection aClass482_4076 = new NodeCollection();
 
-    public Class349(Packet rsbytebuffer_1) {
+    public Class349(ByteBuf rsbytebuffer_1) {
         method6178(rsbytebuffer_1);
     }
 
-    void method6178(Packet rsbytebuffer_1) {
+    void method6178(ByteBuf rsbytebuffer_1) {
         aLong4081 = rsbytebuffer_1.readLong();
         aLong4077 = rsbytebuffer_1.readLong();
         for (int i_3 = rsbytebuffer_1.readUnsignedByte(); i_3 != 0; i_3 = rsbytebuffer_1.readUnsignedByte()) {

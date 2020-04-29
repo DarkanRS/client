@@ -11,12 +11,12 @@ public class Node_Sub17_Sub8 extends Node_Sub17 {
     }
 
     @Override
-    void method12250(Packet rsbytebuffer_1) {
+    void method12250(ByteBuf rsbytebuffer_1) {
         anInt10021 = rsbytebuffer_1.readUnsignedShort();
     }
 
     @Override
-    void method12249(Packet rsbytebuffer_1) {
+    void method12249(ByteBuf rsbytebuffer_1) {
         anInt10021 = rsbytebuffer_1.readUnsignedShort() * 86059087 * 1415900847;
     }
 
@@ -26,12 +26,12 @@ public class Node_Sub17_Sub8 extends Node_Sub17 {
     }
 
     @Override
-    void method12257(Packet rsbytebuffer_1) {
+    void method12257(ByteBuf rsbytebuffer_1) {
         anInt10021 = rsbytebuffer_1.readUnsignedShort() * 86059087 * 1415900847;
     }
 
     @Override
-    void method12253(Packet rsbytebuffer_1) {
+    void method12253(ByteBuf rsbytebuffer_1) {
         anInt10021 = rsbytebuffer_1.readUnsignedShort() * 86059087 * 1415900847;
     }
 

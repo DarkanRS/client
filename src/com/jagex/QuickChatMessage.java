@@ -27,7 +27,7 @@ public class QuickChatMessage {
         }
     }
 
-    static boolean method6155(Packet.Bit rsbitsbuffer_0, int i_1) {
+    static boolean method6155(ByteBuf.Bit rsbitsbuffer_0, int i_1) {
         int i_3 = rsbitsbuffer_0.readBits(2);
         int i_4;
         int i_5;
@@ -209,7 +209,7 @@ public class QuickChatMessage {
         Class9.lobbyStage = 140;
         Class9.CURRENT_CONNECTION_CONTEXT = client.LOBBY_CONNECTION_CONTEXT;
         if (client.aByteArray7152 != null) {
-            Packet rsbytebuffer_1 = new Packet(client.aByteArray7152);
+            ByteBuf rsbytebuffer_1 = new ByteBuf(client.aByteArray7152);
             Class9.aLong77 = rsbytebuffer_1.readLong();
             Class9.aLong86 = rsbytebuffer_1.readLong();
         }

@@ -69,7 +69,7 @@ public class ScriptRunner {
             hitsplatdefinitions_3 = new HitsplatDefinitions();
             hitsplatdefinitions_3.aClass210_2850 = this;
             if (bytes_10 != null) {
-                hitsplatdefinitions_3.method3837(new Packet(bytes_10));
+                hitsplatdefinitions_3.method3837(new ByteBuf(bytes_10));
             }
             LRUCache softcache_9 = aClass229_2667;
             synchronized (aClass229_2667) {

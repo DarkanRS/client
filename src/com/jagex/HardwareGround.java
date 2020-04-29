@@ -179,7 +179,7 @@ public class HardwareGround extends Ground {
 
     @Override
     public void method6707(int x, int y, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, HDWaterTile hdWaterTile, boolean bool_12) {
-        Interface22 interface22_13 = aGraphicalRenderer_Sub2_8528.anInterface22_5834;
+        ImageLoader interface22_13 = aGraphicalRenderer_Sub2_8528.textureCache;
         if (ints_6 != null && anIntArrayArrayArray8543 == null) {
             anIntArrayArrayArray8543 = new int[width][length][];
         }
@@ -205,7 +205,7 @@ public class HardwareGround extends Ground {
         for (int i_15 = 0; i_15 < ints_7.length; i_15++) {
             int i_16 = ints_9[i_15];
             int i_17 = ints_10[i_15];
-            if ((flags & 0x20) != 0 && i_16 != -1 && interface22_13.method144(i_16).isGroundMesh) {
+            if ((flags & 0x20) != 0 && i_16 != -1 && interface22_13.getTextureDetails(i_16).isGroundMesh) {
                 i_17 = 128;
                 i_16 = -1;
             }
@@ -515,7 +515,7 @@ public class HardwareGround extends Ground {
                             boolean bool_30 = false;
                             if (class282_sub6_20.anInt7510 != -1) {
                                 class48_27.anInterface6_452 = aGraphicalRenderer_Sub2_8528.aClass66_8787.method1283(class282_sub6_20.anInt7510);
-                                class169_22 = aGraphicalRenderer_Sub2_8528.anInterface22_5834.method144(class282_sub6_20.anInt7510);
+                                class169_22 = aGraphicalRenderer_Sub2_8528.textureCache.getTextureDetails(class282_sub6_20.anInt7510);
                                 bool_30 = !Node_Sub41.method13367(class169_22.effectId);
                             } else {
                                 class48_27.anInterface6_452 = aGraphicalRenderer_Sub2_8528.anInterface6_8788;
@@ -554,7 +554,7 @@ public class HardwareGround extends Ground {
 
                             byte b_29 = 11;
                             if (class282_sub6_20.anInt7510 != -1) {
-                                class169_22 = aGraphicalRenderer_Sub2_8528.anInterface22_5834.method144(class282_sub6_20.anInt7510);
+                                class169_22 = aGraphicalRenderer_Sub2_8528.textureCache.getTextureDetails(class282_sub6_20.anInt7510);
                                 b_29 = class169_22.effectId;
                                 class48_27.anInterface6_452 = aGraphicalRenderer_Sub2_8528.aClass66_8787.method1283(class282_sub6_20.anInt7510);
                                 class48_27.method944(class169_22);
@@ -583,7 +583,7 @@ public class HardwareGround extends Ground {
                                         class41_sub1_sub1_31.aClass384_10090.method6562(aGraphicalRenderer_Sub2_8528.aClass384_8729);
                                         class41_sub1_sub1_31.aClass384_10091.method6525(1.0F / (class282_sub6_20.aFloat7511 * (class282_sub6_20.hdWaterTile.hdWaterInt1)), 1.0F / (class282_sub6_20.aFloat7511 * (class282_sub6_20.hdWaterTile.hdWaterInt1)), 1.0F, 1.0F);
                                         class41_sub1_sub1_31.aClass385_10089.set(aGraphicalRenderer_Sub2_8528.aClass384_8814.buf[12], aGraphicalRenderer_Sub2_8528.aClass384_8814.buf[13], aGraphicalRenderer_Sub2_8528.aClass384_8814.buf[14]);
-                                        TextureDetails class169_23 = aGraphicalRenderer_Sub2_8528.anInterface22_5834.method144(class282_sub6_20.anInt7510);
+                                        TextureDetails class169_23 = aGraphicalRenderer_Sub2_8528.textureCache.getTextureDetails(class282_sub6_20.anInt7510);
                                         class41_sub1_sub1_31.anInt10095 = class169_23.effectParam1;
                                         class41_sub1_sub1_31.anInt10110 = class282_sub6_20.anInt7519;
                                         class41_sub1_sub1_31.anInt10111 = (class282_sub6_20.anInt7517 - class282_sub6_20.anInt7519 + 1);
@@ -739,7 +739,7 @@ public class HardwareGround extends Ground {
 
     @Override
     public void method6706(int i_1, int i_2, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, HDWaterTile class90_11, boolean bool_12) {
-        Interface22 interface22_13 = aGraphicalRenderer_Sub2_8528.anInterface22_5834;
+        ImageLoader interface22_13 = aGraphicalRenderer_Sub2_8528.textureCache;
         if (ints_6 != null && anIntArrayArrayArray8543 == null) {
             anIntArrayArrayArray8543 = new int[width][length][];
         }
@@ -765,7 +765,7 @@ public class HardwareGround extends Ground {
         for (int i_15 = 0; i_15 < ints_7.length; i_15++) {
             int i_16 = ints_9[i_15];
             int i_17 = ints_10[i_15];
-            if ((flags & 0x20) != 0 && i_16 != -1 && interface22_13.method144(i_16).isGroundMesh) {
+            if ((flags & 0x20) != 0 && i_16 != -1 && interface22_13.getTextureDetails(i_16).isGroundMesh) {
                 i_17 = 128;
                 i_16 = -1;
             }
@@ -2100,7 +2100,7 @@ public class HardwareGround extends Ground {
                             boolean bool_30 = false;
                             if (class282_sub6_20.anInt7510 != -1) {
                                 class48_27.anInterface6_452 = aGraphicalRenderer_Sub2_8528.aClass66_8787.method1283(class282_sub6_20.anInt7510);
-                                class169_22 = aGraphicalRenderer_Sub2_8528.anInterface22_5834.method144(class282_sub6_20.anInt7510);
+                                class169_22 = aGraphicalRenderer_Sub2_8528.textureCache.getTextureDetails(class282_sub6_20.anInt7510);
                                 bool_30 = !Node_Sub41.method13367(class169_22.effectId);
                             } else {
                                 class48_27.anInterface6_452 = aGraphicalRenderer_Sub2_8528.anInterface6_8788;
@@ -2139,7 +2139,7 @@ public class HardwareGround extends Ground {
 
                             byte b_29 = 11;
                             if (class282_sub6_20.anInt7510 != -1) {
-                                class169_22 = aGraphicalRenderer_Sub2_8528.anInterface22_5834.method144(class282_sub6_20.anInt7510);
+                                class169_22 = aGraphicalRenderer_Sub2_8528.textureCache.getTextureDetails(class282_sub6_20.anInt7510);
                                 b_29 = class169_22.effectId;
                                 class48_27.anInterface6_452 = aGraphicalRenderer_Sub2_8528.aClass66_8787.method1283(class282_sub6_20.anInt7510);
                                 class48_27.method944(class169_22);
@@ -2169,7 +2169,7 @@ public class HardwareGround extends Ground {
                                         class41_sub1_sub1_31.aClass384_10090.method6562(aGraphicalRenderer_Sub2_8528.aClass384_8729);
                                         class41_sub1_sub1_31.aClass384_10091.method6525(1.0F / (class282_sub6_20.aFloat7511 * class282_sub6_20.hdWaterTile.hdWaterInt1), 1.0F / (class282_sub6_20.aFloat7511 * class282_sub6_20.hdWaterTile.hdWaterInt1), 1.0F, 1.0F);
                                         class41_sub1_sub1_31.aClass385_10089.set(aGraphicalRenderer_Sub2_8528.aClass384_8814.buf[12], aGraphicalRenderer_Sub2_8528.aClass384_8814.buf[13], aGraphicalRenderer_Sub2_8528.aClass384_8814.buf[14]);
-                                        TextureDetails class169_23 = aGraphicalRenderer_Sub2_8528.anInterface22_5834.method144(class282_sub6_20.anInt7510);
+                                        TextureDetails class169_23 = aGraphicalRenderer_Sub2_8528.textureCache.getTextureDetails(class282_sub6_20.anInt7510);
                                         class41_sub1_sub1_31.anInt10095 = class169_23.effectParam1;
                                         class41_sub1_sub1_31.anInt10110 = class282_sub6_20.anInt7519;
                                         class41_sub1_sub1_31.anInt10111 = class282_sub6_20.anInt7517 - class282_sub6_20.anInt7519 + 1;

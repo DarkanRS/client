@@ -87,8 +87,8 @@ public class LocType {
 
     public static void method8020() {
         MeshModifier.method7042();
-        Node_Sub20_Sub36.method15420();
-        Node_Sub20_Sub24.method15391();
+        MaterialProp33.method15420();
+        MaterialPropTexture.method15391();
         Class335.method5961();
     }
 
@@ -132,7 +132,7 @@ public class LocType {
         }
     }
 
-    void method7964(Packet rsbytebuffer_1) {
+    void method7964(ByteBuf rsbytebuffer_1) {
         while (true) {
             int i_3 = rsbytebuffer_1.readUnsignedByte();
             if (i_3 == 0) {
@@ -142,7 +142,7 @@ public class LocType {
         }
     }
 
-    void method7965(Packet buffer, int opcode) {
+    void method7965(ByteBuf buffer, int opcode) {
         int i_4;
         int i_5;
         int i_6;
@@ -337,9 +337,9 @@ public class LocType {
             } else if (opcode == 169) {
                 aBool5700 = true;
             } else if (opcode == 170) {
-                anInt5684 = buffer.readUnsignedSmart();
+                anInt5684 = buffer.readSmart();
             } else if (opcode == 171) {
-                anInt5658 = buffer.readUnsignedSmart();
+                anInt5658 = buffer.readSmart();
             } else if (opcode == 173) {
                 anInt5708 = buffer.readUnsignedShort();
                 anInt5709 = buffer.readUnsignedShort();

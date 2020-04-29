@@ -26,7 +26,7 @@ public class Class535 {
 
     Class247 aClass247_7091;
 
-    public Class535(Packet rsbytebuffer_1, Class239 class239_2) {
+    public Class535(ByteBuf rsbytebuffer_1, Class239 class239_2) {
         method11468(rsbytebuffer_1, class239_2);
     }
 
@@ -104,7 +104,7 @@ public class Class535 {
         return aClass247_7091;
     }
 
-    public void method11468(Packet rsbytebuffer_1, Class239 class239_2) {
+    public void method11468(ByteBuf rsbytebuffer_1, Class239 class239_2) {
         int i_4 = rsbytebuffer_1.readUnsignedByte();
         if (Class393.preferences.lightDetail.method12786() == 1 && Renderers.SOFTWARE_RENDERER.method8463() > 0) {
             if ((i_4 & 0x1) != 0) {
@@ -173,13 +173,13 @@ public class Class535 {
         }
     }
 
-    public void method11471(Packet rsbytebuffer_1) {
+    public void method11471(ByteBuf rsbytebuffer_1) {
         aFloat7088 = (rsbytebuffer_1.readUnsignedByte() * 8) / 255.0F;
         aFloat7089 = (rsbytebuffer_1.readUnsignedByte() * 8) / 255.0F;
         aFloat7080 = (rsbytebuffer_1.readUnsignedByte() * 8) / 255.0F;
     }
 
-    public void method11472(Packet rsbytebuffer_1, Class239 class239_2) {
+    public void method11472(ByteBuf rsbytebuffer_1, Class239 class239_2) {
         int i_4 = rsbytebuffer_1.readUnsignedShort();
         int i_5 = rsbytebuffer_1.readShort();
         int i_6 = rsbytebuffer_1.readShort();

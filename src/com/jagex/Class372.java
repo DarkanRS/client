@@ -21,7 +21,7 @@ public class Class372 implements Definition {
         return (short) (i_2 << 10 | i_6 >> 4 << 7 | i_5);
     }
 
-    void method6356(Packet rsbytebuffer_1) {
+    void method6356(ByteBuf rsbytebuffer_1) {
         while (true) {
             int i_3 = rsbytebuffer_1.readUnsignedByte();
             if (i_3 == 0) {
@@ -32,7 +32,7 @@ public class Class372 implements Definition {
         }
     }
 
-    void method6357(Packet rsbytebuffer_1, int i_2) {
+    void method6357(ByteBuf rsbytebuffer_1, int i_2) {
         if (i_2 == 1) {
             aChar4328 = Utils.cp1252ToChar(rsbytebuffer_1.readByte());
         } else if (i_2 == 5) {

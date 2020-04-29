@@ -24,8 +24,8 @@ public class AnimationFrame {
         frameBaseList = frameList;
 
         try {
-            Packet attribBuffer = new Packet(data);
-            Packet transformationBuffer = new Packet(data);
+            ByteBuf attribBuffer = new ByteBuf(data);
+            ByteBuf transformationBuffer = new ByteBuf(data);
             attribBuffer.readUnsignedByte();
             attribBuffer.index += 2;
             int count = attribBuffer.readUnsignedByte();
@@ -54,19 +54,19 @@ public class AnimationFrame {
                     }
 
                     if ((attribute & 0x1) != 0) {
-                        bufferX[used] = (short) transformationBuffer.readSignedSmart();
+                        bufferX[used] = (short) transformationBuffer.readUnsignedSmart();
                     } else {
                         bufferX[used] = value;
                     }
 
                     if ((attribute & 0x2) != 0) {
-                        bufferY[used] = (short) transformationBuffer.readSignedSmart();
+                        bufferY[used] = (short) transformationBuffer.readUnsignedSmart();
                     } else {
                         bufferY[used] = value;
                     }
 
                     if ((attribute & 0x4) != 0) {
-                        bufferZ[used] = (short) transformationBuffer.readSignedSmart();
+                        bufferZ[used] = (short) transformationBuffer.readUnsignedSmart();
                     } else {
                         bufferZ[used] = value;
                     }

@@ -23,7 +23,7 @@ public enum ServerEnvironment implements Identifiable {
         return class496_0 == WTRC || class496_0 == WTQA || class496_0 == WTWIP || class496_0 == WTI || class496_0 == INTBETA;
     }
 
-    static void updateRandomDatUID192(Packet data, int i_1) {
+    static void updateRandomDatUID192(ByteBuf data, int i_1) {
         if (Engine.PLAYER_UID192 != null) {
             try {
                 Engine.PLAYER_UID192.method7347(0L);
@@ -47,11 +47,11 @@ public enum ServerEnvironment implements Identifiable {
                 Class119.method2077();
                 b_1 = 2;
             } else {
-                Node_Sub20_Sub25.method15393();
+                MaterialProp14.method15393();
                 b_1 = 1;
             }
         } else {
-            Node_Sub20_Sub25.method15393();
+            MaterialProp14.method15393();
             b_1 = 1;
         }
         if (Class393.preferences.currentToolkit.getValue() != 0) {
@@ -91,7 +91,7 @@ public enum ServerEnvironment implements Identifiable {
                 client.anInt7476 = client.anInt3243 * -969250379;
             }
             LightIntensityIndexLoader.method7313(null, client.BASE_WINDOW_ID, 0, 0, Class349.anInt4083, client.anInt3243 * -969250379, 0, 0, i_1, i_2);
-            if (Node_Sub20_Sub24.aClass118_9884 != null) {
+            if (MaterialPropTexture.aClass118_9884 != null) {
                 BillboardDefinitions.method6170(i_1, i_2);
             }
         }

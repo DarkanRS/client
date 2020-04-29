@@ -49,7 +49,7 @@ public class VarBitIndexLoader implements IndexLoader {
             }
             class226_3 = new VarBitDefinitions();
             if (bytes_10 != null) {
-                class226_3.method3795(new Packet(bytes_10));
+                class226_3.method3795(new ByteBuf(bytes_10));
             }
             LRUCache softcache_9 = aClass229_2856;
             synchronized (aClass229_2856) {

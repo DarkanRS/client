@@ -83,7 +83,7 @@ public class UnderlayDef {
         r = (int) (d_13 * a);
     }
 
-    void decodeOpcode(Packet packet, int opcode) {
+    void decodeOpcode(ByteBuf packet, int opcode) {
         if (opcode == 1) {
             rgb = packet.read24BitUnsignedInteger();
             method8048(rgb);
@@ -102,7 +102,7 @@ public class UnderlayDef {
 
     }
 
-    void decode(Packet packet) {
+    void decode(ByteBuf packet) {
         while (true) {
             int i_3 = packet.readUnsignedByte();
             if (i_3 == 0) {

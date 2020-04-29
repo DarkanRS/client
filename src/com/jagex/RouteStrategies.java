@@ -23,7 +23,7 @@ public class RouteStrategies {
         cacheablenode_0.aCacheableNode_8119.current = cacheablenode_0;
     }
 
-    public static Class366 method3784(Packet rsbytebuffer_0) {
+    public static Class366 method3784(ByteBuf rsbytebuffer_0) {
         int i_2 = rsbytebuffer_0.readInt();
         return new Class366(i_2);
     }

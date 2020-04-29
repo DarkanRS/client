@@ -37,7 +37,7 @@ public class AbstractRenderer_Sub2_Sub2 extends AbstractRenderer_Sub2 {
     Matrix44 aClass384_10261;
     long aLong10269;
 
-    AbstractRenderer_Sub2_Sub2(int i_1, int i_2, long long_3, long long_5, D3DPRESENT_PARAMETERS d3dpresent_parameters_7, D3DCAPS d3dcaps_8, Interface22 interface22_9, Index index_10, int i_11) {
+    AbstractRenderer_Sub2_Sub2(int i_1, int i_2, long long_3, long long_5, D3DPRESENT_PARAMETERS d3dpresent_parameters_7, D3DCAPS d3dcaps_8, ImageLoader interface22_9, Index index_10, int i_11) {
         super(interface22_9, index_10, i_11, 0);
         aLongArray10271 = new long[anInt10268];
 
@@ -78,7 +78,7 @@ public class AbstractRenderer_Sub2_Sub2 extends AbstractRenderer_Sub2 {
         }
     }
 
-    static AbstractRenderer method15638(Canvas canvas_0, Interface22 interface22_1, Index index_2, Integer integer_3) {
+    static AbstractRenderer method15638(Canvas canvas_0, ImageLoader interface22_1, Index index_2, Integer integer_3) {
         AbstractRenderer_Sub2_Sub2 class505_sub2_sub2_4 = null;
         byte b_6 = 0;
         byte b_7 = 1;
@@ -436,8 +436,8 @@ public class AbstractRenderer_Sub2_Sub2 extends AbstractRenderer_Sub2 {
         }
 
         IDirect3DDevice.BeginScene(aLong10252);
-        if (anInterface22_5834 != null) {
-            anInterface22_5834.method161();
+        if (textureCache != null) {
+            textureCache.method161();
         }
 
     }
@@ -1169,8 +1169,8 @@ public class AbstractRenderer_Sub2_Sub2 extends AbstractRenderer_Sub2 {
         }
 
         IDirect3DDevice.BeginScene(aLong10252);
-        if (anInterface22_5834 != null) {
-            anInterface22_5834.method161();
+        if (textureCache != null) {
+            textureCache.method161();
         }
 
     }

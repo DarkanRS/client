@@ -8,7 +8,7 @@ public class Node_Sub46 extends Node {
         aShort8067 = s_1;
     }
 
-    static void method13407(AbstractRenderer graphicalrenderer_0, Interface22 interface22_1, int i_2, int i_3, int i_4, int i_5) {
+    static void method13407(AbstractRenderer graphicalrenderer_0, ImageLoader interface22_1, int i_2, int i_3, int i_4, int i_5) {
         if (Class291_Sub1.anInt8015 < 100) {
             Class435.method7302(graphicalrenderer_0, interface22_1);
         }

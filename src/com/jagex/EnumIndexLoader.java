@@ -37,7 +37,7 @@ public class EnumIndexLoader {
             byte[] bytes_8 = configIndex.getFile(SharedConfigsType.ENUMS.containerId(enumId), SharedConfigsType.ENUMS.fileId(enumId));
             enumdefinitions_3 = new EnumDefinitions();
             if (bytes_8 != null) {
-                enumdefinitions_3.method7227(new Packet(bytes_8));
+                enumdefinitions_3.method7227(new ByteBuf(bytes_8));
             }
             synchronized (aClass229_5377) {
                 aClass229_5377.put(enumdefinitions_3, enumId);

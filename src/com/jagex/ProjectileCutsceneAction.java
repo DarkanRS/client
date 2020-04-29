@@ -28,7 +28,7 @@ public class ProjectileCutsceneAction extends CutsceneAction {
 
     int anInt9399;
 
-    ProjectileCutsceneAction(Packet rsbytebuffer_1, int i_2, int i_3) {
+    ProjectileCutsceneAction(ByteBuf rsbytebuffer_1, int i_2, int i_3) {
         super(rsbytebuffer_1);
         int i_4;
         if (i_2 == 0) {

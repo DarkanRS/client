@@ -72,7 +72,7 @@ public class ParticleArchive1Def {
         Class455.method7558(false, false, string_0, string_1, -1L);
     }
 
-    void method6124(Packet rsbytebuffer_1) {
+    void method6124(ByteBuf rsbytebuffer_1) {
         while (true) {
             int i_3 = rsbytebuffer_1.readUnsignedByte();
             if (i_3 == 0) {
@@ -82,7 +82,7 @@ public class ParticleArchive1Def {
         }
     }
 
-    void method6125(Packet rsbytebuffer_1, int i_2) {
+    void method6125(ByteBuf rsbytebuffer_1, int i_2) {
         if (i_2 == 1) {
             if (false) {
                 throw new IllegalStateException();

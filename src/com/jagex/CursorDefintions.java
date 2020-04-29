@@ -8,7 +8,7 @@ public class CursorDefintions {
     CursorIndexLoader loader;
     int spriteId;
 
-    void method7024(Packet rsbytebuffer_1) {
+    void method7024(ByteBuf rsbytebuffer_1) {
         while (true) {
             int i_3 = rsbytebuffer_1.readUnsignedByte();
             if (i_3 == 0) {
@@ -19,7 +19,7 @@ public class CursorDefintions {
         }
     }
 
-    void method7025(Packet rsbytebuffer_1, int i_2) {
+    void method7025(ByteBuf rsbytebuffer_1, int i_2) {
         if (i_2 == 1) {
             spriteId = rsbytebuffer_1.readBigSmart();
         } else if (i_2 == 2) {
