@@ -265,7 +265,7 @@ public class Class334 {
         if (aNativeSprite_3910 == null) {
             if (anInt3887 == 0) {
                 if (Class247.TEXTURE_LOADER.loadTexture(anInt3893)) {
-                    int[] ints_3 = Class247.TEXTURE_LOADER.method141(anInt3893, anInt3902, anInt3902);
+                    int[] ints_3 = Class247.TEXTURE_LOADER.renderMaterialPixelsI(anInt3893, anInt3902, anInt3902);
                     aNativeSprite_3910 = graphicalrenderer_1.createNativeSprite(ints_3, anInt3902, anInt3902, anInt3902);
                 }
             } else if (anInt3887 == 2) {

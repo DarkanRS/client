@@ -121,7 +121,7 @@ public abstract class MaterialProperty extends Node {
 	        case 17:
 	            return new MaterialProp17();
 	        case 18:
-	            return new MaterialProp18();
+	            return new MaterialPropSpriteSub18();
 	        case 19:
 	            return new MaterialProp19();
 	        case 20:

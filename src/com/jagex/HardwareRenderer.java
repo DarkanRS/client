@@ -33,8 +33,8 @@ public class HardwareRenderer extends AbstractRenderer {
     Matrix44Var aClass294_8993;
     int anInt8992;
     float[][] aFloatArrayArray8989;
-    int anInt9005;
-    boolean aBool8997;
+    int size;
+    boolean lowResolution;
     LRUCache aClass229_9013;
     LRUCache aClass229_9006;
     Matrix44 aClass384_8994;
@@ -59,8 +59,8 @@ public class HardwareRenderer extends AbstractRenderer {
         aFloatArrayArray8989 = new float[6][4];
         aFloat8978 = 1.0F;
         aFloat8985 = 0.0F;
-        anInt9005 = 128;
-        aBool8997 = false;
+        size = 128;
+        lowResolution = false;
         aClass229_9013 = new LRUCache(16);
         anInt9015 = -1;
 
@@ -152,13 +152,11 @@ public class HardwareRenderer extends AbstractRenderer {
         synchronized (aClass229_9006) {
             class282_sub27 = ((Node_Sub27) aClass229_9006.get(textureId | -9223372036854775808L));
             if (class282_sub27 == null) {
-                if (!textureCache.loadTexture(textureId)) {
-                    int[] is = null;
-                    return is;
-                }
+                if (!textureCache.loadTexture(textureId))
+                    return null;
                 TextureDetails texDeets = textureCache.getTextureDetails(textureId);
-                int i_29_ = (texDeets.isHalfSize || aBool8997 ? 64 : anInt9005);
-                class282_sub27 = (new Node_Sub27(textureId, i_29_, textureCache.method141(textureId, i_29_, i_29_), texDeets.blendType != 1));
+                int res = (texDeets.isHalfSize || lowResolution ? 64 : size);
+                class282_sub27 = (new Node_Sub27(textureId, res, textureCache.renderMaterialPixelsI(textureId, res, res), texDeets.blendType != 1));
                 aClass229_9006.put(class282_sub27, textureId | -9223372036854775808L);
             }
         }
@@ -2226,7 +2224,7 @@ public class HardwareRenderer extends AbstractRenderer {
                         return;
                     }
 
-                    int i_13 = isHalfSize(texture) ? 64 : anInt9005;
+                    int i_13 = isHalfSize(texture) ? 64 : size;
                     nativesprite_11 = createNativeSprite(ints_12, i_13, i_13, i_13);
                     aClass229_9013.put(nativesprite_11, texture);
                 }
@@ -2254,7 +2252,7 @@ public class HardwareRenderer extends AbstractRenderer {
                                 return;
                             }
 
-                            int i_16 = isHalfSize(i_9) ? 64 : anInt9005;
+                            int i_16 = isHalfSize(i_9) ? 64 : size;
                             nativesprite_14 = createNativeSprite(ints_15, i_16, i_16, i_16);
                             aClass229_9013.put(nativesprite_14, i_9);
                         }
@@ -2594,7 +2592,7 @@ public class HardwareRenderer extends AbstractRenderer {
 
     @Override
     public void method8568() {
-        aBool8997 = false;
+        lowResolution = false;
         aClass229_9006.method3859();
     }
 
@@ -2959,7 +2957,7 @@ public class HardwareRenderer extends AbstractRenderer {
     }
 
     boolean isHalfSize(int textureId) {
-        return aBool8997 || textureCache.getTextureDetails(textureId).isHalfSize;
+        return lowResolution || textureCache.getTextureDetails(textureId).isHalfSize;
     }
 
     @Override
@@ -7408,7 +7406,7 @@ public class HardwareRenderer extends AbstractRenderer {
 
     @Override
     public void method8595(boolean bool_1) {
-        aBool8997 = bool_1;
+        lowResolution = bool_1;
         aClass229_9006.method3859();
     }
 
@@ -7514,7 +7512,7 @@ public class HardwareRenderer extends AbstractRenderer {
 
     @Override
     public void method8594(boolean bool_1) {
-        aBool8997 = bool_1;
+        lowResolution = bool_1;
         aClass229_9006.method3859();
     }
 

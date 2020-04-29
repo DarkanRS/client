@@ -1,6 +1,6 @@
 package com.jagex;
 
-public class MaterialProp18 extends MaterialPropSprite {
+public class MaterialPropSpriteSub18 extends MaterialPropSprite {
 
     @Override
     int[][] getPixels(int i_1) {

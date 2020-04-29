@@ -167,14 +167,14 @@ public class ImageIndexLoader implements ImageLoader {
     }
 
     @Override
-    public int[] method141(int textureId, int i_3, int i_4) {
-        int[] ints_7 = getMaterialDefinitions(textureId).method14719(spriteIndex, this, (float) 0.7, i_3, i_4, textures[textureId].isBrickTile);
+    public int[] renderMaterialPixelsI(int textureId, int width, int height) {
+        int[] ints_7 = getMaterialDefinitions(textureId).renderIntPixels(spriteIndex, this, (float) 0.7, width, height, textures[textureId].isBrickTile);
         return ints_7;
     }
 
     @Override
-    public float[] method145(int i_1, int i_3, int i_4) {
-        float[] floats_7 = getMaterialDefinitions(i_1).method14723(spriteIndex, this, i_3, i_4, textures[i_1].isBrickTile);
+    public float[] renderMaterialPixelsF(int i_1, int i_3, int i_4) {
+        float[] floats_7 = getMaterialDefinitions(i_1).renderFloatPixels(spriteIndex, this, i_3, i_4, textures[i_1].isBrickTile);
         return floats_7;
     }
 

@@ -604,7 +604,7 @@ public class ChoppyItemFixClass {
                 return;
             }
 
-            anInt1694 = aGraphicalRenderer_Sub3_1686.isHalfSize(i_291) ? 64 : aGraphicalRenderer_Sub3_1686.anInt9005;
+            anInt1694 = aGraphicalRenderer_Sub3_1686.isHalfSize(i_291) ? 64 : aGraphicalRenderer_Sub3_1686.size;
             anInt1691 = anInt1694 - 1;
             anInt1697 = aGraphicalRenderer_Sub3_1686.method14361(i_291);
         }
@@ -620,7 +620,7 @@ public class ChoppyItemFixClass {
                 return;
             }
 
-            anInt1701 = aGraphicalRenderer_Sub3_1686.isHalfSize(i_311) ? 64 : aGraphicalRenderer_Sub3_1686.anInt9005;
+            anInt1701 = aGraphicalRenderer_Sub3_1686.isHalfSize(i_311) ? 64 : aGraphicalRenderer_Sub3_1686.size;
             anInt1699 = anInt1701 - 1;
         }
 
@@ -635,7 +635,7 @@ public class ChoppyItemFixClass {
                 return;
             }
 
-            anInt1706 = aGraphicalRenderer_Sub3_1686.isHalfSize(i_331) ? 64 : aGraphicalRenderer_Sub3_1686.anInt9005;
+            anInt1706 = aGraphicalRenderer_Sub3_1686.isHalfSize(i_331) ? 64 : aGraphicalRenderer_Sub3_1686.size;
             anInt1707 = anInt1706 - 1;
         }
 
@@ -1969,7 +1969,7 @@ public class ChoppyItemFixClass {
                     return;
                 }
 
-                anInt1694 = aGraphicalRenderer_Sub3_1686.isHalfSize(i_29) ? 64 : aGraphicalRenderer_Sub3_1686.anInt9005;
+                anInt1694 = aGraphicalRenderer_Sub3_1686.isHalfSize(i_29) ? 64 : aGraphicalRenderer_Sub3_1686.size;
                 anInt1691 = anInt1694 - 1;
                 anInt1697 = aGraphicalRenderer_Sub3_1686.method14361(i_29);
                 aBool1703 = aGraphicalRenderer_Sub3_1686.method14403(i_29);

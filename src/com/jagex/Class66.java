@@ -27,14 +27,14 @@ public class Class66 {
 
             Interface6 interface6_7;
             if (class169_6.hdr && aGraphicalRenderer_Sub2_676.method8471()) {
-                float[] floats_9 = anInterface22_675.method145(i_1, i_21, i_21);
+                float[] floats_9 = anInterface22_675.renderMaterialPixelsF(i_1, i_21, i_21);
                 interface6_7 = aGraphicalRenderer_Sub2_676.method13958(Class150.aClass150_1949, i_21, i_21, floats_9);
             } else {
                 int[] ints_8;
                 if (class169_6.blendType != 2 && Node_Sub41.method13367(class169_6.effectId)) {
                     ints_8 = anInterface22_675.renderTexturePixels(i_1, 0.7F, i_21, i_21, true);
                 } else {
-                    ints_8 = anInterface22_675.method141(i_1, i_21, i_21);
+                    ints_8 = anInterface22_675.renderMaterialPixelsI(i_1, i_21, i_21);
                 }
 
                 interface6_7 = aGraphicalRenderer_Sub2_676.method14024(i_21, i_21, true, ints_8);
