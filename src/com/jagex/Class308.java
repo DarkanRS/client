@@ -25,7 +25,7 @@ public class Class308 {
         return i_0 >= LocShapes.WALL_STRAIGHT.type && i_0 <= LocShapes.WALL_STRAIGHT_CORNER.type || i_0 == LocShapes.WALL_INTERACT.type;
     }
 
-    void method5462() {
+    void clear() {
         for (int i_2 = 0; i_2 < anInt3613; i_2++) {
             anIntArrayArrayArray3614[i_2][0] = null;
             anIntArrayArrayArray3614[i_2][1] = null;

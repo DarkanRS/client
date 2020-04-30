@@ -13,8 +13,8 @@ public class MaterialPropSprite extends MaterialProperty {
     }
 
     @Override
-    void method12326() {
-        super.method12326();
+    void reset() {
+        super.reset();
         pixels = null;
     }
 

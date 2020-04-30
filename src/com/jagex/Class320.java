@@ -39,7 +39,7 @@ public class Class320 {
         return Class88.method1493(i_0, canvas_1, interface22_2, index_3, i_4, i_6, i_7);
     }
 
-    void method5720() {
+    void clear() {
         for (int i_2 = 0; i_2 < anInt3716; i_2++) {
             anIntArrayArray3717[i_2] = null;
         }

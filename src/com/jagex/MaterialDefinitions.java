@@ -15,6 +15,12 @@ public class MaterialDefinitions extends CacheableNode {
     MaterialProperty combinedProperty;
 
     MaterialDefinitions(ByteBuf buffer) {
+//    	final long header = buffer.readLong();
+//		if (header == 0x89504E470D0A1A0AL) {
+//			texture.setRawImageData(buffer.getBytes());
+//			return;
+//		}
+//		buffer.setOffset(0);
         int size = buffer.readUnsignedByte();
         int spriteProperties = 0;
         int textureProperties = 0;
@@ -127,7 +133,7 @@ public class MaterialDefinitions extends CacheableNode {
             int[] ints_16;
             int[] ints_17;
             int[] ints_18;
-            if (opaqueProperty.aBool7669) {
+            if (opaqueProperty.noPalette) {
                 int[] ints_19 = opaqueProperty.method12319(i_15);
                 ints_16 = ints_19;
                 ints_17 = ints_19;
@@ -187,7 +193,7 @@ public class MaterialDefinitions extends CacheableNode {
         }
 
         for (i_15 = 0; i_15 < properties.length; i_15++) {
-            properties[i_15].method12326();
+            properties[i_15].reset();
         }
 
         return ints_24;
@@ -212,7 +218,7 @@ public class MaterialDefinitions extends CacheableNode {
             int[] ints_13;
             int[] ints_14;
             int[] ints_15;
-            if (opaqueProperty.aBool7669) {
+            if (opaqueProperty.noPalette) {
                 ints_15 = opaqueProperty.method12319(i_11);
                 ints_12 = ints_15;
                 ints_13 = ints_15;
@@ -224,7 +230,7 @@ public class MaterialDefinitions extends CacheableNode {
                 ints_14 = ints_22[2];
             }
 
-            if (translucentProperty.aBool7669) {
+            if (translucentProperty.noPalette) {
                 ints_15 = translucentProperty.method12319(i_11);
             } else {
                 ints_15 = translucentProperty.getPixels(i_11)[0];
@@ -287,7 +293,7 @@ public class MaterialDefinitions extends CacheableNode {
         }
 
         for (i_11 = 0; i_11 < properties.length; i_11++) {
-            properties[i_11].method12326();
+            properties[i_11].reset();
         }
 
         return ints_21;
@@ -311,7 +317,7 @@ public class MaterialDefinitions extends CacheableNode {
             int[] ints_11;
             int[] ints_12;
             int[] ints_13;
-            if (opaqueProperty.aBool7669) {
+            if (opaqueProperty.noPalette) {
                 ints_13 = opaqueProperty.method12319(i_9);
                 ints_10 = ints_13;
                 ints_11 = ints_13;
@@ -323,14 +329,14 @@ public class MaterialDefinitions extends CacheableNode {
                 ints_12 = ints_19[2];
             }
 
-            if (translucentProperty.aBool7669) {
+            if (translucentProperty.noPalette) {
                 ints_13 = translucentProperty.method12319(i_9);
             } else {
                 ints_13 = translucentProperty.getPixels(i_9)[0];
             }
 
             int[] ints_14;
-            if (combinedProperty.aBool7669) {
+            if (combinedProperty.noPalette) {
                 ints_14 = combinedProperty.method12319(i_9);
             } else {
                 ints_14 = combinedProperty.getPixels(i_9)[0];
@@ -360,7 +366,7 @@ public class MaterialDefinitions extends CacheableNode {
         }
 
         for (i_9 = 0; i_9 < properties.length; i_9++) {
-            properties[i_9].method12326();
+            properties[i_9].reset();
         }
 
         return floats_18;

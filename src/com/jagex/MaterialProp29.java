@@ -87,7 +87,7 @@ public class MaterialProp29 extends MaterialProperty {
                 }
             }
         } else if (i_1 == 1) {
-            aBool7669 = rsbytebuffer_2.readUnsignedByte() == 1;
+            noPalette = rsbytebuffer_2.readUnsignedByte() == 1;
         }
     }
 }

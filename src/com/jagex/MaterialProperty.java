@@ -1,21 +1,21 @@
 package com.jagex;
 
-public abstract class MaterialProperty extends Node {
+public abstract class MaterialProperty extends Node<MaterialProperty> {
 
     protected Class308 aClass308_7670;
     protected Class320 aClass320_7667;
-    protected boolean aBool7669;
+    protected boolean noPalette;
     int anInt7668;
     MaterialProperty[] params;
 
     MaterialProperty(int numParams, boolean bool_2) {
-        aBool7669 = bool_2;
+        noPalette = bool_2;
         params = new MaterialProperty[numParams];
     }
 
     void method12315(int i_1, int i_2) {
         int i_4 = anInt7668 == 255 ? i_2 : anInt7668;
-        if (aBool7669) {
+        if (noPalette) {
             aClass320_7667 = new Class320(i_4, i_2, i_1);
         } else {
             aClass308_7670 = new Class308(i_4, i_2, i_1);
@@ -23,7 +23,7 @@ public abstract class MaterialProperty extends Node {
     }
 
     int[] method12317(int i_1, int i_2) {
-        return !params[i_1].aBool7669 ? params[i_1].getPixels(i_2)[0] : params[i_1].method12319(i_2);
+        return !params[i_1].noPalette ? params[i_1].getPixels(i_2)[0] : params[i_1].method12319(i_2);
     }
 
     int[] method12319(int i_1) {
@@ -48,18 +48,18 @@ public abstract class MaterialProperty extends Node {
         return -1;
     }
 
-    void method12326() {
-        if (aBool7669) {
-            aClass320_7667.method5720();
+    void reset() {
+        if (noPalette) {
+            aClass320_7667.clear();
             aClass320_7667 = null;
         } else {
-            aClass308_7670.method5462();
+            aClass308_7670.clear();
             aClass308_7670 = null;
         }
     }
 
     int[][] method12333(int i_1, int i_2) {
-        if (params[i_1].aBool7669) {
+        if (params[i_1].noPalette) {
             int[] ints_4 = params[i_1].method12319(i_2);
             int[][] ints_5 = {ints_4, ints_4, ints_4};
             return ints_5;

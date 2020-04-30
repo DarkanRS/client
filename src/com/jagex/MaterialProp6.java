@@ -69,7 +69,7 @@ public class MaterialProp6 extends MaterialProperty {
                 anInt9868 = rsbytebuffer_2.readUnsignedShort();
                 break;
             case 2:
-                aBool7669 = rsbytebuffer_2.readUnsignedByte() == 1;
+                noPalette = rsbytebuffer_2.readUnsignedByte() == 1;
         }
 
     }

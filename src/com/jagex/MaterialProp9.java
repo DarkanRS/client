@@ -64,7 +64,7 @@ public class MaterialProp9 extends MaterialProperty {
                 aBool9875 = rsbytebuffer_2.readUnsignedByte() == 1;
                 break;
             case 2:
-                aBool7669 = rsbytebuffer_2.readUnsignedByte() == 1;
+                noPalette = rsbytebuffer_2.readUnsignedByte() == 1;
         }
     }
 }

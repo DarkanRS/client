@@ -163,7 +163,7 @@ public class MaterialProp30 extends MaterialProperty {
                 anInt9760 = rsbytebuffer_2.readUnsignedShort();
                 break;
             case 2:
-                aBool7669 = rsbytebuffer_2.readUnsignedByte() == 1;
+                noPalette = rsbytebuffer_2.readUnsignedByte() == 1;
         }
 
     }
