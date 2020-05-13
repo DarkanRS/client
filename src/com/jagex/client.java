@@ -1320,7 +1320,7 @@ public class client extends Engine {
                                         i_25 = (int) (-((record.getY() - y - iCompDef.height / 2) * 2.0D / Class291.aFloat3468));
                                         i_26 = i_24 + Class291.anInt3472 + MapSpriteIndexLoader.anInt5123;
                                         i_27 = i_25 + Class291.anInt3473 + Class475.anInt5624;
-                                        CacheableNode_Sub6 class282_sub50_sub6_42 = Class125.method2173();
+                                        WorldMapDef class282_sub50_sub6_42 = Class125.method2173();
                                         if (class282_sub50_sub6_42 == null) {
                                             continue;
                                         }

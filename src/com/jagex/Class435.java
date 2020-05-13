@@ -64,8 +64,8 @@ public class Class435 {
             Utils.time();
             Utils.time();
             if (Class291_Sub1.anInt8015 < 10) {
-                if (!Class291_Sub1.MAP_AREA_INDEX.method5629(Class291_Sub1.aCacheableNode_Sub6_3491.aString9533)) {
-                    Class291_Sub1.anInt8015 = IndexLoaders.WORLD_MAP_INDEX.method5631(Class291_Sub1.aCacheableNode_Sub6_3491.aString9533) / 10;
+                if (!Class291_Sub1.MAP_AREA_INDEX.method5629(Class291_Sub1.aCacheableNode_Sub6_3491.staticElementsName)) {
+                    Class291_Sub1.anInt8015 = IndexLoaders.WORLD_MAP_INDEX.method5631(Class291_Sub1.aCacheableNode_Sub6_3491.staticElementsName) / 10;
                     return;
                 }
 
@@ -104,7 +104,7 @@ public class Class435 {
                     Class291_Sub1.anInt8019 = -1;
                     Class291_Sub1.aBool8028 = false;
                 } else {
-                    Class291_Sub1.aCacheableNode_Sub6_3491.method14777(Class291_Sub1.aCacheableNode_Sub6_3491.anInt9532 >> 14 & 0x3fff, Class291_Sub1.aCacheableNode_Sub6_3491.anInt9532 & 0x3fff, ints_3);
+                    Class291_Sub1.aCacheableNode_Sub6_3491.method14777(Class291_Sub1.aCacheableNode_Sub6_3491.regionHash >> 14 & 0x3fff, Class291_Sub1.aCacheableNode_Sub6_3491.regionHash & 0x3fff, ints_3);
                     MapSpriteIndexLoader.anInt5123 = ints_3[1] - Class291_Sub1.anInt3472;
                     Class475.anInt5624 = ints_3[2] - Class291_Sub1.anInt3473;
                 }
@@ -160,19 +160,19 @@ public class Class435 {
                 Class291_Sub1.anInt8015 = 20;
             } else if (Class291_Sub1.anInt8015 == 20) {
                 Exception_Sub3.method15619(true);
-                Class291_Sub1.method5183(Class291_Sub1.anInt3454, Class291_Sub1.anInt3463);
+                Class291_Sub1.decodeArea(Class291_Sub1.anInt3454, Class291_Sub1.anInt3463);
                 Class291_Sub1.anInt8015 = 60;
                 Exception_Sub3.method15619(true);
                 Node_Sub15_Sub1.method14840();
             } else if (Class291_Sub1.anInt8015 == 60) {
-                if (Class291_Sub1.MAP_AREA_INDEX.validFile(Class291_Sub1.aCacheableNode_Sub6_3491.aString9533 + "_staticelements")) {
-                    if (!Class291_Sub1.MAP_AREA_INDEX.method5629(Class291_Sub1.aCacheableNode_Sub6_3491.aString9533 + "_staticelements")) {
+                if (Class291_Sub1.MAP_AREA_INDEX.validFile(Class291_Sub1.aCacheableNode_Sub6_3491.staticElementsName + "_staticelements")) {
+                    if (!Class291_Sub1.MAP_AREA_INDEX.method5629(Class291_Sub1.aCacheableNode_Sub6_3491.staticElementsName + "_staticelements")) {
                         return;
                     }
 
-                    Class291_Sub1.aClass283_3470 = Class301.method5331(Class291_Sub1.MAP_AREA_INDEX, Class291_Sub1.aCacheableNode_Sub6_3491.aString9533 + "_staticelements", client.membersWorld);
+                    Class291_Sub1.aClass283_3470 = Class301.getStaticElements(Class291_Sub1.MAP_AREA_INDEX, Class291_Sub1.aCacheableNode_Sub6_3491.staticElementsName + "_staticelements", client.membersWorld);
                 } else {
-                    Class291_Sub1.aClass283_3470 = new Class283(0);
+                    Class291_Sub1.aClass283_3470 = new StaticElements(0);
                 }
 
                 Class291_Sub1.method5145();

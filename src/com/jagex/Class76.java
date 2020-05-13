@@ -54,7 +54,7 @@ public class Class76 {
             }
         }
         Class308.CS2_QUERY_RESULTS = shorts_3;
-        Class283.CS2_QUERY_RESULT_IDX = 0;
+        StaticElements.CS2_QUERY_RESULT_IDX = 0;
         VarcDefinitions.CS2_QUERY_RESULTS_LEN = i_4;
         String[] arr_11 = new String[VarcDefinitions.CS2_QUERY_RESULTS_LEN];
         for (int i_8 = 0; i_8 < VarcDefinitions.CS2_QUERY_RESULTS_LEN; i_8++) {

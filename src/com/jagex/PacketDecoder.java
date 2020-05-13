@@ -530,10 +530,10 @@ public class PacketDecoder {
                     string_137 = url;
                 }
                 if (!client.aBool7310 || GroundItemStrategy.aString8069.startsWith("mac") || !Class186.method3082(url, 1, Class361.aClass361_4179.method6253())) {
-                    CacheableNode_Sub6.method14788(string_137, true, client.aBool7158);
+                    WorldMapDef.method14788(string_137, true, client.aBool7158);
                 }
             } else {
-                CacheableNode_Sub6.method14788(url, true, client.aBool7158);
+                WorldMapDef.method14788(url, true, client.aBool7158);
             }
             context.currentPacket = null;
             return true;

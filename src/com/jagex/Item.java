@@ -49,7 +49,7 @@ public class Item extends Node {
                 int i_12 = i_8 / 128 + 48;
                 int i_13 = 48 + IndexLoaders.MAP_REGION_DECODER.getSizeY() * 4 - i_9 / 128;
                 CursorDefintions.aNativeSprite_5004.method2762(i_2 + icomponentdefinitions_1.width / 2.0F, i_3 + icomponentdefinitions_1.height / 2.0F, i_12, i_13, i_11, i_10 << 2, class455_6, i_2, i_3);
-                Class283 class283_14 = IndexLoaders.MAP_REGION_DECODER.method4528();
+                StaticElements class283_14 = IndexLoaders.MAP_REGION_DECODER.method4528();
 
                 int i_16;
                 int i_17;
@@ -58,11 +58,11 @@ public class Item extends Node {
                 int i_20;
                 for (IntNode class282_sub38_15 = (IntNode) Class187.aClass482_2350.head(); class282_sub38_15 != null; class282_sub38_15 = (IntNode) Class187.aClass482_2350.next()) {
                     i_16 = class282_sub38_15.value;
-                    i_17 = (class283_14.anIntArray3381[i_16] >> 14 & 0x3fff) - coordgrid_7.x;
-                    i_18 = (class283_14.anIntArray3381[i_16] & 0x3fff) - coordgrid_7.y;
+                    i_17 = (class283_14.regionHashes[i_16] >> 14 & 0x3fff) - coordgrid_7.x;
+                    i_18 = (class283_14.regionHashes[i_16] & 0x3fff) - coordgrid_7.y;
                     i_19 = i_17 * 4 + 2 - i_8 / 128;
                     i_20 = i_18 * 4 + 2 - i_9 / 128;
-                    Class158.method2731(graphicalrenderer_0, class455_6, icomponentdefinitions_1, i_2, i_3, i_19, i_20, class283_14.anIntArray3383[i_16]);
+                    Class158.method2731(graphicalrenderer_0, class455_6, icomponentdefinitions_1, i_2, i_3, i_19, i_20, class283_14.areaIds[i_16]);
                 }
 
                 int i_21;

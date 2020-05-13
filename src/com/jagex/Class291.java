@@ -9,10 +9,10 @@ public class Class291 {
     public static float aFloat3468;
     public static int anInt3472;
     public static int anInt3473;
-    public static CacheableNode_Sub6 aCacheableNode_Sub6_3491;
+    public static WorldMapDef aCacheableNode_Sub6_3491;
     protected static byte[][][] aByteArrayArrayArray3464;
     protected static int anInt3469;
-    protected static Class283 aClass283_3470;
+    protected static StaticElements aClass283_3470;
     protected static int xLength;
     protected static int yLength;
     protected static int anInt3454 = (int) (Math.random() * 11.0D) - 5;
@@ -59,12 +59,12 @@ public class Class291 {
         MAP_SPRITE_LOADER = class427_5;
         PLAYER_VAR_PROVIDER = interface42_6;
         aClass465_3461.method7749();
-        int i_7 = MAP_AREA_INDEX.getArchiveId("details");
-        int[] ints_8 = MAP_AREA_INDEX.getValidFileIds(i_7);
-        if (ints_8 != null) {
-            for (int i_9 = 0; i_9 < ints_8.length; i_9++) {
-                CacheableNode_Sub6 class282_sub50_sub6_10 = Class52.method1087(MAP_AREA_INDEX, i_7, ints_8[i_9]);
-                aClass465_3461.put(class282_sub50_sub6_10, class282_sub50_sub6_10.anInt9536);
+        int detailsArchive = MAP_AREA_INDEX.getArchiveId("details");
+        int[] fileIds = MAP_AREA_INDEX.getValidFileIds(detailsArchive);
+        if (fileIds != null) {
+            for (int fileId = 0; fileId < fileIds.length; fileId++) {
+                WorldMapDef class282_sub50_sub6_10 = Class52.method1087(MAP_AREA_INDEX, detailsArchive, fileIds[fileId]);
+                aClass465_3461.put(class282_sub50_sub6_10, class282_sub50_sub6_10.id);
             }
         }
 
@@ -84,7 +84,7 @@ public class Class291 {
     public static Queue method5127(int i_0, int i_1) {
         Queue class477_2 = new Queue();
 
-        for (CacheableNode_Sub6 class282_sub50_sub6_3 = (CacheableNode_Sub6) aClass465_3461.method7750(); class282_sub50_sub6_3 != null; class282_sub50_sub6_3 = (CacheableNode_Sub6) aClass465_3461.method7751()) {
+        for (WorldMapDef class282_sub50_sub6_3 = (WorldMapDef) aClass465_3461.method7750(); class282_sub50_sub6_3 != null; class282_sub50_sub6_3 = (WorldMapDef) aClass465_3461.method7751()) {
             if (class282_sub50_sub6_3.aBool9543 && class282_sub50_sub6_3.method14784(i_0, i_1)) {
                 class477_2.method7936(class282_sub50_sub6_3);
             }
@@ -94,11 +94,11 @@ public class Class291 {
     }
 
     static void method5128(int i_0) {
-        aCacheableNode_Sub6_3491 = (CacheableNode_Sub6) aClass465_3461.get(i_0);
+        aCacheableNode_Sub6_3491 = (WorldMapDef) aClass465_3461.get(i_0);
     }
 
-    public static CacheableNode_Sub6 method5130(int i_0) {
-        return (CacheableNode_Sub6) aClass465_3461.get(i_0);
+    public static WorldMapDef method5130(int i_0) {
+        return (WorldMapDef) aClass465_3461.get(i_0);
     }
 
     static void renderMap(AbstractRenderer graphicalrenderer_0, int i_1, int i_2) {
@@ -549,10 +549,10 @@ public class Class291 {
     static void method5145() {
         int[] ints_0 = new int[3];
 
-        for (int i_1 = 0; i_1 < aClass283_3470.anInt3382; i_1++) {
-            boolean bool_2 = aCacheableNode_Sub6_3491.method14778(aClass283_3470.anIntArray3381[i_1] >> 28 & 0x3, aClass283_3470.anIntArray3381[i_1] >> 14 & 0x3fff, aClass283_3470.anIntArray3381[i_1] & 0x3fff, ints_0);
+        for (int i_1 = 0; i_1 < aClass283_3470.size; i_1++) {
+            boolean bool_2 = aCacheableNode_Sub6_3491.method14778(aClass283_3470.regionHashes[i_1] >> 28 & 0x3, aClass283_3470.regionHashes[i_1] >> 14 & 0x3fff, aClass283_3470.regionHashes[i_1] & 0x3fff, ints_0);
             if (bool_2) {
-                Node_Sub36 class282_sub36_3 = new Node_Sub36(aClass283_3470.anIntArray3383[i_1]);
+                Node_Sub36 class282_sub36_3 = new Node_Sub36(aClass283_3470.areaIds[i_1]);
                 class282_sub36_3.anInt7987 = ints_0[1] - anInt3472;
                 class282_sub36_3.anInt7993 = ints_0[2] - anInt3473;
                 aClass482_3459.append(class282_sub36_3);
@@ -807,8 +807,8 @@ public class Class291 {
 
     }
 
-    public static CacheableNode_Sub6 method5175(int i_0, int i_1) {
-        for (CacheableNode_Sub6 class282_sub50_sub6_2 = (CacheableNode_Sub6) aClass465_3461.method7750(); class282_sub50_sub6_2 != null; class282_sub50_sub6_2 = (CacheableNode_Sub6) aClass465_3461.method7751()) {
+    public static WorldMapDef method5175(int i_0, int i_1) {
+        for (WorldMapDef class282_sub50_sub6_2 = (WorldMapDef) aClass465_3461.method7750(); class282_sub50_sub6_2 != null; class282_sub50_sub6_2 = (WorldMapDef) aClass465_3461.method7751()) {
             if (class282_sub50_sub6_2.aBool9543 && class282_sub50_sub6_2.method14784(i_0, i_1)) {
                 return class282_sub50_sub6_2;
             }
@@ -833,53 +833,53 @@ public class Class291 {
         renderMap(graphicalrenderer_0, i_3, i_4);
     }
 
-    static void method5183(int i_1, int i_2) {
-        ByteBuf rsbytebuffer_3 = new ByteBuf(MAP_AREA_INDEX.getFileByName(aCacheableNode_Sub6_3491.aString9533, "area"));
-        int i_4 = rsbytebuffer_3.readUnsignedByte();
-        int[] ints_5 = new int[i_4];
+    static void decodeArea(int i_1, int i_2) {
+        ByteBuf buffer = new ByteBuf(MAP_AREA_INDEX.getFileByName(aCacheableNode_Sub6_3491.staticElementsName, "area"));
+        int length = buffer.readUnsignedByte();
+        int[] ints_5 = new int[length];
 
         int i_6;
-        for (i_6 = 0; i_6 < i_4; i_6++) {
-            ints_5[i_6] = rsbytebuffer_3.readUnsignedByte();
+        for (i_6 = 0; i_6 < length; i_6++) {
+            ints_5[i_6] = buffer.readUnsignedByte();
         }
 
-        i_6 = rsbytebuffer_3.readUnsignedByte();
+        i_6 = buffer.readUnsignedByte();
         int[] ints_7 = new int[i_6];
 
         int i_8;
         for (i_8 = 0; i_8 < i_6; i_8++) {
-            ints_7[i_8] = rsbytebuffer_3.readUnsignedByte();
+            ints_7[i_8] = buffer.readUnsignedByte();
         }
 
         while (true) {
             int i_9;
             int i_11;
             int i_12;
-            while (rsbytebuffer_3.index < rsbytebuffer_3.buffer.length) {
+            while (buffer.index < buffer.buffer.length) {
                 int i_13;
                 int i_18;
-                if (rsbytebuffer_3.readUnsignedByte() == 0) {
-                    i_8 = rsbytebuffer_3.readUnsignedByte();
-                    i_9 = rsbytebuffer_3.readUnsignedByte();
+                if (buffer.readUnsignedByte() == 0) {
+                    i_8 = buffer.readUnsignedByte();
+                    i_9 = buffer.readUnsignedByte();
 
                     for (i_18 = 0; i_18 < 64; i_18++) {
                         for (i_11 = 0; i_11 < 64; i_11++) {
                             i_12 = i_8 * 64 + i_18 - anInt3472;
                             i_13 = i_9 * 64 + i_11 - anInt3473;
-                            method5162(rsbytebuffer_3, i_8, i_9, i_12, i_13, ints_5, ints_7);
+                            method5162(buffer, i_8, i_9, i_12, i_13, ints_5, ints_7);
                         }
                     }
                 } else {
-                    i_8 = rsbytebuffer_3.readUnsignedByte();
-                    i_9 = rsbytebuffer_3.readUnsignedByte();
-                    i_18 = rsbytebuffer_3.readUnsignedByte();
-                    i_11 = rsbytebuffer_3.readUnsignedByte();
+                    i_8 = buffer.readUnsignedByte();
+                    i_9 = buffer.readUnsignedByte();
+                    i_18 = buffer.readUnsignedByte();
+                    i_11 = buffer.readUnsignedByte();
 
                     for (i_12 = 0; i_12 < 8; i_12++) {
                         for (i_13 = 0; i_13 < 8; i_13++) {
                             int i_20 = i_8 * 64 + i_12 + i_18 * 8 - anInt3472;
                             int i_15 = i_9 * 64 + i_13 + i_11 * 8 - anInt3473;
-                            method5162(rsbytebuffer_3, i_8, i_9, i_20, i_15, ints_5, ints_7);
+                            method5162(buffer, i_8, i_9, i_20, i_15, ints_5, ints_7);
                         }
                     }
                 }

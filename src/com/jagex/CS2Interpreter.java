@@ -3241,8 +3241,8 @@ public class CS2Interpreter {
     }
 
     static void method2868(CS2Executor executor) {
-        if (Class308.CS2_QUERY_RESULTS != null && Class283.CS2_QUERY_RESULT_IDX < VarcDefinitions.CS2_QUERY_RESULTS_LEN) {
-            executor.intStack[++executor.intStackPtr - 1] = Class308.CS2_QUERY_RESULTS[++Class283.CS2_QUERY_RESULT_IDX - 1] & 0xffff;
+        if (Class308.CS2_QUERY_RESULTS != null && StaticElements.CS2_QUERY_RESULT_IDX < VarcDefinitions.CS2_QUERY_RESULTS_LEN) {
+            executor.intStack[++executor.intStackPtr - 1] = Class308.CS2_QUERY_RESULTS[++StaticElements.CS2_QUERY_RESULT_IDX - 1] & 0xffff;
         } else {
             executor.intStack[++executor.intStackPtr - 1] = -1;
         }
@@ -3296,7 +3296,7 @@ public class CS2Interpreter {
 
     static void method12572(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
-        CacheableNode_Sub6 class282_sub50_sub6_3 = Class125.method2173();
+        WorldMapDef class282_sub50_sub6_3 = Class125.method2173();
         if (class282_sub50_sub6_3 != null) {
             boolean bool_4 = class282_sub50_sub6_3.method14775(i_2 >> 14 & 0x3fff, i_2 & 0x3fff, CS2Executor.anIntArray5900);
             if (bool_4) {
@@ -3420,7 +3420,7 @@ public class CS2Interpreter {
 
     static void method3556(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
-        CacheableNode_Sub6 class282_sub50_sub6_3 = Class125.method2173();
+        WorldMapDef class282_sub50_sub6_3 = Class125.method2173();
         if (class282_sub50_sub6_3 != null) {
             boolean bool_4 = class282_sub50_sub6_3.method14778(i_2 >> 28 & 0x3, i_2 >> 14 & 0x3fff, i_2 & 0x3fff, CS2Executor.anIntArray5900);
             if (bool_4) {
@@ -3588,7 +3588,7 @@ public class CS2Interpreter {
         String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
         boolean bool_3 = executor.intStack[--executor.intStackPtr] == 1;
         String string_4 = MapAreaDefinitions.method3741() + string_2;
-        CacheableNode_Sub6.method14788(string_4, bool_3, client.aBool7158);
+        WorldMapDef.method14788(string_4, bool_3, client.aBool7158);
     }
 
     static void getNPCParam(CS2Executor executor) {
@@ -4590,7 +4590,7 @@ public class CS2Interpreter {
     }
 
     static void method4091(CS2Executor executor) {
-        executor.intStack[++executor.intStackPtr - 1] = Class291.aCacheableNode_Sub6_3491 != null ? Class291.aCacheableNode_Sub6_3491.anInt9536 : -1;
+        executor.intStack[++executor.intStackPtr - 1] = Class291.aCacheableNode_Sub6_3491 != null ? Class291.aCacheableNode_Sub6_3491.id : -1;
     }
 
     static void method15306() {
@@ -6422,8 +6422,8 @@ public class CS2Interpreter {
         int i_3 = executor.intStack[executor.intStackPtr + 1];
         Queue class477_4 = Class291.method5127(i_2 >> 14 & 0x3fff, i_2 & 0x3fff);
         boolean bool_5 = false;
-        for (CacheableNode_Sub6 class282_sub50_sub6_6 = (CacheableNode_Sub6) class477_4.method7941(); class282_sub50_sub6_6 != null; class282_sub50_sub6_6 = (CacheableNode_Sub6) class477_4.method7955()) {
-            if (i_3 == class282_sub50_sub6_6.anInt9536) {
+        for (WorldMapDef class282_sub50_sub6_6 = (WorldMapDef) class477_4.method7941(); class282_sub50_sub6_6 != null; class282_sub50_sub6_6 = (WorldMapDef) class477_4.method7955()) {
+            if (i_3 == class282_sub50_sub6_6.id) {
                 bool_5 = true;
                 break;
             }
@@ -6551,13 +6551,13 @@ public class CS2Interpreter {
 
     static void method7276(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
-        CacheableNode_Sub6 class282_sub50_sub6_3 = Class291.method5130(i_2);
+        WorldMapDef class282_sub50_sub6_3 = Class291.method5130(i_2);
         if (class282_sub50_sub6_3 == null) {
             executor.intStack[++executor.intStackPtr - 1] = 0;
             executor.intStack[++executor.intStackPtr - 1] = 0;
         } else {
-            executor.intStack[++executor.intStackPtr - 1] = class282_sub50_sub6_3.anInt9532 >> 14 & 0x3fff;
-            executor.intStack[++executor.intStackPtr - 1] = class282_sub50_sub6_3.anInt9532 & 0x3fff;
+            executor.intStack[++executor.intStackPtr - 1] = class282_sub50_sub6_3.regionHash >> 14 & 0x3fff;
+            executor.intStack[++executor.intStackPtr - 1] = class282_sub50_sub6_3.regionHash & 0x3fff;
         }
     }
 
@@ -7636,8 +7636,8 @@ public class CS2Interpreter {
     }
 
     static void method3986(CS2Executor executor) {
-        if (Class308.CS2_QUERY_RESULTS != null && Class283.CS2_QUERY_RESULT_IDX < VarcDefinitions.CS2_QUERY_RESULTS_LEN) {
-            executor.intStack[++executor.intStackPtr - 1] = Class308.CS2_QUERY_RESULTS[++Class283.CS2_QUERY_RESULT_IDX - 1] & 0xffff;
+        if (Class308.CS2_QUERY_RESULTS != null && StaticElements.CS2_QUERY_RESULT_IDX < VarcDefinitions.CS2_QUERY_RESULTS_LEN) {
+            executor.intStack[++executor.intStackPtr - 1] = Class308.CS2_QUERY_RESULTS[++StaticElements.CS2_QUERY_RESULT_IDX - 1] & 0xffff;
         } else {
             executor.intStack[++executor.intStackPtr - 1] = -1;
         }
@@ -7831,10 +7831,10 @@ public class CS2Interpreter {
     }
 
     static void method6073(CS2Executor executor) {
-        CacheableNode_Sub6 class282_sub50_sub6_2 = Class291.method5130(executor.intStack[--executor.intStackPtr]);
+        WorldMapDef class282_sub50_sub6_2 = Class291.method5130(executor.intStack[--executor.intStackPtr]);
         if (class282_sub50_sub6_2 != null) {
-            if (class282_sub50_sub6_2.aString9534 != null) {
-                executor.stringStack[++executor.stringStackPtr - 1] = class282_sub50_sub6_2.aString9534;
+            if (class282_sub50_sub6_2.areaName != null) {
+                executor.stringStack[++executor.stringStackPtr - 1] = class282_sub50_sub6_2.areaName;
                 return;
             }
         }
@@ -8752,7 +8752,7 @@ public class CS2Interpreter {
 
     static void method856(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
-        CacheableNode_Sub6 class282_sub50_sub6_3 = Class291.method5130(i_2);
+        WorldMapDef class282_sub50_sub6_3 = Class291.method5130(i_2);
         if (class282_sub50_sub6_3 == null) {
             executor.intStack[++executor.intStackPtr - 1] = -1;
         } else {
@@ -8812,7 +8812,7 @@ public class CS2Interpreter {
 
     static void method2916(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
-        CacheableNode_Sub6 class282_sub50_sub6_3 = Class125.method2173();
+        WorldMapDef class282_sub50_sub6_3 = Class125.method2173();
         if (class282_sub50_sub6_3 != null) {
             boolean bool_4 = class282_sub50_sub6_3.method14778(i_2 >> 28 & 0x3, i_2 >> 14 & 0x3fff, i_2 & 0x3fff, CS2Executor.anIntArray5900);
             if (bool_4) {
@@ -8830,11 +8830,11 @@ public class CS2Interpreter {
 
     static void method13756(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
-        CacheableNode_Sub6 class282_sub50_sub6_3 = Class291.method5175(i_2 >> 14 & 0x3fff, i_2 & 0x3fff);
+        WorldMapDef class282_sub50_sub6_3 = Class291.method5175(i_2 >> 14 & 0x3fff, i_2 & 0x3fff);
         if (class282_sub50_sub6_3 == null) {
             executor.intStack[++executor.intStackPtr - 1] = -1;
         } else {
-            executor.intStack[++executor.intStackPtr - 1] = class282_sub50_sub6_3.anInt9536;
+            executor.intStack[++executor.intStackPtr - 1] = class282_sub50_sub6_3.id;
         }
     }
 
@@ -8927,7 +8927,7 @@ public class CS2Interpreter {
     }
 
     static void method4315() {
-        Class283.CS2_QUERY_RESULT_IDX = 0;
+        StaticElements.CS2_QUERY_RESULT_IDX = 0;
     }
 
     static void method13359(CS2Executor executor) {
@@ -9721,7 +9721,7 @@ public class CS2Interpreter {
     }
 
     static void method3950() {
-        Class283.CS2_QUERY_RESULT_IDX = 0;
+        StaticElements.CS2_QUERY_RESULT_IDX = 0;
     }
 
     static void method3951(CS2Executor executor) {
@@ -10212,7 +10212,7 @@ public class CS2Interpreter {
 
     static void method4988(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
-        CacheableNode_Sub6 class282_sub50_sub6_3 = Class291.method5130(i_2);
+        WorldMapDef class282_sub50_sub6_3 = Class291.method5130(i_2);
         if (class282_sub50_sub6_3 == null) {
             executor.intStack[++executor.intStackPtr - 1] = 0;
             executor.intStack[++executor.intStackPtr - 1] = 0;
@@ -10227,7 +10227,7 @@ public class CS2Interpreter {
     }
 
     static void method7043(CS2Executor executor) {
-        CacheableNode_Sub6 class282_sub50_sub6_2 = Class125.method2173();
+        WorldMapDef class282_sub50_sub6_2 = Class125.method2173();
         if (class282_sub50_sub6_2 != null) {
             boolean bool_3 = class282_sub50_sub6_2.method14775(Class291.anInt3472 + MapSpriteIndexLoader.anInt5123, Class291.anInt3473 + Class475.anInt5624, CS2Executor.anIntArray5900);
             if (bool_3) {

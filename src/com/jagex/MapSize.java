@@ -1,21 +1,22 @@
 package com.jagex;
 
-public class MapSize {
+public enum MapSize {
 
-    public static MapSize aClass106_1075 = new MapSize(0, 104);
-    static String[] aStringArray1077;
-    static MapSize aClass106_1074 = new MapSize(1, 120);
-    static MapSize aClass106_1072 = new MapSize(2, 136);
-    static MapSize aClass106_1073 = new MapSize(3, 168);
-    static MapSize aClass106_1070 = new MapSize(4, 72);
+    SIZE_104(0, 104),
+    SIZE_120(1, 120),
+    SIZE_136(2, 136),
+    SIZE_168(3, 168),
+    SIZE_72(4, 72);
 
-    public int anInt1071;
+    public int index;
     public int size;
 
     MapSize(int i_1, int i_2) {
-        anInt1071 = i_1;
+        index = i_1;
         size = i_2;
     }
+    
+    static String[] aStringArray1077;
 
     public static void method1818(int i_0) {
         PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(8, i_0);

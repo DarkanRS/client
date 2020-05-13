@@ -60,7 +60,7 @@ public class Class480 {
 
     public static void method8043() {
         String string_1 = Class445.aString5384 != null ? Class445.aString5384 : MapAreaDefinitions.method3741();
-        CacheableNode_Sub6.method14788(string_1, false, client.aBool7158);
+        WorldMapDef.method14788(string_1, false, client.aBool7158);
     }
 
     static void method8044(Component[] arr_0, Component icomponentdefinitions_1, boolean bool_2) {
@@ -95,10 +95,10 @@ public class Class480 {
     }
 
     public static MapSize getMapSize(int i_0) {
-        MapSize[] arr_2 = IFSubObjectPosition.method11352();
+        MapSize[] arr_2 = MapSize.values();
         for (int i_3 = 0; i_3 < arr_2.length; i_3++) {
             MapSize class106_4 = arr_2[i_3];
-            if (i_0 == class106_4.anInt1071) {
+            if (i_0 == class106_4.index) {
                 return class106_4;
             }
         }

@@ -43,8 +43,8 @@ public class MapRegion {
     int anInt3170;
     int anInt3207;
     CoordGrid coordGrid = new CoordGrid();
-    CacheableNode_Sub6 aCacheableNode_Sub6_3176;
-    Class283 aClass283_3180;
+    WorldMapDef aCacheableNode_Sub6_3176;
+    StaticElements mapStaticElements;
     Class329_Sub1 highDetailWaterPlane;
     Class329_Sub1 aClass329_Sub1_3167;
     Class341 aClass341_3181 = new Class341();
@@ -502,7 +502,7 @@ public class MapRegion {
             }
             coordGrid = new CoordGrid(0, (anInt3170 - (sizeX >> 4)) * 8, (anInt3207 - (sizeY >> 4)) * 8);
             aCacheableNode_Sub6_3176 = Class291.method5175(coordGrid.x, coordGrid.y);
-            aClass283_3180 = null;
+            mapStaticElements = null;
             if (!aBool3171) {
                 method4459(i_3);
             }
@@ -724,15 +724,15 @@ public class MapRegion {
                 }
             }
         }
-        if (aClass283_3180 == null) {
-            if (aCacheableNode_Sub6_3176 != null && IndexLoaders.WORLD_MAP_INDEX.validFile(aCacheableNode_Sub6_3176.aString9533 + "_staticelements")) {
-                if (!IndexLoaders.WORLD_MAP_INDEX.method5629(aCacheableNode_Sub6_3176.aString9533 + "_staticelements")) {
+        if (mapStaticElements == null) {
+            if (aCacheableNode_Sub6_3176 != null && IndexLoaders.WORLD_MAP_INDEX.validFile(aCacheableNode_Sub6_3176.staticElementsName + "_staticelements")) {
+                if (!IndexLoaders.WORLD_MAP_INDEX.method5629(aCacheableNode_Sub6_3176.staticElementsName + "_staticelements")) {
                     ++missingMapCount;
                 } else {
-                    aClass283_3180 = Class301.method5331(IndexLoaders.WORLD_MAP_INDEX, aCacheableNode_Sub6_3176.aString9533 + "_staticelements", client.membersWorld);
+                    mapStaticElements = Class301.getStaticElements(IndexLoaders.WORLD_MAP_INDEX, aCacheableNode_Sub6_3176.staticElementsName + "_staticelements", client.membersWorld);
                 }
             } else {
-                aClass283_3180 = new Class283(0);
+                mapStaticElements = new StaticElements(0);
             }
         }
         if (missingMapCount > 0) {
@@ -1186,7 +1186,7 @@ public class MapRegion {
 
     void method4498() {
         aClass256_3164 = mapType;
-        setMapSizes(MapSize.aClass106_1075);
+        setMapSizes(MapSize.SIZE_104);
         int i_2;
         int i_4;
         int i_21;
@@ -1312,8 +1312,8 @@ public class MapRegion {
         return zFar;
     }
 
-    public Class283 method4528() {
-        return aClass283_3180;
+    public StaticElements method4528() {
+        return mapStaticElements;
     }
 
     public byte[][][] method4532() {
@@ -1352,7 +1352,7 @@ public class MapRegion {
             anInt3177 = mapregion_2.anInt3177;
             zFar = mapregion_2.zFar;
             aCacheableNode_Sub6_3176 = mapregion_2.aCacheableNode_Sub6_3176;
-            aClass283_3180 = mapregion_2.aClass283_3180;
+            mapStaticElements = mapregion_2.mapStaticElements;
             anIntArrayArray3185 = mapregion_2.anIntArrayArray3185;
             anIntArrayArray3186 = mapregion_2.anIntArrayArray3186;
             aByteArrayArrayArray3162 = mapregion_2.aByteArrayArrayArray3162;

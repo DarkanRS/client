@@ -41,15 +41,15 @@ public abstract class Class52 implements Interface2 {
         }
     }
 
-    static CacheableNode_Sub6 method1087(Index index_0, int i_1, int i_2) {
-        ByteBuf rsbytebuffer_4 = new ByteBuf(index_0.getFile(i_1, i_2));
-        CacheableNode_Sub6 class282_sub50_sub6_5 = new CacheableNode_Sub6(i_2, rsbytebuffer_4.readString(), rsbytebuffer_4.readString(), rsbytebuffer_4.readInt(), rsbytebuffer_4.readInt(), rsbytebuffer_4.readUnsignedByte() == 1, rsbytebuffer_4.readUnsignedByte(), rsbytebuffer_4.readUnsignedByte());
-        int i_6 = rsbytebuffer_4.readUnsignedByte();
-        for (int i_7 = 0; i_7 < i_6; i_7++) {
-            class282_sub50_sub6_5.aClass482_9537.append(new Node_Sub28(rsbytebuffer_4.readUnsignedByte(), rsbytebuffer_4.readUnsignedShort(), rsbytebuffer_4.readUnsignedShort(), rsbytebuffer_4.readUnsignedShort(), rsbytebuffer_4.readUnsignedShort(), rsbytebuffer_4.readUnsignedShort(), rsbytebuffer_4.readUnsignedShort(), rsbytebuffer_4.readUnsignedShort(), rsbytebuffer_4.readUnsignedShort()));
+    static WorldMapDef method1087(Index mapAreas, int archiveId, int fileId) {
+        ByteBuf buffer = new ByteBuf(mapAreas.getFile(archiveId, fileId));
+        WorldMapDef def = new WorldMapDef(fileId, buffer.readString(), buffer.readString(), buffer.readInt(), buffer.readInt(), buffer.readUnsignedByte() == 1, buffer.readUnsignedByte(), buffer.readUnsignedByte());
+        int size = buffer.readUnsignedByte();
+        for (int i = 0; i < size; i++) {
+            def.areaRects.append(new WorldMapRect(buffer.readUnsignedByte(), buffer.readUnsignedShort(), buffer.readUnsignedShort(), buffer.readUnsignedShort(), buffer.readUnsignedShort(), buffer.readUnsignedShort(), buffer.readUnsignedShort(), buffer.readUnsignedShort(), buffer.readUnsignedShort()));
         }
-        class282_sub50_sub6_5.method14779();
-        return class282_sub50_sub6_5;
+        def.init();
+        return def;
     }
 
     abstract void method1075(int var2, int var3);

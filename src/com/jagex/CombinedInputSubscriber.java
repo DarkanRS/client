@@ -66,7 +66,7 @@ public class CombinedInputSubscriber implements InputSubscriber {
             }
         }
         Class308.CS2_QUERY_RESULTS = results;
-        Class283.CS2_QUERY_RESULT_IDX = 0;
+        StaticElements.CS2_QUERY_RESULT_IDX = 0;
         VarcDefinitions.CS2_QUERY_RESULTS_LEN = numResults;
         String[] resultNames = new String[VarcDefinitions.CS2_QUERY_RESULTS_LEN];
         for (int i_12 = 0; i_12 < VarcDefinitions.CS2_QUERY_RESULTS_LEN; i_12++) {

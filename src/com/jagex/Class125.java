@@ -51,7 +51,7 @@ public class Class125 implements Interface8 {
         return 0;
     }
 
-    public static CacheableNode_Sub6 method2173() {
+    public static WorldMapDef method2173() {
         return Class291_Sub1.aCacheableNode_Sub6_3491;
     }
 

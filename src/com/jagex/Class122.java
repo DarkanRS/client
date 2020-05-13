@@ -56,7 +56,7 @@ public class Class122 {
 
     public static void method2111(boolean bool_0) {
         if (bool_0 && Class291_Sub1.aCacheableNode_Sub6_3491 != null) {
-            Class51.anInt488 = Class291_Sub1.aCacheableNode_Sub6_3491.anInt9536;
+            Class51.anInt488 = Class291_Sub1.aCacheableNode_Sub6_3491.id;
         } else {
             Class51.anInt488 = -1;
         }

@@ -33,7 +33,7 @@ public class Node_Sub40 extends Node {
         Class393.preferences.setValue(Class393.preferences.antiAliasingDefault, 0);
         Class393.preferences.setValue(Class393.preferences.aPreference_Sub4_8223, 0);
         Class393.preferences.setValue(Class393.preferences.particles, 1);
-        Class393.preferences.setValue(Class393.preferences.buildArea, MapSize.aClass106_1075.anInt1071);
+        Class393.preferences.setValue(Class393.preferences.buildArea, MapSize.SIZE_104.index);
         Class393.preferences.setValue(Class393.preferences.bloom, 0);
         Class393.preferences.setValue(Class393.preferences.skyBoxes, 1);
         ImageIndexLoader.method5777();

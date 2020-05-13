@@ -273,19 +273,19 @@ public class AsyncOutputStream implements Runnable {
                             }
                         }
                     }
-                    Class283 class283_44 = IndexLoaders.MAP_REGION_DECODER.method4528();
+                    StaticElements class283_44 = IndexLoaders.MAP_REGION_DECODER.method4528();
                     if (class283_44 != null) {
                         IndexLoaders.WORLD_MAP_LOADER.method3697(1024, 64);
                         CoordGrid coordgrid_45 = IndexLoaders.MAP_REGION_DECODER.getBase();
-                        for (i_23 = 0; i_23 < class283_44.anInt3382; i_23++) {
-                            i_24 = class283_44.anIntArray3381[i_23];
+                        for (i_23 = 0; i_23 < class283_44.size; i_23++) {
+                            i_24 = class283_44.regionHashes[i_23];
                             if (i_24 >> 28 == VertexNormal.MY_PLAYER.plane) {
                                 i_25 = (i_24 >> 14 & 0x3fff) - coordgrid_45.x;
                                 i_26 = (i_24 & 0x3fff) - coordgrid_45.y;
                                 if (i_25 >= 0 && i_25 < i_3 && i_26 >= 0 && i_26 < i_4) {
                                     Class187.aClass482_2350.append(new IntNode(i_23));
                                 } else {
-                                    MapAreaDefinitions worldmapareadefs_46 = IndexLoaders.WORLD_MAP_LOADER.getWorldMapDefs(class283_44.anIntArray3383[i_23]);
+                                    MapAreaDefinitions worldmapareadefs_46 = IndexLoaders.WORLD_MAP_LOADER.getWorldMapDefs(class283_44.areaIds[i_23]);
                                     if (worldmapareadefs_46.anIntArray2717 != null && i_25 + worldmapareadefs_46.anInt2731 >= 0 && i_25 + worldmapareadefs_46.anInt2747 < i_3 && i_26 + worldmapareadefs_46.anInt2746 >= 0 && i_26 + worldmapareadefs_46.anInt2744 < i_4) {
                                         Class187.aClass482_2350.append(new IntNode(i_23));
                                     }

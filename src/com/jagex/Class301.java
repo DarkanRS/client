@@ -16,30 +16,30 @@ public class Class301 implements Interface41 {
         aString3553 = string_1;
     }
 
-    public static Class283 method5331(Index index_0, String string_1, boolean bool_2) {
-        int i_4 = index_0.getArchiveId(string_1);
-        if (i_4 == -1) {
-            return new Class283(0);
+    public static StaticElements getStaticElements(Index index_0, String archiveName, boolean members) {
+        int archiveId = index_0.getArchiveId(archiveName);
+        if (archiveId == -1) {
+            return new StaticElements(0);
         } else {
-            int[] ints_5 = index_0.getValidFileIds(i_4);
-            Class283 class283_6 = new Class283(ints_5.length);
-            int i_7 = 0;
-            int i_8 = 0;
+            int[] fileIds = index_0.getValidFileIds(archiveId);
+            StaticElements elements = new StaticElements(fileIds.length);
+            int id = 0;
+            int fileIndex = 0;
             while (true) {
-                while (i_7 < class283_6.anInt3382) {
-                    ByteBuf rsbytebuffer_9 = new ByteBuf(index_0.getFile(i_4, ints_5[i_8++]));
-                    int i_10 = rsbytebuffer_9.readInt();
-                    int i_11 = rsbytebuffer_9.readUnsignedShort();
-                    int i_12 = rsbytebuffer_9.readUnsignedByte();
-                    if (!bool_2 && i_12 == 1) {
-                        --class283_6.anInt3382;
+                while (id < elements.size) {
+                    ByteBuf buffer = new ByteBuf(index_0.getFile(archiveId, fileIds[fileIndex++]));
+                    int regionHash = buffer.readInt();
+                    int areaId = buffer.readUnsignedShort();
+                    int isMembers = buffer.readUnsignedByte();
+                    if (!members && isMembers == 1) {
+                        --elements.size;
                     } else {
-                        class283_6.anIntArray3381[i_7] = i_10;
-                        class283_6.anIntArray3383[i_7] = i_11;
-                        ++i_7;
+                        elements.regionHashes[id] = regionHash;
+                        elements.areaIds[id] = areaId;
+                        ++id;
                     }
                 }
-                return class283_6;
+                return elements;
             }
         }
     }

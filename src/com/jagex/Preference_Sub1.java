@@ -77,7 +77,7 @@ public class Preference_Sub1 extends Preference {
 
     @Override
     int getDefaultValue() {
-        return MapSize.aClass106_1075.anInt1071;
+        return MapSize.SIZE_104.index;
     }
 
     public boolean method12609() {
@@ -88,12 +88,12 @@ public class Preference_Sub1 extends Preference {
     @Override
     public int checkValid(int i_1) {
         int i_3 = manager.getProcessorSpecs().getMaxMemory();
-        return i_3 < 245 ? 3 : (i_1 == MapSize.aClass106_1073.anInt1071 && i_3 < 500 ? 3 : 1);
+        return i_3 < 245 ? 3 : (i_1 == MapSize.SIZE_168.index && i_3 < 500 ? 3 : 1);
     }
 
     public int method7784(int i_1) {
         int i_2 = manager.getProcessorSpecs().getMaxMemory();
-        return i_2 < 245 ? 3 : (MapSize.aClass106_1073.anInt1071 * -827615537 * -530599889 == i_1 && i_2 < 500 ? 3 : 1);
+        return i_2 < 245 ? 3 : (MapSize.SIZE_168.index * -827615537 * -530599889 == i_1 && i_2 < 500 ? 3 : 1);
     }
 
     void method7780(int i_1) {
@@ -101,11 +101,11 @@ public class Preference_Sub1 extends Preference {
     }
 
     int method7786() {
-        return -530599889 * MapSize.aClass106_1075.anInt1071 * -827615537;
+        return -530599889 * MapSize.SIZE_104.index * -827615537;
     }
 
     int method7787() {
-        return -530599889 * MapSize.aClass106_1075.anInt1071 * -827615537;
+        return -530599889 * MapSize.SIZE_104.index * -827615537;
     }
 
     public int method12615() {
@@ -115,14 +115,14 @@ public class Preference_Sub1 extends Preference {
     public void method12616() {
         int i_2 = manager.getProcessorSpecs().getMaxMemory();
         if (i_2 < 245) {
-            anInt5578 = MapSize.aClass106_1075.anInt1071;
+            anInt5578 = MapSize.SIZE_104.index;
         }
 
-        if (anInt5578 == MapSize.aClass106_1073.anInt1071 && i_2 < 500) {
-            anInt5578 = MapSize.aClass106_1072.anInt1071;
+        if (anInt5578 == MapSize.SIZE_168.index && i_2 < 500) {
+            anInt5578 = MapSize.SIZE_136.index;
         }
 
-        if (anInt5578 < MapSize.aClass106_1075.anInt1071 || anInt5578 > MapSize.aClass106_1070.anInt1071) {
+        if (anInt5578 < MapSize.SIZE_104.index || anInt5578 > MapSize.SIZE_72.index) {
             anInt5578 = getDefaultValue();
         }
 

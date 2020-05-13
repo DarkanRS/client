@@ -16,10 +16,6 @@ public class IFSubObjectPosition {
         anInt7049 = i_4;
     }
 
-    static MapSize[] method11352() {
-        return new MapSize[]{MapSize.aClass106_1072, MapSize.aClass106_1073, MapSize.aClass106_1070, MapSize.aClass106_1074, MapSize.aClass106_1075};
-    }
-
     static Class204[] method11353() {
         return new Class204[]{Class204.aClass204_2578, Class204.aClass204_2579};
     }
