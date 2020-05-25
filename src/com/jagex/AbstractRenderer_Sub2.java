@@ -1297,10 +1297,11 @@ public abstract class AbstractRenderer_Sub2 extends AbstractRenderer {
     }
 
     @Override
-    public void method8547(int i_1, Node_Sub24[] arr_2) {
-        if (i_1 >= 0) System.arraycopy(arr_2, 0, aNode_Sub24Array8716, 0, i_1);
+    public void method8547(int nodeCount, Node_Sub24[] node) {
+    	for(int index = 0; index < nodeCount; index++)
+    		aNode_Sub24Array8716[index] = node[index];
 
-        anInt8773 = i_1;
+        anInt8773 = nodeCount;
         if (aClass33_8719 == Class33.aClass33_381) {
             method13903();
         }
@@ -1441,7 +1442,7 @@ public abstract class AbstractRenderer_Sub2 extends AbstractRenderer {
 
     abstract Interface1 method13962(Class150 var1, byte[] var6);
 
-    @Override
+    @Override // dead code
     public void method8426(int i_1, Node_Sub24[] arr_2) {
         if (i_1 >= 0) System.arraycopy(arr_2, 0, aNode_Sub24Array8716, 0, i_1);
 
@@ -3021,8 +3022,8 @@ public abstract class AbstractRenderer_Sub2 extends AbstractRenderer {
         return anInt8799 - 2;
     }
 
-    @Override
-    public void method8394(int i_1, Node_Sub24[] arr_2) {
+    @Override // dead code
+    public void method8394(int i_1, Node_Sub24[] arr_2) { 
         if (i_1 >= 0) System.arraycopy(arr_2, 0, aNode_Sub24Array8716, 0, i_1);
 
         anInt8773 = i_1;

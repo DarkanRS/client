@@ -20,6 +20,15 @@ public class IcmpService_Sub1 extends IcmpService {
         }
 
     }
+    
+
+	protected void notify(int i, int i_0_, int i_1_) { 
+		Iterator iterator = ((IcmpService_Sub1) this).aList7962.iterator();
+		while (iterator.hasNext()) {
+			Interface45 interface45 = (Interface45) iterator.next();
+			interface45.method245(i, i_0_, i_1_);
+		}
+	}
 
     @Override
     protected void method11597() {

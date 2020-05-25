@@ -4531,7 +4531,7 @@ public class OpenGLHardwareRenderer extends AbstractRenderer {
         return 4;
     }
 
-    @Override
+    @Override // dead code
     public void method8394(int i_1, Node_Sub24[] arr_2) {
         if (i_1 >= 0) System.arraycopy(arr_2, 0, aNode_Sub24Array8435, 0, i_1);
 
@@ -4542,7 +4542,7 @@ public class OpenGLHardwareRenderer extends AbstractRenderer {
 
     }
 
-    @Override
+    @Override // dead code
     public void method8426(int i_1, Node_Sub24[] arr_2) {
         if (i_1 >= 0) System.arraycopy(arr_2, 0, aNode_Sub24Array8435, 0, i_1);
 
@@ -4553,7 +4553,7 @@ public class OpenGLHardwareRenderer extends AbstractRenderer {
 
     }
 
-    @Override
+    @Override // dead code
     public void method8579(int i_1, Node_Sub24[] arr_2) {
         if (i_1 >= 0) System.arraycopy(arr_2, 0, aNode_Sub24Array8435, 0, i_1);
 
@@ -5206,10 +5206,11 @@ public class OpenGLHardwareRenderer extends AbstractRenderer {
     }
 
     @Override
-    public void method8547(int i_1, Node_Sub24[] arr_2) {
-        if (i_1 >= 0) System.arraycopy(arr_2, 0, aNode_Sub24Array8435, 0, i_1);
+    public void method8547(int nodeCount, Node_Sub24[] nodes) {
+    	for(int index = 0; index < nodeCount; index++)
+    		aNode_Sub24Array8435[index] = nodes[index];
 
-        anInt8437 = i_1;
+        anInt8437 = nodeCount;
         if (anInt8409 != 1) {
             method13638();
         }
