@@ -440,18 +440,18 @@ public class MapRegion {
         method4458(i_3, i_4, 18, bool_5);
     }
 
-    String getArchiveName(boolean mapData, boolean hdWater, int regionX, int regionY) {
-        String name = "";
-        if (mapData) {
-            name = name + "m" + regionX + '_' + regionY;
-        } else {
-            name = name + "l" + regionX + '_' + regionY;
-        }
-        if (hdWater) {
-            name += 'u';
-        }
-        return name;
-    }
+	String getArchiveName(boolean settingsData, boolean underwaterMap, int regionX, int regionY) {
+		String string = "";
+		if (settingsData) {
+			string = new StringBuilder().append(string).append("m").append(regionX).append('_').append(regionY).toString();
+		} else {
+			string = new StringBuilder().append(string).append("l").append(regionX).append('_').append(regionY).toString();
+		}
+		if (underwaterMap) {
+			string = new StringBuilder().append('u').append(string).toString();
+		}
+		return string;
+	}
 
     void setMapSizes(MapSize mapSize) {
         if (mapSize != aClass106_3165) {
