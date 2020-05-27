@@ -80,7 +80,7 @@ public class Class261_Sub1 extends Class261 {
                 float f_39 = method13372(f_37);
                 i_35 &= i_11;
                 i_36 &= i_11;
-                floats_9[i_33] = f_8 * method13369(method13369(method13369(method13370(anIntArray8042[i_35 + i_29] & 0x7, f_38, f_27, f_18), method13370(anIntArray8042[i_36 + i_29] & 0x7, f_37, f_27, f_18), f_39), method13369(method13370(anIntArray8042[i_35 + i_30] & 0x7, f_38, f_26, f_18), method13370(anIntArray8042[i_36 + i_30] & 0x7, f_37, f_26, f_18), f_39), f_28), method13369(method13369(method13370(anIntArray8042[i_35 + i_31] & 0x7, f_38, f_27, f_17), method13370(anIntArray8042[i_36 + i_31] & 0x7, f_37, f_27, f_17), f_39), method13369(method13370(anIntArray8042[i_35 + i_32] & 0x7, f_38, f_26, f_17), method13370(anIntArray8042[i_36 + i_32] & 0x7, f_37, f_26, f_17), f_39), f_28), f_19);
+                floats_9[start++] = f_8 * method13369(method13369(method13369(method13370(anIntArray8042[i_35 + i_29] & 0x7, f_38, f_27, f_18), method13370(anIntArray8042[i_36 + i_29] & 0x7, f_37, f_27, f_18), f_39), method13369(method13370(anIntArray8042[i_35 + i_30] & 0x7, f_38, f_26, f_18), method13370(anIntArray8042[i_36 + i_30] & 0x7, f_37, f_26, f_18), f_39), f_28), method13369(method13369(method13370(anIntArray8042[i_35 + i_31] & 0x7, f_38, f_27, f_17), method13370(anIntArray8042[i_36 + i_31] & 0x7, f_37, f_27, f_17), f_39), method13369(method13370(anIntArray8042[i_35 + i_32] & 0x7, f_38, f_26, f_17), method13370(anIntArray8042[i_36 + i_32] & 0x7, f_37, f_26, f_17), f_39), f_28), f_19);
             }
         }
 
