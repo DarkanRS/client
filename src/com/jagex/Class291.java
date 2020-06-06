@@ -344,7 +344,7 @@ public class Class291 {
                         Node_Sub49 class282_sub49_14 = (Node_Sub49) object_2;
                         if (class282_sub49_14 != null) {
                             for (int i_4 = 0; i_4 < class282_sub49_14.anIntArray8109.length; i_4++) {
-                                LocType objectdefinitions_12 = OBJECT_LOADER.getLocType(class282_sub49_14.anIntArray8109[i_4]);
+                                ObjectDefinition objectdefinitions_12 = OBJECT_LOADER.getObjectDefs(class282_sub49_14.anIntArray8109[i_4]);
                                 i_13 = objectdefinitions_12.mapIcon;
                                 if (objectdefinitions_12.transformTo != null) {
                                     objectdefinitions_12 = objectdefinitions_12.getMultiLoc(PLAYER_VAR_PROVIDER);
@@ -363,7 +363,7 @@ public class Class291 {
                         }
                     } else {
                         Integer integer_3 = (Integer) object_2;
-                        LocType objectdefinitions_10 = OBJECT_LOADER.getLocType(integer_3.intValue());
+                        ObjectDefinition objectdefinitions_10 = OBJECT_LOADER.getObjectDefs(integer_3.intValue());
                         int i_5 = objectdefinitions_10.mapIcon;
                         if (objectdefinitions_10.transformTo != null) {
                             objectdefinitions_10 = objectdefinitions_10.getMultiLoc(PLAYER_VAR_PROVIDER);
@@ -402,7 +402,7 @@ public class Class291 {
                             } while (class269_18.anIntArray3313 == null);
 
                             for (i_13 = 0; i_13 < class269_18.anIntArray3313.length; i_13++) {
-                                LocType objectdefinitions_16 = OBJECT_LOADER.getLocType(class269_18.anIntArray3313[i_13]);
+                                ObjectDefinition objectdefinitions_16 = OBJECT_LOADER.getObjectDefs(class269_18.anIntArray3313[i_13]);
                                 int i_8 = objectdefinitions_16.mapIcon;
                                 if (objectdefinitions_16.transformTo != null) {
                                     objectdefinitions_16 = objectdefinitions_16.getMultiLoc(PLAYER_VAR_PROVIDER);
@@ -484,8 +484,8 @@ public class Class291 {
 
             for (int i_13 = 0; i_13 < ints_8.length; i_13++) {
                 int i_14 = bytes_9[i_13] & 0x3f;
-                if (i_14 == LocShapes.WALL_STRAIGHT.type || i_14 == LocShapes.WALL_WHOLE_CORNER.type || i_14 == LocShapes.WALL_STRAIGHT_CORNER.type || i_14 == LocShapes.WALL_INTERACT.type) {
-                    LocType objectdefinitions_15 = OBJECT_LOADER.getLocType(ints_8[i_13]);
+                if (i_14 == ObjectType.WALL_STRAIGHT.type || i_14 == ObjectType.WALL_WHOLE_CORNER.type || i_14 == ObjectType.WALL_STRAIGHT_CORNER.type || i_14 == ObjectType.WALL_INTERACT.type) {
+                    ObjectDefinition objectdefinitions_15 = OBJECT_LOADER.getObjectDefs(ints_8[i_13]);
                     if (objectdefinitions_15.mapSpriteId == -1) {
                         int i_16 = -3355444;
                         if (objectdefinitions_15.interactable == 1) {
@@ -493,7 +493,7 @@ public class Class291 {
                         }
 
                         int i_17 = bytes_9[i_13] >> 6 & 0x3;
-                        if (i_14 == LocShapes.WALL_STRAIGHT.type) {
+                        if (i_14 == ObjectType.WALL_STRAIGHT.type) {
                             if (i_17 == 0) {
                                 graphicalrenderer_0.G(i_1, i_2, i_4, i_16, 0);
                             } else if (i_17 == 1) {
@@ -503,7 +503,7 @@ public class Class291 {
                             } else {
                                 graphicalrenderer_0.XA(i_1, i_12, i_3, i_16, 0);
                             }
-                        } else if (i_14 == LocShapes.WALL_WHOLE_CORNER.type) {
+                        } else if (i_14 == ObjectType.WALL_WHOLE_CORNER.type) {
                             if (i_17 == 0) {
                                 graphicalrenderer_0.G(i_1, i_2, i_4, -1, 0);
                                 graphicalrenderer_0.XA(i_1, i_2, i_3, i_16, 0);
@@ -517,7 +517,7 @@ public class Class291 {
                                 graphicalrenderer_0.G(i_1, i_2, i_4, -1, 0);
                                 graphicalrenderer_0.XA(i_1, i_12, i_3, i_16, 0);
                             }
-                        } else if (i_14 == LocShapes.WALL_STRAIGHT_CORNER.type) {
+                        } else if (i_14 == ObjectType.WALL_STRAIGHT_CORNER.type) {
                             if (i_17 == 0) {
                                 graphicalrenderer_0.XA(i_1, i_2, 1, i_16, 0);
                             } else if (i_17 == 1) {
@@ -527,7 +527,7 @@ public class Class291 {
                             } else {
                                 graphicalrenderer_0.XA(i_1, i_12, 1, i_16, 0);
                             }
-                        } else if (i_14 == LocShapes.WALL_INTERACT.type) {
+                        } else if (i_14 == ObjectType.WALL_INTERACT.type) {
                             int i_18;
                             if (i_17 != 0 && i_17 != 2) {
                                 for (i_18 = 0; i_18 < i_4; i_18++) {
@@ -772,7 +772,7 @@ public class Class291 {
     static void renderObjectSprites(AbstractRenderer graphicalrenderer_0, int i_1, int i_2, int i_3, int i_4, int[] ints_5, byte[] bytes_6) {
         if (ints_5 != null) {
             for (int i_7 = 0; i_7 < ints_5.length; i_7++) {
-                LocType objectdefinitions_8 = OBJECT_LOADER.getLocType(ints_5[i_7]);
+                ObjectDefinition objectdefinitions_8 = OBJECT_LOADER.getObjectDefs(ints_5[i_7]);
                 int i_9 = objectdefinitions_8.mapSpriteId;
                 if (i_9 != -1) {
                     MapSpriteDefinitions class418_10 = MAP_SPRITE_LOADER.method7172(i_9);

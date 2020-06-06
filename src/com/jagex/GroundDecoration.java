@@ -7,9 +7,9 @@ public class GroundDecoration extends SceneObjectNode implements Location {
     Class200 aClass200_10505;
     boolean aBool10506;
 
-    public GroundDecoration(SceneObjectManager sceneobjectmanager_1, AbstractRenderer graphicalrenderer_2, LocationIndexLoader objectindexloader_3, LocType objectdefinitions_4, int i_5, int i_6, int i_7, int i_8, int i_9, boolean bool_10, int i_11, int i_12) {
+    public GroundDecoration(SceneObjectManager sceneobjectmanager_1, AbstractRenderer graphicalrenderer_2, LocationIndexLoader objectindexloader_3, ObjectDefinition objectdefinitions_4, int i_5, int i_6, int i_7, int i_8, int i_9, boolean bool_10, int i_11, int i_12) {
         super(sceneobjectmanager_1, i_7, i_8, i_9, i_5, i_6, objectdefinitions_4.anInt5704);
-        aClass123_10507 = new Class123(graphicalrenderer_2, objectindexloader_3, objectdefinitions_4, LocShapes.GROUND_DECORATION.type, i_11, i_5, i_6, this, bool_10, i_12);
+        aClass123_10507 = new Class123(graphicalrenderer_2, objectindexloader_3, objectdefinitions_4, ObjectType.GROUND_DECORATION.type, i_11, i_5, i_6, this, bool_10, i_12);
         aBool10506 = objectdefinitions_4.interactable != 0 && !bool_10;
         method13008(1);
     }

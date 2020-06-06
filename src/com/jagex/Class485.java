@@ -9,7 +9,7 @@ public class Class485 {
     }
 
     static boolean method8201(int i_0) {
-        return i_0 >= LocShapes.STRAIGHT_INSIDE_WALL_DEC.type && i_0 <= LocShapes.DIAGONAL_INWALL_DEC.type;
+        return i_0 >= ObjectType.STRAIGHT_INSIDE_WALL_DEC.type && i_0 <= ObjectType.DIAGONAL_INWALL_DEC.type;
     }
 
 }

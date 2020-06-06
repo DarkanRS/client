@@ -88,7 +88,7 @@ public class PacketDecoder {
             int key = buffer.readUnsignedShort();
             int flags = buffer.readUnsignedByte();
             boolean isNegativeKey = (flags & 0x1) == 1;
-            NormalObjectStrategy.resetContainer(key, isNegativeKey);
+            Static.resetContainer(key, isNegativeKey);
             int size = buffer.readUnsignedShort();
             for (int slot = 0; slot < size; slot++) {
                 int amount = buffer.readUnsigned128Byte();
@@ -2365,7 +2365,7 @@ public class PacketDecoder {
         } else if (packet == UpdateZonePacket.OBJECT_PREFETCH) {
             int i_3 = buffer.readInt();
             int i_21 = buffer.readUnsignedByte();
-            IndexLoaders.MAP_REGION_DECODER.method4436().getLocType(i_3).method7987(i_21);
+            IndexLoaders.MAP_REGION_DECODER.method4436().getObjectDefs(i_3).method7987(i_21);
         } else if (packet == UpdateZonePacket.SPOT_ANIM) {
             int i_3 = buffer.readUnsignedByte();
             int x = (i_3 >> 4 & 0x7) + Static.UPDATE_ZONE_X;
@@ -2481,7 +2481,7 @@ public class PacketDecoder {
             }
         } else if (packet == UpdateZonePacket.CUSTOMIZE_OBJECT) {
             int i_3 = buffer.readInt();
-            LocType objectdefinitions_32 = IndexLoaders.MAP_REGION_DECODER.method4436().getLocType(i_3);
+            ObjectDefinition objectdefinitions_32 = IndexLoaders.MAP_REGION_DECODER.method4436().getObjectDefs(i_3);
             int i_5 = buffer.readUnsignedByte128();
             int i_6 = i_5 >> 2;
             int i_7 = client.OBJECT_TYPE_SLOTS[i_6];
@@ -2489,8 +2489,8 @@ public class PacketDecoder {
             int i_9 = buffer.readUnsignedByte128();
             int i_10 = (i_9 >> 4 & 0x7) + Static.UPDATE_ZONE_X;
             int i_11 = (i_9 & 0x7) + Class158_Sub1_Sub2.UPDATE_ZONE_Y;
-            if (i_6 == LocShapes.GROUND_INTERACT.type) {
-                i_6 = LocShapes.SCENERY_INTERACT.type;
+            if (i_6 == ObjectType.GROUND_INTERACT.type) {
+                i_6 = ObjectType.SCENERY_INTERACT.type;
             }
             int i_23 = 0;
             if (objectdefinitions_32.types != null) {

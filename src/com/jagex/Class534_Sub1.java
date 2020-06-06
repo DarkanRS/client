@@ -26,7 +26,7 @@ public class Class534_Sub1 extends Class534 {
                 }
             }
         } else if (EnumDefinitions.isObjectClickType(class282_sub50_sub7_0.clickType)) {
-            LocType objectdefinitions_6 = IndexLoaders.MAP_REGION_DECODER.method4436().getLocType((int) (class282_sub50_sub7_0.aLong9584 >>> 32 & 0x7fffffffL));
+            ObjectDefinition objectdefinitions_6 = IndexLoaders.MAP_REGION_DECODER.method4436().getObjectDefs((int) (class282_sub50_sub7_0.aLong9584 >>> 32 & 0x7fffffffL));
             if (objectdefinitions_6.transformTo != null) {
                 objectdefinitions_6 = objectdefinitions_6.getMultiLoc(Class158_Sub1.PLAYER_VAR_PROVIDER);
             }

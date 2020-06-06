@@ -47,7 +47,7 @@ public enum ModeWhere {
     }
 
     static byte method7853(int i_0, int i_1) {
-        return (byte) (i_0 != LocShapes.WALL_INTERACT.type ? 0 : ((i_1 & 0x1) == 0 ? 1 : 2));
+        return (byte) (i_0 != ObjectType.WALL_INTERACT.type ? 0 : ((i_1 & 0x1) == 0 ? 1 : 2));
     }
 
 }

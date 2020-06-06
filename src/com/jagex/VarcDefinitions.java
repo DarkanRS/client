@@ -14,7 +14,7 @@ public class VarcDefinitions {
         }
     }
 
-    static void method6997(AbstractRenderer graphicalrenderer_0, LocType objectdefinitions_1, int i_2, int i_3, int i_4) {
+    static void method6997(AbstractRenderer graphicalrenderer_0, ObjectDefinition objectdefinitions_1, int i_2, int i_3, int i_4) {
         int i_21 = i_2;
         MapSpriteDefinitions class418_6 = IndexLoaders.MAP_SPRITE_LOADER.method7172(objectdefinitions_1.mapSpriteId);
         if (class418_6.anInt4995 != -1) {

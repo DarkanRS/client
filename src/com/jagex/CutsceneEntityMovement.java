@@ -64,7 +64,7 @@ public class CutsceneEntityMovement {
     }
 
     static boolean method1577(Location sceneobject_0) {
-        LocType objectdefinitions_2 = IndexLoaders.MAP_REGION_DECODER.method4436().getLocType(sceneobject_0.getId());
+        ObjectDefinition objectdefinitions_2 = IndexLoaders.MAP_REGION_DECODER.method4436().getObjectDefs(sceneobject_0.getId());
         if (objectdefinitions_2.mapSpriteId == -1) {
             return true;
         } else {

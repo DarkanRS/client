@@ -15,7 +15,7 @@ public class Node_Sub48 extends Node {
     MIDIInstrument aNode_Sub18_8087;
     boolean aBool8092;
     Node_Sub15_Sub5 aNode_Sub15_Sub5_8096;
-    LocType aClass478_8104;
+    ObjectDefinition aClass478_8104;
     Node_Sub26_Sub1_Sub1 aNode_Sub26_Sub1_Sub1_8106;
     int anInt8107;
     int soundEffectId;
@@ -38,7 +38,7 @@ public class Node_Sub48 extends Node {
         int i_2 = soundEffectId;
         boolean bool_3 = aBool8098;
         if (aClass478_8104 != null) {
-            LocType objectdefinitions_4 = aClass478_8104.getMultiLoc(client.anInt7341 == 4 ? Class86.anInterface42_832 : Class158_Sub1.PLAYER_VAR_PROVIDER);
+            ObjectDefinition objectdefinitions_4 = aClass478_8104.getMultiLoc(client.anInt7341 == 4 ? Class86.anInterface42_832 : Class158_Sub1.PLAYER_VAR_PROVIDER);
             if (objectdefinitions_4 != null) {
                 soundEffectId = objectdefinitions_4.ambientSoundId;
                 aBool8098 = objectdefinitions_4.aBool5696;

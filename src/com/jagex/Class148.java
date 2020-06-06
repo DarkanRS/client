@@ -34,13 +34,13 @@ public class Class148 {
         return null;
     }
 
-    public static RouteStrategy method2551(int i_0, int i_1, LocShapes sceneobjecttype_4, int i_5) {
-        RouteStrategies.NORMAL_OBJECT.approxDestinationX = i_0;
-        RouteStrategies.NORMAL_OBJECT.approxDestinationY = i_1;
+    public static RouteStrategy createNormalObjectStrategy(int x, int y, ObjectType objectType, int accessFlags) {
+        RouteStrategies.NORMAL_OBJECT.approxDestinationX = x;
+        RouteStrategies.NORMAL_OBJECT.approxDestinationY = y;
         RouteStrategies.NORMAL_OBJECT.approxDestinationSizeX = 0;
         RouteStrategies.NORMAL_OBJECT.approxDestinationSizeY = 0;
-        RouteStrategies.NORMAL_OBJECT.aClass458_7972 = sceneobjecttype_4;
-        RouteStrategies.NORMAL_OBJECT.anInt7971 = i_5;
+        RouteStrategies.NORMAL_OBJECT.objectType = objectType;
+        RouteStrategies.NORMAL_OBJECT.accessFlags = accessFlags;
         return RouteStrategies.NORMAL_OBJECT;
     }
 

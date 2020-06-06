@@ -54,11 +54,11 @@ public class LocationIndexLoader {
         return Class244.aBool3007 && id >= Class485.WORLD_LIST_START && id <= Class244.WORLD_LIST_SIZEPLUS1 ? Class244.WORLD_LIST_DESCRIPTORS[id - Class485.WORLD_LIST_START] : null;
     }
 
-    public LocType getLocType(int i_1) {
+    public ObjectDefinition getObjectDefs(int i_1) {
         LRUCache softcache_4 = LRUCache;
-        LocType objectdefinitions_3;
+        ObjectDefinition objectdefinitions_3;
         synchronized (LRUCache) {
-            objectdefinitions_3 = (LocType) LRUCache.get(i_1);
+            objectdefinitions_3 = (ObjectDefinition) LRUCache.get(i_1);
         }
         if (objectdefinitions_3 != null) {
             return objectdefinitions_3;
@@ -68,7 +68,7 @@ public class LocationIndexLoader {
             synchronized (locationIndex) {
                 bytes_9 = locationIndex.getFile(SharedConfigsType.OBJECTS.containerId(i_1), SharedConfigsType.OBJECTS.fileId(i_1));
             }
-            objectdefinitions_3 = new LocType();
+            objectdefinitions_3 = new ObjectDefinition();
             objectdefinitions_3.id = i_1;
             objectdefinitions_3.loader = this;
             objectdefinitions_3.options = defaultOptions.clone();

@@ -7,7 +7,7 @@ public class WallDecoration extends GraphNode_Sub1_Sub4 implements Location {
     Class200 aClass200_10503;
     boolean aBool10502;
 
-    public WallDecoration(SceneObjectManager sceneobjectmanager_1, AbstractRenderer graphicalrenderer_2, LocationIndexLoader objectindexloader_3, LocType objectdefinitions_4, int i_5, int i_6, int i_7, int i_8, int i_9, boolean bool_10, int i_11, int i_12, int i_13, int i_14, int i_15) {
+    public WallDecoration(SceneObjectManager sceneobjectmanager_1, AbstractRenderer graphicalrenderer_2, LocationIndexLoader objectindexloader_3, ObjectDefinition objectdefinitions_4, int i_5, int i_6, int i_7, int i_8, int i_9, boolean bool_10, int i_11, int i_12, int i_13, int i_14, int i_15) {
         super(sceneobjectmanager_1, i_7, i_8, i_9, i_5, i_6, i_11, i_12);
         aClass123_10501 = new Class123(graphicalrenderer_2, objectindexloader_3, objectdefinitions_4, i_13, i_14, plane, i_6, this, bool_10, i_15);
         aBool10502 = objectdefinitions_4.interactable != 0 && !bool_10;

@@ -47,7 +47,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
     boolean aBool3268;
 
     static int method4777(int i_0, int i_1) {
-        return i_0 != LocShapes.WALL_DIAGONAL_CORNER.type && i_0 != LocShapes.WALL_STRAIGHT_CORNER.type ? Wall.anIntArray10531[i_1 & 0x3] : Wall.anIntArray10533[i_1 & 0x3];
+        return i_0 != ObjectType.WALL_DIAGONAL_CORNER.type && i_0 != ObjectType.WALL_STRAIGHT_CORNER.type ? Wall.anIntArray10531[i_1 & 0x3] : Wall.anIntArray10533[i_1 & 0x3];
     }
 
     static void method4779(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8) {

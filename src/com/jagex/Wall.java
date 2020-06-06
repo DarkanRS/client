@@ -9,7 +9,7 @@ public class Wall extends GraphNode_Sub1_Sub5 implements Location {
     Class200 aClass200_10530;
     boolean aBool10529;
 
-    public Wall(SceneObjectManager sceneobjectmanager_1, AbstractRenderer graphicalrenderer_2, LocationIndexLoader objectindexloader_3, LocType objectdefinitions_4, int i_5, int i_6, int i_7, int i_8, int i_9, boolean bool_10, int i_11, int i_12, int i_13) {
+    public Wall(SceneObjectManager sceneobjectmanager_1, AbstractRenderer graphicalrenderer_2, LocationIndexLoader objectindexloader_3, ObjectDefinition objectdefinitions_4, int i_5, int i_6, int i_7, int i_8, int i_9, boolean bool_10, int i_11, int i_12, int i_13) {
         super(sceneobjectmanager_1, i_7, i_8, i_9, i_5, i_6, Engine.method4777(i_11, i_12));
         aClass123_10532 = new Class123(graphicalrenderer_2, objectindexloader_3, objectdefinitions_4, i_11, i_12, plane, i_6, this, bool_10, i_13);
         aBool10529 = objectdefinitions_4.interactable != 0 && !bool_10;

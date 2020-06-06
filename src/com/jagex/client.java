@@ -975,7 +975,7 @@ public class client extends Engine {
             }
         }
 
-        NormalObjectStrategy.method13047(anIntArray7288, anIntArray7287, 0, anInt7304 - 1);
+        Static.method13047(anIntArray7288, anIntArray7287, 0, anInt7304 - 1);
     }
 
     public static void method11768(Interface interface_0, Component[] components, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, int i_10) {
@@ -1954,7 +1954,7 @@ public class client extends Engine {
                 ScreenSizePreference.JS5_MANAGER.pulse();
             }
 
-            LocType.method8020();
+            ObjectDefinition.method8020();
             Class158_Sub1_Sub2.method15536();
             PlaySoundJingleCutsceneAction.keyRecorder.method3235();
             Class163.mouseRecorder.method3589();
@@ -2439,7 +2439,7 @@ public class client extends Engine {
             aBool7372 = false;
         }
 
-        Class455.aShortArray5452 = LocType.aShortArray5691 = NPCType.aShortArray4862 = ItemDefinitions.staticColorArr256 = new short[256];
+        Class455.aShortArray5452 = ObjectDefinition.aShortArray5691 = NPCType.aShortArray4862 = ItemDefinitions.staticColorArr256 = new short[256];
 
         try {
             Class182.aClipboard2263 = Class371.getActiveContainer().getToolkit().getSystemClipboard();
@@ -2556,7 +2556,7 @@ public class client extends Engine {
             aBool7372 = false;
         }
 
-        Class455.aShortArray5452 = LocType.aShortArray5691 = NPCType.aShortArray4862 = ItemDefinitions.staticColorArr256 = new short[256];
+        Class455.aShortArray5452 = ObjectDefinition.aShortArray5691 = NPCType.aShortArray4862 = ItemDefinitions.staticColorArr256 = new short[256];
 
         try {
             Class182.aClipboard2263 = Class371.getActiveContainer().getToolkit().getSystemClipboard();
@@ -2682,7 +2682,7 @@ public class client extends Engine {
             aBool7372 = false;
         }
 
-        Class455.aShortArray5452 = LocType.aShortArray5691 = NPCType.aShortArray4862 = ItemDefinitions.staticColorArr256 = new short[256];
+        Class455.aShortArray5452 = ObjectDefinition.aShortArray5691 = NPCType.aShortArray4862 = ItemDefinitions.staticColorArr256 = new short[256];
 
         try {
             Class182.aClipboard2263 = Class371.getActiveContainer().getToolkit().getSystemClipboard();

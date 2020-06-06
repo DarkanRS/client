@@ -24,7 +24,7 @@ public class GraphNode_Sub1_Sub1_Sub6 extends GraphNode_Sub1_Sub1 implements Loc
 
     Shadow aCacheableNode_Sub17_10538;
 
-    public GraphNode_Sub1_Sub1_Sub6(SceneObjectManager sceneobjectmanager_1, AbstractRenderer graphicalrenderer_2, LocationIndexLoader objectindexloader_3, LocType objectdefinitions_4, int i_5, int i_6, int i_7, int i_8, int i_9, boolean bool_10, int i_11, int i_12, int i_13, int i_14, int i_15, int i_16, boolean bool_17) {
+    public GraphNode_Sub1_Sub1_Sub6(SceneObjectManager sceneobjectmanager_1, AbstractRenderer graphicalrenderer_2, LocationIndexLoader objectindexloader_3, ObjectDefinition objectdefinitions_4, int i_5, int i_6, int i_7, int i_8, int i_9, boolean bool_10, int i_11, int i_12, int i_13, int i_14, int i_15, int i_16, boolean bool_17) {
         super(sceneobjectmanager_1, i_5, i_6, i_7, i_8, i_9, i_11, i_12, i_13, i_14, objectdefinitions_4.supportsItems == 1, ModeWhere.method7853(i_15, i_16));
         aClass474_10542 = objectindexloader_3;
         id = objectdefinitions_4.id;
@@ -86,7 +86,7 @@ public class GraphNode_Sub1_Sub1_Sub6 extends GraphNode_Sub1_Sub1 implements Loc
     }
 
     Class452 method16117(AbstractRenderer graphicalrenderer_1, int i_2, boolean bool_3) {
-        LocType objectdefinitions_5 = aClass474_10542.getLocType(id);
+        ObjectDefinition objectdefinitions_5 = aClass474_10542.getObjectDefs(id);
         Ground class390_6;
         Ground class390_7;
         if (aBool10536) {
@@ -101,7 +101,7 @@ public class GraphNode_Sub1_Sub1_Sub6 extends GraphNode_Sub1_Sub1 implements Loc
             }
         }
         Vector3 vector3_8 = method11166().coords;
-        return objectdefinitions_5.method8010(graphicalrenderer_1, i_2, aByte10539 != LocShapes.GROUND_INTERACT.type ? aByte10539 : LocShapes.SCENERY_INTERACT.type, LocShapes.GROUND_INTERACT.type == aByte10539 ? aByte10540 + 4 : aByte10540, class390_6, class390_7, (int) vector3_8.x, (int) vector3_8.y, (int) vector3_8.z, bool_3, null);
+        return objectdefinitions_5.method8010(graphicalrenderer_1, i_2, aByte10539 != ObjectType.GROUND_INTERACT.type ? aByte10539 : ObjectType.SCENERY_INTERACT.type, ObjectType.GROUND_INTERACT.type == aByte10539 ? aByte10540 + 4 : aByte10540, class390_6, class390_7, (int) vector3_8.x, (int) vector3_8.y, (int) vector3_8.z, bool_3, null);
     }
 
     @Override

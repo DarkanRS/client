@@ -14,7 +14,7 @@ public class Class492 {
 
     static boolean method8264(LocationIndexLoader objectindexloader_0, int i_1, int i_2) {
         int i_21 = i_2;
-        LocType objectdefinitions_4 = objectindexloader_0.getLocType(i_1);
+        ObjectDefinition objectdefinitions_4 = objectindexloader_0.getObjectDefs(i_1);
         if (i_21 == 11) {
             i_21 = 10;
         }

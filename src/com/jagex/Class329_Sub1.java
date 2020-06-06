@@ -40,16 +40,16 @@ public class Class329_Sub1 extends Class329 {
         if (i_3 < anInt7723) {
             anInt7723 = i_3;
         }
-        LocType objectDefs = objectDefLoader.getLocType(objectId);
-        if (Class393.preferences.textures.method12873() != 0 || !objectDefs.hidden) {
+        ObjectDefinition defs = objectDefLoader.getObjectDefs(objectId);
+        if (Class393.preferences.textures.method12873() != 0 || !defs.hidden) {
             int i_13;
             int i_14;
             if (i_7 != 1 && i_7 != 3) {
-                i_13 = objectDefs.sizeX;
-                i_14 = objectDefs.sizeY;
+                i_13 = defs.sizeX;
+                i_14 = defs.sizeY;
             } else {
-                i_13 = objectDefs.sizeY;
-                i_14 = objectDefs.sizeX;
+                i_13 = defs.sizeY;
+                i_14 = defs.sizeX;
             }
             int i_15;
             int i_16;
@@ -73,50 +73,50 @@ public class Class329_Sub1 extends Class329 {
             int i_20 = class390_19.getHeight(i_15, i_17) + class390_19.getHeight(i_16, i_17) + class390_19.getHeight(i_15, i_18) + class390_19.getHeight(i_16, i_18) >> 2;
             int i_21 = (i_4 << 9) + (i_13 << 8);
             int i_22 = (i_5 << 9) + (i_14 << 8);
-            boolean bool_23 = aBool3773 && !overlayHidden && objectDefs.delayShading;
-            if (objectDefs.hasSound()) {
-                Static.method6775(i_3, i_4, i_5, i_7, objectDefs, null, null);
+            boolean bool_23 = aBool3773 && !overlayHidden && defs.delayShading;
+            if (defs.hasSound()) {
+                Static.method6775(i_3, i_4, i_5, i_7, defs, null, null);
             }
-            boolean bool_24 = i_10 == -1 && !objectDefs.method7967() && objectDefs.transformTo == null && !objectDefs.hasAnimation && !objectDefs.aBool5699;
-            if (!aBool7717 || (!Class308.isWall(i_8) || objectDefs.occludes == 1) && (!QuestDefinitions.isRoof(i_8) || objectDefs.occludes != 0)) {
+            boolean bool_24 = i_10 == -1 && !defs.method7967() && defs.transformTo == null && !defs.hasAnimation && !defs.aBool5699;
+            if (!aBool7717 || (!Class308.isWall(i_8) || defs.occludes == 1) && (!QuestDefinitions.isRoof(i_8) || defs.occludes != 0)) {
                 Object obj_25;
-                if (i_8 == LocShapes.GROUND_DECORATION.type) {
-                    if (Class393.preferences.groundDecor.method12897() != 0 || objectDefs.interactable != 0 || objectDefs.clipType == 1 || objectDefs.obstructsGround) {
+                if (i_8 == ObjectType.GROUND_DECORATION.type) {
+                    if (Class393.preferences.groundDecor.method12897() != 0 || defs.interactable != 0 || defs.clipType == 1 || defs.obstructsGround) {
                         if (bool_24) {
-                            GraphNode_Sub1_Sub3_Sub1 class521_sub1_sub3_sub1_26 = new GraphNode_Sub1_Sub3_Sub1(sceneObjectManager, graphicalrenderer_1, objectDefLoader, objectDefs, i_3, i_2, i_21, i_20, i_22, overlayHidden, i_7, bool_23);
+                            GraphNode_Sub1_Sub3_Sub1 class521_sub1_sub3_sub1_26 = new GraphNode_Sub1_Sub3_Sub1(sceneObjectManager, graphicalrenderer_1, objectDefLoader, defs, i_3, i_2, i_21, i_20, i_22, overlayHidden, i_7, bool_23);
                             if (class521_sub1_sub3_sub1_26.method86()) {
                                 class521_sub1_sub3_sub1_26.method87(graphicalrenderer_1);
                             }
                             obj_25 = class521_sub1_sub3_sub1_26;
                         } else {
-                            obj_25 = new GroundDecoration(sceneObjectManager, graphicalrenderer_1, objectDefLoader, objectDefs, i_3, i_2, i_21, i_20, i_22, overlayHidden, i_7, i_10);
+                            obj_25 = new GroundDecoration(sceneObjectManager, graphicalrenderer_1, objectDefLoader, defs, i_3, i_2, i_21, i_20, i_22, overlayHidden, i_7, i_10);
                         }
                         sceneObjectManager.method3393(i_3, i_4, i_5, (SceneObjectNode) obj_25);
-                        if (objectDefs.clipType == 1 && clipMap != null) {
+                        if (defs.clipType == 1 && clipMap != null) {
                             clipMap.addBlockFloorDeco(i_4, i_5);
                         }
                     }
-                } else if (i_8 != LocShapes.SCENERY_INTERACT.type && i_8 != LocShapes.GROUND_INTERACT.type) {
+                } else if (i_8 != ObjectType.SCENERY_INTERACT.type && i_8 != ObjectType.GROUND_INTERACT.type) {
                     if (!QuestDefinitions.isRoof(i_8) && !HitsplatDefinitions.method3849(i_8)) {
-                        if (!method12464(graphicalrenderer_1, i_8, i_7, bool_24, objectDefs, i_10, i_3, i_2, i_21, i_20, i_22, i_4, i_5, bool_23, class390_19, clipMap, i_13, i_14)) {
-                            method12465(graphicalrenderer_1, i_8, i_7, bool_24, objectDefs, i_10, i_3, i_2, i_21, i_20, i_22, i_4, i_5);
+                        if (!method12464(graphicalrenderer_1, i_8, i_7, bool_24, defs, i_10, i_3, i_2, i_21, i_20, i_22, i_4, i_5, bool_23, class390_19, clipMap, i_13, i_14)) {
+                            method12465(graphicalrenderer_1, i_8, i_7, bool_24, defs, i_10, i_3, i_2, i_21, i_20, i_22, i_4, i_5);
                         }
                     } else {
                         if (bool_24) {
-                            GraphNode_Sub1_Sub1_Sub6 class521_sub1_sub1_sub6_33 = new GraphNode_Sub1_Sub1_Sub6(sceneObjectManager, graphicalrenderer_1, objectDefLoader, objectDefs, i_3, i_2, i_21, i_20, i_22, overlayHidden, i_4, i_13 + i_4 - 1, i_5, i_5 + i_14 - 1, i_8, i_7, bool_23);
+                            GraphNode_Sub1_Sub1_Sub6 class521_sub1_sub1_sub6_33 = new GraphNode_Sub1_Sub1_Sub6(sceneObjectManager, graphicalrenderer_1, objectDefLoader, defs, i_3, i_2, i_21, i_20, i_22, overlayHidden, i_4, i_13 + i_4 - 1, i_5, i_5 + i_14 - 1, i_8, i_7, bool_23);
                             if (class521_sub1_sub1_sub6_33.method86()) {
                                 class521_sub1_sub1_sub6_33.method87(graphicalrenderer_1);
                             }
                             obj_25 = class521_sub1_sub1_sub6_33;
                         } else {
-                            obj_25 = new InteractableObject(sceneObjectManager, graphicalrenderer_1, objectDefLoader, objectDefs, i_3, i_2, i_21, i_20, i_22, overlayHidden, i_4, i_13 + i_4 - 1, i_5, i_5 + i_14 - 1, i_8, i_7, i_10);
+                            obj_25 = new InteractableObject(sceneObjectManager, graphicalrenderer_1, objectDefLoader, defs, i_3, i_2, i_21, i_20, i_22, overlayHidden, i_4, i_13 + i_4 - 1, i_5, i_5 + i_14 - 1, i_8, i_7, i_10);
                         }
                         sceneObjectManager.method3397((GraphNode_Sub1_Sub1) obj_25, false);
-                        if (aBool3773 && !overlayHidden && QuestDefinitions.isRoof(i_8) && i_8 != LocShapes.DIAGONAL_SLOPE_ROOF.type && i_3 > 0 && objectDefs.occludes != 0) {
+                        if (aBool3773 && !overlayHidden && QuestDefinitions.isRoof(i_8) && i_8 != ObjectType.DIAGONAL_SLOPE_ROOF.type && i_3 > 0 && defs.occludes != 0) {
                             aByteArrayArrayArray3794[i_3][i_4][i_5] |= 0x4;
                         }
-                        if (objectDefs.clipType != 0 && clipMap != null) {
-                            clipMap.addObject(i_4, i_5, i_13, i_14, objectDefs.blocks, !objectDefs.alt);
+                        if (defs.clipType != 0 && clipMap != null) {
+                            clipMap.addObject(i_4, i_5, i_13, i_14, defs.blocks, !defs.alt);
                         }
                     }
                 } else {
@@ -124,19 +124,19 @@ public class Class329_Sub1 extends Class329 {
                     int i_27;
                     GraphNode_Sub1_Sub1 obj_32;
                     if (bool_24) {
-                        GraphNode_Sub1_Sub1_Sub6 class521_sub1_sub1_sub6_28 = new GraphNode_Sub1_Sub1_Sub6(sceneObjectManager, graphicalrenderer_1, objectDefLoader, objectDefs, i_3, i_2, i_21, i_20, i_22, overlayHidden, i_4, i_13 + i_4 - 1, i_5, i_5 + i_14 - 1, i_8, i_7, bool_23);
+                        GraphNode_Sub1_Sub1_Sub6 class521_sub1_sub1_sub6_28 = new GraphNode_Sub1_Sub1_Sub6(sceneObjectManager, graphicalrenderer_1, objectDefLoader, defs, i_3, i_2, i_21, i_20, i_22, overlayHidden, i_4, i_13 + i_4 - 1, i_5, i_5 + i_14 - 1, i_8, i_7, bool_23);
                         i_27 = class521_sub1_sub1_sub6_28.method16115();
                         obj_32 = class521_sub1_sub1_sub6_28;
                         class521_sub1_sub1_sub6_31 = class521_sub1_sub1_sub6_28;
                     } else {
-                        obj_32 = new InteractableObject(sceneObjectManager, graphicalrenderer_1, objectDefLoader, objectDefs, i_3, i_2, i_21, i_20, i_22, overlayHidden, i_4, i_13 + i_4 - 1, i_5, i_5 + i_14 - 1, i_8, i_7, i_10);
+                        obj_32 = new InteractableObject(sceneObjectManager, graphicalrenderer_1, objectDefLoader, defs, i_3, i_2, i_21, i_20, i_22, overlayHidden, i_4, i_13 + i_4 - 1, i_5, i_5 + i_14 - 1, i_8, i_7, i_10);
                         i_27 = 15;
                     }
                     if (sceneObjectManager.method3397(obj_32, false)) {
                         if (class521_sub1_sub1_sub6_31 != null && class521_sub1_sub1_sub6_31.method86()) {
                             class521_sub1_sub1_sub6_31.method87(graphicalrenderer_1);
                         }
-                        if (objectDefs.castsShadow && aBool3773) {
+                        if (defs.castsShadow && aBool3773) {
                             if (i_27 > 30) {
                                 i_27 = 30;
                             }
@@ -147,8 +147,8 @@ public class Class329_Sub1 extends Class329 {
                             }
                         }
                     }
-                    if (objectDefs.clipType != 0 && clipMap != null) {
-                        clipMap.addObject(i_4, i_5, i_13, i_14, objectDefs.blocks, !objectDefs.alt);
+                    if (defs.clipType != 0 && clipMap != null) {
+                        clipMap.addObject(i_4, i_5, i_13, i_14, defs.blocks, !defs.alt);
                     }
                 }
             }
@@ -371,7 +371,7 @@ public class Class329_Sub1 extends Class329 {
                 int i_21 = i_20 >> 2;
                 int i_22 = i_20 & 0x3;
                 if (i_19 == i_6 && i_18 >= i_7 && i_18 < i_7 + 8 && i_17 >= i_8 && i_17 < i_8 + 8) {
-                    LocType objectdefinitions_23 = objectDefLoader.getLocType(i_13);
+                    ObjectDefinition objectdefinitions_23 = objectDefLoader.getObjectDefs(i_13);
                     int i_24 = i_4 + KeyPressInputSubscriber.method3756(i_18 & 0x7, i_17 & 0x7, i_9, objectdefinitions_23.sizeX, objectdefinitions_23.sizeY, i_22);
                     int i_25 = i_5 + PlayerVarProvider.method282(i_18 & 0x7, i_17 & 0x7, i_9, objectdefinitions_23.sizeX, objectdefinitions_23.sizeY, i_22);
                     if (i_24 > 0 && i_25 > 0 && i_24 < maxX - 1 && i_25 < maxY - 1) {
@@ -456,10 +456,10 @@ public class Class329_Sub1 extends Class329 {
         aByteArrayArrayArray3794 = null;
     }
 
-    boolean method12464(AbstractRenderer graphicalrenderer_1, int i_2, int i_3, boolean bool_4, LocType objectdefinitions_5, int i_6, int i_7, int i_8, int i_9, int i_10, int i_11, int i_12, int i_13, boolean bool_14, Ground class390_15, ClipMap clipmap_16, int i_17, int i_18) {
+    boolean method12464(AbstractRenderer graphicalrenderer_1, int i_2, int i_3, boolean bool_4, ObjectDefinition objectdefinitions_5, int i_6, int i_7, int i_8, int i_9, int i_10, int i_11, int i_12, int i_13, boolean bool_14, Ground class390_15, ClipMap clipmap_16, int i_17, int i_18) {
         int i_20;
         GraphNode_Sub1_Sub5 obj_28;
-        if (i_2 == LocShapes.WALL_STRAIGHT.type) {
+        if (i_2 == ObjectType.WALL_STRAIGHT.type) {
             i_20 = objectdefinitions_5.occludes;
             if (aBool7714 && objectdefinitions_5.occludes == -1) {
                 i_20 = 1;
@@ -517,7 +517,7 @@ public class Class329_Sub1 extends Class329 {
         } else {
             Object obj_25;
             GraphNode_Sub1_Sub5_Sub1 class521_sub1_sub5_sub1_27;
-            if (i_2 == LocShapes.WALL_DIAGONAL_CORNER.type) {
+            if (i_2 == ObjectType.WALL_DIAGONAL_CORNER.type) {
                 if (bool_4) {
                     class521_sub1_sub5_sub1_27 = new GraphNode_Sub1_Sub5_Sub1(sceneObjectManager, graphicalrenderer_1, objectDefLoader, objectdefinitions_5, i_7, i_8, i_9, i_10, i_11, overlayHidden, i_2, i_3, bool_14);
                     if (class521_sub1_sub5_sub1_27.method86()) {
@@ -543,7 +543,7 @@ public class Class329_Sub1 extends Class329 {
                     clipmap_16.addWall(i_12, i_13, i_2, i_3, objectdefinitions_5.blocks, !objectdefinitions_5.alt);
                 }
                 return true;
-            } else if (i_2 == LocShapes.WALL_WHOLE_CORNER.type) {
+            } else if (i_2 == ObjectType.WALL_WHOLE_CORNER.type) {
                 i_20 = i_3 + 1 & 0x3;
                 GraphNode_Sub1_Sub5 obj_22;
                 if (bool_4) {
@@ -584,7 +584,7 @@ public class Class329_Sub1 extends Class329 {
                     sceneObjectManager.method3398(i_7, i_12, i_13, objectdefinitions_5.decorDisplacement);
                 }
                 return true;
-            } else if (i_2 == LocShapes.WALL_STRAIGHT_CORNER.type) {
+            } else if (i_2 == ObjectType.WALL_STRAIGHT_CORNER.type) {
                 if (bool_4) {
                     class521_sub1_sub5_sub1_27 = new GraphNode_Sub1_Sub5_Sub1(sceneObjectManager, graphicalrenderer_1, objectDefLoader, objectdefinitions_5, i_7, i_8, i_9, i_10, i_11, overlayHidden, i_2, i_3, bool_14);
                     if (class521_sub1_sub5_sub1_27.method86()) {
@@ -610,7 +610,7 @@ public class Class329_Sub1 extends Class329 {
                     clipmap_16.addWall(i_12, i_13, i_2, i_3, objectdefinitions_5.blocks, !objectdefinitions_5.alt);
                 }
                 return true;
-            } else if (i_2 == LocShapes.WALL_INTERACT.type) {
+            } else if (i_2 == ObjectType.WALL_INTERACT.type) {
                 if (bool_4) {
                     GraphNode_Sub1_Sub1_Sub6 class521_sub1_sub1_sub6_21 = new GraphNode_Sub1_Sub1_Sub6(sceneObjectManager, graphicalrenderer_1, objectDefLoader, objectdefinitions_5, i_7, i_8, i_9, i_10, i_11, overlayHidden, i_12, i_12, i_13, i_13, i_2, i_3, bool_14);
                     if (class521_sub1_sub1_sub6_21.method86()) {
@@ -643,8 +643,8 @@ public class Class329_Sub1 extends Class329 {
         }
     }
 
-    boolean method12465(AbstractRenderer graphicalrenderer_1, int i_2, int i_3, boolean bool_4, LocType objectdefinitions_5, int i_6, int i_7, int i_8, int i_9, int i_10, int i_11, int i_12, int i_13) {
-        if (i_2 == LocShapes.STRAIGHT_INSIDE_WALL_DEC.type) {
+    boolean method12465(AbstractRenderer graphicalrenderer_1, int i_2, int i_3, boolean bool_4, ObjectDefinition objectdefinitions_5, int i_6, int i_7, int i_8, int i_9, int i_10, int i_11, int i_12, int i_13) {
+        if (i_2 == ObjectType.STRAIGHT_INSIDE_WALL_DEC.type) {
             GraphNode_Sub1_Sub4 obj_15;
             if (bool_4) {
                 GraphNode_Sub1_Sub4_Sub1 class521_sub1_sub4_sub1_26 = new GraphNode_Sub1_Sub4_Sub1(sceneObjectManager, graphicalrenderer_1, objectDefLoader, objectdefinitions_5, i_7, i_8, i_9, i_10, i_11, overlayHidden, 0, 0, i_2, i_3);
@@ -662,11 +662,11 @@ public class Class329_Sub1 extends Class329 {
             Location sceneobject_24;
             GraphNode_Sub1_Sub4 obj_27;
             GraphNode_Sub1_Sub4_Sub1 class521_sub1_sub4_sub1_28;
-            if (i_2 == LocShapes.STRAIGHT_OUSIDE_WALL_DEC.type) {
+            if (i_2 == ObjectType.STRAIGHT_OUSIDE_WALL_DEC.type) {
                 i_22 = 65;
                 sceneobject_24 = (Location) sceneObjectManager.getWall(i_7, i_12, i_13);
                 if (sceneobject_24 != null) {
-                    i_22 = objectDefLoader.getLocType(sceneobject_24.getId()).decorDisplacement + 1;
+                    i_22 = objectDefLoader.getObjectDefs(sceneobject_24.getId()).decorDisplacement + 1;
                 }
                 if (bool_4) {
                     class521_sub1_sub4_sub1_28 = new GraphNode_Sub1_Sub4_Sub1(sceneObjectManager, graphicalrenderer_1, objectDefLoader, objectdefinitions_5, i_7, i_8, i_9, i_10, i_11, overlayHidden, i_22 * anIntArray7724[i_3], i_22 * anIntArray7720[i_3], i_2, i_3);
@@ -679,11 +679,11 @@ public class Class329_Sub1 extends Class329 {
                 }
                 sceneObjectManager.method3396(i_7, i_12, i_13, obj_27, null);
                 return true;
-            } else if (i_2 == LocShapes.DIAGONAL_OUTSIDE_WALL_DEC.type) {
+            } else if (i_2 == ObjectType.DIAGONAL_OUTSIDE_WALL_DEC.type) {
                 i_22 = 33;
                 sceneobject_24 = (Location) sceneObjectManager.getWall(i_7, i_12, i_13);
                 if (sceneobject_24 != null) {
-                    i_22 = objectDefLoader.getLocType(sceneobject_24.getId()).decorDisplacement / 2 + 1;
+                    i_22 = objectDefLoader.getObjectDefs(sceneobject_24.getId()).decorDisplacement / 2 + 1;
                 }
                 if (bool_4) {
                     class521_sub1_sub4_sub1_28 = new GraphNode_Sub1_Sub4_Sub1(sceneObjectManager, graphicalrenderer_1, objectDefLoader, objectdefinitions_5, i_7, i_8, i_9, i_10, i_11, overlayHidden, i_22 * anIntArray7724[i_3], i_22 * anIntArray7720[i_3], i_2, i_3 + 4);
@@ -696,7 +696,7 @@ public class Class329_Sub1 extends Class329 {
                 }
                 sceneObjectManager.method3396(i_7, i_12, i_13, obj_27, null);
                 return true;
-            } else if (i_2 == LocShapes.DIAGONAL_INSIDE_WALL_DEC.type) {
+            } else if (i_2 == ObjectType.DIAGONAL_INSIDE_WALL_DEC.type) {
                 i_22 = i_3 + 2 & 0x3;
                 GraphNode_Sub1_Sub4 obj_16;
                 if (bool_4) {
@@ -710,12 +710,12 @@ public class Class329_Sub1 extends Class329 {
                 }
                 sceneObjectManager.method3396(i_7, i_12, i_13, obj_16, null);
                 return true;
-            } else if (i_2 == LocShapes.DIAGONAL_INWALL_DEC.type) {
+            } else if (i_2 == ObjectType.DIAGONAL_INWALL_DEC.type) {
                 i_22 = i_3 + 2 & 0x3;
                 int i_23 = 33;
                 Location sceneobject_17 = (Location) sceneObjectManager.getWall(i_7, i_12, i_13);
                 if (sceneobject_17 != null) {
-                    i_23 = objectDefLoader.getLocType(sceneobject_17.getId()).decorDisplacement / 2 + 1;
+                    i_23 = objectDefLoader.getObjectDefs(sceneobject_17.getId()).decorDisplacement / 2 + 1;
                 }
                 GraphNode_Sub1_Sub4 obj_18;
                 GraphNode_Sub1_Sub4 obj_19;
@@ -949,7 +949,7 @@ public class Class329_Sub1 extends Class329 {
     void method12475(AbstractRenderer graphicalrenderer_1, int i_2, int i_3, int x, int y, ClipMap clipmap_6) {
         Location sceneobject_8 = method12467(i_2, i_3, x, y);
         if (sceneobject_8 != null) {
-            LocType objectdefinitions_9 = objectDefLoader.getLocType(sceneobject_8.getId());
+            ObjectDefinition objectdefinitions_9 = objectDefLoader.getObjectDefs(sceneobject_8.getId());
             int type = sceneobject_8.method89();
             int i_11 = sceneobject_8.method92();
             if (objectdefinitions_9.hasSound()) {
@@ -983,7 +983,7 @@ public class Class329_Sub1 extends Class329 {
                 if (objectdefinitions_9.clipType != 0 && x + objectdefinitions_9.sizeX < maxX && y + objectdefinitions_9.sizeX < maxY && x + objectdefinitions_9.sizeY < maxX && y + objectdefinitions_9.sizeY < maxY) {
                     clipmap_6.removeObject(x, y, objectdefinitions_9.sizeX, objectdefinitions_9.sizeY, i_11, objectdefinitions_9.blocks, !objectdefinitions_9.alt);
                 }
-                if (type == LocShapes.WALL_INTERACT.type) {
+                if (type == ObjectType.WALL_INTERACT.type) {
                     if ((i_11 & 0x1) == 0) {
                         sceneObjectManager.aClass201_2600.method3297(8, i_2, x, y);
                     } else {

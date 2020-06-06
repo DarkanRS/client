@@ -28,7 +28,7 @@ public class PulseEvent extends CacheableNode {
             Class499.method8333(i_1);
             client.anIntArray7379[++client.anInt7453 - 1 & 0x1f] = i_1;
         }
-        for (PulseEvent event = LocType.nextPulseEvent(); event != null; event = LocType.nextPulseEvent()) {
+        for (PulseEvent event = ObjectDefinition.nextPulseEvent(); event != null; event = ObjectDefinition.nextPulseEvent()) {
             int type = event.getType();
             long value = event.method14967();
             if (type == 1) {

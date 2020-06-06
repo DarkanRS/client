@@ -1,6 +1,6 @@
 package com.jagex;
 
-public enum LocShapes implements Identifiable {
+public enum ObjectType implements Identifiable {
     WALL_STRAIGHT(0, 0),
     WALL_DIAGONAL_CORNER(1, 0),
     WALL_WHOLE_CORNER(2, 0),
@@ -26,15 +26,11 @@ public enum LocShapes implements Identifiable {
     GROUND_DECORATION(22, 3);
 
     public final int type;
-    public final int anInt5494;
+    public final int slot;
 
-    LocShapes(int i_1, int i_2) {
+    ObjectType(int i_1, int i_2) {
         type = i_1;
-        anInt5494 = i_2;
-    }
-
-    public static LocShapes[] method262() {
-        return new LocShapes[]{STRAIGHT_INSIDE_WALL_DEC, STRAIGHT_SLOPE_ROOF, GROUND_INTERACT, STRAIGHT_SLOPE_CORNER_ROOF, STRAIGHT_BOTTOM_EDGE_ROOF, STRAIGHT_BOTTOM_EDGE_CONNECT_ROOF, WALL_INTERACT, STRAIGHT_OUSIDE_WALL_DEC, STRAIGHT_BOTTOM_EDGE_CONNECT_CORNER_ROOF, DIAGONAL_INSIDE_WALL_DEC, WALL_DIAGONAL_CORNER, WALL_STRAIGHT_CORNER, DIAGONAL_INWALL_DEC, WALL_WHOLE_CORNER, SCENERY_INTERACT, DIAGONAL_BOTTOM_EDGE_CONNECT_ROOF, DIAGONAL_OUTSIDE_WALL_DEC, LocShapes.GROUND_DECORATION, DIAGONAL_SLOPE_ROOF, STRAIGHT_FLAT_ROOF, WALL_STRAIGHT, DIAGONAL_SLOPE_CONNECT_ROOF, STRAIGHT_SLOPE_CORNER_CONNECT_ROOF};
+        slot = i_2;
     }
 
     @Override

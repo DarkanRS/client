@@ -200,7 +200,7 @@ public class Class190 {
 
         IndexLoaders.MAP_REGION_DECODER.method4435().method4048();
         client.aBool7371 = true;
-        Class455.aShortArray5452 = LocType.aShortArray5691 = NPCType.aShortArray4862 = ItemDefinitions.staticColorArr256 = new short[256];
+        Class455.aShortArray5452 = ObjectDefinition.aShortArray5691 = NPCType.aShortArray4862 = ItemDefinitions.staticColorArr256 = new short[256];
         Class85.aString817 = LocalizedText.WALK_HERE.translate(Class223.CURRENT_LANGUAGE);
         Class393.preferences.setValue(Class393.preferences.removeRoofsOptionOverride, Class393.preferences.removeRoofs.method12952());
         client.anInt7221 = 0;

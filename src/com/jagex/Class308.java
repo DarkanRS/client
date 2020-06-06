@@ -22,7 +22,7 @@ public class Class308 {
     }
 
     public static boolean isWall(int i_0) {
-        return i_0 >= LocShapes.WALL_STRAIGHT.type && i_0 <= LocShapes.WALL_STRAIGHT_CORNER.type || i_0 == LocShapes.WALL_INTERACT.type;
+        return i_0 >= ObjectType.WALL_STRAIGHT.type && i_0 <= ObjectType.WALL_STRAIGHT_CORNER.type || i_0 == ObjectType.WALL_INTERACT.type;
     }
 
     void clear() {

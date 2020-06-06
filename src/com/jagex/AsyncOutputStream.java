@@ -144,7 +144,7 @@ public class AsyncOutputStream implements Runnable {
                                                 i_34 = i_29 - 1;
                                             }
                                             if (i_34 >= 0) {
-                                                NormalObjectStrategy.method13042(graphicalrenderer_0, i_34, i_32, i_33, i_22 + i_30 * 4, (i_7 - i_31) * 4 + i_23 - 4, i_37, i_17);
+                                                Static.method13042(graphicalrenderer_0, i_34, i_32, i_33, i_22 + i_30 * 4, (i_7 - i_31) * 4 + i_23 - 4, i_37, i_17);
                                             }
                                         }
                                     }
@@ -219,13 +219,13 @@ public class AsyncOutputStream implements Runnable {
                                         sceneobject_40 = (Location) sceneobjectmanager_6.getWallDecoration(i_23, i_21, i_22);
                                     }
                                     if (sceneobject_40 != null) {
-                                        LocType objectdefinitions_41 = objectindexloader_39.getLocType(sceneobject_40.getId());
+                                        ObjectDefinition objectdefinitions_41 = objectindexloader_39.getObjectDefs(sceneobject_40.getId());
                                         if (!objectdefinitions_41.members || client.membersWorld) {
                                             i_26 = objectdefinitions_41.mapIcon;
                                             if (objectdefinitions_41.transformTo != null) {
                                                 for (i_27 = 0; i_27 < objectdefinitions_41.transformTo.length; i_27++) {
                                                     if (objectdefinitions_41.transformTo[i_27] != -1) {
-                                                        LocType objectdefinitions_42 = objectindexloader_39.getLocType(objectdefinitions_41.transformTo[i_27]);
+                                                        ObjectDefinition objectdefinitions_42 = objectindexloader_39.getObjectDefs(objectdefinitions_41.transformTo[i_27]);
                                                         if (objectdefinitions_42.mapIcon >= 0) {
                                                             i_26 = objectdefinitions_42.mapIcon;
                                                         }

@@ -4,7 +4,7 @@ public class CutsceneObject {
 
     int objectId;
 
-    LocShapes type;
+    ObjectType type;
 
     int anInt965;
 
@@ -16,7 +16,7 @@ public class CutsceneObject {
 
     CutsceneObject(ByteBuf rsbytebuffer_1) {
         objectId = rsbytebuffer_1.readBigSmart();
-        type = (LocShapes) Class386.identify(LocShapes.method262(), rsbytebuffer_1.readUnsignedByte());
+        type = (ObjectType) Class386.identify(ObjectType.values(), rsbytebuffer_1.readUnsignedByte());
     }
 
     static int calculateTileHeights(int i_0, int i_1) {
@@ -58,7 +58,7 @@ public class CutsceneObject {
         if (objectId < 0) {
             return true;
         } else {
-            LocType objectdefinitions_2 = IndexLoaders.OBJECT_LOADER.getLocType(objectId);
+            ObjectDefinition objectdefinitions_2 = IndexLoaders.OBJECT_LOADER.getObjectDefs(objectId);
             boolean bool_3 = objectdefinitions_2.method7987(type.type);
             int[] ints_4 = objectdefinitions_2.method8008();
             if (ints_4 != null) {
@@ -73,11 +73,11 @@ public class CutsceneObject {
     }
 
     void method1558() {
-        Class299.method5313(anInt965, anInt962, anInt966, type.anInt5494, -1, type.type, anInt967);
+        Class299.method5313(anInt965, anInt962, anInt966, type.slot, -1, type.type, anInt967);
     }
 
     void method1559(int i_1, int i_2, int i_3, int i_4) {
-        Class299.method5313(i_1, i_2, i_3, type.anInt5494, objectId, type.type, i_4);
+        Class299.method5313(i_1, i_2, i_3, type.slot, objectId, type.type, i_4);
         anInt965 = i_1;
         anInt962 = i_2;
         anInt966 = i_3;

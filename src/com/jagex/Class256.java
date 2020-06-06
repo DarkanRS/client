@@ -39,7 +39,7 @@ public class Class256 {
         }
     }
 
-    public static void method4415(int i_0, int i_1, int i_2, LocType objectdefinitions_3) {
+    public static void method4415(int i_0, int i_1, int i_2, ObjectDefinition objectdefinitions_3) {
         for (Node_Sub48 class282_sub48_5 = (Node_Sub48) Node_Sub48.aClass482_8073.head(); class282_sub48_5 != null; class282_sub48_5 = (Node_Sub48) Node_Sub48.aClass482_8073.next()) {
             if (i_0 == class282_sub48_5.anInt8076 && class282_sub48_5.anInt8107 == i_1 << 9 && i_2 << 9 == class282_sub48_5.anInt8078 && class282_sub48_5.aClass478_8104.id == objectdefinitions_3.id) {
                 if (class282_sub48_5.aNode_Sub15_Sub5_8099 != null) {

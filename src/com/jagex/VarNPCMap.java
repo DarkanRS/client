@@ -41,7 +41,7 @@ public class VarNPCMap {
     }
 
     public static byte[] method2621(File file_0) {
-        return LocType.method8023(file_0, (int) file_0.length());
+        return ObjectDefinition.method8023(file_0, (int) file_0.length());
     }
 
     static Class208 method2622(GraphNode_Sub1_Sub1 class521_sub1_sub1_0) {

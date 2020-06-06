@@ -16,7 +16,7 @@ public class GraphNode_Sub1_Sub4_Sub1 extends GraphNode_Sub1_Sub4 implements Loc
     Shadow aCacheableNode_Sub17_10486;
     Class200 aClass200_10484;
 
-    public GraphNode_Sub1_Sub4_Sub1(SceneObjectManager sceneobjectmanager_1, AbstractRenderer graphicalrenderer_2, LocationIndexLoader objectindexloader_3, LocType objectdefinitions_4, int i_5, int i_6, int i_7, int i_8, int i_9, boolean bool_10, int i_11, int i_12, int i_13, int i_14) {
+    public GraphNode_Sub1_Sub4_Sub1(SceneObjectManager sceneobjectmanager_1, AbstractRenderer graphicalrenderer_2, LocationIndexLoader objectindexloader_3, ObjectDefinition objectdefinitions_4, int i_5, int i_6, int i_7, int i_8, int i_9, boolean bool_10, int i_11, int i_12, int i_13, int i_14) {
         super(sceneobjectmanager_1, i_7, i_8, i_9, i_5, i_6, i_11, i_12);
         aClass474_10489 = objectindexloader_3;
         anInt10482 = objectdefinitions_4.id;
@@ -117,7 +117,7 @@ public class GraphNode_Sub1_Sub4_Sub1 extends GraphNode_Sub1_Sub4 implements Loc
             while (true) {
                 int i_46;
                 int i_47;
-                LocType objectdefinitions_57;
+                ObjectDefinition objectdefinitions_57;
                 Location sceneobject_60;
                 String[] arr_63;
                 do {
@@ -334,7 +334,7 @@ public class GraphNode_Sub1_Sub4_Sub1 extends GraphNode_Sub1_Sub4 implements Loc
                             } while (!(class285_34.aTransform_Sub1_3391 instanceof Location));
 
                             sceneobject_60 = (Location) class285_34.aTransform_Sub1_3391;
-                            objectdefinitions_57 = IndexLoaders.MAP_REGION_DECODER.method4436().getLocType(sceneobject_60.getId());
+                            objectdefinitions_57 = IndexLoaders.MAP_REGION_DECODER.method4436().getObjectDefs(sceneobject_60.getId());
                             if (objectdefinitions_57.transformTo != null) {
                                 objectdefinitions_57 = objectdefinitions_57.getMultiLoc(Class158_Sub1.PLAYER_VAR_PROVIDER);
                             }
@@ -424,7 +424,7 @@ public class GraphNode_Sub1_Sub4_Sub1 extends GraphNode_Sub1_Sub4 implements Loc
     }
 
     Class452 method16069(AbstractRenderer graphicalrenderer_1, int i_2, boolean bool_3) {
-        LocType objectdefinitions_5 = aClass474_10489.getLocType(anInt10482);
+        ObjectDefinition objectdefinitions_5 = aClass474_10489.getObjectDefs(anInt10482);
         Ground class390_6;
         Ground class390_7;
         if (aBool10488) {

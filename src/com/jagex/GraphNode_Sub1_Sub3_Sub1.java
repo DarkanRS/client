@@ -12,7 +12,7 @@ public class GraphNode_Sub1_Sub3_Sub1 extends SceneObjectNode implements Locatio
     boolean aBool10500;
     MeshRasterizer aMeshRasterizer_10499;
 
-    public GraphNode_Sub1_Sub3_Sub1(SceneObjectManager sceneobjectmanager_1, AbstractRenderer graphicalrenderer_2, LocationIndexLoader objectindexloader_3, LocType objectdefinitions_4, int i_5, int i_6, int i_7, int i_8, int i_9, boolean bool_10, int i_11, boolean bool_12) {
+    public GraphNode_Sub1_Sub3_Sub1(SceneObjectManager sceneobjectmanager_1, AbstractRenderer graphicalrenderer_2, LocationIndexLoader objectindexloader_3, ObjectDefinition objectdefinitions_4, int i_5, int i_6, int i_7, int i_8, int i_9, boolean bool_10, int i_11, boolean bool_12) {
         super(sceneobjectmanager_1, i_7, i_8, i_9, i_5, i_6, objectdefinitions_4.anInt5704);
         aClass474_10492 = objectindexloader_3;
         id = objectdefinitions_4.id;
@@ -120,7 +120,7 @@ public class GraphNode_Sub1_Sub3_Sub1 extends SceneObjectNode implements Locatio
     }
 
     Class452 method16074(AbstractRenderer graphicalrenderer_1, int i_2, boolean bool_3) {
-        LocType objectdefinitions_5 = aClass474_10492.getLocType(id);
+        ObjectDefinition objectdefinitions_5 = aClass474_10492.getObjectDefs(id);
         Ground class390_6;
         Ground class390_7;
         if (aBool10493) {
@@ -135,7 +135,7 @@ public class GraphNode_Sub1_Sub3_Sub1 extends SceneObjectNode implements Locatio
             }
         }
         Vector3 vector3_8 = method11166().coords;
-        return objectdefinitions_5.method8010(graphicalrenderer_1, i_2, LocShapes.GROUND_DECORATION.type, aByte10496, class390_6, class390_7, (int) vector3_8.x, (int) vector3_8.y, (int) vector3_8.z, bool_3, null);
+        return objectdefinitions_5.method8010(graphicalrenderer_1, i_2, ObjectType.GROUND_DECORATION.type, aByte10496, class390_6, class390_7, (int) vector3_8.x, (int) vector3_8.y, (int) vector3_8.z, bool_3, null);
     }
 
     @Override
@@ -261,12 +261,12 @@ public class GraphNode_Sub1_Sub3_Sub1 extends SceneObjectNode implements Locatio
 
     @Override
     public int method73() {
-        return LocShapes.GROUND_DECORATION.type * 2087055829 * 1109376893;
+        return ObjectType.GROUND_DECORATION.type * 2087055829 * 1109376893;
     }
 
     @Override
     public int method77() {
-        return LocShapes.GROUND_DECORATION.type * 2087055829 * 1109376893;
+        return ObjectType.GROUND_DECORATION.type * 2087055829 * 1109376893;
     }
 
     @Override
@@ -488,7 +488,7 @@ public class GraphNode_Sub1_Sub3_Sub1 extends SceneObjectNode implements Locatio
 
     @Override
     public int method89() {
-        return LocShapes.GROUND_DECORATION.type;
+        return ObjectType.GROUND_DECORATION.type;
     }
 
     @Override

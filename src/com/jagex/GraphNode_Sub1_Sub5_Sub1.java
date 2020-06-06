@@ -20,7 +20,7 @@ public class GraphNode_Sub1_Sub5_Sub1 extends GraphNode_Sub1_Sub5 implements Loc
     boolean aBool10516;
     MeshRasterizer aMeshRasterizer_10513;
 
-    public GraphNode_Sub1_Sub5_Sub1(SceneObjectManager sceneobjectmanager_1, AbstractRenderer graphicalrenderer_2, LocationIndexLoader objectindexloader_3, LocType objectdefinitions_4, int i_5, int i_6, int i_7, int i_8, int i_9, boolean bool_10, int i_11, int i_12, boolean bool_13) {
+    public GraphNode_Sub1_Sub5_Sub1(SceneObjectManager sceneobjectmanager_1, AbstractRenderer graphicalrenderer_2, LocationIndexLoader objectindexloader_3, ObjectDefinition objectdefinitions_4, int i_5, int i_6, int i_7, int i_8, int i_9, boolean bool_10, int i_11, int i_12, boolean bool_13) {
         super(sceneobjectmanager_1, i_7, i_8, i_9, i_5, i_6, Class235.method3967(i_11, i_12));
         aClass474_10515 = objectindexloader_3;
         anInt10514 = objectdefinitions_4.id;
@@ -167,7 +167,7 @@ public class GraphNode_Sub1_Sub5_Sub1 extends GraphNode_Sub1_Sub5 implements Loc
     }
 
     Class452 method16101(AbstractRenderer graphicalrenderer_1, int i_2, boolean bool_3) {
-        LocType objectdefinitions_5 = aClass474_10515.getLocType(anInt10514);
+        ObjectDefinition objectdefinitions_5 = aClass474_10515.getObjectDefs(anInt10514);
         Ground class390_6;
         Ground class390_7;
         if (aBool10525) {

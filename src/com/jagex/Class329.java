@@ -104,7 +104,7 @@ public class Class329 {
     static long method5905(Location sceneobject_0, int i_1, int i_2) {
         long long_4 = 4194304L;
         long long_6 = Long.MIN_VALUE;
-        LocType objectdefinitions_8 = IndexLoaders.MAP_REGION_DECODER.method4436().getLocType(sceneobject_0.getId());
+        ObjectDefinition objectdefinitions_8 = IndexLoaders.MAP_REGION_DECODER.method4436().getObjectDefs(sceneobject_0.getId());
         long long_9 = i_1 | i_2 << 7 | sceneobject_0.method89() << 14 | sceneobject_0.method92() << 20 | 0x40000000;
         if (objectdefinitions_8.interactable == 0) {
             long_9 |= long_6;

@@ -459,7 +459,7 @@ public class CS2Interpreter {
             case instr6095:
                 method5454(exec);
                 break;
-            case instr6556:
+            case instr6556: //CC_SET_SCRIPT_CALLBACK_ON_GAMELOOP
                 method14521(exec);
                 break;
             case instr6687:
@@ -4884,9 +4884,9 @@ public class CS2Interpreter {
         int i_3 = executor.intStack[executor.intStackPtr + 1];
         ParamDefinitions attributedefault_4 = IndexLoaders.PARAM_LOADER.getParam(i_3);
         if (attributedefault_4.isString()) {
-            executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.MAP_REGION_DECODER.method4436().getLocType(i_2).method7973(i_3, attributedefault_4.typeName);
+            executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.MAP_REGION_DECODER.method4436().getObjectDefs(i_2).method7973(i_3, attributedefault_4.typeName);
         } else {
-            executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.MAP_REGION_DECODER.method4436().getLocType(i_2).method7963(i_3, attributedefault_4.defaultInt);
+            executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.MAP_REGION_DECODER.method4436().getObjectDefs(i_2).method7963(i_3, attributedefault_4.defaultInt);
         }
     }
 
@@ -6171,7 +6171,7 @@ public class CS2Interpreter {
     }
 
     static void fromDate(CS2Executor executor) {
-        executor.stringStack[++executor.stringStackPtr - 1] = NormalObjectStrategy.method13045(Class302.method5363(executor.intStack[--executor.intStackPtr]), Class223.CURRENT_LANGUAGE.getValue());
+        executor.stringStack[++executor.stringStackPtr - 1] = Static.method13045(Class302.method5363(executor.intStack[--executor.intStackPtr]), Class223.CURRENT_LANGUAGE.getValue());
     }
 
     static void method4968(CS2Executor executor) {
@@ -10468,7 +10468,7 @@ public class CS2Interpreter {
         } else if (i_3 == i_4) {
             throw new RuntimeException();
         } else {
-            NormalObjectStrategy.method13047(executor.globalArrays[i_3], executor.globalArrays[i_4], 0, i_2 - 1);
+            Static.method13047(executor.globalArrays[i_3], executor.globalArrays[i_4], 0, i_2 - 1);
         }
     }
 
