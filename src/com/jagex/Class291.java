@@ -484,7 +484,7 @@ public class Class291 {
 
             for (int i_13 = 0; i_13 < ints_8.length; i_13++) {
                 int i_14 = bytes_9[i_13] & 0x3f;
-                if (i_14 == ObjectType.WALL_STRAIGHT.type || i_14 == ObjectType.WALL_WHOLE_CORNER.type || i_14 == ObjectType.WALL_STRAIGHT_CORNER.type || i_14 == ObjectType.WALL_INTERACT.type) {
+                if (i_14 == ObjectType.WALL_STRAIGHT.id || i_14 == ObjectType.WALL_WHOLE_CORNER.id || i_14 == ObjectType.WALL_STRAIGHT_CORNER.id || i_14 == ObjectType.WALL_INTERACT.id) {
                     ObjectDefinition objectdefinitions_15 = OBJECT_LOADER.getObjectDefs(ints_8[i_13]);
                     if (objectdefinitions_15.mapSpriteId == -1) {
                         int i_16 = -3355444;
@@ -493,7 +493,7 @@ public class Class291 {
                         }
 
                         int i_17 = bytes_9[i_13] >> 6 & 0x3;
-                        if (i_14 == ObjectType.WALL_STRAIGHT.type) {
+                        if (i_14 == ObjectType.WALL_STRAIGHT.id) {
                             if (i_17 == 0) {
                                 graphicalrenderer_0.G(i_1, i_2, i_4, i_16, 0);
                             } else if (i_17 == 1) {
@@ -503,7 +503,7 @@ public class Class291 {
                             } else {
                                 graphicalrenderer_0.XA(i_1, i_12, i_3, i_16, 0);
                             }
-                        } else if (i_14 == ObjectType.WALL_WHOLE_CORNER.type) {
+                        } else if (i_14 == ObjectType.WALL_WHOLE_CORNER.id) {
                             if (i_17 == 0) {
                                 graphicalrenderer_0.G(i_1, i_2, i_4, -1, 0);
                                 graphicalrenderer_0.XA(i_1, i_2, i_3, i_16, 0);
@@ -517,7 +517,7 @@ public class Class291 {
                                 graphicalrenderer_0.G(i_1, i_2, i_4, -1, 0);
                                 graphicalrenderer_0.XA(i_1, i_12, i_3, i_16, 0);
                             }
-                        } else if (i_14 == ObjectType.WALL_STRAIGHT_CORNER.type) {
+                        } else if (i_14 == ObjectType.WALL_STRAIGHT_CORNER.id) {
                             if (i_17 == 0) {
                                 graphicalrenderer_0.XA(i_1, i_2, 1, i_16, 0);
                             } else if (i_17 == 1) {
@@ -527,7 +527,7 @@ public class Class291 {
                             } else {
                                 graphicalrenderer_0.XA(i_1, i_12, 1, i_16, 0);
                             }
-                        } else if (i_14 == ObjectType.WALL_INTERACT.type) {
+                        } else if (i_14 == ObjectType.WALL_INTERACT.id) {
                             int i_18;
                             if (i_17 != 0 && i_17 != 2) {
                                 for (i_18 = 0; i_18 < i_4; i_18++) {

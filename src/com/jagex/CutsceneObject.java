@@ -59,7 +59,7 @@ public class CutsceneObject {
             return true;
         } else {
             ObjectDefinition objectdefinitions_2 = IndexLoaders.OBJECT_LOADER.getObjectDefs(objectId);
-            boolean bool_3 = objectdefinitions_2.method7987(type.type);
+            boolean bool_3 = objectdefinitions_2.method7987(type.id);
             int[] ints_4 = objectdefinitions_2.method8008();
             if (ints_4 != null) {
                 int[] ints_5 = ints_4;
@@ -73,11 +73,11 @@ public class CutsceneObject {
     }
 
     void method1558() {
-        Class299.method5313(anInt965, anInt962, anInt966, type.slot, -1, type.type, anInt967);
+        Class299.method5313(anInt965, anInt962, anInt966, type.slot, -1, type.id, anInt967);
     }
 
     void method1559(int i_1, int i_2, int i_3, int i_4) {
-        Class299.method5313(i_1, i_2, i_3, type.slot, objectId, type.type, i_4);
+        Class299.method5313(i_1, i_2, i_3, type.slot, objectId, type.id, i_4);
         anInt965 = i_1;
         anInt962 = i_2;
         anInt966 = i_3;

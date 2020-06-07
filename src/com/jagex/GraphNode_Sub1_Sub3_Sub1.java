@@ -135,7 +135,7 @@ public class GraphNode_Sub1_Sub3_Sub1 extends SceneObjectNode implements Locatio
             }
         }
         Vector3 vector3_8 = method11166().coords;
-        return objectdefinitions_5.method8010(graphicalrenderer_1, i_2, ObjectType.GROUND_DECORATION.type, aByte10496, class390_6, class390_7, (int) vector3_8.x, (int) vector3_8.y, (int) vector3_8.z, bool_3, null);
+        return objectdefinitions_5.method8010(graphicalrenderer_1, i_2, ObjectType.GROUND_DECORATION.id, aByte10496, class390_6, class390_7, (int) vector3_8.x, (int) vector3_8.y, (int) vector3_8.z, bool_3, null);
     }
 
     @Override
@@ -261,12 +261,12 @@ public class GraphNode_Sub1_Sub3_Sub1 extends SceneObjectNode implements Locatio
 
     @Override
     public int method73() {
-        return ObjectType.GROUND_DECORATION.type * 2087055829 * 1109376893;
+        return ObjectType.GROUND_DECORATION.id * 2087055829 * 1109376893;
     }
 
     @Override
     public int method77() {
-        return ObjectType.GROUND_DECORATION.type * 2087055829 * 1109376893;
+        return ObjectType.GROUND_DECORATION.id * 2087055829 * 1109376893;
     }
 
     @Override
@@ -488,7 +488,7 @@ public class GraphNode_Sub1_Sub3_Sub1 extends SceneObjectNode implements Locatio
 
     @Override
     public int method89() {
-        return ObjectType.GROUND_DECORATION.type;
+        return ObjectType.GROUND_DECORATION.id;
     }
 
     @Override

@@ -400,7 +400,7 @@ public class ClipMap {
         return false;
     }
 
-    public boolean reachedObject(int x, int y, int size, int destX, int destY, int objectType, int accessFlags) {
+    public boolean reachedObject(int x, int y, int size, int destX, int destY, int objectType, int rotation) {
         if (size == 1) {
             if (destX == x && destY == y) {
                 return true;
@@ -414,7 +414,7 @@ public class ClipMap {
         destY -= offsetY;
         if (size == 1) {
             if (objectType == 0) {
-                if (accessFlags == 0) {
+                if (rotation == 0) {
                     if (destX - 1 == x && destY == y) {
                         return true;
                     }
@@ -424,7 +424,7 @@ public class ClipMap {
                     if (destX == x && y == destY - 1 && notFlagged(map[x][y], ClipFlag.N_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
-                } else if (accessFlags == 1) {
+                } else if (rotation == 1) {
                     if (destX == x && destY + 1 == y) {
                         return true;
                     }
@@ -434,7 +434,7 @@ public class ClipMap {
                     if (destX + 1 == x && destY == y && notFlagged(map[x][y], ClipFlag.W_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
-                } else if (accessFlags == 2) {
+                } else if (rotation == 2) {
                     if (destX + 1 == x && destY == y) {
                         return true;
                     }
@@ -444,7 +444,7 @@ public class ClipMap {
                     if (destX == x && y == destY - 1 && notFlagged(map[x][y], ClipFlag.N_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
-                } else if (accessFlags == 3) {
+                } else if (rotation == 3) {
                     if (destX == x && y == destY - 1) {
                         return true;
                     }
@@ -457,7 +457,7 @@ public class ClipMap {
                 }
             }
             if (objectType == 2) {
-                if (accessFlags == 0) {
+                if (rotation == 0) {
                     if (destX - 1 == x && destY == y) {
                         return true;
                     }
@@ -470,7 +470,7 @@ public class ClipMap {
                     if (destX == x && y == destY - 1 && notFlagged(map[x][y], ClipFlag.N_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
-                } else if (accessFlags == 1) {
+                } else if (rotation == 1) {
                     if (destX - 1 == x && destY == y && notFlagged(map[x][y], ClipFlag.E_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
@@ -483,7 +483,7 @@ public class ClipMap {
                     if (destX == x && y == destY - 1 && notFlagged(map[x][y], ClipFlag.N_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
-                } else if (accessFlags == 2) {
+                } else if (rotation == 2) {
                     if (destX - 1 == x && destY == y && notFlagged(map[x][y], ClipFlag.E_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
@@ -496,7 +496,7 @@ public class ClipMap {
                     if (destX == x && y == destY - 1) {
                         return true;
                     }
-                } else if (accessFlags == 3) {
+                } else if (rotation == 3) {
                     if (destX - 1 == x && destY == y) {
                         return true;
                     }
@@ -527,7 +527,7 @@ public class ClipMap {
             int i_9 = size + x - 1;
             int i_10 = size + y - 1;
             if (objectType == 0) {
-                if (accessFlags == 0) {
+                if (rotation == 0) {
                     if (destX - size == x && destY >= y && destY <= i_10) {
                         return true;
                     }
@@ -537,7 +537,7 @@ public class ClipMap {
                     if (destX >= x && destX <= i_9 && destY - size == y && notFlagged(map[destX][i_10], ClipFlag.N_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
-                } else if (accessFlags == 1) {
+                } else if (rotation == 1) {
                     if (destX >= x && destX <= i_9 && destY + 1 == y) {
                         return true;
                     }
@@ -547,7 +547,7 @@ public class ClipMap {
                     if (destX + 1 == x && destY >= y && destY <= i_10 && notFlagged(map[x][destY], ClipFlag.W_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
-                } else if (accessFlags == 2) {
+                } else if (rotation == 2) {
                     if (destX + 1 == x && destY >= y && destY <= i_10) {
                         return true;
                     }
@@ -557,7 +557,7 @@ public class ClipMap {
                     if (destX >= x && destX <= i_9 && destY - size == y && notFlagged(map[destX][i_10], ClipFlag.N_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
-                } else if (accessFlags == 3) {
+                } else if (rotation == 3) {
                     if (destX >= x && destX <= i_9 && destY - size == y) {
                         return true;
                     }
@@ -570,7 +570,7 @@ public class ClipMap {
                 }
             }
             if (objectType == 2) {
-                if (accessFlags == 0) {
+                if (rotation == 0) {
                     if (destX - size == x && destY >= y && destY <= i_10) {
                         return true;
                     }
@@ -583,7 +583,7 @@ public class ClipMap {
                     if (destX >= x && destX <= i_9 && destY - size == y && notFlagged(map[destX][i_10], ClipFlag.N_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
-                } else if (accessFlags == 1) {
+                } else if (rotation == 1) {
                     if (destX - size == x && destY >= y && destY <= i_10 && notFlagged(map[i_9][destY], ClipFlag.E_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
@@ -596,7 +596,7 @@ public class ClipMap {
                     if (destX >= x && destX <= i_9 && destY - size == y && notFlagged(map[destX][i_10], ClipFlag.N_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
-                } else if (accessFlags == 2) {
+                } else if (rotation == 2) {
                     if (destX - size == x && destY >= y && destY <= i_10 && notFlagged(map[i_9][destY], ClipFlag.E_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
@@ -609,7 +609,7 @@ public class ClipMap {
                     if (destX >= x && destX <= i_9 && destY - size == y) {
                         return true;
                     }
-                } else if (accessFlags == 3) {
+                } else if (rotation == 3) {
                     if (destX - size == x && destY >= y && destY <= i_10) {
                         return true;
                     }

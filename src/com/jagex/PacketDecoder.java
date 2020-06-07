@@ -2489,8 +2489,8 @@ public class PacketDecoder {
             int i_9 = buffer.readUnsignedByte128();
             int i_10 = (i_9 >> 4 & 0x7) + Static.UPDATE_ZONE_X;
             int i_11 = (i_9 & 0x7) + Class158_Sub1_Sub2.UPDATE_ZONE_Y;
-            if (i_6 == ObjectType.GROUND_INTERACT.type) {
-                i_6 = ObjectType.SCENERY_INTERACT.type;
+            if (i_6 == ObjectType.GROUND_INTERACT.id) {
+                i_6 = ObjectType.SCENERY_INTERACT.id;
             }
             int i_23 = 0;
             if (objectdefinitions_32.types != null) {

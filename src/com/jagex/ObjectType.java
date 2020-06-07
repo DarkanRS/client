@@ -25,16 +25,16 @@ public enum ObjectType implements Identifiable {
     STRAIGHT_BOTTOM_EDGE_CONNECT_CORNER_ROOF(21, 2),
     GROUND_DECORATION(22, 3);
 
-    public final int type;
+    public final int id;
     public final int slot;
 
     ObjectType(int i_1, int i_2) {
-        type = i_1;
+        id = i_1;
         slot = i_2;
     }
 
     @Override
     public int getValue() {
-        return type;
+        return id;
     }
 }

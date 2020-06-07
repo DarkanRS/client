@@ -27,7 +27,7 @@ public class QuestDefinitions {
     IterableNodeMap params;
 
     public static boolean isRoof(int locShape) {
-        return locShape >= ObjectType.STRAIGHT_SLOPE_ROOF.type && locShape <= ObjectType.STRAIGHT_FLAT_ROOF.type;
+        return locShape >= ObjectType.STRAIGHT_SLOPE_ROOF.id && locShape <= ObjectType.STRAIGHT_FLAT_ROOF.id;
     }
 
     static void writeCRCs(ByteBuf.Bit rsbitsbuffer_0) {

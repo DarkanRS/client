@@ -64,7 +64,7 @@ public class ObjectAnimationCutsceneAction extends CutsceneAction {
     @Override
     public void method1592() {
         CutsceneObject class92_2 = Class86.CUTSCENE_OBJECTS[anInt8516];
-        Class9.animateObject(class92_2.anInt965, class92_2.anInt962, class92_2.anInt966, class92_2.type.slot, class92_2.type.type, class92_2.anInt967, anInt8517);
+        Class9.animateObject(class92_2.anInt965, class92_2.anInt962, class92_2.anInt966, class92_2.type.slot, class92_2.type.id, class92_2.anInt967, anInt8517);
     }
 
     @Override
@@ -75,6 +75,6 @@ public class ObjectAnimationCutsceneAction extends CutsceneAction {
 
     public void method1601() {
         CutsceneObject class92_1 = Class86.CUTSCENE_OBJECTS[anInt8516 * 834292573 * -1978703627];
-        Class9.animateObject(-1318859227 * class92_1.anInt965 * 1968020909, class92_1.anInt962 * 1631065949 * -76417803, -987984923 * class92_1.anInt966 * -1041057299, class92_1.type.slot * -259002495 * 480268417, class92_1.type.type * 2087055829 * 1109376893, -71092145 * class92_1.anInt967 * 1405673135, anInt8517 * 450467189 * -45034787);
+        Class9.animateObject(-1318859227 * class92_1.anInt965 * 1968020909, class92_1.anInt962 * 1631065949 * -76417803, -987984923 * class92_1.anInt966 * -1041057299, class92_1.type.slot * -259002495 * 480268417, class92_1.type.id * 2087055829 * 1109376893, -71092145 * class92_1.anInt967 * 1405673135, anInt8517 * 450467189 * -45034787);
     }
 }

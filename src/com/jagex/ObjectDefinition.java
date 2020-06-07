@@ -392,7 +392,7 @@ public class ObjectDefinition {
     void method7966() {
         if (interactable == -1) {
             interactable = 0;
-            if (types != null && types.length == 1 && types[0] == ObjectType.SCENERY_INTERACT.type) {
+            if (types != null && types.length == 1 && types[0] == ObjectType.SCENERY_INTERACT.id) {
                 interactable = 1;
             }
             for (int i_2 = 0; i_2 < 5; i_2++) {
@@ -435,7 +435,7 @@ public class ObjectDefinition {
         int i_38_ = 64 + ambient;
         int i_39_ = 850 + contrast;
         int i_40_ = i;
-        boolean bool = inverted || i_35_ == (ObjectType.WALL_WHOLE_CORNER.type) && i_36_ > 3;
+        boolean bool = inverted || i_35_ == (ObjectType.WALL_WHOLE_CORNER.id) && i_36_ > 3;
         if (bool)
             i |= 0x10;
         if (i_36_ == 0) {
@@ -517,7 +517,7 @@ public class ObjectDefinition {
             class528_48_.Q(i_39_);
         if (bool)
             class528_48_.wa();
-        if (ObjectType.STRAIGHT_INSIDE_WALL_DEC.type == i_35_ && i_36_ > 3) {
+        if (ObjectType.STRAIGHT_INSIDE_WALL_DEC.id == i_35_ && i_36_ > 3) {
             class528_48_.S(2048);
             class528_48_.ia(180, 0, -180);
         }
@@ -644,7 +644,7 @@ public class ObjectDefinition {
     public synchronized Class452 method8010(AbstractRenderer graphicalrenderer_1, int i_2, int i_3, int i_4, Ground class390_5, Ground class390_6, int i_7, int i_8, int i_9, boolean bool_10, Class476 class476_11) {
         int i_31 = i_3;
         if (Class485.method8201(i_31)) {
-            i_31 = ObjectType.STRAIGHT_INSIDE_WALL_DEC.type;
+            i_31 = ObjectType.STRAIGHT_INSIDE_WALL_DEC.id;
         }
         long long_13 = (i_31 << 3) + i_4 + (id << 10);
         long_13 |= graphicalrenderer_1.rendererId << 29;
@@ -685,14 +685,14 @@ public class ObjectDefinition {
                 i_15 = graphicalrenderer_1.method8546(i_15, meshrasterizer_24.m());
             }
             int i_19 = i_15;
-            if (i_31 == ObjectType.SCENERY_INTERACT.type && i_4 > 3) {
+            if (i_31 == ObjectType.SCENERY_INTERACT.id && i_4 > 3) {
                 i_19 = i_15 | 0x5;
             }
             meshrasterizer_24 = method7971(graphicalrenderer_1, i_19, i_31, i_4, class476_11);
             if (meshrasterizer_24 == null) {
                 return null;
             }
-            if (i_31 == ObjectType.SCENERY_INTERACT.type && i_4 > 3) {
+            if (i_31 == ObjectType.SCENERY_INTERACT.id && i_4 > 3) {
                 meshrasterizer_24.f(2048);
             }
             if (bool_10) {
@@ -727,7 +727,7 @@ public class ObjectDefinition {
     public synchronized MeshRasterizer method8012(AbstractRenderer graphicalrenderer_1, int i_2, int i_3, int i_4, Ground class390_5, Ground class390_6, int i_7, int i_8, int i_9, Animation animation_10, Class476 class476_11) {
         int i_31 = i_3;
         if (Class485.method8201(i_31)) {
-            i_31 = ObjectType.STRAIGHT_INSIDE_WALL_DEC.type;
+            i_31 = ObjectType.STRAIGHT_INSIDE_WALL_DEC.id;
         }
         long long_13 = (i_31 << 3) + i_4 + (id << 10);
         long_13 |= graphicalrenderer_1.rendererId << 29;
@@ -750,7 +750,7 @@ public class ObjectDefinition {
                 i_2 |= 0x4;
             }
         }
-        if (i_31 == ObjectType.SCENERY_INTERACT.type && i_4 > 3) {
+        if (i_31 == ObjectType.SCENERY_INTERACT.id && i_4 > 3) {
             i_2 |= 0x5;
         }
         LRUCache softcache_17 = loader.aClass229_5619;
@@ -777,7 +777,7 @@ public class ObjectDefinition {
             bool_18 = true;
             animation_10.rasterize(meshrasterizer_16, i_4 & 0x3);
         }
-        if (i_31 == ObjectType.SCENERY_INTERACT.type && i_4 > 3) {
+        if (i_31 == ObjectType.SCENERY_INTERACT.id && i_4 > 3) {
             if (!bool_18) {
                 meshrasterizer_16 = meshrasterizer_16.method11289((byte) 3, i_2, true);
                 bool_18 = true;

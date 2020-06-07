@@ -40,7 +40,7 @@ public class RegionMap {
                     int i_18 = i_3 + i_14;
                     if (i_17 > 0 && i_18 > 0 && i_17 < i_4 - 1 && i_18 < i_5 - 1) {
                         ObjectDefinition objectdefinitions_19 = objectindexloader_0.getObjectDefs(i_9);
-                        if (i_16 != ObjectType.GROUND_DECORATION.type || Class393.preferences.groundDecor.method12897() != 0 || objectdefinitions_19.interactable != 0 || objectdefinitions_19.clipType == 1 || objectdefinitions_19.obstructsGround) {
+                        if (i_16 != ObjectType.GROUND_DECORATION.id || Class393.preferences.groundDecor.method12897() != 0 || objectdefinitions_19.interactable != 0 || objectdefinitions_19.clipType == 1 || objectdefinitions_19.obstructsGround) {
                             if (!objectdefinitions_19.method7968()) {
                                 ++i_7;
                             }

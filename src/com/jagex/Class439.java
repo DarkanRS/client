@@ -20,25 +20,24 @@ public class Class439 {
         ObjectType objType = (ObjectType) Class386.identify(ObjectType.values(), type);
         RouteStrategy strategy;
         switch(objType) {
-        case SCENERY_INTERACT:
-        case GROUND_INTERACT:
-        case GROUND_DECORATION:
+        case SCENERY_INTERACT: //10
+        case GROUND_INTERACT: //11
+        case GROUND_DECORATION: //22
         	 ObjectDefinition defs = IndexLoaders.MAP_REGION_DECODER.method4436().getObjectDefs(objectId);
-             int width;
-             int height;
+             int sizeX;
+             int sizeY;
              if (rotation != 0 && rotation != 2) {
-                 width = defs.sizeY;
-                 height = defs.sizeX;
+                 sizeX = defs.sizeY;
+                 sizeY = defs.sizeX;
              } else {
-                 width = defs.sizeX;
-                 height = defs.sizeY;
+                 sizeX = defs.sizeX;
+                 sizeY = defs.sizeY;
              }
-
-             strategy = JS5CacheFile.method3354(x, y, width, height, ObjectType.WALL_STRAIGHT, 0);
+             strategy = JS5CacheFile.createWallObjectStrategy(x, y, sizeX, sizeY, ObjectType.WALL_STRAIGHT, 0);
         	break;
         default:
-        	if (Class308.isWall(objType.type)) {
-                strategy = JS5CacheFile.method3354(x, y, 0, 0, objType, rotation);
+        	if (Class308.isWall(objType.id)) {
+                strategy = JS5CacheFile.createWallObjectStrategy(x, y, 0, 0, objType, rotation);
             } else {
                 strategy = Class148.createNormalObjectStrategy(x, y, objType, rotation);
             }

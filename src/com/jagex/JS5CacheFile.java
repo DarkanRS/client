@@ -32,7 +32,7 @@ public class JS5CacheFile {
         }
     }
 
-    public static RouteStrategy method3354(int i_0, int i_1, int i_2, int i_3, ObjectType sceneobjecttype_4, int i_5) {
+    public static RouteStrategy createWallObjectStrategy(int i_0, int i_1, int i_2, int i_3, ObjectType sceneobjecttype_4, int i_5) {
         RouteStrategies.WALL_OBJECT.approxDestinationX = i_0;
         RouteStrategies.WALL_OBJECT.approxDestinationY = i_1;
         RouteStrategies.WALL_OBJECT.approxDestinationSizeX = i_2;

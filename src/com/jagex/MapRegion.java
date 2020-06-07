@@ -60,7 +60,7 @@ public class MapRegion {
         int i_6 = VertexNormal.MY_PLAYER.regionBaseY[0];
         if (i_5 >= 0 && i_5 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && i_6 >= 0 && i_6 < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
             if (i_0 >= 0 && i_0 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && i_1 >= 0 && i_1 < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
-                int i_7 = Class112.findRoute(i_5, i_6, VertexNormal.MY_PLAYER.getSize(), routestrategy_3, IndexLoaders.MAP_REGION_DECODER.getClipMap(VertexNormal.MY_PLAYER.plane), bool_2, client.walkStepsX, client.walkStepsY);
+                int i_7 = RouteFinder.findRoute(i_5, i_6, VertexNormal.MY_PLAYER.getSize(), routestrategy_3, IndexLoaders.MAP_REGION_DECODER.getClipMap(VertexNormal.MY_PLAYER.plane), bool_2, client.walkStepsX, client.walkStepsY);
                 if (i_7 < 1) {
                     return false;
                 } else {

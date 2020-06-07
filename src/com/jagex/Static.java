@@ -226,7 +226,7 @@ public class Static {
 	            if (objectdefinitions_11.interactable > 0) {
 	                i_14 = i_7;
 	            }
-	            if (i_13 == ObjectType.WALL_STRAIGHT.type || i_13 == ObjectType.WALL_WHOLE_CORNER.type) {
+	            if (i_13 == ObjectType.WALL_STRAIGHT.id || i_13 == ObjectType.WALL_WHOLE_CORNER.id) {
 	                if (i_12 == 0) {
 	                    graphicalrenderer_0.method8428(i_4, i_5, 4, i_14);
 	                } else if (i_12 == 1) {
@@ -237,7 +237,7 @@ public class Static {
 	                    graphicalrenderer_0.method8659(i_4, i_5 + 3, 4, i_14);
 	                }
 	            }
-	            if (i_13 == ObjectType.WALL_STRAIGHT_CORNER.type) {
+	            if (i_13 == ObjectType.WALL_STRAIGHT_CORNER.id) {
 	                if (i_12 == 0) {
 	                    graphicalrenderer_0.method8425(i_4, i_5, 1, 1, i_14);
 	                } else if (i_12 == 1) {
@@ -248,7 +248,7 @@ public class Static {
 	                    graphicalrenderer_0.method8425(i_4, i_5 + 3, 1, 1, i_14);
 	                }
 	            }
-	            if (i_13 == ObjectType.WALL_WHOLE_CORNER.type) {
+	            if (i_13 == ObjectType.WALL_WHOLE_CORNER.id) {
 	                if (i_12 == 0) {
 	                    graphicalrenderer_0.method8659(i_4, i_5, 4, i_14);
 	                } else if (i_12 == 1) {
@@ -268,7 +268,7 @@ public class Static {
 	        i_13 = sceneobject_10.method89();
 	        if (objectdefinitions_11.mapSpriteId != -1) {
 	            VarcDefinitions.method6997(graphicalrenderer_0, objectdefinitions_11, i_12, i_4, i_5);
-	        } else if (i_13 == ObjectType.WALL_INTERACT.type) {
+	        } else if (i_13 == ObjectType.WALL_INTERACT.id) {
 	            i_14 = -1118482;
 	            if (objectdefinitions_11.interactable > 0) {
 	                i_14 = -1179648;

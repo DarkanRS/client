@@ -101,7 +101,7 @@ public class GraphNode_Sub1_Sub1_Sub6 extends GraphNode_Sub1_Sub1 implements Loc
             }
         }
         Vector3 vector3_8 = method11166().coords;
-        return objectdefinitions_5.method8010(graphicalrenderer_1, i_2, aByte10539 != ObjectType.GROUND_INTERACT.type ? aByte10539 : ObjectType.SCENERY_INTERACT.type, ObjectType.GROUND_INTERACT.type == aByte10539 ? aByte10540 + 4 : aByte10540, class390_6, class390_7, (int) vector3_8.x, (int) vector3_8.y, (int) vector3_8.z, bool_3, null);
+        return objectdefinitions_5.method8010(graphicalrenderer_1, i_2, aByte10539 != ObjectType.GROUND_INTERACT.id ? aByte10539 : ObjectType.SCENERY_INTERACT.id, ObjectType.GROUND_INTERACT.id == aByte10539 ? aByte10540 + 4 : aByte10540, class390_6, class390_7, (int) vector3_8.x, (int) vector3_8.y, (int) vector3_8.z, bool_3, null);
     }
 
     @Override

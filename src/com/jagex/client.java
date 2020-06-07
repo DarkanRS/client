@@ -2795,7 +2795,7 @@ public class client extends Engine {
                                 i_9 = IndexLoaders.MAP_REGION_DECODER.getSizeY() - i_5 - 1;
                             }
 
-                            int i_10 = Class112.findRoute(npc_3.regionBaseX[0], npc_3.regionBaseY[0], i_5, Class190.method3150(i_8, i_9, i_5, i_5), IndexLoaders.MAP_REGION_DECODER.getClipMap(npc_3.plane), true, walkStepsX, walkStepsY);
+                            int i_10 = RouteFinder.findRoute(npc_3.regionBaseX[0], npc_3.regionBaseY[0], i_5, Class190.method3150(i_8, i_9, i_5, i_5), IndexLoaders.MAP_REGION_DECODER.getClipMap(npc_3.plane), true, walkStepsX, walkStepsY);
                             if (i_10 > 0) {
                                 if (i_10 > 9) {
                                     i_10 = 9;

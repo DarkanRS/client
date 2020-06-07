@@ -19,7 +19,7 @@ public class HitsplatDefinitions {
     String aString2840 = "";
 
     public static boolean method3849(int i_0) {
-        return i_0 >= ObjectType.STRAIGHT_BOTTOM_EDGE_ROOF.type && i_0 <= ObjectType.STRAIGHT_BOTTOM_EDGE_CONNECT_CORNER_ROOF.type;
+        return i_0 >= ObjectType.STRAIGHT_BOTTOM_EDGE_ROOF.id && i_0 <= ObjectType.STRAIGHT_BOTTOM_EDGE_CONNECT_CORNER_ROOF.id;
     }
 
     static void method3850(Matrix44 matrix44_0, float f_2, float f_3, float f_4, float f_5, int i_6, int i_7) {
