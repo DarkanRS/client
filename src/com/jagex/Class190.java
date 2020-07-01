@@ -68,7 +68,7 @@ public class Class190 {
 
         for (int i_8 = 0; i_8 < hintArrows.length; i_8++) {
             HintArrow arrow = hintArrows[i_8];
-            if (arrow != null && arrow.targetType != 0 && client.cycles % 20 < 10) {
+            if (arrow != null && arrow.targetType != 0 && client.CYCLES_20MS % 20 < 10) {
                 int i_13;
                 if (arrow.targetType == 1) {
                     ObjectNode class282_sub47_10 = (ObjectNode) client.NPC_MAP.get(arrow.targetIndex);
@@ -104,7 +104,7 @@ public class Class190 {
     }
 
     static void method3152() {
-        if (client.gameState == 17) {
+        if (client.GAME_STATE == 17) {
             Class42_Sub1.method14562();
         }
 
@@ -156,7 +156,7 @@ public class Class190 {
         Class501.anInt5828 = 0;
 
         for (i_1 = 0; i_1 < Class320.VARC_INT.length; i_1++) {
-            if (!Node_Sub17_Sub2.VARC_BOOL[i_1]) {
+            if (!Node_Sub17_Sub2.IS_VARC_SAVE_TO_FILE[i_1]) {
                 Class320.VARC_INT[i_1] = -1;
             }
         }

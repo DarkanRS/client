@@ -12,17 +12,17 @@ public class QuickchatMessageDefinitions extends CacheableNode {
     static boolean method14921(int i_0, int i_1, int i_2) {
         SceneObjectManager sceneobjectmanager_4 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager();
         boolean bool_5 = true;
-        Location sceneobject_6 = (Location) sceneobjectmanager_4.getWall(i_0, i_1, i_2);
+        WorldObject sceneobject_6 = (WorldObject) sceneobjectmanager_4.getWall(i_0, i_1, i_2);
         if (sceneobject_6 != null) {
             bool_5 &= CutsceneEntityMovement.method1577(sceneobject_6);
         }
 
-        sceneobject_6 = (Location) sceneobjectmanager_4.getInteractableObject(i_0, i_1, i_2, client.anInterface25_7446);
+        sceneobject_6 = (WorldObject) sceneobjectmanager_4.getInteractableObject(i_0, i_1, i_2, client.anInterface25_7446);
         if (sceneobject_6 != null) {
             bool_5 &= CutsceneEntityMovement.method1577(sceneobject_6);
         }
 
-        sceneobject_6 = (Location) sceneobjectmanager_4.getGroundDecoration(i_0, i_1, i_2);
+        sceneobject_6 = (WorldObject) sceneobjectmanager_4.getGroundDecoration(i_0, i_1, i_2);
         if (sceneobject_6 != null) {
             bool_5 &= CutsceneEntityMovement.method1577(sceneobject_6);
         }

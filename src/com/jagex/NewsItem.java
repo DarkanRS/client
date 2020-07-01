@@ -193,7 +193,7 @@ public class NewsItem {
                         player_6.method16129(i_12, i_13, Class197.playerMovementTypes[i_1]);
                     }
                     player_6.plane = player_6.collisionPlane = (byte) (i_9 + player_6.plane & 0x3);
-                    if (IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(i_12, i_13)) {
+                    if (IndexLoaders.MAP_REGION_DECODER.getRenderFlags().isLowerObjectsToOverrideClipping(i_12, i_13)) {
                         player_6.collisionPlane += 1;
                     }
                     if (client.myPlayerIndex == i_1 && player_6.plane != Class4.MY_PLAYER_PLANE) {
@@ -214,7 +214,7 @@ public class NewsItem {
                         player_6.method16129(i_12, i_13, Class197.playerMovementTypes[i_1]);
                     }
                     player_6.plane = player_6.collisionPlane = (byte) (i_9 + player_6.plane & 0x3);
-                    if (IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(i_12, i_13)) {
+                    if (IndexLoaders.MAP_REGION_DECODER.getRenderFlags().isLowerObjectsToOverrideClipping(i_12, i_13)) {
                         player_6.collisionPlane += 1;
                     }
                     if (client.myPlayerIndex == i_1) {

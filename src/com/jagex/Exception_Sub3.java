@@ -6,7 +6,7 @@ public class Exception_Sub3 extends Exception {
 
     public static void method15619(boolean bool_0) {
         MaterialPropTexture.method15391();
-        if (TextureDetails.method2875(client.gameState)) {
+        if (GameState.loggedIn(client.GAME_STATE)) {
             BufferedConnectionContext[] arr_2 = client.aClass184Array7220;
 
             for (int i_3 = 0; i_3 < arr_2.length; i_3++) {

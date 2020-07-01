@@ -22,7 +22,7 @@ public class Class119 {
     }
 
     public static void method2074(String string_0, String string_1, int i_2, boolean bool_3) {
-        if (client.gameState == 3) {
+        if (client.GAME_STATE == 3) {
             TCPPacket tcpmessage_5 = Class271.createPacket(ClientProt.SEND_SIGN_UP_FORM, client.LOBBY_CONNECTION_CONTEXT.isaac);
             tcpmessage_5.buffer.writeShort(0);
             int i_6 = tcpmessage_5.buffer.index;

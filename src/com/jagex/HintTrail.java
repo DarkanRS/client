@@ -64,7 +64,7 @@ public class HintTrail {
 
     void method4983(SceneObjectManager sceneobjectmanager_1) {
         aLinkedList3377 = new LinkedList<>();
-        RegionMap regionmap_3 = IndexLoaders.MAP_REGION_DECODER.method4433();
+        RenderFlagMap regionmap_3 = IndexLoaders.MAP_REGION_DECODER.getRenderFlags();
         CoordGrid regionBase = IndexLoaders.MAP_REGION_DECODER.getBase();
         CoordGrid prevPos = new CoordGrid(Class4.MY_PLAYER_PLANE, xLocs[0], yLocs[0]);
         for (int i_6 = 1; i_6 < length; i_6++) {
@@ -86,7 +86,7 @@ public class HintTrail {
                 if (x >= 0 && x < sceneobjectmanager_1.sizeX && y >= 0 && y < sceneobjectmanager_1.sizeY) {
                     int i_11 = (x << 9) + 256;
                     int i_12 = (y << 9) + 256;
-                    if (regionmap_3.is0x2(x, y)) {
+                    if (regionmap_3.isLowerObjectsToOverrideClipping(x, y)) {
                         ++plane;
                     }
                     aLinkedList3377.add(new GraphNode_Sub1_Sub1_Sub1(sceneobjectmanager_1, this, Class4.MY_PLAYER_PLANE, plane, i_11, Class504.getTerrainHeightAtPos(i_11, i_12, Class4.MY_PLAYER_PLANE), i_12));

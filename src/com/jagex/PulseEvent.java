@@ -33,7 +33,7 @@ public class PulseEvent extends CacheableNode {
             long value = event.method14967();
             if (type == 1) {
                 Class320.VARC_INT[(int) value] = event.primary;
-                client.aBool7400 |= Node_Sub17_Sub2.VARC_BOOL[(int) value];
+                client.NEEDS_VARC_SAVE |= Node_Sub17_Sub2.IS_VARC_SAVE_TO_FILE[(int) value];
                 client.anIntArray7150[++client.anInt7368 - 1 & 0x1f] = (int) value;
             } else if (type == 2) {
                 Class462.VARC_STRING[(int) value] = event.string;

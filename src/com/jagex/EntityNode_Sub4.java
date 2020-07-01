@@ -14,18 +14,18 @@ public class EntityNode_Sub4 extends EntityNode {
     static void method12585(Node_Sub31 class282_sub31_0) {
         SceneObjectManager sceneobjectmanager_2 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager();
         if (sceneobjectmanager_2 != null) {
-            Location sceneobject_3 = null;
+            WorldObject sceneobject_3 = null;
             if (class282_sub31_0.anInt7766 == 0) {
-                sceneobject_3 = (Location) sceneobjectmanager_2.getWall(class282_sub31_0.anInt7764, class282_sub31_0.anInt7762, class282_sub31_0.anInt7763);
+                sceneobject_3 = (WorldObject) sceneobjectmanager_2.getWall(class282_sub31_0.anInt7764, class282_sub31_0.anInt7762, class282_sub31_0.anInt7763);
             }
             if (class282_sub31_0.anInt7766 == 1) {
-                sceneobject_3 = (Location) sceneobjectmanager_2.getWallDecoration(class282_sub31_0.anInt7764, class282_sub31_0.anInt7762, class282_sub31_0.anInt7763);
+                sceneobject_3 = (WorldObject) sceneobjectmanager_2.getWallDecoration(class282_sub31_0.anInt7764, class282_sub31_0.anInt7762, class282_sub31_0.anInt7763);
             }
             if (class282_sub31_0.anInt7766 == 2) {
-                sceneobject_3 = (Location) sceneobjectmanager_2.getInteractableObject(class282_sub31_0.anInt7764, class282_sub31_0.anInt7762, class282_sub31_0.anInt7763, client.anInterface25_7446);
+                sceneobject_3 = (WorldObject) sceneobjectmanager_2.getInteractableObject(class282_sub31_0.anInt7764, class282_sub31_0.anInt7762, class282_sub31_0.anInt7763, client.anInterface25_7446);
             }
             if (class282_sub31_0.anInt7766 == 3) {
-                sceneobject_3 = (Location) sceneobjectmanager_2.getGroundDecoration(class282_sub31_0.anInt7764, class282_sub31_0.anInt7762, class282_sub31_0.anInt7763);
+                sceneobject_3 = (WorldObject) sceneobjectmanager_2.getGroundDecoration(class282_sub31_0.anInt7764, class282_sub31_0.anInt7762, class282_sub31_0.anInt7763);
             }
             if (sceneobject_3 != null) {
                 class282_sub31_0.anInt7765 = sceneobject_3.getId();

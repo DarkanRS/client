@@ -58,9 +58,9 @@ public class Class363 {
     static void method6287(PathingEntity animable_0, boolean bool_1) {
         int moveType = MoveSpeed.STATIONARY.id;
         int i_4 = 0;
-        if (animable_0.forceMovementT1Delay > client.cycles) {
+        if (animable_0.forceMovementT1Delay > client.CYCLES_20MS) {
             Static.method4281(animable_0);
-        } else if (animable_0.forceMovementT2Delay >= client.cycles) {
+        } else if (animable_0.forceMovementT2Delay >= client.CYCLES_20MS) {
             ProcessorSpecs.method7727(animable_0);
         } else {
             SystemInfo.method13466(animable_0, bool_1);

@@ -18,7 +18,7 @@ public class CutsceneAction_Sub10_Sub2 extends CutsceneAction_Sub10 {
         int i_1 = 256 + anInt10223 * -979961597 * 611538432;
         int i_2 = 256 + anInt10222 * -1994093411 * -55350784;
         int i_3 = -387189251 * anInt10224 * -51671211;
-        if (i_3 < 3 && IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(anInt10223 * -979961597 * 563231147, anInt10222 * -1994093411 * -344041035)) {
+        if (i_3 < 3 && IndexLoaders.MAP_REGION_DECODER.getRenderFlags().isLowerObjectsToOverrideClipping(anInt10223 * -979961597 * 563231147, anInt10222 * -1994093411 * -344041035)) {
             ++i_3;
         }
 
@@ -31,7 +31,7 @@ public class CutsceneAction_Sub10_Sub2 extends CutsceneAction_Sub10 {
         int i_2 = anInt10223 * 512 + 256;
         int i_3 = anInt10222 * 512 + 256;
         int i_4 = anInt10224;
-        if (i_4 < 3 && IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(anInt10223, anInt10222)) {
+        if (i_4 < 3 && IndexLoaders.MAP_REGION_DECODER.getRenderFlags().isLowerObjectsToOverrideClipping(anInt10223, anInt10222)) {
             ++i_4;
         }
 

@@ -20,7 +20,7 @@ public class KeyHoldInputSubscriber implements InputSubscriber {
     }
 
     static void method3920(int i_0) {
-        int i_2 = client.cycles - client.anInt7429;
+        int i_2 = client.CYCLES_20MS - client.anInt7429;
         if (i_2 >= 100) {
             NativeLibraryLoader.anInt3240 = 2;
             Class86.anInt833 = -1;
@@ -40,7 +40,7 @@ public class KeyHoldInputSubscriber implements InputSubscriber {
             IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX = (int) (Class186.anInt2349 + f_6 * (IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX - Class186.anInt2349));
             Class109_Sub1.CAM_MOVE_ABSOLUTEZ = (int) (GraphNode_Sub1_Sub2.anInt9461 + f_6 * (Class109_Sub1.CAM_MOVE_ABSOLUTEZ - GraphNode_Sub1_Sub2.anInt9461));
             Class246.CAM_MOVE_ABSOLUTEY = (int) ((Class246.CAM_MOVE_ABSOLUTEY - Node_Sub15_Sub1.anInt9575) * f_6 + Node_Sub15_Sub1.anInt9575);
-            Class293.anInt3512 = (int) (ClipMap.anInt3968 + f_6 * (Class293.anInt3512 - ClipMap.anInt3968));
+            Class293.anInt3512 = (int) (ClipFlagMap.anInt3968 + f_6 * (Class293.anInt3512 - ClipFlagMap.anInt3968));
             int i_7 = AnimationDefinitions.anInt5930 - ParamIndexLoader.anInt5029;
             if (i_7 > 8192) {
                 i_7 -= 16384;

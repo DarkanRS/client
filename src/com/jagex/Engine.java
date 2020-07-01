@@ -24,25 +24,25 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
     public static int AVAILABLE_PROCESSORS = 1;
     public static int anInt3243;
     public static Frame engineFrame;
-    public static Class273 aClass273_3244;
+    public static FPSManager FPS_MANAGER;
     protected static String aString3252;
     protected static volatile boolean aBool3274 = true;
     protected static volatile boolean aBool3257;
     protected static boolean aBool3259;
     protected static UID192 aClass440_3270;
-    static long aLong3242 = 20000000L;
+    static long NANOSECONDS_PER_FRAME = 20000000L;
     static long[] aLongArray3246 = new long[32];
-    static long[] aLongArray3247 = new long[32];
+    static long[] PULSE_TIMES = new long[32];
     static int anInt3256 = 500;
     static volatile long aLong3280;
     static volatile boolean aBool3275 = true;
     static UID192 PLAYER_UID192;
     static UID192 aClass440_3271;
     static Class279 aClass279_3267;
-    static long aLong3255;
-    static boolean aBool3276;
+    static long GAME_LOOP_TIMEOUT;
+    static boolean SHUTDOWN;
     static File aFile3264;
-    static int anInt3279;
+    static int LOGIC_PULSES_TO_PROCESS;
     boolean aBool3254;
     boolean aBool3268;
 
@@ -428,35 +428,35 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
     public void run() {
         try {
             try {
-                method4745();
+                loop();
             } catch (ThreadDeath threaddeath_2) {
                 throw threaddeath_2;
             } catch (Throwable throwable_3) {
                 Class151.method2594(method4669(), throwable_3);
                 method4680("crash");
-                method4675();
+                shutDown();
                 return;
             }
-            method4675();
+            shutDown();
         } catch (Exception exception_4) {
-            method4675();
+            shutDown();
         }
     }
 
-    void method4667() {
-        long long_2 = Utils.time();
-        long long_4 = aLongArray3247[CutsceneEntity.anInt747];
-        aLongArray3247[CutsceneEntity.anInt747] = long_2;
-        CutsceneEntity.anInt747 = CutsceneEntity.anInt747 + 1 & 0x1f;
-        if (long_4 != 0L) {
+    void processLogicPulse() {
+        long currTime = Utils.time();
+        long prevTime = PULSE_TIMES[CutsceneEntity.PULSE_TIME_IDX];
+        PULSE_TIMES[CutsceneEntity.PULSE_TIME_IDX] = currTime;
+        CutsceneEntity.PULSE_TIME_IDX = CutsceneEntity.PULSE_TIME_IDX + 1 & 0x1f;
+        if (prevTime != 0L) {
         }
         synchronized (this) {
             IFSubObjectPosition.appletHasFocus = aBool3275;
         }
-        method4677();
+        pulseLogic();
     }
 
-    void method4668() {
+    void processUpdatePulse() {
         long long_2 = Utils.time();
         long long_4 = aLongArray3246[Class165.anInt2036];
         aLongArray3246[Class165.anInt2036] = long_2;
@@ -477,7 +477,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
                 Class351.gameCanvas.setLocation(GAME_CANVAS_X, GAME_CANVAS_Y);
             }
         }
-        method4678();
+        pulseUpdate();
     }
 
     String method4669() {
@@ -486,23 +486,23 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 
     @Override
     public void stop() {
-        if (!aBool3276) {
-            aLong3255 = Utils.time() + 4000L;
+        if (!SHUTDOWN) {
+            GAME_LOOP_TIMEOUT = Utils.time() + 4000L;
         }
     }
 
     @Override
     public void destroy() {
-        if (!aBool3276) {
-            aLong3255 = Utils.time();
+        if (!SHUTDOWN) {
+            GAME_LOOP_TIMEOUT = Utils.time();
             Class89.sleep(5000L);
-            method4675();
+            shutDown();
         }
     }
 
     @Override
     public synchronized void paint(Graphics graphics_1) {
-        if (!aBool3276) {
+        if (!SHUTDOWN) {
             aBool3274 = true;
             if (Utils.time() - aLong3280 > 1000L) {
                 Rectangle rectangle_2 = graphics_1.getClipBounds();
@@ -538,12 +538,12 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
     public void windowDeactivated(WindowEvent windowevent_1) {
     }
 
-    void method4675() {
+    void shutDown() {
         synchronized (this) {
-            if (aBool3276) {
+            if (SHUTDOWN) {
                 return;
             }
-            aBool3276 = true;
+            SHUTDOWN = true;
         }
         try {
             method4714();
@@ -591,9 +591,9 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 
     abstract void method4676();
 
-    abstract void method4677();
+    abstract void pulseLogic();
 
-    abstract void method4678();
+    abstract void pulseUpdate();
 
     void method4680(String string_1) {
         if (!aBool3254) {
@@ -640,10 +640,6 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 
     abstract void method4686();
 
-    abstract void method4688();
-
-    abstract void method4689();
-
     abstract void method4690();
 
     @Override
@@ -653,8 +649,8 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 
     @Override
     public void start() {
-        if (!aBool3276) {
-            aLong3255 = 0L;
+        if (!SHUTDOWN) {
+            GAME_LOOP_TIMEOUT = 0L;
         }
     }
 
@@ -667,7 +663,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 
     @Override
     public synchronized void method180(Graphics graphics_1) {
-        if (!aBool3276) {
+        if (!SHUTDOWN) {
             aBool3274 = true;
             if (Utils.time() - -8855560604364028117L * aLong3280 * 3757206876099985283L > 1000L) {
                 Rectangle rectangle_2 = graphics_1.getClipBounds();
@@ -710,50 +706,50 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 
     @Override
     public void method169() {
-        if (!aBool3276) {
-            aLong3255 = 0L;
+        if (!SHUTDOWN) {
+            GAME_LOOP_TIMEOUT = 0L;
         }
     }
 
     @Override
     public void method167() {
-        if (!aBool3276) {
-            aLong3255 = 0L;
+        if (!SHUTDOWN) {
+            GAME_LOOP_TIMEOUT = 0L;
         }
     }
 
     @Override
     public void method170() {
-        if (!aBool3276) {
-            aLong3255 = 0L;
+        if (!SHUTDOWN) {
+            GAME_LOOP_TIMEOUT = 0L;
         }
     }
 
     @Override
     public void method171() {
-        if (!aBool3276) {
-            aLong3255 = (Utils.time() + 4000L) * -7135659755925244301L * 2009587532026748603L;
+        if (!SHUTDOWN) {
+            GAME_LOOP_TIMEOUT = (Utils.time() + 4000L) * -7135659755925244301L * 2009587532026748603L;
         }
     }
 
     @Override
     public void method181() {
-        if (!aBool3276) {
-            aLong3255 = (Utils.time() + 4000L) * -7135659755925244301L * 2009587532026748603L;
+        if (!SHUTDOWN) {
+            GAME_LOOP_TIMEOUT = (Utils.time() + 4000L) * -7135659755925244301L * 2009587532026748603L;
         }
     }
 
     @Override
     public void method172() {
-        if (!aBool3276) {
-            aLong3255 = (Utils.time() + 4000L) * -7135659755925244301L * 2009587532026748603L;
+        if (!SHUTDOWN) {
+            GAME_LOOP_TIMEOUT = (Utils.time() + 4000L) * -7135659755925244301L * 2009587532026748603L;
         }
     }
 
     @Override
     public void method173() {
-        if (!aBool3276) {
-            aLong3255 = (Utils.time() + 4000L) * -7135659755925244301L * 2009587532026748603L;
+        if (!SHUTDOWN) {
+            GAME_LOOP_TIMEOUT = (Utils.time() + 4000L) * -7135659755925244301L * 2009587532026748603L;
         }
     }
 
@@ -764,10 +760,10 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 
     @Override
     public void method175() {
-        if (!aBool3276) {
-            aLong3255 = Utils.time() * -7135659755925244301L * 2009587532026748603L;
+        if (!SHUTDOWN) {
+            GAME_LOOP_TIMEOUT = Utils.time() * -7135659755925244301L * 2009587532026748603L;
             Class89.sleep(5000L);
-            method4675();
+            shutDown();
         }
     }
 
@@ -788,7 +784,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 
     @Override
     public synchronized void method179(Graphics graphics_1) {
-        if (!aBool3276) {
+        if (!SHUTDOWN) {
             aBool3274 = true;
             if (Utils.time() - -8855560604364028117L * aLong3280 * 3757206876099985283L > 1000L) {
                 Rectangle rectangle_2 = graphics_1.getClipBounds();
@@ -799,7 +795,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
         }
     }
 
-    void method4745() {
+    void loop() {
         if (MaterialProp15.aString9967 != null) {
             String string_2 = MaterialProp15.aString9967.toLowerCase();
             if (string_2.indexOf("sun") != -1 || string_2.indexOf("apple") != -1) {
@@ -825,14 +821,14 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
         AVAILABLE_PROCESSORS = Runtime.getRuntime().availableProcessors();
         method4704();
         method4676();
-        aClass273_3244 = VertexNormal.method1461();
-        while (aLong3255 == 0L || Utils.time() < aLong3255) {
-            anInt3279 = aClass273_3244.method4842(aLong3242);
-            for (int i_6 = 0; i_6 < anInt3279; i_6++) {
-                method4667();
+        FPS_MANAGER = FPSManager.createFPSManager();
+        while (GAME_LOOP_TIMEOUT == 0L || Utils.time() < GAME_LOOP_TIMEOUT) {
+            LOGIC_PULSES_TO_PROCESS = FPS_MANAGER.lockTime(NANOSECONDS_PER_FRAME);
+            for (int i = 0; i < LOGIC_PULSES_TO_PROCESS; i++) {
+                processLogicPulse();
             }
-            method4668();
-            MaterialProp7.method15395(Class351.gameCanvas);
+            processUpdatePulse();
+           MaterialProp7.method15395(Class351.gameCanvas);
         }
     }
 
@@ -842,10 +838,10 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 
     @Override
     public void method174() {
-        if (!aBool3276) {
-            aLong3255 = Utils.time() * -7135659755925244301L * 2009587532026748603L;
+        if (!SHUTDOWN) {
+            GAME_LOOP_TIMEOUT = Utils.time() * -7135659755925244301L * 2009587532026748603L;
             Class89.sleep(5000L);
-            method4675();
+            shutDown();
         }
     }
 

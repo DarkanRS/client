@@ -12,10 +12,6 @@ public class Class464 {
         aEntityNode_Sub1_5554.aEntityNode_Sub1_7707 = aEntityNode_Sub1_5554;
     }
 
-    static boolean method7742(int i_0) {
-        return i_0 == 11 || i_0 == 2 || i_0 == 18 || i_0 == 6 || i_0 == 9;
-    }
-
     static void method7743(Component[] arr_0, int i_1) {
         for (int i_3 = 0; i_3 < arr_0.length; i_3++) {
             Component icomponentdefinitions_4 = arr_0[i_3];

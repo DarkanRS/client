@@ -21,7 +21,7 @@ public class CS2Executor {
     QuickChatMessage currentQuickChatMessage;
     ClanSettings currentClanSettings;
     ClanChannel clanChannel;
-    Location currentLocation;
+    WorldObject currentLocation;
     GroundItem currentGroundItem;
     Object[] objectLocals;
     int[] intOpValues;

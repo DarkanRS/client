@@ -1,6 +1,6 @@
 package com.jagex;
 
-public class GraphNode_Sub1_Sub3_Sub1 extends SceneObjectNode implements Location {
+public class GraphNode_Sub1_Sub3_Sub1 extends SceneObjectNode implements WorldObject {
     Shadow aCacheableNode_Sub17_10491;
     Class200 aClass200_10494;
     boolean aBool10497;

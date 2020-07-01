@@ -75,7 +75,7 @@ public class Class277 {
                 ++i_5;
             }
             if (Class20.aCacheableNode_Sub15_163 != null) {
-                VarDefinitionLoader.method6394(graphicalrenderer_0, Class341.anInt3996, CacheableNode_Sub2.anInt9471, ObjectAnimationCutsceneAction.anInt8518, GraphNode_Sub1_Sub5_Sub1.anInt10526, i_2);
+                VarDefinitionLoader.method6394(graphicalrenderer_0, Class341.anInt3996, CacheableNode_Sub2.anInt9471, ObjectAnimationCutsceneAction.anInt8518, WallObjectGraphNode.anInt10526, i_2);
                 Class285.aFontRenderer_3394.renderText(Class20.aCacheableNode_Sub15_163.aString9771, Class341.anInt3996 + 3, CacheableNode_Sub2.anInt9471 + 14, i_2, -1);
                 i_5 = 0;
                 for (class282_sub50_sub7_6 = (CacheableNode_Sub7) Class20.aCacheableNode_Sub15_163.aClass477_9770.method7941(); class282_sub50_sub7_6 != null; class282_sub50_sub7_6 = (CacheableNode_Sub7) Class20.aCacheableNode_Sub15_163.aClass477_9770.method7955()) {

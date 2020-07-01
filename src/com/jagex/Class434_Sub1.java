@@ -70,7 +70,7 @@ public class Class434_Sub1 extends Class434 {
                     class521_sub1_sub2_sub1_11.anInt10422 = 0;
                     class521_sub1_sub2_sub1_11.plane = (byte) i_0;
                     class521_sub1_sub2_sub1_11.collisionPlane = (byte) i_0;
-                    if (IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(i_1, i_2)) {
+                    if (IndexLoaders.MAP_REGION_DECODER.getRenderFlags().isLowerObjectsToOverrideClipping(i_1, i_2)) {
                         class521_sub1_sub2_sub1_11.collisionPlane += 1;
                     }
 

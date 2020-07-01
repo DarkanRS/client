@@ -61,7 +61,7 @@ public class AsyncInputStream implements Runnable {
                 return RouteFinder.aClass194_3103;
             }
             if (Class291_Sub1.aFloat3468 >= 8.0D) {
-                return GraphNode_Sub1_Sub5_Sub1.aClass194_10527;
+                return WallObjectGraphNode.aClass194_10527;
             }
         }
         return null;

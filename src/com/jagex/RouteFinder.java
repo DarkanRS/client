@@ -25,7 +25,7 @@ public class RouteFinder {
         throw new Error();
     }
 
-    static boolean performCalculationS1(int srcX, int srcY, RouteStrategy strategy, ClipMap clipMap) {
+    static boolean performCalculationS1(int srcX, int srcY, RouteStrategy strategy, ClipFlagMap clipMap) {
         int currentX = srcX;
         int currentY = srcY;
         int graphBaseX = srcX - (64);
@@ -52,7 +52,7 @@ public class RouteFinder {
             }
             int nextDistance = distances[currentGraphX][currentGraphY] + 1;
             if (currentGraphX > 0 && directions[currentGraphX - 1][currentGraphY] == 0 &&
-                    ClipMap.notFlagged(clip[clipX - 1][clipY], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.E_ALT_OBJ, ClipFlag.ALT_OBJ)) {
+                    ClipFlagMap.notFlagged(clip[clipX - 1][clipY], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.E_ALT_OBJ, ClipFlag.ALT_OBJ)) {
                 bufferX[write] = currentX - 1;
                 bufferY[write] = currentY;
                 write = write + 1 & QUEUE_SIZE;
@@ -60,7 +60,7 @@ public class RouteFinder {
                 distances[currentGraphX - 1][currentGraphY] = nextDistance;
             }
             if (currentGraphX < 127 && directions[currentGraphX + 1][currentGraphY] == 0 &&
-                    ClipMap.notFlagged(clip[clipX + 1][clipY], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ)) {
+                    ClipFlagMap.notFlagged(clip[clipX + 1][clipY], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ)) {
                 bufferX[write] = currentX + 1;
                 bufferY[write] = currentY;
                 write = write + 1 & QUEUE_SIZE;
@@ -68,7 +68,7 @@ public class RouteFinder {
                 distances[currentGraphX + 1][currentGraphY] = nextDistance;
             }
             if (currentGraphY > 0 && directions[currentGraphX][currentGraphY - 1] == 0 &&
-                    ClipMap.notFlagged(clip[clipX][clipY - 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.N_ALT_OBJ, ClipFlag.ALT_OBJ)) {
+                    ClipFlagMap.notFlagged(clip[clipX][clipY - 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.N_ALT_OBJ, ClipFlag.ALT_OBJ)) {
                 bufferX[write] = currentX;
                 bufferY[write] = currentY - 1;
                 write = write + 1 & QUEUE_SIZE;
@@ -76,7 +76,7 @@ public class RouteFinder {
                 distances[currentGraphX][currentGraphY - 1] = nextDistance;
             }
             if (currentGraphY < 127 && directions[currentGraphX][currentGraphY + 1] == 0 &&
-                    ClipMap.notFlagged(clip[clipX][clipY + 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.S_ALT_OBJ, ClipFlag.ALT_OBJ)) {
+                    ClipFlagMap.notFlagged(clip[clipX][clipY + 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.S_ALT_OBJ, ClipFlag.ALT_OBJ)) {
                 bufferX[write] = currentX;
                 bufferY[write] = currentY + 1;
                 write = write + 1 & QUEUE_SIZE;
@@ -84,9 +84,9 @@ public class RouteFinder {
                 distances[currentGraphX][currentGraphY + 1] = nextDistance;
             }
             if (currentGraphX > 0 && currentGraphY > 0 && directions[currentGraphX - 1][currentGraphY - 1] == 0 &&
-                    ClipMap.notFlagged(clip[clipX - 1][clipY - 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.N_ALT_OBJ, ClipFlag.NE_ALT_OBJ, ClipFlag.E_ALT_OBJ, ClipFlag.ALT_OBJ) &&
-                    ClipMap.notFlagged(clip[clipX - 1][clipY], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.E_ALT_OBJ, ClipFlag.ALT_OBJ) &&
-                    ClipMap.notFlagged(clip[clipX][clipY - 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.N_ALT_OBJ, ClipFlag.ALT_OBJ)) {
+                    ClipFlagMap.notFlagged(clip[clipX - 1][clipY - 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.N_ALT_OBJ, ClipFlag.NE_ALT_OBJ, ClipFlag.E_ALT_OBJ, ClipFlag.ALT_OBJ) &&
+                    ClipFlagMap.notFlagged(clip[clipX - 1][clipY], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.E_ALT_OBJ, ClipFlag.ALT_OBJ) &&
+                    ClipFlagMap.notFlagged(clip[clipX][clipY - 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.N_ALT_OBJ, ClipFlag.ALT_OBJ)) {
                 bufferX[write] = currentX - 1;
                 bufferY[write] = currentY - 1;
                 write = write + 1 & QUEUE_SIZE;
@@ -94,9 +94,9 @@ public class RouteFinder {
                 distances[currentGraphX - 1][currentGraphY - 1] = nextDistance;
             }
             if (currentGraphX < 127 && currentGraphY > 0 && directions[currentGraphX + 1][currentGraphY - 1] == 0 &&
-                    ClipMap.notFlagged(clip[clipX + 1][clipY - 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.NW_ALT_OBJ, ClipFlag.N_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ) &&
-                    ClipMap.notFlagged(clip[clipX + 1][clipY], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ) &&
-                    ClipMap.notFlagged(clip[clipX][clipY - 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.N_ALT_OBJ, ClipFlag.ALT_OBJ)) {
+                    ClipFlagMap.notFlagged(clip[clipX + 1][clipY - 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.NW_ALT_OBJ, ClipFlag.N_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ) &&
+                    ClipFlagMap.notFlagged(clip[clipX + 1][clipY], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ) &&
+                    ClipFlagMap.notFlagged(clip[clipX][clipY - 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.N_ALT_OBJ, ClipFlag.ALT_OBJ)) {
                 bufferX[write] = currentX + 1;
                 bufferY[write] = currentY - 1;
                 write = write + 1 & QUEUE_SIZE;
@@ -104,9 +104,9 @@ public class RouteFinder {
                 distances[currentGraphX + 1][currentGraphY - 1] = nextDistance;
             }
             if (currentGraphX > 0 && currentGraphY < 127 && directions[currentGraphX - 1][currentGraphY + 1] == 0 &&
-                    ClipMap.notFlagged(clip[clipX - 1][clipY + 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.E_ALT_OBJ, ClipFlag.SE_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.ALT_OBJ) &&
-                    ClipMap.notFlagged(clip[clipX - 1][clipY], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.E_ALT_OBJ, ClipFlag.ALT_OBJ) &&
-                    ClipMap.notFlagged(clip[clipX][clipY + 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.S_ALT_OBJ, ClipFlag.ALT_OBJ)) {
+                    ClipFlagMap.notFlagged(clip[clipX - 1][clipY + 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.E_ALT_OBJ, ClipFlag.SE_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.ALT_OBJ) &&
+                    ClipFlagMap.notFlagged(clip[clipX - 1][clipY], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.E_ALT_OBJ, ClipFlag.ALT_OBJ) &&
+                    ClipFlagMap.notFlagged(clip[clipX][clipY + 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.S_ALT_OBJ, ClipFlag.ALT_OBJ)) {
                 bufferX[write] = currentX - 1;
                 bufferY[write] = currentY + 1;
                 write = write + 1 & QUEUE_SIZE;
@@ -114,9 +114,9 @@ public class RouteFinder {
                 distances[currentGraphX - 1][currentGraphY + 1] = nextDistance;
             }
             if (currentGraphX < 127 && currentGraphY < 127 && directions[currentGraphX + 1][currentGraphY + 1] == 0 &&
-                    ClipMap.notFlagged(clip[clipX + 1][clipY + 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.S_ALT_OBJ, ClipFlag.SW_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ) &&
-                    ClipMap.notFlagged(clip[clipX + 1][clipY], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ) &&
-                    ClipMap.notFlagged(clip[clipX][clipY + 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.S_ALT_OBJ, ClipFlag.ALT_OBJ)) {
+                    ClipFlagMap.notFlagged(clip[clipX + 1][clipY + 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.S_ALT_OBJ, ClipFlag.SW_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ) &&
+                    ClipFlagMap.notFlagged(clip[clipX + 1][clipY], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ) &&
+                    ClipFlagMap.notFlagged(clip[clipX][clipY + 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.S_ALT_OBJ, ClipFlag.ALT_OBJ)) {
                 bufferX[write] = currentX + 1;
                 bufferY[write] = currentY + 1;
                 write = write + 1 & QUEUE_SIZE;
@@ -129,7 +129,7 @@ public class RouteFinder {
         return false;
     }
 
-    static boolean performCalculationS2(int i_0, int i_1, RouteStrategy routestrategy_2, ClipMap clipmap_3) {
+    static boolean performCalculationS2(int i_0, int i_1, RouteStrategy routestrategy_2, ClipFlagMap clipmap_3) {
         int i_5 = i_0;
         int i_6 = i_1;
         byte b_7 = 64;
@@ -159,56 +159,56 @@ public class RouteFinder {
                 return true;
             }
             int i_16 = distances[i_17][i_18] + 1;
-            if (i_17 > 0 && directions[i_17 - 1][i_18] == 0 && ClipMap.notFlagged(ints_13[i_14 - 1][i_15], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.N_ALT_OBJ, ClipFlag.NE_ALT_OBJ, ClipFlag.E_ALT_OBJ, ClipFlag.ALT_OBJ) && ClipMap.notFlagged(ints_13[i_14 - 1][i_15 + 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.E_ALT_OBJ, ClipFlag.SE_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.ALT_OBJ)) {
+            if (i_17 > 0 && directions[i_17 - 1][i_18] == 0 && ClipFlagMap.notFlagged(ints_13[i_14 - 1][i_15], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.N_ALT_OBJ, ClipFlag.NE_ALT_OBJ, ClipFlag.E_ALT_OBJ, ClipFlag.ALT_OBJ) && ClipFlagMap.notFlagged(ints_13[i_14 - 1][i_15 + 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.E_ALT_OBJ, ClipFlag.SE_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.ALT_OBJ)) {
                 bufferX[i_19] = i_5 - 1;
                 bufferY[i_19] = i_6;
                 i_19 = i_19 + 1 & QUEUE_SIZE;
                 directions[i_17 - 1][i_18] = 2;
                 distances[i_17 - 1][i_18] = i_16;
             }
-            if (i_17 < 126 && directions[i_17 + 1][i_18] == 0 && ClipMap.notFlagged(ints_13[i_14 + 2][i_15], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.NW_ALT_OBJ, ClipFlag.N_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ) && ClipMap.notFlagged(ints_13[i_14 + 2][i_15 + 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.S_ALT_OBJ, ClipFlag.SW_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ)) {
+            if (i_17 < 126 && directions[i_17 + 1][i_18] == 0 && ClipFlagMap.notFlagged(ints_13[i_14 + 2][i_15], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.NW_ALT_OBJ, ClipFlag.N_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ) && ClipFlagMap.notFlagged(ints_13[i_14 + 2][i_15 + 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.S_ALT_OBJ, ClipFlag.SW_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ)) {
                 bufferX[i_19] = i_5 + 1;
                 bufferY[i_19] = i_6;
                 i_19 = i_19 + 1 & QUEUE_SIZE;
                 directions[i_17 + 1][i_18] = 8;
                 distances[i_17 + 1][i_18] = i_16;
             }
-            if (i_18 > 0 && directions[i_17][i_18 - 1] == 0 && ClipMap.notFlagged(ints_13[i_14][i_15 - 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.N_ALT_OBJ, ClipFlag.NE_ALT_OBJ, ClipFlag.E_ALT_OBJ, ClipFlag.ALT_OBJ) && ClipMap.notFlagged(ints_13[i_14 + 1][i_15 - 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.NW_ALT_OBJ, ClipFlag.N_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ)) {
+            if (i_18 > 0 && directions[i_17][i_18 - 1] == 0 && ClipFlagMap.notFlagged(ints_13[i_14][i_15 - 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.N_ALT_OBJ, ClipFlag.NE_ALT_OBJ, ClipFlag.E_ALT_OBJ, ClipFlag.ALT_OBJ) && ClipFlagMap.notFlagged(ints_13[i_14 + 1][i_15 - 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.NW_ALT_OBJ, ClipFlag.N_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ)) {
                 bufferX[i_19] = i_5;
                 bufferY[i_19] = i_6 - 1;
                 i_19 = i_19 + 1 & QUEUE_SIZE;
                 directions[i_17][i_18 - 1] = 1;
                 distances[i_17][i_18 - 1] = i_16;
             }
-            if (i_18 < 126 && directions[i_17][i_18 + 1] == 0 && ClipMap.notFlagged(ints_13[i_14][i_15 + 2], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.E_ALT_OBJ, ClipFlag.SE_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.ALT_OBJ) && ClipMap.notFlagged(ints_13[i_14 + 1][i_15 + 2], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.S_ALT_OBJ, ClipFlag.SW_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ)) {
+            if (i_18 < 126 && directions[i_17][i_18 + 1] == 0 && ClipFlagMap.notFlagged(ints_13[i_14][i_15 + 2], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.E_ALT_OBJ, ClipFlag.SE_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.ALT_OBJ) && ClipFlagMap.notFlagged(ints_13[i_14 + 1][i_15 + 2], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.S_ALT_OBJ, ClipFlag.SW_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ)) {
                 bufferX[i_19] = i_5;
                 bufferY[i_19] = i_6 + 1;
                 i_19 = i_19 + 1 & QUEUE_SIZE;
                 directions[i_17][i_18 + 1] = 4;
                 distances[i_17][i_18 + 1] = i_16;
             }
-            if (i_17 > 0 && i_18 > 0 && directions[i_17 - 1][i_18 - 1] == 0 && ClipMap.notFlagged(ints_13[i_14 - 1][i_15], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.N_ALT_OBJ, ClipFlag.NE_ALT_OBJ, ClipFlag.E_ALT_OBJ, ClipFlag.SE_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.ALT_OBJ) && ClipMap.notFlagged(ints_13[i_14 - 1][i_15 - 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.N_ALT_OBJ, ClipFlag.NE_ALT_OBJ, ClipFlag.E_ALT_OBJ, ClipFlag.ALT_OBJ) && ClipMap.notFlagged(ints_13[i_14][i_15 - 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.NW_ALT_OBJ, ClipFlag.N_ALT_OBJ, ClipFlag.NE_ALT_OBJ, ClipFlag.E_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ)) {
+            if (i_17 > 0 && i_18 > 0 && directions[i_17 - 1][i_18 - 1] == 0 && ClipFlagMap.notFlagged(ints_13[i_14 - 1][i_15], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.N_ALT_OBJ, ClipFlag.NE_ALT_OBJ, ClipFlag.E_ALT_OBJ, ClipFlag.SE_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.ALT_OBJ) && ClipFlagMap.notFlagged(ints_13[i_14 - 1][i_15 - 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.N_ALT_OBJ, ClipFlag.NE_ALT_OBJ, ClipFlag.E_ALT_OBJ, ClipFlag.ALT_OBJ) && ClipFlagMap.notFlagged(ints_13[i_14][i_15 - 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.NW_ALT_OBJ, ClipFlag.N_ALT_OBJ, ClipFlag.NE_ALT_OBJ, ClipFlag.E_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ)) {
                 bufferX[i_19] = i_5 - 1;
                 bufferY[i_19] = i_6 - 1;
                 i_19 = i_19 + 1 & QUEUE_SIZE;
                 directions[i_17 - 1][i_18 - 1] = 3;
                 distances[i_17 - 1][i_18 - 1] = i_16;
             }
-            if (i_17 < 126 && i_18 > 0 && directions[i_17 + 1][i_18 - 1] == 0 && ClipMap.notFlagged(ints_13[i_14 + 1][i_15 - 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.NW_ALT_OBJ, ClipFlag.N_ALT_OBJ, ClipFlag.NE_ALT_OBJ, ClipFlag.E_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ) && ClipMap.notFlagged(ints_13[i_14 + 2][i_15 - 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.NW_ALT_OBJ, ClipFlag.N_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ) && ClipMap.notFlagged(ints_13[i_14 + 2][i_15], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.NW_ALT_OBJ, ClipFlag.N_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.SW_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ)) {
+            if (i_17 < 126 && i_18 > 0 && directions[i_17 + 1][i_18 - 1] == 0 && ClipFlagMap.notFlagged(ints_13[i_14 + 1][i_15 - 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.NW_ALT_OBJ, ClipFlag.N_ALT_OBJ, ClipFlag.NE_ALT_OBJ, ClipFlag.E_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ) && ClipFlagMap.notFlagged(ints_13[i_14 + 2][i_15 - 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.NW_ALT_OBJ, ClipFlag.N_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ) && ClipFlagMap.notFlagged(ints_13[i_14 + 2][i_15], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.NW_ALT_OBJ, ClipFlag.N_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.SW_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ)) {
                 bufferX[i_19] = i_5 + 1;
                 bufferY[i_19] = i_6 - 1;
                 i_19 = i_19 + 1 & QUEUE_SIZE;
                 directions[i_17 + 1][i_18 - 1] = 9;
                 distances[i_17 + 1][i_18 - 1] = i_16;
             }
-            if (i_17 > 0 && i_18 < 126 && directions[i_17 - 1][i_18 + 1] == 0 && ClipMap.notFlagged(ints_13[i_14 - 1][i_15 + 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.N_ALT_OBJ, ClipFlag.NE_ALT_OBJ, ClipFlag.E_ALT_OBJ, ClipFlag.SE_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.ALT_OBJ) && ClipMap.notFlagged(ints_13[i_14 - 1][i_15 + 2], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.E_ALT_OBJ, ClipFlag.SE_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.ALT_OBJ) && ClipMap.notFlagged(ints_13[i_14][i_15 + 2], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.E_ALT_OBJ, ClipFlag.SE_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.SW_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ)) {
+            if (i_17 > 0 && i_18 < 126 && directions[i_17 - 1][i_18 + 1] == 0 && ClipFlagMap.notFlagged(ints_13[i_14 - 1][i_15 + 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.N_ALT_OBJ, ClipFlag.NE_ALT_OBJ, ClipFlag.E_ALT_OBJ, ClipFlag.SE_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.ALT_OBJ) && ClipFlagMap.notFlagged(ints_13[i_14 - 1][i_15 + 2], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.E_ALT_OBJ, ClipFlag.SE_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.ALT_OBJ) && ClipFlagMap.notFlagged(ints_13[i_14][i_15 + 2], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.E_ALT_OBJ, ClipFlag.SE_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.SW_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ)) {
                 bufferX[i_19] = i_5 - 1;
                 bufferY[i_19] = i_6 + 1;
                 i_19 = i_19 + 1 & QUEUE_SIZE;
                 directions[i_17 - 1][i_18 + 1] = 6;
                 distances[i_17 - 1][i_18 + 1] = i_16;
             }
-            if (i_17 < 126 && i_18 < 126 && directions[i_17 + 1][i_18 + 1] == 0 && ClipMap.notFlagged(ints_13[i_14 + 1][i_15 + 2], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.E_ALT_OBJ, ClipFlag.SE_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.SW_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ) && ClipMap.notFlagged(ints_13[i_14 + 2][i_15 + 2], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.S_ALT_OBJ, ClipFlag.SW_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ) && ClipMap.notFlagged(ints_13[i_14 + 2][i_15 + 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.NW_ALT_OBJ, ClipFlag.N_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.SW_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ)) {
+            if (i_17 < 126 && i_18 < 126 && directions[i_17 + 1][i_18 + 1] == 0 && ClipFlagMap.notFlagged(ints_13[i_14 + 1][i_15 + 2], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.E_ALT_OBJ, ClipFlag.SE_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.SW_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ) && ClipFlagMap.notFlagged(ints_13[i_14 + 2][i_15 + 2], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.S_ALT_OBJ, ClipFlag.SW_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ) && ClipFlagMap.notFlagged(ints_13[i_14 + 2][i_15 + 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.NW_ALT_OBJ, ClipFlag.N_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.SW_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ)) {
                 bufferX[i_19] = i_5 + 1;
                 bufferY[i_19] = i_6 + 1;
                 i_19 = i_19 + 1 & QUEUE_SIZE;
@@ -221,7 +221,7 @@ public class RouteFinder {
         return false;
     }
 
-    static boolean performCalculationSX(int i_0, int i_1, int i_2, RouteStrategy routestrategy_3, ClipMap clipmap_4) {
+    static boolean performCalculationSX(int i_0, int i_1, int i_2, RouteStrategy routestrategy_3, ClipFlagMap clipmap_4) {
         int i_6 = i_0;
         int i_7 = i_1;
         byte b_8 = 64;
@@ -252,7 +252,7 @@ public class RouteFinder {
             }
             int i_17 = distances[i_19][i_20] + 1;
             int i_18;
-            if (i_19 > 0 && directions[i_19 - 1][i_20] == 0 && ClipMap.notFlagged(ints_14[i_15 - 1][i_16], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.N_ALT_OBJ, ClipFlag.NE_ALT_OBJ, ClipFlag.E_ALT_OBJ, ClipFlag.ALT_OBJ) && ClipMap.notFlagged(ints_14[i_15 - 1][i_16 + i_2 - 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.E_ALT_OBJ, ClipFlag.SE_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.ALT_OBJ)) {
+            if (i_19 > 0 && directions[i_19 - 1][i_20] == 0 && ClipFlagMap.notFlagged(ints_14[i_15 - 1][i_16], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.N_ALT_OBJ, ClipFlag.NE_ALT_OBJ, ClipFlag.E_ALT_OBJ, ClipFlag.ALT_OBJ) && ClipFlagMap.notFlagged(ints_14[i_15 - 1][i_16 + i_2 - 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.E_ALT_OBJ, ClipFlag.SE_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.ALT_OBJ)) {
                 i_18 = 1;
                 while (true) {
                     if (i_18 >= i_2 - 1) {
@@ -263,13 +263,13 @@ public class RouteFinder {
                         distances[i_19 - 1][i_20] = i_17;
                         break;
                     }
-                    if (!ClipMap.notFlagged(ints_14[i_15 - 1][i_18 + i_16], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.N_ALT_OBJ, ClipFlag.NE_ALT_OBJ, ClipFlag.E_ALT_OBJ, ClipFlag.SE_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.ALT_OBJ)) {
+                    if (!ClipFlagMap.notFlagged(ints_14[i_15 - 1][i_18 + i_16], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.N_ALT_OBJ, ClipFlag.NE_ALT_OBJ, ClipFlag.E_ALT_OBJ, ClipFlag.SE_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.ALT_OBJ)) {
                         break;
                     }
                     ++i_18;
                 }
             }
-            if (i_19 < 128 - i_2 && directions[i_19 + 1][i_20] == 0 && ClipMap.notFlagged(ints_14[i_15 + i_2][i_16], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.NW_ALT_OBJ, ClipFlag.N_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ) && ClipMap.notFlagged(ints_14[i_15 + i_2][i_16 + i_2 - 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.S_ALT_OBJ, ClipFlag.SW_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ)) {
+            if (i_19 < 128 - i_2 && directions[i_19 + 1][i_20] == 0 && ClipFlagMap.notFlagged(ints_14[i_15 + i_2][i_16], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.NW_ALT_OBJ, ClipFlag.N_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ) && ClipFlagMap.notFlagged(ints_14[i_15 + i_2][i_16 + i_2 - 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.S_ALT_OBJ, ClipFlag.SW_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ)) {
                 i_18 = 1;
                 while (true) {
                     if (i_18 >= i_2 - 1) {
@@ -280,13 +280,13 @@ public class RouteFinder {
                         distances[i_19 + 1][i_20] = i_17;
                         break;
                     }
-                    if (!ClipMap.notFlagged(ints_14[i_15 + i_2][i_18 + i_16], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.NW_ALT_OBJ, ClipFlag.N_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.SW_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ)) {
+                    if (!ClipFlagMap.notFlagged(ints_14[i_15 + i_2][i_18 + i_16], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.NW_ALT_OBJ, ClipFlag.N_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.SW_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ)) {
                         break;
                     }
                     ++i_18;
                 }
             }
-            if (i_20 > 0 && directions[i_19][i_20 - 1] == 0 && ClipMap.notFlagged(ints_14[i_15][i_16 - 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.N_ALT_OBJ, ClipFlag.NE_ALT_OBJ, ClipFlag.E_ALT_OBJ, ClipFlag.ALT_OBJ) && ClipMap.notFlagged(ints_14[i_15 + i_2 - 1][i_16 - 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.NW_ALT_OBJ, ClipFlag.N_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ)) {
+            if (i_20 > 0 && directions[i_19][i_20 - 1] == 0 && ClipFlagMap.notFlagged(ints_14[i_15][i_16 - 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.N_ALT_OBJ, ClipFlag.NE_ALT_OBJ, ClipFlag.E_ALT_OBJ, ClipFlag.ALT_OBJ) && ClipFlagMap.notFlagged(ints_14[i_15 + i_2 - 1][i_16 - 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.NW_ALT_OBJ, ClipFlag.N_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ)) {
                 i_18 = 1;
                 while (true) {
                     if (i_18 >= i_2 - 1) {
@@ -297,13 +297,13 @@ public class RouteFinder {
                         distances[i_19][i_20 - 1] = i_17;
                         break;
                     }
-                    if (!ClipMap.notFlagged(ints_14[i_18 + i_15][i_16 - 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.NW_ALT_OBJ, ClipFlag.N_ALT_OBJ, ClipFlag.NE_ALT_OBJ, ClipFlag.E_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ)) {
+                    if (!ClipFlagMap.notFlagged(ints_14[i_18 + i_15][i_16 - 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.NW_ALT_OBJ, ClipFlag.N_ALT_OBJ, ClipFlag.NE_ALT_OBJ, ClipFlag.E_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ)) {
                         break;
                     }
                     ++i_18;
                 }
             }
-            if (i_20 < 128 - i_2 && directions[i_19][i_20 + 1] == 0 && ClipMap.notFlagged(ints_14[i_15][i_16 + i_2], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.E_ALT_OBJ, ClipFlag.SE_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.ALT_OBJ) && ClipMap.notFlagged(ints_14[i_15 + i_2 - 1][i_16 + i_2], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.S_ALT_OBJ, ClipFlag.SW_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ)) {
+            if (i_20 < 128 - i_2 && directions[i_19][i_20 + 1] == 0 && ClipFlagMap.notFlagged(ints_14[i_15][i_16 + i_2], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.E_ALT_OBJ, ClipFlag.SE_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.ALT_OBJ) && ClipFlagMap.notFlagged(ints_14[i_15 + i_2 - 1][i_16 + i_2], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.S_ALT_OBJ, ClipFlag.SW_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ)) {
                 i_18 = 1;
                 while (true) {
                     if (i_18 >= i_2 - 1) {
@@ -314,13 +314,13 @@ public class RouteFinder {
                         distances[i_19][i_20 + 1] = i_17;
                         break;
                     }
-                    if (!ClipMap.notFlagged(ints_14[i_15 + i_18][i_16 + i_2], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.E_ALT_OBJ, ClipFlag.SE_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.SW_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ)) {
+                    if (!ClipFlagMap.notFlagged(ints_14[i_15 + i_18][i_16 + i_2], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.E_ALT_OBJ, ClipFlag.SE_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.SW_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ)) {
                         break;
                     }
                     ++i_18;
                 }
             }
-            if (i_19 > 0 && i_20 > 0 && directions[i_19 - 1][i_20 - 1] == 0 && ClipMap.notFlagged(ints_14[i_15 - 1][i_16 - 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.N_ALT_OBJ, ClipFlag.NE_ALT_OBJ, ClipFlag.E_ALT_OBJ, ClipFlag.ALT_OBJ)) {
+            if (i_19 > 0 && i_20 > 0 && directions[i_19 - 1][i_20 - 1] == 0 && ClipFlagMap.notFlagged(ints_14[i_15 - 1][i_16 - 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.N_ALT_OBJ, ClipFlag.NE_ALT_OBJ, ClipFlag.E_ALT_OBJ, ClipFlag.ALT_OBJ)) {
                 i_18 = 1;
                 while (true) {
                     if (i_18 >= i_2) {
@@ -331,13 +331,13 @@ public class RouteFinder {
                         distances[i_19 - 1][i_20 - 1] = i_17;
                         break;
                     }
-                    if (!ClipMap.notFlagged(ints_14[i_15 - 1][i_18 + (i_16 - 1)], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.N_ALT_OBJ, ClipFlag.NE_ALT_OBJ, ClipFlag.E_ALT_OBJ, ClipFlag.SE_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.ALT_OBJ) || !ClipMap.notFlagged(ints_14[i_18 + (i_15 - 1)][i_16 - 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.NW_ALT_OBJ, ClipFlag.N_ALT_OBJ, ClipFlag.NE_ALT_OBJ, ClipFlag.E_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ)) {
+                    if (!ClipFlagMap.notFlagged(ints_14[i_15 - 1][i_18 + (i_16 - 1)], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.N_ALT_OBJ, ClipFlag.NE_ALT_OBJ, ClipFlag.E_ALT_OBJ, ClipFlag.SE_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.ALT_OBJ) || !ClipFlagMap.notFlagged(ints_14[i_18 + (i_15 - 1)][i_16 - 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.NW_ALT_OBJ, ClipFlag.N_ALT_OBJ, ClipFlag.NE_ALT_OBJ, ClipFlag.E_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ)) {
                         break;
                     }
                     ++i_18;
                 }
             }
-            if (i_19 < 128 - i_2 && i_20 > 0 && directions[i_19 + 1][i_20 - 1] == 0 && ClipMap.notFlagged(ints_14[i_15 + i_2][i_16 - 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.NW_ALT_OBJ, ClipFlag.N_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ)) {
+            if (i_19 < 128 - i_2 && i_20 > 0 && directions[i_19 + 1][i_20 - 1] == 0 && ClipFlagMap.notFlagged(ints_14[i_15 + i_2][i_16 - 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.NW_ALT_OBJ, ClipFlag.N_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ)) {
                 i_18 = 1;
                 while (true) {
                     if (i_18 >= i_2) {
@@ -348,13 +348,13 @@ public class RouteFinder {
                         distances[i_19 + 1][i_20 - 1] = i_17;
                         break;
                     }
-                    if (!ClipMap.notFlagged(ints_14[i_15 + i_2][i_18 + (i_16 - 1)], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.NW_ALT_OBJ, ClipFlag.N_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.SW_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ) || !ClipMap.notFlagged(ints_14[i_18 + i_15][i_16 - 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.NW_ALT_OBJ, ClipFlag.N_ALT_OBJ, ClipFlag.NE_ALT_OBJ, ClipFlag.E_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ)) {
+                    if (!ClipFlagMap.notFlagged(ints_14[i_15 + i_2][i_18 + (i_16 - 1)], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.NW_ALT_OBJ, ClipFlag.N_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.SW_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ) || !ClipFlagMap.notFlagged(ints_14[i_18 + i_15][i_16 - 1], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.NW_ALT_OBJ, ClipFlag.N_ALT_OBJ, ClipFlag.NE_ALT_OBJ, ClipFlag.E_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ)) {
                         break;
                     }
                     ++i_18;
                 }
             }
-            if (i_19 > 0 && i_20 < 128 - i_2 && directions[i_19 - 1][i_20 + 1] == 0 && ClipMap.notFlagged(ints_14[i_15 - 1][i_16 + i_2], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.E_ALT_OBJ, ClipFlag.SE_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.ALT_OBJ)) {
+            if (i_19 > 0 && i_20 < 128 - i_2 && directions[i_19 - 1][i_20 + 1] == 0 && ClipFlagMap.notFlagged(ints_14[i_15 - 1][i_16 + i_2], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.E_ALT_OBJ, ClipFlag.SE_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.ALT_OBJ)) {
                 i_18 = 1;
                 while (true) {
                     if (i_18 >= i_2) {
@@ -365,15 +365,15 @@ public class RouteFinder {
                         distances[i_19 - 1][i_20 + 1] = i_17;
                         break;
                     }
-                    if (!ClipMap.notFlagged(ints_14[i_15 - 1][i_18 + i_16], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.N_ALT_OBJ, ClipFlag.NE_ALT_OBJ, ClipFlag.E_ALT_OBJ, ClipFlag.SE_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.ALT_OBJ) || !ClipMap.notFlagged(ints_14[i_18 + (i_15 - 1)][i_16 + i_2], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.E_ALT_OBJ, ClipFlag.SE_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.SW_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ)) {
+                    if (!ClipFlagMap.notFlagged(ints_14[i_15 - 1][i_18 + i_16], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.N_ALT_OBJ, ClipFlag.NE_ALT_OBJ, ClipFlag.E_ALT_OBJ, ClipFlag.SE_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.ALT_OBJ) || !ClipFlagMap.notFlagged(ints_14[i_18 + (i_15 - 1)][i_16 + i_2], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.E_ALT_OBJ, ClipFlag.SE_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.SW_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ)) {
                         break;
                     }
                     ++i_18;
                 }
             }
-            if (i_19 < 128 - i_2 && i_20 < 128 - i_2 && directions[i_19 + 1][i_20 + 1] == 0 && ClipMap.notFlagged(ints_14[i_15 + i_2][i_16 + i_2], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.S_ALT_OBJ, ClipFlag.SW_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ)) {
+            if (i_19 < 128 - i_2 && i_20 < 128 - i_2 && directions[i_19 + 1][i_20 + 1] == 0 && ClipFlagMap.notFlagged(ints_14[i_15 + i_2][i_16 + i_2], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.S_ALT_OBJ, ClipFlag.SW_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ)) {
                 for (i_18 = 1; i_18 < i_2; i_18++) {
-                    if (!ClipMap.notFlagged(ints_14[i_15 + i_18][i_16 + i_2], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.E_ALT_OBJ, ClipFlag.SE_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.SW_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ) || !ClipMap.notFlagged(ints_14[i_15 + i_2][i_18 + i_16], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.NW_ALT_OBJ, ClipFlag.N_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.SW_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ)) {
+                    if (!ClipFlagMap.notFlagged(ints_14[i_15 + i_18][i_16 + i_2], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.E_ALT_OBJ, ClipFlag.SE_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.SW_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ) || !ClipFlagMap.notFlagged(ints_14[i_15 + i_2][i_18 + i_16], ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.NW_ALT_OBJ, ClipFlag.N_ALT_OBJ, ClipFlag.S_ALT_OBJ, ClipFlag.SW_ALT_OBJ, ClipFlag.W_ALT_OBJ, ClipFlag.ALT_OBJ)) {
                         continue label208;
                     }
                 }
@@ -472,7 +472,7 @@ public class RouteFinder {
                     return;
                 }
                 if (string_0.startsWith("clipmask")) {
-                    Class209.printConsoleMessage("(" + VertexNormal.MY_PLAYER.localX + ", " + VertexNormal.MY_PLAYER.localY + "): " + IndexLoaders.MAP_REGION_DECODER.getClipMap(VertexNormal.MY_PLAYER.plane).map[VertexNormal.MY_PLAYER.localX + 1][VertexNormal.MY_PLAYER.localY + 1] + " - " + ClipMap.getFlags(IndexLoaders.MAP_REGION_DECODER.getClipMap(VertexNormal.MY_PLAYER.plane).map[VertexNormal.MY_PLAYER.localX + 1][VertexNormal.MY_PLAYER.localY + 1]));
+                    Class209.printConsoleMessage("(" + VertexNormal.MY_PLAYER.localX + ", " + VertexNormal.MY_PLAYER.localY + "): " + IndexLoaders.MAP_REGION_DECODER.getClipMap(VertexNormal.MY_PLAYER.plane).map[VertexNormal.MY_PLAYER.localX + 1][VertexNormal.MY_PLAYER.localY + 1] + " - " + ClipFlagMap.getFlags(IndexLoaders.MAP_REGION_DECODER.getClipMap(VertexNormal.MY_PLAYER.plane).map[VertexNormal.MY_PLAYER.localX + 1][VertexNormal.MY_PLAYER.localY + 1]));
                 }
                 int i_6;
                 int i_10;
@@ -579,9 +579,9 @@ public class RouteFinder {
                     return;
                 }
                 if ("clientdrop".equalsIgnoreCase(string_0)) {
-                    if (client.gameState == 13) {
+                    if (client.GAME_STATE == 13) {
                         Class151.method2592();
-                    } else if (client.gameState == 18) {
+                    } else if (client.GAME_STATE == 18) {
                         client.GAME_CONNECTION_CONTEXT.aBool2298 = true;
                     }
                     return;
@@ -666,7 +666,7 @@ public class RouteFinder {
                     String[] arr_12 = MovingAnimation.method12681(Class122.method2110(Node_Sub17_Sub7.method15439(bytes_5), '\r', ""), '\n');
                     Class341.method6074(arr_12);
                 }
-                if (client.gameState == 13) {
+                if (client.GAME_STATE == 13) {
                     TCPPacket tcpmessage_21 = Class271.createPacket(ClientProt.COMMAND, client.GAME_CONNECTION_CONTEXT.isaac);
                     tcpmessage_21.buffer.writeByte(string_0.length() + 3);
                     tcpmessage_21.buffer.writeByte(bool_1 ? 1 : 0);
@@ -679,12 +679,12 @@ public class RouteFinder {
                 return;
             }
         }
-        if (client.gameState != 13) {
+        if (client.GAME_STATE != 13) {
             Class209.printConsoleMessage(LocalizedText.UNKNOWN_DEV_COMMAND.translate(Class223.CURRENT_LANGUAGE) + string_0);
         }
     }
 
-	public static int findRoute(int i_0, int i_1, int i_2, RouteStrategy routestrategy_3, ClipMap clipmap_4, boolean bool_5, int[] ints_6, int[] ints_7) {
+	public static int findRoute(int i_0, int i_1, int i_2, RouteStrategy routestrategy_3, ClipFlagMap clipmap_4, boolean bool_5, int[] ints_6, int[] ints_7) {
 	    int i_10;
 	    for (int i_9 = 0; i_9 < 128; i_9++) {
 	        for (i_10 = 0; i_10 < 128; i_10++) {

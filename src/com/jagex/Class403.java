@@ -6,8 +6,8 @@ public class Class403 {
         throw new Error();
     }
 
-    public static ClipMap createClipMap(int i_0, int i_1) {
-        ClipMap clipmap_3 = new ClipMap();
+    public static ClipFlagMap createClipMap(int i_0, int i_1) {
+        ClipFlagMap clipmap_3 = new ClipFlagMap();
         clipmap_3.offsetX = -1;
         clipmap_3.offsetY = -1;
         clipmap_3.sizeX = i_0 + 1 + 5;

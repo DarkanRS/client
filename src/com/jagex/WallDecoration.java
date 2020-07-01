@@ -1,6 +1,6 @@
 package com.jagex;
 
-public class WallDecoration extends GraphNode_Sub1_Sub4 implements Location {
+public class WallDecoration extends GraphNode_Sub1_Sub4 implements WorldObject {
 
     public Class123 aClass123_10501;
     boolean aBool10504 = true;
@@ -83,7 +83,7 @@ public class WallDecoration extends GraphNode_Sub1_Sub4 implements Location {
     }
 
     public static void method16088(int i_0) {
-        if (client.gameState == 3) {
+        if (client.GAME_STATE == 3) {
             TCPPacket tcpmessage_2 = Class271.createPacket(ClientProt.UNK_79, client.LOBBY_CONNECTION_CONTEXT.isaac);
             tcpmessage_2.buffer.writeByte(i_0);
             client.LOBBY_CONNECTION_CONTEXT.queuePacket(tcpmessage_2);

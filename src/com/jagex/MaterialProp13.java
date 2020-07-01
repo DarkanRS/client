@@ -14,7 +14,7 @@ public class MaterialProp13 extends MaterialProperty {
 
             Class9.anInt76 = i_0;
             client.LOBBY_CONNECTION_CONTEXT.method3051();
-            Class365.setGameState(14);
+            GameState.setGameState(14);
         }
 
     }

@@ -68,17 +68,17 @@ public class Class231 {
         Class122.method2109(Class182.aNativeSpriteArray2261);
         Static.method6378();
         Class94.method1589();
-        if (client.gameState == 5) {
-            Class365.setGameState(11);
-        } else if (client.gameState == 0) {
-            Class365.setGameState(2);
-        } else if (client.gameState == 7) {
-            Class365.setGameState(6);
-        } else if (client.gameState == 13) {
-            Class365.setGameState(18);
-        } else if (client.gameState != 15 && client.gameState != 1) {
-            if (client.gameState == 3) {
-                Class365.setGameState(9);
+        if (client.GAME_STATE == 5) {
+            GameState.setGameState(11);
+        } else if (client.GAME_STATE == 0) {
+            GameState.setGameState(2);
+        } else if (client.GAME_STATE == 7) {
+            GameState.setGameState(6);
+        } else if (client.GAME_STATE == 13) {
+            GameState.setGameState(18);
+        } else if (client.GAME_STATE != 15 && client.GAME_STATE != 1) {
+            if (client.GAME_STATE == 3) {
+                GameState.setGameState(9);
             }
         } else {
             Class386.method6673();

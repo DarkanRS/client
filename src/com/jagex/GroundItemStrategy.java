@@ -35,7 +35,7 @@ public class GroundItemStrategy extends RouteStrategy {
     }
 
     @Override
-    public boolean canExit(int i_1, int i_2, int i_3, ClipMap clipmap_4) {
+    public boolean canExit(int i_1, int i_2, int i_3, ClipFlagMap clipmap_4) {
         return Class325.method5790(i_2, i_3, i_1, i_1, approxDestinationX, approxDestinationY, approxDestinationSizeX, approxDestinationSizeY);
     }
 }

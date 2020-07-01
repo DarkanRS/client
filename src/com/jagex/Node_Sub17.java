@@ -2,10 +2,6 @@ package com.jagex;
 
 public abstract class Node_Sub17 extends Node {
 
-    public static boolean inLobby(int i_0) {
-        return i_0 == 0 || i_0 == 2 || i_0 == 7 || i_0 == 6;
-    }
-
     abstract void method12249(ByteBuf var1);
 
     abstract void method12250(ByteBuf var1);

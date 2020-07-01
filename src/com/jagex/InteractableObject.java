@@ -1,6 +1,6 @@
 package com.jagex;
 
-public class InteractableObject extends GraphNode_Sub1_Sub1 implements Location {
+public class InteractableObject extends GraphNode_Sub1_Sub1 implements WorldObject {
 
     public Class123 aClass123_10509;
     boolean aBool10512 = true;

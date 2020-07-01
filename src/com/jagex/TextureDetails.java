@@ -22,10 +22,6 @@ public class TextureDetails {
     public byte textureSpeedV;
     public int combineMode;
 
-    public static boolean method2875(int i_0) {
-        return i_0 == 13 || i_0 == 18 || i_0 == 12;
-    }
-
     public static void method2876(NPCEntity npc_0) {
         for (Node_Sub48 class282_sub48_2 = (Node_Sub48) Node_Sub48.aClass482_8074.head(); class282_sub48_2 != null; class282_sub48_2 = (Node_Sub48) Node_Sub48.aClass482_8074.next()) {
             if (class282_sub48_2.aTransform_Sub1_Sub1_Sub2_Sub2_8085 == npc_0) {

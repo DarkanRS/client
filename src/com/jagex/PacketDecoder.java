@@ -188,7 +188,7 @@ public class PacketDecoder {
             }
             int[] xteas = {i_9, i_8, key, flags};
             client.BASE_WINDOW_ID = windowId;
-            ClipMap.method6007(windowId, xteas);
+            ClipFlagMap.method6007(windowId, xteas);
             Class516.method8867(false);
             Class150.method2582(client.BASE_WINDOW_ID, xteas);
             for (int i_11 = 0; i_11 < 107; i_11++) {
@@ -345,7 +345,7 @@ public class PacketDecoder {
                         int tileX = x * 512 + 256;
                         int tileY = y * 512 + 256;
                         int toPlane = fromPlane;
-                        if (fromPlane < 3 && IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(x, y)) {
+                        if (fromPlane < 3 && IndexLoaders.MAP_REGION_DECODER.getRenderFlags().isLowerObjectsToOverrideClipping(x, y)) {
                             toPlane = fromPlane + 1;
                         }
                         SpotAnimation spotAnimation = new SpotAnimation(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), spotAnimId, speed, fromPlane, toPlane, tileX, Class504.getTerrainHeightAtPos(tileX, tileY, fromPlane) - height, tileY, x, x, y, y, rotation, setting2);
@@ -714,7 +714,7 @@ public class PacketDecoder {
             Class448.aClass450_5429 = Class159.GAME_CONNECTION_INFO;
             Class448.aBool5428 = reconnecting;
             Class62.setGameHost(port, host);
-            Class365.setGameState(17);
+            GameState.setGameState(17);
             context.currentPacket = null;
             return false;
         } else if (context.currentPacket == ServerProt.LOGOUT_LOBBY) {
@@ -1130,7 +1130,7 @@ public class PacketDecoder {
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.UPDATE_REBOOT_TIMER) {
-            if (Node_Sub17.inLobby(client.gameState)) {
+            if (GameState.inLobby(client.GAME_STATE)) {
                 client.REBOOT_TIMER = (int) (buffer.readUnsignedShort() * 2.5F);
             } else {
                 client.REBOOT_TIMER = buffer.readUnsignedShort() * 30;
@@ -2337,28 +2337,29 @@ public class PacketDecoder {
     static void decodeTilestreamPacket(UpdateZonePacket packet) {
         ByteBuf.Bit buffer = client.GAME_CONNECTION_CONTEXT.recievedBuffer;
         if (packet == UpdateZonePacket.GROUND_ITEM_COUNT) {
-            int i_3 = buffer.readUnsignedByte();
-            CoordGrid coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getBase();
-            int i_5 = (i_3 & 0x7) + Class158_Sub1_Sub2.UPDATE_ZONE_Y;
-            int y = i_5 + coordgrid_4.y;
-            int i_7 = (i_3 >> 4 & 0x7) + Static.UPDATE_ZONE_X;
-            int x = i_7 + coordgrid_4.x;
-            int i_9 = buffer.readUnsignedShort();
-            int i_10 = buffer.readUnsignedShort();
+            int loc = buffer.readUnsignedByte();
+            CoordGrid mapBase = IndexLoaders.MAP_REGION_DECODER.getBase();
+            int baseY = (loc & 0x7) + Class158_Sub1_Sub2.UPDATE_ZONE_Y;
+            int y = baseY + mapBase.y;
+            int baseX = (loc >> 4 & 0x7) + Static.UPDATE_ZONE_X;
+            int x = baseX + mapBase.x;
+            int itemId = buffer.readUnsignedShort();
+            int oldAmount = buffer.readUnsignedShort();
             int amount = buffer.readUnsignedShort();
             if (client.aClass465_7414 != null) {
                 Node_Sub29 class282_sub29_12 = (Node_Sub29) client.aClass465_7414.get(Class272.UPDATE_ZONE_PLANE << 28 | y << 14 | x);
                 if (class282_sub29_12 != null) {
                     for (GroundItemNode item = (GroundItemNode) class282_sub29_12.aClass482_7708.head(); item != null; item = (GroundItemNode) class282_sub29_12.aClass482_7708.next()) {
-                        if ((i_9 & 0x7fff) == item.id && i_10 == item.amount) {
+                        if ((itemId & 0x7fff) == item.id && oldAmount == item.amount) {
                             item.unlink();
                             item.amount = amount;
+                            System.out.println("Updated");
                             Class353.addGroundItem(Class272.UPDATE_ZONE_PLANE, x, y, item);
                             break;
                         }
                     }
-                    if (i_7 >= 0 && i_5 >= 0 && i_7 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && i_5 < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
-                        Class434_Sub1.method12760(Class272.UPDATE_ZONE_PLANE, i_7, i_5);
+                    if (baseX >= 0 && baseY >= 0 && baseX < IndexLoaders.MAP_REGION_DECODER.getSizeX() && baseY < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
+                        Class434_Sub1.method12760(Class272.UPDATE_ZONE_PLANE, baseX, baseY);
                     }
                 }
             }
@@ -2388,7 +2389,7 @@ public class PacketDecoder {
                     int tileX = x * 512 + 256;
                     int tileY = y * 512 + 256;
                     int toPlane = Class272.UPDATE_ZONE_PLANE;
-                    if (toPlane < 3 && IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(x, y)) {
+                    if (toPlane < 3 && IndexLoaders.MAP_REGION_DECODER.getRenderFlags().isLowerObjectsToOverrideClipping(x, y)) {
                         ++toPlane;
                     }
                     SpotAnimation spotAnimation = new SpotAnimation(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), spotAnimId, speed, Class272.UPDATE_ZONE_PLANE, toPlane, tileX, Class504.getTerrainHeightAtPos(tileX, tileY, Class272.UPDATE_ZONE_PLANE) - height, tileY, x, x, y, y, rotation, false);
@@ -2421,8 +2422,8 @@ public class PacketDecoder {
                 startHeight <<= 2;
                 endHeight <<= 2;
                 slope <<= 2;
-                ProjectileAnimation p = new ProjectileAnimation(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), spotAnimId, Class272.UPDATE_ZONE_PLANE, Class272.UPDATE_ZONE_PLANE, localX, localY, startHeight, startTime + client.cycles, endTime + client.cycles, angle, slope, 0, lockOn, endHeight, useFloorHeight, -1);
-                p.start(xOff, yOff, Class504.getTerrainHeightAtPos(xOff, yOff, Class272.UPDATE_ZONE_PLANE) - endHeight, startTime + client.cycles);
+                ProjectileAnimation p = new ProjectileAnimation(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), spotAnimId, Class272.UPDATE_ZONE_PLANE, Class272.UPDATE_ZONE_PLANE, localX, localY, startHeight, startTime + client.CYCLES_20MS, endTime + client.CYCLES_20MS, angle, slope, 0, lockOn, endHeight, useFloorHeight, -1);
+                p.start(xOff, yOff, Class504.getTerrainHeightAtPos(xOff, yOff, Class272.UPDATE_ZONE_PLANE) - endHeight, startTime + client.CYCLES_20MS);
                 client.PROJECTILES.append(new ProjectileNode(p));
             }
         } else if (packet == UpdateZonePacket.MIDI_SONG_LOCATION) {

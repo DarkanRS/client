@@ -1,6 +1,6 @@
 package com.jagex;
 
-public class GroundDecoration extends SceneObjectNode implements Location {
+public class GroundDecoration extends SceneObjectNode implements WorldObject {
 
     public Class123 aClass123_10507;
     boolean aBool10508 = true;
@@ -27,7 +27,7 @@ public class GroundDecoration extends SceneObjectNode implements Location {
                     i_13 = i_8;
                 }
                 inter.anInt1449 = i_13;
-                inter.anInt1450 = client.cycles;
+                inter.anInt1450 = client.CYCLES_20MS;
                 if (!client.method11651(inter)) {
                     if (inter.contentType != 0) {
                         Class28.method776(inter);
@@ -172,8 +172,8 @@ public class GroundDecoration extends SceneObjectNode implements Location {
                                     i_23 = client.anInt7377;
                                     i_24 = client.anInt7413;
                                     i_25 = client.anInt7217;
-                                    if (client.cycles < client.anInt7237) {
-                                        float f_26 = (client.cycles - client.anInt7236) * 1.0F / (client.anInt7237 - client.anInt7236);
+                                    if (client.CYCLES_20MS < client.anInt7237) {
+                                        float f_26 = (client.CYCLES_20MS - client.anInt7236) * 1.0F / (client.anInt7237 - client.anInt7236);
                                         i_22 = (int) (client.anInt7238 * f_26 + (1.0F - f_26) * SceneryShadowPreference.anInt7868);
                                         i_23 = (int) (client.anInt7377 * f_26 + Class350_Sub2.anInt7815 * (1.0F - f_26));
                                         i_24 = (int) (f_26 * client.anInt7413 + Class329_Sub1.anInt7726 * (1.0F - f_26));
@@ -412,7 +412,7 @@ public class GroundDecoration extends SceneObjectNode implements Location {
                                                 client.aClass294_7169.method5219((inter.offsetX << 2), (i_31 + i_23 + (inter.offsetY << 2)), (i_32 + (inter.offsetY << 2)));
                                                 client.aClass294_7169.rotation(1.0F, 0.0F, 0.0F, Class382.method6508(inter.spritePitch << 3));
                                             }
-                                            inter.method1991(Renderers.SOFTWARE_RENDERER, meshRasterizer, client.aClass294_7169, client.cycles);
+                                            inter.method1991(Renderers.SOFTWARE_RENDERER, meshRasterizer, client.aClass294_7169, client.CYCLES_20MS);
                                             if (client.aBool7358) {
                                                 Renderers.SOFTWARE_RENDERER.o(drawX, drawY, drawX + inter.width, drawY + inter.height);
                                             }

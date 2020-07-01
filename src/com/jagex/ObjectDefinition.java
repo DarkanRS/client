@@ -24,7 +24,7 @@ public class ObjectDefinition {
     public boolean inverted;
     public boolean castsShadow = true;
     public boolean obstructsGround;
-    public boolean alt;
+    public boolean ignoreAltClip;
     public int supportsItems = -1;
     public int ambientSoundId = -1;
     public int ambientSoundHearDistance;
@@ -85,7 +85,7 @@ public class ObjectDefinition {
     int anInt5710;
     IterableNodeMap aClass465_5668;
 
-    public static void method8020() {
+    public static void pulseSounds() {
         MeshModifier.method7042();
         MaterialProp33.method15420();
         MaterialPropTexture.method15391();
@@ -236,7 +236,7 @@ public class ObjectDefinition {
         } else if (opcode == 73) {
             obstructsGround = true;
         } else if (opcode == 74) {
-            alt = true;
+            ignoreAltClip = true;
         } else if (opcode == 75) {
             supportsItems = buffer.readUnsignedByte();
         } else if (opcode != 77 && opcode != 92) {

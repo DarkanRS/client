@@ -57,18 +57,18 @@ public class Class174 {
         return bool_1;
     }
 
-    static void animateObject(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
-        if (i_2 >= 1 && i_3 >= 1 && i_2 <= IndexLoaders.MAP_REGION_DECODER.getSizeX() - 2 && i_3 <= IndexLoaders.MAP_REGION_DECODER.getSizeY() - 2) {
-            int i_9 = i_0;
-            if (i_0 < 3 && IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(i_2, i_3)) {
-                i_9 = i_0 + 1;
+    static void animateObject(int plane, int slot, int x, int y, int objectId, int rotation, int type, int animId) {
+        if (x >= 1 && y >= 1 && x <= IndexLoaders.MAP_REGION_DECODER.getSizeX() - 2 && y <= IndexLoaders.MAP_REGION_DECODER.getSizeY() - 2) {
+            int i_9 = plane;
+            if (plane < 3 && IndexLoaders.MAP_REGION_DECODER.getRenderFlags().isLowerObjectsToOverrideClipping(x, y)) {
+                i_9 = plane + 1;
             }
             if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager() != null) {
-                IndexLoaders.MAP_REGION_DECODER.method4441().method12475(Renderers.SOFTWARE_RENDERER, i_0, i_1, i_2, i_3, IndexLoaders.MAP_REGION_DECODER.getClipMap(i_0));
-                if (i_4 >= 0) {
+                IndexLoaders.MAP_REGION_DECODER.method4441().method12475(Renderers.SOFTWARE_RENDERER, plane, slot, x, y, IndexLoaders.MAP_REGION_DECODER.getClipMap(plane));
+                if (objectId >= 0) {
                     int i_10 = Class393.preferences.groundDecor.method12897();
                     Class393.preferences.setValue(Class393.preferences.groundDecor, 1);
-                    IndexLoaders.MAP_REGION_DECODER.method4441().method12459(Renderers.SOFTWARE_RENDERER, i_9, i_0, i_2, i_3, i_4, i_5, i_6, IndexLoaders.MAP_REGION_DECODER.getClipMap(i_0), i_7);
+                    IndexLoaders.MAP_REGION_DECODER.method4441().method12459(Renderers.SOFTWARE_RENDERER, i_9, plane, x, y, objectId, rotation, type, IndexLoaders.MAP_REGION_DECODER.getClipMap(plane), animId);
                     Class393.preferences.setValue(Class393.preferences.groundDecor, i_10);
                 }
             }

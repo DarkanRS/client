@@ -24,7 +24,7 @@ public class Class388 implements Interface41 {
     }
 
     static boolean method6693() {
-        return client.gameState == 5 && (!JS5CacheFile.method3360() && !Class85.method1466());
+        return client.GAME_STATE == 5 && (!JS5CacheFile.method3360() && !Class85.method1466());
     }
 
     static void method6694(Class200 class200_0, int i_1, int i_2, int i_3, MeshRasterizer meshrasterizer_4) {

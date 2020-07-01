@@ -123,11 +123,11 @@ public class SpotAnimation extends GraphNode_Sub1_Sub1 {
         ParticleEmitterConfig[] arr_5 = meshrasterizer_2.method11253();
         SurfaceSkin[] arr_6 = meshrasterizer_2.method11274();
         if ((aClass539_10409 == null || aClass539_10409.aBool7132) && (arr_5 != null || arr_6 != null)) {
-            aClass539_10409 = ParticleSystem.method11557(client.cycles, true);
+            aClass539_10409 = ParticleSystem.method11557(client.CYCLES_20MS, true);
         }
 
         if (aClass539_10409 != null) {
-            aClass539_10409.method11511(graphicalrenderer_1, client.cycles, arr_5, arr_6);
+            aClass539_10409.method11511(graphicalrenderer_1, client.CYCLES_20MS, arr_5, arr_6);
             aClass539_10409.method11515(plane);
         }
 

@@ -1,6 +1,6 @@
 package com.jagex;
 
-public abstract class Class273 {
+public abstract class FPSManager {
 
     static void method4866(int i_0, int i_1, int i_2, int i_3) {
         int i_5 = 0;
@@ -49,41 +49,27 @@ public abstract class Class273 {
         }
     }
 
-    int method4842(long long_1) {
-        long long_3 = method4844();
-        if (long_3 > 0L) {
-            Class89.sleep(long_3);
+    int lockTime(long time) {
+        long sleepTime = method4844();
+        if (sleepTime > 0L) {
+            Class89.sleep(sleepTime);
         }
-        return method4845(long_1);
+        return method4845(time);
     }
 
     abstract long method4844();
 
     abstract int method4845(long var1);
 
-    abstract long method4846();
-
-    abstract void method4847();
-
-    abstract void method4848();
-
-    abstract void method4849();
-
-    abstract long method4851();
-
     abstract long method4852();
 
     abstract void method4853();
 
-    abstract int method4854(long var1);
-
-    abstract void method4855();
-
-    abstract long method4856();
-
-    abstract long method4857();
-
-    abstract long method4861();
-
-    abstract int method4862(long var1);
+	public static FPSManager createFPSManager() {
+	    try {
+	        return new NativeNanoTimeFPSManager();
+	    } catch (Throwable t) {
+	        return new JavaNanoTimeFPSManager();
+	    }
+	}
 }

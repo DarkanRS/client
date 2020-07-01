@@ -52,7 +52,7 @@ public class Class239 {
     }
 
     public void method4037(MapRegion mapregion_1) {
-        if (!Class97.loggedOutState(client.gameState) && !Node_Sub17.inLobby(client.gameState)) {
+        if (!GameState.loggedOut(client.GAME_STATE) && !GameState.inLobby(client.GAME_STATE)) {
             int i_3 = -1;
             int i_4 = -1;
             if (VertexNormal.MY_PLAYER != null) {

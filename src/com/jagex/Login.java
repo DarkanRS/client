@@ -70,7 +70,7 @@ public class Login {
                         tcpmessage_2.buffer.writeInt(727);
                         tcpmessage_2.buffer.writeInt(1);
                         if (Class9.lobbyStage == 273) {
-                            tcpmessage_2.buffer.writeByte(client.gameState == 10 ? 1 : 0);
+                            tcpmessage_2.buffer.writeByte(client.GAME_STATE == 10 ? 1 : 0);
                         }
                         ByteBuf rsbytebuffer_4 = Class94.method1587();
                         rsbytebuffer_4.writeByte(Class9.anInt76);
@@ -180,7 +180,7 @@ public class Login {
                         if (!Class9.socialNetworkLogin) {
                             rsbitsbuffer_22.writeInt(727);
                             rsbitsbuffer_22.writeInt(1);
-                            rsbitsbuffer_22.writeByte(client.gameState == 10 ? 1 : 0);
+                            rsbitsbuffer_22.writeByte(client.GAME_STATE == 10 ? 1 : 0);
                             i_6 = rsbitsbuffer_22.index;
                             rsbytebuffer_7 = ChatLine.getLoginMod();
                             rsbitsbuffer_22.writeBytes(rsbytebuffer_7.buffer, 0, rsbytebuffer_7.index);
@@ -397,7 +397,7 @@ public class Login {
                             client.IS_MEMBER = buffer.readUnsignedByte() == 1;
                             Class504.PLAYER_DOB = buffer.read24BitInteger();
                             client.membersWorld = buffer.readUnsignedByte() == 1;
-                            RegionMap.aString3643 = buffer.readString();
+                            RenderFlagMap.aString3643 = buffer.readString();
                             IndexLoaders.MAP_REGION_DECODER.method4436().method7912(client.membersWorld);
                             IndexLoaders.MAP_REGION_LOADER_THREAD.method6052().method4436().method7912(client.membersWorld);
                             IndexLoaders.ITEM_LOADER.method7148(client.membersWorld);
@@ -434,7 +434,7 @@ public class Login {
                             UID192.anInt5357 = buffer.readUnsignedShort();
                             Class464.aBool5556 = buffer.readUnsignedByte() == 1;
                             VertexNormal.MY_PLAYER.displayName = VertexNormal.MY_PLAYER.username = RuntimeException_Sub3.MY_PLAYER_USERNAME = buffer.readGJString();
-                            RegionMap.anInt3644 = buffer.readUnsignedByte();
+                            RenderFlagMap.anInt3644 = buffer.readUnsignedByte();
                             Class121.anInt1526 = buffer.readInt();
                             client.aBool7323 = buffer.readUnsignedByte() == 1;
                             Class448.CONNECTION_INFO = new ConnectionInfo();
@@ -475,7 +475,7 @@ public class Login {
                             Class9.loginStage = 2;
                             FontRenderer_Sub1.method13784(2);
                             Static.method6377();
-                            Class365.setGameState(0);
+                            GameState.setGameState(0);
                             Class9.CURRENT_CONNECTION_CONTEXT.currentPacket = null;
                             return;
                         }

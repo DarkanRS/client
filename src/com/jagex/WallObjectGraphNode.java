@@ -2,7 +2,7 @@ package com.jagex;
 
 import java.io.IOException;
 
-public class GraphNode_Sub1_Sub5_Sub1 extends GraphNode_Sub1_Sub5 implements Location {
+public class WallObjectGraphNode extends GraphNode_Sub1_Sub5 implements WorldObject {
 
     static int anInt10526;
     static Class194 aClass194_10527;
@@ -20,7 +20,7 @@ public class GraphNode_Sub1_Sub5_Sub1 extends GraphNode_Sub1_Sub5 implements Loc
     boolean aBool10516;
     MeshRasterizer aMeshRasterizer_10513;
 
-    public GraphNode_Sub1_Sub5_Sub1(SceneObjectManager sceneobjectmanager_1, AbstractRenderer graphicalrenderer_2, LocationIndexLoader objectindexloader_3, ObjectDefinition objectdefinitions_4, int i_5, int i_6, int i_7, int i_8, int i_9, boolean bool_10, int i_11, int i_12, boolean bool_13) {
+    public WallObjectGraphNode(SceneObjectManager sceneobjectmanager_1, AbstractRenderer graphicalrenderer_2, LocationIndexLoader objectindexloader_3, ObjectDefinition objectdefinitions_4, int i_5, int i_6, int i_7, int i_8, int i_9, boolean bool_10, int i_11, int i_12, boolean bool_13) {
         super(sceneobjectmanager_1, i_7, i_8, i_9, i_5, i_6, Class235.method3967(i_11, i_12));
         aClass474_10515 = objectindexloader_3;
         anInt10514 = objectdefinitions_4.id;
@@ -122,7 +122,7 @@ public class GraphNode_Sub1_Sub5_Sub1 extends GraphNode_Sub1_Sub5 implements Loc
 
                             client.LOBBY_CONNECTION_CONTEXT.aClass432_2295 = new Isaac(ints_8);
                             client.LOBBY_CONNECTION_CONTEXT.recievedBuffer.setIsaacCipher(client.LOBBY_CONNECTION_CONTEXT.aClass432_2295);
-                            Class365.setGameState(3);
+                            GameState.setGameState(3);
                             client.LOBBY_CONNECTION_CONTEXT.clearAllQueuedPackets();
                             client.LOBBY_CONNECTION_CONTEXT.recievedBuffer.index = 0;
                             client.LOBBY_CONNECTION_CONTEXT.lastPacket = null;
@@ -250,8 +250,8 @@ public class GraphNode_Sub1_Sub5_Sub1 extends GraphNode_Sub1_Sub5 implements Loc
 
     @Override
     void method13016(GraphNode_Sub1 class521_sub1_2, int i_3, int i_4, int i_5, boolean bool_6) {
-        if (class521_sub1_2 instanceof GraphNode_Sub1_Sub5_Sub1) {
-            GraphNode_Sub1_Sub5_Sub1 class521_sub1_sub5_sub1_7 = (GraphNode_Sub1_Sub5_Sub1) class521_sub1_2;
+        if (class521_sub1_2 instanceof WallObjectGraphNode) {
+            WallObjectGraphNode class521_sub1_sub5_sub1_7 = (WallObjectGraphNode) class521_sub1_2;
             if (aMeshRasterizer_10513 != null && class521_sub1_sub5_sub1_7.aMeshRasterizer_10513 != null) {
                 aMeshRasterizer_10513.method11269(class521_sub1_sub5_sub1_7.aMeshRasterizer_10513, i_3, i_4, i_5, bool_6);
             }
@@ -486,8 +486,8 @@ public class GraphNode_Sub1_Sub5_Sub1 extends GraphNode_Sub1_Sub5 implements Loc
 
     @Override
     void method13013(GraphNode_Sub1 class521_sub1_2, int i_3, int i_4, int i_5, boolean bool_6) {
-        if (class521_sub1_2 instanceof GraphNode_Sub1_Sub5_Sub1) {
-            GraphNode_Sub1_Sub5_Sub1 class521_sub1_sub5_sub1_8 = (GraphNode_Sub1_Sub5_Sub1) class521_sub1_2;
+        if (class521_sub1_2 instanceof WallObjectGraphNode) {
+            WallObjectGraphNode class521_sub1_sub5_sub1_8 = (WallObjectGraphNode) class521_sub1_2;
             if (aMeshRasterizer_10513 != null && class521_sub1_sub5_sub1_8.aMeshRasterizer_10513 != null) {
                 aMeshRasterizer_10513.method11269(class521_sub1_sub5_sub1_8.aMeshRasterizer_10513, i_3, i_4, i_5, bool_6);
             }

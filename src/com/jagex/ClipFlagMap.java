@@ -2,7 +2,7 @@ package com.jagex;
 
 import java.util.ArrayList;
 
-public class ClipMap {
+public class ClipFlagMap {
 
     static int anInt3968;
     public int[][] map;

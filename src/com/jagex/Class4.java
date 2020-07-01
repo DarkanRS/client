@@ -26,7 +26,7 @@ public class Class4 {
             int i_20 = (int) f_18 >> 9;
             if (i_19 > 0 && i_20 > 0 && i_19 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && i_20 < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
                 int i_21 = VertexNormal.MY_PLAYER.plane;
-                if (i_21 < 3 && (IndexLoaders.MAP_REGION_DECODER.method4433().tileMasks[1][i_19][i_20] & 0x2) != 0) {
+                if (i_21 < 3 && (IndexLoaders.MAP_REGION_DECODER.getRenderFlags().tileMasks[1][i_19][i_20] & 0x2) != 0) {
                     ++i_21;
                 }
                 int i_22 = sceneobjectmanager_15.aGroundArray2607[i_21].averageHeight((int) f_16, (int) f_18);

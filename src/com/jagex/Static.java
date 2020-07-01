@@ -118,7 +118,7 @@ public class Static {
     }
 
     static void method4281(PathingEntity animable_0) {
-        int i_2 = animable_0.forceMovementT1Delay - client.cycles;
+        int i_2 = animable_0.forceMovementT1Delay - client.CYCLES_20MS;
         int i_3 = animable_0.forceMovementT1XOff * 512 + animable_0.getSize() * 256;
         int i_4 = animable_0.forceMovementT1YOff * 512 + animable_0.getSize() * 256;
         Vector3 vector3_5 = animable_0.method11166().coords;
@@ -210,7 +210,7 @@ public class Static {
 
 	static void method13042(AbstractRenderer graphicalrenderer_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
 	    SceneObjectManager sceneobjectmanager_9 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager();
-	    Location sceneobject_10 = (Location) sceneobjectmanager_9.getWall(i_1, i_2, i_3);
+	    WorldObject sceneobject_10 = (WorldObject) sceneobjectmanager_9.getWall(i_1, i_2, i_3);
 	    ObjectDefinition objectdefinitions_11;
 	    int i_12;
 	    int i_13;
@@ -261,7 +261,7 @@ public class Static {
 	            }
 	        }
 	    }
-	    sceneobject_10 = (Location) sceneobjectmanager_9.getInteractableObject(i_1, i_2, i_3, client.anInterface25_7446);
+	    sceneobject_10 = (WorldObject) sceneobjectmanager_9.getInteractableObject(i_1, i_2, i_3, client.anInterface25_7446);
 	    if (sceneobject_10 != null) {
 	        objectdefinitions_11 = IndexLoaders.MAP_REGION_DECODER.method4436().getObjectDefs(sceneobject_10.getId());
 	        i_12 = sceneobject_10.method92() & 0x3;
@@ -280,7 +280,7 @@ public class Static {
 	            }
 	        }
 	    }
-	    sceneobject_10 = (Location) sceneobjectmanager_9.getGroundDecoration(i_1, i_2, i_3);
+	    sceneobject_10 = (WorldObject) sceneobjectmanager_9.getGroundDecoration(i_1, i_2, i_3);
 	    if (sceneobject_10 != null) {
 	        objectdefinitions_11 = IndexLoaders.MAP_REGION_DECODER.method4436().getObjectDefs(sceneobject_10.getId());
 	        i_12 = sceneobject_10.method92() & 0x3;

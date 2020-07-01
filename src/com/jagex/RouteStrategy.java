@@ -23,5 +23,5 @@ public abstract class RouteStrategy {
         PingRequester.anInt5864 = -1;
     }
 
-    public abstract boolean canExit(int size, int x, int y, ClipMap var4);
+    public abstract boolean canExit(int size, int x, int y, ClipFlagMap var4);
 }

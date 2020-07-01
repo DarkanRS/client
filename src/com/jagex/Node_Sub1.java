@@ -8,7 +8,7 @@ public abstract class Node_Sub1 extends Node {
                 Class9.aLong77 = -1L;
             }
             Class9.anInt76 = i_0;
-            Class365.setGameState(19);
+            GameState.setGameState(19);
         }
     }
 

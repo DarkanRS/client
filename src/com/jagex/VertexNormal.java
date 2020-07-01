@@ -15,15 +15,6 @@ public class VertexNormal {
         anInt810 = i_4;
     }
 
-    public static Class273 method1461() {
-        try {
-            Class273_Sub1 class273_sub1_1 = new Class273_Sub1();
-            return class273_sub1_1;
-        } catch (Throwable throwable_3) {
-            return new Class273_Sub2();
-        }
-    }
-
     static boolean method1465() {
         return Class86.method1481(Class149_Sub2.DEFAULTS_LOADER_7.aClass232_5873);
     }

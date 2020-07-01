@@ -34,14 +34,14 @@ public class CursorIndexLoader {
         Class260.anInt3223 = -1;
         Class260.aBool3220 = false;
         GraphicsPreference.method12658();
-        ClipMap.method6008(true);
+        ClipFlagMap.method6008(true);
         Class459.method7678();
         Class204.method3367();
         Class42_Sub1.method14562();
         if (bool_0) {
-            Class365.setGameState(12);
+            GameState.setGameState(12);
         } else {
-            Class365.setGameState(5);
+            GameState.setGameState(5);
             try {
                 Class441.method7377(SubInterface.suppliedApplet, "loggedout");
             } catch (Throwable ignored) {
@@ -76,8 +76,8 @@ public class CursorIndexLoader {
                 }
             }
         }
-        ProjectileAnimation projectile = new ProjectileAnimation(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), spotAnimId, Class272.UPDATE_ZONE_PLANE, Class272.UPDATE_ZONE_PLANE, localX, localY, startHeight, startTime + client.cycles, endTime + client.cycles, angle, slope, source, lockOn, endHeight, useFloorHeight, basOffIdx);
-        projectile.start(xOff, yOff, Class504.getTerrainHeightAtPos(xOff, yOff, Class272.UPDATE_ZONE_PLANE) - endHeight, startTime + client.cycles);
+        ProjectileAnimation projectile = new ProjectileAnimation(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), spotAnimId, Class272.UPDATE_ZONE_PLANE, Class272.UPDATE_ZONE_PLANE, localX, localY, startHeight, startTime + client.CYCLES_20MS, endTime + client.CYCLES_20MS, angle, slope, source, lockOn, endHeight, useFloorHeight, basOffIdx);
+        projectile.start(xOff, yOff, Class504.getTerrainHeightAtPos(xOff, yOff, Class272.UPDATE_ZONE_PLANE) - endHeight, startTime + client.CYCLES_20MS);
         client.PROJECTILES.append(new ProjectileNode(projectile));
     }
 

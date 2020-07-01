@@ -26,30 +26,30 @@ public class Class435 {
                 for (int i_5 = 0; i_5 < arr_3[i_4].length; i_5++) {
                     Class293 class293_6 = arr_3[i_4][i_5];
                     if (class293_6 != null) {
-                        if (class293_6.aTransform_Sub1_Sub3_3499 instanceof Location) {
-                            ((Location) class293_6.aTransform_Sub1_Sub3_3499).method85();
+                        if (class293_6.aTransform_Sub1_Sub3_3499 instanceof WorldObject) {
+                            ((WorldObject) class293_6.aTransform_Sub1_Sub3_3499).method85();
                         }
 
-                        if (class293_6.aTransform_Sub1_Sub4_3503 instanceof Location) {
-                            ((Location) class293_6.aTransform_Sub1_Sub4_3503).method85();
+                        if (class293_6.aTransform_Sub1_Sub4_3503 instanceof WorldObject) {
+                            ((WorldObject) class293_6.aTransform_Sub1_Sub4_3503).method85();
                         }
 
-                        if (class293_6.aTransform_Sub1_Sub4_3500 instanceof Location) {
-                            ((Location) class293_6.aTransform_Sub1_Sub4_3500).method85();
+                        if (class293_6.aTransform_Sub1_Sub4_3500 instanceof WorldObject) {
+                            ((WorldObject) class293_6.aTransform_Sub1_Sub4_3500).method85();
                         }
 
-                        if (class293_6.aTransform_Sub1_Sub5_3505 instanceof Location) {
-                            ((Location) class293_6.aTransform_Sub1_Sub5_3505).method85();
+                        if (class293_6.aTransform_Sub1_Sub5_3505 instanceof WorldObject) {
+                            ((WorldObject) class293_6.aTransform_Sub1_Sub5_3505).method85();
                         }
 
-                        if (class293_6.aTransform_Sub1_Sub5_3502 instanceof Location) {
-                            ((Location) class293_6.aTransform_Sub1_Sub5_3502).method85();
+                        if (class293_6.aTransform_Sub1_Sub5_3502 instanceof WorldObject) {
+                            ((WorldObject) class293_6.aTransform_Sub1_Sub5_3502).method85();
                         }
 
                         for (Class208 class208_7 = class293_6.aClass208_3504; class208_7 != null; class208_7 = class208_7.aClass208_2660) {
                             GraphNode_Sub1_Sub1 class521_sub1_sub1_8 = class208_7.aTransform_Sub1_Sub1_2659;
-                            if (class521_sub1_sub1_8 instanceof Location) {
-                                ((Location) class521_sub1_sub1_8).method85();
+                            if (class521_sub1_sub1_8 instanceof WorldObject) {
+                                ((WorldObject) class521_sub1_sub1_8).method85();
                             }
                         }
                     }
@@ -215,7 +215,7 @@ public class Class435 {
                 Exception_Sub3.method15619(true);
                 Node_Sub15_Sub1.method14840();
             } else {
-                GraphNode_Sub1_Sub5_Sub1.aClass194_10527 = new Class194(graphicalrenderer_0, 30, Class351.gameCanvas);
+                WallObjectGraphNode.aClass194_10527 = new Class194(graphicalrenderer_0, 30, Class351.gameCanvas);
                 Class291_Sub1.anInt8015 = 100;
                 Exception_Sub3.method15619(true);
                 Node_Sub15_Sub1.method14840();

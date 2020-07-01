@@ -49,7 +49,7 @@ public class QuickchatMessageLoader {
                 Vector3 vector3_17 = VertexNormal.MY_PLAYER.method11166().coords;
                 i_5 = (int) vector3_17.x;
                 int i_6 = (int) vector3_17.z;
-                RegionMap regionmap_7 = IndexLoaders.MAP_REGION_DECODER.method4433();
+                RenderFlagMap regionmap_7 = IndexLoaders.MAP_REGION_DECODER.getRenderFlags();
                 SceneObjectManager sceneobjectmanager_8 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager();
                 int i_9;
                 if (NativeLibraryLoader.anInt3240 != 2 && PingRequester.anInt5864 == -1) {

@@ -50,7 +50,7 @@ public class ParticleProducer {
     }
 
     static void method11501() {
-        CutsceneAction_Sub12.method14614(Renderers.SOFTWARE_RENDERER, client.cycles);
+        CutsceneAction_Sub12.method14614(Renderers.SOFTWARE_RENDERER, client.CYCLES_20MS);
         if (client.BASE_WINDOW_ID != -1) {
             CS2Interface.method8777(client.BASE_WINDOW_ID);
         }
@@ -61,7 +61,7 @@ public class ParticleProducer {
             client.aBoolArray7443[i_1] = false;
         }
 
-        client.anInt7408 = client.cycles;
+        client.anInt7408 = client.CYCLES_20MS;
         if (client.BASE_WINDOW_ID != -1) {
             client.anInt7407 = 0;
             StructIndexLoader.method7039();

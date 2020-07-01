@@ -19,7 +19,7 @@ public class ChatLine {
     public String message;
 
     ChatLine(int type, int effectFlags, String crownedName, String name, String nameSimple, String clan, int i_7, String message) {
-        time = client.cycles;
+        time = client.CYCLES_20MS;
         this.type = type;
         this.effectFlags = effectFlags;
         this.crownedName = crownedName;
@@ -79,7 +79,7 @@ public class ChatLine {
 
     void set(int type, int i_2, String string_3, String string_4, String string_5, String string_6, int i_7, String string_8) {
         anInt1085 = MaterialProp25.method15396();
-        time = client.cycles;
+        time = client.CYCLES_20MS;
         this.type = type;
         effectFlags = i_2;
         crownedName = string_3;

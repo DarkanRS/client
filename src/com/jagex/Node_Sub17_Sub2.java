@@ -2,7 +2,7 @@ package com.jagex;
 
 public class Node_Sub17_Sub2 extends Node_Sub17 {
 
-    public static boolean[] VARC_BOOL;
+    public static boolean[] IS_VARC_SAVE_TO_FILE;
     static FontMetrics aClass414_9933;
     int anInt9932;
     Class348 this$0;

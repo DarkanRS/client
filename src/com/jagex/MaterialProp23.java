@@ -12,7 +12,8 @@ public class MaterialProp23 extends MaterialProperty {
         super(1, false);
     }
 
-    static void method15386() {
+    //Every 20ms pulsed (50 fps lock)
+    static void pulseLoggedInLogic() {
         if (client.REBOOT_TIMER > 1) {
             --client.REBOOT_TIMER;
             client.anInt7397 = client.anInt7347;
@@ -26,7 +27,7 @@ public class MaterialProp23 extends MaterialProperty {
             }
             for (int i_1 = 0; i_1 < 100 && FontRenderer_Sub3.method14338(client.GAME_CONNECTION_CONTEXT); i_1++) {
             }
-            if (client.gameState == 13) {
+            if (client.GAME_STATE == 13) {
                 int i_2;
                 TCPPacket tcpmessage_6;
                 while (HashTableIterator.hasValues()) {
@@ -68,7 +69,7 @@ public class MaterialProp23 extends MaterialProperty {
                     client.aFloat7266 /= 2.0F;
                 }
                 MaterialProp30.method15240();
-                if (client.gameState == 13) {
+                if (client.GAME_STATE == 13) {
                     IndexLoaders.MAP_REGION_DECODER.method4435().method4037(IndexLoaders.MAP_REGION_DECODER);
                     Class350_Sub1.method12516();
                     Interface.method1623();
@@ -88,15 +89,15 @@ public class MaterialProp23 extends MaterialProperty {
                                 IndexLoaders.MAP_REGION_DECODER.method4499(new Class335(Class256.aClass256_3153, null));
                                 client.anInt7341 = 0;
                             }
-                            if (client.anInt7341 == 0 && client.gameState != 18) {
+                            if (client.anInt7341 == 0 && client.GAME_STATE != 18) {
                                 Class86.aClass465_823.method7749();
                                 client.anInt7341 = 4;
-                                client.anInt7357 = client.cycles;
+                                client.anInt7357 = client.CYCLES_20MS;
                                 client.anInt7235 = 0;
                                 ParticleTriangle.method3953();
                             }
                             if (client.anInt7341 == 4) {
-                                i_2 = client.cycles - client.anInt7357;
+                                i_2 = client.CYCLES_20MS - client.anInt7357;
                                 if (client.anInt7235 < Class86.aCutsceneActionArray822.length) {
                                     do {
                                         CutsceneAction class96_3 = Class86.aCutsceneActionArray822[client.anInt7235];
@@ -186,8 +187,8 @@ public class MaterialProp23 extends MaterialProperty {
                                                             for (i_2 = 0; i_2 < 5; i_2++) {
                                                                 ++client.anIntArray7435[i_2];
                                                             }
-                                                            if (client.aBool7400 && client.aLong7401 < Utils.time() - 60000L) {
-                                                                Node_Sub11.method12211();
+                                                            if (client.NEEDS_VARC_SAVE && client.aLong7401 < Utils.time() - 60000L) {
+                                                                Node_Sub11.saveVarcsToFile();
                                                             }
                                                             for (EntityNode_Sub4 class275_sub4_15 = (EntityNode_Sub4) client.aClass457_7350.method7659(); class275_sub4_15 != null; class275_sub4_15 = (EntityNode_Sub4) client.aClass457_7350.method7650()) {
                                                                 if (class275_sub4_15.anInt7838 < Utils.time() / 1000L - 5L) {

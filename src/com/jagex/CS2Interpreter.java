@@ -3229,7 +3229,7 @@ public class CS2Interpreter {
             UID192.method7373(Class393.preferences.screenSize.method12687(), -1, -1, false);
         }
         if (NamedFileReference.method867() == Class279.aClass279_3368) {
-            Node_Sub11.method12211();
+            Node_Sub11.saveVarcsToFile();
             System.exit(0);
         } else {
             Class480.method8043();
@@ -3313,7 +3313,7 @@ public class CS2Interpreter {
     }
 
     static void setPingWorlds(CS2Executor executor) {
-        if (client.gameState == 0) {
+        if (client.GAME_STATE == 0) {
             Class448.PING_WORLDS = executor.intStack[--executor.intStackPtr] == 1;
         }
     }
@@ -3643,7 +3643,7 @@ public class CS2Interpreter {
         int i_2 = executor.intOpValues[executor.instrPtr];
         Class320.VARC_INT[i_2] = executor.intStack[--executor.intStackPtr];
         MaterialProp26.method15264(i_2);
-        client.aBool7400 |= Node_Sub17_Sub2.VARC_BOOL[i_2];
+        client.NEEDS_VARC_SAVE |= Node_Sub17_Sub2.IS_VARC_SAVE_TO_FILE[i_2];
     }
 
     static void method5099(CS2Executor executor) {
@@ -3756,7 +3756,7 @@ public class CS2Interpreter {
 
     static void method13494(CS2Executor executor) {
         String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
-        if (RegionMap.aString3643 != null && RegionMap.aString3643.equalsIgnoreCase(string_2)) {
+        if (RenderFlagMap.aString3643 != null && RenderFlagMap.aString3643.equalsIgnoreCase(string_2)) {
             executor.intStack[++executor.intStackPtr - 1] = 1;
         } else {
             executor.intStack[++executor.intStackPtr - 1] = 0;
@@ -4341,7 +4341,7 @@ public class CS2Interpreter {
     static void method5010(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
         String string_3 = (String) executor.stringStack[--executor.stringStackPtr];
-        if (client.gameState == 0 && !JS5CacheFile.method3360()) {
+        if (client.GAME_STATE == 0 && !JS5CacheFile.method3360()) {
             executor.intStack[++executor.intStackPtr - 1] = Class62.setGameHost(i_2, string_3) ? 1 : 0;
         } else {
             executor.intStack[++executor.intStackPtr - 1] = 0;
@@ -5209,7 +5209,7 @@ public class CS2Interpreter {
 
     static void sendAClass379_4624(CS2Executor executor) {
         String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
-        if (client.gameState == 0 && !JS5CacheFile.method3360()) {
+        if (client.GAME_STATE == 0 && !JS5CacheFile.method3360()) {
             if (string_2.length() > 20) {
                 client.aByte7458 = -4;
             } else {
@@ -5387,7 +5387,7 @@ public class CS2Interpreter {
     }
 
     static void method6317(CS2Executor executor) {
-        executor.intStack[++executor.intStackPtr - 1] = TextureDetails.method2875(client.gameState) ? 1 : 0;
+        executor.intStack[++executor.intStackPtr - 1] = GameState.loggedIn(client.GAME_STATE) ? 1 : 0;
     }
 
     static void method6318(CS2Executor executor) {
@@ -6736,7 +6736,7 @@ public class CS2Interpreter {
         int i_2 = executor.intStack[--executor.intStackPtr];
         int i_3 = Class393.preferences.musicVolume.method12714();
         if (i_2 != i_3) {
-            if (TextureDetails.method2875(client.gameState)) {
+            if (GameState.loggedIn(client.GAME_STATE)) {
                 if (i_3 == 0 && Class260.anInt3223 != -1) {
                     Class11.method13400(IndexLoaders.MUSIC_INDEX, Class260.anInt3223, i_2);
                     GraphicsPreference.method12658();
@@ -7192,7 +7192,7 @@ public class CS2Interpreter {
         int i_2 = executor.intStack[--executor.intStackPtr];
         int i_3 = Class393.preferences.aPreference_Sub13_8229.method12714();
         if (i_3 != i_2 && Class260.anInt3228 == Class260.anInt3223) {
-            if (!TextureDetails.method2875(client.gameState)) {
+            if (!GameState.loggedIn(client.GAME_STATE)) {
                 if (i_3 == 0) {
                     Class11.method13400(IndexLoaders.MUSIC_INDEX, Class260.anInt3223, i_2);
                     GraphicsPreference.method12658();
@@ -7226,7 +7226,7 @@ public class CS2Interpreter {
     }
 
     static void method15437(CS2Executor executor) {
-        if (client.gameState == 0 && !JS5CacheFile.method3360()) {
+        if (client.GAME_STATE == 0 && !JS5CacheFile.method3360()) {
             if (Class448.aBool5422) {
                 executor.intStack[++executor.intStackPtr - 1] = 0;
             } else if (Class448.aLong5425 > Utils.time() - 1000L) {
@@ -9501,7 +9501,7 @@ public class CS2Interpreter {
     }
 
     static void method456(CS2Executor executor) {
-        executor.intStack[++executor.intStackPtr - 1] = client.cycles;
+        executor.intStack[++executor.intStackPtr - 1] = client.CYCLES_20MS;
     }
 
     static void method457(CS2Executor executor) {
@@ -10196,7 +10196,7 @@ public class CS2Interpreter {
     }
 
     static void method13467(CS2Executor executor) {
-        executor.intStack[++executor.intStackPtr - 1] = RegionMap.anInt3644;
+        executor.intStack[++executor.intStackPtr - 1] = RenderFlagMap.anInt3644;
     }
 
     static void getVarpbitOld(CS2Executor executor) {
@@ -11847,7 +11847,7 @@ public class CS2Interpreter {
             icomponentdefinitions_0.recolor(i_4, s_5, s_6);
             Class109.redrawComponent(icomponentdefinitions_0);
             if (icomponentdefinitions_0.slotId == -1 && !interface_1.aBool999) {
-                RegionMap.method5513(icomponentdefinitions_0.idHash, i_4);
+                RenderFlagMap.method5513(icomponentdefinitions_0.idHash, i_4);
             }
         }
     }

@@ -40,7 +40,7 @@ public class Class329 {
     protected SceneObjectManager sceneObjectManager;
     protected int maxX;
     protected int maxY;
-    protected RegionMap regionMap;
+    protected RenderFlagMap regionMap;
     protected byte[][][] aByteArrayArrayArray3794;
     int[] anIntArray3795;
     int[] anIntArray3796;
@@ -78,7 +78,7 @@ public class Class329 {
     byte[][][] overlayRotations;
     boolean aBool3854;
 
-    Class329(SceneObjectManager sceneobjectmanager_1, int i_2, int i_3, int i_4, boolean bool_5, OverlayIndexLoader class536_6, UnderlayIndexLoader underlayindexloader_7, RegionMap regionmap_8) {
+    Class329(SceneObjectManager sceneobjectmanager_1, int i_2, int i_3, int i_4, boolean bool_5, OverlayIndexLoader class536_6, UnderlayIndexLoader underlayindexloader_7, RenderFlagMap regionmap_8) {
         sceneObjectManager = sceneobjectmanager_1;
         anInt3845 = i_2;
         maxX = i_3;
@@ -101,7 +101,7 @@ public class Class329 {
         frame_1.dispose();
     }
 
-    static long method5905(Location sceneobject_0, int i_1, int i_2) {
+    static long method5905(WorldObject sceneobject_0, int i_1, int i_2) {
         long long_4 = 4194304L;
         long long_6 = Long.MIN_VALUE;
         ObjectDefinition objectdefinitions_8 = IndexLoaders.MAP_REGION_DECODER.method4436().getObjectDefs(sceneobject_0.getId());
@@ -270,14 +270,14 @@ public class Class329 {
         }
     }
 
-    public void decodeTileMasksUnderlay(ByteBuf rsbytebuffer_1, int i_2, int i_3, int i_4, int i_5, ClipMap[] arr_6) {
+    public void decodeTileMasksUnderlay(ByteBuf rsbytebuffer_1, int i_2, int i_3, int i_4, int i_5, ClipFlagMap[] arr_6) {
         int i_8;
         int i_10;
         int i_11;
         int i_12;
         if (!overlayHidden) {
             for (i_8 = 0; i_8 < 4; i_8++) {
-                ClipMap clipmap_14 = arr_6[i_8];
+                ClipFlagMap clipmap_14 = arr_6[i_8];
                 for (i_10 = 0; i_10 < 64; i_10++) {
                     for (i_11 = 0; i_11 < 64; i_11++) {
                         i_12 = i_10 + i_2;
@@ -300,13 +300,13 @@ public class Class329 {
         }
     }
 
-    public void method5841(ByteBuf rsbytebuffer_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, ClipMap[] arr_9) {
+    public void method5841(ByteBuf rsbytebuffer_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, ClipFlagMap[] arr_9) {
         int i_11 = (i_6 & 0x7) * 8;
         int i_12 = (i_7 & 0x7) * 8;
         int i_14;
         int i_17;
         if (!overlayHidden) {
-            ClipMap clipmap_13 = arr_9[i_2];
+            ClipFlagMap clipmap_13 = arr_9[i_2];
             for (i_14 = 0; i_14 < 8; i_14++) {
                 for (int i_15 = 0; i_15 < 8; i_15++) {
                     int i_16 = i_3 + Class112.method1871(i_14 & 0x7, i_15 & 0x7, i_8);
@@ -399,7 +399,7 @@ public class Class329 {
         }
     }
 
-    public void initClipMap(AbstractRenderer graphicalrenderer_1, int[][][] ints_2, ClipMap[] arr_3) {
+    public void initClipMap(AbstractRenderer graphicalrenderer_1, int[][][] ints_2, ClipFlagMap[] arr_3) {
         if (!overlayHidden) {
             for (int plane = 0; plane < 4; plane++) {
                 for (int x = 0; x < maxX; x++) {
@@ -560,7 +560,7 @@ public class Class329 {
                     i_33 = ground.getHeight(x + 1, y);
                     i_34 = ground.getHeight(x + 1, y + 1);
                     i_35 = ground.getHeight(x, y + 1);
-                    boolean bool_39 = regionMap.is0x2(x, y);
+                    boolean bool_39 = regionMap.isLowerObjectsToOverrideClipping(x, y);
                     if (bool_39 ? plane > 1 : plane > 0) {
                         boolean bool_37 = true;
                         if (underlay != null && !underlay.aBool5722) {
@@ -1262,7 +1262,7 @@ public class Class329 {
         int i_13 = class390_1.getHeight(i_7, i_6);
         int i_14 = class390_1.getHeight(i_7, i_8);
         int i_15 = class390_1.getHeight(i_5, i_8);
-        boolean bool_16 = regionMap.is0x2(i_5, i_6);
+        boolean bool_16 = regionMap.isLowerObjectsToOverrideClipping(i_5, i_6);
         if (bool_16 ? i_4 > 1 : i_4 > 0) {
             boolean bool_17 = true;
             if (underlaydef_2 != null && !underlaydef_2.aBool5722) {

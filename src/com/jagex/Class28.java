@@ -35,7 +35,7 @@ public class Class28 implements Interface2 {
                 icomponentdefinitions_0.anInt1339 = 0;
             } else {
                 icomponentdefinitions_0.spritePitch = 150;
-                icomponentdefinitions_0.spriteRoll = (int) (Math.sin(client.cycles / 40.0D) * 256.0D) & 0x7ff;
+                icomponentdefinitions_0.spriteRoll = (int) (Math.sin(client.CYCLES_20MS / 40.0D) * 256.0D) & 0x7ff;
                 icomponentdefinitions_0.modelType = ModelType.PLAYER_MODEL;
                 icomponentdefinitions_0.modelId = client.myPlayerIndex;
                 icomponentdefinitions_0.anInt1339 = Class272.stringToInt(VertexNormal.MY_PLAYER.displayName);

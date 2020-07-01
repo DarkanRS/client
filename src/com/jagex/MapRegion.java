@@ -38,7 +38,7 @@ public class MapRegion {
     int[][][] chunkFlags;
     int[][] anIntArrayArray3185;
     int[][] anIntArrayArray3186;
-    RegionMap aClass311_3202;
+    RenderFlagMap renderFlagMap;
     MapSize aClass106_3165;
     int anInt3170;
     int anInt3207;
@@ -49,7 +49,7 @@ public class MapRegion {
     Class329_Sub1 aClass329_Sub1_3167;
     Class341 aClass341_3181 = new Class341();
     float aFloat3173;
-    ClipMap[] clipMaps = new ClipMap[4];
+    ClipFlagMap[] clipMaps = new ClipFlagMap[4];
 
     public MapRegion(boolean bool_1) {
         aBool3171 = bool_1;
@@ -184,15 +184,15 @@ public class MapRegion {
             hdWaterLandscapeDataArchiveIds[regionId] = -1;
         }
         byte b_11;
-        if (client.gameState == 5) {
+        if (client.GAME_STATE == 5) {
             b_11 = 11;
-        } else if (client.gameState == 7) {
+        } else if (client.GAME_STATE == 7) {
             b_11 = 6;
-        } else if (client.gameState == 0) {
+        } else if (client.GAME_STATE == 0) {
             b_11 = 2;
         } else {
-            if (client.gameState != 3) {
-                throw new RuntimeException("" + client.gameState);
+            if (client.GAME_STATE != 3) {
+                throw new RuntimeException("" + client.GAME_STATE);
             }
             b_11 = 9;
         }
@@ -246,8 +246,8 @@ public class MapRegion {
         }
     }
 
-    public RegionMap method4433() {
-        return aClass311_3202;
+    public RenderFlagMap getRenderFlags() {
+        return renderFlagMap;
     }
 
     public Class239 method4435() {
@@ -463,7 +463,7 @@ public class MapRegion {
                 clipMaps[i_3] = Class403.createClipMap(sizeX, sizeY);
             }
             aByteArrayArrayArray3162 = new byte[4][sizeX][sizeY];
-            aClass311_3202 = new RegionMap(sizeX, sizeY);
+            renderFlagMap = new RenderFlagMap(sizeX, sizeY);
             method4446();
             aClass106_3165 = mapSize;
         }
@@ -492,7 +492,7 @@ public class MapRegion {
             anInt3170 = i_1;
             anInt3207 = i_2;
             if (!aBool3171) {
-                Class365.setGameState(i_3);
+                GameState.setGameState(i_3);
                 Class446.method7447(LocalizedText.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE), true, Renderers.SOFTWARE_RENDERER, Class16.aFontRenderer_144, Class16.aClass414_139);
             }
             if (coordGrid != null) {
@@ -636,7 +636,7 @@ public class MapRegion {
             Class187.anInt2359 -= i_4;
         }
         Class16.method566();
-        ClipMap.method6008(false);
+        ClipFlagMap.method6008(false);
         if (i_1 == 18) {
             client.anInt7262 -= i_3 * 512;
             client.anInt7376 -= i_4 * 512;
@@ -674,8 +674,8 @@ public class MapRegion {
                 clipMaps[i_2].initEmpty();
             }
         }
-        if (aClass311_3202 != null) {
-            aClass311_3202.reset();
+        if (renderFlagMap != null) {
+            renderFlagMap.reset();
         }
         if (aClass239_3175 != null) {
             aClass239_3175.method4044();
@@ -755,7 +755,7 @@ public class MapRegion {
                         i_4 = 10;
                         i_5 = 10;
                     }
-                    i_6 = RegionMap.decodeLandscapeData(objectDefsLoader, bytes_3, i_4, i_5, sizeX, sizeY);
+                    i_6 = RenderFlagMap.decodeLandscapeData(objectDefsLoader, bytes_3, i_4, i_5, sizeX, sizeY);
                     if (i_6 > 0) {
                         anInt3191 += i_6;
                     }
@@ -768,7 +768,7 @@ public class MapRegion {
                         i_4 = 10;
                         i_5 = 10;
                     }
-                    i_6 = RegionMap.decodeLandscapeData(objectDefsLoader, bytes_3, i_4, i_5, sizeX, sizeY);
+                    i_6 = RenderFlagMap.decodeLandscapeData(objectDefsLoader, bytes_3, i_4, i_5, sizeX, sizeY);
                     if (i_6 > 0) {
                         anInt3191 += i_6;
                     }
@@ -834,7 +834,7 @@ public class MapRegion {
                 }
                 aClass341_3181 = new Class341();
                 aFloat3173 = -0.05f + (float) (Math.random() / 10.0D);
-                aClass329_Sub1_3167 = new Class329_Sub1(sceneObjectManager, objectDefsLoader, 4, sizeX, sizeY, false, aClass311_3202, aClass239_3175);
+                aClass329_Sub1_3167 = new Class329_Sub1(sceneObjectManager, objectDefsLoader, 4, sizeX, sizeY, false, renderFlagMap, aClass239_3175);
                 aClass329_Sub1_3167.method5835();
                 aClass329_Sub1_3167.anInt3809 = Class393.preferences.sceneryShadows.method12624();
                 aClass329_Sub1_3167.highDetailWater = Class393.preferences.water.getValue() == 2;
@@ -853,7 +853,7 @@ public class MapRegion {
                 aClass239_3175.method4037(this);
                 if (highDetailWater) {
                     sceneObjectManager.method3380(true);
-                    highDetailWaterPlane = new Class329_Sub1(sceneObjectManager, objectDefsLoader, 1, sizeX, sizeY, true, aClass311_3202, aClass239_3175);
+                    highDetailWaterPlane = new Class329_Sub1(sceneObjectManager, objectDefsLoader, 1, sizeX, sizeY, true, renderFlagMap, aClass239_3175);
                     highDetailWaterPlane.method5835();
                     highDetailWaterPlane.anInt3809 = Class393.preferences.sceneryShadows.method12624();
                     highDetailWaterPlane.highDetailWater = Class393.preferences.water.getValue() == 2;
@@ -981,7 +981,7 @@ public class MapRegion {
                 ClanVarDefinitions.method6823();
                 Class48_Sub2.method14571();
                 TCPPacket tcpmessage_22;
-                if (NamedFileReference.method867() == Class279.aClass279_3368 && client.GAME_CONNECTION_CONTEXT.getConnection() != null && client.gameState == 18) {
+                if (NamedFileReference.method867() == Class279.aClass279_3368 && client.GAME_CONNECTION_CONTEXT.getConnection() != null && client.GAME_STATE == 18) {
                     tcpmessage_22 = Class271.createPacket(ClientProt.UNK_82, client.GAME_CONNECTION_CONTEXT.isaac);
                     tcpmessage_22.buffer.writeInt(1057001181);
                     client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_22);
@@ -1002,16 +1002,16 @@ public class MapRegion {
                         }
                     }
                 }
-                if (client.gameState == 11) {
-                    Class365.setGameState(5);
-                } else if (client.gameState == 2) {
-                    Class365.setGameState(0);
-                } else if (client.gameState == 6) {
-                    Class365.setGameState(7);
-                } else if (client.gameState == 9) {
-                    Class365.setGameState(3);
+                if (client.GAME_STATE == 11) {
+                    GameState.setGameState(5);
+                } else if (client.GAME_STATE == 2) {
+                    GameState.setGameState(0);
+                } else if (client.GAME_STATE == 6) {
+                    GameState.setGameState(7);
+                } else if (client.GAME_STATE == 9) {
+                    GameState.setGameState(3);
                 } else {
-                    Class365.setGameState(13);
+                    GameState.setGameState(13);
                     if (client.GAME_CONNECTION_CONTEXT.getConnection() != null) {
                         tcpmessage_22 = Class271.createPacket(ClientProt.REGION_LOADED_CONFIRM, client.GAME_CONNECTION_CONTEXT.isaac);
                         client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_22);
@@ -1166,7 +1166,7 @@ public class MapRegion {
                         client.NPC_MAP.put(class282_sub47_17, i_7);
                         client.NPC_ARRAY[++client.anInt7210 - 1] = class282_sub47_17;
                         client.NPC_UPDATE_INDICES[++client.NPC_UPDATE_INDEX - 1] = i_7;
-                        npc_16.lastUpdate = client.cycles;
+                        npc_16.lastUpdate = client.CYCLES_20MS;
                         npc_16.setDefinition(npcdefinitions_14);
                         npc_16.setBoundSize(npc_16.definitions.size);
                         npc_16.anInt10340 = npc_16.definitions.contrast << 3;
@@ -1346,7 +1346,7 @@ public class MapRegion {
             hdWaterMapDataBuffer = mapregion_2.hdWaterMapDataBuffer;
             hdWaterLandscapeDataBuffer = mapregion_2.hdWaterLandscapeDataBuffer;
             clipMaps = mapregion_2.clipMaps;
-            aClass311_3202 = mapregion_2.aClass311_3202;
+            renderFlagMap = mapregion_2.renderFlagMap;
             aClass239_3175 = mapregion_2.aClass239_3175;
             chunkFlags = mapregion_2.chunkFlags;
             anInt3177 = mapregion_2.anInt3177;
@@ -1364,20 +1364,20 @@ public class MapRegion {
             anInt3207 = mapregion_2.anInt3207;
             sizeX = mapregion_2.sizeX;
             sizeY = mapregion_2.sizeY;
-        } else if (client.gameState == 5) {
-            Class365.setGameState(11);
-        } else if (client.gameState == 0) {
-            Class365.setGameState(2);
-        } else if (client.gameState == 7) {
-            Class365.setGameState(6);
-        } else if (client.gameState == 13) {
-            Class365.setGameState(18);
-        } else if (client.gameState == 3) {
-            Class365.setGameState(9);
+        } else if (client.GAME_STATE == 5) {
+            GameState.setGameState(11);
+        } else if (client.GAME_STATE == 0) {
+            GameState.setGameState(2);
+        } else if (client.GAME_STATE == 7) {
+            GameState.setGameState(6);
+        } else if (client.GAME_STATE == 13) {
+            GameState.setGameState(18);
+        } else if (client.GAME_STATE == 3) {
+            GameState.setGameState(9);
         }
     }
 
-    public ClipMap getClipMap(int i_1) {
+    public ClipFlagMap getClipMap(int i_1) {
         return clipMaps[i_1];
     }
 }

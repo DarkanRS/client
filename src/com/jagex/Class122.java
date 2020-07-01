@@ -77,7 +77,7 @@ public class Class122 {
         ShaderLoader.aClass194_1243 = null;
         DefaultsFile.aClass194_6967 = null;
         RouteFinder.aClass194_3103 = null;
-        GraphNode_Sub1_Sub5_Sub1.aClass194_10527 = null;
+        WallObjectGraphNode.aClass194_10527 = null;
         if (Class291_Sub1.MAP_AREA_LOADER != null) {
             Class291_Sub1.MAP_AREA_LOADER.method3699();
             Class291_Sub1.MAP_AREA_LOADER.method3697(128, 64);

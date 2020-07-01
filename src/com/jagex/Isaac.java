@@ -38,7 +38,7 @@ public class Isaac {
         while (client.camAngleY < 0.0F) {
             client.camAngleY += 16384.0F;
         }
-        RegionMap regionmap_1 = IndexLoaders.MAP_REGION_DECODER.method4433();
+        RenderFlagMap regionmap_1 = IndexLoaders.MAP_REGION_DECODER.getRenderFlags();
         SceneObjectManager sceneobjectmanager_2 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager();
         int i_3 = Class11.anInt122 >> 9;
         int i_4 = Class266.anInt3289 >> 9;
@@ -48,7 +48,7 @@ public class Isaac {
             for (int x = i_3 - 4; x <= i_3 + 4; x++) {
                 for (int y = i_4 - 4; y <= i_4 + 4; y++) {
                     int i_9 = Class4.MY_PLAYER_PLANE;
-                    if (i_9 < 3 && regionmap_1.is0x2(x, y)) {
+                    if (i_9 < 3 && regionmap_1.isLowerObjectsToOverrideClipping(x, y)) {
                         ++i_9;
                     }
                     int i_10 = 0;

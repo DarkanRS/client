@@ -28,7 +28,7 @@ public enum UpdateZonePacket {
         if (i_0 - i_2 >= Class532_Sub3.anInt7071 && i_0 + i_2 <= Class532_Sub3.anInt7069 && i_1 - i_2 >= Class532_Sub3.anInt7070 && i_2 + i_1 <= Class532_Sub3.anInt7068) {
             IdentiKitIndexLoader.method813(i_0, i_1, i_2, i_3);
         } else {
-            Class273.method4866(i_0, i_1, i_2, i_3);
+            FPSManager.method4866(i_0, i_1, i_2, i_3);
         }
     }
 }

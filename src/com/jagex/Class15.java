@@ -43,7 +43,7 @@ class Class15 implements Interface35 {
         return stringbuilder_2.toString();
     }
 
-    public static void method549(ClientTriggerType class397_0, int i_1, Location sceneobject_3) {
+    public static void method549(ClientTriggerType class397_0, int i_1, WorldObject sceneobject_3) {
         CS2Executor cs2executor_5 = CS2Executor.getNextScriptExecutor();
         cs2executor_5.currentLocation = sceneobject_3;
         CS2Executor.method1834(class397_0, i_1, -1, cs2executor_5);

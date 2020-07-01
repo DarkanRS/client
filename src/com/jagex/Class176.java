@@ -34,7 +34,7 @@ public class Class176 {
     }
 
     static long method2979() {
-        return Engine.aClass273_3244.method4852();
+        return Engine.FPS_MANAGER.method4852();
     }
 
     static boolean method2980(int i_0) {

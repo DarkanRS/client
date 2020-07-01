@@ -541,7 +541,7 @@ public class MIDIInstrument extends Node {
 
     public Node_Sub26_Sub1_Sub1 method12272() {
         Class2.method263(this);
-        return !method12276() || anInt7636 > anInt7605 && anInt7638 > anInt7605 / Class204.method3363() ? new Node_Sub26_Sub1_Sub1(anInt7605, aFloatArray7608, anInt7616, anInt7604, aBool7609) : null;
+        return !method12276() || anInt7636 > anInt7605 && anInt7638 > anInt7605 / Class204.getFpsCap() ? new Node_Sub26_Sub1_Sub1(anInt7605, aFloatArray7608, anInt7616, anInt7604, aBool7609) : null;
     }
 
     int method12273(int i_1) {

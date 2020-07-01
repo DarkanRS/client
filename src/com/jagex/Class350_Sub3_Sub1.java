@@ -9,7 +9,7 @@ public class Class350_Sub3_Sub1 extends Class350_Sub3 {
         anInt10160 = i_16;
     }
 
-    static void method15560(long long_0) {
+    static void sleep(long long_0) {
         try {
             Thread.sleep(long_0);
         } catch (InterruptedException ignored) {

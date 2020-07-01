@@ -30,12 +30,12 @@ public class IFSubObjectPosition {
         return client.OBJECT_TYPE_SLOTS[anInt7047];
     }
 
-    public Location method11344() {
-        Location sceneobject_2 = method11348();
+    public WorldObject method11344() {
+        WorldObject sceneobject_2 = method11348();
         return sceneobject_2 == null ? null : (sceneobject_2.getId() != anInt7049 ? null : sceneobject_2);
     }
 
-    Location method11348() {
+    WorldObject method11348() {
         int i_2 = aClass219_7048.plane;
         CoordGrid coordgrid_3 = IndexLoaders.MAP_REGION_DECODER.getBase();
         int i_4 = aClass219_7048.x - coordgrid_3.x;
@@ -43,13 +43,13 @@ public class IFSubObjectPosition {
         if (i_4 >= 0 && i_5 >= 0 && i_4 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && i_5 < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
             switch (method11343()) {
                 case 0:
-                    return (Location) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().getWall(i_2, i_4, i_5);
+                    return (WorldObject) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().getWall(i_2, i_4, i_5);
                 case 1:
-                    return (Location) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().getWallDecoration(i_2, i_4, i_5);
+                    return (WorldObject) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().getWallDecoration(i_2, i_4, i_5);
                 case 2:
-                    return (Location) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().getInteractableObject(i_2, i_4, i_5, client.anInterface25_7446);
+                    return (WorldObject) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().getInteractableObject(i_2, i_4, i_5, client.anInterface25_7446);
                 case 3:
-                    return (Location) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().getGroundDecoration(i_2, i_4, i_5);
+                    return (WorldObject) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().getGroundDecoration(i_2, i_4, i_5);
                 default:
                     return null;
             }

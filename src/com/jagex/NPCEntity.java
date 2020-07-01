@@ -64,7 +64,7 @@ public class NPCEntity extends PathingEntity {
             i_2 |= 0x7;
         }
 
-        boolean bool_10 = scalar != 0 && client.cycles >= anInt10347 && client.cycles < anInt10348;
+        boolean bool_10 = scalar != 0 && client.CYCLES_20MS >= anInt10347 && client.CYCLES_20MS < anInt10348;
         if (bool_10) {
             i_2 |= 0x80000;
         }
@@ -123,7 +123,7 @@ public class NPCEntity extends PathingEntity {
 
     public void move(int i_1, int i_2, int i_3, boolean bool_4, int i_5) {
         plane = collisionPlane = (byte) i_1;
-        if (IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(i_2, i_3)) {
+        if (IndexLoaders.MAP_REGION_DECODER.getRenderFlags().isLowerObjectsToOverrideClipping(i_2, i_3)) {
             ++collisionPlane;
         }
 
@@ -463,7 +463,7 @@ public class NPCEntity extends PathingEntity {
     }
 
     public void method16164(String string_1) {
-        int i_5 = Class204.method3363() * QuickchatFiller.ENTITY_DEFAULTS.npcMessageDuration;
+        int i_5 = Class204.getFpsCap() * QuickchatFiller.ENTITY_DEFAULTS.npcMessageDuration;
         method15875(string_1, 0, 0, i_5);
     }
 

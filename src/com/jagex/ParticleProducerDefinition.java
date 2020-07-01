@@ -132,7 +132,7 @@ public class ParticleProducerDefinition {
         class275_sub6_8.anInt7857 = i_0;
         class275_sub6_8.anInt7859 = i_1;
         class275_sub6_8.anInt7854 = i_2;
-        class275_sub6_8.anInt7858 = i_4 + client.cycles;
+        class275_sub6_8.anInt7858 = i_4 + client.CYCLES_20MS;
         class275_sub6_8.anInt7855 = i_3;
         class275_sub6_8.aString7860 = string_6;
         class275_sub6_8.anInt7856 = i_5;

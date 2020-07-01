@@ -30,7 +30,7 @@ public class AsyncOutputStream implements Runnable {
         } else {
             int i_3 = IndexLoaders.MAP_REGION_DECODER.getSizeX();
             int i_4 = IndexLoaders.MAP_REGION_DECODER.getSizeY();
-            RegionMap regionmap_5 = IndexLoaders.MAP_REGION_DECODER.method4433();
+            RenderFlagMap regionmap_5 = IndexLoaders.MAP_REGION_DECODER.getRenderFlags();
             SceneObjectManager sceneobjectmanager_6 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager();
             int i_7 = i_3 / 2;
             byte b_8 = 0;
@@ -43,7 +43,7 @@ public class AsyncOutputStream implements Runnable {
                     for (i_13 = i_1; i_13 <= 3; i_13++) {
                         if (regionmap_5.method5498(i_1, i_13, i_11, i_12)) {
                             int i_14 = i_13;
-                            if (regionmap_5.is0x2(i_11, i_12)) {
+                            if (regionmap_5.isLowerObjectsToOverrideClipping(i_11, i_12)) {
                                 i_14 = i_13 - 1;
                             }
                             if (i_14 >= 0) {
@@ -140,7 +140,7 @@ public class AsyncOutputStream implements Runnable {
                                         i_33 = i_21 + i_31;
                                         if (i_32 >= b_8 && i_33 >= b_9 && regionmap_5.method5498(i_1, i_29, i_32, i_33)) {
                                             i_34 = i_29;
-                                            if (regionmap_5.is0x2(i_32, i_33)) {
+                                            if (regionmap_5.isLowerObjectsToOverrideClipping(i_32, i_33)) {
                                                 i_34 = i_29 - 1;
                                             }
                                             if (i_34 >= 0) {
@@ -152,21 +152,21 @@ public class AsyncOutputStream implements Runnable {
                             }
                         }
                         if (Class187.aBool2356) {
-                            ClipMap clipmap_38 = IndexLoaders.MAP_REGION_DECODER.getClipMap(i_1);
+                            ClipFlagMap clipmap_38 = IndexLoaders.MAP_REGION_DECODER.getClipMap(i_1);
                             for (i_30 = 0; i_30 < i_7; i_30++) {
                                 for (i_31 = 0; i_31 < i_7; i_31++) {
                                     i_32 = i_20 + i_30;
                                     i_33 = i_21 + i_31;
                                     i_34 = clipmap_38.map[i_32 - clipmap_38.offsetX][i_33 - clipmap_38.offsetY];
-                                    if (!ClipMap.notFlagged(i_34, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.ALT_OBJ)) {
+                                    if (!ClipFlagMap.notFlagged(i_34, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.ALT_OBJ)) {
                                         graphicalrenderer_0.method8425(i_22 + i_30 * 4, (i_7 - i_31) * 4 + i_23 - 4, 4, 4, -1713569622);
-                                    } else if (!ClipMap.notFlagged(i_34, ClipFlag.N_ALT_OBJ)) {
+                                    } else if (!ClipFlagMap.notFlagged(i_34, ClipFlag.N_ALT_OBJ)) {
                                         graphicalrenderer_0.method8659(i_22 + i_30 * 4, (i_7 - i_31) * 4 + i_23 - 4, 4, -1713569622);
-                                    } else if (!ClipMap.notFlagged(i_34, ClipFlag.E_ALT_OBJ)) {
+                                    } else if (!ClipFlagMap.notFlagged(i_34, ClipFlag.E_ALT_OBJ)) {
                                         graphicalrenderer_0.method8428(i_22 + i_30 * 4 + 3, (i_7 - i_31) * 4 + i_23 - 4, 4, -1713569622);
-                                    } else if (!ClipMap.notFlagged(i_34, ClipFlag.S_ALT_OBJ)) {
+                                    } else if (!ClipFlagMap.notFlagged(i_34, ClipFlag.S_ALT_OBJ)) {
                                         graphicalrenderer_0.method8659(i_22 + i_30 * 4, (i_7 - i_31) * 4 + i_23 - 4 + 3, 4, -1713569622);
-                                    } else if (!ClipMap.notFlagged(i_34, ClipFlag.W_ALT_OBJ)) {
+                                    } else if (!ClipFlagMap.notFlagged(i_34, ClipFlag.W_ALT_OBJ)) {
                                         graphicalrenderer_0.method8428(i_22 + i_30 * 4, (i_7 - i_31) * 4 + i_23 - 4, 4, -1713569622);
                                     }
                                 }
@@ -208,15 +208,15 @@ public class AsyncOutputStream implements Runnable {
                         for (i_22 = b_9; i_22 < i_4 + b_9; i_22++) {
                             for (i_23 = i_1; i_23 <= i_1 + 1 && i_23 <= 3; i_23++) {
                                 if (regionmap_5.method5498(i_1, i_23, i_21, i_22)) {
-                                    Location sceneobject_40 = (Location) sceneobjectmanager_6.getGroundDecoration(i_23, i_21, i_22);
+                                    WorldObject sceneobject_40 = (WorldObject) sceneobjectmanager_6.getGroundDecoration(i_23, i_21, i_22);
                                     if (sceneobject_40 == null) {
-                                        sceneobject_40 = (Location) sceneobjectmanager_6.getInteractableObject(i_23, i_21, i_22, client.anInterface25_7446);
+                                        sceneobject_40 = (WorldObject) sceneobjectmanager_6.getInteractableObject(i_23, i_21, i_22, client.anInterface25_7446);
                                     }
                                     if (sceneobject_40 == null) {
-                                        sceneobject_40 = (Location) sceneobjectmanager_6.getWall(i_23, i_21, i_22);
+                                        sceneobject_40 = (WorldObject) sceneobjectmanager_6.getWall(i_23, i_21, i_22);
                                     }
                                     if (sceneobject_40 == null) {
-                                        sceneobject_40 = (Location) sceneobjectmanager_6.getWallDecoration(i_23, i_21, i_22);
+                                        sceneobject_40 = (WorldObject) sceneobjectmanager_6.getWallDecoration(i_23, i_21, i_22);
                                     }
                                     if (sceneobject_40 != null) {
                                         ObjectDefinition objectdefinitions_41 = objectindexloader_39.getObjectDefs(sceneobject_40.getId());

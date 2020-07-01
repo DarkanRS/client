@@ -3,7 +3,7 @@ package com.jagex;
 import java.util.Iterator;
 import java.util.List;
 
-public class GraphNode_Sub1_Sub4_Sub1 extends GraphNode_Sub1_Sub4 implements Location {
+public class GraphNode_Sub1_Sub4_Sub1 extends GraphNode_Sub1_Sub4 implements WorldObject {
 
     LocationIndexLoader aClass474_10489;
     int anInt10482;
@@ -85,7 +85,7 @@ public class GraphNode_Sub1_Sub4_Sub1 extends GraphNode_Sub1_Sub4 implements Loc
                     i_8 = i_21 + (VertexNormal.MY_PLAYER.getSize() - 1 << 8) >> 9;
                     i_9 = i_22 + (VertexNormal.MY_PLAYER.getSize() - 1 << 8) >> 9;
                     byte b_23 = VertexNormal.MY_PLAYER.plane;
-                    if (b_23 < 3 && (IndexLoaders.MAP_REGION_DECODER.method4433().tileMasks[1][i_21 >> 9][i_22 >> 9] & 0x2) != 0) {
+                    if (b_23 < 3 && (IndexLoaders.MAP_REGION_DECODER.getRenderFlags().tileMasks[1][i_21 >> 9][i_22 >> 9] & 0x2) != 0) {
                         i_51 = b_23 + 1;
                     }
                 }
@@ -118,7 +118,7 @@ public class GraphNode_Sub1_Sub4_Sub1 extends GraphNode_Sub1_Sub4 implements Loc
                 int i_46;
                 int i_47;
                 ObjectDefinition objectdefinitions_57;
-                Location sceneobject_60;
+                WorldObject sceneobject_60;
                 String[] arr_63;
                 do {
                     Class285 class285_34;
@@ -169,13 +169,13 @@ public class GraphNode_Sub1_Sub4_Sub1 extends GraphNode_Sub1_Sub4 implements Loc
                                                 ObjectNode class282_sub47_24 = (ObjectNode) client.NPC_MAP.get(client.NPC_UPDATE_INDICES[i_51]);
                                                 if (class282_sub47_24 != null) {
                                                     NPCEntity npc_40 = (NPCEntity) class282_sub47_24.anObject8068;
-                                                    if (npc_40.anInt10375 != client.cycles && npc_40.aBool10318) {
+                                                    if (npc_40.anInt10375 != client.CYCLES_20MS && npc_40.aBool10318) {
                                                         vector3_26 = npc_40.method11166().coords;
                                                         i_41 = (int) vector3_26.x - (npc_40.definitions.size - 1 << 8);
                                                         i_28 = (int) vector3_26.z - (npc_40.definitions.size - 1 << 8);
                                                         if (i_41 >= i_21 && npc_40.definitions.size <= player_58.getSize() - (i_41 - i_21 >> 9) && i_28 >= i_22 && npc_40.definitions.size <= player_58.getSize() - (i_28 - i_22 >> 9)) {
                                                             MapAreaDefinitions.iComponentOnNPC(npc_40, class285_34.aTransform_Sub1_3391.plane != VertexNormal.MY_PLAYER.plane);
-                                                            npc_40.anInt10375 = client.cycles;
+                                                            npc_40.anInt10375 = client.CYCLES_20MS;
                                                         }
                                                     }
                                                 }
@@ -186,21 +186,21 @@ public class GraphNode_Sub1_Sub4_Sub1 extends GraphNode_Sub1_Sub4 implements Loc
 
                                             for (int i_25 = 0; i_25 < i_51; i_25++) {
                                                 PlayerEntity player_55 = client.players[ints_53[i_25]];
-                                                if (player_55 != null && player_55.anInt10375 != client.cycles && player_58 != player_55 && player_55.aBool10318) {
+                                                if (player_55 != null && player_55.anInt10375 != client.CYCLES_20MS && player_58 != player_55 && player_55.aBool10318) {
                                                     Vector3 vector3_27 = player_55.method11166().coords;
                                                     i_28 = (int) vector3_27.x - (player_55.getSize() - 1 << 8);
                                                     int i_29 = (int) vector3_27.z - (player_55.getSize() - 1 << 8);
                                                     if (i_28 >= i_21 && player_55.getSize() <= player_58.getSize() - (i_28 - i_21 >> 9) && i_29 >= i_22 && player_55.getSize() <= player_58.getSize() - (i_29 - i_22 >> 9)) {
                                                         CutsceneAction_Sub22.iComponentOnPlayer(player_55, class285_34.aTransform_Sub1_3391.plane != VertexNormal.MY_PLAYER.plane);
-                                                        player_55.anInt10375 = client.cycles;
+                                                        player_55.anInt10375 = client.CYCLES_20MS;
                                                     }
                                                 }
                                             }
                                         }
 
-                                        if (player_58.anInt10375 != client.cycles) {
+                                        if (player_58.anInt10375 != client.CYCLES_20MS) {
                                             CutsceneAction_Sub22.iComponentOnPlayer(player_58, class285_34.aTransform_Sub1_3391.plane != VertexNormal.MY_PLAYER.plane);
-                                            player_58.anInt10375 = client.cycles;
+                                            player_58.anInt10375 = client.CYCLES_20MS;
                                             break;
                                         }
                                     }
@@ -223,13 +223,13 @@ public class GraphNode_Sub1_Sub4_Sub1 extends GraphNode_Sub1_Sub4 implements Loc
                                             ObjectNode class282_sub47_37 = (ObjectNode) client.NPC_MAP.get(client.NPC_UPDATE_INDICES[i_22]);
                                             if (class282_sub47_37 != null) {
                                                 NPCEntity npc_54 = (NPCEntity) class282_sub47_37.anObject8068;
-                                                if (npc_54.anInt10375 != client.cycles && npc_59 != npc_54 && npc_54.aBool10318) {
+                                                if (npc_54.anInt10375 != client.CYCLES_20MS && npc_59 != npc_54 && npc_54.aBool10318) {
                                                     Vector3 vector3_66 = npc_54.method11166().coords;
                                                     i_42 = (int) vector3_66.x - (npc_54.definitions.size - 1 << 8);
                                                     i_41 = (int) vector3_66.z - (npc_54.definitions.size - 1 << 8);
                                                     if (i_42 >= i_50 && npc_54.definitions.size <= npc_59.definitions.size - (i_42 - i_50 >> 9) && i_41 >= i_21 && npc_54.definitions.size <= npc_59.definitions.size - (i_41 - i_21 >> 9)) {
                                                         MapAreaDefinitions.iComponentOnNPC(npc_54, class285_34.aTransform_Sub1_3391.plane != VertexNormal.MY_PLAYER.plane);
-                                                        npc_54.anInt10375 = client.cycles;
+                                                        npc_54.anInt10375 = client.CYCLES_20MS;
                                                     }
                                                 }
                                             }
@@ -240,21 +240,21 @@ public class GraphNode_Sub1_Sub4_Sub1 extends GraphNode_Sub1_Sub4 implements Loc
 
                                         for (i_38 = 0; i_38 < i_22; i_38++) {
                                             PlayerEntity player_67 = client.players[ints_64[i_38]];
-                                            if (player_67 != null && player_67.anInt10375 != client.cycles && player_67.aBool10318) {
+                                            if (player_67 != null && player_67.anInt10375 != client.CYCLES_20MS && player_67.aBool10318) {
                                                 vector3_26 = player_67.method11166().coords;
                                                 i_41 = (int) vector3_26.x - (player_67.getSize() - 1 << 8);
                                                 i_28 = (int) vector3_26.z - (player_67.getSize() - 1 << 8);
                                                 if (i_41 >= i_50 && player_67.getSize() <= npc_59.definitions.size - (i_41 - i_50 >> 9) && i_28 >= i_21 && player_67.getSize() <= npc_59.definitions.size - (i_28 - i_21 >> 9)) {
                                                     CutsceneAction_Sub22.iComponentOnPlayer(player_67, class285_34.aTransform_Sub1_3391.plane != VertexNormal.MY_PLAYER.plane);
-                                                    player_67.anInt10375 = client.cycles;
+                                                    player_67.anInt10375 = client.CYCLES_20MS;
                                                 }
                                             }
                                         }
                                     }
 
-                                    if (npc_59.anInt10375 != client.cycles) {
+                                    if (npc_59.anInt10375 != client.CYCLES_20MS) {
                                         MapAreaDefinitions.iComponentOnNPC(npc_59, class285_34.aTransform_Sub1_3391.plane != VertexNormal.MY_PLAYER.plane);
-                                        npc_59.anInt10375 = client.cycles;
+                                        npc_59.anInt10375 = client.CYCLES_20MS;
                                         break;
                                     }
                                 }
@@ -331,9 +331,9 @@ public class GraphNode_Sub1_Sub4_Sub1 extends GraphNode_Sub1_Sub4 implements Loc
                                         }
                                     }
                                 }
-                            } while (!(class285_34.aTransform_Sub1_3391 instanceof Location));
+                            } while (!(class285_34.aTransform_Sub1_3391 instanceof WorldObject));
 
-                            sceneobject_60 = (Location) class285_34.aTransform_Sub1_3391;
+                            sceneobject_60 = (WorldObject) class285_34.aTransform_Sub1_3391;
                             objectdefinitions_57 = IndexLoaders.MAP_REGION_DECODER.method4436().getObjectDefs(sceneobject_60.getId());
                             if (objectdefinitions_57.transformTo != null) {
                                 objectdefinitions_57 = objectdefinitions_57.getMultiLoc(Class158_Sub1.PLAYER_VAR_PROVIDER);

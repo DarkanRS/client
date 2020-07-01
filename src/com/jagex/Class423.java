@@ -29,7 +29,7 @@ public class Class423 {
 
     static void method7066(int i_0, int i_1) {
         for (EntityNode_Sub6 class275_sub6_7 = (EntityNode_Sub6) client.aClass457_7335.method7659(); class275_sub6_7 != null; class275_sub6_7 = (EntityNode_Sub6) client.aClass457_7335.method7650()) {
-            if (client.cycles >= class275_sub6_7.anInt7858) {
+            if (client.CYCLES_20MS >= class275_sub6_7.anInt7858) {
                 class275_sub6_7.method4887();
             } else {
                 Class407.method6871(class275_sub6_7.anInt7857, (class275_sub6_7.anInt7859 << 9) + 256, (class275_sub6_7.anInt7854 << 9) + 256, class275_sub6_7.anInt7855 * 2);

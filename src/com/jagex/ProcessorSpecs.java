@@ -49,9 +49,9 @@ public class ProcessorSpecs {
 
     static void method7727(PathingEntity animable_0) {
         Animation animation_2 = animable_0.currentAnimation;
-        if (animable_0.forceMovementT2Delay == client.cycles || !animation_2.hasDefs() || animation_2.method7585(1)) {
+        if (animable_0.forceMovementT2Delay == client.CYCLES_20MS || !animation_2.hasDefs() || animation_2.method7585(1)) {
             int i_3 = animable_0.forceMovementT2Delay - animable_0.forceMovementT1Delay;
-            int i_4 = client.cycles - animable_0.forceMovementT1Delay;
+            int i_4 = client.CYCLES_20MS - animable_0.forceMovementT1Delay;
             int i_5 = animable_0.forceMovementT1XOff * 512 + animable_0.getSize() * 256;
             int i_6 = animable_0.forceMovementT1YOff * 512 + animable_0.getSize() * 256;
             int i_7 = animable_0.forceMovementT2XOff * 512 + animable_0.getSize() * 256;

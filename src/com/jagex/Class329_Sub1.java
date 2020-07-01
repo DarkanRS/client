@@ -24,7 +24,7 @@ public class Class329_Sub1 extends Class329 {
 
     Class239 aClass239_7719;
 
-    public Class329_Sub1(SceneObjectManager sceneobjectmanager_1, LocationIndexLoader objectindexloader_2, int i_3, int i_4, int i_5, boolean bool_6, RegionMap regionmap_7, Class239 class239_8) {
+    public Class329_Sub1(SceneObjectManager sceneobjectmanager_1, LocationIndexLoader objectindexloader_2, int i_3, int i_4, int i_5, boolean bool_6, RenderFlagMap regionmap_7, Class239 class239_8) {
         super(sceneobjectmanager_1, i_3, i_4, i_5, bool_6, IndexLoaders.OVERLAY_LOADER, IndexLoaders.UNDERLAY_LOADER, regionmap_7);
         objectDefLoader = objectindexloader_2;
         aClass239_7719 = class239_8;
@@ -36,7 +36,7 @@ public class Class329_Sub1 extends Class329 {
         Class20.animate(player, animations, speed, false);
     }
 
-    void method12459(AbstractRenderer graphicalrenderer_1, int i_2, int i_3, int i_4, int i_5, int objectId, int i_7, int i_8, ClipMap clipMap, int i_10) {
+    void method12459(AbstractRenderer graphicalrenderer_1, int i_2, int i_3, int i_4, int i_5, int objectId, int i_7, int i_8, ClipFlagMap clipMap, int i_10) {
         if (i_3 < anInt7723) {
             anInt7723 = i_3;
         }
@@ -116,7 +116,7 @@ public class Class329_Sub1 extends Class329 {
                             aByteArrayArrayArray3794[i_3][i_4][i_5] |= 0x4;
                         }
                         if (defs.clipType != 0 && clipMap != null) {
-                            clipMap.addObject(i_4, i_5, i_13, i_14, defs.blocks, !defs.alt);
+                            clipMap.addObject(i_4, i_5, i_13, i_14, defs.blocks, !defs.ignoreAltClip);
                         }
                     }
                 } else {
@@ -148,7 +148,7 @@ public class Class329_Sub1 extends Class329 {
                         }
                     }
                     if (defs.clipType != 0 && clipMap != null) {
-                        clipMap.addObject(i_4, i_5, i_13, i_14, defs.blocks, !defs.alt);
+                        clipMap.addObject(i_4, i_5, i_13, i_14, defs.blocks, !defs.ignoreAltClip);
                     }
                 }
             }
@@ -307,7 +307,7 @@ public class Class329_Sub1 extends Class329 {
         }
     }
 
-    public void method12461(AbstractRenderer graphicalrenderer_1, byte[] bytes_2, int i_3, int i_4, ClipMap[] arr_5) {
+    public void method12461(AbstractRenderer graphicalrenderer_1, byte[] bytes_2, int i_3, int i_4, ClipFlagMap[] arr_5) {
         ByteBuf rsbytebuffer_7 = new ByteBuf(bytes_2);
         int i_8 = -1;
         while (true) {
@@ -332,7 +332,7 @@ public class Class329_Sub1 extends Class329 {
                 int i_18 = i_3 + i_13;
                 int i_19 = i_12 + i_4;
                 if (i_18 > 0 && i_19 > 0 && i_18 < maxX - 1 && i_19 < maxY - 1) {
-                    ClipMap clipmap_20 = null;
+                    ClipFlagMap clipmap_20 = null;
                     if (!overlayHidden) {
                         int i_21 = i_14;
                         if ((regionMap.tileMasks[1][i_18][i_19] & 0x2) == 2) {
@@ -348,7 +348,7 @@ public class Class329_Sub1 extends Class329 {
         }
     }
 
-    public void method12462(AbstractRenderer graphicalrenderer_1, byte[] bytes_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, ClipMap[] arr_10) {
+    public void method12462(AbstractRenderer graphicalrenderer_1, byte[] bytes_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, ClipFlagMap[] arr_10) {
         ByteBuf rsbytebuffer_12 = new ByteBuf(bytes_2);
         int i_13 = -1;
         while (true) {
@@ -375,7 +375,7 @@ public class Class329_Sub1 extends Class329 {
                     int i_24 = i_4 + KeyPressInputSubscriber.method3756(i_18 & 0x7, i_17 & 0x7, i_9, objectdefinitions_23.sizeX, objectdefinitions_23.sizeY, i_22);
                     int i_25 = i_5 + PlayerVarProvider.method282(i_18 & 0x7, i_17 & 0x7, i_9, objectdefinitions_23.sizeX, objectdefinitions_23.sizeY, i_22);
                     if (i_24 > 0 && i_25 > 0 && i_24 < maxX - 1 && i_25 < maxY - 1) {
-                        ClipMap clipmap_26 = null;
+                        ClipFlagMap clipmap_26 = null;
                         if (!overlayHidden) {
                             int i_27 = i_3;
                             if ((regionMap.tileMasks[1][i_24][i_25] & 0x2) == 2) {
@@ -456,7 +456,7 @@ public class Class329_Sub1 extends Class329 {
         aByteArrayArrayArray3794 = null;
     }
 
-    boolean method12464(AbstractRenderer graphicalrenderer_1, int i_2, int i_3, boolean bool_4, ObjectDefinition objectdefinitions_5, int i_6, int i_7, int i_8, int i_9, int i_10, int i_11, int i_12, int i_13, boolean bool_14, Ground class390_15, ClipMap clipmap_16, int i_17, int i_18) {
+    boolean method12464(AbstractRenderer graphicalrenderer_1, int i_2, int i_3, boolean bool_4, ObjectDefinition objectdefinitions_5, int i_6, int i_7, int i_8, int i_9, int i_10, int i_11, int i_12, int i_13, boolean bool_14, Ground class390_15, ClipFlagMap clipmap_16, int i_17, int i_18) {
         int i_20;
         GraphNode_Sub1_Sub5 obj_28;
         if (i_2 == ObjectType.WALL_STRAIGHT.id) {
@@ -465,7 +465,7 @@ public class Class329_Sub1 extends Class329 {
                 i_20 = 1;
             }
             if (bool_4) {
-                GraphNode_Sub1_Sub5_Sub1 class521_sub1_sub5_sub1_29 = new GraphNode_Sub1_Sub5_Sub1(sceneObjectManager, graphicalrenderer_1, objectDefLoader, objectdefinitions_5, i_7, i_8, i_9, i_10, i_11, overlayHidden, i_2, i_3, bool_14);
+                WallObjectGraphNode class521_sub1_sub5_sub1_29 = new WallObjectGraphNode(sceneObjectManager, graphicalrenderer_1, objectDefLoader, objectdefinitions_5, i_7, i_8, i_9, i_10, i_11, overlayHidden, i_2, i_3, bool_14);
                 if (class521_sub1_sub5_sub1_29.method86()) {
                     class521_sub1_sub5_sub1_29.method87(graphicalrenderer_1);
                 }
@@ -508,7 +508,7 @@ public class Class329_Sub1 extends Class329 {
                 }
             }
             if (objectdefinitions_5.clipType != 0 && clipmap_16 != null) {
-                clipmap_16.addWall(i_12, i_13, i_2, i_3, objectdefinitions_5.blocks, !objectdefinitions_5.alt);
+                clipmap_16.addWall(i_12, i_13, i_2, i_3, objectdefinitions_5.blocks, !objectdefinitions_5.ignoreAltClip);
             }
             if (objectdefinitions_5.decorDisplacement != 64) {
                 sceneObjectManager.method3398(i_7, i_12, i_13, objectdefinitions_5.decorDisplacement);
@@ -516,10 +516,10 @@ public class Class329_Sub1 extends Class329 {
             return true;
         } else {
             Object obj_25;
-            GraphNode_Sub1_Sub5_Sub1 class521_sub1_sub5_sub1_27;
+            WallObjectGraphNode class521_sub1_sub5_sub1_27;
             if (i_2 == ObjectType.WALL_DIAGONAL_CORNER.id) {
                 if (bool_4) {
-                    class521_sub1_sub5_sub1_27 = new GraphNode_Sub1_Sub5_Sub1(sceneObjectManager, graphicalrenderer_1, objectDefLoader, objectdefinitions_5, i_7, i_8, i_9, i_10, i_11, overlayHidden, i_2, i_3, bool_14);
+                    class521_sub1_sub5_sub1_27 = new WallObjectGraphNode(sceneObjectManager, graphicalrenderer_1, objectDefLoader, objectdefinitions_5, i_7, i_8, i_9, i_10, i_11, overlayHidden, i_2, i_3, bool_14);
                     if (class521_sub1_sub5_sub1_27.method86()) {
                         class521_sub1_sub5_sub1_27.method87(graphicalrenderer_1);
                     }
@@ -540,15 +540,15 @@ public class Class329_Sub1 extends Class329 {
                     }
                 }
                 if (objectdefinitions_5.clipType != 0 && clipmap_16 != null) {
-                    clipmap_16.addWall(i_12, i_13, i_2, i_3, objectdefinitions_5.blocks, !objectdefinitions_5.alt);
+                    clipmap_16.addWall(i_12, i_13, i_2, i_3, objectdefinitions_5.blocks, !objectdefinitions_5.ignoreAltClip);
                 }
                 return true;
             } else if (i_2 == ObjectType.WALL_WHOLE_CORNER.id) {
                 i_20 = i_3 + 1 & 0x3;
                 GraphNode_Sub1_Sub5 obj_22;
                 if (bool_4) {
-                    GraphNode_Sub1_Sub5_Sub1 class521_sub1_sub5_sub1_23 = new GraphNode_Sub1_Sub5_Sub1(sceneObjectManager, graphicalrenderer_1, objectDefLoader, objectdefinitions_5, i_7, i_8, i_9, i_10, i_11, overlayHidden, i_2, i_3 + 4, bool_14);
-                    GraphNode_Sub1_Sub5_Sub1 class521_sub1_sub5_sub1_24 = new GraphNode_Sub1_Sub5_Sub1(sceneObjectManager, graphicalrenderer_1, objectDefLoader, objectdefinitions_5, i_7, i_8, i_9, i_10, i_11, overlayHidden, i_2, i_20, bool_14);
+                    WallObjectGraphNode class521_sub1_sub5_sub1_23 = new WallObjectGraphNode(sceneObjectManager, graphicalrenderer_1, objectDefLoader, objectdefinitions_5, i_7, i_8, i_9, i_10, i_11, overlayHidden, i_2, i_3 + 4, bool_14);
+                    WallObjectGraphNode class521_sub1_sub5_sub1_24 = new WallObjectGraphNode(sceneObjectManager, graphicalrenderer_1, objectDefLoader, objectdefinitions_5, i_7, i_8, i_9, i_10, i_11, overlayHidden, i_2, i_20, bool_14);
                     if (class521_sub1_sub5_sub1_23.method86()) {
                         class521_sub1_sub5_sub1_23.method87(graphicalrenderer_1);
                     }
@@ -578,7 +578,7 @@ public class Class329_Sub1 extends Class329 {
                     }
                 }
                 if (objectdefinitions_5.clipType != 0 && clipmap_16 != null) {
-                    clipmap_16.addWall(i_12, i_13, i_2, i_3, objectdefinitions_5.blocks, !objectdefinitions_5.alt);
+                    clipmap_16.addWall(i_12, i_13, i_2, i_3, objectdefinitions_5.blocks, !objectdefinitions_5.ignoreAltClip);
                 }
                 if (objectdefinitions_5.decorDisplacement != 64) {
                     sceneObjectManager.method3398(i_7, i_12, i_13, objectdefinitions_5.decorDisplacement);
@@ -586,7 +586,7 @@ public class Class329_Sub1 extends Class329 {
                 return true;
             } else if (i_2 == ObjectType.WALL_STRAIGHT_CORNER.id) {
                 if (bool_4) {
-                    class521_sub1_sub5_sub1_27 = new GraphNode_Sub1_Sub5_Sub1(sceneObjectManager, graphicalrenderer_1, objectDefLoader, objectdefinitions_5, i_7, i_8, i_9, i_10, i_11, overlayHidden, i_2, i_3, bool_14);
+                    class521_sub1_sub5_sub1_27 = new WallObjectGraphNode(sceneObjectManager, graphicalrenderer_1, objectDefLoader, objectdefinitions_5, i_7, i_8, i_9, i_10, i_11, overlayHidden, i_2, i_3, bool_14);
                     if (class521_sub1_sub5_sub1_27.method86()) {
                         class521_sub1_sub5_sub1_27.method87(graphicalrenderer_1);
                     }
@@ -607,7 +607,7 @@ public class Class329_Sub1 extends Class329 {
                     }
                 }
                 if (objectdefinitions_5.clipType != 0 && clipmap_16 != null) {
-                    clipmap_16.addWall(i_12, i_13, i_2, i_3, objectdefinitions_5.blocks, !objectdefinitions_5.alt);
+                    clipmap_16.addWall(i_12, i_13, i_2, i_3, objectdefinitions_5.blocks, !objectdefinitions_5.ignoreAltClip);
                 }
                 return true;
             } else if (i_2 == ObjectType.WALL_INTERACT.id) {
@@ -631,7 +631,7 @@ public class Class329_Sub1 extends Class329 {
                     sceneObjectManager.aClass201_2600.method3262(b_26, i_7, i_12, i_13, objectdefinitions_5.anInt5684, 0);
                 }
                 if (objectdefinitions_5.clipType != 0 && clipmap_16 != null) {
-                    clipmap_16.addObject(i_12, i_13, i_17, i_18, objectdefinitions_5.blocks, !objectdefinitions_5.alt);
+                    clipmap_16.addObject(i_12, i_13, i_17, i_18, objectdefinitions_5.blocks, !objectdefinitions_5.ignoreAltClip);
                 }
                 if (objectdefinitions_5.decorDisplacement != 64) {
                     sceneObjectManager.method3398(i_7, i_12, i_13, objectdefinitions_5.decorDisplacement);
@@ -659,12 +659,12 @@ public class Class329_Sub1 extends Class329 {
             return true;
         } else {
             int i_22;
-            Location sceneobject_24;
+            WorldObject sceneobject_24;
             GraphNode_Sub1_Sub4 obj_27;
             GraphNode_Sub1_Sub4_Sub1 class521_sub1_sub4_sub1_28;
             if (i_2 == ObjectType.STRAIGHT_OUSIDE_WALL_DEC.id) {
                 i_22 = 65;
-                sceneobject_24 = (Location) sceneObjectManager.getWall(i_7, i_12, i_13);
+                sceneobject_24 = (WorldObject) sceneObjectManager.getWall(i_7, i_12, i_13);
                 if (sceneobject_24 != null) {
                     i_22 = objectDefLoader.getObjectDefs(sceneobject_24.getId()).decorDisplacement + 1;
                 }
@@ -681,7 +681,7 @@ public class Class329_Sub1 extends Class329 {
                 return true;
             } else if (i_2 == ObjectType.DIAGONAL_OUTSIDE_WALL_DEC.id) {
                 i_22 = 33;
-                sceneobject_24 = (Location) sceneObjectManager.getWall(i_7, i_12, i_13);
+                sceneobject_24 = (WorldObject) sceneObjectManager.getWall(i_7, i_12, i_13);
                 if (sceneobject_24 != null) {
                     i_22 = objectDefLoader.getObjectDefs(sceneobject_24.getId()).decorDisplacement / 2 + 1;
                 }
@@ -713,7 +713,7 @@ public class Class329_Sub1 extends Class329 {
             } else if (i_2 == ObjectType.DIAGONAL_INWALL_DEC.id) {
                 i_22 = i_3 + 2 & 0x3;
                 int i_23 = 33;
-                Location sceneobject_17 = (Location) sceneObjectManager.getWall(i_7, i_12, i_13);
+                WorldObject sceneobject_17 = (WorldObject) sceneObjectManager.getWall(i_7, i_12, i_13);
                 if (sceneobject_17 != null) {
                     i_23 = objectDefLoader.getObjectDefs(sceneobject_17.getId()).decorDisplacement / 2 + 1;
                 }
@@ -744,19 +744,19 @@ public class Class329_Sub1 extends Class329 {
         }
     }
 
-    Location method12467(int i_1, int i_2, int i_3, int i_4) {
-        Location sceneobject_6 = null;
-        if (i_2 == 0) {
-            sceneobject_6 = (Location) sceneObjectManager.getWall(i_1, i_3, i_4);
+    WorldObject getWorldObject(int plane, int slot, int x, int y) {
+        WorldObject sceneobject_6 = null;
+        if (slot == 0) {
+            sceneobject_6 = (WorldObject) sceneObjectManager.getWall(plane, x, y);
         }
-        if (i_2 == 1) {
-            sceneobject_6 = (Location) sceneObjectManager.getWallDecoration(i_1, i_3, i_4);
+        if (slot == 1) {
+            sceneobject_6 = (WorldObject) sceneObjectManager.getWallDecoration(plane, x, y);
         }
-        if (i_2 == 2) {
-            sceneobject_6 = (Location) sceneObjectManager.getInteractableObject(i_1, i_3, i_4, client.anInterface25_7446);
+        if (slot == 2) {
+            sceneobject_6 = (WorldObject) sceneObjectManager.getInteractableObject(plane, x, y, client.anInterface25_7446);
         }
-        if (i_2 == 3) {
-            sceneobject_6 = (Location) sceneObjectManager.getGroundDecoration(i_1, i_3, i_4);
+        if (slot == 3) {
+            sceneobject_6 = (WorldObject) sceneObjectManager.getGroundDecoration(plane, x, y);
         }
         return sceneobject_6;
     }
@@ -946,23 +946,23 @@ public class Class329_Sub1 extends Class329 {
         }
     }
 
-    void method12475(AbstractRenderer graphicalrenderer_1, int i_2, int i_3, int x, int y, ClipMap clipmap_6) {
-        Location sceneobject_8 = method12467(i_2, i_3, x, y);
-        if (sceneobject_8 != null) {
-            ObjectDefinition objectdefinitions_9 = objectDefLoader.getObjectDefs(sceneobject_8.getId());
-            int type = sceneobject_8.method89();
-            int i_11 = sceneobject_8.method92();
+    void method12475(AbstractRenderer graphicalrenderer_1, int i_2, int i_3, int x, int y, ClipFlagMap clipmap_6) {
+        WorldObject object = getWorldObject(i_2, i_3, x, y);
+        if (object != null) {
+            ObjectDefinition objectdefinitions_9 = objectDefLoader.getObjectDefs(object.getId());
+            int type = object.method89();
+            int i_11 = object.method92();
             if (objectdefinitions_9.hasSound()) {
                 Class256.method4415(i_2, x, y, objectdefinitions_9);
             }
-            if (sceneobject_8.method86()) {
-                sceneobject_8.method88(graphicalrenderer_1);
+            if (object.method86()) {
+                object.method88(graphicalrenderer_1);
             }
             if (i_3 == 0) {
                 sceneObjectManager.method3422(i_2, x, y);
                 sceneObjectManager.method3460(i_2, x, y);
                 if (objectdefinitions_9.clipType != 0) {
-                    clipmap_6.removeWall(x, y, type, i_11, objectdefinitions_9.blocks, !objectdefinitions_9.alt);
+                    clipmap_6.removeWall(x, y, type, i_11, objectdefinitions_9.blocks, !objectdefinitions_9.ignoreAltClip);
                 }
                 if (objectdefinitions_9.occludes == 1) {
                     if (i_11 == 0) {
@@ -981,7 +981,7 @@ public class Class329_Sub1 extends Class329 {
             } else if (i_3 == 2) {
                 sceneObjectManager.method3530(i_2, x, y, client.anInterface25_7446);
                 if (objectdefinitions_9.clipType != 0 && x + objectdefinitions_9.sizeX < maxX && y + objectdefinitions_9.sizeX < maxY && x + objectdefinitions_9.sizeY < maxX && y + objectdefinitions_9.sizeY < maxY) {
-                    clipmap_6.removeObject(x, y, objectdefinitions_9.sizeX, objectdefinitions_9.sizeY, i_11, objectdefinitions_9.blocks, !objectdefinitions_9.alt);
+                    clipmap_6.removeObject(x, y, objectdefinitions_9.sizeX, objectdefinitions_9.sizeY, i_11, objectdefinitions_9.blocks, !objectdefinitions_9.ignoreAltClip);
                 }
                 if (type == ObjectType.WALL_INTERACT.id) {
                     if ((i_11 & 0x1) == 0) {

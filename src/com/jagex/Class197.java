@@ -32,7 +32,7 @@ public class Class197 {
         player_3.regionBaseY[0] = i_7 - coordgrid_8.y;
         player_3.method11172(((player_3.regionBaseX[0] << 9) + (player_3.getSize() << 8)), player_3.method11165().coords.y, ((player_3.regionBaseY[0] << 9) + (player_3.getSize() << 8)));
         Class4.MY_PLAYER_PLANE = player_3.plane = player_3.collisionPlane = b_5;
-        if (IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(player_3.regionBaseX[0], player_3.regionBaseY[0])) {
+        if (IndexLoaders.MAP_REGION_DECODER.getRenderFlags().isLowerObjectsToOverrideClipping(player_3.regionBaseX[0], player_3.regionBaseY[0])) {
             player_3.collisionPlane += 1;
         }
         if (aNode_Sub35Array2428[i_2] != null) {

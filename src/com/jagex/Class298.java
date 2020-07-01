@@ -8,8 +8,8 @@ public class Class298 implements Interface41 {
         index = index_1;
     }
 
-    static boolean method5303() {
-        return !Class504.loadingState(client.gameState);
+    static boolean gameNotLoading() {
+        return !Class504.loadingState(client.GAME_STATE);
     }
 
     public static boolean method5304(int i_0) {

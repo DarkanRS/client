@@ -162,7 +162,7 @@ public class IndexLoaders {
 
             Class487.aClass378_5752.method6403(client.anInterface35_7206);
             Node_Sub11_Sub3.method15476();
-            Class365.setGameState(15);
+            GameState.setGameState(15);
         }
 
         if (LOADING_STAGE == LoadingStage.aClass387_4699) {
@@ -230,7 +230,7 @@ public class IndexLoaders {
 
             Class89.method1496(bytes_7);
             NodeCollection.method8148();
-            Class365.setGameState(1);
+            GameState.setGameState(1);
         }
 
         if (LoadingStage.aClass387_4709 == LOADING_STAGE) {
@@ -307,7 +307,7 @@ public class IndexLoaders {
             FriendsChatPlayer.method2943(MESH_INDEX, IMAGE_LOADER);
             Huffman huffman = new Huffman(HUFFMAN_INDEX.getFileByName("huffman", ""));
             InventoriesIndexLoader.setHuffman(huffman);
-            Engine.aClass273_3244 = VertexNormal.method1461();
+            Engine.FPS_MANAGER = FPSManager.createFPSManager();
             Class11.SYSTEM_INFO = new SystemInfo();
         }
 
@@ -325,12 +325,12 @@ public class IndexLoaders {
 
         if (LoadingStage.aClass387_4707 == LOADING_STAGE) {
             Class320.VARC_INT = new int[VARC_LOADER.size];
-            Node_Sub17_Sub2.VARC_BOOL = new boolean[VARC_LOADER.size];
+            Node_Sub17_Sub2.IS_VARC_SAVE_TO_FILE = new boolean[VARC_LOADER.size];
             Class462.VARC_STRING = new String[VARC_STRING_LOADER.size];
 
             for (i = 0; i < VARC_LOADER.size; i++) {
                 if (VARC_LOADER.method6873(i).anInt4983 == 0) {
-                    Node_Sub17_Sub2.VARC_BOOL[i] = true;
+                    Node_Sub17_Sub2.IS_VARC_SAVE_TO_FILE[i] = true;
                     ++client.anInt7399;
                 }
 

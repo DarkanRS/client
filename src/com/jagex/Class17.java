@@ -21,11 +21,11 @@ class Class17 implements Interface25 {
 
     @Override
     public boolean method182(GraphNode_Sub1_Sub1 class521_sub1_sub1_1) {
-        return class521_sub1_sub1_1 instanceof Location;
+        return class521_sub1_sub1_1 instanceof WorldObject;
     }
 
     @Override
     public boolean method183(GraphNode_Sub1_Sub1 class521_sub1_sub1_1) {
-        return class521_sub1_sub1_1 instanceof Location;
+        return class521_sub1_sub1_1 instanceof WorldObject;
     }
 }

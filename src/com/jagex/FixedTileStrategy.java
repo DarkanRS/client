@@ -108,7 +108,7 @@ public class FixedTileStrategy extends RouteStrategy {
     }
 
     @Override
-    public boolean canExit(int i_1, int i_2, int i_3, ClipMap clipmap_4) {
+    public boolean canExit(int i_1, int i_2, int i_3, ClipFlagMap clipmap_4) {
         return i_2 == approxDestinationX && i_3 == approxDestinationY;
     }
 

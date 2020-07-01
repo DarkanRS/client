@@ -22,7 +22,7 @@ public class Class155 {
             HeadbarIndexLoader.method5118();
             Class9.aString99 = string_0;
             Class9.aString102 = string_1;
-            Class365.setGameState(14);
+            GameState.setGameState(14);
         }
     }
 

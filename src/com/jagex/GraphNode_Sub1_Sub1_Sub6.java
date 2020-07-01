@@ -1,6 +1,6 @@
 package com.jagex;
 
-public class GraphNode_Sub1_Sub1_Sub6 extends GraphNode_Sub1_Sub1 implements Location {
+public class GraphNode_Sub1_Sub1_Sub6 extends GraphNode_Sub1_Sub1 implements WorldObject {
 
     Class200 aClass200_10537;
 
@@ -137,8 +137,8 @@ public class GraphNode_Sub1_Sub1_Sub6 extends GraphNode_Sub1_Sub1 implements Loc
 
     @Override
     void method13013(GraphNode_Sub1 class521_sub1_2, int i_3, int i_4, int i_5, boolean bool_6) {
-        if (class521_sub1_2 instanceof GraphNode_Sub1_Sub5_Sub1) {
-            GraphNode_Sub1_Sub5_Sub1 class521_sub1_sub5_sub1_8 = (GraphNode_Sub1_Sub5_Sub1) class521_sub1_2;
+        if (class521_sub1_2 instanceof WallObjectGraphNode) {
+            WallObjectGraphNode class521_sub1_sub5_sub1_8 = (WallObjectGraphNode) class521_sub1_2;
             if (aMeshRasterizer_10535 != null && class521_sub1_sub5_sub1_8.aMeshRasterizer_10513 != null) {
                 aMeshRasterizer_10535.method11269(class521_sub1_sub5_sub1_8.aMeshRasterizer_10513, i_3, i_4, i_5, bool_6);
             }
@@ -418,8 +418,8 @@ public class GraphNode_Sub1_Sub1_Sub6 extends GraphNode_Sub1_Sub1 implements Loc
 
     @Override
     void method13016(GraphNode_Sub1 class521_sub1_2, int i_3, int i_4, int i_5, boolean bool_6) {
-        if (class521_sub1_2 instanceof GraphNode_Sub1_Sub5_Sub1) {
-            GraphNode_Sub1_Sub5_Sub1 class521_sub1_sub5_sub1_7 = (GraphNode_Sub1_Sub5_Sub1) class521_sub1_2;
+        if (class521_sub1_2 instanceof WallObjectGraphNode) {
+            WallObjectGraphNode class521_sub1_sub5_sub1_7 = (WallObjectGraphNode) class521_sub1_2;
             if (aMeshRasterizer_10535 != null && class521_sub1_sub5_sub1_7.aMeshRasterizer_10513 != null) {
                 aMeshRasterizer_10535.method11269(class521_sub1_sub5_sub1_7.aMeshRasterizer_10513, i_3, i_4, i_5, bool_6);
             }

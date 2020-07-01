@@ -33,11 +33,6 @@ public class Loader extends Applet implements AppletStub {
     public JFrame clientFrame;
 
     public static void main(String[] arg0) {
-		Runtime.getRuntime().addShutdownHook(new Thread() {
-			public void run() {
-				System.err.println("ayy");
-			}
-		});
         new Loader().doFrame();
     }
 

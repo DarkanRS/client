@@ -323,7 +323,7 @@ public abstract class PathingEntity extends GraphNode_Sub1_Sub1 {
             }
 
             if ((aClass539_10369 == null || aClass539_10369.aBool7132) && (i_7 > 0 || i_9 > 0)) {
-                aClass539_10369 = ParticleSystem.method11557(client.cycles, true);
+                aClass539_10369 = ParticleSystem.method11557(client.CYCLES_20MS, true);
             }
 
             if (aClass539_10369 != null) {
@@ -359,11 +359,11 @@ public abstract class PathingEntity extends GraphNode_Sub1_Sub1 {
                     }
                 }
 
-                aClass539_10369.method11511(graphicalrenderer_1, client.cycles, arr_15, arr_17);
+                aClass539_10369.method11511(graphicalrenderer_1, client.CYCLES_20MS, arr_15, arr_17);
                 aBool10370 = true;
             }
         } else if (aClass539_10369 != null) {
-            aClass539_10369.method11512(client.cycles);
+            aClass539_10369.method11512(client.CYCLES_20MS);
         }
 
         if (aClass539_10369 != null) {

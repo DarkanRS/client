@@ -28,7 +28,7 @@ public abstract class CutsceneAction_Sub10 extends CutsceneAction {
             }
             if (client.getIComponentSettings(icomponentdefinitions_5).clickOptionEnabled(i_0 - 1)) {
                 BufferedConnectionContext class184_8 = Preference_Sub20.getConnectionContext();
-                if (client.gameState == 0 || client.gameState == 13) {
+                if (client.GAME_STATE == 0 || client.GAME_STATE == 13) {
                     TCPPacket tcpmessage_7;
                     if (i_0 == 1) {
                         tcpmessage_7 = Class271.createPacket(ClientProt.IF_OP1, class184_8.isaac);

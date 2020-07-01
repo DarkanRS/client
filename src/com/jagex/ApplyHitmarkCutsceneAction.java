@@ -115,11 +115,11 @@ public class ApplyHitmarkCutsceneAction extends CutsceneAction {
     @Override
     public void method1592() {
         PathingEntity animable_2 = Class82.CUTSCENE_ENTITIES[anInt9369].method1342();
-        animable_2.applyHit(anInt9370, anInt9371, anInt9373, anInt9372, client.cycles, 0);
+        animable_2.applyHit(anInt9370, anInt9371, anInt9373, anInt9372, client.CYCLES_20MS, 0);
     }
 
     public void method1601() {
         PathingEntity animable_1 = Class82.CUTSCENE_ENTITIES[1276816799 * anInt9369 * 565784159].method1342();
-        animable_1.applyHit(-2146354133 * anInt9370 * 1355915907, 2002383587 * anInt9371 * 1673585355, anInt9373 * 306986489 * 117044297, anInt9372 * -491483183 * 1810377009, client.cycles * 1968179203 * -1809259861, 0);
+        animable_1.applyHit(-2146354133 * anInt9370 * 1355915907, 2002383587 * anInt9371 * 1673585355, anInt9373 * 306986489 * 117044297, anInt9372 * -491483183 * 1810377009, client.CYCLES_20MS * 1968179203 * -1809259861, 0);
     }
 }

@@ -25,7 +25,7 @@ public class SpotAnimDefinitions {
     int anInt6969;
 
     static void method11243() {
-        if (Class298.method5303()) {
+        if (Class298.gameNotLoading()) {
             if (Class13.aStringArray129 == null) {
                 FontRenderer.method402();
             }

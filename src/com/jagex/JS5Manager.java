@@ -64,7 +64,7 @@ public class JS5Manager {
         if (bytes_6[Class4.MY_PLAYER_PLANE][i_2][i_3] == b_7) {
             return false;
         } else {
-            RegionMap regionmap_8 = IndexLoaders.MAP_REGION_DECODER.method4433();
+            RenderFlagMap regionmap_8 = IndexLoaders.MAP_REGION_DECODER.getRenderFlags();
             if ((regionmap_8.tileMasks[Class4.MY_PLAYER_PLANE][i_2][i_3] & 0x4) == 0) {
                 return false;
             } else {
@@ -120,8 +120,8 @@ public class JS5Manager {
                                     if (class293_26.aClass208_3504 != null) {
                                         for (class208_27 = class293_26.aClass208_3504; class208_27 != null; class208_27 = class208_27.aClass208_2660) {
                                             class521_sub1_sub1_21 = class208_27.aTransform_Sub1_Sub1_2659;
-                                            if (class521_sub1_sub1_21 instanceof Location) {
-                                                Location sceneobject_28 = (Location) class521_sub1_sub1_21;
+                                            if (class521_sub1_sub1_21 instanceof WorldObject) {
+                                                WorldObject sceneobject_28 = (WorldObject) class521_sub1_sub1_21;
                                                 i_23 = sceneobject_28.method89();
                                                 int i_24 = sceneobject_28.method92();
                                                 if (i_23 == 21) {

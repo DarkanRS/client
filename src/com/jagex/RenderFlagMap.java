@@ -1,6 +1,6 @@
 package com.jagex;
 
-public class RegionMap {
+public class RenderFlagMap {
 
     public static String aString3643;
 
@@ -8,7 +8,7 @@ public class RegionMap {
 
     public byte[][][] tileMasks;
 
-    public RegionMap(int i_2, int i_3) {
+    public RenderFlagMap(int i_2, int i_3) {
         tileMasks = new byte[4][i_2][i_3];
     }
 
@@ -72,7 +72,7 @@ public class RegionMap {
         }
     }
 
-    public boolean is0x2(int i_1, int i_2) {
+    public boolean isLowerObjectsToOverrideClipping(int i_1, int i_2) {
         return (i_1 >= 0 && i_2 >= 0 && i_1 < tileMasks[1].length && i_2 < tileMasks[1][i_1].length) && (tileMasks[1][i_1][i_2] & 0x2) != 0;
     }
 

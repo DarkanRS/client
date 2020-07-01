@@ -1,6 +1,6 @@
 package com.jagex;
 
-public interface Location {
+public interface WorldObject {
 
     void method38();
 

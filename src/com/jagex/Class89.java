@@ -55,13 +55,13 @@ public class Class89 {
         method1502();
     }
 
-    public static void sleep(long long_0) {
-        if (long_0 > 0L) {
-            if (long_0 % 10L == 0L) {
-                Class350_Sub3_Sub1.method15560(long_0 - 1L);
-                Class350_Sub3_Sub1.method15560(1L);
+    public static void sleep(long time) {
+        if (time > 0L) {
+            if (time % 10L == 0L) {
+                Class350_Sub3_Sub1.sleep(time - 1L);
+                Class350_Sub3_Sub1.sleep(1L);
             } else {
-                Class350_Sub3_Sub1.method15560(long_0);
+                Class350_Sub3_Sub1.sleep(time);
             }
         }
     }

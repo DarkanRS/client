@@ -1,6 +1,6 @@
 package com.jagex;
 
-public class Wall extends GraphNode_Sub1_Sub5 implements Location {
+public class Wall extends GraphNode_Sub1_Sub5 implements WorldObject {
 
     static int[] anIntArray10531 = {1, 2, 4, 8};
     static int[] anIntArray10533 = {16, 32, 64, 128};

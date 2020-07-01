@@ -11,7 +11,7 @@ public class IFSubObjectNode extends SubInterface {
 
     @Override
     public boolean method13401() {
-        Location sceneobject_2 = aClass530_9564.method11344();
+        WorldObject sceneobject_2 = aClass530_9564.method11344();
         if (sceneobject_2 != null) {
             Class15.method549(ClientTriggerType.aClass397_4808, interfaceId, sceneobject_2);
             return true;

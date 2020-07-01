@@ -355,7 +355,7 @@ public class PlayerEntity extends PathingEntity {
         }
 
         int i_10 = aClass19_10359.method578();
-        boolean bool_11 = scalar != 0 && client.cycles >= anInt10347 && client.cycles < anInt10348;
+        boolean bool_11 = scalar != 0 && client.CYCLES_20MS >= anInt10347 && client.CYCLES_20MS < anInt10348;
         if (bool_11) {
             i_2 |= 0x80000;
         }
@@ -417,7 +417,7 @@ public class PlayerEntity extends PathingEntity {
     }
 
     public void sendChat(String string_1, int i_2, int i_3) {
-        method15875(string_1, i_2, i_3, Class204.method3363() * QuickchatFiller.ENTITY_DEFAULTS.playerMessageDuration);
+        method15875(string_1, i_2, i_3, Class204.getFpsCap() * QuickchatFiller.ENTITY_DEFAULTS.playerMessageDuration);
     }
 
     @Override

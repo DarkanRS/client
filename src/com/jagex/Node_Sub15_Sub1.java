@@ -27,15 +27,15 @@ public class Node_Sub15_Sub1 extends Node_Sub15 {
     }
 
     public static void method14840() {
-        Engine.aClass273_3244.method4853();
+        Engine.FPS_MANAGER.method4853();
         int i_1;
         for (i_1 = 0; i_1 < 32; i_1++) {
             Engine.aLongArray3246[i_1] = 0L;
         }
         for (i_1 = 0; i_1 < 32; i_1++) {
-            Engine.aLongArray3247[i_1] = 0L;
+            Engine.PULSE_TIMES[i_1] = 0L;
         }
-        Engine.anInt3279 = 0;
+        Engine.LOGIC_PULSES_TO_PROCESS = 0;
     }
 
     synchronized void method14808() {

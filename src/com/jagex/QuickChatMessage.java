@@ -66,7 +66,7 @@ public class QuickChatMessage {
                 player_8.aBool10550 = class4_7.aBool33;
                 player_8.walkTypes[0] = Class197.playerMovementTypes[i_1];
                 player_8.plane = player_8.collisionPlane = (byte) i_10;
-                if (IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(i_14, i_15)) {
+                if (IndexLoaders.MAP_REGION_DECODER.getRenderFlags().isLowerObjectsToOverrideClipping(i_14, i_15)) {
                     player_8.collisionPlane += 1;
                 }
                 player_8.move(i_14, i_15);

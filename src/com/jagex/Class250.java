@@ -112,7 +112,7 @@ public class Class250 {
                 NativeSprite nativesprite_98;
                 if (!((PathingEntity) obj_12).aBool10318 && !((PathingEntity) obj_12).aClass457_10333.method7666()) {
                     for (EntityNode_Sub7 class275_sub7_95 = (EntityNode_Sub7) ((PathingEntity) obj_12).aClass457_10333.method7659(); class275_sub7_95 != null; class275_sub7_95 = (EntityNode_Sub7) ((PathingEntity) obj_12).aClass457_10333.method7650()) {
-                        EntityNode_Sub3 class275_sub3_16 = class275_sub7_95.method12600(client.cycles);
+                        EntityNode_Sub3 class275_sub3_16 = class275_sub7_95.method12600(client.CYCLES_20MS);
                         if (class275_sub3_16 == null) {
                             if (class275_sub7_95.method12602()) {
                                 class275_sub7_95.method4887();
@@ -131,7 +131,7 @@ public class Class250 {
                             if (nativesprite_98 != null && nativesprite_99 != null) {
                                 i_21 = 255;
                                 boolean bool_22 = true;
-                                i_23 = client.cycles - class275_sub3_16.anInt7811;
+                                i_23 = client.CYCLES_20MS - class275_sub3_16.anInt7811;
                                 int i_24 = nativesprite_99.method2747() * class275_sub3_16.anInt7809 / 255;
                                 int i_25;
                                 int i_26;
@@ -232,8 +232,8 @@ public class Class250 {
                             if (class180_121.idk == 0) {
                                 bool_20 = true;
                             } else {
-                                i_21 = Class204.method3363() * 1000 / class180_121.idk / 2;
-                                bool_20 = client.cycles % (i_21 * 2) < i_21;
+                                i_21 = Class204.getFpsCap() * 1000 / class180_121.idk / 2;
+                                bool_20 = client.CYCLES_20MS % (i_21 * 2) < i_21;
                             }
                             if (bool_20) {
                                 nativesprite_98.method2752((int) (i_0 + client.aFloatArray7292[0] - 12.0F), i_92 - nativesprite_98.method2793());
@@ -250,7 +250,7 @@ public class Class250 {
                     HitsplatDefinitions hitsplatdefinitions_122 = null;
                     i_19 = 0;
                     if (i_17 >= 0) {
-                        if (i_100 <= client.cycles) {
+                        if (i_100 <= client.CYCLES_20MS) {
                             continue;
                         }
                         hitsplatdefinitions_122 = IndexLoaders.HITSPLAT_LOADER.getDefinitions(((PathingEntity) obj_12).anIntArray10316[i_15]);
@@ -263,7 +263,7 @@ public class Class250 {
                     if (i_115 >= 0) {
                         hitsplatdefinitions_101 = IndexLoaders.HITSPLAT_LOADER.getDefinitions(i_115);
                     }
-                    if (i_100 - i_19 <= client.cycles) {
+                    if (i_100 - i_19 <= client.CYCLES_20MS) {
                         if (hitsplatdefinitions_122 == null) {
                             ((PathingEntity) obj_12).anIntArray10351[i_15] = -1;
                         } else {
@@ -479,7 +479,7 @@ public class Class250 {
                                         i_65 += i_42;
                                     }
                                 }
-                                i_76 = ((PathingEntity) obj_12).anIntArray10351[i_15] - client.cycles;
+                                i_76 = ((PathingEntity) obj_12).anIntArray10351[i_15] - client.CYCLES_20MS;
                                 int i_77 = hitsplatdefinitions_122.anInt2846 - i_76 * hitsplatdefinitions_122.anInt2846 / hitsplatdefinitions_122.anInt2841;
                                 int i_78 = i_76 * hitsplatdefinitions_122.anInt2833 / hitsplatdefinitions_122.anInt2841 + -hitsplatdefinitions_122.anInt2833;
                                 int i_79 = (int) (i_0 + client.aFloatArray7292[0] - (i_65 >> 1) + i_77);

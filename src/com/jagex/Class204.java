@@ -11,8 +11,8 @@ public enum Class204 implements Identifiable {
         anInt2580 = i_1;
     }
 
-    public static int method3363() {
-        return (int) (1000000000L / Engine.aLong3242);
+    public static int getFpsCap() {
+        return (int) (1000000000L / Engine.NANOSECONDS_PER_FRAME);
     }
 
     static void method3367() {

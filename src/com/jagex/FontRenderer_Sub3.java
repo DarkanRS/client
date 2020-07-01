@@ -32,7 +32,7 @@ public class FontRenderer_Sub3 extends FontRenderer {
     static void method14336(GraphNode_Sub1 class521_sub1_0, int i_1, boolean bool_2) {
         int i_4;
         int i_5;
-        if (class521_sub1_0 instanceof GraphNode_Sub1_Sub1 && class521_sub1_0 instanceof Location) {
+        if (class521_sub1_0 instanceof GraphNode_Sub1_Sub1 && class521_sub1_0 instanceof WorldObject) {
             GraphNode_Sub1_Sub1 class521_sub1_sub1_9 = (GraphNode_Sub1_Sub1) class521_sub1_0;
             int i_7 = class521_sub1_sub1_9.localX - class521_sub1_sub1_9.aShort9458 + 1 << 9;
             int i_8 = class521_sub1_sub1_9.localY - class521_sub1_sub1_9.aShort9456 + 1 << 9;
@@ -57,7 +57,7 @@ public class FontRenderer_Sub3 extends FontRenderer {
             boolean bool_2 = PacketDecoder.decode(class184_0);
             return bool_2;
         } catch (IOException ioexception_7) {
-            if (client.gameState == 7) {
+            if (client.GAME_STATE == 7) {
                 class184_0.reset();
                 return false;
             } else {

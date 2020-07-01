@@ -75,7 +75,7 @@ public class Class507 {
             if (client.BASE_WINDOW_ID != -1) {
                 Class516.method8867(true);
             }
-            if (client.GAME_CONNECTION_CONTEXT.getConnection() != null && TextureDetails.method2875(client.gameState)) {
+            if (client.GAME_CONNECTION_CONTEXT.getConnection() != null && GameState.loggedIn(client.GAME_STATE)) {
                 Class388.method6692();
             }
             for (int i_8 = 0; i_8 < 107; i_8++) {

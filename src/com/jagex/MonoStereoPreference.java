@@ -35,7 +35,7 @@ public class MonoStereoPreference extends Preference {
                     for (int i_4 = 0; i_4 < i_3; i_4++) {
                         int i_5 = rsbytebuffer_0.readUnsignedShort();
                         int i_6 = rsbytebuffer_0.readInt();
-                        if (i_5 < Class320.VARC_INT.length && Node_Sub17_Sub2.VARC_BOOL[i_5] && (IndexLoaders.VARC_LOADER.method6873(i_5).aChar4984 != 49 || i_6 >= -1 && i_6 <= 1)) {
+                        if (i_5 < Class320.VARC_INT.length && Node_Sub17_Sub2.IS_VARC_SAVE_TO_FILE[i_5] && (IndexLoaders.VARC_LOADER.method6873(i_5).aChar4984 != 49 || i_6 >= -1 && i_6 <= 1)) {
                             Class320.VARC_INT[i_5] = i_6;
                         }
                     }

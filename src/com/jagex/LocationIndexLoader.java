@@ -76,7 +76,7 @@ public class LocationIndexLoader {
                 objectdefinitions_3.method7964(new ByteBuf(bytes_9));
             }
             objectdefinitions_3.method7966();
-            if (objectdefinitions_3.alt) {
+            if (objectdefinitions_3.ignoreAltClip) {
                 objectdefinitions_3.clipType = 0;
                 objectdefinitions_3.blocks = false;
             }

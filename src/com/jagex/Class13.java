@@ -33,7 +33,7 @@ public class Class13 {
         if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager() == null) {
             return 0;
         } else if (i_4 < 3) {
-            RegionMap regionmap_6 = IndexLoaders.MAP_REGION_DECODER.method4433();
+            RenderFlagMap regionmap_6 = IndexLoaders.MAP_REGION_DECODER.getRenderFlags();
             int i_7 = i_0 >> 9;
             int i_8 = i_1 >> 9;
             if (i_2 >= 0 && i_3 >= 0 && i_2 <= IndexLoaders.MAP_REGION_DECODER.getSizeX() - 1 && i_3 <= IndexLoaders.MAP_REGION_DECODER.getSizeY() - 1) {
