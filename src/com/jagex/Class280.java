@@ -29,8 +29,8 @@ public class Class280 implements Interface25 {
             }
             Class11.anInt122 += i_5;
         }
-        if (i_3 != Class266.anInt3289) {
-            i_4 = i_3 - Class266.anInt3289;
+        if (i_3 != LibraryBase.anInt3289) {
+            i_4 = i_3 - LibraryBase.anInt3289;
             i_5 = (int) (i_4 * long_0 / 320L);
             if (i_4 > 0) {
                 if (i_5 == 0) {
@@ -43,7 +43,7 @@ public class Class280 implements Interface25 {
             } else if (i_5 < i_4) {
                 i_5 = i_4;
             }
-            Class266.anInt3289 += i_5;
+            LibraryBase.anInt3289 += i_5;
         }
         client.camAngleY += 8.0F * (client.aFloat7266 * long_0 / 40.0F);
         client.camAngleX += 8.0F * (long_0 * client.aFloat7284 / 40.0F);

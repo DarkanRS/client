@@ -2,7 +2,7 @@ package com.jagex;
 
 public class Class404 {
 
-    static Interface36 LIBRARY_LOADER;
+    static LibraryLoader LIBRARY_LOADER;
     static Class466 aClass466_4831;
 
     Class404() throws Throwable {

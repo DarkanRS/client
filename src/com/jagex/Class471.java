@@ -99,7 +99,7 @@ public class Class471 {
         int i_2 = class459_0.anInt5496;
         int i_3 = class459_0.anInt5518;
         int i_4 = class459_0.anInt5516;
-        int[] ints_5 = Class266.anIntArray3288;
+        int[] ints_5 = LibraryBase.anIntArray3288;
         int i_6 = class459_0.anInt5515;
         byte[] bytes_7 = class459_0.aByteArray5526;
         int i_8 = class459_0.anInt5506;
@@ -199,7 +199,7 @@ public class Class471 {
         class459_0.anInt5496 = i_2;
         class459_0.anInt5518 = i_3;
         class459_0.anInt5516 = i_4;
-        Class266.anIntArray3288 = ints_5;
+        LibraryBase.anIntArray3288 = ints_5;
         class459_0.anInt5515 = i_6;
         class459_0.aByteArray5526 = bytes_7;
         class459_0.anInt5506 = i_8;
@@ -242,8 +242,8 @@ public class Class471 {
         int[] ints_21 = null;
         int[] ints_22 = null;
         class459_0.anInt5513 = 1;
-        if (Class266.anIntArray3288 == null) {
-            Class266.anIntArray3288 = new int[class459_0.anInt5513 * 100000];
+        if (LibraryBase.anIntArray3288 == null) {
+            LibraryBase.anIntArray3288 = new int[class459_0.anInt5513 * 100000];
         }
 
         boolean bool_23 = true;
@@ -476,7 +476,7 @@ public class Class471 {
                         }
 
                         ++class459_0.anIntArray5517[class459_0.aByteArray5523[b_24 & 0xff] & 0xff];
-                        Class266.anIntArray3288[i_34] = class459_0.aByteArray5523[b_24 & 0xff] & 0xff;
+                        LibraryBase.anIntArray3288[i_34] = class459_0.aByteArray5523[b_24 & 0xff] & 0xff;
                         ++i_34;
                         if (i_49 == 0) {
                             ++i_48;
@@ -534,7 +534,7 @@ public class Class471 {
                         b_25 = class459_0.aByteArray5523[class459_0.aByteArray5524[class459_0.anIntArray5525[0]] & 0xff];
 
                         for (class459_0.anIntArray5517[b_25 & 0xff] += i_39; i_39 > 0; --i_39) {
-                            Class266.anIntArray3288[i_34] = b_25 & 0xff;
+                            LibraryBase.anIntArray3288[i_34] = b_25 & 0xff;
                             ++i_34;
                         }
                     }
@@ -553,14 +553,14 @@ public class Class471 {
                 }
 
                 for (i_39 = 0; i_39 < i_34; i_39++) {
-                    b_25 = (byte) (Class266.anIntArray3288[i_39] & 0xff);
-                    Class266.anIntArray3288[class459_0.anIntArray5519[b_25 & 0xff]] |= i_39 << 8;
+                    b_25 = (byte) (LibraryBase.anIntArray3288[i_39] & 0xff);
+                    LibraryBase.anIntArray3288[class459_0.anIntArray5519[b_25 & 0xff]] |= i_39 << 8;
                     ++class459_0.anIntArray5519[b_25 & 0xff];
                 }
 
-                class459_0.anInt5515 = Class266.anIntArray3288[class459_0.anInt5514] >> 8;
+                class459_0.anInt5515 = LibraryBase.anIntArray3288[class459_0.anInt5514] >> 8;
                 class459_0.anInt5518 = 0;
-                class459_0.anInt5515 = Class266.anIntArray3288[class459_0.anInt5515];
+                class459_0.anInt5515 = LibraryBase.anIntArray3288[class459_0.anInt5515];
                 class459_0.anInt5516 = (byte) (class459_0.anInt5515 & 0xff);
                 class459_0.anInt5515 >>= 8;
                 ++class459_0.anInt5518;

@@ -213,7 +213,7 @@ public class Login {
                         if (client.aString7156 != null) {
                             rsbitsbuffer_22.writeString(client.aString7156);
                         }
-                        rsbitsbuffer_22.writeByte(IndexLoaders.NATIVE_LIBRARY_LOADER.method4639() ? 1 : 0);
+                        rsbitsbuffer_22.writeByte(IndexLoaders.NATIVE_LIBRARY_LOADER.hasTheoraLibrary() ? 1 : 0);
                         rsbitsbuffer_22.writeByte(client.aBool7310 ? 1 : 0);
                         rsbitsbuffer_22.writeByte(client.aBool7160 ? 1 : 0);
                         rsbitsbuffer_22.writeByte(BASDefinitions.anInt2831);

@@ -367,4 +367,58 @@ public class Static {
 	    }
 	}
 
+	static void method4653(int i_0, int i_1) {
+	    if (QuickchatFiller.ENTITY_DEFAULTS.aBool7044 || Class20.anInt169 != 1 && (!CutsceneAction_Sub6.SHOW_FACE_HERE || Class20.anInt169 != 2 || !AccountCreationStage.aCacheableNode_Sub7_12.aString9576.equals(LocalizedText.FACE_HERE.translate(Class223.CURRENT_LANGUAGE)))) {
+	        FontMetrics fontmetrics_3 = ShaderLoader.method1887();
+	        int i_4 = fontmetrics_3.getWidthNoSprites(LocalizedText.CHOOSE_OPTION.translate(Class223.CURRENT_LANGUAGE));
+	        int i_5;
+	        int i_7;
+	        if (!Class20.aBool162) {
+	            for (CacheableNode_Sub7 class282_sub50_sub7_9 = (CacheableNode_Sub7) Class20.aClass482_171.head(); class282_sub50_sub7_9 != null; class282_sub50_sub7_9 = (CacheableNode_Sub7) Class20.aClass482_171.next()) {
+	                i_7 = Shadow.method15507(class282_sub50_sub7_9, fontmetrics_3);
+	                if (i_7 > i_4) {
+	                    i_4 = i_7;
+	                }
+	            }
+	            i_4 += 8;
+	            i_5 = Class20.anInt169 * Class20.anInt178 + 21;
+	            Class110.anInt1104 = (Class20.aBool187 ? 26 : 22) + Class20.anInt169 * Class20.anInt178;
+	        } else {
+	            for (CacheableNode_Sub15 class282_sub50_sub15_6 = (CacheableNode_Sub15) Class20.aClass477_182.method7941(); class282_sub50_sub15_6 != null; class282_sub50_sub15_6 = (CacheableNode_Sub15) Class20.aClass477_182.method7955()) {
+	                if (class282_sub50_sub15_6.anInt9769 == 1) {
+	                    i_7 = Shadow.method15507((CacheableNode_Sub7) class282_sub50_sub15_6.aClass477_9770.aCacheableNode_5629.aCacheableNode_8119, fontmetrics_3);
+	                } else {
+	                    i_7 = Class163.method2840(class282_sub50_sub15_6, fontmetrics_3);
+	                }
+	                if (i_7 > i_4) {
+	                    i_4 = i_7;
+	                }
+	            }
+	            i_4 += 8;
+	            i_5 = Class20.anInt178 * Class20.anInt170 + 21;
+	            Class110.anInt1104 = Class20.anInt178 * Class20.anInt170 + (Class20.aBool187 ? 26 : 22);
+	        }
+	        i_4 += 10;
+	        int i_8 = i_0 - i_4 / 2;
+	        if (i_8 + i_4 > Class349.anInt4083) {
+	            i_8 = Class349.anInt4083 - i_4;
+	        }
+	        if (i_8 < 0) {
+	            i_8 = 0;
+	        }
+	        i_7 = i_1;
+	        if (i_1 + i_5 > Engine.anInt3243 * -969250379) {
+	            i_7 = Engine.anInt3243 * -969250379 - i_5;
+	        }
+	        if (i_7 < 0) {
+	            i_7 = 0;
+	        }
+	        Class301.anInt3555 = i_8;
+	        BufferedConnectionContext.anInt2300 = i_7;
+	        Class158_Sub2.anInt8975 = i_4;
+	        Class20.anInt156 = (int) (Math.random() * 24.0D);
+	        Class20.aBool161 = true;
+	    }
+	}
+
 }

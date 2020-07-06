@@ -21,12 +21,4 @@ public class Class362 {
         }
         return arr_2;
     }
-
-    public static Interface36 getNativeLibraryLoader() {
-        if (Class404.LIBRARY_LOADER == null) {
-            throw new IllegalStateException("");
-        } else {
-            return Class404.LIBRARY_LOADER;
-        }
-    }
 }

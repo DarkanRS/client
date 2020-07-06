@@ -93,7 +93,7 @@ public class Whirlpool {
                         i_3 = (int) ((runtime_7.totalMemory() - runtime_7.freeMemory()) / 1024L);
                         Class209.printConsoleMessage("" + i_3);
                     } else if (id == 19) {
-                        Class209.printConsoleMessage(IndexLoaders.NATIVE_LIBRARY_LOADER.method219() ? "Success" : "Failure");
+                        Class209.printConsoleMessage(IndexLoaders.NATIVE_LIBRARY_LOADER.unload() ? "Success" : "Failure");
                     } else if (id == 20) {
                         Class159.GAME_CONNECTION_INFO.swap();
                     } else if (id == 22) {

@@ -12,9 +12,9 @@ public class Class363 {
         Vector3 vector3_2 = VertexNormal.MY_PLAYER.method11166().coords;
         int i_3 = (int) vector3_2.x + client.anInt7248;
         int i_4 = (int) vector3_2.z + client.anInt7250;
-        if (Class11.anInt122 - i_3 < -2000 || Class11.anInt122 - i_3 > 2000 || Class266.anInt3289 - i_4 < -2000 || Class266.anInt3289 - i_4 > 2000) {
+        if (Class11.anInt122 - i_3 < -2000 || Class11.anInt122 - i_3 > 2000 || LibraryBase.anInt3289 - i_4 < -2000 || LibraryBase.anInt3289 - i_4 > 2000) {
             Class11.anInt122 = i_3;
-            Class266.anInt3289 = i_4;
+            LibraryBase.anInt3289 = i_4;
         }
         int i_5;
         int i_6;
@@ -34,8 +34,8 @@ public class Class363 {
             }
             Class11.anInt122 += i_6;
         }
-        if (i_4 != Class266.anInt3289) {
-            i_5 = i_4 - Class266.anInt3289;
+        if (i_4 != LibraryBase.anInt3289) {
+            i_5 = i_4 - LibraryBase.anInt3289;
             i_6 = (int) (long_0 * i_5 / 320L);
             if (i_5 > 0) {
                 if (i_6 == 0) {
@@ -48,7 +48,7 @@ public class Class363 {
             } else if (i_6 < i_5) {
                 i_6 = i_5;
             }
-            Class266.anInt3289 += i_6;
+            LibraryBase.anInt3289 += i_6;
         }
         client.camAngleY += client.aFloat7266 * long_0 / 6.0F;
         client.camAngleX += client.aFloat7284 * long_0 / 6.0F;

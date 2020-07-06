@@ -312,7 +312,7 @@ public class FriendStatus {
                 }
                 if (bool_20 && Class20.anInt169 > 0) {
                     if (client.aClass118_7257 == null && client.anInt7184 == 0) {
-                        NativeLibraryLoader.method4653(i_3, i_4);
+                        Static.method4653(i_3, i_4);
                     } else {
                         Class20.anInt167 = 2;
                     }

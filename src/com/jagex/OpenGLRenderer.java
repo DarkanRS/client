@@ -185,9 +185,9 @@ public class OpenGLRenderer extends AbstractRenderer {
 
         try {
             anInt8475 = i_3;
-            if (!Class362.getNativeLibraryLoader().loadLibrary("jaclib")) {
+            if (!LibraryLoader.getLoader().loadLibrary("jaclib")) {
                 throw new RuntimeException("");
-            } else if (!Class362.getNativeLibraryLoader().loadLibrary("jaggl")) {
+            } else if (!LibraryLoader.getLoader().loadLibrary("jaggl")) {
                 throw new RuntimeException("");
             } else {
                 anOpenGL8352 = new OpenGL();

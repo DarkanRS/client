@@ -55,9 +55,7 @@ public class PulseEvent extends CacheableNode {
                 ModelType i_6 = ModelType.forId(event.primary);
                 int i_7 = event.secondary;
                 int i_8 = event.tertiary;
-                System.out.println(i_6);
                 if (i_6 != icomponentdefinitions_5.modelType || i_7 != icomponentdefinitions_5.modelId || i_8 != icomponentdefinitions_5.anInt1339) {
-                	System.out.println("meme");
                     icomponentdefinitions_5.modelType = i_6;
                     icomponentdefinitions_5.modelId = i_7;
                     icomponentdefinitions_5.anInt1339 = i_8;

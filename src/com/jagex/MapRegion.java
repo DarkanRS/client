@@ -641,7 +641,7 @@ public class MapRegion {
             client.anInt7262 -= i_3 * 512;
             client.anInt7376 -= i_4 * 512;
             Class11.anInt122 -= i_3 * 512;
-            Class266.anInt3289 -= i_4 * 512;
+            LibraryBase.anInt3289 -= i_4 * 512;
             if (NativeLibraryLoader.anInt3240 != 4) {
                 NativeLibraryLoader.anInt3240 = 2;
                 Class86.anInt833 = -1;

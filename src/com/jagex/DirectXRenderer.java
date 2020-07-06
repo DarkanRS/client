@@ -84,7 +84,7 @@ public class DirectXRenderer extends HardwareRenderer {
 	        boolean bool_5 = HardwareRenderer.method13893();
 	        if (!bool_5) {
 	            throw new RuntimeException("");
-	        } else if (!Class362.getNativeLibraryLoader().loadLibrary("jagdx")) {
+	        } else if (!LibraryLoader.getLoader().loadLibrary("jagdx")) {
 	            throw new RuntimeException("");
 	        } else {
 	            AbstractRenderer graphicalrenderer_4 = method15638(canvas_0, interface22_1, index_2, Integer.valueOf(i_3));

@@ -38,7 +38,7 @@ public class GraphicsToolkitPreference extends Preference {
 
     @Override
     public int checkValid(int i_1) {
-        return i_1 == 3 && !Class362.getNativeLibraryLoader().method218() ? 3 : 2;
+        return i_1 == 3 && !LibraryLoader.getLoader().hasDxLibrary() ? 3 : 2;
     }
 
     public int getValue() {
@@ -52,10 +52,6 @@ public class GraphicsToolkitPreference extends Preference {
     int method7786() {
         aBool7914 = true;
         return 2;
-    }
-
-    public int method7784(int i_1) {
-        return i_1 == 3 && !Class362.getNativeLibraryLoader().method218() ? 3 : 2;
     }
 
     void method7780(int i_1) {

@@ -304,6 +304,7 @@ public class GroundDecoration extends SceneObjectNode implements WorldObject {
                                             }
                                         }
                                     } else if (inter.type == ComponentType.MODEL) {
+                                    	//TODO figure out what is broken with this block of logic
                                         IndexLoaders.MAP_REGION_DECODER.method4435().method4052();
                                         MeshRasterizer meshRasterizer = null;
                                         i_22 = 2048;
@@ -311,7 +312,6 @@ public class GroundDecoration extends SceneObjectNode implements WorldObject {
                                             i_22 |= 0x80000;
                                         }
                                         i_23 = 0;
-                                        System.out.println(Renderers.CURRENT_RENDERER.getClass().getSimpleName());
                                         if (inter.containerItemId != -1) {
                                             itemdefinitions_36 = IndexLoaders.ITEM_LOADER.getItemDefinitions(inter.containerItemId);
                                             if (itemdefinitions_36 != null) {

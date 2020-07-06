@@ -2874,7 +2874,7 @@ public class JAGGLRenderer extends HardwareRenderer {
 	        boolean bool_5 = HardwareRenderer.method13893();
 	        if (!bool_5) {
 	            throw new RuntimeException("");
-	        } else if (!Class362.getNativeLibraryLoader().loadLibrary("jaggl")) {
+	        } else if (!LibraryLoader.getLoader().loadLibrary("jaggl")) {
 	            throw new RuntimeException("");
 	        } else {
 	            Class459.method7679(canvas_0);

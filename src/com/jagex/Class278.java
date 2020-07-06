@@ -24,7 +24,7 @@ public abstract class Class278 {
     boolean aBool3360;
 
     Class278() {
-        if (!Class362.getNativeLibraryLoader().loadLibrary("jagtheora")) {
+        if (!LibraryLoader.getLoader().loadLibrary("jagtheora")) {
             throw new RuntimeException("");
         } else {
             aByteArray3354 = new byte[4096];

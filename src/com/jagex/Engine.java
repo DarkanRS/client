@@ -370,7 +370,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
     }
 
     public boolean method4662() {
-        return Class362.getNativeLibraryLoader().loadLibrary("jagtheora");
+        return LibraryLoader.getLoader().loadLibrary("jagtheora");
     }
 
     void method4663(Container container_1) {
@@ -566,7 +566,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
         }
         Class156.method2645();
         if (Class187.method3118()) {
-            Class362.getNativeLibraryLoader().method219();
+            LibraryLoader.getLoader().unload();
         }
         if (Class351.gameCanvas != null) {
             try {
@@ -611,7 +611,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
     }
 
     public boolean method4681() {
-        aBool3268 = Class362.getNativeLibraryLoader().loadLibrary("jaclib");
+        aBool3268 = LibraryLoader.getLoader().loadLibrary("jaclib");
         if (aBool3268) {
             try {
                 QueryPerformanceCounter.init();

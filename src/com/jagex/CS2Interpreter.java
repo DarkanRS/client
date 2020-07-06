@@ -9415,7 +9415,7 @@ public class CS2Interpreter {
     }
 
     static void method14818(CS2Executor executor) {
-        executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.NATIVE_LIBRARY_LOADER.method4639() ? 1 : 0;
+        executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.NATIVE_LIBRARY_LOADER.hasTheoraLibrary() ? 1 : 0;
     }
 
     static void method14833(CS2Executor executor) {

@@ -299,7 +299,7 @@ public abstract class HardwareRenderer extends AbstractRenderer {
     }
 
     public static boolean method13893() {
-        return Class362.getNativeLibraryLoader().loadLibrary("jaclib");
+        return LibraryLoader.getLoader().loadLibrary("jaclib");
     }
 
     Matrix44 method13884() {

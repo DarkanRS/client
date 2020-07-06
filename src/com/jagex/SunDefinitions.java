@@ -63,7 +63,7 @@ public class SunDefinitions {
                 if (i_15 < 0) {
                     i_15 = 0;
                 }
-                NativeLibraryLoader.method4653(i_15, BufferedConnectionContext.anInt2300);
+                Static.method4653(i_15, BufferedConnectionContext.anInt2300);
                 return;
             }
         }

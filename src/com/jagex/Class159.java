@@ -73,7 +73,7 @@ public class Class159 {
         return i_0 + i_2;
     }
 
-    public static void setNativeLibraryLoader(Interface36 interface36_0) {
+    public static void setNativeLibraryLoader(LibraryLoader interface36_0) {
         if (Class404.LIBRARY_LOADER != null) {
             throw new IllegalStateException("");
         } else {

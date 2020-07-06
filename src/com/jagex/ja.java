@@ -51,7 +51,8 @@ public class ja extends AbstractRenderer implements Interface40 {
         super(interface22_2);
 
         try {
-            if (!Class362.getNativeLibraryLoader().loadLibrary("sw3d")) {
+            if (!LibraryLoader.getLoader().loadLibrary("sw3d")) {
+            	System.err.println("Unable to load sw3d.");
                 throw new RuntimeException("");
             } else {
                 Class156.method2643();
@@ -89,6 +90,10 @@ public class ja extends AbstractRenderer implements Interface40 {
             throw new RuntimeException();
         }
     }
+    
+	public static AbstractRenderer create(Canvas canvas_0, ImageLoader interface22_1, int i_2, int i_3) {
+	    return new ja(canvas_0, interface22_1, i_2, i_3);
+	}
 
     native void op(za var1);
 
@@ -2010,9 +2015,5 @@ public class ja extends AbstractRenderer implements Interface40 {
     native void oa(int var1, int var2, int var3, int var4);
 
     native void ox(int var1, int var2, int var3, int var4);
-
-	public static AbstractRenderer create(Canvas canvas_0, ImageLoader interface22_1, int i_2, int i_3) {
-	    return new ja(canvas_0, interface22_1, i_2, i_3);
-	}
 
 }

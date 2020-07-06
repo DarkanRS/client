@@ -126,7 +126,7 @@ public class QuestIndexLoader {
         if (Class20.anInt167 == 1) {
             CutsceneAction_Sub4.method13789(Class46.aCacheableNode_Sub7_438, i_0, i_1);
         } else if (Class20.anInt167 == 2) {
-            NativeLibraryLoader.method4653(i_0, i_1);
+            Static.method4653(i_0, i_1);
         }
         Class20.anInt167 = 0;
         Class46.aCacheableNode_Sub7_438 = null;
