@@ -60,7 +60,7 @@ public class Class507 {
             }
             if (!bool_4) {
                 Class351.gameCanvas.setSize(Class349.anInt4083, client.anInt3243 * -969250379);
-                Renderers.SOFTWARE_RENDERER.method8414(Class351.gameCanvas, Class349.anInt4083, client.anInt3243 * -969250379);
+                Renderers.CURRENT_RENDERER.method8414(Class351.gameCanvas, Class349.anInt4083, client.anInt3243 * -969250379);
                 if (container_6 == client.engineFrame) {
                     insets_7 = client.engineFrame.getInsets();
                     Class351.gameCanvas.setLocation(insets_7.left + client.GAME_CANVAS_X, insets_7.top + client.GAME_CANVAS_Y);

@@ -12,7 +12,7 @@ public class Class136 {
     Class137_Sub4 aClass137_Sub4_1638;
     boolean aBool1631;
 
-    Class136(OpenGLHardwareRenderer class505_sub1_1) {
+    Class136(OpenGLRenderer class505_sub1_1) {
         aBool1631 = class505_sub1_1.aBool8393;
         method2348(class505_sub1_1);
         if (!aBool1631) {
@@ -54,7 +54,7 @@ public class Class136 {
 
     }
 
-    static void method2348(OpenGLHardwareRenderer class505_sub1_0) {
+    static void method2348(OpenGLRenderer class505_sub1_0) {
         byte[] bytes_2;
         if (anObject1637 == null) {
             Class370_Sub1_Sub2 class370_sub1_sub2_1 = new Class370_Sub1_Sub2();

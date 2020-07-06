@@ -63,7 +63,7 @@ public class Class231 {
         Class487.aClass378_5752.method6433();
         Class487.aClass378_5752.method6403(client.anInterface35_7206);
         Node_Sub11_Sub3.method15476();
-        Class188.method3139(Renderers.SOFTWARE_RENDERER, IndexLoaders.SPRITES_INDEX);
+        Class188.method3139(Renderers.CURRENT_RENDERER, IndexLoaders.SPRITES_INDEX);
         Class76.method1361();
         Class122.method2109(Class182.aNativeSpriteArray2261);
         Static.method6378();

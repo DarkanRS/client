@@ -1,224 +1,537 @@
 package com.jagex;
 
-import java.awt.*;
+import jaclib.memory.DirectBufferHelper;
+import jaclib.memory.Stream;
+import jaclib.memory.heap.NativeHeap;
+import jaclib.memory.heap.NativeHeapBuffer;
+import sun.misc.Unsafe;
 
-public class HardwareRenderer extends AbstractRenderer {
+import java.lang.reflect.Field;
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
+import java.util.ArrayList;
 
-    int anInt8977;
-    int anInt8998;
-    int anInt8999;
-    int anInt9000;
-    int anInt9001;
-    boolean aBool9012;
-    boolean aBool9014;
-    float aFloat8976;
-    float aFloat9004;
-    float aFloat9003;
-    float aFloat8982;
-    int anInt8983;
-    int anInt9009;
-    int anInt9002;
-    int anInt8986;
-    float aFloat8978;
-    float aFloat8985;
-    int anInt8990;
-    int anInt8991;
-    int anInt9011;
-    int anInt8988;
-    int anInt9007;
-    int anInt9008;
-    Class185[] aClass185Array8984;
-    int anInt9015;
-    NativeSprite aNativeSprite_8987;
-    Matrix44Var aClass294_8993;
-    int anInt8992;
-    float[][] aFloatArrayArray8989;
-    int size;
-    boolean lowResolution;
-    LRUCache aClass229_9013;
-    LRUCache aClass229_9006;
-    Matrix44 aClass384_8994;
-    Matrix44 aClass384_8995;
-    Matrix44 aClass384_8996;
-    int anInt8980;
-    int anInt8981;
-    int[] anIntArray8979;
-    float[] aFloatArray9010;
+public abstract class HardwareRenderer extends AbstractRenderer {
 
-    HardwareRenderer(ImageLoader interface22_1) {
+    static Object anObject8711 = new Object();
+    static Matrix44 aClass384_8712 = new Matrix44();
+    public int anInt8701;
+    public int anInt8702;
+    public boolean aBool8718;
+    public int anInt8825;
+    public Matrix44 aClass384_8740;
+    public Matrix44 aClass384_8727;
+    public Matrix44 aClass384_8729;
+    public float[] aFloatArray8747;
+    public float aFloat8766;
+    public float aFloat8767;
+    public float aFloat8768;
+    public float aFloat8770;
+    public int anInt8709;
+    public Unsafe anUnsafe8830;
+    public ByteBuffer aByteBuffer8838;
+    public long aLong8695;
+    public int anInt8820;
+    public Interface6 anInterface6_8788;
+    protected int anInt8761;
+    protected int anInt8799;
+    protected float aFloat8813;
+    protected float aFloat8819;
+    protected boolean aBool8827;
+    protected boolean aBool8828;
+    protected Matrix44 aClass384_8683;
+    protected float aFloat8735;
+    protected float aFloat8736;
+    protected float aFloat8726;
+    protected float aFloat8697;
+    protected int anInt8822;
+    protected int anInt8742;
+    protected int anInt8743;
+    protected int anInt8744;
+    protected int anInt8749;
+    protected int anInt8776;
+    protected int anInt8751;
+    protected int anInt8752;
+    protected int anInt8823;
+    protected int anInt8754;
+    protected boolean aBool8755;
+    protected boolean aBool8756;
+    protected boolean aBool8757;
+    protected boolean aBool8684;
+    protected boolean aBool8759;
+    protected boolean aBool8760;
+    protected float[] aFloatArray8762;
+    protected float aFloat8769;
+    protected float aFloat8826;
+    protected int anInt8780;
+    protected boolean aBool8809;
+    protected int anInt8810;
+    protected int anInt8811;
+    protected int anInt8680;
+    protected Class73 aClass73_8733;
+    protected boolean aBool8817;
+    protected boolean aBool8818;
+    protected int anInt8844;
+    protected boolean aBool8692;
+    protected boolean aBool8843;
+    protected int anInt8831;
+    protected int anInt8773;
+    protected int anInt8758;
+    protected boolean aBool8808;
+    protected Matrix44[] aClass384Array8782;
+    protected Class37[] aClass37Array8783;
+    protected Class68[] aClass68Array8784;
+    protected Class68[] aClass68Array8785;
+    protected Node_Sub24[] aNode_Sub24Array8716;
+    int anInt8696 = 4194304;
+    Class428 aClass428_8772 = new Class428();
+    LinkedNodeList aClass473_8700;
+    Matrix44Var aClass294_8704;
+    Matrix44 aClass384_8705;
+    Matrix44Var aClass294_8706;
+    Matrix44Var aClass294_8804;
+    Matrix44 aClass384_8814;
+    Matrix44Var aClass294_8710;
+    Matrix44 aClass384_8685;
+    Matrix44Var aClass294_8713;
+    Matrix44 aClass384_8715;
+    Vector3 aClass385_8707;
+    float[] aFloatArray8717;
+    boolean aBool8829;
+    Class33 aClass33_8719;
+    boolean aBool8720;
+    Matrix44 aClass384_8774;
+    Matrix44 aClass384_8812;
+    boolean aBool8723;
+    Matrix44 aClass384_8724;
+    Matrix44 aClass384_8725;
+    Matrix44 aClass384_8708;
+    Matrix44 aClass384_8728;
+    float[][] aFloatArrayArray8730;
+    float aFloat8737;
+    float aFloat8738;
+    int anInt8745;
+    int anInt8835;
+    int anInt8722;
+    int anInt8748;
+    float[] aFloatArray8763;
+    float[] aFloatArray8764;
+    int anInt8765;
+    int anInt8775;
+    int anInt8806;
+    int anInt8821;
+    Class41[] aClass41Array8793;
+    Class55[] aClass55Array8802;
+    boolean aBool8805;
+    int anInt8815;
+    boolean aBool8681;
+    MeshRasterizer_Sub3[] aMeshRasterizer_Sub3Array8839;
+    MeshRasterizer_Sub3[] aMeshRasterizer_Sub3Array8840;
+    Matrix44 aClass384_8841;
+    Matrix44Var aClass294_8842;
+    Index shaderIndex;
+    int anInt8824;
+    Class66 aClass66_8787;
+    int[] anIntArray8803;
+    Class49 aClass49_8694;
+    Class48 aClass48_8794;
+    Class47 aClass47_8698;
+    Class103 aClass103_8796;
+    Class41_Sub1_Sub1 aClass41_Sub1_Sub1_8691;
+    Class41_Sub1_Sub2 aClass41_Sub1_Sub2_8798;
+    Class32 aClass32_8714;
+    Class41 aClass41_8753;
+    Class54 aClass54_8837;
+    int anInt8703;
+    int anInt8777;
+    int anInt8778;
+    NativeHeap aNativeHeap8699;
+    Class152_Sub2 aClass152_Sub2_8731;
+    float aFloat8732;
+    float aFloat8734;
+    float aFloat8797;
+    float aFloat8741;
+    Interface4 anInterface4_8746;
+    Class70 aClass70_8786;
+    int anInt8739;
+    HDWaterTile aClass90_8807;
+    boolean aBool8779;
+    Interface4 anInterface4_8682;
+    Class70 aClass70_8833;
+    Interface30[] anInterface30Array8781;
+    Interface6 anInterface6_8795;
+    Class70 aClass70_8832;
+    Class70 aClass70_8836;
+    Class70 aClass70_8721;
+    Interface32 anInterface32_8834;
+    NativeSprite_Sub3 aNativeSprite_Sub3_8790;
+    NativeSprite_Sub3 aNativeSprite_Sub3_8791;
+    Interface4 anInterface4_8693;
+
+    HardwareRenderer(ImageLoader interface22_1, Index index_2, int i_3, int i_4) {
         super(interface22_1);
-        aBool9014 = false;
-        aBool9012 = false;
-        anInt8983 = 0;
-        anInt9002 = 0;
-        anInt9009 = 0;
-        anInt8986 = 0;
-        anInt8990 = 45823;
-        anInt8991 = 78642;
-        anInt8992 = 75518;
-        aFloatArrayArray8989 = new float[6][4];
-        aFloat8978 = 1.0F;
-        aFloat8985 = 0.0F;
-        size = 128;
-        lowResolution = false;
-        aClass229_9013 = new LRUCache(16);
-        anInt9015 = -1;
+        anInt8696 = 4194304;
+        aClass473_8700 = new LinkedNodeList();
+        aClass294_8704 = new Matrix44Var();
+        aClass384_8705 = new Matrix44();
+        aClass294_8706 = new Matrix44Var();
+        aClass294_8804 = new Matrix44Var();
+        aClass384_8740 = new Matrix44();
+        aClass384_8814 = new Matrix44();
+        aClass294_8710 = new Matrix44Var();
+        aClass384_8685 = new Matrix44();
+        aClass294_8713 = new Matrix44Var();
+        aClass384_8683 = new Matrix44();
+        aClass384_8715 = new Matrix44();
+        aClass385_8707 = new Vector3();
+        aFloatArray8717 = new float[4];
+        aBool8829 = false;
+        aClass33_8719 = Class33.aClass33_380;
+        aBool8720 = false;
+        aClass384_8774 = new Matrix44();
+        aClass384_8812 = new Matrix44();
+        aBool8723 = false;
+        aClass384_8724 = new Matrix44();
+        aClass384_8725 = new Matrix44();
+        aClass384_8708 = aClass384_8725;
+        aClass384_8727 = new Matrix44();
+        aClass384_8728 = new Matrix44();
+        aClass384_8729 = new Matrix44();
+        aFloatArrayArray8730 = new float[6][4];
+        aFloat8735 = 0.0F;
+        aFloat8736 = 1.0F;
+        aFloat8737 = 0.0F;
+        aFloat8738 = 1.0F;
+        aFloat8726 = 50.0F;
+        aFloat8697 = 3584.0F;
+        anInt8822 = 0;
+        anInt8742 = 0;
+        anInt8743 = 0;
+        anInt8744 = 0;
+        anInt8745 = 0;
+        anInt8835 = 0;
+        anInt8722 = 0;
+        anInt8748 = 0;
+        anInt8749 = 0;
+        anInt8776 = 0;
+        anInt8751 = 0;
+        anInt8752 = 0;
+        anInt8823 = 0;
+        anInt8754 = 0;
+        aBool8755 = true;
+        aBool8756 = false;
+        aBool8757 = false;
+        aBool8684 = false;
+        aBool8759 = true;
+        aBool8760 = false;
+        aFloatArray8747 = new float[]{0.0F, 0.0F, 1.0F, 0.0F};
+        aFloatArray8762 = new float[]{0.0F, 0.0F, -1.0f, 0.0F};
+        aFloatArray8763 = new float[]{0.0F, 0.0F, 1.0F, 0.0F};
+        aFloatArray8764 = new float[]{0.0F, 0.0F, 1.0F, 0.0F};
+        anInt8765 = 16777215;
+        aFloat8766 = 1.0F;
+        aFloat8767 = 1.0F;
+        aFloat8768 = 1.0F;
+        aFloat8769 = 1.0F;
+        aFloat8770 = -1.0f;
+        aFloat8826 = -1.0f;
+        anInt8775 = 8;
+        anInt8806 = 3;
+        anInt8821 = 128;
+        anInt8780 = 0;
+        aClass41Array8793 = new Class41[16];
+        aClass55Array8802 = new Class55[2];
+        aBool8805 = false;
+        aBool8809 = true;
+        anInt8810 = -1;
+        anInt8811 = -1;
+        anInt8680 = 0;
+        anInt8815 = 1;
+        aClass73_8733 = Class73.aClass73_727;
+        aBool8817 = true;
+        aBool8818 = true;
+        aBool8681 = false;
+        new Stream();
+        aMeshRasterizer_Sub3Array8839 = new MeshRasterizer_Sub3[7];
+        aMeshRasterizer_Sub3Array8840 = new MeshRasterizer_Sub3[7];
+        aClass384_8841 = new Matrix44();
+        aClass294_8842 = new Matrix44Var();
+        anInt8844 = -1;
 
         try {
-            aClass229_9006 = new LRUCache(256);
-            aClass294_8993 = new Matrix44Var();
-            aClass384_8994 = new Matrix44();
-            aClass384_8995 = new Matrix44();
-            aClass384_8996 = new Matrix44();
-            method14369(1);
-            method14409();
-            SunDefinitions.method854(true, true);
-            aBool9012 = true;
-            anInt8977 = (int) Utils.time();
-        } catch (Throwable throwable_3) {
-            throwable_3.printStackTrace();
+            shaderIndex = index_2;
+            anInt8709 = i_3;
+            anInt8824 = i_4;
+            SunDefinitions.method854(false, true);
+            if (textureCache != null) {
+                aClass66_8787 = new Class66(this, textureCache);
+            } else {
+                aClass66_8787 = null;
+            }
+
+            if (anInt8824 == 0) {
+                anIntArray8803 = Class540.anIntArray7136;
+            } else {
+                anIntArray8803 = EnumIndexLoader.anIntArray5379;
+            }
+
+            try {
+                Field field_5 = Unsafe.class.getDeclaredField("theUnsafe");
+                field_5.setAccessible(true);
+                anUnsafe8830 = (Unsafe) field_5.get(null);
+            } catch (Exception ignored) {
+            }
+
+            aByteBuffer8838 = ByteBuffer.allocateDirect(4194304);
+            aByteBuffer8838.order(ByteOrder.nativeOrder());
+            aLong8695 = DirectBufferHelper.getDirectBufferAddress(aByteBuffer8838);
+        } catch (Throwable throwable_7) {
+            throwable_7.printStackTrace();
             method8396();
+            if (throwable_7 instanceof OutOfMemoryError) {
+                throw (OutOfMemoryError) throwable_7;
+            }
+
             throw new RuntimeException("");
+        }
+
+        method8439(method8438(131072));
+    }
+
+    public static boolean method13893() {
+        return Class362.getNativeLibraryLoader().loadLibrary("jaclib");
+    }
+
+    Matrix44 method13884() {
+        return aClass384Array8782[anInt8780];
+    }
+
+    public void method13885(Interface7 interface7_1) {
+        aClass428_8772.method7191(interface7_1);
+    }
+
+    void method13886() {
+        ArrayList arraylist_1 = aClass428_8772.method7193();
+
+        for (Object o : arraylist_1) {
+            Interface7 interface7_3 = (Interface7) o;
+            interface7_3.method26();
+        }
+
+    }
+
+    public abstract boolean method13887();
+
+    public abstract boolean method13888();
+
+    boolean method13889() {
+        return aBool8692;
+    }
+
+    public abstract Shader loadShader(String var1);
+
+    @Override
+    public void method8586(Matrix44 matrix44_1) {
+        aClass384_8724.method6562(matrix44_1);
+        method13926();
+        if (aClass33_8719 == Class33.aClass33_381) {
+            method14030();
+        }
+
+    }
+
+    ShaderLoader method13891(byte[] bytes_1) {
+        if (bytes_1 == null) {
+            return null;
+        } else {
+            try {
+                ShaderLoader class114_2 = new ShaderLoader(bytes_1);
+                return class114_2;
+            } catch (Exception exception_4) {
+                return null;
+            }
         }
     }
 
-    HardwareRenderer(Canvas canvas_1, ImageLoader interface22_2, int i_3, int i_4) {
-        this(interface22_2);
+    public abstract void method13892(Matrix44 var1, Matrix44 var2, Matrix44 var3);
+
+    abstract void method13894();
+
+    void method13895() {
+        aClass49_8694 = new Class49(this);
+        aBool8692 = false;
 
         try {
-            method8524(canvas_1, i_3, i_4);
-            method8412(canvas_1);
-        } catch (Throwable throwable_6) {
-            throwable_6.printStackTrace();
-            method8396();
-            throw new RuntimeException("");
+            aClass48_8794 = new Class48_Sub2(this);
+            aClass47_8698 = new Class47_Sub1(this);
+            aClass103_8796 = new Class103_Sub1(this);
+            aClass41_Sub1_Sub1_8691 = new Class41_Sub1_Sub1(this, aClass49_8694);
+            aClass41_Sub1_Sub2_8798 = new Class41_Sub1_Sub2(this, aClass49_8694);
+        } catch (Exception exception_4) {
+            exception_4.printStackTrace();
+            aClass48_8794 = new Class48_Sub1(this);
+            aClass47_8698 = new Class47_Sub2(this);
+            aClass103_8796 = new Class103_Sub2(this);
+            aClass41_Sub1_Sub1_8691 = null;
+            aClass41_Sub1_Sub2_8798 = null;
+            aBool8692 = true;
         }
+
+        int i_2;
+        int i_3;
+        if (aClass158_5853 != null) {
+            i_2 = aClass158_5853.method2714();
+            i_3 = aClass158_5853.method2716();
+        } else {
+            i_3 = 0;
+            i_2 = 0;
+        }
+
+        aClass32_8714 = new Class32(this, i_2, i_3);
+        if (!aBool8692) {
+            aClass55Array8802[1] = new Class55_Sub1(this);
+            aClass32_8714.method816(aClass55Array8802[1]);
+        }
+
+        if (aClass41_8753 != null) {
+            aClass41_8753.method885();
+            aClass41_8753 = null;
+        }
+
+        method13899();
+    }
+
+    Class41 method13896(int i_1) {
+        return aClass41Array8793[i_1];
+    }
+
+    void method13897() {
+        method13986(7);
+        method13976();
+    }
+
+    @Override
+    public void method8573(float f_1, float f_2, float f_3, float[] floats_4) {
+        float f_5 = aClass384_8728.buf[15] + aClass384_8728.buf[3] * f_1 + aClass384_8728.buf[7] * f_2 + aClass384_8728.buf[11] * f_3;
+        float f_6 = aClass384_8728.buf[12] + aClass384_8728.buf[0] * f_1 + aClass384_8728.buf[4] * f_2 + aClass384_8728.buf[8] * f_3;
+        float f_7 = aClass384_8728.buf[13] + aClass384_8728.buf[1] * f_1 + aClass384_8728.buf[5] * f_2 + aClass384_8728.buf[9] * f_3;
+        float f_8 = aClass384_8740.buf[14] + aClass384_8740.buf[2] * f_1 + aClass384_8740.buf[6] * f_2 + aClass384_8740.buf[10] * f_3;
+        floats_4[0] = aFloat8797 + aFloat8732 * f_6 / f_5;
+        floats_4[1] = aFloat8741 + aFloat8734 * f_7 / f_5;
+        floats_4[2] = f_8;
+    }
+
+    HDWaterTile method13898() {
+        return aClass90_8807;
+    }
+
+    void method13899() {
+        aClass32_8714.method819();
+
+        for (int i_1 = 0; i_1 < aClass55Array8802.length; i_1++) {
+            if (aClass55Array8802[i_1] != null && aClass55Array8802[i_1].method1107()) {
+                aClass55Array8802[i_1].method1099();
+            }
+        }
+
+        aClass54_8837 = new Class54(this);
+        method13944();
+        method14009();
+        method14177();
+        aClass54_8837.method1089();
+    }
+
+    void method13900() {
+        aClass32_8714.method818();
+        anInterface4_8746.method26();
+        anInterface4_8682.method26();
+        anInterface4_8693.method26();
+
+        for (int i_1 = 0; i_1 < 7; i_1++) {
+            aMeshRasterizer_Sub3Array8840[i_1].method14280();
+        }
+
+        aClass54_8837.method1090();
+        anInterface32_8834.method26();
+    }
+
+    @Override
+    public NativeSprite method8668(int i_1, int i_2, int i_3, int i_4, boolean bool_5) {
+        NativeSprite_Sub3 class160_sub3_6 = new NativeSprite_Sub3(this, i_3, i_4, bool_5, false);
+        class160_sub3_6.method2750(0, 0, i_3, i_4, i_1, i_2);
+        return class160_sub3_6;
     }
 
     @Override
     public boolean method8399() {
-        return false;
+        return true;
     }
 
     @Override
-    public RendererInfo method8392() {
-        return new RendererInfo(0, "Pure Java", 1, "CPU", 0L);
-    }
-
-    @Override
-    public void method8507() {
-    }
-
-    @Override
-    public void method8395() {
-    }
-
-    @Override
-    public void method8398(int i_1) {
-        int i_2 = i_1 - anInt8977;
-
-        for (Node_Sub27 class282_sub27_3 = (Node_Sub27) aClass229_9006.method3866(); class282_sub27_3 != null; class282_sub27_3 = (Node_Sub27) aClass229_9006.method3867()) {
-            if (class282_sub27_3.aBool7693) {
-                class282_sub27_3.anInt7692 += i_2;
-                int i_4 = class282_sub27_3.anInt7692 / 50;
-                if (i_4 > 0) {
-                    TextureDetails class169_5 = textureCache.getTextureDetails(class282_sub27_3.anInt7695);
-                    float f_6 = class169_5.isHalfSize ? 64.0F : 128.0F;
-                    class282_sub27_3.method12403((int) (f_6 * (class169_5.textureSpeedU * (i_2 / 1000.0F) / 64.0F)), (int) (class169_5.textureSpeedV * (i_2 / 1000.0F) / 64.0F * f_6));
-                    class282_sub27_3.anInt7692 -= i_4 * 50;
-                }
-
-                class282_sub27_3.aBool7693 = false;
-            }
+    public void fm(int i_1, int i_2, int i_3, int i_4) {
+        int i_5;
+        int i_6;
+        if (aClass158_5853 != null) {
+            i_6 = aClass158_5853.method2714();
+            i_5 = aClass158_5853.method2716();
+        } else {
+            i_5 = 0;
+            i_6 = 0;
         }
 
-        anInt8977 = i_1;
-        aClass229_9013.method3858(5);
-        aClass229_9006.method3858(5);
-    }
-
-    @Override
-    public int method8443(int i_1, int i_2) {
-        i_1 |= 0x20800;
-        return i_1 & i_2 ^ i_2;
-    }
-
-    @Override
-    void method8592(float f_1, float f_2, float f_3) {
-    }
-
-    int[] method14359(int textureId) {
-        Node_Sub27 class282_sub27;
-        synchronized (aClass229_9006) {
-            class282_sub27 = ((Node_Sub27) aClass229_9006.get(textureId | -9223372036854775808L));
-            if (class282_sub27 == null) {
-                if (!textureCache.loadTexture(textureId))
-                    return null;
-                TextureDetails texDeets = textureCache.getTextureDetails(textureId);
-                int res = (texDeets.isHalfSize || lowResolution ? 64 : size);
-                class282_sub27 = (new Node_Sub27(textureId, res, textureCache.renderMaterialPixelsI(textureId, res, res), texDeets.blendType != 1));
-                aClass229_9006.put(class282_sub27, textureId | -9223372036854775808L);
+        if (i_1 <= 0 && i_3 >= i_6 - 1 && i_2 <= 0 && i_4 >= i_5 - 1) {
+            L();
+        } else {
+            anInt8743 = Math.max(0, i_1);
+            anInt8744 = Math.min(i_3, i_6);
+            anInt8822 = Math.max(0, i_2);
+            anInt8742 = Math.min(i_4, i_5);
+            if (!aBool8843) {
+                aBool8843 = true;
+                method13922();
             }
+
+            method13921();
         }
-        class282_sub27.aBool7693 = true;
-        return class282_sub27.method12406();
-    }
 
-    boolean method14360(int i_1) {
-        return textureCache.loadTexture(i_1);
     }
 
     @Override
-    public boolean method8498() {
-        return false;
-    }
+    void method8397() {
+        if (!aBool8681) {
+            method13900();
+            aClass66_8787.method1279();
 
-    int method14361(int i_1) {
-        return textureCache.getTextureDetails(i_1).blendType;
-    }
+            for (Node node_1 = aClass473_8700.getBack(); node_1 != null; node_1 = aClass473_8700.getPrevious()) {
+                ((Node_Sub1_Sub2) node_1).method15609();
+            }
 
-    int method14362(int i_1) {
-        return textureCache.getTextureDetails(i_1).color & 0xffff;
-    }
+            Class13.method508(false, true);
 
-    @Override
-    public void method8598(Class152 class152_1) {
-    }
-
-    void method14363(boolean bool_1, boolean bool_2, Class151 class151_4) {
-        Class185 class185_5 = method14370(Thread.currentThread());
-        EntityNode_Sub1 class275_sub1_6 = class151_4.aClass464_1961.aEntityNode_Sub1_5554;
-
-        for (EntityNode_Sub1 class275_sub1_7 = class275_sub1_6.aEntityNode_Sub1_7706; class275_sub1_7 != class275_sub1_6; class275_sub1_7 = class275_sub1_7.aEntityNode_Sub1_7706) {
-            PointEntity class275_sub1_sub1_8 = (PointEntity) class275_sub1_7;
-            int i_9 = class275_sub1_sub1_8.x >> 12;
-            int i_10 = class275_sub1_sub1_8.z >> 12;
-            int i_11 = class275_sub1_sub1_8.y >> 12;
-            float f_12 = aClass384_8996.buf[14] + aClass384_8996.buf[10] * i_11 + i_9 * aClass384_8996.buf[2] + i_10 * aClass384_8996.buf[6];
-            float f_13 = aClass384_8996.buf[15] + aClass384_8996.buf[7] * i_10 + aClass384_8996.buf[3] * i_9 + aClass384_8996.buf[11] * i_11;
-            if (f_12 >= -f_13) {
-                float f_14 = aFloat8985 + f_12 * aFloat8978 / f_13;
-                if (f_12 <= class185_5.aFloat2305) {
-                    float f_15 = aClass384_8996.buf[0] * i_9 + aClass384_8996.buf[4] * i_10 + i_11 * aClass384_8996.buf[8] + aClass384_8996.buf[12];
-                    float f_16 = i_11 * aClass384_8996.buf[9] + aClass384_8996.buf[1] * i_9 + aClass384_8996.buf[5] * i_10 + aClass384_8996.buf[13];
-                    if (f_15 >= -f_13 && f_15 <= f_13 && f_16 >= -f_13 && f_16 <= f_13) {
-                        float f_17 = class275_sub1_sub1_8.size / 4096.0F;
-                        float f_18 = f_17 * aClass384_8995.buf[0] + f_15;
-                        float f_19 = f_13 + aClass384_8995.buf[3] * f_17;
-                        float f_20 = aFloat9003 + f_15 * aFloat8976 / f_13;
-                        float f_21 = aFloat9004 * f_16 / f_13 + aFloat8982;
-                        float f_22 = aFloat9003 + f_18 * aFloat8976 / f_19;
-                        method14371(bool_1, bool_2, class275_sub1_sub1_8, (int) f_20, (int) f_21, f_14, (int) (f_22 < f_20 ? f_20 - f_22 : f_22 - f_20));
-                    }
+            int i_2;
+            for (i_2 = 0; i_2 < aClass41Array8793.length; i_2++) {
+                if (aClass41Array8793[i_2] != null) {
+                    aClass41Array8793[i_2].method878();
+                    aClass41Array8793[i_2] = null;
                 }
             }
+
+            for (i_2 = 0; i_2 < aClass55Array8802.length; i_2++) {
+                if (aClass55Array8802[i_2] != null) {
+                    aClass55Array8802[i_2].method1105();
+                    aClass55Array8802[i_2] = null;
+                }
+            }
+
+            method13886();
+            method8398(0);
+            aBool8681 = true;
         }
 
     }
 
-    @Override
-    public boolean method8465() {
-        return false;
+    public void method13901(Interface7 interface7_1) {
+        aClass428_8772.method7201(interface7_1);
     }
 
     @Override
@@ -228,1737 +541,282 @@ public class HardwareRenderer extends AbstractRenderer {
 
     @Override
     public boolean method8403() {
-        return false;
+        return aClass55Array8802[1] != null;
+    }
+
+    void method13903() {
+        if (method13889()) {
+            method13953();
+        }
+
+        anInt8831 = anInt8773;
+        anInt8773 = 0;
+    }
+
+    void method13904(int i_1) {
+        if (anInt8815 != i_1) {
+            Class73 class73_2;
+            boolean bool_3;
+            boolean bool_4;
+            if (i_1 == 1) {
+                class73_2 = Class73.aClass73_727;
+                bool_3 = true;
+                bool_4 = true;
+            } else if (i_1 == 2) {
+                class73_2 = Class73.aClass73_725;
+                bool_3 = false;
+                bool_4 = true;
+            } else if (i_1 == 128) {
+                class73_2 = Class73.aClass73_726;
+                bool_3 = true;
+                bool_4 = true;
+            } else {
+                class73_2 = Class73.aClass73_728;
+                bool_3 = false;
+                bool_4 = false;
+            }
+
+            if (bool_3 != aBool8818) {
+                aBool8818 = bool_3;
+                method14238();
+            }
+
+            if (bool_4 != aBool8817) {
+                aBool8817 = bool_4;
+                method13914();
+            }
+
+            if (class73_2 != aClass73_8733) {
+                aClass73_8733 = class73_2;
+                method13894();
+            }
+
+            anInt8815 = i_1;
+            anInt8703 &= -13;
+        }
+
     }
 
     @Override
-    public boolean method8404() {
-        return false;
+    public void iw(int i_1, float f_2, float f_3, float f_4, float f_5, float f_6) {
+        boolean bool_7 = anInt8765 != i_1;
+        if (bool_7 || aFloat8770 != f_2 || aFloat8826 != f_3) {
+            anInt8765 = i_1;
+            aFloat8770 = f_2;
+            aFloat8826 = f_3;
+            if (bool_7) {
+                aFloat8766 = (anInt8765 & 0xff0000) / 1.671168E7F;
+                aFloat8767 = (anInt8765 & 0xff00) / 65280.0F;
+                aFloat8768 = (anInt8765 & 0xff) / 255.0F;
+                method13948();
+            }
+
+            method13949();
+        }
+
+        if (aFloatArray8763[0] != f_4 || aFloatArray8763[1] != f_5 || aFloatArray8763[2] != f_6) {
+            aFloatArray8763[0] = f_4;
+            aFloatArray8763[1] = f_5;
+            aFloatArray8763[2] = f_6;
+            aFloatArray8764[0] = -f_4;
+            aFloatArray8764[1] = -f_5;
+            aFloatArray8764[2] = -f_6;
+            float f_8 = (float) (1.0D / Math.sqrt(f_4 * f_4 + f_5 * f_5 + f_6 * f_6));
+            aFloatArray8747[0] = f_4 * f_8;
+            aFloatArray8747[1] = f_5 * f_8;
+            aFloatArray8747[2] = f_6 * f_8;
+            aFloatArray8762[0] = -aFloatArray8747[0];
+            aFloatArray8762[1] = -aFloatArray8747[1];
+            aFloatArray8762[2] = -aFloatArray8747[2];
+            method13950();
+            anInt8777 = (int) (f_4 * 256.0F / f_5);
+            anInt8778 = (int) (f_6 * 256.0F / f_5);
+        }
+
+        method13951();
     }
 
     @Override
-    public boolean method8402() {
+    public boolean method8454() {
+        return true;
+    }
+
+    @Override
+    public boolean method8407() {
         return false;
     }
 
     @Override
     public boolean method8405() {
-        return false;
+        return aBool8828;
     }
 
-    @Override
-    public boolean method8406() {
-        return false;
-    }
+    public abstract float method13905();
 
     @Override
-    public boolean method8454() {
-        return false;
-    }
-
-    @Override
-    public boolean method8407() {
-        return true;
-    }
-
-    @Override
-    public int method8539(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
-        int i_7 = 0;
-        float f_8 = i_3 * aClass384_8996.buf[10] + i_2 * aClass384_8996.buf[6] + aClass384_8996.buf[14] + i_1 * aClass384_8996.buf[2];
-        float f_9 = aClass384_8996.buf[6] * i_5 + aClass384_8996.buf[14] + aClass384_8996.buf[2] * i_4 + aClass384_8996.buf[10] * i_6;
-        float f_10 = aClass384_8996.buf[15] + i_1 * aClass384_8996.buf[3] + i_2 * aClass384_8996.buf[7] + i_3 * aClass384_8996.buf[11];
-        float f_11 = i_5 * aClass384_8996.buf[7] + aClass384_8996.buf[15] + aClass384_8996.buf[3] * i_4 + i_6 * aClass384_8996.buf[11];
-        if (f_8 < -f_10 && f_9 < -f_11) {
-            i_7 |= 0x10;
-        } else if (f_8 > f_10 && f_9 > f_11) {
-            i_7 |= 0x20;
+    public void method8398(int i_1) {
+        if (aClass66_8787 != null) {
+            aClass66_8787.method1278();
         }
 
-        float f_12 = aClass384_8996.buf[4] * i_2 + aClass384_8996.buf[12] + i_1 * aClass384_8996.buf[0] + i_3 * aClass384_8996.buf[8];
-        float f_13 = i_6 * aClass384_8996.buf[8] + i_4 * aClass384_8996.buf[0] + aClass384_8996.buf[12] + aClass384_8996.buf[4] * i_5;
-        if (f_12 < -f_10 && f_13 < -f_11) {
-            i_7 |= 0x1;
-        }
+        anInt8820 = i_1 & 0x7fffffff;
+    }
 
-        if (f_12 > f_10 && f_13 > f_11) {
-            i_7 |= 0x2;
-        }
+    void method13906() {
+        method13907();
+    }
 
-        float f_14 = aClass384_8996.buf[5] * i_2 + i_1 * aClass384_8996.buf[1] + aClass384_8996.buf[13] + aClass384_8996.buf[9] * i_3;
-        float f_15 = aClass384_8996.buf[13] + aClass384_8996.buf[1] * i_4 + aClass384_8996.buf[5] * i_5 + i_6 * aClass384_8996.buf[9];
-        if (f_14 < -f_10 && f_15 < -f_11) {
-            i_7 |= 0x4;
-        }
-
-        if (f_14 > f_10 && f_15 > f_11) {
-            i_7 |= 0x8;
-        }
-
-        return i_7;
+    void method13907() {
+        method13936();
+        method13938();
+        method13934();
+        method8421();
+        L();
     }
 
     @Override
-    Class158_Sub2 method8417(Canvas canvas_1, int i_2, int i_3) {
-        return Class52_Sub1.method14493(this, canvas_1, i_2, i_3);
-    }
+    public boolean method8469() {
+        if (aClass55Array8802[1] != null && !aClass55Array8802[1].method1107()) {
+            boolean bool_1 = aClass32_8714.method816(aClass55Array8802[1]);
+            if (bool_1) {
+                aClass66_8787.method1279();
+            }
 
-    @Override
-    public void RA(boolean bool_1) {
-        Class185 class185_2 = method14370(Thread.currentThread());
-        class185_2.aBool2334 = bool_1;
-    }
-
-    @Override
-    public int[] ab(int i_1, int i_2, int i_3, int i_4) {
-        if (anIntArray8979 == null) {
-            throw new IllegalStateException("");
+            return bool_1;
         } else {
-            int[] ints_5 = new int[i_3 * i_4];
-            int i_6 = 0;
-
-            for (int i_7 = 0; i_7 < i_4; i_7++) {
-                int i_8 = (i_7 + i_2) * anInt8980 + i_1;
-
-                for (int i_9 = 0; i_9 < i_3; i_9++) {
-                    ints_5[i_6++] = anIntArray8979[i_8 + i_9];
-                }
-            }
-
-            return ints_5;
+            return false;
         }
     }
 
     @Override
-    public void method8420() {
-    }
-
-    @Override
-    public void method8408(int[] ints_1) {
-        ints_1[0] = anInt8980;
-        ints_1[1] = anInt8981;
-    }
-
-    @Override
-    public boolean method8600() {
-        return false;
-    }
-
-    @Override
-    public void method8618(Node_Sub1 class282_sub1_1) {
-    }
-
-    @Override
-    public void method8421() {
-        anInt8998 = 0;
-        anInt8999 = 0;
-        anInt9000 = anInt8980;
-        anInt9001 = anInt8981;
-        method14364();
-    }
-
-    @Override
-    public void method8617(int i_1, int i_2, int i_3, int i_4) {
-        anInt8998 = i_1;
-        anInt8999 = i_2;
-        anInt9000 = i_3;
-        anInt9001 = i_4;
-        method14364();
-    }
-
-    @Override
-    void method8397() {
-        if (aBool9012) {
-            Class13.method508(true, false);
-            aBool9012 = false;
-        }
-
-        aBool9014 = true;
-    }
-
-    void method14364() {
-        int i_1 = anInt9002 - anInt8983;
-        int i_2 = anInt8986 - anInt9009;
-        float f_3 = aFloat8976 = anInt9000 / 2.0F;
-        float f_4 = aFloat9004 = anInt9001 / 2.0F;
-        aFloat9003 = anInt8998 + f_3;
-        aFloat8982 = anInt8999 + f_4;
-
-        int i_5;
-        for (i_5 = 0; i_5 < anInt9008; i_5++) {
-            Class185 class185_8 = aClass185Array8984[i_5];
-            ChoppyItemFixClass choppyitemfixclass_7 = class185_8.aClass144_2310;
-            choppyitemfixclass_7.aFloat1679 = f_3;
-            choppyitemfixclass_7.aFloat1702 = f_4;
-            choppyitemfixclass_7.aFloat1678 = aFloat9003 - anInt8983;
-            choppyitemfixclass_7.aFloat1680 = aFloat8982 - anInt9009;
-            choppyitemfixclass_7.anInt1684 = i_1;
-            choppyitemfixclass_7.anInt1700 = i_2;
-        }
-
-        i_5 = anInt8980 * anInt9009 + anInt8983;
-
-        for (int i_6 = anInt9009; i_6 < anInt8986; i_6++) {
-            for (int i_9 = 0; i_9 < anInt9008; i_9++) {
-                aClass185Array8984[i_9].aClass144_2310.anIntArray1685[i_6 - anInt9009] = i_5;
-            }
-
-            i_5 += anInt8980;
+    public void method8490() {
+        if (aClass55Array8802[1] != null && aClass55Array8802[1].method1107()) {
+            aClass32_8714.method822(aClass55Array8802[1]);
+            aClass66_8787.method1279();
         }
 
     }
 
     @Override
-    public NativeSprite method8442(int[] ints_1, int i_2, int i_3, int i_4, int i_5, boolean bool_6) {
-        boolean bool_7 = false;
-        int i_8 = i_2;
-
-        for (int i_9 = 0; i_9 < i_5; i_9++) {
-            for (int i_10 = 0; i_10 < i_4; i_10++) {
-                int i_11 = ints_1[i_8++] >>> 24;
-                if (i_11 != 0 && i_11 != 255) {
-                    bool_7 = true;
-                    return bool_7 ? new NativeSprite_Sub1_Sub3(this, ints_1, i_2, i_3, i_4, i_5, bool_6) : new NativeSprite_Sub1_Sub1(this, ints_1, i_2, i_3, i_4, i_5, bool_6);
-                }
-            }
-        }
-
-        return bool_7 ? new NativeSprite_Sub1_Sub3(this, ints_1, i_2, i_3, i_4, i_5, bool_6) : new NativeSprite_Sub1_Sub1(this, ints_1, i_2, i_3, i_4, i_5, bool_6);
+    public boolean method8471() {
+        return aClass55Array8802[1] != null && aClass55Array8802[1].method1107();
     }
 
     @Override
-    public FontRenderer createFont(FontMetrics fontmetrics_1, SpriteDefinitions[] arr_2, boolean bool_3) {
-        int[] ints_4 = new int[arr_2.length];
-        int[] ints_5 = new int[arr_2.length];
-        boolean bool_6 = false;
-
-        for (int i_7 = 0; i_7 < arr_2.length; i_7++) {
-            ints_4[i_7] = arr_2[i_7].width;
-            ints_5[i_7] = arr_2[i_7].height;
-            if (arr_2[i_7].alpha != null) {
-                bool_6 = true;
-            }
-        }
-
-        if (bool_3) {
-            if (bool_6) {
-                return new FontRenderer_Sub2(this, fontmetrics_1, arr_2, ints_4, ints_5);
-            } else {
-                return new FontRenderer_Sub1(this, fontmetrics_1, arr_2, ints_4, ints_5);
-            }
-        } else if (bool_6) {
-            throw new IllegalArgumentException("");
-        } else {
-            return new FontRenderer_Sub3(this, fontmetrics_1, arr_2, ints_4, ints_5);
-        }
+    void method8592(float f_1, float f_2, float f_3) {
+        Class55_Sub1.aFloat9188 = f_1;
+        Class55_Sub1.aFloat9184 = f_2;
+        Class55_Sub1.aFloat9189 = f_3;
+        Class55_Sub1.aFloat9186 = (float) 1.0;
     }
+
+    boolean method13908(float f_1, float f_2, float f_4, float f_5) {
+        aByteBuffer8838.clear();
+        aByteBuffer8838.putFloat(f_1);
+        aByteBuffer8838.putFloat(f_2);
+        aByteBuffer8838.putFloat((float) 0.0);
+        aByteBuffer8838.putFloat(f_4);
+        aByteBuffer8838.putFloat(f_5);
+        aByteBuffer8838.putFloat((float) 0.0);
+        return anInterface4_8682.method42(0, aByteBuffer8838.position(), aLong8695);
+    }
+
+    abstract void method13909();
 
     @Override
-    public void o(int i_1, int i_2, int i_3, int i_4) {
-        if (anInt8983 < i_1) {
-            anInt8983 = i_1;
-        }
-
-        if (anInt9009 < i_2) {
-            anInt9009 = i_2;
-        }
-
-        if (anInt9002 > i_3) {
-            anInt9002 = i_3;
-        }
-
-        if (anInt8986 > i_4) {
-            anInt8986 = i_4;
-        }
-
-        method14364();
-    }
-
-    @Override
-    void method8531() {
-        if (aBool9012) {
-            Class13.method508(true, false);
-            aBool9012 = false;
-        }
-
-        aBool9014 = true;
-    }
-
-    @Override
-    public NativeSprite method8548(int[] ints_1, int i_2, int i_3, int i_4, int i_5, boolean bool_6) {
-        boolean bool_7 = false;
-        int i_8 = i_2;
-
-        for (int i_9 = 0; i_9 < i_5; i_9++) {
-            for (int i_10 = 0; i_10 < i_4; i_10++) {
-                int i_11 = ints_1[i_8++] >>> 24;
-                if (i_11 != 0 && i_11 != 255) {
-                    bool_7 = true;
-                    return bool_7 ? new NativeSprite_Sub1_Sub3(this, ints_1, i_2, i_3, i_4, i_5, bool_6) : new NativeSprite_Sub1_Sub1(this, ints_1, i_2, i_3, i_4, i_5, bool_6);
-                }
-            }
-        }
-
-        return bool_7 ? new NativeSprite_Sub1_Sub3(this, ints_1, i_2, i_3, i_4, i_5, bool_6) : new NativeSprite_Sub1_Sub1(this, ints_1, i_2, i_3, i_4, i_5, bool_6);
-    }
-
-    @Override
-    public void B(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
-        int i_21 = i_2;
-        int i_41 = i_4;
-        int i_31 = i_3;
-        int i_15 = i_1;
-        if (anIntArray8979 != null) {
-            if (i_15 < anInt8983) {
-                i_31 -= anInt8983 - i_15;
-                i_15 = anInt8983;
-            }
-
-            if (i_21 < anInt9009) {
-                i_41 -= anInt9009 - i_21;
-                i_21 = anInt9009;
-            }
-
-            if (i_31 + i_15 > anInt9002) {
-                i_31 = anInt9002 - i_15;
-            }
-
-            if (i_21 + i_41 > anInt8986) {
-                i_41 = anInt8986 - i_21;
-            }
-
-            if (i_31 > 0 && i_41 > 0 && i_15 <= anInt9002 && i_21 <= anInt8986) {
-                int i_7 = anInt8980 - i_31;
-                int i_8 = i_21 * anInt8980 + i_15;
-                int i_9 = i_5 >>> 24;
-                int i_10;
-                int i_11;
-                int i_12;
-                if (i_6 != 0 && (i_6 != 1 || i_9 != 255)) {
-                    int i_13;
-                    if (i_6 == 1) {
-                        i_5 = (i_9 * ((i_5 & -16711936) >>> 8) & -16711936) + (i_9 * (i_5 & 0xff00ff) >> 8 & 0xff00ff);
-                        i_10 = 256 - i_9;
-
-                        for (i_11 = 0; i_11 < i_41; i_11++) {
-                            for (i_12 = -i_31; i_12 < 0; i_12++) {
-                                i_13 = anIntArray8979[i_8];
-                                i_13 = (((i_13 & -16711936) >>> 8) * i_10 & -16711936) + ((i_13 & 0xff00ff) * i_10 >> 8 & 0xff00ff);
-                                anIntArray8979[i_8++] = i_5 + i_13;
-                            }
-
-                            i_8 += i_7;
-                        }
-                    } else {
-                        if (i_6 != 2) {
-                            throw new IllegalArgumentException();
-                        }
-
-                        for (i_10 = 0; i_10 < i_41; i_10++) {
-                            for (i_11 = -i_31; i_11 < 0; i_11++) {
-                                i_12 = anIntArray8979[i_8];
-                                i_13 = i_5 + i_12;
-                                int i_14 = (i_12 & 0xff00ff) + (i_5 & 0xff00ff);
-                                i_12 = (i_14 & 0x1000100) + (i_13 - i_14 & 0x10000);
-                                anIntArray8979[i_8++] = i_13 - i_12 | i_12 - (i_12 >>> 8);
-                            }
-
-                            i_8 += i_7;
-                        }
-                    }
-                } else {
-                    i_10 = i_31 >> 3;
-                    i_11 = i_31 & 0x7;
-                    i_31 = i_8 - 1;
-
-                    for (i_12 = -i_41; i_12 < 0; i_12++) {
-                        if (i_10 > 0) {
-                            i_15 = i_10;
-
-                            do {
-                                ++i_31;
-                                anIntArray8979[i_31] = i_5;
-                                ++i_31;
-                                anIntArray8979[i_31] = i_5;
-                                ++i_31;
-                                anIntArray8979[i_31] = i_5;
-                                ++i_31;
-                                anIntArray8979[i_31] = i_5;
-                                ++i_31;
-                                anIntArray8979[i_31] = i_5;
-                                ++i_31;
-                                anIntArray8979[i_31] = i_5;
-                                ++i_31;
-                                anIntArray8979[i_31] = i_5;
-                                ++i_31;
-                                anIntArray8979[i_31] = i_5;
-                                --i_15;
-                            } while (i_15 > 0);
-                        }
-
-                        if (i_11 > 0) {
-                            i_15 = i_11;
-
-                            do {
-                                ++i_31;
-                                anIntArray8979[i_31] = i_5;
-                                --i_15;
-                            } while (i_15 > 0);
-                        }
-
-                        i_31 += i_7;
-                    }
-                }
-            }
-        }
-
-    }
-
-    @Override
-    public void N(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, byte[] bytes_7, int i_8, int i_9) {
-        if (anIntArray8979 != null && i_3 > 0 && i_4 > 0) {
-            int i_10 = 0;
-            int i_11 = 0;
-            int i_12 = (i_8 << 16) / i_3;
-            int i_13 = (bytes_7.length / i_8 << 16) / i_4;
-            int i_14 = i_2 * anInt8980 + i_1;
-            int i_15 = anInt8980 - i_3;
-            if (i_2 + i_4 > anInt8986) {
-                i_4 -= i_2 + i_4 - anInt8986;
-            }
-
-            int i_16;
-            if (i_2 < anInt9009) {
-                i_16 = anInt9009 - i_2;
-                i_4 -= i_16;
-                i_14 += i_16 * anInt8980;
-                i_11 += i_16 * i_13;
-            }
-
-            if (i_3 + i_1 > anInt9002) {
-                i_16 = i_3 + i_1 - anInt9002;
-                i_3 -= i_16;
-                i_15 += i_16;
-            }
-
-            if (i_1 < anInt8983) {
-                i_16 = anInt8983 - i_1;
-                i_3 -= i_16;
-                i_14 += i_16;
-                i_10 += i_16 * i_12;
-                i_15 += i_16;
-            }
-
-            i_16 = i_5 >>> 24;
-            int i_17 = i_6 >>> 24;
-            int i_18;
-            int i_19;
-            int i_20;
-            int i_21;
-            if (i_9 == 0 || i_9 == 1 && i_16 == 255 && i_17 == 255) {
-                i_18 = i_10;
-
-                for (i_19 = -i_4; i_19 < 0; i_19++) {
-                    i_20 = i_8 * (i_11 >> 16);
-
-                    for (i_21 = -i_3; i_21 < 0; i_21++) {
-                        if (bytes_7[i_20 + (i_10 >> 16)] != 0) {
-                            anIntArray8979[i_14++] = i_6;
-                        } else {
-                            anIntArray8979[i_14++] = i_5;
-                        }
-
-                        i_10 += i_12;
-                    }
-
-                    i_11 += i_13;
-                    i_10 = i_18;
-                    i_14 += i_15;
-                }
-            } else {
-                int i_22;
-                int i_23;
-                int i_24;
-                int i_25;
-                if (i_9 == 1) {
-                    i_18 = i_10;
-
-                    for (i_19 = -i_4; i_19 < 0; i_19++) {
-                        i_20 = i_8 * (i_11 >> 16);
-
-                        for (i_21 = -i_3; i_21 < 0; i_21++) {
-                            i_22 = i_5;
-                            if (bytes_7[i_20 + (i_10 >> 16)] != 0) {
-                                i_22 = i_6;
-                            }
-
-                            i_23 = i_22 >>> 24;
-                            i_24 = 255 - i_23;
-                            i_25 = anIntArray8979[i_14];
-                            anIntArray8979[i_14++] = (i_24 * (i_25 & 0xff00) + i_23 * (i_22 & 0xff00) & 0xff0000) + ((i_25 & 0xff00ff) * i_24 + (i_22 & 0xff00ff) * i_23 & -16711936) >> 8;
-                            i_10 += i_12;
-                        }
-
-                        i_11 += i_13;
-                        i_10 = i_18;
-                        i_14 += i_15;
-                    }
-                } else {
-                    if (i_9 != 2) {
-                        throw new IllegalArgumentException();
-                    }
-
-                    i_18 = i_10;
-
-                    for (i_19 = -i_4; i_19 < 0; i_19++) {
-                        i_20 = i_8 * (i_11 >> 16);
-
-                        for (i_21 = -i_3; i_21 < 0; i_21++) {
-                            i_22 = i_5;
-                            if (bytes_7[i_20 + (i_10 >> 16)] != 0) {
-                                i_22 = i_6;
-                            }
-
-                            if (i_22 != 0) {
-                                i_23 = anIntArray8979[i_14];
-                                i_24 = i_22 + i_23;
-                                i_25 = (i_23 & 0xff00ff) + (i_22 & 0xff00ff);
-                                i_23 = (i_25 & 0x1000100) + (i_24 - i_25 & 0x10000);
-                                anIntArray8979[i_14++] = i_24 - i_23 | i_23 - (i_23 >>> 8);
-                            } else {
-                                ++i_14;
-                            }
-
-                            i_10 += i_12;
-                        }
-
-                        i_11 += i_13;
-                        i_10 = i_18;
-                        i_14 += i_15;
-                    }
-                }
-            }
-        }
-
-    }
-
-    @Override
-    void CA(int i_1, int i_2, int i_3, int i_4) {
-        int i_22 = i_2;
-        if (anIntArray8979 != null) {
-            if (i_3 < 0) {
-                i_3 = -i_3;
-            }
-
-            int i_6 = i_22 - i_3;
-            if (i_6 < anInt9009) {
-                i_6 = anInt9009;
-            }
-
-            int i_7 = i_3 + i_22 + 1;
-            if (i_7 > anInt8986) {
-                i_7 = anInt8986;
-            }
-
-            int i_8 = i_6;
-            int i_9 = i_3 * i_3;
-            int i_10 = 0;
-            int i_11 = i_22 - i_6;
-            int i_12 = i_11 * i_11;
-            int i_13 = i_12 - i_11;
-            if (i_22 > i_7) {
-                i_22 = i_7;
-            }
-
-            int i_14 = i_4 >>> 24;
-            int i_15;
-            int i_16;
-            int i_17;
-            int i_18;
-            if ((false || i_14 != 255)) {
-                int i_19;
-                int i_20;
-                if (true) {
-                    i_4 = (i_14 * (i_4 & 0xff00ff) >> 8 & 0xff00ff) + (i_14 * (i_4 & 0xff00) >> 8 & 0xff00) + (i_14 << 24);
-
-                    for (i_15 = 256 - i_14; i_8 < i_22; i_13 -= i_11 + i_11) {
-                        while (i_13 <= i_9 || i_12 <= i_9) {
-                            i_12 += i_10 + i_10;
-                            i_13 += i_10++ + i_10;
-                        }
-
-                        i_16 = i_1 - i_10 + 1;
-                        if (i_16 < anInt8983) {
-                            i_16 = anInt8983;
-                        }
-
-                        i_17 = i_10 + i_1;
-                        if (i_17 > anInt9002) {
-                            i_17 = anInt9002;
-                        }
-
-                        i_18 = i_16 + i_8 * anInt8980;
-
-                        for (i_19 = i_16; i_19 < i_17; i_19++) {
-                            i_20 = anIntArray8979[i_18];
-                            i_20 = ((i_20 & 0xff00ff) * i_15 >> 8 & 0xff00ff) + (i_15 * (i_20 & 0xff00) >> 8 & 0xff00);
-                            anIntArray8979[i_18++] = i_20 + i_4;
-                        }
-
-                        ++i_8;
-                        i_12 -= i_11-- + i_11;
-                    }
-
-                    i_10 = i_3;
-                    i_11 = -i_11;
-                    i_13 = i_9 + i_11 * i_11;
-                    i_12 = i_13 - i_3;
-
-                    for (i_13 -= i_11; i_8 < i_7; i_12 += i_11++ + i_11) {
-                        while (i_13 > i_9 && i_12 > i_9) {
-                            i_13 -= i_10-- + i_10;
-                            i_12 -= i_10 + i_10;
-                        }
-
-                        i_16 = i_1 - i_10;
-                        if (i_16 < anInt8983) {
-                            i_16 = anInt8983;
-                        }
-
-                        i_17 = i_10 + i_1;
-                        if (i_17 > anInt9002 - 1) {
-                            i_17 = anInt9002 - 1;
-                        }
-
-                        i_18 = i_16 + i_8 * anInt8980;
-
-                        for (i_19 = i_16; i_19 <= i_17; i_19++) {
-                            i_20 = anIntArray8979[i_18];
-                            i_20 = (i_15 * (i_20 & 0xff00) >> 8 & 0xff00) + ((i_20 & 0xff00ff) * i_15 >> 8 & 0xff00ff);
-                            anIntArray8979[i_18++] = i_20 + i_4;
-                        }
-
-                        ++i_8;
-                        i_13 += i_11 + i_11;
-                    }
-                } else {
-                    if (true) {
-                        throw new IllegalArgumentException();
-                    }
-
-                    int i_21;
-                    while (i_8 < i_22) {
-                        while (i_13 <= i_9 || i_12 <= i_9) {
-                            i_12 += i_10 + i_10;
-                            i_13 += i_10++ + i_10;
-                        }
-
-                        i_15 = i_1 - i_10 + 1;
-                        if (i_15 < anInt8983) {
-                            i_15 = anInt8983;
-                        }
-
-                        i_16 = i_10 + i_1;
-                        if (i_16 > anInt9002) {
-                            i_16 = anInt9002;
-                        }
-
-                        i_17 = i_15 + i_8 * anInt8980;
-
-                        for (i_18 = i_15; i_18 < i_16; i_18++) {
-                            i_19 = anIntArray8979[i_17];
-                            i_20 = i_19 + i_4;
-                            i_21 = (i_19 & 0xff00ff) + (i_4 & 0xff00ff);
-                            i_19 = (i_21 & 0x1000100) + (i_20 - i_21 & 0x10000);
-                            anIntArray8979[i_17++] = i_20 - i_19 | i_19 - (i_19 >>> 8);
-                        }
-
-                        ++i_8;
-                        i_12 -= i_11-- + i_11;
-                        i_13 -= i_11 + i_11;
-                    }
-
-                    i_10 = i_3;
-                    i_11 = -i_11;
-                    i_13 = i_9 + i_11 * i_11;
-                    i_12 = i_13 - i_3;
-
-                    for (i_13 -= i_11; i_8 < i_7; i_12 += i_11++ + i_11) {
-                        while (i_13 > i_9 && i_12 > i_9) {
-                            i_13 -= i_10-- + i_10;
-                            i_12 -= i_10 + i_10;
-                        }
-
-                        i_15 = i_1 - i_10;
-                        if (i_15 < anInt8983) {
-                            i_15 = anInt8983;
-                        }
-
-                        i_16 = i_10 + i_1;
-                        if (i_16 > anInt9002 - 1) {
-                            i_16 = anInt9002 - 1;
-                        }
-
-                        i_17 = i_15 + i_8 * anInt8980;
-
-                        for (i_18 = i_15; i_18 <= i_16; i_18++) {
-                            i_19 = anIntArray8979[i_17];
-                            i_20 = i_19 + i_4;
-                            i_21 = (i_19 & 0xff00ff) + (i_4 & 0xff00ff);
-                            i_19 = (i_21 & 0x1000100) + (i_20 - i_21 & 0x10000);
-                            anIntArray8979[i_17++] = i_20 - i_19 | i_19 - (i_19 >>> 8);
-                        }
-
-                        ++i_8;
-                        i_13 += i_11 + i_11;
-                    }
-                }
-            } else {
-                while (i_8 < i_22) {
-                    while (i_13 <= i_9 || i_12 <= i_9) {
-                        i_12 += i_10 + i_10;
-                        i_13 += i_10++ + i_10;
-                    }
-
-                    i_15 = i_1 - i_10 + 1;
-                    if (i_15 < anInt8983) {
-                        i_15 = anInt8983;
-                    }
-
-                    i_16 = i_10 + i_1;
-                    if (i_16 > anInt9002) {
-                        i_16 = anInt9002;
-                    }
-
-                    i_17 = i_15 + i_8 * anInt8980;
-
-                    for (i_18 = i_15; i_18 < i_16; i_18++) {
-                        anIntArray8979[i_17++] = i_4;
-                    }
-
-                    ++i_8;
-                    i_12 -= i_11-- + i_11;
-                    i_13 -= i_11 + i_11;
-                }
-
-                i_10 = i_3;
-                i_11 = i_8 - i_22;
-                i_13 = i_9 + i_11 * i_11;
-                i_12 = i_13 - i_3;
-
-                for (i_13 -= i_11; i_8 < i_7; i_12 += i_11++ + i_11) {
-                    while (i_13 > i_9 && i_12 > i_9) {
-                        i_13 -= i_10-- + i_10;
-                        i_12 -= i_10 + i_10;
-                    }
-
-                    i_15 = i_1 - i_10;
-                    if (i_15 < anInt8983) {
-                        i_15 = anInt8983;
-                    }
-
-                    i_16 = i_10 + i_1;
-                    if (i_16 > anInt9002 - 1) {
-                        i_16 = anInt9002 - 1;
-                    }
-
-                    i_17 = i_15 + i_8 * anInt8980;
-
-                    for (i_18 = i_15; i_18 <= i_16; i_18++) {
-                        anIntArray8979[i_17++] = i_4;
-                    }
-
-                    ++i_8;
-                    i_13 += i_11 + i_11;
-                }
-
-                return;
-            }
-        }
-
-    }
-
-    @Override
-    public void XA(int i_1, int i_2, int i_3, int i_4, int i_5) {
-        int i_12 = i_1;
-        int i_31 = i_3;
-        if (anIntArray8979 != null && i_2 >= anInt9009 && i_2 < anInt8986) {
-            if (i_12 < anInt8983) {
-                i_31 -= anInt8983 - i_12;
-                i_12 = anInt8983;
-            }
-
-            if (i_31 + i_12 > anInt9002) {
-                i_31 = anInt9002 - i_12;
-            }
-
-            int i_6 = i_2 * anInt8980 + i_12;
-            int i_7 = i_4 >>> 24;
-            int i_8;
-            if (i_5 == 0 || i_5 == 1 && i_7 == 255) {
-                for (i_8 = 0; i_8 < i_31; i_8++) {
-                    anIntArray8979[i_6 + i_8] = i_4;
-                }
-            } else {
-                int i_9;
-                int i_10;
-                if (i_5 == 1) {
-                    i_4 = (i_7 * (i_4 & 0xff00ff) >> 8 & 0xff00ff) + (i_7 << 24) + (i_7 * (i_4 & 0xff00) >> 8 & 0xff00);
-                    i_8 = 256 - i_7;
-
-                    for (i_9 = 0; i_9 < i_31; i_9++) {
-                        i_10 = anIntArray8979[i_9 + i_6];
-                        i_10 = ((i_10 & 0xff00ff) * i_8 >> 8 & 0xff00ff) + (i_8 * (i_10 & 0xff00) >> 8 & 0xff00);
-                        anIntArray8979[i_9 + i_6] = i_10 + i_4;
-                    }
-                } else {
-                    if (i_5 != 2) {
-                        throw new IllegalArgumentException();
-                    }
-
-                    for (i_8 = 0; i_8 < i_31; i_8++) {
-                        i_9 = anIntArray8979[i_6 + i_8];
-                        i_10 = i_9 + i_4;
-                        int i_11 = (i_9 & 0xff00ff) + (i_4 & 0xff00ff);
-                        i_9 = (i_11 & 0x1000100) + (i_10 - i_11 & 0x10000);
-                        anIntArray8979[i_8 + i_6] = i_10 - i_9 | i_9 - (i_9 >>> 8);
-                    }
-                }
-            }
-        }
-
-    }
-
-    void method14366(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
-        if (anIntArray8979 != null && i_2 >= anInt9009 && i_2 < anInt8986) {
-            int i_9 = i_2 * anInt8980 + i_1;
-            int i_10 = i_4 >>> 24;
-            int i_11 = i_7 + i_6;
-            int i_12 = i_8 % i_11;
-            int i_13;
-            if (i_5 == 0 || i_5 == 1 && i_10 == 255) {
-                for (i_13 = 0; i_13 < i_3; i_12 %= i_11) {
-                    if (i_13 + i_1 >= anInt8983 && i_13 + i_1 < anInt9002 && i_12 < i_6) {
-                        anIntArray8979[i_13 + i_9] = i_4;
-                    }
-
-                    ++i_13;
-                    ++i_12;
-                }
-            } else {
-                int i_14;
-                int i_15;
-                if (i_5 == 1) {
-                    i_4 = (i_10 * (i_4 & 0xff00) >> 8 & 0xff00) + (i_10 * (i_4 & 0xff00ff) >> 8 & 0xff00ff) + (i_10 << 24);
-                    i_13 = 256 - i_10;
-
-                    for (i_14 = 0; i_14 < i_3; i_12 %= i_11) {
-                        if (i_14 + i_1 >= anInt8983 && i_14 + i_1 < anInt9002 && i_12 < i_6) {
-                            i_15 = anIntArray8979[i_14 + i_9];
-                            i_15 = ((i_15 & 0xff00ff) * i_13 >> 8 & 0xff00ff) + (i_13 * (i_15 & 0xff00) >> 8 & 0xff00);
-                            anIntArray8979[i_14 + i_9] = i_15 + i_4;
-                        }
-
-                        ++i_14;
-                        ++i_12;
-                    }
-                } else {
-                    if (i_5 != 2) {
-                        throw new IllegalArgumentException();
-                    }
-
-                    for (i_13 = 0; i_13 < i_3; i_12 %= i_11) {
-                        if (i_13 + i_1 >= anInt8983 && i_13 + i_1 < anInt9002 && i_12 < i_6) {
-                            i_14 = anIntArray8979[i_13 + i_9];
-                            i_15 = i_14 + i_4;
-                            int i_16 = (i_14 & 0xff00ff) + (i_4 & 0xff00ff);
-                            i_14 = (i_16 & 0x1000100) + (i_15 - i_16 & 0x10000);
-                            anIntArray8979[i_9 + i_13] = i_15 - i_14 | i_14 - (i_14 >>> 8);
-                        }
-
-                        ++i_13;
-                        ++i_12;
-                    }
-                }
-            }
-        }
-
-    }
-
-    @Override
-    public void qa(int[] ints_1) {
-        ints_1[0] = anInt8983;
-        ints_1[1] = anInt9009;
-        ints_1[2] = anInt9002;
-        ints_1[3] = anInt8986;
-    }
-
-    @Override
-    public void method8519(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
-        XA(i_1, i_2, i_3, i_5, i_6);
-        XA(i_1, i_4 + i_2 - 1, i_3, i_5, i_6);
-        G(i_1, i_2 + 1, i_4 - 2, i_5, i_6);
-        G(i_1 + i_3 - 1, 1 + i_2, i_4 - 2, i_5, i_6);
-    }
-
-    @Override
-    public void method8433(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
-        int i_14 = i_1;
-        int i_31 = i_3;
-        int i_21 = i_2;
-        int i_41 = i_4;
-        if (anIntArray8979 != null) {
-            i_31 -= i_14;
-            i_41 -= i_21;
-            if (i_41 == 0) {
-                if (i_31 >= 0) {
-                    XA(i_14, i_21, i_31 + 1, i_5, i_6);
-                } else {
-                    XA(i_31 + i_14, i_21, -i_31 + 1, i_5, i_6);
-                }
-            } else if (i_31 == 0) {
-                if (i_41 >= 0) {
-                    G(i_14, i_21, i_41 + 1, i_5, i_6);
-                } else {
-                    G(i_14, i_21 + i_41, -i_41 + 1, i_5, i_6);
-                }
-            } else {
-                if (i_31 + i_41 < 0) {
-                    i_14 += i_31;
-                    i_31 = -i_31;
-                    i_21 += i_41;
-                    i_41 = -i_41;
-                }
-
-                int i_7;
-                int i_8;
-                int i_9;
-                int i_10;
-                int i_11;
-                int i_12;
-                int i_13;
-                if (i_31 > i_41) {
-                    i_21 <<= 16;
-                    i_21 += 32768;
-                    i_41 <<= 16;
-                    i_7 = (int) Math.floor(0.5D + (double) i_41 / i_31);
-                    i_31 += i_14;
-                    if (i_14 < anInt8983) {
-                        i_21 += i_7 * (anInt8983 - i_14);
-                        i_14 = anInt8983;
-                    }
-
-                    if (i_31 >= anInt9002) {
-                        i_31 = anInt9002 - 1;
-                    }
-
-                    i_8 = i_5 >>> 24;
-                    if (i_6 != 0 && (i_6 != 1 || i_8 != 255)) {
-                        if (i_6 == 1) {
-                            i_5 = (i_8 * (i_5 & 0xff00ff) >> 8 & 0xff00ff) + (i_8 * (i_5 & 0xff00) >> 8 & 0xff00) + (i_8 << 24);
-
-                            for (i_9 = 256 - i_8; i_14 <= i_31; i_14++) {
-                                i_10 = i_21 >> 16;
-                                if (i_10 >= anInt9009 && i_10 < anInt8986) {
-                                    i_11 = i_10 * anInt8980 + i_14;
-                                    i_12 = anIntArray8979[i_11];
-                                    i_12 = (i_9 * (i_12 & 0xff00) >> 8 & 0xff00) + ((i_12 & 0xff00ff) * i_9 >> 8 & 0xff00ff);
-                                    anIntArray8979[i_11] = i_5 + i_12;
-                                }
-
-                                i_21 += i_7;
-                            }
-                        } else {
-                            if (i_6 != 2) {
-                                throw new IllegalArgumentException();
-                            }
-
-                            while (i_14 <= i_31) {
-                                i_9 = i_21 >> 16;
-                                if (i_9 >= anInt9009 && i_9 < anInt8986) {
-                                    i_10 = i_9 * anInt8980 + i_14;
-                                    i_11 = anIntArray8979[i_10];
-                                    i_12 = i_5 + i_11;
-                                    i_13 = (i_11 & 0xff00ff) + (i_5 & 0xff00ff);
-                                    i_11 = (i_13 & 0x1000100) + (i_12 - i_13 & 0x10000);
-                                    anIntArray8979[i_10] = i_12 - i_11 | i_11 - (i_11 >>> 8);
-                                }
-
-                                i_21 += i_7;
-                                ++i_14;
-                            }
-                        }
-                    } else {
-                        while (i_14 <= i_31) {
-                            i_9 = i_21 >> 16;
-                            if (i_9 >= anInt9009 && i_9 < anInt8986) {
-                                anIntArray8979[i_9 * anInt8980 + i_14] = i_5;
-                            }
-
-                            i_21 += i_7;
-                            ++i_14;
-                        }
-                    }
-                } else {
-                    i_14 <<= 16;
-                    i_14 += 32768;
-                    i_31 <<= 16;
-                    i_7 = (int) Math.floor((double) i_31 / i_41 + 0.5D);
-                    i_41 += i_21;
-                    if (i_21 < anInt9009) {
-                        i_14 += i_7 * (anInt9009 - i_21);
-                        i_21 = anInt9009;
-                    }
-
-                    if (i_41 >= anInt8986) {
-                        i_41 = anInt8986 - 1;
-                    }
-
-                    i_8 = i_5 >>> 24;
-                    if (i_6 == 0 || i_6 == 1 && i_8 == 255) {
-                        while (i_21 <= i_41) {
-                            i_9 = i_14 >> 16;
-                            if (i_9 >= anInt8983 && i_9 < anInt9002) {
-                                anIntArray8979[i_21 * anInt8980 + i_9] = i_5;
-                            }
-
-                            i_14 += i_7;
-                            ++i_21;
-                        }
-                    } else if (i_6 == 1) {
-                        i_5 = (i_8 * (i_5 & 0xff00ff) >> 8 & 0xff00ff) + (i_8 * (i_5 & 0xff00) >> 8 & 0xff00) + (i_8 << 24);
-
-                        for (i_9 = 256 - i_8; i_21 <= i_41; i_21++) {
-                            i_10 = i_14 >> 16;
-                            if (i_10 >= anInt8983 && i_10 < anInt9002) {
-                                i_11 = i_21 * anInt8980 + i_10;
-                                i_12 = anIntArray8979[i_11];
-                                i_12 = ((i_12 & 0xff00ff) * i_9 >> 8 & 0xff00ff) + (i_9 * (i_12 & 0xff00) >> 8 & 0xff00);
-                                anIntArray8979[i_21 * anInt8980 + i_10] = i_5 + i_12;
-                            }
-
-                            i_14 += i_7;
-                        }
-                    } else {
-                        if (i_6 != 2) {
-                            throw new IllegalArgumentException();
-                        }
-
-                        while (i_21 <= i_41) {
-                            i_9 = i_14 >> 16;
-                            if (i_9 >= anInt8983 && i_9 < anInt9002) {
-                                i_10 = i_21 * anInt8980 + i_9;
-                                i_11 = anIntArray8979[i_10];
-                                i_12 = i_5 + i_11;
-                                i_13 = (i_11 & 0xff00ff) + (i_5 & 0xff00ff);
-                                i_11 = (i_13 & 0x1000100) + (i_12 - i_13 & 0x10000);
-                                anIntArray8979[i_10] = i_12 - i_11 | i_11 - (i_11 >>> 8);
-                            }
-
-                            i_14 += i_7;
-                            ++i_21;
-                        }
-                    }
-                }
-            }
-        }
-
-    }
-
-    @Override
-    public Matrix44 method8449() {
-        Class185 class185_1 = method14370(Thread.currentThread());
-        return class185_1.aClass384_2346;
-    }
-
-    @Override
-    public void method8669(int i_1, int i_2, int i_3, int i_4, int i_5, Class455 class455_7, int i_8, int i_9) {
-        int i_11 = i_1;
-        int i_31 = i_3;
-        int i_24 = i_2;
-        int i_41 = i_4;
-        if (anIntArray8979 != null) {
-            Class455_Sub3 packetsdecoder_10 = (Class455_Sub3) class455_7;
-            int[] ints_11 = packetsdecoder_10.anIntArray9077;
-            int[] ints_12 = packetsdecoder_10.anIntArray9078;
-            int i_13 = Math.max(anInt9009, i_9);
-            int i_14 = Math.min(anInt8986, ints_11.length + i_9);
-            i_31 -= i_11;
-            i_41 -= i_24;
-            if (i_31 + i_41 < 0) {
-                i_11 += i_31;
-                i_31 = -i_31;
-                i_24 += i_41;
-                i_41 = -i_41;
-            }
-
-            int i_15;
-            int i_16;
-            int i_17;
-            int i_18;
-            int i_19;
-            int i_20;
-            int i_21;
-            int i_22;
-            int i_23;
-            if (i_31 > i_41) {
-                i_24 <<= 16;
-                i_24 += 32768;
-                i_41 <<= 16;
-                i_15 = (int) Math.floor((double) i_41 / i_31 + 0.5D);
-                i_31 += i_11;
-                if (i_11 < anInt8983) {
-                    i_24 += i_15 * (anInt8983 - i_11);
-                    i_11 = anInt8983;
-                }
-
-                if (i_31 >= anInt9002) {
-                    i_31 = anInt9002 - 1;
-                }
-
-                i_16 = i_5 >>> 24;
-                if (i_16 == 255) {
-                    while (i_11 <= i_31) {
-                        i_17 = i_24 >> 16;
-                        i_18 = i_17 - i_9;
-                        if (i_17 >= i_13 && i_17 < i_14) {
-                            i_19 = i_8 + ints_11[i_18];
-                            if (i_11 >= i_19 && i_11 < i_19 + ints_12[i_18]) {
-                                anIntArray8979[i_17 * anInt8980 + i_11] = i_5;
-                            }
-                        }
-
-                        i_24 += i_15;
-                        ++i_11;
-                    }
-                } else if (true) {
-                    i_5 = (i_16 * (i_5 & 0xff00ff) >> 8 & 0xff00ff) + (i_16 * (i_5 & 0xff00) >> 8 & 0xff00) + (i_16 << 24);
-
-                    for (i_17 = 256 - i_16; i_11 <= i_31; i_11++) {
-                        i_18 = i_24 >> 16;
-                        i_19 = i_18 - i_9;
-                        if (i_18 >= i_13 && i_18 < i_14) {
-                            i_20 = i_8 + ints_11[i_19];
-                            if (i_11 >= i_20 && i_11 < i_20 + ints_12[i_19]) {
-                                i_21 = i_18 * anInt8980 + i_11;
-                                i_22 = anIntArray8979[i_21];
-                                i_22 = (i_17 * (i_22 & 0xff00) >> 8 & 0xff00) + ((i_22 & 0xff00ff) * i_17 >> 8 & 0xff00ff);
-                                anIntArray8979[i_21] = i_5 + i_22;
-                            }
-                        }
-
-                        i_24 += i_15;
-                    }
-                } else {
-                    if (true) {
-                        throw new IllegalArgumentException();
-                    }
-
-                    while (i_11 <= i_31) {
-                        i_17 = i_24 >> 16;
-                        i_18 = i_17 - i_9;
-                        if (i_17 >= i_13 && i_17 < i_14) {
-                            i_19 = i_8 + ints_11[i_18];
-                            if (i_11 >= i_19 && i_11 < i_19 + ints_12[i_18]) {
-                                i_20 = i_17 * anInt8980 + i_11;
-                                i_21 = anIntArray8979[i_20];
-                                i_22 = i_5 + i_21;
-                                i_23 = (i_21 & 0xff00ff) + (i_5 & 0xff00ff);
-                                i_21 = (i_23 & 0x1000100) + (i_22 - i_23 & 0x10000);
-                                anIntArray8979[i_20] = i_22 - i_21 | i_21 - (i_21 >>> 8);
-                            }
-                        }
-
-                        i_24 += i_15;
-                        ++i_11;
-                    }
-                }
-            } else {
-                i_11 <<= 16;
-                i_11 += 32768;
-                i_31 <<= 16;
-                i_15 = (int) Math.floor(0.5D + (double) i_31 / i_41);
-                i_41 += i_24;
-                if (i_24 < i_13) {
-                    i_11 += (i_13 - i_24) * i_15;
-                    i_24 = i_13;
-                }
-
-                if (i_41 >= i_14) {
-                    i_41 = i_14 - 1;
-                }
-
-                i_16 = i_5 >>> 24;
-                if ((false || i_16 != 255)) {
-                    if (true) {
-                        i_5 = (i_16 * (i_5 & 0xff00) >> 8 & 0xff00) + (i_16 * (i_5 & 0xff00ff) >> 8 & 0xff00ff) + (i_16 << 24);
-
-                        for (i_17 = 256 - i_16; i_24 <= i_41; i_24++) {
-                            i_18 = i_11 >> 16;
-                            i_19 = i_24 - i_9;
-                            i_20 = i_8 + ints_11[i_19];
-                            if (i_18 >= anInt8983 && i_18 < anInt9002 && i_18 >= i_20 && i_18 < i_20 + ints_12[i_19]) {
-                                i_21 = i_24 * anInt8980 + i_18;
-                                i_22 = anIntArray8979[i_21];
-                                i_22 = (i_17 * (i_22 & 0xff00) >> 8 & 0xff00) + ((i_22 & 0xff00ff) * i_17 >> 8 & 0xff00ff);
-                                anIntArray8979[i_24 * anInt8980 + i_18] = i_5 + i_22;
-                            }
-
-                            i_11 += i_15;
-                        }
-                    } else {
-                        if (true) {
-                            throw new IllegalArgumentException();
-                        }
-
-                        while (i_24 <= i_41) {
-                            i_17 = i_11 >> 16;
-                            i_18 = i_24 - i_9;
-                            i_19 = i_8 + ints_11[i_18];
-                            if (i_17 >= anInt8983 && i_17 < anInt9002 && i_17 >= i_19 && i_17 < i_19 + ints_12[i_18]) {
-                                i_20 = i_24 * anInt8980 + i_17;
-                                i_21 = anIntArray8979[i_20];
-                                i_22 = i_5 + i_21;
-                                i_23 = (i_21 & 0xff00ff) + (i_5 & 0xff00ff);
-                                i_21 = (i_23 & 0x1000100) + (i_22 - i_23 & 0x10000);
-                                anIntArray8979[i_20] = i_22 - i_21 | i_21 - (i_21 >>> 8);
-                            }
-
-                            i_11 += i_15;
-                            ++i_24;
-                        }
-                    }
-                } else {
-                    while (i_24 <= i_41) {
-                        i_17 = i_11 >> 16;
-                        i_18 = i_24 - i_9;
-                        i_19 = i_8 + ints_11[i_18];
-                        if (i_17 >= anInt8983 && i_17 < anInt9002 && i_17 >= i_19 && i_17 < i_19 + ints_12[i_18]) {
-                            anIntArray8979[i_24 * anInt8980 + i_17] = i_5;
-                        }
-
-                        i_11 += i_15;
-                        ++i_24;
-                    }
-                }
-            }
-        }
-
-    }
-
-    @Override
-    public void method8563(int i_1, int i_2, int i_3, int i_4, int i_5, Class455 class455_7, int i_8, int i_9, int i_10, int i_11, int i_12) {
-        if (anIntArray8979 != null) {
-            Class455_Sub3 packetsdecoder_13 = (Class455_Sub3) class455_7;
-            int[] ints_14 = packetsdecoder_13.anIntArray9077;
-            int[] ints_15 = packetsdecoder_13.anIntArray9078;
-            int i_16 = Math.max(anInt9009, i_9);
-            int i_17 = Math.min(anInt8986, ints_14.length + i_9);
-            i_12 <<= 8;
-            i_10 <<= 8;
-            i_11 <<= 8;
-            int i_18 = i_11 + i_10;
-            i_12 %= i_18;
-            i_3 -= i_1;
-            i_4 -= i_2;
-            int i_19;
-            int i_20;
-            if (i_3 + i_4 < 0) {
-                i_19 = (int) (Math.sqrt(i_3 * i_3 + i_4 * i_4) * 256.0D);
-                i_20 = i_19 % i_18;
-                i_12 = i_10 + i_18 - i_12 - i_20;
-                i_12 %= i_18;
-                if (i_12 < 0) {
-                    i_12 += i_18;
-                }
-
-                i_1 += i_3;
-                i_3 = -i_3;
-                i_2 += i_4;
-                i_4 = -i_4;
-            }
-
-            int i_21;
-            int i_22;
-            int i_23;
-            int i_24;
-            int i_25;
-            int i_26;
-            int i_27;
-            if (i_3 > i_4) {
-                i_2 <<= 16;
-                i_2 += 32768;
-                i_4 <<= 16;
-                i_19 = (int) Math.floor((double) i_4 / i_3 + 0.5D);
-                i_3 += i_1;
-                i_20 = i_5 >>> 24;
-                i_21 = (int) Math.sqrt((i_19 >> 8) * (i_19 >> 8) + 65536);
-                if (i_20 == 255) {
-                    while (i_1 <= i_3) {
-                        i_22 = i_2 >> 16;
-                        i_23 = i_22 - i_9;
-                        if (i_1 >= anInt8983 && i_1 < anInt9002 && i_22 >= i_16 && i_22 < i_17 && i_12 < i_10) {
-                            i_24 = i_8 + ints_14[i_23];
-                            if (i_1 >= i_24 && i_1 < i_24 + ints_15[i_23]) {
-                                anIntArray8979[i_22 * anInt8980 + i_1] = i_5;
-                            }
-                        }
-
-                        i_2 += i_19;
-                        ++i_1;
-                        i_12 += i_21;
-                        i_12 %= i_18;
-                    }
-                } else if (true) {
-                    i_5 = (i_20 * (i_5 & 0xff00ff) >> 8 & 0xff00ff) + (i_20 * (i_5 & 0xff00) >> 8 & 0xff00) + (i_20 << 24);
-
-                    for (i_22 = 256 - i_20; i_1 <= i_3; i_12 %= i_18) {
-                        i_23 = i_2 >> 16;
-                        i_24 = i_23 - i_9;
-                        if (i_1 >= anInt8983 && i_1 < anInt9002 && i_23 >= i_16 && i_23 < i_17 && i_12 < i_10) {
-                            i_25 = i_8 + ints_14[i_24];
-                            if (i_1 >= i_25 && i_1 < i_25 + ints_15[i_24]) {
-                                i_26 = i_23 * anInt8980 + i_1;
-                                i_27 = anIntArray8979[i_26];
-                                i_27 = (i_22 * (i_27 & 0xff00) >> 8 & 0xff00) + ((i_27 & 0xff00ff) * i_22 >> 8 & 0xff00ff);
-                                anIntArray8979[i_26] = i_5 + i_27;
-                            }
-                        }
-
-                        i_2 += i_19;
-                        ++i_1;
-                        i_12 += i_21;
-                    }
-                } else {
-                    if (true) {
-                        throw new IllegalArgumentException();
-                    }
-
-                    while (i_1 <= i_3) {
-                        i_22 = i_2 >> 16;
-                        i_23 = i_22 - i_9;
-                        if (i_1 >= anInt8983 && i_1 < anInt9002 && i_22 >= i_16 && i_22 < i_17 && i_12 < i_10) {
-                            i_24 = i_8 + ints_14[i_23];
-                            if (i_1 >= i_24 && i_1 < i_24 + ints_15[i_23]) {
-                                i_25 = i_22 * anInt8980 + i_1;
-                                i_26 = anIntArray8979[i_25];
-                                i_27 = i_5 + i_26;
-                                int i_28 = (i_26 & 0xff00ff) + (i_5 & 0xff00ff);
-                                i_26 = (i_28 & 0x1000100) + (i_27 - i_28 & 0x10000);
-                                anIntArray8979[i_25] = i_27 - i_26 | i_26 - (i_26 >>> 8);
-                            }
-                        }
-
-                        i_2 += i_19;
-                        ++i_1;
-                        i_12 += i_21;
-                        i_12 %= i_18;
-                    }
-                }
-            } else {
-                i_1 <<= 16;
-                i_1 += 32768;
-                i_3 <<= 16;
-                i_19 = (int) Math.floor(0.5D + (double) i_3 / i_4);
-                i_20 = (int) Math.sqrt((i_19 >> 8) * (i_19 >> 8) + 65536);
-                i_4 += i_2;
-                i_21 = i_5 >>> 24;
-                if (i_21 == 255) {
-                    while (i_2 <= i_4) {
-                        i_22 = i_1 >> 16;
-                        i_23 = i_2 - i_9;
-                        if (i_2 >= i_16 && i_2 < i_17 && i_22 >= anInt8983 && i_22 < anInt9002 && i_12 < i_10 && i_22 >= i_8 + ints_14[i_23] && i_22 < i_8 + ints_14[i_23] + ints_15[i_23]) {
-                            anIntArray8979[i_2 * anInt8980 + i_22] = i_5;
-                        }
-
-                        i_1 += i_19;
-                        ++i_2;
-                        i_12 += i_20;
-                        i_12 %= i_18;
-                    }
-                } else if (true) {
-                    i_5 = (i_21 * (i_5 & 0xff00ff) >> 8 & 0xff00ff) + (i_21 * (i_5 & 0xff00) >> 8 & 0xff00) + (i_21 << 24);
-
-                    for (i_22 = 256 - i_21; i_2 <= i_4; i_12 %= i_18) {
-                        i_23 = i_1 >> 16;
-                        i_24 = i_2 - i_9;
-                        if (i_2 >= i_16 && i_2 < i_17 && i_23 >= anInt8983 && i_23 < anInt9002 && i_12 < i_10 && i_23 >= i_8 + ints_14[i_24] && i_23 < i_8 + ints_14[i_24] + ints_15[i_24]) {
-                            i_25 = i_2 * anInt8980 + i_23;
-                            i_26 = anIntArray8979[i_25];
-                            i_26 = (i_22 * (i_26 & 0xff00) >> 8 & 0xff00) + ((i_26 & 0xff00ff) * i_22 >> 8 & 0xff00ff);
-                            anIntArray8979[i_2 * anInt8980 + i_23] = i_5 + i_26;
-                        }
-
-                        i_1 += i_19;
-                        ++i_2;
-                        i_12 += i_20;
-                    }
-                } else {
-                    if (true) {
-                        throw new IllegalArgumentException();
-                    }
-
-                    while (i_2 <= i_4) {
-                        i_22 = i_1 >> 16;
-                        i_23 = i_2 - i_9;
-                        if (i_2 >= i_16 && i_2 < i_17 && i_22 >= anInt8983 && i_22 < anInt9002 && i_12 < i_10 && i_22 >= i_8 + ints_14[i_23] && i_22 < i_8 + ints_15[i_23] + ints_14[i_23]) {
-                            i_24 = i_2 * anInt8980 + i_22;
-                            i_25 = anIntArray8979[i_24];
-                            i_26 = i_5 + i_25;
-                            i_27 = (i_25 & 0xff00ff) + (i_5 & 0xff00ff);
-                            i_25 = (i_27 & 0x1000100) + (i_26 - i_27 & 0x10000);
-                            anIntArray8979[i_24] = i_26 - i_25 | i_25 - (i_25 >>> 8);
-                        }
-
-                        i_1 += i_19;
-                        ++i_2;
-                        i_12 += i_20;
-                        i_12 %= i_18;
-                    }
-                }
-            }
-        }
-
-    }
-
-    @Override
-    public void method8516(int i_1, int i_2, float f_3, int i_4, int i_5, float f_6, int i_7, int i_8, float f_9, int i_10, int i_11, int i_12, int i_13) {
-        boolean bool_14 = anIntArray8979 != null;
-        boolean bool_15 = aFloatArray9010 != null;
-        if (bool_14 || bool_15) {
-            Class185 class185_16 = method14370(Thread.currentThread());
-            ChoppyItemFixClass choppyitemfixclass_17 = class185_16.aClass144_2310;
-            choppyitemfixclass_17.aBool1675 = false;
-            i_1 -= anInt8983;
-            i_4 -= anInt8983;
-            i_7 -= anInt8983;
-            i_2 -= anInt9009;
-            i_5 -= anInt9009;
-            i_8 -= anInt9009;
-            choppyitemfixclass_17.aBool1708 = i_1 < 0 || i_1 > choppyitemfixclass_17.anInt1684 || i_4 < 0 || i_4 > choppyitemfixclass_17.anInt1684 || i_7 < 0 || i_7 > choppyitemfixclass_17.anInt1684;
-            int i_18 = i_10 >>> 24;
-            if (i_13 == 0 || i_13 == 1 && i_18 == 255) {
-                choppyitemfixclass_17.anInt1674 = 0;
-                choppyitemfixclass_17.aBool1672 = false;
-                choppyitemfixclass_17.method2425(bool_14, bool_15, false, i_2, i_5, i_8, i_1, i_4, i_7, f_3, f_6, f_9, i_10, i_11, i_12);
-            } else if (i_13 == 1) {
-                choppyitemfixclass_17.anInt1674 = 255 - i_18;
-                choppyitemfixclass_17.aBool1672 = false;
-                choppyitemfixclass_17.method2425(bool_14, bool_15, false, i_2, i_5, i_8, i_1, i_4, i_7, f_3, f_6, f_9, i_10, i_11, i_12);
-            } else {
-                if (i_13 != 2) {
-                    throw new IllegalArgumentException();
-                }
-
-                choppyitemfixclass_17.anInt1674 = 128;
-                choppyitemfixclass_17.aBool1672 = true;
-                choppyitemfixclass_17.method2425(bool_14, bool_15, false, i_2, i_5, i_8, i_1, i_4, i_7, f_3, f_6, f_9, i_10, i_11, i_12);
-            }
-
-            choppyitemfixclass_17.aBool1675 = true;
-        }
-
-    }
-
-    @Override
-    public int method8437(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
-        int i_7 = 0;
-        float f_8 = i_3 * aClass384_8996.buf[10] + i_2 * aClass384_8996.buf[6] + aClass384_8996.buf[14] + i_1 * aClass384_8996.buf[2];
-        float f_9 = aClass384_8996.buf[6] * i_5 + aClass384_8996.buf[14] + aClass384_8996.buf[2] * i_4 + aClass384_8996.buf[10] * i_6;
-        float f_10 = aClass384_8996.buf[15] + i_1 * aClass384_8996.buf[3] + i_2 * aClass384_8996.buf[7] + i_3 * aClass384_8996.buf[11];
-        float f_11 = i_5 * aClass384_8996.buf[7] + aClass384_8996.buf[15] + aClass384_8996.buf[3] * i_4 + i_6 * aClass384_8996.buf[11];
-        if (f_8 < -f_10 && f_9 < -f_11) {
-            i_7 |= 0x10;
-        } else if (f_8 > f_10 && f_9 > f_11) {
-            i_7 |= 0x20;
-        }
-
-        float f_12 = aClass384_8996.buf[4] * i_2 + aClass384_8996.buf[12] + i_1 * aClass384_8996.buf[0] + i_3 * aClass384_8996.buf[8];
-        float f_13 = i_6 * aClass384_8996.buf[8] + i_4 * aClass384_8996.buf[0] + aClass384_8996.buf[12] + aClass384_8996.buf[4] * i_5;
-        if (f_12 < -f_10 && f_13 < -f_11) {
-            i_7 |= 0x1;
-        }
-
-        if (f_12 > f_10 && f_13 > f_11) {
-            i_7 |= 0x2;
-        }
-
-        float f_14 = aClass384_8996.buf[5] * i_2 + i_1 * aClass384_8996.buf[1] + aClass384_8996.buf[13] + aClass384_8996.buf[9] * i_3;
-        float f_15 = aClass384_8996.buf[13] + aClass384_8996.buf[1] * i_4 + aClass384_8996.buf[5] * i_5 + i_6 * aClass384_8996.buf[9];
-        if (f_14 < -f_10 && f_15 < -f_11) {
-            i_7 |= 0x4;
-        }
-
-        if (f_14 > f_10 && f_15 > f_11) {
-            i_7 |= 0x8;
-        }
-
-        return i_7;
-    }
-
-    @Override
-    public void method8532(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, Class455 class455_7, int i_8, int i_9) {
-        int i_11 = i_1;
-        int i_31 = i_3;
-        int i_24 = i_2;
-        int i_41 = i_4;
-        if (anIntArray8979 != null) {
-            Class455_Sub3 packetsdecoder_10 = (Class455_Sub3) class455_7;
-            int[] ints_11 = packetsdecoder_10.anIntArray9077;
-            int[] ints_12 = packetsdecoder_10.anIntArray9078;
-            int i_13 = Math.max(anInt9009, i_9);
-            int i_14 = Math.min(anInt8986, i_9 + ints_11.length);
-            i_31 -= i_11;
-            i_41 -= i_24;
-            if (i_41 + i_31 < 0) {
-                i_11 += i_31;
-                i_31 = -i_31;
-                i_24 += i_41;
-                i_41 = -i_41;
-            }
-
-            int i_15;
-            int i_16;
-            int i_17;
-            int i_18;
-            int i_19;
-            int i_20;
-            int i_21;
-            int i_22;
-            int i_23;
-            if (i_31 > i_41) {
-                i_24 <<= 16;
-                i_24 += 32768;
-                i_41 <<= 16;
-                i_15 = (int) Math.floor((double) i_41 / i_31 + 0.5D);
-                i_31 += i_11;
-                if (i_11 < anInt8983) {
-                    i_24 += (anInt8983 - i_11) * i_15;
-                    i_11 = anInt8983;
-                }
-
-                if (i_31 >= anInt9002) {
-                    i_31 = anInt9002 - 1;
-                }
-
-                i_16 = i_5 >>> 24;
-                if (i_6 == 0 || i_6 == 1 && i_16 == 255) {
-                    while (i_11 <= i_31) {
-                        i_17 = i_24 >> 16;
-                        i_18 = i_17 - i_9;
-                        if (i_17 >= i_13 && i_17 < i_14) {
-                            i_19 = ints_11[i_18] + i_8;
-                            if (i_11 >= i_19 && i_11 < ints_12[i_18] + i_19) {
-                                anIntArray8979[i_17 * anInt8980 + i_11] = i_5;
-                            }
-                        }
-
-                        i_24 += i_15;
-                        ++i_11;
-                    }
-                } else if (i_6 == 1) {
-                    i_5 = (i_16 * (i_5 & 0xff00ff) >> 8 & 0xff00ff) + ((i_5 & 0xff00) * i_16 >> 8 & 0xff00) + (i_16 << 24);
-
-                    for (i_17 = 256 - i_16; i_11 <= i_31; i_11++) {
-                        i_18 = i_24 >> 16;
-                        i_19 = i_18 - i_9;
-                        if (i_18 >= i_13 && i_18 < i_14) {
-                            i_20 = ints_11[i_19] + i_8;
-                            if (i_11 >= i_20 && i_11 < i_20 + ints_12[i_19]) {
-                                i_21 = i_11 + anInt8980 * i_18;
-                                i_22 = anIntArray8979[i_21];
-                                i_22 = (i_17 * (i_22 & 0xff00) >> 8 & 0xff00) + (i_17 * (i_22 & 0xff00ff) >> 8 & 0xff00ff);
-                                anIntArray8979[i_21] = i_5 + i_22;
-                            }
-                        }
-
-                        i_24 += i_15;
-                    }
-                } else {
-                    if (i_6 != 2) {
-                        throw new IllegalArgumentException();
-                    }
-
-                    while (i_11 <= i_31) {
-                        i_17 = i_24 >> 16;
-                        i_18 = i_17 - i_9;
-                        if (i_17 >= i_13 && i_17 < i_14) {
-                            i_19 = i_8 + ints_11[i_18];
-                            if (i_11 >= i_19 && i_11 < ints_12[i_18] + i_19) {
-                                i_20 = i_17 * anInt8980 + i_11;
-                                i_21 = anIntArray8979[i_20];
-                                i_22 = i_21 + i_5;
-                                i_23 = (i_5 & 0xff00ff) + (i_21 & 0xff00ff);
-                                i_21 = (i_23 & 0x1000100) + (i_22 - i_23 & 0x10000);
-                                anIntArray8979[i_20] = i_22 - i_21 | i_21 - (i_21 >>> 8);
-                            }
-                        }
-
-                        i_24 += i_15;
-                        ++i_11;
-                    }
-                }
-            } else {
-                i_11 <<= 16;
-                i_11 += 32768;
-                i_31 <<= 16;
-                i_15 = (int) Math.floor(0.5D + (double) i_31 / i_41);
-                i_41 += i_24;
-                if (i_24 < i_13) {
-                    i_11 += (i_13 - i_24) * i_15;
-                    i_24 = i_13;
-                }
-
-                if (i_41 >= i_14) {
-                    i_41 = i_14 - 1;
-                }
-
-                i_16 = i_5 >>> 24;
-                if (i_6 != 0 && (i_6 != 1 || i_16 != 255)) {
-                    if (i_6 == 1) {
-                        i_5 = (i_16 * (i_5 & 0xff00) >> 8 & 0xff00) + ((i_5 & 0xff00ff) * i_16 >> 8 & 0xff00ff) + (i_16 << 24);
-
-                        for (i_17 = 256 - i_16; i_24 <= i_41; i_24++) {
-                            i_18 = i_11 >> 16;
-                            i_19 = i_24 - i_9;
-                            i_20 = i_8 + ints_11[i_19];
-                            if (i_18 >= anInt8983 && i_18 < anInt9002 && i_18 >= i_20 && i_18 < i_20 + ints_12[i_19]) {
-                                i_21 = i_18 + i_24 * anInt8980;
-                                i_22 = anIntArray8979[i_21];
-                                i_22 = (i_17 * (i_22 & 0xff00ff) >> 8 & 0xff00ff) + (i_17 * (i_22 & 0xff00) >> 8 & 0xff00);
-                                anIntArray8979[i_18 + i_24 * anInt8980] = i_22 + i_5;
-                            }
-
-                            i_11 += i_15;
-                        }
-                    } else {
-                        if (i_6 != 2) {
-                            throw new IllegalArgumentException();
-                        }
-
-                        while (i_24 <= i_41) {
-                            i_17 = i_11 >> 16;
-                            i_18 = i_24 - i_9;
-                            i_19 = ints_11[i_18] + i_8;
-                            if (i_17 >= anInt8983 && i_17 < anInt9002 && i_17 >= i_19 && i_17 < i_19 + ints_12[i_18]) {
-                                i_20 = anInt8980 * i_24 + i_17;
-                                i_21 = anIntArray8979[i_20];
-                                i_22 = i_5 + i_21;
-                                i_23 = (i_21 & 0xff00ff) + (i_5 & 0xff00ff);
-                                i_21 = (i_22 - i_23 & 0x10000) + (i_23 & 0x1000100);
-                                anIntArray8979[i_20] = i_22 - i_21 | i_21 - (i_21 >>> 8);
-                            }
-
-                            i_11 += i_15;
-                            ++i_24;
-                        }
-                    }
-                } else {
-                    while (i_24 <= i_41) {
-                        i_17 = i_11 >> 16;
-                        i_18 = i_24 - i_9;
-                        i_19 = ints_11[i_18] + i_8;
-                        if (i_17 >= anInt8983 && i_17 < anInt9002 && i_17 >= i_19 && i_17 < ints_12[i_18] + i_19) {
-                            anIntArray8979[i_17 + anInt8980 * i_24] = i_5;
-                        }
-
-                        i_11 += i_15;
-                        ++i_24;
-                    }
-                }
-            }
-        }
-
+    public Node_Sub1 method8438(int i_1) {
+        Node_Sub1_Sub2 class282_sub1_sub2_2 = new Node_Sub1_Sub2(i_1);
+        aClass473_8700.insertBack(class282_sub1_sub2_2);
+        return class282_sub1_sub2_2;
     }
 
     @Override
     public void method8439(Node_Sub1 class282_sub1_1) {
+        aNativeHeap8699 = ((Node_Sub1_Sub2) class282_sub1_1).aNativeHeap10212;
     }
 
-    @Override
-    public NativeSprite method8654(int i_1, int i_2, boolean bool_3, boolean bool_4) {
-        return bool_3 ? new NativeSprite_Sub1_Sub3(this, i_1, i_2) : new NativeSprite_Sub1_Sub1(this, i_1, i_2);
+    public NativeHeapBuffer method13910(int i_1, boolean bool_2) {
+        return aNativeHeap8699.method759(i_1, bool_2);
     }
 
-    @Override
-    public void method8479(float f_1, float f_2, float f_3, float[] floats_4) {
-        float f_5 = f_3 * aClass384_8996.buf[11] + aClass384_8996.buf[7] * f_2 + f_1 * aClass384_8996.buf[3] + aClass384_8996.buf[15];
-        float f_6 = f_2 * aClass384_8996.buf[4] + f_1 * aClass384_8996.buf[0] + aClass384_8996.buf[12] + aClass384_8996.buf[8] * f_3;
-        float f_7 = f_2 * aClass384_8996.buf[5] + f_1 * aClass384_8996.buf[1] + aClass384_8996.buf[13] + f_3 * aClass384_8996.buf[9];
-        float f_8 = f_3 * aClass384_8994.buf[10] + aClass384_8994.buf[6] * f_2 + f_1 * aClass384_8994.buf[2] + aClass384_8994.buf[14];
-        floats_4[0] = aFloat9003 + f_6 * aFloat8976 / f_5;
-        floats_4[1] = aFloat8982 + f_7 * aFloat9004 / f_5;
-        floats_4[2] = f_8;
-    }
-
-    @Override
-    public NativeSprite method8668(int i_1, int i_2, int i_3, int i_4, boolean bool_5) {
-        if (anIntArray8979 == null) {
-            throw new IllegalStateException("");
-        } else {
-            int[] ints_6 = new int[i_3 * i_4];
-            int i_7 = i_2 * anInt8980 + i_1;
-            int i_8 = anInt8980 - i_3;
-
-            for (int i_9 = 0; i_9 < i_4; i_9++) {
-                int i_10 = i_3 * i_9;
-
-                for (int i_11 = 0; i_11 < i_3; i_11++) {
-                    ints_6[i_10 + i_11] = anIntArray8979[i_7++];
-                }
-
-                i_7 += i_8;
-            }
-
-            if (bool_5) {
-                return new NativeSprite_Sub1_Sub3(this, ints_6, i_3, i_4);
-            } else {
-                return new NativeSprite_Sub1_Sub1(this, ints_6, i_3, i_4);
-            }
+    Interface32 method13911(int i_1) {
+        if (anInterface32_8834.method39() < i_1 * 2) {
+            anInterface32_8834.method208(i_1);
         }
+
+        return anInterface32_8834;
     }
+
+    @Override
+    public int za() {
+        return anInt8702 + anInt8701 + anInt8761;
+    }
+
+    @Override
+    public FontRenderer method8660(FontMetrics fontmetrics_1, SpriteDefinitions[] arr_2, boolean bool_3) {
+        return new FontRenderer_Sub4(this, fontmetrics_1, arr_2, bool_3);
+    }
+
+    @Override
+    public NativeSprite method8444(SpriteDefinitions class91_1, boolean bool_2) {
+        NativeSprite nativesprite_3;
+        if (class91_1.width != 0 && class91_1.height != 0) {
+            int[] ints_4 = new int[class91_1.width * class91_1.height];
+            int i_5 = 0;
+            int i_6 = 0;
+            int i_7;
+            int i_8;
+            if (class91_1.alpha != null) {
+                for (i_7 = 0; i_7 < class91_1.height; i_7++) {
+                    for (i_8 = 0; i_8 < class91_1.width; i_8++) {
+                        ints_4[i_6++] = class91_1.alpha[i_5] << 24 | class91_1.pallete[class91_1.pixels[i_5] & 0xff];
+                        ++i_5;
+                    }
+                }
+            } else {
+                for (i_7 = 0; i_7 < class91_1.height; i_7++) {
+                    for (i_8 = 0; i_8 < class91_1.width; i_8++) {
+                        int i_9 = class91_1.pallete[class91_1.pixels[i_5++] & 0xff];
+                        ints_4[i_6++] = i_9 != 0 ? -16777216 | i_9 : 0;
+                    }
+                }
+            }
+
+            nativesprite_3 = createNativeSprite(ints_4, class91_1.width, class91_1.width, class91_1.height);
+        } else {
+            nativesprite_3 = createNativeSprite(new int[1], 1, 1, 1);
+        }
+
+        nativesprite_3.method2743(class91_1.minX, class91_1.minY, class91_1.anInt958, class91_1.anInt953);
+        return nativesprite_3;
+    }
+
+    @Override
+    public NativeSprite method8442(int[] ints_1, int i_2, int i_3, int i_4, int i_5, boolean bool_6) {
+        return new NativeSprite_Sub3(this, i_4, i_5, ints_1, i_2, i_3);
+    }
+
+    Matrix44 method13912() {
+        return aClass384_8727;
+    }
+
+    abstract void method13913();
 
     @Override
     public Class455 method8624(int i_1, int i_2, int[] ints_3, int[] ints_4) {
-        return new Class455_Sub3(ints_3, ints_4);
+        return Class455_Sub1.method13769(this, i_1, i_2, ints_3, ints_4);
     }
 
-    @Override
-    public void en(float f_1, float f_2) {
-        aFloat8978 = f_2 - f_1;
-        aFloat8985 = f_2 + f_1 - 1.0F;
-
-        for (int i_3 = 0; i_3 < anInt9008; i_3++) {
-            Class185 class185_4 = aClass185Array8984[i_3];
-            ChoppyItemFixClass choppyitemfixclass_5 = class185_4.aClass144_2310;
-            choppyitemfixclass_5.aFloat1683 = aFloat8978;
-            choppyitemfixclass_5.aFloat1682 = aFloat8985;
-        }
-
-    }
-
-    @Override
-    public void method8446(Matrix44 matrix44_1) {
-        aClass384_8995.method6562(matrix44_1);
-        method14374();
-    }
-
-    @Override
-    public void GA() {
-        aFloat8978 = 1.0f;
-        aFloat8985 = 0.0f;
-
-        for (int i_3 = 0; i_3 < anInt9008; i_3++) {
-            Class185 class185_4 = aClass185Array8984[i_3];
-            ChoppyItemFixClass choppyitemfixclass_5 = class185_4.aClass144_2310;
-            choppyitemfixclass_5.aFloat1683 = aFloat8978;
-            choppyitemfixclass_5.aFloat1682 = aFloat8985;
-        }
-
-    }
+    abstract void method13914();
 
     @Override
     public MeshRasterizer createMeshRasterizer(RSMesh rsmesh_1, int i_2, int i_3, int i_4, int i_5) {
-        return new MeshRasterizer_Sub2(this, rsmesh_1, i_2, i_4, i_5, i_3);
+        return new MeshRasterizer_Sub3(this, rsmesh_1, i_2, i_4, i_5, i_3);
+    }
+
+    @Override
+    public void method8542(Node_Sub1 class282_sub1_1) {
+        aNativeHeap8699 = ((Node_Sub1_Sub2) class282_sub1_1).aNativeHeap10212;
     }
 
     @Override
@@ -1968,925 +826,442 @@ public class HardwareRenderer extends AbstractRenderer {
 
     @Override
     public Ground createGround(int i_1, int i_2, int[][] ints_3, int[][] ints_4, int i_6, int i_7) {
-        return new Ground_Sub3(this, i_7, i_1, i_2, ints_3, ints_4, 512);
+        return new HardwareGround(this, i_6, i_7, i_1, i_2, ints_3, ints_4, 512);
     }
 
-    @Override
-    public void method8634() {
-        anInt8998 = 0;
-        anInt8999 = 0;
-        anInt9000 = anInt8980;
-        anInt9001 = anInt8981;
-        method14364();
-    }
+    abstract void method13915();
 
     @Override
     public Matrix44Var method8450() {
-        Class185 class185_1 = method14370(Thread.currentThread());
-        return class185_1.aClass294_2314;
+        return aClass294_8842;
+    }
+
+    abstract void method13916();
+
+    @Override
+    public void method8477(Class152 class152_1) {
+        aClass152_Sub2_8731 = (Class152_Sub2) class152_1;
+    }
+
+    abstract Interface1 method13917(Class150 var1, int var2, int var3, int var4, boolean var5, byte[] var6);
+
+    @Override
+    public void method8421() {
+        anInt8745 = 0;
+        anInt8835 = 0;
+        anInt8722 = aClass158_5853.method2714();
+        anInt8748 = aClass158_5853.method2716();
+        method13918();
     }
 
     @Override
-    public boolean method8471() {
-        return false;
+    public void method8617(int i_1, int i_2, int i_3, int i_4) {
+        anInt8745 = i_1;
+        anInt8835 = i_2;
+        anInt8722 = i_3;
+        anInt8748 = i_4;
+        method13918();
     }
 
-    @Override
-    public void iw(int i_1, float f_2, float f_3, float f_4, float f_5, float f_6) {
-        anInt8990 = (int) (65535.0F * f_2);
-        anInt8991 = (int) (65535.0F * f_3);
-        float f_7 = (float) Math.sqrt(f_6 * f_6 + f_5 * f_5 + f_4 * f_4);
-        anInt9011 = (int) (f_4 * 65535.0F / f_7);
-        anInt8988 = (int) (65535.0F * f_5 / f_7);
-        anInt9007 = (int) (f_6 * 65535.0F / f_7);
-    }
-
-    @Override
-    public void method8547(int i_1, Node_Sub24[] arr_2) {
-    }
-
-    @Override
-    public void method8535(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, Class455 class455_7, int i_8, int i_9, int i_10, int i_11, int i_12) {
-        if (anIntArray8979 != null) {
-            Class455_Sub3 packetsdecoder_13 = (Class455_Sub3) class455_7;
-            int[] ints_14 = packetsdecoder_13.anIntArray9077;
-            int[] ints_15 = packetsdecoder_13.anIntArray9078;
-            int i_16 = Math.max(anInt9009, i_9);
-            int i_17 = Math.min(anInt8986, i_9 + ints_14.length);
-            i_12 <<= 8;
-            i_10 <<= 8;
-            i_11 <<= 8;
-            int i_18 = i_11 + i_10;
-            i_12 %= i_18;
-            i_3 -= i_1;
-            i_4 -= i_2;
-            int i_19;
-            int i_20;
-            if (i_3 + i_4 < 0) {
-                i_19 = (int) (Math.sqrt(i_4 * i_4 + i_3 * i_3) * 256.0D);
-                i_20 = i_19 % i_18;
-                i_12 = i_10 + i_18 - i_12 - i_20;
-                i_12 %= i_18;
-                if (i_12 < 0) {
-                    i_12 += i_18;
-                }
-
-                i_1 += i_3;
-                i_3 = -i_3;
-                i_2 += i_4;
-                i_4 = -i_4;
-            }
-
-            int i_21;
-            int i_22;
-            int i_23;
-            int i_24;
-            int i_25;
-            int i_26;
-            int i_27;
-            if (i_3 > i_4) {
-                i_2 <<= 16;
-                i_2 += 32768;
-                i_4 <<= 16;
-                i_19 = (int) Math.floor((double) i_4 / i_3 + 0.5D);
-                i_3 += i_1;
-                i_20 = i_5 >>> 24;
-                i_21 = (int) Math.sqrt((i_19 >> 8) * (i_19 >> 8) + 65536);
-                if (i_6 == 0 || i_6 == 1 && i_20 == 255) {
-                    while (i_1 <= i_3) {
-                        i_22 = i_2 >> 16;
-                        i_23 = i_22 - i_9;
-                        if (i_1 >= anInt8983 && i_1 < anInt9002 && i_22 >= i_16 && i_22 < i_17 && i_12 < i_10) {
-                            i_24 = i_8 + ints_14[i_23];
-                            if (i_1 >= i_24 && i_1 < ints_15[i_23] + i_24) {
-                                anIntArray8979[i_22 * anInt8980 + i_1] = i_5;
-                            }
-                        }
-
-                        i_2 += i_19;
-                        ++i_1;
-                        i_12 += i_21;
-                        i_12 %= i_18;
-                    }
-                } else if (i_6 == 1) {
-                    i_5 = ((i_5 & 0xff00ff) * i_20 >> 8 & 0xff00ff) + ((i_5 & 0xff00) * i_20 >> 8 & 0xff00) + (i_20 << 24);
-
-                    for (i_22 = 256 - i_20; i_1 <= i_3; i_12 %= i_18) {
-                        i_23 = i_2 >> 16;
-                        i_24 = i_23 - i_9;
-                        if (i_1 >= anInt8983 && i_1 < anInt9002 && i_23 >= i_16 && i_23 < i_17 && i_12 < i_10) {
-                            i_25 = i_8 + ints_14[i_24];
-                            if (i_1 >= i_25 && i_1 < i_25 + ints_15[i_24]) {
-                                i_26 = anInt8980 * i_23 + i_1;
-                                i_27 = anIntArray8979[i_26];
-                                i_27 = (i_22 * (i_27 & 0xff00ff) >> 8 & 0xff00ff) + (i_22 * (i_27 & 0xff00) >> 8 & 0xff00);
-                                anIntArray8979[i_26] = i_27 + i_5;
-                            }
-                        }
-
-                        i_2 += i_19;
-                        ++i_1;
-                        i_12 += i_21;
-                    }
-                } else {
-                    if (i_6 != 2) {
-                        throw new IllegalArgumentException();
-                    }
-
-                    while (i_1 <= i_3) {
-                        i_22 = i_2 >> 16;
-                        i_23 = i_22 - i_9;
-                        if (i_1 >= anInt8983 && i_1 < anInt9002 && i_22 >= i_16 && i_22 < i_17 && i_12 < i_10) {
-                            i_24 = i_8 + ints_14[i_23];
-                            if (i_1 >= i_24 && i_1 < i_24 + ints_15[i_23]) {
-                                i_25 = i_1 + i_22 * anInt8980;
-                                i_26 = anIntArray8979[i_25];
-                                i_27 = i_26 + i_5;
-                                int i_28 = (i_26 & 0xff00ff) + (i_5 & 0xff00ff);
-                                i_26 = (i_28 & 0x1000100) + (i_27 - i_28 & 0x10000);
-                                anIntArray8979[i_25] = i_27 - i_26 | i_26 - (i_26 >>> 8);
-                            }
-                        }
-
-                        i_2 += i_19;
-                        ++i_1;
-                        i_12 += i_21;
-                        i_12 %= i_18;
-                    }
-                }
-            } else {
-                i_1 <<= 16;
-                i_1 += 32768;
-                i_3 <<= 16;
-                i_19 = (int) Math.floor(0.5D + (double) i_3 / i_4);
-                i_20 = (int) Math.sqrt(65536 + (i_19 >> 8) * (i_19 >> 8));
-                i_4 += i_2;
-                i_21 = i_5 >>> 24;
-                if (i_6 == 0 || i_6 == 1 && i_21 == 255) {
-                    while (i_2 <= i_4) {
-                        i_22 = i_1 >> 16;
-                        i_23 = i_2 - i_9;
-                        if (i_2 >= i_16 && i_2 < i_17 && i_22 >= anInt8983 && i_22 < anInt9002 && i_12 < i_10 && i_22 >= i_8 + ints_14[i_23] && i_22 < ints_14[i_23] + i_8 + ints_15[i_23]) {
-                            anIntArray8979[i_2 * anInt8980 + i_22] = i_5;
-                        }
-
-                        i_1 += i_19;
-                        ++i_2;
-                        i_12 += i_20;
-                        i_12 %= i_18;
-                    }
-                } else if (i_6 == 1) {
-                    i_5 = (i_21 * (i_5 & 0xff00) >> 8 & 0xff00) + (i_21 * (i_5 & 0xff00ff) >> 8 & 0xff00ff) + (i_21 << 24);
-
-                    for (i_22 = 256 - i_21; i_2 <= i_4; i_12 %= i_18) {
-                        i_23 = i_1 >> 16;
-                        i_24 = i_2 - i_9;
-                        if (i_2 >= i_16 && i_2 < i_17 && i_23 >= anInt8983 && i_23 < anInt9002 && i_12 < i_10 && i_23 >= i_8 + ints_14[i_24] && i_23 < i_8 + ints_14[i_24] + ints_15[i_24]) {
-                            i_25 = i_2 * anInt8980 + i_23;
-                            i_26 = anIntArray8979[i_25];
-                            i_26 = (i_22 * (i_26 & 0xff00) >> 8 & 0xff00) + (i_22 * (i_26 & 0xff00ff) >> 8 & 0xff00ff);
-                            anIntArray8979[anInt8980 * i_2 + i_23] = i_26 + i_5;
-                        }
-
-                        i_1 += i_19;
-                        ++i_2;
-                        i_12 += i_20;
-                    }
-                } else {
-                    if (i_6 != 2) {
-                        throw new IllegalArgumentException();
-                    }
-
-                    while (i_2 <= i_4) {
-                        i_22 = i_1 >> 16;
-                        i_23 = i_2 - i_9;
-                        if (i_2 >= i_16 && i_2 < i_17 && i_22 >= anInt8983 && i_22 < anInt9002 && i_12 < i_10 && i_22 >= i_8 + ints_14[i_23] && i_22 < ints_15[i_23] + ints_14[i_23] + i_8) {
-                            i_24 = i_22 + i_2 * anInt8980;
-                            i_25 = anIntArray8979[i_24];
-                            i_26 = i_5 + i_25;
-                            i_27 = (i_25 & 0xff00ff) + (i_5 & 0xff00ff);
-                            i_25 = (i_27 & 0x1000100) + (i_26 - i_27 & 0x10000);
-                            anIntArray8979[i_24] = i_26 - i_25 | i_25 - (i_25 >>> 8);
-                        }
-
-                        i_1 += i_19;
-                        ++i_2;
-                        i_12 += i_20;
-                        i_12 %= i_18;
-                    }
-                }
-            }
-        }
-
-    }
-
-    void method14369(int i_1) {
-        anInt9008 = i_1;
-        aClass185Array8984 = new Class185[anInt9008];
-
-        for (int i_2 = 0; i_2 < anInt9008; i_2++) {
-            aClass185Array8984[i_2] = new Class185(this);
-        }
-
-    }
-
-    Class185 method14370(Runnable runnable_1) {
-        for (int i_2 = 0; i_2 < anInt9008; i_2++) {
-            if (runnable_1 == aClass185Array8984[i_2].aRunnable2343) {
-                return aClass185Array8984[i_2];
-            }
-        }
-
-        return null;
-    }
-
-    @Override
-    public void method8456(Class151 class151_1) {
-        method14363(anIntArray8979 != null, aFloatArray9010 != null, class151_1);
-    }
-
-    @Override
-    public void method8611() {
-    }
-
-    void method14371(boolean bool_1, boolean bool_2, PointEntity class275_sub1_sub1_4, int i_5, int i_6, float f_7, int i_8) {
-        int texture = class275_sub1_sub1_4.textureId;
-        int i_10 = i_8;
-        i_8 <<= 1;
-        if (texture == -1) {
-            method14373(bool_2, i_5, i_6, f_7, i_10, class275_sub1_sub1_4.color, 1);
+    void method13918() {
+        if (aClass33_8719 == Class33.aClass33_381) {
+            anInt8749 = anInt8745;
+            anInt8776 = anInt8835;
+            anInt8751 = anInt8722;
+            anInt8752 = anInt8748;
+            aFloat8735 = aFloat8737;
+            aFloat8736 = aFloat8738;
         } else {
-            if (texture != anInt9015) {
-                NativeSprite nativesprite_11 = (NativeSprite) aClass229_9013.get(texture);
-                if (nativesprite_11 == null) {
-                    int[] ints_12 = method14359(texture);
-                    if (ints_12 == null) {
-                        return;
-                    }
+            anInt8749 = 0;
+            anInt8776 = 0;
+            anInt8751 = aClass158_5853.method2714();
+            anInt8752 = aClass158_5853.method2716();
+            aFloat8735 = 0.0F;
+            aFloat8736 = 1.0F;
+        }
 
-                    int i_13 = isHalfSize(texture) ? 64 : size;
-                    nativesprite_11 = createNativeSprite(ints_12, i_13, i_13, i_13);
-                    aClass229_9013.put(nativesprite_11, texture);
-                }
+        method13920();
+        aFloat8732 = anInt8722 / 2.0F;
+        aFloat8734 = anInt8748 / 2.0F;
+        aFloat8797 = anInt8745 + aFloat8732;
+        aFloat8741 = anInt8835 + aFloat8734;
+    }
 
-                anInt9015 = texture;
-                aNativeSprite_8987 = nativesprite_11;
+    @Override
+    public boolean method8674() {
+        return true;
+    }
+
+    @Override
+    public void qa(int[] ints_1) {
+        ints_1[0] = anInt8743;
+        ints_1[1] = anInt8822;
+        ints_1[2] = anInt8744;
+        ints_1[3] = anInt8742;
+    }
+
+    @Override
+    public void en(float f_1, float f_2) {
+        aFloat8737 = f_1;
+        aFloat8738 = f_2;
+        method13918();
+    }
+
+    @Override
+    public void fq(int i_1, int i_2, int i_3, int i_4, int i_5) {
+        method8433(i_1, i_2, i_1 + i_3, i_2, i_4, i_5);
+    }
+
+    @Override
+    public void o(int i_1, int i_2, int i_3, int i_4) {
+        int i_5;
+        int i_6;
+        if (aClass158_5853 != null) {
+            i_6 = aClass158_5853.method2714();
+            i_5 = aClass158_5853.method2716();
+        } else {
+            i_5 = 0;
+            i_6 = 0;
+        }
+
+        i_1 = Math.max(0, i_1);
+        i_3 = Math.min(i_3, i_6);
+        i_2 = Math.max(0, i_2);
+        i_4 = Math.min(i_4, i_5);
+        boolean bool_7 = false;
+        if (anInt8743 < i_1) {
+            anInt8743 = i_1;
+            bool_7 = true;
+        }
+
+        if (anInt8744 > i_3) {
+            anInt8744 = i_3;
+            bool_7 = true;
+        }
+
+        if (anInt8822 < i_2) {
+            anInt8822 = i_2;
+            bool_7 = true;
+        }
+
+        if (anInt8742 > i_4) {
+            anInt8742 = i_4;
+            bool_7 = true;
+        }
+
+        if (bool_7) {
+            if (!aBool8843) {
+                aBool8843 = true;
+                method13922();
             }
 
-            ++i_8;
-            ((NativeSprite_Sub1) aNativeSprite_8987).method14247(bool_1, bool_2, false, i_5 - i_10, i_6 - i_10, f_7, i_8, i_8, 0, class275_sub1_sub1_4.color, 1, false);
+            method13921();
         }
 
     }
 
-    void method14372(boolean bool_1, boolean bool_2, boolean bool_3, int i_4, int i_5, float f_6, int i_7, int i_8, int i_9, int i_10, int i_11, int i_12) {
-        if (i_7 != 0 && i_8 != 0) {
-            if (i_9 != 65535) {
-                TextureDetails class169_13 = textureCache.getTextureDetails(i_9);
-                if (!class169_13.isGroundMesh) {
-                    if (i_9 != anInt9015) {
-                        NativeSprite nativesprite_14 = (NativeSprite) aClass229_9013.get(i_9);
-                        if (nativesprite_14 == null) {
-                            int[] ints_15 = method14359(i_9);
-                            if (ints_15 == null) {
-                                return;
-                            }
+    void method13919() {
+        anInt8823 = 0;
+        anInt8754 = 0;
+        method13920();
+        method13921();
+    }
 
-                            int i_16 = isHalfSize(i_9) ? 64 : size;
-                            nativesprite_14 = createNativeSprite(ints_15, i_16, i_16, i_16);
-                            aClass229_9013.put(nativesprite_14, i_9);
-                        }
+    abstract void method13920();
 
-                        anInt9015 = i_9;
-                        aNativeSprite_8987 = nativesprite_14;
-                    }
+    abstract void method13921();
 
-                    ((NativeSprite_Sub1) aNativeSprite_8987).method14247(bool_1, bool_2, bool_3, i_4 - i_7, i_5 - i_8, f_6, i_7 << 1, i_8 << 1, i_11, i_10, i_12, class169_13.blendType != 2);
-                    return;
+    abstract void method13922();
+
+    public abstract void method13923(Class352 var1, int var2, int var3);
+
+    @Override
+    void method8485() {
+        if (!aBool8681) {
+            method13900();
+            aClass66_8787.method1279();
+
+            for (Node node_1 = aClass473_8700.getBack(); node_1 != null; node_1 = aClass473_8700.getPrevious()) {
+                ((Node_Sub1_Sub2) node_1).method15609();
+            }
+
+            Class13.method508(false, true);
+
+            int i_2;
+            for (i_2 = 0; i_2 < aClass41Array8793.length; i_2++) {
+                if (aClass41Array8793[i_2] != null) {
+                    aClass41Array8793[i_2].method878();
+                    aClass41Array8793[i_2] = null;
                 }
             }
 
-            method14373(bool_2, i_4, i_5, f_6, i_7, i_10, i_12);
+            for (i_2 = 0; i_2 < aClass55Array8802.length; i_2++) {
+                if (aClass55Array8802[i_2] != null) {
+                    aClass55Array8802[i_2].method1105();
+                    aClass55Array8802[i_2] = null;
+                }
+            }
+
+            method13886();
+            method8398(0);
+            aBool8681 = true;
         }
 
     }
 
-    void method14373(boolean bool_1, int i_2, int i_3, float f_4, int i_5, int i_6, int i_7) {
-        int i_31 = i_3;
-        if (anIntArray8979 != null) {
-            if (i_5 < 0) {
-                i_5 = -i_5;
-            }
+    abstract void method13924();
 
-            int i_8 = i_31 - i_5;
-            if (i_8 < anInt9009) {
-                i_8 = anInt9009;
-            }
-
-            int i_9 = i_31 + i_5 + 1;
-            if (i_9 > anInt8986) {
-                i_9 = anInt8986;
-            }
-
-            int i_10 = i_8;
-            int i_11 = i_5 * i_5;
-            int i_12 = 0;
-            int i_13 = i_31 - i_8;
-            int i_14 = i_13 * i_13;
-            int i_15 = i_14 - i_13;
-            if (i_31 > i_9) {
-                i_31 = i_9;
-            }
-
-            int i_16 = i_6 >>> 24;
-            int i_17;
-            int i_18;
-            int i_19;
-            int i_20;
-            if (i_7 != 0 && (i_7 != 1 || i_16 != 255)) {
-                int i_21;
-                int i_22;
-                if (i_7 == 1) {
-                    i_6 = ((i_6 & 0xff00ff) * i_16 >> 8 & 0xff00ff) + (i_16 << 24) + (i_16 * (i_6 & 0xff00) >> 8 & 0xff00);
-
-                    for (i_17 = 256 - i_16; i_10 < i_31; i_15 -= i_13 + i_13) {
-                        while (i_15 <= i_11 || i_14 <= i_11) {
-                            i_14 += i_12 + i_12;
-                            i_15 += i_12++ + i_12;
-                        }
-
-                        i_18 = i_2 - i_12 + 1;
-                        if (i_18 < anInt8983) {
-                            i_18 = anInt8983;
-                        }
-
-                        i_19 = i_12 + i_2;
-                        if (i_19 > anInt9002) {
-                            i_19 = anInt9002;
-                        }
-
-                        i_20 = i_18 + i_10 * anInt8980;
-
-                        for (i_21 = i_18; i_21 < i_19; i_21++) {
-                            if (!bool_1 || f_4 < aFloatArray9010[i_20]) {
-                                i_22 = anIntArray8979[i_20];
-                                i_22 = ((i_22 & 0xff00ff) * i_17 >> 8 & 0xff00ff) + (i_17 * (i_22 & 0xff00) >> 8 & 0xff00);
-                                anIntArray8979[i_20] = i_22 + i_6;
-                            }
-
-                            ++i_20;
-                        }
-
-                        ++i_10;
-                        i_14 -= i_13-- + i_13;
-                    }
-
-                    i_12 = i_5;
-                    i_13 = -i_13;
-                    i_15 = i_11 + i_13 * i_13;
-                    i_14 = i_15 - i_5;
-
-                    for (i_15 -= i_13; i_10 < i_9; i_14 += i_13++ + i_13) {
-                        while (i_15 > i_11 && i_14 > i_11) {
-                            i_15 -= i_12-- + i_12;
-                            i_14 -= i_12 + i_12;
-                        }
-
-                        i_18 = i_2 - i_12;
-                        if (i_18 < anInt8983) {
-                            i_18 = anInt8983;
-                        }
-
-                        i_19 = i_12 + i_2;
-                        if (i_19 > anInt9002 - 1) {
-                            i_19 = anInt9002 - 1;
-                        }
-
-                        i_20 = i_18 + i_10 * anInt8980;
-
-                        for (i_21 = i_18; i_21 <= i_19; i_21++) {
-                            if (!bool_1 || f_4 < aFloatArray9010[i_20]) {
-                                i_22 = anIntArray8979[i_20];
-                                i_22 = ((i_22 & 0xff00ff) * i_17 >> 8 & 0xff00ff) + (i_17 * (i_22 & 0xff00) >> 8 & 0xff00);
-                                anIntArray8979[i_20] = i_22 + i_6;
-                            }
-
-                            ++i_20;
-                        }
-
-                        ++i_10;
-                        i_15 += i_13 + i_13;
-                    }
-                } else {
-                    if (i_7 != 2) {
-                        throw new IllegalArgumentException();
-                    }
-
-                    int i_23;
-                    while (i_10 < i_31) {
-                        while (i_15 <= i_11 || i_14 <= i_11) {
-                            i_14 += i_12 + i_12;
-                            i_15 += i_12++ + i_12;
-                        }
-
-                        i_17 = i_2 - i_12 + 1;
-                        if (i_17 < anInt8983) {
-                            i_17 = anInt8983;
-                        }
-
-                        i_18 = i_12 + i_2;
-                        if (i_18 > anInt9002) {
-                            i_18 = anInt9002;
-                        }
-
-                        i_19 = i_17 + i_10 * anInt8980;
-
-                        for (i_20 = i_17; i_20 < i_18; i_20++) {
-                            if (!bool_1 || f_4 < aFloatArray9010[i_19]) {
-                                i_21 = anIntArray8979[i_19];
-                                i_22 = i_21 + i_6;
-                                i_23 = (i_21 & 0xff00ff) + (i_6 & 0xff00ff);
-                                i_21 = (i_23 & 0x1000100) + (i_22 - i_23 & 0x10000);
-                                anIntArray8979[i_19] = i_22 - i_21 | i_21 - (i_21 >>> 8);
-                            }
-
-                            ++i_19;
-                        }
-
-                        ++i_10;
-                        i_14 -= i_13-- + i_13;
-                        i_15 -= i_13 + i_13;
-                    }
-
-                    i_12 = i_5;
-                    i_13 = -i_13;
-                    i_15 = i_11 + i_13 * i_13;
-                    i_14 = i_15 - i_5;
-
-                    for (i_15 -= i_13; i_10 < i_9; i_14 += i_13++ + i_13) {
-                        while (i_15 > i_11 && i_14 > i_11) {
-                            i_15 -= i_12-- + i_12;
-                            i_14 -= i_12 + i_12;
-                        }
-
-                        i_17 = i_2 - i_12;
-                        if (i_17 < anInt8983) {
-                            i_17 = anInt8983;
-                        }
-
-                        i_18 = i_12 + i_2;
-                        if (i_18 > anInt9002 - 1) {
-                            i_18 = anInt9002 - 1;
-                        }
-
-                        i_19 = i_17 + i_10 * anInt8980;
-
-                        for (i_20 = i_17; i_20 <= i_18; i_20++) {
-                            if (!bool_1 || f_4 < aFloatArray9010[i_19]) {
-                                i_21 = anIntArray8979[i_19];
-                                i_22 = i_21 + i_6;
-                                i_23 = (i_21 & 0xff00ff) + (i_6 & 0xff00ff);
-                                i_21 = (i_23 & 0x1000100) + (i_22 - i_23 & 0x10000);
-                                anIntArray8979[i_19] = i_22 - i_21 | i_21 - (i_21 >>> 8);
-                            }
-
-                            ++i_19;
-                        }
-
-                        ++i_10;
-                        i_15 += i_13 + i_13;
-                    }
-                }
-            } else {
-                while (i_10 < i_31) {
-                    while (i_15 <= i_11 || i_14 <= i_11) {
-                        i_14 += i_12 + i_12;
-                        i_15 += i_12++ + i_12;
-                    }
-
-                    i_17 = i_2 - i_12 + 1;
-                    if (i_17 < anInt8983) {
-                        i_17 = anInt8983;
-                    }
-
-                    i_18 = i_12 + i_2;
-                    if (i_18 > anInt9002) {
-                        i_18 = anInt9002;
-                    }
-
-                    i_19 = i_17 + i_10 * anInt8980;
-
-                    for (i_20 = i_17; i_20 < i_18; i_20++) {
-                        if (!bool_1 || f_4 < aFloatArray9010[i_19]) {
-                            anIntArray8979[i_19] = i_6;
-                        }
-
-                        ++i_19;
-                    }
-
-                    ++i_10;
-                    i_14 -= i_13-- + i_13;
-                    i_15 -= i_13 + i_13;
-                }
-
-                i_12 = i_5;
-                i_13 = i_10 - i_31;
-                i_15 = i_11 + i_13 * i_13;
-                i_14 = i_15 - i_5;
-
-                for (i_15 -= i_13; i_10 < i_9; i_14 += i_13++ + i_13) {
-                    while (i_15 > i_11 && i_14 > i_11) {
-                        i_15 -= i_12-- + i_12;
-                        i_14 -= i_12 + i_12;
-                    }
-
-                    i_17 = i_2 - i_12;
-                    if (i_17 < anInt8983) {
-                        i_17 = anInt8983;
-                    }
-
-                    i_18 = i_12 + i_2;
-                    if (i_18 > anInt9002 - 1) {
-                        i_18 = anInt9002 - 1;
-                    }
-
-                    i_19 = i_17 + i_10 * anInt8980;
-
-                    for (i_20 = i_17; i_20 <= i_18; i_20++) {
-                        if (!bool_1 || f_4 < aFloatArray9010[i_19]) {
-                            anIntArray8979[i_19] = i_6;
-                        }
-
-                        ++i_19;
-                    }
-
-                    ++i_10;
-                    i_15 += i_13 + i_13;
-                }
-
-                return;
-            }
-        }
-
-    }
+    abstract Interface4 method13925(boolean var1);
 
     @Override
-    public void method8457(Matrix44Var matrix44var_1) {
-        aClass294_8993 = matrix44var_1;
-        method14374();
+    public void method8650(float f_1, float f_2, float f_3, float[] floats_4) {
+        float f_5 = aClass384_8728.buf[15] + aClass384_8728.buf[3] * f_1 + aClass384_8728.buf[7] * f_2 + aClass384_8728.buf[11] * f_3;
+        float f_6 = aClass384_8728.buf[12] + aClass384_8728.buf[0] * f_1 + aClass384_8728.buf[4] * f_2 + aClass384_8728.buf[8] * f_3;
+        float f_7 = aClass384_8728.buf[13] + aClass384_8728.buf[1] * f_1 + aClass384_8728.buf[5] * f_2 + aClass384_8728.buf[9] * f_3;
+        float f_8 = aClass384_8740.buf[14] + aClass384_8740.buf[2] * f_1 + aClass384_8740.buf[6] * f_2 + aClass384_8740.buf[10] * f_3;
+        floats_4[0] = aFloat8797 + aFloat8732 * f_6 / f_5;
+        floats_4[1] = aFloat8741 + aFloat8734 * f_7 / f_5;
+        floats_4[2] = f_8;
     }
 
-    @Override
-    public Matrix44Var method8458() {
-        return new Matrix44Var(aClass294_8993);
-    }
-
-    @Override
-    public void method8521() {
+    void method13926() {
+        aClass384_8728.method6562(aClass384_8740);
+        aClass384_8728.method6523(aClass384_8724);
+        aClass384_8728.method6539(aFloatArrayArray8730[0]);
+        aClass384_8728.method6540(aFloatArrayArray8730[1]);
+        aClass384_8728.method6535(aFloatArrayArray8730[2]);
+        aClass384_8728.method6536(aFloatArrayArray8730[3]);
+        aClass384_8728.method6613(aFloatArrayArray8730[4]);
+        aClass384_8728.method6538(aFloatArrayArray8730[5]);
+        aClass384_8729.method6562(aClass384_8728);
+        method13933(aClass384_8729);
     }
 
     @Override
     public Matrix44 method8453() {
-        return new Matrix44(aClass384_8995);
+        return aClass384_8724;
     }
 
-    @Override
-    public void m(int i_1, float f_2, float f_3, float f_4, float f_5, float f_6) {
-        anInt8990 = (int) (65535.0F * f_2);
-        anInt8991 = (int) (65535.0F * f_3);
-        float f_7 = (float) Math.sqrt(f_6 * f_6 + f_5 * f_5 + f_4 * f_4);
-        anInt9011 = (int) (f_4 * 65535.0F / f_7);
-        anInt8988 = (int) (65535.0F * f_5 / f_7);
-        anInt9007 = (int) (f_6 * 65535.0F / f_7);
+    void method13927() {
+        aBool8829 = false;
     }
 
-    @Override
-    public void J() {
-    }
-
-    @Override
-    public void c(int i_1, int i_2, int i_3) {
-        for (int i_4 = 0; i_4 < aClass185Array8984.length; i_4++) {
-            Class185 class185_5 = aClass185Array8984[i_4];
-            class185_5.anInt2307 = i_1 & 0xffffff;
-            int i_6 = class185_5.anInt2307 >>> 16 & 0xff;
-            if (i_6 < 2) {
-                i_6 = 2;
+    Matrix44 method13930() {
+        if (aClass33_8719 == Class33.aClass33_381) {
+            if (!aBool8829) {
+                method14130();
             }
 
-            int i_7 = class185_5.anInt2307 >> 8 & 0xff;
-            if (i_7 < 2) {
-                i_7 = 2;
-            }
-
-            int i_8 = class185_5.anInt2307 & 0xff;
-            if (i_8 < 2) {
-                i_8 = 2;
-            }
-
-            class185_5.anInt2307 = i_6 << 16 | i_7 << 8 | i_8;
-            class185_5.aBool2304 = i_2 >= 0;
-        }
-
-    }
-
-    @Override
-    public void method8568() {
-        lowResolution = false;
-        aClass229_9006.method3859();
-    }
-
-    void method14374() {
-        aClass384_8994.fromVarMatrix44(aClass294_8993);
-        aClass384_8996.method6562(aClass384_8994);
-        aClass384_8996.method6523(aClass384_8995);
-        aClass384_8996.method6539(aFloatArrayArray8989[0]);
-        aClass384_8996.method6540(aFloatArrayArray8989[1]);
-        aClass384_8996.method6535(aFloatArrayArray8989[2]);
-        aClass384_8996.method6536(aFloatArrayArray8989[3]);
-        aClass384_8996.method6613(aFloatArrayArray8989[4]);
-        aClass384_8996.method6538(aFloatArrayArray8989[5]);
-        float f_1 = aClass384_8995.method6587();
-        float f_2 = aClass384_8995.buf[10] * (f_1 - 255.0F) + aClass384_8995.buf[14];
-        float f_3 = aClass384_8995.buf[10] * f_1 + aClass384_8995.buf[14];
-        float f_4 = f_3 - f_2;
-
-        for (int i_5 = 0; i_5 < anInt9008; i_5++) {
-            Class185 class185_6 = aClass185Array8984[i_5];
-            class185_6.aFloat2305 = f_2;
-            class185_6.aFloat2303 = f_4;
-        }
-
-    }
-
-    @Override
-    public Class152 method8466(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
-        return null;
-    }
-
-    @Override
-    public void ik(int i_1, int i_2, int i_3) {
-        for (int i_4 = 0; i_4 < aClass185Array8984.length; i_4++) {
-            Class185 class185_5 = aClass185Array8984[i_4];
-            class185_5.anInt2307 = (i_1 & 0xffffff);
-            int i_6 = class185_5.anInt2307 >>> 16 & 0xff;
-            if (i_6 < 2) {
-                i_6 = 2;
-            }
-
-            int i_7 = class185_5.anInt2307 >> 8 & 0xff;
-            if (i_7 < 2) {
-                i_7 = 2;
-            }
-
-            int i_8 = class185_5.anInt2307 & 0xff;
-            if (i_8 < 2) {
-                i_8 = 2;
-            }
-
-            class185_5.anInt2307 = (i_6 << 16 | i_7 << 8 | i_8);
-            class185_5.aBool2304 = i_2 >= 0;
-        }
-
-    }
-
-    @Override
-    public Matrix44 method8590() {
-        return new Matrix44(aClass384_8995);
-    }
-
-    @Override
-    public int method8537(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
-        int i_7 = 0;
-        float f_8 = i_3 * aClass384_8996.buf[10] + i_2 * aClass384_8996.buf[6] + aClass384_8996.buf[14] + i_1 * aClass384_8996.buf[2];
-        float f_9 = aClass384_8996.buf[6] * i_5 + aClass384_8996.buf[14] + aClass384_8996.buf[2] * i_4 + aClass384_8996.buf[10] * i_6;
-        float f_10 = aClass384_8996.buf[15] + i_1 * aClass384_8996.buf[3] + i_2 * aClass384_8996.buf[7] + i_3 * aClass384_8996.buf[11];
-        float f_11 = i_5 * aClass384_8996.buf[7] + aClass384_8996.buf[15] + aClass384_8996.buf[3] * i_4 + i_6 * aClass384_8996.buf[11];
-        if (f_8 < -f_10 && f_9 < -f_11) {
-            i_7 |= 0x10;
-        } else if (f_8 > f_10 && f_9 > f_11) {
-            i_7 |= 0x20;
-        }
-
-        float f_12 = aClass384_8996.buf[4] * i_2 + aClass384_8996.buf[12] + i_1 * aClass384_8996.buf[0] + i_3 * aClass384_8996.buf[8];
-        float f_13 = i_6 * aClass384_8996.buf[8] + i_4 * aClass384_8996.buf[0] + aClass384_8996.buf[12] + aClass384_8996.buf[4] * i_5;
-        if (f_12 < -f_10 && f_13 < -f_11) {
-            i_7 |= 0x1;
-        }
-
-        if (f_12 > f_10 && f_13 > f_11) {
-            i_7 |= 0x2;
-        }
-
-        float f_14 = aClass384_8996.buf[5] * i_2 + i_1 * aClass384_8996.buf[1] + aClass384_8996.buf[13] + aClass384_8996.buf[9] * i_3;
-        float f_15 = aClass384_8996.buf[13] + aClass384_8996.buf[1] * i_4 + aClass384_8996.buf[5] * i_5 + i_6 * aClass384_8996.buf[9];
-        if (f_14 < -f_10 && f_15 < -f_11) {
-            i_7 |= 0x4;
-        }
-
-        if (f_14 > f_10 && f_15 > f_11) {
-            i_7 |= 0x8;
-        }
-
-        return i_7;
-    }
-
-    @Override
-    public void method8490() {
-    }
-
-    @Override
-    public void fu(int i_1, int i_2) {
-        if ((i_1 & 0x1) != 0) {
-            B(0, 0, anInt8980, anInt8981, i_2, 0);
-        }
-
-        if ((i_1 & 0x2) != 0) {
-            method14410();
-        }
-
-    }
-
-    @Override
-    public void method8525(int i_3, int i_4) {
-    }
-
-    @Override
-    public boolean method8528() {
-        return false;
-    }
-
-    void method14376(int i_1, int i_2, int[] ints_3, float[] floats_4) {
-        anInt8980 = i_1;
-        anInt8981 = i_2;
-        anIntArray8979 = ints_3;
-        aFloatArray9010 = floats_4;
-
-        for (int i_5 = 0; i_5 < anInt9008; i_5++) {
-            aClass185Array8984[i_5].method3071();
-        }
-
-        L();
-        method8421();
-    }
-
-    @Override
-    public void method8476(int i_1, HDWaterTile class90_2) {
-        Class185 class185_3 = method14370(Thread.currentThread());
-        class185_3.anInt2306 = i_1;
-        class185_3.anInt2307 = class90_2.color;
-        class185_3.anInt2313 = class90_2.scale;
-    }
-
-    @Override
-    public void O() {
-        for (int i_1 = 0; i_1 < aClass185Array8984.length; i_1++) {
-            aClass185Array8984[i_1].anInt2307 = aClass185Array8984[i_1].anInt2336;
-            aClass185Array8984[i_1].aBool2309 = false;
-        }
-
-    }
-
-    @Override
-    public void method8658() {
-        boolean bool_14 = anIntArray8979 != null;
-        boolean bool_15 = aFloatArray9010 != null;
-        if (bool_14 || bool_15) {
-            Class185 class185_16 = method14370(Thread.currentThread());
-            ChoppyItemFixClass choppyitemfixclass_17 = class185_16.aClass144_2310;
-            choppyitemfixclass_17.aBool1675 = false;
-            choppyitemfixclass_17.aBool1708 = choppyitemfixclass_17.anInt1684 < 5 || choppyitemfixclass_17.anInt1684 < 75 || choppyitemfixclass_17.anInt1684 < 15;
-            int i_18 = 255;
-            if (i_18 == 255) {
-                choppyitemfixclass_17.anInt1674 = 0;
-            } else {
-                choppyitemfixclass_17.anInt1674 = 255 - i_18;
-            }
-            choppyitemfixclass_17.aBool1672 = false;
-            choppyitemfixclass_17.method2425(bool_14, bool_15, false, 10, 50, 90, 5, 75, 15, (float) 100.0, (float) 100.0, (float) 100.0, -65536, -65536, -65536);
-
-            choppyitemfixclass_17.aBool1675 = true;
-        }
-
-    }
-
-    @Override
-    public Matrix44 method8587() {
-        return new Matrix44(aClass384_8995);
-    }
-
-    @Override
-    public void method8536(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
-        if (anIntArray8979 != null) {
-            Class185 class185_8 = method14370(Thread.currentThread());
-            ChoppyItemFixClass choppyitemfixclass_9 = class185_8.aClass144_2310;
-            int i_10 = i_3 - i_1;
-            int i_11 = i_4 - i_2;
-            int i_12 = i_10 >= 0 ? i_10 : -i_10;
-            int i_13 = i_11 >= 0 ? i_11 : -i_11;
-            int i_14 = i_12;
-            if (i_12 < i_13) {
-                i_14 = i_13;
-            }
-
-            if (i_14 != 0) {
-                int i_15 = (i_10 << 16) / i_14;
-                int i_16 = (i_11 << 16) / i_14;
-                i_10 += i_15 >> 16;
-                i_11 += i_16 >> 16;
-                if (i_16 <= i_15) {
-                    i_15 = -i_15;
-                } else {
-                    i_16 = -i_16;
-                }
-
-                int i_17 = i_16 * i_6 >> 17;
-                int i_18 = 1 + i_16 * i_6 >> 17;
-                int i_19 = i_15 * i_6 >> 17;
-                int i_20 = 1 + i_6 * i_15 >> 17;
-                i_1 -= choppyitemfixclass_9.method2416();
-                i_2 -= choppyitemfixclass_9.method2417();
-                int i_21 = i_1 + i_17;
-                int i_22 = i_1 - i_18;
-                int i_23 = i_10 + i_1 - i_18;
-                int i_24 = i_10 + i_1 + i_17;
-                int i_25 = i_19 + i_2;
-                int i_26 = i_2 - i_20;
-                int i_27 = i_2 + i_11 - i_20;
-                int i_28 = i_11 + i_2 + i_19;
-                if (i_7 == 0) {
-                    choppyitemfixclass_9.anInt1674 = 0;
-                } else {
-                    if (i_7 != 1) {
-                        throw new IllegalArgumentException();
-                    }
-
-                    choppyitemfixclass_9.anInt1674 = 255 - (i_5 >>> 24);
-                }
-
-                RA(false);
-                choppyitemfixclass_9.aBool1708 = i_21 < 0 || i_21 > choppyitemfixclass_9.anInt1684 || i_22 < 0 || i_22 > choppyitemfixclass_9.anInt1684 || i_23 < 0 || i_23 > choppyitemfixclass_9.anInt1684;
-                choppyitemfixclass_9.method2428(true, false, false, i_25, i_26, i_27, i_21, i_22, i_23, 100.0F, 100.0F, 100.0F, i_5);
-                choppyitemfixclass_9.aBool1708 = i_21 < 0 || i_21 > choppyitemfixclass_9.anInt1684 || i_23 < 0 || i_23 > choppyitemfixclass_9.anInt1684 || i_24 < 0 || i_24 > choppyitemfixclass_9.anInt1684;
-                choppyitemfixclass_9.method2428(true, false, false, i_25, i_27, i_28, i_21, i_23, i_24, 100.0F, 100.0F, 100.0F, i_5);
-                RA(true);
-            }
-        }
-
-    }
-
-    @Override
-    public void method8459() {
-        MeshRasterizer_Sub2.anInt8644 = 10000;
-        MeshRasterizer_Sub2.anInt8562 = 10000;
-        if (anInt9008 > 1) {
-            throw new IllegalStateException();
+            return aClass384_8685;
         } else {
-            method14369(anInt9008);
-            method14409();
+            return aClass384_8705;
         }
     }
 
-    @Override
-    public Interface8 method8419(int i_1, int i_2) {
-        return new Class125(i_1, i_2);
+    Matrix44 method13931() {
+        return aClass384_8729;
     }
 
-    @Override
-    public RendererInfo method8481() {
-        return new RendererInfo(0, "Pure Java", 1, "CPU", 0L);
-    }
+    void method13932() {
+        if (!aBool8720) {
+            int i_1;
+            int i_2;
+            if (aClass158_5853 != null) {
+                i_2 = aClass158_5853.method2714();
+                i_1 = aClass158_5853.method2716();
+            } else {
+                i_1 = 0;
+                i_2 = 0;
+            }
 
-    @Override
-    void method8486() {
-        if (aBool9012) {
-            Class13.method508(true, false);
-            aBool9012 = false;
+            Matrix44 matrix44_3 = aClass384_8774;
+            if (i_2 != 0 && i_1 != 0) {
+                matrix44_3.method6530(0.0F, i_2, 0.0F, i_1, -1.0f, 1.0F);
+            } else {
+                matrix44_3.identity();
+            }
+
+            aClass384_8812.method6562(matrix44_3);
+            method13933(aClass384_8812);
+            aBool8720 = true;
         }
 
-        aBool9014 = true;
+    }
+
+    public abstract void method13933(Matrix44 var1);
+
+    void method13934() {
+        if (aClass33_8719 != Class33.aClass33_380) {
+            Class33 class33_1 = aClass33_8719;
+            aClass33_8719 = Class33.aClass33_380;
+            if (class33_1 == Class33.aClass33_381) {
+                method13927();
+            }
+
+            aClass384_8708 = aClass384_8725;
+            method14030();
+            method13918();
+            anInt8703 &= -16;
+        }
+
+    }
+
+    void method13935() {
+        if (aClass33_8719 != Class33.aClass33_379) {
+            Class33 class33_1 = aClass33_8719;
+            aClass33_8719 = Class33.aClass33_379;
+            if (class33_1 == Class33.aClass33_381) {
+                method13927();
+            }
+
+            method13932();
+            aClass384_8708 = aClass384_8774;
+            method14030();
+            method13918();
+            anInt8703 &= -9;
+        }
+
+    }
+
+    void method13936() {
+        aBool8720 = false;
+        if (aClass33_8719 == Class33.aClass33_379) {
+            method13932();
+            method14030();
+        }
+
+    }
+
+    void method13937() {
+        if (aClass33_8719 != Class33.aClass33_381) {
+            aClass33_8719 = Class33.aClass33_381;
+            method13927();
+            method13940();
+            aClass384_8708 = aClass384_8724;
+            method14030();
+            method13918();
+            anInt8703 &= -8;
+        }
+
+    }
+
+    void method13938() {
+        aBool8723 = false;
+        method13940();
+        if (aClass33_8719 == Class33.aClass33_381) {
+            method14030();
+        }
+
+    }
+
+    void method13940() {
+        if (!aBool8723) {
+            aBool8723 = true;
+        }
+
     }
 
     @Override
-    public void method8483() {
+    public boolean method8644() {
+        return true;
     }
 
     @Override
-    public void method8484() {
+    public void RA(boolean bool_1) {
+        aBool8755 = bool_1;
+        method14054();
+    }
+
+    void method13941(boolean bool_1) {
+        if (aBool8757 != bool_1) {
+            aBool8757 = bool_1;
+            method13956();
+            anInt8703 &= -16;
+        }
+
+    }
+
+    void method13942(boolean bool_1) {
+        if (aBool8756 != bool_1) {
+            aBool8756 = bool_1;
+            method14054();
+            anInt8703 &= -16;
+        }
+
+    }
+
+    void method13944() {
+        anInterface4_8746 = method13994(false);
+        short s_1 = 160;
+        anInterface4_8746.method31(s_1, 32);
+        aByteBuffer8838.clear();
+        aByteBuffer8838.putFloat(0.0F);
+        aByteBuffer8838.putFloat(0.0F);
+        aByteBuffer8838.putFloat(0.0F);
+        aByteBuffer8838.putInt(-1);
+        aByteBuffer8838.putFloat(0.0F);
+        aByteBuffer8838.putFloat(0.0F);
+        aByteBuffer8838.putFloat(0.0F);
+        aByteBuffer8838.putFloat(0.0F);
+        aByteBuffer8838.putFloat(0.0F);
+        aByteBuffer8838.putFloat(1.0F);
+        aByteBuffer8838.putFloat(0.0F);
+        aByteBuffer8838.putInt(-1);
+        aByteBuffer8838.putFloat(0.0F);
+        aByteBuffer8838.putFloat(1.0F);
+        aByteBuffer8838.putFloat(0.0F);
+        aByteBuffer8838.putFloat(1.0F);
+        aByteBuffer8838.putFloat(1.0F);
+        aByteBuffer8838.putFloat(1.0F);
+        aByteBuffer8838.putFloat(0.0F);
+        aByteBuffer8838.putInt(-1);
+        aByteBuffer8838.putFloat(1.0F);
+        aByteBuffer8838.putFloat(1.0F);
+        aByteBuffer8838.putFloat(1.0F);
+        aByteBuffer8838.putFloat(1.0F);
+        aByteBuffer8838.putFloat(1.0F);
+        aByteBuffer8838.putFloat(0.0F);
+        aByteBuffer8838.putFloat(0.0F);
+        aByteBuffer8838.putInt(-1);
+        aByteBuffer8838.putFloat(1.0F);
+        aByteBuffer8838.putFloat(0.0F);
+        aByteBuffer8838.putFloat(1.0F);
+        aByteBuffer8838.putFloat(0.0F);
+        aByteBuffer8838.putFloat(0.0F);
+        aByteBuffer8838.putFloat(0.0F);
+        aByteBuffer8838.putFloat(0.0F);
+        aByteBuffer8838.putInt(-1);
+        aByteBuffer8838.putFloat(0.0F);
+        aByteBuffer8838.putFloat(0.0F);
+        aByteBuffer8838.putFloat(0.0F);
+        aByteBuffer8838.putFloat(0.0F);
+        anInterface4_8746.method42(0, aByteBuffer8838.position(), aLong8695);
+        aClass70_8786 = method13995(new Class72[]{new Class72(new Class69[]{Class69.aClass69_695, Class69.aClass69_690, Class69.aClass69_692, Class69.aClass69_692})});
+    }
+
+    @Override
+    public void method8479(float f_1, float f_2, float f_3, float[] floats_4) {
+        float f_5 = aClass384_8728.buf[15] + aClass384_8728.buf[3] * f_1 + aClass384_8728.buf[7] * f_2 + aClass384_8728.buf[11] * f_3;
+        float f_6 = aClass384_8728.buf[12] + aClass384_8728.buf[0] * f_1 + aClass384_8728.buf[4] * f_2 + aClass384_8728.buf[8] * f_3;
+        float f_7 = aClass384_8728.buf[13] + aClass384_8728.buf[1] * f_1 + aClass384_8728.buf[5] * f_2 + aClass384_8728.buf[9] * f_3;
+        float f_8 = aClass384_8740.buf[14] + aClass384_8740.buf[2] * f_1 + aClass384_8740.buf[6] * f_2 + aClass384_8740.buf[10] * f_3;
+        floats_4[0] = aFloat8797 + aFloat8732 * f_6 / f_5;
+        floats_4[1] = aFloat8741 + aFloat8734 * f_7 / f_5;
+        floats_4[2] = f_8;
     }
 
     @Override
     public void method8515(float f_1, float f_2, float f_3, float[] floats_4) {
-        float f_5 = aClass384_8996.buf[10] * f_3 + f_1 * aClass384_8996.buf[2] + aClass384_8996.buf[14] + f_2 * aClass384_8996.buf[6];
-        float f_6 = aClass384_8996.buf[3] * f_1 + aClass384_8996.buf[15] + aClass384_8996.buf[7] * f_2 + f_3 * aClass384_8996.buf[11];
+        float f_5 = aClass384_8728.buf[14] + aClass384_8728.buf[2] * f_1 + aClass384_8728.buf[6] * f_2 + aClass384_8728.buf[10] * f_3;
+        float f_6 = aClass384_8728.buf[15] + aClass384_8728.buf[3] * f_1 + aClass384_8728.buf[7] * f_2 + aClass384_8728.buf[11] * f_3;
         if (f_5 >= -f_6 && f_5 <= f_6) {
-            float f_7 = f_2 * aClass384_8996.buf[4] + aClass384_8996.buf[12] + f_1 * aClass384_8996.buf[0] + aClass384_8996.buf[8] * f_3;
+            float f_7 = aClass384_8728.buf[12] + aClass384_8728.buf[0] * f_1 + aClass384_8728.buf[4] * f_2 + aClass384_8728.buf[8] * f_3;
             if (f_7 >= -f_6 && f_7 <= f_6) {
-                float f_8 = f_3 * aClass384_8996.buf[9] + aClass384_8996.buf[13] + aClass384_8996.buf[1] * f_1 + aClass384_8996.buf[5] * f_2;
+                float f_8 = aClass384_8728.buf[13] + aClass384_8728.buf[1] * f_1 + aClass384_8728.buf[5] * f_2 + aClass384_8728.buf[9] * f_3;
                 if (f_8 >= -f_6 && f_8 <= f_6) {
-                    float f_9 = aClass384_8994.buf[14] + aClass384_8994.buf[2] * f_1 + aClass384_8994.buf[6] * f_2 + aClass384_8994.buf[10] * f_3;
-                    floats_4[0] = aFloat9003 + f_7 * aFloat8976 / f_6;
-                    floats_4[1] = f_8 * aFloat9004 / f_6 + aFloat8982;
+                    float f_9 = aClass384_8740.buf[14] + aClass384_8740.buf[2] * f_1 + aClass384_8740.buf[6] * f_2 + aClass384_8740.buf[10] * f_3;
+                    floats_4[0] = aFloat8797 + aFloat8732 * f_7 / f_6;
+                    floats_4[1] = aFloat8741 + aFloat8734 * f_8 / f_6;
                     floats_4[2] = f_9;
                 } else {
                     floats_4[2] = Float.NaN;
@@ -2906,3307 +1281,1376 @@ public class HardwareRenderer extends AbstractRenderer {
 
     }
 
-    @Override
-    public void DA(Class455 class455_2, int i_3, int i_4) {
-        int i_41 = i_4;
-        if (anIntArray8979 != null) {
-            Class455_Sub3 packetsdecoder_5 = (Class455_Sub3) class455_2;
-            int[] ints_6 = packetsdecoder_5.anIntArray9077;
-            int[] ints_7 = packetsdecoder_5.anIntArray9078;
-            int i_8;
-            if (anInt8986 < ints_6.length + i_41) {
-                i_8 = anInt8986 - i_41;
-            } else {
-                i_8 = ints_6.length;
-            }
-
-            int i_9;
-            if (anInt9009 > i_41) {
-                i_9 = anInt9009 - i_41;
-                i_41 = anInt9009;
-            } else {
-                i_9 = 0;
-            }
-
-            if (i_8 - i_9 > 0) {
-                int i_10 = i_41 * anInt8980;
-
-                for (int i_11 = i_9; i_11 < i_8; i_11++) {
-                    int i_12 = i_3 + ints_6[i_11];
-                    int i_13 = ints_7[i_11];
-                    if (anInt8983 > i_12) {
-                        i_13 -= anInt8983 - i_12;
-                        i_12 = anInt8983;
-                    }
-
-                    if (anInt9002 < i_13 + i_12) {
-                        i_13 = anInt9002 - i_12;
-                    }
-
-                    i_12 += i_10;
-
-                    for (int i_14 = -i_13; i_14 < 0; i_14++) {
-                        anIntArray8979[i_12++] = -16777216;
-                    }
-
-                    i_10 += anInt8980;
-                }
-            }
-        }
-
-    }
-
-    boolean isHalfSize(int textureId) {
-        return lowResolution || textureCache.getTextureDetails(textureId).isHalfSize;
-    }
+    abstract void method13945();
 
     @Override
-    public void method8487(int i_1) {
-        int i_2 = i_1 - 1426154545 * anInt8977;
-
-        for (Node_Sub27 class282_sub27_3 = (Node_Sub27) aClass229_9006.method3866(); class282_sub27_3 != null; class282_sub27_3 = (Node_Sub27) aClass229_9006.method3867()) {
-            if (class282_sub27_3.aBool7693) {
-                class282_sub27_3.anInt7692 += i_2;
-                int i_4 = class282_sub27_3.anInt7692 / 50;
-                if (i_4 > 0) {
-                    TextureDetails class169_5 = textureCache.getTextureDetails(class282_sub27_3.anInt7695);
-                    float f_6 = class169_5.isHalfSize ? 64.0F : 128.0F;
-                    class282_sub27_3.method12403((int) (f_6 * (class169_5.textureSpeedU * (i_2 / 1000.0F) / 64.0F)), (int) (class169_5.textureSpeedV * (i_2 / 1000.0F) / 64.0F * f_6));
-                    class282_sub27_3.anInt7692 -= 50 * i_4;
-                }
-
-                class282_sub27_3.aBool7693 = false;
-            }
-        }
-
-        anInt8977 = i_1;
-        aClass229_9013.method3858(5);
-        aClass229_9006.method3858(5);
+    public void method8516(int i_1, int i_2, float f_3, int i_4, int i_5, float f_6, int i_7, int i_8, float f_9, int i_10, int i_11, int i_12, int i_13) {
     }
 
-    @Override
-    public void fq(int i_1, int i_2, int i_3, int i_4, int i_5) {
-        int i_12 = i_1;
-        int i_31 = i_3;
-        if (anIntArray8979 != null && i_2 >= anInt9009 && i_2 < anInt8986) {
-            if (i_12 < anInt8983) {
-                i_31 -= anInt8983 - i_12;
-                i_12 = anInt8983;
-            }
-
-            if (i_31 + i_12 > anInt9002) {
-                i_31 = anInt9002 - i_12;
-            }
-
-            int i_6 = i_2 * anInt8980 + i_12;
-            int i_7 = i_4 >>> 24;
-            int i_8;
-            if (i_5 == 0 || i_5 == 1 && i_7 == 255) {
-                for (i_8 = 0; i_8 < i_31; i_8++) {
-                    anIntArray8979[i_6 + i_8] = i_4;
-                }
-            } else {
-                int i_9;
-                int i_10;
-                if (i_5 == 1) {
-                    i_4 = ((i_4 & 0xff00) * i_7 >> 8 & 0xff00) + ((i_4 & 0xff00ff) * i_7 >> 8 & 0xff00ff) + (i_7 << 24);
-                    i_8 = 256 - i_7;
-
-                    for (i_9 = 0; i_9 < i_31; i_9++) {
-                        i_10 = anIntArray8979[i_9 + i_6];
-                        i_10 = (i_8 * (i_10 & 0xff00) >> 8 & 0xff00) + ((i_10 & 0xff00ff) * i_8 >> 8 & 0xff00ff);
-                        anIntArray8979[i_9 + i_6] = i_4 + i_10;
-                    }
-                } else {
-                    if (i_5 != 2) {
-                        throw new IllegalArgumentException();
-                    }
-
-                    for (i_8 = 0; i_8 < i_31; i_8++) {
-                        i_9 = anIntArray8979[i_6 + i_8];
-                        i_10 = i_9 + i_4;
-                        int i_11 = (i_4 & 0xff00ff) + (i_9 & 0xff00ff);
-                        i_9 = (i_10 - i_11 & 0x10000) + (i_11 & 0x1000100);
-                        anIntArray8979[i_8 + i_6] = i_10 - i_9 | i_9 - (i_9 >>> 8);
-                    }
-                }
-            }
+    void method13946(boolean bool_1) {
+        if (aBool8684 != bool_1) {
+            aBool8684 = bool_1;
+            method14204();
+            anInt8703 &= -8;
         }
 
     }
 
     @Override
-    public int dd() {
-        return 0;
+    public void method8547(int nodeCount, Node_Sub24[] node) {
+    	for(int index = 0; index < nodeCount; index++)
+    		aNode_Sub24Array8716[index] = node[index];
+
+        anInt8773 = nodeCount;
+        if (aClass33_8719 == Class33.aClass33_381) {
+            method13903();
+        }
+
     }
 
     @Override
-    public int df() {
-        return 0;
+    public void IA(float f_1) {
+        if (aFloat8769 != f_1) {
+            aFloat8769 = f_1;
+            method13948();
+            method13951();
+        }
+
     }
 
     @Override
-    public int dv() {
-        return 0;
-    }
-
-    @Override
-    public FontRenderer method8660(FontMetrics fontmetrics_1, SpriteDefinitions[] arr_2, boolean bool_3) {
-        int[] ints_4 = new int[arr_2.length];
-        int[] ints_5 = new int[arr_2.length];
-        boolean bool_6 = false;
-
-        for (int i_7 = 0; i_7 < arr_2.length; i_7++) {
-            ints_4[i_7] = arr_2[i_7].width;
-            ints_5[i_7] = arr_2[i_7].height;
-            if (arr_2[i_7].alpha != null) {
-                bool_6 = true;
+    public void m(int i_1, float f_2, float f_3, float f_4, float f_5, float f_6) {
+        boolean bool_7 = anInt8765 != i_1;
+        if (bool_7 || aFloat8770 != f_2 || aFloat8826 != f_3) {
+            anInt8765 = i_1;
+            aFloat8770 = f_2;
+            aFloat8826 = f_3;
+            if (bool_7) {
+                aFloat8766 = (anInt8765 & 0xff0000) / 1.671168E7F;
+                aFloat8767 = (anInt8765 & 0xff00) / 65280.0F;
+                aFloat8768 = (anInt8765 & 0xff) / 255.0F;
+                method13948();
             }
+
+            method13949();
+        }
+
+        if (aFloatArray8763[0] != f_4 || aFloatArray8763[1] != f_5 || aFloatArray8763[2] != f_6) {
+            aFloatArray8763[0] = f_4;
+            aFloatArray8763[1] = f_5;
+            aFloatArray8763[2] = f_6;
+            aFloatArray8764[0] = -f_4;
+            aFloatArray8764[1] = -f_5;
+            aFloatArray8764[2] = -f_6;
+            float f_8 = (float) (1.0D / Math.sqrt(f_4 * f_4 + f_5 * f_5 + f_6 * f_6));
+            aFloatArray8747[0] = f_4 * f_8;
+            aFloatArray8747[1] = f_5 * f_8;
+            aFloatArray8747[2] = f_6 * f_8;
+            aFloatArray8762[0] = -aFloatArray8747[0];
+            aFloatArray8762[1] = -aFloatArray8747[1];
+            aFloatArray8762[2] = -aFloatArray8747[2];
+            method13950();
+            anInt8777 = (int) (f_4 * 256.0F / f_5);
+            anInt8778 = (int) (f_6 * 256.0F / f_5);
+        }
+
+        method13951();
+    }
+
+    @Override
+    public int method8452(int i_1, int i_2) {
+        return i_1 & i_2 ^ i_2;
+    }
+
+    public void method13947(int i_1) {
+        switch (i_1) {
+            case 0:
+                method13966(Class68.aClass68_683, Class68.aClass68_683);
+                break;
+            case 1:
+                method13966(Class68.aClass68_687, Class68.aClass68_687);
+                break;
+            case 2:
+                method13966(Class68.aClass68_682, Class68.aClass68_687);
+                break;
+            case 3:
+                method13966(Class68.aClass68_684, Class68.aClass68_683);
+                break;
+            case 4:
+                method13966(Class68.aClass68_685, Class68.aClass68_685);
+        }
+
+    }
+
+    abstract void method13948();
+
+    abstract void method13949();
+
+    abstract void method13950();
+
+    abstract void method13951();
+
+    @Override
+    public int method8463() {
+        return anInt8799 - 2;
+    }
+
+    abstract void method13952();
+
+    abstract void method13953();
+
+    abstract boolean method13954(Class150 var1, Class76 var2);
+
+    abstract boolean method13955(Class150 var1, Class76 var2);
+
+    abstract void method13956();
+
+    Interface6 method13957(Class150 class150_1, int i_2, int i_3, boolean bool_4, byte[] bytes_5) {
+        return method14143(class150_1, i_2, i_3, bool_4, bytes_5);
+    }
+
+    Interface6 method13958(Class150 class150_1, int i_2, int i_3, float[] floats_5) {
+        return method13961(class150_1, i_2, i_3, floats_5);
+    }
+
+    public abstract void method13959(Class352 var1, int var2, int var3);
+
+    void method13960() {
+        if (aClass37Array8783[anInt8780] != Class37.aClass37_393) {
+            aClass37Array8783[anInt8780] = Class37.aClass37_393;
+            aClass384Array8782[anInt8780].identity();
+            method14133();
+        }
+
+    }
+
+    abstract Interface6 method13961(Class150 var1, int var2, int var3, float[] var5);
+
+    @Override
+    public Matrix44Var method8458() {
+        return aClass294_8706;
+    }
+
+    @Override
+    public void il(int i_1) {
+        for (anInt8806 = 0; i_1 > 1; i_1 >>= 1) {
+            anInt8806 += 1;
+        }
+
+        anInt8775 = 1 << anInt8806;
+    }
+
+    abstract Interface1 method13962(Class150 var1, byte[] var6);
+
+    @Override // dead code
+    public void method8426(int i_1, Node_Sub24[] arr_2) {
+        if (i_1 >= 0) System.arraycopy(arr_2, 0, aNode_Sub24Array8716, 0, i_1);
+
+        anInt8773 = i_1;
+        if (aClass33_8719 == Class33.aClass33_381) {
+            method13903();
+        }
+
+    }
+
+    @Override
+    public void method8568() {
+    }
+
+    public int method13963() {
+        return anInt8780;
+    }
+
+    @Override
+    public void XA(int i_1, int i_2, int i_3, int i_4, int i_5) {
+        method8433(i_1, i_2, i_3 + i_1, i_2, i_4, i_5);
+    }
+
+    @Override
+    void fr(int i_1, int i_2, int i_3, int i_4, int i_5) {
+    }
+
+    public abstract void method13964();
+
+    public Interface31 method13965() {
+        return aClass152_Sub2_8731 != null ? aClass152_Sub2_8731.method14241() : null;
+    }
+
+    public void method13966(Class68 class68_1, Class68 class68_2) {
+        boolean bool_3 = false;
+        if (class68_1 != aClass68Array8784[anInt8780]) {
+            aClass68Array8784[anInt8780] = class68_1;
+            method13979();
+            bool_3 = true;
+        }
+
+        if (class68_2 != aClass68Array8785[anInt8780]) {
+            aClass68Array8785[anInt8780] = class68_2;
+            method13980();
+            bool_3 = true;
         }
 
         if (bool_3) {
-            if (bool_6) {
-                return new FontRenderer_Sub2(this, fontmetrics_1, arr_2, ints_4, ints_5);
-            } else {
-                return new FontRenderer_Sub1(this, fontmetrics_1, arr_2, ints_4, ints_5);
-            }
-        } else if (bool_6) {
-            throw new IllegalArgumentException("");
-        } else {
-            return new FontRenderer_Sub3(this, fontmetrics_1, arr_2, ints_4, ints_5);
-        }
-    }
-
-    @Override
-    public boolean method8495() {
-        return false;
-    }
-
-    @Override
-    public void method8477(Class152 class152_1) {
-    }
-
-    @Override
-    void fw(int i_1, int i_2, int i_3, int i_4, int i_5) {
-        int i_22 = i_2;
-        if (anIntArray8979 != null) {
-            if (i_3 < 0) {
-                i_3 = -i_3;
-            }
-
-            int i_6 = i_22 - i_3;
-            if (i_6 < anInt9009) {
-                i_6 = anInt9009;
-            }
-
-            int i_7 = 1 + i_22 + i_3;
-            if (i_7 > anInt8986) {
-                i_7 = anInt8986;
-            }
-
-            int i_8 = i_6;
-            int i_9 = i_3 * i_3;
-            int i_10 = 0;
-            int i_11 = i_22 - i_6;
-            int i_12 = i_11 * i_11;
-            int i_13 = i_12 - i_11;
-            if (i_22 > i_7) {
-                i_22 = i_7;
-            }
-
-            int i_14 = i_4 >>> 24;
-            int i_15;
-            int i_16;
-            int i_17;
-            int i_18;
-            if (i_5 != 0 && (i_5 != 1 || i_14 != 255)) {
-                int i_19;
-                int i_20;
-                if (i_5 == 1) {
-                    i_4 = (i_14 * (i_4 & 0xff00) >> 8 & 0xff00) + (i_14 * (i_4 & 0xff00ff) >> 8 & 0xff00ff) + (i_14 << 24);
-
-                    for (i_15 = 256 - i_14; i_8 < i_22; i_13 -= i_11 + i_11) {
-                        while (i_13 <= i_9 || i_12 <= i_9) {
-                            i_12 += i_10 + i_10;
-                            i_13 += i_10++ + i_10;
-                        }
-
-                        i_16 = i_1 - i_10 + 1;
-                        if (i_16 < anInt8983) {
-                            i_16 = anInt8983;
-                        }
-
-                        i_17 = i_1 + i_10;
-                        if (i_17 > anInt9002) {
-                            i_17 = anInt9002;
-                        }
-
-                        i_18 = i_16 + i_8 * anInt8980;
-
-                        for (i_19 = i_16; i_19 < i_17; i_19++) {
-                            i_20 = anIntArray8979[i_18];
-                            i_20 = ((i_20 & 0xff00) * i_15 >> 8 & 0xff00) + ((i_20 & 0xff00ff) * i_15 >> 8 & 0xff00ff);
-                            anIntArray8979[i_18++] = i_4 + i_20;
-                        }
-
-                        ++i_8;
-                        i_12 -= i_11-- + i_11;
-                    }
-
-                    i_10 = i_3;
-                    i_11 = -i_11;
-                    i_13 = i_9 + i_11 * i_11;
-                    i_12 = i_13 - i_3;
-
-                    for (i_13 -= i_11; i_8 < i_7; i_12 += i_11++ + i_11) {
-                        while (i_13 > i_9 && i_12 > i_9) {
-                            i_13 -= i_10-- + i_10;
-                            i_12 -= i_10 + i_10;
-                        }
-
-                        i_16 = i_1 - i_10;
-                        if (i_16 < anInt8983) {
-                            i_16 = anInt8983;
-                        }
-
-                        i_17 = i_10 + i_1;
-                        if (i_17 > anInt9002 - 1) {
-                            i_17 = anInt9002 - 1;
-                        }
-
-                        i_18 = i_16 + anInt8980 * i_8;
-
-                        for (i_19 = i_16; i_19 <= i_17; i_19++) {
-                            i_20 = anIntArray8979[i_18];
-                            i_20 = (i_15 * (i_20 & 0xff00) >> 8 & 0xff00) + (i_15 * (i_20 & 0xff00ff) >> 8 & 0xff00ff);
-                            anIntArray8979[i_18++] = i_4 + i_20;
-                        }
-
-                        ++i_8;
-                        i_13 += i_11 + i_11;
-                    }
-                } else {
-                    if (i_5 != 2) {
-                        throw new IllegalArgumentException();
-                    }
-
-                    int i_21;
-                    while (i_8 < i_22) {
-                        while (i_13 <= i_9 || i_12 <= i_9) {
-                            i_12 += i_10 + i_10;
-                            i_13 += i_10++ + i_10;
-                        }
-
-                        i_15 = i_1 - i_10 + 1;
-                        if (i_15 < anInt8983) {
-                            i_15 = anInt8983;
-                        }
-
-                        i_16 = i_10 + i_1;
-                        if (i_16 > anInt9002) {
-                            i_16 = anInt9002;
-                        }
-
-                        i_17 = i_15 + anInt8980 * i_8;
-
-                        for (i_18 = i_15; i_18 < i_16; i_18++) {
-                            i_19 = anIntArray8979[i_17];
-                            i_20 = i_4 + i_19;
-                            i_21 = (i_4 & 0xff00ff) + (i_19 & 0xff00ff);
-                            i_19 = (i_21 & 0x1000100) + (i_20 - i_21 & 0x10000);
-                            anIntArray8979[i_17++] = i_20 - i_19 | i_19 - (i_19 >>> 8);
-                        }
-
-                        ++i_8;
-                        i_12 -= i_11-- + i_11;
-                        i_13 -= i_11 + i_11;
-                    }
-
-                    i_10 = i_3;
-                    i_11 = -i_11;
-                    i_13 = i_11 * i_11 + i_9;
-                    i_12 = i_13 - i_3;
-
-                    for (i_13 -= i_11; i_8 < i_7; i_12 += i_11++ + i_11) {
-                        while (i_13 > i_9 && i_12 > i_9) {
-                            i_13 -= i_10-- + i_10;
-                            i_12 -= i_10 + i_10;
-                        }
-
-                        i_15 = i_1 - i_10;
-                        if (i_15 < anInt8983) {
-                            i_15 = anInt8983;
-                        }
-
-                        i_16 = i_10 + i_1;
-                        if (i_16 > anInt9002 - 1) {
-                            i_16 = anInt9002 - 1;
-                        }
-
-                        i_17 = i_15 + anInt8980 * i_8;
-
-                        for (i_18 = i_15; i_18 <= i_16; i_18++) {
-                            i_19 = anIntArray8979[i_17];
-                            i_20 = i_4 + i_19;
-                            i_21 = (i_19 & 0xff00ff) + (i_4 & 0xff00ff);
-                            i_19 = (i_21 & 0x1000100) + (i_20 - i_21 & 0x10000);
-                            anIntArray8979[i_17++] = i_20 - i_19 | i_19 - (i_19 >>> 8);
-                        }
-
-                        ++i_8;
-                        i_13 += i_11 + i_11;
-                    }
-                }
-            } else {
-                while (i_8 < i_22) {
-                    while (i_13 <= i_9 || i_12 <= i_9) {
-                        i_12 += i_10 + i_10;
-                        i_13 += i_10++ + i_10;
-                    }
-
-                    i_15 = 1 + (i_1 - i_10);
-                    if (i_15 < anInt8983) {
-                        i_15 = anInt8983;
-                    }
-
-                    i_16 = i_10 + i_1;
-                    if (i_16 > anInt9002) {
-                        i_16 = anInt9002;
-                    }
-
-                    i_17 = i_15 + i_8 * anInt8980;
-
-                    for (i_18 = i_15; i_18 < i_16; i_18++) {
-                        anIntArray8979[i_17++] = i_4;
-                    }
-
-                    ++i_8;
-                    i_12 -= i_11-- + i_11;
-                    i_13 -= i_11 + i_11;
-                }
-
-                i_10 = i_3;
-                i_11 = i_8 - i_22;
-                i_13 = i_11 * i_11 + i_9;
-                i_12 = i_13 - i_3;
-
-                for (i_13 -= i_11; i_8 < i_7; i_12 += i_11++ + i_11) {
-                    while (i_13 > i_9 && i_12 > i_9) {
-                        i_13 -= i_10-- + i_10;
-                        i_12 -= i_10 + i_10;
-                    }
-
-                    i_15 = i_1 - i_10;
-                    if (i_15 < anInt8983) {
-                        i_15 = anInt8983;
-                    }
-
-                    i_16 = i_1 + i_10;
-                    if (i_16 > anInt9002 - 1) {
-                        i_16 = anInt9002 - 1;
-                    }
-
-                    i_17 = i_15 + i_8 * anInt8980;
-
-                    for (i_18 = i_15; i_18 <= i_16; i_18++) {
-                        anIntArray8979[i_17++] = i_4;
-                    }
-
-                    ++i_8;
-                    i_13 += i_11 + i_11;
-                }
-
-                return;
-            }
+            anInt8703 &= -14;
         }
 
     }
 
-    @Override
-    void method8485() {
-        if (aBool9012) {
-            Class13.method508(true, false);
-            aBool9012 = false;
-        }
-
-        aBool9014 = true;
+    public void method13967(int i_1, Class67 class67_2) {
+        method13968(i_1, class67_2);
     }
 
-    @Override
-    public boolean method8489() {
-        return false;
+    abstract void method13968(int var1, Class67 var2);
+
+    public void method13969(int i_1, Class67 class67_2) {
+        method13970(i_1, class67_2);
     }
 
-    @Override
-    public boolean method8674() {
-        return false;
-    }
+    abstract void method13970(int var1, Class67 var2);
 
-    @Override
-    public Class158_Sub1 method8418() {
-        return new Class158_Sub1_Sub2(this);
-    }
-
-    @Override
-    public boolean method8492() {
-        return true;
-    }
-
-    @Override
-    public boolean method8599() {
-        return false;
-    }
-
-    @Override
-    public void method8520(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
-        XA(i_1, i_2, i_3, i_5, i_6);
-        XA(i_1, i_4 + i_2 - 1, i_3, i_5, i_6);
-        G(i_1, i_2 + 1, i_4 - 2, i_5, i_6);
-        G(i_1 + i_3 - 1, 1 + i_2, i_4 - 2, i_5, i_6);
-    }
-
-    @Override
-    public Class152 method8636(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
-        return null;
-    }
-
-    @Override
-    void method8555() throws Exception_Sub3 {
-        aClass158_Sub2_5841.method14353(0, 0);
-        if (textureCache != null) {
-            textureCache.method161();
+    public void method13971(int i_1) {
+        if (anInt8758 != i_1) {
+            anInt8758 = i_1;
+            method13987();
         }
 
     }
 
-    @Override
-    public boolean method8431() {
-        return false;
+    public Matrix44 method13973() {
+        return aClass384Array8782[anInt8780];
     }
 
-    @Override
-    public boolean method8644() {
-        return false;
+    public void method13974(Class37 class37_1) {
+        aClass37Array8783[anInt8780] = class37_1;
+        method14133();
     }
+
+    abstract boolean method13975(Class150 var1, Class76 var2);
+
+    @Override
+    public void method8585(int i_1, HDWaterTile class90_2) {
+        anInt8739 = i_1;
+        aClass90_8807 = class90_2;
+        aBool8779 = true;
+    }
+
+    void method13976() {
+        method13948();
+        method13949();
+        method14204();
+        method13903();
+        method13950();
+        method13951();
+        method13952();
+        method13956();
+        method14054();
+        method13991();
+        method14013();
+        method13914();
+        method13894();
+        method14238();
+
+        for (int i_1 = anInt8825 - 1; i_1 >= 0; --i_1) {
+            method14163(i_1);
+            method13979();
+            method13980();
+            method13960();
+        }
+
+        method13987();
+        method13920();
+    }
+
+    abstract void method13978();
+
+    abstract void method13979();
+
+    abstract void method13980();
 
     @Override
     public void method8475(HDWaterTile class90_2) {
-        for (int i_3 = 0; i_3 < aClass185Array8984.length; i_3++) {
-            aClass185Array8984[i_3].anInt2336 = aClass185Array8984[i_3].anInt2307;
-            aClass185Array8984[i_3].anInt2306 = -1;
-            aClass185Array8984[i_3].anInt2307 = class90_2.color;
-            aClass185Array8984[i_3].anInt2313 = class90_2.scale;
-            aClass185Array8984[i_3].aBool2309 = true;
+        anInt8739 = -1;
+        aClass90_8807 = class90_2;
+        aBool8779 = true;
+    }
+
+    abstract void method13982();
+
+    public abstract void method13983(Class352 var1, int var2, int var3, int var4, int var5);
+
+    void method13985() {
+        if (anInt8844 != 0) {
+            anInt8844 = 0;
+            method13894();
         }
 
     }
 
-    @Override
-    public boolean method8578() {
-        return false;
-    }
+    abstract void method13986(int var1);
 
     @Override
-    public boolean method8462() {
-        return false;
-    }
-
-    @Override
-    public boolean method8501() {
-        return false;
-    }
-
-    @Override
-    public void method8560(int i_1) {
-        MeshRasterizer_Sub2.anInt8644 = i_1;
-        MeshRasterizer_Sub2.anInt8562 = i_1;
-        if (656550451 * anInt9008 * 1696391419 > 1) {
-            throw new IllegalStateException();
+    public void L() {
+        if (aClass158_5853 != null) {
+            anInt8822 = 0;
+            anInt8743 = 0;
+            anInt8744 = aClass158_5853.method2714();
+            anInt8742 = aClass158_5853.method2716();
         } else {
-            method14369(anInt9008);
-            method14409();
-        }
-    }
-
-    @Override
-    public boolean method8503() {
-        return false;
-    }
-
-    @Override
-    public boolean method8614() {
-        return false;
-    }
-
-    @Override
-    public boolean method8504() {
-        return false;
-    }
-
-    @Override
-    public void method8491() {
-    }
-
-    @Override
-    Class158_Sub2 method8558(Canvas canvas_1, int i_2, int i_3) {
-        return Class52_Sub1.method14493(this, canvas_1, i_2, i_3);
-    }
-
-    @Override
-    public void fd(int i_1, int i_2) {
-        if ((i_1 & 0x1) != 0) {
-            B(0, 0, anInt8980, anInt8981, i_2, 0);
+            anInt8742 = 0;
+            anInt8744 = 0;
+            anInt8822 = 0;
+            anInt8743 = 0;
         }
 
-        if ((i_1 & 0x2) != 0) {
-            method14410();
+        if (aBool8843) {
+            aBool8843 = false;
+            method13922();
+        }
+
+    }
+
+    abstract void method13987();
+
+    void method13989(boolean bool_1) {
+        if (aBool8808 != bool_1) {
+            aBool8808 = bool_1;
+            method13991();
+            anInt8703 &= -16;
         }
 
     }
 
     @Override
-    public void method8445() {
-    }
-
-    @Override
-    public void method8497() {
-    }
-
-    @Override
-    public void method8424(Matrix44 matrix44_1) {
-        aClass384_8995.method6562(matrix44_1);
-        method14374();
-    }
-
-    @Override
-    public void method8559(int i_1) {
-        MeshRasterizer_Sub2.anInt8644 = i_1;
-        MeshRasterizer_Sub2.anInt8562 = i_1;
-        if (656550451 * anInt9008 * 1696391419 > 1) {
-            throw new IllegalStateException();
-        } else {
-            method14369(anInt9008);
-            method14409();
-        }
-    }
-
-    @Override
-    public void eq(boolean bool_1) {
-        Class185 class185_2 = method14370(Thread.currentThread());
-        class185_2.aBool2334 = bool_1;
-    }
-
-    @Override
-    public void method8513(int i_1, int i_2, int i_3, int i_4) {
-        anInt8998 = i_1;
-        anInt8999 = i_2;
-        anInt9000 = i_3;
-        anInt9001 = i_4;
-        method14364();
-    }
-
-    @Override
-    public void method8691() {
-    }
-
-    @Override
-    public boolean method8502() {
-        return false;
-    }
-
-    @Override
-    public NativeSprite method8518(SpriteDefinitions class91_1, boolean bool_2) {
-        int[] ints_3 = class91_1.pallete;
-        byte[] bytes_4 = class91_1.pixels;
-        int i_5 = class91_1.width;
-        int i_6 = class91_1.height;
-        NativeSprite_Sub1 obj_7;
-        int[] ints_8;
-        byte[] bytes_9;
-        int i_10;
-        int i_11;
-        int i_12;
-        if (bool_2 && class91_1.alpha == null) {
-            ints_8 = new int[ints_3.length];
-            bytes_9 = new byte[i_5 * i_6];
-
-            for (i_10 = 0; i_10 < i_6; i_10++) {
-                i_11 = i_10 * i_5;
-
-                for (i_12 = 0; i_12 < i_5; i_12++) {
-                    bytes_9[i_12 + i_11] = bytes_4[i_12 + i_11];
-                }
-            }
-
-            for (i_10 = 0; i_10 < ints_3.length; i_10++) {
-                ints_8[i_10] = ints_3[i_10];
-            }
-
-            obj_7 = new NativeSprite_Sub1_Sub2(this, bytes_9, ints_8, i_5, i_6);
-        } else {
-            ints_8 = new int[i_6 * i_5];
-            bytes_9 = class91_1.alpha;
-            if (bytes_9 != null) {
-                for (i_10 = 0; i_10 < i_6; i_10++) {
-                    i_11 = i_5 * i_10;
-
-                    for (i_12 = 0; i_12 < i_5; i_12++) {
-                        ints_8[i_12 + i_11] = ints_3[bytes_4[i_12 + i_11] & 0xff] | bytes_9[i_12 + i_11] << 24;
-                    }
-                }
-
-                obj_7 = new NativeSprite_Sub1_Sub3(this, ints_8, i_5, i_6);
-            } else {
-                for (i_10 = 0; i_10 < i_6; i_10++) {
-                    i_11 = i_10 * i_5;
-
-                    for (i_12 = 0; i_12 < i_5; i_12++) {
-                        int i_13 = ints_3[bytes_4[i_12 + i_11] & 0xff];
-                        ints_8[i_11 + i_12] = i_13 != 0 ? -16777216 | i_13 : 0;
-                    }
-                }
-
-                obj_7 = new NativeSprite_Sub1_Sub1(this, ints_8, i_5, i_6);
-            }
+    public void c(int i_1, int i_2, int i_3) {
+        if (anInt8810 != i_1 || i_2 != anInt8811 || i_3 != anInt8680) {
+            anInt8810 = i_1;
+            anInt8811 = i_2;
+            anInt8680 = i_3;
+            method14062();
+            method13991();
         }
 
-        (obj_7).method2743(class91_1.minX, class91_1.minY, class91_1.anInt958, class91_1.anInt953);
-        return obj_7;
+    }
+
+    @Override
+    public void method8457(Matrix44Var matrix44var_1) {
+        aClass294_8706 = matrix44var_1;
+        aClass384_8740.fromVarMatrix44(aClass294_8706);
+        aClass294_8804.method5209(matrix44var_1);
+        aClass294_8804.method5207();
+        aClass384_8814.fromVarMatrix44(aClass294_8804);
+        method13926();
+        if (aClass33_8719 == Class33.aClass33_381) {
+            method13927();
+        }
+
+    }
+
+    abstract void method13991();
+
+    abstract void method13992(boolean var1);
+
+    abstract Interface32 method13993(boolean var1);
+
+    abstract Interface4 method13994(boolean var1);
+
+    abstract Class70 method13995(Class72[] var1);
+
+    public abstract void method13996(Class70 var1);
+
+    @Override
+    public void DA(Class455 class455_2, int i_3, int i_4) {
+        RA(false);
+        aNativeSprite_Sub3_8791.method2766(0.0F, 0.0F, method8523().method2714(), 0.0F, 0.0F, method8523().method2716(), 0, class455_2, i_3, i_4);
+        RA(true);
+    }
+
+    abstract void method13997(Interface32 var1);
+
+    Matrix44 method13998() {
+        return aClass33_8719 == Class33.aClass33_381 ? aClass384_8814 : aClass384_8712;
+    }
+
+    @Override
+    public void method8595(boolean bool_1) {
+    }
+
+    @Override
+    public void method8430(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
+        method8433(i_1, i_2, i_3 + i_1, i_2, i_5, i_6);
+        method8433(i_1, i_2 + i_4, i_3 + i_1, i_2 + i_4, i_5, i_6);
+        method8433(i_1, i_2, i_1, i_2 + i_4, i_5, i_6);
+        method8433(i_3 + i_1, i_2, i_3 + i_1, i_2 + i_4, i_5, i_6);
+    }
+
+    @Override
+    public void N(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, byte[] bytes_7, int i_8, int i_9) {
+    }
+
+    @Override
+    public void method8658() {
+    }
+
+    @Override
+    void CA(int i_1, int i_2, int i_3, int i_4) {
+    }
+
+    @Override
+    public void fo(int i_1, int i_2, int i_3, int i_4, int i_5) {
+        method8433(i_1, i_2, i_1, i_2 + i_3, i_4, i_5);
     }
 
     @Override
     public void ez() {
-        anInt8983 = 0;
-        anInt9009 = 0;
-        anInt9002 = 1480196385 * anInt8980;
-        anInt8986 = anInt8981 * 1628550159;
-        method14364();
+        if (aClass158_5853 != null) {
+            anInt8822 = 0;
+            anInt8743 = 0;
+            anInt8744 = aClass158_5853.method2714();
+            anInt8742 = aClass158_5853.method2716();
+        } else {
+            anInt8742 = 0;
+            anInt8744 = 0;
+            anInt8822 = 0;
+            anInt8743 = 0;
+        }
+
+        if (aBool8843) {
+            aBool8843 = false;
+            method13922();
+        }
+
+    }
+
+    @Override
+    public void method8433(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
+        method8496(i_1, i_2, i_3, i_4, i_5, 1, i_6);
+    }
+
+    @Override
+    public void method8435(int i_1, int i_2, int i_3, int i_4, int i_5, int i_7, int i_8, int i_9) {
+        float f_10 = (float) i_3 - i_1;
+        float f_11 = (float) i_4 - i_2;
+        if (f_10 == 0.0F && f_11 == 0.0F) {
+            f_10 = 1.0F;
+        } else {
+            float f_23 = (float) (1.0D / Math.sqrt(f_10 * f_10 + f_11 * f_11));
+            f_10 *= f_23;
+            f_11 *= f_23;
+        }
+
+        method13935();
+        Class41 class41_12 = aClass41Array8793[13];
+        class41_12.method873();
+        class41_12.method875();
+        method13904(1);
+        class41_12.method879();
+        method13992(false);
+        i_9 %= i_8 + i_7;
+        float f_13 = f_10 * i_7;
+        float f_14 = f_11 * i_7;
+        float f_15 = 0.0F;
+        float f_16 = 0.0F;
+        float f_17 = f_13;
+        float f_18 = f_14;
+        if (i_9 > i_7) {
+            f_15 = f_10 * (i_8 + i_7 - i_9);
+            f_16 = f_11 * (i_8 + i_7 - i_9);
+        } else {
+            f_17 = f_10 * (i_7 - i_9);
+            f_18 = f_11 * (i_7 - i_9);
+        }
+
+        float f_19 = i_1 + f_15;
+        float f_20 = i_2 + f_16;
+        float f_21 = f_10 * i_8;
+        float f_22 = f_11 * i_8;
+
+        while (true) {
+            if (i_3 > i_1) {
+                if (f_19 > i_3) {
+                    break;
+                }
+
+                if (f_19 + f_17 > i_3) {
+                    f_17 = i_3 - f_19;
+                }
+            } else {
+                if (f_19 < i_3) {
+                    break;
+                }
+
+                if (f_19 + f_17 < i_3) {
+                    f_17 = i_3 - f_19;
+                }
+            }
+
+            if (i_4 > i_2) {
+                if (f_20 > i_4) {
+                    break;
+                }
+
+                if (f_20 + f_18 > i_4) {
+                    f_18 = i_4 - f_20;
+                }
+            } else {
+                if (f_20 < i_4) {
+                    break;
+                }
+
+                if (f_20 + f_18 < i_4) {
+                    f_18 = i_4 - f_20;
+                }
+            }
+
+            if (!method13908(f_19, f_20, f_19 + f_17, f_20 + f_18)) {
+                return;
+            }
+
+            method14000();
+            f_19 += f_21 + f_17;
+            f_20 += f_22 + f_18;
+            f_17 = f_13;
+            f_18 = f_14;
+        }
+
+        method13992(true);
+        class41_12.method885();
+    }
+
+    @Override
+    public void method8563(int i_1, int i_2, int i_3, int i_4, int i_5, Class455 class455_7, int i_8, int i_9, int i_10, int i_11, int i_12) {
+    }
+
+    abstract void method13999();
+
+    @Override
+    public void method8496(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
+        i_1 = (int) (i_1 + 1.0F);
+        i_2 = (int) (i_2 + 1.0F);
+        i_3 = (int) (i_3 + 1.0F);
+        i_4 = (int) (i_4 + 1.0F);
+        float f_8 = (i_3 - i_1);
+        float f_9 = (i_4 - i_2);
+        float f_10 = 1.0F / (float) Math.sqrt(f_8 * f_8 + f_9 * f_9);
+        f_8 *= f_10;
+        f_9 *= f_10;
+        i_1 = (int) (i_1 - f_8);
+        i_2 = (int) (i_2 - f_9);
+        float f_11 = -f_9;
+        f_11 *= 0.5F * i_6;
+        float f_12 = f_8 * 0.5F * i_6;
+        aNativeSprite_Sub3_8790.method2763(i_1 - f_11, i_2 - f_12, i_3 - f_11, i_4 - f_12, i_1 + f_11, i_2 + f_12, 0, i_5, i_7);
+    }
+
+    @Override
+    public void method8456(Class151 class151_1) {
+        aClass54_8837.method1091(this, class151_1);
+    }
+
+    void method14000() {
+        method14161(0, anInterface4_8682);
+        method13996(aClass70_8833);
+        method13923(Class352.aClass352_4099, 0, 1);
+    }
+
+    @Override
+    public void hi(int i_1, Class455 class455_2, int i_3, int i_4) {
+        RA(false);
+        aNativeSprite_Sub3_8791.method2766(0.0F, 0.0F, method8523().method2714(), 0.0F, 0.0F, method8523().method2716(), 0, class455_2, i_3, i_4);
+        RA(true);
+    }
+
+    void method14001(Class352 class352_1) {
+        method14161(0, anInterface4_8746);
+        method13996(aClass70_8786);
+        method13923(class352_1, 0, 2);
+    }
+
+    @Override
+    public void method8619(float f_1, float f_2, float f_3, float[] floats_4) {
+        float f_5 = aClass384_8728.buf[14] + aClass384_8728.buf[2] * f_1 + aClass384_8728.buf[6] * f_2 + aClass384_8728.buf[10] * f_3;
+        float f_6 = aClass384_8728.buf[15] + aClass384_8728.buf[3] * f_1 + aClass384_8728.buf[7] * f_2 + aClass384_8728.buf[11] * f_3;
+        if (f_5 >= -f_6 && f_5 <= f_6) {
+            float f_7 = aClass384_8728.buf[12] + aClass384_8728.buf[0] * f_1 + aClass384_8728.buf[4] * f_2 + aClass384_8728.buf[8] * f_3;
+            if (f_7 >= -f_6 && f_7 <= f_6) {
+                float f_8 = aClass384_8728.buf[13] + aClass384_8728.buf[1] * f_1 + aClass384_8728.buf[5] * f_2 + aClass384_8728.buf[9] * f_3;
+                if (f_8 >= -f_6 && f_8 <= f_6) {
+                    float f_9 = aClass384_8740.buf[14] + aClass384_8740.buf[2] * f_1 + aClass384_8740.buf[6] * f_2 + aClass384_8740.buf[10] * f_3;
+                    floats_4[0] = aFloat8797 + aFloat8732 * f_7 / f_6;
+                    floats_4[1] = aFloat8741 + aFloat8734 * f_8 / f_6;
+                    floats_4[2] = f_9;
+                } else {
+                    floats_4[2] = Float.NaN;
+                    floats_4[1] = Float.NaN;
+                    floats_4[0] = Float.NaN;
+                }
+            } else {
+                floats_4[2] = Float.NaN;
+                floats_4[1] = Float.NaN;
+                floats_4[0] = Float.NaN;
+            }
+        } else {
+            floats_4[2] = Float.NaN;
+            floats_4[1] = Float.NaN;
+            floats_4[0] = Float.NaN;
+        }
+
+    }
+
+    public abstract void method14002(Class352 var1, int var2, int var3, int var4, int var5);
+
+    public void method14003() {
+        if (anInt8703 != 2) {
+            method13935();
+            method13989(false);
+            method13946(false);
+            method13941(false);
+            method13942(false);
+            anInt8703 = 2;
+        }
+
+    }
+
+    void method14004() {
+        if (anInt8703 != 8) {
+            method13937();
+            method13989(true);
+            method13941(true);
+            method13942(true);
+            method13904(1);
+            anInt8703 = 8;
+        }
+
+    }
+
+    @Override
+    void method8531() {
+        if (!aBool8681) {
+            method13900();
+            aClass66_8787.method1279();
+
+            for (Node node_1 = aClass473_8700.getBack(); node_1 != null; node_1 = aClass473_8700.getPrevious()) {
+                ((Node_Sub1_Sub2) node_1).method15609();
+            }
+
+            Class13.method508(false, true);
+
+            int i_2;
+            for (i_2 = 0; i_2 < aClass41Array8793.length; i_2++) {
+                if (aClass41Array8793[i_2] != null) {
+                    aClass41Array8793[i_2].method878();
+                    aClass41Array8793[i_2] = null;
+                }
+            }
+
+            for (i_2 = 0; i_2 < aClass55Array8802.length; i_2++) {
+                if (aClass55Array8802[i_2] != null) {
+                    aClass55Array8802[i_2].method1105();
+                    aClass55Array8802[i_2] = null;
+                }
+            }
+
+            method13886();
+            method8398(0);
+            aBool8681 = true;
+        }
+
+    }
+
+    @Override
+    void method8486() {
+        if (!aBool8681) {
+            method13900();
+            aClass66_8787.method1279();
+
+            for (Node node_1 = aClass473_8700.getBack(); node_1 != null; node_1 = aClass473_8700.getPrevious()) {
+                ((Node_Sub1_Sub2) node_1).method15609();
+            }
+
+            Class13.method508(false, true);
+
+            int i_2;
+            for (i_2 = 0; i_2 < aClass41Array8793.length; i_2++) {
+                if (aClass41Array8793[i_2] != null) {
+                    aClass41Array8793[i_2].method878();
+                    aClass41Array8793[i_2] = null;
+                }
+            }
+
+            for (i_2 = 0; i_2 < aClass55Array8802.length; i_2++) {
+                if (aClass55Array8802[i_2] != null) {
+                    aClass55Array8802[i_2].method1105();
+                    aClass55Array8802[i_2] = null;
+                }
+            }
+
+            method13886();
+            method8398(0);
+            aBool8681 = true;
+        }
+
+    }
+
+    @Override
+    public void method8487(int i_1) {
+        if (aClass66_8787 != null) {
+            aClass66_8787.method1278();
+        }
+
+        anInt8820 = i_1 & 0x7fffffff;
+    }
+
+    @Override
+    public Class455 method8553(int i_1, int i_2, int[] ints_3, int[] ints_4) {
+        return Class455_Sub1.method13769(this, i_1, i_2, ints_3, ints_4);
+    }
+
+    @Override
+    public int dd() {
+        return anInt8702 + anInt8701 + anInt8761;
+    }
+
+    @Override
+    public void method8424(Matrix44 matrix44_1) {
+        aClass384_8724.method6562(matrix44_1);
+        method13926();
+        if (aClass33_8719 == Class33.aClass33_381) {
+            method14030();
+        }
+
+    }
+
+    @Override
+    public Matrix44 method8571() {
+        return aClass384_8841;
+    }
+
+    @Override
+    public int dv() {
+        return anInt8702 + anInt8701 + anInt8761;
+    }
+
+    @Override
+    public boolean method8489() {
+        return true;
+    }
+
+    @Override
+    public boolean method8528() {
+        return true;
+    }
+
+    @Override
+    public void method8581(Class151 class151_1) {
+        aClass54_8837.method1091(this, class151_1);
+    }
+
+    @Override
+    public boolean method8599() {
+        return aClass55Array8802[1] != null;
+    }
+
+    @Override
+    public boolean method8464() {
+        return aClass55Array8802[1] != null;
+    }
+
+    @Override
+    public boolean method8649() {
+        return aClass55Array8802[1] != null;
+    }
+
+    abstract Interface6 method14008(int var1, int var2, boolean var3, int[] var4, int var5, int var6);
+
+    @Override
+    public boolean method8431() {
+        return true;
+    }
+
+    void method14009() {
+        anInterface4_8682 = method13994(true);
+        anInterface4_8682.method31(24, 12);
+        aClass70_8833 = method13995(new Class72[]{new Class72(Class69.aClass69_695)});
+    }
+
+    @Override
+    public boolean method8498() {
+        return true;
+    }
+
+    abstract Interface31 method14011(int var1, boolean var2, int[][] var3);
+
+    abstract void method14013();
+
+    @Override
+    public boolean method8503() {
+        return true;
+    }
+
+    @Override
+    public void fh(int[] ints_1) {
+        ints_1[0] = anInt8743;
+        ints_1[1] = anInt8822;
+        ints_1[2] = anInt8744;
+        ints_1[3] = anInt8742;
+    }
+
+    @Override
+    public void eq(boolean bool_1) {
+        aBool8755 = bool_1;
+        method14054();
+    }
+
+    @Override
+    public void method8513(int i_1, int i_2, int i_3, int i_4) {
+        anInt8745 = i_1;
+        anInt8835 = i_2;
+        anInt8722 = i_3;
+        anInt8748 = i_4;
+        method13918();
+    }
+
+    abstract void method14015();
+
+    @Override
+    public void ft(int[] ints_1) {
+        ints_1[0] = anInt8743;
+        ints_1[1] = anInt8822;
+        ints_1[2] = anInt8744;
+        ints_1[3] = anInt8742;
+    }
+
+    @Override
+    public void ej(float f_1, float f_2) {
+        aFloat8737 = f_1;
+        aFloat8738 = f_2;
+        method13918();
     }
 
     @Override
     public void eh() {
-        anInt8983 = 0;
-        anInt9009 = 0;
-        anInt9002 = 1480196385 * anInt8980;
-        anInt8986 = anInt8981 * 1628550159;
-        method14364();
-    }
-
-    @Override
-    public NativeSprite method8444(SpriteDefinitions class91_1, boolean bool_2) {
-        int[] ints_3 = class91_1.pallete;
-        byte[] bytes_4 = class91_1.pixels;
-        int i_5 = class91_1.width;
-        int i_6 = class91_1.height;
-        NativeSprite_Sub1 obj_7;
-        int[] ints_8;
-        byte[] bytes_9;
-        int i_10;
-        int i_11;
-        int i_12;
-        if (bool_2 && class91_1.alpha == null) {
-            ints_8 = new int[ints_3.length];
-            bytes_9 = new byte[i_5 * i_6];
-
-            for (i_10 = 0; i_10 < i_6; i_10++) {
-                i_11 = i_10 * i_5;
-
-                for (i_12 = 0; i_12 < i_5; i_12++) {
-                    bytes_9[i_12 + i_11] = bytes_4[i_12 + i_11];
-                }
-            }
-
-            for (i_10 = 0; i_10 < ints_3.length; i_10++) {
-                ints_8[i_10] = ints_3[i_10];
-            }
-
-            obj_7 = new NativeSprite_Sub1_Sub2(this, bytes_9, ints_8, i_5, i_6);
+        if (aClass158_5853 != null) {
+            anInt8822 = 0;
+            anInt8743 = 0;
+            anInt8744 = aClass158_5853.method2714();
+            anInt8742 = aClass158_5853.method2716();
         } else {
-            ints_8 = new int[i_6 * i_5];
-            bytes_9 = class91_1.alpha;
-            if (bytes_9 != null) {
-                for (i_10 = 0; i_10 < i_6; i_10++) {
-                    i_11 = i_5 * i_10;
-
-                    for (i_12 = 0; i_12 < i_5; i_12++) {
-                        ints_8[i_12 + i_11] = ints_3[bytes_4[i_12 + i_11] & 0xff] | bytes_9[i_12 + i_11] << 24;
-                    }
-                }
-
-                obj_7 = new NativeSprite_Sub1_Sub3(this, ints_8, i_5, i_6);
-            } else {
-                for (i_10 = 0; i_10 < i_6; i_10++) {
-                    i_11 = i_10 * i_5;
-
-                    for (i_12 = 0; i_12 < i_5; i_12++) {
-                        int i_13 = ints_3[bytes_4[i_12 + i_11] & 0xff];
-                        ints_8[i_11 + i_12] = i_13 != 0 ? -16777216 | i_13 : 0;
-                    }
-                }
-
-                obj_7 = new NativeSprite_Sub1_Sub1(this, ints_8, i_5, i_6);
-            }
+            anInt8742 = 0;
+            anInt8744 = 0;
+            anInt8822 = 0;
+            anInt8743 = 0;
         }
 
-        (obj_7).method2743(class91_1.minX, class91_1.minY, class91_1.anInt958, class91_1.anInt953);
-        return obj_7;
+        if (aBool8843) {
+            aBool8843 = false;
+            method13922();
+        }
+
     }
 
+    abstract Class70 method14017(Class72[] var1);
+
     @Override
-    public void fc(int i_1, int i_2, int i_3, int i_4) {
-        int i_11 = i_1;
-        int i_21 = i_2;
-        int i_31 = i_3;
-        int i_41 = i_4;
-        if (i_11 < 0) {
-            i_11 = 0;
-        }
-
-        if (i_21 < 0) {
-            i_21 = 0;
-        }
-
-        if (i_31 > anInt8980) {
-            i_31 = anInt8980;
-        }
-
-        if (i_41 > anInt8981) {
-            i_41 = anInt8981;
-        }
-
-        anInt8983 = i_11;
-        anInt9002 = i_31;
-        anInt9009 = i_21;
-        anInt8986 = i_41;
-        method14364();
+    public boolean method8404() {
+        return true;
     }
 
     @Override
     public void fe(int i_1, int i_2, int i_3, int i_4) {
-        if (anInt8983 < i_1) {
-            anInt8983 = i_1;
+        int i_5;
+        int i_6;
+        if (aClass158_5853 != null) {
+            i_6 = aClass158_5853.method2714();
+            i_5 = aClass158_5853.method2716();
+        } else {
+            i_5 = 0;
+            i_6 = 0;
         }
 
-        if (anInt9009 < i_2) {
-            anInt9009 = i_2;
+        i_1 = Math.max(0, i_1);
+        i_3 = Math.min(i_3, i_6);
+        i_2 = Math.max(0, i_2);
+        i_4 = Math.min(i_4, i_5);
+        boolean bool_7 = false;
+        if (anInt8743 < i_1) {
+            anInt8743 = i_1;
+            bool_7 = true;
         }
 
-        if (anInt9002 > i_3) {
-            anInt9002 = 1714763515 * i_3;
+        if (anInt8744 > i_3) {
+            anInt8744 = i_3;
+            bool_7 = true;
         }
 
-        if (anInt8986 > i_4) {
-            anInt8986 = i_4;
+        if (anInt8822 < i_2) {
+            anInt8822 = i_2;
+            bool_7 = true;
         }
 
-        method14364();
-    }
-
-    @Override
-    public MeshRasterizer method8564(RSMesh rsmesh_1, int i_2, int i_3, int i_4, int i_5) {
-        return new MeshRasterizer_Sub2(this, rsmesh_1, i_2, i_4, i_5, i_3);
-    }
-
-    @Override
-    void method8596(int i_1, int i_2) throws Exception_Sub3 {
-        aClass158_Sub2_5841.method14353(i_1, i_2);
-        if (textureCache != null) {
-            textureCache.method161();
+        if (anInt8742 > i_4) {
+            anInt8742 = i_4;
+            bool_7 = true;
         }
 
-    }
-
-    @Override
-    public Matrix44Var method8685() {
-        return new Matrix44Var(aClass294_8993);
-    }
-
-    @Override
-    public void method8496(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
-        if (anIntArray8979 != null) {
-            Class185 class185_8 = method14370(Thread.currentThread());
-            ChoppyItemFixClass choppyitemfixclass_9 = class185_8.aClass144_2310;
-            int i_10 = i_3 - i_1;
-            int i_11 = i_4 - i_2;
-            int i_12 = i_10 >= 0 ? i_10 : -i_10;
-            int i_13 = i_11 >= 0 ? i_11 : -i_11;
-            int i_14 = i_12;
-            if (i_12 < i_13) {
-                i_14 = i_13;
+        if (bool_7) {
+            if (!aBool8843) {
+                aBool8843 = true;
+                method13922();
             }
 
-            if (i_14 != 0) {
-                int i_15 = (i_10 << 16) / i_14;
-                int i_16 = (i_11 << 16) / i_14;
-                i_10 += i_15 >> 16;
-                i_11 += i_16 >> 16;
-                if (i_16 <= i_15) {
-                    i_15 = -i_15;
-                } else {
-                    i_16 = -i_16;
-                }
-
-                int i_17 = i_16 * i_6 >> 17;
-                int i_18 = i_16 * i_6 + 1 >> 17;
-                int i_19 = i_15 * i_6 >> 17;
-                int i_20 = i_15 * i_6 + 1 >> 17;
-                i_1 -= choppyitemfixclass_9.method2416();
-                i_2 -= choppyitemfixclass_9.method2417();
-                int i_21 = i_17 + i_1;
-                int i_22 = i_1 - i_18;
-                int i_23 = i_10 + i_1 - i_18;
-                int i_24 = i_10 + i_17 + i_1;
-                int i_25 = i_19 + i_2;
-                int i_26 = i_2 - i_20;
-                int i_27 = i_11 + i_2 - i_20;
-                int i_28 = i_11 + i_19 + i_2;
-                if (i_7 == 0) {
-                    choppyitemfixclass_9.anInt1674 = 0;
-                } else {
-                    if (i_7 != 1) {
-                        throw new IllegalArgumentException();
-                    }
-
-                    choppyitemfixclass_9.anInt1674 = 255 - (i_5 >>> 24);
-                }
-
-                RA(false);
-                choppyitemfixclass_9.aBool1708 = i_21 < 0 || i_21 > choppyitemfixclass_9.anInt1684 || i_22 < 0 || i_22 > choppyitemfixclass_9.anInt1684 || i_23 < 0 || i_23 > choppyitemfixclass_9.anInt1684;
-                choppyitemfixclass_9.method2428(true, false, false, i_25, i_26, i_27, i_21, i_22, i_23, 100.0F, 100.0F, 100.0F, i_5);
-                choppyitemfixclass_9.aBool1708 = i_21 < 0 || i_21 > choppyitemfixclass_9.anInt1684 || i_23 < 0 || i_23 > choppyitemfixclass_9.anInt1684 || i_24 < 0 || i_24 > choppyitemfixclass_9.anInt1684;
-                choppyitemfixclass_9.method2428(true, false, false, i_25, i_27, i_28, i_21, i_23, i_24, 100.0F, 100.0F, 100.0F, i_5);
-                RA(true);
-            }
-        }
-
-    }
-
-    @Override
-    public MeshRasterizer method8561(RSMesh rsmesh_1, int i_2, int i_3, int i_4, int i_5) {
-        return new MeshRasterizer_Sub2(this, rsmesh_1, i_2, i_4, i_5, i_3);
-    }
-
-    @Override
-    public void fi(int i_1, int i_2) {
-        if ((i_1 & 0x1) != 0) {
-            B(0, 0, anInt8980, anInt8981, i_2, 0);
-        }
-
-        if ((i_1 & 0x2) != 0) {
-            method14410();
+            method13921();
         }
 
     }
 
     @Override
     public void fk(int i_1, int i_2, int i_3, int i_4) {
-        if (anInt8983 < i_1) {
-            anInt8983 = i_1;
+        int i_5;
+        int i_6;
+        if (aClass158_5853 != null) {
+            i_6 = aClass158_5853.method2714();
+            i_5 = aClass158_5853.method2716();
+        } else {
+            i_5 = 0;
+            i_6 = 0;
         }
 
-        if (anInt9009 < i_2) {
-            anInt9009 = i_2;
+        i_1 = Math.max(0, i_1);
+        i_3 = Math.min(i_3, i_6);
+        i_2 = Math.max(0, i_2);
+        i_4 = Math.min(i_4, i_5);
+        boolean bool_7 = false;
+        if (anInt8743 < i_1) {
+            anInt8743 = i_1;
+            bool_7 = true;
         }
 
-        if (anInt9002 > i_3) {
-            anInt9002 = 1714763515 * i_3;
+        if (anInt8744 > i_3) {
+            anInt8744 = i_3;
+            bool_7 = true;
         }
 
-        if (anInt8986 > i_4) {
-            anInt8986 = i_4;
+        if (anInt8822 < i_2) {
+            anInt8822 = i_2;
+            bool_7 = true;
         }
 
-        method14364();
+        if (anInt8742 > i_4) {
+            anInt8742 = i_4;
+            bool_7 = true;
+        }
+
+        if (bool_7) {
+            if (!aBool8843) {
+                aBool8843 = true;
+                method13922();
+            }
+
+            method13921();
+        }
+
+    }
+
+    abstract void method14019();
+
+    @Override
+    public Class152 method8466(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
+        return new Class152_Sub2_Sub1(this, i_1, i_2, i_3, i_4, i_5, i_6);
     }
 
     @Override
     public void method8511(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
-        XA(i_1, i_2, i_3, i_5, i_6);
-        XA(i_1, i_4 + i_2 - 1, i_3, i_5, i_6);
-        G(i_1, i_2 + 1, i_4 - 2, i_5, i_6);
-        G(i_1 + i_3 - 1, 1 + i_2, i_4 - 2, i_5, i_6);
+        method8433(i_1, i_2, i_1 + i_3, i_2, i_5, i_6);
+        method8433(i_1, i_2 + i_4, i_1 + i_3, i_2 + i_4, i_5, i_6);
+        method8433(i_1, i_2, i_1, i_2 + i_4, i_5, i_6);
+        method8433(i_1 + i_3, i_2, i_1 + i_3, i_2 + i_4, i_5, i_6);
+    }
+
+    @Override
+    public void method8520(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
+        method8433(i_1, i_2, i_1 + i_3, i_2, i_5, i_6);
+        method8433(i_1, i_2 + i_4, i_1 + i_3, i_2 + i_4, i_5, i_6);
+        method8433(i_1, i_2, i_1, i_2 + i_4, i_5, i_6);
+        method8433(i_1 + i_3, i_2, i_1 + i_3, i_2 + i_4, i_5, i_6);
     }
 
     @Override
     public void fp(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
-        int i_21 = i_2;
-        int i_41 = i_4;
-        int i_31 = i_3;
-        int i_15 = i_1;
-        if (anIntArray8979 != null) {
-            if (i_15 < anInt8983) {
-                i_31 -= anInt8983 - i_15;
-                i_15 = anInt8983;
-            }
-
-            if (i_21 < anInt9009) {
-                i_41 -= anInt9009 - i_21;
-                i_21 = anInt9009;
-            }
-
-            if (i_15 + i_31 > anInt9002) {
-                i_31 = anInt9002 - i_15;
-            }
-
-            if (i_21 + i_41 > anInt8986) {
-                i_41 = anInt8986 - i_21;
-            }
-
-            if (i_31 > 0 && i_41 > 0 && i_15 <= anInt9002 && i_21 <= anInt8986) {
-                int i_7 = anInt8980 - i_31;
-                int i_8 = i_15 + i_21 * anInt8980;
-                int i_9 = i_5 >>> 24;
-                int i_10;
-                int i_11;
-                int i_12;
-                if (i_6 != 0 && (i_6 != 1 || i_9 != 255)) {
-                    int i_13;
-                    if (i_6 == 1) {
-                        i_5 = (((i_5 & -16711936) >>> 8) * i_9 & -16711936) + ((i_5 & 0xff00ff) * i_9 >> 8 & 0xff00ff);
-                        i_10 = 256 - i_9;
-
-                        for (i_11 = 0; i_11 < i_41; i_11++) {
-                            for (i_12 = -i_31; i_12 < 0; i_12++) {
-                                i_13 = anIntArray8979[i_8];
-                                i_13 = (i_10 * ((i_13 & -16711936) >>> 8) & -16711936) + (i_10 * (i_13 & 0xff00ff) >> 8 & 0xff00ff);
-                                anIntArray8979[i_8++] = i_5 + i_13;
-                            }
-
-                            i_8 += i_7;
-                        }
-                    } else {
-                        if (i_6 != 2) {
-                            throw new IllegalArgumentException();
-                        }
-
-                        for (i_10 = 0; i_10 < i_41; i_10++) {
-                            for (i_11 = -i_31; i_11 < 0; i_11++) {
-                                i_12 = anIntArray8979[i_8];
-                                i_13 = i_12 + i_5;
-                                int i_14 = (i_5 & 0xff00ff) + (i_12 & 0xff00ff);
-                                i_12 = (i_13 - i_14 & 0x10000) + (i_14 & 0x1000100);
-                                anIntArray8979[i_8++] = i_13 - i_12 | i_12 - (i_12 >>> 8);
-                            }
-
-                            i_8 += i_7;
-                        }
-                    }
-                } else {
-                    i_10 = i_31 >> 3;
-                    i_11 = i_31 & 0x7;
-                    i_31 = i_8 - 1;
-
-                    for (i_12 = -i_41; i_12 < 0; i_12++) {
-                        if (i_10 > 0) {
-                            i_15 = i_10;
-
-                            do {
-                                ++i_31;
-                                anIntArray8979[i_31] = i_5;
-                                ++i_31;
-                                anIntArray8979[i_31] = i_5;
-                                ++i_31;
-                                anIntArray8979[i_31] = i_5;
-                                ++i_31;
-                                anIntArray8979[i_31] = i_5;
-                                ++i_31;
-                                anIntArray8979[i_31] = i_5;
-                                ++i_31;
-                                anIntArray8979[i_31] = i_5;
-                                ++i_31;
-                                anIntArray8979[i_31] = i_5;
-                                ++i_31;
-                                anIntArray8979[i_31] = i_5;
-                                --i_15;
-                            } while (i_15 > 0);
-                        }
-
-                        if (i_11 > 0) {
-                            i_15 = i_11;
-
-                            do {
-                                ++i_31;
-                                anIntArray8979[i_31] = i_5;
-                                --i_15;
-                            } while (i_15 > 0);
-                        }
-
-                        i_31 += i_7;
-                    }
-                }
-            }
+        if (aBool8755) {
+            RA(false);
+            aNativeSprite_Sub3_8790.method2754(i_1, i_2, i_3, i_4, 0, i_5, i_6);
+            RA(true);
+        } else {
+            aNativeSprite_Sub3_8790.method2754(i_1, i_2, i_3, i_4, 0, i_5, i_6);
         }
 
     }
 
     @Override
     public void fb(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
-        int i_21 = i_2;
-        int i_41 = i_4;
-        int i_31 = i_3;
-        int i_15 = i_1;
-        if (anIntArray8979 != null) {
-            if (i_15 < anInt8983) {
-                i_31 -= anInt8983 - i_15;
-                i_15 = anInt8983;
-            }
-
-            if (i_21 < anInt9009) {
-                i_41 -= anInt9009 - i_21;
-                i_21 = anInt9009;
-            }
-
-            if (i_15 + i_31 > anInt9002) {
-                i_31 = anInt9002 - i_15;
-            }
-
-            if (i_21 + i_41 > anInt8986) {
-                i_41 = anInt8986 - i_21;
-            }
-
-            if (i_31 > 0 && i_41 > 0 && i_15 <= anInt9002 && i_21 <= anInt8986) {
-                int i_7 = anInt8980 - i_31;
-                int i_8 = i_15 + i_21 * anInt8980;
-                int i_9 = i_5 >>> 24;
-                int i_10;
-                int i_11;
-                int i_12;
-                if (i_6 != 0 && (i_6 != 1 || i_9 != 255)) {
-                    int i_13;
-                    if (i_6 == 1) {
-                        i_5 = (((i_5 & -16711936) >>> 8) * i_9 & -16711936) + ((i_5 & 0xff00ff) * i_9 >> 8 & 0xff00ff);
-                        i_10 = 256 - i_9;
-
-                        for (i_11 = 0; i_11 < i_41; i_11++) {
-                            for (i_12 = -i_31; i_12 < 0; i_12++) {
-                                i_13 = anIntArray8979[i_8];
-                                i_13 = (i_10 * ((i_13 & -16711936) >>> 8) & -16711936) + (i_10 * (i_13 & 0xff00ff) >> 8 & 0xff00ff);
-                                anIntArray8979[i_8++] = i_5 + i_13;
-                            }
-
-                            i_8 += i_7;
-                        }
-                    } else {
-                        if (i_6 != 2) {
-                            throw new IllegalArgumentException();
-                        }
-
-                        for (i_10 = 0; i_10 < i_41; i_10++) {
-                            for (i_11 = -i_31; i_11 < 0; i_11++) {
-                                i_12 = anIntArray8979[i_8];
-                                i_13 = i_12 + i_5;
-                                int i_14 = (i_5 & 0xff00ff) + (i_12 & 0xff00ff);
-                                i_12 = (i_13 - i_14 & 0x10000) + (i_14 & 0x1000100);
-                                anIntArray8979[i_8++] = i_13 - i_12 | i_12 - (i_12 >>> 8);
-                            }
-
-                            i_8 += i_7;
-                        }
-                    }
-                } else {
-                    i_10 = i_31 >> 3;
-                    i_11 = i_31 & 0x7;
-                    i_31 = i_8 - 1;
-
-                    for (i_12 = -i_41; i_12 < 0; i_12++) {
-                        if (i_10 > 0) {
-                            i_15 = i_10;
-
-                            do {
-                                ++i_31;
-                                anIntArray8979[i_31] = i_5;
-                                ++i_31;
-                                anIntArray8979[i_31] = i_5;
-                                ++i_31;
-                                anIntArray8979[i_31] = i_5;
-                                ++i_31;
-                                anIntArray8979[i_31] = i_5;
-                                ++i_31;
-                                anIntArray8979[i_31] = i_5;
-                                ++i_31;
-                                anIntArray8979[i_31] = i_5;
-                                ++i_31;
-                                anIntArray8979[i_31] = i_5;
-                                ++i_31;
-                                anIntArray8979[i_31] = i_5;
-                                --i_15;
-                            } while (i_15 > 0);
-                        }
-
-                        if (i_11 > 0) {
-                            i_15 = i_11;
-
-                            do {
-                                ++i_31;
-                                anIntArray8979[i_31] = i_5;
-                                --i_15;
-                            } while (i_15 > 0);
-                        }
-
-                        i_31 += i_7;
-                    }
-                }
-            }
+        if (aBool8755) {
+            RA(false);
+            aNativeSprite_Sub3_8790.method2754(i_1, i_2, i_3, i_4, 0, i_5, i_6);
+            RA(true);
+        } else {
+            aNativeSprite_Sub3_8790.method2754(i_1, i_2, i_3, i_4, 0, i_5, i_6);
         }
 
     }
 
     @Override
     public void fv(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, byte[] bytes_7, int i_8, int i_9) {
-        if (anIntArray8979 != null && i_3 > 0 && i_4 > 0) {
-            int i_10 = 0;
-            int i_11 = 0;
-            int i_12 = (i_8 << 16) / i_3;
-            int i_13 = (bytes_7.length / i_8 << 16) / i_4;
-            int i_14 = i_1 + anInt8980 * i_2;
-            int i_15 = anInt8980 - i_3;
-            if (i_2 + i_4 > anInt8986) {
-                i_4 -= i_4 + i_2 - anInt8986;
-            }
-
-            int i_16;
-            if (i_2 < anInt9009) {
-                i_16 = anInt9009 - i_2;
-                i_4 -= i_16;
-                i_14 += anInt8980 * i_16;
-                i_11 += i_16 * i_13;
-            }
-
-            if (i_1 + i_3 > anInt9002) {
-                i_16 = i_3 + i_1 - anInt9002;
-                i_3 -= i_16;
-                i_15 += i_16;
-            }
-
-            if (i_1 < anInt8983) {
-                i_16 = anInt8983 - i_1;
-                i_3 -= i_16;
-                i_14 += i_16;
-                i_10 += i_16 * i_12;
-                i_15 += i_16;
-            }
-
-            i_16 = i_5 >>> 24;
-            int i_17 = i_6 >>> 24;
-            int i_18;
-            int i_19;
-            int i_20;
-            int i_21;
-            if (i_9 == 0 || i_9 == 1 && i_16 == 255 && i_17 == 255) {
-                i_18 = i_10;
-
-                for (i_19 = -i_4; i_19 < 0; i_19++) {
-                    i_20 = i_8 * (i_11 >> 16);
-
-                    for (i_21 = -i_3; i_21 < 0; i_21++) {
-                        if (bytes_7[i_20 + (i_10 >> 16)] != 0) {
-                            anIntArray8979[i_14++] = i_6;
-                        } else {
-                            anIntArray8979[i_14++] = i_5;
-                        }
-
-                        i_10 += i_12;
-                    }
-
-                    i_11 += i_13;
-                    i_10 = i_18;
-                    i_14 += i_15;
-                }
-            } else {
-                int i_22;
-                int i_23;
-                int i_24;
-                int i_25;
-                if (i_9 == 1) {
-                    i_18 = i_10;
-
-                    for (i_19 = -i_4; i_19 < 0; i_19++) {
-                        i_20 = (i_11 >> 16) * i_8;
-
-                        for (i_21 = -i_3; i_21 < 0; i_21++) {
-                            i_22 = i_5;
-                            if (bytes_7[i_20 + (i_10 >> 16)] != 0) {
-                                i_22 = i_6;
-                            }
-
-                            i_23 = i_22 >>> 24;
-                            i_24 = 255 - i_23;
-                            i_25 = anIntArray8979[i_14];
-                            anIntArray8979[i_14++] = (i_24 * (i_25 & 0xff00) + i_23 * (i_22 & 0xff00) & 0xff0000) + (i_23 * (i_22 & 0xff00ff) + (i_25 & 0xff00ff) * i_24 & -16711936) >> 8;
-                            i_10 += i_12;
-                        }
-
-                        i_11 += i_13;
-                        i_10 = i_18;
-                        i_14 += i_15;
-                    }
-                } else {
-                    if (i_9 != 2) {
-                        throw new IllegalArgumentException();
-                    }
-
-                    i_18 = i_10;
-
-                    for (i_19 = -i_4; i_19 < 0; i_19++) {
-                        i_20 = i_8 * (i_11 >> 16);
-
-                        for (i_21 = -i_3; i_21 < 0; i_21++) {
-                            i_22 = i_5;
-                            if (bytes_7[(i_10 >> 16) + i_20] != 0) {
-                                i_22 = i_6;
-                            }
-
-                            if (i_22 != 0) {
-                                i_23 = anIntArray8979[i_14];
-                                i_24 = i_22 + i_23;
-                                i_25 = (i_23 & 0xff00ff) + (i_22 & 0xff00ff);
-                                i_23 = (i_24 - i_25 & 0x10000) + (i_25 & 0x1000100);
-                                anIntArray8979[i_14++] = i_24 - i_23 | i_23 - (i_23 >>> 8);
-                            } else {
-                                ++i_14;
-                            }
-
-                            i_10 += i_12;
-                        }
-
-                        i_11 += i_13;
-                        i_10 = i_18;
-                        i_14 += i_15;
-                    }
-                }
-            }
-        }
-
     }
 
     @Override
     public void ff(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, byte[] bytes_7, int i_8, int i_9) {
-        if (anIntArray8979 != null && i_3 > 0 && i_4 > 0) {
-            int i_10 = 0;
-            int i_11 = 0;
-            int i_12 = (i_8 << 16) / i_3;
-            int i_13 = (bytes_7.length / i_8 << 16) / i_4;
-            int i_14 = i_1 + anInt8980 * i_2;
-            int i_15 = anInt8980 - i_3;
-            if (i_2 + i_4 > anInt8986) {
-                i_4 -= i_4 + i_2 - anInt8986;
-            }
-
-            int i_16;
-            if (i_2 < anInt9009) {
-                i_16 = anInt9009 - i_2;
-                i_4 -= i_16;
-                i_14 += anInt8980 * i_16;
-                i_11 += i_16 * i_13;
-            }
-
-            if (i_1 + i_3 > anInt9002) {
-                i_16 = i_3 + i_1 - anInt9002;
-                i_3 -= i_16;
-                i_15 += i_16;
-            }
-
-            if (i_1 < anInt8983) {
-                i_16 = anInt8983 - i_1;
-                i_3 -= i_16;
-                i_14 += i_16;
-                i_10 += i_16 * i_12;
-                i_15 += i_16;
-            }
-
-            i_16 = i_5 >>> 24;
-            int i_17 = i_6 >>> 24;
-            int i_18;
-            int i_19;
-            int i_20;
-            int i_21;
-            if (i_9 == 0 || i_9 == 1 && i_16 == 255 && i_17 == 255) {
-                i_18 = i_10;
-
-                for (i_19 = -i_4; i_19 < 0; i_19++) {
-                    i_20 = i_8 * (i_11 >> 16);
-
-                    for (i_21 = -i_3; i_21 < 0; i_21++) {
-                        if (bytes_7[i_20 + (i_10 >> 16)] != 0) {
-                            anIntArray8979[i_14++] = i_6;
-                        } else {
-                            anIntArray8979[i_14++] = i_5;
-                        }
-
-                        i_10 += i_12;
-                    }
-
-                    i_11 += i_13;
-                    i_10 = i_18;
-                    i_14 += i_15;
-                }
-            } else {
-                int i_22;
-                int i_23;
-                int i_24;
-                int i_25;
-                if (i_9 == 1) {
-                    i_18 = i_10;
-
-                    for (i_19 = -i_4; i_19 < 0; i_19++) {
-                        i_20 = (i_11 >> 16) * i_8;
-
-                        for (i_21 = -i_3; i_21 < 0; i_21++) {
-                            i_22 = i_5;
-                            if (bytes_7[i_20 + (i_10 >> 16)] != 0) {
-                                i_22 = i_6;
-                            }
-
-                            i_23 = i_22 >>> 24;
-                            i_24 = 255 - i_23;
-                            i_25 = anIntArray8979[i_14];
-                            anIntArray8979[i_14++] = (i_24 * (i_25 & 0xff00) + i_23 * (i_22 & 0xff00) & 0xff0000) + (i_23 * (i_22 & 0xff00ff) + (i_25 & 0xff00ff) * i_24 & -16711936) >> 8;
-                            i_10 += i_12;
-                        }
-
-                        i_11 += i_13;
-                        i_10 = i_18;
-                        i_14 += i_15;
-                    }
-                } else {
-                    if (i_9 != 2) {
-                        throw new IllegalArgumentException();
-                    }
-
-                    i_18 = i_10;
-
-                    for (i_19 = -i_4; i_19 < 0; i_19++) {
-                        i_20 = i_8 * (i_11 >> 16);
-
-                        for (i_21 = -i_3; i_21 < 0; i_21++) {
-                            i_22 = i_5;
-                            if (bytes_7[(i_10 >> 16) + i_20] != 0) {
-                                i_22 = i_6;
-                            }
-
-                            if (i_22 != 0) {
-                                i_23 = anIntArray8979[i_14];
-                                i_24 = i_22 + i_23;
-                                i_25 = (i_23 & 0xff00ff) + (i_22 & 0xff00ff);
-                                i_23 = (i_24 - i_25 & 0x10000) + (i_25 & 0x1000100);
-                                anIntArray8979[i_14++] = i_24 - i_23 | i_23 - (i_23 >>> 8);
-                            } else {
-                                ++i_14;
-                            }
-
-                            i_10 += i_12;
-                        }
-
-                        i_11 += i_13;
-                        i_10 = i_18;
-                        i_14 += i_15;
-                    }
-                }
-            }
-        }
-
     }
 
     @Override
-    void fr(int i_1, int i_2, int i_3, int i_4, int i_5) {
-        int i_22 = i_2;
-        if (anIntArray8979 != null) {
-            if (i_3 < 0) {
-                i_3 = -i_3;
-            }
-
-            int i_6 = i_22 - i_3;
-            if (i_6 < anInt9009) {
-                i_6 = anInt9009;
-            }
-
-            int i_7 = 1 + i_22 + i_3;
-            if (i_7 > anInt8986) {
-                i_7 = anInt8986;
-            }
-
-            int i_8 = i_6;
-            int i_9 = i_3 * i_3;
-            int i_10 = 0;
-            int i_11 = i_22 - i_6;
-            int i_12 = i_11 * i_11;
-            int i_13 = i_12 - i_11;
-            if (i_22 > i_7) {
-                i_22 = i_7;
-            }
-
-            int i_14 = i_4 >>> 24;
-            int i_15;
-            int i_16;
-            int i_17;
-            int i_18;
-            if (i_5 != 0 && (i_5 != 1 || i_14 != 255)) {
-                int i_19;
-                int i_20;
-                if (i_5 == 1) {
-                    i_4 = (i_14 * (i_4 & 0xff00) >> 8 & 0xff00) + (i_14 * (i_4 & 0xff00ff) >> 8 & 0xff00ff) + (i_14 << 24);
-
-                    for (i_15 = 256 - i_14; i_8 < i_22; i_13 -= i_11 + i_11) {
-                        while (i_13 <= i_9 || i_12 <= i_9) {
-                            i_12 += i_10 + i_10;
-                            i_13 += i_10++ + i_10;
-                        }
-
-                        i_16 = i_1 - i_10 + 1;
-                        if (i_16 < anInt8983) {
-                            i_16 = anInt8983;
-                        }
-
-                        i_17 = i_1 + i_10;
-                        if (i_17 > anInt9002) {
-                            i_17 = anInt9002;
-                        }
-
-                        i_18 = i_16 + i_8 * anInt8980;
-
-                        for (i_19 = i_16; i_19 < i_17; i_19++) {
-                            i_20 = anIntArray8979[i_18];
-                            i_20 = ((i_20 & 0xff00) * i_15 >> 8 & 0xff00) + ((i_20 & 0xff00ff) * i_15 >> 8 & 0xff00ff);
-                            anIntArray8979[i_18++] = i_4 + i_20;
-                        }
-
-                        ++i_8;
-                        i_12 -= i_11-- + i_11;
-                    }
-
-                    i_10 = i_3;
-                    i_11 = -i_11;
-                    i_13 = i_9 + i_11 * i_11;
-                    i_12 = i_13 - i_3;
-
-                    for (i_13 -= i_11; i_8 < i_7; i_12 += i_11++ + i_11) {
-                        while (i_13 > i_9 && i_12 > i_9) {
-                            i_13 -= i_10-- + i_10;
-                            i_12 -= i_10 + i_10;
-                        }
-
-                        i_16 = i_1 - i_10;
-                        if (i_16 < anInt8983) {
-                            i_16 = anInt8983;
-                        }
-
-                        i_17 = i_10 + i_1;
-                        if (i_17 > anInt9002 - 1) {
-                            i_17 = anInt9002 - 1;
-                        }
-
-                        i_18 = i_16 + anInt8980 * i_8;
-
-                        for (i_19 = i_16; i_19 <= i_17; i_19++) {
-                            i_20 = anIntArray8979[i_18];
-                            i_20 = (i_15 * (i_20 & 0xff00) >> 8 & 0xff00) + (i_15 * (i_20 & 0xff00ff) >> 8 & 0xff00ff);
-                            anIntArray8979[i_18++] = i_4 + i_20;
-                        }
-
-                        ++i_8;
-                        i_13 += i_11 + i_11;
-                    }
-                } else {
-                    if (i_5 != 2) {
-                        throw new IllegalArgumentException();
-                    }
-
-                    int i_21;
-                    while (i_8 < i_22) {
-                        while (i_13 <= i_9 || i_12 <= i_9) {
-                            i_12 += i_10 + i_10;
-                            i_13 += i_10++ + i_10;
-                        }
-
-                        i_15 = i_1 - i_10 + 1;
-                        if (i_15 < anInt8983) {
-                            i_15 = anInt8983;
-                        }
-
-                        i_16 = i_10 + i_1;
-                        if (i_16 > anInt9002) {
-                            i_16 = anInt9002;
-                        }
-
-                        i_17 = i_15 + anInt8980 * i_8;
-
-                        for (i_18 = i_15; i_18 < i_16; i_18++) {
-                            i_19 = anIntArray8979[i_17];
-                            i_20 = i_4 + i_19;
-                            i_21 = (i_4 & 0xff00ff) + (i_19 & 0xff00ff);
-                            i_19 = (i_21 & 0x1000100) + (i_20 - i_21 & 0x10000);
-                            anIntArray8979[i_17++] = i_20 - i_19 | i_19 - (i_19 >>> 8);
-                        }
-
-                        ++i_8;
-                        i_12 -= i_11-- + i_11;
-                        i_13 -= i_11 + i_11;
-                    }
-
-                    i_10 = i_3;
-                    i_11 = -i_11;
-                    i_13 = i_11 * i_11 + i_9;
-                    i_12 = i_13 - i_3;
-
-                    for (i_13 -= i_11; i_8 < i_7; i_12 += i_11++ + i_11) {
-                        while (i_13 > i_9 && i_12 > i_9) {
-                            i_13 -= i_10-- + i_10;
-                            i_12 -= i_10 + i_10;
-                        }
-
-                        i_15 = i_1 - i_10;
-                        if (i_15 < anInt8983) {
-                            i_15 = anInt8983;
-                        }
-
-                        i_16 = i_10 + i_1;
-                        if (i_16 > anInt9002 - 1) {
-                            i_16 = anInt9002 - 1;
-                        }
-
-                        i_17 = i_15 + anInt8980 * i_8;
-
-                        for (i_18 = i_15; i_18 <= i_16; i_18++) {
-                            i_19 = anIntArray8979[i_17];
-                            i_20 = i_4 + i_19;
-                            i_21 = (i_19 & 0xff00ff) + (i_4 & 0xff00ff);
-                            i_19 = (i_21 & 0x1000100) + (i_20 - i_21 & 0x10000);
-                            anIntArray8979[i_17++] = i_20 - i_19 | i_19 - (i_19 >>> 8);
-                        }
-
-                        ++i_8;
-                        i_13 += i_11 + i_11;
-                    }
-                }
-            } else {
-                while (i_8 < i_22) {
-                    while (i_13 <= i_9 || i_12 <= i_9) {
-                        i_12 += i_10 + i_10;
-                        i_13 += i_10++ + i_10;
-                    }
-
-                    i_15 = 1 + (i_1 - i_10);
-                    if (i_15 < anInt8983) {
-                        i_15 = anInt8983;
-                    }
-
-                    i_16 = i_10 + i_1;
-                    if (i_16 > anInt9002) {
-                        i_16 = anInt9002;
-                    }
-
-                    i_17 = i_15 + i_8 * anInt8980;
-
-                    for (i_18 = i_15; i_18 < i_16; i_18++) {
-                        anIntArray8979[i_17++] = i_4;
-                    }
-
-                    ++i_8;
-                    i_12 -= i_11-- + i_11;
-                    i_13 -= i_11 + i_11;
-                }
-
-                i_10 = i_3;
-                i_11 = i_8 - i_22;
-                i_13 = i_11 * i_11 + i_9;
-                i_12 = i_13 - i_3;
-
-                for (i_13 -= i_11; i_8 < i_7; i_12 += i_11++ + i_11) {
-                    while (i_13 > i_9 && i_12 > i_9) {
-                        i_13 -= i_10-- + i_10;
-                        i_12 -= i_10 + i_10;
-                    }
-
-                    i_15 = i_1 - i_10;
-                    if (i_15 < anInt8983) {
-                        i_15 = anInt8983;
-                    }
-
-                    i_16 = i_1 + i_10;
-                    if (i_16 > anInt9002 - 1) {
-                        i_16 = anInt9002 - 1;
-                    }
-
-                    i_17 = i_15 + i_8 * anInt8980;
-
-                    for (i_18 = i_15; i_18 <= i_16; i_18++) {
-                        anIntArray8979[i_17++] = i_4;
-                    }
-
-                    ++i_8;
-                    i_13 += i_11 + i_11;
-                }
-
-                return;
-            }
-        }
-
+    public void method8611() {
+        aClass32_8714.method833();
     }
 
     @Override
-    public void method8514(int i_1, int i_2, int i_3, int i_4) {
-        anInt8998 = i_1;
-        anInt8999 = i_2;
-        anInt9000 = i_3;
-        anInt9001 = i_4;
-        method14364();
+    void fw(int i_1, int i_2, int i_3, int i_4, int i_5) {
     }
 
-    @Override
-    public void fs(int i_1, int i_2, int i_3, int i_4, int i_5) {
-        int i_12 = i_1;
-        int i_31 = i_3;
-        if (anIntArray8979 != null && i_2 >= anInt9009 && i_2 < anInt8986) {
-            if (i_12 < anInt8983) {
-                i_31 -= anInt8983 - i_12;
-                i_12 = anInt8983;
-            }
+    abstract void method14020();
 
-            if (i_31 + i_12 > anInt9002) {
-                i_31 = anInt9002 - i_12;
-            }
-
-            int i_6 = i_2 * anInt8980 + i_12;
-            int i_7 = i_4 >>> 24;
-            int i_8;
-            if (i_5 == 0 || i_5 == 1 && i_7 == 255) {
-                for (i_8 = 0; i_8 < i_31; i_8++) {
-                    anIntArray8979[i_6 + i_8] = i_4;
-                }
-            } else {
-                int i_9;
-                int i_10;
-                if (i_5 == 1) {
-                    i_4 = ((i_4 & 0xff00) * i_7 >> 8 & 0xff00) + ((i_4 & 0xff00ff) * i_7 >> 8 & 0xff00ff) + (i_7 << 24);
-                    i_8 = 256 - i_7;
-
-                    for (i_9 = 0; i_9 < i_31; i_9++) {
-                        i_10 = anIntArray8979[i_9 + i_6];
-                        i_10 = (i_8 * (i_10 & 0xff00) >> 8 & 0xff00) + ((i_10 & 0xff00ff) * i_8 >> 8 & 0xff00ff);
-                        anIntArray8979[i_9 + i_6] = i_4 + i_10;
-                    }
-                } else {
-                    if (i_5 != 2) {
-                        throw new IllegalArgumentException();
-                    }
-
-                    for (i_8 = 0; i_8 < i_31; i_8++) {
-                        i_9 = anIntArray8979[i_6 + i_8];
-                        i_10 = i_9 + i_4;
-                        int i_11 = (i_4 & 0xff00ff) + (i_9 & 0xff00ff);
-                        i_9 = (i_10 - i_11 & 0x10000) + (i_11 & 0x1000100);
-                        anIntArray8979[i_8 + i_6] = i_10 - i_9 | i_9 - (i_9 >>> 8);
-                    }
-                }
-            }
-        }
-
-    }
-
-    @Override
-    public boolean method8605() {
-        return false;
-    }
-
-    @Override
-    public void ej(float f_1, float f_2) {
-        aFloat8978 = f_2 - f_1;
-        aFloat8985 = f_2 + f_1 - 1.0F;
-
-        for (int i_3 = 0; i_3 < anInt9008; i_3++) {
-            Class185 class185_4 = aClass185Array8984[i_3];
-            ChoppyItemFixClass choppyitemfixclass_5 = class185_4.aClass144_2310;
-            choppyitemfixclass_5.aFloat1683 = aFloat8978;
-            choppyitemfixclass_5.aFloat1682 = aFloat8985;
-        }
-
-    }
-
-    @Override
-    public void fo(int i_1, int i_2, int i_3, int i_4, int i_5) {
-        int i_21 = i_2;
-        int i_31 = i_3;
-        if (anIntArray8979 != null && i_1 >= anInt8983 && i_1 < anInt9002) {
-            if (i_21 < anInt9009) {
-                i_31 -= anInt9009 - i_21;
-                i_21 = anInt9009;
-            }
-
-            if (i_21 + i_31 > anInt8986) {
-                i_31 = anInt8986 - i_21;
-            }
-
-            int i_6 = i_21 * anInt8980 + i_1;
-            int i_7 = i_4 >>> 24;
-            int i_8;
-            if (i_5 == 0 || i_5 == 1 && i_7 == 255) {
-                for (i_8 = 0; i_8 < i_31; i_8++) {
-                    anIntArray8979[i_6 + anInt8980 * i_8] = i_4;
-                }
-            } else {
-                int i_9;
-                int i_10;
-                int i_11;
-                if (i_5 == 1) {
-                    i_4 = ((i_4 & 0xff00ff) * i_7 >> 8 & 0xff00ff) + ((i_4 & 0xff00) * i_7 >> 8 & 0xff00) + (i_7 << 24);
-                    i_8 = 256 - i_7;
-
-                    for (i_9 = 0; i_9 < i_31; i_9++) {
-                        i_10 = i_6 + i_9 * anInt8980;
-                        i_11 = anIntArray8979[i_10];
-                        i_11 = ((i_11 & 0xff00ff) * i_8 >> 8 & 0xff00ff) + ((i_11 & 0xff00) * i_8 >> 8 & 0xff00);
-                        anIntArray8979[i_10] = i_4 + i_11;
-                    }
-                } else {
-                    if (i_5 != 2) {
-                        throw new IllegalArgumentException();
-                    }
-
-                    for (i_8 = 0; i_8 < i_31; i_8++) {
-                        i_9 = anInt8980 * i_8 + i_6;
-                        i_10 = anIntArray8979[i_9];
-                        i_11 = i_10 + i_4;
-                        int i_12 = (i_4 & 0xff00ff) + (i_10 & 0xff00ff);
-                        i_10 = (i_12 & 0x1000100) + (i_11 - i_12 & 0x10000);
-                        anIntArray8979[i_9] = i_11 - i_10 | i_10 - (i_10 >>> 8);
-                    }
-                }
-            }
-        }
-
-    }
+    abstract Interface29 method14022(Class150 var1, Class76 var2, int var3, int var4);
 
     @Override
     public void fl(int i_1, int i_2, int i_3, int i_4, int i_5) {
-        int i_21 = i_2;
-        int i_31 = i_3;
-        if (anIntArray8979 != null && i_1 >= anInt8983 && i_1 < anInt9002) {
-            if (i_21 < anInt9009) {
-                i_31 -= anInt9009 - i_21;
-                i_21 = anInt9009;
-            }
-
-            if (i_21 + i_31 > anInt8986) {
-                i_31 = anInt8986 - i_21;
-            }
-
-            int i_6 = i_21 * anInt8980 + i_1;
-            int i_7 = i_4 >>> 24;
-            int i_8;
-            if (i_5 == 0 || i_5 == 1 && i_7 == 255) {
-                for (i_8 = 0; i_8 < i_31; i_8++) {
-                    anIntArray8979[i_6 + anInt8980 * i_8] = i_4;
-                }
-            } else {
-                int i_9;
-                int i_10;
-                int i_11;
-                if (i_5 == 1) {
-                    i_4 = ((i_4 & 0xff00ff) * i_7 >> 8 & 0xff00ff) + ((i_4 & 0xff00) * i_7 >> 8 & 0xff00) + (i_7 << 24);
-                    i_8 = 256 - i_7;
-
-                    for (i_9 = 0; i_9 < i_31; i_9++) {
-                        i_10 = i_6 + i_9 * anInt8980;
-                        i_11 = anIntArray8979[i_10];
-                        i_11 = ((i_11 & 0xff00ff) * i_8 >> 8 & 0xff00ff) + ((i_11 & 0xff00) * i_8 >> 8 & 0xff00);
-                        anIntArray8979[i_10] = i_4 + i_11;
-                    }
-                } else {
-                    if (i_5 != 2) {
-                        throw new IllegalArgumentException();
-                    }
-
-                    for (i_8 = 0; i_8 < i_31; i_8++) {
-                        i_9 = anInt8980 * i_8 + i_6;
-                        i_10 = anIntArray8979[i_9];
-                        i_11 = i_10 + i_4;
-                        int i_12 = (i_4 & 0xff00ff) + (i_10 & 0xff00ff);
-                        i_10 = (i_12 & 0x1000100) + (i_11 - i_12 & 0x10000);
-                        anIntArray8979[i_9] = i_11 - i_10 | i_10 - (i_10 >>> 8);
-                    }
-                }
-            }
-        }
-
-    }
-
-    @Override
-    public Class455 method8553(int i_1, int i_2, int[] ints_3, int[] ints_4) {
-        return new Class455_Sub3(ints_3, ints_4);
+        method8433(i_1, i_2, i_1, i_2 + i_3, i_4, i_5);
     }
 
     @Override
     public void method8415(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
-        int i_14 = i_1;
-        int i_31 = i_3;
-        int i_21 = i_2;
-        int i_41 = i_4;
-        if (anIntArray8979 != null) {
-            i_31 -= i_14;
-            i_41 -= i_21;
-            if (i_41 == 0) {
-                if (i_31 >= 0) {
-                    XA(i_14, i_21, 1 + i_31, i_5, i_6);
-                } else {
-                    XA(i_14 + i_31, i_21, -i_31 + 1, i_5, i_6);
-                }
-            } else if (i_31 == 0) {
-                if (i_41 >= 0) {
-                    G(i_14, i_21, 1 + i_41, i_5, i_6);
-                } else {
-                    G(i_14, i_21 + i_41, -i_41 + 1, i_5, i_6);
-                }
-            } else {
-                if (i_31 + i_41 < 0) {
-                    i_14 += i_31;
-                    i_31 = -i_31;
-                    i_21 += i_41;
-                    i_41 = -i_41;
-                }
-
-                int i_7;
-                int i_8;
-                int i_9;
-                int i_10;
-                int i_11;
-                int i_12;
-                int i_13;
-                if (i_31 > i_41) {
-                    i_21 <<= 16;
-                    i_21 += 32768;
-                    i_41 <<= 16;
-                    i_7 = (int) Math.floor(0.5D + (double) i_41 / i_31);
-                    i_31 += i_14;
-                    if (i_14 < anInt8983) {
-                        i_21 += (anInt8983 - i_14) * i_7;
-                        i_14 = anInt8983;
-                    }
-
-                    if (i_31 >= anInt9002) {
-                        i_31 = anInt9002 - 1;
-                    }
-
-                    i_8 = i_5 >>> 24;
-                    if (i_6 != 0 && (i_6 != 1 || i_8 != 255)) {
-                        if (i_6 == 1) {
-                            i_5 = (i_8 << 24) + ((i_5 & 0xff00) * i_8 >> 8 & 0xff00) + ((i_5 & 0xff00ff) * i_8 >> 8 & 0xff00ff);
-
-                            for (i_9 = 256 - i_8; i_14 <= i_31; i_14++) {
-                                i_10 = i_21 >> 16;
-                                if (i_10 >= anInt9009 && i_10 < anInt8986) {
-                                    i_11 = i_14 + anInt8980 * i_10;
-                                    i_12 = anIntArray8979[i_11];
-                                    i_12 = (i_9 * (i_12 & 0xff00ff) >> 8 & 0xff00ff) + (i_9 * (i_12 & 0xff00) >> 8 & 0xff00);
-                                    anIntArray8979[i_11] = i_5 + i_12;
-                                }
-
-                                i_21 += i_7;
-                            }
-                        } else {
-                            if (i_6 != 2) {
-                                throw new IllegalArgumentException();
-                            }
-
-                            while (i_14 <= i_31) {
-                                i_9 = i_21 >> 16;
-                                if (i_9 >= anInt9009 && i_9 < anInt8986) {
-                                    i_10 = i_14 + i_9 * anInt8980;
-                                    i_11 = anIntArray8979[i_10];
-                                    i_12 = i_5 + i_11;
-                                    i_13 = (i_11 & 0xff00ff) + (i_5 & 0xff00ff);
-                                    i_11 = (i_13 & 0x1000100) + (i_12 - i_13 & 0x10000);
-                                    anIntArray8979[i_10] = i_12 - i_11 | i_11 - (i_11 >>> 8);
-                                }
-
-                                i_21 += i_7;
-                                ++i_14;
-                            }
-                        }
-                    } else {
-                        while (i_14 <= i_31) {
-                            i_9 = i_21 >> 16;
-                            if (i_9 >= anInt9009 && i_9 < anInt8986) {
-                                anIntArray8979[i_14 + i_9 * anInt8980] = i_5;
-                            }
-
-                            i_21 += i_7;
-                            ++i_14;
-                        }
-                    }
-                } else {
-                    i_14 <<= 16;
-                    i_14 += 32768;
-                    i_31 <<= 16;
-                    i_7 = (int) Math.floor((double) i_31 / i_41 + 0.5D);
-                    i_41 += i_21;
-                    if (i_21 < anInt9009) {
-                        i_14 += (anInt9009 - i_21) * i_7;
-                        i_21 = anInt9009;
-                    }
-
-                    if (i_41 >= anInt8986) {
-                        i_41 = anInt8986 - 1;
-                    }
-
-                    i_8 = i_5 >>> 24;
-                    if (i_6 == 0 || i_6 == 1 && i_8 == 255) {
-                        while (i_21 <= i_41) {
-                            i_9 = i_14 >> 16;
-                            if (i_9 >= anInt8983 && i_9 < anInt9002) {
-                                anIntArray8979[i_9 + anInt8980 * i_21] = i_5;
-                            }
-
-                            i_14 += i_7;
-                            ++i_21;
-                        }
-                    } else if (i_6 == 1) {
-                        i_5 = (i_8 * (i_5 & 0xff00ff) >> 8 & 0xff00ff) + ((i_5 & 0xff00) * i_8 >> 8 & 0xff00) + (i_8 << 24);
-
-                        for (i_9 = 256 - i_8; i_21 <= i_41; i_21++) {
-                            i_10 = i_14 >> 16;
-                            if (i_10 >= anInt8983 && i_10 < anInt9002) {
-                                i_11 = anInt8980 * i_21 + i_10;
-                                i_12 = anIntArray8979[i_11];
-                                i_12 = ((i_12 & 0xff00ff) * i_9 >> 8 & 0xff00ff) + ((i_12 & 0xff00) * i_9 >> 8 & 0xff00);
-                                anIntArray8979[anInt8980 * i_21 + i_10] = i_5 + i_12;
-                            }
-
-                            i_14 += i_7;
-                        }
-                    } else {
-                        if (i_6 != 2) {
-                            throw new IllegalArgumentException();
-                        }
-
-                        while (i_21 <= i_41) {
-                            i_9 = i_14 >> 16;
-                            if (i_9 >= anInt8983 && i_9 < anInt9002) {
-                                i_10 = i_9 + i_21 * anInt8980;
-                                i_11 = anIntArray8979[i_10];
-                                i_12 = i_11 + i_5;
-                                i_13 = (i_11 & 0xff00ff) + (i_5 & 0xff00ff);
-                                i_11 = (i_12 - i_13 & 0x10000) + (i_13 & 0x1000100);
-                                anIntArray8979[i_10] = i_12 - i_11 | i_11 - (i_11 >>> 8);
-                            }
-
-                            i_14 += i_7;
-                            ++i_21;
-                        }
-                    }
-                }
-            }
-        }
-
+        method8496(i_1, i_2, i_3, i_4, i_5, 1, i_6);
     }
 
     @Override
     public void method8526(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
-        int i_14 = i_1;
-        int i_31 = i_3;
-        int i_21 = i_2;
-        int i_41 = i_4;
-        if (anIntArray8979 != null) {
-            i_31 -= i_14;
-            i_41 -= i_21;
-            if (i_41 == 0) {
-                if (i_31 >= 0) {
-                    XA(i_14, i_21, 1 + i_31, i_5, i_6);
-                } else {
-                    XA(i_14 + i_31, i_21, -i_31 + 1, i_5, i_6);
-                }
-            } else if (i_31 == 0) {
-                if (i_41 >= 0) {
-                    G(i_14, i_21, 1 + i_41, i_5, i_6);
-                } else {
-                    G(i_14, i_21 + i_41, -i_41 + 1, i_5, i_6);
-                }
-            } else {
-                if (i_31 + i_41 < 0) {
-                    i_14 += i_31;
-                    i_31 = -i_31;
-                    i_21 += i_41;
-                    i_41 = -i_41;
-                }
-
-                int i_7;
-                int i_8;
-                int i_9;
-                int i_10;
-                int i_11;
-                int i_12;
-                int i_13;
-                if (i_31 > i_41) {
-                    i_21 <<= 16;
-                    i_21 += 32768;
-                    i_41 <<= 16;
-                    i_7 = (int) Math.floor(0.5D + (double) i_41 / i_31);
-                    i_31 += i_14;
-                    if (i_14 < anInt8983) {
-                        i_21 += (anInt8983 - i_14) * i_7;
-                        i_14 = anInt8983;
-                    }
-
-                    if (i_31 >= anInt9002) {
-                        i_31 = anInt9002 - 1;
-                    }
-
-                    i_8 = i_5 >>> 24;
-                    if (i_6 != 0 && (i_6 != 1 || i_8 != 255)) {
-                        if (i_6 == 1) {
-                            i_5 = (i_8 << 24) + ((i_5 & 0xff00) * i_8 >> 8 & 0xff00) + ((i_5 & 0xff00ff) * i_8 >> 8 & 0xff00ff);
-
-                            for (i_9 = 256 - i_8; i_14 <= i_31; i_14++) {
-                                i_10 = i_21 >> 16;
-                                if (i_10 >= anInt9009 && i_10 < anInt8986) {
-                                    i_11 = i_14 + anInt8980 * i_10;
-                                    i_12 = anIntArray8979[i_11];
-                                    i_12 = (i_9 * (i_12 & 0xff00ff) >> 8 & 0xff00ff) + (i_9 * (i_12 & 0xff00) >> 8 & 0xff00);
-                                    anIntArray8979[i_11] = i_5 + i_12;
-                                }
-
-                                i_21 += i_7;
-                            }
-                        } else {
-                            if (i_6 != 2) {
-                                throw new IllegalArgumentException();
-                            }
-
-                            while (i_14 <= i_31) {
-                                i_9 = i_21 >> 16;
-                                if (i_9 >= anInt9009 && i_9 < anInt8986) {
-                                    i_10 = i_14 + i_9 * anInt8980;
-                                    i_11 = anIntArray8979[i_10];
-                                    i_12 = i_5 + i_11;
-                                    i_13 = (i_11 & 0xff00ff) + (i_5 & 0xff00ff);
-                                    i_11 = (i_13 & 0x1000100) + (i_12 - i_13 & 0x10000);
-                                    anIntArray8979[i_10] = i_12 - i_11 | i_11 - (i_11 >>> 8);
-                                }
-
-                                i_21 += i_7;
-                                ++i_14;
-                            }
-                        }
-                    } else {
-                        while (i_14 <= i_31) {
-                            i_9 = i_21 >> 16;
-                            if (i_9 >= anInt9009 && i_9 < anInt8986) {
-                                anIntArray8979[i_14 + i_9 * anInt8980] = i_5;
-                            }
-
-                            i_21 += i_7;
-                            ++i_14;
-                        }
-                    }
-                } else {
-                    i_14 <<= 16;
-                    i_14 += 32768;
-                    i_31 <<= 16;
-                    i_7 = (int) Math.floor((double) i_31 / i_41 + 0.5D);
-                    i_41 += i_21;
-                    if (i_21 < anInt9009) {
-                        i_14 += (anInt9009 - i_21) * i_7;
-                        i_21 = anInt9009;
-                    }
-
-                    if (i_41 >= anInt8986) {
-                        i_41 = anInt8986 - 1;
-                    }
-
-                    i_8 = i_5 >>> 24;
-                    if (i_6 == 0 || i_6 == 1 && i_8 == 255) {
-                        while (i_21 <= i_41) {
-                            i_9 = i_14 >> 16;
-                            if (i_9 >= anInt8983 && i_9 < anInt9002) {
-                                anIntArray8979[i_9 + anInt8980 * i_21] = i_5;
-                            }
-
-                            i_14 += i_7;
-                            ++i_21;
-                        }
-                    } else if (i_6 == 1) {
-                        i_5 = (i_8 * (i_5 & 0xff00ff) >> 8 & 0xff00ff) + ((i_5 & 0xff00) * i_8 >> 8 & 0xff00) + (i_8 << 24);
-
-                        for (i_9 = 256 - i_8; i_21 <= i_41; i_21++) {
-                            i_10 = i_14 >> 16;
-                            if (i_10 >= anInt8983 && i_10 < anInt9002) {
-                                i_11 = anInt8980 * i_21 + i_10;
-                                i_12 = anIntArray8979[i_11];
-                                i_12 = ((i_12 & 0xff00ff) * i_9 >> 8 & 0xff00ff) + ((i_12 & 0xff00) * i_9 >> 8 & 0xff00);
-                                anIntArray8979[anInt8980 * i_21 + i_10] = i_5 + i_12;
-                            }
-
-                            i_14 += i_7;
-                        }
-                    } else {
-                        if (i_6 != 2) {
-                            throw new IllegalArgumentException();
-                        }
-
-                        while (i_21 <= i_41) {
-                            i_9 = i_14 >> 16;
-                            if (i_9 >= anInt8983 && i_9 < anInt9002) {
-                                i_10 = i_9 + i_21 * anInt8980;
-                                i_11 = anIntArray8979[i_10];
-                                i_12 = i_11 + i_5;
-                                i_13 = (i_11 & 0xff00ff) + (i_5 & 0xff00ff);
-                                i_11 = (i_12 - i_13 & 0x10000) + (i_13 & 0x1000100);
-                                anIntArray8979[i_10] = i_12 - i_11 | i_11 - (i_11 >>> 8);
-                            }
-
-                            i_14 += i_7;
-                            ++i_21;
-                        }
-                    }
-                }
-            }
-        }
-
+        method8496(i_1, i_2, i_3, i_4, i_5, 1, i_6);
     }
 
     @Override
-    public Matrix44 method8588() {
-        return new Matrix44(aClass384_8995);
+    public void method8527(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9) {
+        float f_10 = (float) i_3 - i_1;
+        float f_11 = (float) i_4 - i_2;
+        if (f_10 == 0.0F && f_11 == 0.0F) {
+            f_10 = 1.0F;
+        } else {
+            float f_23 = (float) (1.0D / Math.sqrt(f_10 * f_10 + f_11 * f_11));
+            f_10 *= f_23;
+            f_11 *= f_23;
+        }
+
+        method13935();
+        Class41 class41_12 = aClass41Array8793[13];
+        class41_12.method873();
+        class41_12.method875();
+        method13904(i_6);
+        class41_12.method879();
+        method13992(false);
+        i_9 %= i_8 + i_7;
+        float f_13 = f_10 * i_7;
+        float f_14 = f_11 * i_7;
+        float f_15 = 0.0F;
+        float f_16 = 0.0F;
+        float f_17 = f_13;
+        float f_18 = f_14;
+        if (i_9 > i_7) {
+            f_15 = f_10 * (i_7 + i_8 - i_9);
+            f_16 = f_11 * (i_7 + i_8 - i_9);
+        } else {
+            f_17 = f_10 * (i_7 - i_9);
+            f_18 = f_11 * (i_7 - i_9);
+        }
+
+        float f_19 = i_1 + f_15;
+        float f_20 = i_2 + f_16;
+        float f_21 = f_10 * i_8;
+        float f_22 = f_11 * i_8;
+
+        while (true) {
+            if (i_3 > i_1) {
+                if (f_19 > i_3) {
+                    break;
+                }
+
+                if (f_19 + f_17 > i_3) {
+                    f_17 = i_3 - f_19;
+                }
+            } else {
+                if (f_19 < i_3) {
+                    break;
+                }
+
+                if (f_19 + f_17 < i_3) {
+                    f_17 = i_3 - f_19;
+                }
+            }
+
+            if (i_4 > i_2) {
+                if (f_20 > i_4) {
+                    break;
+                }
+
+                if (f_20 + f_18 > i_4) {
+                    f_18 = i_4 - f_20;
+                }
+            } else {
+                if (f_20 < i_4) {
+                    break;
+                }
+
+                if (f_20 + f_18 < i_4) {
+                    f_18 = i_4 - f_20;
+                }
+            }
+
+            if (!method13908(f_19, f_20, f_19 + f_17, f_20 + f_18)) {
+                return;
+            }
+
+            method14000();
+            f_19 += f_21 + f_17;
+            f_20 += f_22 + f_18;
+            f_17 = f_13;
+            f_18 = f_14;
+        }
+
+        method13992(true);
+        class41_12.method885();
     }
 
     @Override
-    public void method8494(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9) {
-        if (anIntArray8979 != null) {
-            i_3 -= i_1;
-            i_4 -= i_2;
-            int i_10;
-            if (i_4 == 0) {
-                if (i_3 >= 0) {
-                    method14366(i_1, i_2, 1 + i_3, i_5, i_6, i_7, i_8, i_9);
-                } else {
-                    i_10 = i_7 + i_8;
-                    i_9 %= i_10;
-                    i_9 = i_10 + i_7 - i_9 - (1 + -i_3) % i_10;
-                    i_9 %= i_10;
-                    if (i_9 < 0) {
-                        i_9 += i_10;
-                    }
-
-                    method14366(i_1 + i_3, i_2, -i_3 + 1, i_5, i_6, i_7, i_8, i_9);
-                }
-            } else if (i_3 == 0) {
-                if (i_4 >= 0) {
-                    method14399(i_1, i_2, 1 + i_4, i_5, i_6, i_7, i_8, i_9);
-                } else {
-                    i_10 = i_8 + i_7;
-                    i_9 %= i_10;
-                    i_9 = i_7 + i_10 - i_9 - (-i_4 + 1) % i_10;
-                    i_9 %= i_10;
-                    if (i_9 < 0) {
-                        i_9 += i_10;
-                    }
-
-                    method14399(i_1, i_2 + i_4, 1 + -i_4, i_5, i_6, i_7, i_8, i_9);
-                }
-            } else {
-                i_9 <<= 8;
-                i_7 <<= 8;
-                i_8 <<= 8;
-                i_10 = i_8 + i_7;
-                i_9 %= i_10;
-                int i_11;
-                int i_12;
-                if (i_3 + i_4 < 0) {
-                    i_11 = (int) (Math.sqrt(i_3 * i_3 + i_4 * i_4) * 256.0D);
-                    i_12 = i_11 % i_10;
-                    i_9 = i_7 + i_10 - i_9 - i_12;
-                    i_9 %= i_10;
-                    if (i_9 < 0) {
-                        i_9 += i_10;
-                    }
-
-                    i_1 += i_3;
-                    i_3 = -i_3;
-                    i_2 += i_4;
-                    i_4 = -i_4;
-                }
-
-                int i_13;
-                int i_14;
-                int i_15;
-                int i_16;
-                int i_17;
-                int i_18;
-                if (i_3 > i_4) {
-                    i_2 <<= 16;
-                    i_2 += 32768;
-                    i_4 <<= 16;
-                    i_11 = (int) Math.floor((double) i_4 / i_3 + 0.5D);
-                    i_3 += i_1;
-                    i_12 = i_5 >>> 24;
-                    i_13 = (int) Math.sqrt((i_11 >> 8) * (i_11 >> 8) + 65536);
-                    if (i_6 == 0 || i_6 == 1 && i_12 == 255) {
-                        while (i_1 <= i_3) {
-                            i_14 = i_2 >> 16;
-                            if (i_1 >= anInt8983 && i_1 < anInt9002 && i_14 >= anInt9009 && i_14 < anInt8986 && i_9 < i_7) {
-                                anIntArray8979[i_1 + anInt8980 * i_14] = i_5;
-                            }
-
-                            i_2 += i_11;
-                            ++i_1;
-                            i_9 += i_13;
-                            i_9 %= i_10;
-                        }
-                    } else if (i_6 == 1) {
-                        i_5 = (i_12 << 24) + ((i_5 & 0xff00) * i_12 >> 8 & 0xff00) + (i_12 * (i_5 & 0xff00ff) >> 8 & 0xff00ff);
-
-                        for (i_14 = 256 - i_12; i_1 <= i_3; i_9 %= i_10) {
-                            i_15 = i_2 >> 16;
-                            if (i_1 >= anInt8983 && i_1 < anInt9002 && i_15 >= anInt9009 && i_15 < anInt8986 && i_9 < i_7) {
-                                i_16 = i_15 * anInt8980 + i_1;
-                                i_17 = anIntArray8979[i_16];
-                                i_17 = ((i_17 & 0xff00ff) * i_14 >> 8 & 0xff00ff) + (i_14 * (i_17 & 0xff00) >> 8 & 0xff00);
-                                anIntArray8979[i_16] = i_17 + i_5;
-                            }
-
-                            i_2 += i_11;
-                            ++i_1;
-                            i_9 += i_13;
-                        }
-                    } else {
-                        if (i_6 != 2) {
-                            throw new IllegalArgumentException();
-                        }
-
-                        while (i_1 <= i_3) {
-                            i_14 = i_2 >> 16;
-                            if (i_1 >= anInt8983 && i_1 < anInt9002 && i_14 >= anInt9009 && i_14 < anInt8986 && i_9 < i_7) {
-                                i_15 = i_1 + i_14 * anInt8980;
-                                i_16 = anIntArray8979[i_15];
-                                i_17 = i_16 + i_5;
-                                i_18 = (i_16 & 0xff00ff) + (i_5 & 0xff00ff);
-                                i_16 = (i_18 & 0x1000100) + (i_17 - i_18 & 0x10000);
-                                anIntArray8979[i_15] = i_17 - i_16 | i_16 - (i_16 >>> 8);
-                            }
-
-                            i_2 += i_11;
-                            ++i_1;
-                            i_9 += i_13;
-                            i_9 %= i_10;
-                        }
-                    }
-                } else {
-                    i_1 <<= 16;
-                    i_1 += 32768;
-                    i_3 <<= 16;
-                    i_11 = (int) Math.floor((double) i_3 / i_4 + 0.5D);
-                    i_4 += i_2;
-                    i_12 = i_5 >>> 24;
-                    i_13 = (int) Math.sqrt((i_11 >> 8) * (i_11 >> 8) + 65536);
-                    if (i_6 != 0 && (i_6 != 1 || i_12 != 255)) {
-                        if (i_6 == 1) {
-                            i_5 = (i_12 << 24) + ((i_5 & 0xff00ff) * i_12 >> 8 & 0xff00ff) + ((i_5 & 0xff00) * i_12 >> 8 & 0xff00);
-
-                            for (i_14 = 256 - i_12; i_2 <= i_4; i_9 %= i_10) {
-                                i_15 = i_1 >> 16;
-                                if (i_2 >= anInt9009 && i_2 < anInt8986 && i_15 >= anInt8983 && i_15 < anInt9002 && i_9 < i_7) {
-                                    i_16 = i_2 * anInt8980 + i_15;
-                                    i_17 = anIntArray8979[i_16];
-                                    i_17 = (i_14 * (i_17 & 0xff00ff) >> 8 & 0xff00ff) + ((i_17 & 0xff00) * i_14 >> 8 & 0xff00);
-                                    anIntArray8979[i_15 + anInt8980 * i_2] = i_17 + i_5;
-                                }
-
-                                i_1 += i_11;
-                                ++i_2;
-                                i_9 += i_13;
-                            }
-                        } else {
-                            if (i_6 != 2) {
-                                throw new IllegalArgumentException();
-                            }
-
-                            while (i_2 <= i_4) {
-                                i_14 = i_1 >> 16;
-                                if (i_2 >= anInt9009 && i_2 < anInt8986 && i_14 >= anInt8983 && i_14 < anInt9002 && i_9 < i_7) {
-                                    i_15 = i_2 * anInt8980 + i_14;
-                                    i_16 = anIntArray8979[i_15];
-                                    i_17 = i_16 + i_5;
-                                    i_18 = (i_5 & 0xff00ff) + (i_16 & 0xff00ff);
-                                    i_16 = (i_18 & 0x1000100) + (i_17 - i_18 & 0x10000);
-                                    anIntArray8979[i_15] = i_17 - i_16 | i_16 - (i_16 >>> 8);
-                                }
-
-                                i_1 += i_11;
-                                ++i_2;
-                                i_9 += i_13;
-                                i_9 %= i_10;
-                            }
-                        }
-                    } else {
-                        while (i_2 <= i_4) {
-                            i_14 = i_1 >> 16;
-                            if (i_2 >= anInt9009 && i_2 < anInt8986 && i_14 >= anInt8983 && i_14 < anInt9002 && i_9 < i_7) {
-                                anIntArray8979[i_14 + i_2 * anInt8980] = i_5;
-                            }
-
-                            i_1 += i_11;
-                            ++i_2;
-                            i_9 += i_13;
-                            i_9 %= i_10;
-                        }
-                    }
-                }
-            }
-        }
-
+    public NativeSprite method8548(int[] ints_1, int i_2, int i_3, int i_4, int i_5, boolean bool_6) {
+        return new NativeSprite_Sub3(this, i_4, i_5, ints_1, i_2, i_3);
     }
 
     @Override
     public void method8529(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9) {
-        if (anIntArray8979 != null) {
-            i_3 -= i_1;
-            i_4 -= i_2;
-            int i_10;
-            if (i_4 == 0) {
-                if (i_3 >= 0) {
-                    method14366(i_1, i_2, 1 + i_3, i_5, i_6, i_7, i_8, i_9);
-                } else {
-                    i_10 = i_7 + i_8;
-                    i_9 %= i_10;
-                    i_9 = i_10 + i_7 - i_9 - (1 + -i_3) % i_10;
-                    i_9 %= i_10;
-                    if (i_9 < 0) {
-                        i_9 += i_10;
-                    }
-
-                    method14366(i_1 + i_3, i_2, -i_3 + 1, i_5, i_6, i_7, i_8, i_9);
-                }
-            } else if (i_3 == 0) {
-                if (i_4 >= 0) {
-                    method14399(i_1, i_2, 1 + i_4, i_5, i_6, i_7, i_8, i_9);
-                } else {
-                    i_10 = i_8 + i_7;
-                    i_9 %= i_10;
-                    i_9 = i_7 + i_10 - i_9 - (-i_4 + 1) % i_10;
-                    i_9 %= i_10;
-                    if (i_9 < 0) {
-                        i_9 += i_10;
-                    }
-
-                    method14399(i_1, i_2 + i_4, 1 + -i_4, i_5, i_6, i_7, i_8, i_9);
-                }
-            } else {
-                i_9 <<= 8;
-                i_7 <<= 8;
-                i_8 <<= 8;
-                i_10 = i_8 + i_7;
-                i_9 %= i_10;
-                int i_11;
-                int i_12;
-                if (i_3 + i_4 < 0) {
-                    i_11 = (int) (Math.sqrt(i_3 * i_3 + i_4 * i_4) * 256.0D);
-                    i_12 = i_11 % i_10;
-                    i_9 = i_7 + i_10 - i_9 - i_12;
-                    i_9 %= i_10;
-                    if (i_9 < 0) {
-                        i_9 += i_10;
-                    }
-
-                    i_1 += i_3;
-                    i_3 = -i_3;
-                    i_2 += i_4;
-                    i_4 = -i_4;
-                }
-
-                int i_13;
-                int i_14;
-                int i_15;
-                int i_16;
-                int i_17;
-                int i_18;
-                if (i_3 > i_4) {
-                    i_2 <<= 16;
-                    i_2 += 32768;
-                    i_4 <<= 16;
-                    i_11 = (int) Math.floor((double) i_4 / i_3 + 0.5D);
-                    i_3 += i_1;
-                    i_12 = i_5 >>> 24;
-                    i_13 = (int) Math.sqrt((i_11 >> 8) * (i_11 >> 8) + 65536);
-                    if (i_6 == 0 || i_6 == 1 && i_12 == 255) {
-                        while (i_1 <= i_3) {
-                            i_14 = i_2 >> 16;
-                            if (i_1 >= anInt8983 && i_1 < anInt9002 && i_14 >= anInt9009 && i_14 < anInt8986 && i_9 < i_7) {
-                                anIntArray8979[i_1 + anInt8980 * i_14] = i_5;
-                            }
-
-                            i_2 += i_11;
-                            ++i_1;
-                            i_9 += i_13;
-                            i_9 %= i_10;
-                        }
-                    } else if (i_6 == 1) {
-                        i_5 = (i_12 << 24) + ((i_5 & 0xff00) * i_12 >> 8 & 0xff00) + (i_12 * (i_5 & 0xff00ff) >> 8 & 0xff00ff);
-
-                        for (i_14 = 256 - i_12; i_1 <= i_3; i_9 %= i_10) {
-                            i_15 = i_2 >> 16;
-                            if (i_1 >= anInt8983 && i_1 < anInt9002 && i_15 >= anInt9009 && i_15 < anInt8986 && i_9 < i_7) {
-                                i_16 = i_15 * anInt8980 + i_1;
-                                i_17 = anIntArray8979[i_16];
-                                i_17 = ((i_17 & 0xff00ff) * i_14 >> 8 & 0xff00ff) + (i_14 * (i_17 & 0xff00) >> 8 & 0xff00);
-                                anIntArray8979[i_16] = i_17 + i_5;
-                            }
-
-                            i_2 += i_11;
-                            ++i_1;
-                            i_9 += i_13;
-                        }
-                    } else {
-                        if (i_6 != 2) {
-                            throw new IllegalArgumentException();
-                        }
-
-                        while (i_1 <= i_3) {
-                            i_14 = i_2 >> 16;
-                            if (i_1 >= anInt8983 && i_1 < anInt9002 && i_14 >= anInt9009 && i_14 < anInt8986 && i_9 < i_7) {
-                                i_15 = i_1 + i_14 * anInt8980;
-                                i_16 = anIntArray8979[i_15];
-                                i_17 = i_16 + i_5;
-                                i_18 = (i_16 & 0xff00ff) + (i_5 & 0xff00ff);
-                                i_16 = (i_18 & 0x1000100) + (i_17 - i_18 & 0x10000);
-                                anIntArray8979[i_15] = i_17 - i_16 | i_16 - (i_16 >>> 8);
-                            }
-
-                            i_2 += i_11;
-                            ++i_1;
-                            i_9 += i_13;
-                            i_9 %= i_10;
-                        }
-                    }
-                } else {
-                    i_1 <<= 16;
-                    i_1 += 32768;
-                    i_3 <<= 16;
-                    i_11 = (int) Math.floor((double) i_3 / i_4 + 0.5D);
-                    i_4 += i_2;
-                    i_12 = i_5 >>> 24;
-                    i_13 = (int) Math.sqrt((i_11 >> 8) * (i_11 >> 8) + 65536);
-                    if (i_6 != 0 && (i_6 != 1 || i_12 != 255)) {
-                        if (i_6 == 1) {
-                            i_5 = (i_12 << 24) + ((i_5 & 0xff00ff) * i_12 >> 8 & 0xff00ff) + ((i_5 & 0xff00) * i_12 >> 8 & 0xff00);
-
-                            for (i_14 = 256 - i_12; i_2 <= i_4; i_9 %= i_10) {
-                                i_15 = i_1 >> 16;
-                                if (i_2 >= anInt9009 && i_2 < anInt8986 && i_15 >= anInt8983 && i_15 < anInt9002 && i_9 < i_7) {
-                                    i_16 = i_2 * anInt8980 + i_15;
-                                    i_17 = anIntArray8979[i_16];
-                                    i_17 = (i_14 * (i_17 & 0xff00ff) >> 8 & 0xff00ff) + ((i_17 & 0xff00) * i_14 >> 8 & 0xff00);
-                                    anIntArray8979[i_15 + anInt8980 * i_2] = i_17 + i_5;
-                                }
-
-                                i_1 += i_11;
-                                ++i_2;
-                                i_9 += i_13;
-                            }
-                        } else {
-                            if (i_6 != 2) {
-                                throw new IllegalArgumentException();
-                            }
-
-                            while (i_2 <= i_4) {
-                                i_14 = i_1 >> 16;
-                                if (i_2 >= anInt9009 && i_2 < anInt8986 && i_14 >= anInt8983 && i_14 < anInt9002 && i_9 < i_7) {
-                                    i_15 = i_2 * anInt8980 + i_14;
-                                    i_16 = anIntArray8979[i_15];
-                                    i_17 = i_16 + i_5;
-                                    i_18 = (i_5 & 0xff00ff) + (i_16 & 0xff00ff);
-                                    i_16 = (i_18 & 0x1000100) + (i_17 - i_18 & 0x10000);
-                                    anIntArray8979[i_15] = i_17 - i_16 | i_16 - (i_16 >>> 8);
-                                }
-
-                                i_1 += i_11;
-                                ++i_2;
-                                i_9 += i_13;
-                                i_9 %= i_10;
-                            }
-                        }
-                    } else {
-                        while (i_2 <= i_4) {
-                            i_14 = i_1 >> 16;
-                            if (i_2 >= anInt9009 && i_2 < anInt8986 && i_14 >= anInt8983 && i_14 < anInt9002 && i_9 < i_7) {
-                                anIntArray8979[i_14 + i_2 * anInt8980] = i_5;
-                            }
-
-                            i_1 += i_11;
-                            ++i_2;
-                            i_9 += i_13;
-                            i_9 %= i_10;
-                        }
-                    }
-                }
-            }
+        float f_10 = (float) i_3 - i_1;
+        float f_11 = (float) i_4 - i_2;
+        if (f_10 == 0.0F && f_11 == 0.0F) {
+            f_10 = 1.0F;
+        } else {
+            float f_23 = (float) (1.0D / Math.sqrt(f_10 * f_10 + f_11 * f_11));
+            f_10 *= f_23;
+            f_11 *= f_23;
         }
 
+        method13935();
+        Class41 class41_12 = aClass41Array8793[13];
+        class41_12.method873();
+        class41_12.method875();
+        method13904(i_6);
+        class41_12.method879();
+        method13992(false);
+        i_9 %= i_8 + i_7;
+        float f_13 = f_10 * i_7;
+        float f_14 = f_11 * i_7;
+        float f_15 = 0.0F;
+        float f_16 = 0.0F;
+        float f_17 = f_13;
+        float f_18 = f_14;
+        if (i_9 > i_7) {
+            f_15 = f_10 * (i_7 + i_8 - i_9);
+            f_16 = f_11 * (i_7 + i_8 - i_9);
+        } else {
+            f_17 = f_10 * (i_7 - i_9);
+            f_18 = f_11 * (i_7 - i_9);
+        }
+
+        float f_19 = i_1 + f_15;
+        float f_20 = i_2 + f_16;
+        float f_21 = f_10 * i_8;
+        float f_22 = f_11 * i_8;
+
+        while (true) {
+            if (i_3 > i_1) {
+                if (f_19 > i_3) {
+                    break;
+                }
+
+                if (f_19 + f_17 > i_3) {
+                    f_17 = i_3 - f_19;
+                }
+            } else {
+                if (f_19 < i_3) {
+                    break;
+                }
+
+                if (f_19 + f_17 < i_3) {
+                    f_17 = i_3 - f_19;
+                }
+            }
+
+            if (i_4 > i_2) {
+                if (f_20 > i_4) {
+                    break;
+                }
+
+                if (f_20 + f_18 > i_4) {
+                    f_18 = i_4 - f_20;
+                }
+            } else {
+                if (f_20 < i_4) {
+                    break;
+                }
+
+                if (f_20 + f_18 < i_4) {
+                    f_18 = i_4 - f_20;
+                }
+            }
+
+            if (!method13908(f_19, f_20, f_19 + f_17, f_20 + f_18)) {
+                return;
+            }
+
+            method14000();
+            f_19 += f_21 + f_17;
+            f_20 += f_22 + f_18;
+            f_17 = f_13;
+            f_18 = f_14;
+        }
+
+        method13992(true);
+        class41_12.method885();
     }
 
     @Override
     public void method8530(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9) {
-        if (anIntArray8979 != null) {
-            i_3 -= i_1;
-            i_4 -= i_2;
-            int i_10;
-            if (i_4 == 0) {
-                if (i_3 >= 0) {
-                    method14366(i_1, i_2, 1 + i_3, i_5, i_6, i_7, i_8, i_9);
-                } else {
-                    i_10 = i_7 + i_8;
-                    i_9 %= i_10;
-                    i_9 = i_10 + i_7 - i_9 - (1 + -i_3) % i_10;
-                    i_9 %= i_10;
-                    if (i_9 < 0) {
-                        i_9 += i_10;
-                    }
-
-                    method14366(i_1 + i_3, i_2, -i_3 + 1, i_5, i_6, i_7, i_8, i_9);
-                }
-            } else if (i_3 == 0) {
-                if (i_4 >= 0) {
-                    method14399(i_1, i_2, 1 + i_4, i_5, i_6, i_7, i_8, i_9);
-                } else {
-                    i_10 = i_8 + i_7;
-                    i_9 %= i_10;
-                    i_9 = i_7 + i_10 - i_9 - (-i_4 + 1) % i_10;
-                    i_9 %= i_10;
-                    if (i_9 < 0) {
-                        i_9 += i_10;
-                    }
-
-                    method14399(i_1, i_2 + i_4, 1 + -i_4, i_5, i_6, i_7, i_8, i_9);
-                }
-            } else {
-                i_9 <<= 8;
-                i_7 <<= 8;
-                i_8 <<= 8;
-                i_10 = i_8 + i_7;
-                i_9 %= i_10;
-                int i_11;
-                int i_12;
-                if (i_3 + i_4 < 0) {
-                    i_11 = (int) (Math.sqrt(i_3 * i_3 + i_4 * i_4) * 256.0D);
-                    i_12 = i_11 % i_10;
-                    i_9 = i_7 + i_10 - i_9 - i_12;
-                    i_9 %= i_10;
-                    if (i_9 < 0) {
-                        i_9 += i_10;
-                    }
-
-                    i_1 += i_3;
-                    i_3 = -i_3;
-                    i_2 += i_4;
-                    i_4 = -i_4;
-                }
-
-                int i_13;
-                int i_14;
-                int i_15;
-                int i_16;
-                int i_17;
-                int i_18;
-                if (i_3 > i_4) {
-                    i_2 <<= 16;
-                    i_2 += 32768;
-                    i_4 <<= 16;
-                    i_11 = (int) Math.floor((double) i_4 / i_3 + 0.5D);
-                    i_3 += i_1;
-                    i_12 = i_5 >>> 24;
-                    i_13 = (int) Math.sqrt((i_11 >> 8) * (i_11 >> 8) + 65536);
-                    if (i_6 == 0 || i_6 == 1 && i_12 == 255) {
-                        while (i_1 <= i_3) {
-                            i_14 = i_2 >> 16;
-                            if (i_1 >= anInt8983 && i_1 < anInt9002 && i_14 >= anInt9009 && i_14 < anInt8986 && i_9 < i_7) {
-                                anIntArray8979[i_1 + anInt8980 * i_14] = i_5;
-                            }
-
-                            i_2 += i_11;
-                            ++i_1;
-                            i_9 += i_13;
-                            i_9 %= i_10;
-                        }
-                    } else if (i_6 == 1) {
-                        i_5 = (i_12 << 24) + ((i_5 & 0xff00) * i_12 >> 8 & 0xff00) + (i_12 * (i_5 & 0xff00ff) >> 8 & 0xff00ff);
-
-                        for (i_14 = 256 - i_12; i_1 <= i_3; i_9 %= i_10) {
-                            i_15 = i_2 >> 16;
-                            if (i_1 >= anInt8983 && i_1 < anInt9002 && i_15 >= anInt9009 && i_15 < anInt8986 && i_9 < i_7) {
-                                i_16 = i_15 * anInt8980 + i_1;
-                                i_17 = anIntArray8979[i_16];
-                                i_17 = ((i_17 & 0xff00ff) * i_14 >> 8 & 0xff00ff) + (i_14 * (i_17 & 0xff00) >> 8 & 0xff00);
-                                anIntArray8979[i_16] = i_17 + i_5;
-                            }
-
-                            i_2 += i_11;
-                            ++i_1;
-                            i_9 += i_13;
-                        }
-                    } else {
-                        if (i_6 != 2) {
-                            throw new IllegalArgumentException();
-                        }
-
-                        while (i_1 <= i_3) {
-                            i_14 = i_2 >> 16;
-                            if (i_1 >= anInt8983 && i_1 < anInt9002 && i_14 >= anInt9009 && i_14 < anInt8986 && i_9 < i_7) {
-                                i_15 = i_1 + i_14 * anInt8980;
-                                i_16 = anIntArray8979[i_15];
-                                i_17 = i_16 + i_5;
-                                i_18 = (i_16 & 0xff00ff) + (i_5 & 0xff00ff);
-                                i_16 = (i_18 & 0x1000100) + (i_17 - i_18 & 0x10000);
-                                anIntArray8979[i_15] = i_17 - i_16 | i_16 - (i_16 >>> 8);
-                            }
-
-                            i_2 += i_11;
-                            ++i_1;
-                            i_9 += i_13;
-                            i_9 %= i_10;
-                        }
-                    }
-                } else {
-                    i_1 <<= 16;
-                    i_1 += 32768;
-                    i_3 <<= 16;
-                    i_11 = (int) Math.floor((double) i_3 / i_4 + 0.5D);
-                    i_4 += i_2;
-                    i_12 = i_5 >>> 24;
-                    i_13 = (int) Math.sqrt((i_11 >> 8) * (i_11 >> 8) + 65536);
-                    if (i_6 != 0 && (i_6 != 1 || i_12 != 255)) {
-                        if (i_6 == 1) {
-                            i_5 = (i_12 << 24) + ((i_5 & 0xff00ff) * i_12 >> 8 & 0xff00ff) + ((i_5 & 0xff00) * i_12 >> 8 & 0xff00);
-
-                            for (i_14 = 256 - i_12; i_2 <= i_4; i_9 %= i_10) {
-                                i_15 = i_1 >> 16;
-                                if (i_2 >= anInt9009 && i_2 < anInt8986 && i_15 >= anInt8983 && i_15 < anInt9002 && i_9 < i_7) {
-                                    i_16 = i_2 * anInt8980 + i_15;
-                                    i_17 = anIntArray8979[i_16];
-                                    i_17 = (i_14 * (i_17 & 0xff00ff) >> 8 & 0xff00ff) + ((i_17 & 0xff00) * i_14 >> 8 & 0xff00);
-                                    anIntArray8979[i_15 + anInt8980 * i_2] = i_17 + i_5;
-                                }
-
-                                i_1 += i_11;
-                                ++i_2;
-                                i_9 += i_13;
-                            }
-                        } else {
-                            if (i_6 != 2) {
-                                throw new IllegalArgumentException();
-                            }
-
-                            while (i_2 <= i_4) {
-                                i_14 = i_1 >> 16;
-                                if (i_2 >= anInt9009 && i_2 < anInt8986 && i_14 >= anInt8983 && i_14 < anInt9002 && i_9 < i_7) {
-                                    i_15 = i_2 * anInt8980 + i_14;
-                                    i_16 = anIntArray8979[i_15];
-                                    i_17 = i_16 + i_5;
-                                    i_18 = (i_5 & 0xff00ff) + (i_16 & 0xff00ff);
-                                    i_16 = (i_18 & 0x1000100) + (i_17 - i_18 & 0x10000);
-                                    anIntArray8979[i_15] = i_17 - i_16 | i_16 - (i_16 >>> 8);
-                                }
-
-                                i_1 += i_11;
-                                ++i_2;
-                                i_9 += i_13;
-                                i_9 %= i_10;
-                            }
-                        }
-                    } else {
-                        while (i_2 <= i_4) {
-                            i_14 = i_1 >> 16;
-                            if (i_2 >= anInt9009 && i_2 < anInt8986 && i_14 >= anInt8983 && i_14 < anInt9002 && i_9 < i_7) {
-                                anIntArray8979[i_14 + i_2 * anInt8980] = i_5;
-                            }
-
-                            i_1 += i_11;
-                            ++i_2;
-                            i_9 += i_13;
-                            i_9 %= i_10;
-                        }
-                    }
-                }
-            }
+        float f_10 = (float) i_3 - i_1;
+        float f_11 = (float) i_4 - i_2;
+        if (f_10 == 0.0F && f_11 == 0.0F) {
+            f_10 = 1.0F;
+        } else {
+            float f_23 = (float) (1.0D / Math.sqrt(f_10 * f_10 + f_11 * f_11));
+            f_10 *= f_23;
+            f_11 *= f_23;
         }
 
+        method13935();
+        Class41 class41_12 = aClass41Array8793[13];
+        class41_12.method873();
+        class41_12.method875();
+        method13904(i_6);
+        class41_12.method879();
+        method13992(false);
+        i_9 %= i_8 + i_7;
+        float f_13 = f_10 * i_7;
+        float f_14 = f_11 * i_7;
+        float f_15 = 0.0F;
+        float f_16 = 0.0F;
+        float f_17 = f_13;
+        float f_18 = f_14;
+        if (i_9 > i_7) {
+            f_15 = f_10 * (i_7 + i_8 - i_9);
+            f_16 = f_11 * (i_7 + i_8 - i_9);
+        } else {
+            f_17 = f_10 * (i_7 - i_9);
+            f_18 = f_11 * (i_7 - i_9);
+        }
+
+        float f_19 = i_1 + f_15;
+        float f_20 = i_2 + f_16;
+        float f_21 = f_10 * i_8;
+        float f_22 = f_11 * i_8;
+
+        while (true) {
+            if (i_3 > i_1) {
+                if (f_19 > i_3) {
+                    break;
+                }
+
+                if (f_19 + f_17 > i_3) {
+                    f_17 = i_3 - f_19;
+                }
+            } else {
+                if (f_19 < i_3) {
+                    break;
+                }
+
+                if (f_19 + f_17 < i_3) {
+                    f_17 = i_3 - f_19;
+                }
+            }
+
+            if (i_4 > i_2) {
+                if (f_20 > i_4) {
+                    break;
+                }
+
+                if (f_20 + f_18 > i_4) {
+                    f_18 = i_4 - f_20;
+                }
+            } else {
+                if (f_20 < i_4) {
+                    break;
+                }
+
+                if (f_20 + f_18 < i_4) {
+                    f_18 = i_4 - f_20;
+                }
+            }
+
+            if (!method13908(f_19, f_20, f_19 + f_17, f_20 + f_18)) {
+                return;
+            }
+
+            method14000();
+            f_19 += f_21 + f_17;
+            f_20 += f_22 + f_18;
+            f_17 = f_13;
+            f_18 = f_14;
+        }
+
+        method13992(true);
+        class41_12.method885();
     }
 
     @Override
     public void method8576(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, Class455 class455_7, int i_8, int i_9) {
-        int i_11 = i_1;
-        int i_31 = i_3;
-        int i_24 = i_2;
-        int i_41 = i_4;
-        if (anIntArray8979 != null) {
-            Class455_Sub3 packetsdecoder_10 = (Class455_Sub3) class455_7;
-            int[] ints_11 = packetsdecoder_10.anIntArray9077;
-            int[] ints_12 = packetsdecoder_10.anIntArray9078;
-            int i_13 = Math.max(anInt9009, i_9);
-            int i_14 = Math.min(anInt8986, i_9 + ints_11.length);
-            i_31 -= i_11;
-            i_41 -= i_24;
-            if (i_41 + i_31 < 0) {
-                i_11 += i_31;
-                i_31 = -i_31;
-                i_24 += i_41;
-                i_41 = -i_41;
-            }
-
-            int i_15;
-            int i_16;
-            int i_17;
-            int i_18;
-            int i_19;
-            int i_20;
-            int i_21;
-            int i_22;
-            int i_23;
-            if (i_31 > i_41) {
-                i_24 <<= 16;
-                i_24 += 32768;
-                i_41 <<= 16;
-                i_15 = (int) Math.floor((double) i_41 / i_31 + 0.5D);
-                i_31 += i_11;
-                if (i_11 < anInt8983) {
-                    i_24 += (anInt8983 - i_11) * i_15;
-                    i_11 = anInt8983;
-                }
-
-                if (i_31 >= anInt9002) {
-                    i_31 = anInt9002 - 1;
-                }
-
-                i_16 = i_5 >>> 24;
-                if (i_6 == 0 || i_6 == 1 && i_16 == 255) {
-                    while (i_11 <= i_31) {
-                        i_17 = i_24 >> 16;
-                        i_18 = i_17 - i_9;
-                        if (i_17 >= i_13 && i_17 < i_14) {
-                            i_19 = ints_11[i_18] + i_8;
-                            if (i_11 >= i_19 && i_11 < ints_12[i_18] + i_19) {
-                                anIntArray8979[i_17 * anInt8980 + i_11] = i_5;
-                            }
-                        }
-
-                        i_24 += i_15;
-                        ++i_11;
-                    }
-                } else if (i_6 == 1) {
-                    i_5 = (i_16 * (i_5 & 0xff00ff) >> 8 & 0xff00ff) + ((i_5 & 0xff00) * i_16 >> 8 & 0xff00) + (i_16 << 24);
-
-                    for (i_17 = 256 - i_16; i_11 <= i_31; i_11++) {
-                        i_18 = i_24 >> 16;
-                        i_19 = i_18 - i_9;
-                        if (i_18 >= i_13 && i_18 < i_14) {
-                            i_20 = ints_11[i_19] + i_8;
-                            if (i_11 >= i_20 && i_11 < i_20 + ints_12[i_19]) {
-                                i_21 = i_11 + anInt8980 * i_18;
-                                i_22 = anIntArray8979[i_21];
-                                i_22 = (i_17 * (i_22 & 0xff00) >> 8 & 0xff00) + (i_17 * (i_22 & 0xff00ff) >> 8 & 0xff00ff);
-                                anIntArray8979[i_21] = i_5 + i_22;
-                            }
-                        }
-
-                        i_24 += i_15;
-                    }
-                } else {
-                    if (i_6 != 2) {
-                        throw new IllegalArgumentException();
-                    }
-
-                    while (i_11 <= i_31) {
-                        i_17 = i_24 >> 16;
-                        i_18 = i_17 - i_9;
-                        if (i_17 >= i_13 && i_17 < i_14) {
-                            i_19 = i_8 + ints_11[i_18];
-                            if (i_11 >= i_19 && i_11 < ints_12[i_18] + i_19) {
-                                i_20 = i_17 * anInt8980 + i_11;
-                                i_21 = anIntArray8979[i_20];
-                                i_22 = i_21 + i_5;
-                                i_23 = (i_5 & 0xff00ff) + (i_21 & 0xff00ff);
-                                i_21 = (i_23 & 0x1000100) + (i_22 - i_23 & 0x10000);
-                                anIntArray8979[i_20] = i_22 - i_21 | i_21 - (i_21 >>> 8);
-                            }
-                        }
-
-                        i_24 += i_15;
-                        ++i_11;
-                    }
-                }
-            } else {
-                i_11 <<= 16;
-                i_11 += 32768;
-                i_31 <<= 16;
-                i_15 = (int) Math.floor(0.5D + (double) i_31 / i_41);
-                i_41 += i_24;
-                if (i_24 < i_13) {
-                    i_11 += (i_13 - i_24) * i_15;
-                    i_24 = i_13;
-                }
-
-                if (i_41 >= i_14) {
-                    i_41 = i_14 - 1;
-                }
-
-                i_16 = i_5 >>> 24;
-                if (i_6 != 0 && (i_6 != 1 || i_16 != 255)) {
-                    if (i_6 == 1) {
-                        i_5 = (i_16 * (i_5 & 0xff00) >> 8 & 0xff00) + ((i_5 & 0xff00ff) * i_16 >> 8 & 0xff00ff) + (i_16 << 24);
-
-                        for (i_17 = 256 - i_16; i_24 <= i_41; i_24++) {
-                            i_18 = i_11 >> 16;
-                            i_19 = i_24 - i_9;
-                            i_20 = i_8 + ints_11[i_19];
-                            if (i_18 >= anInt8983 && i_18 < anInt9002 && i_18 >= i_20 && i_18 < i_20 + ints_12[i_19]) {
-                                i_21 = i_18 + i_24 * anInt8980;
-                                i_22 = anIntArray8979[i_21];
-                                i_22 = (i_17 * (i_22 & 0xff00ff) >> 8 & 0xff00ff) + (i_17 * (i_22 & 0xff00) >> 8 & 0xff00);
-                                anIntArray8979[i_18 + i_24 * anInt8980] = i_22 + i_5;
-                            }
-
-                            i_11 += i_15;
-                        }
-                    } else {
-                        if (i_6 != 2) {
-                            throw new IllegalArgumentException();
-                        }
-
-                        while (i_24 <= i_41) {
-                            i_17 = i_11 >> 16;
-                            i_18 = i_24 - i_9;
-                            i_19 = ints_11[i_18] + i_8;
-                            if (i_17 >= anInt8983 && i_17 < anInt9002 && i_17 >= i_19 && i_17 < i_19 + ints_12[i_18]) {
-                                i_20 = anInt8980 * i_24 + i_17;
-                                i_21 = anIntArray8979[i_20];
-                                i_22 = i_5 + i_21;
-                                i_23 = (i_21 & 0xff00ff) + (i_5 & 0xff00ff);
-                                i_21 = (i_22 - i_23 & 0x10000) + (i_23 & 0x1000100);
-                                anIntArray8979[i_20] = i_22 - i_21 | i_21 - (i_21 >>> 8);
-                            }
-
-                            i_11 += i_15;
-                            ++i_24;
-                        }
-                    }
-                } else {
-                    while (i_24 <= i_41) {
-                        i_17 = i_11 >> 16;
-                        i_18 = i_24 - i_9;
-                        i_19 = ints_11[i_18] + i_8;
-                        if (i_17 >= anInt8983 && i_17 < anInt9002 && i_17 >= i_19 && i_17 < ints_12[i_18] + i_19) {
-                            anIntArray8979[i_17 + anInt8980 * i_24] = i_5;
-                        }
-
-                        i_11 += i_15;
-                        ++i_24;
-                    }
-                }
-            }
-        }
-
     }
 
     @Override
-    public void jf() {
-        for (int i_1 = 0; i_1 < aClass185Array8984.length; i_1++) {
-            aClass185Array8984[i_1].anInt2307 = aClass185Array8984[i_1].anInt2336;
-            aClass185Array8984[i_1].aBool2309 = false;
-        }
-
+    public void method8532(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, Class455 class455_7, int i_8, int i_9) {
     }
 
     @Override
     public void method8533(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, Class455 class455_7, int i_8, int i_9) {
-        int i_11 = i_1;
-        int i_31 = i_3;
-        int i_24 = i_2;
-        int i_41 = i_4;
-        if (anIntArray8979 != null) {
-            Class455_Sub3 packetsdecoder_10 = (Class455_Sub3) class455_7;
-            int[] ints_11 = packetsdecoder_10.anIntArray9077;
-            int[] ints_12 = packetsdecoder_10.anIntArray9078;
-            int i_13 = Math.max(anInt9009, i_9);
-            int i_14 = Math.min(anInt8986, i_9 + ints_11.length);
-            i_31 -= i_11;
-            i_41 -= i_24;
-            if (i_41 + i_31 < 0) {
-                i_11 += i_31;
-                i_31 = -i_31;
-                i_24 += i_41;
-                i_41 = -i_41;
-            }
-
-            int i_15;
-            int i_16;
-            int i_17;
-            int i_18;
-            int i_19;
-            int i_20;
-            int i_21;
-            int i_22;
-            int i_23;
-            if (i_31 > i_41) {
-                i_24 <<= 16;
-                i_24 += 32768;
-                i_41 <<= 16;
-                i_15 = (int) Math.floor((double) i_41 / i_31 + 0.5D);
-                i_31 += i_11;
-                if (i_11 < anInt8983) {
-                    i_24 += (anInt8983 - i_11) * i_15;
-                    i_11 = anInt8983;
-                }
-
-                if (i_31 >= anInt9002) {
-                    i_31 = anInt9002 - 1;
-                }
-
-                i_16 = i_5 >>> 24;
-                if (i_6 == 0 || i_6 == 1 && i_16 == 255) {
-                    while (i_11 <= i_31) {
-                        i_17 = i_24 >> 16;
-                        i_18 = i_17 - i_9;
-                        if (i_17 >= i_13 && i_17 < i_14) {
-                            i_19 = ints_11[i_18] + i_8;
-                            if (i_11 >= i_19 && i_11 < ints_12[i_18] + i_19) {
-                                anIntArray8979[i_17 * anInt8980 + i_11] = i_5;
-                            }
-                        }
-
-                        i_24 += i_15;
-                        ++i_11;
-                    }
-                } else if (i_6 == 1) {
-                    i_5 = (i_16 * (i_5 & 0xff00ff) >> 8 & 0xff00ff) + ((i_5 & 0xff00) * i_16 >> 8 & 0xff00) + (i_16 << 24);
-
-                    for (i_17 = 256 - i_16; i_11 <= i_31; i_11++) {
-                        i_18 = i_24 >> 16;
-                        i_19 = i_18 - i_9;
-                        if (i_18 >= i_13 && i_18 < i_14) {
-                            i_20 = ints_11[i_19] + i_8;
-                            if (i_11 >= i_20 && i_11 < i_20 + ints_12[i_19]) {
-                                i_21 = i_11 + anInt8980 * i_18;
-                                i_22 = anIntArray8979[i_21];
-                                i_22 = (i_17 * (i_22 & 0xff00) >> 8 & 0xff00) + (i_17 * (i_22 & 0xff00ff) >> 8 & 0xff00ff);
-                                anIntArray8979[i_21] = i_5 + i_22;
-                            }
-                        }
-
-                        i_24 += i_15;
-                    }
-                } else {
-                    if (i_6 != 2) {
-                        throw new IllegalArgumentException();
-                    }
-
-                    while (i_11 <= i_31) {
-                        i_17 = i_24 >> 16;
-                        i_18 = i_17 - i_9;
-                        if (i_17 >= i_13 && i_17 < i_14) {
-                            i_19 = i_8 + ints_11[i_18];
-                            if (i_11 >= i_19 && i_11 < ints_12[i_18] + i_19) {
-                                i_20 = i_17 * anInt8980 + i_11;
-                                i_21 = anIntArray8979[i_20];
-                                i_22 = i_21 + i_5;
-                                i_23 = (i_5 & 0xff00ff) + (i_21 & 0xff00ff);
-                                i_21 = (i_23 & 0x1000100) + (i_22 - i_23 & 0x10000);
-                                anIntArray8979[i_20] = i_22 - i_21 | i_21 - (i_21 >>> 8);
-                            }
-                        }
-
-                        i_24 += i_15;
-                        ++i_11;
-                    }
-                }
-            } else {
-                i_11 <<= 16;
-                i_11 += 32768;
-                i_31 <<= 16;
-                i_15 = (int) Math.floor(0.5D + (double) i_31 / i_41);
-                i_41 += i_24;
-                if (i_24 < i_13) {
-                    i_11 += (i_13 - i_24) * i_15;
-                    i_24 = i_13;
-                }
-
-                if (i_41 >= i_14) {
-                    i_41 = i_14 - 1;
-                }
-
-                i_16 = i_5 >>> 24;
-                if (i_6 != 0 && (i_6 != 1 || i_16 != 255)) {
-                    if (i_6 == 1) {
-                        i_5 = (i_16 * (i_5 & 0xff00) >> 8 & 0xff00) + ((i_5 & 0xff00ff) * i_16 >> 8 & 0xff00ff) + (i_16 << 24);
-
-                        for (i_17 = 256 - i_16; i_24 <= i_41; i_24++) {
-                            i_18 = i_11 >> 16;
-                            i_19 = i_24 - i_9;
-                            i_20 = i_8 + ints_11[i_19];
-                            if (i_18 >= anInt8983 && i_18 < anInt9002 && i_18 >= i_20 && i_18 < i_20 + ints_12[i_19]) {
-                                i_21 = i_18 + i_24 * anInt8980;
-                                i_22 = anIntArray8979[i_21];
-                                i_22 = (i_17 * (i_22 & 0xff00ff) >> 8 & 0xff00ff) + (i_17 * (i_22 & 0xff00) >> 8 & 0xff00);
-                                anIntArray8979[i_18 + i_24 * anInt8980] = i_22 + i_5;
-                            }
-
-                            i_11 += i_15;
-                        }
-                    } else {
-                        if (i_6 != 2) {
-                            throw new IllegalArgumentException();
-                        }
-
-                        while (i_24 <= i_41) {
-                            i_17 = i_11 >> 16;
-                            i_18 = i_24 - i_9;
-                            i_19 = ints_11[i_18] + i_8;
-                            if (i_17 >= anInt8983 && i_17 < anInt9002 && i_17 >= i_19 && i_17 < i_19 + ints_12[i_18]) {
-                                i_20 = anInt8980 * i_24 + i_17;
-                                i_21 = anIntArray8979[i_20];
-                                i_22 = i_5 + i_21;
-                                i_23 = (i_21 & 0xff00ff) + (i_5 & 0xff00ff);
-                                i_21 = (i_22 - i_23 & 0x10000) + (i_23 & 0x1000100);
-                                anIntArray8979[i_20] = i_22 - i_21 | i_21 - (i_21 >>> 8);
-                            }
-
-                            i_11 += i_15;
-                            ++i_24;
-                        }
-                    }
-                } else {
-                    while (i_24 <= i_41) {
-                        i_17 = i_11 >> 16;
-                        i_18 = i_24 - i_9;
-                        i_19 = ints_11[i_18] + i_8;
-                        if (i_17 >= anInt8983 && i_17 < anInt9002 && i_17 >= i_19 && i_17 < ints_12[i_18] + i_19) {
-                            anIntArray8979[i_17 + anInt8980 * i_24] = i_5;
-                        }
-
-                        i_11 += i_15;
-                        ++i_24;
-                    }
-                }
-            }
-        }
-
     }
 
     @Override
     public void method8575(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, Class455 class455_7, int i_8, int i_9) {
-        int i_11 = i_1;
-        int i_31 = i_3;
-        int i_24 = i_2;
-        int i_41 = i_4;
-        if (anIntArray8979 != null) {
-            Class455_Sub3 packetsdecoder_10 = (Class455_Sub3) class455_7;
-            int[] ints_11 = packetsdecoder_10.anIntArray9077;
-            int[] ints_12 = packetsdecoder_10.anIntArray9078;
-            int i_13 = Math.max(anInt9009, i_9);
-            int i_14 = Math.min(anInt8986, i_9 + ints_11.length);
-            i_31 -= i_11;
-            i_41 -= i_24;
-            if (i_41 + i_31 < 0) {
-                i_11 += i_31;
-                i_31 = -i_31;
-                i_24 += i_41;
-                i_41 = -i_41;
-            }
-
-            int i_15;
-            int i_16;
-            int i_17;
-            int i_18;
-            int i_19;
-            int i_20;
-            int i_21;
-            int i_22;
-            int i_23;
-            if (i_31 > i_41) {
-                i_24 <<= 16;
-                i_24 += 32768;
-                i_41 <<= 16;
-                i_15 = (int) Math.floor((double) i_41 / i_31 + 0.5D);
-                i_31 += i_11;
-                if (i_11 < anInt8983) {
-                    i_24 += (anInt8983 - i_11) * i_15;
-                    i_11 = anInt8983;
-                }
-
-                if (i_31 >= anInt9002) {
-                    i_31 = anInt9002 - 1;
-                }
-
-                i_16 = i_5 >>> 24;
-                if (i_6 == 0 || i_6 == 1 && i_16 == 255) {
-                    while (i_11 <= i_31) {
-                        i_17 = i_24 >> 16;
-                        i_18 = i_17 - i_9;
-                        if (i_17 >= i_13 && i_17 < i_14) {
-                            i_19 = ints_11[i_18] + i_8;
-                            if (i_11 >= i_19 && i_11 < ints_12[i_18] + i_19) {
-                                anIntArray8979[i_17 * anInt8980 + i_11] = i_5;
-                            }
-                        }
-
-                        i_24 += i_15;
-                        ++i_11;
-                    }
-                } else if (i_6 == 1) {
-                    i_5 = (i_16 * (i_5 & 0xff00ff) >> 8 & 0xff00ff) + ((i_5 & 0xff00) * i_16 >> 8 & 0xff00) + (i_16 << 24);
-
-                    for (i_17 = 256 - i_16; i_11 <= i_31; i_11++) {
-                        i_18 = i_24 >> 16;
-                        i_19 = i_18 - i_9;
-                        if (i_18 >= i_13 && i_18 < i_14) {
-                            i_20 = ints_11[i_19] + i_8;
-                            if (i_11 >= i_20 && i_11 < i_20 + ints_12[i_19]) {
-                                i_21 = i_11 + anInt8980 * i_18;
-                                i_22 = anIntArray8979[i_21];
-                                i_22 = (i_17 * (i_22 & 0xff00) >> 8 & 0xff00) + (i_17 * (i_22 & 0xff00ff) >> 8 & 0xff00ff);
-                                anIntArray8979[i_21] = i_5 + i_22;
-                            }
-                        }
-
-                        i_24 += i_15;
-                    }
-                } else {
-                    if (i_6 != 2) {
-                        throw new IllegalArgumentException();
-                    }
-
-                    while (i_11 <= i_31) {
-                        i_17 = i_24 >> 16;
-                        i_18 = i_17 - i_9;
-                        if (i_17 >= i_13 && i_17 < i_14) {
-                            i_19 = i_8 + ints_11[i_18];
-                            if (i_11 >= i_19 && i_11 < ints_12[i_18] + i_19) {
-                                i_20 = i_17 * anInt8980 + i_11;
-                                i_21 = anIntArray8979[i_20];
-                                i_22 = i_21 + i_5;
-                                i_23 = (i_5 & 0xff00ff) + (i_21 & 0xff00ff);
-                                i_21 = (i_23 & 0x1000100) + (i_22 - i_23 & 0x10000);
-                                anIntArray8979[i_20] = i_22 - i_21 | i_21 - (i_21 >>> 8);
-                            }
-                        }
-
-                        i_24 += i_15;
-                        ++i_11;
-                    }
-                }
-            } else {
-                i_11 <<= 16;
-                i_11 += 32768;
-                i_31 <<= 16;
-                i_15 = (int) Math.floor(0.5D + (double) i_31 / i_41);
-                i_41 += i_24;
-                if (i_24 < i_13) {
-                    i_11 += (i_13 - i_24) * i_15;
-                    i_24 = i_13;
-                }
-
-                if (i_41 >= i_14) {
-                    i_41 = i_14 - 1;
-                }
-
-                i_16 = i_5 >>> 24;
-                if (i_6 != 0 && (i_6 != 1 || i_16 != 255)) {
-                    if (i_6 == 1) {
-                        i_5 = (i_16 * (i_5 & 0xff00) >> 8 & 0xff00) + ((i_5 & 0xff00ff) * i_16 >> 8 & 0xff00ff) + (i_16 << 24);
-
-                        for (i_17 = 256 - i_16; i_24 <= i_41; i_24++) {
-                            i_18 = i_11 >> 16;
-                            i_19 = i_24 - i_9;
-                            i_20 = i_8 + ints_11[i_19];
-                            if (i_18 >= anInt8983 && i_18 < anInt9002 && i_18 >= i_20 && i_18 < i_20 + ints_12[i_19]) {
-                                i_21 = i_18 + i_24 * anInt8980;
-                                i_22 = anIntArray8979[i_21];
-                                i_22 = (i_17 * (i_22 & 0xff00ff) >> 8 & 0xff00ff) + (i_17 * (i_22 & 0xff00) >> 8 & 0xff00);
-                                anIntArray8979[i_18 + i_24 * anInt8980] = i_22 + i_5;
-                            }
-
-                            i_11 += i_15;
-                        }
-                    } else {
-                        if (i_6 != 2) {
-                            throw new IllegalArgumentException();
-                        }
-
-                        while (i_24 <= i_41) {
-                            i_17 = i_11 >> 16;
-                            i_18 = i_24 - i_9;
-                            i_19 = ints_11[i_18] + i_8;
-                            if (i_17 >= anInt8983 && i_17 < anInt9002 && i_17 >= i_19 && i_17 < i_19 + ints_12[i_18]) {
-                                i_20 = anInt8980 * i_24 + i_17;
-                                i_21 = anIntArray8979[i_20];
-                                i_22 = i_5 + i_21;
-                                i_23 = (i_21 & 0xff00ff) + (i_5 & 0xff00ff);
-                                i_21 = (i_22 - i_23 & 0x10000) + (i_23 & 0x1000100);
-                                anIntArray8979[i_20] = i_22 - i_21 | i_21 - (i_21 >>> 8);
-                            }
-
-                            i_11 += i_15;
-                            ++i_24;
-                        }
-                    }
-                } else {
-                    while (i_24 <= i_41) {
-                        i_17 = i_11 >> 16;
-                        i_18 = i_24 - i_9;
-                        i_19 = ints_11[i_18] + i_8;
-                        if (i_17 >= anInt8983 && i_17 < anInt9002 && i_17 >= i_19 && i_17 < ints_12[i_18] + i_19) {
-                            anIntArray8979[i_17 + anInt8980 * i_24] = i_5;
-                        }
-
-                        i_11 += i_15;
-                        ++i_24;
-                    }
-                }
-            }
-        }
-
     }
 
     @Override
-    public int[] kh(int i_1, int i_2, int i_3, int i_4) {
-        if (anIntArray8979 == null) {
-            throw new IllegalStateException("");
-        } else {
-            int[] ints_5 = new int[i_4 * i_3];
-            int i_6 = 0;
-
-            for (int i_7 = 0; i_7 < i_4; i_7++) {
-                int i_8 = i_1 + (i_2 + i_7) * anInt8980;
-
-                for (int i_9 = 0; i_9 < i_3; i_9++) {
-                    ints_5[i_6++] = anIntArray8979[i_8 + i_9];
-                }
-            }
-
-            return ints_5;
-        }
+    public void method8535(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, Class455 class455_7, int i_8, int i_9, int i_10, int i_11, int i_12) {
     }
 
-    @Override
-    public void method8480() {
-    }
-
-    @Override
-    public Node_Sub1 method8438(int i_1) {
-        return null;
+    Interface6 method14024(int i_1, int i_2, boolean bool_3, int[] ints_4) {
+        return method14094(i_1, i_2, bool_3, ints_4, 0, 0);
     }
 
     @Override
     public int method8538(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
         int i_7 = 0;
-        float f_8 = i_3 * aClass384_8996.buf[10] + i_2 * aClass384_8996.buf[6] + aClass384_8996.buf[14] + i_1 * aClass384_8996.buf[2];
-        float f_9 = aClass384_8996.buf[6] * i_5 + aClass384_8996.buf[14] + aClass384_8996.buf[2] * i_4 + aClass384_8996.buf[10] * i_6;
-        float f_10 = aClass384_8996.buf[15] + i_1 * aClass384_8996.buf[3] + i_2 * aClass384_8996.buf[7] + i_3 * aClass384_8996.buf[11];
-        float f_11 = i_5 * aClass384_8996.buf[7] + aClass384_8996.buf[15] + aClass384_8996.buf[3] * i_4 + i_6 * aClass384_8996.buf[11];
+        float f_8 = aClass384_8728.buf[14] + aClass384_8728.buf[2] * i_1 + aClass384_8728.buf[6] * i_2 + aClass384_8728.buf[10] * i_3;
+        float f_9 = aClass384_8728.buf[14] + aClass384_8728.buf[2] * i_4 + aClass384_8728.buf[6] * i_5 + aClass384_8728.buf[10] * i_6;
+        float f_10 = aClass384_8728.buf[15] + aClass384_8728.buf[3] * i_1 + aClass384_8728.buf[7] * i_2 + aClass384_8728.buf[11] * i_3;
+        float f_11 = aClass384_8728.buf[15] + aClass384_8728.buf[3] * i_4 + aClass384_8728.buf[7] * i_5 + aClass384_8728.buf[11] * i_6;
         if (f_8 < -f_10 && f_9 < -f_11) {
             i_7 |= 0x10;
         } else if (f_8 > f_10 && f_9 > f_11) {
             i_7 |= 0x20;
         }
 
-        float f_12 = aClass384_8996.buf[4] * i_2 + aClass384_8996.buf[12] + i_1 * aClass384_8996.buf[0] + i_3 * aClass384_8996.buf[8];
-        float f_13 = i_6 * aClass384_8996.buf[8] + i_4 * aClass384_8996.buf[0] + aClass384_8996.buf[12] + aClass384_8996.buf[4] * i_5;
+        float f_12 = aClass384_8728.buf[12] + aClass384_8728.buf[0] * i_1 + aClass384_8728.buf[4] * i_2 + aClass384_8728.buf[8] * i_3;
+        float f_13 = aClass384_8728.buf[12] + aClass384_8728.buf[0] * i_4 + aClass384_8728.buf[4] * i_5 + aClass384_8728.buf[8] * i_6;
         if (f_12 < -f_10 && f_13 < -f_11) {
             i_7 |= 0x1;
         }
@@ -6215,8 +2659,8 @@ public class HardwareRenderer extends AbstractRenderer {
             i_7 |= 0x2;
         }
 
-        float f_14 = aClass384_8996.buf[5] * i_2 + i_1 * aClass384_8996.buf[1] + aClass384_8996.buf[13] + aClass384_8996.buf[9] * i_3;
-        float f_15 = aClass384_8996.buf[13] + aClass384_8996.buf[1] * i_4 + aClass384_8996.buf[5] * i_5 + i_6 * aClass384_8996.buf[9];
+        float f_14 = aClass384_8728.buf[13] + aClass384_8728.buf[1] * i_1 + aClass384_8728.buf[5] * i_2 + aClass384_8728.buf[9] * i_3;
+        float f_15 = aClass384_8728.buf[13] + aClass384_8728.buf[1] * i_4 + aClass384_8728.buf[5] * i_5 + aClass384_8728.buf[9] * i_6;
         if (f_14 < -f_10 && f_15 < -f_11) {
             i_7 |= 0x4;
         }
@@ -6229,59 +2673,20 @@ public class HardwareRenderer extends AbstractRenderer {
     }
 
     @Override
-    public void method8629(int i_1, int i_2, float f_3, int i_4, int i_5, float f_6, int i_7, int i_8, float f_9, int i_10, int i_11, int i_12, int i_13) {
-        boolean bool_14 = anIntArray8979 != null;
-        boolean bool_15 = aFloatArray9010 != null;
-        if (bool_14 || bool_15) {
-            Class185 class185_16 = method14370(Thread.currentThread());
-            ChoppyItemFixClass choppyitemfixclass_17 = class185_16.aClass144_2310;
-            choppyitemfixclass_17.aBool1675 = false;
-            i_1 -= anInt8983;
-            i_4 -= anInt8983;
-            i_7 -= anInt8983;
-            i_2 -= anInt9009;
-            i_5 -= anInt9009;
-            i_8 -= anInt9009;
-            choppyitemfixclass_17.aBool1708 = i_1 < 0 || i_1 > choppyitemfixclass_17.anInt1684 || i_4 < 0 || i_4 > choppyitemfixclass_17.anInt1684 || i_7 < 0 || i_7 > choppyitemfixclass_17.anInt1684;
-            int i_18 = i_10 >>> 24;
-            if (i_13 == 0 || i_13 == 1 && i_18 == 255) {
-                choppyitemfixclass_17.anInt1674 = 0;
-                choppyitemfixclass_17.aBool1672 = false;
-                choppyitemfixclass_17.method2425(bool_14, bool_15, false, i_2, i_5, i_8, i_1, i_4, i_7, f_3, f_6, f_9, i_10, i_11, i_12);
-            } else if (i_13 == 1) {
-                choppyitemfixclass_17.anInt1674 = 255 - i_18;
-                choppyitemfixclass_17.aBool1672 = false;
-                choppyitemfixclass_17.method2425(bool_14, bool_15, false, i_2, i_5, i_8, i_1, i_4, i_7, f_3, f_6, f_9, i_10, i_11, i_12);
-            } else {
-                if (i_13 != 2) {
-                    throw new IllegalArgumentException();
-                }
-
-                choppyitemfixclass_17.anInt1674 = 128;
-                choppyitemfixclass_17.aBool1672 = true;
-                choppyitemfixclass_17.method2425(bool_14, bool_15, false, i_2, i_5, i_8, i_1, i_4, i_7, f_3, f_6, f_9, i_10, i_11, i_12);
-            }
-
-            choppyitemfixclass_17.aBool1675 = true;
-        }
-
-    }
-
-    @Override
-    public int method8540(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
+    public int method8539(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
         int i_7 = 0;
-        float f_8 = i_3 * aClass384_8996.buf[10] + i_2 * aClass384_8996.buf[6] + aClass384_8996.buf[14] + i_1 * aClass384_8996.buf[2];
-        float f_9 = aClass384_8996.buf[6] * i_5 + aClass384_8996.buf[14] + aClass384_8996.buf[2] * i_4 + aClass384_8996.buf[10] * i_6;
-        float f_10 = aClass384_8996.buf[15] + i_1 * aClass384_8996.buf[3] + i_2 * aClass384_8996.buf[7] + i_3 * aClass384_8996.buf[11];
-        float f_11 = i_5 * aClass384_8996.buf[7] + aClass384_8996.buf[15] + aClass384_8996.buf[3] * i_4 + i_6 * aClass384_8996.buf[11];
+        float f_8 = aClass384_8728.buf[14] + aClass384_8728.buf[2] * i_1 + aClass384_8728.buf[6] * i_2 + aClass384_8728.buf[10] * i_3;
+        float f_9 = aClass384_8728.buf[14] + aClass384_8728.buf[2] * i_4 + aClass384_8728.buf[6] * i_5 + aClass384_8728.buf[10] * i_6;
+        float f_10 = aClass384_8728.buf[15] + aClass384_8728.buf[3] * i_1 + aClass384_8728.buf[7] * i_2 + aClass384_8728.buf[11] * i_3;
+        float f_11 = aClass384_8728.buf[15] + aClass384_8728.buf[3] * i_4 + aClass384_8728.buf[7] * i_5 + aClass384_8728.buf[11] * i_6;
         if (f_8 < -f_10 && f_9 < -f_11) {
             i_7 |= 0x10;
         } else if (f_8 > f_10 && f_9 > f_11) {
             i_7 |= 0x20;
         }
 
-        float f_12 = aClass384_8996.buf[4] * i_2 + aClass384_8996.buf[12] + i_1 * aClass384_8996.buf[0] + i_3 * aClass384_8996.buf[8];
-        float f_13 = i_6 * aClass384_8996.buf[8] + i_4 * aClass384_8996.buf[0] + aClass384_8996.buf[12] + aClass384_8996.buf[4] * i_5;
+        float f_12 = aClass384_8728.buf[12] + aClass384_8728.buf[0] * i_1 + aClass384_8728.buf[4] * i_2 + aClass384_8728.buf[8] * i_3;
+        float f_13 = aClass384_8728.buf[12] + aClass384_8728.buf[0] * i_4 + aClass384_8728.buf[4] * i_5 + aClass384_8728.buf[8] * i_6;
         if (f_12 < -f_10 && f_13 < -f_11) {
             i_7 |= 0x1;
         }
@@ -6290,8 +2695,44 @@ public class HardwareRenderer extends AbstractRenderer {
             i_7 |= 0x2;
         }
 
-        float f_14 = aClass384_8996.buf[5] * i_2 + i_1 * aClass384_8996.buf[1] + aClass384_8996.buf[13] + aClass384_8996.buf[9] * i_3;
-        float f_15 = aClass384_8996.buf[13] + aClass384_8996.buf[1] * i_4 + aClass384_8996.buf[5] * i_5 + i_6 * aClass384_8996.buf[9];
+        float f_14 = aClass384_8728.buf[13] + aClass384_8728.buf[1] * i_1 + aClass384_8728.buf[5] * i_2 + aClass384_8728.buf[9] * i_3;
+        float f_15 = aClass384_8728.buf[13] + aClass384_8728.buf[1] * i_4 + aClass384_8728.buf[5] * i_5 + aClass384_8728.buf[9] * i_6;
+        if (f_14 < -f_10 && f_15 < -f_11) {
+            i_7 |= 0x4;
+        }
+
+        if (f_14 > f_10 && f_15 > f_11) {
+            i_7 |= 0x8;
+        }
+
+        return i_7;
+    }
+
+    @Override
+    public int method8540(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
+        int i_7 = 0;
+        float f_8 = aClass384_8728.buf[14] + aClass384_8728.buf[2] * i_1 + aClass384_8728.buf[6] * i_2 + aClass384_8728.buf[10] * i_3;
+        float f_9 = aClass384_8728.buf[14] + aClass384_8728.buf[2] * i_4 + aClass384_8728.buf[6] * i_5 + aClass384_8728.buf[10] * i_6;
+        float f_10 = aClass384_8728.buf[15] + aClass384_8728.buf[3] * i_1 + aClass384_8728.buf[7] * i_2 + aClass384_8728.buf[11] * i_3;
+        float f_11 = aClass384_8728.buf[15] + aClass384_8728.buf[3] * i_4 + aClass384_8728.buf[7] * i_5 + aClass384_8728.buf[11] * i_6;
+        if (f_8 < -f_10 && f_9 < -f_11) {
+            i_7 |= 0x10;
+        } else if (f_8 > f_10 && f_9 > f_11) {
+            i_7 |= 0x20;
+        }
+
+        float f_12 = aClass384_8728.buf[12] + aClass384_8728.buf[0] * i_1 + aClass384_8728.buf[4] * i_2 + aClass384_8728.buf[8] * i_3;
+        float f_13 = aClass384_8728.buf[12] + aClass384_8728.buf[0] * i_4 + aClass384_8728.buf[4] * i_5 + aClass384_8728.buf[8] * i_6;
+        if (f_12 < -f_10 && f_13 < -f_11) {
+            i_7 |= 0x1;
+        }
+
+        if (f_12 > f_10 && f_13 > f_11) {
+            i_7 |= 0x2;
+        }
+
+        float f_14 = aClass384_8728.buf[13] + aClass384_8728.buf[1] * i_1 + aClass384_8728.buf[5] * i_2 + aClass384_8728.buf[9] * i_3;
+        float f_15 = aClass384_8728.buf[13] + aClass384_8728.buf[1] * i_4 + aClass384_8728.buf[5] * i_5 + aClass384_8728.buf[9] * i_6;
         if (f_14 < -f_10 && f_15 < -f_11) {
             i_7 |= 0x4;
         }
@@ -6305,1539 +2746,692 @@ public class HardwareRenderer extends AbstractRenderer {
 
     @Override
     public Node_Sub1 method8570(int i_1) {
-        return null;
+        Node_Sub1_Sub2 class282_sub1_sub2_2 = new Node_Sub1_Sub2(i_1);
+        aClass473_8700.insertBack(class282_sub1_sub2_2);
+        return class282_sub1_sub2_2;
     }
 
     @Override
     public Node_Sub1 method8541(int i_1) {
-        return null;
+        Node_Sub1_Sub2 class282_sub1_sub2_2 = new Node_Sub1_Sub2(i_1);
+        aClass473_8700.insertBack(class282_sub1_sub2_2);
+        return class282_sub1_sub2_2;
+    }
+
+    abstract void method14025();
+
+    @Override
+    public void method8618(Node_Sub1 class282_sub1_1) {
+        aNativeHeap8699 = ((Node_Sub1_Sub2) class282_sub1_1).aNativeHeap10212;
     }
 
     @Override
     public void method8544(Node_Sub1 class282_sub1_1) {
+        aNativeHeap8699 = ((Node_Sub1_Sub2) class282_sub1_1).aNativeHeap10212;
     }
 
     @Override
-    public NativeSprite method8461(int i_1, int i_2, boolean bool_3, boolean bool_4) {
-        return bool_3 ? new NativeSprite_Sub1_Sub3(this, i_1, i_2) : new NativeSprite_Sub1_Sub1(this, i_1, i_2);
+    public boolean method8578() {
+        return aBool8828;
     }
 
     @Override
-    public NativeSprite method8577(int i_1, int i_2, boolean bool_3, boolean bool_4) {
-        return bool_3 ? new NativeSprite_Sub1_Sub3(this, i_1, i_2) : new NativeSprite_Sub1_Sub1(this, i_1, i_2);
+    public void fc(int i_1, int i_2, int i_3, int i_4) {
+        int i_5;
+        int i_6;
+        if (aClass158_5853 != null) {
+            i_6 = aClass158_5853.method2714();
+            i_5 = aClass158_5853.method2716();
+        } else {
+            i_5 = 0;
+            i_6 = 0;
+        }
+
+        if (i_1 <= 0 && i_3 >= i_6 - 1 && i_2 <= 0 && i_4 >= i_5 - 1) {
+            L();
+        } else {
+            anInt8743 = Math.max(0, i_1);
+            anInt8744 = Math.min(i_3, i_6);
+            anInt8822 = Math.max(0, i_2);
+            anInt8742 = Math.min(i_4, i_5);
+            if (!aBool8843) {
+                aBool8843 = true;
+                method13922();
+            }
+
+            method13921();
+        }
+
     }
 
     @Override
     public NativeSprite method8543(int[] ints_1, int i_2, int i_3, int i_4, int i_5, boolean bool_6) {
-        boolean bool_7 = false;
-        int i_8 = i_2;
-
-        for (int i_9 = 0; i_9 < i_5; i_9++) {
-            for (int i_10 = 0; i_10 < i_4; i_10++) {
-                int i_11 = ints_1[i_8++] >>> 24;
-                if (i_11 != 0 && i_11 != 255) {
-                    bool_7 = true;
-                    return bool_7 ? new NativeSprite_Sub1_Sub3(this, ints_1, i_2, i_3, i_4, i_5, bool_6) : new NativeSprite_Sub1_Sub1(this, ints_1, i_2, i_3, i_4, i_5, bool_6);
-                }
-            }
-        }
-
-        return bool_7 ? new NativeSprite_Sub1_Sub3(this, ints_1, i_2, i_3, i_4, i_5, bool_6) : new NativeSprite_Sub1_Sub1(this, ints_1, i_2, i_3, i_4, i_5, bool_6);
+        return new NativeSprite_Sub3(this, i_4, i_5, ints_1, i_2, i_3);
     }
 
-    @Override
-    public void method8673(int i_1, int i_2, int i_3, int i_4) {
-    }
+    abstract void method14026();
 
     @Override
     public NativeSprite method8612(SpriteDefinitions class91_1, boolean bool_2) {
-        int[] ints_3 = class91_1.pallete;
-        byte[] bytes_4 = class91_1.pixels;
-        int i_5 = class91_1.width;
-        int i_6 = class91_1.height;
-        NativeSprite_Sub1 obj_7;
-        int[] ints_8;
-        byte[] bytes_9;
-        int i_10;
-        int i_11;
-        int i_12;
-        if (bool_2 && class91_1.alpha == null) {
-            ints_8 = new int[ints_3.length];
-            bytes_9 = new byte[i_5 * i_6];
-
-            for (i_10 = 0; i_10 < i_6; i_10++) {
-                i_11 = i_10 * i_5;
-
-                for (i_12 = 0; i_12 < i_5; i_12++) {
-                    bytes_9[i_12 + i_11] = bytes_4[i_12 + i_11];
-                }
-            }
-
-            for (i_10 = 0; i_10 < ints_3.length; i_10++) {
-                ints_8[i_10] = ints_3[i_10];
-            }
-
-            obj_7 = new NativeSprite_Sub1_Sub2(this, bytes_9, ints_8, i_5, i_6);
-        } else {
-            ints_8 = new int[i_6 * i_5];
-            bytes_9 = class91_1.alpha;
-            if (bytes_9 != null) {
-                for (i_10 = 0; i_10 < i_6; i_10++) {
-                    i_11 = i_5 * i_10;
-
-                    for (i_12 = 0; i_12 < i_5; i_12++) {
-                        ints_8[i_12 + i_11] = ints_3[bytes_4[i_12 + i_11] & 0xff] | bytes_9[i_12 + i_11] << 24;
-                    }
-                }
-
-                obj_7 = new NativeSprite_Sub1_Sub3(this, ints_8, i_5, i_6);
-            } else {
-                for (i_10 = 0; i_10 < i_6; i_10++) {
-                    i_11 = i_10 * i_5;
-
-                    for (i_12 = 0; i_12 < i_5; i_12++) {
-                        int i_13 = ints_3[bytes_4[i_12 + i_11] & 0xff];
-                        ints_8[i_11 + i_12] = i_13 != 0 ? -16777216 | i_13 : 0;
-                    }
-                }
-
-                obj_7 = new NativeSprite_Sub1_Sub1(this, ints_8, i_5, i_6);
-            }
-        }
-
-        (obj_7).method2743(class91_1.minX, class91_1.minY, class91_1.anInt958, class91_1.anInt953);
-        return obj_7;
-    }
-
-    @Override
-    public int method8463() {
-        return 0;
-    }
-
-    @Override
-    public boolean method8464() {
-        return false;
-    }
-
-    @Override
-    public NativeSprite method8552(int i_1, int i_2, int i_3, int i_4, boolean bool_5) {
-        if (anIntArray8979 == null) {
-            throw new IllegalStateException("");
-        } else {
-            int[] ints_6 = new int[i_3 * i_4];
-            int i_7 = i_2 * anInt8980 + i_1;
-            int i_8 = anInt8980 - i_3;
-
-            for (int i_9 = 0; i_9 < i_4; i_9++) {
-                int i_10 = i_9 * i_3;
-
-                for (int i_11 = 0; i_11 < i_3; i_11++) {
-                    ints_6[i_10 + i_11] = anIntArray8979[i_7++];
-                }
-
-                i_7 += i_8;
-            }
-
-            if (bool_5) {
-                return new NativeSprite_Sub1_Sub3(this, ints_6, i_3, i_4);
-            } else {
-                return new NativeSprite_Sub1_Sub1(this, ints_6, i_3, i_4);
-            }
-        }
-    }
-
-    @Override
-    public void method8542(Node_Sub1 class282_sub1_1) {
-    }
-
-    @Override
-    public Class455 method8554(int i_1, int i_2, int[] ints_3, int[] ints_4) {
-        return new Class455_Sub3(ints_3, ints_4);
-    }
-
-    @Override
-    public Class455 method8427(int i_1, int i_2, int[] ints_3, int[] ints_4) {
-        return new Class455_Sub3(ints_3, ints_4);
-    }
-
-    void method14399(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
-        if (anIntArray8979 != null && i_1 >= anInt8983 && i_1 < anInt9002) {
-            int i_9 = i_2 * anInt8980 + i_1;
-            int i_10 = i_4 >>> 24;
-            int i_11 = i_7 + i_6;
-            int i_12 = i_8 % i_11;
-            int i_13;
-            if (i_5 == 0 || i_5 == 1 && i_10 == 255) {
-                for (i_13 = 0; i_13 < i_3; i_12 %= i_11) {
-                    if (i_13 + i_2 >= anInt9009 && i_13 + i_2 < anInt8986 && i_12 < i_6) {
-                        anIntArray8979[i_9 + i_13 * anInt8980] = i_4;
-                    }
-
-                    ++i_13;
-                    ++i_12;
-                }
-            } else {
-                int i_14;
-                int i_15;
-                int i_16;
-                if (i_5 == 1) {
-                    i_4 = (i_10 * (i_4 & 0xff00ff) >> 8 & 0xff00ff) + (i_10 * (i_4 & 0xff00) >> 8 & 0xff00) + (i_10 << 24);
-                    i_13 = 256 - i_10;
-
-                    for (i_14 = 0; i_14 < i_3; i_12 %= i_11) {
-                        if (i_14 + i_2 >= anInt9009 && i_14 + i_2 < anInt8986 && i_12 < i_6) {
-                            i_15 = i_9 + i_14 * anInt8980;
-                            i_16 = anIntArray8979[i_15];
-                            i_16 = (i_13 * (i_16 & 0xff00) >> 8 & 0xff00) + ((i_16 & 0xff00ff) * i_13 >> 8 & 0xff00ff);
-                            anIntArray8979[i_15] = i_16 + i_4;
-                        }
-
-                        ++i_14;
-                        ++i_12;
-                    }
-                } else {
-                    if (i_5 != 2) {
-                        throw new IllegalArgumentException();
-                    }
-
-                    for (i_13 = 0; i_13 < i_3; i_12 %= i_11) {
-                        if (i_13 + i_2 >= anInt9009 && i_13 + i_2 < anInt8986 && i_12 < i_6) {
-                            i_14 = i_9 + i_13 * anInt8980;
-                            i_15 = anIntArray8979[i_14];
-                            i_16 = i_15 + i_4;
-                            int i_17 = (i_15 & 0xff00ff) + (i_4 & 0xff00ff);
-                            i_15 = (i_17 & 0x1000100) + (i_16 - i_17 & 0x10000);
-                            anIntArray8979[i_14] = i_16 - i_15 | i_15 - (i_15 >>> 8);
-                        }
-
-                        ++i_13;
-                        ++i_12;
-                    }
-                }
-            }
-        }
-
-    }
-
-    @Override
-    public void hr(int i_1, Class455 class455_2, int i_3, int i_4) {
-        int i_41 = i_4;
-        if (anIntArray8979 != null) {
-            Class455_Sub3 packetsdecoder_5 = (Class455_Sub3) class455_2;
-            int[] ints_6 = packetsdecoder_5.anIntArray9077;
-            int[] ints_7 = packetsdecoder_5.anIntArray9078;
-            int i_8;
-            if (anInt8986 < i_41 + ints_6.length) {
-                i_8 = anInt8986 - i_41;
-            } else {
-                i_8 = ints_6.length;
-            }
-
-            int i_9;
-            if (anInt9009 > i_41) {
-                i_9 = anInt9009 - i_41;
-                i_41 = anInt9009;
-            } else {
-                i_9 = 0;
-            }
-
-            if (i_8 - i_9 > 0) {
-                int i_10 = anInt8980 * i_41;
-
-                for (int i_11 = i_9; i_11 < i_8; i_11++) {
-                    int i_12 = ints_6[i_11] + i_3;
-                    int i_13 = ints_7[i_11];
-                    if (anInt8983 > i_12) {
-                        i_13 -= anInt8983 - i_12;
-                        i_12 = anInt8983;
-                    }
-
-                    if (anInt9002 < i_13 + i_12) {
-                        i_13 = anInt9002 - i_12;
-                    }
-
-                    i_12 += i_10;
-
-                    for (int i_14 = -i_13; i_14 < 0; i_14++) {
-                        anIntArray8979[i_12++] = i_1;
-                    }
-
-                    i_10 += anInt8980;
-                }
-            }
-        }
-
-    }
-
-    @Override
-    public void hi(int i_1, Class455 class455_2, int i_3, int i_4) {
-        int i_41 = i_4;
-        if (anIntArray8979 != null) {
-            Class455_Sub3 packetsdecoder_5 = (Class455_Sub3) class455_2;
-            int[] ints_6 = packetsdecoder_5.anIntArray9077;
-            int[] ints_7 = packetsdecoder_5.anIntArray9078;
-            int i_8;
-            if (anInt8986 < i_41 + ints_6.length) {
-                i_8 = anInt8986 - i_41;
-            } else {
-                i_8 = ints_6.length;
-            }
-
-            int i_9;
-            if (anInt9009 > i_41) {
-                i_9 = anInt9009 - i_41;
-                i_41 = anInt9009;
-            } else {
-                i_9 = 0;
-            }
-
-            if (i_8 - i_9 > 0) {
-                int i_10 = anInt8980 * i_41;
-
-                for (int i_11 = i_9; i_11 < i_8; i_11++) {
-                    int i_12 = ints_6[i_11] + i_3;
-                    int i_13 = ints_7[i_11];
-                    if (anInt8983 > i_12) {
-                        i_13 -= anInt8983 - i_12;
-                        i_12 = anInt8983;
-                    }
-
-                    if (anInt9002 < i_13 + i_12) {
-                        i_13 = anInt9002 - i_12;
-                    }
-
-                    i_12 += i_10;
-
-                    for (int i_14 = -i_13; i_14 < 0; i_14++) {
-                        anIntArray8979[i_12++] = i_1;
-                    }
-
-                    i_10 += anInt8980;
-                }
-            }
-        }
-
-    }
-
-    @Override
-    public void method8601() {
-    }
-
-    @Override
-    public FontRenderer method8625(FontMetrics fontmetrics_1, SpriteDefinitions[] arr_2, boolean bool_3) {
-        int[] ints_4 = new int[arr_2.length];
-        int[] ints_5 = new int[arr_2.length];
-        boolean bool_6 = false;
-
-        for (int i_7 = 0; i_7 < arr_2.length; i_7++) {
-            ints_4[i_7] = arr_2[i_7].width;
-            ints_5[i_7] = arr_2[i_7].height;
-            if (arr_2[i_7].alpha != null) {
-                bool_6 = true;
-            }
-        }
-
-        if (bool_3) {
-            if (bool_6) {
-                return new FontRenderer_Sub2(this, fontmetrics_1, arr_2, ints_4, ints_5);
-            } else {
-                return new FontRenderer_Sub1(this, fontmetrics_1, arr_2, ints_4, ints_5);
-            }
-        } else if (bool_6) {
-            throw new IllegalArgumentException("");
-        } else {
-            return new FontRenderer_Sub3(this, fontmetrics_1, arr_2, ints_4, ints_5);
-        }
-    }
-
-    @Override
-    public void method8586(Matrix44 matrix44_1) {
-        aClass384_8995.method6562(matrix44_1);
-        method14374();
-    }
-
-    @Override
-    public void ba(int i_1, int i_2) {
-        if ((i_1 & 0x1) != 0) {
-            B(0, 0, anInt8980, anInt8981, i_2, 0);
-        }
-
-        if ((i_1 & 0x2) != 0) {
-            method14410();
-        }
-
-    }
-
-    @Override
-    public void fh(int[] ints_1) {
-        ints_1[0] = anInt8983;
-        ints_1[1] = anInt9009;
-        ints_1[2] = anInt9002;
-        ints_1[3] = anInt8986;
-    }
-
-    @Override
-    public MeshRasterizer method8623(RSMesh rsmesh_1, int i_2, int i_3, int i_4, int i_5) {
-        return new MeshRasterizer_Sub2(this, rsmesh_1, i_2, i_4, i_5, i_3);
-    }
-
-    @Override
-    public MeshRasterizer method8505(RSMesh rsmesh_1, int i_2, int i_3, int i_4, int i_5) {
-        return new MeshRasterizer_Sub2(this, rsmesh_1, i_2, i_4, i_5, i_3);
-    }
-
-    @Override
-    public void L() {
-        anInt8983 = 0;
-        anInt9009 = 0;
-        anInt9002 = anInt8980;
-        anInt8986 = anInt8981;
-        method14364();
-    }
-
-    @Override
-    public int method8565(int i_1, int i_2) {
-        i_1 |= 0x20800;
-        return i_1 & i_2 ^ i_2;
-    }
-
-    @Override
-    public void method8581(Class151 class151_1) {
-        method14363(anIntArray8979 != null, aFloatArray9010 != null, class151_1);
-    }
-
-    @Override
-    public Ground method8569(int i_1, int i_2, int[][] ints_3, int[][] ints_4, int i_5, int i_6, int i_7) {
-        return new Ground_Sub3(this, i_7, i_1, i_2, ints_3, ints_4, i_5);
-    }
-
-    @Override
-    public Matrix44 method8517() {
-        Class185 class185_1 = method14370(Thread.currentThread());
-        return class185_1.aClass384_2346;
-    }
-
-    @Override
-    public Matrix44 method8571() {
-        Class185 class185_1 = method14370(Thread.currentThread());
-        return class185_1.aClass384_2346;
-    }
-
-    @Override
-    public void method8580(Class151 class151_1) {
-        method14363(anIntArray8979 != null, aFloatArray9010 != null, class151_1);
-    }
-
-    @Override
-    public Matrix44Var method8626() {
-        Class185 class185_1 = method14370(Thread.currentThread());
-        return class185_1.aClass294_2314;
-    }
-
-    @Override
-    public int method8574() {
-        return 0;
-    }
-
-    @Override
-    public void fm(int i_1, int i_2, int i_3, int i_4) {
-        int i_11 = i_1;
-        int i_21 = i_2;
-        int i_31 = i_3;
-        int i_41 = i_4;
-        if (i_11 < 0) {
-            i_11 = 0;
-        }
-
-        if (i_21 < 0) {
-            i_21 = 0;
-        }
-
-        if (i_31 > anInt8980) {
-            i_31 = anInt8980;
-        }
-
-        if (i_41 > anInt8981) {
-            i_41 = anInt8981;
-        }
-
-        anInt8983 = i_11;
-        anInt9002 = i_31;
-        anInt9009 = i_21;
-        anInt8986 = i_41;
-        method14364();
-    }
-
-    @Override
-    public void method8426(int i_1, Node_Sub24[] arr_2) {
-    }
-
-    @Override
-    public void method8579(int i_1, Node_Sub24[] arr_2) {
-    }
-
-    @Override
-    public int[] ke(int i_1, int i_2, int i_3, int i_4) {
-        if (anIntArray8979 == null) {
-            throw new IllegalStateException("");
-        } else {
-            int[] ints_5 = new int[i_4 * i_3];
+        NativeSprite nativesprite_3;
+        if (class91_1.width != 0 && class91_1.height != 0) {
+            int[] ints_4 = new int[class91_1.width * class91_1.height];
+            int i_5 = 0;
             int i_6 = 0;
-
-            for (int i_7 = 0; i_7 < i_4; i_7++) {
-                int i_8 = i_1 + (i_2 + i_7) * anInt8980;
-
-                for (int i_9 = 0; i_9 < i_3; i_9++) {
-                    ints_5[i_6++] = anIntArray8979[i_8 + i_9];
-                }
-            }
-
-            return ints_5;
-        }
-    }
-
-    @Override
-    public void G(int i_1, int i_2, int i_3, int i_4, int i_5) {
-        int i_21 = i_2;
-        int i_31 = i_3;
-        if (anIntArray8979 != null && i_1 >= anInt8983 && i_1 < anInt9002) {
-            if (i_21 < anInt9009) {
-                i_31 -= anInt9009 - i_21;
-                i_21 = anInt9009;
-            }
-
-            if (i_31 + i_21 > anInt8986) {
-                i_31 = anInt8986 - i_21;
-            }
-
-            int i_6 = i_21 * anInt8980 + i_1;
-            int i_7 = i_4 >>> 24;
+            int i_7;
             int i_8;
-            if (i_5 == 0 || i_5 == 1 && i_7 == 255) {
-                for (i_8 = 0; i_8 < i_31; i_8++) {
-                    anIntArray8979[i_6 + i_8 * anInt8980] = i_4;
+            if (class91_1.alpha != null) {
+                for (i_7 = 0; i_7 < class91_1.height; i_7++) {
+                    for (i_8 = 0; i_8 < class91_1.width; i_8++) {
+                        ints_4[i_6++] = class91_1.alpha[i_5] << 24 | class91_1.pallete[class91_1.pixels[i_5] & 0xff];
+                        ++i_5;
+                    }
                 }
             } else {
-                int i_9;
-                int i_10;
-                int i_11;
-                if (i_5 == 1) {
-                    i_4 = (i_7 * (i_4 & 0xff00ff) >> 8 & 0xff00ff) + (i_7 << 24) + (i_7 * (i_4 & 0xff00) >> 8 & 0xff00);
-                    i_8 = 256 - i_7;
-
-                    for (i_9 = 0; i_9 < i_31; i_9++) {
-                        i_10 = i_6 + i_9 * anInt8980;
-                        i_11 = anIntArray8979[i_10];
-                        i_11 = ((i_11 & 0xff00ff) * i_8 >> 8 & 0xff00ff) + (i_8 * (i_11 & 0xff00) >> 8 & 0xff00);
-                        anIntArray8979[i_10] = i_11 + i_4;
-                    }
-                } else {
-                    if (i_5 != 2) {
-                        throw new IllegalArgumentException();
-                    }
-
-                    for (i_8 = 0; i_8 < i_31; i_8++) {
-                        i_9 = i_6 + i_8 * anInt8980;
-                        i_10 = anIntArray8979[i_9];
-                        i_11 = i_10 + i_4;
-                        int i_12 = (i_10 & 0xff00ff) + (i_4 & 0xff00ff);
-                        i_10 = (i_12 & 0x1000100) + (i_11 - i_12 & 0x10000);
-                        anIntArray8979[i_9] = i_11 - i_10 | i_10 - (i_10 >>> 8);
+                for (i_7 = 0; i_7 < class91_1.height; i_7++) {
+                    for (i_8 = 0; i_8 < class91_1.width; i_8++) {
+                        int i_9 = class91_1.pallete[class91_1.pixels[i_5++] & 0xff];
+                        ints_4[i_6++] = i_9 != 0 ? -16777216 | i_9 : 0;
                     }
                 }
             }
+
+            nativesprite_3 = createNativeSprite(ints_4, class91_1.width, class91_1.width, class91_1.height);
+        } else {
+            nativesprite_3 = createNativeSprite(new int[1], 1, 1, 1);
         }
 
-    }
-
-    boolean method14403(int i_1) {
-        return textureCache.getTextureDetails(i_1).repeatS || textureCache.getTextureDetails(i_1).repeatT;
-    }
-
-    @Override
-    public void method8430(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
-        XA(i_1, i_2, i_3, i_5, i_6);
-        XA(i_1, i_2 + i_4 - 1, i_3, i_5, i_6);
-        G(i_1, i_2 + 1, i_4 - 2, i_5, i_6);
-        G(i_3 + i_1 - 1, i_2 + 1, i_4 - 2, i_5, i_6);
+        nativesprite_3.method2743(class91_1.minX, class91_1.minY, class91_1.anInt958, class91_1.anInt953);
+        return nativesprite_3;
     }
 
     @Override
-    public void method8474() {
-    }
-
-    @Override
-    public void IA(float f_1) {
-        anInt8992 = (int) (f_1 * 65535.0F);
-    }
-
-    @Override
-    public void method8423(Matrix44Var matrix44var_1) {
-        aClass294_8993 = matrix44var_1;
-        method14374();
-    }
-
-    @Override
-    public Matrix44Var method8583() {
-        return new Matrix44Var(aClass294_8993);
-    }
-
-    @Override
-    public int method8566(int i_1, int i_2) {
-        i_1 |= 0x20800;
-        return i_1 & i_2 ^ i_2;
-    }
-
-    @Override
-    public void method8394(int i_1, Node_Sub24[] arr_2) {
-    }
-
-    @Override
-    public int method8567(int i_1, int i_2) {
-        i_1 |= 0x20800;
-        return i_1 & i_2 ^ i_2;
-    }
-
-    @Override
-    public void method8527(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9) {
-        if (anIntArray8979 != null) {
-            i_3 -= i_1;
-            i_4 -= i_2;
-            int i_10;
-            if (i_4 == 0) {
-                if (i_3 >= 0) {
-                    method14366(i_1, i_2, 1 + i_3, i_5, i_6, i_7, i_8, i_9);
-                } else {
-                    i_10 = i_7 + i_8;
-                    i_9 %= i_10;
-                    i_9 = i_10 + i_7 - i_9 - (1 + -i_3) % i_10;
-                    i_9 %= i_10;
-                    if (i_9 < 0) {
-                        i_9 += i_10;
+    public NativeSprite method8518(SpriteDefinitions class91_1, boolean bool_2) {
+        NativeSprite nativesprite_3;
+        if (class91_1.width != 0 && class91_1.height != 0) {
+            int[] ints_4 = new int[class91_1.width * class91_1.height];
+            int i_5 = 0;
+            int i_6 = 0;
+            int i_7;
+            int i_8;
+            if (class91_1.alpha != null) {
+                for (i_7 = 0; i_7 < class91_1.height; i_7++) {
+                    for (i_8 = 0; i_8 < class91_1.width; i_8++) {
+                        ints_4[i_6++] = class91_1.alpha[i_5] << 24 | class91_1.pallete[class91_1.pixels[i_5] & 0xff];
+                        ++i_5;
                     }
-
-                    method14366(i_1 + i_3, i_2, -i_3 + 1, i_5, i_6, i_7, i_8, i_9);
-                }
-            } else if (i_3 == 0) {
-                if (i_4 >= 0) {
-                    method14399(i_1, i_2, 1 + i_4, i_5, i_6, i_7, i_8, i_9);
-                } else {
-                    i_10 = i_8 + i_7;
-                    i_9 %= i_10;
-                    i_9 = i_7 + i_10 - i_9 - (-i_4 + 1) % i_10;
-                    i_9 %= i_10;
-                    if (i_9 < 0) {
-                        i_9 += i_10;
-                    }
-
-                    method14399(i_1, i_2 + i_4, 1 + -i_4, i_5, i_6, i_7, i_8, i_9);
                 }
             } else {
-                i_9 <<= 8;
-                i_7 <<= 8;
-                i_8 <<= 8;
-                i_10 = i_8 + i_7;
-                i_9 %= i_10;
-                int i_11;
-                int i_12;
-                if (i_3 + i_4 < 0) {
-                    i_11 = (int) (Math.sqrt(i_3 * i_3 + i_4 * i_4) * 256.0D);
-                    i_12 = i_11 % i_10;
-                    i_9 = i_7 + i_10 - i_9 - i_12;
-                    i_9 %= i_10;
-                    if (i_9 < 0) {
-                        i_9 += i_10;
-                    }
-
-                    i_1 += i_3;
-                    i_3 = -i_3;
-                    i_2 += i_4;
-                    i_4 = -i_4;
-                }
-
-                int i_13;
-                int i_14;
-                int i_15;
-                int i_16;
-                int i_17;
-                int i_18;
-                if (i_3 > i_4) {
-                    i_2 <<= 16;
-                    i_2 += 32768;
-                    i_4 <<= 16;
-                    i_11 = (int) Math.floor((double) i_4 / i_3 + 0.5D);
-                    i_3 += i_1;
-                    i_12 = i_5 >>> 24;
-                    i_13 = (int) Math.sqrt((i_11 >> 8) * (i_11 >> 8) + 65536);
-                    if (i_6 == 0 || i_6 == 1 && i_12 == 255) {
-                        while (i_1 <= i_3) {
-                            i_14 = i_2 >> 16;
-                            if (i_1 >= anInt8983 && i_1 < anInt9002 && i_14 >= anInt9009 && i_14 < anInt8986 && i_9 < i_7) {
-                                anIntArray8979[i_1 + anInt8980 * i_14] = i_5;
-                            }
-
-                            i_2 += i_11;
-                            ++i_1;
-                            i_9 += i_13;
-                            i_9 %= i_10;
-                        }
-                    } else if (i_6 == 1) {
-                        i_5 = (i_12 << 24) + ((i_5 & 0xff00) * i_12 >> 8 & 0xff00) + (i_12 * (i_5 & 0xff00ff) >> 8 & 0xff00ff);
-
-                        for (i_14 = 256 - i_12; i_1 <= i_3; i_9 %= i_10) {
-                            i_15 = i_2 >> 16;
-                            if (i_1 >= anInt8983 && i_1 < anInt9002 && i_15 >= anInt9009 && i_15 < anInt8986 && i_9 < i_7) {
-                                i_16 = i_15 * anInt8980 + i_1;
-                                i_17 = anIntArray8979[i_16];
-                                i_17 = ((i_17 & 0xff00ff) * i_14 >> 8 & 0xff00ff) + (i_14 * (i_17 & 0xff00) >> 8 & 0xff00);
-                                anIntArray8979[i_16] = i_17 + i_5;
-                            }
-
-                            i_2 += i_11;
-                            ++i_1;
-                            i_9 += i_13;
-                        }
-                    } else {
-                        if (i_6 != 2) {
-                            throw new IllegalArgumentException();
-                        }
-
-                        while (i_1 <= i_3) {
-                            i_14 = i_2 >> 16;
-                            if (i_1 >= anInt8983 && i_1 < anInt9002 && i_14 >= anInt9009 && i_14 < anInt8986 && i_9 < i_7) {
-                                i_15 = i_1 + i_14 * anInt8980;
-                                i_16 = anIntArray8979[i_15];
-                                i_17 = i_16 + i_5;
-                                i_18 = (i_16 & 0xff00ff) + (i_5 & 0xff00ff);
-                                i_16 = (i_18 & 0x1000100) + (i_17 - i_18 & 0x10000);
-                                anIntArray8979[i_15] = i_17 - i_16 | i_16 - (i_16 >>> 8);
-                            }
-
-                            i_2 += i_11;
-                            ++i_1;
-                            i_9 += i_13;
-                            i_9 %= i_10;
-                        }
-                    }
-                } else {
-                    i_1 <<= 16;
-                    i_1 += 32768;
-                    i_3 <<= 16;
-                    i_11 = (int) Math.floor((double) i_3 / i_4 + 0.5D);
-                    i_4 += i_2;
-                    i_12 = i_5 >>> 24;
-                    i_13 = (int) Math.sqrt((i_11 >> 8) * (i_11 >> 8) + 65536);
-                    if (i_6 != 0 && (i_6 != 1 || i_12 != 255)) {
-                        if (i_6 == 1) {
-                            i_5 = (i_12 << 24) + ((i_5 & 0xff00ff) * i_12 >> 8 & 0xff00ff) + ((i_5 & 0xff00) * i_12 >> 8 & 0xff00);
-
-                            for (i_14 = 256 - i_12; i_2 <= i_4; i_9 %= i_10) {
-                                i_15 = i_1 >> 16;
-                                if (i_2 >= anInt9009 && i_2 < anInt8986 && i_15 >= anInt8983 && i_15 < anInt9002 && i_9 < i_7) {
-                                    i_16 = i_2 * anInt8980 + i_15;
-                                    i_17 = anIntArray8979[i_16];
-                                    i_17 = (i_14 * (i_17 & 0xff00ff) >> 8 & 0xff00ff) + ((i_17 & 0xff00) * i_14 >> 8 & 0xff00);
-                                    anIntArray8979[i_15 + anInt8980 * i_2] = i_17 + i_5;
-                                }
-
-                                i_1 += i_11;
-                                ++i_2;
-                                i_9 += i_13;
-                            }
-                        } else {
-                            if (i_6 != 2) {
-                                throw new IllegalArgumentException();
-                            }
-
-                            while (i_2 <= i_4) {
-                                i_14 = i_1 >> 16;
-                                if (i_2 >= anInt9009 && i_2 < anInt8986 && i_14 >= anInt8983 && i_14 < anInt9002 && i_9 < i_7) {
-                                    i_15 = i_2 * anInt8980 + i_14;
-                                    i_16 = anIntArray8979[i_15];
-                                    i_17 = i_16 + i_5;
-                                    i_18 = (i_5 & 0xff00ff) + (i_16 & 0xff00ff);
-                                    i_16 = (i_18 & 0x1000100) + (i_17 - i_18 & 0x10000);
-                                    anIntArray8979[i_15] = i_17 - i_16 | i_16 - (i_16 >>> 8);
-                                }
-
-                                i_1 += i_11;
-                                ++i_2;
-                                i_9 += i_13;
-                                i_9 %= i_10;
-                            }
-                        }
-                    } else {
-                        while (i_2 <= i_4) {
-                            i_14 = i_1 >> 16;
-                            if (i_2 >= anInt9009 && i_2 < anInt8986 && i_14 >= anInt8983 && i_14 < anInt9002 && i_9 < i_7) {
-                                anIntArray8979[i_14 + i_2 * anInt8980] = i_5;
-                            }
-
-                            i_1 += i_11;
-                            ++i_2;
-                            i_9 += i_13;
-                            i_9 %= i_10;
-                        }
+                for (i_7 = 0; i_7 < class91_1.height; i_7++) {
+                    for (i_8 = 0; i_8 < class91_1.width; i_8++) {
+                        int i_9 = class91_1.pallete[class91_1.pixels[i_5++] & 0xff];
+                        ints_4[i_6++] = i_9 != 0 ? -16777216 | i_9 : 0;
                     }
                 }
             }
+
+            nativesprite_3 = createNativeSprite(ints_4, class91_1.width, class91_1.width, class91_1.height);
+        } else {
+            nativesprite_3 = createNativeSprite(new int[1], 1, 1, 1);
         }
 
-    }
-
-    @Override
-    public void r(int i_1, int i_2, int i_3, int i_4) {
-        int i_11 = i_1;
-        int i_21 = i_2;
-        int i_31 = i_3;
-        int i_41 = i_4;
-        if (i_11 < 0) {
-            i_11 = 0;
-        }
-
-        if (i_21 < 0) {
-            i_21 = 0;
-        }
-
-        if (i_31 > anInt8980) {
-            i_31 = anInt8980;
-        }
-
-        if (i_41 > anInt8981) {
-            i_41 = anInt8981;
-        }
-
-        anInt8983 = i_11;
-        anInt9002 = i_31;
-        anInt9009 = i_21;
-        anInt8986 = i_41;
-        method14364();
-    }
-
-    @Override
-    public Matrix44 method8589() {
-        return new Matrix44(aClass384_8995);
-    }
-
-    @Override
-    public Class152 method8467(Class152 class152_1, Class152 class152_2, float f_3, Class152 class152_4) {
-        return null;
-    }
-
-    @Override
-    public void iz(float f_1) {
-        anInt8992 = (int) (f_1 * 65535.0F);
-    }
-
-    @Override
-    public void in(float f_1) {
-        anInt8992 = (int) (f_1 * 65535.0F);
-    }
-
-    boolean method14408() {
-        return aBool9014;
-    }
-
-    @Override
-    public void im(int i_1, float f_2, float f_3, float f_4, float f_5, float f_6) {
-        anInt8990 = (int) (65535.0F * f_2);
-        anInt8991 = (int) (65535.0F * f_3);
-        float f_7 = (float) Math.sqrt(f_6 * f_6 + f_5 * f_5 + f_4 * f_4);
-        anInt9011 = (int) (f_4 * 65535.0F / f_7);
-        anInt8988 = (int) (65535.0F * f_5 / f_7);
-        anInt9007 = (int) (f_6 * 65535.0F / f_7);
-    }
-
-    @Override
-    public void iq(int i_1) {
-    }
-
-    @Override
-    public void il(int i_1) {
-    }
-
-    @Override
-    public void ii(int i_1) {
-    }
-
-    @Override
-    public void is(int i_1, int i_2, int i_3) {
-        for (int i_4 = 0; i_4 < aClass185Array8984.length; i_4++) {
-            Class185 class185_5 = aClass185Array8984[i_4];
-            class185_5.anInt2307 = (i_1 & 0xffffff);
-            int i_6 = class185_5.anInt2307 >>> 16 & 0xff;
-            if (i_6 < 2) {
-                i_6 = 2;
-            }
-
-            int i_7 = class185_5.anInt2307 >> 8 & 0xff;
-            if (i_7 < 2) {
-                i_7 = 2;
-            }
-
-            int i_8 = class185_5.anInt2307 & 0xff;
-            if (i_8 < 2) {
-                i_8 = 2;
-            }
-
-            class185_5.anInt2307 = (i_6 << 16 | i_7 << 8 | i_8);
-            class185_5.aBool2304 = i_2 >= 0;
-        }
-
-    }
-
-    @Override
-    public void method8435(int i_1, int i_2, int i_3, int i_4, int i_5, int i_7, int i_8, int i_9) {
-        if (anIntArray8979 != null) {
-            i_3 -= i_1;
-            i_4 -= i_2;
-            int i_10;
-            if (i_4 == 0) {
-                if (i_3 >= 0) {
-                    method14366(i_1, i_2, i_3 + 1, i_5, 1, i_7, i_8, i_9);
-                } else {
-                    i_10 = i_8 + i_7;
-                    i_9 %= i_10;
-                    i_9 = i_10 + i_7 - i_9 - (-i_3 + 1) % i_10;
-                    i_9 %= i_10;
-                    if (i_9 < 0) {
-                        i_9 += i_10;
-                    }
-
-                    method14366(i_3 + i_1, i_2, -i_3 + 1, i_5, 1, i_7, i_8, i_9);
-                }
-            } else if (i_3 == 0) {
-                if (i_4 >= 0) {
-                    method14399(i_1, i_2, i_4 + 1, i_5, 1, i_7, i_8, i_9);
-                } else {
-                    i_10 = i_8 + i_7;
-                    i_9 %= i_10;
-                    i_9 = i_10 + i_7 - i_9 - (-i_4 + 1) % i_10;
-                    i_9 %= i_10;
-                    if (i_9 < 0) {
-                        i_9 += i_10;
-                    }
-
-                    method14399(i_1, i_2 + i_4, -i_4 + 1, i_5, 1, i_7, i_8, i_9);
-                }
-            } else {
-                i_9 <<= 8;
-                i_7 <<= 8;
-                i_8 <<= 8;
-                i_10 = i_8 + i_7;
-                i_9 %= i_10;
-                int i_11;
-                int i_12;
-                if (i_3 + i_4 < 0) {
-                    i_11 = (int) (Math.sqrt(i_3 * i_3 + i_4 * i_4) * 256.0D);
-                    i_12 = i_11 % i_10;
-                    i_9 = i_10 + i_7 - i_9 - i_12;
-                    i_9 %= i_10;
-                    if (i_9 < 0) {
-                        i_9 += i_10;
-                    }
-
-                    i_1 += i_3;
-                    i_3 = -i_3;
-                    i_2 += i_4;
-                    i_4 = -i_4;
-                }
-
-                int i_13;
-                int i_14;
-                int i_15;
-                int i_16;
-                int i_17;
-                int i_18;
-                if (i_3 > i_4) {
-                    i_2 <<= 16;
-                    i_2 += 32768;
-                    i_4 <<= 16;
-                    i_11 = (int) Math.floor((double) i_4 / i_3 + 0.5D);
-                    i_3 += i_1;
-                    i_12 = i_5 >>> 24;
-                    i_13 = (int) Math.sqrt((i_11 >> 8) * (i_11 >> 8) + 65536);
-                    if (i_12 == 255) {
-                        while (i_1 <= i_3) {
-                            i_14 = i_2 >> 16;
-                            if (i_1 >= anInt8983 && i_1 < anInt9002 && i_14 >= anInt9009 && i_14 < anInt8986 && i_9 < i_7) {
-                                anIntArray8979[i_14 * anInt8980 + i_1] = i_5;
-                            }
-
-                            i_2 += i_11;
-                            ++i_1;
-                            i_9 += i_13;
-                            i_9 %= i_10;
-                        }
-                    } else if (true) {
-                        i_5 = (i_12 * (i_5 & 0xff00ff) >> 8 & 0xff00ff) + (i_12 * (i_5 & 0xff00) >> 8 & 0xff00) + (i_12 << 24);
-
-                        for (i_14 = 256 - i_12; i_1 <= i_3; i_9 %= i_10) {
-                            i_15 = i_2 >> 16;
-                            if (i_1 >= anInt8983 && i_1 < anInt9002 && i_15 >= anInt9009 && i_15 < anInt8986 && i_9 < i_7) {
-                                i_16 = i_15 * anInt8980 + i_1;
-                                i_17 = anIntArray8979[i_16];
-                                i_17 = ((i_17 & 0xff00ff) * i_14 >> 8 & 0xff00ff) + (i_14 * (i_17 & 0xff00) >> 8 & 0xff00);
-                                anIntArray8979[i_16] = i_5 + i_17;
-                            }
-
-                            i_2 += i_11;
-                            ++i_1;
-                            i_9 += i_13;
-                        }
-                    } else {
-                        if (true) {
-                            throw new IllegalArgumentException();
-                        }
-
-                        while (i_1 <= i_3) {
-                            i_14 = i_2 >> 16;
-                            if (i_1 >= anInt8983 && i_1 < anInt9002 && i_14 >= anInt9009 && i_14 < anInt8986 && i_9 < i_7) {
-                                i_15 = i_14 * anInt8980 + i_1;
-                                i_16 = anIntArray8979[i_15];
-                                i_17 = i_5 + i_16;
-                                i_18 = (i_16 & 0xff00ff) + (i_5 & 0xff00ff);
-                                i_16 = (i_18 & 0x1000100) + (i_17 - i_18 & 0x10000);
-                                anIntArray8979[i_15] = i_17 - i_16 | i_16 - (i_16 >>> 8);
-                            }
-
-                            i_2 += i_11;
-                            ++i_1;
-                            i_9 += i_13;
-                            i_9 %= i_10;
-                        }
-                    }
-                } else {
-                    i_1 <<= 16;
-                    i_1 += 32768;
-                    i_3 <<= 16;
-                    i_11 = (int) Math.floor((double) i_3 / i_4 + 0.5D);
-                    i_4 += i_2;
-                    i_12 = i_5 >>> 24;
-                    i_13 = (int) Math.sqrt((i_11 >> 8) * (i_11 >> 8) + 65536);
-                    if ((false || i_12 != 255)) {
-                        if (true) {
-                            i_5 = (i_12 * (i_5 & 0xff00ff) >> 8 & 0xff00ff) + (i_12 * (i_5 & 0xff00) >> 8 & 0xff00) + (i_12 << 24);
-
-                            for (i_14 = 256 - i_12; i_2 <= i_4; i_9 %= i_10) {
-                                i_15 = i_1 >> 16;
-                                if (i_2 >= anInt9009 && i_2 < anInt8986 && i_15 >= anInt8983 && i_15 < anInt9002 && i_9 < i_7) {
-                                    i_16 = i_2 * anInt8980 + i_15;
-                                    i_17 = anIntArray8979[i_16];
-                                    i_17 = (i_14 * (i_17 & 0xff00) >> 8 & 0xff00) + ((i_17 & 0xff00ff) * i_14 >> 8 & 0xff00ff);
-                                    anIntArray8979[i_2 * anInt8980 + i_15] = i_5 + i_17;
-                                }
-
-                                i_1 += i_11;
-                                ++i_2;
-                                i_9 += i_13;
-                            }
-                        } else {
-                            if (true) {
-                                throw new IllegalArgumentException();
-                            }
-
-                            while (i_2 <= i_4) {
-                                i_14 = i_1 >> 16;
-                                if (i_2 >= anInt9009 && i_2 < anInt8986 && i_14 >= anInt8983 && i_14 < anInt9002 && i_9 < i_7) {
-                                    i_15 = i_2 * anInt8980 + i_14;
-                                    i_16 = anIntArray8979[i_15];
-                                    i_17 = i_5 + i_16;
-                                    i_18 = (i_16 & 0xff00ff) + (i_5 & 0xff00ff);
-                                    i_16 = (i_18 & 0x1000100) + (i_17 - i_18 & 0x10000);
-                                    anIntArray8979[i_15] = i_17 - i_16 | i_16 - (i_16 >>> 8);
-                                }
-
-                                i_1 += i_11;
-                                ++i_2;
-                                i_9 += i_13;
-                                i_9 %= i_10;
-                            }
-                        }
-                    } else {
-                        while (i_2 <= i_4) {
-                            i_14 = i_1 >> 16;
-                            if (i_2 >= anInt9009 && i_2 < anInt8986 && i_14 >= anInt8983 && i_14 < anInt9002 && i_9 < i_7) {
-                                anIntArray8979[i_2 * anInt8980 + i_14] = i_5;
-                            }
-
-                            i_1 += i_11;
-                            ++i_2;
-                            i_9 += i_13;
-                            i_9 %= i_10;
-                        }
-                    }
-                }
-            }
-        }
-
-    }
-
-    @Override
-    public void ib(int i_1, int i_2, int i_3) {
-        for (int i_4 = 0; i_4 < aClass185Array8984.length; i_4++) {
-            Class185 class185_5 = aClass185Array8984[i_4];
-            class185_5.anInt2307 = (i_1 & 0xffffff);
-            int i_6 = class185_5.anInt2307 >>> 16 & 0xff;
-            if (i_6 < 2) {
-                i_6 = 2;
-            }
-
-            int i_7 = class185_5.anInt2307 >> 8 & 0xff;
-            if (i_7 < 2) {
-                i_7 = 2;
-            }
-
-            int i_8 = class185_5.anInt2307 & 0xff;
-            if (i_8 < 2) {
-                i_8 = 2;
-            }
-
-            class185_5.anInt2307 = (i_6 << 16 | i_7 << 8 | i_8);
-            class185_5.aBool2304 = i_2 >= 0;
-        }
-
-    }
-
-    @Override
-    public Node_Sub24 method8593(int i_1, int i_2, int i_3, int i_4, int i_5) {
-        return null;
-    }
-
-    @Override
-    public void method8595(boolean bool_1) {
-        lowResolution = bool_1;
-        aClass229_9006.method3859();
-    }
-
-    @Override
-    public Class152 method8557(Class152 class152_1, Class152 class152_2, float f_3, Class152 class152_4) {
-        return null;
-    }
-
-    @Override
-    public void method8584(Class152 class152_1) {
-    }
-
-    @Override
-    public boolean method8469() {
-        return false;
-    }
-
-    @Override
-    public boolean method8628() {
-        return false;
-    }
-
-    @Override
-    public void method8602() {
-    }
-
-    @Override
-    public Matrix44Var method8572() {
-        Class185 class185_1 = method14370(Thread.currentThread());
-        return class185_1.aClass294_2314;
-    }
-
-    @Override
-    public Class455 method8556(int i_1, int i_2, int[] ints_3, int[] ints_4) {
-        return new Class455_Sub3(ints_3, ints_4);
+        nativesprite_3.method2743(class91_1.minX, class91_1.minY, class91_1.anInt958, class91_1.anInt953);
+        return nativesprite_3;
     }
 
     @Override
     public NativeSprite method8604(int i_1, int i_2, int i_3, int i_4, boolean bool_5) {
-        if (anIntArray8979 == null) {
-            throw new IllegalStateException("");
-        } else {
-            int[] ints_6 = new int[i_3 * i_4];
-            int i_7 = i_2 * anInt8980 + i_1;
-            int i_8 = anInt8980 - i_3;
-
-            for (int i_9 = 0; i_9 < i_4; i_9++) {
-                int i_10 = i_9 * i_3;
-
-                for (int i_11 = 0; i_11 < i_3; i_11++) {
-                    ints_6[i_10 + i_11] = anIntArray8979[i_7++];
-                }
-
-                i_7 += i_8;
-            }
-
-            if (bool_5) {
-                return new NativeSprite_Sub1_Sub3(this, ints_6, i_3, i_4);
-            } else {
-                return new NativeSprite_Sub1_Sub1(this, ints_6, i_3, i_4);
-            }
-        }
+        NativeSprite_Sub3 class160_sub3_6 = new NativeSprite_Sub3(this, i_3, i_4, bool_5, false);
+        class160_sub3_6.method2750(0, 0, i_3, i_4, i_1, i_2);
+        return class160_sub3_6;
     }
 
     @Override
-    public boolean method8679() {
-        return false;
+    public NativeSprite method8552(int i_1, int i_2, int i_3, int i_4, boolean bool_5) {
+        NativeSprite_Sub3 class160_sub3_6 = new NativeSprite_Sub3(this, i_3, i_4, bool_5, false);
+        class160_sub3_6.method2750(0, 0, i_3, i_4, i_1, i_2);
+        return class160_sub3_6;
     }
 
     @Override
-    public boolean method8649() {
-        return false;
-    }
-
-    @Override
-    public boolean method8606() {
-        return false;
-    }
-
-    @Override
-    public boolean method8607() {
-        return false;
-    }
-
-    @Override
-    void method8608(float f_1, float f_2, float f_3, float f_6) {
-    }
-
-    @Override
-    public int method8452(int i_1, int i_2) {
-        i_1 |= 0x20800;
-        return i_1 & i_2 ^ i_2;
-    }
-
-    @Override
-    public void method8603(int i_1, int i_2, int i_3, int i_4) {
-    }
-
-    @Override
-    public int za() {
-        return 0;
-    }
-
-    @Override
-    public void method8594(boolean bool_1) {
-        lowResolution = bool_1;
-        aClass229_9006.method3859();
-    }
-
-    @Override
-    public void method8613() {
-    }
-
-    @Override
-    public void method8585(int i_1, HDWaterTile class90_2) {
-        for (int i_3 = 0; i_3 < aClass185Array8984.length; i_3++) {
-            aClass185Array8984[i_3].anInt2336 = aClass185Array8984[i_3].anInt2307;
-            aClass185Array8984[i_3].anInt2306 = i_1;
-            aClass185Array8984[i_3].anInt2307 = class90_2.color;
-            aClass185Array8984[i_3].anInt2313 = class90_2.scale;
-            aClass185Array8984[i_3].aBool2309 = true;
+    public void iz(float f_1) {
+        if (aFloat8769 != f_1) {
+            aFloat8769 = f_1;
+            method13948();
+            method13951();
         }
 
     }
 
     @Override
-    public void method8615(int i_1, HDWaterTile class90_2) {
-        Class185 class185_3 = method14370(Thread.currentThread());
-        class185_3.anInt2306 = i_1;
-        class185_3.anInt2307 = class90_2.color;
-        class185_3.anInt2313 = class90_2.scale;
+    public Class455 method8554(int i_1, int i_2, int[] ints_3, int[] ints_4) {
+        return Class455_Sub1.method13769(this, i_1, i_2, ints_3, ints_4);
     }
 
     @Override
-    public void method8616(int i_1, HDWaterTile class90_2) {
-        Class185 class185_3 = method14370(Thread.currentThread());
-        class185_3.anInt2306 = i_1;
-        class185_3.anInt2307 = class90_2.color;
-        class185_3.anInt2313 = class90_2.scale;
+    public Class455 method8427(int i_1, int i_2, int[] ints_3, int[] ints_4) {
+        return Class455_Sub1.method13769(this, i_1, i_2, ints_3, ints_4);
     }
 
     @Override
-    public void method8488(int i_1) {
-        int i_2 = i_1 - 1426154545 * anInt8977;
-
-        for (Node_Sub27 class282_sub27_3 = (Node_Sub27) aClass229_9006.method3866(); class282_sub27_3 != null; class282_sub27_3 = (Node_Sub27) aClass229_9006.method3867()) {
-            if (class282_sub27_3.aBool7693) {
-                class282_sub27_3.anInt7692 += i_2;
-                int i_4 = class282_sub27_3.anInt7692 / 50;
-                if (i_4 > 0) {
-                    TextureDetails class169_5 = textureCache.getTextureDetails(class282_sub27_3.anInt7695);
-                    float f_6 = class169_5.isHalfSize ? 64.0F : 128.0F;
-                    class282_sub27_3.method12403((int) (f_6 * (class169_5.textureSpeedU * (i_2 / 1000.0F) / 64.0F)), (int) (class169_5.textureSpeedV * (i_2 / 1000.0F) / 64.0F * f_6));
-                    class282_sub27_3.anInt7692 -= 50 * i_4;
-                }
-
-                class282_sub27_3.aBool7693 = false;
-            }
-        }
-
-        anInt8977 = i_1;
-        aClass229_9013.method3858(5);
-        aClass229_9006.method3858(5);
+    public Class455 method8556(int i_1, int i_2, int[] ints_3, int[] ints_4) {
+        return Class455_Sub1.method13769(this, i_1, i_2, ints_3, ints_4);
     }
 
     @Override
-    public void method8573(float f_1, float f_2, float f_3, float[] floats_4) {
-        float f_5 = f_3 * aClass384_8996.buf[11] + aClass384_8996.buf[7] * f_2 + f_1 * aClass384_8996.buf[3] + aClass384_8996.buf[15];
-        float f_6 = f_2 * aClass384_8996.buf[4] + f_1 * aClass384_8996.buf[0] + aClass384_8996.buf[12] + aClass384_8996.buf[8] * f_3;
-        float f_7 = f_2 * aClass384_8996.buf[5] + f_1 * aClass384_8996.buf[1] + aClass384_8996.buf[13] + f_3 * aClass384_8996.buf[9];
-        float f_8 = f_3 * aClass384_8994.buf[10] + aClass384_8994.buf[6] * f_2 + f_1 * aClass384_8994.buf[2] + aClass384_8994.buf[14];
-        floats_4[0] = aFloat9003 + f_6 * aFloat8976 / f_5;
-        floats_4[1] = aFloat8982 + f_7 * aFloat9004 / f_5;
-        floats_4[2] = f_8;
-    }
-
-    @Override
-    public void method8650(float f_1, float f_2, float f_3, float[] floats_4) {
-        float f_5 = f_3 * aClass384_8996.buf[11] + aClass384_8996.buf[7] * f_2 + f_1 * aClass384_8996.buf[3] + aClass384_8996.buf[15];
-        float f_6 = f_2 * aClass384_8996.buf[4] + f_1 * aClass384_8996.buf[0] + aClass384_8996.buf[12] + aClass384_8996.buf[8] * f_3;
-        float f_7 = f_2 * aClass384_8996.buf[5] + f_1 * aClass384_8996.buf[1] + aClass384_8996.buf[13] + f_3 * aClass384_8996.buf[9];
-        float f_8 = f_3 * aClass384_8994.buf[10] + aClass384_8994.buf[6] * f_2 + f_1 * aClass384_8994.buf[2] + aClass384_8994.buf[14];
-        floats_4[0] = aFloat9003 + f_6 * aFloat8976 / f_5;
-        floats_4[1] = aFloat8982 + f_7 * aFloat9004 / f_5;
-        floats_4[2] = f_8;
-    }
-
-    @Override
-    public void method8619(float f_1, float f_2, float f_3, float[] floats_4) {
-        float f_5 = aClass384_8996.buf[10] * f_3 + f_1 * aClass384_8996.buf[2] + aClass384_8996.buf[14] + f_2 * aClass384_8996.buf[6];
-        float f_6 = aClass384_8996.buf[3] * f_1 + aClass384_8996.buf[15] + aClass384_8996.buf[7] * f_2 + f_3 * aClass384_8996.buf[11];
-        if (f_5 >= -f_6 && f_5 <= f_6) {
-            float f_7 = f_2 * aClass384_8996.buf[4] + aClass384_8996.buf[12] + f_1 * aClass384_8996.buf[0] + aClass384_8996.buf[8] * f_3;
-            if (f_7 >= -f_6 && f_7 <= f_6) {
-                float f_8 = f_3 * aClass384_8996.buf[9] + aClass384_8996.buf[13] + aClass384_8996.buf[1] * f_1 + aClass384_8996.buf[5] * f_2;
-                if (f_8 >= -f_6 && f_8 <= f_6) {
-                    float f_9 = aClass384_8994.buf[14] + aClass384_8994.buf[2] * f_1 + aClass384_8994.buf[6] * f_2 + aClass384_8994.buf[10] * f_3;
-                    floats_4[0] = aFloat9003 + f_7 * aFloat8976 / f_6;
-                    floats_4[1] = f_8 * aFloat9004 / f_6 + aFloat8982;
-                    floats_4[2] = f_9;
-                } else {
-                    floats_4[2] = Float.NaN;
-                    floats_4[1] = Float.NaN;
-                    floats_4[0] = Float.NaN;
-                }
-            } else {
-                floats_4[2] = Float.NaN;
-                floats_4[1] = Float.NaN;
-                floats_4[0] = Float.NaN;
-            }
-        } else {
-            floats_4[2] = Float.NaN;
-            floats_4[1] = Float.NaN;
-            floats_4[0] = Float.NaN;
-        }
-
-    }
-
-    @Override
-    public Class158_Sub1 method8620() {
-        return new Class158_Sub1_Sub2(this);
-    }
-
-    @Override
-    public Interface8 method8621(int i_1, int i_2) {
-        return new Class125(i_1, i_2);
-    }
-
-    @Override
-    public boolean method8609() {
-        return true;
-    }
-
-    @Override
-    public void ft(int[] ints_1) {
-        ints_1[0] = anInt8983;
-        ints_1[1] = anInt9009;
-        ints_1[2] = anInt9002;
-        ints_1[3] = anInt8986;
-    }
-
-    void method14409() {
-        aClass185Array8984[0].method3070(Thread.currentThread());
-    }
-
-    @Override
-    public int[] kf(int i_1, int i_2, int i_3, int i_4) {
-        if (anIntArray8979 == null) {
-            throw new IllegalStateException("");
-        } else {
-            int[] ints_5 = new int[i_4 * i_3];
-            int i_6 = 0;
-
-            for (int i_7 = 0; i_7 < i_4; i_7++) {
-                int i_8 = i_1 + (i_2 + i_7) * anInt8980;
-
-                for (int i_9 = 0; i_9 < i_3; i_9++) {
-                    ints_5[i_6++] = anIntArray8979[i_8 + i_9];
-                }
-            }
-
-            return ints_5;
-        }
-    }
-
-    @Override
-    public void method8627(int i_1, int i_2, float f_3, int i_4, int i_5, float f_6, int i_7, int i_8, float f_9, int i_10, int i_11, int i_12, int i_13) {
-        boolean bool_14 = anIntArray8979 != null;
-        boolean bool_15 = aFloatArray9010 != null;
-        if (bool_14 || bool_15) {
-            Class185 class185_16 = method14370(Thread.currentThread());
-            ChoppyItemFixClass choppyitemfixclass_17 = class185_16.aClass144_2310;
-            choppyitemfixclass_17.aBool1675 = false;
-            i_1 -= anInt8983;
-            i_4 -= anInt8983;
-            i_7 -= anInt8983;
-            i_2 -= anInt9009;
-            i_5 -= anInt9009;
-            i_8 -= anInt9009;
-            choppyitemfixclass_17.aBool1708 = i_1 < 0 || i_1 > choppyitemfixclass_17.anInt1684 || i_4 < 0 || i_4 > choppyitemfixclass_17.anInt1684 || i_7 < 0 || i_7 > choppyitemfixclass_17.anInt1684;
-            int i_18 = i_10 >>> 24;
-            if (i_13 == 0 || i_13 == 1 && i_18 == 255) {
-                choppyitemfixclass_17.anInt1674 = 0;
-                choppyitemfixclass_17.aBool1672 = false;
-                choppyitemfixclass_17.method2425(bool_14, bool_15, false, i_2, i_5, i_8, i_1, i_4, i_7, f_3, f_6, f_9, i_10, i_11, i_12);
-            } else if (i_13 == 1) {
-                choppyitemfixclass_17.anInt1674 = 255 - i_18;
-                choppyitemfixclass_17.aBool1672 = false;
-                choppyitemfixclass_17.method2425(bool_14, bool_15, false, i_2, i_5, i_8, i_1, i_4, i_7, f_3, f_6, f_9, i_10, i_11, i_12);
-            } else {
-                if (i_13 != 2) {
-                    throw new IllegalArgumentException();
-                }
-
-                choppyitemfixclass_17.anInt1674 = 128;
-                choppyitemfixclass_17.aBool1672 = true;
-                choppyitemfixclass_17.method2425(bool_14, bool_15, false, i_2, i_5, i_8, i_1, i_4, i_7, f_3, f_6, f_9, i_10, i_11, i_12);
-            }
-
-            choppyitemfixclass_17.aBool1675 = true;
-        }
-
+    public void hr(int i_1, Class455 class455_2, int i_3, int i_4) {
+        RA(false);
+        aNativeSprite_Sub3_8791.method2766(0.0F, 0.0F, method8523().method2714(), 0.0F, 0.0F, method8523().method2716(), 0, class455_2, i_3, i_4);
+        RA(true);
     }
 
     @Override
     public void hz(int i_1, Class455 class455_2, int i_3, int i_4) {
-        int i_41 = i_4;
-        if (anIntArray8979 != null) {
-            Class455_Sub3 packetsdecoder_5 = (Class455_Sub3) class455_2;
-            int[] ints_6 = packetsdecoder_5.anIntArray9077;
-            int[] ints_7 = packetsdecoder_5.anIntArray9078;
-            int i_8;
-            if (anInt8986 < i_41 + ints_6.length) {
-                i_8 = anInt8986 - i_41;
-            } else {
-                i_8 = ints_6.length;
-            }
-
-            int i_9;
-            if (anInt9009 > i_41) {
-                i_9 = anInt9009 - i_41;
-                i_41 = anInt9009;
-            } else {
-                i_9 = 0;
-            }
-
-            if (i_8 - i_9 > 0) {
-                int i_10 = anInt8980 * i_41;
-
-                for (int i_11 = i_9; i_11 < i_8; i_11++) {
-                    int i_12 = ints_6[i_11] + i_3;
-                    int i_13 = ints_7[i_11];
-                    if (anInt8983 > i_12) {
-                        i_13 -= anInt8983 - i_12;
-                        i_12 = anInt8983;
-                    }
-
-                    if (anInt9002 < i_13 + i_12) {
-                        i_13 = anInt9002 - i_12;
-                    }
-
-                    i_12 += i_10;
-
-                    for (int i_14 = -i_13; i_14 < 0; i_14++) {
-                        anIntArray8979[i_12++] = i_1;
-                    }
-
-                    i_10 += anInt8980;
-                }
-            }
-        }
-
+        RA(false);
+        aNativeSprite_Sub3_8791.method2766(0.0F, 0.0F, method8523().method2714(), 0.0F, 0.0F, method8523().method2716(), 0, class455_2, i_3, i_4);
+        RA(true);
     }
 
-    void method14410() {
-        if (aFloatArray9010 != null) {
-            int i_1;
-            int i_2;
-            int i_3;
-            if (anInt8983 == 0 && anInt9002 == anInt8980 && anInt9009 == 0 && anInt8986 == anInt8981) {
-                i_1 = aFloatArray9010.length;
-                i_2 = i_1 - (i_1 & 0x7);
+    @Override
+    public Matrix44 method8588() {
+        return aClass384_8724;
+    }
 
-                for (i_3 = 0; i_3 < i_2; aFloatArray9010[i_3++] = 2.14748365E9F) {
-                    aFloatArray9010[i_3++] = 2.14748365E9F;
-                    aFloatArray9010[i_3++] = 2.14748365E9F;
-                    aFloatArray9010[i_3++] = 2.14748365E9F;
-                    aFloatArray9010[i_3++] = 2.14748365E9F;
-                    aFloatArray9010[i_3++] = 2.14748365E9F;
-                    aFloatArray9010[i_3++] = 2.14748365E9F;
-                    aFloatArray9010[i_3++] = 2.14748365E9F;
-                }
+    @Override
+    public Matrix44Var method8626() {
+        return aClass294_8842;
+    }
 
-                while (i_3 < i_1) {
-                    aFloatArray9010[i_3++] = 2.14748365E9F;
-                }
-            } else {
-                i_1 = anInt9002 - anInt8983;
-                i_2 = anInt8986 - anInt9009;
-                i_3 = anInt8980 - i_1;
-                int i_4 = anInt8980 * anInt9009 + anInt8983;
-                int i_5 = i_1 >> 3;
-                int i_6 = i_1 & 0x7;
-                i_1 = i_4 - 1;
+    @Override
+    public void method8559(int i_1) {
+    }
 
-                for (int i_7 = -i_2; i_7 < 0; i_7++) {
-                    int i_8;
-                    if (i_5 > 0) {
-                        i_8 = i_5;
+    @Override
+    public MeshRasterizer method8561(RSMesh rsmesh_1, int i_2, int i_3, int i_4, int i_5) {
+        return new MeshRasterizer_Sub3(this, rsmesh_1, i_2, i_4, i_5, i_3);
+    }
 
-                        do {
-                            ++i_1;
-                            aFloatArray9010[i_1] = 2.14748365E9F;
-                            ++i_1;
-                            aFloatArray9010[i_1] = 2.14748365E9F;
-                            ++i_1;
-                            aFloatArray9010[i_1] = 2.14748365E9F;
-                            ++i_1;
-                            aFloatArray9010[i_1] = 2.14748365E9F;
-                            ++i_1;
-                            aFloatArray9010[i_1] = 2.14748365E9F;
-                            ++i_1;
-                            aFloatArray9010[i_1] = 2.14748365E9F;
-                            ++i_1;
-                            aFloatArray9010[i_1] = 2.14748365E9F;
-                            ++i_1;
-                            aFloatArray9010[i_1] = 2.14748365E9F;
-                            --i_8;
-                        } while (i_8 > 0);
-                    }
+    @Override
+    public boolean method8614() {
+        return true;
+    }
 
-                    if (i_6 > 0) {
-                        i_8 = i_6;
+    @Override
+    public void GA() {
+        aFloat8737 = (float) 0.0;
+        aFloat8738 = (float) 1.0;
+        method13918();
+    }
 
-                        do {
-                            ++i_1;
-                            aFloatArray9010[i_1] = 2.14748365E9F;
-                            --i_8;
-                        } while (i_8 > 0);
-                    }
+    @Override
+    public MeshRasterizer method8505(RSMesh rsmesh_1, int i_2, int i_3, int i_4, int i_5) {
+        return new MeshRasterizer_Sub3(this, rsmesh_1, i_2, i_4, i_5, i_3);
+    }
 
-                    i_1 += i_3;
-                }
-            }
+    @Override
+    public MeshRasterizer method8564(RSMesh rsmesh_1, int i_2, int i_3, int i_4, int i_5) {
+        return new MeshRasterizer_Sub3(this, rsmesh_1, i_2, i_4, i_5, i_3);
+    }
+
+    @Override
+    public int method8565(int i_1, int i_2) {
+        return i_1 & i_2 ^ i_2;
+    }
+
+    @Override
+    public int method8566(int i_1, int i_2) {
+        return i_1 & i_2 ^ i_2;
+    }
+
+    @Override
+    public int method8567(int i_1, int i_2) {
+        return i_1 & i_2 ^ i_2;
+    }
+
+    @Override
+    public Ground method8569(int i_1, int i_2, int[][] ints_3, int[][] ints_4, int i_5, int i_6, int i_7) {
+        return new HardwareGround(this, i_6, i_7, i_1, i_2, ints_3, ints_4, i_5);
+    }
+
+    @Override
+    public Matrix44 method8517() {
+        return aClass384_8841;
+    }
+
+    @Override
+    public void method8629(int i_1, int i_2, float f_3, int i_4, int i_5, float f_6, int i_7, int i_8, float f_9, int i_10, int i_11, int i_12, int i_13) {
+    }
+
+    @Override
+    public Matrix44Var method8572() {
+        return aClass294_8842;
+    }
+
+    @Override
+    public void J() {
+        int meme = 32;
+        for (anInt8806 = 0; meme > 1; meme >>= 1) {
+            ++anInt8806;
+        }
+
+        anInt8775 = 1 << anInt8806;
+    }
+
+    @Override
+    public int method8574() {
+        return anInt8799 - 2;
+    }
+
+    @Override // dead code
+    public void method8394(int i_1, Node_Sub24[] arr_2) { 
+        if (i_1 >= 0) System.arraycopy(arr_2, 0, aNode_Sub24Array8716, 0, i_1);
+
+        anInt8773 = i_1;
+        if (aClass33_8719 == Class33.aClass33_381) {
+            method13903();
         }
 
     }
 
     @Override
-    public int method8630(int i_1, int i_2) {
-        return i_1 | i_2;
+    public NativeSprite method8461(int i_1, int i_2, boolean bool_3, boolean bool_4) {
+        return new NativeSprite_Sub3(this, i_1, i_2, bool_3, bool_4);
+    }
+
+    @Override
+    public void method8579(int i_1, Node_Sub24[] arr_2) {
+        if (i_1 >= 0) System.arraycopy(arr_2, 0, aNode_Sub24Array8716, 0, i_1);
+
+        anInt8773 = i_1;
+        if (aClass33_8719 == Class33.aClass33_381) {
+            method13903();
+        }
+
+    }
+
+    @Override
+    public void method8580(Class151 class151_1) {
+        aClass54_8837.method1091(this, class151_1);
+    }
+
+    @Override
+    public Matrix44Var method8685() {
+        return aClass294_8706;
+    }
+
+    @Override
+    public void method8423(Matrix44Var matrix44var_1) {
+        aClass294_8706 = matrix44var_1;
+        aClass384_8740.fromVarMatrix44(aClass294_8706);
+        aClass294_8804.method5209(matrix44var_1);
+        aClass294_8804.method5207();
+        aClass384_8814.fromVarMatrix44(aClass294_8804);
+        method13926();
+        if (aClass33_8719 == Class33.aClass33_381) {
+            method13927();
+        }
+
+    }
+
+    @Override
+    public Matrix44Var method8583() {
+        return aClass294_8706;
+    }
+
+    @Override
+    public boolean method8462() {
+        return aBool8828;
+    }
+
+    @Override
+    public void method8446(Matrix44 matrix44_1) {
+        aClass384_8724.method6562(matrix44_1);
+        method13926();
+        if (aClass33_8719 == Class33.aClass33_381) {
+            method14030();
+        }
+
+    }
+
+    @Override
+    public boolean method8502() {
+        return true;
+    }
+
+    @Override
+    public Matrix44 method8449() {
+        return aClass384_8841;
+    }
+
+    void method14030() {
+        aClass384_8727.method6562(aClass384_8708);
+        method13933(aClass384_8727);
+        aFloat8697 = (aClass384_8727.buf[14] - aClass384_8727.buf[15]) / (aClass384_8727.buf[11] - aClass384_8727.buf[10]);
+        aFloat8726 = -aClass384_8727.buf[14] / aClass384_8727.buf[10];
+        method14062();
+    }
+
+    @Override
+    public Matrix44 method8590() {
+        return aClass384_8724;
+    }
+
+    @Override
+    public boolean method8504() {
+        return true;
+    }
+
+    @Override
+    public void in(float f_1) {
+        if (aFloat8769 != f_1) {
+            aFloat8769 = f_1;
+            method13948();
+            method13951();
+        }
+
+    }
+
+    @Override
+    public Class152 method8400(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
+        return new Class152_Sub2_Sub1(this, i_1, i_2, i_3, i_4, i_5, i_6);
+    }
+
+    @Override
+    public void im(int i_1, float f_2, float f_3, float f_4, float f_5, float f_6) {
+        boolean bool_7 = anInt8765 != i_1;
+        if (bool_7 || aFloat8770 != f_2 || aFloat8826 != f_3) {
+            anInt8765 = i_1;
+            aFloat8770 = f_2;
+            aFloat8826 = f_3;
+            if (bool_7) {
+                aFloat8766 = (anInt8765 & 0xff0000) / 1.671168E7F;
+                aFloat8767 = (anInt8765 & 0xff00) / 65280.0F;
+                aFloat8768 = (anInt8765 & 0xff) / 255.0F;
+                method13948();
+            }
+
+            method13949();
+        }
+
+        if (aFloatArray8763[0] != f_4 || aFloatArray8763[1] != f_5 || aFloatArray8763[2] != f_6) {
+            aFloatArray8763[0] = f_4;
+            aFloatArray8763[1] = f_5;
+            aFloatArray8763[2] = f_6;
+            aFloatArray8764[0] = -f_4;
+            aFloatArray8764[1] = -f_5;
+            aFloatArray8764[2] = -f_6;
+            float f_8 = (float) (1.0D / Math.sqrt(f_4 * f_4 + f_5 * f_5 + f_6 * f_6));
+            aFloatArray8747[0] = f_4 * f_8;
+            aFloatArray8747[1] = f_5 * f_8;
+            aFloatArray8747[2] = f_6 * f_8;
+            aFloatArray8762[0] = -aFloatArray8747[0];
+            aFloatArray8762[1] = -aFloatArray8747[1];
+            aFloatArray8762[2] = -aFloatArray8747[2];
+            method13950();
+            anInt8777 = (int) (f_4 * 256.0F / f_5);
+            anInt8778 = (int) (f_6 * 256.0F / f_5);
+        }
+
+        method13951();
+    }
+
+    @Override
+    public void iq(int i_1) {
+        for (anInt8806 = 0; i_1 > 1; i_1 >>= 1) {
+            anInt8806 += 1;
+        }
+
+        anInt8775 = 1 << anInt8806;
+    }
+
+    @Override
+    public void ii(int i_1) {
+        for (anInt8806 = 0; i_1 > 1; i_1 >>= 1) {
+            anInt8806 += 1;
+        }
+
+        anInt8775 = 1 << anInt8806;
+    }
+
+    @Override
+    public FontRenderer createFont(FontMetrics fontmetrics_1, SpriteDefinitions[] arr_2, boolean bool_3) {
+        return new FontRenderer_Sub4(this, fontmetrics_1, arr_2, bool_3);
+    }
+
+    @Override
+    public void ik(int i_1, int i_2, int i_3) {
+        if (anInt8810 != i_1 || anInt8811 != i_2 || anInt8680 != i_3) {
+            anInt8810 = i_1;
+            anInt8811 = i_2;
+            anInt8680 = i_3;
+            method14062();
+            method13991();
+        }
+
+    }
+
+    @Override
+    public MeshRasterizer method8623(RSMesh rsmesh_1, int i_2, int i_3, int i_4, int i_5) {
+        return new MeshRasterizer_Sub3(this, rsmesh_1, i_2, i_4, i_5, i_3);
+    }
+
+    @Override
+    public void method8594(boolean bool_1) {
+    }
+
+    @Override
+    public boolean method8501() {
+        return aBool8828;
+    }
+
+    @Override
+    public void method8584(Class152 class152_1) {
+        aClass152_Sub2_8731 = (Class152_Sub2) class152_1;
+    }
+
+    @Override
+    public void method8598(Class152 class152_1) {
+        aClass152_Sub2_8731 = (Class152_Sub2) class152_1;
+    }
+
+    @Override
+    public boolean method8628() {
+        if (aClass55Array8802[1] != null && !aClass55Array8802[1].method1107()) {
+            boolean bool_1 = aClass32_8714.method816(aClass55Array8802[1]);
+            if (bool_1) {
+                aClass66_8787.method1279();
+            }
+
+            return bool_1;
+        } else {
+            return false;
+        }
+    }
+
+    @Override
+    public boolean method8600() {
+        if (aClass55Array8802[1] != null && !aClass55Array8802[1].method1107()) {
+            boolean bool_1 = aClass32_8714.method816(aClass55Array8802[1]);
+            if (bool_1) {
+                aClass66_8787.method1279();
+            }
+
+            return bool_1;
+        } else {
+            return false;
+        }
+    }
+
+    @Override
+    public void method8601() {
+        if (aClass55Array8802[1] != null && aClass55Array8802[1].method1107()) {
+            aClass32_8714.method822(aClass55Array8802[1]);
+            aClass66_8787.method1279();
+        }
+
+    }
+
+    @Override
+    public void method8602() {
+        if (aClass55Array8802[1] != null && aClass55Array8802[1].method1107()) {
+            aClass32_8714.method822(aClass55Array8802[1]);
+            aClass66_8787.method1279();
+        }
+
+    }
+
+    @Override
+    public void method8521() {
+        if (aClass55Array8802[1] != null && aClass55Array8802[1].method1107()) {
+            aClass32_8714.method822(aClass55Array8802[1]);
+            aClass66_8787.method1279();
+        }
+
+    }
+
+    @Override
+    public boolean method8679() {
+        return aClass55Array8802[1] != null && aClass55Array8802[1].method1107();
+    }
+
+    @Override
+    public boolean method8605() {
+        return aClass55Array8802[1] != null && aClass55Array8802[1].method1107();
+    }
+
+    @Override
+    public boolean method8606() {
+        return aClass55Array8802[1] != null && aClass55Array8802[1].method1107();
+    }
+
+    @Override
+    public boolean method8607() {
+        return aClass55Array8802[1] != null && aClass55Array8802[1].method1107();
+    }
+
+    @Override
+    void method8608(float f_1, float f_2, float f_3, float f_6) {
+        Class55_Sub1.aFloat9188 = f_1;
+        Class55_Sub1.aFloat9184 = f_2;
+        Class55_Sub1.aFloat9189 = f_3;
+        Class55_Sub1.aFloat9186 = f_6;
+    }
+
+    @Override
+    public void method8673(int i_1, int i_2, int i_3, int i_4) {
+        aClass32_8714.method830(i_3, i_4);
+    }
+
+    @Override
+    public void method8603(int i_1, int i_2, int i_3, int i_4) {
+        aClass32_8714.method830(i_3, i_4);
+    }
+
+    @Override
+    public void method8691() {
+        aClass32_8714.method833();
+    }
+
+    @Override
+    public void method8613() {
+        aClass32_8714.method833();
+    }
+
+    @Override
+    public int df() {
+        return anInt8702 + anInt8701 + anInt8761;
+    }
+
+    @Override
+    public void method8615(int i_1, HDWaterTile class90_2) {
+        if (!aBool8779) {
+            throw new RuntimeException("");
+        } else {
+            anInt8739 = i_1;
+            aClass90_8807 = class90_2;
+            if (aBool8805) {
+                aClass41Array8793[3].method876();
+                aClass41Array8793[3].method877();
+            }
+
+        }
+    }
+
+    @Override
+    public void method8616(int i_1, HDWaterTile class90_2) {
+        if (!aBool8779) {
+            throw new RuntimeException("");
+        } else {
+            anInt8739 = i_1;
+            aClass90_8807 = class90_2;
+            if (aBool8805) {
+                aClass41Array8793[3].method876();
+                aClass41Array8793[3].method877();
+            }
+
+        }
+    }
+
+    abstract Interface31 method14034(int var1, boolean var2, int[][] var3);
+
+    public void method14035(Interface30 interface30_1) {
+        if (interface30_1 != anInterface30Array8781[anInt8780]) {
+            anInterface30Array8781[anInt8780] = interface30_1;
+            if (interface30_1 != null) {
+                interface30_1.method207();
+            } else {
+                anInterface6_8788.method207();
+            }
+
+            anInt8703 &= -2;
+        }
+
+    }
+
+    Matrix44 method14036() {
+        return aClass384_8705;
+    }
+
+    @Override
+    public void method8627(int i_1, int i_2, float f_3, int i_4, int i_5, float f_6, int i_7, int i_8, float f_9, int i_10, int i_11, int i_12, int i_13) {
+    }
+
+    @Override
+    public void method8488(int i_1) {
+        if (aClass66_8787 != null) {
+            aClass66_8787.method1278();
+        }
+
+        anInt8820 = i_1 & 0x7fffffff;
+    }
+
+    @Override
+    public void r(int i_1, int i_2, int i_3, int i_4) {
+        int i_5;
+        int i_6;
+        if (aClass158_5853 != null) {
+            i_6 = aClass158_5853.method2714();
+            i_5 = aClass158_5853.method2716();
+        } else {
+            i_5 = 0;
+            i_6 = 0;
+        }
+
+        if (i_1 <= 0 && i_3 >= i_6 - 1 && i_2 <= 0 && i_4 >= i_5 - 1) {
+            L();
+        } else {
+            anInt8743 = Math.max(0, i_1);
+            anInt8744 = Math.min(i_3, i_6);
+            anInt8822 = Math.max(0, i_2);
+            anInt8742 = Math.min(i_4, i_5);
+            if (!aBool8843) {
+                aBool8843 = true;
+                method13922();
+            }
+
+            method13921();
+        }
+
     }
 
     @Override
@@ -7846,36 +3440,686 @@ public class HardwareRenderer extends AbstractRenderer {
     }
 
     @Override
+    public void method8633() {
+        anInt8745 = 0;
+        anInt8835 = 0;
+        anInt8722 = aClass158_5853.method2714();
+        anInt8748 = aClass158_5853.method2716();
+        method13918();
+    }
+
+    @Override
+    public Matrix44 method8589() {
+        return aClass384_8724;
+    }
+
+    @Override
+    public boolean method8402() {
+        return true;
+    }
+
+    @Override
+    public FontRenderer method8625(FontMetrics fontmetrics_1, SpriteDefinitions[] arr_2, boolean bool_3) {
+        return new FontRenderer_Sub4(this, fontmetrics_1, arr_2, bool_3);
+    }
+
+    public abstract boolean method14045();
+
+    abstract void method14047();
+
+    abstract Interface6 method14048(int var1, int var2, boolean var3, int[] var4, int var5, int var6);
+
+    public abstract Shader method14049(String var1);
+
+    @Override
+    public int method8537(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
+        int i_7 = 0;
+        float f_8 = aClass384_8728.buf[14] + aClass384_8728.buf[2] * i_1 + aClass384_8728.buf[6] * i_2 + aClass384_8728.buf[10] * i_3;
+        float f_9 = aClass384_8728.buf[14] + aClass384_8728.buf[2] * i_4 + aClass384_8728.buf[6] * i_5 + aClass384_8728.buf[10] * i_6;
+        float f_10 = aClass384_8728.buf[15] + aClass384_8728.buf[3] * i_1 + aClass384_8728.buf[7] * i_2 + aClass384_8728.buf[11] * i_3;
+        float f_11 = aClass384_8728.buf[15] + aClass384_8728.buf[3] * i_4 + aClass384_8728.buf[7] * i_5 + aClass384_8728.buf[11] * i_6;
+        if (f_8 < -f_10 && f_9 < -f_11) {
+            i_7 |= 0x10;
+        } else if (f_8 > f_10 && f_9 > f_11) {
+            i_7 |= 0x20;
+        }
+
+        float f_12 = aClass384_8728.buf[12] + aClass384_8728.buf[0] * i_1 + aClass384_8728.buf[4] * i_2 + aClass384_8728.buf[8] * i_3;
+        float f_13 = aClass384_8728.buf[12] + aClass384_8728.buf[0] * i_4 + aClass384_8728.buf[4] * i_5 + aClass384_8728.buf[8] * i_6;
+        if (f_12 < -f_10 && f_13 < -f_11) {
+            i_7 |= 0x1;
+        }
+
+        if (f_12 > f_10 && f_13 > f_11) {
+            i_7 |= 0x2;
+        }
+
+        float f_14 = aClass384_8728.buf[13] + aClass384_8728.buf[1] * i_1 + aClass384_8728.buf[5] * i_2 + aClass384_8728.buf[9] * i_3;
+        float f_15 = aClass384_8728.buf[13] + aClass384_8728.buf[1] * i_4 + aClass384_8728.buf[5] * i_5 + aClass384_8728.buf[9] * i_6;
+        if (f_14 < -f_10 && f_15 < -f_11) {
+            i_7 |= 0x4;
+        }
+
+        if (f_14 > f_10 && f_15 > f_11) {
+            i_7 |= 0x8;
+        }
+
+        return i_7;
+    }
+
+    abstract void method14054();
+
+    public abstract void method14056(Matrix44 var1, Matrix44 var2, Matrix44 var3);
+
+    public abstract void method14057(Matrix44 var1, Matrix44 var2, Matrix44 var3);
+
+    public abstract void method14058(Matrix44 var1, Matrix44 var2, Matrix44 var3);
+
+    @Override
+    public Matrix44 method8587() {
+        return aClass384_8724;
+    }
+
+    @Override
+    public int method8443(int i_1, int i_2) {
+        return i_1 & i_2 ^ i_2;
+    }
+
+    @Override
+    public void method8525(int i_3, int i_4) {
+        aClass32_8714.method830(i_3, i_4);
+    }
+
+    @Override
+    public void method8494(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9) {
+        float f_10 = (float) i_3 - i_1;
+        float f_11 = (float) i_4 - i_2;
+        if (f_10 == 0.0F && f_11 == 0.0F) {
+            f_10 = 1.0F;
+        } else {
+            float f_23 = (float) (1.0D / Math.sqrt(f_10 * f_10 + f_11 * f_11));
+            f_10 *= f_23;
+            f_11 *= f_23;
+        }
+
+        method13935();
+        Class41 class41_12 = aClass41Array8793[13];
+        class41_12.method873();
+        class41_12.method875();
+        method13904(i_6);
+        class41_12.method879();
+        method13992(false);
+        i_9 %= i_8 + i_7;
+        float f_13 = f_10 * i_7;
+        float f_14 = f_11 * i_7;
+        float f_15 = 0.0F;
+        float f_16 = 0.0F;
+        float f_17 = f_13;
+        float f_18 = f_14;
+        if (i_9 > i_7) {
+            f_15 = f_10 * (i_7 + i_8 - i_9);
+            f_16 = f_11 * (i_7 + i_8 - i_9);
+        } else {
+            f_17 = f_10 * (i_7 - i_9);
+            f_18 = f_11 * (i_7 - i_9);
+        }
+
+        float f_19 = i_1 + f_15;
+        float f_20 = i_2 + f_16;
+        float f_21 = f_10 * i_8;
+        float f_22 = f_11 * i_8;
+
+        while (true) {
+            if (i_3 > i_1) {
+                if (f_19 > i_3) {
+                    break;
+                }
+
+                if (f_19 + f_17 > i_3) {
+                    f_17 = i_3 - f_19;
+                }
+            } else {
+                if (f_19 < i_3) {
+                    break;
+                }
+
+                if (f_19 + f_17 < i_3) {
+                    f_17 = i_3 - f_19;
+                }
+            }
+
+            if (i_4 > i_2) {
+                if (f_20 > i_4) {
+                    break;
+                }
+
+                if (f_20 + f_18 > i_4) {
+                    f_18 = i_4 - f_20;
+                }
+            } else {
+                if (f_20 < i_4) {
+                    break;
+                }
+
+                if (f_20 + f_18 < i_4) {
+                    f_18 = i_4 - f_20;
+                }
+            }
+
+            if (!method13908(f_19, f_20, f_19 + f_17, f_20 + f_18)) {
+                return;
+            }
+
+            method14000();
+            f_19 += f_21 + f_17;
+            f_20 += f_22 + f_18;
+            f_17 = f_13;
+            f_18 = f_14;
+        }
+
+        method13992(true);
+        class41_12.method885();
+    }
+
+    @Override
     public int method8632(int i_1, int i_2) {
         return i_1 | i_2;
     }
 
+    void method14062() {
+        if (aClass41_8753 != null) {
+            aClass41_8753.method877();
+        }
+
+        method14013();
+    }
+
+    abstract void method14063();
+
+    abstract Interface29 method14064(Class150 var1, Class76 var2, int var3, int var4);
+
+    abstract Interface6 method14072(Class150 var1, Class76 var2, int var3, int var4);
+
+    byte[] getCacheShaderData(String string_1, String string_2) {
+        return shaderIndex.getFileByName(string_1, string_2);
+    }
+
+    abstract Interface1 method14077(Class150 var1, int var2, int var3, int var4, boolean var5, byte[] var6);
+
     @Override
-    public void method8633() {
-        anInt8998 = 0;
-        anInt8999 = 0;
-        anInt9000 = anInt8980;
-        anInt9001 = anInt8981;
-        method14364();
+    public void fs(int i_1, int i_2, int i_3, int i_4, int i_5) {
+        method8433(i_1, i_2, i_1 + i_3, i_2, i_4, i_5);
+    }
+
+    @Override
+    public void method8476(int i_1, HDWaterTile class90_2) {
+        if (!aBool8779) {
+            throw new RuntimeException("");
+        } else {
+            anInt8739 = i_1;
+            aClass90_8807 = class90_2;
+            if (aBool8805) {
+                aClass41Array8793[3].method876();
+                aClass41Array8793[3].method877();
+            }
+
+        }
+    }
+
+    @Override
+    public void method8634() {
+        anInt8745 = 0;
+        anInt8835 = 0;
+        anInt8722 = aClass158_5853.method2714();
+        anInt8748 = aClass158_5853.method2716();
+        method13918();
+    }
+
+    abstract void method14087();
+
+    @Override
+    public int method8630(int i_1, int i_2) {
+        return i_1 | i_2;
+    }
+
+    abstract void method14088();
+
+    @Override
+    public void method8536(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
+        i_1 = (int) (i_1 + 1.0F);
+        i_2 = (int) (i_2 + 1.0F);
+        i_3 = (int) (i_3 + 1.0F);
+        i_4 = (int) (i_4 + 1.0F);
+        float f_8 = (i_3 - i_1);
+        float f_9 = (i_4 - i_2);
+        float f_10 = 1.0F / (float) Math.sqrt(f_8 * f_8 + f_9 * f_9);
+        f_8 *= f_10;
+        f_9 *= f_10;
+        i_1 = (int) (i_1 - f_8);
+        i_2 = (int) (i_2 - f_9);
+        float f_11 = -f_9;
+        f_11 *= 0.5F * i_6;
+        float f_12 = f_8 * 0.5F * i_6;
+        aNativeSprite_Sub3_8790.method2763(i_1 - f_11, i_2 - f_12, i_3 - f_11, i_4 - f_12, i_1 + f_11, i_2 + f_12, 0, i_5, i_7);
+    }
+
+    abstract Interface6 method14090(Class150 var1, int var2, int var3, boolean var4, float[] var5, int var6, int var7);
+
+    public abstract float method14091();
+
+    abstract void method14092(boolean var1);
+
+    abstract Interface6 method14094(int var1, int var2, boolean var3, int[] var4, int var5, int var6);
+
+    abstract void method14098(int var1);
+
+    public abstract void method14101(Class352 var1, int var2, int var3, int var4, int var5);
+
+    @Override
+    public void method8669(int i_1, int i_2, int i_3, int i_4, int i_5, Class455 class455_7, int i_8, int i_9) {
+    }
+
+    public abstract void method14107(Matrix44 var1);
+
+    @Override
+    public void O() {
+        aBool8779 = false;
+    }
+
+    abstract void method14117();
+
+    @Override
+    public void ib(int i_1, int i_2, int i_3) {
+        if (anInt8810 != i_1 || anInt8811 != i_2 || anInt8680 != i_3) {
+            anInt8810 = i_1;
+            anInt8811 = i_2;
+            anInt8680 = i_3;
+            method14062();
+            method13991();
+        }
+
     }
 
     @Override
     public void method8635() {
-        anInt8998 = 0;
-        anInt8999 = 0;
-        anInt9000 = anInt8980;
-        anInt9001 = anInt8981;
-        method14364();
+        anInt8745 = 0;
+        anInt8835 = 0;
+        anInt8722 = aClass158_5853.method2714();
+        anInt8748 = aClass158_5853.method2716();
+        method13918();
+    }
+
+    @Override
+    public boolean method8495() {
+        return true;
     }
 
     @Override
     public int di() {
-        return 0;
+        return anInt8702 + anInt8701 + anInt8761;
+    }
+
+    abstract void method14119();
+
+    abstract void method14120();
+
+    @Override
+    public int method8437(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
+        int i_7 = 0;
+        float f_8 = aClass384_8728.buf[14] + aClass384_8728.buf[2] * i_1 + aClass384_8728.buf[6] * i_2 + aClass384_8728.buf[10] * i_3;
+        float f_9 = aClass384_8728.buf[14] + aClass384_8728.buf[2] * i_4 + aClass384_8728.buf[6] * i_5 + aClass384_8728.buf[10] * i_6;
+        float f_10 = aClass384_8728.buf[15] + aClass384_8728.buf[3] * i_1 + aClass384_8728.buf[7] * i_2 + aClass384_8728.buf[11] * i_3;
+        float f_11 = aClass384_8728.buf[15] + aClass384_8728.buf[3] * i_4 + aClass384_8728.buf[7] * i_5 + aClass384_8728.buf[11] * i_6;
+        if (f_8 < -f_10 && f_9 < -f_11) {
+            i_7 |= 0x10;
+        } else if (f_8 > f_10 && f_9 > f_11) {
+            i_7 |= 0x20;
+        }
+
+        float f_12 = aClass384_8728.buf[12] + aClass384_8728.buf[0] * i_1 + aClass384_8728.buf[4] * i_2 + aClass384_8728.buf[8] * i_3;
+        float f_13 = aClass384_8728.buf[12] + aClass384_8728.buf[0] * i_4 + aClass384_8728.buf[4] * i_5 + aClass384_8728.buf[8] * i_6;
+        if (f_12 < -f_10 && f_13 < -f_11) {
+            i_7 |= 0x1;
+        }
+
+        if (f_12 > f_10 && f_13 > f_11) {
+            i_7 |= 0x2;
+        }
+
+        float f_14 = aClass384_8728.buf[13] + aClass384_8728.buf[1] * i_1 + aClass384_8728.buf[5] * i_2 + aClass384_8728.buf[9] * i_3;
+        float f_15 = aClass384_8728.buf[13] + aClass384_8728.buf[1] * i_4 + aClass384_8728.buf[5] * i_5 + aClass384_8728.buf[9] * i_6;
+        if (f_14 < -f_10 && f_15 < -f_11) {
+            i_7 |= 0x4;
+        }
+
+        if (f_14 > f_10 && f_15 > f_11) {
+            i_7 |= 0x8;
+        }
+
+        return i_7;
     }
 
     @Override
-    public Class152 method8400(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
-        return null;
+    public void is(int i_1, int i_2, int i_3) {
+        if (anInt8810 != i_1 || anInt8811 != i_2 || anInt8680 != i_3) {
+            anInt8810 = i_1;
+            anInt8811 = i_2;
+            anInt8680 = i_3;
+            method14062();
+            method13991();
+        }
+
     }
+
+    abstract void method14121();
+
+    abstract void method14122();
+
+    @Override
+    public boolean method8492() {
+        return true;
+    }
+
+    abstract void method14124();
+
+    abstract void method14125();
+
+    Matrix44 method14126() {
+        return aClass33_8719 == Class33.aClass33_381 ? aClass384_8740 : aClass384_8712;
+    }
+
+    abstract void method14127();
+
+    @Override
+    public boolean method8406() {
+        return true;
+    }
+
+    @Override
+    public void method8459() {
+    }
+
+    Matrix44Var method14130() {
+        if (aClass33_8719 == Class33.aClass33_381) {
+            if (!aBool8829) {
+                aClass294_8710.method5209(aClass294_8704);
+                aClass294_8710.method5208(aClass294_8706);
+                aClass384_8685.fromVarMatrix44(aClass294_8710);
+                aBool8829 = true;
+            }
+
+            return aClass294_8710;
+        } else {
+            return aClass294_8704;
+        }
+    }
+
+    @Override
+    public void method8514(int i_1, int i_2, int i_3, int i_4) {
+        anInt8745 = i_1;
+        anInt8835 = i_2;
+        anInt8722 = i_3;
+        anInt8748 = i_4;
+        method13918();
+    }
+
+    abstract void method14132();
+
+    void method14133() {
+        method14226();
+    }
+
+    abstract boolean method14134(Class150 var1, Class76 var2);
+
+    abstract boolean method14135(Class150 var1, Class76 var2);
+
+    abstract boolean method14136(Class150 var1, Class76 var2);
+
+    abstract boolean method14137(Class150 var1, Class76 var2);
+
+    @Override
+    public void jf() {
+        aBool8779 = false;
+    }
+
+    abstract Interface6 method14141(Class150 var1, Class76 var2, int var3, int var4);
+
+    abstract Interface6 method14142(Class150 var1, Class76 var2, int var3, int var4);
+
+    abstract Interface6 method14143(Class150 var1, int var2, int var3, boolean var4, byte[] var5);
+
+    abstract Interface6 method14144(Class150 var1, int var2, int var3, boolean var4, byte[] var5, int var6, int var7);
+
+    @Override
+    public boolean method8465() {
+        return true;
+    }
+
+    abstract Interface6 method14145(Class150 var1, int var2, int var3, boolean var4, float[] var5, int var6, int var7);
+
+    @Override
+    public NativeSprite method8654(int i_1, int i_2, boolean bool_3, boolean bool_4) {
+        return new NativeSprite_Sub3(this, i_1, i_2, bool_3, bool_4);
+    }
+
+    public abstract boolean method14146();
+
+    @Override
+    public NativeSprite method8577(int i_1, int i_2, boolean bool_3, boolean bool_4) {
+        return new NativeSprite_Sub3(this, i_1, i_2, bool_3, bool_4);
+    }
+
+    @Override
+    public void method8519(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
+        method8433(i_1, i_2, i_1 + i_3, i_2, i_5, i_6);
+        method8433(i_1, i_2 + i_4, i_1 + i_3, i_2 + i_4, i_5, i_6);
+        method8433(i_1, i_2, i_1, i_2 + i_4, i_5, i_6);
+        method8433(i_1 + i_3, i_2, i_1 + i_3, i_2 + i_4, i_5, i_6);
+    }
+
+    public void method14147() {
+        anInterface30Array8781 = new Interface30[anInt8825];
+        aClass384Array8782 = new Matrix44[anInt8825];
+        aClass37Array8783 = new Class37[anInt8825];
+        aClass68Array8784 = new Class68[anInt8825];
+        aClass68Array8785 = new Class68[anInt8825];
+
+        for (int i_1 = 0; i_1 < anInt8825; i_1++) {
+            aClass68Array8785[i_1] = Class68.aClass68_683;
+            aClass68Array8784[i_1] = Class68.aClass68_683;
+            aClass37Array8783[i_1] = Class37.aClass37_393;
+            aClass384Array8782[i_1] = new Matrix44();
+        }
+
+        aNode_Sub24Array8716 = new Node_Sub24[anInt8799 - 2];
+        int[] ints_3 = {-1};
+        anInterface6_8788 = method14094(1, 1, false, ints_3, 0, 0);
+        ints_3[0] = -16777216;
+        anInterface6_8795 = method14094(1, 1, false, ints_3, 0, 0);
+        method8439(new Node_Sub1_Sub2(262144));
+        aClass70_8832 = method13995(new Class72[]{new Class72(new Class69[]{Class69.aClass69_695, Class69.aClass69_692})});
+        method13995(new Class72[]{new Class72(new Class69[]{Class69.aClass69_695, Class69.aClass69_690})});
+        aClass70_8836 = method13995(new Class72[]{new Class72(Class69.aClass69_695), new Class72(Class69.aClass69_690), new Class72(Class69.aClass69_692), new Class72(Class69.aClass69_689)});
+        aClass70_8721 = method13995(new Class72[]{new Class72(Class69.aClass69_695), new Class72(Class69.aClass69_690), new Class72(Class69.aClass69_692)});
+
+        for (int i_2 = 0; i_2 < 7; i_2++) {
+            aMeshRasterizer_Sub3Array8839[i_2] = new MeshRasterizer_Sub3(this, 0, 0, false, false);
+            aMeshRasterizer_Sub3Array8840[i_2] = new MeshRasterizer_Sub3(this, 0, 0, true, true);
+        }
+
+        method13895();
+        anInterface32_8834 = method13993(true);
+        method13897();
+        method8418();
+        L();
+        method8420();
+        aNativeSprite_Sub3_8790 = new NativeSprite_Sub3(this, anInterface6_8788);
+        aNativeSprite_Sub3_8791 = new NativeSprite_Sub3(this, anInterface6_8795);
+        ba(3, 0);
+    }
+
+    abstract Interface29 method14148(Class150 var1, Class76 var2, int var3, int var4);
+
+    abstract Interface29 method14149(Class150 var1, Class76 var2, int var3, int var4);
+
+    public void method14150() {
+        method14001(Class352.aClass352_4104);
+    }
+
+    public abstract void method14153();
+
+    public abstract void method14154();
+
+    public abstract void method14161(int var1, Interface4 var2);
+
+    abstract void method14162(int var1, Class67 var2, boolean var3, boolean var4);
+
+    public void method14163(int i_1) {
+        if (anInt8780 != i_1) {
+            anInt8780 = i_1;
+            method13978();
+        }
+
+    }
+
+    abstract void method14166(int var1, Class67 var2, boolean var3);
+
+    abstract void method14169();
+
+    @Override
+    public void method8560(int i_1) {
+    }
+
+    abstract void method14172();
+
+    abstract void method14173(Interface32 var1);
+
+    void method14177() {
+        anInterface4_8693 = method13994(false);
+        anInterface4_8693.method31(3096, 12);
+        aByteBuffer8838.clear();
+        aByteBuffer8838.putFloat(0.0F);
+        aByteBuffer8838.putFloat(0.0F);
+        aByteBuffer8838.putFloat(0.0F);
+
+        for (int i_1 = 0; i_1 <= 256; i_1++) {
+            double d_2 = (i_1 * 2) * 3.141592653589793D / 256.0D;
+            float f_4 = (float) Math.cos(d_2);
+            float f_5 = (float) Math.sin(d_2);
+            aByteBuffer8838.putFloat(f_5);
+            aByteBuffer8838.putFloat(f_4);
+            aByteBuffer8838.putFloat(0.0F);
+        }
+
+        anInterface4_8693.method42(0, aByteBuffer8838.position(), aLong8695);
+    }
+
+    abstract void method14179();
+
+    abstract void method14180();
+
+    @Override
+    public Class152 method8636(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
+        return new Class152_Sub2_Sub1(this, i_1, i_2, i_3, i_4, i_5, i_6);
+    }
+
+    abstract void method14181();
+
+    abstract void method14182();
+
+    abstract void method14183();
+
+    abstract void method14184();
+
+    abstract void method14185();
+
+    abstract void method14186();
+
+    abstract void method14187();
+
+    abstract void method14188();
+
+    abstract void method14190();
+
+    @Override
+    public void B(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
+        if (aBool8755) {
+            RA(false);
+            aNativeSprite_Sub3_8790.method2754(i_1, i_2, i_3, i_4, 0, i_5, i_6);
+            RA(true);
+        } else {
+            aNativeSprite_Sub3_8790.method2754(i_1, i_2, i_3, i_4, 0, i_5, i_6);
+        }
+
+    }
+
+    abstract void method14197();
+
+    @Override
+    public void G(int i_1, int i_2, int i_3, int i_4, int i_5) {
+        method8433(i_1, i_2, i_1, i_3 + i_2, i_4, i_5);
+    }
+
+    abstract void method14199();
+
+    abstract void method14200();
+
+    @Override
+    public void method8474() {
+        aClass32_8714.method833();
+    }
+
+    abstract void method14203();
+
+    abstract void method14204();
+
+    abstract void method14205();
+
+    abstract Interface32 method14206(boolean var1);
+
+    abstract Interface32 method14207(boolean var1);
+
+    abstract Class70 method14209(Class72[] var1);
+
+    abstract Class70 method14210(Class72[] var1);
+
+    public abstract void method14212(Class70 var1);
+
+    public abstract void method14213(int var1, Interface4 var2);
+
+    public abstract void method14214(int var1, Interface4 var2);
+
+    abstract void method14215(Interface32 var1);
+
+    abstract Interface6 method14216(Class150 var1, Class76 var2, int var3, int var4);
+
+    abstract void method14217(Interface32 var1);
+
+    abstract void method14224(int var1, Class67 var2, boolean var3, boolean var4);
+
+    abstract void method14226();
+
+    @Override
+    public boolean method8609() {
+        return false;
+    }
+
+    public abstract void method14228(Class352 var1, int var2, int var3, int var4, int var5);
+
+    public abstract void method14229(Class352 var1, int var2, int var3, int var4, int var5);
+
+    public abstract void method14230(Class352 var1, int var2, int var3, int var4, int var5);
+
+    abstract void method14235(int var1);
+
+    abstract void method14236(int var1);
+
+    abstract Interface31 method14237(int var1, boolean var2, int[][] var3);
+
+    abstract void method14238();
+
+    abstract Interface31 method14239(int var1, boolean var2, int[][] var3);
+
+    abstract void method14240(int var1);
 
 }

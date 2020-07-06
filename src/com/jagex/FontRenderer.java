@@ -36,10 +36,6 @@ public abstract class FontRenderer {
         Class209.printConsoleMessage(LocalizedText.DEVELOPER_CONSOLE_INTRO.translate(Class223.CURRENT_LANGUAGE));
     }
 
-    public static AbstractRenderer method404(Canvas canvas_0, ImageLoader interface22_1, int i_2, int i_3) {
-        return new ja(canvas_0, interface22_1, i_2, i_3);
-    }
-
     public void renderText(String string_1, int i_2, int i_3, int i_4, int i_5) {
         if (string_1 != null) {
             method365(i_4, i_5);

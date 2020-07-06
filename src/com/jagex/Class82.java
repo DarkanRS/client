@@ -4,7 +4,7 @@ class Class82 implements Interface11 {
 
     public static CutsceneEntity[] CUTSCENE_ENTITIES;
 
-    static void method1457(int i_0, int i_1, Component icomponentdefinitions_2, Class455 class455_3, int i_4, int i_5) {
+    static void method1457(int i_0, int i_1, IComponentDefinitions icomponentdefinitions_2, Class455 class455_3, int i_4, int i_5) {
         int i_7 = Class197.NUM_PLAYER_INDICES;
         int[] ints_8 = Class197.PLAYER_INDICES;
         for (int i_9 = 0; i_9 < i_7; i_9++) {

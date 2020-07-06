@@ -4,7 +4,7 @@ import jagdx.*;
 
 import java.awt.*;
 
-public class AbstractRenderer_Sub2_Sub2 extends AbstractRenderer_Sub2 {
+public class DirectXRenderer extends HardwareRenderer {
 
     static int[] anIntArray10272 = {77, 80};
     static int[] anIntArray10273 = {22, 23};
@@ -37,7 +37,7 @@ public class AbstractRenderer_Sub2_Sub2 extends AbstractRenderer_Sub2 {
     Matrix44 aClass384_10261;
     long aLong10269;
 
-    AbstractRenderer_Sub2_Sub2(int i_1, int i_2, long long_3, long long_5, D3DPRESENT_PARAMETERS d3dpresent_parameters_7, D3DCAPS d3dcaps_8, ImageLoader interface22_9, Index index_10, int i_11) {
+    DirectXRenderer(int i_1, int i_2, long long_3, long long_5, D3DPRESENT_PARAMETERS d3dpresent_parameters_7, D3DCAPS d3dcaps_8, ImageLoader interface22_9, Index index_10, int i_11) {
         super(interface22_9, index_10, i_11, 0);
         aLongArray10271 = new long[anInt10268];
 
@@ -77,9 +77,26 @@ public class AbstractRenderer_Sub2_Sub2 extends AbstractRenderer_Sub2 {
             throw new RuntimeException("");
         }
     }
+    
+
+	public static AbstractRenderer create(Canvas canvas_0, ImageLoader interface22_1, Index index_2, int i_3) {
+	    try {
+	        boolean bool_5 = HardwareRenderer.method13893();
+	        if (!bool_5) {
+	            throw new RuntimeException("");
+	        } else if (!Class362.getNativeLibraryLoader().loadLibrary("jagdx")) {
+	            throw new RuntimeException("");
+	        } else {
+	            AbstractRenderer graphicalrenderer_4 = method15638(canvas_0, interface22_1, index_2, Integer.valueOf(i_3));
+	            return graphicalrenderer_4;
+	        }
+	    } catch (Throwable throwable_7) {
+	        throw new RuntimeException("");
+	    }
+	}
 
     static AbstractRenderer method15638(Canvas canvas_0, ImageLoader interface22_1, Index index_2, Integer integer_3) {
-        AbstractRenderer_Sub2_Sub2 class505_sub2_sub2_4 = null;
+        DirectXRenderer class505_sub2_sub2_4 = null;
         byte b_6 = 0;
         byte b_7 = 1;
         long long_8 = IDirect3D.Direct3DCreate();
@@ -133,7 +150,7 @@ public class AbstractRenderer_Sub2_Sub2 extends AbstractRenderer_Sub2 {
                     long_13 = IDirect3D.CreateDeviceContext(long_8, b_6, b_7, canvas_0, i_12 & -1048577 | 0x20, d3dpresent_parameters_11);
                 }
 
-                class505_sub2_sub2_4 = new AbstractRenderer_Sub2_Sub2(b_6, b_7, long_8, long_13, d3dpresent_parameters_11, d3dcaps_10, interface22_1, index_2, integer_3.intValue());
+                class505_sub2_sub2_4 = new DirectXRenderer(b_6, b_7, long_8, long_13, d3dpresent_parameters_11, d3dcaps_10, interface22_1, index_2, integer_3.intValue());
                 if (!class505_sub2_sub2_4.mapCanvasToTBD.containsKey(canvas_0)) {
                     Class459.method7679(canvas_0);
                     class505_sub2_sub2_4.method8411(canvas_0, new Class158_Sub2_Sub2_Sub2(class505_sub2_sub2_4, canvas_0, canvas_0.getWidth(), canvas_0.getHeight(), true));

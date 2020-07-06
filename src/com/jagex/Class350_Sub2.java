@@ -17,12 +17,12 @@ public class Class350_Sub2 extends Class350 {
     }
 
     static void method12571() {
-        if (Renderers.SOFTWARE_RENDERER.method8407()) {
-            Renderers.SOFTWARE_RENDERER.method8410(Class351.gameCanvas);
+        if (Renderers.CURRENT_RENDERER.method8407()) {
+            Renderers.CURRENT_RENDERER.method8410(Class351.gameCanvas);
             Class250.method4297();
             Dimension dimension_1 = Class351.gameCanvas.getSize();
-            Renderers.SOFTWARE_RENDERER.method8524(Class351.gameCanvas, dimension_1.width, dimension_1.height);
-            Renderers.SOFTWARE_RENDERER.method8412(Class351.gameCanvas);
+            Renderers.CURRENT_RENDERER.method8524(Class351.gameCanvas, dimension_1.width, dimension_1.height);
+            Renderers.CURRENT_RENDERER.method8412(Class351.gameCanvas);
         } else {
             ParticleProducer.method11500(Class393.preferences.currentToolkit.getValue(), false);
         }

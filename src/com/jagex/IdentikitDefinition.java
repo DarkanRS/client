@@ -18,8 +18,8 @@ public class IdentikitDefinition implements Definition {
         return i_0 == 16711935 ? -1 : Class5.method294(i_0);
     }
 
-    public static void method913(Interface interface_0, Component icomponentdefinitions_1) {
-        Component icomponentdefinitions_3 = CutsceneAction_Sub23.method14682(interface_0, icomponentdefinitions_1);
+    public static void method913(Interface interface_0, IComponentDefinitions icomponentdefinitions_1) {
+        IComponentDefinitions icomponentdefinitions_3 = CutsceneAction_Sub23.method14682(interface_0, icomponentdefinitions_1);
         int i_4;
         int i_5;
         if (icomponentdefinitions_3 == null) {

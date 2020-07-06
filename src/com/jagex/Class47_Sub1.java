@@ -16,7 +16,7 @@ public class Class47_Sub1 extends Class47 {
 
     Vector4 aClass303_9141 = new Vector4(0.0F, 0.0F, 0.0F, 0.0F);
 
-    public Class47_Sub1(AbstractRenderer_Sub2 class505_sub2_1) throws Exception_Sub2 {
+    public Class47_Sub1(HardwareRenderer class505_sub2_1) throws Exception_Sub2 {
         super(class505_sub2_1);
         method14475();
     }

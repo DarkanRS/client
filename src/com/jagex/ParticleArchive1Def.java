@@ -119,7 +119,7 @@ public class ParticleArchive1Def {
     }
 
     void method6128() {
-        anInt4024 = Class382.COSINE[anInt4034 << 3];
+        anInt4024 = Trig.COSINE[anInt4034 << 3];
         long long_2 = anInt4027;
         long long_4 = anInt4036;
         long long_6 = anInt4037;

@@ -29,9 +29,9 @@ public class ClipFlagMap {
 
     static void method6007(int i_0, int[] ints_1) {
         if (MovingAnimation.isInterfaceLoaded(i_0, ints_1)) {
-            Component[] arr_3 = CustomCursorsPreference.INTERFACES[i_0].components;
+            IComponentDefinitions[] arr_3 = CustomCursorsPreference.INTERFACES[i_0].components;
             for (int i_4 = 0; i_4 < arr_3.length; i_4++) {
-                Component icomponentdefinitions_5 = arr_3[i_4];
+                IComponentDefinitions icomponentdefinitions_5 = arr_3[i_4];
                 if (icomponentdefinitions_5 != null && icomponentdefinitions_5.anim != null) {
                     icomponentdefinitions_5.anim.method7582();
                 }

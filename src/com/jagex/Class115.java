@@ -15,14 +15,14 @@ public abstract class Class115 implements Interface7 {
 
     public static boolean setBloom(boolean bloom) {
         boolean bloom1 = bloom;
-        boolean bool_2 = Renderers.SOFTWARE_RENDERER.method8471();
+        boolean bool_2 = Renderers.CURRENT_RENDERER.method8471();
         if (bloom1 != bool_2) {
             if (bloom1) {
-                if (!Renderers.SOFTWARE_RENDERER.method8469()) {
+                if (!Renderers.CURRENT_RENDERER.method8469()) {
                     bloom1 = false;
                 }
             } else {
-                Renderers.SOFTWARE_RENDERER.method8490();
+                Renderers.CURRENT_RENDERER.method8490();
             }
             if (bloom1 != bool_2) {
                 Class393.preferences.setValue(Class393.preferences.bloom, bloom1 ? 1 : 0);

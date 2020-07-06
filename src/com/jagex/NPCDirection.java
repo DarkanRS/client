@@ -30,7 +30,7 @@ public enum NPCDirection implements Identifiable {
         }
     }
 
-    static void drawDebugInformation(int x, int y, Component inter) {
+    static void drawDebugInformation(int x, int y, IComponentDefinitions inter) {
         int currDrawX = inter.width + x;
         int currDrawY = y + 15;
         if (client.DRAW_DEBUG) {
@@ -69,7 +69,7 @@ public enum NPCDirection implements Identifiable {
             }
             Class16.aFontRenderer_144.drawText("Lobby: In:" + client.LOBBY_CONNECTION_CONTEXT.anInt2294 + "B/s " + "Out:" + client.LOBBY_CONNECTION_CONTEXT.anInt2293 + "B/s " + "Ping:" + lobbyPingStr, currDrawX, currDrawY, -256, -1);
             currDrawY += 15;
-            int i_19 = Renderers.SOFTWARE_RENDERER.za() / 1024;
+            int i_19 = Renderers.CURRENT_RENDERER.za() / 1024;
             Class16.aFontRenderer_144.drawText("Offheap:" + i_19 + "k", currDrawX, currDrawY, i_19 > 65536 ? -65536 : -256, -1);
             currDrawY += 15;
             int i_20 = 0;

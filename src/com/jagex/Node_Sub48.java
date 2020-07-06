@@ -67,7 +67,7 @@ public class Node_Sub48 extends Node {
             int i_6 = Node_Sub11_Sub1.method15433(aTransform_Sub1_Sub1_Sub2_Sub2_8085);
             if (i_2 != i_6) {
                 soundEffectId = i_6;
-                NPCType npcdefinitions_5 = aTransform_Sub1_Sub1_Sub2_Sub2_8085.definitions;
+                NPCDefinitions npcdefinitions_5 = aTransform_Sub1_Sub1_Sub2_Sub2_8085.definitions;
                 if (npcdefinitions_5.transformTo != null) {
                     npcdefinitions_5 = npcdefinitions_5.getMultiNPC(Class158_Sub1.PLAYER_VAR_PROVIDER);
                 }

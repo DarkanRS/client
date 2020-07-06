@@ -10,7 +10,7 @@ public class Node_Sub3 extends Node {
     NativeHeapBuffer aNativeHeapBuffer7495;
     Stream aStream7489;
     OpenGLGround aGround_Sub2_7488;
-    OpenGLHardwareRenderer aGraphicalRenderer_Sub1_7494;
+    OpenGLRenderer aGraphicalRenderer_Sub1_7494;
     int anInt7493;
     float aFloat7490;
     HDWaterTile aClass90_7487;

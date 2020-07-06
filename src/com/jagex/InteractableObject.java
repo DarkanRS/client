@@ -14,9 +14,9 @@ public class InteractableObject extends GraphNode_Sub1_Sub1 implements WorldObje
         method13008(1);
     }
 
-    public static void method16099(Component[] arr_0, int i_1, int i_2, int i_3, boolean bool_4) {
+    public static void method16099(IComponentDefinitions[] arr_0, int i_1, int i_2, int i_3, boolean bool_4) {
         for (int i_6 = 0; i_6 < arr_0.length; i_6++) {
-            Component icomponentdefinitions_7 = arr_0[i_6];
+            IComponentDefinitions icomponentdefinitions_7 = arr_0[i_6];
             if (icomponentdefinitions_7 != null && icomponentdefinitions_7.parent == i_1) {
                 Class484.initSizes(icomponentdefinitions_7, i_2, i_3, bool_4);
                 Class246.method4204(icomponentdefinitions_7, i_2, i_3);

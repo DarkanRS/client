@@ -12,17 +12,17 @@ public class Class520 {
     }
 
     public static void method11161() {
-        Component.aClass229_1280.method3859();
-        Component.aClass229_1341.method3859();
-        Component.aClass229_1303.method3859();
-        Component.aClass229_1282.method3859();
+        IComponentDefinitions.aClass229_1280.method3859();
+        IComponentDefinitions.aClass229_1341.method3859();
+        IComponentDefinitions.aClass229_1303.method3859();
+        IComponentDefinitions.aClass229_1282.method3859();
     }
 
     public static boolean method11162(int i_0) {
         return i_0 == 0 || i_0 == 2;
     }
 
-    static int method11163(Component icomponentdefinitions_0, int i_1) {
+    static int method11163(IComponentDefinitions icomponentdefinitions_0, int i_1) {
         return !client.getIComponentSettings(icomponentdefinitions_0).clickOptionEnabled(i_1) && icomponentdefinitions_0.params == null ? -1 : (icomponentdefinitions_0.opCursors != null && icomponentdefinitions_0.opCursors.length > i_1 ? icomponentdefinitions_0.opCursors[i_1] : -1);
     }
 

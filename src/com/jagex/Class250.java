@@ -56,7 +56,7 @@ public class Class250 {
         int i_115;
         int i_116;
         for (i_10 = 0; i_10 < i_9; i_10++) {
-            NPCType npcdefinitions_91 = null;
+            NPCDefinitions npcdefinitions_91 = null;
             if (client.anInt7341 == 4) {
                 CutsceneEntity class75_13 = Class82.CUTSCENE_ENTITIES[i_10];
                 if (!class75_13.initialized) {
@@ -122,11 +122,11 @@ public class Class250 {
                             PlayerEntity player_97 = client.players[ints_8[i_10]];
                             NativeSprite nativesprite_99;
                             if (player_97 != null && player_97.aBool10571) {
-                                nativesprite_98 = hitbardefinitions_96.method3224(Renderers.SOFTWARE_RENDERER);
-                                nativesprite_99 = hitbardefinitions_96.method3222(Renderers.SOFTWARE_RENDERER);
+                                nativesprite_98 = hitbardefinitions_96.method3224(Renderers.CURRENT_RENDERER);
+                                nativesprite_99 = hitbardefinitions_96.method3222(Renderers.CURRENT_RENDERER);
                             } else {
-                                nativesprite_98 = hitbardefinitions_96.method3208(Renderers.SOFTWARE_RENDERER);
-                                nativesprite_99 = hitbardefinitions_96.method3207(Renderers.SOFTWARE_RENDERER);
+                                nativesprite_98 = hitbardefinitions_96.method3208(Renderers.CURRENT_RENDERER);
+                                nativesprite_99 = hitbardefinitions_96.method3207(Renderers.CURRENT_RENDERER);
                             }
                             if (nativesprite_98 != null && nativesprite_99 != null) {
                                 i_21 = 255;
@@ -156,14 +156,14 @@ public class Class250 {
                                     i_27 = i_21 << 24;
                                     i_28 = i_27 | 0xffffff;
                                     nativesprite_98.method2742(i_26, i_92, 0, i_28, 1);
-                                    Renderers.SOFTWARE_RENDERER.o(i_26, i_92, i_26 + i_116, i_92 + i_25);
+                                    Renderers.CURRENT_RENDERER.o(i_26, i_92, i_26 + i_116, i_92 + i_25);
                                     nativesprite_99.method2742(i_26, i_92, 0, i_28, 1);
                                 } else {
                                     nativesprite_98.method2752(i_26, i_92);
-                                    Renderers.SOFTWARE_RENDERER.o(i_26, i_92, i_116 + i_26, i_92 + i_25);
+                                    Renderers.CURRENT_RENDERER.o(i_26, i_92, i_116 + i_26, i_92 + i_25);
                                     nativesprite_99.method2752(i_26, i_92);
                                 }
-                                Renderers.SOFTWARE_RENDERER.r(i_0, i_1, i_0 + i_2, i_3 + i_1);
+                                Renderers.CURRENT_RENDERER.r(i_0, i_1, i_0 + i_2, i_3 + i_1);
                                 i_92 -= 2;
                                 bool_94 = true;
                             }
@@ -297,7 +297,7 @@ public class Class250 {
                                 int i_45 = 0;
                                 int i_46 = 0;
                                 int i_47 = 0;
-                                NativeSprite nativesprite_48 = hitsplatdefinitions_122.method3835(Renderers.SOFTWARE_RENDERER);
+                                NativeSprite nativesprite_48 = hitsplatdefinitions_122.method3835(Renderers.CURRENT_RENDERER);
                                 if (nativesprite_48 != null) {
                                     i_27 = nativesprite_48.method2747();
                                     int i_49 = nativesprite_48.method2793();
@@ -307,7 +307,7 @@ public class Class250 {
                                     nativesprite_48.method2744(client.anIntArray7461);
                                     i_31 = client.anIntArray7461[0];
                                 }
-                                NativeSprite nativesprite_106 = hitsplatdefinitions_122.method3836(Renderers.SOFTWARE_RENDERER);
+                                NativeSprite nativesprite_106 = hitsplatdefinitions_122.method3836(Renderers.CURRENT_RENDERER);
                                 if (nativesprite_106 != null) {
                                     i_28 = nativesprite_106.method2747();
                                     int i_50 = nativesprite_106.method2793();
@@ -317,7 +317,7 @@ public class Class250 {
                                     nativesprite_106.method2744(client.anIntArray7461);
                                     i_32 = client.anIntArray7461[0];
                                 }
-                                NativeSprite nativesprite_107 = hitsplatdefinitions_122.method3832(Renderers.SOFTWARE_RENDERER);
+                                NativeSprite nativesprite_107 = hitsplatdefinitions_122.method3832(Renderers.CURRENT_RENDERER);
                                 if (nativesprite_107 != null) {
                                     i_29 = nativesprite_107.method2747();
                                     int i_51 = nativesprite_107.method2793();
@@ -327,7 +327,7 @@ public class Class250 {
                                     nativesprite_107.method2744(client.anIntArray7461);
                                     i_33 = client.anIntArray7461[0];
                                 }
-                                NativeSprite nativesprite_108 = hitsplatdefinitions_122.method3838(Renderers.SOFTWARE_RENDERER);
+                                NativeSprite nativesprite_108 = hitsplatdefinitions_122.method3838(Renderers.CURRENT_RENDERER);
                                 int i_52;
                                 if (nativesprite_108 != null) {
                                     i_30 = nativesprite_108.method2747();
@@ -339,7 +339,7 @@ public class Class250 {
                                     i_34 = client.anIntArray7461[0];
                                 }
                                 if (hitsplatdefinitions_101 != null) {
-                                    nativesprite_35 = hitsplatdefinitions_101.method3835(Renderers.SOFTWARE_RENDERER);
+                                    nativesprite_35 = hitsplatdefinitions_101.method3835(Renderers.CURRENT_RENDERER);
                                     if (nativesprite_35 != null) {
                                         i_39 = nativesprite_35.method2747();
                                         i_52 = nativesprite_35.method2793();
@@ -349,7 +349,7 @@ public class Class250 {
                                         nativesprite_35.method2744(client.anIntArray7461);
                                         i_43 = client.anIntArray7461[0];
                                     }
-                                    nativesprite_36 = hitsplatdefinitions_101.method3836(Renderers.SOFTWARE_RENDERER);
+                                    nativesprite_36 = hitsplatdefinitions_101.method3836(Renderers.CURRENT_RENDERER);
                                     if (nativesprite_36 != null) {
                                         i_40 = nativesprite_36.method2747();
                                         i_52 = nativesprite_36.method2793();
@@ -359,7 +359,7 @@ public class Class250 {
                                         nativesprite_36.method2744(client.anIntArray7461);
                                         i_44 = client.anIntArray7461[0];
                                     }
-                                    nativesprite_37 = hitsplatdefinitions_101.method3832(Renderers.SOFTWARE_RENDERER);
+                                    nativesprite_37 = hitsplatdefinitions_101.method3832(Renderers.CURRENT_RENDERER);
                                     if (nativesprite_37 != null) {
                                         i_41 = nativesprite_37.method2747();
                                         i_52 = nativesprite_37.method2793();
@@ -369,7 +369,7 @@ public class Class250 {
                                         nativesprite_37.method2744(client.anIntArray7461);
                                         i_45 = client.anIntArray7461[0];
                                     }
-                                    nativesprite_38 = hitsplatdefinitions_101.method3838(Renderers.SOFTWARE_RENDERER);
+                                    nativesprite_38 = hitsplatdefinitions_101.method3838(Renderers.CURRENT_RENDERER);
                                     if (nativesprite_38 != null) {
                                         i_42 = nativesprite_38.method2747();
                                         i_52 = nativesprite_38.method2793();
@@ -684,9 +684,9 @@ public class Class250 {
                 if (i_115 == 4) {
                     i_21 = 150 - client.aClass163Array7419[i_11].method2833() * 150 / client.aClass163Array7419[i_11].method2832();
                     i_116 = i_21 * (SkyboxIndexLoader.aClass414_3438.getWidthNoSprites(string_114) + 100) / 150;
-                    Renderers.SOFTWARE_RENDERER.o(i_0 + i_93 - 50, i_1, i_0 + i_93 + 50, i_3 + i_1);
+                    Renderers.CURRENT_RENDERER.o(i_0 + i_93 - 50, i_1, i_0 + i_93 + 50, i_3 + i_1);
                     Class285.aFontRenderer_3394.renderText(string_114, i_0 + i_93 + 50 - i_116, i_92 + i_1, i_19, -16777216);
-                    Renderers.SOFTWARE_RENDERER.r(i_0, i_1, i_0 + i_2, i_3 + i_1);
+                    Renderers.CURRENT_RENDERER.r(i_0, i_1, i_0 + i_2, i_3 + i_1);
                 }
                 if (i_115 == 5) {
                     i_21 = 150 - client.aClass163Array7419[i_11].method2833() * 150 / client.aClass163Array7419[i_11].method2832();
@@ -697,9 +697,9 @@ public class Class250 {
                         i_116 = i_21 - 125;
                     }
                     i_23 = SkyboxIndexLoader.aClass414_3438.topPadding + SkyboxIndexLoader.aClass414_3438.bottomPadding;
-                    Renderers.SOFTWARE_RENDERER.o(i_0, i_92 + i_1 - i_23 - 1, i_0 + i_2, i_92 + i_1 + 5);
+                    Renderers.CURRENT_RENDERER.o(i_0, i_92 + i_1 - i_23 - 1, i_0 + i_2, i_92 + i_1 + 5);
                     Class285.aFontRenderer_3394.method360(string_114, i_0 + i_93, i_116 + i_92 + i_1, i_19, -16777216);
-                    Renderers.SOFTWARE_RENDERER.r(i_0, i_1, i_0 + i_2, i_3 + i_1);
+                    Renderers.CURRENT_RENDERER.r(i_0, i_1, i_0 + i_2, i_3 + i_1);
                 }
             } else {
                 Class285.aFontRenderer_3394.method360(string_114, i_0 + i_93, i_92 + i_1, -256, -16777216);

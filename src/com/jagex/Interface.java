@@ -1,29 +1,29 @@
 package com.jagex;
 
 public class Interface {
-    public Component[] components;
+    public IComponentDefinitions[] components;
     public boolean aBool999;
-    Component[] iComponentDefinitions;
+    IComponentDefinitions[] iComponentDefinitions;
 
-    Interface(boolean bool_1, Component[] arr_2) {
+    Interface(boolean bool_1, IComponentDefinitions[] arr_2) {
         components = arr_2;
         aBool999 = bool_1;
     }
 
-    static void method7554(Interface inter, Component defs) {
+    static void method7554(Interface inter, IComponentDefinitions defs) {
         if (defs != null) {
             int i_4;
             if (defs.slotId != -1) {
-                Component icomponentdefinitions_3 = inter.getComponent(defs.parent);
+                IComponentDefinitions icomponentdefinitions_3 = inter.getComponent(defs.parent);
                 if (icomponentdefinitions_3 != null) {
                     if (icomponentdefinitions_3.itemSlots == icomponentdefinitions_3.slotChildren) {
-                        icomponentdefinitions_3.itemSlots = new Component[icomponentdefinitions_3.slotChildren.length];
+                        icomponentdefinitions_3.itemSlots = new IComponentDefinitions[icomponentdefinitions_3.slotChildren.length];
                         icomponentdefinitions_3.itemSlots[icomponentdefinitions_3.itemSlots.length - 1] = defs;
                         Class503.method8359(icomponentdefinitions_3.slotChildren, 0, icomponentdefinitions_3.itemSlots, 0, defs.slotId);
                         Class503.method8359(icomponentdefinitions_3.slotChildren, defs.slotId + 1, icomponentdefinitions_3.itemSlots, defs.slotId, icomponentdefinitions_3.slotChildren.length - defs.slotId - 1);
                     } else {
                         i_4 = 0;
-                        Component[] arr_5;
+                        IComponentDefinitions[] arr_5;
                         for (arr_5 = icomponentdefinitions_3.itemSlots; i_4 < arr_5.length && arr_5[i_4] != defs; i_4++) {
                         }
                         if (i_4 < arr_5.length) {
@@ -33,7 +33,7 @@ public class Interface {
                     }
                 }
             } else {
-                Component[] arr_6 = inter.method1617();
+                IComponentDefinitions[] arr_6 = inter.method1617();
                 for (i_4 = 0; i_4 < arr_6.length && arr_6[i_4] != defs; i_4++) {
                 }
                 if (i_4 < arr_6.length) {
@@ -44,21 +44,21 @@ public class Interface {
         }
     }
 
-    static void method3710(Interface inter, Component defs) {
+    static void method3710(Interface inter, IComponentDefinitions defs) {
         if (defs != null) {
             int i_4;
             if (defs.slotId != -1) {
-                Component icomponentdefinitions_3 = inter.components[defs.parent & 0xffff];
+                IComponentDefinitions icomponentdefinitions_3 = inter.components[defs.parent & 0xffff];
                 if (icomponentdefinitions_3 != null) {
                     if (icomponentdefinitions_3.slotChildren == icomponentdefinitions_3.itemSlots) {
-                        icomponentdefinitions_3.itemSlots = new Component[icomponentdefinitions_3.slotChildren.length];
+                        icomponentdefinitions_3.itemSlots = new IComponentDefinitions[icomponentdefinitions_3.slotChildren.length];
                         icomponentdefinitions_3.itemSlots[0] = defs;
                         Class503.method8359(icomponentdefinitions_3.slotChildren, 0, icomponentdefinitions_3.itemSlots, 1, defs.slotId);
                         Class503.method8359(icomponentdefinitions_3.slotChildren, defs.slotId + 1, icomponentdefinitions_3.itemSlots, defs.slotId + 1, icomponentdefinitions_3.slotChildren.length - defs.slotId - 1);
                     } else {
                         i_4 = 0;
 
-                        Component[] arr_5;
+                        IComponentDefinitions[] arr_5;
                         for (arr_5 = icomponentdefinitions_3.itemSlots; i_4 < arr_5.length && arr_5[i_4] != defs; i_4++) {
                         }
 
@@ -69,7 +69,7 @@ public class Interface {
                     }
                 }
             } else {
-                Component[] arr_6 = inter.method1617();
+                IComponentDefinitions[] arr_6 = inter.method1617();
 
                 for (i_4 = 0; i_4 < arr_6.length && arr_6[i_4] != defs; i_4++) {
                 }
@@ -207,20 +207,20 @@ public class Interface {
         return new AccountCreationResponseOpcodes[]{AccountCreationResponseOpcodes.aClass483_5729, AccountCreationResponseOpcodes.CLIENT_HAS_BEEN_UPDATED, AccountCreationResponseOpcodes.CONTINUE, AccountCreationResponseOpcodes.aClass483_5733, AccountCreationResponseOpcodes.aClass483_5730, AccountCreationResponseOpcodes.aClass483_5735, AccountCreationResponseOpcodes.aClass483_5732, AccountCreationResponseOpcodes.aClass483_5736, AccountCreationResponseOpcodes.aClass483_5737, AccountCreationResponseOpcodes.aClass483_5731};
     }
 
-    public Component[] method1616() {
+    public IComponentDefinitions[] method1616() {
         return iComponentDefinitions == null ? components : iComponentDefinitions;
     }
 
-    public Component[] method1617() {
+    public IComponentDefinitions[] method1617() {
         if (iComponentDefinitions == null) {
             int i_2 = components.length;
-            iComponentDefinitions = new Component[i_2];
+            iComponentDefinitions = new IComponentDefinitions[i_2];
             System.arraycopy(components, 0, iComponentDefinitions, 0, components.length);
         }
         return iComponentDefinitions;
     }
 
-    public Component getComponent(int componentId) {
+    public IComponentDefinitions getComponent(int componentId) {
         if (componentId >>> 16 != components[0].idHash >>> 16) {
             throw new IllegalArgumentException();
         } else {

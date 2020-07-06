@@ -7,7 +7,7 @@ import jaggl.OpenGL;
 
 import java.awt.*;
 
-public class OpenGLHardwareRenderer extends AbstractRenderer {
+public class OpenGLRenderer extends AbstractRenderer {
 
     static int[] anIntArray8381 = new int[1000];
     static int anInt8421 = 4;
@@ -162,7 +162,7 @@ public class OpenGLHardwareRenderer extends AbstractRenderer {
     Class152_Sub1 aClass152_Sub1_8317;
     Interface15 anInterface15_8452;
 
-    OpenGLHardwareRenderer(Canvas canvas_1, ImageLoader interface22_2, int i_3) {
+    OpenGLRenderer(Canvas canvas_1, ImageLoader interface22_2, int i_3) {
         super(interface22_2);
         aNode_Sub24Array8435 = new Node_Sub24[anInt8421];
         anInt8441 = -1;
@@ -5583,5 +5583,9 @@ public class OpenGLHardwareRenderer extends AbstractRenderer {
     public Class152 method8400(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
         return aBool8480 ? new Class152_Sub1_Sub1(this, i_1, i_2, i_3, i_4, i_5, i_6) : null;
     }
+
+	public static AbstractRenderer create(Canvas canvas_0, ImageLoader interface22_1, int i_2) {
+	    return new OpenGLRenderer(canvas_0, interface22_1, i_2);
+	}
 
 }

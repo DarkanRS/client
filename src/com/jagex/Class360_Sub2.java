@@ -12,7 +12,7 @@ public class Class360_Sub2 extends Class360 implements Interface6 {
     boolean aBool9156;
     boolean aBool9155;
 
-    Class360_Sub2(AbstractRenderer_Sub2_Sub2 class505_sub2_sub2_1, Class150 class150_2, int i_3, int i_4, boolean bool_5, byte[] bytes_6, int i_7, int i_8) {
+    Class360_Sub2(DirectXRenderer class505_sub2_sub2_1, Class150 class150_2, int i_3, int i_4, boolean bool_5, byte[] bytes_6, int i_7, int i_8) {
         super(class505_sub2_sub2_1, class150_2, Class76.aClass76_751, bool_5 && class505_sub2_sub2_1.aBool10263);
         int i_81 = i_8;
         if (!aGraphicalRenderer_Sub2_Sub2_4165.aBool10265) {
@@ -24,9 +24,9 @@ public class Class360_Sub2 extends Class360 implements Interface6 {
         }
 
         if (bool_5) {
-            aLong4168 = IDirect3DDevice.CreateTexture(aGraphicalRenderer_Sub2_Sub2_4165.aLong10252, anInt9154, anInt9157, 0, 1024, AbstractRenderer_Sub2_Sub2.method15652(aClass150_4167, Class76.aClass76_751), 1);
+            aLong4168 = IDirect3DDevice.CreateTexture(aGraphicalRenderer_Sub2_Sub2_4165.aLong10252, anInt9154, anInt9157, 0, 1024, DirectXRenderer.method15652(aClass150_4167, Class76.aClass76_751), 1);
         } else {
-            aLong4168 = IDirect3DDevice.CreateTexture(aGraphicalRenderer_Sub2_Sub2_4165.aLong10252, anInt9154, anInt9157, 1, 0, AbstractRenderer_Sub2_Sub2.method15652(aClass150_4167, Class76.aClass76_751), 1);
+            aLong4168 = IDirect3DDevice.CreateTexture(aGraphicalRenderer_Sub2_Sub2_4165.aLong10252, anInt9154, anInt9157, 1, 0, DirectXRenderer.method15652(aClass150_4167, Class76.aClass76_751), 1);
         }
 
         if (i_81 == 0) {
@@ -54,7 +54,7 @@ public class Class360_Sub2 extends Class360 implements Interface6 {
 
     }
 
-    Class360_Sub2(AbstractRenderer_Sub2_Sub2 class505_sub2_sub2_1, Class150 class150_2, Class76 class76_3, int i_4, int i_5, int i_6, int i_7) {
+    Class360_Sub2(DirectXRenderer class505_sub2_sub2_1, Class150 class150_2, Class76 class76_3, int i_4, int i_5, int i_6, int i_7) {
         super(class505_sub2_sub2_1, class150_2, class76_3, false);
         if (!aGraphicalRenderer_Sub2_Sub2_4165.aBool10265) {
             anInt9154 = Utils.nextPowerOfTwo(i_4);
@@ -64,10 +64,10 @@ public class Class360_Sub2 extends Class360 implements Interface6 {
             anInt9157 = i_5;
         }
 
-        aLong4168 = IDirect3DDevice.CreateTexture(aGraphicalRenderer_Sub2_Sub2_4165.aLong10252, i_4, i_5, 0, i_6, AbstractRenderer_Sub2_Sub2.method15652(aClass150_4167, aClass76_4164), i_7);
+        aLong4168 = IDirect3DDevice.CreateTexture(aGraphicalRenderer_Sub2_Sub2_4165.aLong10252, i_4, i_5, 0, i_6, DirectXRenderer.method15652(aClass150_4167, aClass76_4164), i_7);
     }
 
-    Class360_Sub2(AbstractRenderer_Sub2_Sub2 class505_sub2_sub2_1, Class150 class150_2, int i_3, int i_4, boolean bool_5, float[] floats_6, int i_7, int i_8) {
+    Class360_Sub2(DirectXRenderer class505_sub2_sub2_1, Class150 class150_2, int i_3, int i_4, boolean bool_5, float[] floats_6, int i_7, int i_8) {
         super(class505_sub2_sub2_1, class150_2, Class76.aClass76_751, bool_5 && class505_sub2_sub2_1.aBool10263);
         int i_81 = i_8;
         if (!aGraphicalRenderer_Sub2_Sub2_4165.aBool10265) {
@@ -79,9 +79,9 @@ public class Class360_Sub2 extends Class360 implements Interface6 {
         }
 
         if (bool_5) {
-            aLong4168 = IDirect3DDevice.CreateTexture(aGraphicalRenderer_Sub2_Sub2_4165.aLong10252, anInt9154, anInt9157, 0, 1024, AbstractRenderer_Sub2_Sub2.method15652(aClass150_4167, Class76.aClass76_758), 1);
+            aLong4168 = IDirect3DDevice.CreateTexture(aGraphicalRenderer_Sub2_Sub2_4165.aLong10252, anInt9154, anInt9157, 0, 1024, DirectXRenderer.method15652(aClass150_4167, Class76.aClass76_758), 1);
         } else {
-            aLong4168 = IDirect3DDevice.CreateTexture(aGraphicalRenderer_Sub2_Sub2_4165.aLong10252, anInt9154, anInt9157, 1, 0, AbstractRenderer_Sub2_Sub2.method15652(aClass150_4167, Class76.aClass76_758), 1);
+            aLong4168 = IDirect3DDevice.CreateTexture(aGraphicalRenderer_Sub2_Sub2_4165.aLong10252, anInt9154, anInt9157, 1, 0, DirectXRenderer.method15652(aClass150_4167, Class76.aClass76_758), 1);
         }
 
         if (i_81 == 0) {
@@ -94,11 +94,11 @@ public class Class360_Sub2 extends Class360 implements Interface6 {
         IDirect3DTexture.Upload(aLong4168, 0, 0, 0, i_3, i_4, aClass150_4167.anInt1959 * i_81 * 4, 0, aGraphicalRenderer_Sub2_Sub2_4165.aLong8695);
     }
 
-    Class360_Sub2(AbstractRenderer_Sub2_Sub2 class505_sub2_sub2_1, Class150 class150_2, Class76 class76_3, int i_4, int i_5) {
+    Class360_Sub2(DirectXRenderer class505_sub2_sub2_1, Class150 class150_2, Class76 class76_3, int i_4, int i_5) {
         this(class505_sub2_sub2_1, class150_2, class76_3, i_4, i_5, 0, 1);
     }
 
-    Class360_Sub2(AbstractRenderer_Sub2_Sub2 class505_sub2_sub2_1, int i_2, int i_3, boolean bool_4, int[] ints_5, int i_6, int i_7) {
+    Class360_Sub2(DirectXRenderer class505_sub2_sub2_1, int i_2, int i_3, boolean bool_4, int[] ints_5, int i_6, int i_7) {
         super(class505_sub2_sub2_1, Class150.aClass150_1949, Class76.aClass76_751, bool_4 && class505_sub2_sub2_1.aBool10263);
         int i_71 = i_7;
         if (!aGraphicalRenderer_Sub2_Sub2_4165.aBool10265) {

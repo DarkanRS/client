@@ -18,7 +18,7 @@ public abstract class Shader {
 
     Class115[] aClass115Array1010;
 
-    Shader(AbstractRenderer_Sub2 class505_sub2_1, ShaderLoader class114_2) {
+    Shader(HardwareRenderer class505_sub2_1, ShaderLoader class114_2) {
         aString1014 = class114_2.name;
         anInt1009 = class114_2.aClass122Array1236.length;
         aClass107_1013 = new Class107(anInt1009, anInterface11_1012);
@@ -165,7 +165,7 @@ public abstract class Shader {
 
     public abstract boolean method1664();
 
-    abstract Class115 method1665(AbstractRenderer_Sub2 var1, Class99 var2);
+    abstract Class115 method1665(HardwareRenderer var1, Class99 var2);
 
     public void method1667(Node_Sub21_Sub1 class282_sub21_sub1_1, Matrix44 matrix44_2) {
         aClass115Array1010[anInt1015].method1936(class282_sub21_sub1_1, matrix44_2);
@@ -221,7 +221,7 @@ public abstract class Shader {
         return anInt1009;
     }
 
-    abstract Class115 method1683(AbstractRenderer_Sub2 var1, Class99 var2);
+    abstract Class115 method1683(HardwareRenderer var1, Class99 var2);
 
     void method1684() {
     }
@@ -265,7 +265,7 @@ public abstract class Shader {
         method1662(class282_sub21_sub1_1, f_4, f_5, f_6, f_7);
     }
 
-    abstract Class115 method1697(AbstractRenderer_Sub2 var1, Class99 var2);
+    abstract Class115 method1697(HardwareRenderer var1, Class99 var2);
 
     public Node_Sub21_Sub1 method1705(int i_1) {
         return (Node_Sub21_Sub1) aClass107_1011.method1823(i_1);
@@ -293,7 +293,7 @@ public abstract class Shader {
         return (Node_Sub21_Sub1) aClass107_1013.method1823(i_1);
     }
 
-    abstract Class115 method1743(AbstractRenderer_Sub2 var1, Class99 var2);
+    abstract Class115 method1743(HardwareRenderer var1, Class99 var2);
 
     public void method1749(int i_1, float f_2, float f_3, float f_4, float f_5) {
         aClass115Array1010[anInt1015].method1895(i_1, f_2, f_3, f_4, f_5);

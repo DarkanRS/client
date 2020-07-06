@@ -232,7 +232,7 @@ public class MapRegion {
                             int i_12 = (i_10 / 8 << 8) + i_11 / 8;
                             for (int i_13 = 0; i_13 < regionIds.length; i_13++) {
                                 if (i_12 == regionIds[i_13] && bytes_2[i_13] != null) {
-                                    class329_sub1_1.method12462(Renderers.SOFTWARE_RENDERER, bytes_2[i_13], i_4, i_5 * 8, i_6 * 8, i_8, (i_10 & 0x7) * 8, (i_11 & 0x7) * 8, i_9, clipMaps);
+                                    class329_sub1_1.method12462(Renderers.CURRENT_RENDERER, bytes_2[i_13], i_4, i_5 * 8, i_6 * 8, i_8, (i_10 & 0x7) * 8, (i_11 & 0x7) * 8, i_9, clipMaps);
                                     break;
                                 }
                             }
@@ -380,14 +380,14 @@ public class MapRegion {
     }
 
     public void method4446() {
-        aClass239_3175 = new Class239(Renderers.SOFTWARE_RENDERER, sizeX >> 3, sizeY >> 3);
+        aClass239_3175 = new Class239(Renderers.CURRENT_RENDERER, sizeX >> 3, sizeY >> 3);
     }
 
     public void method4447() {
         anInt3177 = 200;
         zFar = (int) (34.46D * sizeX);
         zFar <<= 2;
-        if (Renderers.SOFTWARE_RENDERER.method8454()) {
+        if (Renderers.CURRENT_RENDERER.method8454()) {
             zFar += 512;
         }
         zFar += 3072;
@@ -493,7 +493,7 @@ public class MapRegion {
             anInt3207 = i_2;
             if (!aBool3171) {
                 GameState.setGameState(i_3);
-                Class446.method7447(LocalizedText.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE), true, Renderers.SOFTWARE_RENDERER, Class16.aFontRenderer_144, Class16.aClass414_139);
+                Class446.method7447(LocalizedText.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE), true, Renderers.CURRENT_RENDERER, Class16.aFontRenderer_144, Class16.aClass414_139);
             }
             if (coordGrid != null) {
                 aClass219_3169 = coordGrid;
@@ -782,7 +782,7 @@ public class MapRegion {
                 return false;
             } else {
                 if (!aBool3171 && aClass339_3188 != Class339.aClass339_3984) {
-                    Class446.method7447(LocalizedText.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE) + "<br>" + "(100%)", true, Renderers.SOFTWARE_RENDERER, Class16.aFontRenderer_144, Class16.aClass414_139);
+                    Class446.method7447(LocalizedText.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE) + "<br>" + "(100%)", true, Renderers.CURRENT_RENDERER, Class16.aFontRenderer_144, Class16.aClass414_139);
                 }
                 aClass339_3188 = Class339.aClass339_3982;
                 if (!aBool3171) {
@@ -819,12 +819,12 @@ public class MapRegion {
                     }
                 }
                 chunkSize = Class5.method295(Class393.preferences.aPreference_Sub16_8198.method12750()).chunkSize * 8;
-                if (Renderers.SOFTWARE_RENDERER.method8454()) {
+                if (Renderers.CURRENT_RENDERER.method8454()) {
                     ++chunkSize;
                 }
                 method4447();
                 method4460();
-                sceneObjectManager = new SceneObjectManager(Renderers.SOFTWARE_RENDERER, sizeX, sizeY, chunkSize, highDetailWater, Renderers.SOFTWARE_RENDERER.method8463() > 0);
+                sceneObjectManager = new SceneObjectManager(Renderers.CURRENT_RENDERER, sizeX, sizeY, chunkSize, highDetailWater, Renderers.CURRENT_RENDERER.method8463() > 0);
                 sceneObjectManager.method3380(false);
                 sceneObjectManager.method3378();
                 if (client.anInt7240 != 0) {
@@ -872,13 +872,13 @@ public class MapRegion {
                         }
                     }
                     highDetailWaterPlane.method5853(aClass329_Sub1_3167.tileHeights[0]);
-                    highDetailWaterPlane.initClipMap(Renderers.SOFTWARE_RENDERER, null, null);
+                    highDetailWaterPlane.initClipMap(Renderers.CURRENT_RENDERER, null, null);
                     sceneObjectManager.method3380(false);
                     if (aBool3171) {
                         method4462(50);
                     }
                 }
-                aClass329_Sub1_3167.initClipMap(Renderers.SOFTWARE_RENDERER, highDetailWater ? highDetailWaterPlane.tileHeights : null, clipMaps);
+                aClass329_Sub1_3167.initClipMap(Renderers.CURRENT_RENDERER, highDetailWater ? highDetailWaterPlane.tileHeights : null, clipMaps);
                 if (!mapType.method4410()) {
                     if (!aBool3171) {
                         Exception_Sub3.method15619(true);
@@ -896,7 +896,7 @@ public class MapRegion {
                 if (!aBool3171) {
                     Exception_Sub3.method15619(true);
                 }
-                aClass329_Sub1_3167.method5837(Renderers.SOFTWARE_RENDERER, highDetailWater ? sceneObjectManager.aGroundArray2614[0] : null, null);
+                aClass329_Sub1_3167.method5837(Renderers.CURRENT_RENDERER, highDetailWater ? sceneObjectManager.aGroundArray2614[0] : null, null);
                 if (aBool3171) {
                     method4462(75);
                 }
@@ -920,7 +920,7 @@ public class MapRegion {
                     if (!aBool3171) {
                         Exception_Sub3.method15619(true);
                     }
-                    highDetailWaterPlane.method5837(Renderers.SOFTWARE_RENDERER, null, sceneObjectManager.aGroundArray2607[0]);
+                    highDetailWaterPlane.method5837(Renderers.CURRENT_RENDERER, null, sceneObjectManager.aGroundArray2607[0]);
                     highDetailWaterPlane.method12463(true);
                     if (!aBool3171) {
                         Exception_Sub3.method15619(true);
@@ -937,7 +937,7 @@ public class MapRegion {
                 sceneObjectManager.method3428();
                 if (aBool3171) {
                     Utils.time();
-                    while (!Renderers.SOFTWARE_RENDERER.method8455()) {
+                    while (!Renderers.CURRENT_RENDERER.method8455()) {
                         method4462(1);
                     }
                 }
@@ -1055,7 +1055,7 @@ public class MapRegion {
                     MaterialPropTexture.method15391();
                 }
                 class329_sub1_1.decodeTileMasksUnderlay(rsbytebuffer_7, i_10, i_11, coordGrid.x, coordGrid.y, clipMaps);
-                class329_sub1_1.method12471(Renderers.SOFTWARE_RENDERER, rsbytebuffer_7, i_10, i_11);
+                class329_sub1_1.method12471(Renderers.CURRENT_RENDERER, rsbytebuffer_7, i_10, i_11);
             }
         }
         for (i_5 = 0; i_5 < i_4; i_5++) {
@@ -1090,7 +1090,7 @@ public class MapRegion {
                                 if (i_12 == regionIds[i_13] && bytes_2[i_13] != null) {
                                     ByteBuf rsbytebuffer_14 = new ByteBuf(bytes_2[i_13]);
                                     class329_sub1_1.method5841(rsbytebuffer_14, i_4, x * 8, y * 8, plane, realX, realY, rotation, clipMaps);
-                                    class329_sub1_1.method12460(Renderers.SOFTWARE_RENDERER, rsbytebuffer_14, i_4, x * 8, y * 8, plane, realX, realY, rotation);
+                                    class329_sub1_1.method12460(Renderers.CURRENT_RENDERER, rsbytebuffer_14, i_4, x * 8, y * 8, plane, realX, realY, rotation);
                                     break;
                                 }
                             }
@@ -1124,7 +1124,7 @@ public class MapRegion {
                 if (!aBool3171) {
                     MaterialPropTexture.method15391();
                 }
-                class329_sub1_1.method12461(Renderers.SOFTWARE_RENDERER, bytes_6, i_7, i_8, clipMaps);
+                class329_sub1_1.method12461(Renderers.CURRENT_RENDERER, bytes_6, i_7, i_8, clipMaps);
                 if (aBool3171) {
                     method4462(10);
                 }
@@ -1157,7 +1157,7 @@ public class MapRegion {
                     int i_11 = i_8 & 0x3f;
                     int i_12 = (regionIds[i_3] >> 8) * 64 - coordGrid.x + i_10;
                     int i_13 = (regionIds[i_3] & 0xff) * 64 - coordGrid.y + i_11;
-                    NPCType npcdefinitions_14 = IndexLoaders.NPC_INDEX_LOADER.getNPCType(rsbytebuffer_18.readUnsignedShort());
+                    NPCDefinitions npcdefinitions_14 = IndexLoaders.NPC_INDEX_LOADER.getNPCType(rsbytebuffer_18.readUnsignedShort());
                     ObjectNode class282_sub47_15 = (ObjectNode) client.NPC_MAP.get(i_7);
                     if (class282_sub47_15 == null && (npcdefinitions_14.walkMask & 0x1) > 0 && i_12 >= 0 && i_12 + npcdefinitions_14.size < sizeX && i_13 >= 0 && i_13 + npcdefinitions_14.size < sizeY) {
                         NPCEntity npc_16 = new NPCEntity(sceneObjectManager);

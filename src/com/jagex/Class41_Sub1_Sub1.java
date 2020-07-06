@@ -38,7 +38,7 @@ public class Class41_Sub1_Sub1 extends Class41_Sub1 {
 
     boolean aBool10097;
 
-    public Class41_Sub1_Sub1(AbstractRenderer_Sub2 class505_sub2_1, Class49 class49_2) throws Exception_Sub2 {
+    public Class41_Sub1_Sub1(HardwareRenderer class505_sub2_1, Class49 class49_2) throws Exception_Sub2 {
         super(class505_sub2_1);
         new Matrix44();
         aClass49_10092 = class49_2;

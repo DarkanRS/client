@@ -985,8 +985,8 @@ public class RSMesh {
         int i_6;
         int i_7;
         if (i_3 != 0) {
-            i_4 = Class382.SINE[i_3];
-            i_5 = Class382.COSINE[i_3];
+            i_4 = Trig.SINE[i_3];
+            i_5 = Trig.COSINE[i_3];
 
             for (i_6 = 0; i_6 < vertexCount; i_6++) {
                 i_7 = i_4 * vertexY[i_6] + i_5 * vertexX[i_6] >> 14;
@@ -996,8 +996,8 @@ public class RSMesh {
         }
 
         if (i_1 != 0) {
-            i_4 = Class382.SINE[i_1];
-            i_5 = Class382.COSINE[i_1];
+            i_4 = Trig.SINE[i_1];
+            i_5 = Trig.COSINE[i_1];
 
             for (i_6 = 0; i_6 < vertexCount; i_6++) {
                 i_7 = i_5 * vertexY[i_6] - i_4 * vertexZ[i_6] >> 14;
@@ -1007,8 +1007,8 @@ public class RSMesh {
         }
 
         if (i_2 != 0) {
-            i_4 = Class382.SINE[i_2];
-            i_5 = Class382.COSINE[i_2];
+            i_4 = Trig.SINE[i_2];
+            i_5 = Trig.COSINE[i_2];
 
             for (i_6 = 0; i_6 < vertexCount; i_6++) {
                 i_7 = i_4 * vertexZ[i_6] + i_5 * vertexX[i_6] >> 14;

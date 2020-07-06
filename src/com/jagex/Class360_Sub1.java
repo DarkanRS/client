@@ -11,12 +11,12 @@ public class Class360_Sub1 extends Class360 implements Interface1 {
     int anInt9121;
     int anInt9122;
 
-    Class360_Sub1(AbstractRenderer_Sub2_Sub2 class505_sub2_sub2_1, Class150 class150_2, int i_3, int i_4, int i_5, byte[] bytes_7) {
+    Class360_Sub1(DirectXRenderer class505_sub2_sub2_1, Class150 class150_2, int i_3, int i_4, int i_5, byte[] bytes_7) {
         super(class505_sub2_sub2_1, class150_2, Class76.aClass76_751, false);
         anInt9123 = i_3;
         anInt9121 = i_4;
         anInt9122 = i_5;
-        aLong4168 = IDirect3DDevice.CreateVolumeTexture(aGraphicalRenderer_Sub2_Sub2_4165.aLong10252, i_3, i_4, i_5, 1, 0, AbstractRenderer_Sub2_Sub2.method15652(class150_2, aClass76_4164), 1);
+        aLong4168 = IDirect3DDevice.CreateVolumeTexture(aGraphicalRenderer_Sub2_Sub2_4165.aLong10252, i_3, i_4, i_5, 1, 0, DirectXRenderer.method15652(class150_2, aClass76_4164), 1);
         ByteBuffer bytebuffer_8 = aGraphicalRenderer_Sub2_Sub2_4165.aByteBuffer8838;
         bytebuffer_8.clear();
         bytebuffer_8.put(bytes_7);

@@ -11,10 +11,10 @@ public class Class300 implements Interface4 {
     byte aByte3547;
     long aLong3549;
     int anInt3548;
-    AbstractRenderer_Sub2_Sub2 aGraphicalRenderer_Sub2_Sub2_3551;
+    DirectXRenderer aGraphicalRenderer_Sub2_Sub2_3551;
     boolean aBool3552;
 
-    Class300(AbstractRenderer_Sub2_Sub2 class505_sub2_sub2_1, boolean bool_2) {
+    Class300(DirectXRenderer class505_sub2_sub2_1, boolean bool_2) {
         aGraphicalRenderer_Sub2_Sub2_3551 = class505_sub2_sub2_1;
         aBool3552 = bool_2;
         aGraphicalRenderer_Sub2_Sub2_3551.method13901(this);

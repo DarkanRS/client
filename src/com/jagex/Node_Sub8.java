@@ -5,7 +5,7 @@ import java.nio.ByteBuffer;
 public class Node_Sub8 extends Node {
 
     int anInt7530;
-    AbstractRenderer_Sub2 aGraphicalRenderer_Sub2_7533;
+    HardwareRenderer aGraphicalRenderer_Sub2_7533;
     Node_Sub24 aNode_Sub24_7528;
     HardwareGround aGround_Sub1_7524;
     int anInt7531;
@@ -20,7 +20,7 @@ public class Node_Sub8 extends Node {
     HashTable aClass453_7537;
     int anInt7532;
 
-    Node_Sub8(AbstractRenderer_Sub2 class505_sub2_1, HardwareGround class390_sub1_2, Node_Sub24 class282_sub24_3, int[] ints_4) {
+    Node_Sub8(HardwareRenderer class505_sub2_1, HardwareGround class390_sub1_2, Node_Sub24 class282_sub24_3, int[] ints_4) {
         aGraphicalRenderer_Sub2_7533 = class505_sub2_1;
         aNode_Sub24_7528 = class282_sub24_3;
         aGround_Sub1_7524 = class390_sub1_2;

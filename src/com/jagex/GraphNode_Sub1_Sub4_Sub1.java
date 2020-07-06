@@ -92,7 +92,7 @@ public class GraphNode_Sub1_Sub4_Sub1 extends GraphNode_Sub1_Sub4 implements Wor
 
                 if (i_8 != -1 && i_9 != -1) {
                     if (client.aBool7344 && (Class506.USE_OPTIONS_FLAGS & 0x40) != 0) {
-                        Component icomponentdefinitions_30 = Index.getIComponentDefinitions(client.anInt56, client.anInt7345);
+                        IComponentDefinitions icomponentdefinitions_30 = Index.getIComponentDefinitions(client.anInt56, client.anInt7345);
                         if (icomponentdefinitions_30 != null) {
                             PlayerModel.method4032(client.aString7275, " -> ", Defaults8Loader.anInt5932, 59, -1, 0L, i_8, i_9, true, false, i_8 << 0 | i_9, true);
                         } else {

@@ -50,8 +50,8 @@ public class Class532_Sub1 extends Class532 {
                         int i_10000 = client.anInt3243;
                     }
                     Class351.gameCanvas.setSize(Class349.anInt4083, client.anInt3243 * -969250379);
-                    if (Renderers.SOFTWARE_RENDERER != null) {
-                        Renderers.SOFTWARE_RENDERER.method8414(Class351.gameCanvas, Class349.anInt4083, client.anInt3243 * -969250379);
+                    if (Renderers.CURRENT_RENDERER != null) {
+                        Renderers.CURRENT_RENDERER.method8414(Class351.gameCanvas, Class349.anInt4083, client.anInt3243 * -969250379);
                     }
                     if (container_2 == client.engineFrame) {
                         insets_3 = client.engineFrame.getInsets();

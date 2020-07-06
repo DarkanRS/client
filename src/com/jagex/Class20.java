@@ -22,7 +22,7 @@ public class Class20 {
     static NodeCollection aClass482_174 = new NodeCollection();
     static NodeCollection aClass482_175 = new NodeCollection();
     static LRUCache aClass229_164 = new LRUCache(30);
-    static Component aClass118_183;
+    static IComponentDefinitions aClass118_183;
     static int anInt195 = -1;
     static int anInt179 = -1;
     static int anInt180 = -1;

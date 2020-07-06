@@ -2,9 +2,9 @@ package com.jagex;
 
 public abstract class Class141 {
 
-    OpenGLHardwareRenderer aGraphicalRenderer_Sub1_1664;
+    OpenGLRenderer aGraphicalRenderer_Sub1_1664;
 
-    Class141(OpenGLHardwareRenderer class505_sub1_1) {
+    Class141(OpenGLRenderer class505_sub1_1) {
         aGraphicalRenderer_Sub1_1664 = class505_sub1_1;
     }
 

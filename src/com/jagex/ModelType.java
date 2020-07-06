@@ -1,5 +1,8 @@
 package com.jagex;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public enum ModelType {
     NONE(0),
     RAW_MODEL(1),
@@ -11,6 +14,13 @@ public enum ModelType {
     PLAYER_HEAD_IGNOREWORN(7),
     ITEM_CONTAINER_MALE(8),
     ITEM_CONTAINER_FEMALE(9);
+	
+	private static Map<Integer, ModelType> MAP = new HashMap<>();
+	
+	static {
+		for (ModelType t : ModelType.values())
+			MAP.put(t.id, t);
+	}
 
     private final int id;
 
@@ -19,11 +29,7 @@ public enum ModelType {
     }
 
     public static ModelType forId(int id) {
-        for (ModelType t : ModelType.values()) {
-            if (t.id == id)
-                return t;
-        }
-        return null;
+    	return MAP.get(id);
     }
 
     public int getId() {

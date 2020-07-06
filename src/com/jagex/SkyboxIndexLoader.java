@@ -23,11 +23,11 @@ public class SkyboxIndexLoader {
             return null;
         } else {
             int componentSize = Class388.INTERFACE_INDEX.filesCount(interfaceId);
-            Component[] arr_6;
+            IComponentDefinitions[] arr_6;
             if (componentSize == 0) {
-                arr_6 = new Component[0];
+                arr_6 = new IComponentDefinitions[0];
             } else if (interface_21 == null) {
-                arr_6 = new Component[componentSize];
+                arr_6 = new IComponentDefinitions[componentSize];
             } else {
                 arr_6 = interface_21.components;
             }
@@ -41,7 +41,7 @@ public class SkyboxIndexLoader {
                 if (interface_21.components[i] == null) {
                     byte[] bytes_8 = Class388.INTERFACE_INDEX.getFile(interfaceId, i, ints_1);
                     if (bytes_8 != null) {
-                        Component component = interface_21.components[i] = new Component();
+                        IComponentDefinitions component = interface_21.components[i] = new IComponentDefinitions();
                         component.idHash = i + (interfaceId << 16);
                         component.readValues(new ByteBuf(bytes_8));
                     }

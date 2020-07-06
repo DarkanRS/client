@@ -5,10 +5,10 @@ import jaggl.OpenGL;
 public class Class152_Sub1_Sub2 extends Class152_Sub1 {
 
     static int[] anIntArray10125 = new int[4];
-    OpenGLHardwareRenderer aGraphicalRenderer_Sub1_10123;
+    OpenGLRenderer aGraphicalRenderer_Sub1_10123;
     Class137_Sub2 aClass137_Sub2_10124;
 
-    Class152_Sub1_Sub2(OpenGLHardwareRenderer class505_sub1_1, int i_2) {
+    Class152_Sub1_Sub2(OpenGLRenderer class505_sub1_1, int i_2) {
         aGraphicalRenderer_Sub1_10123 = class505_sub1_1;
         aClass137_Sub2_10124 = new Class137_Sub2(class505_sub1_1, Class150.aClass150_1949, Class76.aClass76_751, i_2);
     }

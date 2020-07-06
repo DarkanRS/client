@@ -27,7 +27,7 @@ public class Class41_Sub1_Sub2 extends Class41_Sub1 {
 
     float aFloat10149;
 
-    public Class41_Sub1_Sub2(AbstractRenderer_Sub2 class505_sub2_1, Class49 class49_2) throws Exception_Sub2 {
+    public Class41_Sub1_Sub2(HardwareRenderer class505_sub2_1, Class49 class49_2) throws Exception_Sub2 {
         super(class505_sub2_1);
         aClass49_10147 = class49_2;
         if (aClass49_10147.method975() && class505_sub2_1.method13887()) {

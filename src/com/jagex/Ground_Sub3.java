@@ -25,10 +25,10 @@ public class Ground_Sub3 extends Ground {
     float aFloat9328;
     float aFloat9333;
     float aFloat9354;
-    HardwareRenderer aGraphicalRenderer_Sub3_9353;
+    JavaRenderer aGraphicalRenderer_Sub3_9353;
     int anInt9345;
 
-    Ground_Sub3(HardwareRenderer hardwarerenderer_1, int i_3, int i_4, int i_5, int[][] ints_6, int[][] ints_7, int i_8) {
+    Ground_Sub3(JavaRenderer hardwarerenderer_1, int i_3, int i_4, int i_5, int[][] ints_6, int[][] ints_7, int i_8) {
         super(i_4, i_5, i_8, ints_6);
         aGraphicalRenderer_Sub3_9353 = hardwarerenderer_1;
         anInt9345 = i_3;

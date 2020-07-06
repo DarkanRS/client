@@ -38,7 +38,7 @@ public class ItemDefinitions implements Definition {
     public int[] quests;
     public int pickSizeShift;
     public int bindTemplateId = -1;
-    ObjectIndexLoader loader;
+    ItemIndexLoader loader;
     int id;
     int modelId;
     short[] originalModelColors;
@@ -105,7 +105,7 @@ public class ItemDefinitions implements Definition {
                 if (arr_12 == null) {
                     return;
                 }
-                nativesprite_11 = Renderers.SOFTWARE_RENDERER.method8444(arr_12[0], true);
+                nativesprite_11 = Renderers.CURRENT_RENDERER.method8444(arr_12[0], true);
                 client.aClass229_7204.put(nativesprite_11, i_10);
             }
             Vector3 vector3_16 = animable_0.method11166().coords;
@@ -116,7 +116,7 @@ public class ItemDefinitions implements Definition {
             i_14 += i_2 % 4 * 18;
             nativesprite_11.method2752(i_13, i_14);
             if (animable_1 == animable_0) {
-                Renderers.SOFTWARE_RENDERER.method8562(i_13 - 1, i_14 - 1, 18, 18, -256);
+                Renderers.CURRENT_RENDERER.method8562(i_13 - 1, i_14 - 1, 18, 18, -256);
             }
             EntityNode_Sub2 class275_sub2_15 = PlayerVarProvider.method286();
             class275_sub2_15.aTransform_Sub1_Sub1_Sub2_7739 = animable_1;
@@ -574,10 +574,10 @@ public class ItemDefinitions implements Definition {
                 hardwareRenderer.IA(0.95F + (float) (Math.random() / 10.0D));
                 hardwareRenderer.m(16777215, 0.95F + (float) (Math.random() / 10.0D), 0.95F + (float) (Math.random() / 10.0D), -50.0f, -10.0f, -50.0f);
                 Matrix44Var matrix44var_20 = hardwareRenderer.method8450();
-                matrix44var_20.method5217(0.0F, 0.0F, 1.0F, Class382.method6508(-modelRotationZ << 3));
-                matrix44var_20.rotation(0.0F, 1.0F, 0.0F, Class382.method6508(modelRotationY << 3));
-                matrix44var_20.method5219((modelOffsetX << 2), ((zoom * Class382.SINE[modelRotationX << 3] >> 14) - meshRasterizer.YA() / 2 + (modelOffsetY << 2)), ((zoom * Class382.COSINE[modelRotationX << 3] >> 14) + (modelOffsetY << 2)));
-                matrix44var_20.rotation(1.0F, 0.0F, 0.0F, Class382.method6508(modelRotationX << 3));
+                matrix44var_20.method5217(0.0F, 0.0F, 1.0F, Trig.degToRad(-modelRotationZ << 3));
+                matrix44var_20.rotation(0.0F, 1.0F, 0.0F, Trig.degToRad(modelRotationY << 3));
+                matrix44var_20.method5219((modelOffsetX << 2), ((zoom * Trig.SINE[modelRotationX << 3] >> 14) - meshRasterizer.YA() / 2 + (modelOffsetY << 2)), ((zoom * Trig.COSINE[modelRotationX << 3] >> 14) + (modelOffsetY << 2)));
+                matrix44var_20.rotation(1.0F, 0.0F, 0.0F, Trig.degToRad(modelRotationX << 3));
                 hardwareRenderer.r(0, 0, 36, 32);
                 hardwareRenderer.ba(2, 0);
                 hardwareRenderer.B(0, 0, 36, 32, 0, 0);

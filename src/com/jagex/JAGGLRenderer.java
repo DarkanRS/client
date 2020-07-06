@@ -6,7 +6,7 @@ import jaggl.OpenGL;
 
 import java.awt.*;
 
-public class AbstractRenderer_Sub2_Sub1 extends AbstractRenderer_Sub2 {
+public class JAGGLRenderer extends HardwareRenderer {
 
     Class115_Sub2 aClass115_Sub2_10189;
     LinkedNodeList aClass473_10173 = new LinkedNodeList();
@@ -38,7 +38,7 @@ public class AbstractRenderer_Sub2_Sub1 extends AbstractRenderer_Sub2 {
     boolean aBool10183;
     int anInt10181;
 
-    AbstractRenderer_Sub2_Sub1(OpenGL opengl_1, Canvas canvas_2, long long_3, ImageLoader interface22_5, Index index_6, int i_7) {
+    JAGGLRenderer(OpenGL opengl_1, Canvas canvas_2, long long_3, ImageLoader interface22_5, Index index_6, int i_7) {
         super(interface22_5, index_6, i_7, 1);
         new MapBuffer();
         new MapBuffer();
@@ -2868,5 +2868,29 @@ public class AbstractRenderer_Sub2_Sub1 extends AbstractRenderer_Sub2 {
     void method14120() {
         OpenGL.glDepthMask(aBool8755 && aBool8756);
     }
+
+	public static AbstractRenderer create(Canvas canvas_0, ImageLoader interface22_1, Index index_2, int i_3) {
+	    try {
+	        boolean bool_5 = HardwareRenderer.method13893();
+	        if (!bool_5) {
+	            throw new RuntimeException("");
+	        } else if (!Class362.getNativeLibraryLoader().loadLibrary("jaggl")) {
+	            throw new RuntimeException("");
+	        } else {
+	            Class459.method7679(canvas_0);
+	            OpenGL opengl_6 = new OpenGL();
+	            long long_7 = opengl_6.init(canvas_0, 8, 8, 8, 24, 0, i_3);
+	            if (long_7 == 0L) {
+	                throw new RuntimeException("");
+	            } else {
+	                JAGGLRenderer class505_sub2_sub1_9 = new JAGGLRenderer(opengl_6, canvas_0, long_7, interface22_1, index_2, i_3);
+	                class505_sub2_sub1_9.method14147();
+	                return class505_sub2_sub1_9;
+	            }
+	        }
+	    } catch (Throwable throwable_11) {
+	        throw new RuntimeException("");
+	    }
+	}
 
 }

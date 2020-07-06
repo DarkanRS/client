@@ -44,10 +44,10 @@ public class Class185 {
     float[] aFloatArray2344;
     float[] aFloatArray2345;
     float[] aFloatArray2324;
-    HardwareRenderer aGraphicalRenderer_Sub3_2320;
+    JavaRenderer aGraphicalRenderer_Sub3_2320;
     int[] anIntArray2329;
 
-    Class185(HardwareRenderer hardwarerenderer_1) {
+    Class185(JavaRenderer hardwarerenderer_1) {
         aFloat2303 = 1.0F - aFloat2305;
         anInt2307 = 0;
         anInt2336 = 0;

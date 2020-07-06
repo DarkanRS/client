@@ -23,7 +23,7 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
     int triangleCount;
     int anInt8302;
     boolean aBool8279 = true;
-    OpenGLHardwareRenderer aGraphicalRenderer_Sub1_8239;
+    OpenGLRenderer aGraphicalRenderer_Sub1_8239;
     int anInt8240;
     int anInt8241;
     OpenGlArrayBufferPointer aClass143_8272;
@@ -74,7 +74,7 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
     Interface15 anInterface15_8277;
     Interface14 anInterface14_8305;
 
-    MeshRasterizer_Sub1(OpenGLHardwareRenderer class505_sub1_1, RSMesh rsmesh_2, int i_3, int i_4, int i_5, int i_6) {
+    MeshRasterizer_Sub1(OpenGLRenderer class505_sub1_1, RSMesh rsmesh_2, int i_3, int i_4, int i_5, int i_6) {
         aGraphicalRenderer_Sub1_8239 = class505_sub1_1;
         anInt8240 = i_3;
         anInt8241 = i_6;
@@ -668,7 +668,7 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 
     }
 
-    MeshRasterizer_Sub1(OpenGLHardwareRenderer class505_sub1_1) {
+    MeshRasterizer_Sub1(OpenGLRenderer class505_sub1_1) {
         aGraphicalRenderer_Sub1_8239 = class505_sub1_1;
         aClass143_8272 = new OpenGlArrayBufferPointer(null, 5126, 3, 0);
         aClass143_8275 = new OpenGlArrayBufferPointer(null, 5126, 2, 0);
@@ -709,8 +709,8 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 
     @Override
     public void bw(int i_1) {
-        int i_2 = Class382.SINE[i_1];
-        int i_3 = Class382.COSINE[i_1];
+        int i_2 = Trig.SINE[i_1];
+        int i_3 = Trig.COSINE[i_1];
 
         for (int i_4 = 0; i_4 < maxDepth; i_4++) {
             int i_5 = verticesZ[i_4] * i_2 + verticesX[i_4] * i_3 >> 14;
@@ -727,8 +727,8 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 
     @Override
     public void bx(int i_1) {
-        int i_2 = Class382.SINE[i_1];
-        int i_3 = Class382.COSINE[i_1];
+        int i_2 = Trig.SINE[i_1];
+        int i_3 = Trig.COSINE[i_1];
 
         for (int i_4 = 0; i_4 < maxDepth; i_4++) {
             int i_5 = verticesZ[i_4] * i_2 + verticesX[i_4] * i_3 >> 14;
@@ -1311,8 +1311,8 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 
     @Override
     public void f(int i_1) {
-        int i_2 = Class382.SINE[i_1];
-        int i_3 = Class382.COSINE[i_1];
+        int i_2 = Trig.SINE[i_1];
+        int i_3 = Trig.COSINE[i_1];
 
         for (int i_4 = 0; i_4 < maxDepth; i_4++) {
             int i_5 = i_2 * verticesZ[i_4] + i_3 * verticesX[i_4] >> 14;
@@ -1329,8 +1329,8 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 
     @Override
     public void S(int i_1) {
-        int i_2 = Class382.SINE[i_1];
-        int i_3 = Class382.COSINE[i_1];
+        int i_2 = Trig.SINE[i_1];
+        int i_3 = Trig.COSINE[i_1];
 
         int i_4;
         int i_5;
@@ -1363,8 +1363,8 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 
     @Override
     public void t(int i_1) {
-        int i_2 = Class382.SINE[i_1];
-        int i_3 = Class382.COSINE[i_1];
+        int i_2 = Trig.SINE[i_1];
+        int i_3 = Trig.COSINE[i_1];
 
         for (int i_4 = 0; i_4 < maxDepth; i_4++) {
             int i_5 = i_3 * verticesY[i_4] - i_2 * verticesZ[i_4] >> 14;
@@ -2104,24 +2104,24 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
                                     verticesY[i_13] -= anInt8247;
                                     verticesZ[i_13] -= anInt8232;
                                     if (i_5 != 0) {
-                                        i_14 = Class382.SINE[i_5];
-                                        i_15 = Class382.COSINE[i_5];
+                                        i_14 = Trig.SINE[i_5];
+                                        i_15 = Trig.COSINE[i_5];
                                         i_16 = verticesY[i_13] * i_14 + verticesX[i_13] * i_15 + 16383 >> 14;
                                         verticesY[i_13] = verticesY[i_13] * i_15 - verticesX[i_13] * i_14 + 16383 >> 14;
                                         verticesX[i_13] = i_16;
                                     }
 
                                     if (i_3 != 0) {
-                                        i_14 = Class382.SINE[i_3];
-                                        i_15 = Class382.COSINE[i_3];
+                                        i_14 = Trig.SINE[i_3];
+                                        i_15 = Trig.COSINE[i_3];
                                         i_16 = verticesY[i_13] * i_15 - verticesZ[i_13] * i_14 + 16383 >> 14;
                                         verticesZ[i_13] = verticesY[i_13] * i_14 + verticesZ[i_13] * i_15 + 16383 >> 14;
                                         verticesY[i_13] = i_16;
                                     }
 
                                     if (i_4 != 0) {
-                                        i_14 = Class382.SINE[i_4];
-                                        i_15 = Class382.COSINE[i_4];
+                                        i_14 = Trig.SINE[i_4];
+                                        i_15 = Trig.COSINE[i_4];
                                         i_16 = verticesZ[i_13] * i_14 + verticesX[i_13] * i_15 + 16383 >> 14;
                                         verticesZ[i_13] = verticesZ[i_13] * i_15 - verticesX[i_13] * i_14 + 16383 >> 14;
                                         verticesX[i_13] = i_16;
@@ -2138,24 +2138,24 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
                                     verticesY[i_13] -= anInt8247;
                                     verticesZ[i_13] -= anInt8232;
                                     if (i_3 != 0) {
-                                        i_14 = Class382.SINE[i_3];
-                                        i_15 = Class382.COSINE[i_3];
+                                        i_14 = Trig.SINE[i_3];
+                                        i_15 = Trig.COSINE[i_3];
                                         i_16 = verticesY[i_13] * i_15 - verticesZ[i_13] * i_14 + 16383 >> 14;
                                         verticesZ[i_13] = verticesY[i_13] * i_14 + verticesZ[i_13] * i_15 + 16383 >> 14;
                                         verticesY[i_13] = i_16;
                                     }
 
                                     if (i_5 != 0) {
-                                        i_14 = Class382.SINE[i_5];
-                                        i_15 = Class382.COSINE[i_5];
+                                        i_14 = Trig.SINE[i_5];
+                                        i_15 = Trig.COSINE[i_5];
                                         i_16 = verticesY[i_13] * i_14 + verticesX[i_13] * i_15 + 16383 >> 14;
                                         verticesY[i_13] = verticesY[i_13] * i_15 - verticesX[i_13] * i_14 + 16383 >> 14;
                                         verticesX[i_13] = i_16;
                                     }
 
                                     if (i_4 != 0) {
-                                        i_14 = Class382.SINE[i_4];
-                                        i_15 = Class382.COSINE[i_4];
+                                        i_14 = Trig.SINE[i_4];
+                                        i_15 = Trig.COSINE[i_4];
                                         i_16 = verticesZ[i_13] * i_14 + verticesX[i_13] * i_15 + 16383 >> 14;
                                         verticesZ[i_13] = verticesZ[i_13] * i_15 - verticesX[i_13] * i_14 + 16383 >> 14;
                                         verticesX[i_13] = i_16;
@@ -2190,24 +2190,24 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
                                         int i_19;
                                         int i_20;
                                         if (i_5 != 0) {
-                                            i_18 = Class382.SINE[i_5];
-                                            i_19 = Class382.COSINE[i_5];
+                                            i_18 = Trig.SINE[i_5];
+                                            i_19 = Trig.COSINE[i_5];
                                             i_20 = aShortArray8270[i_17] * i_18 + aShortArray8255[i_17] * i_19 + 16383 >> 14;
                                             aShortArray8270[i_17] = (short) (aShortArray8270[i_17] * i_19 - aShortArray8255[i_17] * i_18 + 16383 >> 14);
                                             aShortArray8255[i_17] = (short) i_20;
                                         }
 
                                         if (i_3 != 0) {
-                                            i_18 = Class382.SINE[i_3];
-                                            i_19 = Class382.COSINE[i_3];
+                                            i_18 = Trig.SINE[i_3];
+                                            i_19 = Trig.COSINE[i_3];
                                             i_20 = aShortArray8270[i_17] * i_19 - aShortArray8261[i_17] * i_18 + 16383 >> 14;
                                             aShortArray8261[i_17] = (short) (aShortArray8270[i_17] * i_18 + aShortArray8261[i_17] * i_19 + 16383 >> 14);
                                             aShortArray8270[i_17] = (short) i_20;
                                         }
 
                                         if (i_4 != 0) {
-                                            i_18 = Class382.SINE[i_4];
-                                            i_19 = Class382.COSINE[i_4];
+                                            i_18 = Trig.SINE[i_4];
+                                            i_19 = Trig.COSINE[i_4];
                                             i_20 = aShortArray8261[i_17] * i_18 + aShortArray8255[i_17] * i_19 + 16383 >> 14;
                                             aShortArray8261[i_17] = (short) (aShortArray8261[i_17] * i_19 - aShortArray8255[i_17] * i_18 + 16383 >> 14);
                                             aShortArray8255[i_17] = (short) i_20;
@@ -2542,12 +2542,12 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
                         }
 
                         int[] ints_49 = new int[9];
-                        i_17 = Class382.COSINE[i_31];
-                        i_18 = Class382.SINE[i_31];
-                        i_19 = Class382.COSINE[i_41];
-                        i_20 = Class382.SINE[i_41];
-                        i_21 = Class382.COSINE[i_51];
-                        i_22 = Class382.SINE[i_51];
+                        i_17 = Trig.COSINE[i_31];
+                        i_18 = Trig.SINE[i_31];
+                        i_19 = Trig.COSINE[i_41];
+                        i_20 = Trig.SINE[i_41];
+                        i_21 = Trig.COSINE[i_51];
+                        i_22 = Trig.SINE[i_51];
                         i_23 = i_18 * i_21 + 8192 >> 14;
                         i_24 = i_18 * i_22 + 8192 >> 14;
                         ints_49[0] = i_19 * i_21 + i_20 * i_24 + 8192 >> 14;
@@ -2640,24 +2640,24 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
                                         verticesY[i_14] -= anInt8247;
                                         verticesZ[i_14] -= anInt8232;
                                         if (i_51 != 0) {
-                                            i_15 = Class382.SINE[i_51];
-                                            i_16 = Class382.COSINE[i_51];
+                                            i_15 = Trig.SINE[i_51];
+                                            i_16 = Trig.COSINE[i_51];
                                             i_17 = i_15 * verticesY[i_14] + i_16 * verticesX[i_14] + 16383 >> 14;
                                             verticesY[i_14] = i_16 * verticesY[i_14] - i_15 * verticesX[i_14] + 16383 >> 14;
                                             verticesX[i_14] = i_17;
                                         }
 
                                         if (i_31 != 0) {
-                                            i_15 = Class382.SINE[i_31];
-                                            i_16 = Class382.COSINE[i_31];
+                                            i_15 = Trig.SINE[i_31];
+                                            i_16 = Trig.COSINE[i_31];
                                             i_17 = i_16 * verticesY[i_14] - i_15 * verticesZ[i_14] + 16383 >> 14;
                                             verticesZ[i_14] = i_15 * verticesY[i_14] + i_16 * verticesZ[i_14] + 16383 >> 14;
                                             verticesY[i_14] = i_17;
                                         }
 
                                         if (i_41 != 0) {
-                                            i_15 = Class382.SINE[i_41];
-                                            i_16 = Class382.COSINE[i_41];
+                                            i_15 = Trig.SINE[i_41];
+                                            i_16 = Trig.COSINE[i_41];
                                             i_17 = i_15 * verticesZ[i_14] + i_16 * verticesX[i_14] + 16383 >> 14;
                                             verticesZ[i_14] = i_16 * verticesZ[i_14] - i_15 * verticesX[i_14] + 16383 >> 14;
                                             verticesX[i_14] = i_17;
@@ -2690,24 +2690,24 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
                                                 }
 
                                                 if (i_51 != 0) {
-                                                    i_19 = Class382.SINE[i_51];
-                                                    i_20 = Class382.COSINE[i_51];
+                                                    i_19 = Trig.SINE[i_51];
+                                                    i_20 = Trig.COSINE[i_51];
                                                     i_21 = aShortArray8270[i_18] * i_19 + aShortArray8255[i_18] * i_20 + 16383 >> 14;
                                                     aShortArray8270[i_18] = (short) (aShortArray8270[i_18] * i_20 - aShortArray8255[i_18] * i_19 + 16383 >> 14);
                                                     aShortArray8255[i_18] = (short) i_21;
                                                 }
 
                                                 if (i_31 != 0) {
-                                                    i_19 = Class382.SINE[i_31];
-                                                    i_20 = Class382.COSINE[i_31];
+                                                    i_19 = Trig.SINE[i_31];
+                                                    i_20 = Trig.COSINE[i_31];
                                                     i_21 = aShortArray8270[i_18] * i_20 - aShortArray8261[i_18] * i_19 + 16383 >> 14;
                                                     aShortArray8261[i_18] = (short) (aShortArray8270[i_18] * i_19 + aShortArray8261[i_18] * i_20 + 16383 >> 14);
                                                     aShortArray8270[i_18] = (short) i_21;
                                                 }
 
                                                 if (i_41 != 0) {
-                                                    i_19 = Class382.SINE[i_41];
-                                                    i_20 = Class382.COSINE[i_41];
+                                                    i_19 = Trig.SINE[i_41];
+                                                    i_20 = Trig.COSINE[i_41];
                                                     i_21 = aShortArray8261[i_18] * i_19 + aShortArray8255[i_18] * i_20 + 16383 >> 14;
                                                     aShortArray8261[i_18] = (short) (aShortArray8261[i_18] * i_20 - aShortArray8255[i_18] * i_19 + 16383 >> 14);
                                                     aShortArray8255[i_18] = (short) i_21;
@@ -3006,24 +3006,24 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
                     verticesY[i_5] -= anInt8247;
                     verticesZ[i_5] -= anInt8232;
                     if (i_4 != 0) {
-                        i_6 = Class382.SINE[i_4];
-                        i_7 = Class382.COSINE[i_4];
+                        i_6 = Trig.SINE[i_4];
+                        i_7 = Trig.COSINE[i_4];
                         i_8 = i_6 * verticesY[i_5] + i_7 * verticesX[i_5] + 16383 >> 14;
                         verticesY[i_5] = i_7 * verticesY[i_5] - i_6 * verticesX[i_5] + 16383 >> 14;
                         verticesX[i_5] = i_8;
                     }
 
                     if (i_2 != 0) {
-                        i_6 = Class382.SINE[i_2];
-                        i_7 = Class382.COSINE[i_2];
+                        i_6 = Trig.SINE[i_2];
+                        i_7 = Trig.COSINE[i_2];
                         i_8 = i_7 * verticesY[i_5] - i_6 * verticesZ[i_5] + 16383 >> 14;
                         verticesZ[i_5] = i_6 * verticesY[i_5] + i_7 * verticesZ[i_5] + 16383 >> 14;
                         verticesY[i_5] = i_8;
                     }
 
                     if (i_3 != 0) {
-                        i_6 = Class382.SINE[i_3];
-                        i_7 = Class382.COSINE[i_3];
+                        i_6 = Trig.SINE[i_3];
+                        i_7 = Trig.COSINE[i_3];
                         i_8 = i_6 * verticesZ[i_5] + i_7 * verticesX[i_5] + 16383 >> 14;
                         verticesZ[i_5] = i_7 * verticesZ[i_5] - i_6 * verticesX[i_5] + 16383 >> 14;
                         verticesX[i_5] = i_8;
@@ -3209,24 +3209,24 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
                                     verticesY[i_13] -= anInt8247;
                                     verticesZ[i_13] -= anInt8232;
                                     if (i_5 != 0) {
-                                        i_14 = Class382.SINE[i_5];
-                                        i_15 = Class382.COSINE[i_5];
+                                        i_14 = Trig.SINE[i_5];
+                                        i_15 = Trig.COSINE[i_5];
                                         i_16 = i_14 * verticesY[i_13] + i_15 * verticesX[i_13] + 16383 >> 14;
                                         verticesY[i_13] = i_15 * verticesY[i_13] - i_14 * verticesX[i_13] + 16383 >> 14;
                                         verticesX[i_13] = i_16;
                                     }
 
                                     if (i_3 != 0) {
-                                        i_14 = Class382.SINE[i_3];
-                                        i_15 = Class382.COSINE[i_3];
+                                        i_14 = Trig.SINE[i_3];
+                                        i_15 = Trig.COSINE[i_3];
                                         i_16 = i_15 * verticesY[i_13] - i_14 * verticesZ[i_13] + 16383 >> 14;
                                         verticesZ[i_13] = i_14 * verticesY[i_13] + i_15 * verticesZ[i_13] + 16383 >> 14;
                                         verticesY[i_13] = i_16;
                                     }
 
                                     if (i_4 != 0) {
-                                        i_14 = Class382.SINE[i_4];
-                                        i_15 = Class382.COSINE[i_4];
+                                        i_14 = Trig.SINE[i_4];
+                                        i_15 = Trig.COSINE[i_4];
                                         i_16 = i_14 * verticesZ[i_13] + i_15 * verticesX[i_13] + 16383 >> 14;
                                         verticesZ[i_13] = i_15 * verticesZ[i_13] - i_14 * verticesX[i_13] + 16383 >> 14;
                                         verticesX[i_13] = i_16;
@@ -3243,24 +3243,24 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
                                     verticesY[i_13] -= anInt8247;
                                     verticesZ[i_13] -= anInt8232;
                                     if (i_3 != 0) {
-                                        i_14 = Class382.SINE[i_3];
-                                        i_15 = Class382.COSINE[i_3];
+                                        i_14 = Trig.SINE[i_3];
+                                        i_15 = Trig.COSINE[i_3];
                                         i_16 = i_15 * verticesY[i_13] - i_14 * verticesZ[i_13] + 16383 >> 14;
                                         verticesZ[i_13] = i_14 * verticesY[i_13] + i_15 * verticesZ[i_13] + 16383 >> 14;
                                         verticesY[i_13] = i_16;
                                     }
 
                                     if (i_5 != 0) {
-                                        i_14 = Class382.SINE[i_5];
-                                        i_15 = Class382.COSINE[i_5];
+                                        i_14 = Trig.SINE[i_5];
+                                        i_15 = Trig.COSINE[i_5];
                                         i_16 = i_14 * verticesY[i_13] + i_15 * verticesX[i_13] + 16383 >> 14;
                                         verticesY[i_13] = i_15 * verticesY[i_13] - i_14 * verticesX[i_13] + 16383 >> 14;
                                         verticesX[i_13] = i_16;
                                     }
 
                                     if (i_4 != 0) {
-                                        i_14 = Class382.SINE[i_4];
-                                        i_15 = Class382.COSINE[i_4];
+                                        i_14 = Trig.SINE[i_4];
+                                        i_15 = Trig.COSINE[i_4];
                                         i_16 = i_14 * verticesZ[i_13] + i_15 * verticesX[i_13] + 16383 >> 14;
                                         verticesZ[i_13] = i_15 * verticesZ[i_13] - i_14 * verticesX[i_13] + 16383 >> 14;
                                         verticesX[i_13] = i_16;
@@ -3295,24 +3295,24 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
                                         int i_19;
                                         int i_20;
                                         if (i_5 != 0) {
-                                            i_18 = Class382.SINE[i_5];
-                                            i_19 = Class382.COSINE[i_5];
+                                            i_18 = Trig.SINE[i_5];
+                                            i_19 = Trig.COSINE[i_5];
                                             i_20 = aShortArray8270[i_17] * i_18 + aShortArray8255[i_17] * i_19 + 16383 >> 14;
                                             aShortArray8270[i_17] = (short) (aShortArray8270[i_17] * i_19 - aShortArray8255[i_17] * i_18 + 16383 >> 14);
                                             aShortArray8255[i_17] = (short) i_20;
                                         }
 
                                         if (i_3 != 0) {
-                                            i_18 = Class382.SINE[i_3];
-                                            i_19 = Class382.COSINE[i_3];
+                                            i_18 = Trig.SINE[i_3];
+                                            i_19 = Trig.COSINE[i_3];
                                             i_20 = aShortArray8270[i_17] * i_19 - aShortArray8261[i_17] * i_18 + 16383 >> 14;
                                             aShortArray8261[i_17] = (short) (aShortArray8270[i_17] * i_18 + aShortArray8261[i_17] * i_19 + 16383 >> 14);
                                             aShortArray8270[i_17] = (short) i_20;
                                         }
 
                                         if (i_4 != 0) {
-                                            i_18 = Class382.SINE[i_4];
-                                            i_19 = Class382.COSINE[i_4];
+                                            i_18 = Trig.SINE[i_4];
+                                            i_19 = Trig.COSINE[i_4];
                                             i_20 = aShortArray8261[i_17] * i_18 + aShortArray8255[i_17] * i_19 + 16383 >> 14;
                                             aShortArray8261[i_17] = (short) (aShortArray8261[i_17] * i_19 - aShortArray8255[i_17] * i_18 + 16383 >> 14);
                                             aShortArray8255[i_17] = (short) i_20;
@@ -4611,8 +4611,8 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 
     @Override
     public void bm(int i_1) {
-        int i_2 = Class382.SINE[i_1];
-        int i_3 = Class382.COSINE[i_1];
+        int i_2 = Trig.SINE[i_1];
+        int i_3 = Trig.COSINE[i_1];
 
         for (int i_4 = 0; i_4 < maxDepth; i_4++) {
             int i_5 = verticesY[i_4] * i_3 - verticesZ[i_4] * i_2 >> 14;
@@ -4716,8 +4716,8 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 
     @Override
     public void bz(int i_1) {
-        int i_2 = Class382.SINE[i_1];
-        int i_3 = Class382.COSINE[i_1];
+        int i_2 = Trig.SINE[i_1];
+        int i_3 = Trig.COSINE[i_1];
 
         int i_4;
         int i_5;
@@ -4750,8 +4750,8 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 
     @Override
     public void bj(int i_1) {
-        int i_2 = Class382.SINE[i_1];
-        int i_3 = Class382.COSINE[i_1];
+        int i_2 = Trig.SINE[i_1];
+        int i_3 = Trig.COSINE[i_1];
 
         int i_4;
         int i_5;
@@ -4784,8 +4784,8 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 
     @Override
     public void bk(int i_1) {
-        int i_2 = Class382.SINE[i_1];
-        int i_3 = Class382.COSINE[i_1];
+        int i_2 = Trig.SINE[i_1];
+        int i_3 = Trig.COSINE[i_1];
 
         for (int i_4 = 0; i_4 < maxDepth; i_4++) {
             int i_5 = verticesY[i_4] * i_3 - verticesZ[i_4] * i_2 >> 14;
@@ -4802,8 +4802,8 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 
     @Override
     public void bf(int i_1) {
-        int i_2 = Class382.SINE[i_1];
-        int i_3 = Class382.COSINE[i_1];
+        int i_2 = Trig.SINE[i_1];
+        int i_3 = Trig.COSINE[i_1];
 
         for (int i_4 = 0; i_4 < maxDepth; i_4++) {
             int i_5 = verticesY[i_4] * i_3 - verticesZ[i_4] * i_2 >> 14;
@@ -4820,8 +4820,8 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 
     @Override
     public void bn(int i_1) {
-        int i_2 = Class382.SINE[i_1];
-        int i_3 = Class382.COSINE[i_1];
+        int i_2 = Trig.SINE[i_1];
+        int i_3 = Trig.COSINE[i_1];
 
         for (int i_4 = 0; i_4 < maxDepth; i_4++) {
             int i_5 = verticesY[i_4] * i_3 - verticesZ[i_4] * i_2 >> 14;
@@ -5161,12 +5161,12 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
                         }
 
                         int[] ints_49 = new int[9];
-                        i_17 = Class382.COSINE[i_31];
-                        i_18 = Class382.SINE[i_31];
-                        i_19 = Class382.COSINE[i_41];
-                        i_20 = Class382.SINE[i_41];
-                        i_21 = Class382.COSINE[i_51];
-                        i_22 = Class382.SINE[i_51];
+                        i_17 = Trig.COSINE[i_31];
+                        i_18 = Trig.SINE[i_31];
+                        i_19 = Trig.COSINE[i_41];
+                        i_20 = Trig.SINE[i_41];
+                        i_21 = Trig.COSINE[i_51];
+                        i_22 = Trig.SINE[i_51];
                         i_23 = i_18 * i_21 + 8192 >> 14;
                         i_24 = i_18 * i_22 + 8192 >> 14;
                         ints_49[0] = i_19 * i_21 + i_20 * i_24 + 8192 >> 14;
@@ -5259,24 +5259,24 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
                                         verticesY[i_14] -= anInt8247;
                                         verticesZ[i_14] -= anInt8232;
                                         if (i_51 != 0) {
-                                            i_15 = Class382.SINE[i_51];
-                                            i_16 = Class382.COSINE[i_51];
+                                            i_15 = Trig.SINE[i_51];
+                                            i_16 = Trig.COSINE[i_51];
                                             i_17 = verticesY[i_14] * i_15 + verticesX[i_14] * i_16 + 16383 >> 14;
                                             verticesY[i_14] = verticesY[i_14] * i_16 - verticesX[i_14] * i_15 + 16383 >> 14;
                                             verticesX[i_14] = i_17;
                                         }
 
                                         if (i_31 != 0) {
-                                            i_15 = Class382.SINE[i_31];
-                                            i_16 = Class382.COSINE[i_31];
+                                            i_15 = Trig.SINE[i_31];
+                                            i_16 = Trig.COSINE[i_31];
                                             i_17 = verticesY[i_14] * i_16 - verticesZ[i_14] * i_15 + 16383 >> 14;
                                             verticesZ[i_14] = verticesY[i_14] * i_15 + verticesZ[i_14] * i_16 + 16383 >> 14;
                                             verticesY[i_14] = i_17;
                                         }
 
                                         if (i_41 != 0) {
-                                            i_15 = Class382.SINE[i_41];
-                                            i_16 = Class382.COSINE[i_41];
+                                            i_15 = Trig.SINE[i_41];
+                                            i_16 = Trig.COSINE[i_41];
                                             i_17 = verticesZ[i_14] * i_15 + verticesX[i_14] * i_16 + 16383 >> 14;
                                             verticesZ[i_14] = verticesZ[i_14] * i_16 - verticesX[i_14] * i_15 + 16383 >> 14;
                                             verticesX[i_14] = i_17;
@@ -5309,24 +5309,24 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
                                                 }
 
                                                 if (i_51 != 0) {
-                                                    i_19 = Class382.SINE[i_51];
-                                                    i_20 = Class382.COSINE[i_51];
+                                                    i_19 = Trig.SINE[i_51];
+                                                    i_20 = Trig.COSINE[i_51];
                                                     i_21 = aShortArray8270[i_18] * i_19 + aShortArray8255[i_18] * i_20 + 16383 >> 14;
                                                     aShortArray8270[i_18] = (short) (aShortArray8270[i_18] * i_20 - aShortArray8255[i_18] * i_19 + 16383 >> 14);
                                                     aShortArray8255[i_18] = (short) i_21;
                                                 }
 
                                                 if (i_31 != 0) {
-                                                    i_19 = Class382.SINE[i_31];
-                                                    i_20 = Class382.COSINE[i_31];
+                                                    i_19 = Trig.SINE[i_31];
+                                                    i_20 = Trig.COSINE[i_31];
                                                     i_21 = aShortArray8270[i_18] * i_20 - aShortArray8261[i_18] * i_19 + 16383 >> 14;
                                                     aShortArray8261[i_18] = (short) (aShortArray8270[i_18] * i_19 + aShortArray8261[i_18] * i_20 + 16383 >> 14);
                                                     aShortArray8270[i_18] = (short) i_21;
                                                 }
 
                                                 if (i_41 != 0) {
-                                                    i_19 = Class382.SINE[i_41];
-                                                    i_20 = Class382.COSINE[i_41];
+                                                    i_19 = Trig.SINE[i_41];
+                                                    i_20 = Trig.COSINE[i_41];
                                                     i_21 = aShortArray8261[i_18] * i_19 + aShortArray8255[i_18] * i_20 + 16383 >> 14;
                                                     aShortArray8261[i_18] = (short) (aShortArray8261[i_18] * i_20 - aShortArray8255[i_18] * i_19 + 16383 >> 14);
                                                     aShortArray8255[i_18] = (short) i_21;
@@ -5625,24 +5625,24 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
                     verticesY[i_5] -= anInt8247;
                     verticesZ[i_5] -= anInt8232;
                     if (i_4 != 0) {
-                        i_6 = Class382.SINE[i_4];
-                        i_7 = Class382.COSINE[i_4];
+                        i_6 = Trig.SINE[i_4];
+                        i_7 = Trig.COSINE[i_4];
                         i_8 = verticesY[i_5] * i_6 + verticesX[i_5] * i_7 + 16383 >> 14;
                         verticesY[i_5] = verticesY[i_5] * i_7 - verticesX[i_5] * i_6 + 16383 >> 14;
                         verticesX[i_5] = i_8;
                     }
 
                     if (i_2 != 0) {
-                        i_6 = Class382.SINE[i_2];
-                        i_7 = Class382.COSINE[i_2];
+                        i_6 = Trig.SINE[i_2];
+                        i_7 = Trig.COSINE[i_2];
                         i_8 = verticesY[i_5] * i_7 - verticesZ[i_5] * i_6 + 16383 >> 14;
                         verticesZ[i_5] = verticesY[i_5] * i_6 + verticesZ[i_5] * i_7 + 16383 >> 14;
                         verticesY[i_5] = i_8;
                     }
 
                     if (i_3 != 0) {
-                        i_6 = Class382.SINE[i_3];
-                        i_7 = Class382.COSINE[i_3];
+                        i_6 = Trig.SINE[i_3];
+                        i_7 = Trig.COSINE[i_3];
                         i_8 = verticesZ[i_5] * i_6 + verticesX[i_5] * i_7 + 16383 >> 14;
                         verticesZ[i_5] = verticesZ[i_5] * i_7 - verticesX[i_5] * i_6 + 16383 >> 14;
                         verticesX[i_5] = i_8;
@@ -5792,24 +5792,24 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
                     verticesY[i_5] -= anInt8247;
                     verticesZ[i_5] -= anInt8232;
                     if (i_4 != 0) {
-                        i_6 = Class382.SINE[i_4];
-                        i_7 = Class382.COSINE[i_4];
+                        i_6 = Trig.SINE[i_4];
+                        i_7 = Trig.COSINE[i_4];
                         i_8 = verticesY[i_5] * i_6 + verticesX[i_5] * i_7 + 16383 >> 14;
                         verticesY[i_5] = verticesY[i_5] * i_7 - verticesX[i_5] * i_6 + 16383 >> 14;
                         verticesX[i_5] = i_8;
                     }
 
                     if (i_2 != 0) {
-                        i_6 = Class382.SINE[i_2];
-                        i_7 = Class382.COSINE[i_2];
+                        i_6 = Trig.SINE[i_2];
+                        i_7 = Trig.COSINE[i_2];
                         i_8 = verticesY[i_5] * i_7 - verticesZ[i_5] * i_6 + 16383 >> 14;
                         verticesZ[i_5] = verticesY[i_5] * i_6 + verticesZ[i_5] * i_7 + 16383 >> 14;
                         verticesY[i_5] = i_8;
                     }
 
                     if (i_3 != 0) {
-                        i_6 = Class382.SINE[i_3];
-                        i_7 = Class382.COSINE[i_3];
+                        i_6 = Trig.SINE[i_3];
+                        i_7 = Trig.COSINE[i_3];
                         i_8 = verticesZ[i_5] * i_6 + verticesX[i_5] * i_7 + 16383 >> 14;
                         verticesZ[i_5] = verticesZ[i_5] * i_7 - verticesX[i_5] * i_6 + 16383 >> 14;
                         verticesX[i_5] = i_8;
@@ -6095,8 +6095,8 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 
     @Override
     public void EA(int i_1) {
-        int i_2 = Class382.SINE[i_1];
-        int i_3 = Class382.COSINE[i_1];
+        int i_2 = Trig.SINE[i_1];
+        int i_3 = Trig.COSINE[i_1];
 
         for (int i_4 = 0; i_4 < maxDepth; i_4++) {
             int i_5 = i_2 * verticesY[i_4] + i_3 * verticesX[i_4] >> 14;
@@ -6471,8 +6471,8 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 
     @Override
     public void bs(int i_1) {
-        int i_2 = Class382.SINE[i_1];
-        int i_3 = Class382.COSINE[i_1];
+        int i_2 = Trig.SINE[i_1];
+        int i_3 = Trig.COSINE[i_1];
 
         for (int i_4 = 0; i_4 < maxDepth; i_4++) {
             int i_5 = verticesY[i_4] * i_3 - verticesZ[i_4] * i_2 >> 14;
@@ -6522,8 +6522,8 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 
     @Override
     public void dl(int i_1) {
-        int i_2 = Class382.SINE[i_1];
-        int i_3 = Class382.COSINE[i_1];
+        int i_2 = Trig.SINE[i_1];
+        int i_3 = Trig.COSINE[i_1];
 
         for (int i_4 = 0; i_4 < maxDepth; i_4++) {
             int i_5 = verticesY[i_4] * i_2 + verticesX[i_4] * i_3 >> 14;
@@ -6556,8 +6556,8 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 
     @Override
     public void bi(int i_1) {
-        int i_2 = Class382.SINE[i_1];
-        int i_3 = Class382.COSINE[i_1];
+        int i_2 = Trig.SINE[i_1];
+        int i_3 = Trig.COSINE[i_1];
 
         for (int i_4 = 0; i_4 < maxDepth; i_4++) {
             int i_5 = verticesZ[i_4] * i_2 + verticesX[i_4] * i_3 >> 14;

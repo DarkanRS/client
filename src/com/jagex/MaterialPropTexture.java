@@ -2,7 +2,7 @@ package com.jagex;
 
 public class MaterialPropTexture extends MaterialProperty {
 
-    public static Component aClass118_9884;
+    public static IComponentDefinitions aClass118_9884;
     int[] pixels;
     int height;
     int width;

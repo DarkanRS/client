@@ -19,10 +19,6 @@ class Class109_Sub1 extends Class109 {
         return 12;
     }
 
-    public static AbstractRenderer method14652(Canvas canvas_0, ImageLoader interface22_1, int i_2, int i_3) {
-        return new HardwareRenderer(canvas_0, interface22_1, i_2, i_3);
-    }
-
     @Override
     void method1851() {
         Class260.aClass277_3221 = Class260.aClass277_3234;

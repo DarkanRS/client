@@ -1,6 +1,6 @@
 package com.jagex;
 
-public class Component {
+public class IComponentDefinitions {
 
     public static int anInt1283;
     public static int anInt1373 = 1;
@@ -38,8 +38,8 @@ public class Component {
     public int anInt1433;
     public int anInt1434;
     public Animation anim;
-    public Component[] slotChildren;
-    public Component[] itemSlots;
+    public IComponentDefinitions[] slotChildren;
+    public IComponentDefinitions[] itemSlots;
     public ComponentType type;
     public String name;
     public int contentType;
@@ -165,7 +165,7 @@ public class Component {
     public int renderStack = 2;
     public boolean textAntiMacro;
     public int anInt1378;
-    public Component aClass118_1379;
+    public IComponentDefinitions aClass118_1379;
     public int containerItemId;
     public int anInt1427;
     public boolean wearCol;
@@ -188,7 +188,7 @@ public class Component {
     short[] texturesToReplace;
     short[] texturesToReplaceWith;
 
-    public Component() {
+    public IComponentDefinitions() {
         targetParams = IFTargetParams.DEFAULT_SETTINGS;
         aBool1424 = false;
         useOnName = "";
@@ -218,7 +218,7 @@ public class Component {
         anInt1450 = -1;
     }
 
-    public static Component getDefs(int hash) {
+    public static IComponentDefinitions getDefs(int hash) {
         int interfaceId = hash >> 16;
         if (CustomCursorsPreference.INTERFACES[interfaceId] == null || CustomCursorsPreference.INTERFACES[interfaceId].getComponent(hash) == null) {
             boolean bool_3 = MovingAnimation.isInterfaceLoaded(interfaceId, null);
@@ -631,7 +631,7 @@ public class Component {
         aClass465_1365.put(new ObjectNode(string_2), i_1);
     }
 
-    public MeshRasterizer method2002(AbstractRenderer graphicalrenderer_1, int i_2, RenderAnimIndexLoader renderanimindexloader_3, IdentiKitIndexLoader class31_4, NPCIndexLoader npcindexloader_5, ObjectIndexLoader itemindexloader_6, VarProvider interface42_8, Animation animation_9, PlayerModel playerappearance_10) {
+    public MeshRasterizer method2002(AbstractRenderer graphicalrenderer_1, int i_2, RenderAnimIndexLoader renderanimindexloader_3, IdentiKitIndexLoader class31_4, NPCIndexLoader npcindexloader_5, ItemIndexLoader itemindexloader_6, VarProvider interface42_8, Animation animation_9, PlayerModel playerappearance_10) {
         aBool1399 = false;
         if (modelType == ModelType.NONE) {
             return null;

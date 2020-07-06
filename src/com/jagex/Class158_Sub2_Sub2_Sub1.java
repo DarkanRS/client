@@ -12,7 +12,7 @@ public class Class158_Sub2_Sub2_Sub1 extends Class158_Sub2_Sub2 {
     int anInt10298;
     int anInt10301;
 
-    Class158_Sub2_Sub2_Sub1(AbstractRenderer_Sub2_Sub1 class505_sub2_sub1_1, Canvas canvas_2, long long_3) {
+    Class158_Sub2_Sub2_Sub1(JAGGLRenderer class505_sub2_sub1_1, Canvas canvas_2, long long_3) {
         super(class505_sub2_sub1_1);
         aCanvas10302 = canvas_2;
         anOpenGL10299 = class505_sub2_sub1_1.anOpenGL10191;
@@ -20,7 +20,7 @@ public class Class158_Sub2_Sub2_Sub1 extends Class158_Sub2_Sub2 {
         method15723();
     }
 
-    Class158_Sub2_Sub2_Sub1(AbstractRenderer_Sub2_Sub1 class505_sub2_sub1_1, Canvas canvas_2) {
+    Class158_Sub2_Sub2_Sub1(JAGGLRenderer class505_sub2_sub1_1, Canvas canvas_2) {
         this(class505_sub2_sub1_1, canvas_2, class505_sub2_sub1_1.anOpenGL10191.prepareSurface(canvas_2));
     }
 

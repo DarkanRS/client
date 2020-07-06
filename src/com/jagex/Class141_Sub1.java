@@ -9,7 +9,7 @@ public class Class141_Sub1 extends Class141 {
     boolean aBool9025;
     Class137_Sub2[] aClass137_Sub2Array9027;
 
-    Class141_Sub1(OpenGLHardwareRenderer class505_sub1_1) {
+    Class141_Sub1(OpenGLRenderer class505_sub1_1) {
         super(class505_sub1_1);
         if (class505_sub1_1.aBool8480) {
             aBool9025 = class505_sub1_1.anInt8469 < 3;

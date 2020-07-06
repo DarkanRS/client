@@ -31,7 +31,7 @@ public class OpenGLGround extends Ground {
     int anInt8659;
     int anInt8672;
     LinkedNodeList aClass473_8673 = new LinkedNodeList();
-    OpenGLHardwareRenderer renderer;
+    OpenGLRenderer renderer;
     int quarterTileScale;
     int quartertileUnits;
     int anInt8651;
@@ -39,7 +39,7 @@ public class OpenGLGround extends Ground {
     short[][] materialIndices;
     byte[][] shadowFlags;
 
-    OpenGLGround(OpenGLHardwareRenderer class505_sub1_1, int i_2, int i_3, int i_4, int i_5, int[][] ints_6, int[][] ints_7, int i_8) {
+    OpenGLGround(OpenGLRenderer class505_sub1_1, int i_2, int i_3, int i_4, int i_5, int[][] ints_6, int[][] ints_7, int i_8) {
         super(i_4, i_5, i_8, ints_6);
         renderer = class505_sub1_1;
         quarterTileScale = tileScale - 2;

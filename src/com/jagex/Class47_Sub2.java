@@ -2,7 +2,7 @@ package com.jagex;
 
 public class Class47_Sub2 extends Class47 {
 
-    public Class47_Sub2(AbstractRenderer_Sub2 class505_sub2_1) {
+    public Class47_Sub2(HardwareRenderer class505_sub2_1) {
         super(class505_sub2_1);
     }
 

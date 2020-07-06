@@ -18,9 +18,9 @@ public class Class158_Sub2_Sub2_Sub2 extends Class158_Sub2_Sub2 implements Inter
     boolean aBool10478;
     boolean aBool10477;
     Canvas aCanvas10472;
-    AbstractRenderer_Sub2_Sub2 aGraphicalRenderer_Sub2_Sub2_10479;
+    DirectXRenderer aGraphicalRenderer_Sub2_Sub2_10479;
 
-    Class158_Sub2_Sub2_Sub2(AbstractRenderer_Sub2_Sub2 class505_sub2_sub2_1, Canvas canvas_2, int i_3, int i_4, boolean bool_5) {
+    Class158_Sub2_Sub2_Sub2(DirectXRenderer class505_sub2_sub2_1, Canvas canvas_2, int i_3, int i_4, boolean bool_5) {
         super(class505_sub2_sub2_1);
         aCanvas10472 = canvas_2;
         aGraphicalRenderer_Sub2_Sub2_10479 = class505_sub2_sub2_1;
@@ -57,7 +57,7 @@ public class Class158_Sub2_Sub2_Sub2 extends Class158_Sub2_Sub2 implements Inter
             aLong10475 = IDirect3DSwapChain.GetBackBuffer(aLong10473, 0, 0);
             aLong10474 = IDirect3DDevice.GetDepthStencilSurface(aGraphicalRenderer_Sub2_Sub2_10479.aLong10252);
         } else {
-            if (!AbstractRenderer_Sub2_Sub2.method15656(aGraphicalRenderer_Sub2_Sub2_10479.anInt10260, aGraphicalRenderer_Sub2_Sub2_10479.anInt10244, aGraphicalRenderer_Sub2_Sub2_10479.aLong10246, aGraphicalRenderer_Sub2_Sub2_10479.anInt8709, aD3DPRESENT_PARAMETERS10480)) {
+            if (!DirectXRenderer.method15656(aGraphicalRenderer_Sub2_Sub2_10479.anInt10260, aGraphicalRenderer_Sub2_Sub2_10479.anInt10244, aGraphicalRenderer_Sub2_Sub2_10479.aLong10246, aGraphicalRenderer_Sub2_Sub2_10479.anInt8709, aD3DPRESENT_PARAMETERS10480)) {
                 throw new RuntimeException();
             }
 
@@ -306,7 +306,7 @@ public class Class158_Sub2_Sub2_Sub2 extends Class158_Sub2_Sub2 implements Inter
             aLong10475 = IDirect3DSwapChain.GetBackBuffer(aLong10473, 0, 0);
             aLong10474 = IDirect3DDevice.GetDepthStencilSurface(aGraphicalRenderer_Sub2_Sub2_10479.aLong10252);
         } else {
-            if (!AbstractRenderer_Sub2_Sub2.method15656(aGraphicalRenderer_Sub2_Sub2_10479.anInt10260, aGraphicalRenderer_Sub2_Sub2_10479.anInt10244, aGraphicalRenderer_Sub2_Sub2_10479.aLong10246, aGraphicalRenderer_Sub2_Sub2_10479.anInt8709, aD3DPRESENT_PARAMETERS10480)) {
+            if (!DirectXRenderer.method15656(aGraphicalRenderer_Sub2_Sub2_10479.anInt10260, aGraphicalRenderer_Sub2_Sub2_10479.anInt10244, aGraphicalRenderer_Sub2_Sub2_10479.aLong10246, aGraphicalRenderer_Sub2_Sub2_10479.anInt8709, aD3DPRESENT_PARAMETERS10480)) {
                 throw new RuntimeException();
             }
 

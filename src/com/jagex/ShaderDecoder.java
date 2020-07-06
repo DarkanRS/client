@@ -12,7 +12,7 @@ public class ShaderDecoder {
     }
 
     public static void sortAlphabetically(String[] names, short[] ids) {
-        Class88.method1495(names, ids, 0, names.length - 1);
+        Static.method1495(names, ids, 0, names.length - 1);
     }
 
     int getNextStringLength() {

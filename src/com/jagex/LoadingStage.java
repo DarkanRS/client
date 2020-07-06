@@ -144,12 +144,12 @@ public class LoadingStage {
         int i_13 = 0;
         int i_14 = i_5;
         if (i_10 != 0) {
-            i_13 = Class382.SINE[i_10] * -i_5 >> 14;
-            i_14 = Class382.COSINE[i_10] * i_5 >> 14;
+            i_13 = Trig.SINE[i_10] * -i_5 >> 14;
+            i_14 = Trig.COSINE[i_10] * i_5 >> 14;
         }
         if (i_11 != 0) {
-            i_12 = Class382.SINE[i_11] * i_14 >> 14;
-            i_14 = Class382.COSINE[i_11] * i_14 >> 14;
+            i_12 = Trig.SINE[i_11] * i_14 >> 14;
+            i_14 = Trig.COSINE[i_11] * i_14 >> 14;
         }
         IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX = i_0 - i_12;
         Class109_Sub1.CAM_MOVE_ABSOLUTEZ = i_1 - i_13;

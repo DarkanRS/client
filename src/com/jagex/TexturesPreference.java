@@ -10,8 +10,8 @@ public class TexturesPreference extends Preference {
         super(i_1, class282_sub54_2);
     }
 
-    static Component method12880(Component icomponentdefinitions_0) {
-        Component icomponentdefinitions_2 = client.method11634(icomponentdefinitions_0);
+    static IComponentDefinitions method12880(IComponentDefinitions icomponentdefinitions_0) {
+        IComponentDefinitions icomponentdefinitions_2 = client.method11634(icomponentdefinitions_0);
         if (icomponentdefinitions_2 == null) {
             icomponentdefinitions_2 = icomponentdefinitions_0.aClass118_1379;
         }

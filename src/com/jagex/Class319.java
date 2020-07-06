@@ -8,13 +8,13 @@ public abstract class Class319 implements Interface30 {
     int anInt3706;
     boolean aBool3712;
     Class35 aClass35_3705;
-    AbstractRenderer_Sub2_Sub1 aGraphicalRenderer_Sub2_Sub1_3700;
+    JAGGLRenderer aGraphicalRenderer_Sub2_Sub1_3700;
     int anInt3707;
     Class150 aClass150_3708;
     Class76 aClass76_3710;
     int anInt3711;
 
-    Class319(AbstractRenderer_Sub2_Sub1 class505_sub2_sub1_1, int i_2, Class150 class150_3, Class76 class76_4, int i_5, boolean bool_6) {
+    Class319(JAGGLRenderer class505_sub2_sub1_1, int i_2, Class150 class150_3, Class76 class76_4, int i_5, boolean bool_6) {
         aClass35_3705 = Class35.aClass35_382;
         aGraphicalRenderer_Sub2_Sub1_3700 = class505_sub2_sub1_1;
         anInt3707 = i_2;
@@ -95,7 +95,7 @@ public abstract class Class319 implements Interface30 {
             float[] floats_11 = new float[i_8 * i_9 * i_5];
 
             while (true) {
-                OpenGL.glTexImage2Df(i_1, i_6, AbstractRenderer_Sub2_Sub1.method15574(aClass150_3708, aClass76_3710), i_21, i_31, 0, AbstractRenderer_Sub2_Sub1.method15575(aClass150_3708), 5126, floats_10, 0);
+                OpenGL.glTexImage2Df(i_1, i_6, JAGGLRenderer.method15574(aClass150_3708, aClass76_3710), i_21, i_31, 0, JAGGLRenderer.method15575(aClass150_3708), 5126, floats_10, 0);
                 if (i_7 <= 1) {
                     return;
                 }
@@ -171,7 +171,7 @@ public abstract class Class319 implements Interface30 {
             byte[] bytes_11 = new byte[i_8 * i_9 * i_5];
 
             while (true) {
-                OpenGL.glTexImage2Dub(i_1, i_6, AbstractRenderer_Sub2_Sub1.method15574(aClass150_3708, aClass76_3710), i_22, i_31, 0, AbstractRenderer_Sub2_Sub1.method15575(aClass150_3708), 5121, bytes_10, 0);
+                OpenGL.glTexImage2Dub(i_1, i_6, JAGGLRenderer.method15574(aClass150_3708, aClass76_3710), i_22, i_31, 0, JAGGLRenderer.method15575(aClass150_3708), 5121, bytes_10, 0);
                 if (i_7 <= 1) {
                     return;
                 }
@@ -286,7 +286,7 @@ public abstract class Class319 implements Interface30 {
             int[] ints_10 = new int[i_7 * i_8];
 
             while (true) {
-                OpenGL.glTexImage2Di(i_1, i_5, AbstractRenderer_Sub2_Sub1.method15574(aClass150_3708, aClass76_3710), i_24, i_31, 0, 32993, aGraphicalRenderer_Sub2_Sub1_3700.anInt10198, ints_9, 0);
+                OpenGL.glTexImage2Di(i_1, i_5, JAGGLRenderer.method15574(aClass150_3708, aClass76_3710), i_24, i_31, 0, 32993, aGraphicalRenderer_Sub2_Sub1_3700.anInt10198, ints_9, 0);
                 if (i_6 <= 1) {
                     return;
                 }

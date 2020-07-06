@@ -7,13 +7,13 @@ public abstract class Class135 {
 
     static int[] anIntArray1626 = new int[1];
     boolean aBool1619;
-    OpenGLHardwareRenderer aGraphicalRenderer_Sub1_1620;
+    OpenGLRenderer aGraphicalRenderer_Sub1_1620;
     int anInt1621;
     int anInt1623;
     boolean aBool1624;
     int anInt1622;
 
-    Class135(OpenGLHardwareRenderer class505_sub1_1, Buffer buffer_3, int i_4) {
+    Class135(OpenGLRenderer class505_sub1_1, Buffer buffer_3, int i_4) {
         aGraphicalRenderer_Sub1_1620 = class505_sub1_1;
         anInt1621 = 34962;
         anInt1623 = i_4;
@@ -25,7 +25,7 @@ public abstract class Class135 {
         aGraphicalRenderer_Sub1_1620.anInt8371 += anInt1623;
     }
 
-    Class135(OpenGLHardwareRenderer class505_sub1_1, int i_2, byte[] bytes_3, int i_4, boolean bool_5) {
+    Class135(OpenGLRenderer class505_sub1_1, int i_2, byte[] bytes_3, int i_4, boolean bool_5) {
         aGraphicalRenderer_Sub1_1620 = class505_sub1_1;
         anInt1621 = i_2;
         anInt1623 = i_4;

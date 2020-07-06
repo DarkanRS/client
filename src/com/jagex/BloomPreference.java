@@ -24,7 +24,7 @@ public class BloomPreference extends Preference {
 
     public static void method12710(int i_0) {
         Node_Sub14.anInt7597 = i_0;
-        Component.aClass229_1341.method3859();
+        IComponentDefinitions.aClass229_1341.method3859();
     }
 
     public void method12703() {

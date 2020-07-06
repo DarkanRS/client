@@ -60,22 +60,22 @@ public class Class383 implements Interface41 {
             }
             try {
                 Dimension dimension_4 = Class351.gameCanvas.getSize();
-                Class446.method7447(LocalizedText.PROFILING.translate(Class223.CURRENT_LANGUAGE), true, Renderers.SOFTWARE_RENDERER, Class16.aFontRenderer_144, Class16.aClass414_139);
+                Class446.method7447(LocalizedText.PROFILING.translate(Class223.CURRENT_LANGUAGE), true, Renderers.CURRENT_RENDERER, Class16.aFontRenderer_144, Class16.aClass414_139);
                 RSMesh rsmesh_5 = RSMesh.decodeMesh(IndexLoaders.MESH_INDEX, QuickchatFiller.ENTITY_DEFAULTS.profilingModel);
                 long long_6 = Utils.time();
-                Renderers.SOFTWARE_RENDERER.L();
+                Renderers.CURRENT_RENDERER.L();
                 client.aClass294_7457.method5223(0.0F, 256.0F, 0.0F);
-                Renderers.SOFTWARE_RENDERER.method8457(client.aClass294_7457);
-                Matrix44 matrix44_8 = Renderers.SOFTWARE_RENDERER.method8449();
+                Renderers.CURRENT_RENDERER.method8457(client.aClass294_7457);
+                Matrix44 matrix44_8 = Renderers.CURRENT_RENDERER.method8449();
                 matrix44_8.method6531((dimension_4.width / 2), (dimension_4.height / 2), 512.0F, 512.0F, IndexLoaders.MAP_REGION_DECODER.method4544(), IndexLoaders.MAP_REGION_DECODER.method4522(), dimension_4.width, dimension_4.height);
-                Renderers.SOFTWARE_RENDERER.method8424(matrix44_8);
-                Renderers.SOFTWARE_RENDERER.IA(1.0F);
-                Renderers.SOFTWARE_RENDERER.m(16777215, 0.5F, 0.5F, 20.0F, -50.0f, 30.0F);
-                MeshRasterizer meshrasterizer_9 = Renderers.SOFTWARE_RENDERER.createMeshRasterizer(rsmesh_5, 2048, 64, 64, 768);
+                Renderers.CURRENT_RENDERER.method8424(matrix44_8);
+                Renderers.CURRENT_RENDERER.IA(1.0F);
+                Renderers.CURRENT_RENDERER.m(16777215, 0.5F, 0.5F, 20.0F, -50.0f, 30.0F);
+                MeshRasterizer meshrasterizer_9 = Renderers.CURRENT_RENDERER.createMeshRasterizer(rsmesh_5, 2048, 64, 64, 768);
                 int i_10 = 0;
                 label43:
                 for (int i_11 = 0; i_11 < 500; i_11++) {
-                    Renderers.SOFTWARE_RENDERER.ba(3, 0);
+                    Renderers.CURRENT_RENDERER.ba(3, 0);
                     for (int i_12 = 15; i_12 >= 0; --i_12) {
                         for (int i_13 = 0; i_13 <= i_12; i_13++) {
                             client.aClass294_7169.method5223(((int) (512.0F * (i_13 - i_12 / 2.0F))), 0.0F, ((i_12 + 1) * 512));
@@ -87,9 +87,9 @@ public class Class383 implements Interface41 {
                         }
                     }
                 }
-                Renderers.SOFTWARE_RENDERER.method8395();
+                Renderers.CURRENT_RENDERER.method8395();
                 long long_14 = (i_10 * 1000) / (Utils.time() - long_6);
-                Renderers.SOFTWARE_RENDERER.ba(3, 0);
+                Renderers.CURRENT_RENDERER.ba(3, 0);
                 int i_3 = (int) long_14;
                 return i_3;
             } catch (Throwable throwable_16) {

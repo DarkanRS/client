@@ -7,7 +7,7 @@ public class Class137_Sub1 extends Class137 {
     int anInt9087;
     int anInt9086;
 
-    Class137_Sub1(OpenGLHardwareRenderer class505_sub1_1, int i_2, int i_3, int i_4, boolean bool_5, int[] ints_6, int i_7, int i_8, boolean bool_9) {
+    Class137_Sub1(OpenGLRenderer class505_sub1_1, int i_2, int i_3, int i_4, boolean bool_5, int[] ints_6, int i_7, int i_8, boolean bool_9) {
         super(class505_sub1_1, i_2, Class150.aClass150_1949, Class76.aClass76_751, i_3 * i_4, bool_5);
         int[] ints_61 = ints_6;
         anInt9087 = i_3;
@@ -29,11 +29,11 @@ public class Class137_Sub1 extends Class137 {
 
         openGLHardwareRenderer.method13654(this);
         if (anInt1648 != 34037 && bool_5 && i_7 == 0 && i_8 == 0) {
-            method2371(anInt1648, OpenGLHardwareRenderer.method13630(aClass150_1650, aClass76_1651), anInt9087, anInt9086, openGLHardwareRenderer.anInt8410, ints_61);
+            method2371(anInt1648, OpenGLRenderer.method13630(aClass150_1650, aClass76_1651), anInt9087, anInt9086, openGLHardwareRenderer.anInt8410, ints_61);
             method2354(true);
         } else {
             OpenGL.glPixelStorei(3314, i_7);
-            OpenGL.glTexImage2Di(anInt1648, 0, OpenGLHardwareRenderer.method13630(aClass150_1650, aClass76_1651), anInt9087, anInt9086, 0, 32993, openGLHardwareRenderer.anInt8410, ints_61, i_8 * 4);
+            OpenGL.glTexImage2Di(anInt1648, 0, OpenGLRenderer.method13630(aClass150_1650, aClass76_1651), anInt9087, anInt9086, 0, 32993, openGLHardwareRenderer.anInt8410, ints_61, i_8 * 4);
             OpenGL.glPixelStorei(3314, 0);
             method2354(false);
         }
@@ -41,7 +41,7 @@ public class Class137_Sub1 extends Class137 {
         method2351(true);
     }
 
-    Class137_Sub1(OpenGLHardwareRenderer class505_sub1_1, int i_2, Class150 class150_3, Class76 class76_4, int i_5, int i_6, boolean bool_7, byte[] bytes_8, Class150 class150_9, boolean bool_10) {
+    Class137_Sub1(OpenGLRenderer class505_sub1_1, int i_2, Class150 class150_3, Class76 class76_4, int i_5, int i_6, boolean bool_7, byte[] bytes_8, Class150 class150_9, boolean bool_10) {
         super(class505_sub1_1, i_2, class150_3, class76_4, i_5 * i_6, bool_7);
         byte[] bytes_81 = bytes_8;
         anInt9087 = i_5;
@@ -64,10 +64,10 @@ public class Class137_Sub1 extends Class137 {
         openGLHardwareRenderer.method13654(this);
         OpenGL.glPixelStorei(3317, 1);
         if (bool_7 && anInt1648 != 34037) {
-            method2359(i_2, OpenGLHardwareRenderer.method13630(aClass150_1650, aClass76_1651), i_5, i_6, class150_9, bytes_81);
+            method2359(i_2, OpenGLRenderer.method13630(aClass150_1650, aClass76_1651), i_5, i_6, class150_9, bytes_81);
             method2354(true);
         } else {
-            OpenGL.glTexImage2Dub(anInt1648, 0, OpenGLHardwareRenderer.method13630(aClass150_1650, aClass76_1651), anInt9087, anInt9086, 0, OpenGLHardwareRenderer.method13629(class150_9), 5121, bytes_81, 0);
+            OpenGL.glTexImage2Dub(anInt1648, 0, OpenGLRenderer.method13630(aClass150_1650, aClass76_1651), anInt9087, anInt9086, 0, OpenGLRenderer.method13629(class150_9), 5121, bytes_81, 0);
             method2354(false);
         }
 
@@ -75,7 +75,7 @@ public class Class137_Sub1 extends Class137 {
         method2351(true);
     }
 
-    Class137_Sub1(OpenGLHardwareRenderer class505_sub1_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
+    Class137_Sub1(OpenGLRenderer class505_sub1_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
         super(class505_sub1_1, i_2, Class150.aClass150_1950, Class76.aClass76_751, i_5 * i_6, false);
         anInt9087 = i_5;
         anInt9086 = i_6;
@@ -83,35 +83,35 @@ public class Class137_Sub1 extends Class137 {
         Class158 class158_7 = openGLHardwareRenderer.method8523();
         if (class158_7 != null) {
             int i_8 = class158_7.method2716() - (i_4 + i_6);
-            int i_9 = OpenGLHardwareRenderer.method13630(aClass150_1650, aClass76_1651);
+            int i_9 = OpenGLRenderer.method13630(aClass150_1650, aClass76_1651);
             OpenGL.glCopyTexImage2D(anInt1648, 0, i_9, i_3, i_8, i_5, i_6, 0);
         }
 
         method2351(true);
     }
 
-    Class137_Sub1(OpenGLHardwareRenderer class505_sub1_1, Class150 class150_3, Class76 class76_4, int i_5, int i_6, boolean bool_7, float[] floats_8, Class150 class150_9) {
+    Class137_Sub1(OpenGLRenderer class505_sub1_1, Class150 class150_3, Class76 class76_4, int i_5, int i_6, boolean bool_7, float[] floats_8, Class150 class150_9) {
         super(class505_sub1_1, 3553, class150_3, class76_4, i_5 * i_6, bool_7);
         anInt9087 = i_5;
         anInt9086 = i_6;
         openGLHardwareRenderer.method13654(this);
         if (bool_7 && anInt1648 != 34037) {
-            method2361(OpenGLHardwareRenderer.method13630(aClass150_1650, aClass76_1651), i_5, i_6, class150_9, floats_8);
+            method2361(OpenGLRenderer.method13630(aClass150_1650, aClass76_1651), i_5, i_6, class150_9, floats_8);
             method2354(true);
         } else {
-            OpenGL.glTexImage2Df(anInt1648, 0, OpenGLHardwareRenderer.method13630(aClass150_1650, aClass76_1651), anInt9087, anInt9086, 0, OpenGLHardwareRenderer.method13629(class150_9), 5126, floats_8, 0);
+            OpenGL.glTexImage2Df(anInt1648, 0, OpenGLRenderer.method13630(aClass150_1650, aClass76_1651), anInt9087, anInt9086, 0, OpenGLRenderer.method13629(class150_9), 5126, floats_8, 0);
             method2354(false);
         }
 
         method2351(true);
     }
 
-    Class137_Sub1(OpenGLHardwareRenderer class505_sub1_1, int i_2, Class150 class150_3, Class76 class76_4, int i_5, int i_6) {
+    Class137_Sub1(OpenGLRenderer class505_sub1_1, int i_2, Class150 class150_3, Class76 class76_4, int i_5, int i_6) {
         super(class505_sub1_1, i_2, class150_3, class76_4, i_5 * i_6, false);
         anInt9087 = i_5;
         anInt9086 = i_6;
         openGLHardwareRenderer.method13654(this);
-        OpenGL.glTexImage2Dub(anInt1648, 0, OpenGLHardwareRenderer.method13630(aClass150_1650, aClass76_1651), i_5, i_6, 0, OpenGLHardwareRenderer.method13629(aClass150_1650), 5121, null, 0);
+        OpenGL.glTexImage2Dub(anInt1648, 0, OpenGLRenderer.method13630(aClass150_1650, aClass76_1651), i_5, i_6, 0, OpenGLRenderer.method13629(aClass150_1650), 5121, null, 0);
         method2351(true);
     }
 
@@ -203,7 +203,7 @@ public class Class137_Sub1 extends Class137 {
             OpenGL.glPixelStorei(3314, i_81);
         }
 
-        OpenGL.glTexSubImage2Dub(anInt1648, 0, 0, anInt9086 - i_2 - i_4, i_3, i_4, OpenGLHardwareRenderer.method13629(class150_6), 5121, bytes_51, 0);
+        OpenGL.glTexSubImage2Dub(anInt1648, 0, 0, anInt9086 - i_2 - i_4, i_3, i_4, OpenGLRenderer.method13629(class150_6), 5121, bytes_51, 0);
         if (i_3 != i_81) {
             OpenGL.glPixelStorei(3314, 0);
         }

@@ -32,11 +32,11 @@ public abstract class NativeSprite_Sub1 extends NativeSprite {
     int anInt8855;
     int anInt8856;
     int[] anIntArray8857;
-    HardwareRenderer renderer;
+    JavaRenderer renderer;
     int anInt8851;
     int anInt8867;
 
-    NativeSprite_Sub1(HardwareRenderer hardwarerenderer_1, int i_2, int i_3) {
+    NativeSprite_Sub1(JavaRenderer hardwarerenderer_1, int i_2, int i_3) {
         renderer = hardwarerenderer_1;
         anInt8851 = i_2;
         anInt8867 = i_3;

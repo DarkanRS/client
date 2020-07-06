@@ -89,8 +89,8 @@ public class Index {
         return i_6;
     }
 
-    public static Component getIComponentDefinitions(int interfaceId, int slotId) {
-        Component ifDef = Component.getDefs(interfaceId);
+    public static IComponentDefinitions getIComponentDefinitions(int interfaceId, int slotId) {
+        IComponentDefinitions ifDef = IComponentDefinitions.getDefs(interfaceId);
         if (slotId == -1)
             return ifDef;
         if (ifDef != null && ifDef.slotChildren != null && slotId < ifDef.slotChildren.length)

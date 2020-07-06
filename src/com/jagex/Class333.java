@@ -9,9 +9,9 @@ public class Class333 implements Interface28 {
     Class76 aClass76_3878;
     int anInt3877;
     int anInt3879;
-    AbstractRenderer_Sub2_Sub1 aGraphicalRenderer_Sub2_Sub1_3881;
+    JAGGLRenderer aGraphicalRenderer_Sub2_Sub1_3881;
 
-    Class333(AbstractRenderer_Sub2_Sub1 class505_sub2_sub1_1, Class150 class150_2, Class76 class76_3, int i_4, int i_5) {
+    Class333(JAGGLRenderer class505_sub2_sub1_1, Class150 class150_2, Class76 class76_3, int i_4, int i_5) {
         aClass150_3880 = class150_2;
         aClass76_3878 = class76_3;
         anInt3877 = i_4;
@@ -21,7 +21,7 @@ public class Class333 implements Interface28 {
         OpenGL.glGenRenderbuffersEXT(1, ints_6, 0);
         anInt3882 = ints_6[0];
         OpenGL.glBindRenderbufferEXT(36161, anInt3882);
-        OpenGL.glRenderbufferStorageEXT(36161, AbstractRenderer_Sub2_Sub1.method15574(aClass150_3880, aClass76_3878), i_4, i_5);
+        OpenGL.glRenderbufferStorageEXT(36161, JAGGLRenderer.method15574(aClass150_3880, aClass76_3878), i_4, i_5);
     }
 
     @Override

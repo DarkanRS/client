@@ -119,14 +119,14 @@ public class Whirlpool {
                             vector3_8 = VertexNormal.MY_PLAYER.method11166().coords;
                             Class209.printConsoleMessage("" + IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().aGroundArray2591[VertexNormal.MY_PLAYER.plane].getHeight((int) vector3_8.x >> 9, (int) vector3_8.z >> 9));
                         } else if (id == 23) {
-                            Class209.printConsoleMessage(Component.aClass229_1280.method3861() + " " + Component.aClass229_1280.method3860());
-                            Class209.printConsoleMessage(Component.aClass229_1341.method3861() + " " + Component.aClass229_1341.method3860());
+                            Class209.printConsoleMessage(IComponentDefinitions.aClass229_1280.method3861() + " " + IComponentDefinitions.aClass229_1280.method3860());
+                            Class209.printConsoleMessage(IComponentDefinitions.aClass229_1341.method3861() + " " + IComponentDefinitions.aClass229_1341.method3860());
                             Class209.printConsoleMessage(IndexLoaders.ITEM_LOADER.aClass212_5114.method3640() + " " + IndexLoaders.ITEM_LOADER.aClass212_5114.method3632());
                         } else if (id == 16) {
                             Class356.method6227(false);
                         } else if (id == 15) {
                             client.aBool7177 = !client.aBool7177;
-                            Renderers.SOFTWARE_RENDERER.method8480();
+                            Renderers.CURRENT_RENDERER.method8480();
                             Node_Sub14.method12222();
                         } else if (id == 10) {
                             client.anInt7240 = 0;

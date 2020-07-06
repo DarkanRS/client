@@ -233,13 +233,13 @@ public class BASDefinitions {
                 if (i_3 != 0 || i_4 != 0 || i_5 != 0 || xRot != 0 || yRot != 0 || zRot != 0) {
                     Matrix44Var matrix = matrices[i] = new Matrix44Var();
                     if (zRot != 0) {
-                        matrix.rotation(0.0F, 0.0F, 1.0F, Class382.method6508(zRot));
+                        matrix.rotation(0.0F, 0.0F, 1.0F, Trig.degToRad(zRot));
                     }
                     if (xRot != 0) {
-                        matrix.rotation(1.0F, 0.0F, 0.0F, Class382.method6508(xRot));
+                        matrix.rotation(1.0F, 0.0F, 0.0F, Trig.degToRad(xRot));
                     }
                     if (yRot != 0) {
-                        matrix.rotation(0.0F, 1.0F, 0.0F, Class382.method6508(yRot));
+                        matrix.rotation(0.0F, 1.0F, 0.0F, Trig.degToRad(yRot));
                     }
                     matrix.method5219(i_3, i_4, i_5);
                 }

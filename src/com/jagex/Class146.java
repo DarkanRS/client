@@ -5,12 +5,12 @@ public class Class146 {
     int anInt1716;
     int anInt1717;
     int anInt1718;
-    OpenGLHardwareRenderer aGraphicalRenderer_Sub1_1719;
+    OpenGLRenderer aGraphicalRenderer_Sub1_1719;
     Class136 aClass136_1720;
     Class141[] aClass141Array1721;
     Class141_Sub4 aClass141_Sub4_1715;
 
-    Class146(OpenGLHardwareRenderer class505_sub1_1) {
+    Class146(OpenGLRenderer class505_sub1_1) {
         aGraphicalRenderer_Sub1_1719 = class505_sub1_1;
         aClass136_1720 = new Class136(class505_sub1_1);
         aClass141Array1721 = new Class141[16];

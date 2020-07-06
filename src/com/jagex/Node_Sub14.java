@@ -445,7 +445,7 @@ public class Node_Sub14 extends Node {
 
     }
 
-    public static void method12221(Component icomponentdefinitions_0, int i_1, int i_2) {
+    public static void method12221(IComponentDefinitions icomponentdefinitions_0, int i_1, int i_2) {
         if (client.aClass118_7257 == null && !Class20.aBool161 && icomponentdefinitions_0 != null && ApplyHitmarkCutsceneAction.method14643(icomponentdefinitions_0)) {
             client.aClass118_7257 = icomponentdefinitions_0;
             client.aClass118_7247 = TexturesPreference.method12880(icomponentdefinitions_0);

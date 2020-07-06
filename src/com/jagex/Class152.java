@@ -94,7 +94,7 @@ public abstract class Class152 {
         NativeSprite nativesprite_3 = (NativeSprite) Class299.aClass229_3545.get(i_1);
         if (nativesprite_3 == null) {
             if (IndexLoaders.USING_JAGEX_IMAGE_FORMAT) {
-                nativesprite_3 = Renderers.SOFTWARE_RENDERER.method8444(SpriteDefinitions.method1515(index_0, i_1), true);
+                nativesprite_3 = Renderers.CURRENT_RENDERER.method8444(SpriteDefinitions.method1515(index_0, i_1), true);
             } else {
                 nativesprite_3 = Class103_Sub1.method14490(index_0.getFile(i_1));
             }
@@ -113,7 +113,7 @@ public abstract class Class152 {
                 Class363.method6286(long_0);
             }
         }
-        CutsceneAction_Sub12.method14614(Renderers.SOFTWARE_RENDERER, client.CYCLES_20MS);
+        CutsceneAction_Sub12.method14614(Renderers.CURRENT_RENDERER, client.CYCLES_20MS);
         if (client.BASE_WINDOW_ID != -1) {
             CS2Interface.method8777(client.BASE_WINDOW_ID);
         }
@@ -128,8 +128,8 @@ public abstract class Class152 {
             client.anInt7407 = 0;
             StructIndexLoader.method7039();
         }
-        Renderers.SOFTWARE_RENDERER.L();
-        MaterialProp21.method15411(Renderers.SOFTWARE_RENDERER);
+        Renderers.CURRENT_RENDERER.L();
+        MaterialProp21.method15411(Renderers.CURRENT_RENDERER);
         i_2 = QuickchatFiller.method1141();
         if (i_2 == -1) {
             i_2 = client.anInt7427;

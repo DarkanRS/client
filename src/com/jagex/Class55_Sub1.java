@@ -20,7 +20,7 @@ public class Class55_Sub1 extends Class55 {
     Class115 aClass115_9192;
     boolean aBool9199;
 
-    public Class55_Sub1(AbstractRenderer_Sub2 class505_sub2_1) {
+    public Class55_Sub1(HardwareRenderer class505_sub2_1) {
         super(class505_sub2_1);
     }
 

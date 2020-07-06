@@ -12,7 +12,7 @@ public class Class103_Sub1 extends Class103 {
     Node_Sub21_Sub1 aNode_Sub21_Sub1_9146;
     Matrix44 aClass384_9147 = new Matrix44();
 
-    public Class103_Sub1(AbstractRenderer_Sub2 class505_sub2_1) throws Exception_Sub2 {
+    public Class103_Sub1(HardwareRenderer class505_sub2_1) throws Exception_Sub2 {
         super(class505_sub2_1);
         method14483();
     }
@@ -33,7 +33,7 @@ public class Class103_Sub1 extends Class103 {
                         int[] ints_7 = new int[i_5 * i_6];
                         PixelGrabber pixelgrabber_8 = new PixelGrabber(image_3, 0, 0, i_5, i_6, ints_7, 0, i_5);
                         pixelgrabber_8.grabPixels();
-                        NativeSprite nativesprite_2 = Renderers.SOFTWARE_RENDERER.createNativeSprite(ints_7, i_5, i_5, i_6);
+                        NativeSprite nativesprite_2 = Renderers.CURRENT_RENDERER.createNativeSprite(ints_7, i_5, i_5, i_6);
                         return nativesprite_2;
                     }
 

@@ -4,7 +4,7 @@ public class NativeSprite_Sub1_Sub3 extends NativeSprite_Sub1 {
 
     int[] anIntArray10235;
 
-    NativeSprite_Sub1_Sub3(HardwareRenderer hardwarerenderer_1, int[] ints_2, int i_3, int i_4, int i_5, int i_6, boolean bool_7) {
+    NativeSprite_Sub1_Sub3(JavaRenderer hardwarerenderer_1, int[] ints_2, int i_3, int i_4, int i_5, int i_6, boolean bool_7) {
         super(hardwarerenderer_1, i_5, i_6);
         if (bool_7) {
             anIntArray10235 = new int[i_5 * i_6];
@@ -25,12 +25,12 @@ public class NativeSprite_Sub1_Sub3 extends NativeSprite_Sub1 {
 
     }
 
-    NativeSprite_Sub1_Sub3(HardwareRenderer hardwarerenderer_1, int[] ints_2, int i_3, int i_4) {
+    NativeSprite_Sub1_Sub3(JavaRenderer hardwarerenderer_1, int[] ints_2, int i_3, int i_4) {
         super(hardwarerenderer_1, i_3, i_4);
         anIntArray10235 = ints_2;
     }
 
-    NativeSprite_Sub1_Sub3(HardwareRenderer hardwarerenderer_1, int i_2, int i_3) {
+    NativeSprite_Sub1_Sub3(JavaRenderer hardwarerenderer_1, int i_2, int i_3) {
         super(hardwarerenderer_1, i_2, i_3);
         anIntArray10235 = new int[i_3 * i_2];
     }

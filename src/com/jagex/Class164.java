@@ -5,9 +5,9 @@ import jaggl.OpenGL;
 public class Class164 {
 
     Class128 aClass128_2032;
-    OpenGLHardwareRenderer aGraphicalRenderer_Sub1_2033;
+    OpenGLRenderer aGraphicalRenderer_Sub1_2033;
 
-    Class164(OpenGLHardwareRenderer class505_sub1_1) {
+    Class164(OpenGLRenderer class505_sub1_1) {
         aGraphicalRenderer_Sub1_2033 = class505_sub1_1;
     }
 

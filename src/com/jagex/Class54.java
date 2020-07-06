@@ -21,7 +21,7 @@ public class Class54 {
     Interface4 anInterface4_510;
     Interface32 anInterface32_511;
 
-    Class54(AbstractRenderer_Sub2 class505_sub2_1) {
+    Class54(HardwareRenderer class505_sub2_1) {
         anInt497 = 64;
         anIntArray506 = new int[8191];
         anIntArray507 = new int[1600];
@@ -78,7 +78,7 @@ public class Class54 {
         anInterface4_500.method26();
     }
 
-    void method1091(AbstractRenderer_Sub2 class505_sub2_1, Class151 class151_2) {
+    void method1091(HardwareRenderer class505_sub2_1, Class151 class151_2) {
         class505_sub2_1.RA(false);
         aFloat512 = class505_sub2_1.aFloat8769;
         float f_3 = class505_sub2_1.aClass384_8740.buf[2];
@@ -186,7 +186,7 @@ public class Class54 {
         class505_sub2_1.RA(true);
     }
 
-    void method1096(AbstractRenderer_Sub2 class505_sub2_1, int i_2) {
+    void method1096(HardwareRenderer class505_sub2_1, int i_2) {
         int i_3 = 0;
         Matrix44 matrix44_4 = class505_sub2_1.aClass384_8740;
         float f_5 = matrix44_4.buf[0];

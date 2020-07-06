@@ -8,7 +8,7 @@ public class Class141_Sub5 extends Class141 {
     Class136 aClass136_9080;
     Class138 aClass138_9082;
 
-    Class141_Sub5(OpenGLHardwareRenderer class505_sub1_1, Class136 class136_2) {
+    Class141_Sub5(OpenGLRenderer class505_sub1_1, Class136 class136_2) {
         super(class505_sub1_1);
         aClass136_9080 = class136_2;
         aClass138_9082 = new Class138(2);

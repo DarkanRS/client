@@ -35,13 +35,13 @@ public class ChoppyItemFixClass {
     boolean aBool1703 = true;
     int anInt1704 = -1;
     boolean aBool1708;
-    HardwareRenderer aGraphicalRenderer_Sub3_1686;
+    JavaRenderer aGraphicalRenderer_Sub3_1686;
     Class185 aClass185_1687;
     int anInt1705;
     int[] anIntArray1689;
     float[] aFloatArray1690;
 
-    ChoppyItemFixClass(HardwareRenderer hardwarerenderer_1, Class185 class185_2) {
+    ChoppyItemFixClass(JavaRenderer hardwarerenderer_1, Class185 class185_2) {
         aGraphicalRenderer_Sub3_1686 = hardwarerenderer_1;
         aClass185_1687 = class185_2;
         anInt1705 = aGraphicalRenderer_Sub3_1686.anInt8980;

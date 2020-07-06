@@ -18,12 +18,12 @@ public class Class32 {
     Interface8 anInterface8_362;
     int anInt378;
     Vector<Class55> aVector375 = new Vector<Class55>();
-    AbstractRenderer_Sub2 aGraphicalRenderer_Sub2_371;
+    HardwareRenderer aGraphicalRenderer_Sub2_371;
     int anInt367;
     int anInt365;
     boolean aBool370;
 
-    Class32(AbstractRenderer_Sub2 class505_sub2_1, int i_2, int i_3) {
+    Class32(HardwareRenderer class505_sub2_1, int i_2, int i_3) {
         aGraphicalRenderer_Sub2_371 = class505_sub2_1;
         aClass76_373 = Class76.aClass76_751;
         anInt367 = i_2;

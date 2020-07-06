@@ -3,10 +3,10 @@ package com.jagex;
 public class DirectXShader extends Shader {
 
     boolean aBool9361;
-    AbstractRenderer_Sub2_Sub2 aGraphicalRenderer_Sub2_Sub2_9362;
+    DirectXRenderer aGraphicalRenderer_Sub2_Sub2_9362;
     Class115_Sub1 aClass115_Sub1_9360;
 
-    DirectXShader(AbstractRenderer_Sub2_Sub2 class505_sub2_sub2_1, ShaderLoader class114_2) {
+    DirectXShader(DirectXRenderer class505_sub2_sub2_1, ShaderLoader class114_2) {
         super(class505_sub2_sub2_1, class114_2);
         aGraphicalRenderer_Sub2_Sub2_9362 = class505_sub2_sub2_1;
         aBool9361 = false;
@@ -25,8 +25,8 @@ public class DirectXShader extends Shader {
     }
 
     @Override
-    Class115 method1743(AbstractRenderer_Sub2 class505_sub2_1, Class99 class99_2) {
-        return new Class115_Sub1((AbstractRenderer_Sub2_Sub2) class505_sub2_1, this, class99_2);
+    Class115 method1743(HardwareRenderer class505_sub2_1, Class99 class99_2) {
+        return new Class115_Sub1((DirectXRenderer) class505_sub2_1, this, class99_2);
     }
 
     @Override
@@ -111,8 +111,8 @@ public class DirectXShader extends Shader {
     }
 
     @Override
-    Class115 method1683(AbstractRenderer_Sub2 class505_sub2_1, Class99 class99_2) {
-        return new Class115_Sub1((AbstractRenderer_Sub2_Sub2) class505_sub2_1, this, class99_2);
+    Class115 method1683(HardwareRenderer class505_sub2_1, Class99 class99_2) {
+        return new Class115_Sub1((DirectXRenderer) class505_sub2_1, this, class99_2);
     }
 
     @Override
@@ -172,13 +172,13 @@ public class DirectXShader extends Shader {
     }
 
     @Override
-    Class115 method1665(AbstractRenderer_Sub2 class505_sub2_1, Class99 class99_2) {
-        return new Class115_Sub1((AbstractRenderer_Sub2_Sub2) class505_sub2_1, this, class99_2);
+    Class115 method1665(HardwareRenderer class505_sub2_1, Class99 class99_2) {
+        return new Class115_Sub1((DirectXRenderer) class505_sub2_1, this, class99_2);
     }
 
     @Override
-    Class115 method1697(AbstractRenderer_Sub2 class505_sub2_1, Class99 class99_2) {
-        return new Class115_Sub1((AbstractRenderer_Sub2_Sub2) class505_sub2_1, this, class99_2);
+    Class115 method1697(HardwareRenderer class505_sub2_1, Class99 class99_2) {
+        return new Class115_Sub1((DirectXRenderer) class505_sub2_1, this, class99_2);
     }
 
     @Override

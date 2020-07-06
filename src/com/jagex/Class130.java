@@ -4,7 +4,7 @@ import jaggl.OpenGL;
 
 public class Class130 {
 
-    OpenGLHardwareRenderer aGraphicalRenderer_Sub1_1592;
+    OpenGLRenderer aGraphicalRenderer_Sub1_1592;
     OpenGLGround aGround_Sub2_1584;
     int anInt1586;
     int anInt1587;
@@ -14,7 +14,7 @@ public class Class130 {
     int anInt1590;
     Class124[][] aClass124ArrayArray1585;
 
-    Class130(OpenGLHardwareRenderer class505_sub1_1, OpenGLGround class390_sub2_2) {
+    Class130(OpenGLRenderer class505_sub1_1, OpenGLGround class390_sub2_2) {
         aGraphicalRenderer_Sub1_1592 = class505_sub1_1;
         aGround_Sub2_1584 = class390_sub2_2;
         anInt1586 = (aGround_Sub2_1584.width * aGround_Sub2_1584.tileUnits >> aGraphicalRenderer_Sub1_1592.anInt8473) + 2;

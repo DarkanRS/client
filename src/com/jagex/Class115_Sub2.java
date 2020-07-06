@@ -20,9 +20,9 @@ public class Class115_Sub2 extends Class115 {
     float[] aFloatArray9432;
     int[] anIntArray9433;
     OpenGLShader aClass101_Sub1_9421;
-    AbstractRenderer_Sub2_Sub1 aGraphicalRenderer_Sub2_Sub1_9419;
+    JAGGLRenderer aGraphicalRenderer_Sub2_Sub1_9419;
 
-    Class115_Sub2(AbstractRenderer_Sub2_Sub1 class505_sub2_sub1_1, Class99 class99_2) {
+    Class115_Sub2(JAGGLRenderer class505_sub2_sub1_1, Class99 class99_2) {
         anInt9423 = 0;
         anInt9435 = 0;
         anInt9424 = 0;
@@ -70,7 +70,7 @@ public class Class115_Sub2 extends Class115 {
         Class503.method8365(anIntArray9426, 0, anIntArray9426.length, -1);
     }
 
-    Class115_Sub2(AbstractRenderer_Sub2_Sub1 class505_sub2_sub1_1, OpenGLShader class101_sub1_2, Class99 class99_3) {
+    Class115_Sub2(JAGGLRenderer class505_sub2_sub1_1, OpenGLShader class101_sub1_2, Class99 class99_3) {
         this(class505_sub2_sub1_1, class99_3);
         aClass101_Sub1_9421 = class101_sub1_2;
         aGraphicalRenderer_Sub2_Sub1_9419 = class505_sub2_sub1_1;

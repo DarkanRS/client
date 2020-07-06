@@ -45,7 +45,7 @@ public class MapAreaDefinitions {
 
     static void iComponentOnNPC(NPCEntity npc_0, boolean bool_1) {
         if (Class20.anInt169 < 412) {
-            NPCType npcdefinitions_3 = npc_0.definitions;
+            NPCDefinitions npcdefinitions_3 = npc_0.definitions;
             String string_4 = npc_0.modifiedName;
             if (npcdefinitions_3.transformTo != null) {
                 npcdefinitions_3 = npcdefinitions_3.getMultiNPC(Class158_Sub1.PLAYER_VAR_PROVIDER);
@@ -57,7 +57,7 @@ public class MapAreaDefinitions {
             if (npcdefinitions_3.visible) {
                 if (npc_0.anInt10582 != 0) {
                     String string_5 = client.CURRENT_GAME == Game.stellarDawn ? LocalizedText.RATING_.translate(Class223.CURRENT_LANGUAGE) : LocalizedText.LEVEL_.translate(Class223.CURRENT_LANGUAGE);
-                    string_4 = string_4 + ObjectIndexLoader.method7169(npc_0.anInt10582, VertexNormal.MY_PLAYER.combatLevel) + " (" + string_5 + npc_0.anInt10582 + ")";
+                    string_4 = string_4 + ItemIndexLoader.method7169(npc_0.anInt10582, VertexNormal.MY_PLAYER.combatLevel) + " (" + string_5 + npc_0.anInt10582 + ")";
                 }
                 if (client.aBool7344 && !bool_1) {
                     ParamDefinitions attributedefault_10 = CutsceneAction_Sub12.USE_INTERFACE_ID != -1 ? IndexLoaders.PARAM_LOADER.getParam(CutsceneAction_Sub12.USE_INTERFACE_ID) : null;

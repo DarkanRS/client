@@ -12,7 +12,7 @@ public class Node_Sub6 extends Node {
     int anInt7519;
     int anInt7517;
     HardwareGround aGround_Sub1_7509;
-    AbstractRenderer_Sub2 aGraphicalRenderer_Sub2_7518;
+    HardwareRenderer aGraphicalRenderer_Sub2_7518;
     int anInt7510;
     float aFloat7511;
     HDWaterTile hdWaterTile;

@@ -1034,7 +1034,7 @@ public class PacketDecoder {
                 IFTargetParams newSettings;
                 if (currentSettings == null) {
                     if (slot == -1) {
-                        newSettings = new IFTargetParams(settings, Component.getDefs(interfaceHash).targetParams.interfaceId);
+                        newSettings = new IFTargetParams(settings, IComponentDefinitions.getDefs(interfaceHash).targetParams.interfaceId);
                     } else {
                         newSettings = new IFTargetParams(settings, -1);
                     }
@@ -1064,7 +1064,7 @@ public class PacketDecoder {
                 IFTargetParams newSettings;
                 if (currentSettings == null) {
                     if (slot == -1) {
-                        newSettings = new IFTargetParams(Component.getDefs(interfaceHash).targetParams.settingsHash, interfaceId);
+                        newSettings = new IFTargetParams(IComponentDefinitions.getDefs(interfaceHash).targetParams.settingsHash, interfaceId);
                     } else {
                         newSettings = new IFTargetParams(0, interfaceId);
                     }
@@ -1084,7 +1084,7 @@ public class PacketDecoder {
                 client.HINT_TRAILS[idx] = null;
             }
             if (modelId != -1) {
-                client.HINT_TRAILS[idx] = new HintTrail(Renderers.SOFTWARE_RENDERER, buffer, modelId);
+                client.HINT_TRAILS[idx] = new HintTrail(Renderers.CURRENT_RENDERER, buffer, modelId);
                 client.HINT_TRAILS[idx].method4978(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager());
             }
             context.currentPacket = null;
@@ -2065,11 +2065,11 @@ public class PacketDecoder {
                 toSub.unlink();
                 client.OPEN_INTERFACES.put(toSub, fromParentUid);
             }
-            Component parent2Def = Component.getDefs(toParentUid);
+            IComponentDefinitions parent2Def = IComponentDefinitions.getDefs(toParentUid);
             if (parent2Def != null) {
                 Class109.redrawComponent(parent2Def);
             }
-            parent2Def = Component.getDefs(fromParentUid);
+            parent2Def = IComponentDefinitions.getDefs(fromParentUid);
             if (parent2Def != null) {
                 Class109.redrawComponent(parent2Def);
                 HostNameIdentifier.method483(CustomCursorsPreference.INTERFACES[parent2Def.idHash >>> 16], parent2Def, true);

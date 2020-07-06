@@ -28,17 +28,6 @@ public class Class320 {
         Class260.aClass277_3234 = new Class277(i_1 << 9, i_2 << 9, i_3 << 8, i_4 * 8);
     }
 
-    public static AbstractRenderer createRenderer(int i_0, Canvas canvas_1, ImageLoader interface22_2, Index index_3, int i_4) {
-        int i_6 = 0;
-        int i_7 = 0;
-        if (canvas_1 != null) {
-            Dimension dimension_8 = canvas_1.getSize();
-            i_6 = dimension_8.width;
-            i_7 = dimension_8.height;
-        }
-        return Class88.method1493(i_0, canvas_1, interface22_2, index_3, i_4, i_6, i_7);
-    }
-
     void clear() {
         for (int i_2 = 0; i_2 < anInt3716; i_2++) {
             anIntArrayArray3717[i_2] = null;

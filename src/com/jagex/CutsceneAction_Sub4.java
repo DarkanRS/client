@@ -244,7 +244,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
                 }
             }
 
-            Component icomponentdefinitions_23;
+            IComponentDefinitions icomponentdefinitions_23;
             if (clickType == 58) {
                 icomponentdefinitions_23 = Index.getIComponentDefinitions(i_5, i_4);
                 if (icomponentdefinitions_23 != null) {

@@ -9,9 +9,9 @@ public class Class158_Sub1_Sub2 extends Class158_Sub1 {
     int anInt10129;
     int anInt10128;
     Class125 aClass125_10127;
-    HardwareRenderer aGraphicalRenderer_Sub3_10130;
+    JavaRenderer aGraphicalRenderer_Sub3_10130;
 
-    Class158_Sub1_Sub2(HardwareRenderer hardwarerenderer_1) {
+    Class158_Sub1_Sub2(JavaRenderer hardwarerenderer_1) {
         aGraphicalRenderer_Sub3_10130 = hardwarerenderer_1;
     }
 

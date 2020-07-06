@@ -39,9 +39,9 @@ public class CutsceneAction_Sub22 extends CutsceneAction {
                     }
                     String string_8 = client.CURRENT_GAME == Game.stellarDawn ? LocalizedText.RATING_.translate(Class223.CURRENT_LANGUAGE) : LocalizedText.LEVEL_.translate(Class223.CURRENT_LANGUAGE);
                     if (player_0.combatLevel >= player_0.cbLevelWithSumm) {
-                        string_3 = player_0.getUsernameWithTitle() + (bool_4 ? ObjectIndexLoader.method7169(player_0.combatLevel, VertexNormal.MY_PLAYER.combatLevel) : Utils.rgbToColHexShortcut(16777215)) + " (" + string_8 + player_0.combatLevel + ")";
+                        string_3 = player_0.getUsernameWithTitle() + (bool_4 ? ItemIndexLoader.method7169(player_0.combatLevel, VertexNormal.MY_PLAYER.combatLevel) : Utils.rgbToColHexShortcut(16777215)) + " (" + string_8 + player_0.combatLevel + ")";
                     } else {
-                        string_3 = player_0.getUsernameWithTitle() + (bool_4 ? ObjectIndexLoader.method7169(player_0.combatLevel, VertexNormal.MY_PLAYER.combatLevel) : Utils.rgbToColHexShortcut(16777215)) + " (" + string_8 + player_0.combatLevel + "+" + (player_0.cbLevelWithSumm - player_0.combatLevel) + ")";
+                        string_3 = player_0.getUsernameWithTitle() + (bool_4 ? ItemIndexLoader.method7169(player_0.combatLevel, VertexNormal.MY_PLAYER.combatLevel) : Utils.rgbToColHexShortcut(16777215)) + " (" + string_8 + player_0.combatLevel + "+" + (player_0.cbLevelWithSumm - player_0.combatLevel) + ")";
                     }
                 } else if (player_0.elo == -1) {
                     string_3 = player_0.getUsernameWithTitle();

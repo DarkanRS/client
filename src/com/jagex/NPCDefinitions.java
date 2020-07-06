@@ -1,9 +1,9 @@
 package com.jagex;
 
-public class NPCType {
+public class NPCDefinitions {
 
     public static short[] aShortArray4862 = new short[256];
-    public int type;
+    public int id;
     public String[] options;
     public int[] modelIds;
     public byte aByte4916;
@@ -69,7 +69,7 @@ public class NPCType {
     byte aByte4905;
     IterableNodeMap cs2Params;
 
-    NPCType() {
+    NPCDefinitions() {
         respawnDirection = NPCDirection.SOUTH;
         anInt4914 = -1;
         aByte4916 = -1;
@@ -86,7 +86,7 @@ public class NPCType {
         Class356.method6227(true);
         Class247.method4250();
         System.gc();
-        Renderers.SOFTWARE_RENDERER.ba(2, 0);
+        Renderers.CURRENT_RENDERER.ba(2, 0);
     }
 
     void method6874(ByteBuf rsbytebuffer_1) {
@@ -127,7 +127,7 @@ public class NPCType {
 
     public MeshRasterizer renderFull(AbstractRenderer graphicalrenderer_1, int i_2, RenderAnimIndexLoader renderanimindexloader_3, VarProvider interface42_4, Animation animation_5, Animation animation_6, Animation[] arr_7, int[] ints_8, int i_9, NPCMeshModifier class417_10, int i_11, boolean bool_12) {
         if (transformTo != null) {
-            NPCType npcdefinitions_14 = getMultiNPC(interface42_4);
+            NPCDefinitions npcdefinitions_14 = getMultiNPC(interface42_4);
             return npcdefinitions_14 == null ? null : npcdefinitions_14.renderFull(graphicalrenderer_1, i_2, renderanimindexloader_3, interface42_4, animation_5, animation_6, arr_7, ints_8, i_9, class417_10, i_11, bool_12);
         } else {
             int i_32 = i_2;
@@ -153,9 +153,9 @@ public class NPCType {
                 i_32 |= animation_6.method7640();
                 bool_15 = true;
             }
-            long long_33 = type | graphicalrenderer_1.rendererId << 16;
+            long long_33 = id | graphicalrenderer_1.rendererId << 16;
             if (class417_10 != null) {
-                long_33 |= class417_10.aLong4993 << 24;
+                long_33 |= class417_10.cacheKey << 24;
             }
             LRUCache softcache_20 = npcLoader.aClass229_4836;
             MeshRasterizer meshrasterizer_19;
@@ -318,7 +318,7 @@ public class NPCType {
                             i_25 = ints_8[i_40] - i_9;
                             i_25 &= 0x3fff;
                             Matrix44Var matrix44var_50 = new Matrix44Var();
-                            matrix44var_50.method5217(0.0F, 1.0F, 0.0F, Class382.method6508(i_25));
+                            matrix44var_50.method5217(0.0F, 1.0F, 0.0F, Trig.degToRad(i_25));
                             meshrasterizer_37.method11298(matrix44var_50, 1 << i_40, false);
                         }
                     }
@@ -346,43 +346,41 @@ public class NPCType {
         }
     }
 
-    public MeshRasterizer renderHead(AbstractRenderer graphicalrenderer_1, int i_2, VarProvider interface42_3, Animation animation_4, NPCMeshModifier class417_5) {
+    public MeshRasterizer renderHead(AbstractRenderer renderer, int colorScalar, VarProvider varProvider, Animation animation, NPCMeshModifier meshModifier) {
         if (transformTo != null) {
-            NPCType npcdefinitions_7 = getMultiNPC(interface42_3);
-            return npcdefinitions_7 == null ? null : npcdefinitions_7.renderHead(graphicalrenderer_1, i_2, interface42_3, animation_4, class417_5);
-        } else if (headModels == null && (class417_5 == null || class417_5.anIntArray4992 == null)) {
+            NPCDefinitions defs = getMultiNPC(varProvider);
+            return defs == null ? null : defs.renderHead(renderer, colorScalar, varProvider, animation, meshModifier);
+        } else if (headModels == null && (meshModifier == null || meshModifier.anIntArray4992 == null)) {
             return null;
         } else {
-            int i_18 = i_2;
-            if (animation_4 != null) {
-                i_18 = i_2 | animation_4.method7640();
+            int colorFlags = colorScalar;
+            if (animation != null) {
+                colorFlags = colorScalar | animation.method7640();
             }
-            long long_8 = type | graphicalrenderer_1.rendererId << 16;
-            if (class417_5 != null) {
-                long_8 |= class417_5.aLong4993 << 24;
+            long cacheKey = id | renderer.rendererId << 16;
+            if (meshModifier != null) {
+                cacheKey |= meshModifier.cacheKey << 24;
             }
-            LRUCache softcache_11 = npcLoader.aClass229_4843;
-            MeshRasterizer meshrasterizer_10;
-            synchronized (npcLoader.aClass229_4843) {
-                meshrasterizer_10 = (MeshRasterizer) npcLoader.aClass229_4843.get(long_8);
+            MeshRasterizer raster;
+            synchronized (npcLoader.meshCache) {
+                raster = (MeshRasterizer) npcLoader.meshCache.get(cacheKey);
             }
-            if (meshrasterizer_10 == null || (meshrasterizer_10.m() & i_18) != i_18) {
-                if (meshrasterizer_10 != null) {
-                    i_18 |= meshrasterizer_10.m();
+            if (raster == null || (raster.m() & colorFlags) != colorFlags) {
+                if (raster != null) {
+                    colorFlags |= raster.m();
                 }
-                int i_19 = i_18;
+                int modifierFlags = colorFlags;
                 if (originalColors != null) {
-                    i_19 = i_18 | 0x4000;
+                    modifierFlags = colorFlags | 0x4000;
                 }
                 if (originalTextures != null) {
-                    i_19 |= 0x8000;
+                    modifierFlags |= 0x8000;
                 }
                 if (aByte4871 != 0) {
-                    i_19 |= 0x80000;
+                    modifierFlags |= 0x80000;
                 }
-                int[] ints_12 = class417_5 != null && class417_5.anIntArray4992 != null ? class417_5.anIntArray4992 : headModels;
+                int[] ints_12 = meshModifier != null && meshModifier.anIntArray4992 != null ? meshModifier.anIntArray4992 : headModels;
                 boolean bool_13 = false;
-                Index index_14 = npcLoader.aClass317_4842;
                 int i_15;
                 synchronized (npcLoader.aClass317_4842) {
                     i_15 = 0;
@@ -397,7 +395,6 @@ public class NPCType {
                     return null;
                 }
                 RSMesh[] arr_26 = new RSMesh[ints_12.length];
-                Index index_20 = npcLoader.aClass317_4842;
                 synchronized (npcLoader.aClass317_4842) {
                     for (int i_16 = 0; i_16 < ints_12.length; i_16++) {
                         arr_26[i_16] = RSMesh.decodeMesh(npcLoader.aClass317_4842, ints_12[i_16]);
@@ -414,48 +411,47 @@ public class NPCType {
                 } else {
                     rsmesh_27 = new RSMesh(arr_26, arr_26.length);
                 }
-                meshrasterizer_10 = graphicalrenderer_1.createMeshRasterizer(rsmesh_27, i_19, npcLoader.anInt4845, 64, 768);
+                raster = renderer.createMeshRasterizer(rsmesh_27, modifierFlags, npcLoader.anInt4845, 64, 768);
                 int i_17;
                 short[] shorts_21;
                 if (originalColors != null) {
-                    if (class417_5 != null && class417_5.aShortArray4990 != null) {
-                        shorts_21 = class417_5.aShortArray4990;
+                    if (meshModifier != null && meshModifier.aShortArray4990 != null) {
+                        shorts_21 = meshModifier.aShortArray4990;
                     } else {
                         shorts_21 = modifiedColors;
                     }
                     for (i_17 = 0; i_17 < originalColors.length; i_17++) {
                         if (recolourPalette != null && i_17 < recolourPalette.length) {
-                            meshrasterizer_10.X(originalColors[i_17], aShortArray4862[recolourPalette[i_17] & 0xff]);
+                            raster.X(originalColors[i_17], aShortArray4862[recolourPalette[i_17] & 0xff]);
                         } else {
-                            meshrasterizer_10.X(originalColors[i_17], shorts_21[i_17]);
+                            raster.X(originalColors[i_17], shorts_21[i_17]);
                         }
                     }
                 }
                 if (originalTextures != null) {
-                    if (class417_5 != null && class417_5.aShortArray4991 != null) {
-                        shorts_21 = class417_5.aShortArray4991;
+                    if (meshModifier != null && meshModifier.aShortArray4991 != null) {
+                        shorts_21 = meshModifier.aShortArray4991;
                     } else {
                         shorts_21 = modifiedTextures;
                     }
                     for (i_17 = 0; i_17 < originalTextures.length; i_17++) {
-                        meshrasterizer_10.W(originalTextures[i_17], shorts_21[i_17]);
+                        raster.W(originalTextures[i_17], shorts_21[i_17]);
                     }
                 }
                 if (aByte4871 != 0) {
-                    meshrasterizer_10.PA(aByte4868, aByte4869, aByte4905, aByte4871 & 0xff);
+                    raster.PA(aByte4868, aByte4869, aByte4905, aByte4871 & 0xff);
                 }
-                meshrasterizer_10.KA(i_18);
-                LRUCache softcache_28 = npcLoader.aClass229_4843;
-                synchronized (npcLoader.aClass229_4843) {
-                    npcLoader.aClass229_4843.put(meshrasterizer_10, long_8);
+                raster.KA(colorFlags);
+                synchronized (npcLoader.meshCache) {
+                    npcLoader.meshCache.put(raster, cacheKey);
                 }
             }
-            if (animation_4 != null) {
-                meshrasterizer_10 = meshrasterizer_10.method11289((byte) 1, i_18, true);
-                animation_4.rasterize(meshrasterizer_10, 0);
+            if (animation != null) {
+                raster = raster.method11289((byte) 1, colorFlags, true);
+                animation.rasterize(raster, 0);
             }
-            meshrasterizer_10.KA(i_2);
-            return meshrasterizer_10;
+            raster.KA(colorScalar);
+            return raster;
         }
     }
 
@@ -484,7 +480,7 @@ public class NPCType {
         }
     }
 
-    public NPCType getMultiNPC(VarProvider vars) {
+    public NPCDefinitions getMultiNPC(VarProvider vars) {
         int index = -1;
         if (varpBit != -1) {
             index = vars.getVarBit(varpBit);
@@ -524,7 +520,7 @@ public class NPCType {
         } else {
             for (int i_2 = 0; i_2 < transformTo.length; i_2++) {
                 if (transformTo[i_2] != -1) {
-                    NPCType npcdefinitions_3 = npcLoader.getNPCType(transformTo[i_2]);
+                    NPCDefinitions npcdefinitions_3 = npcLoader.getNPCType(transformTo[i_2]);
                     if (npcdefinitions_3.walkingAnimation != -1 || npcdefinitions_3.rotate90RightAnimation != -1 || npcdefinitions_3.rotate90LeftAnimation != -1) {
                         return true;
                     }

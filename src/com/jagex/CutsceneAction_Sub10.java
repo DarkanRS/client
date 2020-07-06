@@ -16,7 +16,7 @@ public abstract class CutsceneAction_Sub10 extends CutsceneAction {
     }
 
     public static void method14603(int i_0, int interfaceHash, int slotId, String string_3) {
-        Component icomponentdefinitions_5 = Index.getIComponentDefinitions(interfaceHash, slotId);
+        IComponentDefinitions icomponentdefinitions_5 = Index.getIComponentDefinitions(interfaceHash, slotId);
         if (icomponentdefinitions_5 != null) {
             if (icomponentdefinitions_5.params != null) {
                 HookRequest hookrequest_6 = new HookRequest();

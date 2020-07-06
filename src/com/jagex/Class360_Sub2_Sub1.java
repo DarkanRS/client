@@ -7,7 +7,7 @@ import jagdx.IUnknown;
 
 public class Class360_Sub2_Sub1 extends Class360_Sub2 implements Interface29 {
 
-    Class360_Sub2_Sub1(AbstractRenderer_Sub2_Sub2 class505_sub2_sub2_1, Class150 class150_2, Class76 class76_3, int i_4, int i_5) {
+    Class360_Sub2_Sub1(DirectXRenderer class505_sub2_sub2_1, Class150 class150_2, Class76 class76_3, int i_4, int i_5) {
         super(class505_sub2_sub2_1, class150_2, class76_3, i_4, i_5, 1025, 0);
     }
 

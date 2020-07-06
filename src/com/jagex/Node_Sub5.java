@@ -3,9 +3,9 @@ package com.jagex;
 public abstract class Node_Sub5 extends Node {
 
     boolean aBool7506;
-    OpenGLHardwareRenderer aGraphicalRenderer_Sub1_7507;
+    OpenGLRenderer aGraphicalRenderer_Sub1_7507;
 
-    Node_Sub5(OpenGLHardwareRenderer class505_sub1_1) {
+    Node_Sub5(OpenGLRenderer class505_sub1_1) {
         aGraphicalRenderer_Sub1_7507 = class505_sub1_1;
     }
 

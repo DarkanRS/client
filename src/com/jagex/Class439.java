@@ -7,10 +7,10 @@ public class Class439 {
     }
 
     public static void method7343() {
-        Component.aClass229_1280.method3858(50);
-        Component.aClass229_1341.method3858(50);
-        Component.aClass229_1303.method3858(50);
-        Component.aClass229_1282.method3858(50);
+        IComponentDefinitions.aClass229_1280.method3858(50);
+        IComponentDefinitions.aClass229_1341.method3858(50);
+        IComponentDefinitions.aClass229_1303.method3858(50);
+        IComponentDefinitions.aClass229_1282.method3858(50);
     }
 
     static void routeToSceneObject(int x, int y, long data) {

@@ -21,12 +21,12 @@ public class Class170 {
     int anInt2111;
     LinkedNodeList aClass473_2108 = new LinkedNodeList();
     Class137_Sub1[] aClass137_Sub1Array2106 = new Class137_Sub1[2];
-    OpenGLHardwareRenderer aGraphicalRenderer_Sub1_2112;
+    OpenGLRenderer aGraphicalRenderer_Sub1_2112;
     Class158_Sub1_Sub4 aClass158_Sub1_Sub4_2092;
     Class158_Sub1_Sub4 aClass158_Sub1_Sub4_2095;
     Class158_Sub1_Sub4 aClass158_Sub1_Sub4_2101;
 
-    Class170(OpenGLHardwareRenderer class505_sub1_1) {
+    Class170(OpenGLRenderer class505_sub1_1) {
         aClass76_2102 = Class76.aClass76_751;
         aGraphicalRenderer_Sub1_2112 = class505_sub1_1;
         if (aGraphicalRenderer_Sub1_2112.aBool8472 && aGraphicalRenderer_Sub1_2112.aBool8401) {

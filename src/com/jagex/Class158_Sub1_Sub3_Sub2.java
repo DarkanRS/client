@@ -5,7 +5,7 @@ import jaggl.OpenGL;
 public class Class158_Sub1_Sub3_Sub2 extends Class158_Sub1_Sub3 {
 
     Interface28[] anInterface28Array10449 = new Interface28[4];
-    AbstractRenderer_Sub2_Sub1 aGraphicalRenderer_Sub2_Sub1_10446;
+    JAGGLRenderer aGraphicalRenderer_Sub2_Sub1_10446;
     int anInt10443;
     int anInt10444;
     Interface28 anInterface28_10448;
@@ -13,7 +13,7 @@ public class Class158_Sub1_Sub3_Sub2 extends Class158_Sub1_Sub3 {
     int anInt10441;
     int anInt10447;
 
-    Class158_Sub1_Sub3_Sub2(AbstractRenderer_Sub2_Sub1 class505_sub2_sub1_1) {
+    Class158_Sub1_Sub3_Sub2(JAGGLRenderer class505_sub2_sub1_1) {
         super(class505_sub2_sub1_1);
         aGraphicalRenderer_Sub2_Sub1_10446 = class505_sub2_sub1_1;
         int[] ints_2 = new int[1];

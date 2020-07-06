@@ -74,12 +74,12 @@ public class Class247 {
             int i_3 = i_0 >> 16;
             int i_4 = i_0 & 0xffff;
             if (CustomCursorsPreference.INTERFACES[i_3] != null && CustomCursorsPreference.INTERFACES[i_3].components[i_4] != null) {
-                Component icomponentdefinitions_5 = CustomCursorsPreference.INTERFACES[i_3].components[i_4];
+                IComponentDefinitions icomponentdefinitions_5 = CustomCursorsPreference.INTERFACES[i_3].components[i_4];
                 CacheableNode_Sub7 class282_sub50_sub7_6;
                 if (i_1 == -1 && icomponentdefinitions_5.type == ComponentType.CONTAINER) {
                     for (class282_sub50_sub7_6 = (CacheableNode_Sub7) Class20.aClass482_171.head(); class282_sub50_sub7_6 != null; class282_sub50_sub7_6 = (CacheableNode_Sub7) Class20.aClass482_171.next()) {
                         if (class282_sub50_sub7_6.clickType == 58 || class282_sub50_sub7_6.clickType == 1007 || class282_sub50_sub7_6.clickType == 25 || class282_sub50_sub7_6.clickType == 57 || class282_sub50_sub7_6.clickType == 30) {
-                            for (Component icomponentdefinitions_7 = Component.getDefs(class282_sub50_sub7_6.anInt9582); icomponentdefinitions_7 != null; icomponentdefinitions_7 = CutsceneAction_Sub23.method14682(CustomCursorsPreference.INTERFACES[icomponentdefinitions_7.idHash >> 16], icomponentdefinitions_7)) {
+                            for (IComponentDefinitions icomponentdefinitions_7 = IComponentDefinitions.getDefs(class282_sub50_sub7_6.anInt9582); icomponentdefinitions_7 != null; icomponentdefinitions_7 = CutsceneAction_Sub23.method14682(CustomCursorsPreference.INTERFACES[icomponentdefinitions_7.idHash >> 16], icomponentdefinitions_7)) {
                                 if (icomponentdefinitions_7.idHash == icomponentdefinitions_5.idHash) {
                                     return true;
                                 }
@@ -316,9 +316,9 @@ public class Class247 {
         Matrix44Var matrix44var_7 = graphicalrenderer_1.method8458();
         Matrix44Var matrix44var_8 = new Matrix44Var();
         matrix44var_8.method5223(0.0F, 0.0F, 0.0F);
-        matrix44var_8.rotation(0.0F, -1.0f, 0.0F, Class382.method6508(-i_3 & 0x3fff));
-        matrix44var_8.rotation(-1.0f, 0.0F, 0.0F, Class382.method6508(-i_2 & 0x3fff));
-        matrix44var_8.rotation(0.0F, 0.0F, -1.0f, Class382.method6508(-i_4 & 0x3fff));
+        matrix44var_8.rotation(0.0F, -1.0f, 0.0F, Trig.degToRad(-i_3 & 0x3fff));
+        matrix44var_8.rotation(-1.0f, 0.0F, 0.0F, Trig.degToRad(-i_2 & 0x3fff));
+        matrix44var_8.rotation(0.0F, 0.0F, -1.0f, Trig.degToRad(-i_4 & 0x3fff));
         graphicalrenderer_1.method8457(matrix44var_8);
         Matrix44Var matrix44var_9 = new Matrix44Var();
         if (i_5 != anInt3036) {

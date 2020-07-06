@@ -5,7 +5,7 @@ public class NativeSprite_Sub1_Sub2 extends NativeSprite_Sub1 {
     byte[] aByteArray10221;
     int[] anIntArray10220;
 
-    NativeSprite_Sub1_Sub2(HardwareRenderer hardwarerenderer_1, byte[] bytes_2, int[] ints_3, int i_4, int i_5) {
+    NativeSprite_Sub1_Sub2(JavaRenderer hardwarerenderer_1, byte[] bytes_2, int[] ints_3, int i_4, int i_5) {
         super(hardwarerenderer_1, i_4, i_5);
         aByteArray10221 = bytes_2;
         anIntArray10220 = ints_3;

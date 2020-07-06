@@ -153,8 +153,8 @@ public class MaterialProp23 extends MaterialProperty {
                             client.aBool7375 = false;
                         }
                         while (true) {
-                            Component icomponentdefinitions_10;
-                            Component icomponentdefinitions_11;
+                            IComponentDefinitions icomponentdefinitions_10;
+                            IComponentDefinitions icomponentdefinitions_11;
                             HookRequest hookrequest_14;
                             do {
                                 hookrequest_14 = (HookRequest) client.aClass482_7233.popHead();
@@ -276,7 +276,7 @@ public class MaterialProp23 extends MaterialProperty {
                                                         if (icomponentdefinitions_10.slotId < 0) {
                                                             break;
                                                         }
-                                                        icomponentdefinitions_11 = Component.getDefs(icomponentdefinitions_10.parent);
+                                                        icomponentdefinitions_11 = IComponentDefinitions.getDefs(icomponentdefinitions_10.parent);
                                                     } while (icomponentdefinitions_11 == null || icomponentdefinitions_11.slotChildren == null || icomponentdefinitions_10.slotId >= icomponentdefinitions_11.slotChildren.length || icomponentdefinitions_10 != icomponentdefinitions_11.slotChildren[icomponentdefinitions_10.slotId]);
                                                     CS2Executor.executeHookInner(hookrequest_14);
                                                 }
@@ -285,7 +285,7 @@ public class MaterialProp23 extends MaterialProperty {
                                             if (icomponentdefinitions_10.slotId < 0) {
                                                 break;
                                             }
-                                            icomponentdefinitions_11 = Component.getDefs(icomponentdefinitions_10.parent);
+                                            icomponentdefinitions_11 = IComponentDefinitions.getDefs(icomponentdefinitions_10.parent);
                                         } while (icomponentdefinitions_11 == null || icomponentdefinitions_11.slotChildren == null || icomponentdefinitions_10.slotId >= icomponentdefinitions_11.slotChildren.length || icomponentdefinitions_10 != icomponentdefinitions_11.slotChildren[icomponentdefinitions_10.slotId]);
                                         CS2Executor.executeHookInner(hookrequest_14);
                                     }
@@ -294,7 +294,7 @@ public class MaterialProp23 extends MaterialProperty {
                                 if (icomponentdefinitions_10.slotId < 0) {
                                     break;
                                 }
-                                icomponentdefinitions_11 = Component.getDefs(icomponentdefinitions_10.parent);
+                                icomponentdefinitions_11 = IComponentDefinitions.getDefs(icomponentdefinitions_10.parent);
                             } while (icomponentdefinitions_11 == null || icomponentdefinitions_11.slotChildren == null || icomponentdefinitions_10.slotId >= icomponentdefinitions_11.slotChildren.length || icomponentdefinitions_10 != icomponentdefinitions_11.slotChildren[icomponentdefinitions_10.slotId]);
                             CS2Executor.executeHookInner(hookrequest_14);
                         }

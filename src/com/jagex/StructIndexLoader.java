@@ -33,7 +33,7 @@ public class StructIndexLoader {
         Comparable_Sub1.aClass118Array3772 = null;
         RenderAnimIndexLoader.method3629(client.BASE_WINDOW_ID, 0, 0, Class349.anInt4083, client.anInt3243 * -969250379, 0, 0, -1);
         if (Comparable_Sub1.aClass118Array3772 != null) {
-            Component[] arr_1 = Comparable_Sub1.aClass118Array3772;
+            IComponentDefinitions[] arr_1 = Comparable_Sub1.aClass118Array3772;
             int i_2 = -1412584499;
             byte b_3 = 0;
             byte b_4 = 0;

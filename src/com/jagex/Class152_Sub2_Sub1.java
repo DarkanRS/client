@@ -5,7 +5,7 @@ public class Class152_Sub2_Sub1 extends Class152_Sub2 {
     static int[] anIntArray10169 = new int[6];
     static int[][] anIntArrayArray10170 = new int[6][];
     Interface31 anInterface31_10161;
-    AbstractRenderer_Sub2 aGraphicalRenderer_Sub2_10168;
+    HardwareRenderer aGraphicalRenderer_Sub2_10168;
     int anInt10165;
     int anInt10166;
     int anInt10162;
@@ -13,7 +13,7 @@ public class Class152_Sub2_Sub1 extends Class152_Sub2 {
     int anInt10163;
     int anInt10164;
 
-    Class152_Sub2_Sub1(AbstractRenderer_Sub2 class505_sub2_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
+    Class152_Sub2_Sub1(HardwareRenderer class505_sub2_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
         aGraphicalRenderer_Sub2_10168 = class505_sub2_1;
         anInt10165 = i_4;
         anInt10166 = i_5;

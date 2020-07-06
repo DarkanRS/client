@@ -4,7 +4,7 @@ public class NPCMeshModifier {
 
     public static int MESSAGES;
 
-    public long aLong4993;
+    public long cacheKey;
 
     public int[] anIntArray4992;
 
@@ -13,13 +13,13 @@ public class NPCMeshModifier {
     public short[] aShortArray4991;
 
     public NPCMeshModifier(long long_1, int[] ints_3, short[] shorts_4, short[] shorts_5) {
-        aLong4993 = long_1;
+        cacheKey = long_1;
         anIntArray4992 = ints_3;
         aShortArray4990 = shorts_4;
         aShortArray4991 = shorts_5;
     }
 
-    public NPCMeshModifier(NPCType npcdefinitions_1, boolean bool_2) {
+    public NPCMeshModifier(NPCDefinitions npcdefinitions_1, boolean bool_2) {
         if (bool_2) {
             anIntArray4992 = new int[npcdefinitions_1.modelIds.length];
             System.arraycopy(npcdefinitions_1.modelIds, 0, anIntArray4992, 0, anIntArray4992.length);

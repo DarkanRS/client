@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class FontRenderer_Sub3 extends FontRenderer {
 
-    HardwareRenderer aGraphicalRenderer_Sub3_8968;
+    JavaRenderer aGraphicalRenderer_Sub3_8968;
     int[] anIntArray8969;
     int[] anIntArray8971;
     byte[][] aByteArrayArray8967;
@@ -12,7 +12,7 @@ public class FontRenderer_Sub3 extends FontRenderer {
     int[] anIntArray8973;
     int[] anIntArray8970;
 
-    FontRenderer_Sub3(HardwareRenderer hardwarerenderer_1, FontMetrics fontmetrics_2, SpriteDefinitions[] arr_3, int[] ints_4, int[] ints_5) {
+    FontRenderer_Sub3(JavaRenderer hardwarerenderer_1, FontMetrics fontmetrics_2, SpriteDefinitions[] arr_3, int[] ints_4, int[] ints_5) {
         super(hardwarerenderer_1, fontmetrics_2);
         aGraphicalRenderer_Sub3_8968 = hardwarerenderer_1;
         aGraphicalRenderer_Sub3_8968 = hardwarerenderer_1;

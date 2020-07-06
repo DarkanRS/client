@@ -47,6 +47,7 @@ public class ConnectionInfo {
     }
 
     public Socket createSocket() throws IOException {
+    	System.out.println("Meme: " + worldId);
         return new Socket(host, 5555);
     }
 }

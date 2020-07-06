@@ -67,8 +67,8 @@ public class Class299 implements Interface27 {
 
     @Override
     public void method161() {
-        if (aAbstractRenderer_3542 != Renderers.SOFTWARE_RENDERER) {
-            aAbstractRenderer_3542 = Renderers.SOFTWARE_RENDERER;
+        if (aAbstractRenderer_3542 != Renderers.CURRENT_RENDERER) {
+            aAbstractRenderer_3542 = Renderers.CURRENT_RENDERER;
             aBool3546 = true;
         }
         aAbstractRenderer_3542.ba(3, 0);
@@ -162,8 +162,8 @@ public class Class299 implements Interface27 {
 
     @Override
     public void method158() {
-        if (Renderers.SOFTWARE_RENDERER != aAbstractRenderer_3542) {
-            aAbstractRenderer_3542 = Renderers.SOFTWARE_RENDERER;
+        if (Renderers.CURRENT_RENDERER != aAbstractRenderer_3542) {
+            aAbstractRenderer_3542 = Renderers.CURRENT_RENDERER;
             aBool3546 = true;
         }
         aAbstractRenderer_3542.ba(3, 0);
@@ -178,8 +178,8 @@ public class Class299 implements Interface27 {
 
     @Override
     public void method159() {
-        if (Renderers.SOFTWARE_RENDERER != aAbstractRenderer_3542) {
-            aAbstractRenderer_3542 = Renderers.SOFTWARE_RENDERER;
+        if (Renderers.CURRENT_RENDERER != aAbstractRenderer_3542) {
+            aAbstractRenderer_3542 = Renderers.CURRENT_RENDERER;
             aBool3546 = true;
         }
         aAbstractRenderer_3542.ba(3, 0);
@@ -194,8 +194,8 @@ public class Class299 implements Interface27 {
 
     @Override
     public void method195() {
-        if (Renderers.SOFTWARE_RENDERER != aAbstractRenderer_3542) {
-            aAbstractRenderer_3542 = Renderers.SOFTWARE_RENDERER;
+        if (Renderers.CURRENT_RENDERER != aAbstractRenderer_3542) {
+            aAbstractRenderer_3542 = Renderers.CURRENT_RENDERER;
             aBool3546 = true;
         }
         aAbstractRenderer_3542.ba(3, 0);

@@ -61,14 +61,14 @@ public class Class46 implements Interface2 {
     @Override
     public void method20(boolean bool_1) {
         if (bool_1) {
-            Renderers.SOFTWARE_RENDERER.B(0, 0, Class349.anInt4083, Engine.anInt3243 * -969250379, aClass366_436.anInt4231, 0);
+            Renderers.CURRENT_RENDERER.B(0, 0, Class349.anInt4083, Engine.anInt3243 * -969250379, aClass366_436.anInt4231, 0);
         }
     }
 
     @Override
     public void method11(boolean bool_1) {
         if (bool_1) {
-            Renderers.SOFTWARE_RENDERER.B(0, 0, Class349.anInt4083 * 1426041429 * 765 * -1943418639 * -418109423, -969250379 * Engine.anInt3243 * -969250379 * -1929118563, aClass366_436.anInt4231 * -776392521 * -2044941049, 0);
+            Renderers.CURRENT_RENDERER.B(0, 0, Class349.anInt4083 * 1426041429 * 765 * -1943418639 * -418109423, -969250379 * Engine.anInt3243 * -969250379 * -1929118563, aClass366_436.anInt4231 * -776392521 * -2044941049, 0);
         }
     }
 
@@ -80,14 +80,14 @@ public class Class46 implements Interface2 {
     @Override
     public void method12(boolean bool_1) {
         if (bool_1) {
-            Renderers.SOFTWARE_RENDERER.B(0, 0, Class349.anInt4083 * 1426041429 * 765 * -1943418639 * -418109423, -969250379 * Engine.anInt3243 * -969250379 * -1929118563, aClass366_436.anInt4231 * -776392521 * -2044941049, 0);
+            Renderers.CURRENT_RENDERER.B(0, 0, Class349.anInt4083 * 1426041429 * 765 * -1943418639 * -418109423, -969250379 * Engine.anInt3243 * -969250379 * -1929118563, aClass366_436.anInt4231 * -776392521 * -2044941049, 0);
         }
     }
 
     @Override
     public void method14(boolean bool_1) {
         if (bool_1) {
-            Renderers.SOFTWARE_RENDERER.B(0, 0, Class349.anInt4083 * 1426041429 * 765 * -1943418639 * -418109423, -969250379 * Engine.anInt3243 * -969250379 * -1929118563, aClass366_436.anInt4231 * -776392521 * -2044941049, 0);
+            Renderers.CURRENT_RENDERER.B(0, 0, Class349.anInt4083 * 1426041429 * 765 * -1943418639 * -418109423, -969250379 * Engine.anInt3243 * -969250379 * -1929118563, aClass366_436.anInt4231 * -776392521 * -2044941049, 0);
         }
     }
 

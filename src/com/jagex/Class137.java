@@ -8,13 +8,13 @@ public abstract class Class137 {
     boolean aBool1652;
     boolean aBool1641;
     int anInt1647;
-    OpenGLHardwareRenderer openGLHardwareRenderer;
+    OpenGLRenderer openGLHardwareRenderer;
     int anInt1648;
     Class150 aClass150_1650;
     Class76 aClass76_1651;
     int anInt1654;
 
-    Class137(OpenGLHardwareRenderer class505_sub1_1, int i_2, Class150 class150_3, Class76 class76_4, int i_5, boolean bool_6) {
+    Class137(OpenGLRenderer class505_sub1_1, int i_2, Class150 class150_3, Class76 class76_4, int i_5, boolean bool_6) {
         openGLHardwareRenderer = class505_sub1_1;
         anInt1648 = i_2;
         aClass150_1650 = class150_3;
@@ -43,7 +43,7 @@ public abstract class Class137 {
             byte[] bytes_12 = new byte[i_9 * i_10 * i_6];
 
             while (true) {
-                OpenGL.glTexImage2Dub(i_0, i_7, i_1, i_21, i_31, 0, OpenGLHardwareRenderer.method13629(class150_4), 5121, bytes_11, 0);
+                OpenGL.glTexImage2Dub(i_0, i_7, i_1, i_21, i_31, 0, OpenGLRenderer.method13629(class150_4), 5121, bytes_11, 0);
                 if (i_8 <= 1) {
                     return;
                 }
@@ -104,7 +104,7 @@ public abstract class Class137 {
             float[] floats_12 = new float[i_9 * i_10 * i_6];
 
             while (true) {
-                OpenGL.glTexImage2Df(3553, i_7, i_1, i_21, i_31, 0, OpenGLHardwareRenderer.method13629(class150_4), 5126, floats_11, 0);
+                OpenGL.glTexImage2Df(3553, i_7, i_1, i_21, i_31, 0, OpenGLRenderer.method13629(class150_4), 5126, floats_11, 0);
                 if (i_8 <= 1) {
                     return;
                 }

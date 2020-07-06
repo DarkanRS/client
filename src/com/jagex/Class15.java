@@ -13,7 +13,7 @@ class Class15 implements Interface35 {
         Class235.anInt2901 = 0;
     }
 
-    static void method544(Component icomponentdefinitions_0, int i_1, int i_2) {
+    static void method544(IComponentDefinitions icomponentdefinitions_0, int i_1, int i_2) {
         Class20.aClass118_183 = icomponentdefinitions_0;
         Class20.anInt195 = i_1;
         Class20.anInt179 = i_2;
@@ -29,7 +29,7 @@ class Class15 implements Interface35 {
                 if (nativesprite_6 == null) {
                     SpriteDefinitions class91_7 = SpriteDefinitions.getSprite(IndexLoaders.SPRITES_INDEX, questdefinitions_5.graphicId, 0);
                     if (class91_7 != null) {
-                        nativesprite_6 = Renderers.SOFTWARE_RENDERER.method8444(class91_7, true);
+                        nativesprite_6 = Renderers.CURRENT_RENDERER.method8444(class91_7, true);
                         Class20.aClass229_191.put(nativesprite_6, questdefinitions_5.graphicId);
                     }
                 }
@@ -52,16 +52,16 @@ class Class15 implements Interface35 {
 
     @Override
     public Object method216(byte[] bytes_1, FontMetrics fontmetrics_2, boolean bool_3) {
-        return Renderers.SOFTWARE_RENDERER.createFont(fontmetrics_2, SpriteDefinitions.decode(bytes_1), bool_3);
+        return Renderers.CURRENT_RENDERER.createFont(fontmetrics_2, SpriteDefinitions.decode(bytes_1), bool_3);
     }
 
     @Override
     public FontRenderer method215(byte[] bytes_1, FontMetrics fontmetrics_2, boolean bool_3) {
-        return Renderers.SOFTWARE_RENDERER.createFont(fontmetrics_2, SpriteDefinitions.decode(bytes_1), bool_3);
+        return Renderers.CURRENT_RENDERER.createFont(fontmetrics_2, SpriteDefinitions.decode(bytes_1), bool_3);
     }
 
     @Override
     public FontRenderer method214(byte[] bytes_1, FontMetrics fontmetrics_2, boolean bool_3) {
-        return Renderers.SOFTWARE_RENDERER.createFont(fontmetrics_2, SpriteDefinitions.decode(bytes_1), bool_3);
+        return Renderers.CURRENT_RENDERER.createFont(fontmetrics_2, SpriteDefinitions.decode(bytes_1), bool_3);
     }
 }

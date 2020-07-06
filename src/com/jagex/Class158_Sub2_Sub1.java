@@ -7,14 +7,14 @@ import java.awt.*;
 public class Class158_Sub2_Sub1 extends Class158_Sub2 {
 
     boolean aBool10122;
-    OpenGLHardwareRenderer aGraphicalRenderer_Sub1_10118;
+    OpenGLRenderer aGraphicalRenderer_Sub1_10118;
     Canvas aCanvas10120;
     OpenGL anOpenGL10119;
     long aLong10117;
     int anInt10121;
     int anInt10116;
 
-    Class158_Sub2_Sub1(OpenGLHardwareRenderer class505_sub1_1, Canvas canvas_2, long long_3) {
+    Class158_Sub2_Sub1(OpenGLRenderer class505_sub1_1, Canvas canvas_2, long long_3) {
         aBool10122 = false;
         aGraphicalRenderer_Sub1_10118 = class505_sub1_1;
         aCanvas10120 = canvas_2;
@@ -23,7 +23,7 @@ public class Class158_Sub2_Sub1 extends Class158_Sub2 {
         method15526();
     }
 
-    Class158_Sub2_Sub1(OpenGLHardwareRenderer class505_sub1_1, Canvas canvas_2) {
+    Class158_Sub2_Sub1(OpenGLRenderer class505_sub1_1, Canvas canvas_2) {
         this(class505_sub1_1, canvas_2, class505_sub1_1.anOpenGL8352.prepareSurface(canvas_2));
     }
 

@@ -78,7 +78,7 @@ public class ApplyHitmarkCutsceneAction extends CutsceneAction {
                 try {
                     i_6 = Class383.method6513(3, 1000);
                     if (Class393.preferences.currentToolkit.getValue() == 3) {
-                        RendererInfo class168_7 = Renderers.SOFTWARE_RENDERER.method8392();
+                        RendererInfo class168_7 = Renderers.CURRENT_RENDERER.method8392();
                         long long_8 = class168_7.driverVersion & 0xffffffffffffL;
                         switch (class168_7.id) {
                             case 4098:
@@ -107,7 +107,7 @@ public class ApplyHitmarkCutsceneAction extends CutsceneAction {
         }
     }
 
-    static boolean method14643(Component icomponentdefinitions_0) {
+    static boolean method14643(IComponentDefinitions icomponentdefinitions_0) {
         IFTargetParams class282_sub10_2 = client.getIComponentSettings(icomponentdefinitions_0);
         return class282_sub10_2.depthFlags() > 0 || (class282_sub10_2.bit23Enabled() || icomponentdefinitions_0.aClass118_1379 != null);
     }

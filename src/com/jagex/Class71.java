@@ -9,7 +9,7 @@ public class Class71 {
     boolean aBool710 = true;
     int anInt715 = -1;
     Interface6 anInterface6_714;
-    AbstractRenderer_Sub2 aGraphicalRenderer_Sub2_708;
+    HardwareRenderer aGraphicalRenderer_Sub2_708;
     Class74 aClass74_711;
     int anInt712;
     int anInt718;
@@ -18,7 +18,7 @@ public class Class71 {
     int anInt719;
     Interface32 anInterface32_717;
 
-    Class71(AbstractRenderer_Sub2 class505_sub2_1, Class74 class74_2, HardwareGround class390_sub1_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
+    Class71(HardwareRenderer class505_sub2_1, Class74 class74_2, HardwareGround class390_sub1_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
         aGraphicalRenderer_Sub2_708 = class505_sub2_1;
         aClass74_711 = class74_2;
         anInt712 = i_7;

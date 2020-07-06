@@ -4,11 +4,11 @@ import java.nio.ByteBuffer;
 
 public class FontRenderer_Sub4 extends FontRenderer {
 
-    AbstractRenderer_Sub2 aGraphicalRenderer_Sub2_9321;
+    HardwareRenderer aGraphicalRenderer_Sub2_9321;
     Interface6 anInterface6_9322;
     Interface4 anInterface4_9320;
 
-    FontRenderer_Sub4(AbstractRenderer_Sub2 class505_sub2_1, FontMetrics fontmetrics_2, SpriteDefinitions[] arr_3, boolean bool_4) {
+    FontRenderer_Sub4(HardwareRenderer class505_sub2_1, FontMetrics fontmetrics_2, SpriteDefinitions[] arr_3, boolean bool_4) {
         super(class505_sub2_1, fontmetrics_2);
         aGraphicalRenderer_Sub2_9321 = class505_sub2_1;
         int i_5 = 0;

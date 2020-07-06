@@ -42,7 +42,7 @@ public class IdentiKitIndexLoader implements IndexLoader {
         }
         client.OPEN_INTERFACES.put(sub, parentId);
         ClipFlagMap.method6007(sub.interfaceId, ints_2);
-        Component parentDef = Component.getDefs(parentId);
+        IComponentDefinitions parentDef = IComponentDefinitions.getDefs(parentId);
         if (parentDef != null) {
             Class109.redrawComponent(parentDef);
         }

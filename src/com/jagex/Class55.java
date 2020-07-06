@@ -2,10 +2,10 @@ package com.jagex;
 
 public abstract class Class55 {
 
-    protected AbstractRenderer_Sub2 aGraphicalRenderer_Sub2_514;
+    protected HardwareRenderer aGraphicalRenderer_Sub2_514;
     boolean aBool513;
 
-    Class55(AbstractRenderer_Sub2 class505_sub2_1) {
+    Class55(HardwareRenderer class505_sub2_1) {
         aGraphicalRenderer_Sub2_514 = class505_sub2_1;
     }
 

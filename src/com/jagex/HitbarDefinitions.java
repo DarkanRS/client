@@ -40,7 +40,7 @@ public class HitbarDefinitions {
         int i_21 = i_2;
         int i_31 = i_3;
         if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager() == null) {
-            Renderers.SOFTWARE_RENDERER.method8425(i_01, i_13, i_21, i_31, -16777216);
+            Renderers.CURRENT_RENDERER.method8425(i_01, i_13, i_21, i_31, -16777216);
         } else {
             Vector3 vector3_6 = VertexNormal.MY_PLAYER.method11166().coords;
             boolean bool_7 = false;
@@ -52,7 +52,7 @@ public class HitbarDefinitions {
                 bool_7 = true;
             }
             if (bool_7) {
-                Renderers.SOFTWARE_RENDERER.method8425(i_01, i_13, i_21, i_31, -16777216);
+                Renderers.CURRENT_RENDERER.method8425(i_01, i_13, i_21, i_31, -16777216);
             } else {
                 ++client.anInt7286;
                 if (VertexNormal.MY_PLAYER != null && (int) vector3_6.x - (VertexNormal.MY_PLAYER.getSize() - 1) * 256 >> 9 == Class187.anInt2361 && (int) vector3_6.z - (VertexNormal.MY_PLAYER.getSize() - 1) * 256 >> 9 == Class187.anInt2359) {
@@ -140,23 +140,23 @@ public class HitbarDefinitions {
                     Class246.CAM_MOVE_ABSOLUTEY = (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().sizeY << 9) - 1;
                 }
                 QuickchatMessageLoader.method7215();
-                Renderers.SOFTWARE_RENDERER.method8617(i_01, i_13, i_21, i_31);
-                Renderers.SOFTWARE_RENDERER.r(i_01, i_13, i_01 + i_21, i_31 + i_13);
+                Renderers.CURRENT_RENDERER.method8617(i_01, i_13, i_21, i_31);
+                Renderers.CURRENT_RENDERER.r(i_01, i_13, i_01 + i_21, i_31 + i_13);
                 Class535 class535_16 = IndexLoaders.MAP_REGION_DECODER.method4435().method4038();
                 i_14 = class535_16.method11450();
                 client.aClass294_7457.method5223((-IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX), (-Class109_Sub1.CAM_MOVE_ABSOLUTEZ), (-Class246.CAM_MOVE_ABSOLUTEY));
-                client.aClass294_7457.rotation(0.0F, -1.0f, 0.0F, Class382.method6508(-AnimationDefinitions.anInt5930 & 0x3fff));
-                client.aClass294_7457.rotation(-1.0f, 0.0F, 0.0F, Class382.method6508(-Class293.anInt3512 & 0x3fff));
-                client.aClass294_7457.rotation(0.0F, 0.0F, -1.0f, Class382.method6508(-Class121.anInt1525 & 0x3fff));
-                Renderers.SOFTWARE_RENDERER.method8457(client.aClass294_7457);
+                client.aClass294_7457.rotation(0.0F, -1.0f, 0.0F, Trig.degToRad(-AnimationDefinitions.anInt5930 & 0x3fff));
+                client.aClass294_7457.rotation(-1.0f, 0.0F, 0.0F, Trig.degToRad(-Class293.anInt3512 & 0x3fff));
+                client.aClass294_7457.rotation(0.0F, 0.0F, -1.0f, Trig.degToRad(-Class121.anInt1525 & 0x3fff));
+                Renderers.CURRENT_RENDERER.method8457(client.aClass294_7457);
                 HitsplatDefinitions.method3850(client.aClass384_7167, (i_21 / 2), (i_31 / 2), (client.anInt7451 << 1), (client.anInt7451 << 1), i_21, i_31);
-                Renderers.SOFTWARE_RENDERER.method8424(client.aClass384_7167);
+                Renderers.CURRENT_RENDERER.method8424(client.aClass384_7167);
                 if (class535_16.method11451() != null) {
-                    Renderers.SOFTWARE_RENDERER.IA(1.0F);
-                    Renderers.SOFTWARE_RENDERER.m(16777215, 0.0F, 0.0F, 1.0F, 0.0F, 0.0F);
-                    class535_16.method11451().method4215(Renderers.SOFTWARE_RENDERER, Class388.anInt4723 << 3, i_01, i_13, i_21, i_31, Class293.anInt3512, AnimationDefinitions.anInt5930, Class121.anInt1525, i_14);
+                    Renderers.CURRENT_RENDERER.IA(1.0F);
+                    Renderers.CURRENT_RENDERER.m(16777215, 0.0F, 0.0F, 1.0F, 0.0F, 0.0F);
+                    class535_16.method11451().method4215(Renderers.CURRENT_RENDERER, Class388.anInt4723 << 3, i_01, i_13, i_21, i_31, Class293.anInt3512, AnimationDefinitions.anInt5930, Class121.anInt1525, i_14);
                 } else {
-                    Renderers.SOFTWARE_RENDERER.ba(3, i_14);
+                    Renderers.CURRENT_RENDERER.ba(3, i_14);
                 }
                 Class412.method6934(client.aClass294_7457, client.aClass384_7167, i_21, i_31);
                 IndexLoaders.MAP_REGION_DECODER.method4435().method4037(IndexLoaders.MAP_REGION_DECODER);
@@ -180,11 +180,11 @@ public class HitbarDefinitions {
                     client.aBool7172 = false;
                 }
                 if (client.aBool7172) {
-                    Renderers.SOFTWARE_RENDERER.method8425(i_01, i_13, i_21, i_31, -16777216);
-                    Class446.method7447(LocalizedText.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE), false, Renderers.SOFTWARE_RENDERER, Class16.aFontRenderer_144, Class16.aClass414_139);
+                    Renderers.CURRENT_RENDERER.method8425(i_01, i_13, i_21, i_31, -16777216);
+                    Class446.method7447(LocalizedText.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE), false, Renderers.CURRENT_RENDERER, Class16.aFontRenderer_144, Class16.aClass414_139);
                 }
                 HitsplatDefinitions.method3850(client.aClass384_7167, (i_01 + i_21 / 2), (i_31 / 2 + i_13), (client.anInt7451 << 1), (client.anInt7451 << 1), i_21, i_31);
-                Renderers.SOFTWARE_RENDERER.method8424(client.aClass384_7167);
+                Renderers.CURRENT_RENDERER.method8424(client.aClass384_7167);
                 Node_Sub39.method13296(client.aClass384_7167);
             }
         }

@@ -35,7 +35,7 @@ public class HardwareGround extends Ground {
     float aFloat8535 = Float.MAX_VALUE;
     float aFloat8544 = -3.4028235E38f;
     LinkedNodeList aClass473_8546 = new LinkedNodeList();
-    AbstractRenderer_Sub2 aGraphicalRenderer_Sub2_8528;
+    HardwareRenderer aGraphicalRenderer_Sub2_8528;
     int anInt8536;
     int anInt8529;
     int anInt8530;
@@ -43,7 +43,7 @@ public class HardwareGround extends Ground {
     short[][] aShortArrayArray8534;
     byte[][] aByteArrayArray8531;
 
-    HardwareGround(AbstractRenderer_Sub2 class505_sub2_1, int i_2, int i_3, int i_4, int i_5, int[][] ints_6, int[][] ints_7, int i_8) {
+    HardwareGround(HardwareRenderer class505_sub2_1, int i_2, int i_3, int i_4, int i_5, int[][] ints_6, int[][] ints_7, int i_8) {
         super(i_4, i_5, i_8, ints_6);
         aGraphicalRenderer_Sub2_8528 = class505_sub2_1;
         anInt8536 = tileScale - 2;

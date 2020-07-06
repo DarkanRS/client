@@ -22,7 +22,7 @@ public class Class351 implements Interface3 {
             Class337.unloadInterface(i_4);
         }
         Class109_Sub1.method14650(i_4);
-        Component component = Component.getDefs(interfaceHash);
+        IComponentDefinitions component = IComponentDefinitions.getDefs(interfaceHash);
         if (component != null) {
             Class109.redrawComponent(component);
         }

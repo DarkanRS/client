@@ -12,7 +12,7 @@ public class Node_Sub11_Sub1 extends Node_Sub11 {
     }
 
     static int method15433(NPCEntity npc_0) {
-        NPCType npcdefinitions_2 = npc_0.definitions;
+        NPCDefinitions npcdefinitions_2 = npc_0.definitions;
         if (npcdefinitions_2.transformTo != null) {
             npcdefinitions_2 = npcdefinitions_2.getMultiNPC(Class158_Sub1.PLAYER_VAR_PROVIDER);
             if (npcdefinitions_2 == null) {

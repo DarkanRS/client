@@ -13,10 +13,10 @@ public class Class115_Sub1 extends Class115 {
     byte[] aByteArray9290;
     long aLong9286;
     long aLong9287;
-    AbstractRenderer_Sub2_Sub2 aGraphicalRenderer_Sub2_Sub2_9293;
+    DirectXRenderer aGraphicalRenderer_Sub2_Sub2_9293;
     DirectXShader aClass101_Sub2_9294;
 
-    Class115_Sub1(AbstractRenderer_Sub2_Sub2 class505_sub2_sub2_1, Class99 class99_2) {
+    Class115_Sub1(DirectXRenderer class505_sub2_sub2_1, Class99 class99_2) {
         aBool9284 = false;
         aFloatArrayArray9283 = new float[2][];
         aBoolArray9285 = new boolean[2];
@@ -34,7 +34,7 @@ public class Class115_Sub1 extends Class115 {
         class505_sub2_sub2_1.method13901(this);
     }
 
-    Class115_Sub1(AbstractRenderer_Sub2_Sub2 class505_sub2_sub2_1, DirectXShader class101_sub2_2, Class99 class99_3) {
+    Class115_Sub1(DirectXRenderer class505_sub2_sub2_1, DirectXShader class101_sub2_2, Class99 class99_3) {
         this(class505_sub2_sub2_1, class99_3);
         aGraphicalRenderer_Sub2_Sub2_9293 = class505_sub2_sub2_1;
         aClass101_Sub2_9294 = class101_sub2_2;

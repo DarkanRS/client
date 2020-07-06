@@ -4,12 +4,12 @@ import jaggl.OpenGL;
 
 public class FontRenderer_Sub5 extends FontRenderer {
 
-    OpenGLHardwareRenderer aGraphicalRenderer_Sub1_9323;
+    OpenGLRenderer aGraphicalRenderer_Sub1_9323;
     Class137_Sub1_Sub1 aClass137_Sub1_Sub1_9325;
     boolean aBool9326;
     Class138 aClass138_9324;
 
-    FontRenderer_Sub5(OpenGLHardwareRenderer class505_sub1_1, FontMetrics fontmetrics_2, SpriteDefinitions[] arr_3, boolean bool_4) {
+    FontRenderer_Sub5(OpenGLRenderer class505_sub1_1, FontMetrics fontmetrics_2, SpriteDefinitions[] arr_3, boolean bool_4) {
         super(class505_sub1_1, fontmetrics_2);
         aGraphicalRenderer_Sub1_9323 = class505_sub1_1;
         int i_5 = 0;

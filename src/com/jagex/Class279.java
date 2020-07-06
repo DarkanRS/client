@@ -39,7 +39,7 @@ public class Class279 {
                 if (Class182.HARDWARE_RENDERER == null) {
                     Canvas canvas_3 = new Canvas();
                     canvas_3.setSize(36, 32);
-                    Class182.HARDWARE_RENDERER = Class320.createRenderer(0, canvas_3, IndexLoaders.IMAGE_LOADER, IndexLoaders.SHADER_INDEX, 0);
+                    Class182.HARDWARE_RENDERER = AbstractRenderer.createRenderer(0, canvas_3, IndexLoaders.IMAGE_LOADER, IndexLoaders.SHADER_INDEX, 0);
                     Class182.aFontRenderer_2259 = Class182.HARDWARE_RENDERER.createFont(Class94.getFontMetrics(IndexLoaders.FONT_METRICS_INDEX, Class16.p11FullIndex), SpriteDefinitions.method1514(IndexLoaders.SPRITES_INDEX, Class16.p11FullIndex), true);
                 }
                 for (item_2 = (Item) Class182.ITEMS.head(); item_2 != null; item_2 = (Item) Class182.ITEMS.next()) {

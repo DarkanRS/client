@@ -4,18 +4,18 @@ import jaggl.OpenGL;
 
 public class OpenGLShader extends Shader {
 
-    AbstractRenderer_Sub2_Sub1 aGraphicalRenderer_Sub2_Sub1_9264;
+    JAGGLRenderer aGraphicalRenderer_Sub2_Sub1_9264;
     Class115_Sub2 aClass115_Sub2_9265;
     int handle;
 
-    OpenGLShader(AbstractRenderer_Sub2_Sub1 class505_sub2_sub1_1, ShaderLoader class114_2) {
+    OpenGLShader(JAGGLRenderer class505_sub2_sub1_1, ShaderLoader class114_2) {
         super(class505_sub2_sub1_1, class114_2);
         aGraphicalRenderer_Sub2_Sub1_9264 = class505_sub2_sub1_1;
     }
 
     @Override
-    Class115 method1743(AbstractRenderer_Sub2 class505_sub2_1, Class99 class99_2) {
-        return new Class115_Sub2((AbstractRenderer_Sub2_Sub1) class505_sub2_1, this, class99_2);
+    Class115 method1743(HardwareRenderer class505_sub2_1, Class99 class99_2) {
+        return new Class115_Sub2((JAGGLRenderer) class505_sub2_1, this, class99_2);
     }
 
     @Override
@@ -115,8 +115,8 @@ public class OpenGLShader extends Shader {
     }
 
     @Override
-    Class115 method1697(AbstractRenderer_Sub2 class505_sub2_1, Class99 class99_2) {
-        return new Class115_Sub2((AbstractRenderer_Sub2_Sub1) class505_sub2_1, this, class99_2);
+    Class115 method1697(HardwareRenderer class505_sub2_1, Class99 class99_2) {
+        return new Class115_Sub2((JAGGLRenderer) class505_sub2_1, this, class99_2);
     }
 
     @Override
@@ -152,8 +152,8 @@ public class OpenGLShader extends Shader {
     }
 
     @Override
-    Class115 method1683(AbstractRenderer_Sub2 class505_sub2_1, Class99 class99_2) {
-        return new Class115_Sub2((AbstractRenderer_Sub2_Sub1) class505_sub2_1, this, class99_2);
+    Class115 method1683(HardwareRenderer class505_sub2_1, Class99 class99_2) {
+        return new Class115_Sub2((JAGGLRenderer) class505_sub2_1, this, class99_2);
     }
 
     @Override
@@ -224,8 +224,8 @@ public class OpenGLShader extends Shader {
     }
 
     @Override
-    Class115 method1665(AbstractRenderer_Sub2 class505_sub2_1, Class99 class99_2) {
-        return new Class115_Sub2((AbstractRenderer_Sub2_Sub1) class505_sub2_1, this, class99_2);
+    Class115 method1665(HardwareRenderer class505_sub2_1, Class99 class99_2) {
+        return new Class115_Sub2((JAGGLRenderer) class505_sub2_1, this, class99_2);
     }
 
 }

@@ -4,9 +4,9 @@ import java.io.IOException;
 
 public abstract class Connection {
 
-    public static void runIComponentScripts(Component[] arr_0) {
+    public static void runIComponentScripts(IComponentDefinitions[] arr_0) {
         for (int i_2 = 0; i_2 < arr_0.length; i_2++) {
-            Component icomponentdefinitions_3 = arr_0[i_2];
+            IComponentDefinitions icomponentdefinitions_3 = arr_0[i_2];
             if (icomponentdefinitions_3.onLoadScript != null) {
                 HookRequest hookrequest_4 = new HookRequest();
                 hookrequest_4.source = icomponentdefinitions_3;

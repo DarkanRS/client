@@ -8,9 +8,9 @@ import java.nio.ByteBuffer;
 public class Class70_Sub1 extends Class70 {
 
     long aLong9179;
-    AbstractRenderer_Sub2_Sub2 aGraphicalRenderer_Sub2_Sub2_9178;
+    DirectXRenderer aGraphicalRenderer_Sub2_Sub2_9178;
 
-    Class70_Sub1(AbstractRenderer_Sub2_Sub2 class505_sub2_sub2_1, Class72[] arr_2) {
+    Class70_Sub1(DirectXRenderer class505_sub2_sub2_1, Class72[] arr_2) {
         super(arr_2);
         aGraphicalRenderer_Sub2_Sub2_9178 = class505_sub2_sub2_1;
         byte b_3 = 0;

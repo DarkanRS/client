@@ -2,9 +2,9 @@ package com.jagex;
 
 public abstract class Class41 {
 
-    protected AbstractRenderer_Sub2 aGraphicalRenderer_Sub2_413;
+    protected HardwareRenderer aGraphicalRenderer_Sub2_413;
 
-    Class41(AbstractRenderer_Sub2 class505_sub2_1) {
+    Class41(HardwareRenderer class505_sub2_1) {
         aGraphicalRenderer_Sub2_413 = class505_sub2_1;
     }
 

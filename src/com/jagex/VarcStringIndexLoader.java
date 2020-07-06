@@ -2,7 +2,7 @@ package com.jagex;
 
 public class VarcStringIndexLoader {
 
-    static Component aClass118_4825;
+    static IComponentDefinitions aClass118_4825;
     public int size;
     Index configIndex;
 

@@ -28,7 +28,7 @@ public class HostNameIdentifier implements Runnable {
         }
     }
 
-    public static void method483(Interface interface_0, Component icomponentdefinitions_1, boolean bool_2) {
+    public static void method483(Interface interface_0, IComponentDefinitions icomponentdefinitions_1, boolean bool_2) {
         Class480.method8044(interface_0.components, icomponentdefinitions_1, bool_2);
     }
 

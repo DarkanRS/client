@@ -25,7 +25,7 @@ public class Class430 {
     }
 
     static int method7220(int i_0, int i_1, int i_2, int i_3) {
-        int i_5 = 65536 - Class382.COSINE[i_2 * 8192 / i_3] >> 1;
+        int i_5 = 65536 - Trig.COSINE[i_2 * 8192 / i_3] >> 1;
         return ((65536 - i_5) * i_0 >> 16) + (i_5 * i_1 >> 16);
     }
 

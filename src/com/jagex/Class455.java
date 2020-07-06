@@ -4,7 +4,7 @@ public abstract class Class455 {
 
     public static short[] aShortArray5452;
 
-    static void iComponentOnIComponent(Component icomponentdefinitions_0) {
+    static void iComponentOnIComponent(IComponentDefinitions icomponentdefinitions_0) {
         if (client.aBool7344) {
             ParamDefinitions attributedefault_4 = CutsceneAction_Sub12.USE_INTERFACE_ID != -1 ? IndexLoaders.PARAM_LOADER.getParam(CutsceneAction_Sub12.USE_INTERFACE_ID) : null;
             if (client.getIComponentSettings(icomponentdefinitions_0).bit22Enabled() && (Class506.USE_OPTIONS_FLAGS & 0x20) != 0 && (attributedefault_4 == null || icomponentdefinitions_0.method1997(CutsceneAction_Sub12.USE_INTERFACE_ID, attributedefault_4.defaultInt) != attributedefault_4.defaultInt)) {
@@ -12,7 +12,7 @@ public abstract class Class455 {
             }
         }
         for (int i_7 = 9; i_7 >= 5; --i_7) {
-            String string_8 = ObjectIndexLoader.method7171(icomponentdefinitions_0, i_7);
+            String string_8 = ItemIndexLoader.method7171(icomponentdefinitions_0, i_7);
             if (string_8 != null) {
                 PlayerModel.method4032(string_8, icomponentdefinitions_0.useOnName, Class520.method11163(icomponentdefinitions_0, i_7), 1007, icomponentdefinitions_0.containerItemId, i_7 + 1, icomponentdefinitions_0.slotId, icomponentdefinitions_0.idHash, true, false, icomponentdefinitions_0.slotId << 0 | icomponentdefinitions_0.idHash, false);
             }
@@ -22,7 +22,7 @@ public abstract class Class455 {
             PlayerModel.method4032(string_9, icomponentdefinitions_0.useOnName, icomponentdefinitions_0.anInt1378, 25, icomponentdefinitions_0.containerItemId, 0L, icomponentdefinitions_0.slotId, icomponentdefinitions_0.idHash, true, false, icomponentdefinitions_0.slotId << 0 | icomponentdefinitions_0.idHash, false);
         }
         for (int i_5 = 4; i_5 >= 0; --i_5) {
-            String string_6 = ObjectIndexLoader.method7171(icomponentdefinitions_0, i_5);
+            String string_6 = ItemIndexLoader.method7171(icomponentdefinitions_0, i_5);
             if (string_6 != null) {
                 PlayerModel.method4032(string_6, icomponentdefinitions_0.useOnName, Class520.method11163(icomponentdefinitions_0, i_5), 57, icomponentdefinitions_0.containerItemId, i_5 + 1, icomponentdefinitions_0.slotId, icomponentdefinitions_0.idHash, true, false, icomponentdefinitions_0.slotId << 0 | icomponentdefinitions_0.idHash, false);
             }

@@ -1,6 +1,6 @@
 package com.jagex;
 
-public class ObjectIndexLoader implements IndexLoader {
+public class ItemIndexLoader implements IndexLoader {
 
     public Class212 aClass212_5114 = new Class212();
     public int maxItemsCount;
@@ -17,7 +17,7 @@ public class ObjectIndexLoader implements IndexLoader {
     String[] defaultGroundOptions;
     String[] defaultInventoryOptions;
 
-    public ObjectIndexLoader(Game game_1, Language xlanguage_2, ParamIndexLoader itemdefaultsloader_4, Index index_5, Index index_6) {
+    public ItemIndexLoader(Game game_1, Language xlanguage_2, ParamIndexLoader itemdefaultsloader_4, Index index_5, Index index_6) {
         game = game_1;
         language = xlanguage_2;
         membersOnly = true;
@@ -52,7 +52,7 @@ public class ObjectIndexLoader implements IndexLoader {
 
     }
 
-    static String method7171(Component icomponentdefinitions_0, int i_1) {
+    static String method7171(IComponentDefinitions icomponentdefinitions_0, int i_1) {
         return !client.getIComponentSettings(icomponentdefinitions_0).clickOptionEnabled(i_1) && icomponentdefinitions_0.params == null ? null : (icomponentdefinitions_0.optionNames != null && icomponentdefinitions_0.optionNames.length > i_1 && icomponentdefinitions_0.optionNames[i_1] != null && !icomponentdefinitions_0.optionNames[i_1].trim().isEmpty() ? icomponentdefinitions_0.optionNames[i_1] : (client.aBool7168 ? "Hidden-" + i_1 : null));
     }
 

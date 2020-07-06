@@ -166,14 +166,14 @@ public class GroundItem extends GraphNode_Sub1_Sub2 {
             if (i_11 != 0) {
                 i_29 = (int) (Math.atan2(i_25 - i_26, i_11) * 2607.5945876176133D) & 0x3fff;
                 if (i_29 != 0) {
-                    matrix44var_6.rotation(1.0F, 0.0F, 0.0F, Class382.method6508(i_29));
+                    matrix44var_6.rotation(1.0F, 0.0F, 0.0F, Trig.degToRad(i_29));
                 }
             }
 
             if (i_11 != 0) {
                 i_29 = (int) (Math.atan2(i_28 - i_27, i_11) * 2607.5945876176133D) & 0x3fff;
                 if (i_29 != 0) {
-                    matrix44var_6.rotation(0.0F, 0.0F, 1.0F, Class382.method6508(-i_29));
+                    matrix44var_6.rotation(0.0F, 0.0F, 1.0F, Trig.degToRad(-i_29));
                 }
             }
 
@@ -312,14 +312,14 @@ public class GroundItem extends GraphNode_Sub1_Sub2 {
             if (i_11 != 0) {
                 i_29 = (int) (Math.atan2(i_25 - i_26, i_11) * 2607.5945876176133D) & 0x3fff;
                 if (i_29 != 0) {
-                    matrix44var_6.rotation(1.0F, 0.0F, 0.0F, Class382.method6508(i_29));
+                    matrix44var_6.rotation(1.0F, 0.0F, 0.0F, Trig.degToRad(i_29));
                 }
             }
 
             if (i_11 != 0) {
                 i_29 = (int) (Math.atan2(i_28 - i_27, i_11) * 2607.5945876176133D) & 0x3fff;
                 if (i_29 != 0) {
-                    matrix44var_6.rotation(0.0F, 0.0F, 1.0F, Class382.method6508(-i_29));
+                    matrix44var_6.rotation(0.0F, 0.0F, 1.0F, Trig.degToRad(-i_29));
                 }
             }
 
@@ -421,14 +421,14 @@ public class GroundItem extends GraphNode_Sub1_Sub2 {
             if (i_11 != 0) {
                 i_29 = (int) (Math.atan2(i_25 - i_26, i_11) * 2607.5945876176133D) & 0x3fff;
                 if (i_29 != 0) {
-                    matrix44var_6.rotation(1.0F, 0.0F, 0.0F, Class382.method6508(i_29));
+                    matrix44var_6.rotation(1.0F, 0.0F, 0.0F, Trig.degToRad(i_29));
                 }
             }
 
             if (i_11 != 0) {
                 i_29 = (int) (Math.atan2(i_28 - i_27, i_11) * 2607.5945876176133D) & 0x3fff;
                 if (i_29 != 0) {
-                    matrix44var_6.rotation(0.0F, 0.0F, 1.0F, Class382.method6508(-i_29));
+                    matrix44var_6.rotation(0.0F, 0.0F, 1.0F, Trig.degToRad(-i_29));
                 }
             }
 
@@ -573,14 +573,14 @@ public class GroundItem extends GraphNode_Sub1_Sub2 {
             if (i_12 != 0) {
                 i_30 = (int) (Math.atan2(i_26 - i_27, i_12) * 2607.5945876176133D) & 0x3fff;
                 if (i_30 != 0) {
-                    matrix44var_7.rotation(1.0F, 0.0F, 0.0F, Class382.method6508(i_30));
+                    matrix44var_7.rotation(1.0F, 0.0F, 0.0F, Trig.degToRad(i_30));
                 }
             }
 
             if (i_12 != 0) {
                 i_30 = (int) (Math.atan2(i_29 - i_28, i_12) * 2607.5945876176133D) & 0x3fff;
                 if (i_30 != 0) {
-                    matrix44var_7.rotation(0.0F, 0.0F, 1.0F, Class382.method6508(-i_30));
+                    matrix44var_7.rotation(0.0F, 0.0F, 1.0F, Trig.degToRad(-i_30));
                 }
             }
 

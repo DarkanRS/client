@@ -2,7 +2,7 @@ package com.jagex;
 
 public abstract class Class109 {
 
-    public static void redrawComponent(Component icomponentdefinitions_0) {
+    public static void redrawComponent(IComponentDefinitions icomponentdefinitions_0) {
         if (icomponentdefinitions_0.anInt1450 == client.anInt7408) {
             client.aBoolArray7443[icomponentdefinitions_0.anInt1449] = true;
         }

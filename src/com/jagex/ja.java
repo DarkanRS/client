@@ -2011,4 +2011,8 @@ public class ja extends AbstractRenderer implements Interface40 {
 
     native void ox(int var1, int var2, int var3, int var4);
 
+	public static AbstractRenderer create(Canvas canvas_0, ImageLoader interface22_1, int i_2, int i_3) {
+	    return new ja(canvas_0, interface22_1, i_2, i_3);
+	}
+
 }

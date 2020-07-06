@@ -85,7 +85,7 @@ public class Class119 {
 
     }
 
-    static void method2076(Component icomponentdefinitions_0, Component icomponentdefinitions_1) {
+    static void method2076(IComponentDefinitions icomponentdefinitions_0, IComponentDefinitions icomponentdefinitions_1) {
         TCPPacket tcpmessage_3 = Class271.createPacket(ClientProt.IF_DRAG_ONTO_IF, client.GAME_CONNECTION_CONTEXT.isaac);
         tcpmessage_3.buffer.writeShortLE128(icomponentdefinitions_1.slotId);
         tcpmessage_3.buffer.writeShortLE(icomponentdefinitions_0.slotId);

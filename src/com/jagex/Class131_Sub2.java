@@ -2,7 +2,7 @@ package com.jagex;
 
 public class Class131_Sub2 extends Class131 implements Interface15 {
 
-    Class131_Sub2(OpenGLHardwareRenderer class505_sub1_1, byte[] bytes_3, int i_4) {
+    Class131_Sub2(OpenGLRenderer class505_sub1_1, byte[] bytes_3, int i_4) {
         super(class505_sub1_1, bytes_3, i_4);
     }
 

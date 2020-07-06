@@ -126,7 +126,7 @@ public class PlayerModel {
         }
     }
 
-    public void setItem(int index, int itemId, ObjectIndexLoader loader) {
+    public void setItem(int index, int itemId, ItemIndexLoader loader) {
         if (itemId == -1) {
             appearance[index] = 0;
         } else if (loader.getItemDefinitions(itemId) != null) {
@@ -135,9 +135,9 @@ public class PlayerModel {
         }
     }
 
-    public MeshRasterizer getBodyModel(AbstractRenderer Renderer, int i_2, RenderAnimIndexLoader renderanimindexloader_3, IdentiKitIndexLoader class31_4, NPCIndexLoader loader, ObjectIndexLoader itemindexloader_6, VarProvider interface42_8, Animation animation_9, Animation animation_10, Animation[] arr_11, int[] ints_12, int i_13, EquipmentDefaults defaults6loader_15) {
+    public MeshRasterizer getBodyModel(AbstractRenderer renderer, int i_2, RenderAnimIndexLoader renderanimindexloader_3, IdentiKitIndexLoader class31_4, NPCIndexLoader loader, ItemIndexLoader itemindexloader_6, VarProvider interface42_8, Animation animation_9, Animation animation_10, Animation[] arr_11, int[] ints_12, int i_13, EquipmentDefaults defaults6loader_15) {
         if (mimickingNpcId != -1) {
-            return loader.getNPCType(mimickingNpcId).method6875(Renderer, i_2, renderanimindexloader_3, interface42_8, animation_9, animation_10, arr_11, ints_12, i_13, null);
+            return loader.getNPCType(mimickingNpcId).method6875(renderer, i_2, renderanimindexloader_3, interface42_8, animation_9, animation_10, arr_11, ints_12, i_13, null);
         } else {
             int i_17 = i_2;
             long long_18 = aLong2926;
@@ -222,9 +222,9 @@ public class PlayerModel {
             }
             int i_30;
             int i_31;
-            if (meshrasterizer_39 == null || Renderer.method8452(meshrasterizer_39.m(), i_17) != 0) {
+            if (meshrasterizer_39 == null || renderer.method8452(meshrasterizer_39.m(), i_17) != 0) {
                 if (meshrasterizer_39 != null) {
-                    i_17 = Renderer.method8546(i_17, meshrasterizer_39.m());
+                    i_17 = renderer.method8546(i_17, meshrasterizer_39.m());
                 }
                 boolean bool_29 = false;
                 i_30 = 0;
@@ -238,7 +238,7 @@ public class PlayerModel {
                                     meshrasterizer_39 = (MeshRasterizer) aClass229_2920.get(aLong2927);
                                 }
                             }
-                            if (meshrasterizer_39 == null || Renderer.method8452(meshrasterizer_39.m(), i_17) != 0) {
+                            if (meshrasterizer_39 == null || renderer.method8452(meshrasterizer_39.m(), i_17) != 0) {
                                 return null;
                             }
                         } else {
@@ -293,7 +293,7 @@ public class PlayerModel {
                             }
                             RSMesh rsmesh_44 = new RSMesh(arr_56, arr_56.length);
                             int i_28 = i_17 | 0x4000;
-                            meshrasterizer_39 = Renderer.createMeshRasterizer(rsmesh_44, i_28, Class149.anInt1744, 64, 850);
+                            meshrasterizer_39 = renderer.createMeshRasterizer(rsmesh_44, i_28, Class149.anInt1744, 64, 850);
                             for (i_41 = 0; i_41 < 10; i_41++) {
                                 for (i_54 = 0; i_54 < AbstractQueue_Sub1.SKIN_COLORS[i_41].length; i_54++) {
                                     if (colors[i_41] < Class366.SKIN_COLORS[i_41][i_54].length) {
@@ -376,7 +376,7 @@ public class PlayerModel {
                             i_31 = ints_12[i_30] - i_13;
                             i_31 &= 0x3fff;
                             Matrix44Var matrix44var_53 = new Matrix44Var();
-                            matrix44var_53.method5217(0.0F, 1.0F, 0.0F, Class382.method6508(i_31));
+                            matrix44var_53.method5217(0.0F, 1.0F, 0.0F, Trig.degToRad(i_31));
                             meshrasterizer_45.method11298(matrix44var_53, 1 << i_30, false);
                         }
                     }
@@ -457,7 +457,7 @@ public class PlayerModel {
         refresh();
     }
 
-    public MeshRasterizer method4021(AbstractRenderer graphicalrenderer_1, int i_2, IdentiKitIndexLoader class31_3, NPCIndexLoader npcindexloader_4, ObjectIndexLoader itemindexloader_5, VarProvider interface42_7, Animation animation_8) {
+    public MeshRasterizer method4021(AbstractRenderer graphicalrenderer_1, int i_2, IdentiKitIndexLoader class31_3, NPCIndexLoader npcindexloader_4, ItemIndexLoader itemindexloader_5, VarProvider interface42_7, Animation animation_8) {
         if (mimickingNpcId != -1) {
             return npcindexloader_4.getNPCType(mimickingNpcId).renderHead(graphicalrenderer_1, i_2, interface42_7, animation_8, null);
         } else {

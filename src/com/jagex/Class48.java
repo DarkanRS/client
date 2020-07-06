@@ -23,9 +23,9 @@ public abstract class Class48 {
     public Matrix44 aClass384_465 = new Matrix44();
     protected float aFloat456;
     protected float aFloat453;
-    protected AbstractRenderer_Sub2 aGraphicalRenderer_Sub2_449;
+    protected HardwareRenderer aGraphicalRenderer_Sub2_449;
 
-    Class48(AbstractRenderer_Sub2 class505_sub2_1) {
+    Class48(HardwareRenderer class505_sub2_1) {
         aGraphicalRenderer_Sub2_449 = class505_sub2_1;
     }
 

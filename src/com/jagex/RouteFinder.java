@@ -421,7 +421,7 @@ public class RouteFinder {
                         }
                         break label381;
                     }
-                    RendererInfo class168_4 = Renderers.SOFTWARE_RENDERER.method8392();
+                    RendererInfo class168_4 = Renderers.CURRENT_RENDERER.method8392();
                     Class209.printConsoleMessage("Toolkit ID: " + Class393.preferences.currentToolkit.getValue());
                     Class209.printConsoleMessage("Vendor: " + class168_4.id);
                     Class209.printConsoleMessage("Name: " + class168_4.name);
@@ -478,7 +478,7 @@ public class RouteFinder {
                 int i_10;
                 if (string_0.startsWith("dumpitems")) {
                     for (i_10 = 0; i_10 < 24806; i_10++) {
-                        int[] ints_23 = IndexLoaders.ITEM_LOADER.getItemDefinitions(i_10).getSprite(Class182.HARDWARE_RENDERER, Renderers.SOFTWARE_RENDERER, 1, 1, -13623264, false, 0, Renderers.FONT_RENDERER, VertexNormal.MY_PLAYER.model);
+                        int[] ints_23 = IndexLoaders.ITEM_LOADER.getItemDefinitions(i_10).getSprite(Class182.HARDWARE_RENDERER, Renderers.CURRENT_RENDERER, 1, 1, -13623264, false, 0, Renderers.FONT_RENDERER, VertexNormal.MY_PLAYER.model);
                         try {
                             i_6 = (int) Math.sqrt(ints_23.length) - 1;
                             BufferedImage bufferedimage_25 = new BufferedImage(36, 32, 2);

@@ -57,7 +57,7 @@ public class IndexLoaders {
     public static MapAreaIndexLoader WORLD_MAP_LOADER;
     public static MapSpriteIndexLoader MAP_SPRITE_LOADER;
     public static NPCIndexLoader NPC_INDEX_LOADER;
-    public static ObjectIndexLoader ITEM_LOADER;
+    public static ItemIndexLoader ITEM_LOADER;
     public static QuestIndexLoader QUEST_LOADER;
     public static AnimationIndexLoader ANIMATION_LOADER;
     public static SkyboxIndexLoader SKYBOX_LOADER;
@@ -281,7 +281,7 @@ public class IndexLoaders {
             WORLD_MAP_LOADER = new MapAreaIndexLoader(CONFIG_INDEX, SPRITES_INDEX);
             MAP_SPRITE_LOADER = new MapSpriteIndexLoader(CONFIG_INDEX, SPRITES_INDEX);
             NPC_INDEX_LOADER = new NPCIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, NPC_INDEX, MESH_INDEX);
-            ITEM_LOADER = new ObjectIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, PARAM_LOADER, ITEM_INDEX, MESH_INDEX);
+            ITEM_LOADER = new ItemIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, PARAM_LOADER, ITEM_INDEX, MESH_INDEX);
             QUEST_LOADER = new QuestIndexLoader(CONFIG_INDEX);
             ANIMATION_LOADER = new AnimationIndexLoader(ANIMATION_INDEX, ANIMATION_FRAME_SET_INDEX, ANIMATION_FRAME_BASE_INDEX);
             SKYBOX_LOADER = new SkyboxIndexLoader(CONFIG_INDEX);
@@ -354,7 +354,7 @@ public class IndexLoaders {
             bool_10 = true;
 
             for (i_2 = 0; i_2 < CustomCursorsPreference.INTERFACES[QuickchatFiller.ENTITY_DEFAULTS.loginWindow].components.length; i_2++) {
-                Component icomponentdefinitions_8 = CustomCursorsPreference.INTERFACES[QuickchatFiller.ENTITY_DEFAULTS.loginWindow].components[i_2];
+                IComponentDefinitions icomponentdefinitions_8 = CustomCursorsPreference.INTERFACES[QuickchatFiller.ENTITY_DEFAULTS.loginWindow].components[i_2];
                 if (icomponentdefinitions_8.type == ComponentType.SPRITE && icomponentdefinitions_8.spriteId != -1 && !SPRITES_INDEX.load(icomponentdefinitions_8.spriteId, 0)) {
                     bool_10 = false;
                 }
@@ -403,7 +403,7 @@ public class IndexLoaders {
             UID192.method7373(Class393.preferences.screenSize.method12687(), -1, -1, false);
             Class487.aClass378_5752.method6403(client.anInterface35_7206);
             Node_Sub11_Sub3.method15476();
-            Class188.method3139(Renderers.SOFTWARE_RENDERER, SPRITES_INDEX);
+            Class188.method3139(Renderers.CURRENT_RENDERER, SPRITES_INDEX);
             Class122.method2109(Class182.aNativeSpriteArray2261);
         }
 

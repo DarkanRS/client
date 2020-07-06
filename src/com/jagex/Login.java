@@ -447,7 +447,7 @@ public class Login {
                                 Class448.CONNECTION_INFO.anInt5434 = Class448.CONNECTION_INFO.worldId;
                                 Class448.CONNECTION_INFO.anInt5437 = Class448.CONNECTION_INFO.worldId;
                             }
-                            if (HDWaterTile.SERVER_ENVIRONMENT != ServerEnvironment.LOCAL && (HDWaterTile.SERVER_ENVIRONMENT != ServerEnvironment.WTQA || client.PLAYER_RIGHTS < 2) && Class159.GAME_CONNECTION_INFO.equals(Class448.aClass450_5420)) {
+                            if (HDWaterTile.SERVER_ENVIRONMENT != ServerEnvironment.LOCAL && (HDWaterTile.SERVER_ENVIRONMENT != ServerEnvironment.WTQA || client.PLAYER_RIGHTS < 2) && Class159.GAME_CONNECTION_INFO.equals(Class448.JS5_CONNECTION_INFO)) {
                                 Class274.method4884();
                             }
                         }

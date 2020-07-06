@@ -55,7 +55,7 @@ public class CutsceneAction_Sub23 extends CutsceneAction {
         }
     }
 
-    public static Component method14682(Interface interface_0, Component icomponentdefinitions_1) {
+    public static IComponentDefinitions method14682(Interface interface_0, IComponentDefinitions icomponentdefinitions_1) {
         if (icomponentdefinitions_1.parent != -1) {
             return interface_0.getComponent(icomponentdefinitions_1.parent);
         } else {
@@ -65,7 +65,7 @@ public class CutsceneAction_Sub23 extends CutsceneAction {
 
                 for (SubInterface class282_sub44_5 = (SubInterface) class451_4.first(); class282_sub44_5 != null; class282_sub44_5 = (SubInterface) class451_4.next()) {
                     if (i_3 == class282_sub44_5.interfaceId) {
-                        return Component.getDefs((int) class282_sub44_5.pointer);
+                        return IComponentDefinitions.getDefs((int) class282_sub44_5.pointer);
                     }
                 }
             }

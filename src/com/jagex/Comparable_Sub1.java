@@ -7,7 +7,7 @@ import java.io.RandomAccessFile;
 public class Comparable_Sub1 implements Comparable {
 
     public static Class306 aClass306_3771;
-    static Component[] aClass118Array3772;
+    static IComponentDefinitions[] aClass118Array3772;
     long aLong3767;
     long aLong3769;
     Node_Sub39 anObject3768;

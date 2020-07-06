@@ -47,9 +47,9 @@ public class NewsItemFetcher implements Runnable {
     @Override
     public void run() {
         try {
-            int port = HDWaterTile.SERVER_ENVIRONMENT == ServerEnvironment.LIVE ? 80 : Class448.aClass450_5420.worldId + 7000;
+            int port = HDWaterTile.SERVER_ENVIRONMENT == ServerEnvironment.LIVE ? 80 : Class448.JS5_CONNECTION_INFO.worldId + 7000;
             //System.out.println("http://" + Class448.aClass450_5420.host + ":" + port + "/news.ws?game=" + client.CURRENT_GAME.id);
-            BufferedReader bufferedreader_2 = new BufferedReader(new InputStreamReader(new DataInputStream((new URL("http://" + Class448.aClass450_5420.host + ":" + port + "/news.ws?game=" + client.CURRENT_GAME.id)).openStream())));
+            BufferedReader bufferedreader_2 = new BufferedReader(new InputStreamReader(new DataInputStream((new URL("http://" + Class448.JS5_CONNECTION_INFO.host + ":" + port + "/news.ws?game=" + client.CURRENT_GAME.id)).openStream())));
             String string_3 = bufferedreader_2.readLine();
             ArrayList<String> arraylist_4;
             for (arraylist_4 = new ArrayList<>(); string_3 != null; string_3 = bufferedreader_2.readLine()) {

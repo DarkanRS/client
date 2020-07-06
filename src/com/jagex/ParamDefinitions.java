@@ -9,7 +9,7 @@ public class ParamDefinitions {
     char typeChar;
 
     static void method7323() {
-        if (Renderers.SOFTWARE_RENDERER != null) {
+        if (Renderers.CURRENT_RENDERER != null) {
             IndexLoaders.MAP_REGION_DECODER.method4444();
             QuickchatFiller.method1139();
             Class76.method1361();
@@ -43,8 +43,8 @@ public class ParamDefinitions {
                 }
             }
             client.aClass465_7334.method7749();
-            Renderers.SOFTWARE_RENDERER.method8396();
-            Renderers.SOFTWARE_RENDERER = null;
+            Renderers.CURRENT_RENDERER.method8396();
+            Renderers.CURRENT_RENDERER = null;
         }
     }
 

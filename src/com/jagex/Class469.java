@@ -15,13 +15,13 @@ public class Class469 implements Iterator {
         aCacheableNode_5582 = null;
     }
 
-    static void method7805(AbstractRenderer graphicalrenderer_0, int i_1, int i_2, Component icomponentdefinitions_3, Class455 class455_4, int i_5, int i_6) {
+    static void method7805(AbstractRenderer graphicalrenderer_0, int i_1, int i_2, IComponentDefinitions icomponentdefinitions_3, Class455 class455_4, int i_5, int i_6) {
         for (int i_8 = 0; i_8 < client.NPC_UPDATE_INDEX; i_8++) {
             ObjectNode class282_sub47_9 = (ObjectNode) client.NPC_MAP.get(client.NPC_UPDATE_INDICES[i_8]);
             if (class282_sub47_9 != null) {
                 NPCEntity npc_10 = (NPCEntity) class282_sub47_9.anObject8068;
                 if (npc_10.hasDefinition() && npc_10.plane == VertexNormal.MY_PLAYER.plane) {
-                    NPCType npcdefinitions_11 = npc_10.definitions;
+                    NPCDefinitions npcdefinitions_11 = npc_10.definitions;
                     if (npcdefinitions_11 != null && npcdefinitions_11.transformTo != null) {
                         npcdefinitions_11 = npcdefinitions_11.getMultiNPC(Class158_Sub1.PLAYER_VAR_PROVIDER);
                     }

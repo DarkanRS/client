@@ -10,9 +10,9 @@ public class Class158_Sub1_Sub3_Sub1 extends Class158_Sub1_Sub3 {
     int anInt10436;
     int anInt10439;
     Interface26[] anInterface26Array10440 = new Interface26[4];
-    AbstractRenderer_Sub2_Sub2 aGraphicalRenderer_Sub2_Sub2_10434;
+    DirectXRenderer aGraphicalRenderer_Sub2_Sub2_10434;
 
-    Class158_Sub1_Sub3_Sub1(AbstractRenderer_Sub2_Sub2 class505_sub2_sub2_1) {
+    Class158_Sub1_Sub3_Sub1(DirectXRenderer class505_sub2_sub2_1) {
         super(class505_sub2_sub2_1);
         aGraphicalRenderer_Sub2_Sub2_10434 = class505_sub2_sub2_1;
     }

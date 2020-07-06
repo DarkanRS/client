@@ -73,7 +73,7 @@ public class GameState {
 	        }
 	
 	        if (method7742(state) || state == 10 || state == 17) {
-	            Renderers.SOFTWARE_RENDERER.method8420();
+	            Renderers.CURRENT_RENDERER.method8420();
 	        }
 	
 	        client.GAME_STATE = state;

@@ -9,7 +9,7 @@ public class Class48_Sub2 extends Class48 {
     int[][] anIntArrayArray9258 = new int[18][17];
     Shader aClass101_9257;
 
-    public Class48_Sub2(AbstractRenderer_Sub2 class505_sub2_1) throws Exception_Sub2 {
+    public Class48_Sub2(HardwareRenderer class505_sub2_1) throws Exception_Sub2 {
         super(class505_sub2_1);
         method14567();
     }

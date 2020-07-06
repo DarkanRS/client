@@ -4,7 +4,7 @@ public class Class124 {
 
     boolean aBool1556 = true;
     int anInt1563 = -1;
-    OpenGLHardwareRenderer aGraphicalRenderer_Sub1_1558;
+    OpenGLRenderer aGraphicalRenderer_Sub1_1558;
     Class130 aClass130_1559;
     int anInt1557;
     int anInt1561;
@@ -13,7 +13,7 @@ public class Class124 {
     Interface15 anInterface15_1565;
     Class131_Sub2 aClass131_Sub2_1567;
 
-    Class124(OpenGLHardwareRenderer class505_sub1_1, Class130 class130_2, OpenGLGround class390_sub2_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
+    Class124(OpenGLRenderer class505_sub1_1, Class130 class130_2, OpenGLGround class390_sub2_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
         aGraphicalRenderer_Sub1_1558 = class505_sub1_1;
         aClass130_1559 = class130_2;
         anInt1557 = i_7;

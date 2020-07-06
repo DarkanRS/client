@@ -123,7 +123,7 @@ public class CutsceneEntity {
         if (id < 0) {
             return true;
         } else {
-            NPCType npcdefinitions_2 = IndexLoaders.NPC_INDEX_LOADER.getNPCType(id);
+            NPCDefinitions npcdefinitions_2 = IndexLoaders.NPC_INDEX_LOADER.getNPCType(id);
             boolean bool_3 = npcdefinitions_2.method6881();
             if (animations == null) {
                 BASDefinitions renderanimdefs_4 = IndexLoaders.RENDER_ANIM_LOADER.getBASDefs(npcdefinitions_2.renderEmote);

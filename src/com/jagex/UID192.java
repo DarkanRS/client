@@ -34,7 +34,7 @@ public class UID192 {
             bool_31 = true;
         }
 
-        if (!Renderers.SOFTWARE_RENDERER.method8664()) {
+        if (!Renderers.CURRENT_RENDERER.method8664()) {
             bool_31 = true;
         }
 

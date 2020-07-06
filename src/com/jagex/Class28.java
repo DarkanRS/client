@@ -28,8 +28,8 @@ public class Class28 implements Interface2 {
         }
     }
 
-    static void method776(Component icomponentdefinitions_0) {
-        if (icomponentdefinitions_0.contentType == Component.CONTENT_TYPE_328) {
+    static void method776(IComponentDefinitions icomponentdefinitions_0) {
+        if (icomponentdefinitions_0.contentType == IComponentDefinitions.CONTENT_TYPE_328) {
             if (VertexNormal.MY_PLAYER.displayName == null) {
                 icomponentdefinitions_0.modelId = 0;
                 icomponentdefinitions_0.anInt1339 = 0;
@@ -70,12 +70,12 @@ public class Class28 implements Interface2 {
             int i_3 = aClass365_349.aClass356_4225.method6221(aClass365_349.anInt4227 * 1984931449 * -547232823, 150480619 * client.GAME_WIDTH * 1426041429 * 765 * -1115795005) + aClass365_349.anInt4221 * 368783541 * 1878539677;
             int i_4 = aClass365_349.aClass353_4226.method6198(1416311209 * aClass365_349.anInt4228 * -1733557607, 1176039023 * client.GAME_HEIGHT * -994133479 * 553 * -645779313) + aClass365_349.anInt4223 * 843965525 * -1081607939;
             if (aClass365_349.aBool4230) {
-                Renderers.SOFTWARE_RENDERER.method8430(i_3, i_4, -547232823 * aClass365_349.anInt4227 * 1984931449, aClass365_349.anInt4228 * -1733557607 * 1416311209, aClass365_349.anInt4220 * -965307251 * -1214034363, 0);
+                Renderers.CURRENT_RENDERER.method8430(i_3, i_4, -547232823 * aClass365_349.anInt4227 * 1984931449, aClass365_349.anInt4228 * -1733557607 * 1416311209, aClass365_349.anInt4220 * -965307251 * -1214034363, 0);
             }
             i_4 += method770(Class285.aFontRenderer_3394, class105_2.aString1067, i_3, i_4) * 12;
             i_4 += 8;
             if (aClass365_349.aBool4230) {
-                Renderers.SOFTWARE_RENDERER.method8433(i_3, i_4, aClass365_349.anInt4227 * 1984931449 * -547232823 + i_3 - 1, i_4, -1214034363 * aClass365_349.anInt4220 * -965307251, 0);
+                Renderers.CURRENT_RENDERER.method8433(i_3, i_4, aClass365_349.anInt4227 * 1984931449 * -547232823 + i_3 - 1, i_4, -1214034363 * aClass365_349.anInt4220 * -965307251, 0);
             }
             ++i_4;
             i_4 += method770(Class285.aFontRenderer_3394, class105_2.aString1066, i_3, i_4) * 12;
@@ -91,12 +91,12 @@ public class Class28 implements Interface2 {
             int i_4 = aClass365_349.aClass356_4225.method6221(aClass365_349.anInt4227, client.GAME_WIDTH) + aClass365_349.anInt4221;
             int i_5 = aClass365_349.aClass353_4226.method6198(aClass365_349.anInt4228, client.GAME_HEIGHT) + aClass365_349.anInt4223;
             if (aClass365_349.aBool4230) {
-                Renderers.SOFTWARE_RENDERER.method8430(i_4, i_5, aClass365_349.anInt4227, aClass365_349.anInt4228, aClass365_349.anInt4220, 0);
+                Renderers.CURRENT_RENDERER.method8430(i_4, i_5, aClass365_349.anInt4227, aClass365_349.anInt4228, aClass365_349.anInt4220, 0);
             }
             i_5 += method770(Class285.aFontRenderer_3394, class105_3.aString1067, i_4, i_5) * 12;
             i_5 += 8;
             if (aClass365_349.aBool4230) {
-                Renderers.SOFTWARE_RENDERER.method8433(i_4, i_5, aClass365_349.anInt4227 + i_4 - 1, i_5, aClass365_349.anInt4220, 0);
+                Renderers.CURRENT_RENDERER.method8433(i_4, i_5, aClass365_349.anInt4227 + i_4 - 1, i_5, aClass365_349.anInt4220, 0);
             }
             ++i_5;
             i_5 += method770(Class285.aFontRenderer_3394, class105_3.aString1066, i_4, i_5) * 12;
@@ -112,12 +112,12 @@ public class Class28 implements Interface2 {
             int i_3 = aClass365_349.aClass356_4225.method6221(aClass365_349.anInt4227 * 1984931449 * -547232823, 150480619 * client.GAME_WIDTH * 1426041429 * 765 * -1115795005) + aClass365_349.anInt4221 * 368783541 * 1878539677;
             int i_4 = aClass365_349.aClass353_4226.method6198(1416311209 * aClass365_349.anInt4228 * -1733557607, 1176039023 * client.GAME_HEIGHT * -994133479 * 553 * -645779313) + aClass365_349.anInt4223 * 843965525 * -1081607939;
             if (aClass365_349.aBool4230) {
-                Renderers.SOFTWARE_RENDERER.method8430(i_3, i_4, -547232823 * aClass365_349.anInt4227 * 1984931449, aClass365_349.anInt4228 * -1733557607 * 1416311209, aClass365_349.anInt4220 * -965307251 * -1214034363, 0);
+                Renderers.CURRENT_RENDERER.method8430(i_3, i_4, -547232823 * aClass365_349.anInt4227 * 1984931449, aClass365_349.anInt4228 * -1733557607 * 1416311209, aClass365_349.anInt4220 * -965307251 * -1214034363, 0);
             }
             i_4 += method770(Class285.aFontRenderer_3394, class105_2.aString1067, i_3, i_4) * 12;
             i_4 += 8;
             if (aClass365_349.aBool4230) {
-                Renderers.SOFTWARE_RENDERER.method8433(i_3, i_4, aClass365_349.anInt4227 * 1984931449 * -547232823 + i_3 - 1, i_4, -1214034363 * aClass365_349.anInt4220 * -965307251, 0);
+                Renderers.CURRENT_RENDERER.method8433(i_3, i_4, aClass365_349.anInt4227 * 1984931449 * -547232823 + i_3 - 1, i_4, -1214034363 * aClass365_349.anInt4220 * -965307251, 0);
             }
             ++i_4;
             i_4 += method770(Class285.aFontRenderer_3394, class105_2.aString1066, i_3, i_4) * 12;
@@ -137,12 +137,12 @@ public class Class28 implements Interface2 {
             int i_3 = aClass365_349.aClass356_4225.method6221(aClass365_349.anInt4227 * 1984931449 * -547232823, 150480619 * client.GAME_WIDTH * 1426041429 * 765 * -1115795005) + aClass365_349.anInt4221 * 368783541 * 1878539677;
             int i_4 = aClass365_349.aClass353_4226.method6198(1416311209 * aClass365_349.anInt4228 * -1733557607, 1176039023 * client.GAME_HEIGHT * -994133479 * 553 * -645779313) + aClass365_349.anInt4223 * 843965525 * -1081607939;
             if (aClass365_349.aBool4230) {
-                Renderers.SOFTWARE_RENDERER.method8430(i_3, i_4, -547232823 * aClass365_349.anInt4227 * 1984931449, aClass365_349.anInt4228 * -1733557607 * 1416311209, aClass365_349.anInt4220 * -965307251 * -1214034363, 0);
+                Renderers.CURRENT_RENDERER.method8430(i_3, i_4, -547232823 * aClass365_349.anInt4227 * 1984931449, aClass365_349.anInt4228 * -1733557607 * 1416311209, aClass365_349.anInt4220 * -965307251 * -1214034363, 0);
             }
             i_4 += method770(Class285.aFontRenderer_3394, class105_2.aString1067, i_3, i_4) * 12;
             i_4 += 8;
             if (aClass365_349.aBool4230) {
-                Renderers.SOFTWARE_RENDERER.method8433(i_3, i_4, aClass365_349.anInt4227 * 1984931449 * -547232823 + i_3 - 1, i_4, -1214034363 * aClass365_349.anInt4220 * -965307251, 0);
+                Renderers.CURRENT_RENDERER.method8433(i_3, i_4, aClass365_349.anInt4227 * 1984931449 * -547232823 + i_3 - 1, i_4, -1214034363 * aClass365_349.anInt4220 * -965307251, 0);
             }
             ++i_4;
             i_4 += method770(Class285.aFontRenderer_3394, class105_2.aString1066, i_3, i_4) * 12;

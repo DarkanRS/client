@@ -9,7 +9,7 @@ public class Class141_Sub2 extends Class141 {
     Class136 aClass136_9042;
     Class128 aClass128_9041;
 
-    Class141_Sub2(OpenGLHardwareRenderer class505_sub1_1, Class136 class136_2) {
+    Class141_Sub2(OpenGLRenderer class505_sub1_1, Class136 class136_2) {
         super(class505_sub1_1);
         aClass136_9042 = class136_2;
         if (aClass136_9042.aClass137_Sub4_1638 != null && aGraphicalRenderer_Sub1_1664.aBool8485 && aGraphicalRenderer_Sub1_1664.aBool8365) {

@@ -78,24 +78,24 @@ public class Class306 implements Runnable {
                         anInterface27_3598.method187();
                     } else {
                         long long_4 = Utils.time();
-                        if (Renderers.SOFTWARE_RENDERER != null && anInterface27_3604 != null && anInterface27_3604.method190() != 0 && aLong3601 >= long_4 - anInterface27_3604.method190()) {
+                        if (Renderers.CURRENT_RENDERER != null && anInterface27_3604 != null && anInterface27_3604.method190() != 0 && aLong3601 >= long_4 - anInterface27_3604.method190()) {
                             int i_6 = (int) (255L * (long_4 - aLong3601) / anInterface27_3604.method190());
                             int i_7 = 255 - i_6;
                             i_6 = i_6 << 24 | 0xffffff;
                             i_7 = i_7 << 24 | 0xffffff;
                             EntityNode.method4891();
-                            Renderers.SOFTWARE_RENDERER.ba(1, 0);
-                            NativeSprite nativesprite_8 = Renderers.SOFTWARE_RENDERER.method8440(Class349.anInt4083, Engine.anInt3243 * -969250379);
-                            Class158_Sub1 class158_sub1_9 = Renderers.SOFTWARE_RENDERER.method8418();
+                            Renderers.CURRENT_RENDERER.ba(1, 0);
+                            NativeSprite nativesprite_8 = Renderers.CURRENT_RENDERER.method8440(Class349.anInt4083, Engine.anInt3243 * -969250379);
+                            Class158_Sub1 class158_sub1_9 = Renderers.CURRENT_RENDERER.method8418();
                             class158_sub1_9.method13759(0, nativesprite_8.method2808());
-                            Renderers.SOFTWARE_RENDERER.method8637(class158_sub1_9);
+                            Renderers.CURRENT_RENDERER.method8637(class158_sub1_9);
                             anInterface27_3604.method187();
-                            Renderers.SOFTWARE_RENDERER.method8416(class158_sub1_9);
+                            Renderers.CURRENT_RENDERER.method8416(class158_sub1_9);
                             nativesprite_8.method2742(0, 0, 0, i_7, 1);
-                            Renderers.SOFTWARE_RENDERER.method8637(class158_sub1_9);
-                            Renderers.SOFTWARE_RENDERER.ba(1, 0);
+                            Renderers.CURRENT_RENDERER.method8637(class158_sub1_9);
+                            Renderers.CURRENT_RENDERER.ba(1, 0);
                             anInterface27_3598.method187();
-                            Renderers.SOFTWARE_RENDERER.method8416(class158_sub1_9);
+                            Renderers.CURRENT_RENDERER.method8416(class158_sub1_9);
                             nativesprite_8.method2742(0, 0, 0, i_6, 1);
                         } else {
                             if (anInterface27_3604 != null) {
@@ -105,15 +105,15 @@ public class Class306 implements Runnable {
                             }
                             if (aBool3597) {
                                 EntityNode.method4891();
-                                if (Renderers.SOFTWARE_RENDERER != null) {
-                                    Renderers.SOFTWARE_RENDERER.ba(1, 0);
+                                if (Renderers.CURRENT_RENDERER != null) {
+                                    Renderers.CURRENT_RENDERER.ba(1, 0);
                                 }
                             }
                             anInterface27_3598.method187();
                         }
                         try {
-                            if (Renderers.SOFTWARE_RENDERER != null && !(anInterface27_3598 instanceof Class304)) {
-                                Renderers.SOFTWARE_RENDERER.method8393();
+                            if (Renderers.CURRENT_RENDERER != null && !(anInterface27_3598 instanceof Class304)) {
+                                Renderers.CURRENT_RENDERER.method8393();
                             }
                         } catch (Exception_Sub3 exception_sub3_14) {
                             Class151.method2594(exception_sub3_14.getMessage() + Class308.aclient3620.method4669(), exception_sub3_14);
@@ -121,7 +121,7 @@ public class Class306 implements Runnable {
                         }
                     }
                     aBool3597 = false;
-                    if (Renderers.SOFTWARE_RENDERER != null && !(anInterface27_3598 instanceof Class304) && aClass387_3605.anInt4712 < LoadingStage.aClass387_4698.anInt4712) {
+                    if (Renderers.CURRENT_RENDERER != null && !(anInterface27_3598 instanceof Class304) && aClass387_3605.anInt4712 < LoadingStage.aClass387_4698.anInt4712) {
                         Class532_Sub1.method12840();
                     }
                 } catch (Exception exception_15) {

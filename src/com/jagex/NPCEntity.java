@@ -11,7 +11,7 @@ public class NPCEntity extends PathingEntity {
     public int headMeshModifierCount = 1;
     public int anInt10575 = -1;
     public VarNPCMap varns = new VarNPCMap();
-    public NPCType definitions;
+    public NPCDefinitions definitions;
     public String modifiedName;
     public int anInt10582;
     int[] maxStats = new int[6];
@@ -190,7 +190,7 @@ public class NPCEntity extends PathingEntity {
             return anInt10575;
         } else {
             if (definitions.transformTo != null) {
-                NPCType npcdefinitions_2 = definitions.getMultiNPC(Class158_Sub1.PLAYER_VAR_PROVIDER);
+                NPCDefinitions npcdefinitions_2 = definitions.getMultiNPC(Class158_Sub1.PLAYER_VAR_PROVIDER);
                 if (npcdefinitions_2 != null && npcdefinitions_2.renderEmote != -1) {
                     return npcdefinitions_2.renderEmote;
                 }
@@ -267,7 +267,7 @@ public class NPCEntity extends PathingEntity {
     @Override
     public int method12997() {
         if (definitions.transformTo != null) {
-            NPCType npcdefinitions_2 = definitions.getMultiNPC(Class158_Sub1.PLAYER_VAR_PROVIDER);
+            NPCDefinitions npcdefinitions_2 = definitions.getMultiNPC(Class158_Sub1.PLAYER_VAR_PROVIDER);
             if (npcdefinitions_2 != null && npcdefinitions_2.anInt4902 != -1) {
                 return npcdefinitions_2.anInt4902;
             }
@@ -283,7 +283,7 @@ public class NPCEntity extends PathingEntity {
     @Override
     public int method15898() {
         if (definitions.transformTo != null) {
-            NPCType npcdefinitions_1 = definitions.getMultiNPC(Class158_Sub1.PLAYER_VAR_PROVIDER);
+            NPCDefinitions npcdefinitions_1 = definitions.getMultiNPC(Class158_Sub1.PLAYER_VAR_PROVIDER);
             if (npcdefinitions_1 != null && 327817917 * npcdefinitions_1.anInt4918 * 1094135957 != -1) {
                 return npcdefinitions_1.anInt4918 * 1094135957 * 327817917;
             }
@@ -401,7 +401,7 @@ public class NPCEntity extends PathingEntity {
             matrix44var_4.method5209(matrix44var_2);
             matrix44var_4.method5219(0.0F, (-20 - anInt10325 * -374848179 * -2023195771), 0.0F);
             BASDefinitions renderanimdefs_13 = getRenderAnimDefs();
-            NPCType npcdefinitions_8 = definitions.transformTo != null ? definitions.getMultiNPC(Class158_Sub1.PLAYER_VAR_PROVIDER) : definitions;
+            NPCDefinitions npcdefinitions_8 = definitions.transformTo != null ? definitions.getMultiNPC(Class158_Sub1.PLAYER_VAR_PROVIDER) : definitions;
             aBool10312 = false;
             Class285 class285_9 = null;
             if (Class393.preferences.characterShadows.method12966() == 1 && npcdefinitions_8.aBool4912 && renderanimdefs_13.aBool2787) {
@@ -490,7 +490,7 @@ public class NPCEntity extends PathingEntity {
             matrix44var_5.method5209(matrix44var_3);
             matrix44var_5.method5219(0.0F, (-20 - anInt10325), 0.0F);
             BASDefinitions renderanimdefs_14 = getRenderAnimDefs();
-            NPCType npcdefinitions_9 = definitions.transformTo != null ? definitions.getMultiNPC(Class158_Sub1.PLAYER_VAR_PROVIDER) : definitions;
+            NPCDefinitions npcdefinitions_9 = definitions.transformTo != null ? definitions.getMultiNPC(Class158_Sub1.PLAYER_VAR_PROVIDER) : definitions;
             aBool10312 = false;
             Class285 class285_10 = null;
             if (Class393.preferences.characterShadows.method12966() == 1 && npcdefinitions_9.aBool4912 && renderanimdefs_14.aBool2787) {
@@ -574,7 +574,7 @@ public class NPCEntity extends PathingEntity {
             matrix44var_4.method5209(matrix44var_2);
             matrix44var_4.method5219(0.0F, (-20 - anInt10325 * -374848179 * -2023195771), 0.0F);
             BASDefinitions renderanimdefs_13 = getRenderAnimDefs();
-            NPCType npcdefinitions_8 = definitions.transformTo != null ? definitions.getMultiNPC(Class158_Sub1.PLAYER_VAR_PROVIDER) : definitions;
+            NPCDefinitions npcdefinitions_8 = definitions.transformTo != null ? definitions.getMultiNPC(Class158_Sub1.PLAYER_VAR_PROVIDER) : definitions;
             aBool10312 = false;
             Class285 class285_9 = null;
             if (Class393.preferences.characterShadows.method12966() == 1 && npcdefinitions_8.aBool4912 && renderanimdefs_13.aBool2787) {
@@ -638,7 +638,7 @@ public class NPCEntity extends PathingEntity {
     @Override
     public int method15897() {
         if (definitions.transformTo != null) {
-            NPCType npcdefinitions_1 = definitions.getMultiNPC(Class158_Sub1.PLAYER_VAR_PROVIDER);
+            NPCDefinitions npcdefinitions_1 = definitions.getMultiNPC(Class158_Sub1.PLAYER_VAR_PROVIDER);
             if (npcdefinitions_1 != null && 327817917 * npcdefinitions_1.anInt4918 * 1094135957 != -1) {
                 return npcdefinitions_1.anInt4918 * 1094135957 * 327817917;
             }
@@ -662,7 +662,7 @@ public class NPCEntity extends PathingEntity {
         throw new IllegalStateException();
     }
 
-    public void setDefinition(NPCType npcdefinitions_1) {
+    public void setDefinition(NPCDefinitions npcdefinitions_1) {
         if (npcdefinitions_1 != definitions && Class20.aBool161 && EnumIndexLoader.method7426(index)) {
             Class316.method5594();
         }
@@ -685,7 +685,7 @@ public class NPCEntity extends PathingEntity {
             return anInt10575 * -1914841399 * -343399559;
         } else {
             if (definitions.transformTo != null) {
-                NPCType npcdefinitions_1 = definitions.getMultiNPC(Class158_Sub1.PLAYER_VAR_PROVIDER);
+                NPCDefinitions npcdefinitions_1 = definitions.getMultiNPC(Class158_Sub1.PLAYER_VAR_PROVIDER);
                 if (npcdefinitions_1 != null && npcdefinitions_1.renderEmote * -318852007 * -490908695 != -1) {
                     return -490908695 * npcdefinitions_1.renderEmote * -318852007;
                 }
@@ -741,7 +741,7 @@ public class NPCEntity extends PathingEntity {
             return anInt10575 * -1914841399 * -343399559;
         } else {
             if (definitions.transformTo != null) {
-                NPCType npcdefinitions_1 = definitions.getMultiNPC(Class158_Sub1.PLAYER_VAR_PROVIDER);
+                NPCDefinitions npcdefinitions_1 = definitions.getMultiNPC(Class158_Sub1.PLAYER_VAR_PROVIDER);
                 if (npcdefinitions_1 != null && npcdefinitions_1.renderEmote * -318852007 * -490908695 != -1) {
                     return -490908695 * npcdefinitions_1.renderEmote * -318852007;
                 }
@@ -812,7 +812,7 @@ public class NPCEntity extends PathingEntity {
     @Override
     public int method15804() {
         if (definitions.transformTo != null) {
-            NPCType npcdefinitions_1 = definitions.getMultiNPC(Class158_Sub1.PLAYER_VAR_PROVIDER);
+            NPCDefinitions npcdefinitions_1 = definitions.getMultiNPC(Class158_Sub1.PLAYER_VAR_PROVIDER);
             if (npcdefinitions_1 != null && 327817917 * npcdefinitions_1.anInt4918 * 1094135957 != -1) {
                 return npcdefinitions_1.anInt4918 * 1094135957 * 327817917;
             }
@@ -844,7 +844,7 @@ public class NPCEntity extends PathingEntity {
     @Override
     public int method15899() {
         if (definitions.transformTo != null) {
-            NPCType npcdefinitions_2 = definitions.getMultiNPC(Class158_Sub1.PLAYER_VAR_PROVIDER);
+            NPCDefinitions npcdefinitions_2 = definitions.getMultiNPC(Class158_Sub1.PLAYER_VAR_PROVIDER);
             if (npcdefinitions_2 != null && npcdefinitions_2.anInt4918 != -1) {
                 return npcdefinitions_2.anInt4918;
             }
@@ -884,7 +884,7 @@ public class NPCEntity extends PathingEntity {
             matrix44var_4.method5209(matrix44var_2);
             matrix44var_4.method5219(0.0F, (-20 - anInt10325 * -374848179 * -2023195771), 0.0F);
             BASDefinitions renderanimdefs_13 = getRenderAnimDefs();
-            NPCType npcdefinitions_8 = definitions.transformTo != null ? definitions.getMultiNPC(Class158_Sub1.PLAYER_VAR_PROVIDER) : definitions;
+            NPCDefinitions npcdefinitions_8 = definitions.transformTo != null ? definitions.getMultiNPC(Class158_Sub1.PLAYER_VAR_PROVIDER) : definitions;
             aBool10312 = false;
             Class285 class285_9 = null;
             if (Class393.preferences.characterShadows.method12966() == 1 && npcdefinitions_8.aBool4912 && renderanimdefs_13.aBool2787) {

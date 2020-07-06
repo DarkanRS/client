@@ -8,14 +8,14 @@ public abstract class Class326 implements Interface5 {
 
     static int[] anIntArray3766 = new int[1];
     int anInt3758 = -1;
-    AbstractRenderer_Sub2_Sub1 aGraphicalRenderer_Sub2_Sub1_3757;
+    JAGGLRenderer aGraphicalRenderer_Sub2_Sub1_3757;
     int anInt3762;
     boolean aBool3761;
     NativeHeapBuffer aNativeHeapBuffer3765;
     int anInt3763;
     int anInt3764;
 
-    Class326(AbstractRenderer_Sub2_Sub1 class505_sub2_sub1_1, int i_2, boolean bool_3) {
+    Class326(JAGGLRenderer class505_sub2_sub1_1, int i_2, boolean bool_3) {
         aGraphicalRenderer_Sub2_Sub1_3757 = class505_sub2_sub1_1;
         anInt3762 = i_2;
         aBool3761 = bool_3;

@@ -7,14 +7,14 @@ import java.lang.reflect.Method;
 
 public class FontRenderer_Sub2 extends FontRenderer {
 
-    HardwareRenderer aGraphicalRenderer_Sub3_8889;
+    JavaRenderer aGraphicalRenderer_Sub3_8889;
     int[] anIntArray8886;
     int[] anIntArray8888;
     byte[][] aByteArrayArray8887;
     int[] anIntArray8890;
     int[] anIntArray8891;
 
-    FontRenderer_Sub2(HardwareRenderer hardwarerenderer_1, FontMetrics fontmetrics_2, SpriteDefinitions[] arr_3, int[] ints_4, int[] ints_5) {
+    FontRenderer_Sub2(JavaRenderer hardwarerenderer_1, FontMetrics fontmetrics_2, SpriteDefinitions[] arr_3, int[] ints_4, int[] ints_5) {
         super(hardwarerenderer_1, fontmetrics_2);
         aGraphicalRenderer_Sub3_8889 = hardwarerenderer_1;
         aGraphicalRenderer_Sub3_8889 = hardwarerenderer_1;

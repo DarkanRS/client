@@ -7,7 +7,7 @@ public abstract class Shadow extends CacheableNode {
 
     static EventQueue anEventQueue10074;
 
-    static void method15506(AbstractRenderer graphicalrenderer_0, int i_1, int i_2, Component icomponentdefinitions_3) {
+    static void method15506(AbstractRenderer graphicalrenderer_0, int i_1, int i_2, IComponentDefinitions icomponentdefinitions_3) {
         byte b_5 = 63;
         byte b_6 = 7;
         for (int i_7 = 63; i_7 >= 0; --i_7) {

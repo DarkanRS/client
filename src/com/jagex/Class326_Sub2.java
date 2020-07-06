@@ -4,7 +4,7 @@ public class Class326_Sub2 extends Class326 implements Interface32 {
 
     Class76 aClass76_9267;
 
-    Class326_Sub2(AbstractRenderer_Sub2_Sub1 class505_sub2_sub1_1, Class76 class76_2, boolean bool_3) {
+    Class326_Sub2(JAGGLRenderer class505_sub2_sub1_1, Class76 class76_2, boolean bool_3) {
         super(class505_sub2_sub1_1, 34963, bool_3);
         aClass76_9267 = class76_2;
     }

@@ -3,7 +3,7 @@ package com.jagex;
 public class Node_Sub19 extends Node {
 
     int anInt7646;
-    OpenGLHardwareRenderer aGraphicalRenderer_Sub1_7650;
+    OpenGLRenderer aGraphicalRenderer_Sub1_7650;
     Node_Sub24 aNode_Sub24_7641;
     OpenGLGround aGround_Sub2_7654;
     int anInt7642;
@@ -22,7 +22,7 @@ public class Node_Sub19 extends Node {
     HashTable aClass453_7657;
     int anInt7640;
 
-    Node_Sub19(OpenGLHardwareRenderer class505_sub1_1, OpenGLGround class390_sub2_2, Node_Sub24 class282_sub24_3, int[] ints_4) {
+    Node_Sub19(OpenGLRenderer class505_sub1_1, OpenGLGround class390_sub2_2, Node_Sub24 class282_sub24_3, int[] ints_4) {
         aGraphicalRenderer_Sub1_7650 = class505_sub1_1;
         aNode_Sub24_7641 = class282_sub24_3;
         aGround_Sub2_7654 = class390_sub2_2;

@@ -7,7 +7,7 @@ public class NativeSprite_Sub3 extends NativeSprite {
     int anInt9055;
     int anInt9049;
     int anInt9058;
-    AbstractRenderer_Sub2 aGraphicalRenderer_Sub2_9052;
+    HardwareRenderer aGraphicalRenderer_Sub2_9052;
     int anInt9060;
     int anInt9053;
     Interface6 anInterface6_9050;
@@ -17,11 +17,11 @@ public class NativeSprite_Sub3 extends NativeSprite {
     boolean aBool9061;
     boolean aBool9062;
 
-    NativeSprite_Sub3(AbstractRenderer_Sub2 class505_sub2_1, Interface6 interface6_2) {
+    NativeSprite_Sub3(HardwareRenderer class505_sub2_1, Interface6 interface6_2) {
         this(class505_sub2_1, interface6_2, interface6_2.method1(), interface6_2.method59());
     }
 
-    NativeSprite_Sub3(AbstractRenderer_Sub2 class505_sub2_1, Interface6 interface6_2, int i_3, int i_4) {
+    NativeSprite_Sub3(HardwareRenderer class505_sub2_1, Interface6 interface6_2, int i_3, int i_4) {
         aBool9051 = false;
         anInt9057 = 0;
         anInt9055 = 0;
@@ -39,7 +39,7 @@ public class NativeSprite_Sub3 extends NativeSprite {
         aGraphicalRenderer_Sub2_9052.method13896(12);
     }
 
-    NativeSprite_Sub3(AbstractRenderer_Sub2 class505_sub2_1, int i_2, int i_3, int[] ints_4, int i_5, int i_6) {
+    NativeSprite_Sub3(HardwareRenderer class505_sub2_1, int i_2, int i_3, int[] ints_4, int i_5, int i_6) {
         aBool9051 = false;
         anInt9057 = 0;
         anInt9055 = 0;
@@ -58,7 +58,7 @@ public class NativeSprite_Sub3 extends NativeSprite {
         aGraphicalRenderer_Sub2_9052.method13896(12);
     }
 
-    NativeSprite_Sub3(AbstractRenderer_Sub2 class505_sub2_1, int i_2, int i_3, boolean bool_4, boolean bool_5) {
+    NativeSprite_Sub3(HardwareRenderer class505_sub2_1, int i_2, int i_3, boolean bool_4, boolean bool_5) {
         aBool9051 = false;
         anInt9057 = 0;
         anInt9055 = 0;

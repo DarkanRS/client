@@ -14,10 +14,10 @@ public class GroundDecoration extends SceneObjectNode implements WorldObject {
         method13008(1);
     }
 
-    public static void method16094(Component[] arr_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, boolean bool_9) {
-        Renderers.SOFTWARE_RENDERER.r(i_2, i_3, i_4, i_5);
+    public static void method16094(IComponentDefinitions[] arr_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, boolean bool_9) {
+        Renderers.CURRENT_RENDERER.r(i_2, i_3, i_4, i_5);
         for (int i_11 = 0; i_11 < arr_0.length; i_11++) {
-            Component inter = arr_0[i_11];
+            IComponentDefinitions inter = arr_0[i_11];
             if (inter != null && (inter.parent == i_1 || i_1 == -1412584499 && inter == client.aClass118_7257)) {
                 int i_13;
                 if (i_8 == -1) {
@@ -41,7 +41,7 @@ public class GroundDecoration extends SceneObjectNode implements WorldObject {
                     int i_17;
                     int i_18;
                     if (inter == client.aClass118_7257) {
-                        if (i_1 != -1412584499 && (inter.anInt1382 == Component.anInt1265 || inter.anInt1382 == Component.anInt1283 || client.getIComponentSettings(inter).bit23Enabled())) {
+                        if (i_1 != -1412584499 && (inter.anInt1382 == IComponentDefinitions.anInt1265 || inter.anInt1382 == IComponentDefinitions.anInt1283 || client.getIComponentSettings(inter).bit23Enabled())) {
                             Comparable_Sub1.aClass118Array3772 = arr_0;
                             GameTipsLoader.anInt4822 = i_6;
                             Isaac.anInt5157 = i_7;
@@ -70,7 +70,7 @@ public class GroundDecoration extends SceneObjectNode implements WorldObject {
                             drawX = i_17;
                             drawY = i_18;
                         }
-                        if (inter.anInt1382 == Component.anInt1283) {
+                        if (inter.anInt1382 == IComponentDefinitions.anInt1283) {
                             i_16 = 128;
                         }
                     }
@@ -97,50 +97,50 @@ public class GroundDecoration extends SceneObjectNode implements WorldObject {
                     }
                     if (i_17 < i_19 && i_18 < i_20) {
                         if (inter.contentType != 0) {
-                            if (inter.contentType == Component.CONTENT_TYPE_1337 || inter.contentType == Component.CONTENT_TYPE_1403) {
-                                HitbarDefinitions.method3231(drawX, drawY, inter.width, inter.height, inter.contentType == Component.CONTENT_TYPE_1403);
+                            if (inter.contentType == IComponentDefinitions.CONTENT_TYPE_1337 || inter.contentType == IComponentDefinitions.CONTENT_TYPE_1403) {
+                                HitbarDefinitions.method3231(drawX, drawY, inter.width, inter.height, inter.contentType == IComponentDefinitions.CONTENT_TYPE_1403);
                                 TCPPacket.method12366(i_13, i_17, i_18, i_19, i_20, drawX, drawY);
-                                Renderers.SOFTWARE_RENDERER.method8421();
-                                Renderers.SOFTWARE_RENDERER.r(i_2, i_3, i_4, i_5);
+                                Renderers.CURRENT_RENDERER.method8421();
+                                Renderers.CURRENT_RENDERER.r(i_2, i_3, i_4, i_5);
                                 client.aBoolArray7443[i_13] = true;
                                 continue;
                             }
-                            if (inter.contentType == Component.CONTENT_TYPE_1338 && client.anInt7341 == 1) {
-                                if (inter.method2046(Renderers.SOFTWARE_RENDERER) != null) {
+                            if (inter.contentType == IComponentDefinitions.CONTENT_TYPE_1338 && client.anInt7341 == 1) {
+                                if (inter.method2046(Renderers.CURRENT_RENDERER) != null) {
                                     MaterialPropTexture.method15391();
-                                    Item.method12574(Renderers.SOFTWARE_RENDERER, inter, drawX, drawY);
-                                    Renderers.SOFTWARE_RENDERER.r(i_2, i_3, i_4, i_5);
+                                    Item.method12574(Renderers.CURRENT_RENDERER, inter, drawX, drawY);
+                                    Renderers.CURRENT_RENDERER.r(i_2, i_3, i_4, i_5);
                                 }
                                 continue;
                             }
-                            if (inter.contentType == Component.CONTENT_TYPE_1408) {
-                                Shadow.method15506(Renderers.SOFTWARE_RENDERER, drawX, drawY, inter);
+                            if (inter.contentType == IComponentDefinitions.CONTENT_TYPE_1408) {
+                                Shadow.method15506(Renderers.CURRENT_RENDERER, drawX, drawY, inter);
                                 continue;
                             }
-                            if (inter.contentType == Component.CONTENT_TYPE_1409) {
-                                Class366.method6301(Renderers.SOFTWARE_RENDERER, drawX, drawY, inter, inter.color % 64);
+                            if (inter.contentType == IComponentDefinitions.CONTENT_TYPE_1409) {
+                                Class366.method6301(Renderers.CURRENT_RENDERER, drawX, drawY, inter, inter.color % 64);
                                 continue;
                             }
-                            if (inter.contentType == Component.CONTENT_TYPE_1339) {
-                                if (inter.method2046(Renderers.SOFTWARE_RENDERER) != null) {
+                            if (inter.contentType == IComponentDefinitions.CONTENT_TYPE_1339) {
+                                if (inter.method2046(Renderers.CURRENT_RENDERER) != null) {
                                     VorbisFileReference.method13448(inter, drawX, drawY);
-                                    Renderers.SOFTWARE_RENDERER.r(i_2, i_3, i_4, i_5);
+                                    Renderers.CURRENT_RENDERER.r(i_2, i_3, i_4, i_5);
                                 }
                                 continue;
                             }
-                            if (inter.contentType == Component.CONTENT_TYPE_1400) {
-                                Node_Sub46.method13407(Renderers.SOFTWARE_RENDERER, IndexLoaders.IMAGE_LOADER, drawX, drawY, inter.width, inter.height);
+                            if (inter.contentType == IComponentDefinitions.CONTENT_TYPE_1400) {
+                                Node_Sub46.method13407(Renderers.CURRENT_RENDERER, IndexLoaders.IMAGE_LOADER, drawX, drawY, inter.width, inter.height);
                                 client.aBoolArray7443[i_13] = true;
-                                Renderers.SOFTWARE_RENDERER.r(i_2, i_3, i_4, i_5);
+                                Renderers.CURRENT_RENDERER.r(i_2, i_3, i_4, i_5);
                                 continue;
                             }
-                            if (inter.contentType == Component.MINIMAP) {
-                                LoadingStage.renderMiniMiniMap(Renderers.SOFTWARE_RENDERER, drawX, drawY, inter.width, inter.height);
+                            if (inter.contentType == IComponentDefinitions.MINIMAP) {
+                                LoadingStage.renderMiniMiniMap(Renderers.CURRENT_RENDERER, drawX, drawY, inter.width, inter.height);
                                 client.aBoolArray7443[i_13] = true;
-                                Renderers.SOFTWARE_RENDERER.r(i_2, i_3, i_4, i_5);
+                                Renderers.CURRENT_RENDERER.r(i_2, i_3, i_4, i_5);
                                 continue;
                             }
-                            if (inter.contentType == Component.DEBUG_INFORMATION) {
+                            if (inter.contentType == IComponentDefinitions.DEBUG_INFORMATION) {
                                 if (client.DRAW_DEBUG || client.aBool7177) {
                                     NPCDirection.drawDebugInformation(drawX, drawY, inter);
                                     client.aBoolArray7443[i_13] = true;
@@ -152,8 +152,8 @@ public class GroundDecoration extends SceneObjectNode implements WorldObject {
                         int i_24;
                         int i_25;
                         if (inter.type == ComponentType.CONTAINER) {
-                            if (inter.contentType == Component.CONTENT_TYPE_1407 && Renderers.SOFTWARE_RENDERER.method8471()) {
-                                Renderers.SOFTWARE_RENDERER.method8525(Class349.anInt4083, client.anInt3243 * -969250379);
+                            if (inter.contentType == IComponentDefinitions.CONTENT_TYPE_1407 && Renderers.CURRENT_RENDERER.method8471()) {
+                                Renderers.CURRENT_RENDERER.method8525(Class349.anInt4083, client.anInt3243 * -969250379);
                             }
                             method16094(arr_0, inter.idHash, i_17, i_18, i_19, i_20, drawX - inter.scrollX, drawY - inter.scrollY, i_13, bool_9);
                             if (inter.itemSlots != null) {
@@ -163,9 +163,9 @@ public class GroundDecoration extends SceneObjectNode implements WorldObject {
                             if (class282_sub44_33 != null) {
                                 RenderAnimIndexLoader.method3629(class282_sub44_33.interfaceId, i_17, i_18, i_19, i_20, drawX, drawY, i_13);
                             }
-                            if (inter.contentType == Component.CONTENT_TYPE_1407) {
-                                if (Renderers.SOFTWARE_RENDERER.method8471()) {
-                                    Renderers.SOFTWARE_RENDERER.method8474();
+                            if (inter.contentType == IComponentDefinitions.CONTENT_TYPE_1407) {
+                                if (Renderers.CURRENT_RENDERER.method8471()) {
+                                    Renderers.CURRENT_RENDERER.method8474();
                                 }
                                 if (client.anInt7341 == 4) {
                                     i_22 = client.anInt7238;
@@ -180,31 +180,31 @@ public class GroundDecoration extends SceneObjectNode implements WorldObject {
                                         i_25 = (int) (f_26 * client.anInt7217 + Node_Sub17_Sub4.anInt9940 * (1.0F - f_26));
                                     }
                                     if (i_22 > 0) {
-                                        Renderers.SOFTWARE_RENDERER.method8425(i_17, i_18, i_19 - i_17, i_20 - i_18, i_22 << 24 | i_23 << 16 | i_24 << 8 | i_25);
+                                        Renderers.CURRENT_RENDERER.method8425(i_17, i_18, i_19 - i_17, i_20 - i_18, i_22 << 24 | i_23 << 16 | i_24 << 8 | i_25);
                                     }
                                 }
                             }
-                            Renderers.SOFTWARE_RENDERER.r(i_2, i_3, i_4, i_5);
+                            Renderers.CURRENT_RENDERER.r(i_2, i_3, i_4, i_5);
                         }
                         if (client.aBoolArray7410[i_13] || client.anInt7412 > 1) {
                             if (inter.type == ComponentType.FIGURE) {
                                 if (i_16 == 0) {
                                     if (inter.filled) {
-                                        Renderers.SOFTWARE_RENDERER.B(drawX, drawY, inter.width, inter.height, inter.color, 0);
+                                        Renderers.CURRENT_RENDERER.B(drawX, drawY, inter.width, inter.height, inter.color, 0);
                                     } else {
-                                        Renderers.SOFTWARE_RENDERER.method8430(drawX, drawY, inter.width, inter.height, inter.color, 0);
+                                        Renderers.CURRENT_RENDERER.method8430(drawX, drawY, inter.width, inter.height, inter.color, 0);
                                     }
                                 } else if (inter.filled) {
-                                    Renderers.SOFTWARE_RENDERER.B(drawX, drawY, inter.width, inter.height, 255 - (i_16 & 0xff) << 24 | inter.color & 0xffffff, 1);
+                                    Renderers.CURRENT_RENDERER.B(drawX, drawY, inter.width, inter.height, 255 - (i_16 & 0xff) << 24 | inter.color & 0xffffff, 1);
                                 } else {
-                                    Renderers.SOFTWARE_RENDERER.method8430(drawX, drawY, inter.width, inter.height, 255 - (i_16 & 0xff) << 24 | inter.color & 0xffffff, 1);
+                                    Renderers.CURRENT_RENDERER.method8430(drawX, drawY, inter.width, inter.height, 255 - (i_16 & 0xff) << 24 | inter.color & 0xffffff, 1);
                                 }
                             } else {
                                 ItemDefinitions itemdefinitions_36;
                                 if (inter.type == ComponentType.TEXT) {
                                     FontRenderer fontrenderer_43 = inter.method1988(Class487.aClass378_5752, client.anInterface35_7206);
                                     if (fontrenderer_43 == null) {
-                                        if (Component.aBool1399) {
+                                        if (IComponentDefinitions.aBool1399) {
                                             Class109.redrawComponent(inter);
                                         }
                                     } else {
@@ -231,7 +231,7 @@ public class GroundDecoration extends SceneObjectNode implements WorldObject {
                                             i_22 = inter.color;
                                         }
                                         if (client.aBool7358) {
-                                            Renderers.SOFTWARE_RENDERER.o(drawX, drawY, drawX + inter.width, drawY + inter.height);
+                                            Renderers.CURRENT_RENDERER.o(drawX, drawY, drawX + inter.width, drawY + inter.height);
                                         }
                                         if (inter.textAntiMacro) {
                                             fontrenderer_43.method367(string_35, drawX, drawY, inter.width, inter.height, 255 - (i_16 & 0xff) << 24 | i_22, inter.shadow ? 255 - (i_16 & 0xff) << 24 : -1, inter.textHorizontalAli, inter.textVerticalAli, client.aRandom7260, Class455_Sub3.anInt9079, client.anIntArray7438, Class182.aNativeSpriteArray2261, null);
@@ -239,7 +239,7 @@ public class GroundDecoration extends SceneObjectNode implements WorldObject {
                                             fontrenderer_43.method373(string_35, drawX, drawY, inter.width, inter.height, 255 - (i_16 & 0xff) << 24 | i_22, inter.shadow ? 255 - (i_16 & 0xff) << 24 : -1, inter.textHorizontalAli, inter.textVerticalAli, inter.anInt1358, inter.maxTextLines, Class182.aNativeSpriteArray2261, null, null, 0, 0);
                                         }
                                         if (client.aBool7358) {
-                                            Renderers.SOFTWARE_RENDERER.r(i_2, i_3, i_4, i_5);
+                                            Renderers.CURRENT_RENDERER.r(i_2, i_3, i_4, i_5);
                                         }
                                     }
                                 } else {
@@ -247,16 +247,16 @@ public class GroundDecoration extends SceneObjectNode implements WorldObject {
                                     int i_39;
                                     if (inter.type == ComponentType.SPRITE) {
                                         if (inter.anInt1404 >= 0) {
-                                            inter.method2027(IndexLoaders.SKYBOX_LOADER, IndexLoaders.SUN_LOADER).method4214(Renderers.SOFTWARE_RENDERER, drawX, drawY, inter.width, inter.height, inter.anInt1430 << 3, inter.anInt1431 << 3);
+                                            inter.method2027(IndexLoaders.SKYBOX_LOADER, IndexLoaders.SUN_LOADER).method4214(Renderers.CURRENT_RENDERER, drawX, drawY, inter.width, inter.height, inter.anInt1430 << 3, inter.anInt1431 << 3);
                                         } else {
                                             NativeSprite nativesprite_41;
                                             if (inter.containerItemId != -1) {
                                                 PlayerModel playerappearance_34 = inter.wearCol ? VertexNormal.MY_PLAYER.model : null;
-                                                nativesprite_41 = IndexLoaders.ITEM_LOADER.softwareRender(Renderers.SOFTWARE_RENDERER, inter.containerItemId, inter.anInt1427, inter.borderThickness, -16777216 | inter.spriteShadow, inter.renderStack, playerappearance_34);
+                                                nativesprite_41 = IndexLoaders.ITEM_LOADER.softwareRender(Renderers.CURRENT_RENDERER, inter.containerItemId, inter.anInt1427, inter.borderThickness, -16777216 | inter.spriteShadow, inter.renderStack, playerappearance_34);
                                             } else if (inter.anInt1435 != -1) {
-                                                nativesprite_41 = SpotAnimIndexLoader.method8858(Renderers.SOFTWARE_RENDERER, inter.anInt1435);
+                                                nativesprite_41 = SpotAnimIndexLoader.method8858(Renderers.CURRENT_RENDERER, inter.anInt1435);
                                             } else {
-                                                nativesprite_41 = inter.method2048(Renderers.SOFTWARE_RENDERER);
+                                                nativesprite_41 = inter.method2048(Renderers.CURRENT_RENDERER);
                                             }
                                             if (nativesprite_41 != null) {
                                                 i_22 = nativesprite_41.scaleWidth();
@@ -279,7 +279,7 @@ public class GroundDecoration extends SceneObjectNode implements WorldObject {
                                                         nativesprite_41.method2754(drawX, drawY, inter.width, inter.height, 0, i_24, 1);
                                                     }
                                                 } else {
-                                                    Renderers.SOFTWARE_RENDERER.o(drawX, drawY, drawX + inter.width, drawY + inter.height);
+                                                    Renderers.CURRENT_RENDERER.o(drawX, drawY, drawX + inter.width, drawY + inter.height);
                                                     if (inter.angle2d != 0) {
                                                         i_25 = (i_22 - 1 + inter.width) / i_22;
                                                         i_39 = (i_23 - 1 + inter.height) / i_23;
@@ -297,9 +297,9 @@ public class GroundDecoration extends SceneObjectNode implements WorldObject {
                                                     } else {
                                                         nativesprite_41.method2772(drawX, drawY, inter.width, inter.height, 0, i_24, 1);
                                                     }
-                                                    Renderers.SOFTWARE_RENDERER.r(i_2, i_3, i_4, i_5);
+                                                    Renderers.CURRENT_RENDERER.r(i_2, i_3, i_4, i_5);
                                                 }
-                                            } else if (Component.aBool1399) {
+                                            } else if (IComponentDefinitions.aBool1399) {
                                                 Class109.redrawComponent(inter);
                                             }
                                         }
@@ -311,11 +311,12 @@ public class GroundDecoration extends SceneObjectNode implements WorldObject {
                                             i_22 |= 0x80000;
                                         }
                                         i_23 = 0;
+                                        System.out.println(Renderers.CURRENT_RENDERER.getClass().getSimpleName());
                                         if (inter.containerItemId != -1) {
                                             itemdefinitions_36 = IndexLoaders.ITEM_LOADER.getItemDefinitions(inter.containerItemId);
                                             if (itemdefinitions_36 != null) {
                                                 itemdefinitions_36 = itemdefinitions_36.method7090(inter.anInt1427);
-                                                meshRasterizer = itemdefinitions_36.method7084(Renderers.SOFTWARE_RENDERER, i_22, 1, inter.wearCol ? VertexNormal.MY_PLAYER.model : null, inter.anim, 0, 0, 0, 0);
+                                                meshRasterizer = itemdefinitions_36.method7084(Renderers.CURRENT_RENDERER, i_22, 1, inter.wearCol ? VertexNormal.MY_PLAYER.model : null, inter.anim, 0, 0, 0, 0);
                                                 if (meshRasterizer != null) {
                                                     i_23 = -meshRasterizer.YA() >> 1;
                                                 } else {
@@ -323,39 +324,34 @@ public class GroundDecoration extends SceneObjectNode implements WorldObject {
                                                 }
                                             }
                                         } else {
-                                            PlayerEntity player_37;
                                             if (inter.modelType == ModelType.PLAYER_HEAD) {
                                                 i_24 = inter.modelId;
                                                 if (i_24 >= 0 && i_24 < 2048) {
-                                                    player_37 = client.players[i_24];
+                                                    PlayerEntity player_37 = client.players[i_24];
                                                     if (player_37 != null && (i_24 == client.myPlayerIndex || Class272.stringToInt(player_37.displayName) == inter.anInt1339)) {
-                                                        meshRasterizer = inter.method2002(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIM_LOADER, IndexLoaders.IDENTIKIT_LOADER, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, inter.anim, player_37.model);
-                                                        if (meshRasterizer == null && Component.aBool1399) {
+                                                        meshRasterizer = inter.method2002(Renderers.CURRENT_RENDERER, i_22, IndexLoaders.RENDER_ANIM_LOADER, IndexLoaders.IDENTIKIT_LOADER, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, inter.anim, player_37.model);
+                                                        if (meshRasterizer == null && IComponentDefinitions.aBool1399) {
                                                             Class109.redrawComponent(inter);
                                                         }
                                                     }
                                                 }
                                             } else if (inter.modelType == ModelType.PLAYER_MODEL) {
-                                                i_24 = inter.modelId;
+                                            	i_24 = inter.modelId;
                                                 if (i_24 >= 0 && i_24 < 2048) {
-                                                    player_37 = client.players[i_24];
+                                                	PlayerEntity player_37 = client.players[i_24];
                                                     if (player_37 != null && (i_24 == client.myPlayerIndex || Class272.stringToInt(player_37.displayName) == inter.anInt1339)) {
-                                                        meshRasterizer = player_37.model.getBodyModel(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIM_LOADER, IndexLoaders.IDENTIKIT_LOADER, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, inter.anim, null, null, null, 0, LinkedNodeList.EQUIPMENT_DEFAULTS);
+                                                        meshRasterizer = player_37.model.getBodyModel(Renderers.CURRENT_RENDERER, i_22, IndexLoaders.RENDER_ANIM_LOADER, IndexLoaders.IDENTIKIT_LOADER, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, inter.anim, null, null, null, 0, LinkedNodeList.EQUIPMENT_DEFAULTS);
                                                     }
                                                 }
-                                            } else if (inter.modelType != ModelType.ITEM_CONTAINER_MALE && inter.modelType != ModelType.ITEM_CONTAINER_FEMALE) {
-                                                if (inter.anim != null && inter.anim.hasDefs()) {
-                                                    meshRasterizer = inter.method2002(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIM_LOADER, IndexLoaders.IDENTIKIT_LOADER, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, inter.anim, VertexNormal.MY_PLAYER.model);
-                                                } else {
-                                                    meshRasterizer = inter.method2002(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIM_LOADER, IndexLoaders.IDENTIKIT_LOADER, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, null, VertexNormal.MY_PLAYER.model);
-                                                }
-                                                if (meshRasterizer == null && Component.aBool1399) {
-                                                    Class109.redrawComponent(inter);
-                                                }
-                                            } else {
+                                            } else if (inter.modelType == ModelType.ITEM_CONTAINER_MALE || inter.modelType == ModelType.ITEM_CONTAINER_FEMALE) {
                                                 ItemContainer container = ItemContainer.getContainer(inter.modelId, false);
                                                 if (container != null) {
-                                                    meshRasterizer = container.method12429(Renderers.SOFTWARE_RENDERER, i_22, inter.anim, inter.anInt1339, inter.modelType == ModelType.ITEM_CONTAINER_FEMALE, inter.wearCol ? VertexNormal.MY_PLAYER.model : null);
+                                                    meshRasterizer = container.method12429(Renderers.CURRENT_RENDERER, i_22, inter.anim, inter.anInt1339, inter.modelType == ModelType.ITEM_CONTAINER_FEMALE, inter.wearCol ? VertexNormal.MY_PLAYER.model : null);
+                                                }
+                                            } else {
+                                                meshRasterizer = inter.method2002(Renderers.CURRENT_RENDERER, i_22, IndexLoaders.RENDER_ANIM_LOADER, IndexLoaders.IDENTIKIT_LOADER, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, inter.anim != null && inter.anim.hasDefs() ? inter.anim : null, VertexNormal.MY_PLAYER.model);
+                                                if (meshRasterizer == null && IComponentDefinitions.aBool1399) {
+                                                    Class109.redrawComponent(inter);
                                                 }
                                             }
                                         }
@@ -380,8 +376,8 @@ public class GroundDecoration extends SceneObjectNode implements WorldObject {
                                                 i_27 += i_25 * inter.originY >> 9;
                                             }
                                             client.aClass294_7457.method5212();
-                                            Renderers.SOFTWARE_RENDERER.method8457(client.aClass294_7457);
-                                            Matrix44 matrix44_38 = Renderers.SOFTWARE_RENDERER.method8449();
+                                            Renderers.CURRENT_RENDERER.method8457(client.aClass294_7457);
+                                            Matrix44 matrix44_38 = Renderers.CURRENT_RENDERER.method8449();
                                             int i_29 = IndexLoaders.MAP_REGION_DECODER.method4544();
                                             int i_30 = IndexLoaders.MAP_REGION_DECODER.method4522();
                                             i_30 += inter.spriteScale;
@@ -394,37 +390,37 @@ public class GroundDecoration extends SceneObjectNode implements WorldObject {
                                             } else {
                                                 matrix44_38.method6531(i_39, i_27, i_24, i_25, i_29, i_30, Class349.anInt4083, (client.anInt3243));
                                             }
-                                            Renderers.SOFTWARE_RENDERER.method8424(matrix44_38);
-                                            Renderers.SOFTWARE_RENDERER.ba(2, 0);
+                                            Renderers.CURRENT_RENDERER.method8424(matrix44_38);
+                                            Renderers.CURRENT_RENDERER.ba(2, 0);
                                             if (inter.aBool1345) {
-                                                Renderers.SOFTWARE_RENDERER.RA(false);
+                                                Renderers.CURRENT_RENDERER.RA(false);
                                             }
                                             if (inter.hasOrigin) {
-                                                client.aClass294_7169.method5217(1.0F, 0.0F, 0.0F, Class382.method6508(inter.spritePitch));
-                                                client.aClass294_7169.rotation(0.0F, 1.0F, 0.0F, Class382.method6508(inter.spriteRoll));
-                                                client.aClass294_7169.rotation(0.0F, 0.0F, 1.0F, Class382.method6508(inter.spriteYaw));
+                                                client.aClass294_7169.method5217(1.0F, 0.0F, 0.0F, Trig.degToRad(inter.spritePitch));
+                                                client.aClass294_7169.rotation(0.0F, 1.0F, 0.0F, Trig.degToRad(inter.spriteRoll));
+                                                client.aClass294_7169.rotation(0.0F, 0.0F, 1.0F, Trig.degToRad(inter.spriteYaw));
                                                 client.aClass294_7169.method5219(inter.originX, inter.originY, inter.originZ);
                                             } else {
-                                                int i_31 = Class382.SINE[inter.spritePitch << 3] * (inter.spriteScale << 2) >> 14;
-                                                int i_32 = Class382.COSINE[inter.spritePitch << 3] * (inter.spriteScale << 2) >> 14;
-                                                client.aClass294_7169.method5217(0.0F, 0.0F, 1.0F, Class382.method6508(-inter.spriteYaw << 3));
-                                                client.aClass294_7169.rotation(0.0F, 1.0F, 0.0F, Class382.method6508(inter.spriteRoll << 3));
+                                                int i_31 = Trig.SINE[inter.spritePitch << 3] * (inter.spriteScale << 2) >> 14;
+                                                int i_32 = Trig.COSINE[inter.spritePitch << 3] * (inter.spriteScale << 2) >> 14;
+                                                client.aClass294_7169.method5217(0.0F, 0.0F, 1.0F, Trig.degToRad(-inter.spriteYaw << 3));
+                                                client.aClass294_7169.rotation(0.0F, 1.0F, 0.0F, Trig.degToRad(inter.spriteRoll << 3));
                                                 client.aClass294_7169.method5219((inter.offsetX << 2), (i_31 + i_23 + (inter.offsetY << 2)), (i_32 + (inter.offsetY << 2)));
-                                                client.aClass294_7169.rotation(1.0F, 0.0F, 0.0F, Class382.method6508(inter.spritePitch << 3));
+                                                client.aClass294_7169.rotation(1.0F, 0.0F, 0.0F, Trig.degToRad(inter.spritePitch << 3));
                                             }
-                                            inter.method1991(Renderers.SOFTWARE_RENDERER, meshRasterizer, client.aClass294_7169, client.CYCLES_20MS);
+                                            inter.method1991(Renderers.CURRENT_RENDERER, meshRasterizer, client.aClass294_7169, client.CYCLES_20MS);
                                             if (client.aBool7358) {
-                                                Renderers.SOFTWARE_RENDERER.o(drawX, drawY, drawX + inter.width, drawY + inter.height);
+                                                Renderers.CURRENT_RENDERER.o(drawX, drawY, drawX + inter.width, drawY + inter.height);
                                             }
                                             meshRasterizer.method11282(client.aClass294_7169, null, 1);
                                             if (!inter.usesOrthogonal && inter.particleSystem != null) {
-                                                Renderers.SOFTWARE_RENDERER.method8456(inter.particleSystem.method11533());
+                                                Renderers.CURRENT_RENDERER.method8456(inter.particleSystem.method11533());
                                             }
                                             if (client.aBool7358) {
-                                                Renderers.SOFTWARE_RENDERER.r(i_2, i_3, i_4, i_5);
+                                                Renderers.CURRENT_RENDERER.r(i_2, i_3, i_4, i_5);
                                             }
                                             if (inter.aBool1345) {
-                                                Renderers.SOFTWARE_RENDERER.RA(true);
+                                                Renderers.CURRENT_RENDERER.RA(true);
                                             }
                                         }
                                     } else if (inter.type == ComponentType.LINE) {
@@ -440,9 +436,9 @@ public class GroundDecoration extends SceneObjectNode implements WorldObject {
                                             i_24 = drawY + inter.height;
                                         }
                                         if (inter.lineWidth == 1) {
-                                            Renderers.SOFTWARE_RENDERER.method8433(i_21, i_22, i_23, i_24, inter.color, 0);
+                                            Renderers.CURRENT_RENDERER.method8433(i_21, i_22, i_23, i_24, inter.color, 0);
                                         } else {
-                                            Renderers.SOFTWARE_RENDERER.method8496(i_21, i_22, i_23, i_24, inter.color, inter.lineWidth, 0);
+                                            Renderers.CURRENT_RENDERER.method8496(i_21, i_22, i_23, i_24, inter.color, inter.lineWidth, 0);
                                         }
                                     }
                                 }

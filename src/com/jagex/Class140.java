@@ -5,15 +5,15 @@ import jaggl.OpenGL;
 public class Class140 {
 
     static int[] anIntArray1661 = new int[2];
-    OpenGLHardwareRenderer aGraphicalRenderer_Sub1_1662;
+    OpenGLRenderer aGraphicalRenderer_Sub1_1662;
     int anInt1663;
 
-    Class140(OpenGLHardwareRenderer class505_sub1_1, int i_2) {
+    Class140(OpenGLRenderer class505_sub1_1, int i_2) {
         aGraphicalRenderer_Sub1_1662 = class505_sub1_1;
         anInt1663 = i_2;
     }
 
-    static Class140 method2393(OpenGLHardwareRenderer class505_sub1_0, int i_1, String string_2) {
+    static Class140 method2393(OpenGLRenderer class505_sub1_0, int i_1, String string_2) {
         int i_3 = OpenGL.glCreateShader(i_1);
         OpenGL.glShaderSource(i_3, string_2);
         OpenGL.glCompileShader(i_3);

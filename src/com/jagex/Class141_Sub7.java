@@ -7,7 +7,7 @@ public class Class141_Sub7 extends Class141 {
     boolean aBool9090;
     Class138 aClass138_9088;
 
-    Class141_Sub7(OpenGLHardwareRenderer class505_sub1_1) {
+    Class141_Sub7(OpenGLRenderer class505_sub1_1) {
         super(class505_sub1_1);
         if (class505_sub1_1.aBool8480) {
             aClass138_9088 = new Class138(2);

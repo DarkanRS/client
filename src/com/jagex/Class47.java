@@ -10,9 +10,9 @@ public abstract class Class47 {
     public Matrix44 aClass384_442 = new Matrix44();
     public Matrix44 aClass384_440 = new Matrix44();
     public Matrix44 aClass384_444 = new Matrix44();
-    protected AbstractRenderer_Sub2 aGraphicalRenderer_Sub2_439;
+    protected HardwareRenderer aGraphicalRenderer_Sub2_439;
 
-    Class47(AbstractRenderer_Sub2 class505_sub2_1) {
+    Class47(HardwareRenderer class505_sub2_1) {
         aGraphicalRenderer_Sub2_439 = class505_sub2_1;
     }
 

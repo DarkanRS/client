@@ -3,10 +3,10 @@ package com.jagex;
 public class Class66 {
 
     LRUCache aClass229_674 = new LRUCache(256);
-    AbstractRenderer_Sub2 aGraphicalRenderer_Sub2_676;
+    HardwareRenderer aGraphicalRenderer_Sub2_676;
     ImageLoader anInterface22_675;
 
-    Class66(AbstractRenderer_Sub2 class505_sub2_1, ImageLoader interface22_2) {
+    Class66(HardwareRenderer class505_sub2_1, ImageLoader interface22_2) {
         aGraphicalRenderer_Sub2_676 = class505_sub2_1;
         anInterface22_675 = interface22_2;
     }

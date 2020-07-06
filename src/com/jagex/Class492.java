@@ -52,9 +52,9 @@ public class Class492 {
                 i_9 = i_31 * i_7 * 512 / (s_11 * 334);
                 i_10 = (i_21 - i_9) / 2;
                 if (bool_4) {
-                    Renderers.SOFTWARE_RENDERER.L();
-                    Renderers.SOFTWARE_RENDERER.method8425(i_0, i_1, i_10, i_31, -16777216);
-                    Renderers.SOFTWARE_RENDERER.method8425(i_0 + i_21 - i_10, i_1, i_10, i_31, -16777216);
+                    Renderers.CURRENT_RENDERER.L();
+                    Renderers.CURRENT_RENDERER.method8425(i_0, i_1, i_10, i_31, -16777216);
+                    Renderers.CURRENT_RENDERER.method8425(i_0 + i_21 - i_10, i_1, i_10, i_31, -16777216);
                 }
                 i_0 += i_10;
                 i_21 -= i_10 * 2;
@@ -67,9 +67,9 @@ public class Class492 {
                 i_9 = s_11 * i_21 * 334 / (i_7 * 512);
                 i_10 = (i_31 - i_9) / 2;
                 if (bool_4) {
-                    Renderers.SOFTWARE_RENDERER.L();
-                    Renderers.SOFTWARE_RENDERER.method8425(i_0, i_1, i_21, i_10, -16777216);
-                    Renderers.SOFTWARE_RENDERER.method8425(i_0, i_31 + i_1 - i_10, i_21, i_10, -16777216);
+                    Renderers.CURRENT_RENDERER.L();
+                    Renderers.CURRENT_RENDERER.method8425(i_0, i_1, i_21, i_10, -16777216);
+                    Renderers.CURRENT_RENDERER.method8425(i_0, i_31 + i_1 - i_10, i_21, i_10, -16777216);
                 }
                 i_1 += i_10;
                 i_31 -= i_10 * 2;

@@ -6,12 +6,12 @@ public class Class135_Sub2 extends Class135 implements Interface14 {
 
     int anInt9085;
 
-    Class135_Sub2(OpenGLHardwareRenderer class505_sub1_1, int i_2, byte[] bytes_3, int i_4, boolean bool_5) {
+    Class135_Sub2(OpenGLRenderer class505_sub1_1, int i_2, byte[] bytes_3, int i_4, boolean bool_5) {
         super(class505_sub1_1, 34962, bytes_3, i_4, bool_5);
         anInt9085 = i_2;
     }
 
-    Class135_Sub2(OpenGLHardwareRenderer class505_sub1_1, int i_2, Buffer buffer_3, int i_4) {
+    Class135_Sub2(OpenGLRenderer class505_sub1_1, int i_2, Buffer buffer_3, int i_4) {
         super(class505_sub1_1, buffer_3, i_4);
         anInt9085 = i_2;
     }

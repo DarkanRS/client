@@ -5,9 +5,9 @@ public abstract class Class103 {
     public int anInt1056;
     public Interface6 anInterface6_1059;
     public Matrix44 aClass384_1058 = new Matrix44();
-    protected AbstractRenderer_Sub2 aGraphicalRenderer_Sub2_1057;
+    protected HardwareRenderer aGraphicalRenderer_Sub2_1057;
 
-    Class103(AbstractRenderer_Sub2 class505_sub2_1) {
+    Class103(HardwareRenderer class505_sub2_1) {
         aGraphicalRenderer_Sub2_1057 = class505_sub2_1;
     }
 

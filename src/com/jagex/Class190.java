@@ -27,7 +27,7 @@ public class Class190 {
 
     }
 
-    static void method3149(Component icomponentdefinitions_0, Class455 class455_1, int i_2, int i_3, int i_4, int i_5, NativeSprite nativesprite_6) {
+    static void method3149(IComponentDefinitions icomponentdefinitions_0, Class455 class455_1, int i_2, int i_3, int i_4, int i_5, NativeSprite nativesprite_6) {
         if (nativesprite_6 != null) {
             int i_8;
             if (NativeLibraryLoader.anInt3240 == 4) {
@@ -39,8 +39,8 @@ public class Class190 {
             int i_9 = Math.max(icomponentdefinitions_0.width / 2, icomponentdefinitions_0.height / 2) + 10;
             int i_10 = i_5 * i_5 + i_4 * i_4;
             if (i_10 <= i_9 * i_9) {
-                int i_11 = Class382.SINE[i_8];
-                int i_12 = Class382.COSINE[i_8];
+                int i_11 = Trig.SINE[i_8];
+                int i_12 = Trig.COSINE[i_8];
                 if (NativeLibraryLoader.anInt3240 != 4) {
                     i_11 = i_11 * 256 / (client.anInt7203 + 256);
                     i_12 = i_12 * 256 / (client.anInt7203 + 256);
@@ -63,7 +63,7 @@ public class Class190 {
         return RouteStrategies.NPC;
     }
 
-    static void method3151(int i_0, int i_1, Component icomponentdefinitions_2, Class119 class119_3, int i_4, int i_5) {
+    static void method3151(int i_0, int i_1, IComponentDefinitions icomponentdefinitions_2, Class119 class119_3, int i_4, int i_5) {
         HintArrow[] hintArrows = client.HINT_ARROWS;
 
         for (int i_8 = 0; i_8 < hintArrows.length; i_8++) {
@@ -200,7 +200,7 @@ public class Class190 {
 
         IndexLoaders.MAP_REGION_DECODER.method4435().method4048();
         client.aBool7371 = true;
-        Class455.aShortArray5452 = ObjectDefinition.aShortArray5691 = NPCType.aShortArray4862 = ItemDefinitions.staticColorArr256 = new short[256];
+        Class455.aShortArray5452 = ObjectDefinition.aShortArray5691 = NPCDefinitions.aShortArray4862 = ItemDefinitions.staticColorArr256 = new short[256];
         Class85.aString817 = LocalizedText.WALK_HERE.translate(Class223.CURRENT_LANGUAGE);
         Class393.preferences.setValue(Class393.preferences.removeRoofsOptionOverride, Class393.preferences.removeRoofs.method12952());
         client.anInt7221 = 0;

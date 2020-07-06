@@ -26,7 +26,7 @@ public abstract class Ground {
         tileHeights = ints_4;
     }
 
-    static void method6728(Component icomponentdefinitions_0, Class119 class119_1, int i_2, int i_3, int i_4, int i_5, int i_6, long long_7) {
+    static void method6728(IComponentDefinitions icomponentdefinitions_0, Class119 class119_1, int i_2, int i_3, int i_4, int i_5, int i_6, long long_7) {
         int i_9 = i_5 * i_5 + i_4 * i_4;
         if (i_9 <= long_7) {
             int i_10;
@@ -35,8 +35,8 @@ public abstract class Ground {
             } else {
                 i_10 = (int) client.camAngleY + client.anInt7255 & 0x3fff;
             }
-            int i_11 = Class382.SINE[i_10];
-            int i_12 = Class382.COSINE[i_10];
+            int i_11 = Trig.SINE[i_10];
+            int i_12 = Trig.COSINE[i_10];
             if (NativeLibraryLoader.anInt3240 != 4) {
                 i_11 = i_11 * 256 / (client.anInt7203 + 256);
                 i_12 = i_12 * 256 / (client.anInt7203 + 256);

@@ -10,21 +10,21 @@ public class OpenGLSprite extends NativeSprite {
     int anInt9035;
     boolean aBool9028;
     int anInt9031;
-    OpenGLHardwareRenderer aGraphicalRenderer_Sub1_9032;
+    OpenGLRenderer aGraphicalRenderer_Sub1_9032;
     Class137_Sub1_Sub1 aClass137_Sub1_Sub1_9033;
     Class137_Sub1_Sub1 aClass137_Sub1_Sub1_9029;
 
-    OpenGLSprite(OpenGLHardwareRenderer class505_sub1_1, int i_2, int i_3, int[] ints_4, int i_5, int i_6) {
+    OpenGLSprite(OpenGLRenderer class505_sub1_1, int i_2, int i_3, int[] ints_4, int i_5, int i_6) {
         aGraphicalRenderer_Sub1_9032 = class505_sub1_1;
         aClass137_Sub1_Sub1_9033 = Class137_Sub1_Sub1.method15537(class505_sub1_1, i_2, i_3, ints_4, i_6, i_5);
     }
 
-    OpenGLSprite(OpenGLHardwareRenderer class505_sub1_1, int i_2, int i_3, int i_4, int i_5) {
+    OpenGLSprite(OpenGLRenderer class505_sub1_1, int i_2, int i_3, int i_4, int i_5) {
         aGraphicalRenderer_Sub1_9032 = class505_sub1_1;
         aClass137_Sub1_Sub1_9033 = Class137_Sub1_Sub1.method15538(class505_sub1_1, i_2, i_3, i_4, i_5);
     }
 
-    OpenGLSprite(OpenGLHardwareRenderer class505_sub1_1, int i_2, int i_3, boolean bool_4) {
+    OpenGLSprite(OpenGLRenderer class505_sub1_1, int i_2, int i_3, boolean bool_4) {
         aGraphicalRenderer_Sub1_9032 = class505_sub1_1;
         aClass137_Sub1_Sub1_9033 = Class137_Sub1_Sub1.method15547(class505_sub1_1, bool_4 ? Class150.aClass150_1949 : Class150.aClass150_1950, Class76.aClass76_751, i_2, i_3);
     }

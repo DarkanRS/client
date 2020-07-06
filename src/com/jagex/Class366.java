@@ -10,7 +10,7 @@ public class Class366 implements Interface3 {
         anInt4231 = i_1;
     }
 
-    static void method6301(AbstractRenderer graphicalrenderer_0, int i_1, int i_2, Component icomponentdefinitions_3, int i_4) {
+    static void method6301(AbstractRenderer graphicalrenderer_0, int i_1, int i_2, IComponentDefinitions icomponentdefinitions_3, int i_4) {
         for (int i_6 = 7; i_6 >= 0; --i_6) {
             for (int i_7 = 127; i_7 >= 0; --i_7) {
                 int i_8 = (i_4 & 0x3f) << 10 | (i_6 & 0x7) << 7 | i_7 & 0x7f;

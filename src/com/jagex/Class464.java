@@ -12,9 +12,9 @@ public class Class464 {
         aEntityNode_Sub1_5554.aEntityNode_Sub1_7707 = aEntityNode_Sub1_5554;
     }
 
-    static void method7743(Component[] arr_0, int i_1) {
+    static void method7743(IComponentDefinitions[] arr_0, int i_1) {
         for (int i_3 = 0; i_3 < arr_0.length; i_3++) {
-            Component icomponentdefinitions_4 = arr_0[i_3];
+            IComponentDefinitions icomponentdefinitions_4 = arr_0[i_3];
             if (icomponentdefinitions_4 != null && icomponentdefinitions_4.parent == i_1 && !client.method11651(icomponentdefinitions_4)) {
                 if (icomponentdefinitions_4.type == ComponentType.CONTAINER) {
                     method7743(arr_0, icomponentdefinitions_4.idHash);

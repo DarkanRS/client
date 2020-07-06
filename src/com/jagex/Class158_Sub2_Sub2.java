@@ -2,9 +2,9 @@ package com.jagex;
 
 public abstract class Class158_Sub2_Sub2 extends Class158_Sub2 {
 
-    AbstractRenderer_Sub2 aGraphicalRenderer_Sub2_10225;
+    HardwareRenderer aGraphicalRenderer_Sub2_10225;
 
-    Class158_Sub2_Sub2(AbstractRenderer_Sub2 class505_sub2_1) {
+    Class158_Sub2_Sub2(HardwareRenderer class505_sub2_1) {
         aGraphicalRenderer_Sub2_10225 = class505_sub2_1;
     }
 

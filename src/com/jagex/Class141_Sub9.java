@@ -12,7 +12,7 @@ public class Class141_Sub9 extends Class141 {
     Class133 aClass133_9115;
     float[] aFloatArray9106;
 
-    Class141_Sub9(OpenGLHardwareRenderer class505_sub1_1, Class136 class136_2) {
+    Class141_Sub9(OpenGLRenderer class505_sub1_1, Class136 class136_2) {
         super(class505_sub1_1);
         aClass136_9108 = class136_2;
         if (aGraphicalRenderer_Sub1_1664.aBool8484 && aGraphicalRenderer_Sub1_1664.anInt8469 >= 2) {

@@ -2,7 +2,7 @@ package com.jagex;
 
 public class Class141_Sub6 extends Class141 {
 
-    Class141_Sub6(OpenGLHardwareRenderer class505_sub1_1) {
+    Class141_Sub6(OpenGLRenderer class505_sub1_1) {
         super(class505_sub1_1);
     }
 

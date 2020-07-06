@@ -6,7 +6,7 @@ public abstract class Class158 {
         return Class475.supportsFullScreen && client.fullScreenFrame != null ? 3 : (client.resizeableScreen ? 2 : 1);
     }
 
-    static void method2731(AbstractRenderer graphicalrenderer_0, Class455 class455_1, Component icomponentdefinitions_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
+    static void method2731(AbstractRenderer graphicalrenderer_0, Class455 class455_1, IComponentDefinitions icomponentdefinitions_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
         MapAreaDefinitions worldmapareadefs_9 = IndexLoaders.WORLD_MAP_LOADER.getWorldMapDefs(i_7);
         if (worldmapareadefs_9 != null && worldmapareadefs_9.aBool2729 && worldmapareadefs_9.shouldDraw(Class158_Sub1.PLAYER_VAR_PROVIDER)) {
             int i_11;
@@ -21,8 +21,8 @@ public abstract class Class158 {
                     } else {
                         i_12 = (int) client.camAngleY + client.anInt7255 & 0x3fff;
                     }
-                    i_13 = Class382.SINE[i_12];
-                    i_14 = Class382.COSINE[i_12];
+                    i_13 = Trig.SINE[i_12];
+                    i_14 = Trig.COSINE[i_12];
                     if (NativeLibraryLoader.anInt3240 != 4) {
                         i_13 = i_13 * 256 / (client.anInt7203 + 256);
                         i_14 = i_14 * 256 / (client.anInt7203 + 256);

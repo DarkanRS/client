@@ -5,12 +5,12 @@ import jagdx.IUnknown;
 public abstract class Class360 implements Interface7 {
 
     long aLong4168;
-    AbstractRenderer_Sub2_Sub2 aGraphicalRenderer_Sub2_Sub2_4165;
+    DirectXRenderer aGraphicalRenderer_Sub2_Sub2_4165;
     Class150 aClass150_4167;
     Class76 aClass76_4164;
     boolean aBool4166;
 
-    Class360(AbstractRenderer_Sub2_Sub2 class505_sub2_sub2_1, Class150 class150_2, Class76 class76_3, boolean bool_4) {
+    Class360(DirectXRenderer class505_sub2_sub2_1, Class150 class150_2, Class76 class76_3, boolean bool_4) {
         aGraphicalRenderer_Sub2_Sub2_4165 = class505_sub2_sub2_1;
         aClass150_4167 = class150_2;
         aClass76_4164 = class76_3;

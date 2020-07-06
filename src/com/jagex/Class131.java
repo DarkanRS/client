@@ -4,15 +4,15 @@ import jaclib.memory.Buffer;
 
 public class Class131 {
 
-    OpenGLHardwareRenderer aGraphicalRenderer_Sub1_1594;
+    OpenGLRenderer aGraphicalRenderer_Sub1_1594;
     Buffer aBuffer1593;
 
-    Class131(OpenGLHardwareRenderer class505_sub1_1, Buffer buffer_2) {
+    Class131(OpenGLRenderer class505_sub1_1, Buffer buffer_2) {
         aGraphicalRenderer_Sub1_1594 = class505_sub1_1;
         aBuffer1593 = buffer_2;
     }
 
-    Class131(OpenGLHardwareRenderer class505_sub1_1, byte[] bytes_2, int i_3) {
+    Class131(OpenGLRenderer class505_sub1_1, byte[] bytes_2, int i_3) {
         aGraphicalRenderer_Sub1_1594 = class505_sub1_1;
         aBuffer1593 = aGraphicalRenderer_Sub1_1594.aNativeHeap8445.method759(i_3, false);
         if (bytes_2 != null) {

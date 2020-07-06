@@ -7,7 +7,7 @@ public class Class319_Sub2 extends Class319 implements Interface29 {
     int anInt9159;
     int anInt9158;
 
-    Class319_Sub2(AbstractRenderer_Sub2_Sub1 class505_sub2_sub1_1, int i_2, int i_3, boolean bool_4, int[] ints_5, int i_6, int i_7) {
+    Class319_Sub2(JAGGLRenderer class505_sub2_sub1_1, int i_2, int i_3, boolean bool_4, int[] ints_5, int i_6, int i_7) {
         super(class505_sub2_sub1_1, 3553, Class150.aClass150_1949, Class76.aClass76_751, i_3 * i_2, bool_4);
         anInt9159 = i_2;
         anInt9158 = i_3;
@@ -22,7 +22,7 @@ public class Class319_Sub2 extends Class319 implements Interface29 {
 
     }
 
-    Class319_Sub2(AbstractRenderer_Sub2_Sub1 class505_sub2_sub1_1, Class150 class150_2, int i_3, int i_4, boolean bool_5, byte[] bytes_6, int i_7, int i_8) {
+    Class319_Sub2(JAGGLRenderer class505_sub2_sub1_1, Class150 class150_2, int i_3, int i_4, boolean bool_5, byte[] bytes_6, int i_7, int i_8) {
         super(class505_sub2_sub1_1, 3553, class150_2, Class76.aClass76_751, i_3 * i_4, bool_5);
         anInt9159 = i_3;
         anInt9158 = i_4;
@@ -42,7 +42,7 @@ public class Class319_Sub2 extends Class319 implements Interface29 {
                 if (class150_10 == Class150.aClass150_1957) {
                     OpenGL.glCompressedTexImage2Dub(anInt3707, 0, 33779, i_3, i_4, 0, i_3 * i_4, bytes_6, i_7);
                 } else {
-                    OpenGL.glTexImage2Dub(anInt3707, 0, AbstractRenderer_Sub2_Sub1.method15574(aClass150_3708, aClass76_3710), i_3, i_4, 0, AbstractRenderer_Sub2_Sub1.method15575(aClass150_3708), 5121, bytes_6, i_7);
+                    OpenGL.glTexImage2Dub(anInt3707, 0, JAGGLRenderer.method15574(aClass150_3708, aClass76_3710), i_3, i_4, 0, JAGGLRenderer.method15575(aClass150_3708), 5121, bytes_6, i_7);
                 }
             }
 
@@ -52,7 +52,7 @@ public class Class319_Sub2 extends Class319 implements Interface29 {
         OpenGL.glPixelStorei(3317, 4);
     }
 
-    Class319_Sub2(AbstractRenderer_Sub2_Sub1 class505_sub2_sub1_1, Class150 class150_2, int i_3, int i_4, boolean bool_5, float[] floats_6, int i_7, int i_8) {
+    Class319_Sub2(JAGGLRenderer class505_sub2_sub1_1, Class150 class150_2, int i_3, int i_4, boolean bool_5, float[] floats_6, int i_7, int i_8) {
         super(class505_sub2_sub1_1, 3553, class150_2, Class76.aClass76_758, i_3 * i_4, bool_5);
         anInt9159 = i_3;
         anInt9158 = i_4;
@@ -61,18 +61,18 @@ public class Class319_Sub2 extends Class319 implements Interface29 {
             method5702(anInt3707, i_3, i_4, floats_6);
         } else {
             OpenGL.glPixelStorei(3314, i_8);
-            OpenGL.glTexImage2Df(anInt3707, 0, AbstractRenderer_Sub2_Sub1.method15574(aClass150_3708, aClass76_3710), i_3, i_4, 0, AbstractRenderer_Sub2_Sub1.method15575(aClass150_3708), 5126, floats_6, i_7 * 4);
+            OpenGL.glTexImage2Df(anInt3707, 0, JAGGLRenderer.method15574(aClass150_3708, aClass76_3710), i_3, i_4, 0, JAGGLRenderer.method15575(aClass150_3708), 5126, floats_6, i_7 * 4);
             OpenGL.glPixelStorei(3314, 0);
         }
 
     }
 
-    Class319_Sub2(AbstractRenderer_Sub2_Sub1 class505_sub2_sub1_1, Class150 class150_2, Class76 class76_3, int i_4, int i_5) {
+    Class319_Sub2(JAGGLRenderer class505_sub2_sub1_1, Class150 class150_2, Class76 class76_3, int i_4, int i_5) {
         super(class505_sub2_sub1_1, 3553, class150_2, class76_3, i_5 * i_4, false);
         anInt9159 = i_4;
         anInt9158 = i_5;
         aGraphicalRenderer_Sub2_Sub1_3700.method14035(this);
-        OpenGL.glTexImage2Dub(anInt3707, 0, AbstractRenderer_Sub2_Sub1.method15574(aClass150_3708, aClass76_3710), i_4, i_5, 0, AbstractRenderer_Sub2_Sub1.method15575(aClass150_3708), AbstractRenderer_Sub2_Sub1.method15566(aClass76_3710), null, 0);
+        OpenGL.glTexImage2Dub(anInt3707, 0, JAGGLRenderer.method15574(aClass150_3708, aClass76_3710), i_4, i_5, 0, JAGGLRenderer.method15575(aClass150_3708), JAGGLRenderer.method15566(aClass76_3710), null, 0);
     }
 
     @Override
@@ -80,7 +80,7 @@ public class Class319_Sub2 extends Class319 implements Interface29 {
         aGraphicalRenderer_Sub2_Sub1_3700.method14035(this);
         OpenGL.glPixelStorei(3317, 1);
         OpenGL.glPixelStorei(3314, i_8);
-        OpenGL.glTexSubImage2Dub(anInt3707, 0, i_1, i_2, i_3, i_4, AbstractRenderer_Sub2_Sub1.method15575(class150_6), 5121, bytes_5, i_7);
+        OpenGL.glTexSubImage2Dub(anInt3707, 0, i_1, i_2, i_3, i_4, JAGGLRenderer.method15575(class150_6), 5121, bytes_5, i_7);
         OpenGL.glPixelStorei(3314, 0);
         OpenGL.glPixelStorei(3317, 4);
     }
@@ -103,7 +103,7 @@ public class Class319_Sub2 extends Class319 implements Interface29 {
     void method14494(int i_3, int i_4, float[] floats_5, Class150 class150_6, int i_7, int i_8) {
         aGraphicalRenderer_Sub2_Sub1_3700.method14035(this);
         OpenGL.glPixelStorei(3314, i_8);
-        OpenGL.glTexSubImage2Df(anInt3707, 0, 0, 0, i_3, i_4, AbstractRenderer_Sub2_Sub1.method15575(class150_6), 5121, floats_5, i_7);
+        OpenGL.glTexSubImage2Df(anInt3707, 0, 0, 0, i_3, i_4, JAGGLRenderer.method15575(class150_6), 5121, floats_5, i_7);
         OpenGL.glPixelStorei(3314, 0);
     }
 
@@ -134,7 +134,7 @@ public class Class319_Sub2 extends Class319 implements Interface29 {
         aGraphicalRenderer_Sub2_Sub1_3700.method14035(this);
         OpenGL.glPixelStorei(3317, 1);
         OpenGL.glPixelStorei(3314, i_8);
-        OpenGL.glTexSubImage2Dub(anInt3707, 0, i_1, i_2, i_3, i_4, AbstractRenderer_Sub2_Sub1.method15575(class150_6), 5121, bytes_5, i_7);
+        OpenGL.glTexSubImage2Dub(anInt3707, 0, i_1, i_2, i_3, i_4, JAGGLRenderer.method15575(class150_6), 5121, bytes_5, i_7);
         OpenGL.glPixelStorei(3314, 0);
         OpenGL.glPixelStorei(3317, 4);
     }

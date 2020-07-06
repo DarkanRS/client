@@ -9,11 +9,11 @@ public abstract class Class158_Sub2_Sub3 extends Class158_Sub2 {
     int anInt10238;
     int anInt10239;
     Canvas aCanvas10241;
-    HardwareRenderer aGraphicalRenderer_Sub3_10237;
+    JavaRenderer aGraphicalRenderer_Sub3_10237;
     int[] anIntArray10240;
     float[] aFloatArray10236;
 
-    Class158_Sub2_Sub3(HardwareRenderer hardwarerenderer_1, Canvas canvas_2, int i_3, int i_4) {
+    Class158_Sub2_Sub3(JavaRenderer hardwarerenderer_1, Canvas canvas_2, int i_3, int i_4) {
         aCanvas10241 = canvas_2;
         aGraphicalRenderer_Sub3_10237 = hardwarerenderer_1;
         anInt10238 = i_3;

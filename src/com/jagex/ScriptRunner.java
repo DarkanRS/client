@@ -21,16 +21,16 @@ public class ScriptRunner {
             floats_7[0] = -1.0f;
         } else {
             int i_8 = Class504.getTerrainHeightAtPos(i_1, i_2, i_0) - i_4;
-            client.aClass294_7457.method5209(Renderers.SOFTWARE_RENDERER.method8458());
+            client.aClass294_7457.method5209(Renderers.CURRENT_RENDERER.method8458());
             client.aClass294_7457.method5219(i_3, 0.0F, 0.0F);
-            Renderers.SOFTWARE_RENDERER.method8457(client.aClass294_7457);
+            Renderers.CURRENT_RENDERER.method8457(client.aClass294_7457);
             if (bool_5) {
-                Renderers.SOFTWARE_RENDERER.method8479(i_1, i_8, i_2, client.aFloatArray7292);
+                Renderers.CURRENT_RENDERER.method8479(i_1, i_8, i_2, client.aFloatArray7292);
             } else {
-                Renderers.SOFTWARE_RENDERER.method8515(i_1, i_8, i_2, client.aFloatArray7292);
+                Renderers.CURRENT_RENDERER.method8515(i_1, i_8, i_2, client.aFloatArray7292);
             }
             client.aClass294_7457.method5219((-i_3), 0.0F, 0.0F);
-            Renderers.SOFTWARE_RENDERER.method8457(client.aClass294_7457);
+            Renderers.CURRENT_RENDERER.method8457(client.aClass294_7457);
             client.aFloatArray7292[0] -= client.anInt7444;
             client.aFloatArray7292[1] -= client.anInt7445;
         }

@@ -2,7 +2,7 @@ package com.jagex;
 
 public class Class448 {
 
-    public static ConnectionInfo aClass450_5420;
+    public static ConnectionInfo JS5_CONNECTION_INFO;
     public static ConnectionInfo CONNECTION_INFO;
     public static ConnectionInfo LOBBY_CONNECTION_INFO;
     public static long aLong5425;

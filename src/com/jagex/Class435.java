@@ -69,7 +69,7 @@ public class Class435 {
                     return;
                 }
 
-                NPCType.method6907();
+                NPCDefinitions.method6907();
                 Class291_Sub1.anInt8015 = 10;
             }
 

@@ -17,7 +17,7 @@ public class Class534_Sub1 extends Class534 {
             ObjectNode class282_sub47_3 = (ObjectNode) client.NPC_MAP.get((int) class282_sub50_sub7_0.aLong9584);
             if (class282_sub47_3 != null) {
                 NPCEntity npc_4 = (NPCEntity) class282_sub47_3.anObject8068;
-                NPCType npcdefinitions_5 = npc_4.definitions;
+                NPCDefinitions npcdefinitions_5 = npc_4.definitions;
                 if (npcdefinitions_5.transformTo != null) {
                     npcdefinitions_5 = npcdefinitions_5.getMultiNPC(Class158_Sub1.PLAYER_VAR_PROVIDER);
                 }

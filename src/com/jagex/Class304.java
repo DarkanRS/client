@@ -36,7 +36,7 @@ public class Class304 implements Interface27 {
         return i_0 < 100000 ? "<col=ffff00>" + i_0 + "</col>" : (i_0 < 10000000 ? "<col=ffffff>" + i_0 / 1000 + LocalizedText.aClass433_5297.translate(xlanguage_1) + "</col>" : "<col=00ff80>" + i_0 / 1000000 + LocalizedText.aClass433_5304.translate(xlanguage_1) + "</col>");
     }
 
-    public static void setUseOptionFlags(Component componentDefs, int flags, int interfaceId) {
+    public static void setUseOptionFlags(IComponentDefinitions componentDefs, int flags, int interfaceId) {
         if (componentDefs != null) {
             if (componentDefs.anObjectArray1400 != null) {
                 HookRequest hookrequest_4 = new HookRequest();

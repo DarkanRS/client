@@ -103,7 +103,7 @@ public class Class363 {
         Class236.method3985(animable_0, moveType);
         Class150.method2581(animable_0);
         Quaternion quaternion_7 = Quaternion.create();
-        quaternion_7.romYawPitchRoll(Class382.method6508(animable_0.aClass19_10359.method578()), Class382.method6508(animable_0.aClass19_10330.method578()), Class382.method6508(animable_0.aClass19_10360.method578()));
+        quaternion_7.romYawPitchRoll(Trig.degToRad(animable_0.aClass19_10359.method578()), Trig.degToRad(animable_0.aClass19_10330.method578()), Trig.degToRad(animable_0.aClass19_10360.method578()));
         animable_0.method11187(quaternion_7);
         quaternion_7.cache();
     }

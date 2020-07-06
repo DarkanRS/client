@@ -9,7 +9,7 @@ public class Class360_Sub3 extends Class360 implements Interface31 {
 
     int anInt9200;
 
-    Class360_Sub3(AbstractRenderer_Sub2_Sub2 class505_sub2_sub2_1, int i_2, boolean bool_3, int[][] ints_4) {
+    Class360_Sub3(DirectXRenderer class505_sub2_sub2_1, int i_2, boolean bool_3, int[][] ints_4) {
         super(class505_sub2_sub2_1, Class150.aClass150_1949, Class76.aClass76_751, bool_3 && class505_sub2_sub2_1.aBool10247);
         anInt9200 = i_2;
         if (aBool4166) {

@@ -28,10 +28,10 @@ public class Class151 {
         }
     }
 
-    static void method2590(Component icomponentdefinitions_0) {
+    static void method2590(IComponentDefinitions icomponentdefinitions_0) {
         if (client.aBool7344) {
             if (icomponentdefinitions_0.anObjectArray1393 != null) {
-                Component icomponentdefinitions_2 = Index.getIComponentDefinitions(client.anInt56, client.anInt7345);
+                IComponentDefinitions icomponentdefinitions_2 = Index.getIComponentDefinitions(client.anInt56, client.anInt7345);
                 if (icomponentdefinitions_2 != null) {
                     HookRequest hookrequest_3 = new HookRequest();
                     hookrequest_3.source = icomponentdefinitions_0;
@@ -51,9 +51,9 @@ public class Class151 {
         }
     }
 
-    static void method2591(Component[] arr_0, int i_1) {
+    static void method2591(IComponentDefinitions[] arr_0, int i_1) {
         for (int i_3 = 0; i_3 < arr_0.length; i_3++) {
-            Component icomponentdefinitions_4 = arr_0[i_3];
+            IComponentDefinitions icomponentdefinitions_4 = arr_0[i_3];
             if (icomponentdefinitions_4 != null) {
                 if (icomponentdefinitions_4.type == ComponentType.CONTAINER) {
                     if (icomponentdefinitions_4.itemSlots != null) {
@@ -73,7 +73,7 @@ public class Class151 {
                 }
                 if (i_1 == 1 && icomponentdefinitions_4.anObjectArray1346 != null) {
                     if (icomponentdefinitions_4.slotId >= 0) {
-                        Component icomponentdefinitions_7 = Component.getDefs(icomponentdefinitions_4.idHash);
+                        IComponentDefinitions icomponentdefinitions_7 = IComponentDefinitions.getDefs(icomponentdefinitions_4.idHash);
                         if (icomponentdefinitions_7 == null || icomponentdefinitions_7.slotChildren == null || icomponentdefinitions_4.slotId >= icomponentdefinitions_7.slotChildren.length || icomponentdefinitions_4 != icomponentdefinitions_7.slotChildren[icomponentdefinitions_4.slotId]) {
                             continue;
                         }

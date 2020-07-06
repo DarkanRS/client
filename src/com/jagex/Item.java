@@ -18,7 +18,7 @@ public class Item extends Node {
         hasPlayerAppearance = bool_6;
     }
 
-    static void method12574(AbstractRenderer graphicalrenderer_0, Component icomponentdefinitions_1, int i_2, int i_3) {
+    static void method12574(AbstractRenderer graphicalrenderer_0, IComponentDefinitions icomponentdefinitions_1, int i_2, int i_3) {
         Class119 class119_5 = icomponentdefinitions_1.method2046(graphicalrenderer_0);
         if (class119_5 != null) {
             Class455 class455_6 = class119_5.aClass455_1456;

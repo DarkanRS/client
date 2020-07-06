@@ -11,7 +11,7 @@ public class MaterialProp30 extends MaterialProperty {
     }
 
     static void method15240() {
-        LocalizedText.method7275(Renderers.SOFTWARE_RENDERER);
+        LocalizedText.method7275(Renderers.CURRENT_RENDERER);
         if (client.anInt7472 != Class4.MY_PLAYER_PLANE) {
             ClanVarDefinitions.method6823();
         }

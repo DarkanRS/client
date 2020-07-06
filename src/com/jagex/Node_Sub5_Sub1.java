@@ -21,7 +21,7 @@ public class Node_Sub5_Sub1 extends Node_Sub5 {
     int anInt10039;
     int anInt10033;
 
-    Node_Sub5_Sub1(OpenGLHardwareRenderer class505_sub1_1) {
+    Node_Sub5_Sub1(OpenGLRenderer class505_sub1_1) {
         super(class505_sub1_1);
     }
 

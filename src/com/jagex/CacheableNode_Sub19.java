@@ -6,14 +6,14 @@ public class CacheableNode_Sub19 extends CacheableNode implements Interface13 {
 
     static int[] anIntArray10283 = new int[1];
     int anInt10278;
-    OpenGLHardwareRenderer aGraphicalRenderer_Sub1_10282;
+    OpenGLRenderer aGraphicalRenderer_Sub1_10282;
     int anInt10280;
     int anInt10281;
     Class150 aClass150_10285;
     Class76 aClass76_10279;
     int anInt10284;
 
-    CacheableNode_Sub19(OpenGLHardwareRenderer class505_sub1_1, Class150 class150_2, Class76 class76_3, int i_4, int i_5, int i_6) {
+    CacheableNode_Sub19(OpenGLRenderer class505_sub1_1, Class150 class150_2, Class76 class76_3, int i_4, int i_5, int i_6) {
         aGraphicalRenderer_Sub1_10282 = class505_sub1_1;
         anInt10280 = i_4;
         anInt10281 = i_5;
@@ -22,11 +22,11 @@ public class CacheableNode_Sub19 extends CacheableNode implements Interface13 {
         OpenGL.glGenRenderbuffersEXT(1, anIntArray10283, 0);
         anInt10278 = anIntArray10283[0];
         OpenGL.glBindRenderbufferEXT(36161, anInt10278);
-        OpenGL.glRenderbufferStorageMultisampleEXT(36161, i_6, OpenGLHardwareRenderer.method13630(aClass150_10285, aClass76_10279), anInt10280, anInt10281);
+        OpenGL.glRenderbufferStorageMultisampleEXT(36161, i_6, OpenGLRenderer.method13630(aClass150_10285, aClass76_10279), anInt10280, anInt10281);
         anInt10284 = aClass150_10285.anInt1959 * aClass76_10279.anInt748 * anInt10280 * anInt10281;
     }
 
-    CacheableNode_Sub19(OpenGLHardwareRenderer class505_sub1_1, Class150 class150_2, Class76 class76_3, int i_4, int i_5) {
+    CacheableNode_Sub19(OpenGLRenderer class505_sub1_1, Class150 class150_2, Class76 class76_3, int i_4, int i_5) {
         aGraphicalRenderer_Sub1_10282 = class505_sub1_1;
         anInt10280 = i_4;
         anInt10281 = i_5;
@@ -35,7 +35,7 @@ public class CacheableNode_Sub19 extends CacheableNode implements Interface13 {
         OpenGL.glGenRenderbuffersEXT(1, anIntArray10283, 0);
         anInt10278 = anIntArray10283[0];
         OpenGL.glBindRenderbufferEXT(36161, anInt10278);
-        OpenGL.glRenderbufferStorageEXT(36161, OpenGLHardwareRenderer.method13630(aClass150_10285, aClass76_10279), anInt10280, anInt10281);
+        OpenGL.glRenderbufferStorageEXT(36161, OpenGLRenderer.method13630(aClass150_10285, aClass76_10279), anInt10280, anInt10281);
         anInt10284 = aClass150_10285.anInt1959 * aClass76_10279.anInt748 * anInt10280 * anInt10281;
     }
 

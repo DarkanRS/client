@@ -3,14 +3,14 @@ package com.jagex;
 public class FontRenderer_Sub1 extends FontRenderer {
 
     static int anInt8515;
-    HardwareRenderer aGraphicalRenderer_Sub3_8513;
+    JavaRenderer aGraphicalRenderer_Sub3_8513;
     int[] anIntArray8511;
     int[] anIntArray8512;
     byte[][] aByteArrayArray8509;
     int[] anIntArray8510;
     int[] anIntArray8514;
 
-    FontRenderer_Sub1(HardwareRenderer hardwarerenderer_1, FontMetrics fontmetrics_2, SpriteDefinitions[] arr_3, int[] ints_4, int[] ints_5) {
+    FontRenderer_Sub1(JavaRenderer hardwarerenderer_1, FontMetrics fontmetrics_2, SpriteDefinitions[] arr_3, int[] ints_4, int[] ints_5) {
         super(hardwarerenderer_1, fontmetrics_2);
         aGraphicalRenderer_Sub3_8513 = hardwarerenderer_1;
         anIntArray8511 = ints_4;

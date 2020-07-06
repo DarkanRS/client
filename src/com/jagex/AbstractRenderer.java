@@ -31,6 +31,34 @@ public abstract class AbstractRenderer {
             rendererId = i_2;
         }
     }
+    
+	public static AbstractRenderer createRenderer(int i_0, Canvas canvas_1, ImageLoader interface22_2, Index index_3, int i_4) {
+	    int i_6 = 0;
+	    int i_7 = 0;
+	    if (canvas_1 != null) {
+	        Dimension dimension_8 = canvas_1.getSize();
+	        i_6 = dimension_8.width;
+	        i_7 = dimension_8.height;
+	    }
+	    return createRenderer(i_0, canvas_1, interface22_2, index_3, i_4, i_6, i_7);
+	}
+	
+
+	static synchronized AbstractRenderer createRenderer(int type, Canvas canvas_1, ImageLoader interface22_2, Index index_3, int i_4, int i_5, int i_6) {
+	    if (type == 0) {
+	        return JavaRenderer.create(canvas_1, interface22_2, i_5, i_6); //safe mode renderer
+	    } else if (type == 2) {
+	        return ja.create(canvas_1, interface22_2, i_5, i_6); //jagex sw3d software renderer
+	    } else if (type == 1) {
+	        return OpenGLRenderer.create(canvas_1, interface22_2, i_4); //hardware accellerated opengl renderer
+	    } else if (type == 5) {
+	        return JAGGLRenderer.create(canvas_1, interface22_2, index_3, i_4); //jagex gl library renderer
+	    } else if (type == 3) {
+	        return DirectXRenderer.create(canvas_1, interface22_2, index_3, i_4); //directx renderer
+	    } else {
+	        throw new IllegalArgumentException("");
+	    }
+	}
 
     static void method8695(EntityNode_Sub2 class275_sub2_0) {
         class275_sub2_0.aTransform_Sub1_Sub1_Sub2_7739 = null;

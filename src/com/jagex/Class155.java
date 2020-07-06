@@ -38,7 +38,7 @@ public class Class155 {
     }
 
     static void method2637(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5) {
-        ObjectIndexLoader.method7170(i_2);
+        ItemIndexLoader.method7170(i_2);
         int i_7 = 0;
         int i_8 = i_2 - i_5;
         if (i_8 < 0) {

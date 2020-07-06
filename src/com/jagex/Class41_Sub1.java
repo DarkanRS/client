@@ -25,7 +25,7 @@ public abstract class Class41_Sub1 extends Class41 {
     float[] aFloatArray9230 = new float[3];
     Matrix44[] aClass384Array9227;
 
-    Class41_Sub1(AbstractRenderer_Sub2 class505_sub2_1) {
+    Class41_Sub1(HardwareRenderer class505_sub2_1) {
         super(class505_sub2_1);
         new Matrix44Var();
         aClass384Array9227 = new Matrix44[aGraphicalRenderer_Sub2_413.anInt8825];

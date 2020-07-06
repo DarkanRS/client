@@ -11,7 +11,7 @@ public class Class241 {
     public static int getCPUProfile() {
         Canvas canvas_1 = new Canvas();
         canvas_1.setSize(100, 100);
-        AbstractRenderer graphicalrenderer_2 = Class320.createRenderer(0, canvas_1, null, null, 0);
+        AbstractRenderer graphicalrenderer_2 = AbstractRenderer.createRenderer(0, canvas_1, null, null, 0);
         long long_3 = Utils.time();
         int i_5;
         for (i_5 = 0; i_5 < 10000; i_5++) {
@@ -30,7 +30,7 @@ public class Class241 {
         return i_3 / 16 + i_4 / 8 + i_5 / 4;
     }
 
-    static void method4152(Component icomponentdefinitions_0, Class455 class455_1, int i_2, int i_3, int i_4, int i_5, int i_6, String string_7, FontRenderer fontrenderer_8, FontMetrics fontmetrics_9, int i_10) {
+    static void method4152(IComponentDefinitions icomponentdefinitions_0, Class455 class455_1, int i_2, int i_3, int i_4, int i_5, int i_6, String string_7, FontRenderer fontrenderer_8, FontMetrics fontmetrics_9, int i_10) {
         int i_12;
         if (NativeLibraryLoader.anInt3240 == 4) {
             i_12 = (int) client.camAngleY & 0x3fff;
@@ -40,8 +40,8 @@ public class Class241 {
         int i_13 = Math.max(icomponentdefinitions_0.width / 2, icomponentdefinitions_0.height / 2) + 10;
         int i_14 = i_5 * i_5 + i_4 * i_4;
         if (i_14 <= i_13 * i_13) {
-            int i_15 = Class382.SINE[i_12];
-            int i_16 = Class382.COSINE[i_12];
+            int i_15 = Trig.SINE[i_12];
+            int i_16 = Trig.COSINE[i_12];
             if (NativeLibraryLoader.anInt3240 != 4) {
                 i_15 = i_15 * 256 / (client.anInt7203 + 256);
                 i_16 = i_16 * 256 / (client.anInt7203 + 256);

@@ -765,8 +765,8 @@ public abstract class PathingEntity extends GraphNode_Sub1_Sub1 {
                                 meshrasterizer_14.f(i_19);
                             }
 
-                            int i_20 = Class382.SINE[i_19];
-                            int i_21 = Class382.COSINE[i_19];
+                            int i_20 = Trig.SINE[i_19];
+                            int i_21 = Trig.COSINE[i_19];
                             int i_22 = i_21 * i_15 + i_17 * i_20 >> 14;
                             i_17 = i_21 * i_17 - i_15 * i_20 >> 14;
                             i_15 = i_22;
@@ -882,8 +882,8 @@ public abstract class PathingEntity extends GraphNode_Sub1_Sub1 {
         Vector3 vector3_7 = method11166().coords;
         int i_8 = aShort9458 + localX >> 1;
         int i_9 = localY + aShort9456 >> 1;
-        int i_10 = Class382.SINE[i_1];
-        int i_11 = Class382.COSINE[i_1];
+        int i_10 = Trig.SINE[i_1];
+        int i_11 = Trig.COSINE[i_1];
         int i_12 = -i_2 / 2;
         int i_13 = -i_3 / 2;
         int i_14 = i_11 * i_12 + i_10 * i_13 >> 14;

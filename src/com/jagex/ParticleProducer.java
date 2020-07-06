@@ -50,7 +50,7 @@ public class ParticleProducer {
     }
 
     static void method11501() {
-        CutsceneAction_Sub12.method14614(Renderers.SOFTWARE_RENDERER, client.CYCLES_20MS);
+        CutsceneAction_Sub12.method14614(Renderers.CURRENT_RENDERER, client.CYCLES_20MS);
         if (client.BASE_WINDOW_ID != -1) {
             CS2Interface.method8777(client.BASE_WINDOW_ID);
         }
@@ -67,8 +67,8 @@ public class ParticleProducer {
             StructIndexLoader.method7039();
         }
 
-        Renderers.SOFTWARE_RENDERER.L();
-        MaterialProp21.method15411(Renderers.SOFTWARE_RENDERER);
+        Renderers.CURRENT_RENDERER.L();
+        MaterialProp21.method15411(Renderers.CURRENT_RENDERER);
         i_1 = QuickchatFiller.method1141();
         if (i_1 == -1) {
             i_1 = client.anInt7427;
@@ -191,12 +191,12 @@ public class ParticleProducer {
                     } else {
                         i_17 = anInt7113 + (int) (anInt7114 * Math.random());
                         i_17 &= 0x3fff;
-                        i_18 = Class382.SINE[i_17];
-                        int i_19 = Class382.COSINE[i_17];
+                        i_18 = Trig.SINE[i_17];
+                        int i_19 = Trig.COSINE[i_17];
                         i_20 = anInt7117 + (int) (anInt7116 * Math.random());
                         i_20 &= 0x1fff;
-                        i_21 = Class382.SINE[i_20];
-                        i_22 = Class382.COSINE[i_20];
+                        i_21 = Trig.SINE[i_20];
+                        i_22 = Trig.COSINE[i_20];
                         byte b_23 = 13;
                         i_14 = i_19 * i_21 >> b_23;
                         i_15 = (i_22 << 1) * -1;

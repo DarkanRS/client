@@ -10,10 +10,10 @@ public class Class158_Sub1_Sub4 extends Class158_Sub1 {
     int anInt10230;
     int anInt10229;
     Interface13[] anInterface13Array10233 = new Interface13[4];
-    OpenGLHardwareRenderer aGraphicalRenderer_Sub1_10227;
+    OpenGLRenderer aGraphicalRenderer_Sub1_10227;
     Interface13 anInterface13_10232;
 
-    Class158_Sub1_Sub4(OpenGLHardwareRenderer class505_sub1_1) {
+    Class158_Sub1_Sub4(OpenGLRenderer class505_sub1_1) {
         if (!class505_sub1_1.aBool8472) {
             throw new IllegalStateException("");
         } else {

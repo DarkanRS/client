@@ -5,7 +5,7 @@ import java.nio.ByteBuffer;
 public class Class74 {
 
     Class71[][] aClass71ArrayArray738;
-    AbstractRenderer_Sub2 aGraphicalRenderer_Sub2_730;
+    HardwareRenderer aGraphicalRenderer_Sub2_730;
     HardwareGround aGround_Sub1_731;
     int anInt732;
     int anInt734;
@@ -14,7 +14,7 @@ public class Class74 {
     int anInt735;
     int anInt733;
 
-    Class74(AbstractRenderer_Sub2 class505_sub2_1, HardwareGround class390_sub1_2) {
+    Class74(HardwareRenderer class505_sub2_1, HardwareGround class390_sub1_2) {
         aGraphicalRenderer_Sub2_730 = class505_sub2_1;
         aGround_Sub1_731 = class390_sub1_2;
         anInt732 = (aGround_Sub1_731.width * aGround_Sub1_731.tileUnits >> aGraphicalRenderer_Sub2_730.anInt8806) + 2;

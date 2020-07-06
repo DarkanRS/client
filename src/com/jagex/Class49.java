@@ -11,9 +11,9 @@ public class Class49 {
     public boolean aBool474;
     Interface6[] anInterface6Array476;
     Interface1 anInterface1_475;
-    AbstractRenderer_Sub2 aGraphicalRenderer_Sub2_481;
+    HardwareRenderer aGraphicalRenderer_Sub2_481;
 
-    Class49(AbstractRenderer_Sub2 class505_sub2_1) {
+    Class49(HardwareRenderer class505_sub2_1) {
         aGraphicalRenderer_Sub2_481 = class505_sub2_1;
         aBool474 = aGraphicalRenderer_Sub2_481.aBool8827;
         if (aBool474 && !aGraphicalRenderer_Sub2_481.method13955(Class150.aClass150_1952, Class76.aClass76_751)) {

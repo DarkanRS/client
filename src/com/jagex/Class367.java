@@ -9,11 +9,11 @@ public class Class367 implements Interface32 {
     long aLong4238;
     int anInt4235;
     int anInt4237;
-    AbstractRenderer_Sub2_Sub2 aGraphicalRenderer_Sub2_Sub2_4234;
+    DirectXRenderer aGraphicalRenderer_Sub2_Sub2_4234;
     Class76 aClass76_4233;
     boolean aBool4236;
 
-    Class367(AbstractRenderer_Sub2_Sub2 class505_sub2_sub2_1, Class76 class76_2, boolean bool_3) {
+    Class367(DirectXRenderer class505_sub2_sub2_1, Class76 class76_2, boolean bool_3) {
         aGraphicalRenderer_Sub2_Sub2_4234 = class505_sub2_sub2_1;
         aClass76_4233 = class76_2;
         aBool4236 = bool_3;

@@ -176,7 +176,7 @@ public class Static {
             Node_Sub48.aClass482_8073.append(class282_sub48_8);
         } else if (npc_5 != null) {
             class282_sub48_8.aTransform_Sub1_Sub1_Sub2_Sub2_8085 = npc_5;
-            NPCType npcdefinitions_11 = npc_5.definitions;
+            NPCDefinitions npcdefinitions_11 = npc_5.definitions;
             if (npcdefinitions_11.transformTo != null) {
                 class282_sub48_8.aBool8092 = true;
                 npcdefinitions_11 = npcdefinitions_11.getMultiNPC(Class158_Sub1.PLAYER_VAR_PROVIDER);
@@ -335,6 +335,35 @@ public class Static {
 	        ints_1[i_6] = i_8;
 	        method13047(ints_0, ints_1, i_2, i_6 - 1);
 	        method13047(ints_0, ints_1, i_6 + 1, i_3);
+	    }
+	}
+
+	static void method1495(String[] arr_0, short[] shorts_1, int i_2, int i_3) {
+	    if (i_2 < i_3) {
+	        int i_5 = (i_3 + i_2) / 2;
+	        int i_6 = i_2;
+	        String string_7 = arr_0[i_5];
+	        arr_0[i_5] = arr_0[i_3];
+	        arr_0[i_3] = string_7;
+	        short s_8 = shorts_1[i_5];
+	        shorts_1[i_5] = shorts_1[i_3];
+	        shorts_1[i_3] = s_8;
+	        for (int i_9 = i_2; i_9 < i_3; i_9++) {
+	            if (string_7 == null || arr_0[i_9] != null && arr_0[i_9].compareTo(string_7) < (i_9 & 0x1)) {
+	                String string_10 = arr_0[i_9];
+	                arr_0[i_9] = arr_0[i_6];
+	                arr_0[i_6] = string_10;
+	                short s_11 = shorts_1[i_9];
+	                shorts_1[i_9] = shorts_1[i_6];
+	                shorts_1[i_6++] = s_11;
+	            }
+	        }
+	        arr_0[i_3] = arr_0[i_6];
+	        arr_0[i_6] = string_7;
+	        shorts_1[i_3] = shorts_1[i_6];
+	        shorts_1[i_6] = s_8;
+	        method1495(arr_0, shorts_1, i_2, i_6 - 1);
+	        method1495(arr_0, shorts_1, i_6 + 1, i_3);
 	    }
 	}
 

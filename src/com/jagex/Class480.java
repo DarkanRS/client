@@ -63,7 +63,7 @@ public class Class480 {
         WorldMapDef.method14788(string_1, false, client.aBool7158);
     }
 
-    static void method8044(Component[] arr_0, Component icomponentdefinitions_1, boolean bool_2) {
+    static void method8044(IComponentDefinitions[] arr_0, IComponentDefinitions icomponentdefinitions_1, boolean bool_2) {
         int i_4 = icomponentdefinitions_1.scrollWidth != 0 ? icomponentdefinitions_1.scrollWidth : icomponentdefinitions_1.width;
         int i_5 = icomponentdefinitions_1.scrollHeight != 0 ? icomponentdefinitions_1.scrollHeight : icomponentdefinitions_1.height;
         InteractableObject.method16099(arr_0, icomponentdefinitions_1.idHash, i_4, i_5, bool_2);

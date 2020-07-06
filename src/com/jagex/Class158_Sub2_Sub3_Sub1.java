@@ -8,7 +8,7 @@ public class Class158_Sub2_Sub3_Sub1 extends Class158_Sub2_Sub3 {
 
     Image anImage10450;
 
-    Class158_Sub2_Sub3_Sub1(HardwareRenderer hardwarerenderer_1, Canvas canvas_2, int i_3, int i_4) {
+    Class158_Sub2_Sub3_Sub1(JavaRenderer hardwarerenderer_1, Canvas canvas_2, int i_3, int i_4) {
         super(hardwarerenderer_1, canvas_2, i_3, i_4);
         new Rectangle();
         method15632();
