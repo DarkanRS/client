@@ -655,7 +655,7 @@ public abstract class PathingEntity extends GraphNode_Sub1_Sub1 {
                 }
             }
         } else {
-            GroundDecoration.method16094(inter.method1616(), -1, i_2, i_3, i_4, i_5, i_6, i_7, i_1, false);
+            IComponentDefinitions.render(inter.method1616(), -1, i_2, i_3, i_4, i_5, i_6, i_7, i_1, false);
         }
 
     }

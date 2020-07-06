@@ -48,7 +48,7 @@ public class StructIndexLoader {
                 i_9 = client.aClass118_7247.anInt1449;
             }
 
-            GroundDecoration.method16094(arr_1, i_2, b_3, b_4, i_5, i_6, i_7, i_8, i_9, true);
+            IComponentDefinitions.render(arr_1, i_2, b_3, b_4, i_5, i_6, i_7, i_8, i_9, true);
             Comparable_Sub1.aClass118Array3772 = null;
         }
 

@@ -28,7 +28,7 @@ public class RenderAnimIndexLoader {
                 }
             }
         } else {
-            GroundDecoration.method16094(CustomCursorsPreference.INTERFACES[i_0].method1616(), -1, i_1, i_2, i_3, i_4, i_5, i_6, i_7, i_7 < 0);
+            IComponentDefinitions.render(CustomCursorsPreference.INTERFACES[i_0].method1616(), -1, i_1, i_2, i_3, i_4, i_5, i_6, i_7, i_7 < 0);
         }
     }
 
