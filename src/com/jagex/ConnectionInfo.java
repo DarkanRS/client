@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.net.Socket;
 import java.util.Calendar;
 
+import com.Loader;
+
 public class ConnectionInfo {
 
     public static int anInt5438;
@@ -47,7 +49,8 @@ public class ConnectionInfo {
     }
 
     public Socket createSocket() throws IOException {
-    	System.out.println("Creating socket for world: " + worldId + " at " + host);
-        return new Socket(host, 5555);
+    	int port = Loader.getPort(worldId);
+    	System.out.println("Creating socket for world: " + worldId + " at " + host + ":" + port);
+        return new Socket(host, port);
     }
 }

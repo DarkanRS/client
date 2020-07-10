@@ -17,13 +17,18 @@ public class Loader extends Applet implements AppletStub {
     public static final int MAJOR_BUILD = 727;
     public static final int MINOR_BUILD = 1;
     public static final int CLIENT_BUILD = 6;
-    public static final int LOBBY_PORT = 5555;
+    public static final int WORLD_PORT = 43595;
+    public static final int LOBBY_PORT = 43594;
+    public static final int LOBBY_WORLD = 1115;
+    public static final int JS5_SOURCE_WORLD = 420;
+    public static final int DEFAULT_WORLD = 1;
     public static final BigInteger RSA_PUBLIC_MODULUS = new BigInteger("117525752735533423040644219776209926525585489242340044375332234679786347045466594509203355398209678968096551043842518449703703964361320462967286756268851663407950384008240524570966471744081769815157355561961607944067477858512067883877129283799853947605780903005188603658779539811385137666347647991072028080201");
     public static final BigInteger RSA_PUBLIC_EXPONENT = new BigInteger("65537");
     public static final boolean USING_ISAAC = false;
     public static final boolean LOBBY_ENABLED = true;
     public static final boolean DISABLE_XTEA_CRASH = true;
-    public static String IP_ADDRESS = /*"127.0.0.1";*/ "axios.trentonkress.com";
+    public static final boolean LOCAL = true;
+    public static String IP_ADDRESS = LOCAL ? "127.0.0.1" : "axios.trentonkress.com";
     public static Properties clientParams = new Properties();
 
     static {
@@ -35,6 +40,16 @@ public class Loader extends Applet implements AppletStub {
     public static void main(String[] arg0) {
         new Loader().doFrame();
     }
+    
+	public static int getPort(int worldId) {
+		switch(worldId) {
+		case LOBBY_WORLD:
+		case JS5_SOURCE_WORLD:
+			return LOBBY_PORT;
+		default:
+			return WORLD_PORT;
+		}
+	}
 
     public static void loadParams() {
         clientParams.clear();
@@ -49,7 +64,7 @@ public class Loader extends Applet implements AppletStub {
         clientParams.put("1", "");
         clientParams.put("21", IP_ADDRESS);
         clientParams.put("9", "true");
-        clientParams.put("14", "1115");
+        clientParams.put("14", ""+LOBBY_WORLD);
         clientParams.put("22", "false");
         clientParams.put("7", "");
         clientParams.put("12", "");
@@ -64,7 +79,7 @@ public class Loader extends Applet implements AppletStub {
         clientParams.put("0", "-bQCRYmC-hBwK2NKrdF7iQ");
         clientParams.put("30", "38888");
         clientParams.put("25", "true");
-        clientParams.put("16", "177");
+        clientParams.put("16", ""+JS5_SOURCE_WORLD);
         clientParams.put("32", "");
         clientParams.put("24", "0");
         clientParams.put("5", IP_ADDRESS);
