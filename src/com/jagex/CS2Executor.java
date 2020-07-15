@@ -21,7 +21,7 @@ public class CS2Executor {
     QuickChatMessage currentQuickChatMessage;
     ClanSettings currentClanSettings;
     ClanChannel clanChannel;
-    WorldObject currentLocation;
+    WorldObject activeWorldObject;
     GroundItem currentGroundItem;
     Object[] objectLocals;
     int[] intOpValues;
@@ -56,8 +56,8 @@ public class CS2Executor {
         System.out.println("Error: " + CutsceneAction.method1609(string_0, "%0a", "\n"));
     }
 
-    static void method1834(ClientTriggerType class397_0, int i_1, int i_2, CS2Executor cs2executor_3) {
-        CS2Script cs2script_5 = FixedTileStrategy.getScript(class397_0, i_1, i_2);
+    static void method1834(ClientTriggerType class397_0, int interfaceId, int i_2, CS2Executor cs2executor_3) {
+        CS2Script cs2script_5 = FixedTileStrategy.getScript(class397_0, interfaceId, i_2);
         if (cs2script_5 == null) {
             decrementCS2ExecIdx();
         } else {

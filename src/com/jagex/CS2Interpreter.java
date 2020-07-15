@@ -4768,7 +4768,7 @@ public class CS2Interpreter {
     }
 
     static void method5692(CS2Executor executor) {
-        AnimationDefinitions.method11148((GraphNode_Sub1) executor.currentLocation, executor.intStack[--executor.intStackPtr]);
+        AnimationDefinitions.method11148((GraphNode_Sub1) executor.activeWorldObject, executor.intStack[--executor.intStackPtr]);
         executor.intStack[++executor.intStackPtr - 1] = (int) client.aFloatArray7292[0];
         executor.intStack[++executor.intStackPtr - 1] = (int) client.aFloatArray7292[1];
         executor.intStack[++executor.intStackPtr - 1] = (int) client.aFloatArray7292[2];
@@ -7498,7 +7498,7 @@ public class CS2Interpreter {
     }
 
     static void method7332(CS2Executor executor) {
-        getBoundingBox((GraphNode_Sub1) executor.currentLocation, executor);
+        getBoundingBox((GraphNode_Sub1) executor.activeWorldObject, executor);
     }
 
     static void method7334(CS2Executor executor) {
@@ -9294,7 +9294,7 @@ public class CS2Interpreter {
     }
 
     static void method6042(CS2Executor executor) {
-        executor.intStack[++executor.intStackPtr - 1] = ((GraphNode_Sub1) executor.currentLocation).method12997();
+        executor.intStack[++executor.intStackPtr - 1] = ((GraphNode_Sub1) executor.activeWorldObject).method12997();
     }
 
     static void method6043(CS2Executor executor) {

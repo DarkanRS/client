@@ -2,18 +2,18 @@ package com.jagex;
 
 public class IFSubObjectNode extends SubInterface {
 
-    IFSubObjectPosition aClass530_9564;
+    IFSubObjectPosition objPos;
 
-    public IFSubObjectNode(int i_1, int i_2, IFSubObjectPosition class530_3) {
-        super(i_1, i_2);
-        aClass530_9564 = class530_3;
+    public IFSubObjectNode(int interfaceId, int overlay, IFSubObjectPosition class530_3) {
+        super(interfaceId, overlay);
+        objPos = class530_3;
     }
 
     @Override
     public boolean method13401() {
-        WorldObject sceneobject_2 = aClass530_9564.method11344();
-        if (sceneobject_2 != null) {
-            Class15.method549(ClientTriggerType.aClass397_4808, interfaceId, sceneobject_2);
+        WorldObject obj = objPos.getObjectWithId();
+        if (obj != null) {
+            Class15.method549(ClientTriggerType.aClass397_4808, interfaceId, obj);
             return true;
         } else {
             return false;
