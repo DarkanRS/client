@@ -107,7 +107,7 @@ public class CutsceneCameraMovement {
     }
 
     public static WorldDescriptor getCurrentWorldDescriptor() {
-        return Class448.CURRENT_WORLD < Class448.WORLD_DESCRIPTORS_BYID.length ? Class448.WORLD_DESCRIPTORS_BYID[++Class448.CURRENT_WORLD - 1] : null;
+        return ConnectionInfo.CURRENT_WORLD < ConnectionInfo.WORLD_DESCRIPTORS_BYID.length ? ConnectionInfo.WORLD_DESCRIPTORS_BYID[++ConnectionInfo.CURRENT_WORLD - 1] : null;
     }
 
     public static void method1369(AnimationIndexLoader animationindexloader_0) {

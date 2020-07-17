@@ -5,20 +5,20 @@ public class VarnDefinitions {
     public char aChar5431;
 
     public static void pingWorlds() {
-        if (Class448.PING_WORLDS) {
-            if (Class448.currentWorldPingIdx < Class485.WORLD_LIST_START) {
-                Class448.currentWorldPingIdx = Class485.WORLD_LIST_START;
+        if (ConnectionInfo.PING_WORLDS) {
+            if (ConnectionInfo.currentWorldPingIdx < Class485.WORLD_LIST_START) {
+                ConnectionInfo.currentWorldPingIdx = Class485.WORLD_LIST_START;
             }
 
             while (true) {
-                while (Class448.currentWorldPingIdx < Class244.WORLD_LIST_SIZEPLUS1) {
-                    WorldDescriptor world = LocationIndexLoader.getWorld(Class448.currentWorldPingIdx);
+                while (ConnectionInfo.currentWorldPingIdx < Class244.WORLD_LIST_SIZEPLUS1) {
+                    WorldDescriptor world = LocationIndexLoader.getWorld(ConnectionInfo.currentWorldPingIdx);
                     if (world != null && world.ping == -1) {
-                        if (Class448.CURRENT_WORLD_PING_REQUEST == null) {
-                            Class448.CURRENT_WORLD_PING_REQUEST = client.PING_REQUESTER.createPingRequest(world.ipAddress);
+                        if (ConnectionInfo.CURRENT_WORLD_PING_REQUEST == null) {
+                            ConnectionInfo.CURRENT_WORLD_PING_REQUEST = client.PING_REQUESTER.createPingRequest(world.ipAddress);
                         }
 
-                        int ping = Class448.CURRENT_WORLD_PING_REQUEST.ping;
+                        int ping = ConnectionInfo.CURRENT_WORLD_PING_REQUEST.ping;
 
                         //System.out.println("Ping: " + world.ipAddress + "->" + ping);
 
@@ -27,10 +27,10 @@ public class VarnDefinitions {
                         }
 
                         world.ping = ping;
-                        ++Class448.currentWorldPingIdx;
-                        Class448.CURRENT_WORLD_PING_REQUEST = null;
+                        ++ConnectionInfo.currentWorldPingIdx;
+                        ConnectionInfo.CURRENT_WORLD_PING_REQUEST = null;
                     } else {
-                        ++Class448.currentWorldPingIdx;
+                        ++ConnectionInfo.currentWorldPingIdx;
                     }
                 }
 

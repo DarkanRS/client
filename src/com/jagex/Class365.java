@@ -29,9 +29,9 @@ public class Class365 implements Interface3 {
     }
 
     public static void method6299(int i_0, boolean bool_1, int i_2, boolean bool_3) {
-        Class52.method1086(0, Class448.WORLD_DESCRIPTORS_BYID.length - 1, i_0, bool_1, i_2, bool_3);
-        Class448.currentWorldPingIdx = 0;
-        Class448.CURRENT_WORLD_PING_REQUEST = null;
+        Class52.method1086(0, ConnectionInfo.WORLD_DESCRIPTORS_BYID.length - 1, i_0, bool_1, i_2, bool_3);
+        ConnectionInfo.currentWorldPingIdx = 0;
+        ConnectionInfo.CURRENT_WORLD_PING_REQUEST = null;
     }
 
     @Override

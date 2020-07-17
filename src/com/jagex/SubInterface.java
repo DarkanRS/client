@@ -14,7 +14,7 @@ public class SubInterface extends Node {
         overlay = i_2;
     }
 
-    public boolean method13401() {
+    public boolean load() {
         return true;
     }
 }

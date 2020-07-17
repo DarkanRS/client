@@ -3314,7 +3314,7 @@ public class CS2Interpreter {
 
     static void setPingWorlds(CS2Executor executor) {
         if (client.GAME_STATE == 0) {
-            Class448.PING_WORLDS = executor.intStack[--executor.intStackPtr] == 1;
+            ConnectionInfo.PING_WORLDS = executor.intStack[--executor.intStackPtr] == 1;
         }
     }
 
@@ -7227,12 +7227,12 @@ public class CS2Interpreter {
 
     static void method15437(CS2Executor executor) {
         if (client.GAME_STATE == 0 && !JS5CacheFile.method3360()) {
-            if (Class448.aBool5422) {
+            if (ConnectionInfo.aBool5422) {
                 executor.intStack[++executor.intStackPtr - 1] = 0;
-            } else if (Class448.aLong5425 > Utils.time() - 1000L) {
+            } else if (ConnectionInfo.aLong5425 > Utils.time() - 1000L) {
                 executor.intStack[++executor.intStackPtr - 1] = 1;
             } else {
-                Class448.aBool5422 = true;
+                ConnectionInfo.aBool5422 = true;
                 TCPPacket tcpmessage_2 = Class271.createPacket(ClientProt.REQUEST_WORLD_LIST, client.LOBBY_CONNECTION_CONTEXT.isaac);
                 tcpmessage_2.buffer.writeInt(MapSpriteDefinitions.WORLD_LIST_IDK);
                 client.LOBBY_CONNECTION_CONTEXT.queuePacket(tcpmessage_2);
@@ -8647,7 +8647,7 @@ public class CS2Interpreter {
     }
 
     static void getWorldId(CS2Executor executor) {
-        executor.intStack[++executor.intStackPtr - 1] = Class159.GAME_CONNECTION_INFO.worldId;
+        executor.intStack[++executor.intStackPtr - 1] = ConnectionInfo.GAME_CONNECTION_INFO.worldId;
     }
 
     static void method1888(CS2Executor executor) {

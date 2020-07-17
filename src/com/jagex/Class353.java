@@ -51,7 +51,7 @@ public class Class353 {
     }
 
     public int method6198(int i_1, int i_2) {
-        int i_4 = Math.max(Engine.anInt3243 * -969250379, i_2);
+        int i_4 = Math.max(Engine.BASE_WINDOW_HEIGHT * -969250379, i_2);
         return this == aClass353_4107 ? 0 : (this == aClass353_4106 ? i_4 - i_1 : (this == aClass353_4105 ? (i_4 - i_1) / 2 : 0));
     }
 }

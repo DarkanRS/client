@@ -10,16 +10,15 @@ public class LightIntensityIndexLoader {
         aClass317_5333.filesCount(SharedConfigsType.LIGHT_INTENSITIES.id);
     }
 
-    static void method7313(SubInterface class282_sub44_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9) {
-        if (MovingAnimation.isInterfaceLoaded(i_1, null)) {
-            if (class282_sub44_0 != null && !class282_sub44_0.method13401()) {
-                Class351.closeChildren(class282_sub44_0, true, false);
+    static void method7313(SubInterface ifSub, int baseWindowId, int leftBound, int lowerBound, int rightBound, int upperBound, int x, int y, int mouseX, int mouseY) {
+        if (MovingAnimation.isInterfaceLoaded(baseWindowId, null)) {
+            if (ifSub != null && !ifSub.load()) {
+                Class351.closeChildren(ifSub, true, false);
             } else {
-                Interface interface_11 = CustomCursorsPreference.INTERFACES[i_1];
-                client.method11768(interface_11, interface_11.method1616(), -1, i_2, i_3, i_4, i_5, i_6, i_7, i_8, i_9);
+                Interface interface_11 = CustomCursorsPreference.INTERFACES[baseWindowId];
+                client.method11768(interface_11, interface_11.method1616(), -1, leftBound, lowerBound, rightBound, upperBound, x, y, mouseX, mouseY);
             }
         }
-
     }
 
     public LightIntensityDefinitions method7304(int i_1) {

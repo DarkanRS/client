@@ -57,8 +57,8 @@ public class SunDefinitions {
             if (Class186.aFontRenderer_2348 != null && Class176.aClass414_2200 != null) {
                 Class316.method5594();
                 int i_15 = i_4 / 2 + i_2;
-                if (i_15 + i_4 > Class349.anInt4083) {
-                    i_15 = Class349.anInt4083 - i_4;
+                if (i_15 + i_4 > Class349.BASE_WINDOW_WIDTH) {
+                    i_15 = Class349.BASE_WINDOW_WIDTH - i_4;
                 }
                 if (i_15 < 0) {
                     i_15 = 0;

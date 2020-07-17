@@ -22,7 +22,7 @@ public class Isaac {
     }
 
     public static WorldDescriptor method7266() {
-        return LocationIndexLoader.getWorld(Class159.GAME_CONNECTION_INFO.worldId);
+        return LocationIndexLoader.getWorld(ConnectionInfo.GAME_CONNECTION_INFO.worldId);
     }
 
     static void processCamera() {

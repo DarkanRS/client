@@ -41,14 +41,14 @@ public class Class158_Sub1_Sub2 extends Class158_Sub1 {
             int i_9;
             try {
                 if (OutputStream_Sub1.anImage7953 == null) {
-                    OutputStream_Sub1.anImage7953 = Class351.gameCanvas.createImage(Class349.anInt4083, Engine.anInt3243 * -969250379);
+                    OutputStream_Sub1.anImage7953 = Class351.gameCanvas.createImage(Class349.BASE_WINDOW_WIDTH, Engine.BASE_WINDOW_HEIGHT * -969250379);
                 }
 
                 Graphics graphics_7 = OutputStream_Sub1.anImage7953.getGraphics();
                 graphics_7.setColor(Color.black);
-                graphics_7.fillRect(0, 0, Class349.anInt4083, Engine.anInt3243 * -969250379);
-                i_8 = Class349.anInt4083 / 2 - 152;
-                i_9 = Engine.anInt3243 * -969250379 / 2 - 18;
+                graphics_7.fillRect(0, 0, Class349.BASE_WINDOW_WIDTH, Engine.BASE_WINDOW_HEIGHT * -969250379);
+                i_8 = Class349.BASE_WINDOW_WIDTH / 2 - 152;
+                i_9 = Engine.BASE_WINDOW_HEIGHT * -969250379 / 2 - 18;
                 graphics_7.setColor(color_31);
                 graphics_7.drawRect(i_8, i_9, 303, 33);
                 graphics_7.setColor(color_21);
@@ -62,15 +62,15 @@ public class Class158_Sub1_Sub2 extends Class158_Sub1 {
                 if (Engine.aString3252 != null) {
                     graphics_7.setFont(SpotAnimIndexLoader.aFont5893);
                     graphics_7.setColor(color_41);
-                    graphics_7.drawString(Engine.aString3252, Class349.anInt4083 / 2 - Engine.aString3252.length() * 6 / 2, Engine.anInt3243 * -969250379 / 2 - 26);
+                    graphics_7.drawString(Engine.aString3252, Class349.BASE_WINDOW_WIDTH / 2 - Engine.aString3252.length() * 6 / 2, Engine.BASE_WINDOW_HEIGHT * -969250379 / 2 - 26);
                 }
 
                 graphics_6.drawImage(OutputStream_Sub1.anImage7953, 0, 0, null);
             } catch (Exception exception_10) {
                 graphics_6.setColor(Color.black);
-                graphics_6.fillRect(0, 0, Class349.anInt4083, Engine.anInt3243 * -969250379);
-                i_8 = Class349.anInt4083 / 2 - 152;
-                i_9 = Engine.anInt3243 * -969250379 / 2 - 18;
+                graphics_6.fillRect(0, 0, Class349.BASE_WINDOW_WIDTH, Engine.BASE_WINDOW_HEIGHT * -969250379);
+                i_8 = Class349.BASE_WINDOW_WIDTH / 2 - 152;
+                i_9 = Engine.BASE_WINDOW_HEIGHT * -969250379 / 2 - 18;
                 graphics_6.setColor(color_31);
                 graphics_6.drawRect(i_8, i_9, 303, 33);
                 graphics_6.setColor(color_21);
@@ -83,7 +83,7 @@ public class Class158_Sub1_Sub2 extends Class158_Sub1 {
                 if (Engine.aString3252 != null) {
                     graphics_6.setFont(SpotAnimIndexLoader.aFont5893);
                     graphics_6.setColor(color_41);
-                    graphics_6.drawString(Engine.aString3252, Class349.anInt4083 / 2 - Engine.aString3252.length() * 6 / 2, Engine.anInt3243 * -969250379 / 2 - 26);
+                    graphics_6.drawString(Engine.aString3252, Class349.BASE_WINDOW_WIDTH / 2 - Engine.aString3252.length() * 6 / 2, Engine.BASE_WINDOW_HEIGHT * -969250379 / 2 - 26);
                 }
 
                 graphics_6.drawString(string_1, i_8 + (304 - string_1.length() * 6) / 2, i_9 + 22);

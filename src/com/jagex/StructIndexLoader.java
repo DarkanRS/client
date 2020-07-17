@@ -31,14 +31,14 @@ public class StructIndexLoader {
 
     static void method7039() {
         Comparable_Sub1.aClass118Array3772 = null;
-        RenderAnimIndexLoader.method3629(client.BASE_WINDOW_ID, 0, 0, Class349.anInt4083, client.anInt3243 * -969250379, 0, 0, -1);
+        RenderAnimIndexLoader.method3629(client.BASE_WINDOW_ID, 0, 0, Class349.BASE_WINDOW_WIDTH, client.BASE_WINDOW_HEIGHT * -969250379, 0, 0, -1);
         if (Comparable_Sub1.aClass118Array3772 != null) {
             IComponentDefinitions[] arr_1 = Comparable_Sub1.aClass118Array3772;
             int i_2 = -1412584499;
             byte b_3 = 0;
             byte b_4 = 0;
-            int i_5 = Class349.anInt4083;
-            int i_6 = client.anInt3243 * -969250379;
+            int i_5 = Class349.BASE_WINDOW_WIDTH;
+            int i_6 = client.BASE_WINDOW_HEIGHT * -969250379;
             int i_7 = GameTipsLoader.anInt4822;
             int i_8 = Isaac.anInt5157;
             int i_9;

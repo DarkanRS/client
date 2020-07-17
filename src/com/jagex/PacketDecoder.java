@@ -711,8 +711,8 @@ public class PacketDecoder {
             int port = buffer.readUnsignedShort();
             String host = buffer.readString();
             boolean reconnecting = buffer.readUnsignedByte() == 1;
-            Class448.aClass450_5429 = Class159.GAME_CONNECTION_INFO;
-            Class448.aBool5428 = reconnecting;
+            ConnectionInfo.aClass450_5429 = ConnectionInfo.GAME_CONNECTION_INFO;
+            ConnectionInfo.aBool5428 = reconnecting;
             Class62.setGameHost(port, host);
             GameState.setGameState(17);
             context.currentPacket = null;
@@ -2022,7 +2022,7 @@ public class PacketDecoder {
                     boolean bool_70 = false;
                     Friend class6_132 = client.FRIENDS[i_6];
                     Friend class6_134 = client.FRIENDS[i_6 + 1];
-                    if (class6_132.worldId != Class159.GAME_CONNECTION_INFO.worldId && class6_134.worldId == Class159.GAME_CONNECTION_INFO.worldId) {
+                    if (class6_132.worldId != ConnectionInfo.GAME_CONNECTION_INFO.worldId && class6_134.worldId == ConnectionInfo.GAME_CONNECTION_INFO.worldId) {
                         bool_70 = true;
                     }
                     if (!bool_70 && class6_132.worldId == 0 && class6_134.worldId != 0) {
@@ -2266,19 +2266,19 @@ public class PacketDecoder {
             return true;
         } else if (context.currentPacket == ServerProt.IF_OPENSUB_ACTIVE_OBJECT) {
             int topUid = buffer.readIntV2();
-            int flags = buffer.readIntV2();
+            int xtea3 = buffer.readIntV2();
             int overlay = buffer.readUnsignedByte128();
-            int i_7 = buffer.readInt();
-            int i_8 = buffer.readIntV1();
+            int xtea2 = buffer.readInt();
+            int xtea1 = buffer.readIntV1();
             int subId = buffer.readUnsignedShort128();
             int objFlags = buffer.readUnsigned128Byte();
             int type = objFlags >> 2;
             int rotation = objFlags & 0x3;
-            int i_35 = buffer.readInt();
+            int xtea4 = buffer.readInt();
             CoordGrid tile = new CoordGrid(buffer.readIntV2());
             int objectId = buffer.readInt();
             Class470.method7825();
-            IdentiKitIndexLoader.openSub(topUid, new IFSubObjectNode(subId, overlay, new IFSubObjectPosition(tile, type, objectId)), new int[]{i_8, i_7, flags, i_35}, false);
+            IdentiKitIndexLoader.openSub(topUid, new IFSubObjectNode(subId, overlay, new IFSubObjectPosition(tile, type, objectId)), new int[]{xtea1, xtea2, xtea3, xtea4}, false);
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.VARCLAN_DISABLE) {

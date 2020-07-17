@@ -72,7 +72,7 @@ public class WallObjectGraphNode extends GraphNode_Sub1_Sub5 implements WorldObj
 
                 int i_3;
                 if (Class192.ACCOUNT_CREATION_STAGE == AccountCreationStage.REQUEST) {
-                    client.LOBBY_CONNECTION_CONTEXT.init(SunDefinitions.createAsyncConnection(Class448.LOBBY_CONNECTION_INFO.createSocket(), 15000), Class448.LOBBY_CONNECTION_INFO.host);
+                    client.LOBBY_CONNECTION_CONTEXT.init(SunDefinitions.createAsyncConnection(ConnectionInfo.LOBBY_CONNECTION_INFO.createSocket(), 15000), ConnectionInfo.LOBBY_CONNECTION_INFO.host);
                     client.LOBBY_CONNECTION_CONTEXT.clearAllQueuedPackets();
                     TCPPacket packet = SkyboxDefinitions.method3558();
                     packet.buffer.writeByte(LoginProt.CREATE_ACCOUNT_CONNECT.id);

@@ -34,21 +34,21 @@ public class Class46 implements Interface2 {
         if (i_1 == 2) {
             i_2 = Math.min(800, SunIndexLoader.anInt434);
             i_3 = Math.min(600, Class107.anInt1082);
-            Class349.anInt4083 = i_2;
+            Class349.BASE_WINDOW_WIDTH = i_2;
             client.GAME_CANVAS_X = (SunIndexLoader.anInt434 - i_2) / 2;
-            client.anInt3243 = i_3 * -1929118563;
+            client.BASE_WINDOW_HEIGHT = i_3 * -1929118563;
             client.GAME_CANVAS_Y = 0;
         } else if (i_1 == 1) {
             i_2 = Math.min(1024, SunIndexLoader.anInt434);
             i_3 = Math.min(768, Class107.anInt1082);
-            Class349.anInt4083 = i_2;
+            Class349.BASE_WINDOW_WIDTH = i_2;
             client.GAME_CANVAS_X = (SunIndexLoader.anInt434 - i_2) / 2;
-            client.anInt3243 = i_3 * -1929118563;
+            client.BASE_WINDOW_HEIGHT = i_3 * -1929118563;
             client.GAME_CANVAS_Y = 0;
         } else {
-            Class349.anInt4083 = SunIndexLoader.anInt434;
+            Class349.BASE_WINDOW_WIDTH = SunIndexLoader.anInt434;
             client.GAME_CANVAS_X = 0;
-            client.anInt3243 = Class107.anInt1082 * -1929118563;
+            client.BASE_WINDOW_HEIGHT = Class107.anInt1082 * -1929118563;
             client.GAME_CANVAS_Y = 0;
         }
     }
@@ -61,14 +61,14 @@ public class Class46 implements Interface2 {
     @Override
     public void method20(boolean bool_1) {
         if (bool_1) {
-            Renderers.CURRENT_RENDERER.B(0, 0, Class349.anInt4083, Engine.anInt3243 * -969250379, aClass366_436.anInt4231, 0);
+            Renderers.CURRENT_RENDERER.B(0, 0, Class349.BASE_WINDOW_WIDTH, Engine.BASE_WINDOW_HEIGHT * -969250379, aClass366_436.anInt4231, 0);
         }
     }
 
     @Override
     public void method11(boolean bool_1) {
         if (bool_1) {
-            Renderers.CURRENT_RENDERER.B(0, 0, Class349.anInt4083 * 1426041429 * 765 * -1943418639 * -418109423, -969250379 * Engine.anInt3243 * -969250379 * -1929118563, aClass366_436.anInt4231 * -776392521 * -2044941049, 0);
+            Renderers.CURRENT_RENDERER.B(0, 0, Class349.BASE_WINDOW_WIDTH * 1426041429 * 765 * -1943418639 * -418109423, -969250379 * Engine.BASE_WINDOW_HEIGHT * -969250379 * -1929118563, aClass366_436.anInt4231 * -776392521 * -2044941049, 0);
         }
     }
 
@@ -80,14 +80,14 @@ public class Class46 implements Interface2 {
     @Override
     public void method12(boolean bool_1) {
         if (bool_1) {
-            Renderers.CURRENT_RENDERER.B(0, 0, Class349.anInt4083 * 1426041429 * 765 * -1943418639 * -418109423, -969250379 * Engine.anInt3243 * -969250379 * -1929118563, aClass366_436.anInt4231 * -776392521 * -2044941049, 0);
+            Renderers.CURRENT_RENDERER.B(0, 0, Class349.BASE_WINDOW_WIDTH * 1426041429 * 765 * -1943418639 * -418109423, -969250379 * Engine.BASE_WINDOW_HEIGHT * -969250379 * -1929118563, aClass366_436.anInt4231 * -776392521 * -2044941049, 0);
         }
     }
 
     @Override
     public void method14(boolean bool_1) {
         if (bool_1) {
-            Renderers.CURRENT_RENDERER.B(0, 0, Class349.anInt4083 * 1426041429 * 765 * -1943418639 * -418109423, -969250379 * Engine.anInt3243 * -969250379 * -1929118563, aClass366_436.anInt4231 * -776392521 * -2044941049, 0);
+            Renderers.CURRENT_RENDERER.B(0, 0, Class349.BASE_WINDOW_WIDTH * 1426041429 * 765 * -1943418639 * -418109423, -969250379 * Engine.BASE_WINDOW_HEIGHT * -969250379 * -1929118563, aClass366_436.anInt4231 * -776392521 * -2044941049, 0);
         }
     }
 

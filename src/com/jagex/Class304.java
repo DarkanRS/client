@@ -73,11 +73,11 @@ public class Class304 implements Interface27 {
     }
 
     int method5396(int i_1) {
-        return aBool3583 ? (Class349.anInt4083 - i_1) / 2 : 0;
+        return aBool3583 ? (Class349.BASE_WINDOW_WIDTH - i_1) / 2 : 0;
     }
 
     int method5397(int i_1) {
-        return aBool3584 ? (Engine.anInt3243 * -969250379 - i_1) / 2 : 0;
+        return aBool3584 ? (Engine.BASE_WINDOW_HEIGHT * -969250379 - i_1) / 2 : 0;
     }
 
     @Override
@@ -189,11 +189,11 @@ public class Class304 implements Interface27 {
                     int i_33 = Comparable_Sub1.aClass306_3771.method5424();
                     String string_34 = Comparable_Sub1.aClass306_3771.method5425();
                     if (OutputStream_Sub1.anImage7953 == null) {
-                        OutputStream_Sub1.anImage7953 = Class351.gameCanvas.createImage(-418109423 * Class349.anInt4083 * 1426041429 * 765 * -1943418639, Engine.anInt3243 * -969250379 * -1929118563 * -969250379);
+                        OutputStream_Sub1.anImage7953 = Class351.gameCanvas.createImage(-418109423 * Class349.BASE_WINDOW_WIDTH * 1426041429 * 765 * -1943418639, Engine.BASE_WINDOW_HEIGHT * -969250379 * -1929118563 * -969250379);
                     }
                     Graphics graphics_35 = OutputStream_Sub1.anImage7953.getGraphics();
                     graphics_35.setColor(Color.BLACK);
-                    graphics_35.fillRect(0, 0, -418109423 * Class349.anInt4083 * 1426041429 * 765 * -1943418639, -969250379 * Engine.anInt3243 * -969250379 * -1929118563);
+                    graphics_35.fillRect(0, 0, -418109423 * Class349.BASE_WINDOW_WIDTH * 1426041429 * 765 * -1943418639, -969250379 * Engine.BASE_WINDOW_HEIGHT * -969250379 * -1929118563);
                     int i_36 = anImage3579.getWidth(null);
                     int i_7 = anImage3580.getWidth(null);
                     int i_8 = anImage3581.getWidth(null);
@@ -333,11 +333,11 @@ public class Class304 implements Interface27 {
                     int i_33 = Comparable_Sub1.aClass306_3771.method5424();
                     String string_34 = Comparable_Sub1.aClass306_3771.method5425();
                     if (OutputStream_Sub1.anImage7953 == null) {
-                        OutputStream_Sub1.anImage7953 = Class351.gameCanvas.createImage(-418109423 * Class349.anInt4083 * 1426041429 * 765 * -1943418639, Engine.anInt3243 * -969250379 * -1929118563 * -969250379);
+                        OutputStream_Sub1.anImage7953 = Class351.gameCanvas.createImage(-418109423 * Class349.BASE_WINDOW_WIDTH * 1426041429 * 765 * -1943418639, Engine.BASE_WINDOW_HEIGHT * -969250379 * -1929118563 * -969250379);
                     }
                     Graphics graphics_35 = OutputStream_Sub1.anImage7953.getGraphics();
                     graphics_35.setColor(Color.BLACK);
-                    graphics_35.fillRect(0, 0, -418109423 * Class349.anInt4083 * 1426041429 * 765 * -1943418639, -969250379 * Engine.anInt3243 * -969250379 * -1929118563);
+                    graphics_35.fillRect(0, 0, -418109423 * Class349.BASE_WINDOW_WIDTH * 1426041429 * 765 * -1943418639, -969250379 * Engine.BASE_WINDOW_HEIGHT * -969250379 * -1929118563);
                     int i_36 = anImage3579.getWidth(null);
                     int i_7 = anImage3580.getWidth(null);
                     int i_8 = anImage3581.getWidth(null);
@@ -472,11 +472,11 @@ public class Class304 implements Interface27 {
                     int i_34 = Comparable_Sub1.aClass306_3771.method5424();
                     String string_35 = Comparable_Sub1.aClass306_3771.method5425();
                     if (OutputStream_Sub1.anImage7953 == null) {
-                        OutputStream_Sub1.anImage7953 = Class351.gameCanvas.createImage(Class349.anInt4083, Engine.anInt3243 * -969250379);
+                        OutputStream_Sub1.anImage7953 = Class351.gameCanvas.createImage(Class349.BASE_WINDOW_WIDTH, Engine.BASE_WINDOW_HEIGHT * -969250379);
                     }
                     Graphics graphics_36 = OutputStream_Sub1.anImage7953.getGraphics();
                     graphics_36.setColor(Color.BLACK);
-                    graphics_36.fillRect(0, 0, Class349.anInt4083, Engine.anInt3243 * -969250379);
+                    graphics_36.fillRect(0, 0, Class349.BASE_WINDOW_WIDTH, Engine.BASE_WINDOW_HEIGHT * -969250379);
                     int i_37 = anImage3579.getWidth(null);
                     int i_8 = anImage3580.getWidth(null);
                     int i_9 = anImage3581.getWidth(null);
@@ -611,11 +611,11 @@ public class Class304 implements Interface27 {
                     int i_33 = Comparable_Sub1.aClass306_3771.method5424();
                     String string_34 = Comparable_Sub1.aClass306_3771.method5425();
                     if (OutputStream_Sub1.anImage7953 == null) {
-                        OutputStream_Sub1.anImage7953 = Class351.gameCanvas.createImage(-418109423 * Class349.anInt4083 * 1426041429 * 765 * -1943418639, Engine.anInt3243 * -969250379 * -1929118563 * -969250379);
+                        OutputStream_Sub1.anImage7953 = Class351.gameCanvas.createImage(-418109423 * Class349.BASE_WINDOW_WIDTH * 1426041429 * 765 * -1943418639, Engine.BASE_WINDOW_HEIGHT * -969250379 * -1929118563 * -969250379);
                     }
                     Graphics graphics_35 = OutputStream_Sub1.anImage7953.getGraphics();
                     graphics_35.setColor(Color.BLACK);
-                    graphics_35.fillRect(0, 0, -418109423 * Class349.anInt4083 * 1426041429 * 765 * -1943418639, -969250379 * Engine.anInt3243 * -969250379 * -1929118563);
+                    graphics_35.fillRect(0, 0, -418109423 * Class349.BASE_WINDOW_WIDTH * 1426041429 * 765 * -1943418639, -969250379 * Engine.BASE_WINDOW_HEIGHT * -969250379 * -1929118563);
                     int i_36 = anImage3579.getWidth(null);
                     int i_7 = anImage3580.getWidth(null);
                     int i_8 = anImage3581.getWidth(null);

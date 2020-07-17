@@ -400,15 +400,15 @@ public class Static {
 	        }
 	        i_4 += 10;
 	        int i_8 = i_0 - i_4 / 2;
-	        if (i_8 + i_4 > Class349.anInt4083) {
-	            i_8 = Class349.anInt4083 - i_4;
+	        if (i_8 + i_4 > Class349.BASE_WINDOW_WIDTH) {
+	            i_8 = Class349.BASE_WINDOW_WIDTH - i_4;
 	        }
 	        if (i_8 < 0) {
 	            i_8 = 0;
 	        }
 	        i_7 = i_1;
-	        if (i_1 + i_5 > Engine.anInt3243 * -969250379) {
-	            i_7 = Engine.anInt3243 * -969250379 - i_5;
+	        if (i_1 + i_5 > Engine.BASE_WINDOW_HEIGHT * -969250379) {
+	            i_7 = Engine.BASE_WINDOW_HEIGHT * -969250379 - i_5;
 	        }
 	        if (i_7 < 0) {
 	            i_7 = 0;

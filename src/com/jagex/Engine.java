@@ -22,7 +22,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 	public static int GAME_CANVAS_Y;
 	public static int MAX_MEMORY = -1;
 	public static int AVAILABLE_PROCESSORS = 1;
-	public static int anInt3243;
+	public static int BASE_WINDOW_HEIGHT;
 	public static Frame engineFrame;
 	public static FPSManager FPS_MANAGER;
 	protected static String aString3252;
@@ -94,9 +94,9 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 	void method4655(Class274 class274_1, String string_2, String string_3, int i_4, int i_5, boolean bool_8) {
 		try {
 			method4683(Class279.aClass279_3369, bool_8);
-			SunIndexLoader.anInt434 = Class349.anInt4083 = class274_1.getWidth();
+			SunIndexLoader.anInt434 = Class349.BASE_WINDOW_WIDTH = class274_1.getWidth();
 			int i_10000 = class274_1.getHeight();
-			anInt3243 = i_10000 * -1929118563;
+			BASE_WINDOW_HEIGHT = i_10000 * -1929118563;
 			Class107.anInt1082 = i_10000;
 			GAME_CANVAS_X = 0;
 			GAME_CANVAS_Y = 0;
@@ -375,7 +375,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 		container_1.setBackground(Color.black);
 		container_1.setLayout(null);
 		container_1.add(Class351.gameCanvas);
-		Class351.gameCanvas.setSize(Class349.anInt4083, anInt3243 * -969250379);
+		Class351.gameCanvas.setSize(Class349.BASE_WINDOW_WIDTH, BASE_WINDOW_HEIGHT * -969250379);
 		Class351.gameCanvas.setVisible(true);
 		if (container_1 == engineFrame) {
 			Insets insets_3 = engineFrame.getInsets();
@@ -437,7 +437,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 		if (++anInt3256 - 1 > 50) {
 			anInt3256 -= 50;
 			aBool3274 = true;
-			Class351.gameCanvas.setSize(Class349.anInt4083, anInt3243 * -969250379);
+			Class351.gameCanvas.setSize(Class349.BASE_WINDOW_WIDTH, BASE_WINDOW_HEIGHT * -969250379);
 			Class351.gameCanvas.setVisible(true);
 			if (engineFrame != null && fullScreenFrame == null) {
 				Insets insets_7 = engineFrame.getInsets();

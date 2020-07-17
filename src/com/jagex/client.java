@@ -978,21 +978,21 @@ public class client extends Engine {
 		Static.method13047(anIntArray7288, anIntArray7287, 0, anInt7304 - 1);
 	}
 
-	public static void method11768(Interface interface_0, IComponentDefinitions[] components, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, int i_10) {
+	public static void method11768(Interface interface_0, IComponentDefinitions[] components, int i_2, int boundXMin, int boundYMin, int boundXMax, int boundYMax, int xOffset, int yOffset, int mouseX, int mouseY) {
 		for (int i_11 = 0; i_11 < components.length; i_11++) {
 			IComponentDefinitions iCompDef = components[i_11];
 			if (iCompDef != null && i_2 == iCompDef.parent) {
-				int x = i_7 + iCompDef.x;
-				int y = i_8 + iCompDef.y;
-				int i_15;
-				int i_16;
-				int i_17;
-				int i_18;
+				int x = xOffset + iCompDef.x;
+				int y = yOffset + iCompDef.y;
+				int leftBound;
+				int lowerBound;
+				int rightBound;
+				int upperBound;
 				if (iCompDef.type == ComponentType.TYPE_2) {
-					i_15 = i_3;
-					i_16 = i_4;
-					i_17 = i_5;
-					i_18 = i_6;
+					leftBound = boundXMin;
+					lowerBound = boundYMin;
+					rightBound = boundXMax;
+					upperBound = boundYMax;
 				} else {
 					int i_19 = x + iCompDef.width;
 					int i_20 = y + iCompDef.height;
@@ -1001,14 +1001,14 @@ public class client extends Engine {
 						++i_20;
 					}
 
-					i_15 = Math.max(x, i_3);
-					i_16 = Math.max(y, i_4);
-					i_17 = Math.min(i_19, i_5);
-					i_18 = Math.min(i_20, i_6);
+					leftBound = Math.max(x, boundXMin);
+					lowerBound = Math.max(y, boundYMin);
+					rightBound = Math.min(i_19, boundXMax);
+					upperBound = Math.min(i_20, boundYMax);
 				}
 
 				if (iCompDef.type != ComponentType.CONTAINER && !iCompDef.usesScripts && getIComponentSettings(iCompDef).settingsHash == 0 && iCompDef != aClass118_7247 && iCompDef.contentType != IComponentDefinitions.CONTENT_TYPE_1338 && iCompDef.contentType != IComponentDefinitions.CONTENT_TYPE_1406 && iCompDef.contentType != IComponentDefinitions.CONTENT_TYPE_1337 && iCompDef.contentType != IComponentDefinitions.CONTENT_TYPE_1403) {
-					if (i_15 < i_17 && i_16 < i_18) {
+					if (leftBound < rightBound && lowerBound < upperBound) {
 						Class86.method1482(iCompDef);
 					}
 				} else if (!method11651(iCompDef)) {
@@ -1018,8 +1018,8 @@ public class client extends Engine {
 						anInt7215 = y;
 					}
 
-					if (iCompDef.aBool1424 || i_15 < i_17 && i_16 < i_18) {
-						if (iCompDef.noClickThrough && i_9 >= i_15 && i_10 >= i_16 && i_9 < i_17 && i_10 < i_18) {
+					if (iCompDef.aBool1424 || leftBound < rightBound && lowerBound < upperBound) {
+						if (iCompDef.noClickThrough && mouseX >= leftBound && mouseY >= lowerBound && mouseX < rightBound && mouseY < upperBound) {
 							for (HookRequest hookrequest_37 = (HookRequest) PENDING_HOOK_REQUESTS.head(); hookrequest_37 != null; hookrequest_37 = (HookRequest) PENDING_HOOK_REQUESTS.next()) {
 								if (hookrequest_37.hasMousePosition) {
 									hookrequest_37.unlink();
@@ -1043,12 +1043,12 @@ public class client extends Engine {
 						boolean bool_47 = iCompDef.clickMask && iCompDef.type == ComponentType.SPRITE && iCompDef.transparency == 0 && iCompDef.anInt1404 < 0 && iCompDef.containerItemId == -1 && iCompDef.anInt1435 == -1 && !iCompDef.tiling && iCompDef.angle2d == 0;
 						boolean bool_48 = false;
 						int i_24;
-						if (i_9 >= i_15 && i_10 >= i_16 && i_9 < i_17 && i_10 < i_18) {
+						if (mouseX >= leftBound && mouseY >= lowerBound && mouseX < rightBound && mouseY < upperBound) {
 							if (bool_47) {
 								Class119 class119_21 = iCompDef.method2046(Renderers.CURRENT_RENDERER);
 								if (class119_21 != null && class119_21.anInt1458 == iCompDef.width && iCompDef.height == class119_21.anInt1454) {
-									int i_22 = i_9 - x;
-									int i_23 = i_10 - y;
+									int i_22 = mouseX - x;
+									int i_23 = mouseY - y;
 									if (i_23 >= 0 && i_23 < class119_21.anIntArray1457.length) {
 										i_24 = class119_21.anIntArray1457[i_23];
 										if (i_22 >= i_24 && i_22 <= i_24 + class119_21.anIntArray1455[i_23]) {
@@ -1086,7 +1086,7 @@ public class client extends Engine {
 						int i_26;
 						int i_27;
 						Class119 class119_40;
-						if (record != null && record.getClickType() == 0 && record.getX() >= i_15 && record.getY() >= i_16 && record.getX() < i_17 && record.getY() < i_18) {
+						if (record != null && record.getClickType() == 0 && record.getX() >= leftBound && record.getY() >= lowerBound && record.getX() < rightBound && record.getY() < upperBound) {
 							if (bool_47) {
 								class119_40 = iCompDef.method2046(Renderers.CURRENT_RENDERER);
 								if (class119_40 != null && iCompDef.width == class119_40.anInt1458 && iCompDef.height == class119_40.anInt1454) {
@@ -1216,11 +1216,11 @@ public class client extends Engine {
 										class535_59.method11451().method4217(Renderers.CURRENT_RENDERER, iCompDef.height, Class393.preferences.skyBoxes.method12728());
 									}
 
-									if (iCompDef.contentType == IComponentDefinitions.CONTENT_TYPE_1337 && !Class20.aBool161 && i_9 >= i_15 && i_10 >= i_16 && i_9 < i_17 && i_10 < i_18) {
-										GraphNode_Sub1_Sub4_Sub1.iComponentOnGroundTile(Renderers.CURRENT_RENDERER, i_9, i_10);
+									if (iCompDef.contentType == IComponentDefinitions.CONTENT_TYPE_1337 && !Class20.aBool161 && mouseX >= leftBound && mouseY >= lowerBound && mouseX < rightBound && mouseY < upperBound) {
+										GraphNode_Sub1_Sub4_Sub1.iComponentOnGroundTile(Renderers.CURRENT_RENDERER, mouseX, mouseY);
 
 										for (EntityNode_Sub2 class275_sub2_57 = (EntityNode_Sub2) aClass457_7290.method7659(); class275_sub2_57 != null; class275_sub2_57 = (EntityNode_Sub2) aClass457_7290.method7650()) {
-											if (i_9 >= class275_sub2_57.anInt7742 && i_9 < class275_sub2_57.anInt7744 && i_10 >= class275_sub2_57.anInt7743 && i_10 < class275_sub2_57.anInt7740) {
+											if (mouseX >= class275_sub2_57.anInt7742 && mouseX < class275_sub2_57.anInt7744 && mouseY >= class275_sub2_57.anInt7743 && mouseY < class275_sub2_57.anInt7740) {
 												HitsplatDefinitions.method3851();
 												ProcessorSpecs.method7724(class275_sub2_57.aTransform_Sub1_Sub1_Sub2_7739);
 											}
@@ -1234,7 +1234,7 @@ public class client extends Engine {
 										PlayerEntity player_55 = players[ints_46[i_27]];
 										if (player_55 != null) {
 											AccountCreationStage.method252(ClientTriggerType.aClass397_4806, -1, player_55, ints_46[i_27]);
-											player_55.method15880(i_15, i_16, i_17, i_18, x - iCompDef.scrollX, y - iCompDef.scrollY, i_9, i_10);
+											player_55.method15880(leftBound, lowerBound, rightBound, upperBound, x - iCompDef.scrollX, y - iCompDef.scrollY, mouseX, mouseY);
 										}
 									}
 
@@ -1243,7 +1243,7 @@ public class client extends Engine {
 										ObjectNode class282_sub47_56 = (ObjectNode) NPC_MAP.get(i_52);
 										if (class282_sub47_56 != null) {
 											AccountCreationStage.method252(ClientTriggerType.aClass397_4804, ((NPCEntity) class282_sub47_56.anObject8068).definitions.id, (PathingEntity) class282_sub47_56.anObject8068, i_52);
-											((PathingEntity) class282_sub47_56.anObject8068).method15880(i_15, i_16, i_17, i_18, x - iCompDef.scrollX, y - iCompDef.scrollY, i_9, i_10);
+											((PathingEntity) class282_sub47_56.anObject8068).method15880(leftBound, lowerBound, rightBound, upperBound, x - iCompDef.scrollX, y - iCompDef.scrollY, mouseX, mouseY);
 										}
 									}
 									continue;
@@ -1251,12 +1251,12 @@ public class client extends Engine {
 
 								if (iCompDef.contentType == IComponentDefinitions.CONTENT_TYPE_1338) {
 									class119_40 = iCompDef.method2046(Renderers.CURRENT_RENDERER);
-									if (class119_40 == null || Class187.anInt2363 != 0 && Class187.anInt2363 != 3 || Class20.aBool161 || i_9 < i_15 || i_10 < i_16 || i_9 >= i_17 || i_10 >= i_18) {
+									if (class119_40 == null || Class187.anInt2363 != 0 && Class187.anInt2363 != 3 || Class20.aBool161 || mouseX < leftBound || mouseY < lowerBound || mouseX >= rightBound || mouseY >= upperBound) {
 										continue;
 									}
 
-									i_25 = i_9 - x;
-									i_26 = i_10 - y;
+									i_25 = mouseX - x;
+									i_26 = mouseY - y;
 									i_27 = class119_40.anIntArray1457[i_26];
 									if (i_25 < i_27 || i_25 > i_27 + class119_40.anIntArray1455[i_26]) {
 										continue;
@@ -1701,18 +1701,18 @@ public class client extends Engine {
 
 						Class86.method1482(iCompDef);
 						if (iCompDef.type == ComponentType.CONTAINER) {
-							method11768(interface_0, components, iCompDef.idHash, i_15, i_16, i_17, i_18, x - iCompDef.scrollX, y - iCompDef.scrollY, i_9, i_10);
+							method11768(interface_0, components, iCompDef.idHash, leftBound, lowerBound, rightBound, upperBound, x - iCompDef.scrollX, y - iCompDef.scrollY, mouseX, mouseY);
 							if (iCompDef.itemSlots != null) {
-								method11768(interface_0, iCompDef.itemSlots, iCompDef.idHash, i_15, i_16, i_17, i_18, x - iCompDef.scrollX, y - iCompDef.scrollY, i_9, i_10);
+								method11768(interface_0, iCompDef.itemSlots, iCompDef.idHash, leftBound, lowerBound, rightBound, upperBound, x - iCompDef.scrollX, y - iCompDef.scrollY, mouseX, mouseY);
 							}
 
-							SubInterface class282_sub44_58 = (SubInterface) OPEN_INTERFACES.get(iCompDef.idHash);
-							if (class282_sub44_58 != null) {
-								if (Game.darkan == CURRENT_GAME && class282_sub44_58.overlay == 0 && !Class20.aBool161 && bool_48 && !aBool7168) {
+							SubInterface sub = (SubInterface) OPEN_INTERFACES.get(iCompDef.idHash);
+							if (sub != null) {
+								if (Game.darkan == CURRENT_GAME && sub.overlay == 0 && !Class20.aBool161 && bool_48 && !aBool7168) {
 									HitsplatDefinitions.method3851();
 								}
 
-								LightIntensityIndexLoader.method7313(class282_sub44_58, class282_sub44_58.interfaceId, i_15, i_16, i_17, i_18, x, y, i_9, i_10);
+								LightIntensityIndexLoader.method7313(sub, sub.interfaceId, leftBound, lowerBound, rightBound, upperBound, x, y, mouseX, mouseY);
 							}
 						}
 					}
@@ -1764,11 +1764,11 @@ public class client extends Engine {
 					}
 					break;
 				case 5:
-					if (Class448.LOBBY_CONNECTION_INFO == null) {
-						Class448.LOBBY_CONNECTION_INFO = new ConnectionInfo();
+					if (ConnectionInfo.LOBBY_CONNECTION_INFO == null) {
+						ConnectionInfo.LOBBY_CONNECTION_INFO = new ConnectionInfo();
 					}
 
-					Class448.LOBBY_CONNECTION_INFO.host = string_7;
+					ConnectionInfo.LOBBY_CONNECTION_INFO.host = string_7;
 					break;
 				case 6:
 					Static.COUNTRY = Integer.parseInt(string_7);
@@ -1794,11 +1794,11 @@ public class client extends Engine {
 					Class464.aString5555 = string_7;
 					break;
 				case 14:
-					if (Class448.LOBBY_CONNECTION_INFO == null) {
-						Class448.LOBBY_CONNECTION_INFO = new ConnectionInfo();
+					if (ConnectionInfo.LOBBY_CONNECTION_INFO == null) {
+						ConnectionInfo.LOBBY_CONNECTION_INFO = new ConnectionInfo();
 					}
 
-					Class448.LOBBY_CONNECTION_INFO.worldId = Integer.parseInt(string_7);
+					ConnectionInfo.LOBBY_CONNECTION_INFO.worldId = Integer.parseInt(string_7);
 					break;
 				case 15:
 					Class176.BUILD_ENVIRONMENT = Class182.method3040(Integer.parseInt(string_7));
@@ -1807,8 +1807,8 @@ public class client extends Engine {
 					}
 					break;
 				case 16:
-					Class448.JS5_CONNECTION_INFO = new ConnectionInfo();
-					Class448.JS5_CONNECTION_INFO.worldId = Integer.parseInt(string_7);
+					ConnectionInfo.JS5_CONNECTION_INFO = new ConnectionInfo();
+					ConnectionInfo.JS5_CONNECTION_INFO.worldId = Integer.parseInt(string_7);
 					break;
 				case 17:
 					aString7164 = string_7;
@@ -2027,8 +2027,8 @@ public class client extends Engine {
 						Class9.anInt109 = Class9.anInt112;
 						Class9.anInt108 = Class9.anInt94;
 						Class9.anInt107 = Class9.anInt106;
-						if (Class448.aBool5428) {
-							Class62.setGameHost(Class448.aClass450_5429.worldId, Class448.aClass450_5429.host);
+						if (ConnectionInfo.aBool5428) {
+							Class62.setGameHost(ConnectionInfo.aClass450_5429.worldId, ConnectionInfo.aClass450_5429.host);
 							GAME_CONNECTION_CONTEXT.reset();
 							GameState.setGameState(10);
 						} else {
@@ -2190,7 +2190,7 @@ public class client extends Engine {
 				str_2 = str_2 + Class4.MY_PLAYER_PLANE + "," + Class4.MY_PLAYER_PLANE + "," + Class4.MY_PLAYER_PLANE + "," + " ";
 			}
 
-			str_2 = str_2 + Class393.preferences.currentToolkit.getValue() + " " + Class393.preferences.antiAliasingDefault.method12641() + " " + Class158.windowedMode() + " " + Class349.anInt4083 + "," + anInt3243 * -969250379 + " ";
+			str_2 = str_2 + Class393.preferences.currentToolkit.getValue() + " " + Class393.preferences.antiAliasingDefault.method12641() + " " + Class158.windowedMode() + " " + Class349.BASE_WINDOW_WIDTH + "," + BASE_WINDOW_HEIGHT * -969250379 + " ";
 			str_2 = str_2 + Class393.preferences.lightDetail.method12786() + " ";
 			str_2 = str_2 + Class393.preferences.sceneryShadows.method12624() + " ";
 			str_2 = str_2 + Class393.preferences.water.getValue() + " ";
@@ -2261,7 +2261,7 @@ public class client extends Engine {
 
 	void method11623() {
 		if (Class119.JS5_STANDARD_REQUESTER.anInt3657 > anInt7232) {
-			Class159.GAME_CONNECTION_INFO.swap();
+			ConnectionInfo.GAME_CONNECTION_INFO.swap();
 			anInt7202 = Class119.JS5_STANDARD_REQUESTER.anInt3657 * 250 - 250;
 			if (anInt7202 > 3000) {
 				anInt7202 = 3000;
@@ -2311,7 +2311,7 @@ public class client extends Engine {
 		} else {
 			try {
 				if (updateStage == 0) {
-					MaterialProp8.clientSocket = Class159.GAME_CONNECTION_INFO.createSocket();
+					MaterialProp8.clientSocket = ConnectionInfo.GAME_CONNECTION_INFO.createSocket();
 					++updateStage;
 				}
 
@@ -2408,23 +2408,23 @@ public class client extends Engine {
 		}
 
 		if (HDWaterTile.SERVER_ENVIRONMENT == ServerEnvironment.LIVE) {
-			Class448.JS5_CONNECTION_INFO.host = SubInterface.suppliedApplet.getCodeBase().getHost();
+			ConnectionInfo.JS5_CONNECTION_INFO.host = SubInterface.suppliedApplet.getCodeBase().getHost();
 		} else if (ServerEnvironment.method8308(HDWaterTile.SERVER_ENVIRONMENT)) {
-			Class448.JS5_CONNECTION_INFO.host = SubInterface.suppliedApplet.getCodeBase().getHost();
-			Class448.JS5_CONNECTION_INFO.anInt5434 = 1140744768 + -58916693 * Class448.JS5_CONNECTION_INFO.worldId * -1933199413;
-			Class448.LOBBY_CONNECTION_INFO.anInt5434 = Class448.LOBBY_CONNECTION_INFO.worldId * -1933199413 * -58916693 + 1140744768;
-			Class448.JS5_CONNECTION_INFO.anInt5437 = (-1441381029 * Class448.JS5_CONNECTION_INFO.worldId * -1933199413 + 1250363344) * -1637999045;
-			Class448.LOBBY_CONNECTION_INFO.anInt5437 = (Class448.LOBBY_CONNECTION_INFO.worldId * -1933199413 * -1441381029 + 1250363344) * -1637999045;
+			ConnectionInfo.JS5_CONNECTION_INFO.host = SubInterface.suppliedApplet.getCodeBase().getHost();
+			ConnectionInfo.JS5_CONNECTION_INFO.anInt5434 = 1140744768 + -58916693 * ConnectionInfo.JS5_CONNECTION_INFO.worldId * -1933199413;
+			ConnectionInfo.LOBBY_CONNECTION_INFO.anInt5434 = ConnectionInfo.LOBBY_CONNECTION_INFO.worldId * -1933199413 * -58916693 + 1140744768;
+			ConnectionInfo.JS5_CONNECTION_INFO.anInt5437 = (-1441381029 * ConnectionInfo.JS5_CONNECTION_INFO.worldId * -1933199413 + 1250363344) * -1637999045;
+			ConnectionInfo.LOBBY_CONNECTION_INFO.anInt5437 = (ConnectionInfo.LOBBY_CONNECTION_INFO.worldId * -1933199413 * -1441381029 + 1250363344) * -1637999045;
 		} else if (HDWaterTile.SERVER_ENVIRONMENT == ServerEnvironment.LOCAL) {
-			Class448.JS5_CONNECTION_INFO.host = "127.0.0.1";
-			Class448.LOBBY_CONNECTION_INFO.host = "127.0.0.1";
-			Class448.JS5_CONNECTION_INFO.anInt5434 = -58916693 * Class448.JS5_CONNECTION_INFO.worldId * -1933199413 + 1140744768;
-			Class448.LOBBY_CONNECTION_INFO.anInt5434 = -58916693 * Class448.LOBBY_CONNECTION_INFO.worldId * -1933199413 + 1140744768;
-			Class448.JS5_CONNECTION_INFO.anInt5437 = (-1441381029 * Class448.JS5_CONNECTION_INFO.worldId * -1933199413 + 1250363344) * -1637999045;
-			Class448.LOBBY_CONNECTION_INFO.anInt5437 = (-1441381029 * Class448.LOBBY_CONNECTION_INFO.worldId * -1933199413 + 1250363344) * -1637999045;
+			ConnectionInfo.JS5_CONNECTION_INFO.host = "127.0.0.1";
+			ConnectionInfo.LOBBY_CONNECTION_INFO.host = "127.0.0.1";
+			ConnectionInfo.JS5_CONNECTION_INFO.anInt5434 = -58916693 * ConnectionInfo.JS5_CONNECTION_INFO.worldId * -1933199413 + 1140744768;
+			ConnectionInfo.LOBBY_CONNECTION_INFO.anInt5434 = -58916693 * ConnectionInfo.LOBBY_CONNECTION_INFO.worldId * -1933199413 + 1140744768;
+			ConnectionInfo.JS5_CONNECTION_INFO.anInt5437 = (-1441381029 * ConnectionInfo.JS5_CONNECTION_INFO.worldId * -1933199413 + 1250363344) * -1637999045;
+			ConnectionInfo.LOBBY_CONNECTION_INFO.anInt5437 = (-1441381029 * ConnectionInfo.LOBBY_CONNECTION_INFO.worldId * -1933199413 + 1250363344) * -1637999045;
 		}
 
-		Class159.GAME_CONNECTION_INFO = Class448.JS5_CONNECTION_INFO;
+		ConnectionInfo.GAME_CONNECTION_INFO = ConnectionInfo.JS5_CONNECTION_INFO;
 		if (Game.darkan == CURRENT_GAME) {
 			aBool7372 = false;
 		}
@@ -2489,23 +2489,23 @@ public class client extends Engine {
 		}
 
 		if (HDWaterTile.SERVER_ENVIRONMENT == ServerEnvironment.LIVE) {
-			Class448.JS5_CONNECTION_INFO.host = SubInterface.suppliedApplet.getCodeBase().getHost();
+			ConnectionInfo.JS5_CONNECTION_INFO.host = SubInterface.suppliedApplet.getCodeBase().getHost();
 		} else if (ServerEnvironment.method8308(HDWaterTile.SERVER_ENVIRONMENT)) {
-			Class448.JS5_CONNECTION_INFO.host = SubInterface.suppliedApplet.getCodeBase().getHost();
-			Class448.JS5_CONNECTION_INFO.anInt5434 = 1140744768 + -58916693 * Class448.JS5_CONNECTION_INFO.worldId * -1933199413;
-			Class448.LOBBY_CONNECTION_INFO.anInt5434 = Class448.LOBBY_CONNECTION_INFO.worldId * -1933199413 * -58916693 + 1140744768;
-			Class448.JS5_CONNECTION_INFO.anInt5437 = (-1441381029 * Class448.JS5_CONNECTION_INFO.worldId * -1933199413 + 1250363344) * -1637999045;
-			Class448.LOBBY_CONNECTION_INFO.anInt5437 = (Class448.LOBBY_CONNECTION_INFO.worldId * -1933199413 * -1441381029 + 1250363344) * -1637999045;
+			ConnectionInfo.JS5_CONNECTION_INFO.host = SubInterface.suppliedApplet.getCodeBase().getHost();
+			ConnectionInfo.JS5_CONNECTION_INFO.anInt5434 = 1140744768 + -58916693 * ConnectionInfo.JS5_CONNECTION_INFO.worldId * -1933199413;
+			ConnectionInfo.LOBBY_CONNECTION_INFO.anInt5434 = ConnectionInfo.LOBBY_CONNECTION_INFO.worldId * -1933199413 * -58916693 + 1140744768;
+			ConnectionInfo.JS5_CONNECTION_INFO.anInt5437 = (-1441381029 * ConnectionInfo.JS5_CONNECTION_INFO.worldId * -1933199413 + 1250363344) * -1637999045;
+			ConnectionInfo.LOBBY_CONNECTION_INFO.anInt5437 = (ConnectionInfo.LOBBY_CONNECTION_INFO.worldId * -1933199413 * -1441381029 + 1250363344) * -1637999045;
 		} else if (HDWaterTile.SERVER_ENVIRONMENT == ServerEnvironment.LOCAL) {
-			Class448.JS5_CONNECTION_INFO.host = "127.0.0.1";
-			Class448.LOBBY_CONNECTION_INFO.host = "127.0.0.1";
-			Class448.JS5_CONNECTION_INFO.anInt5434 = -58916693 * Class448.JS5_CONNECTION_INFO.worldId * -1933199413 + 1140744768;
-			Class448.LOBBY_CONNECTION_INFO.anInt5434 = -58916693 * Class448.LOBBY_CONNECTION_INFO.worldId * -1933199413 + 1140744768;
-			Class448.JS5_CONNECTION_INFO.anInt5437 = (-1441381029 * Class448.JS5_CONNECTION_INFO.worldId * -1933199413 + 1250363344) * -1637999045;
-			Class448.LOBBY_CONNECTION_INFO.anInt5437 = (-1441381029 * Class448.LOBBY_CONNECTION_INFO.worldId * -1933199413 + 1250363344) * -1637999045;
+			ConnectionInfo.JS5_CONNECTION_INFO.host = "127.0.0.1";
+			ConnectionInfo.LOBBY_CONNECTION_INFO.host = "127.0.0.1";
+			ConnectionInfo.JS5_CONNECTION_INFO.anInt5434 = -58916693 * ConnectionInfo.JS5_CONNECTION_INFO.worldId * -1933199413 + 1140744768;
+			ConnectionInfo.LOBBY_CONNECTION_INFO.anInt5434 = -58916693 * ConnectionInfo.LOBBY_CONNECTION_INFO.worldId * -1933199413 + 1140744768;
+			ConnectionInfo.JS5_CONNECTION_INFO.anInt5437 = (-1441381029 * ConnectionInfo.JS5_CONNECTION_INFO.worldId * -1933199413 + 1250363344) * -1637999045;
+			ConnectionInfo.LOBBY_CONNECTION_INFO.anInt5437 = (-1441381029 * ConnectionInfo.LOBBY_CONNECTION_INFO.worldId * -1933199413 + 1250363344) * -1637999045;
 		}
 
-		Class159.GAME_CONNECTION_INFO = Class448.JS5_CONNECTION_INFO;
+		ConnectionInfo.GAME_CONNECTION_INFO = ConnectionInfo.JS5_CONNECTION_INFO;
 		if (Game.darkan == CURRENT_GAME) {
 			aBool7372 = false;
 		}
@@ -2615,23 +2615,23 @@ public class client extends Engine {
 		}
 
 		if (HDWaterTile.SERVER_ENVIRONMENT == ServerEnvironment.LIVE) {
-			Class448.JS5_CONNECTION_INFO.host = SubInterface.suppliedApplet.getCodeBase().getHost();
+			ConnectionInfo.JS5_CONNECTION_INFO.host = SubInterface.suppliedApplet.getCodeBase().getHost();
 		} else if (ServerEnvironment.method8308(HDWaterTile.SERVER_ENVIRONMENT)) {
-			Class448.JS5_CONNECTION_INFO.host = SubInterface.suppliedApplet.getCodeBase().getHost();
-			Class448.JS5_CONNECTION_INFO.anInt5434 = Class448.JS5_CONNECTION_INFO.worldId * -1708079975 + 1140744768;
-			Class448.LOBBY_CONNECTION_INFO.anInt5434 = Class448.LOBBY_CONNECTION_INFO.worldId * -1708079975 + 1140744768;
-			Class448.JS5_CONNECTION_INFO.anInt5437 = Class448.JS5_CONNECTION_INFO.worldId * -1473668237 + 1047080176;
-			Class448.LOBBY_CONNECTION_INFO.anInt5437 = Class448.LOBBY_CONNECTION_INFO.worldId * -1473668237 + 1047080176;
+			ConnectionInfo.JS5_CONNECTION_INFO.host = SubInterface.suppliedApplet.getCodeBase().getHost();
+			ConnectionInfo.JS5_CONNECTION_INFO.anInt5434 = ConnectionInfo.JS5_CONNECTION_INFO.worldId * -1708079975 + 1140744768;
+			ConnectionInfo.LOBBY_CONNECTION_INFO.anInt5434 = ConnectionInfo.LOBBY_CONNECTION_INFO.worldId * -1708079975 + 1140744768;
+			ConnectionInfo.JS5_CONNECTION_INFO.anInt5437 = ConnectionInfo.JS5_CONNECTION_INFO.worldId * -1473668237 + 1047080176;
+			ConnectionInfo.LOBBY_CONNECTION_INFO.anInt5437 = ConnectionInfo.LOBBY_CONNECTION_INFO.worldId * -1473668237 + 1047080176;
 		} else if (HDWaterTile.SERVER_ENVIRONMENT == ServerEnvironment.LOCAL) {
-			Class448.JS5_CONNECTION_INFO.host = "127.0.0.1";
-			Class448.LOBBY_CONNECTION_INFO.host = "127.0.0.1";
-			Class448.JS5_CONNECTION_INFO.anInt5434 = Class448.JS5_CONNECTION_INFO.worldId * -1708079975 + 1140744768;
-			Class448.LOBBY_CONNECTION_INFO.anInt5434 = Class448.LOBBY_CONNECTION_INFO.worldId * -1708079975 + 1140744768;
-			Class448.JS5_CONNECTION_INFO.anInt5437 = Class448.JS5_CONNECTION_INFO.worldId * -1473668237 + 1047080176;
-			Class448.LOBBY_CONNECTION_INFO.anInt5437 = Class448.LOBBY_CONNECTION_INFO.worldId * -1473668237 + 1047080176;
+			ConnectionInfo.JS5_CONNECTION_INFO.host = "127.0.0.1";
+			ConnectionInfo.LOBBY_CONNECTION_INFO.host = "127.0.0.1";
+			ConnectionInfo.JS5_CONNECTION_INFO.anInt5434 = ConnectionInfo.JS5_CONNECTION_INFO.worldId * -1708079975 + 1140744768;
+			ConnectionInfo.LOBBY_CONNECTION_INFO.anInt5434 = ConnectionInfo.LOBBY_CONNECTION_INFO.worldId * -1708079975 + 1140744768;
+			ConnectionInfo.JS5_CONNECTION_INFO.anInt5437 = ConnectionInfo.JS5_CONNECTION_INFO.worldId * -1473668237 + 1047080176;
+			ConnectionInfo.LOBBY_CONNECTION_INFO.anInt5437 = ConnectionInfo.LOBBY_CONNECTION_INFO.worldId * -1473668237 + 1047080176;
 		}
 
-		Class159.GAME_CONNECTION_INFO = Class448.JS5_CONNECTION_INFO;
+		ConnectionInfo.GAME_CONNECTION_INFO = ConnectionInfo.JS5_CONNECTION_INFO;
 		if (Game.darkan == CURRENT_GAME) {
 			aBool7372 = false;
 		}
@@ -2721,7 +2721,7 @@ public class client extends Engine {
 		++anInt7261;
 		Class380.method6451(-1, -1);
 		Class15.method544(null, -1, -1);
-		ServerEnvironment.method8315();
+		ServerEnvironment.pulseSubInterfaces();
 		++anInt7347;
 
 		for (i_2 = 0; i_2 < anInt7210; i_2++) {

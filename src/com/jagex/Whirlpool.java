@@ -95,7 +95,7 @@ public class Whirlpool {
                     } else if (id == 19) {
                         Class209.printConsoleMessage(IndexLoaders.NATIVE_LIBRARY_LOADER.unload() ? "Success" : "Failure");
                     } else if (id == 20) {
-                        Class159.GAME_CONNECTION_INFO.swap();
+                        ConnectionInfo.GAME_CONNECTION_INFO.swap();
                     } else if (id == 22) {
                         Class119.JS5_STANDARD_REQUESTER.method5525();
                     } else if (id == 3) {

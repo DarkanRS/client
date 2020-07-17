@@ -47,7 +47,7 @@ public class MaterialProp23 extends MaterialProperty {
                         Class28.aLong351 = Utils.time() + 30000L;
                     }
                 } else if (Utils.time() >= Class28.aLong351) {
-                    PingRequest.CURRENT_REQUEST = client.PING_REQUESTER.createPingRequest(Class159.GAME_CONNECTION_INFO.host);
+                    PingRequest.CURRENT_REQUEST = client.PING_REQUESTER.createPingRequest(ConnectionInfo.GAME_CONNECTION_INFO.host);
                 }
                 Class434.method7292();
                 MouseRecord class282_sub53_13 = (MouseRecord) client.mouseRecords.head();
@@ -143,7 +143,7 @@ public class MaterialProp23 extends MaterialProperty {
                         if (!client.aBool7344) {
                             client.anInt7427 = -1;
                         }
-                        ServerEnvironment.method8315();
+                        ServerEnvironment.pulseSubInterfaces();
                         ++client.anInt7347;
                         TCPPacket tcpmessage_8;
                         if (client.aBool7375) {

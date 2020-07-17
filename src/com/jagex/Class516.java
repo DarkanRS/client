@@ -30,7 +30,7 @@ public class Class516 {
     }
 
     static void method8867(boolean bool_0) {
-        Class442.method7403(client.BASE_WINDOW_ID, Class349.anInt4083, client.anInt3243 * -969250379, bool_0);
+        Class442.method7403(client.BASE_WINDOW_ID, Class349.BASE_WINDOW_WIDTH, client.BASE_WINDOW_HEIGHT * -969250379, bool_0);
     }
 
     static void method8868(String string_0) {

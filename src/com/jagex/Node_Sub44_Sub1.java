@@ -10,7 +10,7 @@ public class Node_Sub44_Sub1 extends SubInterface {
     }
 
     @Override
-    public boolean method13401() {
+    public boolean load() {
         ObjectNode class282_sub47_2 = (ObjectNode) client.NPC_MAP.get(anInt9460);
         if (class282_sub47_2 != null) {
             AccountCreationStage.method252(ClientTriggerType.aClass397_4799, interfaceId, (PathingEntity) class282_sub47_2.anObject8068, anInt9460);

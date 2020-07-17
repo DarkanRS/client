@@ -2,8 +2,6 @@ package com.jagex;
 
 public class Class159 {
 
-    public static ConnectionInfo GAME_CONNECTION_INFO;
-
     Class159() throws Throwable {
         throw new Error();
     }

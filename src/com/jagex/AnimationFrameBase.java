@@ -63,7 +63,7 @@ public class AnimationFrameBase extends Node {
             int i_9 = class282_sub50_sub15_0.anInt9769 * Class20.anInt178 + 21;
             WallObjectGraphNode.anInt10526 = (Class20.aBool187 ? 26 : 22) + Class20.anInt178 * class282_sub50_sub15_0.anInt9769;
             i_6 = Class301.anInt3555 + Class158_Sub2.anInt8975;
-            if (i_4 + i_6 > Class349.anInt4083) {
+            if (i_4 + i_6 > Class349.BASE_WINDOW_WIDTH) {
                 i_6 = Class301.anInt3555 - i_4;
             }
 
@@ -73,8 +73,8 @@ public class AnimationFrameBase extends Node {
 
             int i_7 = Class20.aBool187 ? fontmetrics_3.topPadding + 1 + 20 : 31;
             int i_8 = i_1 - i_7 + fontmetrics_3.topPadding + 1;
-            if (i_9 + i_8 > Engine.anInt3243 * -969250379) {
-                i_8 = Engine.anInt3243 * -969250379 - i_9;
+            if (i_9 + i_8 > Engine.BASE_WINDOW_HEIGHT * -969250379) {
+                i_8 = Engine.BASE_WINDOW_HEIGHT * -969250379 - i_9;
             }
 
             if (i_8 < 0) {

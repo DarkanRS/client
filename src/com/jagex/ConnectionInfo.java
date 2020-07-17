@@ -15,6 +15,20 @@ public class ConnectionInfo {
     public int anInt5434 = -190419398;
     boolean alternate = true;
     boolean proxied;
+    
+	static PingRequest CURRENT_WORLD_PING_REQUEST;
+	static int currentWorldPingIdx;
+	static int CURRENT_WORLD = 1000336;
+	static WorldDescriptor[] WORLD_DESCRIPTORS_BYID = new WorldDescriptor[0];
+	public static boolean PING_WORLDS;
+	public static boolean aBool5422;
+	public static ConnectionInfo aClass450_5429;
+	public static boolean aBool5428;
+	public static long aLong5425;
+	public static ConnectionInfo LOBBY_CONNECTION_INFO;
+	public static ConnectionInfo NEWS_CONNECTION_INFO;
+	public static ConnectionInfo JS5_CONNECTION_INFO;
+	public static ConnectionInfo GAME_CONNECTION_INFO;
 
     static String method7499(long long_0) {
         Calendar calendar_5;

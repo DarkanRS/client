@@ -10,7 +10,7 @@ public class Node_Sub44_Sub2 extends SubInterface {
     }
 
     @Override
-    public boolean method13401() {
+    public boolean load() {
         PlayerEntity player_2 = client.players[anInt9482];
         if (player_2 != null) {
             AccountCreationStage.method252(ClientTriggerType.aClass397_4807, interfaceId, player_2, anInt9482);

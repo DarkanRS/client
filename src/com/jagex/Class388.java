@@ -17,8 +17,8 @@ public class Class388 implements Interface41 {
     static void method6692() {
         TCPPacket tcpmessage_1 = Class271.createPacket(ClientProt.SCREEN_SIZE, client.GAME_CONNECTION_CONTEXT.isaac);
         tcpmessage_1.buffer.writeByte(Class158.windowedMode());
-        tcpmessage_1.buffer.writeShort(Class349.anInt4083);
-        tcpmessage_1.buffer.writeShort(client.anInt3243 * -969250379);
+        tcpmessage_1.buffer.writeShort(Class349.BASE_WINDOW_WIDTH);
+        tcpmessage_1.buffer.writeShort(client.BASE_WINDOW_HEIGHT * -969250379);
         tcpmessage_1.buffer.writeByte(Class393.preferences.aPreference_Sub4_8223.method12641());
         client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_1);
     }

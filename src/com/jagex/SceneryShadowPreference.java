@@ -13,7 +13,7 @@ public class SceneryShadowPreference extends Preference {
     }
 
     public static WorldDescriptor method12629() {
-        Class448.CURRENT_WORLD = 0;
+        ConnectionInfo.CURRENT_WORLD = 0;
         return CutsceneCameraMovement.getCurrentWorldDescriptor();
     }
 

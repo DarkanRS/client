@@ -50,17 +50,17 @@ public class Class507 {
             if (i_1 != 1) {
                 Class46.method935();
             } else {
-                Class349.anInt4083 = client.GAME_WIDTH;
+                Class349.BASE_WINDOW_WIDTH = client.GAME_WIDTH;
                 client.GAME_CANVAS_X = (SunIndexLoader.anInt434 - client.GAME_WIDTH) / 2;
-                client.anInt3243 = client.GAME_HEIGHT * -1929118563;
+                client.BASE_WINDOW_HEIGHT = client.GAME_HEIGHT * -1929118563;
                 client.GAME_CANVAS_Y = 0;
             }
-            if (HDWaterTile.SERVER_ENVIRONMENT != ServerEnvironment.LIVE && Class349.anInt4083 < 1024) {
-                int i_10000 = client.anInt3243;
+            if (HDWaterTile.SERVER_ENVIRONMENT != ServerEnvironment.LIVE && Class349.BASE_WINDOW_WIDTH < 1024) {
+                int i_10000 = client.BASE_WINDOW_HEIGHT;
             }
             if (!bool_4) {
-                Class351.gameCanvas.setSize(Class349.anInt4083, client.anInt3243 * -969250379);
-                Renderers.CURRENT_RENDERER.method8414(Class351.gameCanvas, Class349.anInt4083, client.anInt3243 * -969250379);
+                Class351.gameCanvas.setSize(Class349.BASE_WINDOW_WIDTH, client.BASE_WINDOW_HEIGHT * -969250379);
+                Renderers.CURRENT_RENDERER.method8414(Class351.gameCanvas, Class349.BASE_WINDOW_WIDTH, client.BASE_WINDOW_HEIGHT * -969250379);
                 if (container_6 == client.engineFrame) {
                     insets_7 = client.engineFrame.getInsets();
                     Class351.gameCanvas.setLocation(insets_7.left + client.GAME_CANVAS_X, insets_7.top + client.GAME_CANVAS_Y);

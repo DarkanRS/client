@@ -24,18 +24,18 @@ public abstract class Class52 implements Interface2 {
         if (i_0 < i_1) {
             int i_7 = (i_0 + i_1) / 2;
             int i_8 = i_0;
-            WorldDescriptor class217_sub1_9 = Class448.WORLD_DESCRIPTORS_BYID[i_7];
-            Class448.WORLD_DESCRIPTORS_BYID[i_7] = Class448.WORLD_DESCRIPTORS_BYID[i_1];
-            Class448.WORLD_DESCRIPTORS_BYID[i_1] = class217_sub1_9;
+            WorldDescriptor class217_sub1_9 = ConnectionInfo.WORLD_DESCRIPTORS_BYID[i_7];
+            ConnectionInfo.WORLD_DESCRIPTORS_BYID[i_7] = ConnectionInfo.WORLD_DESCRIPTORS_BYID[i_1];
+            ConnectionInfo.WORLD_DESCRIPTORS_BYID[i_1] = class217_sub1_9;
             for (int i_10 = i_0; i_10 < i_1; i_10++) {
-                if (NPCDirection.method4325(Class448.WORLD_DESCRIPTORS_BYID[i_10], class217_sub1_9, i_2, bool_3, i_4, bool_5) <= 0) {
-                    WorldDescriptor class217_sub1_11 = Class448.WORLD_DESCRIPTORS_BYID[i_10];
-                    Class448.WORLD_DESCRIPTORS_BYID[i_10] = Class448.WORLD_DESCRIPTORS_BYID[i_8];
-                    Class448.WORLD_DESCRIPTORS_BYID[i_8++] = class217_sub1_11;
+                if (NPCDirection.method4325(ConnectionInfo.WORLD_DESCRIPTORS_BYID[i_10], class217_sub1_9, i_2, bool_3, i_4, bool_5) <= 0) {
+                    WorldDescriptor class217_sub1_11 = ConnectionInfo.WORLD_DESCRIPTORS_BYID[i_10];
+                    ConnectionInfo.WORLD_DESCRIPTORS_BYID[i_10] = ConnectionInfo.WORLD_DESCRIPTORS_BYID[i_8];
+                    ConnectionInfo.WORLD_DESCRIPTORS_BYID[i_8++] = class217_sub1_11;
                 }
             }
-            Class448.WORLD_DESCRIPTORS_BYID[i_1] = Class448.WORLD_DESCRIPTORS_BYID[i_8];
-            Class448.WORLD_DESCRIPTORS_BYID[i_8] = class217_sub1_9;
+            ConnectionInfo.WORLD_DESCRIPTORS_BYID[i_1] = ConnectionInfo.WORLD_DESCRIPTORS_BYID[i_8];
+            ConnectionInfo.WORLD_DESCRIPTORS_BYID[i_8] = class217_sub1_9;
             method1086(i_0, i_8 - 1, i_2, bool_3, i_4, bool_5);
             method1086(i_8 + 1, i_1, i_2, bool_3, i_4, bool_5);
         }

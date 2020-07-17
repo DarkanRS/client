@@ -2,7 +2,7 @@ package com.jagex;
 
 public class Class349 {
 
-    public static int anInt4083;
+    public static int BASE_WINDOW_WIDTH;
 
     long aLong4081;
 

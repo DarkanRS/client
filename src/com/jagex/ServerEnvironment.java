@@ -65,34 +65,34 @@ public enum ServerEnvironment implements Identifiable {
     }
 
     public static void method8314(String string_0, int port) {
-        if (Class448.LOBBY_CONNECTION_INFO == null) {
-            Class448.LOBBY_CONNECTION_INFO = new ConnectionInfo();
+        if (ConnectionInfo.LOBBY_CONNECTION_INFO == null) {
+            ConnectionInfo.LOBBY_CONNECTION_INFO = new ConnectionInfo();
         }
-        Class448.LOBBY_CONNECTION_INFO.host = string_0;
-        Class448.LOBBY_CONNECTION_INFO.worldId = port + 1099;
-        Class448.LOBBY_CONNECTION_INFO.anInt5434 = Class448.LOBBY_CONNECTION_INFO.worldId;
-        Class448.LOBBY_CONNECTION_INFO.anInt5437 = Class448.LOBBY_CONNECTION_INFO.worldId;
+        ConnectionInfo.LOBBY_CONNECTION_INFO.host = string_0;
+        ConnectionInfo.LOBBY_CONNECTION_INFO.worldId = port + 1099;
+        ConnectionInfo.LOBBY_CONNECTION_INFO.anInt5434 = ConnectionInfo.LOBBY_CONNECTION_INFO.worldId;
+        ConnectionInfo.LOBBY_CONNECTION_INFO.anInt5437 = ConnectionInfo.LOBBY_CONNECTION_INFO.worldId;
     }
 
-    static void method8315() {
+    static void pulseSubInterfaces() {
         if (client.BASE_WINDOW_ID != -1) {
-            int i_1 = Class163.mouseRecorder.getMouseX();
-            int i_2 = Class163.mouseRecorder.getMouseY();
+            int mouseX = Class163.mouseRecorder.getMouseX();
+            int mouseY = Class163.mouseRecorder.getMouseY();
             MouseRecord class282_sub53_3 = (MouseRecord) client.mouseRecords.head();
             if (class282_sub53_3 != null) {
-                i_1 = class282_sub53_3.getX();
-                i_2 = class282_sub53_3.getY();
+                mouseX = class282_sub53_3.getX();
+                mouseY = class282_sub53_3.getY();
             }
             if (client.aClass118_7257 != null && InputSubscriberType.aClass118_2763 == client.aClass118_7247) {
                 client.aBool7403 = true;
                 client.anInt7432 = 0;
                 client.anInt7265 = 0;
-                client.anInt7367 = Class349.anInt4083;
-                client.anInt7476 = client.anInt3243 * -969250379;
+                client.anInt7367 = Class349.BASE_WINDOW_WIDTH;
+                client.anInt7476 = client.BASE_WINDOW_HEIGHT * -969250379;
             }
-            LightIntensityIndexLoader.method7313(null, client.BASE_WINDOW_ID, 0, 0, Class349.anInt4083, client.anInt3243 * -969250379, 0, 0, i_1, i_2);
+            LightIntensityIndexLoader.method7313(null, client.BASE_WINDOW_ID, 0, 0, Class349.BASE_WINDOW_WIDTH, client.BASE_WINDOW_HEIGHT * -969250379, 0, 0, mouseX, mouseY);
             if (MaterialPropTexture.aClass118_9884 != null) {
-                BillboardDefinitions.method6170(i_1, i_2);
+                BillboardDefinitions.method6170(mouseX, mouseY);
             }
         }
     }

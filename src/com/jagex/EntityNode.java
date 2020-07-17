@@ -15,8 +15,8 @@ public class EntityNode {
         if (client.fullScreenFrame == null) {
             int i_1 = client.GAME_CANVAS_X;
             int i_2 = client.GAME_CANVAS_Y;
-            int i_3 = SunIndexLoader.anInt434 - Class349.anInt4083 - i_1;
-            int i_4 = Class107.anInt1082 - client.anInt3243 * -969250379 - i_2;
+            int i_3 = SunIndexLoader.anInt434 - Class349.BASE_WINDOW_WIDTH - i_1;
+            int i_4 = Class107.anInt1082 - client.BASE_WINDOW_HEIGHT * -969250379 - i_2;
             if (i_1 > 0 || i_3 > 0 || i_2 > 0 || i_4 > 0) {
                 try {
                     Container container_5 = Class371.getActiveContainer();

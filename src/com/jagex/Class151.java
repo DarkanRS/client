@@ -14,16 +14,16 @@ public class Class151 {
         CutsceneAction_Sub20.WORLD_LIST_BUFFER.writeBytes(data, 0, data.length);
         if (refresh) {
             MonoStereoPreference.decodeWorldList(CutsceneAction_Sub20.WORLD_LIST_BUFFER.buffer);
-            Class448.WORLD_DESCRIPTORS_BYID = new WorldDescriptor[Class4.WORLD_LIST_SIZE];
+            ConnectionInfo.WORLD_DESCRIPTORS_BYID = new WorldDescriptor[Class4.WORLD_LIST_SIZE];
             int i_3 = 0;
             for (int i_4 = Class485.WORLD_LIST_START; i_4 <= Class244.WORLD_LIST_SIZEPLUS1; i_4++) {
                 WorldDescriptor world = LocationIndexLoader.getWorld(i_4);
                 if (world != null) {
-                    Class448.WORLD_DESCRIPTORS_BYID[i_3++] = world;
+                    ConnectionInfo.WORLD_DESCRIPTORS_BYID[i_3++] = world;
                 }
             }
-            Class448.aBool5422 = false;
-            Class448.aLong5425 = Utils.time();
+            ConnectionInfo.aBool5422 = false;
+            ConnectionInfo.aLong5425 = Utils.time();
             CutsceneAction_Sub20.WORLD_LIST_BUFFER = null;
         }
     }

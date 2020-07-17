@@ -23,8 +23,8 @@ public class IdentikitDefinition implements Definition {
         int i_4;
         int i_5;
         if (icomponentdefinitions_3 == null) {
-            i_4 = Class349.anInt4083;
-            i_5 = client.anInt3243 * -969250379;
+            i_4 = Class349.BASE_WINDOW_WIDTH;
+            i_5 = client.BASE_WINDOW_HEIGHT * -969250379;
         } else {
             i_4 = icomponentdefinitions_3.width;
             i_5 = icomponentdefinitions_3.height;

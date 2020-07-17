@@ -113,7 +113,7 @@ public class FriendStatus {
         if (client.CURRENT_CUTSCENE < 0) {
             FontMetrics fontmetrics_1 = ShaderLoader.method1887();
             if (!Class20.aBool161) {
-                Class20.aBool162 = Class20.anInt198 != -1 && Class20.anInt169 >= Class20.anInt198 || (Class20.aBool187 ? 26 : 22) + Class20.anInt178 * Class20.anInt169 > Engine.anInt3243 * -969250379;
+                Class20.aBool162 = Class20.anInt198 != -1 && Class20.anInt169 >= Class20.anInt198 || (Class20.aBool187 ? 26 : 22) + Class20.anInt178 * Class20.anInt169 > Engine.BASE_WINDOW_HEIGHT * -969250379;
             }
             Class20.aClass482_174.removeAll();
             Class20.aClass482_175.removeAll();

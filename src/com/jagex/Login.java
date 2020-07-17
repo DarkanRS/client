@@ -44,9 +44,9 @@ public class Login {
                         return;
                     }
                     if (Class9.lobbyStage == 273) {
-                        Class159.GAME_CONNECTION_INFO.swap();
+                        ConnectionInfo.GAME_CONNECTION_INFO.swap();
                     } else {
-                        Class448.LOBBY_CONNECTION_INFO.swap();
+                        ConnectionInfo.LOBBY_CONNECTION_INFO.swap();
                     }
                     Class9.anInt90 = 0;
                     ++Class9.anInt104;
@@ -57,9 +57,9 @@ public class Login {
                 int i_5;
                 if (Class9.loginStage == 18) {
                     if (Class9.lobbyStage == 273) {
-                        Class9.CURRENT_CONNECTION_CONTEXT.init(SunDefinitions.createAsyncConnection(Class159.GAME_CONNECTION_INFO.createSocket(), 15000), Class159.GAME_CONNECTION_INFO.host);
+                        Class9.CURRENT_CONNECTION_CONTEXT.init(SunDefinitions.createAsyncConnection(ConnectionInfo.GAME_CONNECTION_INFO.createSocket(), 15000), ConnectionInfo.GAME_CONNECTION_INFO.host);
                     } else {
-                        Class9.CURRENT_CONNECTION_CONTEXT.init(SunDefinitions.createAsyncConnection(Class448.LOBBY_CONNECTION_INFO.createSocket(), 15000), Class448.LOBBY_CONNECTION_INFO.host);
+                        Class9.CURRENT_CONNECTION_CONTEXT.init(SunDefinitions.createAsyncConnection(ConnectionInfo.LOBBY_CONNECTION_INFO.createSocket(), 15000), ConnectionInfo.LOBBY_CONNECTION_INFO.host);
                     }
                     Class9.CURRENT_CONNECTION_CONTEXT.clearAllQueuedPackets();
                     tcpmessage_2 = SkyboxDefinitions.method3558();
@@ -193,8 +193,8 @@ public class Login {
                             }
                         }
                         rsbitsbuffer_22.writeByte(Class158.windowedMode());
-                        rsbitsbuffer_22.writeShort(Class349.anInt4083);
-                        rsbitsbuffer_22.writeShort(Engine.anInt3243 * -969250379);
+                        rsbitsbuffer_22.writeShort(Class349.BASE_WINDOW_WIDTH);
+                        rsbitsbuffer_22.writeShort(Engine.BASE_WINDOW_HEIGHT * -969250379);
                         rsbitsbuffer_22.writeByte(Class393.preferences.aPreference_Sub4_8223.method12641());
                         IdentiKitIndexLoader.method809(rsbitsbuffer_22);
                         rsbitsbuffer_22.writeString(client.aString7281);
@@ -219,8 +219,8 @@ public class Login {
                         rsbitsbuffer_22.writeByte(BASDefinitions.anInt2831);
                         rsbitsbuffer_22.writeInt(client.anInt7163);
                         rsbitsbuffer_22.writeString(client.aString7164);
-                        rsbitsbuffer_22.writeByte(Class448.CONNECTION_INFO != null && Class159.GAME_CONNECTION_INFO.worldId == Class448.CONNECTION_INFO.worldId ? 0 : 1);
-                        int i_9 = Class159.GAME_CONNECTION_INFO.worldId;
+                        rsbitsbuffer_22.writeByte(ConnectionInfo.NEWS_CONNECTION_INFO != null && ConnectionInfo.GAME_CONNECTION_INFO.worldId == ConnectionInfo.NEWS_CONNECTION_INFO.worldId ? 0 : 1);
+                        int i_9 = ConnectionInfo.GAME_CONNECTION_INFO.worldId;
                         rsbitsbuffer_22.writeInt(i_9);
                         QuestDefinitions.writeCRCs(rsbitsbuffer_22);
                     } else {
@@ -437,17 +437,17 @@ public class Login {
                             RenderFlagMap.anInt3644 = buffer.readUnsignedByte();
                             Class121.anInt1526 = buffer.readInt();
                             client.aBool7323 = buffer.readUnsignedByte() == 1;
-                            Class448.CONNECTION_INFO = new ConnectionInfo();
-                            Class448.CONNECTION_INFO.worldId = buffer.readUnsignedShort();
-                            if (Class448.CONNECTION_INFO.worldId == 65535) {
-                                Class448.CONNECTION_INFO.worldId = -1;
+                            ConnectionInfo.NEWS_CONNECTION_INFO = new ConnectionInfo();
+                            ConnectionInfo.NEWS_CONNECTION_INFO.worldId = buffer.readUnsignedShort();
+                            if (ConnectionInfo.NEWS_CONNECTION_INFO.worldId == 65535) {
+                                ConnectionInfo.NEWS_CONNECTION_INFO.worldId = -1;
                             }
-                            Class448.CONNECTION_INFO.host = buffer.readGJString();
+                            ConnectionInfo.NEWS_CONNECTION_INFO.host = buffer.readGJString();
                             if (HDWaterTile.SERVER_ENVIRONMENT != ServerEnvironment.LIVE) {
-                                Class448.CONNECTION_INFO.anInt5434 = Class448.CONNECTION_INFO.worldId;
-                                Class448.CONNECTION_INFO.anInt5437 = Class448.CONNECTION_INFO.worldId;
+                                ConnectionInfo.NEWS_CONNECTION_INFO.anInt5434 = ConnectionInfo.NEWS_CONNECTION_INFO.worldId;
+                                ConnectionInfo.NEWS_CONNECTION_INFO.anInt5437 = ConnectionInfo.NEWS_CONNECTION_INFO.worldId;
                             }
-                            if (HDWaterTile.SERVER_ENVIRONMENT != ServerEnvironment.LOCAL && (HDWaterTile.SERVER_ENVIRONMENT != ServerEnvironment.WTQA || client.PLAYER_RIGHTS < 2) && Class159.GAME_CONNECTION_INFO.equals(Class448.JS5_CONNECTION_INFO)) {
+                            if (HDWaterTile.SERVER_ENVIRONMENT != ServerEnvironment.LOCAL && (HDWaterTile.SERVER_ENVIRONMENT != ServerEnvironment.WTQA || client.PLAYER_RIGHTS < 2) && ConnectionInfo.GAME_CONNECTION_INFO.equals(ConnectionInfo.JS5_CONNECTION_INFO)) {
                                 Class274.method4884();
                             }
                         }
@@ -553,9 +553,9 @@ public class Login {
                 Class9.CURRENT_CONNECTION_CONTEXT.method3051();
                 if (Class9.anInt104 < 3) {
                     if (Class9.lobbyStage == 273) {
-                        Class159.GAME_CONNECTION_INFO.swap();
+                        ConnectionInfo.GAME_CONNECTION_INFO.swap();
                     } else {
-                        Class448.LOBBY_CONNECTION_INFO.swap();
+                        ConnectionInfo.LOBBY_CONNECTION_INFO.swap();
                     }
                     Class9.anInt90 = 0;
                     ++Class9.anInt104;

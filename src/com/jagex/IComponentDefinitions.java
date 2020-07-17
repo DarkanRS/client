@@ -1037,7 +1037,7 @@ public class IComponentDefinitions {
 	                    int i_25;
 	                    if (inter.type == ComponentType.CONTAINER) {
 	                        if (inter.contentType == CONTENT_TYPE_1407 && Renderers.CURRENT_RENDERER.method8471()) {
-	                            Renderers.CURRENT_RENDERER.method8525(Class349.anInt4083, client.anInt3243 * -969250379);
+	                            Renderers.CURRENT_RENDERER.method8525(Class349.BASE_WINDOW_WIDTH, client.BASE_WINDOW_HEIGHT * -969250379);
 	                        }
 	                        render(arr_0, inter.idHash, i_17, i_18, i_19, i_20, drawX - inter.scrollX, drawY - inter.scrollY, i_13, bool_9);
 	                        if (inter.itemSlots != null) {
@@ -1267,12 +1267,12 @@ public class IComponentDefinitions {
 	                                        i_30 += inter.spriteScale;
 	                                        if (inter.usesOrthogonal) {
 	                                            if (inter.hasOrigin) {
-	                                                matrix44_38.method6532(i_39, i_27, i_24, i_25, i_29, i_30, Class349.anInt4083, (client.anInt3243), inter.spriteScale);
+	                                                matrix44_38.method6532(i_39, i_27, i_24, i_25, i_29, i_30, Class349.BASE_WINDOW_WIDTH, (client.BASE_WINDOW_HEIGHT), inter.spriteScale);
 	                                            } else {
-	                                                matrix44_38.method6532(i_39, i_27, i_24, i_25, i_29, i_30, Class349.anInt4083, (client.anInt3243), (inter.spriteScale << 2));
+	                                                matrix44_38.method6532(i_39, i_27, i_24, i_25, i_29, i_30, Class349.BASE_WINDOW_WIDTH, (client.BASE_WINDOW_HEIGHT), (inter.spriteScale << 2));
 	                                            }
 	                                        } else {
-	                                            matrix44_38.method6531(i_39, i_27, i_24, i_25, i_29, i_30, Class349.anInt4083, (client.anInt3243));
+	                                            matrix44_38.method6531(i_39, i_27, i_24, i_25, i_29, i_30, Class349.BASE_WINDOW_WIDTH, (client.BASE_WINDOW_HEIGHT));
 	                                        }
 	                                        Renderers.CURRENT_RENDERER.method8424(matrix44_38);
 	                                        Renderers.CURRENT_RENDERER.ba(2, 0);

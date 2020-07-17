@@ -125,8 +125,8 @@ public class GameTipsLoader {
     }
 
     static void method6795() {
-        int i_1 = Class349.anInt4083;
-        int i_2 = client.anInt3243 * -969250379;
+        int i_1 = Class349.BASE_WINDOW_WIDTH;
+        int i_2 = client.BASE_WINDOW_HEIGHT * -969250379;
         if (SunIndexLoader.anInt434 < i_1) {
             i_1 = SunIndexLoader.anInt434;
         }
