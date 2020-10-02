@@ -409,7 +409,6 @@ public class Login {
                             if (!Class9.CURRENT_CONNECTION_CONTEXT.getConnection().available(VarNPCMap.anInt1965)) {
                                 return;
                             }
-                            Loader.INSTANCE.getManager().login();
                             Class9.CURRENT_CONNECTION_CONTEXT.getConnection().read(buffer.buffer, 0, VarNPCMap.anInt1965);
                             buffer.index = 0;
                             client.PLAYER_RIGHTS = buffer.readUnsignedByte();

@@ -125,7 +125,6 @@ public class PacketDecoder {
             return true;
         } else if (context.currentPacket == ServerProt.LOGOUT_FULL) {
             CursorIndexLoader.method7333(false);
-            Loader.INSTANCE.getManager().fullLogout();
             context.currentPacket = null;
             return false;
         } else if (context.currentPacket == ServerProt.MAP_PROJANIM_HALFSQ) {
@@ -704,7 +703,6 @@ public class PacketDecoder {
             return false;
         } else if (context.currentPacket == ServerProt.LOGOUT_LOBBY) {
             CursorIndexLoader.method7333(Class9.aBool71);
-            Loader.INSTANCE.getManager().logout();
             context.currentPacket = null;
             return false;
         } else if (context.currentPacket == ServerProt.CLIENT_SETVARC_LARGE) {

@@ -1,9 +1,6 @@
 package com;
 
-import com.jagex.RichPresenceManager;
 import com.jagex.client;
-import net.arikia.dev.drpc.DiscordRPC;
-import net.arikia.dev.drpc.DiscordRichPresence;
 
 import javax.swing.*;
 import java.applet.Applet;
@@ -35,8 +32,6 @@ public class Loader extends Applet implements AppletStub {
     public static Properties clientParams = new Properties();
 
     public static Loader INSTANCE;
-
-    private RichPresenceManager manager;
 
     static {
         loadParams();
@@ -120,8 +115,6 @@ public class Loader extends Applet implements AppletStub {
         openFrame();
         startClient();
         clientFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        manager = new RichPresenceManager();
-        manager.run();
     }
 
     private void openFrame() {
@@ -153,10 +146,6 @@ public class Loader extends Applet implements AppletStub {
     @Override
     public void appletResize(int arg, int arg1) {
 
-    }
-
-    public RichPresenceManager getManager() {
-        return manager;
     }
 
     @Override
