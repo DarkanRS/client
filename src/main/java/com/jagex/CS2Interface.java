@@ -6,7 +6,7 @@ public class CS2Interface {
 
     static void method8777(int i_0) {
         if (MovingAnimation.isInterfaceLoaded(i_0, null)) {
-            Class464.method7743(CustomCursorsPreference.INTERFACES[i_0].components, -1);
+            Class464.method7743(Interface.INTERFACES[i_0].components, -1);
         }
 
     }
@@ -14,7 +14,7 @@ public class CS2Interface {
     boolean setChild(int ifComp, int slotId) {
         IComponentDefinitions def = Index.getIComponentDefinitions(ifComp, slotId);
         if (def != null) {
-            inter = CustomCursorsPreference.INTERFACES[ifComp >> 16];
+            inter = Interface.INTERFACES[ifComp >> 16];
             defs = def;
             return true;
         } else {

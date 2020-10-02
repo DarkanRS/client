@@ -1,5 +1,7 @@
 package com.jagex;
 
+import com.jagex.clans.settings.ClanSettings;
+
 public class Class348 {
 
     long aLong4073;
@@ -58,6 +60,7 @@ public class Class348 {
         return i_0 == 44 || i_0 == 45 || i_0 == 46 || i_0 == 47 || i_0 == 48 || i_0 == 49 || i_0 == 50 || i_0 == 51 || i_0 == 52 || i_0 == 53 || i_0 == 15;
     }
 
+    //details
     void method6171(ByteBuf rsbytebuffer_1) {
         aLong4073 = rsbytebuffer_1.readLong();
         anInt4060 = rsbytebuffer_1.readInt();

@@ -12,20 +12,20 @@ public class ItemContainer extends Node {
         return container == null ? 0 : (slot >= 0 && slot < container.amounts.length ? container.amounts[slot] : 0);
     }
 
-    public static int getContainerTotal(int i_0, int i_1, boolean bool_2) {
-        ItemContainer class282_sub30_4 = getContainer(i_0, bool_2);
-        if (class282_sub30_4 == null) {
+    public static int getContainerTotal(int key, int itemId, boolean negativeKey) {
+        ItemContainer container = getContainer(key, negativeKey);
+        if (container == null) {
             return 0;
-        } else if (i_1 == -1) {
+        } else if (itemId == -1) {
             return 0;
         } else {
-            int i_5 = 0;
-            for (int i_6 = 0; i_6 < class282_sub30_4.amounts.length; i_6++) {
-                if (class282_sub30_4.itemIds[i_6] == i_1) {
-                    i_5 += class282_sub30_4.amounts[i_6];
+            int total = 0;
+            for (int slot = 0; slot < container.amounts.length; slot++) {
+                if (container.itemIds[slot] == itemId) {
+                    total += container.amounts[slot];
                 }
             }
-            return i_5;
+            return total;
         }
     }
 

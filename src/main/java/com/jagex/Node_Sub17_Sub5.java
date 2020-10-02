@@ -1,5 +1,7 @@
 package com.jagex;
 
+import com.jagex.clans.settings.ClanSettings;
+
 import java.nio.ByteBuffer;
 import java.util.Arrays;
 

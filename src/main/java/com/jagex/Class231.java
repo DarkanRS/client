@@ -1,5 +1,7 @@
 package com.jagex;
 
+import com.jagex.clans.settings.impl.EditMemberSetting;
+
 public class Class231 {
 
     public static String aString2876;
@@ -62,7 +64,7 @@ public class Class231 {
         Node_Sub17_Sub1.method15402(i_0, string_1, bool_2);
         Class487.aClass378_5752.method6433();
         Class487.aClass378_5752.method6403(client.anInterface35_7206);
-        Node_Sub11_Sub3.method15476();
+        EditMemberSetting.method15476();
         Class188.method3139(Renderers.CURRENT_RENDERER, IndexLoaders.SPRITES_INDEX);
         Class76.method1361();
         Class122.method2109(Class182.aNativeSpriteArray2261);

@@ -1,6 +1,7 @@
 package com.jagex;
 
 import com.Loader;
+import com.jagex.clans.settings.ClanSettings;
 
 public class Node_Sub17_Sub6 extends Node_Sub17 {
 

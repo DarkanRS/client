@@ -10,7 +10,7 @@ public class Class291_Sub1 extends Class291 {
     static Class194 aClass194_8023;
     static int anInt8021 = -1;
     static int anInt8014 = -1;
-    static int anInt8016 = -1;
+    public static int anInt8016 = -1;
     static boolean aBool8022;
     static int anInt8019 = -1;
     static int anInt8020 = -1;

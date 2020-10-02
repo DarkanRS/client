@@ -1,5 +1,7 @@
 package com.jagex;
 
+import com.jagex.clans.settings.ChangeClanSetting;
+
 public class IdentikitDefinition implements Definition {
 
     public static int[] anIntArray428 = {0, 1, 2, 3, 4, 5, 6, 14};
@@ -19,11 +21,11 @@ public class IdentikitDefinition implements Definition {
     }
 
     public static void method913(Interface interface_0, IComponentDefinitions icomponentdefinitions_1) {
-        IComponentDefinitions icomponentdefinitions_3 = CutsceneAction_Sub23.method14682(interface_0, icomponentdefinitions_1);
+        IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getParentLayer(interface_0, icomponentdefinitions_1);
         int i_4;
         int i_5;
         if (icomponentdefinitions_3 == null) {
-            i_4 = Class349.BASE_WINDOW_WIDTH;
+            i_4 = ChangeClanSetting.BASE_WINDOW_WIDTH;
             i_5 = client.BASE_WINDOW_HEIGHT * -969250379;
         } else {
             i_4 = icomponentdefinitions_3.width;

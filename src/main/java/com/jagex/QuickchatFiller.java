@@ -1,5 +1,7 @@
 package com.jagex;
 
+import com.jagex.clans.settings.ClanSettings;
+
 public class QuickchatFiller implements Interface19 {
 
     public static EntityDefaults ENTITY_DEFAULTS;

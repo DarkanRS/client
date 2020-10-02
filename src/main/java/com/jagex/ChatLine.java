@@ -77,6 +77,10 @@ public class ChatLine {
         }
     }
 
+    public static ChatLine getChatLine(int index) {
+        return index >= 0 && index < 100 ? CHAT_LINES[index] : null;
+    }
+
     void set(int type, int i_2, String string_3, String string_4, String string_5, String string_6, int i_7, String string_8) {
         anInt1085 = MaterialProp25.method15396();
         time = client.CYCLES_20MS;

@@ -16,23 +16,23 @@ public class Class239 {
     LRUCache aClass229_2953 = new LRUCache(9);
     LRUCache aClass229_2954 = new LRUCache(9);
     AbstractRenderer aAbstractRenderer_2944;
-    Class535[][] aClass535ArrayArray2943;
-    Class535 aClass535_2948;
-    Class535 aClass535_2951;
-    Class535 aClass535_2937;
-    Class535 aClass535_2931;
+    Atmosphere[][] aClass535ArrayArray2943;
+    Atmosphere aClass535_2948;
+    Atmosphere aClass535_2951;
+    Atmosphere aClass535_2937;
+    Atmosphere aClass535_2931;
 
     public Class239(AbstractRenderer graphicalrenderer_1, int i_2, int i_3) {
         aAbstractRenderer_2944 = graphicalrenderer_1;
-        aClass535ArrayArray2943 = new Class535[i_2][i_3];
+        aClass535ArrayArray2943 = new Atmosphere[i_2][i_3];
         if (ScriptRunner.anIntArray2668 != null) {
             Class81.aClass152_802 = method4064(ScriptRunner.anIntArray2668[0], ScriptRunner.anIntArray2668[1], ScriptRunner.anIntArray2668[2], ScriptRunner.anIntArray2668[3], ScriptRunner.anIntArray2668[4], ScriptRunner.anIntArray2668[5]);
         }
         aClass247_2940 = null;
-        aClass535_2948 = new Class535();
-        aClass535_2951 = new Class535();
-        aClass535_2937 = new Class535();
-        aClass535_2931 = new Class535();
+        aClass535_2948 = new Atmosphere();
+        aClass535_2951 = new Atmosphere();
+        aClass535_2937 = new Atmosphere();
+        aClass535_2931 = new Atmosphere();
         method4048();
     }
 
@@ -73,7 +73,7 @@ public class Class239 {
         method4075();
     }
 
-    public Class535 method4038() {
+    public Atmosphere method4038() {
         return aClass535_2951;
     }
 
@@ -98,7 +98,7 @@ public class Class239 {
     }
 
     public void method4045(int i_1, int i_2) {
-        Class535 class535_4 = aClass535ArrayArray2943[i_1][i_2];
+        Atmosphere class535_4 = aClass535ArrayArray2943[i_1][i_2];
         if (class535_4 != null) {
             aClass385_2952.copy(class535_4.aClass385_7084);
         }
@@ -115,7 +115,7 @@ public class Class239 {
         aAbstractRenderer_2944.method8477(aClass535_2951.aClass152_7087);
     }
 
-    Class247 method4050(int i_1, int i_2, int i_3, int i_4) {
+    Class247 getSkybox(int i_1, int i_2, int i_3, int i_4) {
         long long_6 = (i_2 & 0xffffL) << 48 | (i_3 & 0xffffL) << 32 | (i_4 & 0xffffL) << 16 | i_1 & 0xffffL;
         Class247 class247_8 = (Class247) aClass229_2954.get(long_6);
         if (class247_8 == null) {
@@ -136,7 +136,7 @@ public class Class239 {
         aAbstractRenderer_2944.method8477(Class81.aClass152_802);
     }
 
-    public void method4056(int i_1, int i_2, Class535 class535_3) {
+    public void method4056(int i_1, int i_2, Atmosphere class535_3) {
         aClass535ArrayArray2943[i_1][i_2] = class535_3;
     }
 
@@ -158,8 +158,8 @@ public class Class239 {
                 aClass535_2951.method11445(aAbstractRenderer_2944, aClass535_2937, aClass535_2931, (float) (anInt2946 - anInt2945) / anInt2946);
             } else {
                 aClass535_2951.method11444(aClass535_2931);
-                if (aClass535_2951.aClass247_7091 != null) {
-                    aClass535_2951.aClass247_7091.method4209();
+                if (aClass535_2951.environmentInfo != null) {
+                    aClass535_2951.environmentInfo.method4209();
                 }
                 anInt2945 = -1;
             }
@@ -169,7 +169,7 @@ public class Class239 {
 
     void method4072(int i_1, int i_2, int i_3) {
         int i_31 = i_3;
-        Class535 class535_5 = aClass535ArrayArray2943[i_1][i_2];
+        Atmosphere class535_5 = aClass535ArrayArray2943[i_1][i_2];
         if (class535_5 == null) {
             class535_5 = aClass535_2948;
         }
@@ -183,12 +183,12 @@ public class Class239 {
             anInt2946 = anInt2945 = i_31;
             if (anInt2946 != 0) {
                 aClass535_2937.method11444(aClass535_2951);
-                if (aClass535_2951.aClass247_7091 != null) {
-                    if (aClass535_2951.aClass247_7091.method4210()) {
-                        aClass535_2951.aClass247_7091 = aClass535_2937.aClass247_7091 = aClass535_2951.aClass247_7091.method4211();
+                if (aClass535_2951.environmentInfo != null) {
+                    if (aClass535_2951.environmentInfo.method4210()) {
+                        aClass535_2951.environmentInfo = aClass535_2937.environmentInfo = aClass535_2951.environmentInfo.method4211();
                     }
-                    if (aClass535_2951.aClass247_7091 != null && aClass535_2951.aClass247_7091 != aClass535_2931.aClass247_7091) {
-                        aClass535_2951.aClass247_7091.method4208(aClass535_2931.aClass247_7091);
+                    if (aClass535_2951.environmentInfo != null && aClass535_2951.environmentInfo != aClass535_2931.environmentInfo) {
+                        aClass535_2951.environmentInfo.method4208(aClass535_2931.environmentInfo);
                     }
                 }
             }

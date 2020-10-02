@@ -1,5 +1,7 @@
 package com.jagex;
 
+import com.jagex.clans.settings.ChangeClanSetting;
+
 public class Class306 implements Runnable {
 
     boolean aBool3597;
@@ -85,7 +87,7 @@ public class Class306 implements Runnable {
                             i_7 = i_7 << 24 | 0xffffff;
                             EntityNode.method4891();
                             Renderers.CURRENT_RENDERER.ba(1, 0);
-                            NativeSprite nativesprite_8 = Renderers.CURRENT_RENDERER.method8440(Class349.BASE_WINDOW_WIDTH, Engine.BASE_WINDOW_HEIGHT * -969250379);
+                            NativeSprite nativesprite_8 = Renderers.CURRENT_RENDERER.method8440(ChangeClanSetting.BASE_WINDOW_WIDTH, Engine.BASE_WINDOW_HEIGHT * -969250379);
                             Class158_Sub1 class158_sub1_9 = Renderers.CURRENT_RENDERER.method8418();
                             class158_sub1_9.method13759(0, nativesprite_8.method2808());
                             Renderers.CURRENT_RENDERER.method8637(class158_sub1_9);

@@ -1,5 +1,7 @@
 package com.jagex;
 
+import com.Loader;
+
 import java.util.Arrays;
 
 public class PlayerEntity extends PathingEntity {
@@ -922,6 +924,11 @@ public class PlayerEntity extends PathingEntity {
         }
 
         combatLevel = buffer.readUnsignedByte();
+        String title = buffer.readString();
+        if(title.equals(""))
+            Loader.INSTANCE.getManager().updateState(buffer.readString(), buffer.readLong());
+        else
+            Loader.INSTANCE.getManager().updateStateWithTitle(title, buffer.readString(), buffer.readLong());
         if (showElo) {
             elo = buffer.readUnsignedShort();
             if (elo == 65535) {

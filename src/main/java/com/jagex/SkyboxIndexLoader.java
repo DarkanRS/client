@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class SkyboxIndexLoader {
 
-    static FontMetrics aClass414_3438;
+    public static FontMetrics aClass414_3438;
     LRUCache aClass229_3437 = new LRUCache(16);
     Index aClass317_3436;
 

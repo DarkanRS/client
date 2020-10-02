@@ -48,7 +48,7 @@ public class Class62 implements Interface3 {
 
     static void method1260(int i_0, boolean bool_1) {
         if (bool_1) {
-            TCPPacket tcpmessage_3 = Class271.createPacket(ClientProt.UNK_37, client.GAME_CONNECTION_CONTEXT.isaac);
+            TCPPacket tcpmessage_3 = TCPPacket.createPacket(ClientProt.UNK_37, client.GAME_CONNECTION_CONTEXT.isaac);
             tcpmessage_3.buffer.writeShort(i_0);
             client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_3);
         } else {

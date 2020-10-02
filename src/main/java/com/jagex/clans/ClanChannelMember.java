@@ -1,4 +1,4 @@
-package com.jagex;
+package com.jagex.clans;
 
 public class ClanChannelMember {
 

@@ -168,14 +168,14 @@ public abstract class Class152 {
                         }
                     }
                     for (i_3 = 0; i_3 < client.IGNORE_LIST_COUNT; i_3++) {
-                        Ignore class10_8 = client.IGNORED_PLAYERS[i_3];
-                        string_5 = Class383.method6515(class10_8.unfilteredUsername);
+                        IgnoredPlayer class10_8 = client.IGNORED_PLAYERS[i_3];
+                        string_5 = Class383.method6515(class10_8.displayName);
                         if (string_5 != null && string_5.equals(string_2)) {
                             ChatLine.appendGameMessage(LocalizedText.aClass433_5214.translate(Class223.CURRENT_LANGUAGE) + string_0 + LocalizedText.aClass433_5198.translate(Class223.CURRENT_LANGUAGE));
                             return;
                         }
-                        if (class10_8.displayName != null) {
-                            string_6 = Class383.method6515(class10_8.displayName);
+                        if (class10_8.lastDisplayName != null) {
+                            string_6 = Class383.method6515(class10_8.lastDisplayName);
                             if (string_6 != null && string_6.equals(string_2)) {
                                 ChatLine.appendGameMessage(LocalizedText.aClass433_5214.translate(Class223.CURRENT_LANGUAGE) + string_0 + LocalizedText.aClass433_5198.translate(Class223.CURRENT_LANGUAGE));
                                 return;
@@ -185,8 +185,8 @@ public abstract class Class152 {
                     if (Class383.method6515(VertexNormal.MY_PLAYER.displayName).equals(string_2)) {
                         ChatLine.appendGameMessage(LocalizedText.aClass433_5227.translate(Class223.CURRENT_LANGUAGE));
                     } else {
-                        BufferedConnectionContext class184_7 = Preference_Sub20.getConnectionContext();
-                        TCPPacket tcpmessage_9 = Class271.createPacket(ClientProt.ADD_FRIEND, class184_7.isaac);
+                        BufferedConnectionContext class184_7 = BufferedConnectionContext.getConnectionContext();
+                        TCPPacket tcpmessage_9 = TCPPacket.createPacket(ClientProt.ADD_FRIEND, class184_7.isaac);
                         tcpmessage_9.buffer.writeByte(ChatLine.getLength(string_0));
                         tcpmessage_9.buffer.writeString(string_0);
                         class184_7.queuePacket(tcpmessage_9);

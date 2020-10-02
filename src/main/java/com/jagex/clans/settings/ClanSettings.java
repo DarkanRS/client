@@ -1,4 +1,6 @@
-package com.jagex;
+package com.jagex.clans.settings;
+
+import com.jagex.*;
 
 public class ClanSettings {
 
@@ -17,16 +19,16 @@ public class ClanSettings {
     public byte kickRank;
     public byte lootshareRank;
     public byte coinShare;
-    long aLong631;
-    long[] bannedUserHashes;
-    IterableNodeMap<Object> variables;
-    int[] sortedAffinedSlots;
-    int updateCount;
-    int anInt623;
-    long[] memberHashes;
-    int[] anIntArray633;
-    boolean useHashes;
-    boolean useNames;
+    public long aLong631;
+    public long[] bannedUserHashes;
+    public IterableNodeMap<Object> variables;
+    public int[] sortedAffinedSlots;
+    public int updateCount;
+    public int anInt623;
+    public long[] memberHashes;
+    public int[] anIntArray633;
+    public boolean useHashes;
+    public boolean useNames;
 
     public ClanSettings(ByteBuf rsbytebuffer_1) {
         decode(rsbytebuffer_1);
@@ -75,7 +77,7 @@ public class ClanSettings {
         }
     }
 
-    void updateOwners() {
+    public void updateOwners() {
         if (memberCount == 0) {
             currentOwner = -1;
             replacementOwner = -1;
@@ -102,7 +104,7 @@ public class ClanSettings {
         }
     }
 
-    void method1207(long long_1, String string_3) {
+    public void method1207(long long_1, String string_3) {
         String string_31 = string_3;
         if (string_31 != null && string_31.isEmpty()) {
             string_31 = null;
@@ -125,7 +127,7 @@ public class ClanSettings {
         }
     }
 
-    void method1208(int i_1) {
+    public void method1208(int i_1) {
         --banCount;
         if (banCount == 0) {
             bannedUserHashes = null;
@@ -140,7 +142,7 @@ public class ClanSettings {
         }
     }
 
-    int method1209(int i_1, byte b_2) {
+    public int method1209(int i_1, byte b_2) {
         if (b_2 != 126 && b_2 != 127) {
             if (currentOwner == i_1 && (replacementOwner == -1 || memberRanks[replacementOwner] < 125)) {
                 return -1;
@@ -156,7 +158,7 @@ public class ClanSettings {
         }
     }
 
-    int method1210(int i_1, int i_2, int i_3, int i_4) {
+    public int method1210(int i_1, int i_2, int i_3, int i_4) {
         int i_6 = (1 << i_3) - 1;
         int i_7 = i_4 == 31 ? -1 : (1 << i_4 + 1) - 1;
         int i_8 = i_7 ^ i_6;
@@ -172,7 +174,7 @@ public class ClanSettings {
         }
     }
 
-    void method1211(int i_1) {
+    public void method1211(int i_1) {
         if (useHashes) {
             if (bannedUserHashes != null) {
                 Class503.method8351(bannedUserHashes, 0, bannedUserHashes = new long[i_1], 0, banCount);
@@ -189,7 +191,7 @@ public class ClanSettings {
         }
     }
 
-    boolean method1212(int i_1, int i_2, int i_3, int i_4) {
+    public boolean method1212(int i_1, int i_2, int i_3, int i_4) {
         int i_6 = (1 << i_3) - 1;
         int i_7 = i_4 == 31 ? -1 : (1 << i_4 + 1) - 1;
         int i_8 = i_7 ^ i_6;
@@ -216,7 +218,7 @@ public class ClanSettings {
         return true;
     }
 
-    boolean method1213(int i_1, long long_2) {
+    public boolean method1213(int i_1, long long_2) {
         if (variables != null) {
             Node<Object> node_4 = variables.get(i_1);
             if (node_4 != null) {
@@ -249,7 +251,7 @@ public class ClanSettings {
         return sortedAffinedSlots;
     }
 
-    void method1216(long long_1, String string_3, int i_4) {
+    public void method1216(long long_1, String string_3, int i_4) {
         String string_31 = string_3;
         if (string_31 != null && string_31.isEmpty()) {
             string_31 = null;
@@ -281,7 +283,7 @@ public class ClanSettings {
         }
     }
 
-    boolean method1222(int i_1, int i_2) {
+    public boolean method1222(int i_1, int i_2) {
         if (variables != null) {
             Node<Object> node_4 = variables.get(i_1);
             if (node_4 != null) {
@@ -302,7 +304,7 @@ public class ClanSettings {
         return true;
     }
 
-    boolean method1224(int i_1, String string_2) {
+    public boolean method1224(int i_1, String string_2) {
         String string_21 = string_2;
         if (string_21 == null) {
             string_21 = "";
@@ -347,7 +349,7 @@ public class ClanSettings {
         }
     }
 
-    void method1232(int i_1) {
+    public void method1232(int i_1) {
         if (useHashes) {
             if (memberHashes != null) {
                 Class503.method8351(memberHashes, 0, memberHashes = new long[i_1], 0, memberCount);
@@ -379,7 +381,7 @@ public class ClanSettings {
         }
     }
 
-    void method1233(int i_1) {
+    public void method1233(int i_1) {
         if (i_1 >= 0 && i_1 < memberCount) {
             --memberCount;
             sortedAffinedSlots = null;
@@ -410,7 +412,7 @@ public class ClanSettings {
         }
     }
 
-    void decode(ByteBuf buffer) {
+    public void decode(ByteBuf buffer) {
         int version = buffer.readUnsignedByte();
         if (version >= 1 && version <= 5) {
             int attr = buffer.readUnsignedByte();

@@ -64,7 +64,7 @@ public class Node_Sub48 extends Node {
                 anInt8081 = 0;
             }
         } else if (aTransform_Sub1_Sub1_Sub2_Sub2_8085 != null) {
-            int i_6 = Node_Sub11_Sub1.method15433(aTransform_Sub1_Sub1_Sub2_Sub2_8085);
+            int i_6 = RankSetting.method15433(aTransform_Sub1_Sub1_Sub2_Sub2_8085);
             if (i_2 != i_6) {
                 soundEffectId = i_6;
                 NPCDefinitions npcdefinitions_5 = aTransform_Sub1_Sub1_Sub2_Sub2_8085.definitions;

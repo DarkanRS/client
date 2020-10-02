@@ -16,7 +16,7 @@ public class HostNameIdentifier implements Runnable {
     public static void clearComponents(int i_0) {
         if (i_0 != -1 && !MapAreaIndexLoader.INTERFACES_LOADED[i_0]) {
             Class388.INTERFACE_INDEX.clearFiles(i_0);
-            CustomCursorsPreference.INTERFACES[i_0] = null;
+            Interface.INTERFACES[i_0] = null;
         }
     }
 

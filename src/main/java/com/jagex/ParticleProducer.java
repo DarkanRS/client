@@ -28,7 +28,7 @@ public class ParticleProducer {
         startTime = long_4;
         definition = aClass87_7110.method1485();
         if (!graphicalrenderer_1.method8406() && definition.anInt573 != -1) {
-            definition = Node_Sub11_Sub1.getParticleProducerDefs(definition.anInt573);
+            definition = RankSetting.getParticleProducerDefs(definition.anInt573);
         }
 
         particles = new EntityList();

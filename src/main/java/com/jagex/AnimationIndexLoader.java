@@ -22,7 +22,7 @@ public class AnimationIndexLoader {
         return var_0 >= 48 && var_0 <= 57;
     }
 
-    static void method11220(int i_0, int i_1, int i_2, int i_3, int i_4) {
+    public static void method11220(int i_0, int i_1, int i_2, int i_3, int i_4) {
         int i_01 = i_0;
         int i_21 = i_2;
         int i_15 = i_1;

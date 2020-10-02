@@ -33,6 +33,27 @@ public class TCPPacket extends Node {
 
     }
 
+    public static TCPPacket createPacket(ClientProt outgoing, Isaac cipher) {
+        TCPPacket packet = Class158_Sub2.method14356();
+        packet.packet = outgoing;
+        packet.anInt7678 = outgoing.size;
+        if (packet.anInt7678 == -1) {
+            packet.buffer = new ByteBuf.Bit(260);
+        } else if (packet.anInt7678 == -2) {
+            packet.buffer = new ByteBuf.Bit(10000);
+        } else if (packet.anInt7678 <= 18) {
+            packet.buffer = new ByteBuf.Bit(20);
+        } else if (packet.anInt7678 <= 98) {
+            packet.buffer = new ByteBuf.Bit(100);
+        } else {
+            packet.buffer = new ByteBuf.Bit(260);
+        }
+        packet.buffer.setIsaacCipher(cipher);
+        packet.buffer.writeIsaacByte(packet.packet.id);
+        packet.anInt7680 = 0;
+        return packet;
+    }
+
     public void method12360() {
         if (index < OUTGOING_PACKETS.length) {
             OUTGOING_PACKETS[++index - 1] = this;

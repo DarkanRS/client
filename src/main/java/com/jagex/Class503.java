@@ -136,7 +136,7 @@ public class Class503 {
 
     }
 
-    public static void method8359(Object[] arr_0, int i_1, Object[] arr_2, int i_3, int i_4) {
+    public static void setSize(Object[] arr_0, int i_1, Object[] arr_2, int i_3, int i_4) {
         if (arr_2 == arr_0) {
             if (i_3 == i_1) {
                 return;

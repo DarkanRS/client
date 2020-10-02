@@ -31,7 +31,7 @@ public class MaterialProp23 extends MaterialProperty {
                 int i_2;
                 TCPPacket tcpmessage_6;
                 while (HashTableIterator.hasValues()) {
-                    tcpmessage_6 = Class271.createPacket(ClientProt.REFLECTION_CHECK, client.GAME_CONNECTION_CONTEXT.isaac);
+                    tcpmessage_6 = TCPPacket.createPacket(ClientProt.REFLECTION_CHECK, client.GAME_CONNECTION_CONTEXT.isaac);
                     tcpmessage_6.buffer.writeByte(0);
                     i_2 = tcpmessage_6.buffer.index;
                     FontRenderer_Sub2.method14264(tcpmessage_6.buffer);
@@ -40,7 +40,7 @@ public class MaterialProp23 extends MaterialProperty {
                 }
                 if (PingRequest.CURRENT_REQUEST != null) {
                     if (PingRequest.CURRENT_REQUEST.ping != -1) {
-                        tcpmessage_6 = Class271.createPacket(ClientProt.WRITE_PING, client.GAME_CONNECTION_CONTEXT.isaac);
+                        tcpmessage_6 = TCPPacket.createPacket(ClientProt.WRITE_PING, client.GAME_CONNECTION_CONTEXT.isaac);
                         tcpmessage_6.buffer.writeShort(PingRequest.CURRENT_REQUEST.ping);
                         client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_6);
                         PingRequest.CURRENT_REQUEST = null;
@@ -86,7 +86,7 @@ public class MaterialProp23 extends MaterialProperty {
                             BrightnessPreference.method12869(false);
                         } else {
                             if (client.anInt7341 == 3 && CutsceneDefinitions.method6684(client.CURRENT_CUTSCENE)) {
-                                IndexLoaders.MAP_REGION_DECODER.method4499(new Class335(Class256.aClass256_3153, null));
+                                IndexLoaders.MAP_REGION_DECODER.loadMapScene(new Class335(Class256.aClass256_3153, null));
                                 client.anInt7341 = 0;
                             }
                             if (client.anInt7341 == 0 && client.GAME_STATE != 18) {
@@ -131,7 +131,7 @@ public class MaterialProp23 extends MaterialProperty {
                         if (VarcStringIndexLoader.aClass118_4825 != null) {
                             ++client.anInt7297;
                             if (client.anInt7297 >= 15) {
-                                Class109.redrawComponent(VarcStringIndexLoader.aClass118_4825);
+                                IComponentDefinitions.redrawComponent(VarcStringIndexLoader.aClass118_4825);
                                 VarcStringIndexLoader.aClass118_4825 = null;
                             }
                         }
@@ -147,7 +147,7 @@ public class MaterialProp23 extends MaterialProperty {
                         ++client.anInt7347;
                         TCPPacket tcpmessage_8;
                         if (client.aBool7375) {
-                            tcpmessage_8 = Class271.createPacket(ClientProt.WORLD_MAP_CLICK, client.GAME_CONNECTION_CONTEXT.isaac);
+                            tcpmessage_8 = TCPPacket.createPacket(ClientProt.WORLD_MAP_CLICK, client.GAME_CONNECTION_CONTEXT.isaac);
                             tcpmessage_8.buffer.writeIntLE(Node_Sub15_Sub5.anInt9859 << 28 | IdentikitDefinition.anInt431 << 14 | StructIndexLoader.anInt5015);
                             client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_8);
                             client.aBool7375 = false;
@@ -188,7 +188,7 @@ public class MaterialProp23 extends MaterialProperty {
                                                                 ++client.anIntArray7435[i_2];
                                                             }
                                                             if (client.NEEDS_VARC_SAVE && client.aLong7401 < Utils.time() - 60000L) {
-                                                                Node_Sub11.saveVarcsToFile();
+                                                                ClanSetting.saveVarcsToFile();
                                                             }
                                                             for (EntityNode_Sub4 class275_sub4_15 = (EntityNode_Sub4) client.aClass457_7350.method7659(); class275_sub4_15 != null; class275_sub4_15 = (EntityNode_Sub4) client.aClass457_7350.method7650()) {
                                                                 if (class275_sub4_15.anInt7838 < Utils.time() / 1000L - 5L) {
@@ -258,7 +258,7 @@ public class MaterialProp23 extends MaterialProperty {
                                                             }
                                                             ++client.GAME_CONNECTION_CONTEXT.anInt2290;
                                                             if (client.GAME_CONNECTION_CONTEXT.anInt2290 > 50) {
-                                                                tcpmessage_8 = Class271.createPacket(ClientProt.PING, client.GAME_CONNECTION_CONTEXT.isaac);
+                                                                tcpmessage_8 = TCPPacket.createPacket(ClientProt.PING, client.GAME_CONNECTION_CONTEXT.isaac);
                                                                 client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_8);
                                                             }
                                                             if (client.aBool7459) {

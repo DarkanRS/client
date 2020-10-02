@@ -24,7 +24,7 @@ public class Class351 implements Interface3 {
         Class109_Sub1.method14650(i_4);
         IComponentDefinitions component = IComponentDefinitions.getDefs(interfaceHash);
         if (component != null) {
-            Class109.redrawComponent(component);
+            IComponentDefinitions.redrawComponent(component);
         }
         OutputStream_Sub1.method12938();
         if (!bool_2 && client.BASE_WINDOW_ID != -1) {

@@ -44,15 +44,15 @@ public class IdentiKitIndexLoader implements IndexLoader {
         ClipFlagMap.method6007(sub.interfaceId, ints_2);
         IComponentDefinitions parentDef = IComponentDefinitions.getDefs(parentId);
         if (parentDef != null) {
-            Class109.redrawComponent(parentDef);
+            IComponentDefinitions.redrawComponent(parentDef);
         }
         if (client.aClass118_7352 != null) {
-            Class109.redrawComponent(client.aClass118_7352);
+            IComponentDefinitions.redrawComponent(client.aClass118_7352);
             client.aClass118_7352 = null;
         }
         OutputStream_Sub1.method12938();
         if (parentDef != null) {
-            HostNameIdentifier.method483(CustomCursorsPreference.INTERFACES[parentDef.idHash >>> 16], parentDef, !bool_3);
+            HostNameIdentifier.method483(Interface.INTERFACES[parentDef.idHash >>> 16], parentDef, !bool_3);
         }
         if (!bool_3) {
             Class150.method2582(sub.interfaceId, ints_2);

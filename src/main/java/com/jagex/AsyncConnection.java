@@ -1,5 +1,7 @@
 package com.jagex;
 
+import com.jagex.clans.ClanChannel;
+
 import java.io.IOException;
 import java.net.Socket;
 

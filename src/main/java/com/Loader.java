@@ -1,6 +1,9 @@
 package com;
 
+import com.jagex.RichPresenceManager;
 import com.jagex.client;
+import net.arikia.dev.drpc.DiscordRPC;
+import net.arikia.dev.drpc.DiscordRichPresence;
 
 import javax.swing.*;
 import java.applet.Applet;
@@ -27,9 +30,13 @@ public class Loader extends Applet implements AppletStub {
     public static final boolean USING_ISAAC = false;
     public static final boolean LOBBY_ENABLED = true;
     public static final boolean DISABLE_XTEA_CRASH = true;
-    public static boolean LOCAL = false;
+    public static boolean LOCAL = true;
     public static String IP_ADDRESS = LOCAL ? "127.0.0.1" : "70.35.204.165";
     public static Properties clientParams = new Properties();
+
+    public static Loader INSTANCE;
+
+    private RichPresenceManager manager;
 
     static {
         loadParams();
@@ -109,9 +116,12 @@ public class Loader extends Applet implements AppletStub {
     }
 
     private void doFrame() {
+        INSTANCE = this;
         openFrame();
         startClient();
         clientFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        manager = new RichPresenceManager();
+        manager.run();
     }
 
     private void openFrame() {
@@ -128,14 +138,6 @@ public class Loader extends Applet implements AppletStub {
     }
 
     private void startClient() {
-//		try {
-//			DiscordRPC.discordInitialize("459588260252090378", null, true);
-//			client.presence = new DiscordRichPresence.Builder("In Menu").setBigImage("main", "https://darkan.org").build();
-//			client.getPresence().details = "http://darkan.org";
-//			client.getPresence().startTimestamp = System.currentTimeMillis() / 1000L;
-//			DiscordRPC.discordUpdatePresence(client.getPresence());
-//		} catch (Exception e) {
-//		}
 
         client clnt = new client();
         clnt.supplyApplet(this);
@@ -151,6 +153,10 @@ public class Loader extends Applet implements AppletStub {
     @Override
     public void appletResize(int arg, int arg1) {
 
+    }
+
+    public RichPresenceManager getManager() {
+        return manager;
     }
 
     @Override

@@ -23,7 +23,7 @@ public class Class119 {
 
     public static void method2074(String string_0, String string_1, int i_2, boolean bool_3) {
         if (client.GAME_STATE == 3) {
-            TCPPacket tcpmessage_5 = Class271.createPacket(ClientProt.SEND_SIGN_UP_FORM, client.LOBBY_CONNECTION_CONTEXT.isaac);
+            TCPPacket tcpmessage_5 = TCPPacket.createPacket(ClientProt.SEND_SIGN_UP_FORM, client.LOBBY_CONNECTION_CONTEXT.isaac);
             tcpmessage_5.buffer.writeShort(0);
             int i_6 = tcpmessage_5.buffer.index;
             tcpmessage_5.buffer.writeString(string_0);
@@ -44,49 +44,49 @@ public class Class119 {
 
     }
 
-    public static void method2075(int i_0, String string_1) {
-        int i_3 = Class197.NUM_PLAYER_INDICES;
-        int[] ints_4 = Class197.PLAYER_INDICES;
-        boolean bool_5 = false;
+    public static void sendPlayerOptionInteraction(int option, String playerName) {
+        int indicesLength = Class197.NUM_PLAYER_INDICES;
+        int[] indices = Class197.PLAYER_INDICES;
+        boolean found = false;
 
-        for (int i_6 = 0; i_6 < i_3; i_6++) {
-            PlayerEntity player_7 = client.players[ints_4[i_6]];
-            if (player_7 != null && player_7 != VertexNormal.MY_PLAYER && player_7.displayName != null && player_7.displayName.equalsIgnoreCase(string_1)) {
-                ClientProt outgoingpacket_8 = null;
-                if (i_0 == 1) {
-                    outgoingpacket_8 = ClientProt.PLAYER_OP1;
-                } else if (i_0 == 4) {
-                    outgoingpacket_8 = ClientProt.PLAYER_OP4;
-                } else if (i_0 == 5) {
-                    outgoingpacket_8 = ClientProt.PLAYER_OP5;
-                } else if (i_0 == 6) {
-                    outgoingpacket_8 = ClientProt.PLAYER_OP6;
-                } else if (i_0 == 7) {
-                    outgoingpacket_8 = ClientProt.PLAYER_OP7;
-                } else if (i_0 == 9) {
-                    outgoingpacket_8 = ClientProt.PLAYER_OP9;
+        for (int index = 0; index < indicesLength; index++) {
+            PlayerEntity player = client.players[indices[index]];
+            if (player != null && player != VertexNormal.MY_PLAYER && player.displayName != null && player.displayName.equalsIgnoreCase(playerName)) {
+                ClientProt outgoing = null;
+                if (option == 1) {
+                    outgoing = ClientProt.PLAYER_OP1;
+                } else if (option == 4) {
+                    outgoing = ClientProt.PLAYER_OP4;
+                } else if (option == 5) {
+                    outgoing = ClientProt.PLAYER_OP5;
+                } else if (option == 6) {
+                    outgoing = ClientProt.PLAYER_OP6;
+                } else if (option == 7) {
+                    outgoing = ClientProt.PLAYER_OP7;
+                } else if (option == 9) {
+                    outgoing = ClientProt.PLAYER_OP9;
                 }
 
-                if (outgoingpacket_8 != null) {
-                    TCPPacket tcpmessage_9 = Class271.createPacket(outgoingpacket_8, client.GAME_CONNECTION_CONTEXT.isaac);
-                    tcpmessage_9.buffer.writeShort(ints_4[i_6]);
-                    tcpmessage_9.buffer.write128Byte(0);
-                    client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_9);
+                if (outgoing != null) {
+                    TCPPacket packet = TCPPacket.createPacket(outgoing, client.GAME_CONNECTION_CONTEXT.isaac);
+                    packet.buffer.writeShort(indices[index]);
+                    packet.buffer.write128Byte(0);
+                    client.GAME_CONNECTION_CONTEXT.queuePacket(packet);
                 }
 
-                bool_5 = true;
+                found = true;
                 break;
             }
         }
 
-        if (!bool_5) {
-            ChatLine.appendGameMessage(LocalizedText.UNABLE_TO_FIND.translate(Class223.CURRENT_LANGUAGE) + string_1);
+        if (!found) {
+            ChatLine.appendGameMessage(LocalizedText.UNABLE_TO_FIND.translate(Class223.CURRENT_LANGUAGE) + playerName);
         }
 
     }
 
     static void method2076(IComponentDefinitions icomponentdefinitions_0, IComponentDefinitions icomponentdefinitions_1) {
-        TCPPacket tcpmessage_3 = Class271.createPacket(ClientProt.IF_DRAG_ONTO_IF, client.GAME_CONNECTION_CONTEXT.isaac);
+        TCPPacket tcpmessage_3 = TCPPacket.createPacket(ClientProt.IF_DRAG_ONTO_IF, client.GAME_CONNECTION_CONTEXT.isaac);
         tcpmessage_3.buffer.writeShortLE128(icomponentdefinitions_1.slotId);
         tcpmessage_3.buffer.writeShortLE(icomponentdefinitions_0.slotId);
         tcpmessage_3.buffer.writeShort(icomponentdefinitions_1.containerItemId);

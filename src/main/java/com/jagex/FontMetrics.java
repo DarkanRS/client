@@ -342,12 +342,12 @@ public class FontMetrics {
         }
     }
 
-    public int method6951(String string_1, int i_2, Sprite[] arr_3) {
-        int i_5 = method6987(string_1, new int[]{i_2}, aStringArray4980, arr_3);
+    public int method6951(String message, int i_2, Sprite[] spriteArray) {
+        int i_5 = method6987(message, new int[]{i_2}, aStringArray4980, spriteArray);
         int i_6 = 0;
 
         for (int i_7 = 0; i_7 < i_5; i_7++) {
-            int i_8 = getTextWidth(aStringArray4980[i_7], arr_3);
+            int i_8 = getTextWidth(aStringArray4980[i_7], spriteArray);
             if (i_8 > i_6) {
                 i_6 = i_8;
             }

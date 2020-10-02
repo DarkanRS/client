@@ -81,9 +81,9 @@ public class LinkedNodeList {
         return bytes_3;
     }
 
-    public static void method7886() {
-        TCPPacket tcpmessage_2 = Class271.createPacket(ClientProt.CLOSE_INTERFACE, client.GAME_CONNECTION_CONTEXT.isaac);
-        client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_2);
+    public static void closeInterfaces() {
+        TCPPacket packet = TCPPacket.createPacket(ClientProt.CLOSE_INTERFACE, client.GAME_CONNECTION_CONTEXT.isaac);
+        client.GAME_CONNECTION_CONTEXT.queuePacket(packet);
         for (SubInterface class282_sub44_3 = (SubInterface) client.OPEN_INTERFACES.method7750(); class282_sub44_3 != null; class282_sub44_3 = (SubInterface) client.OPEN_INTERFACES.method7751()) {
             if (!class282_sub44_3.linked()) {
                 class282_sub44_3 = (SubInterface) client.OPEN_INTERFACES.method7750();
@@ -96,7 +96,7 @@ public class LinkedNodeList {
             }
         }
         if (client.aClass118_7352 != null) {
-            Class109.redrawComponent(client.aClass118_7352);
+            IComponentDefinitions.redrawComponent(client.aClass118_7352);
             client.aClass118_7352 = null;
         }
     }

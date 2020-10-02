@@ -35,7 +35,7 @@ public class Class442 {
 
     static void method7403(int i_0, int i_1, int i_2, boolean bool_3) {
         if (MovingAnimation.isInterfaceLoaded(i_0, null)) {
-            InteractableObject.method16099(CustomCursorsPreference.INTERFACES[i_0].components, -1, i_1, i_2, bool_3);
+            InteractableObject.method16099(Interface.INTERFACES[i_0].components, -1, i_1, i_2, bool_3);
         }
 
     }

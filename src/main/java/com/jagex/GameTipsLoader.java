@@ -1,5 +1,7 @@
 package com.jagex;
 
+import com.jagex.clans.settings.ChangeClanSetting;
+
 import java.util.Random;
 
 public class GameTipsLoader {
@@ -125,7 +127,7 @@ public class GameTipsLoader {
     }
 
     static void method6795() {
-        int i_1 = Class349.BASE_WINDOW_WIDTH;
+        int i_1 = ChangeClanSetting.BASE_WINDOW_WIDTH;
         int i_2 = client.BASE_WINDOW_HEIGHT * -969250379;
         if (SunIndexLoader.anInt434 < i_1) {
             i_1 = SunIndexLoader.anInt434;

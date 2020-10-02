@@ -1,15 +1,14 @@
 package com.jagex;
 
 import com.jagex.clans.ClanChannel;
-import com.jagex.clans.settings.ChangeClanSetting;
 
-public class Node_Sub11_Sub1 extends ClanSetting {
+public class RankSetting extends ClanSetting {
 
-    String aString10001;
-    byte aByte9999;
-    byte aByte10000;
+    String clanName;
+    byte talkRank;
+    byte kickRank;
 
-    public Node_Sub11_Sub1() {
+    public RankSetting() {
     }
 
     static int method15433(NPCEntity npc_0) {
@@ -56,21 +55,21 @@ public class Node_Sub11_Sub1 extends ClanSetting {
 
     @Override
     public void apply(ClanChannel channel) {
-        channel.clanName = aString10001;
-        if (aString10001 != null) {
-            channel.guestsTalk = aByte9999;
-            channel.minRankToKick = aByte10000;
+        channel.clanName = clanName;
+        if (clanName != null) {
+            channel.guestsTalk = talkRank;
+            channel.minRankToKick = kickRank;
         }
 
     }
 
     @Override
     public void readSettings(ByteBuf buffer) {
-        aString10001 = buffer.readNullString();
-        if (aString10001 != null) {
+        clanName = buffer.readNullString();
+        if (clanName != null) {
             buffer.readUnsignedByte();
-            aByte9999 = buffer.readByte();
-            aByte10000 = buffer.readByte();
+            talkRank = buffer.readByte();
+            kickRank = buffer.readByte();
         }
 
     }

@@ -2,9 +2,9 @@ package com.jagex;
 
 public class Class256 {
 
-    public static Class256 aClass256_3154 = new Class256(false, false);
+    public static Class256 LOAD_MAP_SCENE_BACKGROUND = new Class256(false, false);
     public static Class256 aClass256_3153 = new Class256(true, false);
-    public static Class256 aClass256_3158 = new Class256(false, false);
+    public static Class256 LOAD_MAP_SCENE_NORMAL = new Class256(false, false);
     public static Class256 aClass256_3155 = new Class256(true, false);
     public static Class256 aClass256_3156 = new Class256(true, false);
     public static Class256 aClass256_3157 = new Class256(true, true);
@@ -66,7 +66,7 @@ public class Class256 {
         return aBool3159;
     }
 
-    boolean method4410() {
+    boolean allowDynamicMapScene() {
         return aBool3160;
     }
 }

@@ -1,6 +1,6 @@
 package com.jagex;
 
-public class Class535 {
+public class Atmosphere {
 
     int anInt7083;
 
@@ -24,13 +24,13 @@ public class Class535 {
 
     float aFloat7080;
 
-    Class247 aClass247_7091;
+    Class247 environmentInfo;
 
-    public Class535(ByteBuf rsbytebuffer_1, Class239 class239_2) {
+    public Atmosphere(ByteBuf rsbytebuffer_1, Class239 class239_2) {
         method11468(rsbytebuffer_1, class239_2);
     }
 
-    public Class535() {
+    public Atmosphere() {
         method11443();
     }
 
@@ -46,10 +46,10 @@ public class Class535 {
         aFloat7088 = 1.0F;
         aFloat7089 = 0.25F;
         aFloat7080 = 1.0F;
-        aClass247_7091 = Class239.aClass247_2940;
+        environmentInfo = Class239.aClass247_2940;
     }
 
-    void method11444(Class535 class535_1) {
+    void method11444(Atmosphere class535_1) {
         anInt7083 = class535_1.anInt7083;
         aFloat7081 = class535_1.aFloat7081;
         aFloat7082 = class535_1.aFloat7082;
@@ -61,10 +61,10 @@ public class Class535 {
         aFloat7088 = class535_1.aFloat7088;
         aFloat7089 = class535_1.aFloat7089;
         aFloat7080 = class535_1.aFloat7080;
-        aClass247_7091 = class535_1.aClass247_7091;
+        environmentInfo = class535_1.environmentInfo;
     }
 
-    void method11445(AbstractRenderer graphicalrenderer_1, Class535 class535_2, Class535 class535_3, float f_4) {
+    void method11445(AbstractRenderer graphicalrenderer_1, Atmosphere class535_2, Atmosphere class535_3, float f_4) {
         anInt7083 = Class302.method5364(class535_2.anInt7083, class535_3.anInt7083, 255.0F * f_4);
         aFloat7082 = class535_2.aFloat7082 + (class535_3.aFloat7082 - class535_2.aFloat7082) * f_4;
         aFloat7090 = class535_2.aFloat7090 + f_4 * (class535_3.aFloat7090 - class535_2.aFloat7090);
@@ -77,23 +77,23 @@ public class Class535 {
         if (class535_2.aClass152_7087 != class535_3.aClass152_7087) {
             aClass152_7087 = graphicalrenderer_1.method8467(class535_2.aClass152_7087, class535_3.aClass152_7087, f_4, aClass152_7087);
         }
-        if (class535_2.aClass247_7091 != class535_3.aClass247_7091) {
-            if (class535_2.aClass247_7091 == null) {
-                aClass247_7091 = class535_3.aClass247_7091;
-                if (aClass247_7091 != null) {
-                    aClass247_7091.method4207((int) (f_4 * 255.0F), 0);
+        if (class535_2.environmentInfo != class535_3.environmentInfo) {
+            if (class535_2.environmentInfo == null) {
+                environmentInfo = class535_3.environmentInfo;
+                if (environmentInfo != null) {
+                    environmentInfo.method4207((int) (f_4 * 255.0F), 0);
                 }
             } else {
-                aClass247_7091 = class535_2.aClass247_7091;
-                if (aClass247_7091 != null) {
-                    aClass247_7091.method4207((int) (f_4 * 255.0F), 255);
+                environmentInfo = class535_2.environmentInfo;
+                if (environmentInfo != null) {
+                    environmentInfo.method4207((int) (f_4 * 255.0F), 255);
                 }
             }
         }
     }
 
-    boolean method11449(Class535 class535_1) {
-        return anInt7083 == class535_1.anInt7083 && class535_1.aFloat7081 == aFloat7081 && aFloat7082 == class535_1.aFloat7082 && class535_1.aFloat7090 == aFloat7090 && class535_1.aFloat7089 == aFloat7089 && class535_1.aFloat7088 == aFloat7088 && aFloat7080 == class535_1.aFloat7080 && anInt7085 == class535_1.anInt7085 && anInt7086 == class535_1.anInt7086 && aClass152_7087 == class535_1.aClass152_7087 && aClass247_7091 == class535_1.aClass247_7091;
+    boolean method11449(Atmosphere class535_1) {
+        return anInt7083 == class535_1.anInt7083 && class535_1.aFloat7081 == aFloat7081 && aFloat7082 == class535_1.aFloat7082 && class535_1.aFloat7090 == aFloat7090 && class535_1.aFloat7089 == aFloat7089 && class535_1.aFloat7088 == aFloat7088 && aFloat7080 == class535_1.aFloat7080 && anInt7085 == class535_1.anInt7085 && anInt7086 == class535_1.anInt7086 && aClass152_7087 == class535_1.aClass152_7087 && environmentInfo == class535_1.environmentInfo;
     }
 
     public int method11450() {
@@ -101,7 +101,7 @@ public class Class535 {
     }
 
     public Class247 method11451() {
-        return aClass247_7091;
+        return environmentInfo;
     }
 
     public void method11468(ByteBuf rsbytebuffer_1, Class239 class239_2) {
@@ -179,13 +179,19 @@ public class Class535 {
         aFloat7080 = (rsbytebuffer_1.readUnsignedByte() * 8) / 255.0F;
     }
 
-    public void method11472(ByteBuf rsbytebuffer_1, Class239 class239_2) {
-        int i_4 = rsbytebuffer_1.readUnsignedShort();
-        int i_5 = rsbytebuffer_1.readShort();
-        int i_6 = rsbytebuffer_1.readShort();
-        int i_7 = rsbytebuffer_1.readShort();
-        int i_8 = rsbytebuffer_1.readUnsignedShort();
+    public void decodeSkybox(ByteBuf buffer, Class239 class239_2) {
+        int skyboxId = buffer.readUnsignedShort();
+        int xOffset = buffer.readShort();
+        int yOffset = buffer.readShort();
+        int planeOffset = buffer.readShort();
+        int i_8 = buffer.readUnsignedShort();
         Class388.anInt4723 = i_8;
-        aClass247_7091 = class239_2.method4050(i_4, i_5, i_6, i_7);
+        environmentInfo = class239_2.getSkybox(skyboxId, xOffset, yOffset, planeOffset);
+        ChatLine.appendGameMessage("Decoding Skybox: "+skyboxId+" X: "+xOffset+" Y: "+yOffset+" Plane: "+planeOffset);
+    }
+
+    public void setSkybox(Class239 aClass239_7719, int skyboxId) {
+        Class388.anInt4723 = 0;
+        environmentInfo = aClass239_7719.getSkybox(skyboxId, 0, 0, 0);
     }
 }

@@ -16,7 +16,7 @@ public enum Class466 implements Identifiable {
     }
 
     static void method7776() {
-        TCPPacket tcpmessage_1 = Class271.createPacket(ClientProt.TRANSMITVAR_VERIFYID, client.GAME_CONNECTION_CONTEXT.isaac);
+        TCPPacket tcpmessage_1 = TCPPacket.createPacket(ClientProt.TRANSMITVAR_VERIFYID, client.GAME_CONNECTION_CONTEXT.isaac);
         tcpmessage_1.buffer.writeInt(client.anInt7221);
         client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_1);
     }

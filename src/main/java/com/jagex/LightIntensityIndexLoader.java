@@ -15,7 +15,7 @@ public class LightIntensityIndexLoader {
             if (ifSub != null && !ifSub.load()) {
                 Class351.closeChildren(ifSub, true, false);
             } else {
-                Interface interface_11 = CustomCursorsPreference.INTERFACES[baseWindowId];
+                Interface interface_11 = Interface.INTERFACES[baseWindowId];
                 client.method11768(interface_11, interface_11.method1616(), -1, leftBound, lowerBound, rightBound, upperBound, x, y, mouseX, mouseY);
             }
         }

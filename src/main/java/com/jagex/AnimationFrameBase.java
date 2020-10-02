@@ -1,5 +1,7 @@
 package com.jagex;
 
+import com.jagex.clans.settings.ChangeClanSetting;
+
 public class AnimationFrameBase extends Node {
 
     int id;
@@ -63,7 +65,7 @@ public class AnimationFrameBase extends Node {
             int i_9 = class282_sub50_sub15_0.anInt9769 * Class20.anInt178 + 21;
             WallObjectGraphNode.anInt10526 = (Class20.aBool187 ? 26 : 22) + Class20.anInt178 * class282_sub50_sub15_0.anInt9769;
             i_6 = Class301.anInt3555 + Class158_Sub2.anInt8975;
-            if (i_4 + i_6 > Class349.BASE_WINDOW_WIDTH) {
+            if (i_4 + i_6 > ChangeClanSetting.BASE_WINDOW_WIDTH) {
                 i_6 = Class301.anInt3555 - i_4;
             }
 

@@ -1,5 +1,7 @@
 package com.jagex;
 
+import com.jagex.clans.settings.ClanSettings;
+
 public abstract class CutsceneAction {
 
     public int anInt992;
@@ -9,7 +11,7 @@ public abstract class CutsceneAction {
     }
 
     public static Interface method1605(int i_0) {
-        return CustomCursorsPreference.INTERFACES[i_0 >> 16];
+        return Interface.INTERFACES[i_0 >> 16];
     }
 
     public static void method1607() {

@@ -155,10 +155,10 @@ public class Class329_Sub1 extends Class329 {
         }
     }
 
-    public void method12460(AbstractRenderer graphicalrenderer_1, ByteBuf rsbytebuffer_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9) {
+    public void decodeDynamicMap(AbstractRenderer renderer, ByteBuf buffer, int plane, int x, int y, int i_6, int i_7, int i_8, int i_9, int skyboxId) {
         if (!overlayHidden) {
             boolean bool_11 = false;
-            Class535 class535_12 = null;
+            Atmosphere atmosphere = null;
             int i_13 = (i_7 & 0x7) * 8;
             int i_14 = (i_8 & 0x7) * 8;
             while (true) {
@@ -166,13 +166,13 @@ public class Class329_Sub1 extends Class329 {
                 int i_16;
                 int i_18;
                 int i_27;
-                while (rsbytebuffer_2.index < rsbytebuffer_2.buffer.length) {
-                    i_15 = rsbytebuffer_2.readUnsignedByte();
+                while (buffer.index < buffer.buffer.length) {
+                    i_15 = buffer.readUnsignedByte();
                     if (i_15 == 0) {
-                        if (class535_12 == null) {
-                            class535_12 = new Class535(rsbytebuffer_2, aClass239_7719);
+                        if (atmosphere == null) {
+                            atmosphere = new Atmosphere(buffer, aClass239_7719);
                         } else {
-                            class535_12.method11468(rsbytebuffer_2, aClass239_7719);
+                            atmosphere.method11468(buffer, aClass239_7719);
                         }
                     } else {
                         int i_21;
@@ -180,21 +180,21 @@ public class Class329_Sub1 extends Class329 {
                         int i_23;
                         int i_29;
                         if (i_15 == 1) {
-                            i_16 = rsbytebuffer_2.readUnsignedByte();
+                            i_16 = buffer.readUnsignedByte();
                             if (i_16 > 0) {
                                 for (i_27 = 0; i_27 < i_16; i_27++) {
-                                    Class287 class287_25 = new Class287(graphicalrenderer_1, sceneObjectManager.anInt2592, rsbytebuffer_2);
+                                    Class287 class287_25 = new Class287(renderer, sceneObjectManager.anInt2592, buffer);
                                     if (class287_25.anInt3430 == 31) {
-                                        LightIntensityDefinitions class416_19 = IndexLoaders.LIGHT_INTENSITY_LOADER.method7304(rsbytebuffer_2.readUnsignedShort());
+                                        LightIntensityDefinitions class416_19 = IndexLoaders.LIGHT_INTENSITY_LOADER.method7304(buffer.readUnsignedShort());
                                         class287_25.method5061(class416_19.anInt4986, class416_19.anInt4989, class416_19.anInt4988, class416_19.anInt4987);
                                     }
-                                    if (graphicalrenderer_1.method8463() > 0) {
+                                    if (renderer.method8463() > 0) {
                                         Node_Sub24 class282_sub24_28 = class287_25.aNode_Sub24_3425;
                                         i_29 = class282_sub24_28.method12368() >> 9;
                                         i_21 = class282_sub24_28.method12394() >> 9;
                                         if (class287_25.anInt3419 == i_6 && i_29 >= i_13 && i_29 < i_13 + 8 && i_21 >= i_14 && i_21 < i_14 + 8) {
-                                            i_22 = (i_4 << 9) + MaterialProp38.method15436(class282_sub24_28.method12368() & 0xfff, class282_sub24_28.method12394() & 0xfff, i_9);
-                                            i_23 = (i_5 << 9) + Class354.method6214(class282_sub24_28.method12368() & 0xfff, class282_sub24_28.method12394() & 0xfff, i_9);
+                                            i_22 = (x << 9) + MaterialProp38.method15436(class282_sub24_28.method12368() & 0xfff, class282_sub24_28.method12394() & 0xfff, i_9);
+                                            i_23 = (y << 9) + Class354.method6214(class282_sub24_28.method12368() & 0xfff, class282_sub24_28.method12394() & 0xfff, i_9);
                                             i_29 = i_22 >> 9;
                                             i_21 = i_23 >> 9;
                                             if (i_29 >= 0 && i_21 >= 0 && i_29 < maxX && i_21 < maxY) {
@@ -206,15 +206,15 @@ public class Class329_Sub1 extends Class329 {
                                 }
                             }
                         } else if (i_15 == 2) {
-                            if (class535_12 == null) {
-                                class535_12 = new Class535();
+                            if (atmosphere == null) {
+                                atmosphere = new Atmosphere();
                             }
-                            class535_12.method11471(rsbytebuffer_2);
+                            atmosphere.method11471(buffer);
                         } else if (i_15 == 128) {
-                            if (class535_12 == null) {
-                                class535_12 = new Class535();
+                            if (atmosphere == null) {
+                                atmosphere = new Atmosphere();
                             }
-                            class535_12.method11472(rsbytebuffer_2, aClass239_7719);
+                            atmosphere.decodeSkybox(buffer, aClass239_7719);
                         } else {
                             if (i_15 != 129) {
                                 throw new IllegalStateException("");
@@ -223,17 +223,17 @@ public class Class329_Sub1 extends Class329 {
                                 aByteArrayArrayArray3788 = new byte[4][][];
                             }
                             for (i_16 = 0; i_16 < 4; i_16++) {
-                                byte b_17 = rsbytebuffer_2.readByte();
+                                byte b_17 = buffer.readByte();
                                 int i_26;
-                                if (b_17 == 0 && aByteArrayArrayArray3788[i_3] != null) {
+                                if (b_17 == 0 && aByteArrayArrayArray3788[plane] != null) {
                                     if (i_16 <= i_6) {
-                                        i_18 = i_4;
-                                        i_26 = i_4 + 7;
-                                        i_29 = i_5;
-                                        i_21 = i_5 + 7;
-                                        if (i_4 < 0) {
+                                        i_18 = x;
+                                        i_26 = x + 7;
+                                        i_29 = y;
+                                        i_21 = y + 7;
+                                        if (x < 0) {
                                             i_18 = 0;
-                                        } else if (i_4 >= maxX) {
+                                        } else if (x >= maxX) {
                                             i_18 = maxX;
                                         }
                                         if (i_26 < 0) {
@@ -241,9 +241,9 @@ public class Class329_Sub1 extends Class329 {
                                         } else if (i_26 >= maxX) {
                                             i_26 = maxX;
                                         }
-                                        if (i_5 < 0) {
+                                        if (y < 0) {
                                             i_29 = 0;
-                                        } else if (i_5 >= maxY) {
+                                        } else if (y >= maxY) {
                                             i_29 = maxY;
                                         }
                                         if (i_21 < 0) {
@@ -253,7 +253,7 @@ public class Class329_Sub1 extends Class329 {
                                         }
                                         while (i_18 < i_26) {
                                             while (i_29 < i_21) {
-                                                aByteArrayArrayArray3788[i_3][i_18][i_29] = 0;
+                                                aByteArrayArrayArray3788[plane][i_18][i_29] = 0;
                                                 ++i_29;
                                             }
                                             ++i_18;
@@ -263,20 +263,20 @@ public class Class329_Sub1 extends Class329 {
                                     if (b_17 == 2) {
                                     }
                                 } else {
-                                    if (aByteArrayArrayArray3788[i_3] == null) {
-                                        aByteArrayArrayArray3788[i_3] = new byte[maxX + 1][maxY + 1];
+                                    if (aByteArrayArrayArray3788[plane] == null) {
+                                        aByteArrayArrayArray3788[plane] = new byte[maxX + 1][maxY + 1];
                                     }
                                     for (i_18 = 0; i_18 < 64; i_18 += 4) {
                                         for (i_26 = 0; i_26 < 64; i_26 += 4) {
-                                            byte b_20 = rsbytebuffer_2.readByte();
+                                            byte b_20 = buffer.readByte();
                                             if (i_16 <= i_6) {
                                                 for (i_21 = i_18; i_21 < i_18 + 4; i_21++) {
                                                     for (i_22 = i_26; i_22 < i_26 + 4; i_22++) {
                                                         if (i_21 >= i_13 && i_21 < i_13 + 8 && i_22 >= i_14 && i_22 < i_14 + 8) {
-                                                            i_23 = i_4 + Class112.method1871(i_21 & 0x7, i_22 & 0x7, i_9);
-                                                            int i_24 = i_5 + Class2.method259(i_21 & 0x7, i_22 & 0x7, i_9);
+                                                            i_23 = x + Class112.method1871(i_21 & 0x7, i_22 & 0x7, i_9);
+                                                            int i_24 = y + Class2.method259(i_21 & 0x7, i_22 & 0x7, i_9);
                                                             if (i_23 >= 0 && i_23 < maxX && i_24 >= 0 && i_24 < maxY) {
-                                                                aByteArrayArrayArray3788[i_3][i_23][i_24] = b_20;
+                                                                aByteArrayArrayArray3788[plane][i_23][i_24] = b_20;
                                                                 bool_11 = true;
                                                             }
                                                         }
@@ -290,15 +290,16 @@ public class Class329_Sub1 extends Class329 {
                         }
                     }
                 }
-                if (class535_12 != null) {
-                    aClass239_7719.method4056(i_4 >> 3, i_5 >> 3, class535_12);
+                if(atmosphere != null && skyboxId != -1) atmosphere.setSkybox(aClass239_7719, skyboxId);
+                if (atmosphere != null) {
+                    aClass239_7719.method4056(x >> 3, y >> 3, atmosphere);
                 }
-                if (!bool_11 && aByteArrayArrayArray3788 != null && aByteArrayArrayArray3788[i_3] != null) {
-                    i_15 = i_4 + 7;
-                    i_16 = i_5 + 7;
-                    for (i_27 = i_4; i_27 < i_15; i_27++) {
-                        for (i_18 = i_5; i_18 < i_16; i_18++) {
-                            aByteArrayArrayArray3788[i_3][i_27][i_18] = 0;
+                if (!bool_11 && aByteArrayArrayArray3788 != null && aByteArrayArrayArray3788[plane] != null) {
+                    i_15 = x + 7;
+                    i_16 = y + 7;
+                    for (i_27 = x; i_27 < i_15; i_27++) {
+                        for (i_18 = y; i_18 < i_16; i_18++) {
+                            aByteArrayArrayArray3788[plane][i_27][i_18] = 0;
                         }
                     }
                 }
@@ -764,7 +765,7 @@ public class Class329_Sub1 extends Class329 {
     public void method12471(AbstractRenderer graphicalrenderer_1, ByteBuf rsbytebuffer_2, int i_3, int i_4) {
         if (!overlayHidden) {
             boolean bool_6 = false;
-            Class535 class535_7 = null;
+            Atmosphere class535_7 = null;
             while (true) {
                 int i_8;
                 int i_9;
@@ -775,7 +776,7 @@ public class Class329_Sub1 extends Class329 {
                     i_8 = rsbytebuffer_2.readUnsignedByte();
                     if (i_8 == 0) {
                         if (class535_7 == null) {
-                            class535_7 = new Class535(rsbytebuffer_2, aClass239_7719);
+                            class535_7 = new Atmosphere(rsbytebuffer_2, aClass239_7719);
                         } else {
                             class535_7.method11468(rsbytebuffer_2, aClass239_7719);
                         }
@@ -807,14 +808,14 @@ public class Class329_Sub1 extends Class329 {
                             }
                         } else if (i_8 == 2) {
                             if (class535_7 == null) {
-                                class535_7 = new Class535();
+                                class535_7 = new Atmosphere();
                             }
                             class535_7.method11471(rsbytebuffer_2);
                         } else if (i_8 == 128) {
                             if (class535_7 == null) {
-                                class535_7 = new Class535();
+                                class535_7 = new Atmosphere();
                             }
-                            class535_7.method11472(rsbytebuffer_2, aClass239_7719);
+                            class535_7.decodeSkybox(rsbytebuffer_2, aClass239_7719);
                         } else {
                             if (i_8 != 129) {
                                 throw new IllegalStateException("");

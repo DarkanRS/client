@@ -55,25 +55,6 @@ public class CutsceneAction_Sub23 extends CutsceneAction {
         }
     }
 
-    public static IComponentDefinitions method14682(Interface interface_0, IComponentDefinitions icomponentdefinitions_1) {
-        if (icomponentdefinitions_1.parent != -1) {
-            return interface_0.getComponent(icomponentdefinitions_1.parent);
-        } else {
-            if (!interface_0.aBool999) {
-                int i_3 = icomponentdefinitions_1.idHash >>> 16;
-                HashTableIterator class451_4 = new HashTableIterator(client.OPEN_INTERFACES);
-
-                for (SubInterface class282_sub44_5 = (SubInterface) class451_4.first(); class282_sub44_5 != null; class282_sub44_5 = (SubInterface) class451_4.next()) {
-                    if (i_3 == class282_sub44_5.interfaceId) {
-                        return IComponentDefinitions.getDefs((int) class282_sub44_5.pointer);
-                    }
-                }
-            }
-
-            return null;
-        }
-    }
-
     @Override
     public void method1592() {
         client.anInt7236 = client.CYCLES_20MS;

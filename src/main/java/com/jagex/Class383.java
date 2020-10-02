@@ -101,7 +101,7 @@ public class Class383 implements Interface41 {
 
     static void method6514(int i_0, int i_1) {
         if (MovingAnimation.isInterfaceLoaded(i_0, null)) {
-            Class151.method2591(CustomCursorsPreference.INTERFACES[i_0].components, i_1);
+            Class151.method2591(Interface.INTERFACES[i_0].components, i_1);
         }
     }
 

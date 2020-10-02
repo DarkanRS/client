@@ -1,5 +1,7 @@
 package com.jagex;
 
+import com.jagex.clans.ClanChannel;
+
 public class Class113 {
 
     public static ClanChannel CLAN_CHANNEL;

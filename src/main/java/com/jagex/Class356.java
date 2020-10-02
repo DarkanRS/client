@@ -1,5 +1,7 @@
 package com.jagex;
 
+import com.jagex.clans.settings.ChangeClanSetting;
+
 import java.util.Arrays;
 
 public class Class356 {
@@ -59,7 +61,7 @@ public class Class356 {
     }
 
     public int method6221(int i_1, int i_2) {
-        int i_4 = Math.max(Class349.BASE_WINDOW_WIDTH, i_2);
+        int i_4 = Math.max(ChangeClanSetting.BASE_WINDOW_WIDTH, i_2);
         return this == aClass356_4117 ? 0 : (this == aClass356_4119 ? i_4 - i_1 : (this == aClass356_4118 ? (i_4 - i_1) / 2 : 0));
     }
 }

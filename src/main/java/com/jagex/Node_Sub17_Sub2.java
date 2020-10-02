@@ -1,9 +1,11 @@
 package com.jagex;
 
+import com.jagex.clans.settings.ClanSettings;
+
 public class Node_Sub17_Sub2 extends Node_Sub17 {
 
     public static boolean[] IS_VARC_SAVE_TO_FILE;
-    static FontMetrics aClass414_9933;
+    public static FontMetrics aClass414_9933;
     int anInt9932;
     Class348 this$0;
 

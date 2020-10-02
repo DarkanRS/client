@@ -142,7 +142,7 @@ public class HitbarDefinitions {
                 QuickchatMessageLoader.method7215();
                 Renderers.CURRENT_RENDERER.method8617(i_01, i_13, i_21, i_31);
                 Renderers.CURRENT_RENDERER.r(i_01, i_13, i_01 + i_21, i_31 + i_13);
-                Class535 class535_16 = IndexLoaders.MAP_REGION_DECODER.method4435().method4038();
+                Atmosphere class535_16 = IndexLoaders.MAP_REGION_DECODER.method4435().method4038();
                 i_14 = class535_16.method11450();
                 client.aClass294_7457.method5223((-IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX), (-Class109_Sub1.CAM_MOVE_ABSOLUTEZ), (-Class246.CAM_MOVE_ABSOLUTEY));
                 client.aClass294_7457.rotation(0.0F, -1.0f, 0.0F, Trig.degToRad(-AnimationDefinitions.anInt5930 & 0x3fff));

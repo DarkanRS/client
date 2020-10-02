@@ -2,8 +2,6 @@ package com.jagex;
 
 public class CustomCursorsPreference extends Preference {
 
-    public static Interface[] INTERFACES;
-
     public CustomCursorsPreference(GamePreferences class282_sub54_2) {
         super(class282_sub54_2);
     }

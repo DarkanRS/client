@@ -1,4 +1,6 @@
-package com.jagex;
+package com.jagex.clans;
+
+import com.jagex.*;
 
 import java.util.BitSet;
 
@@ -16,7 +18,7 @@ public class ClanChannel extends Node {
     boolean namesAsString = true;
     int[] sortedNameIndices;
     boolean namesAsLong;
-    long nextUpdateNumber;
+    public long nextUpdateNumber;
 
     public ClanChannel(ByteBuf buffer) {
         decode(buffer);
@@ -35,10 +37,9 @@ public class ClanChannel extends Node {
             Class291_Sub1.aFloat3462 = 16.0F;
         }
         Class291_Sub1.anInt8016 = -1;
-        Class291_Sub1.anInt8016 = -1;
     }
 
-    static void method12117(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
+    public static void method12117(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
         if (i_0 == i_2 && i_3 == i_1 && i_4 == i_6 && i_5 == i_7) {
             AnimationIndexLoader.method11220(i_0, i_1, i_6, i_7, i_8);
         } else {
@@ -86,12 +87,12 @@ public class ClanChannel extends Node {
         return sortedNameIndices;
     }
 
-    void method12096(int i_1) {
+    public void removeMember(int index) {
         --numPlayers;
         if (numPlayers == 0) {
             players = null;
         } else {
-            Class503.setSize(players, i_1 + 1, players, i_1, numPlayers - i_1);
+            Class503.setSize(players, index + 1, players, index, numPlayers - index);
         }
         sortedNameIndices = null;
     }
@@ -138,7 +139,7 @@ public class ClanChannel extends Node {
     }
 
     //addMemberNoCheck??
-    void addMember(ClanChannelMember member) {
+    public void addMember(ClanChannelMember member) {
         if (players == null || numPlayers >= players.length) {
             setSize(numPlayers + 5);
         }

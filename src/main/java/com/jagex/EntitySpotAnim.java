@@ -17,7 +17,7 @@ public class EntitySpotAnim {
     }
 
     static void method2827() {
-        Class109.redrawComponent(client.aClass118_7257);
+        IComponentDefinitions.redrawComponent(client.aClass118_7257);
         ++SendFinishedCutsceneAction.anInt8308;
         if (client.aBool7369 && client.aBool7403) {
             int i_1 = Class163.mouseRecorder.getMouseX();

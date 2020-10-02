@@ -53,7 +53,7 @@ public class Class534_Sub1 extends Class534 {
     void method11414() {
         MouseRecord_Sub1 class282_sub53_sub1_2 = aQueue7921.poll();
         if (class282_sub53_sub1_2 != null) {
-            TCPPacket tcpmessage_3 = Class271.createPacket(ClientProt.MOUSE_BUTTON_CLICK, client.GAME_CONNECTION_CONTEXT.isaac);
+            TCPPacket tcpmessage_3 = TCPPacket.createPacket(ClientProt.MOUSE_BUTTON_CLICK, client.GAME_CONNECTION_CONTEXT.isaac);
             tcpmessage_3.buffer.writeIntLE(class282_sub53_sub1_2.getX() | class282_sub53_sub1_2.getY() << 16);
             tcpmessage_3.buffer.writeByte128(class282_sub53_sub1_2.method14730() << 1 | class282_sub53_sub1_2.method14729() & 0x1);
             tcpmessage_3.buffer.writeShortLE(method11408(class282_sub53_sub1_2, 65535));
@@ -90,7 +90,7 @@ public class Class534_Sub1 extends Class534 {
     void method11431() {
         MouseRecord_Sub1 class282_sub53_sub1_1 = aQueue7921.poll();
         if (class282_sub53_sub1_1 != null) {
-            TCPPacket tcpmessage_2 = Class271.createPacket(ClientProt.MOUSE_BUTTON_CLICK, client.GAME_CONNECTION_CONTEXT.isaac);
+            TCPPacket tcpmessage_2 = TCPPacket.createPacket(ClientProt.MOUSE_BUTTON_CLICK, client.GAME_CONNECTION_CONTEXT.isaac);
             tcpmessage_2.buffer.writeIntLE(class282_sub53_sub1_1.getX() | class282_sub53_sub1_1.getY() << 16);
             tcpmessage_2.buffer.writeByte128(class282_sub53_sub1_1.method14730() << 1 | class282_sub53_sub1_1.method14729() & 0x1);
             tcpmessage_2.buffer.writeShortLE(method11408(class282_sub53_sub1_1, 65535));
@@ -103,7 +103,7 @@ public class Class534_Sub1 extends Class534 {
     void method11418() {
         MouseRecord_Sub1 class282_sub53_sub1_1 = aQueue7921.poll();
         if (class282_sub53_sub1_1 != null) {
-            TCPPacket tcpmessage_2 = Class271.createPacket(ClientProt.MOUSE_BUTTON_CLICK, client.GAME_CONNECTION_CONTEXT.isaac);
+            TCPPacket tcpmessage_2 = TCPPacket.createPacket(ClientProt.MOUSE_BUTTON_CLICK, client.GAME_CONNECTION_CONTEXT.isaac);
             tcpmessage_2.buffer.writeIntLE(class282_sub53_sub1_1.getX() | class282_sub53_sub1_1.getY() << 16);
             tcpmessage_2.buffer.writeByte128(class282_sub53_sub1_1.method14730() << 1 | class282_sub53_sub1_1.method14729() & 0x1);
             tcpmessage_2.buffer.writeShortLE(method11408(class282_sub53_sub1_1, 65535));
@@ -119,22 +119,22 @@ public class Class534_Sub1 extends Class534 {
 
     @Override
     TCPPacket method11416() {
-        return Class271.createPacket(ClientProt.MOVE_MOUSE, client.GAME_CONNECTION_CONTEXT.isaac);
+        return TCPPacket.createPacket(ClientProt.MOVE_MOUSE, client.GAME_CONNECTION_CONTEXT.isaac);
     }
 
     @Override
     TCPPacket method11420() {
-        return Class271.createPacket(ClientProt.MOVE_MOUSE, client.GAME_CONNECTION_CONTEXT.isaac);
+        return TCPPacket.createPacket(ClientProt.MOVE_MOUSE, client.GAME_CONNECTION_CONTEXT.isaac);
     }
 
     @Override
     TCPPacket method11428() {
-        return Class271.createPacket(ClientProt.MOVE_MOUSE, client.GAME_CONNECTION_CONTEXT.isaac);
+        return TCPPacket.createPacket(ClientProt.MOVE_MOUSE, client.GAME_CONNECTION_CONTEXT.isaac);
     }
 
     @Override
     TCPPacket method11422() {
-        return Class271.createPacket(ClientProt.MOVE_MOUSE, client.GAME_CONNECTION_CONTEXT.isaac);
+        return TCPPacket.createPacket(ClientProt.MOVE_MOUSE, client.GAME_CONNECTION_CONTEXT.isaac);
     }
 
     @Override
@@ -154,6 +154,6 @@ public class Class534_Sub1 extends Class534 {
 
     @Override
     TCPPacket method11421() {
-        return Class271.createPacket(ClientProt.MOVE_MOUSE, client.GAME_CONNECTION_CONTEXT.isaac);
+        return TCPPacket.createPacket(ClientProt.MOVE_MOUSE, client.GAME_CONNECTION_CONTEXT.isaac);
     }
 }

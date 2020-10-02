@@ -5,10 +5,10 @@ public class Class16 {
     public static FontMetrics aClass414_139;
     public static FontRenderer aFontRenderer_144;
     static int anInt135;
-    static int p12FullIndex;
+    public static int p12FullIndex;
     static int anInt137;
     static NativeSprite[] aNativeSpriteArray138;
-    static int p11FullIndex;
+    public static int p11FullIndex;
     static int anInt141;
     static int anInt142;
     static int anInt143;
@@ -35,14 +35,14 @@ public class Class16 {
                     String string_6;
                     String string_7;
                     for (i_4 = 0; i_4 < client.IGNORE_LIST_COUNT; i_4++) {
-                        Ignore class10_5 = client.IGNORED_PLAYERS[i_4];
-                        string_6 = Class383.method6515(class10_5.unfilteredUsername);
+                        IgnoredPlayer class10_5 = client.IGNORED_PLAYERS[i_4];
+                        string_6 = Class383.method6515(class10_5.displayName);
                         if (string_6 != null && string_6.equals(string_3)) {
                             ChatLine.appendGameMessage(string_0 + LocalizedText.aClass433_5302.translate(Class223.CURRENT_LANGUAGE));
                             return;
                         }
-                        if (class10_5.displayName != null) {
-                            string_7 = Class383.method6515(class10_5.displayName);
+                        if (class10_5.lastDisplayName != null) {
+                            string_7 = Class383.method6515(class10_5.lastDisplayName);
                             if (string_7 != null && string_7.equals(string_3)) {
                                 ChatLine.appendGameMessage(string_0 + LocalizedText.aClass433_5302.translate(Class223.CURRENT_LANGUAGE));
                                 return;
@@ -67,8 +67,8 @@ public class Class16 {
                     if (Class383.method6515(VertexNormal.MY_PLAYER.displayName).equals(string_3)) {
                         ChatLine.appendGameMessage(LocalizedText.aClass433_5238.translate(Class223.CURRENT_LANGUAGE));
                     } else {
-                        BufferedConnectionContext class184_8 = Preference_Sub20.getConnectionContext();
-                        TCPPacket tcpmessage_10 = Class271.createPacket(ClientProt.ADD_IGNORE, class184_8.isaac);
+                        BufferedConnectionContext class184_8 = BufferedConnectionContext.getConnectionContext();
+                        TCPPacket tcpmessage_10 = TCPPacket.createPacket(ClientProt.ADD_IGNORE, class184_8.isaac);
                         tcpmessage_10.buffer.writeByte(ChatLine.getLength(string_0) + 1);
                         tcpmessage_10.buffer.writeString(string_0);
                         tcpmessage_10.buffer.writeByte(bool_1 ? 1 : 0);

@@ -1,5 +1,7 @@
 package com.jagex;
 
+import com.jagex.clans.settings.ChangeClanSetting;
+
 public enum ServerEnvironment implements Identifiable {
 
     LOCAL("LOCAL", 4),
@@ -87,10 +89,10 @@ public enum ServerEnvironment implements Identifiable {
                 client.aBool7403 = true;
                 client.anInt7432 = 0;
                 client.anInt7265 = 0;
-                client.anInt7367 = Class349.BASE_WINDOW_WIDTH;
+                client.anInt7367 = ChangeClanSetting.BASE_WINDOW_WIDTH;
                 client.anInt7476 = client.BASE_WINDOW_HEIGHT * -969250379;
             }
-            LightIntensityIndexLoader.method7313(null, client.BASE_WINDOW_ID, 0, 0, Class349.BASE_WINDOW_WIDTH, client.BASE_WINDOW_HEIGHT * -969250379, 0, 0, mouseX, mouseY);
+            LightIntensityIndexLoader.method7313(null, client.BASE_WINDOW_ID, 0, 0, ChangeClanSetting.BASE_WINDOW_WIDTH, client.BASE_WINDOW_HEIGHT * -969250379, 0, 0, mouseX, mouseY);
             if (MaterialPropTexture.aClass118_9884 != null) {
                 BillboardDefinitions.method6170(mouseX, mouseY);
             }

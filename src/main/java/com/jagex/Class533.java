@@ -9,9 +9,9 @@ public class Class533 {
     }
 
     static void method11404(String string_0, String string_1, String string_2, boolean bool_3, boolean bool_4) {
-        BufferedConnectionContext class184_6 = Preference_Sub20.getConnectionContext();
+        BufferedConnectionContext class184_6 = BufferedConnectionContext.getConnectionContext();
         if (class184_6.getConnection() != null) {
-            TCPPacket tcpmessage_7 = Class271.createPacket(ClientProt.LOBBY_HYPERLINK, class184_6.isaac);
+            TCPPacket tcpmessage_7 = TCPPacket.createPacket(ClientProt.LOBBY_HYPERLINK, class184_6.isaac);
             tcpmessage_7.buffer.writeShort(ChatLine.getLength(string_0) + ChatLine.getLength(string_1) + ChatLine.getLength(string_2) + 1);
             tcpmessage_7.buffer.writeString(string_0);
             tcpmessage_7.buffer.writeString(string_1);

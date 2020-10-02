@@ -1,5 +1,7 @@
 package com.jagex;
 
+import com.jagex.clans.settings.ClanSettings;
+
 public class Node_Sub17_Sub4 extends Node_Sub17 {
 
     public static int anInt9940;

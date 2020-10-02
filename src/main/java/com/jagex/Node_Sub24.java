@@ -1,5 +1,7 @@
 package com.jagex;
 
+import com.jagex.clans.ClanChannel;
+
 public class Node_Sub24 extends Node {
 
     public Vector3 aClass385_7687 = new Vector3();

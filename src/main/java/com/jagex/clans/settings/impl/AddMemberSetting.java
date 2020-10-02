@@ -1,4 +1,4 @@
-package com.jagex.clans.settings;
+package com.jagex.clans.settings.impl;
 
 import com.jagex.ByteBuf;
 import com.jagex.ClanSetting;
@@ -11,7 +11,7 @@ public class AddMemberSetting extends ClanSetting {
     int worldId;
     byte rank;
 
-    AddMemberSetting() {
+    public AddMemberSetting() {
         username = null;
     }
 

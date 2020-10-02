@@ -10,7 +10,7 @@ public class VarcDefinitions {
         boolean bool_3 = IndexLoaders.ITEM_LOADER.softwareRender(graphicalrenderer_0, icomponentdefinitions_1.containerItemId, icomponentdefinitions_1.anInt1427, icomponentdefinitions_1.borderThickness, -16777216 | icomponentdefinitions_1.spriteShadow, icomponentdefinitions_1.renderStack, icomponentdefinitions_1.wearCol ? VertexNormal.MY_PLAYER.model : null) == null;
         if (bool_3) {
             Class182.ITEMS.append(new Item(icomponentdefinitions_1.containerItemId, icomponentdefinitions_1.anInt1427, icomponentdefinitions_1.borderThickness, -16777216 | icomponentdefinitions_1.spriteShadow, icomponentdefinitions_1.renderStack, icomponentdefinitions_1.wearCol));
-            Class109.redrawComponent(icomponentdefinitions_1);
+            IComponentDefinitions.redrawComponent(icomponentdefinitions_1);
         }
     }
 

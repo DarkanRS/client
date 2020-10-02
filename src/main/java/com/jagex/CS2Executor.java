@@ -1,5 +1,8 @@
 package com.jagex;
 
+import com.jagex.clans.ClanChannel;
+import com.jagex.clans.settings.ClanSettings;
+
 import java.util.ArrayList;
 
 public class CS2Executor {

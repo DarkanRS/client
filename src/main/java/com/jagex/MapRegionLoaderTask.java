@@ -63,7 +63,7 @@ public class MapRegionLoaderTask implements Runnable {
         if (Class256.aClass256_3152 == class335_1.aClass256_3915) {
             region.method4547();
         } else {
-            region.method4499(class335_1);
+            region.loadMapScene(class335_1);
         }
         for (boolean bool_3 = region.method4461(); !bool_3; bool_3 = region.method4461()) {
         }

@@ -10,12 +10,12 @@ public class Class285 {
     boolean aBool3392;
     Login aClass284_3393;
 
-    public static String method5025(CharSequence charsequence_0) {
-        String string_2 = Class179.method3018(Class366.method6302(charsequence_0));
-        if (string_2 == null) {
-            string_2 = "";
+    public static String method5025(CharSequence str) {
+        String formatted = Class179.method3018(Class366.method6302(str));
+        if (formatted == null) {
+            formatted = "";
         }
-        return string_2;
+        return formatted;
     }
 
     public static int method5026(CharSequence charsequence_0) {

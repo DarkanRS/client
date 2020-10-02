@@ -66,7 +66,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
                     client.anInt7294 = i_2;
                     client.anInt7296 = 2;
                     client.anInt7295 = 0;
-                    tcpmessage_13 = Class271.createPacket(outgoingpacket_11, client.GAME_CONNECTION_CONTEXT.isaac);
+                    tcpmessage_13 = TCPPacket.createPacket(outgoingpacket_11, client.GAME_CONNECTION_CONTEXT.isaac);
                     tcpmessage_13.buffer.writeShort(i_7);
                     tcpmessage_13.buffer.write128Byte(VertexNormal.method1465() ? 1 : 0);
                     client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_13);
@@ -80,7 +80,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
                 client.anInt7294 = i_2;
                 client.anInt7296 = 2;
                 client.anInt7295 = 0;
-                tcpmessage_17 = Class271.createPacket(ClientProt.IF_ON_PLAYER, client.GAME_CONNECTION_CONTEXT.isaac);
+                tcpmessage_17 = TCPPacket.createPacket(ClientProt.IF_ON_PLAYER, client.GAME_CONNECTION_CONTEXT.isaac);
                 tcpmessage_17.buffer.writeShort(client.anInt7345);
                 tcpmessage_17.buffer.writeShortLE(VertexNormal.MY_PLAYER.index);
                 tcpmessage_17.buffer.write128Byte(VertexNormal.method1465() ? 1 : 0);
@@ -100,7 +100,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
                     client.anInt7294 = i_2;
                     client.anInt7296 = 2;
                     client.anInt7295 = 0;
-                    tcpmessage_13 = Class271.createPacket(ClientProt.IF_ON_PLAYER, client.GAME_CONNECTION_CONTEXT.isaac);
+                    tcpmessage_13 = TCPPacket.createPacket(ClientProt.IF_ON_PLAYER, client.GAME_CONNECTION_CONTEXT.isaac);
                     tcpmessage_13.buffer.writeShort(client.anInt7345);
                     tcpmessage_13.buffer.writeShortLE(i_7);
                     tcpmessage_13.buffer.write128Byte(VertexNormal.method1465() ? 1 : 0);
@@ -116,7 +116,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
                 client.anInt7294 = i_2;
                 client.anInt7296 = 2;
                 client.anInt7295 = 0;
-                tcpmessage_17 = Class271.createPacket(ClientProt.IF_ON_OBJECT, client.GAME_CONNECTION_CONTEXT.isaac);
+                tcpmessage_17 = TCPPacket.createPacket(ClientProt.IF_ON_OBJECT, client.GAME_CONNECTION_CONTEXT.isaac);
                 tcpmessage_17.buffer.writeShortLE128(i_4 + coordgrid_10.x);
                 tcpmessage_17.buffer.write128Byte(VertexNormal.method1465() ? 1 : 0);
                 tcpmessage_17.buffer.writeIntV1((int) (long_8 >>> 32) & 0x7fffffff);
@@ -152,7 +152,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
                     client.anInt7294 = i_2;
                     client.anInt7296 = 2;
                     client.anInt7295 = 0;
-                    tcpmessage_15 = Class271.createPacket(outgoingpacket_18, client.GAME_CONNECTION_CONTEXT.isaac);
+                    tcpmessage_15 = TCPPacket.createPacket(outgoingpacket_18, client.GAME_CONNECTION_CONTEXT.isaac);
                     tcpmessage_15.buffer.writeShort(i_7);
                     tcpmessage_15.buffer.writeByte(VertexNormal.method1465() ? 1 : 0);
                     client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_15);
@@ -168,7 +168,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
                     client.anInt7294 = i_2;
                     client.anInt7296 = 1;
                     client.anInt7295 = 0;
-                    tcpmessage_13 = Class271.createPacket(ClientProt.UNK_63, client.GAME_CONNECTION_CONTEXT.isaac);
+                    tcpmessage_13 = TCPPacket.createPacket(ClientProt.UNK_63, client.GAME_CONNECTION_CONTEXT.isaac);
                     tcpmessage_13.buffer.writeShort128(i_4 + coordgrid_10.x);
                     tcpmessage_13.buffer.writeShort(i_5 + coordgrid_10.y);
                     client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_13);
@@ -209,7 +209,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
                 client.anInt7294 = i_2;
                 client.anInt7296 = 2;
                 client.anInt7295 = 0;
-                tcpmessage_13 = Class271.createPacket(ClientProt.IF_ON_GROUND_ITEM, client.GAME_CONNECTION_CONTEXT.isaac);
+                tcpmessage_13 = TCPPacket.createPacket(ClientProt.IF_ON_GROUND_ITEM, client.GAME_CONNECTION_CONTEXT.isaac);
                 tcpmessage_13.buffer.writeShort128(client.anInt7346);
                 tcpmessage_13.buffer.writeIntV2(client.anInt56);
                 tcpmessage_13.buffer.writeShort(i_7);
@@ -226,7 +226,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
                 client.anInt7294 = i_2;
                 client.anInt7296 = 1;
                 client.anInt7295 = 0;
-                tcpmessage_13 = Class271.createPacket(ClientProt.IF_ON_TILE, client.GAME_CONNECTION_CONTEXT.isaac);
+                tcpmessage_13 = TCPPacket.createPacket(ClientProt.IF_ON_TILE, client.GAME_CONNECTION_CONTEXT.isaac);
                 tcpmessage_13.buffer.writeShortLE(client.anInt7346);
                 tcpmessage_13.buffer.writeShortLE(i_5 + coordgrid_10.y);
                 tcpmessage_13.buffer.writeIntV1(client.anInt56);
@@ -240,7 +240,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
                 Class158_Sub2.method14355(i_5, i_4);
                 client.aClass118_7352 = Index.getIComponentDefinitions(i_5, i_4);
                 if (client.aClass118_7352 != null) {
-                    Class109.redrawComponent(client.aClass118_7352);
+                    IComponentDefinitions.redrawComponent(client.aClass118_7352);
                 }
             }
 
@@ -286,7 +286,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
                     client.anInt7294 = i_2;
                     client.anInt7296 = 2;
                     client.anInt7295 = 0;
-                    TCPPacket tcpmessage_22 = Class271.createPacket(outgoingpacket_27, client.GAME_CONNECTION_CONTEXT.isaac);
+                    TCPPacket tcpmessage_22 = TCPPacket.createPacket(outgoingpacket_27, client.GAME_CONNECTION_CONTEXT.isaac);
                     tcpmessage_22.buffer.writeShortLE128(i_7);
                     tcpmessage_22.buffer.writeByteC(VertexNormal.method1465() ? 1 : 0);
                     tcpmessage_22.buffer.writeShort(i_5 + coordgrid_10.y);
@@ -303,7 +303,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
                         client.anInt7294 = i_2;
                         client.anInt7296 = 2;
                         client.anInt7295 = 0;
-                        TCPPacket tcpmessage_16 = Class271.createPacket(ClientProt.IF_ON_NPC, client.GAME_CONNECTION_CONTEXT.isaac);
+                        TCPPacket tcpmessage_16 = TCPPacket.createPacket(ClientProt.IF_ON_NPC, client.GAME_CONNECTION_CONTEXT.isaac);
                         tcpmessage_16.buffer.writeIntV2(client.anInt56);
                         tcpmessage_16.buffer.writeShortLE128(i_7);
                         tcpmessage_16.buffer.write128Byte(VertexNormal.method1465() ? 1 : 0);
@@ -334,7 +334,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
                     client.anInt7294 = i_2;
                     client.anInt7296 = 2;
                     client.anInt7295 = 0;
-                    tcpmessage_15 = Class271.createPacket(outgoingpacket_26, client.GAME_CONNECTION_CONTEXT.isaac);
+                    tcpmessage_15 = TCPPacket.createPacket(outgoingpacket_26, client.GAME_CONNECTION_CONTEXT.isaac);
                     tcpmessage_15.buffer.writeShort(i_5 + coordgrid_10.y);
                     tcpmessage_15.buffer.writeShort(i_4 + coordgrid_10.x);
                     tcpmessage_15.buffer.writeInt((int) (long_8 >>> 32) & 0x7fffffff);
@@ -352,7 +352,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
                 }
 
                 if (VarcStringIndexLoader.aClass118_4825 != null && client.anInt7297 == 0) {
-                    Class109.redrawComponent(VarcStringIndexLoader.aClass118_4825);
+                    IComponentDefinitions.redrawComponent(VarcStringIndexLoader.aClass118_4825);
                 }
             }
         }

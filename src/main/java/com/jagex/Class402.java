@@ -26,8 +26,8 @@ public class Class402 {
                         if (client.FRIEND_COUNT - i_3 >= 0)
                             System.arraycopy(client.FRIENDS, i_3 + 1, client.FRIENDS, i_3, client.FRIEND_COUNT - i_3);
                         client.anInt7386 = client.anInt7347;
-                        BufferedConnectionContext class184_9 = Preference_Sub20.getConnectionContext();
-                        TCPPacket tcpmessage_8 = Class271.createPacket(ClientProt.REMOVE_FRIEND, class184_9.isaac);
+                        BufferedConnectionContext class184_9 = BufferedConnectionContext.getConnectionContext();
+                        TCPPacket tcpmessage_8 = TCPPacket.createPacket(ClientProt.REMOVE_FRIEND, class184_9.isaac);
                         tcpmessage_8.buffer.writeByte(ChatLine.getLength(string_0));
                         tcpmessage_8.buffer.writeString(string_0);
                         class184_9.queuePacket(tcpmessage_8);

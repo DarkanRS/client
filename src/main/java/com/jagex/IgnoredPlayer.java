@@ -1,10 +1,10 @@
 package com.jagex;
 
-public class Ignore {
+public class IgnoredPlayer {
 
     static int anInt118;
-    public String unfilteredUsername;
     public String displayName;
+    public String lastDisplayName;
     public boolean temporary;
 
     public static void method458(int i_0) {

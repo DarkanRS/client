@@ -1,5 +1,6 @@
-package com.jagex;
+package com.jagex.clans.settings.impl;
 
+import com.jagex.*;
 import com.jagex.clans.ClanChannel;
 import com.jagex.clans.ClanChannelMember;
 

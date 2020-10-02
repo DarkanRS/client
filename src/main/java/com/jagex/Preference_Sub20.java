@@ -38,10 +38,6 @@ public class Preference_Sub20 extends Preference {
         Class271.anInt3330 = index_0.getArchiveId("hint_mapedge");
     }
 
-    public static BufferedConnectionContext getConnectionContext() {
-        return GameState.inLobby(client.GAME_STATE) ? client.LOBBY_CONNECTION_CONTEXT : client.GAME_CONNECTION_CONTEXT;
-    }
-
     public static void method12808() {
         if (Class302.aClass387Array3557 == null) {
             Class302.aClass387Array3557 = LoadingStage.method6676();

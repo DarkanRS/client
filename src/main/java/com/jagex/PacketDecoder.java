@@ -1,10 +1,11 @@
 package com.jagex;
 
-import net.arikia.dev.drpc.DiscordRPC;
-import net.arikia.dev.drpc.DiscordRichPresence;
+import com.Loader;
+import com.jagex.clans.ClanChannel;
+import com.jagex.clans.settings.ChangeClanSetting;
+import com.jagex.clans.settings.ClanSettings;
 
 import java.io.IOException;
-import java.lang.reflect.Field;
 
 public class PacketDecoder {
 
@@ -124,6 +125,7 @@ public class PacketDecoder {
             return true;
         } else if (context.currentPacket == ServerProt.LOGOUT_FULL) {
             CursorIndexLoader.method7333(false);
+            Loader.INSTANCE.getManager().fullLogout();
             context.currentPacket = null;
             return false;
         } else if (context.currentPacket == ServerProt.MAP_PROJANIM_HALFSQ) {
@@ -214,23 +216,6 @@ public class PacketDecoder {
             int flags = buffer.readUnsignedShortLE128();
             Class470.method7825();
             MapRegion.method4562(flags, string_63);
-            context.currentPacket = null;
-            return true;
-        } else if (context.currentPacket == ServerProt.DISCORD_RICH_PRESENCE_UPDATE) {
-            try {
-                Class<? extends DiscordRichPresence> presence = client.getPresence().getClass();
-                Field f = presence.getDeclaredField(buffer.readString());
-                f.setAccessible(true);
-                int type = buffer.readInt();
-                if (type == 0)
-                    f.setInt(client.presence, buffer.readInt());
-                else if (type == 1)
-                    f.set(client.presence, buffer.readString());
-                else if (type == 2)
-                    f.setLong(client.presence, buffer.readLong());
-                DiscordRPC.discordUpdatePresence(client.getPresence());
-            } catch (Throwable ignored) {
-            }
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.IF_SETSCROLLPOS) {
@@ -638,7 +623,7 @@ public class PacketDecoder {
             if (Class393.preferences.aPreference_Sub3_8199.method12632() == 1) {
                 IndexLoaders.MAP_REGION_LOADER_THREAD.method6049(new Class335(Class256.aClass256_3155, rsbitsbuffer_65));
             } else {
-                IndexLoaders.MAP_REGION_DECODER.method4499(new Class335(Class256.aClass256_3155, rsbitsbuffer_65));
+                IndexLoaders.MAP_REGION_DECODER.loadMapScene(new Class335(Class256.aClass256_3155, rsbitsbuffer_65));
             }
             context.currentPacket = null;
             return false;
@@ -719,6 +704,7 @@ public class PacketDecoder {
             return false;
         } else if (context.currentPacket == ServerProt.LOGOUT_LOBBY) {
             CursorIndexLoader.method7333(Class9.aBool71);
+            Loader.INSTANCE.getManager().logout();
             context.currentPacket = null;
             return false;
         } else if (context.currentPacket == ServerProt.CLIENT_SETVARC_LARGE) {
@@ -1096,7 +1082,7 @@ public class PacketDecoder {
         } else if (context.currentPacket == ServerProt.REQUEST_FPS) {
             int key = buffer.readInt();
             int flags = buffer.readInt();
-            TCPPacket tcpmessage_111 = Class271.createPacket(ClientProt.SEND_FPS, context.isaac);
+            TCPPacket tcpmessage_111 = TCPPacket.createPacket(ClientProt.SEND_FPS, context.isaac);
             tcpmessage_111.buffer.writeIntV2(key);
             tcpmessage_111.buffer.writeIntV1(flags);
             tcpmessage_111.buffer.write128Byte(client.FPS);
@@ -1483,14 +1469,14 @@ public class PacketDecoder {
         } else if (context.currentPacket == ServerProt.CLANCHANNEL_DELTA) {
             client.anInt7395 = client.anInt7347;
             boolean bool_91 = buffer.readUnsignedByte() == 1;
-            Class349 class349_105 = new Class349(buffer);
+            ChangeClanSetting changeClanSetting = new ChangeClanSetting(buffer);
             ClanChannel clanChannel;
             if (bool_91) {
                 clanChannel = Class113.CLAN_CHANNEL;
             } else {
                 clanChannel = AsyncConnection.LISTENED_CLAN_CHANNEL;
             }
-            class349_105.method6179(clanChannel);
+            changeClanSetting.applySettings(clanChannel);
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.REGION) {
@@ -1498,9 +1484,9 @@ public class PacketDecoder {
             System.arraycopy(context.recievedBuffer.buffer, context.recievedBuffer.index, rsbitsbuffer_65.buffer, 0, context.currentPacketSize);
             FontMetrics.method6989();
             if (Class393.preferences.aPreference_Sub3_8199.method12632() == 1) {
-                IndexLoaders.MAP_REGION_LOADER_THREAD.method6049(new Class335(Class256.aClass256_3158, rsbitsbuffer_65));
+                IndexLoaders.MAP_REGION_LOADER_THREAD.method6049(new Class335(Class256.LOAD_MAP_SCENE_NORMAL, rsbitsbuffer_65));
             } else {
-                IndexLoaders.MAP_REGION_DECODER.method4499(new Class335(Class256.aClass256_3158, rsbitsbuffer_65));
+                IndexLoaders.MAP_REGION_DECODER.loadMapScene(new Class335(Class256.LOAD_MAP_SCENE_NORMAL, rsbitsbuffer_65));
             }
             context.currentPacket = null;
             return false;
@@ -1533,7 +1519,7 @@ public class PacketDecoder {
                 Class351.closeChildren(class282_sub44_103, true, false);
             }
             if (client.aClass118_7352 != null) {
-                Class109.redrawComponent(client.aClass118_7352);
+                IComponentDefinitions.redrawComponent(client.aClass118_7352);
                 client.aClass118_7352 = null;
             }
             context.currentPacket = null;
@@ -1843,11 +1829,11 @@ public class PacketDecoder {
             int i_6 = buffer.readUnsignedShort();
             Class470.method7825();
             int i_8;
-            if (CustomCursorsPreference.INTERFACES[key] != null) {
+            if (Interface.INTERFACES[key] != null) {
                 for (int i_7 = flags; i_7 < i_6; i_7++) {
                     i_8 = buffer.read24BitUnsignedInteger();
-                    if (i_7 < CustomCursorsPreference.INTERFACES[key].components.length && CustomCursorsPreference.INTERFACES[key].components[i_7] != null) {
-                        CustomCursorsPreference.INTERFACES[key].components[i_7].serverTriggers = i_8;
+                    if (i_7 < Interface.INTERFACES[key].components.length && Interface.INTERFACES[key].components[i_7] != null) {
+                        Interface.INTERFACES[key].components[i_7].serverTriggers = i_8;
                     }
                 }
             }
@@ -2067,12 +2053,12 @@ public class PacketDecoder {
             }
             IComponentDefinitions parent2Def = IComponentDefinitions.getDefs(toParentUid);
             if (parent2Def != null) {
-                Class109.redrawComponent(parent2Def);
+                IComponentDefinitions.redrawComponent(parent2Def);
             }
             parent2Def = IComponentDefinitions.getDefs(fromParentUid);
             if (parent2Def != null) {
-                Class109.redrawComponent(parent2Def);
-                HostNameIdentifier.method483(CustomCursorsPreference.INTERFACES[parent2Def.idHash >>> 16], parent2Def, true);
+                IComponentDefinitions.redrawComponent(parent2Def);
+                HostNameIdentifier.method483(Interface.INTERFACES[parent2Def.idHash >>> 16], parent2Def, true);
             }
             if (client.BASE_WINDOW_ID != -1) {
                 Class383.method6514(client.BASE_WINDOW_ID, 1);
@@ -2130,21 +2116,21 @@ public class PacketDecoder {
         } else if (context.currentPacket == ServerProt.ADD_IGNORE) {
             int key = buffer.readUnsignedByte();
             boolean editDisplayName = (key & 0x1) == 1;
-            String username = buffer.readString();
-            String displayName = buffer.readString();
+            String display = buffer.readString();
+            String lastDisplay = buffer.readString();
             if (!editDisplayName) {
-                Ignore ignore = new Ignore();
-                client.IGNORED_PLAYERS[client.IGNORE_LIST_COUNT] = ignore;
-                ignore.unfilteredUsername = username;
-                ignore.displayName = displayName;
-                ignore.temporary = (key & 0x2) == 2;
+                IgnoredPlayer ignoredPlayer = new IgnoredPlayer();
+                client.IGNORED_PLAYERS[client.IGNORE_LIST_COUNT] = ignoredPlayer;
+                ignoredPlayer.displayName = display;
+                ignoredPlayer.lastDisplayName = lastDisplay;
+                ignoredPlayer.temporary = (key & 0x2) == 2;
                 ++client.IGNORE_LIST_COUNT;
             } else {
                 for (int i_8 = 0; i_8 < client.IGNORE_LIST_COUNT; i_8++) {
-                    Ignore class10_44 = client.IGNORED_PLAYERS[i_8];
-                    if (displayName.equals(class10_44.unfilteredUsername)) {
-                        class10_44.unfilteredUsername = username;
-                        class10_44.displayName = displayName;
+                    IgnoredPlayer class10_44 = client.IGNORED_PLAYERS[i_8];
+                    if (lastDisplay.equals(class10_44.displayName)) {
+                        class10_44.displayName = display;
+                        class10_44.lastDisplayName = lastDisplay;
                         break;
                     }
                 }
@@ -2242,11 +2228,11 @@ public class PacketDecoder {
         } else if (context.currentPacket == ServerProt.UPDATE_IGNORE_LIST) {
             client.IGNORE_LIST_COUNT = buffer.readUnsignedByte();
             for (int key = 0; key < client.IGNORE_LIST_COUNT; key++) {
-                Ignore class10_89 = new Ignore();
-                client.IGNORED_PLAYERS[key] = class10_89;
-                class10_89.unfilteredUsername = buffer.readString();
-                class10_89.displayName = buffer.readString();
-                class10_89.temporary = false;
+                IgnoredPlayer ignored = new IgnoredPlayer();
+                client.IGNORED_PLAYERS[key] = ignored;
+                ignored.displayName = buffer.readString();
+                ignored.lastDisplayName = buffer.readString();
+                ignored.temporary = false;
             }
             client.anInt7386 = client.anInt7347;
             context.currentPacket = null;

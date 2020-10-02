@@ -51,6 +51,8 @@ public class MapRegion {
     float aFloat3173;
     ClipFlagMap[] clipMaps = new ClipFlagMap[4];
 
+    int skyboxId;
+
     public MapRegion(boolean bool_1) {
         aBool3171 = bool_1;
     }
@@ -135,7 +137,7 @@ public class MapRegion {
         return 100 - missingMapCount * 100 / anInt3190;
     }
 
-    void method4422() {
+    void loadMapSceneBackground() {
         setMapSizes(Class480.getMapSize(Class393.preferences.buildArea.method12615()));
         int i_2 = coordGrid.x;
         int i_3 = coordGrid.y;
@@ -266,10 +268,10 @@ public class MapRegion {
         return anIntArrayArray3186;
     }
 
-    void method4439(ByteBuf.Bit rsbitsbuffer_1) {
-        int forceRefresh = rsbitsbuffer_1.readUnsignedByteC();
+    void loadMapSceneDynamic(ByteBuf.Bit buffer) {
+        int forceRefresh = buffer.readUnsignedByteC();
         boolean bool_4 = (forceRefresh & 0x1) != 0;
-        int type = rsbitsbuffer_1.readUnsigned128Byte();
+        int type = buffer.readUnsigned128Byte();
         if (type == 1) {
             mapType = Class256.aClass256_3155;
         } else if (type == 2) {
@@ -279,32 +281,33 @@ public class MapRegion {
         } else if (type == 4) {
             mapType = Class256.aClass256_3161;
         }
-        int mapSize = rsbitsbuffer_1.readUnsignedByte128();
-        int regionY = rsbitsbuffer_1.readUnsignedShort128();
-        int regionX = rsbitsbuffer_1.readUnsignedShort();
+        int mapSize = buffer.readUnsignedByte128();
+        int regionY = buffer.readUnsignedShort128();
+        int regionX = buffer.readUnsignedShort();
+        skyboxId = buffer.readUnsignedShort();
         if (!aBool3171) {
             method4457();
         }
         setMapSizes(Class480.getMapSize(mapSize));
-        rsbitsbuffer_1.initBitAccess();
+        buffer.initBitAccess();
         for (int regionIdx = 0; regionIdx < 4; regionIdx++) {
             for (int rx = 0; rx < sizeX >> 3; rx++) {
                 for (int ry = 0; ry < sizeY >> 3; ry++) {
-                    int hasChunkFlags = rsbitsbuffer_1.readBits(1);
+                    int hasChunkFlags = buffer.readBits(1);
                     if (hasChunkFlags == 1) {
-                        chunkFlags[regionIdx][rx][ry] = rsbitsbuffer_1.readBits(26);
+                        chunkFlags[regionIdx][rx][ry] = buffer.readBits(26);
                     } else {
                         chunkFlags[regionIdx][rx][ry] = -1;
                     }
                 }
             }
         }
-        rsbitsbuffer_1.finishBitAccess();
-        int i_9 = (rsbitsbuffer_1.buffer.length - rsbitsbuffer_1.index) / 16;
+        buffer.finishBitAccess();
+        int i_9 = (buffer.buffer.length - buffer.index) / 16;
         xteas = new int[i_9][4];
         for (int i_10 = 0; i_10 < i_9; i_10++) {
             for (int i_11 = 0; i_11 < 4; i_11++) {
-                xteas[i_10][i_11] = rsbitsbuffer_1.readInt();
+                xteas[i_10][i_11] = buffer.readInt();
             }
         }
         regionIds = new int[i_9];
@@ -397,7 +400,7 @@ public class MapRegion {
         return sizeY;
     }
 
-    void method4452(ByteBuf.Bit rsbitsbuffer_1) {
+    void loadMapSceneNormal(ByteBuf.Bit rsbitsbuffer_1) {
         int i_2 = rsbitsbuffer_1.readUnsignedByte();
         int i_3 = rsbitsbuffer_1.readUnsignedShort();
         int i_4 = rsbitsbuffer_1.readUnsignedShort();
@@ -471,7 +474,7 @@ public class MapRegion {
 
     void method4457() {
         if (mapType != Class256.aClass256_3153 && aClass256_3164 != Class256.aClass256_3153) {
-            if (mapType == Class256.aClass256_3155 || mapType == Class256.aClass256_3157 || aClass256_3164 != mapType && (mapType == Class256.aClass256_3158 || aClass256_3164 == Class256.aClass256_3158)) {
+            if (mapType == Class256.aClass256_3155 || mapType == Class256.aClass256_3157 || aClass256_3164 != mapType && (mapType == Class256.LOAD_MAP_SCENE_NORMAL || aClass256_3164 == Class256.LOAD_MAP_SCENE_NORMAL)) {
                 client.NPC_UPDATE_INDEX = 0;
                 client.anInt7210 = 0;
                 client.NPC_MAP.method7749();
@@ -751,7 +754,7 @@ public class MapRegion {
                 if (bytes_3 != null) {
                     i_4 = (regionIds[i_2] >> 8) * 64 - coordGrid.x;
                     i_5 = (regionIds[i_2] & 0xff) * 64 - coordGrid.y;
-                    if (mapType.method4410()) {
+                    if (mapType.allowDynamicMapScene()) {
                         i_4 = 10;
                         i_5 = 10;
                     }
@@ -764,7 +767,7 @@ public class MapRegion {
                 if (bytes_3 != null) {
                     i_4 = (regionIds[i_2] >> 8) * 64 - coordGrid.x;
                     i_5 = (regionIds[i_2] & 0xff) * 64 - coordGrid.y;
-                    if (mapType.method4410()) {
+                    if (mapType.allowDynamicMapScene()) {
                         i_4 = 10;
                         i_5 = 10;
                     }
@@ -841,7 +844,7 @@ public class MapRegion {
                 aClass329_Sub1_3167.aBool3780 = Class393.preferences.lightDetail.method12786() == 1;
                 aClass329_Sub1_3167.aBool3820 = Class393.preferences.groundBlending.method12762() == 1;
                 aClass329_Sub1_3167.aBool3782 = Class393.preferences.textures.method12873() == 1;
-                if (!mapType.method4410()) {
+                if (!mapType.allowDynamicMapScene()) {
                     decodeUnderlayMasks(aClass329_Sub1_3167, mapDataBuffer);
                 } else {
                     method4464(aClass329_Sub1_3167, mapDataBuffer);
@@ -860,7 +863,7 @@ public class MapRegion {
                     highDetailWaterPlane.aBool3780 = Class393.preferences.lightDetail.method12786() == 1;
                     highDetailWaterPlane.aBool3820 = Class393.preferences.groundBlending.method12762() == 1;
                     highDetailWaterPlane.aBool3782 = Class393.preferences.textures.method12873() == 1;
-                    if (!mapType.method4410()) {
+                    if (!mapType.allowDynamicMapScene()) {
                         decodeUnderlayMasks(highDetailWaterPlane, hdWaterMapDataBuffer);
                         if (!aBool3171) {
                             Exception_Sub3.method15619(true);
@@ -879,7 +882,7 @@ public class MapRegion {
                     }
                 }
                 aClass329_Sub1_3167.initClipMap(Renderers.CURRENT_RENDERER, highDetailWater ? highDetailWaterPlane.tileHeights : null, clipMaps);
-                if (!mapType.method4410()) {
+                if (!mapType.allowDynamicMapScene()) {
                     if (!aBool3171) {
                         Exception_Sub3.method15619(true);
                     }
@@ -912,7 +915,7 @@ public class MapRegion {
                     if (!aBool3171) {
                         Exception_Sub3.method15619(true);
                     }
-                    if (!mapType.method4410()) {
+                    if (!mapType.allowDynamicMapScene()) {
                         method4465(highDetailWaterPlane, hdWaterLandscapeDataBuffer);
                     } else {
                         method4432(highDetailWaterPlane, hdWaterLandscapeDataBuffer);
@@ -982,11 +985,11 @@ public class MapRegion {
                 Class48_Sub2.method14571();
                 TCPPacket tcpmessage_22;
                 if (NamedFileReference.method867() == Class279.aClass279_3368 && client.GAME_CONNECTION_CONTEXT.getConnection() != null && client.GAME_STATE == 18) {
-                    tcpmessage_22 = Class271.createPacket(ClientProt.UNK_82, client.GAME_CONNECTION_CONTEXT.isaac);
+                    tcpmessage_22 = TCPPacket.createPacket(ClientProt.UNK_82, client.GAME_CONNECTION_CONTEXT.isaac);
                     tcpmessage_22.buffer.writeInt(1057001181);
                     client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_22);
                 }
-                if (!mapType.method4410()) {
+                if (!mapType.allowDynamicMapScene()) {
                     i_5 = (anInt3170 - (sizeX >> 4)) / 8;
                     i_6 = (anInt3170 + (sizeX >> 4)) / 8;
                     i_14 = (anInt3207 - (sizeY >> 4)) / 8;
@@ -1013,7 +1016,7 @@ public class MapRegion {
                 } else {
                     GameState.setGameState(13);
                     if (client.GAME_CONNECTION_CONTEXT.getConnection() != null) {
-                        tcpmessage_22 = Class271.createPacket(ClientProt.REGION_LOADED_CONFIRM, client.GAME_CONNECTION_CONTEXT.isaac);
+                        tcpmessage_22 = TCPPacket.createPacket(ClientProt.REGION_LOADED_CONFIRM, client.GAME_CONNECTION_CONTEXT.isaac);
                         client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_22);
                     }
                 }
@@ -1090,7 +1093,7 @@ public class MapRegion {
                                 if (i_12 == regionIds[i_13] && bytes_2[i_13] != null) {
                                     ByteBuf rsbytebuffer_14 = new ByteBuf(bytes_2[i_13]);
                                     class329_sub1_1.method5841(rsbytebuffer_14, i_4, x * 8, y * 8, plane, realX, realY, rotation, clipMaps);
-                                    class329_sub1_1.method12460(Renderers.CURRENT_RENDERER, rsbytebuffer_14, i_4, x * 8, y * 8, plane, realX, realY, rotation);
+                                    class329_sub1_1.decodeDynamicMap(Renderers.CURRENT_RENDERER, rsbytebuffer_14, i_4, x * 8, y * 8, plane, realX, realY, rotation, skyboxId);
                                     break;
                                 }
                             }
@@ -1287,16 +1290,16 @@ public class MapRegion {
         method4458(sizeX >> 4, sizeY >> 4, 18, false);
     }
 
-    public void method4499(Class335 class335_1) {
+    public void loadMapScene(Class335 class335_1) {
         mapType = class335_1.aClass256_3915;
-        if (mapType == Class256.aClass256_3154) {
-            method4422();
-        } else if (mapType == Class256.aClass256_3158) {
-            method4452(class335_1.buffer);
+        if (mapType == Class256.LOAD_MAP_SCENE_BACKGROUND) {
+            loadMapSceneBackground();
+        } else if (mapType == Class256.LOAD_MAP_SCENE_NORMAL) {
+            loadMapSceneNormal(class335_1.buffer);
         } else if (mapType == Class256.aClass256_3153) {
             method4498();
-        } else if (mapType.method4410()) {
-            method4439(class335_1.buffer);
+        } else if (mapType.allowDynamicMapScene()) {
+            loadMapSceneDynamic(class335_1.buffer);
         }
     }
 

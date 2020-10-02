@@ -1,5 +1,8 @@
 package com.jagex;
 
+import com.jagex.clans.ClanChannel;
+import com.jagex.clans.ClanChannelMember;
+
 public class LightDetailPreference extends Preference {
 
     public LightDetailPreference(int i_1, GamePreferences class282_sub54_2) {
@@ -13,11 +16,11 @@ public class LightDetailPreference extends Preference {
     public static void method12790(boolean mainCC, int playerIndex) {
         ClanChannel cc = mainCC ? Class113.CLAN_CHANNEL : AsyncConnection.LISTENED_CLAN_CHANNEL;
         if (cc != null && playerIndex >= 0 && playerIndex < cc.numPlayers) {
-            ClanChannelPlayer ccPlayer = cc.players[playerIndex];
+            ClanChannelMember ccPlayer = cc.players[playerIndex];
             if (ccPlayer.rank == -1) {
                 String ccPlayerName = ccPlayer.name;
-                BufferedConnectionContext connection = Preference_Sub20.getConnectionContext();
-                TCPPacket packet = Class271.createPacket(ClientProt.CLANCHANNEL_KICKUSER, connection.isaac);
+                BufferedConnectionContext connection = BufferedConnectionContext.getConnectionContext();
+                TCPPacket packet = TCPPacket.createPacket(ClientProt.CLANCHANNEL_KICKUSER, connection.isaac);
                 packet.buffer.writeByte(3 + ChatLine.getLength(ccPlayerName));
                 packet.buffer.writeByte(mainCC ? 1 : 0);
                 packet.buffer.writeShort(playerIndex);

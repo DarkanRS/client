@@ -1,8 +1,8 @@
 package com.jagex;
 
 import com.Loader;
+import com.jagex.clans.settings.ChangeClanSetting;
 import jaclib.ping.Ping;
-import net.arikia.dev.drpc.DiscordRichPresence;
 
 import java.awt.*;
 import java.io.IOException;
@@ -145,10 +145,9 @@ public class client extends Engine {
 	public static int anInt7434;
 	public static Friend[] FRIENDS;
 	public static int IGNORE_LIST_COUNT;
-	public static Ignore[] IGNORED_PLAYERS;
+	public static IgnoredPlayer[] IGNORED_PLAYERS;
 	public static byte aByte7458;
 	public static Interface25 anInterface25_7446;
-	public static DiscordRichPresence presence;
 	public static LRUCache aClass229_5901 = new LRUCache(4);
 	static boolean aBool7147;
 	static String aString7281;
@@ -538,19 +537,11 @@ public class client extends Engine {
 		FRIENDS = new Friend[200];
 		aClass457_7350 = new EntityList();
 		IGNORE_LIST_COUNT = 0;
-		IGNORED_PLAYERS = new Ignore[100];
+		IGNORED_PLAYERS = new IgnoredPlayer[100];
 		aCalendar7278 = Calendar.getInstance(TimeZone.getTimeZone("GMT"));
 		aByte7458 = -6;
 		anInterface25_7446 = new Class17();
 		anIntArray7461 = new int[4];
-	}
-
-	public static DiscordRichPresence getPresence() {
-		try {
-			return presence;
-		} catch (Exception e) {
-			return null;
-		}
 	}
 
 	static void method11619() {
@@ -918,7 +909,7 @@ public class client extends Engine {
 				return null;
 			} else {
 				for (int i_3 = 0; i_3 < i_2; i_3++) {
-					icomponentdefinitions_0 = CutsceneAction_Sub23.method14682(CutsceneAction.method1605(icomponentdefinitions_0.idHash), icomponentdefinitions_0);
+					icomponentdefinitions_0 = IComponentDefinitions.getParentLayer(CutsceneAction.method1605(icomponentdefinitions_0.idHash), icomponentdefinitions_0);
 					if (icomponentdefinitions_0 == null) {
 						return InputSubscriberType.aClass118_2763;
 					}
@@ -1211,7 +1202,7 @@ public class client extends Engine {
 								int i_52;
 								if (iCompDef.contentType == IComponentDefinitions.CONTENT_TYPE_1337 || iCompDef.contentType == IComponentDefinitions.CONTENT_TYPE_1403) {
 									GAME_SCREEN_INTERFACE = iCompDef;
-									Class535 class535_59 = IndexLoaders.MAP_REGION_DECODER.method4435().method4038();
+									Atmosphere class535_59 = IndexLoaders.MAP_REGION_DECODER.method4435().method4038();
 									if (class535_59.method11451() != null && !IndexLoaders.MAP_REGION_LOADER_THREAD.method6051()) {
 										class535_59.method11451().method4217(Renderers.CURRENT_RENDERER, iCompDef.height, Class393.preferences.skyBoxes.method12728());
 									}
@@ -2190,7 +2181,7 @@ public class client extends Engine {
 				str_2 = str_2 + Class4.MY_PLAYER_PLANE + "," + Class4.MY_PLAYER_PLANE + "," + Class4.MY_PLAYER_PLANE + "," + " ";
 			}
 
-			str_2 = str_2 + Class393.preferences.currentToolkit.getValue() + " " + Class393.preferences.antiAliasingDefault.method12641() + " " + Class158.windowedMode() + " " + Class349.BASE_WINDOW_WIDTH + "," + BASE_WINDOW_HEIGHT * -969250379 + " ";
+			str_2 = str_2 + Class393.preferences.currentToolkit.getValue() + " " + Class393.preferences.antiAliasingDefault.method12641() + " " + Class158.windowedMode() + " " + ChangeClanSetting.BASE_WINDOW_WIDTH + "," + BASE_WINDOW_HEIGHT * -969250379 + " ";
 			str_2 = str_2 + Class393.preferences.lightDetail.method12786() + " ";
 			str_2 = str_2 + Class393.preferences.sceneryShadows.method12624() + " ";
 			str_2 = str_2 + Class393.preferences.water.getValue() + " ";
@@ -2548,7 +2539,7 @@ public class client extends Engine {
 	@Override
 	void method4714() {
 		if (NEEDS_VARC_SAVE) {
-			Node_Sub11.saveVarcsToFile();
+			ClanSetting.saveVarcsToFile();
 		}
 
 		Class28.method772();
@@ -2657,7 +2648,7 @@ public class client extends Engine {
 	@Override
 	void method4690() {
 		if (NEEDS_VARC_SAVE) {
-			Node_Sub11.saveVarcsToFile();
+			ClanSetting.saveVarcsToFile();
 		}
 
 		Class28.method772();
@@ -2788,7 +2779,7 @@ public class client extends Engine {
 			}
 
 			if (IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX >> 9 < 14 || IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX >> 9 >= IndexLoaders.MAP_REGION_DECODER.getSizeX() - 14 || Class246.CAM_MOVE_ABSOLUTEY >> 9 < 14 || Class246.CAM_MOVE_ABSOLUTEY >> 9 >= IndexLoaders.MAP_REGION_DECODER.getSizeY() - 14) {
-				IndexLoaders.MAP_REGION_DECODER.method4499(new Class335(Class256.aClass256_3154, null));
+				IndexLoaders.MAP_REGION_DECODER.loadMapScene(new Class335(Class256.LOAD_MAP_SCENE_BACKGROUND, null));
 			}
 		}
 
@@ -2821,7 +2812,7 @@ public class client extends Engine {
 
 											VarnDefinitions.pingWorlds();
 											if (NEEDS_VARC_SAVE && aLong7401 < Utils.time() - 60000L) {
-												Node_Sub11.saveVarcsToFile();
+												ClanSetting.saveVarcsToFile();
 											}
 
 											for (EntityNode_Sub4 class275_sub4_17 = (EntityNode_Sub4) aClass457_7350.method7659(); class275_sub4_17 != null; class275_sub4_17 = (EntityNode_Sub4) aClass457_7350.method7650()) {
@@ -2844,7 +2835,7 @@ public class client extends Engine {
 												} else if (LOBBY_CONNECTION_CONTEXT != null) {
 													++LOBBY_CONNECTION_CONTEXT.anInt2290;
 													if (LOBBY_CONNECTION_CONTEXT.anInt2290 > 50) {
-														TCPPacket tcpmessage_18 = Class271.createPacket(ClientProt.PING, LOBBY_CONNECTION_CONTEXT.isaac);
+														TCPPacket tcpmessage_18 = TCPPacket.createPacket(ClientProt.PING, LOBBY_CONNECTION_CONTEXT.isaac);
 														LOBBY_CONNECTION_CONTEXT.queuePacket(tcpmessage_18);
 													}
 

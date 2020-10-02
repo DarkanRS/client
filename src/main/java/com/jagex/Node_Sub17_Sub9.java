@@ -1,5 +1,7 @@
 package com.jagex;
 
+import com.jagex.clans.settings.ClanSettings;
+
 public class Node_Sub17_Sub9 extends Node_Sub17 {
 
     Class348 this$0;

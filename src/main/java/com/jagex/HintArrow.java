@@ -15,7 +15,4 @@ public class HintArrow {
     int height;
     int idk;
 
-    public static ChatLine method3032(int i_0) {
-        return i_0 >= 0 && i_0 < 100 ? ChatLine.CHAT_LINES[i_0] : null;
-    }
 }

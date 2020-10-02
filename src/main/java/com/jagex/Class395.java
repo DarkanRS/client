@@ -4,7 +4,7 @@ import java.util.zip.Inflater;
 
 public class Class395 {
 
-    static int b12FullIndex;
+    public static int b12FullIndex;
     Inflater anInflater4787;
 
     public static void method6772(int i_0, int i_1, int i_2, int i_3, int i_4) {

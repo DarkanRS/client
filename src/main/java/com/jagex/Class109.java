@@ -2,12 +2,6 @@ package com.jagex;
 
 public abstract class Class109 {
 
-    public static void redrawComponent(IComponentDefinitions icomponentdefinitions_0) {
-        if (icomponentdefinitions_0.anInt1450 == client.anInt7408) {
-            client.aBoolArray7443[icomponentdefinitions_0.anInt1449] = true;
-        }
-    }
-
     static void method1859(Index index_0, int i_1, int i_2, int i_3, boolean bool_4) {
         Class148.anInt1730 = 1;
         CutsceneEntity.aClass317_746 = index_0;

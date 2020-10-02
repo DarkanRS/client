@@ -1,5 +1,7 @@
 package com.jagex;
 
+import com.jagex.clans.settings.impl.EditMemberSetting;
+
 public class IndexLoaders {
 
     public static MapRegion MAP_REGION_DECODER;
@@ -161,7 +163,7 @@ public class IndexLoaders {
             }
 
             Class487.aClass378_5752.method6403(client.anInterface35_7206);
-            Node_Sub11_Sub3.method15476();
+            EditMemberSetting.method15476();
             GameState.setGameState(15);
         }
 
@@ -353,8 +355,8 @@ public class IndexLoaders {
 
             bool_10 = true;
 
-            for (i_2 = 0; i_2 < CustomCursorsPreference.INTERFACES[QuickchatFiller.ENTITY_DEFAULTS.loginWindow].components.length; i_2++) {
-                IComponentDefinitions icomponentdefinitions_8 = CustomCursorsPreference.INTERFACES[QuickchatFiller.ENTITY_DEFAULTS.loginWindow].components[i_2];
+            for (i_2 = 0; i_2 < Interface.INTERFACES[QuickchatFiller.ENTITY_DEFAULTS.loginWindow].components.length; i_2++) {
+                IComponentDefinitions icomponentdefinitions_8 = Interface.INTERFACES[QuickchatFiller.ENTITY_DEFAULTS.loginWindow].components[i_2];
                 if (icomponentdefinitions_8.type == ComponentType.SPRITE && icomponentdefinitions_8.spriteId != -1 && !SPRITES_INDEX.load(icomponentdefinitions_8.spriteId, 0)) {
                     bool_10 = false;
                 }
@@ -402,7 +404,7 @@ public class IndexLoaders {
 
             UID192.method7373(Class393.preferences.screenSize.method12687(), -1, -1, false);
             Class487.aClass378_5752.method6403(client.anInterface35_7206);
-            Node_Sub11_Sub3.method15476();
+            EditMemberSetting.method15476();
             Class188.method3139(Renderers.CURRENT_RENDERER, SPRITES_INDEX);
             Class122.method2109(Class182.aNativeSpriteArray2261);
         }

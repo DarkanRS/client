@@ -1,5 +1,7 @@
 package com.jagex;
 
+import com.jagex.clans.settings.ChangeClanSetting;
+
 public class IComponentDefinitions {
 
     public static int anInt1283;
@@ -220,13 +222,38 @@ public class IComponentDefinitions {
 
     public static IComponentDefinitions getDefs(int hash) {
         int interfaceId = hash >> 16;
-        if (CustomCursorsPreference.INTERFACES[interfaceId] == null || CustomCursorsPreference.INTERFACES[interfaceId].getComponent(hash) == null) {
+        if (Interface.INTERFACES[interfaceId] == null || Interface.INTERFACES[interfaceId].getComponent(hash) == null) {
             boolean bool_3 = MovingAnimation.isInterfaceLoaded(interfaceId, null);
             if (!bool_3) {
                 return null;
             }
         }
-        return CustomCursorsPreference.INTERFACES[interfaceId].getComponent(hash);
+        return Interface.INTERFACES[interfaceId].getComponent(hash);
+    }
+
+    public static IComponentDefinitions getParentLayer(Interface interface_0, IComponentDefinitions icomponentdefinitions_1) {
+        if (icomponentdefinitions_1.parent != -1) {
+            return interface_0.getComponent(icomponentdefinitions_1.parent);
+        } else {
+            if (!interface_0.aBool999) {
+                int i_3 = icomponentdefinitions_1.idHash >>> 16;
+                HashTableIterator class451_4 = new HashTableIterator(client.OPEN_INTERFACES);
+
+                for (SubInterface class282_sub44_5 = (SubInterface) class451_4.first(); class282_sub44_5 != null; class282_sub44_5 = (SubInterface) class451_4.next()) {
+                    if (i_3 == class282_sub44_5.interfaceId) {
+                        return getDefs((int) class282_sub44_5.pointer);
+                    }
+                }
+            }
+
+            return null;
+        }
+    }
+
+    public static void redrawComponent(IComponentDefinitions icomponentdefinitions_0) {
+        if (icomponentdefinitions_0.anInt1450 == client.anInt7408) {
+            client.aBoolArray7443[icomponentdefinitions_0.anInt1449] = true;
+        }
     }
 
     void readValues(ByteBuf rsbytebuffer_1) {
@@ -484,7 +511,7 @@ public class IComponentDefinitions {
         }
     }
 
-    public void method1987() {
+    public void clearScripts() {
         onLoadScript = null;
         anObjectArray1386 = null;
         anObjectArray1319 = null;
@@ -1037,7 +1064,7 @@ public class IComponentDefinitions {
 	                    int i_25;
 	                    if (inter.type == ComponentType.CONTAINER) {
 	                        if (inter.contentType == CONTENT_TYPE_1407 && Renderers.CURRENT_RENDERER.method8471()) {
-	                            Renderers.CURRENT_RENDERER.method8525(Class349.BASE_WINDOW_WIDTH, client.BASE_WINDOW_HEIGHT * -969250379);
+	                            Renderers.CURRENT_RENDERER.method8525(ChangeClanSetting.BASE_WINDOW_WIDTH, client.BASE_WINDOW_HEIGHT * -969250379);
 	                        }
 	                        render(arr_0, inter.idHash, i_17, i_18, i_19, i_20, drawX - inter.scrollX, drawY - inter.scrollY, i_13, bool_9);
 	                        if (inter.itemSlots != null) {
@@ -1089,7 +1116,7 @@ public class IComponentDefinitions {
 	                                FontRenderer fontrenderer_43 = inter.method1988(Class487.aClass378_5752, client.anInterface35_7206);
 	                                if (fontrenderer_43 == null) {
 	                                    if (aBool1399) {
-	                                        Class109.redrawComponent(inter);
+	                                        redrawComponent(inter);
 	                                    }
 	                                } else {
 	                                    i_22 = inter.color;
@@ -1184,7 +1211,7 @@ public class IComponentDefinitions {
 	                                                Renderers.CURRENT_RENDERER.r(i_2, i_3, i_4, i_5);
 	                                            }
 	                                        } else if (aBool1399) {
-	                                            Class109.redrawComponent(inter);
+	                                            redrawComponent(inter);
 	                                        }
 	                                    }
 	                                } else if (inter.type == ComponentType.MODEL) {
@@ -1204,7 +1231,7 @@ public class IComponentDefinitions {
 	                                            if (meshRasterizer != null) {
 	                                                i_23 = -meshRasterizer.YA() >> 1;
 	                                            } else {
-	                                                Class109.redrawComponent(inter);
+	                                                redrawComponent(inter);
 	                                            }
 	                                        }
 	                                    } else {
@@ -1215,7 +1242,7 @@ public class IComponentDefinitions {
 	                                                if (player_37 != null && (i_24 == client.myPlayerIndex || Class272.stringToInt(player_37.displayName) == inter.anInt1339)) {
 	                                                    meshRasterizer = inter.method2002(Renderers.CURRENT_RENDERER, i_22, IndexLoaders.RENDER_ANIM_LOADER, IndexLoaders.IDENTIKIT_LOADER, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, inter.anim, player_37.model);
 	                                                    if (meshRasterizer == null && aBool1399) {
-	                                                        Class109.redrawComponent(inter);
+	                                                        redrawComponent(inter);
 	                                                    }
 	                                                }
 	                                            }
@@ -1235,7 +1262,7 @@ public class IComponentDefinitions {
 	                                        } else {
 	                                            meshRasterizer = inter.method2002(Renderers.CURRENT_RENDERER, i_22, IndexLoaders.RENDER_ANIM_LOADER, IndexLoaders.IDENTIKIT_LOADER, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, inter.anim != null && inter.anim.hasDefs() ? inter.anim : null, VertexNormal.MY_PLAYER.model);
 	                                            if (meshRasterizer == null && aBool1399) {
-	                                                Class109.redrawComponent(inter);
+	                                                redrawComponent(inter);
 	                                            }
 	                                        }
 	                                    }
@@ -1267,12 +1294,12 @@ public class IComponentDefinitions {
 	                                        i_30 += inter.spriteScale;
 	                                        if (inter.usesOrthogonal) {
 	                                            if (inter.hasOrigin) {
-	                                                matrix44_38.method6532(i_39, i_27, i_24, i_25, i_29, i_30, Class349.BASE_WINDOW_WIDTH, (client.BASE_WINDOW_HEIGHT), inter.spriteScale);
+	                                                matrix44_38.method6532(i_39, i_27, i_24, i_25, i_29, i_30, ChangeClanSetting.BASE_WINDOW_WIDTH, (client.BASE_WINDOW_HEIGHT), inter.spriteScale);
 	                                            } else {
-	                                                matrix44_38.method6532(i_39, i_27, i_24, i_25, i_29, i_30, Class349.BASE_WINDOW_WIDTH, (client.BASE_WINDOW_HEIGHT), (inter.spriteScale << 2));
+	                                                matrix44_38.method6532(i_39, i_27, i_24, i_25, i_29, i_30, ChangeClanSetting.BASE_WINDOW_WIDTH, (client.BASE_WINDOW_HEIGHT), (inter.spriteScale << 2));
 	                                            }
 	                                        } else {
-	                                            matrix44_38.method6531(i_39, i_27, i_24, i_25, i_29, i_30, Class349.BASE_WINDOW_WIDTH, (client.BASE_WINDOW_HEIGHT));
+	                                            matrix44_38.method6531(i_39, i_27, i_24, i_25, i_29, i_30, ChangeClanSetting.BASE_WINDOW_WIDTH, (client.BASE_WINDOW_HEIGHT));
 	                                        }
 	                                        Renderers.CURRENT_RENDERER.method8424(matrix44_38);
 	                                        Renderers.CURRENT_RENDERER.ba(2, 0);

@@ -1,6 +1,7 @@
 package com.jagex;
 
 public class Interface {
+    public static Interface[] INTERFACES;
     public IComponentDefinitions[] components;
     public boolean aBool999;
     IComponentDefinitions[] iComponentDefinitions;
@@ -19,15 +20,15 @@ public class Interface {
                     if (icomponentdefinitions_3.itemSlots == icomponentdefinitions_3.slotChildren) {
                         icomponentdefinitions_3.itemSlots = new IComponentDefinitions[icomponentdefinitions_3.slotChildren.length];
                         icomponentdefinitions_3.itemSlots[icomponentdefinitions_3.itemSlots.length - 1] = defs;
-                        Class503.method8359(icomponentdefinitions_3.slotChildren, 0, icomponentdefinitions_3.itemSlots, 0, defs.slotId);
-                        Class503.method8359(icomponentdefinitions_3.slotChildren, defs.slotId + 1, icomponentdefinitions_3.itemSlots, defs.slotId, icomponentdefinitions_3.slotChildren.length - defs.slotId - 1);
+                        Class503.setSize(icomponentdefinitions_3.slotChildren, 0, icomponentdefinitions_3.itemSlots, 0, defs.slotId);
+                        Class503.setSize(icomponentdefinitions_3.slotChildren, defs.slotId + 1, icomponentdefinitions_3.itemSlots, defs.slotId, icomponentdefinitions_3.slotChildren.length - defs.slotId - 1);
                     } else {
                         i_4 = 0;
                         IComponentDefinitions[] arr_5;
                         for (arr_5 = icomponentdefinitions_3.itemSlots; i_4 < arr_5.length && arr_5[i_4] != defs; i_4++) {
                         }
                         if (i_4 < arr_5.length) {
-                            Class503.method8359(arr_5, i_4 + 1, arr_5, i_4, arr_5.length - i_4 - 1);
+                            Class503.setSize(arr_5, i_4 + 1, arr_5, i_4, arr_5.length - i_4 - 1);
                             arr_5[icomponentdefinitions_3.itemSlots.length - 1] = defs;
                         }
                     }
@@ -37,7 +38,7 @@ public class Interface {
                 for (i_4 = 0; i_4 < arr_6.length && arr_6[i_4] != defs; i_4++) {
                 }
                 if (i_4 < arr_6.length) {
-                    Class503.method8359(arr_6, i_4 + 1, arr_6, i_4, arr_6.length - i_4 - 1);
+                    Class503.setSize(arr_6, i_4 + 1, arr_6, i_4, arr_6.length - i_4 - 1);
                     arr_6[arr_6.length - 1] = defs;
                 }
             }
@@ -53,8 +54,8 @@ public class Interface {
                     if (icomponentdefinitions_3.slotChildren == icomponentdefinitions_3.itemSlots) {
                         icomponentdefinitions_3.itemSlots = new IComponentDefinitions[icomponentdefinitions_3.slotChildren.length];
                         icomponentdefinitions_3.itemSlots[0] = defs;
-                        Class503.method8359(icomponentdefinitions_3.slotChildren, 0, icomponentdefinitions_3.itemSlots, 1, defs.slotId);
-                        Class503.method8359(icomponentdefinitions_3.slotChildren, defs.slotId + 1, icomponentdefinitions_3.itemSlots, defs.slotId + 1, icomponentdefinitions_3.slotChildren.length - defs.slotId - 1);
+                        Class503.setSize(icomponentdefinitions_3.slotChildren, 0, icomponentdefinitions_3.itemSlots, 1, defs.slotId);
+                        Class503.setSize(icomponentdefinitions_3.slotChildren, defs.slotId + 1, icomponentdefinitions_3.itemSlots, defs.slotId + 1, icomponentdefinitions_3.slotChildren.length - defs.slotId - 1);
                     } else {
                         i_4 = 0;
 
@@ -63,7 +64,7 @@ public class Interface {
                         }
 
                         if (i_4 < arr_5.length) {
-                            Class503.method8359(arr_5, 0, arr_5, 1, i_4);
+                            Class503.setSize(arr_5, 0, arr_5, 1, i_4);
                             arr_5[0] = defs;
                         }
                     }
@@ -75,7 +76,7 @@ public class Interface {
                 }
 
                 if (i_4 < arr_6.length) {
-                    Class503.method8359(arr_6, 0, arr_6, 1, i_4);
+                    Class503.setSize(arr_6, 0, arr_6, 1, i_4);
                     arr_6[0] = defs;
                 }
             }
@@ -196,7 +197,7 @@ public class Interface {
             Class260.aBool3220 = false;
             Class260.aNode_Sub15_Sub2_3231 = null;
         } else if (Class393.preferences.musicVolume.method12714() != 0 && Class260.anInt3223 != -1 && !SongReference.method1966()) {
-            TCPPacket tcpmessage_17 = Class271.createPacket(ClientProt.SOUND_EFFECT_MUSIC_ENDED, client.GAME_CONNECTION_CONTEXT.isaac);
+            TCPPacket tcpmessage_17 = TCPPacket.createPacket(ClientProt.SOUND_EFFECT_MUSIC_ENDED, client.GAME_CONNECTION_CONTEXT.isaac);
             tcpmessage_17.buffer.writeInt(Class260.anInt3223);
             client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_17);
             Class260.anInt3223 = -1;

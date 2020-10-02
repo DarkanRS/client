@@ -26,9 +26,9 @@ public class MaterialProp15 extends MaterialProperty {
             int i_5 = i_4 >> 12;
             int i_6 = i_5 + 1;
             for (int i_7 = 0; i_7 < Class316.anInt3670; i_7++) {
-                Node_Sub11_Sub2.anInt10003 = Integer.MAX_VALUE;
+                RemoveMemberSetting.anInt10003 = Integer.MAX_VALUE;
                 Ground.anInt4777 = Integer.MAX_VALUE;
-                Ignore.anInt118 = Integer.MAX_VALUE;
+                IgnoredPlayer.anInt118 = Integer.MAX_VALUE;
                 Class368.anInt4266 = Integer.MAX_VALUE;
                 int i_8 = Class316.anIntArray3672[i_7] * anInt9961 + 2048;
                 int i_9 = i_8 >> 12;
@@ -67,19 +67,19 @@ public class MaterialProp15 extends MaterialProperty {
                                 i_17 = (int) (Math.sqrt((i_15 * i_15 + i_16 * i_16) / 1.6777216E7F) * 4096.0D);
                         }
                         if (i_17 < Class368.anInt4266) {
-                            Node_Sub11_Sub2.anInt10003 = Ground.anInt4777;
-                            Ground.anInt4777 = Ignore.anInt118;
-                            Ignore.anInt118 = Class368.anInt4266;
+                            RemoveMemberSetting.anInt10003 = Ground.anInt4777;
+                            Ground.anInt4777 = IgnoredPlayer.anInt118;
+                            IgnoredPlayer.anInt118 = Class368.anInt4266;
                             Class368.anInt4266 = i_17;
-                        } else if (i_17 < Ignore.anInt118) {
-                            Node_Sub11_Sub2.anInt10003 = Ground.anInt4777;
-                            Ground.anInt4777 = Ignore.anInt118;
-                            Ignore.anInt118 = i_17;
+                        } else if (i_17 < IgnoredPlayer.anInt118) {
+                            RemoveMemberSetting.anInt10003 = Ground.anInt4777;
+                            Ground.anInt4777 = IgnoredPlayer.anInt118;
+                            IgnoredPlayer.anInt118 = i_17;
                         } else if (i_17 < Ground.anInt4777) {
-                            Node_Sub11_Sub2.anInt10003 = Ground.anInt4777;
+                            RemoveMemberSetting.anInt10003 = Ground.anInt4777;
                             Ground.anInt4777 = i_17;
-                        } else if (i_17 < Node_Sub11_Sub2.anInt10003) {
-                            Node_Sub11_Sub2.anInt10003 = i_17;
+                        } else if (i_17 < RemoveMemberSetting.anInt10003) {
+                            RemoveMemberSetting.anInt10003 = i_17;
                         }
                     }
                 }
@@ -88,16 +88,16 @@ public class MaterialProp15 extends MaterialProperty {
                         ints_3[i_7] = Class368.anInt4266;
                         break;
                     case 1:
-                        ints_3[i_7] = Ignore.anInt118;
+                        ints_3[i_7] = IgnoredPlayer.anInt118;
                         break;
                     case 2:
-                        ints_3[i_7] = Ignore.anInt118 - Class368.anInt4266;
+                        ints_3[i_7] = IgnoredPlayer.anInt118 - Class368.anInt4266;
                         break;
                     case 3:
                         ints_3[i_7] = Ground.anInt4777;
                         break;
                     case 4:
-                        ints_3[i_7] = Node_Sub11_Sub2.anInt10003;
+                        ints_3[i_7] = RemoveMemberSetting.anInt10003;
                 }
             }
         }

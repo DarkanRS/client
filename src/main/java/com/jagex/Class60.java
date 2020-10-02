@@ -42,7 +42,7 @@ public class Class60 {
             client.anInt7346 = -1;
             client.aBool7344 = false;
             if (icomponentdefinitions_1 != null) {
-                Class109.redrawComponent(icomponentdefinitions_1);
+                IComponentDefinitions.redrawComponent(icomponentdefinitions_1);
             }
         }
     }

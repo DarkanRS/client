@@ -69,16 +69,16 @@ public class ProjectileCutsceneAction extends CutsceneAction {
             String string_2 = Class383.method6515(string_0);
             if (string_2 != null) {
                 for (int i_3 = 0; i_3 < client.IGNORE_LIST_COUNT; i_3++) {
-                    Ignore class10_4 = client.IGNORED_PLAYERS[i_3];
-                    String string_5 = class10_4.unfilteredUsername;
+                    IgnoredPlayer class10_4 = client.IGNORED_PLAYERS[i_3];
+                    String string_5 = class10_4.displayName;
                     String string_6 = Class383.method6515(string_5);
                     if (Class159.method2734(string_0, string_2, string_5, string_6, (byte) -110)) {
                         --client.IGNORE_LIST_COUNT;
                         if (client.IGNORE_LIST_COUNT - i_3 >= 0)
                             System.arraycopy(client.IGNORED_PLAYERS, i_3 + 1, client.IGNORED_PLAYERS, i_3, client.IGNORE_LIST_COUNT - i_3);
                         client.anInt7386 = client.anInt7347;
-                        BufferedConnectionContext class184_9 = Preference_Sub20.getConnectionContext();
-                        TCPPacket tcpmessage_8 = Class271.createPacket(ClientProt.REMOVE_IGNORE, class184_9.isaac);
+                        BufferedConnectionContext class184_9 = BufferedConnectionContext.getConnectionContext();
+                        TCPPacket tcpmessage_8 = TCPPacket.createPacket(ClientProt.REMOVE_IGNORE, class184_9.isaac);
                         tcpmessage_8.buffer.writeByte(ChatLine.getLength(string_0));
                         tcpmessage_8.buffer.writeString(string_0);
                         class184_9.queuePacket(tcpmessage_8);

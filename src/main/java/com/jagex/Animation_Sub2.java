@@ -1,5 +1,7 @@
 package com.jagex;
 
+import com.jagex.clans.settings.ClanSettings;
+
 public class Animation_Sub2 extends Animation {
 
     GraphNode_Sub1 aTransform_Sub1_7890;

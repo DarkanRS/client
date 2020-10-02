@@ -18,7 +18,7 @@ public abstract class Class434 {
         TCPPacket tcpmessage_1;
         int i_2;
         if (client.maximumHeldKeys > 0) {
-            tcpmessage_1 = Class271.createPacket(ClientProt.KEY_PRESS, client.GAME_CONNECTION_CONTEXT.isaac);
+            tcpmessage_1 = TCPPacket.createPacket(ClientProt.KEY_PRESS, client.GAME_CONNECTION_CONTEXT.isaac);
             tcpmessage_1.buffer.writeShort(client.maximumHeldKeys * 4);
 
             for (i_2 = 0; i_2 < client.maximumHeldKeys; i_2++) {
@@ -43,7 +43,7 @@ public abstract class Class434 {
         if (client.aBool7371 && Class236.anInt2912 <= 0) {
             Class236.anInt2912 = 20;
             client.aBool7371 = false;
-            tcpmessage_1 = Class271.createPacket(ClientProt.MOVE_CAMERA, client.GAME_CONNECTION_CONTEXT.isaac);
+            tcpmessage_1 = TCPPacket.createPacket(ClientProt.MOVE_CAMERA, client.GAME_CONNECTION_CONTEXT.isaac);
             tcpmessage_1.buffer.writeShortLE128((int) client.camAngleX >> 3);
             tcpmessage_1.buffer.writeShort128((int) client.camAngleY >> 3);
             client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_1);
@@ -51,13 +51,13 @@ public abstract class Class434 {
 
         if (Class236.aBool2909 != IFSubObjectPosition.appletHasFocus) {
             Class236.aBool2909 = IFSubObjectPosition.appletHasFocus;
-            tcpmessage_1 = Class271.createPacket(ClientProt.CLIENT_FOCUS, client.GAME_CONNECTION_CONTEXT.isaac);
+            tcpmessage_1 = TCPPacket.createPacket(ClientProt.CLIENT_FOCUS, client.GAME_CONNECTION_CONTEXT.isaac);
             tcpmessage_1.buffer.writeByte(IFSubObjectPosition.appletHasFocus ? 1 : 0);
             client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_1);
         }
 
         if (!client.aBool7175) {
-            tcpmessage_1 = Class271.createPacket(ClientProt.SEND_PREFERENCES, client.GAME_CONNECTION_CONTEXT.isaac);
+            tcpmessage_1 = TCPPacket.createPacket(ClientProt.SEND_PREFERENCES, client.GAME_CONNECTION_CONTEXT.isaac);
             tcpmessage_1.buffer.writeByte(0);
             i_2 = tcpmessage_1.buffer.index;
             ByteBuf rsbytebuffer_6 = Class393.preferences.encode();

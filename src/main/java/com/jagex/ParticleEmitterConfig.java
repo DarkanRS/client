@@ -39,7 +39,7 @@ public class ParticleEmitterConfig {
     }
 
     public ParticleProducerDefinition method1485() {
-        return Node_Sub11_Sub1.getParticleProducerDefs(type);
+        return RankSetting.getParticleProducerDefs(type);
     }
 
     ParticleEmitterConfig method1488(int i_1, int i_2, int i_3) {

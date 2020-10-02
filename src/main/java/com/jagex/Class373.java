@@ -1,5 +1,7 @@
 package com.jagex;
 
+import com.jagex.clans.settings.ChangeClanSetting;
+
 import java.awt.*;
 import java.util.Queue;
 
@@ -28,7 +30,7 @@ public class Class373 {
                     }
                     if (point_2 != null && Class351.gameCanvas.isShowing() && IFSubObjectPosition.appletHasFocus) {
                         class282_sub53_sub1_3.method14732(point_2);
-                        if (!class282_sub53_sub1_3.method14731() && class282_sub53_sub1_3.getX() < Class349.BASE_WINDOW_WIDTH && class282_sub53_sub1_3.getY() < Engine.BASE_WINDOW_HEIGHT * -969250379 && class282_sub53_sub1_3.getX() >= 0 && class282_sub53_sub1_3.getY() >= 0) {
+                        if (!class282_sub53_sub1_3.method14731() && class282_sub53_sub1_3.getX() < ChangeClanSetting.BASE_WINDOW_WIDTH && class282_sub53_sub1_3.getY() < Engine.BASE_WINDOW_HEIGHT * -969250379 && class282_sub53_sub1_3.getX() >= 0 && class282_sub53_sub1_3.getY() >= 0) {
                             int i_4 = class282_sub53_sub1_3.getClickType();
                             if (class282_sub53_sub1_3.getClickType() == -1) {
                                 Class236.aClass534_Sub1_2913.method11410(class282_sub53_sub1_3);

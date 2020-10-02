@@ -2,7 +2,7 @@ package com.jagex;
 
 import com.jagex.clans.ClanChannel;
 
-public abstract class ChangeClanSetting extends Node {
+public abstract class ClanSetting extends Node {
 
     public static void saveVarcsToFile() {
         Class442 class442_1 = null;
@@ -32,6 +32,6 @@ public abstract class ChangeClanSetting extends Node {
 
     public abstract void readSettings(ByteBuf buffer);
 
-    public abstract void applySettings(ClanChannel channel);
+    public abstract void apply(ClanChannel channel);
 
 }

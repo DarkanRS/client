@@ -1,5 +1,7 @@
 package com.jagex;
 
+import com.jagex.clans.settings.ChangeClanSetting;
+
 import java.util.Calendar;
 
 public class Static {
@@ -184,7 +186,7 @@ public class Static {
             if (npcdefinitions_11 != null) {
                 class282_sub48_8.anInt8079 = npcdefinitions_11.size + i_1 << 9;
                 class282_sub48_8.anInt8077 = i_2 + npcdefinitions_11.size << 9;
-                class282_sub48_8.soundEffectId = Node_Sub11_Sub1.method15433(npc_5);
+                class282_sub48_8.soundEffectId = RankSetting.method15433(npc_5);
                 class282_sub48_8.aBool8098 = npcdefinitions_11.aBool4872;
                 class282_sub48_8.anInt8105 = npcdefinitions_11.specialByte << 9;
                 class282_sub48_8.anInt8089 = npcdefinitions_11.anInt4909;
@@ -400,8 +402,8 @@ public class Static {
 	        }
 	        i_4 += 10;
 	        int i_8 = i_0 - i_4 / 2;
-	        if (i_8 + i_4 > Class349.BASE_WINDOW_WIDTH) {
-	            i_8 = Class349.BASE_WINDOW_WIDTH - i_4;
+	        if (i_8 + i_4 > ChangeClanSetting.BASE_WINDOW_WIDTH) {
+	            i_8 = ChangeClanSetting.BASE_WINDOW_WIDTH - i_4;
 	        }
 	        if (i_8 < 0) {
 	            i_8 = 0;

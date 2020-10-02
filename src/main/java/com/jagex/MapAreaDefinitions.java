@@ -45,102 +45,108 @@ public class MapAreaDefinitions {
 
     static void iComponentOnNPC(NPCEntity npc_0, boolean bool_1) {
         if (Class20.anInt169 < 412) {
-            NPCDefinitions npcdefinitions_3 = npc_0.definitions;
+            NPCDefinitions npcDefinitions = npc_0.definitions;
             String string_4 = npc_0.modifiedName;
-            if (npcdefinitions_3.transformTo != null) {
-                npcdefinitions_3 = npcdefinitions_3.getMultiNPC(Class158_Sub1.PLAYER_VAR_PROVIDER);
-                if (npcdefinitions_3 == null) {
+            if (npcDefinitions.transformTo != null) {
+                npcDefinitions = npcDefinitions.getMultiNPC(Class158_Sub1.PLAYER_VAR_PROVIDER);
+                if (npcDefinitions == null) {
                     return;
                 }
-                string_4 = npcdefinitions_3.name;
+                string_4 = npcDefinitions.name;
             }
-            if (npcdefinitions_3.visible) {
+            if (npcDefinitions.visible) {
                 if (npc_0.anInt10582 != 0) {
                     String string_5 = client.CURRENT_GAME == Game.stellarDawn ? LocalizedText.RATING_.translate(Class223.CURRENT_LANGUAGE) : LocalizedText.LEVEL_.translate(Class223.CURRENT_LANGUAGE);
                     string_4 = string_4 + ItemIndexLoader.method7169(npc_0.anInt10582, VertexNormal.MY_PLAYER.combatLevel) + " (" + string_5 + npc_0.anInt10582 + ")";
                 }
                 if (client.aBool7344 && !bool_1) {
                     ParamDefinitions attributedefault_10 = CutsceneAction_Sub12.USE_INTERFACE_ID != -1 ? IndexLoaders.PARAM_LOADER.getParam(CutsceneAction_Sub12.USE_INTERFACE_ID) : null;
-                    if ((Class506.USE_OPTIONS_FLAGS & 0x2) != 0 && (attributedefault_10 == null || npcdefinitions_3.method6876(CutsceneAction_Sub12.USE_INTERFACE_ID, attributedefault_10.defaultInt) != attributedefault_10.defaultInt)) {
+                    if ((Class506.USE_OPTIONS_FLAGS & 0x2) != 0 && (attributedefault_10 == null || npcDefinitions.method6876(CutsceneAction_Sub12.USE_INTERFACE_ID, attributedefault_10.defaultInt) != attributedefault_10.defaultInt)) {
                         PlayerModel.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + Utils.rgbToColHexShortcut(16776960) + string_4, Defaults8Loader.anInt5932, 8, -1, npc_0.index, 0, 0, true, false, npc_0.index, false);
                     }
                 }
                 if (!bool_1) {
-                    String[] arr_11 = npcdefinitions_3.options;
+                    String[] options;
+                    if(client.PLAYER_RIGHTS >= 2) {
+                        options = new String[npcDefinitions.options.length + 1];
+                        System.arraycopy(npcDefinitions.options, 0, options, 0, npcDefinitions.options.length);
+                        options[options.length-1] = "Bind-To";
+                    } else
+                        options = npcDefinitions.options;
                     if (client.aBool7264) {
-                        arr_11 = Class362.method6277(arr_11);
+                        options = Class362.method6277(options);
                     }
-                    if (arr_11 != null) {
-                        int i_6;
+                    if (options != null) {
+                        int index;
                         short s_7;
-                        for (i_6 = arr_11.length - 1; i_6 >= 0; --i_6) {
-                            if (arr_11[i_6] != null && (npcdefinitions_3.aByte4916 == 0 || !arr_11[i_6].equalsIgnoreCase(LocalizedText.ATTACK.translate(Class223.CURRENT_LANGUAGE)) && !arr_11[i_6].equalsIgnoreCase(LocalizedText.EXAMINE.translate(Class223.CURRENT_LANGUAGE)))) {
+                        for (index = options.length - 1; index >= 0; --index) {
+                            if (options[index] != null && (npcDefinitions.aByte4916 == 0 || !options[index].equalsIgnoreCase(LocalizedText.ATTACK.translate(Class223.CURRENT_LANGUAGE)) && !options[index].equalsIgnoreCase(LocalizedText.EXAMINE.translate(Class223.CURRENT_LANGUAGE)))) {
                                 s_7 = 0;
                                 int i_8 = client.anInt7342;
-                                if (i_6 == 0) {
+                                if (index == 0) {
                                     s_7 = 9;
                                 }
-                                if (i_6 == 1) {
+                                if (index == 1) {
                                     s_7 = 10;
                                 }
-                                if (i_6 == 2) {
+                                if (index == 2) {
                                     s_7 = 11;
                                 }
-                                if (i_6 == 3) {
+                                if (index == 3) {
                                     s_7 = 12;
                                 }
-                                if (i_6 == 4) {
+                                if (index == 4) {
                                     s_7 = 13;
                                 }
-                                if (i_6 == 5) {
+                                if (index == 5) {
                                     s_7 = 1003;
                                 }
-                                if (i_6 == npcdefinitions_3.anInt4875) {
-                                    i_8 = npcdefinitions_3.anInt4873;
+                                if (index == npcDefinitions.anInt4875) {
+                                    i_8 = npcDefinitions.anInt4873;
                                 }
-                                if (i_6 == npcdefinitions_3.anInt4854) {
-                                    i_8 = npcdefinitions_3.anInt4861;
+                                if (index == npcDefinitions.anInt4854) {
+                                    i_8 = npcDefinitions.anInt4861;
                                 }
-                                PlayerModel.method4032(arr_11[i_6], Utils.rgbToColHexShortcut(16776960) + string_4, arr_11[i_6].equalsIgnoreCase(LocalizedText.ATTACK.translate(Class223.CURRENT_LANGUAGE)) ? npcdefinitions_3.anInt4877 : i_8, s_7, -1, npc_0.index, 0, 0, true, false, npc_0.index, false);
+                                PlayerModel.method4032(options[index], Utils.rgbToColHexShortcut(16776960) + string_4, options[index].equalsIgnoreCase(LocalizedText.ATTACK.translate(Class223.CURRENT_LANGUAGE)) ? npcDefinitions.anInt4877 : i_8, s_7, -1, npc_0.index, 0, 0, true, false, npc_0.index, false);
                             }
                         }
-                        if (npcdefinitions_3.aByte4916 == 1) {
-                            for (i_6 = 0; i_6 < arr_11.length; i_6++) {
-                                if (arr_11[i_6] != null && (arr_11[i_6].equalsIgnoreCase(LocalizedText.ATTACK.translate(Class223.CURRENT_LANGUAGE)) || arr_11[i_6].equalsIgnoreCase(LocalizedText.EXAMINE.translate(Class223.CURRENT_LANGUAGE)))) {
+                        if (npcDefinitions.aByte4916 == 1) {
+                            for (index = 0; index < options.length; index++) {
+                                if (options[index] != null && (options[index].equalsIgnoreCase(LocalizedText.ATTACK.translate(Class223.CURRENT_LANGUAGE)) || options[index].equalsIgnoreCase(LocalizedText.EXAMINE.translate(Class223.CURRENT_LANGUAGE)))) {
                                     s_7 = 0;
                                     if (npc_0.anInt10582 > VertexNormal.MY_PLAYER.combatLevel) {
                                         s_7 = 2000;
                                     }
                                     short s_12 = 0;
                                     int i_9 = client.anInt7342;
-                                    if (i_6 == 0) {
+                                    if (index == 0) {
                                         s_12 = 9;
                                     }
-                                    if (i_6 == 1) {
+                                    if (index == 1) {
                                         s_12 = 10;
                                     }
-                                    if (i_6 == 2) {
+                                    if (index == 2) {
                                         s_12 = 11;
                                     }
-                                    if (i_6 == 3) {
+                                    if (index == 3) {
                                         s_12 = 12;
                                     }
-                                    if (i_6 == 4) {
+                                    if (index == 4) {
                                         s_12 = 13;
                                     }
-                                    if (i_6 == 5) {
+                                    if (index == 5) {
                                         s_12 = 1003;
                                     }
                                     if (s_12 != 0) {
                                         s_12 += s_7;
                                     }
-                                    if (i_6 == npcdefinitions_3.anInt4875) {
-                                        i_9 = npcdefinitions_3.anInt4873;
+                                    if (index == npcDefinitions.anInt4875) {
+                                        i_9 = npcDefinitions.anInt4873;
                                     }
-                                    if (i_6 == npcdefinitions_3.anInt4854) {
-                                        i_9 = npcdefinitions_3.anInt4861;
+                                    if (index == npcDefinitions.anInt4854) {
+                                        i_9 = npcDefinitions.anInt4861;
                                     }
-                                    PlayerModel.method4032(arr_11[i_6], Utils.rgbToColHexShortcut(16776960) + string_4, arr_11[i_6].equalsIgnoreCase(LocalizedText.ATTACK.translate(Class223.CURRENT_LANGUAGE)) ? npcdefinitions_3.anInt4877 : i_9, s_12, -1, npc_0.index, 0, 0, true, false, npc_0.index, false);
+                                    PlayerModel.method4032(options[index], Utils.rgbToColHexShortcut(16776960) + string_4, options[index].equalsIgnoreCase(LocalizedText.ATTACK.translate(Class223.CURRENT_LANGUAGE)) ? npcDefinitions.anInt4877 : i_9, s_12, -1, npc_0.index, 0, 0, true, false, npc_0.index, false);
                                 }
                             }
                         }

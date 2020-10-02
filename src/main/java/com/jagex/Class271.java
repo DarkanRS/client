@@ -68,24 +68,4 @@ public class Class271 {
         Class109.method1859(index_0, i_1, i_2, i_3, bool_4);
     }
 
-    public static TCPPacket createPacket(ClientProt outgoingpacket_0, Isaac isaaccipher_1) {
-        TCPPacket tcpmessage_3 = Class158_Sub2.method14356();
-        tcpmessage_3.packet = outgoingpacket_0;
-        tcpmessage_3.anInt7678 = outgoingpacket_0.size;
-        if (tcpmessage_3.anInt7678 == -1) {
-            tcpmessage_3.buffer = new ByteBuf.Bit(260);
-        } else if (tcpmessage_3.anInt7678 == -2) {
-            tcpmessage_3.buffer = new ByteBuf.Bit(10000);
-        } else if (tcpmessage_3.anInt7678 <= 18) {
-            tcpmessage_3.buffer = new ByteBuf.Bit(20);
-        } else if (tcpmessage_3.anInt7678 <= 98) {
-            tcpmessage_3.buffer = new ByteBuf.Bit(100);
-        } else {
-            tcpmessage_3.buffer = new ByteBuf.Bit(260);
-        }
-        tcpmessage_3.buffer.setIsaacCipher(isaaccipher_1);
-        tcpmessage_3.buffer.writeIsaacByte(tcpmessage_3.packet.id);
-        tcpmessage_3.anInt7680 = 0;
-        return tcpmessage_3;
-    }
 }

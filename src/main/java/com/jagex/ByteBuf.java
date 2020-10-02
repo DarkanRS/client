@@ -49,6 +49,14 @@ public class ByteBuf extends Node {
         index = 0;
     }
 
+    public static int writeHuffmanString(ByteBuf buffer, String message) {
+        int i_3 = buffer.index;
+        byte[] bytes_4 = LinkedNodeList.method7885(message);
+        buffer.method13076(bytes_4.length);
+        buffer.index += Class113.HUFFMAN.method1971(bytes_4, 0, bytes_4.length, buffer.buffer, buffer.index);
+        return buffer.index - i_3;
+    }
+
     public void method13059() {
         if (buffer != null) {
             Class351.method6197(buffer);

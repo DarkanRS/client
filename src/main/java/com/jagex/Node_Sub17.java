@@ -1,5 +1,7 @@
 package com.jagex;
 
+import com.jagex.clans.settings.ClanSettings;
+
 public abstract class Node_Sub17 extends Node {
 
     abstract void method12249(ByteBuf var1);

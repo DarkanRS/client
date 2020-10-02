@@ -53,11 +53,11 @@ public class Class280 implements Interface25 {
     public static boolean isIgnored(String string_0) {
         if (string_0 != null) {
             for (int i_2 = 0; i_2 < client.IGNORE_LIST_COUNT; i_2++) {
-                Ignore class10_3 = client.IGNORED_PLAYERS[i_2];
-                if (string_0.equalsIgnoreCase(class10_3.unfilteredUsername)) {
+                IgnoredPlayer class10_3 = client.IGNORED_PLAYERS[i_2];
+                if (string_0.equalsIgnoreCase(class10_3.displayName)) {
                     return true;
                 }
-                if (string_0.equalsIgnoreCase(class10_3.displayName)) {
+                if (string_0.equalsIgnoreCase(class10_3.lastDisplayName)) {
                     return true;
                 }
             }

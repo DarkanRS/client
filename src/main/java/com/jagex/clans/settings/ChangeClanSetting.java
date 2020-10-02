@@ -2,45 +2,47 @@ package com.jagex.clans.settings;
 
 import com.jagex.*;
 import com.jagex.clans.ClanChannel;
+import com.jagex.clans.settings.impl.EditMemberSetting;
+import com.jagex.clans.settings.impl.AddMemberSetting;
 
-public class ClanSetting {
+public class ChangeClanSetting {
 
     public static int BASE_WINDOW_WIDTH;
 
-    long clanHash;
+    long pointer;
 
     long updateNumber = -1L;
 
-    NodeCollection aClass482_4076 = new NodeCollection();
+    NodeCollection settings = new NodeCollection();
 
-    public ClanSetting(ByteBuf buffer) {
+    public ChangeClanSetting(ByteBuf buffer) {
         decodeSettings(buffer);
     }
 
     void decodeSettings(ByteBuf buffer) {
-        clanHash = buffer.readLong();
+        pointer = buffer.readLong();
         updateNumber = buffer.readLong();
         for (int i = buffer.readUnsignedByte(); i != 0; i = buffer.readUnsignedByte()) {
-            ChangeClanSetting setting = null;
+            ClanSetting setting = null;
             if (i == 1)
-                setting = new AddMemberSetting(this);
+                setting = new AddMemberSetting();
             else if(i == 2)
-                setting = new Node_Sub11_Sub3(this);
+                setting = new EditMemberSetting();
             else if (i == 3)
-                setting = new Node_Sub11_Sub2(this);
+                setting = new RemoveMemberSetting();
             else if (i == 4)
-                setting = new Node_Sub11_Sub1(this);
+                setting = new RankSetting();
             setting.readSettings(buffer);
-            aClass482_4076.append(setting);
+            settings.append(setting);
         }
     }
 
-    public void applySettings(ClanChannel class282_sub4_1) {
-        if (class282_sub4_1.pointer == clanHash && class282_sub4_1.nextUpdateNumber == updateNumber) {
-            for (ChangeClanSetting class282_sub11_3 = (ChangeClanSetting) aClass482_4076.head(); class282_sub11_3 != null; class282_sub11_3 = (ChangeClanSetting) aClass482_4076.next()) {
-                class282_sub11_3.applySettings(class282_sub4_1);
+    public void applySettings(ClanChannel channel) {
+        if (channel.pointer == pointer && channel.nextUpdateNumber == updateNumber) {
+            for (ClanSetting setting = (ClanSetting) settings.head(); setting != null; setting = (ClanSetting) settings.next()) {
+                setting.apply(channel);
             }
-            ++class282_sub4_1.nextUpdateNumber;
+            ++channel.nextUpdateNumber;
         } else {
             throw new RuntimeException("");
         }

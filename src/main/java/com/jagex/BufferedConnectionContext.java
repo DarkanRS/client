@@ -33,6 +33,10 @@ public class BufferedConnectionContext {
         thread_1.start();
     }
 
+    public static BufferedConnectionContext getConnectionContext() {
+        return GameState.inLobby(client.GAME_STATE) ? client.LOBBY_CONNECTION_CONTEXT : client.GAME_CONNECTION_CONTEXT;
+    }
+
     public void flush() throws IOException {
         if (connection != null && readDataSize > 0) {
             writeBuffer.index = 0;

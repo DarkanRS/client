@@ -68,8 +68,8 @@ public abstract class Connection {
 
     public static void method3345(String string_0) {
         if (!string_0.isEmpty()) {
-            BufferedConnectionContext class184_2 = Preference_Sub20.getConnectionContext();
-            TCPPacket tcpmessage_3 = Class271.createPacket(ClientProt.FC_JOIN, class184_2.isaac);
+            BufferedConnectionContext class184_2 = BufferedConnectionContext.getConnectionContext();
+            TCPPacket tcpmessage_3 = TCPPacket.createPacket(ClientProt.FC_JOIN, class184_2.isaac);
             tcpmessage_3.buffer.writeByte(ChatLine.getLength(string_0));
             tcpmessage_3.buffer.writeString(string_0);
             class184_2.queuePacket(tcpmessage_3);

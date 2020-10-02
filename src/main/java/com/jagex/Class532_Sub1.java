@@ -1,5 +1,7 @@
 package com.jagex;
 
+import com.jagex.clans.settings.ChangeClanSetting;
+
 import java.awt.*;
 
 public class Class532_Sub1 extends Class532 {
@@ -41,17 +43,17 @@ public class Class532_Sub1 extends Class532 {
                     if (Class158.windowedMode() != 1) {
                         Class46.method935();
                     } else {
-                        Class349.BASE_WINDOW_WIDTH = client.GAME_WIDTH;
+                        ChangeClanSetting.BASE_WINDOW_WIDTH = client.GAME_WIDTH;
                         client.GAME_CANVAS_X = (SunIndexLoader.anInt434 - client.GAME_WIDTH) / 2;
                         client.BASE_WINDOW_HEIGHT = client.GAME_HEIGHT * -1929118563;
                         client.GAME_CANVAS_Y = 0;
                     }
-                    if (HDWaterTile.SERVER_ENVIRONMENT != ServerEnvironment.LIVE && Class349.BASE_WINDOW_WIDTH < 1024) {
+                    if (HDWaterTile.SERVER_ENVIRONMENT != ServerEnvironment.LIVE && ChangeClanSetting.BASE_WINDOW_WIDTH < 1024) {
                         int i_10000 = client.BASE_WINDOW_HEIGHT;
                     }
-                    Class351.gameCanvas.setSize(Class349.BASE_WINDOW_WIDTH, client.BASE_WINDOW_HEIGHT * -969250379);
+                    Class351.gameCanvas.setSize(ChangeClanSetting.BASE_WINDOW_WIDTH, client.BASE_WINDOW_HEIGHT * -969250379);
                     if (Renderers.CURRENT_RENDERER != null) {
-                        Renderers.CURRENT_RENDERER.method8414(Class351.gameCanvas, Class349.BASE_WINDOW_WIDTH, client.BASE_WINDOW_HEIGHT * -969250379);
+                        Renderers.CURRENT_RENDERER.method8414(Class351.gameCanvas, ChangeClanSetting.BASE_WINDOW_WIDTH, client.BASE_WINDOW_HEIGHT * -969250379);
                     }
                     if (container_2 == client.engineFrame) {
                         insets_3 = client.engineFrame.getInsets();

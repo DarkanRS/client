@@ -66,14 +66,6 @@ public class MapSpriteIndexLoader {
         }
     }
 
-    public static int method7189(ByteBuf rsbytebuffer_0, String string_1) {
-        int i_3 = rsbytebuffer_0.index;
-        byte[] bytes_4 = LinkedNodeList.method7885(string_1);
-        rsbytebuffer_0.method13076(bytes_4.length);
-        rsbytebuffer_0.index += Class113.HUFFMAN.method1971(bytes_4, 0, bytes_4.length, rsbytebuffer_0.buffer, rsbytebuffer_0.index);
-        return rsbytebuffer_0.index - i_3;
-    }
-
     public MapSpriteDefinitions method7172(int i_1) {
         LRUCache softcache_4 = aClass229_5117;
         MapSpriteDefinitions class418_3;

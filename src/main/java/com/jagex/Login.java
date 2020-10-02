@@ -1,5 +1,8 @@
 package com.jagex;
 
+import com.Loader;
+import com.jagex.clans.settings.ChangeClanSetting;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.Iterator;
@@ -193,7 +196,7 @@ public class Login {
                             }
                         }
                         rsbitsbuffer_22.writeByte(Class158.windowedMode());
-                        rsbitsbuffer_22.writeShort(Class349.BASE_WINDOW_WIDTH);
+                        rsbitsbuffer_22.writeShort(ChangeClanSetting.BASE_WINDOW_WIDTH);
                         rsbitsbuffer_22.writeShort(Engine.BASE_WINDOW_HEIGHT * -969250379);
                         rsbitsbuffer_22.writeByte(Class393.preferences.aPreference_Sub4_8223.method12641());
                         IdentiKitIndexLoader.method809(rsbitsbuffer_22);
@@ -406,6 +409,7 @@ public class Login {
                             if (!Class9.CURRENT_CONNECTION_CONTEXT.getConnection().available(VarNPCMap.anInt1965)) {
                                 return;
                             }
+                            Loader.INSTANCE.getManager().login();
                             Class9.CURRENT_CONNECTION_CONTEXT.getConnection().read(buffer.buffer, 0, VarNPCMap.anInt1965);
                             buffer.index = 0;
                             client.PLAYER_RIGHTS = buffer.readUnsignedByte();
@@ -516,9 +520,9 @@ public class Login {
                             System.arraycopy(Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer.buffer, Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer.index, rsbitsbuffer_21.buffer, 0, i_3);
                             Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer.index += i_3;
                             if (Class9.CURRENT_CONNECTION_CONTEXT.currentPacket == ServerProt.DYNAMIC_MAP_REGION) {
-                                IndexLoaders.MAP_REGION_DECODER.method4499(new Class335(Class256.aClass256_3155, rsbitsbuffer_21));
+                                IndexLoaders.MAP_REGION_DECODER.loadMapScene(new Class335(Class256.aClass256_3155, rsbitsbuffer_21));
                             } else {
-                                IndexLoaders.MAP_REGION_DECODER.method4499(new Class335(Class256.aClass256_3158, rsbitsbuffer_21));
+                                IndexLoaders.MAP_REGION_DECODER.loadMapScene(new Class335(Class256.LOAD_MAP_SCENE_NORMAL, rsbitsbuffer_21));
                             }
                             if (Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer.index != i_10) {
                                 throw new RuntimeException(Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer.index + " " + i_10);

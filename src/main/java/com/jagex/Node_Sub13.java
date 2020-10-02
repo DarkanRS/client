@@ -1,5 +1,7 @@
 package com.jagex;
 
+import com.jagex.clans.settings.ClanSettings;
+
 public class Node_Sub13 extends Node {
 
     public static ClanSettings GUEST_CLAN_SETTINGS;
