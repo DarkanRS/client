@@ -1,14 +1,15 @@
 package com.jagex;
 
-public class Node_Sub11_Sub1 extends Node_Sub11 {
+import com.jagex.clans.ClanChannel;
+import com.jagex.clans.settings.ChangeClanSetting;
+
+public class Node_Sub11_Sub1 extends ClanSetting {
 
     String aString10001;
     byte aByte9999;
     byte aByte10000;
-    Class349 this$0;
 
-    Node_Sub11_Sub1(Class349 class349_1) {
-        this$0 = class349_1;
+    public Node_Sub11_Sub1() {
     }
 
     static int method15433(NPCEntity npc_0) {
@@ -54,65 +55,22 @@ public class Node_Sub11_Sub1 extends Node_Sub11 {
     }
 
     @Override
-    void method12204(ClanChannel class282_sub4_1) {
-        class282_sub4_1.clanName = aString10001;
+    public void apply(ClanChannel channel) {
+        channel.clanName = aString10001;
         if (aString10001 != null) {
-            class282_sub4_1.guestsTalk = aByte9999;
-            class282_sub4_1.minRankToKick = aByte10000;
+            channel.guestsTalk = aByte9999;
+            channel.minRankToKick = aByte10000;
         }
 
     }
 
     @Override
-    void method12203(ByteBuf rsbytebuffer_1) {
-        aString10001 = rsbytebuffer_1.readNullString();
+    public void readSettings(ByteBuf buffer) {
+        aString10001 = buffer.readNullString();
         if (aString10001 != null) {
-            rsbytebuffer_1.readUnsignedByte();
-            aByte9999 = rsbytebuffer_1.readByte();
-            aByte10000 = rsbytebuffer_1.readByte();
-        }
-
-    }
-
-    @Override
-    void method12206(ByteBuf rsbytebuffer_1) {
-        aString10001 = rsbytebuffer_1.readNullString();
-        if (aString10001 != null) {
-            rsbytebuffer_1.readUnsignedByte();
-            aByte9999 = rsbytebuffer_1.readByte();
-            aByte10000 = rsbytebuffer_1.readByte();
-        }
-
-    }
-
-    @Override
-    void method12205(ClanChannel class282_sub4_1) {
-        class282_sub4_1.clanName = aString10001;
-        if (aString10001 != null) {
-            class282_sub4_1.guestsTalk = aByte9999;
-            class282_sub4_1.minRankToKick = aByte10000;
-        }
-
-    }
-
-    @Override
-    void method12208(ByteBuf rsbytebuffer_1) {
-        aString10001 = rsbytebuffer_1.readNullString();
-        if (aString10001 != null) {
-            rsbytebuffer_1.readUnsignedByte();
-            aByte9999 = rsbytebuffer_1.readByte();
-            aByte10000 = rsbytebuffer_1.readByte();
-        }
-
-    }
-
-    @Override
-    void method12207(ByteBuf rsbytebuffer_1) {
-        aString10001 = rsbytebuffer_1.readNullString();
-        if (aString10001 != null) {
-            rsbytebuffer_1.readUnsignedByte();
-            aByte9999 = rsbytebuffer_1.readByte();
-            aByte10000 = rsbytebuffer_1.readByte();
+            buffer.readUnsignedByte();
+            aByte9999 = buffer.readByte();
+            aByte10000 = buffer.readByte();
         }
 
     }

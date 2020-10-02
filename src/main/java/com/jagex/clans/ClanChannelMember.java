@@ -1,6 +1,6 @@
 package com.jagex;
 
-public class ClanChannelPlayer {
+public class ClanChannelMember {
 
     public String name;
 

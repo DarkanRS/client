@@ -10,7 +10,7 @@ public class ClanChannel extends Node {
 
     public int numPlayers;
     public String clanName;
-    public ClanChannelPlayer[] players;
+    public ClanChannelMember[] players;
     public byte minRankToKick;
     public byte guestsTalk;
     boolean namesAsString = true;
@@ -91,7 +91,7 @@ public class ClanChannel extends Node {
         if (numPlayers == 0) {
             players = null;
         } else {
-            Class503.method8359(players, i_1 + 1, players, i_1, numPlayers - i_1);
+            Class503.setSize(players, i_1 + 1, players, i_1, numPlayers - i_1);
         }
         sortedNameIndices = null;
     }
@@ -121,9 +121,9 @@ public class ClanChannel extends Node {
         guestsTalk = buffer.readByte();
         numPlayers = buffer.readUnsignedShort();
         if (numPlayers > 0) {
-            players = new ClanChannelPlayer[numPlayers];
+            players = new ClanChannelMember[numPlayers];
             for (int i_4 = 0; i_4 < numPlayers; i_4++) {
-                ClanChannelPlayer player = new ClanChannelPlayer();
+                ClanChannelMember player = new ClanChannelMember();
                 if (namesAsLong) {
                     buffer.readLong();
                 }
@@ -137,19 +137,20 @@ public class ClanChannel extends Node {
         }
     }
 
-    void method12105(ClanChannelPlayer class57_1) {
+    //addMemberNoCheck??
+    void addMember(ClanChannelMember member) {
         if (players == null || numPlayers >= players.length) {
-            method12112(numPlayers + 5);
+            setSize(numPlayers + 5);
         }
-        players[++numPlayers - 1] = class57_1;
+        players[++numPlayers - 1] = member;
         sortedNameIndices = null;
     }
 
-    void method12112(int i_1) {
+    void setSize(int size) {
         if (players != null) {
-            Class503.method8359(players, 0, players = new ClanChannelPlayer[i_1], 0, numPlayers);
+            Class503.setSize(players, 0, players = new ClanChannelMember[size], 0, numPlayers);
         } else {
-            players = new ClanChannelPlayer[i_1];
+            players = new ClanChannelMember[size];
         }
     }
 }

@@ -135,7 +135,7 @@ public class ClanSettings {
                 Class503.method8351(bannedUserHashes, i_1 + 1, bannedUserHashes, i_1, banCount - i_1);
             }
             if (bannedUserNames != null) {
-                Class503.method8359(bannedUserNames, i_1 + 1, bannedUserNames, i_1, banCount - i_1);
+                Class503.setSize(bannedUserNames, i_1 + 1, bannedUserNames, i_1, banCount - i_1);
             }
         }
     }
@@ -182,7 +182,7 @@ public class ClanSettings {
         }
         if (useNames) {
             if (bannedUserNames != null) {
-                Class503.method8359(bannedUserNames, 0, bannedUserNames = new String[i_1], 0, banCount);
+                Class503.setSize(bannedUserNames, 0, bannedUserNames = new String[i_1], 0, banCount);
             } else {
                 bannedUserNames = new String[i_1];
             }
@@ -357,7 +357,7 @@ public class ClanSettings {
         }
         if (useNames) {
             if (memberNames != null) {
-                Class503.method8359(memberNames, 0, memberNames = new String[i_1], 0, memberCount);
+                Class503.setSize(memberNames, 0, memberNames = new String[i_1], 0, memberCount);
             } else {
                 memberNames = new String[i_1];
             }
@@ -399,7 +399,7 @@ public class ClanSettings {
                     Class503.method8351(memberHashes, i_1 + 1, memberHashes, i_1, memberCount - i_1);
                 }
                 if (memberNames != null) {
-                    Class503.method8359(memberNames, i_1 + 1, memberNames, i_1, memberCount - i_1);
+                    Class503.setSize(memberNames, i_1 + 1, memberNames, i_1, memberCount - i_1);
                 }
                 if (currentOwner == i_1 || replacementOwner == i_1) {
                     updateOwners();
