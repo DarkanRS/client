@@ -40,7 +40,7 @@ public class IdentiKitIndexLoader implements IndexLoader {
         if (currOpen != null) {
             Class351.closeChildren(currOpen, currOpen.interfaceId != sub.interfaceId, bool_3);
         }
-        client.OPEN_INTERFACES.put(sub, parentId);
+        client.OPEN_INTERFACES.put(sub, (long) parentId);
         ClipFlagMap.method6007(sub.interfaceId, ints_2);
         IComponentDefinitions parentDef = IComponentDefinitions.getDefs(parentId);
         if (parentDef != null) {
