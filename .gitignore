@@ -1,2 +1,6 @@
 bin/
+.settings/
 .idea/
+target/
+.project
+*.iml
