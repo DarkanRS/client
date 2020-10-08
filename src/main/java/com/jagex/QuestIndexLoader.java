@@ -124,7 +124,7 @@ public class QuestIndexLoader {
 
     static void method4164(int i_0, int i_1) {
         if (Class20.anInt167 == 1) {
-            CutsceneAction_Sub4.method13789(Class46.aCacheableNode_Sub7_438, i_0, i_1);
+            CutsceneAction_Sub4.method13789(Class46.aCacheableNode_Sub7_438, i_0, i_1, -549787245);
         } else if (Class20.anInt167 == 2) {
             Static.method4653(i_0, i_1);
         }

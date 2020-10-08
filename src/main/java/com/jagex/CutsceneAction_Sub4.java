@@ -22,7 +22,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
         return i_0 == 59 || i_0 == 2 || i_0 == 8 || i_0 == 17 || i_0 == 15 || i_0 == 16 || i_0 == 58;
     }
 
-    static void method13789(CacheableNode_Sub7 class282_sub50_sub7_0, int i_1, int i_2) {
+    static void method13789(CacheableNode_Sub7 class282_sub50_sub7_0, int i_1, int i_2, int i_3) {
         if (class282_sub50_sub7_0 != null && Class20.aClass482_171.tail != class282_sub50_sub7_0) {
             int i_4 = class282_sub50_sub7_0.anInt9581;
             int i_5 = class282_sub50_sub7_0.anInt9582;
@@ -31,6 +31,12 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
             long long_8 = class282_sub50_sub7_0.aLong9584;
             if (clickType >= 2000) {
                 clickType -= 2000;
+            }
+
+            if (Class209_Sub1.shiftDown && i_3 == -549787245)
+            {
+                clickType = 1007;
+                i_7 = 8;
             }
 
             CoordGrid coordgrid_10 = IndexLoaders.MAP_REGION_DECODER.getBase();
