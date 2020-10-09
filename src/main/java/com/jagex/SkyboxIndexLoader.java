@@ -18,7 +18,7 @@ public class SkyboxIndexLoader {
     }
 
     public static Interface getInterface(int interfaceId, int[] ints_1, Interface interface_2, boolean bool_3) {
-        Interface interface_21 = interface_2;
+        Interface interfaceObj = interface_2;
         if (!Class388.INTERFACE_INDEX.loadArchive(interfaceId)) {
             return null;
         } else {
@@ -26,28 +26,48 @@ public class SkyboxIndexLoader {
             IComponentDefinitions[] arr_6;
             if (componentSize == 0) {
                 arr_6 = new IComponentDefinitions[0];
-            } else if (interface_21 == null) {
+            } else if (interfaceObj == null) {
                 arr_6 = new IComponentDefinitions[componentSize];
             } else {
-                arr_6 = interface_21.components;
+                arr_6 = interfaceObj.components;
             }
-            if (interface_21 == null) {
-                interface_21 = new Interface(bool_3, arr_6);
+            if (interfaceObj == null) {
+                interfaceObj = new Interface(bool_3, arr_6);
             } else {
-                interface_21.components = arr_6;
-                interface_21.aBool999 = bool_3;
+                interfaceObj.components = arr_6;
+                interfaceObj.aBool999 = bool_3;
             }
+
             for (int i = 0; i < componentSize; i++) {
-                if (interface_21.components[i] == null) {
+                if (interfaceObj.components[i] == null) {
                     byte[] bytes_8 = Class388.INTERFACE_INDEX.getFile(interfaceId, i, ints_1);
                     if (bytes_8 != null) {
-                        IComponentDefinitions component = interface_21.components[i] = new IComponentDefinitions();
+                        IComponentDefinitions component = interfaceObj.components[i] = new IComponentDefinitions();
                         component.idHash = i + (interfaceId << 16);
                         component.readValues(new ByteBuf(bytes_8));
+
+                        //Game Window Interface
+                        if(component.idHash == 48889904) {
+                            component.basePositionY = 0;
+                            component.baseHeight = 0;
+                        }
+
+                        //Lobby interface Hashes
+                        if(component.idHash == 59375616 || component.idHash == 35913932 || component.idHash == 59768835 || component.idHash == 38600709) {
+                            component.basePositionY = 0;
+                            component.baseHeight = 0;
+                        }
+
+                        //Banner at top hashes
+                        if(component.idHash == 59375617 || component.idHash == 48890095 || component.idHash == 35913730) {
+                            component.baseHeight = 0;
+                        }
+
                     }
                 }
             }
-            return interface_21;
+
+            return interfaceObj;
         }
     }
 
