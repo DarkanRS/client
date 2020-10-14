@@ -185,7 +185,7 @@ public class FriendStatus {
                             class469_15 = new Class469(Class20.aCacheableNode_Sub15_163.aClass477_9770);
                             for (class282_sub50_sub7_8 = (CacheableNode_Sub7) class469_15.method7790(); class282_sub50_sub7_8 != null; class282_sub50_sub7_8 = (CacheableNode_Sub7) class469_15.next()) {
                                 if (i_5 == i_6) {
-                                    CutsceneAction_Sub4.method13789(class282_sub50_sub7_8, i_3, i_4);
+                                    CutsceneAction_Sub4.method13789(class282_sub50_sub7_8, i_3, i_4, 951380502);
                                     break;
                                 }
                                 ++i_6;
@@ -213,7 +213,7 @@ public class FriendStatus {
                                 NodeIterator nodeiterator_7 = new NodeIterator(Class20.aClass482_171);
                                 for (class282_sub50_sub7_8 = (CacheableNode_Sub7) nodeiterator_7.method7683(); class282_sub50_sub7_8 != null; class282_sub50_sub7_8 = (CacheableNode_Sub7) nodeiterator_7.next()) {
                                     if (i_6 == i_5) {
-                                        CutsceneAction_Sub4.method13789(class282_sub50_sub7_8, i_3, i_4);
+                                        CutsceneAction_Sub4.method13789(class282_sub50_sub7_8, i_3, i_4, 951380502);
                                         break;
                                     }
                                     ++i_6;
@@ -242,7 +242,7 @@ public class FriendStatus {
                                 class469_15 = new Class469(Class20.aClass477_182);
                                 for (CacheableNode_Sub15 class282_sub50_sub15_17 = (CacheableNode_Sub15) class469_15.method7790(); class282_sub50_sub15_17 != null; class282_sub50_sub15_17 = (CacheableNode_Sub15) class469_15.next()) {
                                     if (i_5 == i_6) {
-                                        CutsceneAction_Sub4.method13789((CacheableNode_Sub7) class282_sub50_sub15_17.aClass477_9770.aCacheableNode_5629.aCacheableNode_8119, i_3, i_4);
+                                        CutsceneAction_Sub4.method13789((CacheableNode_Sub7) class282_sub50_sub15_17.aClass477_9770.aCacheableNode_5629.aCacheableNode_8119, i_3, i_4, 1026140504);
                                         Class316.method5594();
                                         break;
                                     }
@@ -318,7 +318,7 @@ public class FriendStatus {
                     }
                 } else if (bool_18) {
                     if (Class20.aCacheableNode_Sub7_168 != null) {
-                        CutsceneAction_Sub4.method13789(Class20.aCacheableNode_Sub7_168, i_3, i_4);
+                        CutsceneAction_Sub4.method13789(Class20.aCacheableNode_Sub7_168, i_3, i_4, -619125547);
                     }
                 } else if (bool_16) {
                     if (CutsceneAction_Sub23.aCacheableNode_Sub7_9445 == null) {
@@ -331,7 +331,7 @@ public class FriendStatus {
                             Class20.anInt167 = 1;
                             Class46.aCacheableNode_Sub7_438 = CutsceneAction_Sub23.aCacheableNode_Sub7_9445;
                         } else {
-                            CutsceneAction_Sub4.method13789(CutsceneAction_Sub23.aCacheableNode_Sub7_9445, i_3, i_4);
+                            CutsceneAction_Sub4.method13789(CutsceneAction_Sub23.aCacheableNode_Sub7_9445, i_3, i_4, 1860097874);
                         }
                     }
                 }
