@@ -28,7 +28,7 @@ public class Loader extends Applet implements AppletStub {
     public static final boolean LOBBY_ENABLED = true;
     public static final boolean DISABLE_XTEA_CRASH = true;
     public static boolean LOCAL = true;
-    public static String IP_ADDRESS = LOCAL ? "127.0.0.1" : "70.35.204.165";
+    public static String IP_ADDRESS = LOCAL ? "127.0.0.1" : "axios.trentonkress.com";
     public static Properties clientParams = new Properties();
 
     public static Loader INSTANCE;
@@ -42,7 +42,7 @@ public class Loader extends Applet implements AppletStub {
     public static void main(String[] arg0) {
         if(arg0.length > 0) {
             LOCAL = Boolean.parseBoolean(arg0[0]);
-            IP_ADDRESS = LOCAL ? "127.0.0.1" : "70.35.204.165";
+            IP_ADDRESS = LOCAL ? "127.0.0.1" : "axios.trentonkress.com";
             loadParams();
         }
         new Loader().doFrame();
@@ -59,7 +59,7 @@ public class Loader extends Applet implements AppletStub {
 	}
 
     public static void loadParams() {
-        clientParams.clear();
+    	clientParams.clear();
         clientParams.put("boxborder", "false");
         clientParams.put("boxbgcolor", "black");
         clientParams.put("separate_jvm", "true");

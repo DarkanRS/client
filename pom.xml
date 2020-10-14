@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.cryogen</groupId>
+    <groupId>com.darkan</groupId>
     <artifactId>client</artifactId>
-    <version>2.5</version>
+    <version>1.0</version>
 
     <build>
         <plugins>
@@ -42,18 +42,4 @@
             </plugin>
         </plugins>
     </build>
-
-    <dependencies>
-        <dependency>
-            <groupId>com.discord</groupId>
-            <artifactId>rpc</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.client</groupId>
-            <artifactId>clientlibs</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-    </dependencies>
-    
 </project>
