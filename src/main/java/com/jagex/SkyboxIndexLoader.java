@@ -17,6 +17,58 @@ public class SkyboxIndexLoader {
         Class407.aCalendar4846.setTime(new Date(long_0));
     }
 
+    private static IComponentDefinitions changeLogin(IComponentDefinitions component, Interface interfaceObj, int interfaceId, int i) {
+
+        if (interfaceId == 596) {
+            //reduce size of background
+            if (i == 3) {
+                component.baseHeight -= 75;
+                component.basePositionY -= 10;
+
+            }
+
+            /*
+             * Move all these down some
+             * 35 is login title 38 is login text 39 is login box 40 is pass text 41 is password box 44 is login button
+             * */
+            if (i == 35 || (i >= 38 && i <= 41) || i == 44) {
+                component.basePositionY += 40;
+            }
+
+            //Remove excess children of a conatiner with filler components
+            if(component.parent == 39059460) {
+                if(component.type != ComponentType.CONTAINER && component.type != ComponentType.TEXT) {
+                    if(i >= 36) {
+                        component.hidden = true;
+                    }
+                }
+            }
+
+            //remove Facebook icons and a background sprite
+            if (component.spriteId == 6041 || i == 1) {
+                component.hidden = true;
+            }
+
+            //Move Create new account container down
+            if(component.idHash == 39059501) {
+                component.basePositionY +=45;
+            }
+
+            //Change the text
+            if (component.text.equalsIgnoreCase("<u=C8C8C8>Recover Your Password")) { //TODO: Change the link?
+                component.text = "Create new account";
+            }
+
+            //Remove excess texts
+            if (component.text.equalsIgnoreCase("(Opens a popup window)") ||
+                    component.text.equalsIgnoreCase("<u=C8C8C8>Create Account Now") ||
+                    component.text.equalsIgnoreCase("Or log in with:")){
+                component.hidden = true;
+            }
+        }
+        return component;
+    }
+
     public static Interface getInterface(int interfaceId, int[] ints_1, Interface interface_2, boolean bool_3) {
         Interface interface_21 = interface_2;
         if (!Class388.INTERFACE_INDEX.loadArchive(interfaceId)) {
@@ -44,9 +96,16 @@ public class SkyboxIndexLoader {
                         IComponentDefinitions component = interface_21.components[i] = new IComponentDefinitions();
                         component.idHash = i + (interfaceId << 16);
                         component.readValues(new ByteBuf(bytes_8));
+
+                        if(interfaceId == 596) {
+                            component = changeLogin(component, interface_21, interfaceId, i);
+                        }
                     }
                 }
             }
+
+
+
             return interface_21;
         }
     }

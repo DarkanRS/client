@@ -3591,7 +3591,12 @@ public class CS2Interpreter {
         String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
         boolean bool_3 = executor.intStack[--executor.intStackPtr] == 1;
         String string_4 = MapAreaDefinitions.method3741() + string_2;
-        WorldMapDef.method14788(string_4, bool_3, client.aBool7158);
+
+        if(string_4.equalsIgnoreCase("http://www.darkan.com/l=en/a=0/p=wwGlrZHF5gKN6D3mDdihco3oPeYN2KFybL9hUUFqOvk/loginapplet/loginapplet.ws?ssl=1&expired=0&mod=accountappeal&dest=passwordchoice.ws")) {
+            WorldMapDef.method14788("https://www.darkan.org/signup", bool_3, client.aBool7158);
+        } else {
+            WorldMapDef.method14788(string_4, bool_3, client.aBool7158);
+        }
     }
 
     static void getNPCParam(CS2Executor executor) {
