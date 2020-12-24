@@ -197,7 +197,7 @@ public class Interface {
             Class260.aBool3220 = false;
             Class260.aNode_Sub15_Sub2_3231 = null;
         } else if (Class393.preferences.musicVolume.method12714() != 0 && Class260.anInt3223 != -1 && !SongReference.method1966()) {
-            TCPPacket tcpmessage_17 = TCPPacket.createPacket(ServerPacket.SOUND_EFFECT_MUSIC_ENDED, client.GAME_CONNECTION_CONTEXT.isaac);
+            TCPPacket tcpmessage_17 = TCPPacket.createPacket(ClientProt.SOUND_EFFECT_MUSIC_ENDED, client.GAME_CONNECTION_CONTEXT.isaac);
             tcpmessage_17.buffer.writeInt(Class260.anInt3223);
             client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_17);
             Class260.anInt3223 = -1;

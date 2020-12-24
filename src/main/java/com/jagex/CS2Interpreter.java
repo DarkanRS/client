@@ -3455,7 +3455,7 @@ public class CS2Interpreter {
 
     static void sendClanQuickChatMessage(CS2Executor executor) {
         BufferedConnectionContext context = BufferedConnectionContext.getConnectionContext();
-        TCPPacket packet = TCPPacket.createPacket(ServerPacket.QUICKCHAT_PUBLIC, context.isaac);
+        TCPPacket packet = TCPPacket.createPacket(ClientProt.QUICKCHAT_PUBLIC, context.isaac);
         packet.buffer.writeByte(0);
         int startIndex = packet.buffer.index;
         packet.buffer.writeByte(2);
@@ -3779,7 +3779,7 @@ public class CS2Interpreter {
         boolean bool_3 = executor.intStack[executor.intStackPtr] == 1;
         boolean bool_4 = executor.intStack[executor.intStackPtr + 1] == 1;
         boolean bool_5 = executor.intStack[executor.intStackPtr + 2] == 1;
-        TCPPacket tcpmessage_6 = TCPPacket.createPacket(ServerPacket.EMAIL_VALIDATION_ADD_NEW_ADDRESS, client.LOBBY_CONNECTION_CONTEXT.isaac);
+        TCPPacket tcpmessage_6 = TCPPacket.createPacket(ClientProt.EMAIL_VALIDATION_ADD_NEW_ADDRESS, client.LOBBY_CONNECTION_CONTEXT.isaac);
         tcpmessage_6.buffer.writeShort(ChatLine.getLength(string_2) + 1);
         tcpmessage_6.buffer.writeString(string_2);
         int i_7 = 0;
@@ -4863,7 +4863,7 @@ public class CS2Interpreter {
         if (Class115.method1950(string_2)) {
             i_3 = Utils.parseInt(string_2);
         }
-        TCPPacket tcpmessage_4 = TCPPacket.createPacket(ServerPacket.RESUME_COUNTDIALOG, client.GAME_CONNECTION_CONTEXT.isaac);
+        TCPPacket tcpmessage_4 = TCPPacket.createPacket(ClientProt.RESUME_COUNTDIALOG, client.GAME_CONNECTION_CONTEXT.isaac);
         tcpmessage_4.buffer.writeInt(i_3);
         client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_4);
     }
@@ -4915,7 +4915,7 @@ public class CS2Interpreter {
 
     static void resumeClanForumQFCDialog(CS2Executor executor) {
         String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
-        TCPPacket tcpmessage_3 = TCPPacket.createPacket(ServerPacket.RESUME_CLANFORUMQFCDIALOG, client.GAME_CONNECTION_CONTEXT.isaac);
+        TCPPacket tcpmessage_3 = TCPPacket.createPacket(ClientProt.RESUME_CLANFORUMQFCDIALOG, client.GAME_CONNECTION_CONTEXT.isaac);
         tcpmessage_3.buffer.writeByte(string_2.length() + 1);
         tcpmessage_3.buffer.writeString(string_2);
         client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_3);
@@ -5000,7 +5000,7 @@ public class CS2Interpreter {
 
     static void sendFriendsChatQuickChatMessage(CS2Executor executor) {
         BufferedConnectionContext context = BufferedConnectionContext.getConnectionContext();
-        TCPPacket packet = TCPPacket.createPacket(ServerPacket.QUICKCHAT_PUBLIC, context.isaac);
+        TCPPacket packet = TCPPacket.createPacket(ClientProt.QUICKCHAT_PUBLIC, context.isaac);
         packet.buffer.writeByte(0);
         int i_4 = packet.buffer.index;
         packet.buffer.writeByte(1);
@@ -5215,7 +5215,7 @@ public class CS2Interpreter {
                 client.aByte7458 = -4;
             } else {
                 client.aByte7458 = -1;
-                TCPPacket tcpmessage_3 = TCPPacket.createPacket(ServerPacket.DEPRECATED_97_SERVERPACKET_52, client.LOBBY_CONNECTION_CONTEXT.isaac);
+                TCPPacket tcpmessage_3 = TCPPacket.createPacket(ClientProt.DEPRECATED_97_SERVERPACKET_52, client.LOBBY_CONNECTION_CONTEXT.isaac);
                 tcpmessage_3.buffer.writeByte(0);
                 int i_4 = tcpmessage_3.buffer.index;
                 tcpmessage_3.buffer.writeString(string_2);
@@ -5373,7 +5373,7 @@ public class CS2Interpreter {
 
     static void sendPublicQuickChatMessage(CS2Executor executor) {
         BufferedConnectionContext context = BufferedConnectionContext.getConnectionContext();
-        TCPPacket packet = TCPPacket.createPacket(ServerPacket.QUICKCHAT_PUBLIC, context.isaac);
+        TCPPacket packet = TCPPacket.createPacket(ClientProt.QUICKCHAT_PUBLIC, context.isaac);
         packet.buffer.writeByte(0);
         int startIndex = packet.buffer.index;
         packet.buffer.writeByte(0);
@@ -7103,7 +7103,7 @@ public class CS2Interpreter {
 
     static void method11594(CS2Executor executor) {
         String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
-        TCPPacket tcpmessage_3 = TCPPacket.createPacket(ServerPacket.EMAIL_VALIDATION_SUBMIT_CODE, client.LOBBY_CONNECTION_CONTEXT.isaac);
+        TCPPacket tcpmessage_3 = TCPPacket.createPacket(ClientProt.EMAIL_VALIDATION_SUBMIT_CODE, client.LOBBY_CONNECTION_CONTEXT.isaac);
         tcpmessage_3.buffer.writeByte(ChatLine.getLength(string_2));
         tcpmessage_3.buffer.writeString(string_2);
         client.LOBBY_CONNECTION_CONTEXT.queuePacket(tcpmessage_3);
@@ -7225,7 +7225,7 @@ public class CS2Interpreter {
                 executor.intStack[++executor.intStackPtr - 1] = 1;
             } else {
                 ConnectionInfo.aBool5422 = true;
-                TCPPacket tcpmessage_2 = TCPPacket.createPacket(ServerPacket.REQUEST_WORLD_LIST, client.LOBBY_CONNECTION_CONTEXT.isaac);
+                TCPPacket tcpmessage_2 = TCPPacket.createPacket(ClientProt.REQUEST_WORLD_LIST, client.LOBBY_CONNECTION_CONTEXT.isaac);
                 tcpmessage_2.buffer.writeInt(MapSpriteDefinitions.WORLD_LIST_IDK);
                 client.LOBBY_CONNECTION_CONTEXT.queuePacket(tcpmessage_2);
                 executor.intStack[++executor.intStackPtr - 1] = 0;
@@ -7806,7 +7806,7 @@ public class CS2Interpreter {
 
     static void resumeStringDialog(CS2Executor executor) {
         String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
-        TCPPacket tcpmessage_3 = TCPPacket.createPacket(ServerPacket.RESUME_TEXTDIALOG, client.GAME_CONNECTION_CONTEXT.isaac);
+        TCPPacket tcpmessage_3 = TCPPacket.createPacket(ClientProt.RESUME_TEXTDIALOG, client.GAME_CONNECTION_CONTEXT.isaac);
         tcpmessage_3.buffer.writeByte(string_2.length() + 1);
         tcpmessage_3.buffer.writeString(string_2);
         client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_3);
@@ -7975,7 +7975,7 @@ public class CS2Interpreter {
     static void method6005(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
         BufferedConnectionContext class184_3 = BufferedConnectionContext.getConnectionContext();
-        TCPPacket tcpmessage_4 = TCPPacket.createPacket(ServerPacket.CHAT_TYPE, class184_3.isaac);
+        TCPPacket tcpmessage_4 = TCPPacket.createPacket(ClientProt.CHAT_TYPE, class184_3.isaac);
         tcpmessage_4.buffer.writeByte(i_2);
         class184_3.queuePacket(tcpmessage_4);
     }
@@ -8023,7 +8023,7 @@ public class CS2Interpreter {
             string_3 = string_3.substring(0, 80);
         }
         BufferedConnectionContext class184_6 = BufferedConnectionContext.getConnectionContext();
-        TCPPacket tcpmessage_7 = TCPPacket.createPacket(ServerPacket.REPORT_ABUSE, class184_6.isaac);
+        TCPPacket tcpmessage_7 = TCPPacket.createPacket(ClientProt.REPORT_ABUSE, class184_6.isaac);
         tcpmessage_7.buffer.writeByte(ChatLine.getLength(string_2) + 2 + ChatLine.getLength(string_3));
         tcpmessage_7.buffer.writeString(string_2);
         tcpmessage_7.buffer.writeByte(i_4 - 1);
@@ -8580,7 +8580,7 @@ public class CS2Interpreter {
 
     static void sendGuestClanQuickChatMessage(CS2Executor executor) {
         BufferedConnectionContext context = BufferedConnectionContext.getConnectionContext();
-        TCPPacket packet = TCPPacket.createPacket(ServerPacket.QUICKCHAT_PUBLIC, context.isaac);
+        TCPPacket packet = TCPPacket.createPacket(ClientProt.QUICKCHAT_PUBLIC, context.isaac);
         packet.buffer.writeByte(0);
         int startIndex = packet.buffer.index;
         packet.buffer.writeByte(3);
@@ -8612,7 +8612,7 @@ public class CS2Interpreter {
 
     static void resumeNamedDialog(CS2Executor executor) {
         String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
-        TCPPacket tcpmessage_3 = TCPPacket.createPacket(ServerPacket.RESUME_NAMEDIALOG, client.GAME_CONNECTION_CONTEXT.isaac);
+        TCPPacket tcpmessage_3 = TCPPacket.createPacket(ClientProt.RESUME_NAMEDIALOG, client.GAME_CONNECTION_CONTEXT.isaac);
         tcpmessage_3.buffer.writeByte(string_2.length() + 1);
         tcpmessage_3.buffer.writeString(string_2);
         client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_3);
@@ -9337,7 +9337,7 @@ public class CS2Interpreter {
     static void sendPrivateQuickChatMessage(CS2Executor executor) {
         String message = (String) executor.stringStack[--executor.stringStackPtr];
         BufferedConnectionContext class184_3 = BufferedConnectionContext.getConnectionContext();
-        TCPPacket packet = TCPPacket.createPacket(ServerPacket.QUICKCHAT_PRIVATE, class184_3.isaac);
+        TCPPacket packet = TCPPacket.createPacket(ClientProt.QUICKCHAT_PRIVATE, class184_3.isaac);
         packet.buffer.writeByte(0);
         int startIndex = packet.buffer.index;
         packet.buffer.writeString(message);
@@ -9484,7 +9484,7 @@ public class CS2Interpreter {
 
     static void method12841(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
-        TCPPacket tcpmessage_3 = TCPPacket.createPacket(ServerPacket.GRAND_EXCHANGE_ITEM_SELECT, client.GAME_CONNECTION_CONTEXT.isaac);
+        TCPPacket tcpmessage_3 = TCPPacket.createPacket(ClientProt.GRAND_EXCHANGE_ITEM_SELECT, client.GAME_CONNECTION_CONTEXT.isaac);
         tcpmessage_3.buffer.writeShort(i_2);
         client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_3);
     }
@@ -9560,7 +9560,7 @@ public class CS2Interpreter {
         String message = (String) executor.stringStack[executor.stringStackPtr + 1];
         if (client.PLAYER_RIGHTS != 0 || (!client.USERDETAIL_QUICKCHAT || client.VERIFIED_EMAIL_ADDRESS) && !client.IS_QUICKCHAT_ONLY) {
             BufferedConnectionContext context = BufferedConnectionContext.getConnectionContext();
-            TCPPacket packet = TCPPacket.createPacket(ServerPacket.SEND_PRIVATE_MESSAGE, context.isaac);
+            TCPPacket packet = TCPPacket.createPacket(ClientProt.SEND_PRIVATE_MESSAGE, context.isaac);
             packet.buffer.writeShort(0);
             int startIndex = packet.buffer.index;
             packet.buffer.writeString(targetName);
@@ -9683,7 +9683,7 @@ public class CS2Interpreter {
     static void method7501(CS2Executor executor) {
         String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
         String string_3 = (String) executor.stringStack[--executor.stringStackPtr];
-        TCPPacket tcpmessage_4 = TCPPacket.createPacket(ServerPacket.EMAIL_VALIDATION_CHANGE_ADDRESS, client.LOBBY_CONNECTION_CONTEXT.isaac);
+        TCPPacket tcpmessage_4 = TCPPacket.createPacket(ClientProt.EMAIL_VALIDATION_CHANGE_ADDRESS, client.LOBBY_CONNECTION_CONTEXT.isaac);
         tcpmessage_4.buffer.writeShort(ChatLine.getLength(string_2) + ChatLine.getLength(string_3));
         tcpmessage_4.buffer.writeString(string_2);
         tcpmessage_4.buffer.writeString(string_3);
@@ -10014,7 +10014,7 @@ public class CS2Interpreter {
                 }
             }
             BufferedConnectionContext context = BufferedConnectionContext.getConnectionContext();
-            TCPPacket packet = TCPPacket.createPacket(ServerPacket.CHAT, context.isaac);
+            TCPPacket packet = TCPPacket.createPacket(ClientProt.CHAT, context.isaac);
             packet.buffer.writeByte(0);
             int i_8 = packet.buffer.index;
             packet.buffer.writeByte(b_4);
@@ -10296,7 +10296,7 @@ public class CS2Interpreter {
         }
         client.TRADE_FILTER = executor.intStack[executor.intStackPtr + 2];
         BufferedConnectionContext context = BufferedConnectionContext.getConnectionContext();
-        TCPPacket packet = TCPPacket.createPacket(ServerPacket.CHAT_SETFILTER, context.isaac);
+        TCPPacket packet = TCPPacket.createPacket(ClientProt.CHAT_SETFILTER, context.isaac);
         packet.buffer.writeByte(client.PUBLIC_FILTER);
         packet.buffer.writeByte(Class149_Sub2.PRIVATE_FILTER.id);
         packet.buffer.writeByte(client.TRADE_FILTER);
@@ -10358,7 +10358,7 @@ public class CS2Interpreter {
 
     static void resumeHSLDialog(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
-        TCPPacket tcpmessage_3 = TCPPacket.createPacket(ServerPacket.RESUME_HSLDIALOG, client.GAME_CONNECTION_CONTEXT.isaac);
+        TCPPacket tcpmessage_3 = TCPPacket.createPacket(ClientProt.RESUME_HSLDIALOG, client.GAME_CONNECTION_CONTEXT.isaac);
         tcpmessage_3.buffer.writeShort(i_2);
         client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_3);
     }

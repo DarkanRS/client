@@ -17,7 +17,7 @@ public class Class388 implements Interface41 {
     }
 
     static void method6692() {
-        TCPPacket tcpmessage_1 = TCPPacket.createPacket(ServerPacket.SCREEN_SIZE, client.GAME_CONNECTION_CONTEXT.isaac);
+        TCPPacket tcpmessage_1 = TCPPacket.createPacket(ClientProt.SCREEN_SIZE, client.GAME_CONNECTION_CONTEXT.isaac);
         tcpmessage_1.buffer.writeByte(Class158.windowedMode());
         tcpmessage_1.buffer.writeShort(ChangeClanSetting.BASE_WINDOW_WIDTH);
         tcpmessage_1.buffer.writeShort(client.BASE_WINDOW_HEIGHT * -969250379);

@@ -3,7 +3,7 @@ package com.jagex;
 import java.util.HashMap;
 import java.util.Map;
 
-public enum ClientPacket {
+public enum ServerProt {
     IF_SETPLAYERHEAD(0, 4),
     CREATE_CHECK_EMAIL_REPLY(1, 1),
     PROCESS_DEV_CONSOLE_COMMAND(2, -1),
@@ -167,22 +167,22 @@ public enum ClientPacket {
     GAME_MESSAGE(160, -1),
     DISCORD_RICH_PRESENCE_UPDATE(161, -1);
 
-    private static final Map<Integer, ClientPacket> OPCODE_MAP = new HashMap<>();
+    private static final Map<Integer, ServerProt> OPCODE_MAP = new HashMap<>();
 
     static {
-        for (ClientPacket p : ClientPacket.values())
+        for (ServerProt p : ServerProt.values())
             OPCODE_MAP.put(p.opcode, p);
     }
 
     public final int opcode;
     public final int size;
 
-    ClientPacket(int opcode, int size) {
+    ServerProt(int opcode, int size) {
         this.opcode = opcode;
         this.size = size;
     }
 
-    public static ClientPacket forId(int opcode) {
+    public static ServerProt forId(int opcode) {
         return OPCODE_MAP.get(opcode);
     }
 }

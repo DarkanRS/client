@@ -40,7 +40,7 @@ public class Class151 {
                     CS2Executor.executeHookInner(hookrequest_3);
                 }
             }
-            TCPPacket tcpmessage_4 = TCPPacket.createPacket(ServerPacket.IF_ON_IF, client.GAME_CONNECTION_CONTEXT.isaac);
+            TCPPacket tcpmessage_4 = TCPPacket.createPacket(ClientProt.IF_ON_IF, client.GAME_CONNECTION_CONTEXT.isaac);
             tcpmessage_4.buffer.writeShortLE128(icomponentdefinitions_0.slotId);
             tcpmessage_4.buffer.writeShortLE(client.anInt7345);
             tcpmessage_4.buffer.writeShortLE128(icomponentdefinitions_0.containerItemId);

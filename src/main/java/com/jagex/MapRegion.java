@@ -985,7 +985,7 @@ public class MapRegion {
                 Class48_Sub2.method14571();
                 TCPPacket tcpmessage_22;
                 if (NamedFileReference.method867() == Class279.aClass279_3368 && client.GAME_CONNECTION_CONTEXT.getConnection() != null && client.GAME_STATE == 18) {
-                    tcpmessage_22 = TCPPacket.createPacket(ServerPacket.UNK_82, client.GAME_CONNECTION_CONTEXT.isaac);
+                    tcpmessage_22 = TCPPacket.createPacket(ClientProt.UNK_82, client.GAME_CONNECTION_CONTEXT.isaac);
                     tcpmessage_22.buffer.writeInt(1057001181);
                     client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_22);
                 }
@@ -1016,7 +1016,7 @@ public class MapRegion {
                 } else {
                     GameState.setGameState(13);
                     if (client.GAME_CONNECTION_CONTEXT.getConnection() != null) {
-                        tcpmessage_22 = TCPPacket.createPacket(ServerPacket.REGION_LOADED_CONFIRM, client.GAME_CONNECTION_CONTEXT.isaac);
+                        tcpmessage_22 = TCPPacket.createPacket(ClientProt.REGION_LOADED_CONFIRM, client.GAME_CONNECTION_CONTEXT.isaac);
                         client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_22);
                     }
                 }

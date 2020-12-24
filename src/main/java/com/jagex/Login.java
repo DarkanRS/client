@@ -501,7 +501,7 @@ public class Login {
                             Class9.CURRENT_CONNECTION_CONTEXT.getConnection().read(buffer.buffer, 3, 1);
                         }
                         i_3 = buffer.readEncryptedSmart();
-                        Class9.CURRENT_CONNECTION_CONTEXT.currentPacket = ClientPacket.forId(i_3);
+                        Class9.CURRENT_CONNECTION_CONTEXT.currentPacket = ServerProt.forId(i_3);
                         Class9.CURRENT_CONNECTION_CONTEXT.currentPacketSize = buffer.readUnsignedShort();
                         Class9.loginStage = 156;
                     }
@@ -518,7 +518,7 @@ public class Login {
                             ByteBuf.Bit rsbitsbuffer_21 = new ByteBuf.Bit(i_3);
                             System.arraycopy(Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer.buffer, Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer.index, rsbitsbuffer_21.buffer, 0, i_3);
                             Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer.index += i_3;
-                            if (Class9.CURRENT_CONNECTION_CONTEXT.currentPacket == ClientPacket.DYNAMIC_MAP_REGION) {
+                            if (Class9.CURRENT_CONNECTION_CONTEXT.currentPacket == ServerProt.DYNAMIC_MAP_REGION) {
                                 IndexLoaders.MAP_REGION_DECODER.loadMapScene(new Class335(Class256.aClass256_3155, rsbitsbuffer_21));
                             } else {
                                 IndexLoaders.MAP_REGION_DECODER.loadMapScene(new Class335(Class256.LOAD_MAP_SCENE_NORMAL, rsbitsbuffer_21));

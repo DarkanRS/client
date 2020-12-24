@@ -31,7 +31,7 @@ public class MaterialProp23 extends MaterialProperty {
                 int i_2;
                 TCPPacket tcpmessage_6;
                 while (HashTableIterator.hasValues()) {
-                    tcpmessage_6 = TCPPacket.createPacket(ServerPacket.REFLECTION_CHECK, client.GAME_CONNECTION_CONTEXT.isaac);
+                    tcpmessage_6 = TCPPacket.createPacket(ClientProt.REFLECTION_CHECK, client.GAME_CONNECTION_CONTEXT.isaac);
                     tcpmessage_6.buffer.writeByte(0);
                     i_2 = tcpmessage_6.buffer.index;
                     FontRenderer_Sub2.method14264(tcpmessage_6.buffer);
@@ -40,7 +40,7 @@ public class MaterialProp23 extends MaterialProperty {
                 }
                 if (PingRequest.CURRENT_REQUEST != null) {
                     if (PingRequest.CURRENT_REQUEST.ping != -1) {
-                        tcpmessage_6 = TCPPacket.createPacket(ServerPacket.WRITE_PING, client.GAME_CONNECTION_CONTEXT.isaac);
+                        tcpmessage_6 = TCPPacket.createPacket(ClientProt.WRITE_PING, client.GAME_CONNECTION_CONTEXT.isaac);
                         tcpmessage_6.buffer.writeShort(PingRequest.CURRENT_REQUEST.ping);
                         client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_6);
                         PingRequest.CURRENT_REQUEST = null;
@@ -147,7 +147,7 @@ public class MaterialProp23 extends MaterialProperty {
                         ++client.anInt7347;
                         TCPPacket tcpmessage_8;
                         if (client.aBool7375) {
-                            tcpmessage_8 = TCPPacket.createPacket(ServerPacket.WORLD_MAP_CLICK, client.GAME_CONNECTION_CONTEXT.isaac);
+                            tcpmessage_8 = TCPPacket.createPacket(ClientProt.WORLD_MAP_CLICK, client.GAME_CONNECTION_CONTEXT.isaac);
                             tcpmessage_8.buffer.writeIntLE(Node_Sub15_Sub5.anInt9859 << 28 | IdentikitDefinition.anInt431 << 14 | StructIndexLoader.anInt5015);
                             client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_8);
                             client.aBool7375 = false;
@@ -258,7 +258,7 @@ public class MaterialProp23 extends MaterialProperty {
                                                             }
                                                             ++client.GAME_CONNECTION_CONTEXT.anInt2290;
                                                             if (client.GAME_CONNECTION_CONTEXT.anInt2290 > 50) {
-                                                                tcpmessage_8 = TCPPacket.createPacket(ServerPacket.PING, client.GAME_CONNECTION_CONTEXT.isaac);
+                                                                tcpmessage_8 = TCPPacket.createPacket(ClientProt.PING, client.GAME_CONNECTION_CONTEXT.isaac);
                                                                 client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_8);
                                                             }
                                                             if (client.aBool7459) {

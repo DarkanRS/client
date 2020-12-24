@@ -1,6 +1,6 @@
 package com.jagex;
 
-public enum ServerPacket {
+public enum ClientProt {
     PING(0, 0),
     PLAYER_OP6(1, 3, true),
     SOUND_EFFECT_MUSIC_ENDED(2, 4),
@@ -110,13 +110,13 @@ public enum ServerPacket {
     final int size;
     final boolean tickProcessed;
 
-    ServerPacket(int id, int size, boolean tickProcessed) {
+    ClientProt(int id, int size, boolean tickProcessed) {
         this.id = id;
         this.size = size;
         this.tickProcessed = tickProcessed;
     }
 
-    ServerPacket(int id, int size) {
+    ClientProt(int id, int size) {
         this(id, size, false);
     }
 }
