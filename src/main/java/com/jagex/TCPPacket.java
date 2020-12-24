@@ -7,7 +7,7 @@ public class TCPPacket extends Node {
     public int anInt7680;
     public ByteBuf.Bit buffer;
     int anInt7678;
-    ClientProt packet;
+    ServerPacket packet;
 
     static void method12366(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
         if (client.anInt7341 == 1) {
@@ -33,7 +33,7 @@ public class TCPPacket extends Node {
 
     }
 
-    public static TCPPacket createPacket(ClientProt outgoing, Isaac cipher) {
+    public static TCPPacket createPacket(ServerPacket outgoing, Isaac cipher) {
         TCPPacket packet = Class158_Sub2.method14356();
         packet.packet = outgoing;
         packet.anInt7678 = outgoing.size;

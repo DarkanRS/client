@@ -40,27 +40,27 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
             }
 
             CoordGrid coordgrid_10 = IndexLoaders.MAP_REGION_DECODER.getBase();
-            ClientProt outgoingpacket_11 = null;
+            ServerPacket outgoingpacket_11 = null;
             if (clickType == 44) {
-                outgoingpacket_11 = ClientProt.PLAYER_OP1;
+                outgoingpacket_11 = ServerPacket.PLAYER_OP1;
             } else if (clickType == 45) {
-                outgoingpacket_11 = ClientProt.PLAYER_OP2;
+                outgoingpacket_11 = ServerPacket.PLAYER_OP2;
             } else if (clickType == 46) {
-                outgoingpacket_11 = ClientProt.PLAYER_OP3;
+                outgoingpacket_11 = ServerPacket.PLAYER_OP3;
             } else if (clickType == 47) {
-                outgoingpacket_11 = ClientProt.PLAYER_OP4;
+                outgoingpacket_11 = ServerPacket.PLAYER_OP4;
             } else if (clickType == 48) {
-                outgoingpacket_11 = ClientProt.PLAYER_OP5;
+                outgoingpacket_11 = ServerPacket.PLAYER_OP5;
             } else if (clickType == 49) {
-                outgoingpacket_11 = ClientProt.PLAYER_OP6;
+                outgoingpacket_11 = ServerPacket.PLAYER_OP6;
             } else if (clickType == 50) {
-                outgoingpacket_11 = ClientProt.PLAYER_OP7;
+                outgoingpacket_11 = ServerPacket.PLAYER_OP7;
             } else if (clickType == 51) {
-                outgoingpacket_11 = ClientProt.PLAYER_OP8;
+                outgoingpacket_11 = ServerPacket.PLAYER_OP8;
             } else if (clickType == 52) {
-                outgoingpacket_11 = ClientProt.PLAYER_OP9;
+                outgoingpacket_11 = ServerPacket.PLAYER_OP9;
             } else if (clickType == 53) {
-                outgoingpacket_11 = ClientProt.PLAYER_OP10;
+                outgoingpacket_11 = ServerPacket.PLAYER_OP10;
             }
 
             PlayerEntity player_12;
@@ -86,7 +86,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
                 client.anInt7294 = i_2;
                 client.anInt7296 = 2;
                 client.anInt7295 = 0;
-                tcpmessage_17 = TCPPacket.createPacket(ClientProt.IF_ON_PLAYER, client.GAME_CONNECTION_CONTEXT.isaac);
+                tcpmessage_17 = TCPPacket.createPacket(ServerPacket.IF_ON_PLAYER, client.GAME_CONNECTION_CONTEXT.isaac);
                 tcpmessage_17.buffer.writeShort(client.anInt7345);
                 tcpmessage_17.buffer.writeShortLE(VertexNormal.MY_PLAYER.index);
                 tcpmessage_17.buffer.write128Byte(VertexNormal.method1465() ? 1 : 0);
@@ -106,7 +106,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
                     client.anInt7294 = i_2;
                     client.anInt7296 = 2;
                     client.anInt7295 = 0;
-                    tcpmessage_13 = TCPPacket.createPacket(ClientProt.IF_ON_PLAYER, client.GAME_CONNECTION_CONTEXT.isaac);
+                    tcpmessage_13 = TCPPacket.createPacket(ServerPacket.IF_ON_PLAYER, client.GAME_CONNECTION_CONTEXT.isaac);
                     tcpmessage_13.buffer.writeShort(client.anInt7345);
                     tcpmessage_13.buffer.writeShortLE(i_7);
                     tcpmessage_13.buffer.write128Byte(VertexNormal.method1465() ? 1 : 0);
@@ -122,7 +122,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
                 client.anInt7294 = i_2;
                 client.anInt7296 = 2;
                 client.anInt7295 = 0;
-                tcpmessage_17 = TCPPacket.createPacket(ClientProt.IF_ON_OBJECT, client.GAME_CONNECTION_CONTEXT.isaac);
+                tcpmessage_17 = TCPPacket.createPacket(ServerPacket.IF_ON_OBJECT, client.GAME_CONNECTION_CONTEXT.isaac);
                 tcpmessage_17.buffer.writeShortLE128(i_4 + coordgrid_10.x);
                 tcpmessage_17.buffer.write128Byte(VertexNormal.method1465() ? 1 : 0);
                 tcpmessage_17.buffer.writeIntV1((int) (long_8 >>> 32) & 0x7fffffff);
@@ -134,19 +134,19 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
                 Class439.routeToSceneObject(i_4, i_5, long_8);
             }
 
-            ClientProt outgoingpacket_18 = null;
+            ServerPacket outgoingpacket_18 = null;
             if (clickType == 9) {
-                outgoingpacket_18 = ClientProt.NPC_OP1;
+                outgoingpacket_18 = ServerPacket.NPC_OP1;
             } else if (clickType == 10) {
-                outgoingpacket_18 = ClientProt.NPC_OP2;
+                outgoingpacket_18 = ServerPacket.NPC_OP2;
             } else if (clickType == 11) {
-                outgoingpacket_18 = ClientProt.NPC_OP3;
+                outgoingpacket_18 = ServerPacket.NPC_OP3;
             } else if (clickType == 12) {
-                outgoingpacket_18 = ClientProt.NPC_OP4;
+                outgoingpacket_18 = ServerPacket.NPC_OP4;
             } else if (clickType == 13) {
-                outgoingpacket_18 = ClientProt.NPC_OP5;
+                outgoingpacket_18 = ServerPacket.NPC_OP5;
             } else if (clickType == 1003) {
-                outgoingpacket_18 = ClientProt.NPC_EXAMINE;
+                outgoingpacket_18 = ServerPacket.NPC_EXAMINE;
             }
 
             TCPPacket tcpmessage_15;
@@ -174,7 +174,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
                     client.anInt7294 = i_2;
                     client.anInt7296 = 1;
                     client.anInt7295 = 0;
-                    tcpmessage_13 = TCPPacket.createPacket(ClientProt.UNK_63, client.GAME_CONNECTION_CONTEXT.isaac);
+                    tcpmessage_13 = TCPPacket.createPacket(ServerPacket.UNK_63, client.GAME_CONNECTION_CONTEXT.isaac);
                     tcpmessage_13.buffer.writeShort128(i_4 + coordgrid_10.x);
                     tcpmessage_13.buffer.writeShort(i_5 + coordgrid_10.y);
                     client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_13);
@@ -215,7 +215,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
                 client.anInt7294 = i_2;
                 client.anInt7296 = 2;
                 client.anInt7295 = 0;
-                tcpmessage_13 = TCPPacket.createPacket(ClientProt.IF_ON_GROUND_ITEM, client.GAME_CONNECTION_CONTEXT.isaac);
+                tcpmessage_13 = TCPPacket.createPacket(ServerPacket.IF_ON_GROUND_ITEM, client.GAME_CONNECTION_CONTEXT.isaac);
                 tcpmessage_13.buffer.writeShort128(client.anInt7346);
                 tcpmessage_13.buffer.writeIntV2(client.anInt56);
                 tcpmessage_13.buffer.writeShort(i_7);
@@ -232,7 +232,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
                 client.anInt7294 = i_2;
                 client.anInt7296 = 1;
                 client.anInt7295 = 0;
-                tcpmessage_13 = TCPPacket.createPacket(ClientProt.IF_ON_TILE, client.GAME_CONNECTION_CONTEXT.isaac);
+                tcpmessage_13 = TCPPacket.createPacket(ServerPacket.IF_ON_TILE, client.GAME_CONNECTION_CONTEXT.isaac);
                 tcpmessage_13.buffer.writeShortLE(client.anInt7346);
                 tcpmessage_13.buffer.writeShortLE(i_5 + coordgrid_10.y);
                 tcpmessage_13.buffer.writeIntV1(client.anInt56);
@@ -272,19 +272,19 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
                     client.aString7356 = icomponentdefinitions_23.useOnName + Utils.rgbToColHexShortcut(16777215);
                 }
             } else {
-                ClientProt outgoingpacket_27 = null;
+                ServerPacket outgoingpacket_27 = null;
                 if (clickType == 18) {
-                    outgoingpacket_27 = ClientProt.GROUND_ITEM_OP1;
+                    outgoingpacket_27 = ServerPacket.GROUND_ITEM_OP1;
                 } else if (clickType == 19) {
-                    outgoingpacket_27 = ClientProt.GROUND_ITEM_OP2;
+                    outgoingpacket_27 = ServerPacket.GROUND_ITEM_OP2;
                 } else if (clickType == 20) {
-                    outgoingpacket_27 = ClientProt.GROUND_ITEM_OP3;
+                    outgoingpacket_27 = ServerPacket.GROUND_ITEM_OP3;
                 } else if (clickType == 21) {
-                    outgoingpacket_27 = ClientProt.GROUND_ITEM_OP4;
+                    outgoingpacket_27 = ServerPacket.GROUND_ITEM_OP4;
                 } else if (clickType == 22) {
-                    outgoingpacket_27 = ClientProt.GROUND_ITEM_OP5;
+                    outgoingpacket_27 = ServerPacket.GROUND_ITEM_OP5;
                 } else if (clickType == 1004) {
-                    outgoingpacket_27 = ClientProt.GROUND_ITEM_EXAMINE;
+                    outgoingpacket_27 = ServerPacket.GROUND_ITEM_EXAMINE;
                 }
 
                 if (outgoingpacket_27 != null) {
@@ -309,7 +309,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
                         client.anInt7294 = i_2;
                         client.anInt7296 = 2;
                         client.anInt7295 = 0;
-                        TCPPacket tcpmessage_16 = TCPPacket.createPacket(ClientProt.IF_ON_NPC, client.GAME_CONNECTION_CONTEXT.isaac);
+                        TCPPacket tcpmessage_16 = TCPPacket.createPacket(ServerPacket.IF_ON_NPC, client.GAME_CONNECTION_CONTEXT.isaac);
                         tcpmessage_16.buffer.writeIntV2(client.anInt56);
                         tcpmessage_16.buffer.writeShortLE128(i_7);
                         tcpmessage_16.buffer.write128Byte(VertexNormal.method1465() ? 1 : 0);
@@ -320,19 +320,19 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
                     }
                 }
 
-                ClientProt outgoingpacket_26 = null;
+                ServerPacket outgoingpacket_26 = null;
                 if (clickType == 3) {
-                    outgoingpacket_26 = ClientProt.OBJECT_OP1;
+                    outgoingpacket_26 = ServerPacket.OBJECT_OP1;
                 } else if (clickType == 4) {
-                    outgoingpacket_26 = ClientProt.OBJECT_OP2;
+                    outgoingpacket_26 = ServerPacket.OBJECT_OP2;
                 } else if (clickType == 5) {
-                    outgoingpacket_26 = ClientProt.OBJECT_OP3;
+                    outgoingpacket_26 = ServerPacket.OBJECT_OP3;
                 } else if (clickType == 6) {
-                    outgoingpacket_26 = ClientProt.OBJECT_OP4;
+                    outgoingpacket_26 = ServerPacket.OBJECT_OP4;
                 } else if (clickType == 1001) {
-                    outgoingpacket_26 = ClientProt.OBJECT_OP5;
+                    outgoingpacket_26 = ServerPacket.OBJECT_OP5;
                 } else if (clickType == 1002) {
-                    outgoingpacket_26 = ClientProt.OBJECT_EXAMINE;
+                    outgoingpacket_26 = ServerPacket.OBJECT_EXAMINE;
                 }
 
                 if (outgoingpacket_26 != null) {

@@ -28,11 +28,11 @@ public class CutsceneArea extends Node {
     static TCPPacket method12078(int i_0, int i_1, int i_2) {
         TCPPacket tcpmessage_4 = null;
         if (i_2 == 0) {
-            tcpmessage_4 = TCPPacket.createPacket(ClientProt.WALK, client.GAME_CONNECTION_CONTEXT.isaac);
+            tcpmessage_4 = TCPPacket.createPacket(ServerPacket.WALK, client.GAME_CONNECTION_CONTEXT.isaac);
         }
 
         if (i_2 == 1) {
-            tcpmessage_4 = TCPPacket.createPacket(ClientProt.MINI_WALK, client.GAME_CONNECTION_CONTEXT.isaac);
+            tcpmessage_4 = TCPPacket.createPacket(ServerPacket.MINI_WALK, client.GAME_CONNECTION_CONTEXT.isaac);
         }
 
         CoordGrid coordgrid_5 = IndexLoaders.MAP_REGION_DECODER.getBase();

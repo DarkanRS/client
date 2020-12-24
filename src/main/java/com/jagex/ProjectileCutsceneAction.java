@@ -78,7 +78,7 @@ public class ProjectileCutsceneAction extends CutsceneAction {
                             System.arraycopy(client.IGNORED_PLAYERS, i_3 + 1, client.IGNORED_PLAYERS, i_3, client.IGNORE_LIST_COUNT - i_3);
                         client.anInt7386 = client.anInt7347;
                         BufferedConnectionContext class184_9 = BufferedConnectionContext.getConnectionContext();
-                        TCPPacket tcpmessage_8 = TCPPacket.createPacket(ClientProt.REMOVE_IGNORE, class184_9.isaac);
+                        TCPPacket tcpmessage_8 = TCPPacket.createPacket(ServerPacket.REMOVE_IGNORE, class184_9.isaac);
                         tcpmessage_8.buffer.writeByte(ChatLine.getLength(string_0));
                         tcpmessage_8.buffer.writeString(string_0);
                         class184_9.queuePacket(tcpmessage_8);
