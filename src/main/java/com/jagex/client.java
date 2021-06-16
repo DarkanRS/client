@@ -2205,31 +2205,31 @@ public class client extends Engine {
 
 			try {
 				if (Class393.preferences.currentToolkit.getValue() == 2) {
-					Class class_4 = Class.forName("java.lang.ClassLoader");
-					Field field_5 = class_4.getDeclaredField("nativeLibraries");
-					Class class_6 = Class.forName("java.lang.reflect.AccessibleObject");
-					Method method_7 = class_6.getDeclaredMethod("setAccessible", Boolean.TYPE);
-					method_7.invoke(field_5, Boolean.TRUE);
-					Vector vector_8 = (Vector) field_5.get(client.class.getClassLoader());
+					Class classLoader = Class.forName("java.lang.ClassLoader");
+					Field nativeLibs = classLoader.getDeclaredField("nativeLibraries");
+					Class ao = Class.forName("java.lang.reflect.AccessibleObject");
+					Method setAccessible = ao.getDeclaredMethod("setAccessible", Boolean.TYPE);
+					setAccessible.invoke(nativeLibs, Boolean.TRUE);
+					Vector vector_8 = (Vector) nativeLibs.get(client.class.getClassLoader());
 
 					for (int i_9 = 0; i_9 < vector_8.size(); i_9++) {
 						try {
 							Object object_10 = vector_8.elementAt(i_9);
 							Field field_11 = object_10.getClass().getDeclaredField("name");
-							method_7.invoke(field_11, Boolean.TRUE);
+							setAccessible.invoke(field_11, Boolean.TRUE);
 
 							try {
 								String string_12 = (String) field_11.get(object_10);
 								if (string_12 != null && string_12.indexOf("sw3d.dll") != -1) {
 									Field field_13 = object_10.getClass().getDeclaredField("handle");
-									method_7.invoke(field_13, Boolean.TRUE);
+									setAccessible.invoke(field_13, Boolean.TRUE);
 									str_2 = str_2 + " " + Long.toHexString(field_13.getLong(object_10));
-									method_7.invoke(field_13, Boolean.FALSE);
+									setAccessible.invoke(field_13, Boolean.FALSE);
 								}
 							} catch (Throwable ignored) {
 							}
 
-							method_7.invoke(field_11, Boolean.FALSE);
+							setAccessible.invoke(field_11, Boolean.FALSE);
 						} catch (Throwable ignored) {
 						}
 					}

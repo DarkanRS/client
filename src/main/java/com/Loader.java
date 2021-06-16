@@ -17,8 +17,8 @@ public class Loader extends Applet implements AppletStub {
     public static final int MAJOR_BUILD = 727;
     public static final int MINOR_BUILD = 1;
     public static final int CLIENT_BUILD = 6;
-    public static final int WORLD_PORT = 5555;
-    public static final int LOBBY_PORT = 5555;
+    public static final int WORLD_PORT = 43595;
+    public static final int LOBBY_PORT = 43594;
     public static final int LOBBY_WORLD = 1115;
     public static final int JS5_SOURCE_WORLD = 420;
     public static final int DEFAULT_WORLD = 1;
