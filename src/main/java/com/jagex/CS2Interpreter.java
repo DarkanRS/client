@@ -1576,7 +1576,7 @@ public class CS2Interpreter {
                 clanVarsEnabled(exec);
                 break;
             case STOCKMARKET_GETOFFERTYPE:
-                method6231(exec);
+                getGEOfferType(exec);
                 break;
             case STOCKMARKET_GETOFFERITEM:
                 getGEOfferItem(exec);
@@ -1585,25 +1585,25 @@ public class CS2Interpreter {
                 getGEOfferPrice(exec);
                 break;
             case STOCKMARKET_GETOFFERCOUNT:
-                method3802(exec);
+                getGEOfferAmount(exec);
                 break;
             case STOCKMARKET_GETOFFERCOMPLETEDCOUNT:
-                method7715(exec);
+                getGEOfferCurrAmount(exec);
                 break;
             case STOCKMARKET_GETOFFERCOMPLETEDGOLD:
-                method6206(exec);
+                getGEOfferCompletedGold(exec);
                 break;
             case STOCKMARKET_ISOFFEREMPTY:
-                isExchangeSlotEmpty(exec);
+                isGEOfferEmpty(exec);
                 break;
             case STOCKMARKET_ISOFFERSTABLE:
-                method8716(exec);
+                isGEOfferStable(exec);
                 break;
             case STOCKMARKET_ISOFFERFINISHED:
-                isExchangeOfferFinished(exec);
+                isGEOfferFinished(exec);
                 break;
             case STOCKMARKET_ISOFFERADDING:
-                method5297(exec);
+                isGEOfferAdding(exec);
                 break;
             case ADD:
                 add(exec);
@@ -3334,9 +3334,9 @@ public class CS2Interpreter {
         method3251(icomponentdefinitions_3, executor);
     }
 
-    static void method8716(CS2Executor executor) {
+    static void isGEOfferStable(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
-        int i_3 = client.GRAND_EXCHANGE_SLOTS[i_2].method5908();
+        int i_3 = client.GRAND_EXCHANGE_SLOTS[i_2].getState();
         executor.intStack[++executor.intStackPtr - 1] = i_3 == 2 ? 1 : 0;
     }
 
@@ -3994,9 +3994,9 @@ public class CS2Interpreter {
         executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.y;
     }
 
-    static void isExchangeSlotEmpty(CS2Executor executor) {
+    static void isGEOfferEmpty(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
-        int i_3 = client.GRAND_EXCHANGE_SLOTS[i_2].method5908();
+        int i_3 = client.GRAND_EXCHANGE_SLOTS[i_2].getState();
         executor.intStack[++executor.intStackPtr - 1] = i_3 == 0 ? 1 : 0;
     }
 
@@ -4482,7 +4482,7 @@ public class CS2Interpreter {
         executor.intStack[executor.intStackPtr - 1] = executor.currentClanSettings.method1215()[executor.intStack[executor.intStackPtr - 1]];
     }
 
-    static void method6206(CS2Executor executor) {
+    static void getGEOfferCompletedGold(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
         executor.intStack[++executor.intStackPtr - 1] = client.GRAND_EXCHANGE_SLOTS[i_2].totalPrice;
     }
@@ -5288,13 +5288,13 @@ public class CS2Interpreter {
         method3366(icomponentdefinitions_4, executor);
     }
 
-    static void method5297(CS2Executor executor) {
-        int i_2 = executor.intStack[--executor.intStackPtr];
-        int i_3 = client.GRAND_EXCHANGE_SLOTS[i_2].method5908();
+    static void isGEOfferAdding(CS2Executor executor) {
+        int slot = executor.intStack[--executor.intStackPtr];
+        int state = client.GRAND_EXCHANGE_SLOTS[slot].getState();
         int[] ints_4 = executor.intStack;
         int i_5 = ++executor.intStackPtr - 1;
         byte b_6;
-        if (i_3 == 1) {
+        if (state == 1) {
             b_6 = 1;
         } else {
             b_6 = 0;
@@ -5875,7 +5875,7 @@ public class CS2Interpreter {
         method6186(icomponentdefinitions_3, interface_4, executor);
     }
 
-    static void method3802(CS2Executor executor) {
+    static void getGEOfferAmount(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
         executor.intStack[++executor.intStackPtr - 1] = client.GRAND_EXCHANGE_SLOTS[i_2].amount;
     }
@@ -7109,7 +7109,7 @@ public class CS2Interpreter {
         client.LOBBY_CONNECTION_CONTEXT.queuePacket(tcpmessage_3);
     }
 
-    static void method7715(CS2Executor executor) {
+    static void getGEOfferCurrAmount(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
         executor.intStack[++executor.intStackPtr - 1] = client.GRAND_EXCHANGE_SLOTS[i_2].currentAmount;
     }
@@ -7158,9 +7158,9 @@ public class CS2Interpreter {
         method569(icomponentdefinitions_3, executor);
     }
 
-    static void isExchangeOfferFinished(CS2Executor executor) {
+    static void isGEOfferFinished(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
-        int i_3 = client.GRAND_EXCHANGE_SLOTS[i_2].method5908();
+        int i_3 = client.GRAND_EXCHANGE_SLOTS[i_2].getState();
         executor.intStack[++executor.intStackPtr - 1] = i_3 == 5 ? 1 : 0;
     }
 
@@ -7722,9 +7722,9 @@ public class CS2Interpreter {
         executor.intStack[++executor.intStackPtr - 1] = ItemContainer.getAmountAtSlot(i_2, i_3, true);
     }
 
-    static void method6231(CS2Executor executor) {
+    static void getGEOfferType(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
-        executor.intStack[++executor.intStackPtr - 1] = client.GRAND_EXCHANGE_SLOTS[i_2].method5909();
+        executor.intStack[++executor.intStackPtr - 1] = client.GRAND_EXCHANGE_SLOTS[i_2].isSelling();
     }
 
     static void getCompHidden(CS2Executor executor) {
