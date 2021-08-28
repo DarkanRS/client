@@ -66,13 +66,7 @@ public class MapAreaDefinitions {
                     }
                 }
                 if (!bool_1) {
-                    String[] options;
-                    if(client.PLAYER_RIGHTS >= 2) {
-                        options = new String[npcDefinitions.options.length + 1];
-                        System.arraycopy(npcDefinitions.options, 0, options, 0, npcDefinitions.options.length);
-                        options[options.length-1] = "Bind-To";
-                    } else
-                        options = npcDefinitions.options;
+                    String[] options = npcDefinitions.options;
                     if (client.aBool7264) {
                         options = Class362.method6277(options);
                     }
