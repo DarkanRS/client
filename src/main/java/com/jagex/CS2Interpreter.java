@@ -4453,11 +4453,11 @@ public class CS2Interpreter {
 
     static void method1387(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
-        WorldDescriptor class217_sub1_3 = LocationIndexLoader.getWorld(i_2);
+        WorldDescriptor class217_sub1_3 = WorldDescriptor.getWorld(i_2);
         if (class217_sub1_3 != null) {
             executor.intStack[++executor.intStackPtr - 1] = class217_sub1_3.flags;
             executor.stringStack[++executor.stringStackPtr - 1] = class217_sub1_3.unknown;
-            World class213_4 = class217_sub1_3.getWorld();
+            WorldType class213_4 = class217_sub1_3.getWorld();
             executor.intStack[++executor.intStackPtr - 1] = class213_4.countryId;
             executor.stringStack[++executor.stringStackPtr - 1] = class213_4.activity;
             executor.intStack[++executor.intStackPtr - 1] = class217_sub1_3.playerCount;
@@ -7991,7 +7991,7 @@ public class CS2Interpreter {
             executor.intStack[++executor.intStackPtr - 1] = descriptor.worldNumber;
             executor.intStack[++executor.intStackPtr - 1] = descriptor.flags;
             executor.stringStack[++executor.stringStackPtr - 1] = descriptor.unknown;
-            World world = descriptor.getWorld();
+            WorldType world = descriptor.getWorld();
             executor.intStack[++executor.intStackPtr - 1] = world.countryId;
             executor.stringStack[++executor.stringStackPtr - 1] = world.activity;
             executor.intStack[++executor.intStackPtr - 1] = descriptor.playerCount;
@@ -8090,7 +8090,7 @@ public class CS2Interpreter {
     }
 
     static void method3039(CS2Executor executor) {
-        WorldDescriptor class217_sub1_2 = Isaac.method7266();
+        WorldDescriptor class217_sub1_2 = WorldDescriptor.getGameWorldDescriptor();
         executor.intStack[++executor.intStackPtr - 1] = class217_sub1_2 == null ? 0 : class217_sub1_2.flags;
     }
 
@@ -8178,7 +8178,7 @@ public class CS2Interpreter {
             executor.intStack[++executor.intStackPtr - 1] = class217_sub1_2.worldNumber;
             executor.intStack[++executor.intStackPtr - 1] = class217_sub1_2.flags;
             executor.stringStack[++executor.stringStackPtr - 1] = class217_sub1_2.unknown;
-            World class213_3 = class217_sub1_2.getWorld();
+            WorldType class213_3 = class217_sub1_2.getWorld();
             executor.intStack[++executor.intStackPtr - 1] = class213_3.countryId;
             executor.stringStack[++executor.stringStackPtr - 1] = class213_3.activity;
             executor.intStack[++executor.intStackPtr - 1] = class217_sub1_2.playerCount;

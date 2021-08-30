@@ -1,6 +1,6 @@
 package com.jagex;
 
-public class World {
+public class WorldType {
 
     public String activity;
     public int countryId;

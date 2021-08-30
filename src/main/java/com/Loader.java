@@ -1,5 +1,6 @@
 package com;
 
+import com.jagex.WorldDescriptor;
 import com.jagex.client;
 
 import javax.swing.*;
@@ -44,6 +45,9 @@ public class Loader extends Applet implements AppletStub {
     }
     
 	public static int getPort(int worldId) {
+		WorldDescriptor world = WorldDescriptor.getWorld(worldId);
+		if (world != null && world.port != -1)
+			return world.port;
 		switch(worldId) {
 		case LOBBY_WORLD:
 		case JS5_SOURCE_WORLD:

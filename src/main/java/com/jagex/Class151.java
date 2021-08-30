@@ -17,7 +17,7 @@ public class Class151 {
             ConnectionInfo.WORLD_DESCRIPTORS_BYID = new WorldDescriptor[Class4.WORLD_LIST_SIZE];
             int i_3 = 0;
             for (int i_4 = Class485.WORLD_LIST_START; i_4 <= Class244.WORLD_LIST_SIZEPLUS1; i_4++) {
-                WorldDescriptor world = LocationIndexLoader.getWorld(i_4);
+                WorldDescriptor world = WorldDescriptor.getWorld(i_4);
                 if (world != null) {
                     ConnectionInfo.WORLD_DESCRIPTORS_BYID[i_3++] = world;
                 }

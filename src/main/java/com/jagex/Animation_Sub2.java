@@ -44,7 +44,7 @@ public class Animation_Sub2 extends Animation {
 
     @Override
     void method7586(AnimationDefinitions animationdefinitions_1, int i_2) {
-        World.method3662(animationdefinitions_1, i_2, aTransform_Sub1_7890);
+        WorldType.method3662(animationdefinitions_1, i_2, aTransform_Sub1_7890);
     }
 
 }

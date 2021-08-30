@@ -4,7 +4,7 @@ public class Class354 {
 
     public static NativeSprite aNativeSprite_4110;
     public static int JCOINS;
-    static World[] WORLDS;
+    static WorldType[] WORLDS;
     Object anObject4109;
 
     int anInt4108;
