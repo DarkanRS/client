@@ -49,6 +49,7 @@ public class CutsceneActionType {
             Class354.WORLDS[i] = new WorldType();
             Class354.WORLDS[i].countryId = buffer.readSmart();
             Class354.WORLDS[i].activity = buffer.readGJString();
+            System.out.println("Worldlist set: " + Class354.WORLDS[i]);
         }
         Class485.WORLD_LIST_START = buffer.readSmart();
         Class244.WORLD_LIST_SIZEPLUS1 = buffer.readSmart();
@@ -64,6 +65,7 @@ public class CutsceneActionType {
             world.ipAddress = buffer.readGJString();
             if (world.hasPort())
             	world.port = buffer.readInt();
+            System.out.println("Worldlist set: " + world);
         }
         MapSpriteDefinitions.WORLD_LIST_IDK = buffer.readInt();
         Class244.aBool3007 = true;

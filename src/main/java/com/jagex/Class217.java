@@ -46,6 +46,6 @@ public abstract class Class217 {
     }
     
     public boolean hasPort() {
-    	return (flags & 0x10) != 0;
+    	return (flags & 0x40000000) != 0;
     }
 }

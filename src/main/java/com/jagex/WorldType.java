@@ -52,4 +52,8 @@ public class WorldType {
 
     }
 
+    @Override
+    public String toString() {
+    	return "WorldType: [" + activity + ", " + countryId + "]";
+    }
 }
