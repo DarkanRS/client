@@ -187,7 +187,6 @@ public class Atmosphere {
         int i_8 = buffer.readUnsignedShort();
         Class388.anInt4723 = i_8;
         environmentInfo = class239_2.getSkybox(skyboxId, xOffset, yOffset, planeOffset);
-        ChatLine.appendGameMessage("Decoding Skybox: "+skyboxId+" X: "+xOffset+" Y: "+yOffset+" Plane: "+planeOffset);
     }
 
     public void setSkybox(Class239 aClass239_7719, int skyboxId) {
