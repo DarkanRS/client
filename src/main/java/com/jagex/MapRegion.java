@@ -51,8 +51,6 @@ public class MapRegion {
     float aFloat3173;
     ClipFlagMap[] clipMaps = new ClipFlagMap[4];
 
-    int skyboxId;
-
     public MapRegion(boolean bool_1) {
         aBool3171 = bool_1;
     }
@@ -1092,7 +1090,7 @@ public class MapRegion {
                                 if (i_12 == regionIds[i_13] && bytes_2[i_13] != null) {
                                     ByteBuf rsbytebuffer_14 = new ByteBuf(bytes_2[i_13]);
                                     class329_sub1_1.method5841(rsbytebuffer_14, i_4, x * 8, y * 8, plane, realX, realY, rotation, clipMaps);
-                                    class329_sub1_1.decodeDynamicMap(Renderers.CURRENT_RENDERER, rsbytebuffer_14, i_4, x * 8, y * 8, plane, realX, realY, rotation, skyboxId);
+                                    class329_sub1_1.decodeDynamicMap(Renderers.CURRENT_RENDERER, rsbytebuffer_14, i_4, x * 8, y * 8, plane, realX, realY, rotation);
                                     break;
                                 }
                             }

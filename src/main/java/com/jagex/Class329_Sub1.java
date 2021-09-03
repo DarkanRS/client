@@ -155,7 +155,7 @@ public class Class329_Sub1 extends Class329 {
         }
     }
 
-    public void decodeDynamicMap(AbstractRenderer renderer, ByteBuf buffer, int plane, int x, int y, int i_6, int i_7, int i_8, int i_9, int skyboxId) {
+    public void decodeDynamicMap(AbstractRenderer renderer, ByteBuf buffer, int plane, int x, int y, int i_6, int i_7, int i_8, int i_9) {
         if (!overlayHidden) {
             boolean bool_11 = false;
             Atmosphere atmosphere = null;
@@ -290,7 +290,8 @@ public class Class329_Sub1 extends Class329 {
                         }
                     }
                 }
-                if(atmosphere != null && skyboxId != -1) atmosphere.setSkybox(aClass239_7719, skyboxId);
+//                if(atmosphere != null && skyboxId != -1) 
+//                	atmosphere.setSkybox(aClass239_7719, skyboxId);
                 if (atmosphere != null) {
                     aClass239_7719.method4056(x >> 3, y >> 3, atmosphere);
                 }
