@@ -269,8 +269,8 @@ public class MapRegion {
     }
 
     void loadMapSceneDynamic(ByteBuf.Bit buffer) {
-        int forceRefresh = buffer.readUnsignedByteC();
-        boolean bool_4 = (forceRefresh & 0x1) != 0;
+        int forceRefreshFlags = buffer.readUnsignedByteC();
+        boolean forceRefresh = (forceRefreshFlags & 0x1) != 0;
         int type = buffer.readUnsigned128Byte();
         if (type == 1) {
             mapType = Class256.aClass256_3155;
@@ -284,7 +284,6 @@ public class MapRegion {
         int mapSize = buffer.readUnsignedByte128();
         int regionY = buffer.readUnsignedShort128();
         int regionX = buffer.readUnsignedShort();
-        skyboxId = buffer.readUnsignedShort();
         if (!aBool3171) {
             method4457();
         }
@@ -351,7 +350,7 @@ public class MapRegion {
                 }
             }
         }
-        method4458(regionX, regionY, 18, bool_4);
+        method4458(regionX, regionY, 18, forceRefresh);
     }
 
     public void method4440(byte[][][] bytes_1) {
