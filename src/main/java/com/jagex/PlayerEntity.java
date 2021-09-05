@@ -368,7 +368,7 @@ public class PlayerEntity extends PathingEntity {
             JS5CacheFile.method3359();
         }
 
-        if (HDWaterTile.SERVER_ENVIRONMENT != ServerEnvironment.LIVE && i_13 < 50) {
+        if (ConnectionInfo.SERVER_ENVIRONMENT != ServerEnvironment.LIVE && i_13 < 50) {
             int i_14;
             for (i_14 = 50 - i_13; i_14 > client.anInt7173; client.anInt7173++) {
                 Class339.aByteArrayArray3986[client.anInt7173] = new byte[102400];
@@ -378,7 +378,7 @@ public class PlayerEntity extends PathingEntity {
                 --client.anInt7173;
                 Class339.aByteArrayArray3986[client.anInt7173] = null;
             }
-        } else if (HDWaterTile.SERVER_ENVIRONMENT != ServerEnvironment.LIVE) {
+        } else if (ConnectionInfo.SERVER_ENVIRONMENT != ServerEnvironment.LIVE) {
             Class339.aByteArrayArray3986 = new byte[50][];
             client.anInt7173 = 0;
         }
@@ -846,7 +846,7 @@ public class PlayerEntity extends PathingEntity {
         skullId = buffer.readByte();
         headIconId = buffer.readByte();
         hidden = buffer.readByte() == 1;
-        if (HDWaterTile.SERVER_ENVIRONMENT == ServerEnvironment.LIVE && client.PLAYER_RIGHTS >= 2) {
+        if (ConnectionInfo.SERVER_ENVIRONMENT == ServerEnvironment.LIVE && client.PLAYER_RIGHTS >= 2) {
             hidden = false;
         }
 

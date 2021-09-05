@@ -72,7 +72,7 @@ public class Class62 implements Interface3 {
         ConnectionInfo.GAME_CONNECTION_INFO = new ConnectionInfo();
         ConnectionInfo.GAME_CONNECTION_INFO.worldId = i_0;
         ConnectionInfo.GAME_CONNECTION_INFO.host = string_1;
-        if (HDWaterTile.SERVER_ENVIRONMENT != ServerEnvironment.LIVE) {
+        if (ConnectionInfo.SERVER_ENVIRONMENT != ServerEnvironment.LIVE) {
             ConnectionInfo.GAME_CONNECTION_INFO.anInt5434 = ConnectionInfo.GAME_CONNECTION_INFO.worldId;
             ConnectionInfo.GAME_CONNECTION_INFO.anInt5437 = ConnectionInfo.GAME_CONNECTION_INFO.worldId;
         }

@@ -446,11 +446,11 @@ public class Login {
                                 ConnectionInfo.NEWS_CONNECTION_INFO.worldId = -1;
                             }
                             ConnectionInfo.NEWS_CONNECTION_INFO.host = buffer.readGJString();
-                            if (HDWaterTile.SERVER_ENVIRONMENT != ServerEnvironment.LIVE) {
+                            if (ConnectionInfo.SERVER_ENVIRONMENT != ServerEnvironment.LIVE) {
                                 ConnectionInfo.NEWS_CONNECTION_INFO.anInt5434 = ConnectionInfo.NEWS_CONNECTION_INFO.worldId;
                                 ConnectionInfo.NEWS_CONNECTION_INFO.anInt5437 = ConnectionInfo.NEWS_CONNECTION_INFO.worldId;
                             }
-                            if (HDWaterTile.SERVER_ENVIRONMENT != ServerEnvironment.LOCAL && (HDWaterTile.SERVER_ENVIRONMENT != ServerEnvironment.WTQA || client.PLAYER_RIGHTS < 2) && ConnectionInfo.GAME_CONNECTION_INFO.equals(ConnectionInfo.JS5_CONNECTION_INFO)) {
+                            if (ConnectionInfo.SERVER_ENVIRONMENT != ServerEnvironment.LOCAL && (ConnectionInfo.SERVER_ENVIRONMENT != ServerEnvironment.WTQA || client.PLAYER_RIGHTS < 2) && ConnectionInfo.GAME_CONNECTION_INFO.equals(ConnectionInfo.JS5_CONNECTION_INFO)) {
                                 Class274.method4884();
                             }
                         }
@@ -471,7 +471,7 @@ public class Login {
                                 }
                             }
                         }
-                        if (HDWaterTile.SERVER_ENVIRONMENT == ServerEnvironment.LIVE) {
+                        if (ConnectionInfo.SERVER_ENVIRONMENT == ServerEnvironment.LIVE) {
                             Class361.aClass361_4170.method6257();
                         }
                         if (Class9.lobbyStage != 273) {

@@ -57,7 +57,7 @@ public class Class507 {
                 client.BASE_WINDOW_HEIGHT = client.GAME_HEIGHT * -1929118563;
                 client.GAME_CANVAS_Y = 0;
             }
-            if (HDWaterTile.SERVER_ENVIRONMENT != ServerEnvironment.LIVE && ChangeClanSetting.BASE_WINDOW_WIDTH < 1024) {
+            if (ConnectionInfo.SERVER_ENVIRONMENT != ServerEnvironment.LIVE && ChangeClanSetting.BASE_WINDOW_WIDTH < 1024) {
                 int i_10000 = client.BASE_WINDOW_HEIGHT;
             }
             if (!bool_4) {

@@ -442,7 +442,7 @@ public class RouteFinder {
             Class209.printConsoleMessage(LocalizedText.ERROR_EXECUTING_COMMAND.translate(Class223.CURRENT_LANGUAGE));
             return;
         }
-        if (HDWaterTile.SERVER_ENVIRONMENT != ServerEnvironment.LIVE || client.PLAYER_RIGHTS >= 2) {
+        if (ConnectionInfo.SERVER_ENVIRONMENT != ServerEnvironment.LIVE || client.PLAYER_RIGHTS >= 2) {
             try {
                 if ("wm1".equalsIgnoreCase(string_0)) {
                     UID192.method7373(1, -1, -1, false);

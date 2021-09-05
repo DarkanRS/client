@@ -152,13 +152,13 @@ public class MapAreaDefinitions {
 
     public static String method3741() {
         String str_1 = "www";
-        if (HDWaterTile.SERVER_ENVIRONMENT == ServerEnvironment.WTRC) {
+        if (ConnectionInfo.SERVER_ENVIRONMENT == ServerEnvironment.WTRC) {
             str_1 = "www-wtrc";
-        } else if (HDWaterTile.SERVER_ENVIRONMENT == ServerEnvironment.WTQA) {
+        } else if (ConnectionInfo.SERVER_ENVIRONMENT == ServerEnvironment.WTQA) {
             str_1 = "www-wtqa";
-        } else if (HDWaterTile.SERVER_ENVIRONMENT == ServerEnvironment.WTWIP) {
+        } else if (ConnectionInfo.SERVER_ENVIRONMENT == ServerEnvironment.WTWIP) {
             str_1 = "www-wtwip";
-        } else if (HDWaterTile.SERVER_ENVIRONMENT == ServerEnvironment.WTI) {
+        } else if (ConnectionInfo.SERVER_ENVIRONMENT == ServerEnvironment.WTI) {
             str_1 = "www-wti";
         }
         String str_2 = "";

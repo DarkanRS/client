@@ -2,7 +2,6 @@ package com.jagex;
 
 public class HDWaterTile {
 
-    public static ServerEnvironment SERVER_ENVIRONMENT;
     public int color;
     public int scale;
     public int intensity;
