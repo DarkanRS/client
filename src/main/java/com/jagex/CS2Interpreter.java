@@ -1854,14 +1854,14 @@ public class CS2Interpreter {
             case CHAT_SENDABUSEREPORT:
                 sendReportAbusePacket(exec);
                 break;
-            case instr6560: //CHAT_GETHISTORY_BYUID
-                method2824(exec);
+            case CHAT_GETBYLINE:
+                getChatByLine(exec);
                 break;
-            case instr6739: //CHAT_GETHISTORY_BYTYPEANDLINE
-                method15512(exec);
+            case CHAT_GETTYPEBYLINE:
+                getChatLineType(exec);
                 break;
-            case instr6562: //CHAT_GETFILTER_PRIVATE
-                method5046(exec);
+            case CHAT_GETFILTER_PRIVATE:
+                getChatFilterPrivate(exec);
                 break;
             case instr6563:
                 method6005(exec);
@@ -3195,7 +3195,7 @@ public class CS2Interpreter {
         setScrollSize(icomponentdefinitions_3, interface_4, executor);
     }
 
-    static void method15512(CS2Executor executor) {
+    static void getChatLineType(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
         ChatLine chatline_3 = ChatLine.getChatLine(i_2);
         int i_4 = -1;
@@ -6829,7 +6829,7 @@ public class CS2Interpreter {
         Class435.playSoundVorbis(executor.intStack[executor.intStackPtr], executor.intStack[executor.intStackPtr + 1], executor.intStack[executor.intStackPtr + 2], executor.intStack[executor.intStackPtr + 3], false, 256);
     }
 
-    static void method2824(CS2Executor executor) {
+    static void getChatByLine(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
         ChatLine chatline_3 = ChatLine.getChatLine(i_2);
         String str_4 = "";
@@ -6998,7 +6998,7 @@ public class CS2Interpreter {
         executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.parent;
     }
 
-    static void method5046(CS2Executor executor) {
+    static void getChatFilterPrivate(CS2Executor executor) {
         if (Class149_Sub2.PRIVATE_FILTER == null) {
             executor.intStack[++executor.intStackPtr - 1] = -1;
         } else {
