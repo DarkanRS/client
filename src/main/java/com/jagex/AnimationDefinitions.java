@@ -4,7 +4,7 @@ public class AnimationDefinitions {
 
     public static int anInt5930;
     public static boolean aBool5925;
-    public int anInt5909;
+    public int id;
     public int[] frameDurations;
     public int loopDelay = -1;
     public boolean[] aBoolArray5915;
