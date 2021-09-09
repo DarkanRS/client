@@ -82,7 +82,7 @@ public class Animation {
             if (animationId == -1) {
                 defs = null;
             } else {
-                if (defs != null && defs.anInt5909 == animationId) {
+                if (defs != null && defs.id == animationId) {
                     if (defs.replayMode == 0) {
                         return;
                     }
@@ -192,7 +192,7 @@ public class Animation {
     }
 
     public int method7597() {
-        return defs != null ? defs.anInt5909 : -1;
+        return defs != null ? defs.id : -1;
     }
 
     public void method7615(int i_1, int i_2) {

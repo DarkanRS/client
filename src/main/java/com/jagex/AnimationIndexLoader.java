@@ -118,7 +118,7 @@ public class AnimationIndexLoader {
                 bytes_10 = sequenceIndex.getFile(SharedConfigsType.ANIMATIONS.containerId(i_1), SharedConfigsType.ANIMATIONS.fileId(i_1));
             }
             animationdefinitions_3 = new AnimationDefinitions();
-            animationdefinitions_3.anInt5909 = i_1;
+            animationdefinitions_3.id = i_1;
             animationdefinitions_3.animationIndexLoader = this;
             if (bytes_10 != null) {
                 animationdefinitions_3.method11130(new ByteBuf(bytes_10));
