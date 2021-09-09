@@ -569,10 +569,10 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 		if (!aBool3254) {
 			aBool3254 = true;
 			System.out.println("error_game_" + string_1);
-			try {
-				Class441.method7377(SubInterface.suppliedApplet, "loggedout");
-			} catch (Throwable ignored) {
-			}
+//			try {
+//				Class441.method7377(SubInterface.suppliedApplet, "loggedout");
+//			} catch (Throwable ignored) {
+//			}
 			try {
 				SubInterface.suppliedApplet.getAppletContext().showDocument(new URL(SubInterface.suppliedApplet.getCodeBase(), "error_game_" + string_1 + ".ws"), "_top");
 			} catch (Exception ignored) {

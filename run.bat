@@ -1,1 +1,0 @@
-target/client-2.5-jar-with-dependencies.jar

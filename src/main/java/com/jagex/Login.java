@@ -455,13 +455,13 @@ public class Login {
                             }
                         }
                         if ((!client.USERDETAIL_QUICKCHAT || client.aBool7322) && !client.IS_MEMBER) {
-                            try {
-                                Class441.method7377(SubInterface.suppliedApplet, "unzap");
-                            } catch (Throwable ignored) {
-                            }
+//                            try {
+//                                Class441.method7377(SubInterface.suppliedApplet, "unzap");
+//                            } catch (Throwable ignored) {
+//                            }
                         } else {
                             try {
-                                Class441.method7377(SubInterface.suppliedApplet, "zap");
+                                //Class441.method7377(SubInterface.suppliedApplet, "zap");
                             } catch (Throwable throwable_16) {
                                 if (client.aBool7147) {
                                     try {

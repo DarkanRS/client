@@ -96,24 +96,26 @@ public class Class361 {
     }
 
     public Object method6254(Object[] arr_1) throws Throwable {
-        return Class441.method7375(SubInterface.suppliedApplet, method6253(), arr_1);
+        //return Class441.method7375(SubInterface.suppliedApplet, method6253(), arr_1);
+    	return new Object();
     }
 
     public Object method6255() throws Throwable {
-        return Class441.method7377(SubInterface.suppliedApplet, method6253());
+        //return Class441.method7377(SubInterface.suppliedApplet, method6253());
+    	return new Object();
     }
 
     public void method6256(Object[] arr_1) {
-        try {
-            method6254(arr_1);
-        } catch (Throwable ignored) {
-        }
+//        try {
+//            method6254(arr_1);
+//        } catch (Throwable ignored) {
+//        }
     }
 
     public void method6257() {
-        try {
-            method6255();
-        } catch (Throwable ignored) {
-        }
+//        try {
+//            method6255();
+//        } catch (Throwable ignored) {
+//        }
     }
 }

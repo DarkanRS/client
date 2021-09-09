@@ -47,7 +47,7 @@ public class Class516 {
                 } else {
                     string_4 = string_4 + "; Expires=" + Class316.method5596(Utils.time() + 94608000000L) + "; Max-Age=" + 94608000L;
                 }
-                Class441.method7376(SubInterface.suppliedApplet, "document.cookie=\"" + string_4 + "\"");
+                //Class441.method7376(SubInterface.suppliedApplet, "document.cookie=\"" + string_4 + "\"");
             } catch (Throwable ignored) {
             }
         }
