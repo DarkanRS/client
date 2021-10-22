@@ -446,22 +446,22 @@ public class Login {
                                 ConnectionInfo.NEWS_CONNECTION_INFO.worldId = -1;
                             }
                             ConnectionInfo.NEWS_CONNECTION_INFO.host = buffer.readGJString();
-                            if (HDWaterTile.SERVER_ENVIRONMENT != ServerEnvironment.LIVE) {
+                            if (ConnectionInfo.SERVER_ENVIRONMENT != ServerEnvironment.LIVE) {
                                 ConnectionInfo.NEWS_CONNECTION_INFO.anInt5434 = ConnectionInfo.NEWS_CONNECTION_INFO.worldId;
                                 ConnectionInfo.NEWS_CONNECTION_INFO.anInt5437 = ConnectionInfo.NEWS_CONNECTION_INFO.worldId;
                             }
-                            if (HDWaterTile.SERVER_ENVIRONMENT != ServerEnvironment.LOCAL && (HDWaterTile.SERVER_ENVIRONMENT != ServerEnvironment.WTQA || client.PLAYER_RIGHTS < 2) && ConnectionInfo.GAME_CONNECTION_INFO.equals(ConnectionInfo.JS5_CONNECTION_INFO)) {
+                            if (ConnectionInfo.SERVER_ENVIRONMENT != ServerEnvironment.LOCAL && (ConnectionInfo.SERVER_ENVIRONMENT != ServerEnvironment.WTQA || client.PLAYER_RIGHTS < 2) && ConnectionInfo.GAME_CONNECTION_INFO.equals(ConnectionInfo.JS5_CONNECTION_INFO)) {
                                 Class274.method4884();
                             }
                         }
                         if ((!client.USERDETAIL_QUICKCHAT || client.aBool7322) && !client.IS_MEMBER) {
-                            try {
-                                Class441.method7377(SubInterface.suppliedApplet, "unzap");
-                            } catch (Throwable ignored) {
-                            }
+//                            try {
+//                                Class441.method7377(SubInterface.suppliedApplet, "unzap");
+//                            } catch (Throwable ignored) {
+//                            }
                         } else {
                             try {
-                                Class441.method7377(SubInterface.suppliedApplet, "zap");
+                                //Class441.method7377(SubInterface.suppliedApplet, "zap");
                             } catch (Throwable throwable_16) {
                                 if (client.aBool7147) {
                                     try {
@@ -471,7 +471,7 @@ public class Login {
                                 }
                             }
                         }
-                        if (HDWaterTile.SERVER_ENVIRONMENT == ServerEnvironment.LIVE) {
+                        if (ConnectionInfo.SERVER_ENVIRONMENT == ServerEnvironment.LIVE) {
                             Class361.aClass361_4170.method6257();
                         }
                         if (Class9.lobbyStage != 273) {

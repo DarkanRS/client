@@ -1,6 +1,6 @@
 package com.jagex;
 
-public class World {
+public class WorldType {
 
     public String activity;
     public int countryId;
@@ -52,4 +52,8 @@ public class World {
 
     }
 
+    @Override
+    public String toString() {
+    	return "WorldType: [" + activity + ", " + countryId + "]";
+    }
 }

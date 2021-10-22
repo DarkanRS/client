@@ -43,7 +43,7 @@ public class Class356 {
             Class520.method11161();
             Class487.aClass378_5752.method6410();
             Class413.method6939();
-            if (HDWaterTile.SERVER_ENVIRONMENT != ServerEnvironment.LIVE) {
+            if (ConnectionInfo.SERVER_ENVIRONMENT != ServerEnvironment.LIVE) {
                 Arrays.fill(Class339.aByteArrayArray3986, null);
                 client.anInt7173 = 0;
             }

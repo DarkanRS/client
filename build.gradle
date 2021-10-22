@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+mainClassName = 'com.Loader'
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+}
+
+group 'darkan'
+version '1.0-SNAPSHOT'
+
+dependencies {
+	
+}

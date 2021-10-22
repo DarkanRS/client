@@ -1576,7 +1576,7 @@ public class CS2Interpreter {
                 clanVarsEnabled(exec);
                 break;
             case STOCKMARKET_GETOFFERTYPE:
-                method6231(exec);
+                getGEOfferType(exec);
                 break;
             case STOCKMARKET_GETOFFERITEM:
                 getGEOfferItem(exec);
@@ -1585,25 +1585,25 @@ public class CS2Interpreter {
                 getGEOfferPrice(exec);
                 break;
             case STOCKMARKET_GETOFFERCOUNT:
-                method3802(exec);
+                getGEOfferAmount(exec);
                 break;
             case STOCKMARKET_GETOFFERCOMPLETEDCOUNT:
-                method7715(exec);
+                getGEOfferCurrAmount(exec);
                 break;
             case STOCKMARKET_GETOFFERCOMPLETEDGOLD:
-                method6206(exec);
+                getGEOfferCompletedGold(exec);
                 break;
             case STOCKMARKET_ISOFFEREMPTY:
-                isExchangeSlotEmpty(exec);
+                isGEOfferEmpty(exec);
                 break;
             case STOCKMARKET_ISOFFERSTABLE:
-                method8716(exec);
+                isGEOfferStable(exec);
                 break;
             case STOCKMARKET_ISOFFERFINISHED:
-                isExchangeOfferFinished(exec);
+                isGEOfferFinished(exec);
                 break;
             case STOCKMARKET_ISOFFERADDING:
-                method5297(exec);
+                isGEOfferAdding(exec);
                 break;
             case ADD:
                 add(exec);
@@ -1854,14 +1854,14 @@ public class CS2Interpreter {
             case CHAT_SENDABUSEREPORT:
                 sendReportAbusePacket(exec);
                 break;
-            case instr6560: //CHAT_GETHISTORY_BYUID
-                method2824(exec);
+            case CHAT_GETBYLINE:
+                getChatByLine(exec);
                 break;
-            case instr6739: //CHAT_GETHISTORY_BYTYPEANDLINE
-                method15512(exec);
+            case CHAT_GETTYPEBYLINE:
+                getChatLineType(exec);
                 break;
-            case instr6562: //CHAT_GETFILTER_PRIVATE
-                method5046(exec);
+            case CHAT_GETFILTER_PRIVATE:
+                getChatFilterPrivate(exec);
                 break;
             case instr6563:
                 method6005(exec);
@@ -3195,7 +3195,7 @@ public class CS2Interpreter {
         setScrollSize(icomponentdefinitions_3, interface_4, executor);
     }
 
-    static void method15512(CS2Executor executor) {
+    static void getChatLineType(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
         ChatLine chatline_3 = ChatLine.getChatLine(i_2);
         int i_4 = -1;
@@ -3334,9 +3334,9 @@ public class CS2Interpreter {
         method3251(icomponentdefinitions_3, executor);
     }
 
-    static void method8716(CS2Executor executor) {
+    static void isGEOfferStable(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
-        int i_3 = client.GRAND_EXCHANGE_SLOTS[i_2].method5908();
+        int i_3 = client.GRAND_EXCHANGE_SLOTS[i_2].getState();
         executor.intStack[++executor.intStackPtr - 1] = i_3 == 2 ? 1 : 0;
     }
 
@@ -3994,9 +3994,9 @@ public class CS2Interpreter {
         executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.y;
     }
 
-    static void isExchangeSlotEmpty(CS2Executor executor) {
+    static void isGEOfferEmpty(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
-        int i_3 = client.GRAND_EXCHANGE_SLOTS[i_2].method5908();
+        int i_3 = client.GRAND_EXCHANGE_SLOTS[i_2].getState();
         executor.intStack[++executor.intStackPtr - 1] = i_3 == 0 ? 1 : 0;
     }
 
@@ -4453,11 +4453,11 @@ public class CS2Interpreter {
 
     static void method1387(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
-        WorldDescriptor class217_sub1_3 = LocationIndexLoader.getWorld(i_2);
+        WorldDescriptor class217_sub1_3 = WorldDescriptor.getWorld(i_2);
         if (class217_sub1_3 != null) {
             executor.intStack[++executor.intStackPtr - 1] = class217_sub1_3.flags;
             executor.stringStack[++executor.stringStackPtr - 1] = class217_sub1_3.unknown;
-            World class213_4 = class217_sub1_3.getWorld();
+            WorldType class213_4 = class217_sub1_3.getWorld();
             executor.intStack[++executor.intStackPtr - 1] = class213_4.countryId;
             executor.stringStack[++executor.stringStackPtr - 1] = class213_4.activity;
             executor.intStack[++executor.intStackPtr - 1] = class217_sub1_3.playerCount;
@@ -4482,7 +4482,7 @@ public class CS2Interpreter {
         executor.intStack[executor.intStackPtr - 1] = executor.currentClanSettings.method1215()[executor.intStack[executor.intStackPtr - 1]];
     }
 
-    static void method6206(CS2Executor executor) {
+    static void getGEOfferCompletedGold(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
         executor.intStack[++executor.intStackPtr - 1] = client.GRAND_EXCHANGE_SLOTS[i_2].totalPrice;
     }
@@ -5288,13 +5288,13 @@ public class CS2Interpreter {
         method3366(icomponentdefinitions_4, executor);
     }
 
-    static void method5297(CS2Executor executor) {
-        int i_2 = executor.intStack[--executor.intStackPtr];
-        int i_3 = client.GRAND_EXCHANGE_SLOTS[i_2].method5908();
+    static void isGEOfferAdding(CS2Executor executor) {
+        int slot = executor.intStack[--executor.intStackPtr];
+        int state = client.GRAND_EXCHANGE_SLOTS[slot].getState();
         int[] ints_4 = executor.intStack;
         int i_5 = ++executor.intStackPtr - 1;
         byte b_6;
-        if (i_3 == 1) {
+        if (state == 1) {
             b_6 = 1;
         } else {
             b_6 = 0;
@@ -5875,7 +5875,7 @@ public class CS2Interpreter {
         method6186(icomponentdefinitions_3, interface_4, executor);
     }
 
-    static void method3802(CS2Executor executor) {
+    static void getGEOfferAmount(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
         executor.intStack[++executor.intStackPtr - 1] = client.GRAND_EXCHANGE_SLOTS[i_2].amount;
     }
@@ -6829,7 +6829,7 @@ public class CS2Interpreter {
         Class435.playSoundVorbis(executor.intStack[executor.intStackPtr], executor.intStack[executor.intStackPtr + 1], executor.intStack[executor.intStackPtr + 2], executor.intStack[executor.intStackPtr + 3], false, 256);
     }
 
-    static void method2824(CS2Executor executor) {
+    static void getChatByLine(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
         ChatLine chatline_3 = ChatLine.getChatLine(i_2);
         String str_4 = "";
@@ -6998,7 +6998,7 @@ public class CS2Interpreter {
         executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.parent;
     }
 
-    static void method5046(CS2Executor executor) {
+    static void getChatFilterPrivate(CS2Executor executor) {
         if (Class149_Sub2.PRIVATE_FILTER == null) {
             executor.intStack[++executor.intStackPtr - 1] = -1;
         } else {
@@ -7109,7 +7109,7 @@ public class CS2Interpreter {
         client.LOBBY_CONNECTION_CONTEXT.queuePacket(tcpmessage_3);
     }
 
-    static void method7715(CS2Executor executor) {
+    static void getGEOfferCurrAmount(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
         executor.intStack[++executor.intStackPtr - 1] = client.GRAND_EXCHANGE_SLOTS[i_2].currentAmount;
     }
@@ -7158,9 +7158,9 @@ public class CS2Interpreter {
         method569(icomponentdefinitions_3, executor);
     }
 
-    static void isExchangeOfferFinished(CS2Executor executor) {
+    static void isGEOfferFinished(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
-        int i_3 = client.GRAND_EXCHANGE_SLOTS[i_2].method5908();
+        int i_3 = client.GRAND_EXCHANGE_SLOTS[i_2].getState();
         executor.intStack[++executor.intStackPtr - 1] = i_3 == 5 ? 1 : 0;
     }
 
@@ -7722,9 +7722,9 @@ public class CS2Interpreter {
         executor.intStack[++executor.intStackPtr - 1] = ItemContainer.getAmountAtSlot(i_2, i_3, true);
     }
 
-    static void method6231(CS2Executor executor) {
+    static void getGEOfferType(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
-        executor.intStack[++executor.intStackPtr - 1] = client.GRAND_EXCHANGE_SLOTS[i_2].method5909();
+        executor.intStack[++executor.intStackPtr - 1] = client.GRAND_EXCHANGE_SLOTS[i_2].isSelling();
     }
 
     static void getCompHidden(CS2Executor executor) {
@@ -7991,7 +7991,7 @@ public class CS2Interpreter {
             executor.intStack[++executor.intStackPtr - 1] = descriptor.worldNumber;
             executor.intStack[++executor.intStackPtr - 1] = descriptor.flags;
             executor.stringStack[++executor.stringStackPtr - 1] = descriptor.unknown;
-            World world = descriptor.getWorld();
+            WorldType world = descriptor.getWorld();
             executor.intStack[++executor.intStackPtr - 1] = world.countryId;
             executor.stringStack[++executor.stringStackPtr - 1] = world.activity;
             executor.intStack[++executor.intStackPtr - 1] = descriptor.playerCount;
@@ -8090,7 +8090,7 @@ public class CS2Interpreter {
     }
 
     static void method3039(CS2Executor executor) {
-        WorldDescriptor class217_sub1_2 = Isaac.method7266();
+        WorldDescriptor class217_sub1_2 = WorldDescriptor.getGameWorldDescriptor();
         executor.intStack[++executor.intStackPtr - 1] = class217_sub1_2 == null ? 0 : class217_sub1_2.flags;
     }
 
@@ -8178,7 +8178,7 @@ public class CS2Interpreter {
             executor.intStack[++executor.intStackPtr - 1] = class217_sub1_2.worldNumber;
             executor.intStack[++executor.intStackPtr - 1] = class217_sub1_2.flags;
             executor.stringStack[++executor.stringStackPtr - 1] = class217_sub1_2.unknown;
-            World class213_3 = class217_sub1_2.getWorld();
+            WorldType class213_3 = class217_sub1_2.getWorld();
             executor.intStack[++executor.intStackPtr - 1] = class213_3.countryId;
             executor.stringStack[++executor.stringStackPtr - 1] = class213_3.activity;
             executor.intStack[++executor.intStackPtr - 1] = class217_sub1_2.playerCount;

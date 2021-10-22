@@ -83,7 +83,7 @@ public class Class188 {
                 String string_1 = SubInterface.suppliedApplet.getParameter(Class358.aClass358_4144.aString4159);
                 int i_2 = (int) (Utils.time() / 86400000L) - 11745;
                 String string_3 = "usrdob=" + i_2 + "; version=1; path=/; domain=" + string_1;
-                Class441.method7376(SubInterface.suppliedApplet, "document.cookie=\"" + string_3 + "\"");
+                //Class441.method7376(SubInterface.suppliedApplet, "document.cookie=\"" + string_3 + "\"");
             } catch (Throwable ignored) {
             }
         }

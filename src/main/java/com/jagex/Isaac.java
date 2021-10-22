@@ -21,10 +21,6 @@ public class Isaac {
         method7253();
     }
 
-    public static WorldDescriptor method7266() {
-        return LocationIndexLoader.getWorld(ConnectionInfo.GAME_CONNECTION_INFO.worldId);
-    }
-
     static void processCamera() {
         if (client.camAngleX < 1081.0F) {
             client.camAngleX = 1081.0F;

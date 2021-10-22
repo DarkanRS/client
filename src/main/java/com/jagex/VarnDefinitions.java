@@ -12,7 +12,7 @@ public class VarnDefinitions {
 
             while (true) {
                 while (ConnectionInfo.currentWorldPingIdx < Class244.WORLD_LIST_SIZEPLUS1) {
-                    WorldDescriptor world = LocationIndexLoader.getWorld(ConnectionInfo.currentWorldPingIdx);
+                    WorldDescriptor world = WorldDescriptor.getWorld(ConnectionInfo.currentWorldPingIdx);
                     if (world != null && world.ping == -1) {
                         if (ConnectionInfo.CURRENT_WORLD_PING_REQUEST == null) {
                             ConnectionInfo.CURRENT_WORLD_PING_REQUEST = client.PING_REQUESTER.createPingRequest(world.ipAddress);

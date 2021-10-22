@@ -51,8 +51,6 @@ public class MapRegion {
     float aFloat3173;
     ClipFlagMap[] clipMaps = new ClipFlagMap[4];
 
-    int skyboxId;
-
     public MapRegion(boolean bool_1) {
         aBool3171 = bool_1;
     }
@@ -269,8 +267,8 @@ public class MapRegion {
     }
 
     void loadMapSceneDynamic(ByteBuf.Bit buffer) {
-        int forceRefresh = buffer.readUnsignedByteC();
-        boolean bool_4 = (forceRefresh & 0x1) != 0;
+        int forceRefreshFlags = buffer.readUnsignedByteC();
+        boolean forceRefresh = (forceRefreshFlags & 0x1) != 0;
         int type = buffer.readUnsigned128Byte();
         if (type == 1) {
             mapType = Class256.aClass256_3155;
@@ -284,7 +282,6 @@ public class MapRegion {
         int mapSize = buffer.readUnsignedByte128();
         int regionY = buffer.readUnsignedShort128();
         int regionX = buffer.readUnsignedShort();
-        skyboxId = buffer.readUnsignedShort();
         if (!aBool3171) {
             method4457();
         }
@@ -351,7 +348,7 @@ public class MapRegion {
                 }
             }
         }
-        method4458(regionX, regionY, 18, bool_4);
+        method4458(regionX, regionY, 18, forceRefresh);
     }
 
     public void method4440(byte[][][] bytes_1) {
@@ -1093,7 +1090,7 @@ public class MapRegion {
                                 if (i_12 == regionIds[i_13] && bytes_2[i_13] != null) {
                                     ByteBuf rsbytebuffer_14 = new ByteBuf(bytes_2[i_13]);
                                     class329_sub1_1.method5841(rsbytebuffer_14, i_4, x * 8, y * 8, plane, realX, realY, rotation, clipMaps);
-                                    class329_sub1_1.decodeDynamicMap(Renderers.CURRENT_RENDERER, rsbytebuffer_14, i_4, x * 8, y * 8, plane, realX, realY, rotation, skyboxId);
+                                    class329_sub1_1.decodeDynamicMap(Renderers.CURRENT_RENDERER, rsbytebuffer_14, i_4, x * 8, y * 8, plane, realX, realY, rotation);
                                     break;
                                 }
                             }

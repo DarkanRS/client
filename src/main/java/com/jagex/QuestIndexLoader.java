@@ -186,6 +186,8 @@ public class QuestIndexLoader {
     }
 
     public QuestDefinitions getQuest(int i_1) {
+    	if (i_1 >= questDefinitions.length)
+    		return null;
         return questDefinitions[i_1];
     }
 }

@@ -36,13 +36,7 @@ public class Class186 {
                 return false;
             }
         } else if (i_1 == 1) {
-            try {
-                Object object_5 = Class441.method7375(SubInterface.suppliedApplet, string_2, new Object[]{(new URL(SubInterface.suppliedApplet.getCodeBase(), string_0)).toString()});
-                bool_4 = object_5 != null;
-                return bool_4;
-            } catch (Throwable throwable_8) {
-                return false;
-            }
+        	return false;
         } else if (i_1 == 2) {
             try {
                 SubInterface.suppliedApplet.getAppletContext().showDocument(new URL(SubInterface.suppliedApplet.getCodeBase(), string_0), "_blank");
@@ -52,11 +46,6 @@ public class Class186 {
                 return false;
             }
         } else if (i_1 == 3) {
-            try {
-                Class441.method7377(SubInterface.suppliedApplet, "loggedout");
-            } catch (Throwable ignored) {
-            }
-
             try {
                 SubInterface.suppliedApplet.getAppletContext().showDocument(new URL(SubInterface.suppliedApplet.getCodeBase(), string_0), "_top");
                 bool_4 = true;

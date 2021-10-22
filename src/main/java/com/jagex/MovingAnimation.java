@@ -46,7 +46,7 @@ public class MovingAnimation extends Animation {
     @Override
     void method7586(AnimationDefinitions animationdefinitions_1, int i_2) {
         if (!aBool7891 || !aTransform_Sub1_Sub1_Sub2_7892.currentAnimation.hasDefs() || aTransform_Sub1_Sub1_Sub2_7892.currentAnimation.hasSpeed()) {
-            World.method3662(animationdefinitions_1, i_2, aTransform_Sub1_Sub1_Sub2_7892);
+            WorldType.method3662(animationdefinitions_1, i_2, aTransform_Sub1_Sub1_Sub2_7892);
         }
 
     }

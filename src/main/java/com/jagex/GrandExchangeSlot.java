@@ -58,11 +58,11 @@ public class GrandExchangeSlot {
         }
     }
 
-    public int method5908() {
+    public int getState() {
         return progress & 0x7;
     }
 
-    public int method5909() {
+    public int isSelling() {
         return (progress & 0x8) == 8 ? 1 : 0;
     }
 }

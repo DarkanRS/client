@@ -42,10 +42,10 @@ public class CursorIndexLoader {
             GameState.setGameState(12);
         } else {
             GameState.setGameState(5);
-            try {
-                Class441.method7377(SubInterface.suppliedApplet, "loggedout");
-            } catch (Throwable ignored) {
-            }
+//			try {
+//				Class441.method7377(SubInterface.suppliedApplet, "loggedout");
+//			} catch (Throwable ignored) {
+//			}
         }
     }
 

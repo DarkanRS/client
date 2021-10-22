@@ -44,4 +44,8 @@ public abstract class Class217 {
     public boolean isLootshare() {
         return (flags & 0x8) != 0;
     }
+    
+    public boolean hasPort() {
+    	return (flags & 0x40000000) != 0;
+    }
 }

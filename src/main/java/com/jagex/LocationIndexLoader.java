@@ -50,10 +50,6 @@ public class LocationIndexLoader {
         return (int) (long_0 / 86400000L) - 11745;
     }
 
-    public static WorldDescriptor getWorld(int id) {
-        return Class244.aBool3007 && id >= Class485.WORLD_LIST_START && id <= Class244.WORLD_LIST_SIZEPLUS1 ? Class244.WORLD_LIST_DESCRIPTORS[id - Class485.WORLD_LIST_START] : null;
-    }
-
     public ObjectDefinition getObjectDefs(int i_1) {
         LRUCache softcache_4 = LRUCache;
         ObjectDefinition objectdefinitions_3;

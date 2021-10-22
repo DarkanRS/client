@@ -15,6 +15,7 @@ public class ConnectionInfo {
     public int anInt5434 = -190419398;
     boolean alternate = true;
     boolean proxied;
+	public static ServerEnvironment SERVER_ENVIRONMENT;
     
 	static PingRequest CURRENT_WORLD_PING_REQUEST;
 	static int currentWorldPingIdx;
