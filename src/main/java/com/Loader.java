@@ -28,7 +28,7 @@ public class Loader extends Applet implements AppletStub {
     public static final boolean USING_ISAAC = false;
     public static final boolean LOBBY_ENABLED = true;
     public static final boolean DISABLE_XTEA_CRASH = true;
-    public static boolean LOCAL = true;
+    public static boolean LOCAL = false;
     public static String IP_ADDRESS = LOCAL ? "localhost" : "testlobby.darkan.org"; //axios.trentonkress.com
     public static Properties clientParams = new Properties();
 
@@ -40,7 +40,9 @@ public class Loader extends Applet implements AppletStub {
 
     public JFrame clientFrame;
 
-    public static void main(String[] arg0) {
+    public static void main(String[] args) {
+    	if (args[0] != null)
+    		IP_ADDRESS = args[0];
         new Loader().doFrame();
     }
     

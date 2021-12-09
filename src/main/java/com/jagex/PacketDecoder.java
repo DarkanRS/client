@@ -2337,7 +2337,6 @@ public class PacketDecoder {
                         if ((itemId & 0x7fff) == item.id && oldAmount == item.amount) {
                             item.unlink();
                             item.amount = amount;
-                            System.out.println("Updated");
                             Class353.addGroundItem(Class272.UPDATE_ZONE_PLANE, x, y, item);
                             break;
                         }
