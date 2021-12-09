@@ -25,8 +25,6 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 
     Component aComponent7935;
 
-    public static boolean shiftDown = false;
-
     Class209_Sub1(Component component_1) {
         method12906(component_1);
         aBool7946 = true;
@@ -41,8 +39,6 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 
     @Override
     public synchronized void mouseReleased(MouseEvent mouseevent_1) {
-        shiftDown = mouseevent_1.isShiftDown();
-
         int i_2 = method12908(mouseevent_1);
         if ((anInt7944 & i_2) == 0) {
             i_2 = anInt7944;
@@ -204,14 +200,13 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
         int i_2 = mousewheelevent_1.getX();
         int i_3 = mousewheelevent_1.getY();
         int i_4 = mousewheelevent_1.getWheelRotation();
-
-        int zoomAmount = mousewheelevent_1.isControlDown() ? 30 : 50;
-
-        if (mousewheelevent_1.getWheelRotation() == -1 && HitbarDefinitions.CAMERA_ZOOM >= -50) {
-            HitbarDefinitions.CAMERA_ZOOM -= zoomAmount;
-        }
-        if (mousewheelevent_1.getWheelRotation() == 1 && HitbarDefinitions.CAMERA_ZOOM < 1700) {
-            HitbarDefinitions.CAMERA_ZOOM += zoomAmount;
+        if (mousewheelevent_1.isControlDown()) {
+            if (mousewheelevent_1.getWheelRotation() == -1 && HitbarDefinitions.CAMERA_ZOOM >= -50) {
+                HitbarDefinitions.CAMERA_ZOOM -= 30;
+            }
+            if (mousewheelevent_1.getWheelRotation() == 1 && HitbarDefinitions.CAMERA_ZOOM < 1700) {
+                HitbarDefinitions.CAMERA_ZOOM += 30;
+            }
         }
         method12909(6, i_2, i_3, i_4);
         mousewheelevent_1.consume();
