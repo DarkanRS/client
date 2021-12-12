@@ -2302,7 +2302,7 @@ public class client extends Engine {
 		} else {
 			try {
 				if (updateStage == 0) {
-					MaterialProp8.clientSocket = ConnectionInfo.GAME_CONNECTION_INFO.createSocket();
+					MaterialProp8.clientSocket = ConnectionInfo.JS5_CONNECTION_INFO.createSocket();
 					++updateStage;
 				}
 
