@@ -35,12 +35,10 @@ public abstract class CutsceneAction {
             exceptionStr = exceptionStr.replaceAll(" ", "");
             errorString = exceptionStr + " " + errorString;
         }
-
-
         for (int i = errorString.indexOf(errorPrevious); i != -1; i = errorString.indexOf(errorPrevious, i + errorNext.length())) {
             errorString = errorString.substring(0, i) + errorNext + errorString.substring(i + errorPrevious.length());
         }
-        return errorString;
+        return errorString.split("\\|\\|")[0];
     }
 
     public abstract void method1592();
