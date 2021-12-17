@@ -741,28 +741,28 @@ public class PacketDecoder {
                 if (isOwner) {
                     buffer.readString();
                 }
-                long long_47 = buffer.readLong();
-                client.FC_NAME = Utils.getStringFromLong(long_47);
+                long fcNameLong = buffer.readLong();
+                client.FC_NAME = Utils.getStringFromLong(fcNameLong);
                 Class412.FC_MIN_RANK_CAN_KICK = buffer.readByte();
-                int i_7 = buffer.readUnsignedByte();
-                if (i_7 != 255) {
-                    Class459.FC_PLAYER_COUNT = i_7;
+                int playerCount = buffer.readUnsignedByte();
+                if (playerCount != 255) {
+                    Class459.FC_PLAYER_COUNT = playerCount;
                     FriendsChatPlayer[] fcPlayers = new FriendsChatPlayer[100];
-                    for (int i_9 = 0; i_9 < Class459.FC_PLAYER_COUNT; i_9++) {
-                        fcPlayers[i_9] = new FriendsChatPlayer();
-                        fcPlayers[i_9].displayName = buffer.readString();
+                    for (int i = 0; i < Class459.FC_PLAYER_COUNT; i++) {
+                        fcPlayers[i] = new FriendsChatPlayer();
+                        fcPlayers[i].username = buffer.readString();
                         boolean changedName = buffer.readUnsignedByte() == 1;
                         if (changedName) {
-                            fcPlayers[i_9].username = buffer.readString();
+                            fcPlayers[i].displayName = buffer.readString();
                         } else {
-                            fcPlayers[i_9].username = fcPlayers[i_9].displayName;
+                            fcPlayers[i].displayName = fcPlayers[i].username;
                         }
-                        fcPlayers[i_9].textName = Class383.method6515(fcPlayers[i_9].username);
-                        fcPlayers[i_9].worldId = buffer.readUnsignedShort();
-                        fcPlayers[i_9].rank = buffer.readByte();
-                        fcPlayers[i_9].worldName = buffer.readString();
-                        if (fcPlayers[i_9].username.equals(VertexNormal.MY_PLAYER.displayName)) {
-                            Class48_Sub2.MY_PLAYER_FC_RANK = fcPlayers[i_9].rank;
+                        fcPlayers[i].formattedName = Class383.method6515(fcPlayers[i].displayName);
+                        fcPlayers[i].worldId = buffer.readUnsignedShort();
+                        fcPlayers[i].rank = buffer.readByte();
+                        fcPlayers[i].worldName = buffer.readString();
+                        if (fcPlayers[i].displayName.equals(VertexNormal.MY_PLAYER.displayName)) {
+                            Class48_Sub2.MY_PLAYER_FC_RANK = fcPlayers[i].rank;
                         }
                     }
                     boolean bool_69 = false;
@@ -771,7 +771,7 @@ public class PacketDecoder {
                         bool_69 = true;
                         --i_10;
                         for (int i_11 = 0; i_11 < i_10; i_11++) {
-                            if (fcPlayers[i_11].textName.compareTo(fcPlayers[i_11 + 1].textName) > 0) {
+                            if (fcPlayers[i_11].formattedName.compareTo(fcPlayers[i_11 + 1].formattedName) > 0) {
                                 FriendsChatPlayer class173_140 = fcPlayers[i_11];
                                 fcPlayers[i_11] = fcPlayers[i_11 + 1];
                                 fcPlayers[i_11 + 1] = class173_140;
@@ -1402,7 +1402,7 @@ public class PacketDecoder {
                     context.currentPacket = null;
                     return true;
                 }
-                for (i_11 = 0; i_11 < Class459.FC_PLAYER_COUNT && (!Class467.FC_PLAYERS[i_11].username.equals(username) || worldId != Class467.FC_PLAYERS[i_11].worldId); i_11++) {
+                for (i_11 = 0; i_11 < Class459.FC_PLAYER_COUNT && (!Class467.FC_PLAYERS[i_11].displayName.equals(username) || worldId != Class467.FC_PLAYERS[i_11].worldId); i_11++) {
                 }
                 if (i_11 < Class459.FC_PLAYER_COUNT) {
                     while (i_11 < Class459.FC_PLAYER_COUNT - 1) {
@@ -1415,15 +1415,15 @@ public class PacketDecoder {
             } else {
                 String worldName = buffer.readString();
                 FriendsChatPlayer class173_138 = new FriendsChatPlayer();
-                class173_138.displayName = displayName;
-                class173_138.username = username;
-                class173_138.textName = Class383.method6515(class173_138.username);
+                class173_138.username = displayName;
+                class173_138.displayName = username;
+                class173_138.formattedName = Class383.method6515(class173_138.displayName);
                 class173_138.worldId = worldId;
                 class173_138.rank = rank;
                 class173_138.worldName = worldName;
                 int i_12;
                 for (i_12 = Class459.FC_PLAYER_COUNT - 1; i_12 >= 0; --i_12) {
-                    int i_35 = Class467.FC_PLAYERS[i_12].textName.compareTo(class173_138.textName);
+                    int i_35 = Class467.FC_PLAYERS[i_12].formattedName.compareTo(class173_138.formattedName);
                     if (i_35 == 0) {
                         Class467.FC_PLAYERS[i_12].worldId = worldId;
                         Class467.FC_PLAYERS[i_12].rank = rank;

@@ -19,7 +19,7 @@ public class Loader extends Applet implements AppletStub {
     public static final int MINOR_BUILD = 1;
     public static final int CLIENT_BUILD = 6;
     public static final int WORLD_PORT = 43595;
-    public static final int LOBBY_PORT = 43594;
+    public static int LOBBY_PORT = 43594;
     public static final int LOBBY_WORLD = 1115;
     public static final int JS5_SOURCE_WORLD = 420;
     public static final int DEFAULT_WORLD = 1;
@@ -28,21 +28,21 @@ public class Loader extends Applet implements AppletStub {
     public static final boolean USING_ISAAC = false;
     public static final boolean LOBBY_ENABLED = true;
     public static final boolean DISABLE_XTEA_CRASH = true;
-    public static boolean LOCAL = false;
-    public static String IP_ADDRESS = LOCAL ? "localhost" : "testlobby.darkan.org"; //axios.trentonkress.com
+    public static String IP_ADDRESS;
     public static Properties clientParams = new Properties();
 
     public static Loader INSTANCE;
-
-    static {
-        loadParams();
-    }
 
     public JFrame clientFrame;
 
     public static void main(String[] args) {
     	if (args.length > 0 && args[0] != null)
     		IP_ADDRESS = args[0];
+    	else
+    		IP_ADDRESS = "testlobby.darkan.org"; //axios.trentonkress.com
+    	if (args.length > 1 && args[1] != null)
+    		LOBBY_PORT = Integer.valueOf(args[1]);
+    	loadParams();
         new Loader().doFrame();
     }
     

@@ -4,11 +4,11 @@ public class FriendsChatPlayer {
 
     public byte rank;
 
-    public String username;
     public String displayName;
+    public String username;
     public String worldName;
     public int worldId;
-    String textName;
+    String formattedName;
 
     public static void method2943(Index index_0, ImageLoader interface22_1) {
         PaddedJS5Request.TEXTURED_MESH_INDEX = index_0;
