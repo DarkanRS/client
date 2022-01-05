@@ -58,7 +58,7 @@ public enum ServerEnvironment implements Identifiable {
         }
         if (Class393.preferences.currentToolkit.getValue() != 0) {
             Class393.preferences.setValue(Class393.preferences.toolKit, 0);
-            ParticleProducer.method11500(0, false);
+            ParticleProducer.switchRenderType(0, false);
         } else {
             Class393.preferences.method13505(Class393.preferences.currentToolkit, true);
         }

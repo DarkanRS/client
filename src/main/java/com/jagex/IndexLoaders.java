@@ -397,12 +397,12 @@ public class IndexLoaders {
 
             Class190.savePreferences();
             if (client.aBool7465) {
-                ParticleProducer.method11500(0, false);
+                ParticleProducer.switchRenderType(0, false);
             } else {
-                ParticleProducer.method11500(Class393.preferences.toolKit.getValue(), false);
+                ParticleProducer.switchRenderType(Class393.preferences.toolKit.getValue(), false);
             }
 
-            UID192.method7373(Class393.preferences.screenSize.method12687(), -1, -1, false);
+            UID192.method7373(Class393.preferences.screenSize.method12687(), -1, -1);
             Class487.aClass378_5752.method6403(client.anInterface35_7206);
             EditMemberSetting.method15476();
             Class188.method3139(Renderers.CURRENT_RENDERER, SPRITES_INDEX);

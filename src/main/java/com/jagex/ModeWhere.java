@@ -18,7 +18,7 @@ public enum ModeWhere {
         id = i_2;
     }
 
-    public static Frame method7852(Class470 class470_0, int i_1, int i_2, int i_3) {
+    public static Frame method7852(Class470 class470_0, int width, int height, int i_3) {
         int i_31 = i_3;
         if (i_31 == 0) {
             Class467[] arr_6 = Class386.method6671(class470_0);
@@ -29,7 +29,7 @@ public enum ModeWhere {
             boolean bool_7 = false;
 
             for (int i_8 = 0; i_8 < arr_6.length; i_8++) {
-                if (arr_6[i_8].anInt5571 == i_1 && i_2 == arr_6[i_8].anInt5574 && (!bool_7 || arr_6[i_8].anInt5573 > 0)) {
+                if (arr_6[i_8].anInt5571 == width && height == arr_6[i_8].anInt5574 && (!bool_7 || arr_6[i_8].anInt5573 > 0)) {
                     i_31 = arr_6[i_8].anInt5573;
                     bool_7 = true;
                 }
@@ -40,10 +40,10 @@ public enum ModeWhere {
             }
         }
 
-        Frame frame_9 = new Frame("Jagex Full Screen");
-        frame_9.setResizable(false);
-        class470_0.method7808(frame_9, i_1, i_2, i_31, 0);
-        return frame_9;
+        Frame window = new Frame("Darkan Full Screen");
+        window.setResizable(false);
+        class470_0.method7808(window, width, height, i_31, 0);
+        return window;
     }
 
     static byte method7853(int i_0, int i_1) {

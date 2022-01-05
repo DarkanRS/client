@@ -40,7 +40,7 @@ public class Class532_Sub1 extends Class532 {
                     if (Class107.anInt1082 <= 0) {
                         Class107.anInt1082 = 1;
                     }
-                    if (Class158.windowedMode() != 1) {
+                    if (Class158.getScreenMode() != 1) {
                         Class46.method935();
                     } else {
                         ChangeClanSetting.BASE_WINDOW_WIDTH = client.GAME_WIDTH;
