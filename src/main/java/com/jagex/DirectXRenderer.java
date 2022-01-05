@@ -129,7 +129,7 @@ public class DirectXRenderer extends HardwareRenderer {
             throw new RuntimeException("");
         } else {
             D3DPRESENT_PARAMETERS d3DPRESENTParameters = new D3DPRESENT_PARAMETERS(canvas);
-            d3DPRESENTParameters.Windowed = !(Class158.getScreenMode() == 3);
+            d3DPRESENTParameters.Windowed = true;
             d3DPRESENTParameters.EnableAutoDepthStencil = true;
             d3DPRESENTParameters.BackBufferWidth = canvas.getWidth();
             d3DPRESENTParameters.BackBufferHeight = canvas.getHeight();
@@ -158,7 +158,6 @@ public class DirectXRenderer extends HardwareRenderer {
 
                 renderer.method8412(canvas);
                 renderer.method14147();
-                System.out.println("got here 15");
                 return renderer;
             }
         }
