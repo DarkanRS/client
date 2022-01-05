@@ -27,11 +27,18 @@ public abstract class CutsceneAction {
         Class176.aClass414_2200 = null;
     }
 
-    static String method1609(String string_0, String string_1, String string_2) {
-        for (int i_4 = string_0.indexOf(string_1); i_4 != -1; i_4 = string_0.indexOf(string_1, i_4 + string_2.length())) {
-            string_0 = string_0.substring(0, i_4) + string_2 + string_0.substring(i_4 + string_1.length());
+    static String formatStringToError(String errorString, String errorPrevious, String errorNext) {
+        String exceptionStr = "";
+        if(errorString.contains("|")) {
+            exceptionStr = errorString.substring(errorString.indexOf("|")+1, errorString.indexOf("|", errorString.indexOf("|") + 1));
+            errorString = errorString.replaceFirst(exceptionStr, "");
+            exceptionStr = exceptionStr.replaceAll(" ", "");
+            errorString = exceptionStr + " " + errorString;
         }
-        return string_0;
+        for (int i = errorString.indexOf(errorPrevious); i != -1; i = errorString.indexOf(errorPrevious, i + errorNext.length())) {
+            errorString = errorString.substring(0, i) + errorNext + errorString.substring(i + errorPrevious.length());
+        }
+        return errorString.split("\\|\\|")[0];
     }
 
     public abstract void method1592();

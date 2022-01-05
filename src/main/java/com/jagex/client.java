@@ -1895,7 +1895,7 @@ public class client extends Engine {
 			} catch (Throwable throwable_4) {
 				Class151.method2594(throwable_4.getMessage() + " " + method4669(), throwable_4);
 				aBool7171 = true;
-				ParticleProducer.method11500(0, false);
+				ParticleProducer.switchRenderType(0, false);
 			}
 		} else {
 			pulse();
@@ -2048,7 +2048,7 @@ public class client extends Engine {
 
 			if (Class176.method2980(GAME_STATE)) {
 				if (aLong7307 != 0L && Utils.time() > aLong7307) {
-					UID192.method7373(Class158.windowedMode(), -1, -1, false);
+					UID192.method7373(Class158.getScreenMode(), -1, -1);
 				} else if (!Renderers.CURRENT_RENDERER.method8465() && aBool3257) {
 					Class350_Sub2.method12571();
 				}
@@ -2079,7 +2079,7 @@ public class client extends Engine {
 			}
 
 			if (Class475.supportsFullScreen && fullScreenFrame != null && !IFSubObjectPosition.appletHasFocus && Class176.method2980(GAME_STATE)) {
-				UID192.method7373(Class393.preferences.screenSize.method12687(), -1, -1, false);
+				UID192.method7373(Class393.preferences.screenSize.method12687(), -1, -1);
 			}
 
 			boolean bool_9 = false;
@@ -2092,7 +2092,7 @@ public class client extends Engine {
 				EntityNode.method4891();
 			}
 
-			if (Renderers.CURRENT_RENDERER != null && Renderers.CURRENT_RENDERER.method8465() || Class158.windowedMode() != 1) {
+			if (Renderers.CURRENT_RENDERER != null && Renderers.CURRENT_RENDERER.method8465() || Class158.getScreenMode() != 1) {
 				Static.method6378();
 			}
 
@@ -2140,7 +2140,7 @@ public class client extends Engine {
 					Renderers.CURRENT_RENDERER.method8393();
 				} catch (Exception_Sub3 exception_sub3_12) {
 					Class151.method2594(exception_sub3_12.getMessage() + " " + method4669(), exception_sub3_12);
-					ParticleProducer.method11500(0, false);
+					ParticleProducer.switchRenderType(0, false);
 				}
 			}
 
@@ -2181,7 +2181,7 @@ public class client extends Engine {
 				str_2 = str_2 + Class4.MY_PLAYER_PLANE + "," + Class4.MY_PLAYER_PLANE + "," + Class4.MY_PLAYER_PLANE + "," + " ";
 			}
 
-			str_2 = str_2 + Class393.preferences.currentToolkit.getValue() + " " + Class393.preferences.antiAliasingDefault.method12641() + " " + Class158.windowedMode() + " " + ChangeClanSetting.BASE_WINDOW_WIDTH + "," + BASE_WINDOW_HEIGHT * -969250379 + " ";
+			str_2 = str_2 + Class393.preferences.currentToolkit.getValue() + " " + Class393.preferences.antiAliasingDefault.method12641() + " " + Class158.getScreenMode() + " " + ChangeClanSetting.BASE_WINDOW_WIDTH + "," + BASE_WINDOW_HEIGHT * -969250379 + " ";
 			str_2 = str_2 + Class393.preferences.lightDetail.method12786() + " ";
 			str_2 = str_2 + Class393.preferences.sceneryShadows.method12624() + " ";
 			str_2 = str_2 + Class393.preferences.water.getValue() + " ";
@@ -2448,7 +2448,7 @@ public class client extends Engine {
 			} catch (Throwable throwable_4) {
 				Class151.method2594(throwable_4.getMessage() + " " + method4669(), throwable_4);
 				aBool7171 = true;
-				ParticleProducer.method11500(0, false);
+				ParticleProducer.switchRenderType(0, false);
 			}
 		} else {
 			method11620();
@@ -2528,7 +2528,7 @@ public class client extends Engine {
 			} catch (Throwable throwable_3) {
 				Class151.method2594(throwable_3.getMessage() + " " + method4669(), throwable_3);
 				aBool7171 = true;
-				ParticleProducer.method11500(0, false);
+				ParticleProducer.switchRenderType(0, false);
 			}
 		} else {
 			method11620();

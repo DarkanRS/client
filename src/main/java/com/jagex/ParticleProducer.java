@@ -45,8 +45,8 @@ public class ParticleProducer {
         aClass234_7109.anInt2884 = current.anInt2884;
     }
 
-    public static void method11500(int i_0, boolean bool_1) {
-        Class231.method3914(i_0, LocalizedText.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE), bool_1);
+    public static void switchRenderType(int renderType, boolean bool_1) {
+        Class231.method3914(renderType, LocalizedText.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE), bool_1);
     }
 
     static void method11501() {

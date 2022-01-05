@@ -7,9 +7,10 @@ import java.awt.*;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.Transferable;
 import java.io.File;
+import java.util.ArrayList;
 
 public class CS2Interpreter {
-
+    private static ArrayList<Integer> opcodes = new ArrayList<Integer>();
     public static void executeOperation(CS2Instruction operation, CS2Executor exec) {
         switch (operation) {
             case PUSH_INT:
@@ -2091,8 +2092,8 @@ public class CS2Interpreter {
             case instr6818:
                 method15403();
                 break;
-            case instr6639:
-                method3804(exec);
+            case FULLSCREEN:
+                chooseFullScreen(exec);
                 break;
             case instr6488:
                 method3613();
@@ -2109,8 +2110,8 @@ public class CS2Interpreter {
             case instr6644:
                 method8199(exec);
                 break;
-            case instr6645:
-                method12933(exec);
+            case CHOOSE_RENDER_TYPE:
+                chooseRenderType(exec);
                 break;
             case instr6406:
                 method3358(exec);
@@ -2409,7 +2410,7 @@ public class CS2Interpreter {
             case instr6744:
                 method1803(exec);
                 break;
-            case instr6745:
+            case CHANGE_RENDER:
                 method6678(exec);
                 break;
             case instr6922:
@@ -3229,7 +3230,7 @@ public class CS2Interpreter {
 
     static void method2866() {
         if (Class475.supportsFullScreen && Engine.fullScreenFrame != null) {
-            UID192.method7373(Class393.preferences.screenSize.method12687(), -1, -1, false);
+            UID192.method7373(Class393.preferences.screenSize.method12687(), -1, -1);
         }
         if (NamedFileReference.method867() == Class279.aClass279_3368) {
             ClanSetting.saveVarcsToFile();
@@ -3586,7 +3587,7 @@ public class CS2Interpreter {
 
     static void method8263(CS2Executor executor) {
         if (Class475.supportsFullScreen && Engine.fullScreenFrame != null) {
-            UID192.method7373(Class393.preferences.screenSize.method12687(), -1, -1, false);
+            UID192.method7373(Class393.preferences.screenSize.method12687(), -1, -1);
         }
         String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
         boolean bool_3 = executor.intStack[--executor.intStackPtr] == 1;
@@ -4001,7 +4002,7 @@ public class CS2Interpreter {
     }
 
     static void method8199(CS2Executor executor) {
-        executor.intStack[++executor.intStackPtr - 1] = Class158.windowedMode();
+        executor.intStack[++executor.intStackPtr - 1] = Class158.getScreenMode();
     }
 
     static void method7006(CS2Executor executor) {
@@ -4625,11 +4626,16 @@ public class CS2Interpreter {
         method789(icomponentdefinitions_3, interface_4, executor);
     }
 
-    static void method12933(CS2Executor executor) {
-        int i_2 = executor.intStack[--executor.intStackPtr];
-        if (i_2 >= 1 && i_2 <= 2) {
-            UID192.method7373(i_2, -1, -1, false);
-        }
+    static void chooseRenderType(CS2Executor executor) {
+        int screenMode = executor.intStack[--executor.intStackPtr];
+        if (screenMode >= 1 && screenMode <= 2 && !Class158.justBecameFullscreen) {
+            GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
+            int width = gd.getDisplayMode().getWidth();
+            int height = gd.getDisplayMode().getHeight();
+            UID192.method7373(screenMode, width, height);
+        } else
+            Class158.justBecameFullscreen = false;
+
     }
 
     static void intLessThan(CS2Executor executor) {
@@ -5890,10 +5896,17 @@ public class CS2Interpreter {
         executor.intStack[++executor.intStackPtr - 1] = i_4;
     }
 
-    static void method3804(CS2Executor executor) {
+    static void chooseFullScreen(CS2Executor executor) {
+        ChatLine.appendChatMessage("Fullscreen is unstable use at your own peril(works depending on Java version)");
         executor.intStackPtr -= 2;
         if (Class475.supportsFullScreen) {
+            ParticleProducer.switchRenderType(0/*renderOption*/, false);
             executor.intStack[++executor.intStackPtr - 1] = Engine.fullScreenFrame != null ? 1 : 0;
+            GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
+            int width = gd.getDisplayMode().getWidth();
+            int height = gd.getDisplayMode().getHeight();
+            Class158.justBecameFullscreen = true;
+            UID192.method7373(3, width, height);
         } else {
             executor.intStack[++executor.intStackPtr - 1] = 0;
         }
@@ -6061,7 +6074,7 @@ public class CS2Interpreter {
 
     static void method3613() {
         if (Class475.supportsFullScreen && Engine.fullScreenFrame != null) {
-            UID192.method7373(Class393.preferences.screenSize.method12687(), -1, -1, false);
+            UID192.method7373(Class393.preferences.screenSize.method12687(), -1, -1);
         }
     }
 
@@ -9203,7 +9216,7 @@ public class CS2Interpreter {
 
     static void method14647(CS2Executor executor) {
         Class393.preferences.setValue(Class393.preferences.aPreference_Sub4_8223, executor.intStack[--executor.intStackPtr]);
-        ParticleProducer.method11500(Class393.preferences.currentToolkit.getValue(), false);
+        ParticleProducer.switchRenderType(Class393.preferences.currentToolkit.getValue(), false);
         Class190.savePreferences();
     }
 
@@ -9454,11 +9467,15 @@ public class CS2Interpreter {
     }
 
     static void method6678(CS2Executor executor) {
-        int i_2 = executor.intStack[--executor.intStackPtr];
-        if (i_2 < 0 || i_2 > 5) {
-            i_2 = 2;
+        int renderType = executor.intStack[--executor.intStackPtr];
+        if (renderType < 0 || renderType > 5) {
+            renderType = 2;
         }
-        ParticleProducer.method11500(i_2, false);
+        if(Class158.getScreenMode() == 3) {
+            ParticleProducer.switchRenderType(renderType, Class158.getScreenMode() == 3 ? true : false);//Switching render types in fullscreen doesnt work!
+        } else {
+            ParticleProducer.switchRenderType(renderType, Class158.getScreenMode() == 3 ? true : false);
+        }
     }
 
     static void getFriendsChatCount(CS2Executor executor) {
@@ -11185,7 +11202,7 @@ public class CS2Interpreter {
         for (int i = params.length - 1; i >= 1; --i) {
             if (paramTypes.charAt(i - 1) == 's') {
                 params[i] = executor.stringStack[--executor.stringStackPtr];
-            } else if (paramTypes.charAt(i - 1) == 'º') {
+            } else if (paramTypes.charAt(i - 1) == '\u00BD') {
                 params[i] = new Long(executor.longStack[--executor.longStackPtr]);
             } else {
                 params[i] = new Integer(executor.intStack[--executor.intStackPtr]);

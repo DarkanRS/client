@@ -57,11 +57,11 @@ public class Class231 {
         aShortArray2875 = new short[4];
     }
 
-    static void method3914(int i_0, String string_1, boolean bool_2) {
+    static void method3914(int renderType, String loadingText, boolean bool_2) {
         Class28.method772();
         ParamDefinitions.method7323();
         Class250.method4297();
-        Node_Sub17_Sub1.method15402(i_0, string_1, bool_2);
+        Node_Sub17_Sub1.method15402(renderType, loadingText, bool_2);
         Class487.aClass378_5752.method6433();
         Class487.aClass378_5752.method6403(client.anInterface35_7206);
         EditMemberSetting.method15476();

@@ -445,8 +445,8 @@ public class RouteFinder {
         if (ConnectionInfo.SERVER_ENVIRONMENT != ServerEnvironment.LIVE || client.PLAYER_RIGHTS >= 2) {
             try {
                 if ("wm1".equalsIgnoreCase(string_0)) {
-                    UID192.method7373(1, -1, -1, false);
-                    if (Class158.windowedMode() == 1) {
+                    UID192.method7373(1, -1, -1);
+                    if (Class158.getScreenMode() == 1) {
                         Class209.printConsoleMessage("Success");
                     } else {
                         Class209.printConsoleMessage("Failure");
@@ -454,8 +454,8 @@ public class RouteFinder {
                     return;
                 }
                 if ("wm2".equalsIgnoreCase(string_0)) {
-                    UID192.method7373(2, -1, -1, false);
-                    if (Class158.windowedMode() == 2) {
+                    UID192.method7373(2, -1, -1);
+                    if (Class158.getScreenMode() == 2) {
                         Class209.printConsoleMessage("Success");
                     } else {
                         Class209.printConsoleMessage("Failure");
@@ -463,8 +463,8 @@ public class RouteFinder {
                     return;
                 }
                 if (Class475.supportsFullScreen && "wm3".equalsIgnoreCase(string_0)) {
-                    UID192.method7373(3, 1024, 768, false);
-                    if (Class158.windowedMode() == 3) {
+                    UID192.method7373(3, 1024, 768);
+                    if (Class158.getScreenMode() == 3) {
                         Class209.printConsoleMessage("Success");
                     } else {
                         Class209.printConsoleMessage("Failure");
@@ -519,7 +519,7 @@ public class RouteFinder {
                     return;
                 }
                 if ("tk0".equalsIgnoreCase(string_0)) {
-                    ParticleProducer.method11500(0, false);
+                    ParticleProducer.switchRenderType(0, false);
                     if (Class393.preferences.currentToolkit.getValue() == 0) {
                         Class209.printConsoleMessage("Success");
                         Class393.preferences.setValue(Class393.preferences.toolKit, 0);
@@ -531,7 +531,7 @@ public class RouteFinder {
                     return;
                 }
                 if ("tk1".equalsIgnoreCase(string_0)) {
-                    ParticleProducer.method11500(1, false);
+                    ParticleProducer.switchRenderType(1, false);
                     if (Class393.preferences.currentToolkit.getValue() == 1) {
                         Class209.printConsoleMessage("Success");
                         Class393.preferences.setValue(Class393.preferences.toolKit, 1);
@@ -543,7 +543,7 @@ public class RouteFinder {
                     return;
                 }
                 if ("tk2".equalsIgnoreCase(string_0)) {
-                    ParticleProducer.method11500(2, false);
+                    ParticleProducer.switchRenderType(2, false);
                     if (Class393.preferences.currentToolkit.getValue() == 2) {
                         Class209.printConsoleMessage("Success");
                         Class393.preferences.setValue(Class393.preferences.toolKit, 2);
@@ -555,7 +555,7 @@ public class RouteFinder {
                     return;
                 }
                 if ("tk3".equalsIgnoreCase(string_0)) {
-                    ParticleProducer.method11500(3, false);
+                    ParticleProducer.switchRenderType(3, false);
                     if (Class393.preferences.currentToolkit.getValue() == 3) {
                         Class209.printConsoleMessage("Success");
                         Class393.preferences.setValue(Class393.preferences.toolKit, 3);
@@ -567,7 +567,7 @@ public class RouteFinder {
                     return;
                 }
                 if ("tk5".equalsIgnoreCase(string_0)) {
-                    ParticleProducer.method11500(5, false);
+                    ParticleProducer.switchRenderType(5, false);
                     if (Class393.preferences.currentToolkit.getValue() == 5) {
                         Class209.printConsoleMessage("Success");
                         Class393.preferences.setValue(Class393.preferences.toolKit, 5);

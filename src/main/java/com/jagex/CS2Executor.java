@@ -55,8 +55,8 @@ public class CS2Executor {
         }
     }
 
-    static void method11251(String string_0) {
-        System.out.println("Error: " + CutsceneAction.method1609(string_0, "%0a", "\n"));
+    static void printError(String errorMessage) {
+        System.out.println("\u001B[31m" + "Jagex Error: " + CutsceneAction.formatStringToError(errorMessage, " ", "\n     ") + "\u001B[0m");
     }
 
     static void method1834(ClientTriggerType class397_0, int interfaceId, int i_2, CS2Executor cs2executor_3) {

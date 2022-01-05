@@ -1,6 +1,5 @@
 package com.jagex;
 
-import com.Loader;
 import com.jagex.clans.settings.ChangeClanSetting;
 
 import java.io.IOException;
@@ -195,7 +194,7 @@ public class Login {
                                 rsbitsbuffer_22.writeLong(Class9.aLong77);
                             }
                         }
-                        rsbitsbuffer_22.writeByte(Class158.windowedMode());
+                        rsbitsbuffer_22.writeByte(Class158.getScreenMode());
                         rsbitsbuffer_22.writeShort(ChangeClanSetting.BASE_WINDOW_WIDTH);
                         rsbitsbuffer_22.writeShort(Engine.BASE_WINDOW_HEIGHT * -969250379);
                         rsbitsbuffer_22.writeByte(Class393.preferences.aPreference_Sub4_8223.method12641());

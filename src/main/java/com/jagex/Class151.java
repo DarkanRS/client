@@ -105,11 +105,11 @@ public class Class151 {
             }
             if (string_0 != null) {
                 if (throwable_1 != null) {
-                    str_3 += " | ";
+                    str_3 += "|";
                 }
                 str_3 += string_0;
             }
-            CS2Executor.method11251(str_3);
+            CS2Executor.printError(str_3);
             str_3 = Class475.method7926(str_3);
             if (RuntimeException_Sub3.anApplet10460 != null) {
                 String str_4 = "Unknown";

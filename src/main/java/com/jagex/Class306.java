@@ -119,7 +119,7 @@ public class Class306 implements Runnable {
                             }
                         } catch (Exception_Sub3 exception_sub3_14) {
                             Class151.method2594(exception_sub3_14.getMessage() + Class308.aclient3620.method4669(), exception_sub3_14);
-                            ParticleProducer.method11500(0, true);
+                            ParticleProducer.switchRenderType(0, true);
                         }
                     }
                     aBool3597 = false;
