@@ -4627,11 +4627,6 @@ public class CS2Interpreter {
 
     static void chooseRenderType(CS2Executor executor) {
         int screenMode = executor.intStack[--executor.intStackPtr];
-        if(screenMode == 1 || ((screenMode == 2 || screenMode == 3) && Class158.getScreenMode() == 1))
-            if(client.GAME_STATE != 0) {//Only in lobby
-                ChatLine.appendChatMessage("You can only switch to or from fixed display in the lobby...");
-                return;
-            }
         if (screenMode >= 1 && screenMode <= 2 && !Class158.justBecameFullscreen) {
             GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
             int width = gd.getDisplayMode().getWidth();
