@@ -3048,13 +3048,13 @@ public class CS2Interpreter {
     }
 
     static void ifSetPlace(boolean front, CS2Executor executor) {
-        int i_3 = executor.intStack[--executor.intStackPtr];
-        IComponentDefinitions icomponentdefinitions_4 = IComponentDefinitions.getDefs(i_3);
-        Interface interface_5 = Interface.INTERFACES[i_3 >> 16];
+        int interfaceId = executor.intStack[--executor.intStackPtr];
+        IComponentDefinitions iCompDefinitions = IComponentDefinitions.getDefs(interfaceId);
+        Interface inter = Interface.INTERFACES[interfaceId >> 16];
         if (front) {
-            Interface.method7554(interface_5, icomponentdefinitions_4);
+            Interface.method7554(inter, iCompDefinitions);
         } else {
-            Interface.method3710(interface_5, icomponentdefinitions_4);
+            Interface.method3710(inter, iCompDefinitions);
         }
 
     }
@@ -4627,6 +4627,11 @@ public class CS2Interpreter {
 
     static void chooseRenderType(CS2Executor executor) {
         int screenMode = executor.intStack[--executor.intStackPtr];
+        if(screenMode == 1 || ((screenMode == 2 || screenMode == 3) && Class158.getScreenMode() == 1))
+            if(client.GAME_STATE != 0) {//Only in lobby
+                ChatLine.appendChatMessage("You can only switch to or from fixed display in the lobby...");
+                return;
+            }
         if (screenMode >= 1 && screenMode <= 2 && !Class158.justBecameFullscreen) {
             GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
             int width = gd.getDisplayMode().getWidth();
@@ -5895,6 +5900,8 @@ public class CS2Interpreter {
     }
 
     static void chooseFullScreen(CS2Executor executor) {
+        if(Class158.getScreenMode() == 1)
+            return;
         ChatLine.appendChatMessage("Fullscreen only works for OpenGL Java 16+");
         executor.intStackPtr -= 2;
         if (Class475.supportsFullScreen) {

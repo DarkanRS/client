@@ -17,8 +17,8 @@ public class SkyboxIndexLoader {
         Class407.aCalendar4846.setTime(new Date(long_0));
     }
 
-    public static Interface getInterface(int interfaceId, int[] ints_1, Interface interface_2, boolean bool_3) {
-        Interface interface_21 = interface_2;
+    public static Interface getInterface(int interfaceId, int[] ints_1, Interface inter, boolean bool_3) {
+        Interface interface_21 = inter;
         if (!Class388.INTERFACE_INDEX.loadArchive(interfaceId)) {
             return null;
         } else {
@@ -45,40 +45,45 @@ public class SkyboxIndexLoader {
                         component.idHash = i + (interfaceId << 16);
                         component.readValues(new ByteBuf(bytes_8));
 
-//                        if(Class158.getScreenMode() >= 2) {
-//                            //Game Window Interface
-//                            if (component.idHash == 48889904) {
-//                                component.basePositionY = 0;
-//                                component.baseHeight = 0;
-//                            }
-//
-//                            //Lobby interface Hashes
-//                            if (component.idHash == 59375616 || component.idHash == 59768835 || component.idHash == 38600709) {
-//                                component.basePositionY = 0;
-//                                component.baseHeight = 0;
-//                            }
-//
-//                            //Banner at top hashes
-//                            if (component.idHash == 59375617 || component.idHash == 48890095 || component.idHash == 35913730) {
-//                                component.baseHeight = 0;
-//                            }
-//                        } else {
-//                            if(component.idHash == 48889904) {
-//                                component.basePositionY = 50;
-//                                component.baseHeight = 50;
-//                            }
-//                            if(component.idHash == 59768835 || component.idHash == 38600709) {
-//                                component.basePositionY = 0;
-//                                component.baseHeight = 0;
-//                            }
-//                            if (component.idHash == 59375616) {
-//                                component.basePositionY = 50;
-//                                component.baseHeight = 50;
-//                            }
-//                            if (component.idHash == 59375617 || component.idHash == 48890095 || component.idHash == 35913730) {
-//                                component.baseHeight = 50;
-//                            }
-//                        }
+
+                        if(Class158.getScreenMode() >= 2) {
+                            //Game Window Interface
+                            if (component.idHash == 48889904) {
+                                component.basePositionY = 0;
+                                component.baseHeight = 0;
+                            }
+
+                            //Lobby interface Hashes
+                            if (component.idHash == 59375616 || component.idHash == 59768835 || component.idHash == 38600709) {
+                                component.basePositionY = 0;
+                                component.baseHeight = 0;
+                            }
+
+                            //Banner at top hashes
+                            if (component.idHash == 59375617 || component.idHash == 48890095 || component.idHash == 35913730) {
+                                component.baseHeight = 0;
+                            }
+                        } else {
+                            //Game window
+                            if(component.idHash == 48889904) {
+                                component.basePositionY = 50;
+                                component.baseHeight = 50;
+                            }
+                            //Lobby interface
+                            if(component.idHash == 59768835 || component.idHash == 38600709) {
+                                component.basePositionY = 0;
+                                component.baseHeight = 0;
+                            }
+                            //Fixed window interface
+                            if (component.idHash == 59375616) {
+                                component.basePositionY = 50;
+                                component.baseHeight = 50;
+                            }
+                            //Banner at top
+                            if (component.idHash == 59375617 || component.idHash == 48890095 || component.idHash == 35913730) {
+                                component.baseHeight = 50;
+                            }
+                        }
 
 
                     }
