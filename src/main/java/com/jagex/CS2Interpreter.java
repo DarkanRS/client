@@ -10,7 +10,6 @@ import java.io.File;
 import java.util.ArrayList;
 
 public class CS2Interpreter {
-    private static ArrayList<Integer> opcodes = new ArrayList<Integer>();
     public static void executeOperation(CS2Instruction operation, CS2Executor exec) {
         switch (operation) {
             case PUSH_INT:
@@ -191,10 +190,10 @@ public class CS2Interpreter {
                 method2620(exec);
                 break;
             case IF_SENDTOFRONT:
-                ifSetFront(true, exec);
+                ifSetPlace(true, exec);
                 break;
             case IF_SENDTOBACK:
-                ifSetFront(false, exec);
+                ifSetPlace(false, exec);
                 break;
             case CC_SENDTOFRONT:
                 ccSetFront(true, exec);
@@ -2297,7 +2296,7 @@ public class CS2Interpreter {
                 method301(exec);
                 break;
             case instr6707:
-                method5925(exec);
+                loadLobby(exec);
                 break;
             case instr6623:
                 method775();
@@ -3048,14 +3047,14 @@ public class CS2Interpreter {
         }
     }
 
-    static void ifSetFront(boolean bool, CS2Executor executor) {
-        int i_3 = executor.intStack[--executor.intStackPtr];
-        IComponentDefinitions icomponentdefinitions_4 = IComponentDefinitions.getDefs(i_3);
-        Interface interface_5 = Interface.INTERFACES[i_3 >> 16];
-        if (bool) {
-            Interface.method7554(interface_5, icomponentdefinitions_4);
+    static void ifSetPlace(boolean front, CS2Executor executor) {
+        int interfaceId = executor.intStack[--executor.intStackPtr];
+        IComponentDefinitions iCompDefinitions = IComponentDefinitions.getDefs(interfaceId);
+        Interface inter = Interface.INTERFACES[interfaceId >> 16];
+        if (front) {
+            Interface.method7554(inter, iCompDefinitions);
         } else {
-            Interface.method3710(interface_5, icomponentdefinitions_4);
+            Interface.method3710(inter, iCompDefinitions);
         }
 
     }
@@ -4635,7 +4634,6 @@ public class CS2Interpreter {
             UID192.method7373(screenMode, width, height);
         } else
             Class158.justBecameFullscreen = false;
-
     }
 
     static void intLessThan(CS2Executor executor) {
@@ -5672,7 +5670,7 @@ public class CS2Interpreter {
         executor.stringStack[++executor.stringStackPtr - 1] = executor.currentClanSettings.clanName;
     }
 
-    static void method5925(CS2Executor executor) {
+    static void loadLobby(CS2Executor executor) {
         executor.stringStackPtr -= 2;
         String string_2 = (String) executor.stringStack[executor.stringStackPtr];
         String string_3 = (String) executor.stringStack[executor.stringStackPtr + 1];
@@ -5897,10 +5895,12 @@ public class CS2Interpreter {
     }
 
     static void chooseFullScreen(CS2Executor executor) {
-        ChatLine.appendChatMessage("Fullscreen is unstable use at your own peril(works depending on Java version)");
+        if(Class158.getScreenMode() == 1 && client.GAME_STATE != 0)
+            return;
+        ChatLine.appendChatMessage("Fullscreen only works for OpenGL Java 16+");
         executor.intStackPtr -= 2;
         if (Class475.supportsFullScreen) {
-            ParticleProducer.switchRenderType(0/*renderOption*/, false);
+            ParticleProducer.switchRenderType(1/*renderOption*/, true);
             executor.intStack[++executor.intStackPtr - 1] = Engine.fullScreenFrame != null ? 1 : 0;
             GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
             int width = gd.getDisplayMode().getWidth();
@@ -9468,13 +9468,15 @@ public class CS2Interpreter {
 
     static void method6678(CS2Executor executor) {
         int renderType = executor.intStack[--executor.intStackPtr];
+        System.out.println(renderType);
         if (renderType < 0 || renderType > 5) {
             renderType = 2;
         }
         if(Class158.getScreenMode() == 3) {
-            ParticleProducer.switchRenderType(renderType, Class158.getScreenMode() == 3 ? true : false);//Switching render types in fullscreen doesnt work!
+            //Only OpenGL
+            ParticleProducer.switchRenderType(1, Class158.getScreenMode() == 3 ? true : false);//Switching render types in fullscreen doesnt work!
         } else {
-            ParticleProducer.switchRenderType(renderType, Class158.getScreenMode() == 3 ? true : false);
+            ParticleProducer.switchRenderType(renderType, false);
         }
     }
 

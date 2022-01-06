@@ -119,6 +119,7 @@ public class Class470 {
         Field field_4;
         try {
             field_4 = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
+
             field_4.setAccessible(true);
             boolean bool_5 = ((Boolean) field_4.get(defaultMoniter)).booleanValue();
             if (bool_5) {

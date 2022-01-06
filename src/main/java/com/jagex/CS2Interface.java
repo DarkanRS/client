@@ -11,6 +11,7 @@ public class CS2Interface {
 
     }
 
+
     boolean setChild(int ifComp, int slotId) {
         IComponentDefinitions def = Index.getIComponentDefinitions(ifComp, slotId);
         if (def != null) {
