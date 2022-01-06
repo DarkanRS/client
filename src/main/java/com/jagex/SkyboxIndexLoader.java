@@ -45,23 +45,42 @@ public class SkyboxIndexLoader {
                         component.idHash = i + (interfaceId << 16);
                         component.readValues(new ByteBuf(bytes_8));
 
+//                        if(Class158.getScreenMode() >= 2) {
+//                            //Game Window Interface
+//                            if (component.idHash == 48889904) {
+//                                component.basePositionY = 0;
+//                                component.baseHeight = 0;
+//                            }
+//
+//                            //Lobby interface Hashes
+//                            if (component.idHash == 59375616 || component.idHash == 59768835 || component.idHash == 38600709) {
+//                                component.basePositionY = 0;
+//                                component.baseHeight = 0;
+//                            }
+//
+//                            //Banner at top hashes
+//                            if (component.idHash == 59375617 || component.idHash == 48890095 || component.idHash == 35913730) {
+//                                component.baseHeight = 0;
+//                            }
+//                        } else {
+//                            if(component.idHash == 48889904) {
+//                                component.basePositionY = 50;
+//                                component.baseHeight = 50;
+//                            }
+//                            if(component.idHash == 59768835 || component.idHash == 38600709) {
+//                                component.basePositionY = 0;
+//                                component.baseHeight = 0;
+//                            }
+//                            if (component.idHash == 59375616) {
+//                                component.basePositionY = 50;
+//                                component.baseHeight = 50;
+//                            }
+//                            if (component.idHash == 59375617 || component.idHash == 48890095 || component.idHash == 35913730) {
+//                                component.baseHeight = 50;
+//                            }
+//                        }
 
-                        //Game Window Interface
-                        if(component.idHash == 48889904) {
-                            component.basePositionY = 0;
-                            component.baseHeight = 0;
-                        }
 
-                        //Lobby interface Hashes
-                        if(component.idHash == 59375616 || component.idHash == 35913932 || component.idHash == 59768835 || component.idHash == 38600709) {
-                            component.basePositionY = 0;
-                            component.baseHeight = 0;
-                        }
-
-                        //Banner at top hashes
-                        if(component.idHash == 59375617 || component.idHash == 48890095 || component.idHash == 35913730) {
-                            component.baseHeight = 0;
-                        }
                     }
                 }
             }
