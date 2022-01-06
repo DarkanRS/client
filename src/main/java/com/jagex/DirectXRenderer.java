@@ -39,7 +39,6 @@ public class DirectXRenderer extends HardwareRenderer {
 
     DirectXRenderer(int i_1, int i_2, long long_3, long long_5, D3DPRESENT_PARAMETERS d3dpresent_parameters_7, D3DCAPS d3dcaps_8, ImageLoader interface22_9, Index index_10, int i_11) {
         super(interface22_9, index_10, i_11, 0);
-        System.out.println("here are");
         aLongArray10271 = new long[anInt10268];
 
         try {
