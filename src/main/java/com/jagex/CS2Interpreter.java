@@ -5900,7 +5900,7 @@ public class CS2Interpreter {
     }
 
     static void chooseFullScreen(CS2Executor executor) {
-        if(Class158.getScreenMode() == 1)
+        if(Class158.getScreenMode() == 1 && client.GAME_STATE != 0)
             return;
         ChatLine.appendChatMessage("Fullscreen only works for OpenGL Java 16+");
         executor.intStackPtr -= 2;
