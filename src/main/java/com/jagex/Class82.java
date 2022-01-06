@@ -23,7 +23,7 @@ class Class82 implements Interface11 {
                 }
                 boolean bool_18 = false;
                 for (int i_16 = 0; i_16 < Class459.FC_PLAYER_COUNT; i_16++) {
-                    if (player_10.displayName.equals(Class467.FC_PLAYERS[i_16].username)) {
+                    if (player_10.displayName.equals(Class467.FC_PLAYERS[i_16].displayName)) {
                         bool_18 = true;
                         break;
                     }

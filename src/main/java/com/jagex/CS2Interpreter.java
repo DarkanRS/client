@@ -8621,7 +8621,7 @@ public class CS2Interpreter {
 
     static void method1608(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
-        if (Class467.FC_PLAYERS != null && i_2 < Class459.FC_PLAYER_COUNT && Class467.FC_PLAYERS[i_2].username.equalsIgnoreCase(VertexNormal.MY_PLAYER.displayName)) {
+        if (Class467.FC_PLAYERS != null && i_2 < Class459.FC_PLAYER_COUNT && Class467.FC_PLAYERS[i_2].displayName.equalsIgnoreCase(VertexNormal.MY_PLAYER.displayName)) {
             executor.intStack[++executor.intStackPtr - 1] = 1;
         } else {
             executor.intStack[++executor.intStackPtr - 1] = 0;
@@ -9056,7 +9056,7 @@ public class CS2Interpreter {
     static void method8870(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
         if (client.FC_NAME != null && i_2 < Class459.FC_PLAYER_COUNT) {
-            executor.stringStack[++executor.stringStackPtr - 1] = Class467.FC_PLAYERS[i_2].displayName;
+            executor.stringStack[++executor.stringStackPtr - 1] = Class467.FC_PLAYERS[i_2].username;
         } else {
             executor.stringStack[++executor.stringStackPtr - 1] = "";
         }
@@ -10354,7 +10354,7 @@ public class CS2Interpreter {
     static void method4566(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
         if (client.FC_NAME != null && i_2 < Class459.FC_PLAYER_COUNT) {
-            executor.stringStack[++executor.stringStackPtr - 1] = Class467.FC_PLAYERS[i_2].username;
+            executor.stringStack[++executor.stringStackPtr - 1] = Class467.FC_PLAYERS[i_2].displayName;
         } else {
             executor.stringStack[++executor.stringStackPtr - 1] = "";
         }
