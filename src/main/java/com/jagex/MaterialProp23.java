@@ -193,10 +193,10 @@ public class MaterialProp23 extends MaterialProperty {
                                                             for (EntityNode_Sub4 class275_sub4_15 = (EntityNode_Sub4) client.aClass457_7350.method7659(); class275_sub4_15 != null; class275_sub4_15 = (EntityNode_Sub4) client.aClass457_7350.method7650()) {
                                                                 if (class275_sub4_15.anInt7838 < Utils.time() / 1000L - 5L) {
                                                                     if (class275_sub4_15.aShort7839 > 0) {
-                                                                        ChatLine.appendChatMessage(5, 0, "", "", "", class275_sub4_15.aString7837 + LocalizedText.HAS_LOGGED_IN.translate(Class223.CURRENT_LANGUAGE));
+                                                                        ChatLine.appendChatMessage(MessageType.FRIENDS_STATUS, 0, "", "", "", class275_sub4_15.aString7837 + LocalizedText.HAS_LOGGED_IN.translate(Class223.CURRENT_LANGUAGE));
                                                                     }
                                                                     if (class275_sub4_15.aShort7839 == 0) {
-                                                                        ChatLine.appendChatMessage(5, 0, "", "", "", class275_sub4_15.aString7837 + LocalizedText.HAS_LOGGED_OUT.translate(Class223.CURRENT_LANGUAGE));
+                                                                        ChatLine.appendChatMessage(MessageType.FRIENDS_STATUS, 0, "", "", "", class275_sub4_15.aString7837 + LocalizedText.HAS_LOGGED_OUT.translate(Class223.CURRENT_LANGUAGE));
                                                                     }
                                                                     class275_sub4_15.method4887();
                                                                 }

@@ -1,6 +1,6 @@
 package com.jagex;
 
-import java.awt.*;
+import java.awt.Canvas;
 import java.util.Stack;
 
 public class Class279 {

@@ -1,9 +1,9 @@
 package com.jagex;
 
-import com.jagex.clans.settings.ChangeClanSetting;
-
-import java.awt.*;
+import java.awt.Point;
 import java.util.Queue;
+
+import com.jagex.clans.settings.ChangeClanSetting;
 
 public class Class373 {
 

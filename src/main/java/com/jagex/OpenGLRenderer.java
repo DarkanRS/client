@@ -1,11 +1,11 @@
 package com.jagex;
 
+import java.awt.Canvas;
+
 import jaclib.memory.Buffer;
 import jaclib.memory.Stream;
 import jaclib.memory.heap.NativeHeap;
 import jaggl.OpenGL;
-
-import java.awt.*;
 
 public class OpenGLRenderer extends AbstractRenderer {
 

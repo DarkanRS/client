@@ -1,6 +1,6 @@
 package com.jagex;
 
-import java.awt.*;
+import java.awt.Point;
 
 public class MouseRecord_Sub1 extends MouseRecord {
 

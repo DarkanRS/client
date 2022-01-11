@@ -1,6 +1,6 @@
 package com.jagex;
 
-import java.awt.*;
+import java.awt.Canvas;
 
 public class ja extends AbstractRenderer implements Interface40 {
 

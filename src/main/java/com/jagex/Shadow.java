@@ -1,6 +1,6 @@
 package com.jagex;
 
-import java.awt.*;
+import java.awt.EventQueue;
 import java.io.File;
 
 public abstract class Shadow extends CacheableNode {

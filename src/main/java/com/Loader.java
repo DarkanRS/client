@@ -1,16 +1,19 @@
 package com;
 
-import com.jagex.WorldDescriptor;
-import com.jagex.client;
-
-import javax.swing.*;
 import java.applet.Applet;
 import java.applet.AppletStub;
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.math.BigInteger;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Properties;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+import com.jagex.WorldDescriptor;
+import com.jagex.client;
 
 public class Loader extends Applet implements AppletStub {
     private static final long serialVersionUID = 1L;

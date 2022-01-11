@@ -1,8 +1,9 @@
 package com.jagex;
 
-import com.jagex.clans.settings.ChangeClanSetting;
+import java.awt.Container;
+import java.awt.Insets;
 
-import java.awt.*;
+import com.jagex.clans.settings.ChangeClanSetting;
 
 public class Class532_Sub1 extends Class532 {
 

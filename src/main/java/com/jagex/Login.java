@@ -1,13 +1,13 @@
 package com.jagex;
 
-import com.jagex.clans.settings.ChangeClanSetting;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.ListIterator;
+
+import com.jagex.clans.settings.ChangeClanSetting;
 
 public class Login {
 

@@ -1,14 +1,23 @@
 package com.jagex;
 
-import com.Loader;
-import com.jagex.clans.settings.ChangeClanSetting;
-import jaclib.ping.Ping;
-
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Container;
+import java.awt.Frame;
+import java.awt.Insets;
+import java.awt.Rectangle;
 import java.io.IOException;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-import java.util.*;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.Random;
+import java.util.TimeZone;
+import java.util.Vector;
+
+import com.Loader;
+import com.jagex.clans.settings.ChangeClanSetting;
+
+import jaclib.ping.Ping;
 
 public class client extends Engine {
 
@@ -2818,11 +2827,11 @@ public class client extends Engine {
 											for (EntityNode_Sub4 class275_sub4_17 = (EntityNode_Sub4) aClass457_7350.method7659(); class275_sub4_17 != null; class275_sub4_17 = (EntityNode_Sub4) aClass457_7350.method7650()) {
 												if (class275_sub4_17.anInt7838 < Utils.time() / 1000L - 5L) {
 													if (class275_sub4_17.aShort7839 > 0) {
-														ChatLine.appendChatMessage(5, 0, "", "", "", class275_sub4_17.aString7837 + LocalizedText.HAS_LOGGED_IN.translate(Class223.CURRENT_LANGUAGE));
+														ChatLine.appendChatMessage(MessageType.FRIENDS_STATUS, 0, "", "", "", class275_sub4_17.aString7837 + LocalizedText.HAS_LOGGED_IN.translate(Class223.CURRENT_LANGUAGE));
 													}
 
 													if (class275_sub4_17.aShort7839 == 0) {
-														ChatLine.appendChatMessage(5, 0, "", "", "", class275_sub4_17.aString7837 + LocalizedText.HAS_LOGGED_OUT.translate(Class223.CURRENT_LANGUAGE));
+														ChatLine.appendChatMessage(MessageType.FRIENDS_STATUS, 0, "", "", "", class275_sub4_17.aString7837 + LocalizedText.HAS_LOGGED_OUT.translate(Class223.CURRENT_LANGUAGE));
 													}
 
 													class275_sub4_17.method4887();
