@@ -7727,7 +7727,7 @@ public class CS2Interpreter {
             QuestDefinitions.setConsoleText(message);
         } else {
         	if (type.name().startsWith("UNK"))
-        		System.out.println("UNIDENTIFIED CHAT TYPE: " + type.name());
+        		System.out.println("UNIDENTIFIED CHAT TYPE: " + type.name() + " - " + message);
             ChatLine.appendChatMessage(type, effectFlags, "", "", "", message);
         }
     }
