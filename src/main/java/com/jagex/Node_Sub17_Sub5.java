@@ -1,9 +1,9 @@
 package com.jagex;
 
-import com.jagex.clans.settings.ClanSettings;
-
 import java.nio.ByteBuffer;
 import java.util.Arrays;
+
+import com.jagex.clans.settings.ClanSettings;
 
 public class Node_Sub17_Sub5 extends Node_Sub17 {
 

@@ -1,6 +1,7 @@
 package com.jagex;
 
-import java.awt.*;
+import java.awt.Canvas;
+import java.awt.Dimension;
 import java.util.Enumeration;
 import java.util.Hashtable;
 

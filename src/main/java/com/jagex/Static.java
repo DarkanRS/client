@@ -1,8 +1,8 @@
 package com.jagex;
 
-import com.jagex.clans.settings.ChangeClanSetting;
-
 import java.util.Calendar;
+
+import com.jagex.clans.settings.ChangeClanSetting;
 
 public class Static {
 

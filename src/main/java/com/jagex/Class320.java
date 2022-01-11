@@ -1,7 +1,5 @@
 package com.jagex;
 
-import java.awt.*;
-
 public class Class320 {
 
     public static Class253 aClass253_3723;

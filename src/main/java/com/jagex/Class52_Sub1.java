@@ -1,6 +1,6 @@
 package com.jagex;
 
-import java.awt.*;
+import java.awt.Canvas;
 
 public class Class52_Sub1 extends Class52 {
 

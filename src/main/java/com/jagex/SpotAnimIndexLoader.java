@@ -1,6 +1,6 @@
 package com.jagex;
 
-import java.awt.*;
+import java.awt.Font;
 
 public class SpotAnimIndexLoader {
 

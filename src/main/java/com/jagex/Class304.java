@@ -1,10 +1,15 @@
 package com.jagex;
 
-import com.jagex.clans.settings.ChangeClanSetting;
-
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.MediaTracker;
+import java.awt.Toolkit;
 import java.io.IOException;
 import java.io.InputStream;
+
+import com.jagex.clans.settings.ChangeClanSetting;
 
 public class Class304 implements Interface27 {
 

@@ -3,9 +3,8 @@
  */
 package jaggl;
 
-import java.awt.*;
+import java.awt.Canvas;
 import java.util.Hashtable;
-import java.util.function.Predicate;
 
 public class OpenGL {
     public static final int anInt1750 = 5120;

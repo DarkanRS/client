@@ -1,8 +1,17 @@
 package com.jagex;
 
-import jagdx.*;
+import java.awt.Canvas;
 
-import java.awt.*;
+import jagdx.D3DADAPTER_IDENTIFIER;
+import jagdx.D3DCAPS;
+import jagdx.D3DDISPLAYMODE;
+import jagdx.D3DLIGHT;
+import jagdx.D3DPRESENT_PARAMETERS;
+import jagdx.IDirect3D;
+import jagdx.IDirect3DDevice;
+import jagdx.IDirect3DEventQuery;
+import jagdx.IDirect3DSurface;
+import jagdx.IUnknown;
 
 public class DirectXRenderer extends HardwareRenderer {
 

@@ -1,6 +1,6 @@
 package com.jagex;
 
-import java.awt.*;
+import java.awt.Canvas;
 
 public abstract class Class158_Sub2_Sub3 extends Class158_Sub2 {
 

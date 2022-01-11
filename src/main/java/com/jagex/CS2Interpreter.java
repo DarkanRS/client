@@ -1,13 +1,14 @@
 package com.jagex;
 
-import com.jagex.clans.ClanChannel;
-import com.jagex.clans.settings.ClanSettings;
-
-import java.awt.*;
+import java.awt.GraphicsDevice;
+import java.awt.GraphicsEnvironment;
+import java.awt.Point;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.Transferable;
 import java.io.File;
-import java.util.ArrayList;
+
+import com.jagex.clans.ClanChannel;
+import com.jagex.clans.settings.ClanSettings;
 
 public class CS2Interpreter {
     public static void executeOperation(CS2Instruction operation, CS2Executor exec) {
@@ -3200,7 +3201,7 @@ public class CS2Interpreter {
         ChatLine chatline_3 = ChatLine.getChatLine(i_2);
         int i_4 = -1;
         if (chatline_3 != null) {
-            i_4 = chatline_3.type;
+            i_4 = chatline_3.type.getValue();
         }
         executor.intStack[++executor.intStackPtr - 1] = i_4;
     }
@@ -7716,14 +7717,17 @@ public class CS2Interpreter {
 
     static void appendTypedMessage(CS2Executor executor) {
         executor.intStackPtr -= 2;
-        int type = executor.intStack[executor.intStackPtr];
+        int typeId = executor.intStack[executor.intStackPtr];
         int effectFlags = executor.intStack[executor.intStackPtr + 1];
         String message = (String) executor.stringStack[--executor.stringStackPtr];
-        if (type == 99) {
+        MessageType type = MessageType.forId(typeId);
+        if (type == MessageType.DEV_CONSOLE) {
             Class209.printConsoleMessage(message);
-        } else if (type == 98) {
+        } else if (type == MessageType.DEV_CONSOLE_CLEAR) {
             QuestDefinitions.setConsoleText(message);
         } else {
+        	if (type.name().startsWith("UNK"))
+        		System.out.println("UNIDENTIFIED CHAT TYPE: " + type.name() + " - " + message);
             ChatLine.appendChatMessage(type, effectFlags, "", "", "", message);
         }
     }

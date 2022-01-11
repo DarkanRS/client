@@ -1,8 +1,8 @@
 package com.jagex;
 
-import com.jagex.clans.settings.ChangeClanSetting;
-
 import java.util.Arrays;
+
+import com.jagex.clans.settings.ChangeClanSetting;
 
 public class Class356 {
     static Class356 aClass356_4117 = new Class356();

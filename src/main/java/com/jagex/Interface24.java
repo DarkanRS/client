@@ -1,7 +1,7 @@
 package com.jagex;
 
 import java.applet.Applet;
-import java.awt.*;
+import java.awt.Graphics;
 
 public interface Interface24 {
 

@@ -1,7 +1,5 @@
 package com.jagex;
 
-import java.util.Iterator;
-
 public class Class258 {
 
     Class258() throws Throwable {

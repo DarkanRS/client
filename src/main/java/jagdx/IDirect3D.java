@@ -3,7 +3,7 @@
  */
 package jagdx;
 
-import java.awt.*;
+import java.awt.Component;
 
 public class IDirect3D extends IUnknown {
     private IDirect3D() throws Throwable {

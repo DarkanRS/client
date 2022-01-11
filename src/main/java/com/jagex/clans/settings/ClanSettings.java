@@ -1,6 +1,15 @@
 package com.jagex.clans.settings;
 
-import com.jagex.*;
+import com.jagex.ByteBuf;
+import com.jagex.Class111;
+import com.jagex.Class503;
+import com.jagex.IntNode;
+import com.jagex.IterableNodeMap;
+import com.jagex.LongNode;
+import com.jagex.NativeSprite;
+import com.jagex.Node;
+import com.jagex.ObjectNode;
+import com.jagex.Utils;
 
 public class ClanSettings {
 

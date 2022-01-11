@@ -1,6 +1,6 @@
 package com.jagex;
 
-import java.awt.*;
+import java.awt.Canvas;
 import java.lang.reflect.Method;
 
 public class Class459 {

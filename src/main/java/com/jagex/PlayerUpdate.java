@@ -222,7 +222,7 @@ public class PlayerUpdate {
         if ((flags & 0x4000) != 0) {
             String string_16 = stream.readString();
             if (player == VertexNormal.MY_PLAYER) {
-                ChatLine.appendChatMessage(2, 0, player.getUsernameWithTitle(), player.getDisplayName(), player.username, string_16);
+                ChatLine.appendChatMessage(MessageType.PUBLIC_CHAT, 0, player.getUsernameWithTitle(), player.getDisplayName(), player.username, string_16);
             }
 
             player.sendChat(string_16, 0, 0);
@@ -232,7 +232,7 @@ public class PlayerUpdate {
             String string_16 = stream.readString();
             int i_7 = stream.readUnsignedByte128();
             if ((i_7 & 0x1) != 0) {
-                ChatLine.appendChatMessage(2, i_7, player.getUsernameWithTitle(), player.getDisplayName(), player.username, string_16);
+                ChatLine.appendChatMessage(MessageType.PUBLIC_CHAT, i_7, player.getUsernameWithTitle(), player.getDisplayName(), player.username, string_16);
             }
 
             player.sendChat(string_16, 0, 0);

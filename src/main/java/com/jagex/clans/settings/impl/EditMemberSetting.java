@@ -1,6 +1,16 @@
 package com.jagex.clans.settings.impl;
 
-import com.jagex.*;
+import com.jagex.ByteBuf;
+import com.jagex.ClanSetting;
+import com.jagex.Class16;
+import com.jagex.Class285;
+import com.jagex.Class395;
+import com.jagex.Class487;
+import com.jagex.FontRenderer;
+import com.jagex.Node_Sub17_Sub2;
+import com.jagex.Renderers;
+import com.jagex.SkyboxIndexLoader;
+import com.jagex.client;
 import com.jagex.clans.ClanChannel;
 import com.jagex.clans.ClanChannelMember;
 

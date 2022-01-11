@@ -1,10 +1,11 @@
 package com.jagex;
 
-import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+
+import javax.imageio.ImageIO;
 
 public class RouteFinder {
     private static final int DIR_NORTH = 0x1;
