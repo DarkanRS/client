@@ -304,8 +304,8 @@ public class client extends Engine {
 	static int[] anIntArray7263;
 	static Class163[] aClass163Array7419;
 	static int[] anIntArray7148;
-	static long[] aLongArray7424;
-	static int anInt7389;
+	static long[] QUICKCHAT_HASHES;
+	static int CURR_QUICKCHAT_INDEX;
 	static int anInt7429;
 	static boolean[] CAM_SHAKING;
 	static int[] anIntArray7268;
@@ -517,8 +517,8 @@ public class client extends Engine {
 		anIntArray7148 = new int[] { 16776960, 16711680, 65280, 65535, 16711935, 16777215 };
 		PUBLIC_FILTER = 0;
 		TRADE_FILTER = 0;
-		aLongArray7424 = new long[100];
-		anInt7389 = 0;
+		QUICKCHAT_HASHES = new long[100];
+		CURR_QUICKCHAT_INDEX = 0;
 		FC_NAME = null;
 		FC_OWNER_NAME = null;
 		GRAND_EXCHANGE_SLOTS = new GrandExchangeSlot[6];
