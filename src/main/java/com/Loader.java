@@ -135,7 +135,6 @@ public class Loader extends Applet implements AppletStub {
     }
 
     private void startClient() {
-
         client clnt = new client();
         clnt.supplyApplet(this);
         clnt.init();
