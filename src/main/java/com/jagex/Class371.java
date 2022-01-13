@@ -106,7 +106,7 @@ public class Class371 {
 
     public static void method6353() {
         BufferedConnectionContext class184_1 = BufferedConnectionContext.getConnectionContext();
-        TCPPacket tcpmessage_2 = TCPPacket.createPacket(ClientProt.FC_JOIN, class184_1.isaac);
+        TCPPacket tcpmessage_2 = TCPPacket.createPacket(ClientProt.FC_JOIN, class184_1.outKeys);
         tcpmessage_2.buffer.writeByte(0);
         class184_1.queuePacket(tcpmessage_2);
     }

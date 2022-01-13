@@ -23,7 +23,7 @@ public class Class119 {
 
     public static void method2074(String string_0, String string_1, int i_2, boolean bool_3) {
         if (client.GAME_STATE == 3) {
-            TCPPacket tcpmessage_5 = TCPPacket.createPacket(ClientProt.SEND_SIGN_UP_FORM, client.LOBBY_CONNECTION_CONTEXT.isaac);
+            TCPPacket tcpmessage_5 = TCPPacket.createPacket(ClientProt.SEND_SIGN_UP_FORM, client.LOBBY_CONNECTION_CONTEXT.outKeys);
             tcpmessage_5.buffer.writeShort(0);
             int i_6 = tcpmessage_5.buffer.index;
             tcpmessage_5.buffer.writeString(string_0);
@@ -68,7 +68,7 @@ public class Class119 {
                 }
 
                 if (outgoing != null) {
-                    TCPPacket packet = TCPPacket.createPacket(outgoing, client.GAME_CONNECTION_CONTEXT.isaac);
+                    TCPPacket packet = TCPPacket.createPacket(outgoing, client.GAME_CONNECTION_CONTEXT.outKeys);
                     packet.buffer.writeShort(indices[index]);
                     packet.buffer.write128Byte(0);
                     client.GAME_CONNECTION_CONTEXT.queuePacket(packet);
@@ -86,7 +86,7 @@ public class Class119 {
     }
 
     static void method2076(IComponentDefinitions icomponentdefinitions_0, IComponentDefinitions icomponentdefinitions_1) {
-        TCPPacket tcpmessage_3 = TCPPacket.createPacket(ClientProt.IF_DRAG_ONTO_IF, client.GAME_CONNECTION_CONTEXT.isaac);
+        TCPPacket tcpmessage_3 = TCPPacket.createPacket(ClientProt.IF_DRAG_ONTO_IF, client.GAME_CONNECTION_CONTEXT.outKeys);
         tcpmessage_3.buffer.writeShortLE128(icomponentdefinitions_1.slotId);
         tcpmessage_3.buffer.writeShortLE(icomponentdefinitions_0.slotId);
         tcpmessage_3.buffer.writeShort(icomponentdefinitions_1.containerItemId);

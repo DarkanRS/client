@@ -2,6 +2,7 @@ package com.jagex;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -129,7 +130,7 @@ public class Login {
                         return;
                     }
                     Class9.CURRENT_CONNECTION_CONTEXT.getConnection().read(Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer.buffer, 0, Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer.index);
-                    Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer.method13100(Class500.anIntArray5827);
+                    Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer.encryptXtea(Class500.ISAAC_SEED);
                     Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer.index = 0;
                     String string_18 = Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer.readGJString();
                     Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer.index = 0;
@@ -154,7 +155,7 @@ public class Login {
                     }
                     Class9.CURRENT_CONNECTION_CONTEXT.getConnection().read(Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer.buffer, 0, 16);
                     Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer.index = 16;
-                    Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer.method13100(Class500.anIntArray5827);
+                    Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer.encryptXtea(Class500.ISAAC_SEED);
                     Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer.index = 0;
                     Class9.aLong77 = Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer.readLong();
                     Class9.aLong86 = Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer.readLong();
@@ -261,18 +262,18 @@ public class Login {
                         rsbitsbuffer_22.writeString(client.aString7164);
                         QuestDefinitions.writeCRCs(rsbitsbuffer_22);
                     }
-                    rsbitsbuffer_22.encryptWithXtea(Class500.anIntArray5827, i_6, rsbitsbuffer_22.index);
+                    rsbitsbuffer_22.encryptWithXtea(Class500.ISAAC_SEED, i_6, rsbitsbuffer_22.index);
                     rsbitsbuffer_22.method13281(rsbitsbuffer_22.index - i_5);
                     Class9.CURRENT_CONNECTION_CONTEXT.queuePacket(tcpmessage_2);
                     Class9.CURRENT_CONNECTION_CONTEXT.flush();
-                    Class9.CURRENT_CONNECTION_CONTEXT.isaac = new Isaac(Class500.anIntArray5827);
+                    Class9.CURRENT_CONNECTION_CONTEXT.outKeys = new ISAACCipher(Class500.ISAAC_SEED);
                     for (int i_12 = 0; i_12 < 4; i_12++) {
-                        Class500.anIntArray5827[i_12] += 50;
+                        Class500.ISAAC_SEED[i_12] += 50;
                     }
-                    Class9.CURRENT_CONNECTION_CONTEXT.aClass432_2295 = new Isaac(Class500.anIntArray5827);
-                    new Isaac(Class500.anIntArray5827);
-                    Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer.setIsaacCipher(Class9.CURRENT_CONNECTION_CONTEXT.aClass432_2295);
-                    Class500.anIntArray5827 = null;
+                    Class9.CURRENT_CONNECTION_CONTEXT.inKeys = new ISAACCipher(Class500.ISAAC_SEED);
+                    new ISAACCipher(Class500.ISAAC_SEED);
+                    Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer.setIsaacCipher(Class9.CURRENT_CONNECTION_CONTEXT.inKeys);
+                    Class500.ISAAC_SEED = null;
                     Class9.loginStage = 97;
                 }
                 if (Class9.loginStage == 97) {
@@ -330,7 +331,7 @@ public class Login {
                     Class9.CURRENT_CONNECTION_CONTEXT.clearAllQueuedPackets();
                     tcpmessage_2 = SkyboxDefinitions.method3558();
                     rsbitsbuffer_22 = tcpmessage_2.buffer;
-                    rsbitsbuffer_22.setIsaacCipher(Class9.CURRENT_CONNECTION_CONTEXT.isaac);
+                    rsbitsbuffer_22.setIsaacCipher(Class9.CURRENT_CONNECTION_CONTEXT.outKeys);
                     rsbitsbuffer_22.writeIsaacByte(LoginProt.GAMELOGIN_CONTINUE.id);
                     Class9.CURRENT_CONNECTION_CONTEXT.queuePacket(tcpmessage_2);
                     Class9.CURRENT_CONNECTION_CONTEXT.flush();
@@ -493,7 +494,7 @@ public class Login {
                     if (Class9.loginStage == 173) {
                         buffer = Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer;
                         buffer.index = 0;
-                        if (buffer.nextIsSmart()) {
+                        if (buffer.peekIsIsaacSmart()) {
                             if (!Class9.CURRENT_CONNECTION_CONTEXT.getConnection().available(1)) {
                                 return;
                             }

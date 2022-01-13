@@ -82,7 +82,7 @@ public class LinkedNodeList {
     }
 
     public static void closeInterfaces() {
-        TCPPacket packet = TCPPacket.createPacket(ClientProt.CLOSE_INTERFACE, client.GAME_CONNECTION_CONTEXT.isaac);
+        TCPPacket packet = TCPPacket.createPacket(ClientProt.CLOSE_INTERFACE, client.GAME_CONNECTION_CONTEXT.outKeys);
         client.GAME_CONNECTION_CONTEXT.queuePacket(packet);
         for (SubInterface class282_sub44_3 = (SubInterface) client.OPEN_INTERFACES.method7750(); class282_sub44_3 != null; class282_sub44_3 = (SubInterface) client.OPEN_INTERFACES.method7751()) {
             if (!class282_sub44_3.linked()) {

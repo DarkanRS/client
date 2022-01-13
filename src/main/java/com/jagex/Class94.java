@@ -12,16 +12,16 @@ public class Class94 {
 
     static ByteBuf method1587() {
         ByteBuf rsbytebuffer_1 = new ByteBuf(518);
-        Class500.anIntArray5827 = new int[4];
-        Class500.anIntArray5827[0] = (int) (Math.random() * 9.9999999E7D);
-        Class500.anIntArray5827[1] = (int) (Math.random() * 9.9999999E7D);
-        Class500.anIntArray5827[2] = (int) (Math.random() * 9.9999999E7D);
-        Class500.anIntArray5827[3] = (int) (Math.random() * 9.9999999E7D);
+        Class500.ISAAC_SEED = new int[4];
+        Class500.ISAAC_SEED[0] = (int) (Math.random() * 9.9999999E7D);
+        Class500.ISAAC_SEED[1] = (int) (Math.random() * 9.9999999E7D);
+        Class500.ISAAC_SEED[2] = (int) (Math.random() * 9.9999999E7D);
+        Class500.ISAAC_SEED[3] = (int) (Math.random() * 9.9999999E7D);
         rsbytebuffer_1.writeByte(10);
-        rsbytebuffer_1.writeInt(Class500.anIntArray5827[0]);
-        rsbytebuffer_1.writeInt(Class500.anIntArray5827[1]);
-        rsbytebuffer_1.writeInt(Class500.anIntArray5827[2]);
-        rsbytebuffer_1.writeInt(Class500.anIntArray5827[3]);
+        rsbytebuffer_1.writeInt(Class500.ISAAC_SEED[0]);
+        rsbytebuffer_1.writeInt(Class500.ISAAC_SEED[1]);
+        rsbytebuffer_1.writeInt(Class500.ISAAC_SEED[2]);
+        rsbytebuffer_1.writeInt(Class500.ISAAC_SEED[3]);
         return rsbytebuffer_1;
     }
 

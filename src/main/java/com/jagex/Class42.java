@@ -19,7 +19,7 @@ public class Class42 implements Interface2 {
             Class260.anInt3223 = i_0;
             Class260.aClass116_3229 = null;
             Class260.aNode_Sub15_Sub2_3231 = null;
-            TCPPacket tcpmessage_4 = TCPPacket.createPacket(ClientProt.SONG_LOADED, client.GAME_CONNECTION_CONTEXT.isaac);
+            TCPPacket tcpmessage_4 = TCPPacket.createPacket(ClientProt.SONG_LOADED, client.GAME_CONNECTION_CONTEXT.outKeys);
             tcpmessage_4.buffer.writeInt(-1);
             client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_4);
         } else {

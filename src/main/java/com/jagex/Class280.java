@@ -47,7 +47,7 @@ public class Class280 implements Interface25 {
         }
         client.camAngleY += 8.0F * (client.aFloat7266 * long_0 / 40.0F);
         client.camAngleX += 8.0F * (long_0 * client.aFloat7284 / 40.0F);
-        Isaac.processCamera();
+        Static.processCamera();
     }
 
     public static boolean isIgnored(String string_0) {

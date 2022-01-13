@@ -5,12 +5,12 @@ import java.io.IOException;
 public class BufferedConnectionContext {
 
     static int anInt2300;
-    public Isaac isaac;
+    public ISAACCipher outKeys;
     public int anInt2290;
     public boolean aBool2298;
     ServerProt lastPacket;
     ServerProt thirdLastPacket;
-    Isaac aClass432_2295;
+    ISAACCipher inKeys;
     ServerProt secondLastPacket;
     int anInt2297;
     int readDataSize;
