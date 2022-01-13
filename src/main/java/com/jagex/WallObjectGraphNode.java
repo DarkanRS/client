@@ -113,15 +113,15 @@ public class WallObjectGraphNode extends GraphNode_Sub1_Sub5 implements WorldObj
                         if (CutsceneAction_Sub9.RECIEVED_RESPONSE != AccountCreationResponseOpcodes.CONTINUE) {
                             client.LOBBY_CONNECTION_CONTEXT.method3051();
                         } else {
-                            client.LOBBY_CONNECTION_CONTEXT.isaac = new Isaac(Class14.LOGIN_XTEAS);
+                            client.LOBBY_CONNECTION_CONTEXT.outKeys = new ISAACCipher(Class14.LOGIN_XTEAS);
                             int[] ints_8 = new int[4];
 
                             for (i_3 = 0; i_3 < 4; i_3++) {
                                 ints_8[i_3] = Class14.LOGIN_XTEAS[i_3] + 50;
                             }
 
-                            client.LOBBY_CONNECTION_CONTEXT.aClass432_2295 = new Isaac(ints_8);
-                            client.LOBBY_CONNECTION_CONTEXT.recievedBuffer.setIsaacCipher(client.LOBBY_CONNECTION_CONTEXT.aClass432_2295);
+                            client.LOBBY_CONNECTION_CONTEXT.inKeys = new ISAACCipher(ints_8);
+                            client.LOBBY_CONNECTION_CONTEXT.recievedBuffer.setIsaacCipher(client.LOBBY_CONNECTION_CONTEXT.inKeys);
                             GameState.setGameState(3);
                             client.LOBBY_CONNECTION_CONTEXT.clearAllQueuedPackets();
                             client.LOBBY_CONNECTION_CONTEXT.recievedBuffer.index = 0;

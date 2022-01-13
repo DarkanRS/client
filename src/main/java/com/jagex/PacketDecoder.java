@@ -24,7 +24,7 @@ public class PacketDecoder {
                 context.aBool2288 = false;
             }
             buffer.index = 0;
-            if (buffer.nextIsSmart()) {
+            if (buffer.peekIsIsaacSmart()) {
                 if (!connection.available(1)) {
                     return false;
                 }
@@ -1080,7 +1080,7 @@ public class PacketDecoder {
         } else if (context.currentPacket == ServerProt.REQUEST_FPS) {
             int key = buffer.readInt();
             int flags = buffer.readInt();
-            TCPPacket tcpmessage_111 = TCPPacket.createPacket(ClientProt.SEND_FPS, context.isaac);
+            TCPPacket tcpmessage_111 = TCPPacket.createPacket(ClientProt.SEND_FPS, context.outKeys);
             tcpmessage_111.buffer.writeIntV2(key);
             tcpmessage_111.buffer.writeIntV1(flags);
             tcpmessage_111.buffer.write128Byte(client.FPS);

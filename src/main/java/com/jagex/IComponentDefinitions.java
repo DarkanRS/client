@@ -955,7 +955,7 @@ public class IComponentDefinitions {
 	                    if (i_1 != -1412584499 && (inter.anInt1382 == anInt1265 || inter.anInt1382 == anInt1283 || client.getIComponentSettings(inter).bit23Enabled())) {
 	                        Comparable_Sub1.aClass118Array3772 = arr_0;
 	                        GameTipsLoader.anInt4822 = i_6;
-	                        Isaac.anInt5157 = i_7;
+	                        ISAACCipher.anInt5157 = i_7;
 	                        continue;
 	                    }
 	                    if (client.aBool7364 && client.aBool7403) {

@@ -33,7 +33,7 @@ public class TCPPacket extends Node {
 
     }
 
-    public static TCPPacket createPacket(ClientProt outgoing, Isaac cipher) {
+    public static TCPPacket createPacket(ClientProt outgoing, ISAACCipher cipher) {
         TCPPacket packet = Class158_Sub2.method14356();
         packet.packet = outgoing;
         packet.anInt7678 = outgoing.size;

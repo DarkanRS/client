@@ -10,9 +10,9 @@ public abstract class Class534 {
 
     long aLong7076 = -1L;
 
-    int anInt7075 = -1;
+    int lastX = -1;
 
-    int anInt7078 = -1;
+    int lastY = -1;
 
     NodeCollection aClass482_7077 = new NodeCollection();
 
@@ -51,8 +51,8 @@ public abstract class Class534 {
         aClass482_7077.removeAll();
         aLong7074 = -1L;
         aLong7076 = -1L;
-        anInt7075 = -1;
-        anInt7078 = -1;
+        lastX = -1;
+        lastY = -1;
     }
 
     void method11410(MouseRecord class282_sub53_1) {
@@ -71,8 +71,8 @@ public abstract class Class534 {
 
     void method11417() {
         if (method11423()) {
-            TCPPacket tcpmessage_2 = null;
-            int i_3 = 0;
+            TCPPacket packet = null;
+            int sizeIndex = 0;
             int i_4 = 0;
             int i_5 = 0;
             Iterator iterator_6 = aClass482_7077.iterator();
@@ -82,86 +82,86 @@ public abstract class Class534 {
                     if (!iterator_6.hasNext()) {
                         break label105;
                     }
-                    MouseRecord class282_sub53_13 = (MouseRecord) iterator_6.next();
-                    if (tcpmessage_2 != null && tcpmessage_2.buffer.index - i_3 >= 252 - (6 + method11412())) {
+                    MouseRecord mouse = (MouseRecord) iterator_6.next();
+                    if (packet != null && packet.buffer.index - sizeIndex >= 252 - (6 + method11412())) {
                         break label105;
                     }
-                    class282_sub53_13.unlink();
-                    int i_8 = class282_sub53_13.getY();
-                    if (i_8 < -1) {
-                        i_8 = -1;
-                    } else if (i_8 > 65534) {
-                        i_8 = 65534;
+                    mouse.unlink();
+                    int mouseY = mouse.getY();
+                    if (mouseY < -1) {
+                        mouseY = -1;
+                    } else if (mouseY > 65534) {
+                        mouseY = 65534;
                     }
-                    int i_9 = class282_sub53_13.getX();
-                    if (i_9 < -1) {
-                        i_9 = -1;
-                    } else if (i_9 > 65534) {
-                        i_9 = 65534;
+                    int mouseX = mouse.getX();
+                    if (mouseX < -1) {
+                        mouseX = -1;
+                    } else if (mouseX > 65534) {
+                        mouseX = 65534;
                     }
-                    if (i_9 != anInt7075 || i_8 != anInt7078) {
-                        if (tcpmessage_2 == null) {
-                            tcpmessage_2 = method11416();
-                            tcpmessage_2.buffer.writeByte(0);
-                            i_3 = tcpmessage_2.buffer.index;
-                            tcpmessage_2.buffer.index += 2;
+                    if (mouseX != lastX || mouseY != lastY) {
+                        if (packet == null) {
+                            packet = method11416();
+                            packet.buffer.writeByte(0);
+                            sizeIndex = packet.buffer.index;
+                            packet.buffer.index += 2;
                             i_4 = 0;
                             i_5 = 0;
                         }
-                        int i_10;
-                        int i_11;
-                        int i_12;
+                        int dX;
+                        int dY;
+                        int unkVal;
                         if (aLong7076 != -1L) {
-                            i_10 = i_9 - anInt7075;
-                            i_11 = i_8 - anInt7078;
-                            i_12 = (int) ((class282_sub53_13.method13471() - aLong7076) / 20L);
-                            i_4 = (int) (i_4 + (class282_sub53_13.method13471() - aLong7076) % 20L);
+                            dX = mouseX - lastX;
+                            dY = mouseY - lastY;
+                            unkVal = (int) ((mouse.method13471() - aLong7076) / 20L);
+                            i_4 = (int) (i_4 + (mouse.method13471() - aLong7076) % 20L);
                         } else {
-                            i_10 = i_9;
-                            i_11 = i_8;
-                            i_12 = Integer.MAX_VALUE;
+                            dX = mouseX;
+                            dY = mouseY;
+                            unkVal = Integer.MAX_VALUE;
                         }
-                        anInt7075 = i_9;
-                        anInt7078 = i_8;
-                        if (i_12 < 8 && i_10 >= -32 && i_10 <= 31 && i_11 >= -32 && i_11 <= 31) {
-                            i_10 += 32;
-                            i_11 += 32;
-                            tcpmessage_2.buffer.writeShort((i_12 << 12) + i_11 + (i_10 << 6));
-                        } else if (i_12 < 32 && i_10 >= -128 && i_10 <= 127 && i_11 >= -128 && i_11 <= 127) {
-                            i_10 += 128;
-                            i_11 += 128;
-                            tcpmessage_2.buffer.writeByte(i_12 + 128);
-                            tcpmessage_2.buffer.writeShort(i_11 + (i_10 << 8));
-                        } else if (i_12 < 32) {
-                            tcpmessage_2.buffer.writeByte(i_12 + 192);
-                            if (i_9 != -1 && i_8 != -1) {
-                                tcpmessage_2.buffer.writeInt(i_9 | i_8 << 16);
+                        lastX = mouseX;
+                        lastY = mouseY;
+                        if (unkVal < 8 && dX >= -32 && dX <= 31 && dY >= -32 && dY <= 31) {
+                            dX += 32;
+                            dY += 32;
+                            packet.buffer.writeShort((unkVal << 12) + dY + (dX << 6));
+                        } else if (unkVal < 32 && dX >= -128 && dX <= 127 && dY >= -128 && dY <= 127) {
+                            dX += 128;
+                            dY += 128;
+                            packet.buffer.writeByte(unkVal + 128);
+                            packet.buffer.writeShort(dY + (dX << 8));
+                        } else if (unkVal < 32) {
+                            packet.buffer.writeByte(unkVal + 192);
+                            if (mouseX != -1 && mouseY != -1) {
+                                packet.buffer.writeInt(mouseX | mouseY << 16);
                             } else {
-                                tcpmessage_2.buffer.writeInt(Integer.MIN_VALUE);
+                                packet.buffer.writeInt(Integer.MIN_VALUE);
                             }
                         } else {
-                            tcpmessage_2.buffer.writeShort((i_12 & 0x1fff) + 57344);
-                            if (i_9 != -1 && i_8 != -1) {
-                                tcpmessage_2.buffer.writeInt(i_9 | i_8 << 16);
+                            packet.buffer.writeShort((unkVal & 0x1fff) + 57344);
+                            if (mouseX != -1 && mouseY != -1) {
+                                packet.buffer.writeInt(mouseX | mouseY << 16);
                             } else {
-                                tcpmessage_2.buffer.writeInt(Integer.MIN_VALUE);
+                                packet.buffer.writeInt(Integer.MIN_VALUE);
                             }
                         }
                         ++i_5;
-                        method11413(tcpmessage_2.buffer, class282_sub53_13);
-                        aLong7076 = class282_sub53_13.method13471();
+                        method11413(packet.buffer, mouse);
+                        aLong7076 = mouse.method13471();
                     }
-                    class282_sub53_13.cache();
+                    mouse.cache();
                 }
             }
-            if (tcpmessage_2 != null) {
-                tcpmessage_2.buffer.writeIndex(tcpmessage_2.buffer.index - i_3);
-                int i_7 = tcpmessage_2.buffer.index;
-                tcpmessage_2.buffer.index = i_3;
-                tcpmessage_2.buffer.writeByte(i_4 / i_5);
-                tcpmessage_2.buffer.writeByte(i_4 % i_5);
-                tcpmessage_2.buffer.index = i_7;
-                client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_2);
+            if (packet != null) {
+                packet.buffer.writeIndex(packet.buffer.index - sizeIndex);
+                int i_7 = packet.buffer.index;
+                packet.buffer.index = sizeIndex;
+                packet.buffer.writeByte(i_4 / i_5);
+                packet.buffer.writeByte(i_4 % i_5);
+                packet.buffer.index = i_7;
+                client.GAME_CONNECTION_CONTEXT.queuePacket(packet);
             }
         }
         method11414();

@@ -52,7 +52,7 @@ public class Class344 {
     public static void method6119(String string_0) {
         if (Class467.FC_PLAYERS != null) {
             BufferedConnectionContext class184_2 = BufferedConnectionContext.getConnectionContext();
-            TCPPacket tcpmessage_3 = TCPPacket.createPacket(ClientProt.FC_KICK, class184_2.isaac);
+            TCPPacket tcpmessage_3 = TCPPacket.createPacket(ClientProt.FC_KICK, class184_2.outKeys);
             tcpmessage_3.buffer.writeByte(ChatLine.getLength(string_0));
             tcpmessage_3.buffer.writeString(string_0);
             class184_2.queuePacket(tcpmessage_3);
