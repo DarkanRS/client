@@ -57,10 +57,10 @@ public class ChatLine {
         return string_0.length() + 1;
     }
 
-    static ByteBuf getLoginMod() {
+    static ByteBuf getLoginMod(boolean password) {
         ByteBuf rsbytebuffer_0 = Class94.method1587();
         rsbytebuffer_0.writeLong(0L);
-        rsbytebuffer_0.writeString(Class9.aString102);
+        rsbytebuffer_0.writeString(password ? Class9.aString102 : Static.LOBBY_AUTH_TOKEN);
         rsbytebuffer_0.writeLong(Class9.aLong86);
         rsbytebuffer_0.writeLong(client.aLong7409);
         rsbytebuffer_0.applyRSA();

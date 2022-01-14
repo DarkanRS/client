@@ -13,14 +13,6 @@ public class SkyboxDefinitions {
         anInt2657 = -1;
     }
 
-    public static TCPPacket method3558() {
-        TCPPacket tcpmessage_1 = Class158_Sub2.method14356();
-        tcpmessage_1.packet = null;
-        tcpmessage_1.anInt7678 = 0;
-        tcpmessage_1.buffer = new ByteBuf.Bit(5000);
-        return tcpmessage_1;
-    }
-
     void method3549(ByteBuf rsbytebuffer_1) {
         while (true) {
             int i_3 = rsbytebuffer_1.readUnsignedByte();

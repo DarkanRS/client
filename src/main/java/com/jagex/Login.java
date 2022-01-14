@@ -65,7 +65,7 @@ public class Login {
                         Class9.CURRENT_CONNECTION_CONTEXT.init(SunDefinitions.createAsyncConnection(ConnectionInfo.LOBBY_CONNECTION_INFO.createSocket(), 15000), ConnectionInfo.LOBBY_CONNECTION_INFO.host);
                     }
                     Class9.CURRENT_CONNECTION_CONTEXT.clearAllQueuedPackets();
-                    tcpmessage_2 = SkyboxDefinitions.method3558();
+                    tcpmessage_2 = TCPPacket.create();
                     if (Class9.socialNetworkLogin) {
                         tcpmessage_2.buffer.writeByte(LoginProt.INIT_SOCIAL_NETWORK_CONNECTION.id);
                         tcpmessage_2.buffer.writeShort(0);
@@ -161,109 +161,109 @@ public class Login {
                     Class9.aLong86 = Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer.readLong();
                     Class9.loginStage = 80;
                 }
-                ByteBuf.Bit rsbitsbuffer_22;
+                ByteBuf.Bit rsBB;
                 if (Class9.loginStage == 80) {
                     Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer.index = 0;
                     Class9.CURRENT_CONNECTION_CONTEXT.clearAllQueuedPackets();
-                    tcpmessage_2 = SkyboxDefinitions.method3558();
-                    rsbitsbuffer_22 = tcpmessage_2.buffer;
+                    tcpmessage_2 = TCPPacket.create();
+                    rsBB = tcpmessage_2.buffer;
                     int i_6;
                     ByteBuf rsbytebuffer_7;
-                    LoginProt outgoingloginpacket_20;
+                    LoginProt opcode;
                     if (Class9.lobbyStage == 273) {
                         if (Class9.socialNetworkLogin) {
-                            outgoingloginpacket_20 = LoginProt.SOCIAL_NETWORK_LOGIN;
+                            opcode = LoginProt.SOCIAL_NETWORK_LOGIN;
                         } else {
-                            outgoingloginpacket_20 = LoginProt.GAMELOGIN;
+                            opcode = LoginProt.GAMELOGIN;
                         }
-                        rsbitsbuffer_22.writeByte(outgoingloginpacket_20.id);
-                        rsbitsbuffer_22.writeShort(0);
-                        i_5 = rsbitsbuffer_22.index;
-                        i_6 = rsbitsbuffer_22.index;
+                        rsBB.writeByte(opcode.id);
+                        rsBB.writeShort(0);
+                        i_5 = rsBB.index;
+                        i_6 = rsBB.index;
                         if (!Class9.socialNetworkLogin) {
-                            rsbitsbuffer_22.writeInt(727);
-                            rsbitsbuffer_22.writeInt(1);
-                            rsbitsbuffer_22.writeByte(client.GAME_STATE == 10 ? 1 : 0);
-                            i_6 = rsbitsbuffer_22.index;
-                            rsbytebuffer_7 = ChatLine.getLoginMod();
-                            rsbitsbuffer_22.writeBytes(rsbytebuffer_7.buffer, 0, rsbytebuffer_7.index);
-                            i_6 = rsbitsbuffer_22.index;
-                            rsbitsbuffer_22.writeByte(Class9.aLong77 == -1L ? 1 : 0);
+                            rsBB.writeInt(727);
+                            rsBB.writeInt(1);
+                            rsBB.writeByte(client.GAME_STATE == 10 ? 1 : 0);
+                            i_6 = rsBB.index;
+                            rsbytebuffer_7 = ChatLine.getLoginMod(false);
+                            rsBB.writeBytes(rsbytebuffer_7.buffer, 0, rsbytebuffer_7.index);
+                            i_6 = rsBB.index;
+                            rsBB.writeByte(Class9.aLong77 == -1L ? 1 : 0);
                             if (Class9.aLong77 == -1L) {
-                                rsbitsbuffer_22.writeString(Class9.aString99);
+                                rsBB.writeString(Class9.aString99);
                             } else {
-                                rsbitsbuffer_22.writeLong(Class9.aLong77);
+                                rsBB.writeLong(Class9.aLong77);
                             }
                         }
-                        rsbitsbuffer_22.writeByte(Class158.getScreenMode());
-                        rsbitsbuffer_22.writeShort(ChangeClanSetting.BASE_WINDOW_WIDTH);
-                        rsbitsbuffer_22.writeShort(Engine.BASE_WINDOW_HEIGHT * -969250379);
-                        rsbitsbuffer_22.writeByte(Class393.preferences.aPreference_Sub4_8223.method12641());
-                        IdentiKitIndexLoader.method809(rsbitsbuffer_22);
-                        rsbitsbuffer_22.writeString(client.aString7281);
-                        rsbitsbuffer_22.writeInt(client.AFFILIATE);
+                        rsBB.writeByte(Class158.getScreenMode());
+                        rsBB.writeShort(ChangeClanSetting.BASE_WINDOW_WIDTH);
+                        rsBB.writeShort(Engine.BASE_WINDOW_HEIGHT * -969250379);
+                        rsBB.writeByte(Class393.preferences.aPreference_Sub4_8223.method12641());
+                        IdentiKitIndexLoader.method809(rsBB);
+                        rsBB.writeString(client.aString7281);
+                        rsBB.writeInt(client.AFFILIATE);
                         rsbytebuffer_7 = Class393.preferences.encode();
-                        rsbitsbuffer_22.writeByte(rsbytebuffer_7.index);
-                        rsbitsbuffer_22.writeBytes(rsbytebuffer_7.buffer, 0, rsbytebuffer_7.index);
+                        rsBB.writeByte(rsbytebuffer_7.index);
+                        rsBB.writeBytes(rsbytebuffer_7.buffer, 0, rsbytebuffer_7.index);
                         client.aBool7175 = true;
                         ByteBuf rsbytebuffer_8 = new ByteBuf(Class11.SYSTEM_INFO.method13454());
                         Class11.SYSTEM_INFO.writeMachineInformation(rsbytebuffer_8);
-                        rsbitsbuffer_22.writeBytes(rsbytebuffer_8.buffer, 0, rsbytebuffer_8.buffer.length);
-                        rsbitsbuffer_22.writeInt(client.anInt7221);
-                        rsbitsbuffer_22.writeLong(client.aLong7153);
-                        rsbitsbuffer_22.writeString(Class464.aString5555);
-                        rsbitsbuffer_22.writeByte(client.aString7156 == null ? 0 : 1);
+                        rsBB.writeBytes(rsbytebuffer_8.buffer, 0, rsbytebuffer_8.buffer.length);
+                        rsBB.writeInt(client.anInt7221);
+                        rsBB.writeLong(client.aLong7153);
+                        rsBB.writeString(Class464.aString5555);
+                        rsBB.writeByte(client.aString7156 == null ? 0 : 1);
                         if (client.aString7156 != null) {
-                            rsbitsbuffer_22.writeString(client.aString7156);
+                            rsBB.writeString(client.aString7156);
                         }
-                        rsbitsbuffer_22.writeByte(IndexLoaders.NATIVE_LIBRARY_LOADER.hasTheoraLibrary() ? 1 : 0);
-                        rsbitsbuffer_22.writeByte(client.aBool7310 ? 1 : 0);
-                        rsbitsbuffer_22.writeByte(client.aBool7160 ? 1 : 0);
-                        rsbitsbuffer_22.writeByte(BASDefinitions.anInt2831);
-                        rsbitsbuffer_22.writeInt(client.anInt7163);
-                        rsbitsbuffer_22.writeString(client.aString7164);
-                        rsbitsbuffer_22.writeByte(ConnectionInfo.NEWS_CONNECTION_INFO != null && ConnectionInfo.GAME_CONNECTION_INFO.worldId == ConnectionInfo.NEWS_CONNECTION_INFO.worldId ? 0 : 1);
+                        rsBB.writeByte(IndexLoaders.NATIVE_LIBRARY_LOADER.hasTheoraLibrary() ? 1 : 0);
+                        rsBB.writeByte(client.aBool7310 ? 1 : 0);
+                        rsBB.writeByte(client.aBool7160 ? 1 : 0);
+                        rsBB.writeByte(BASDefinitions.anInt2831);
+                        rsBB.writeInt(client.anInt7163);
+                        rsBB.writeString(client.aString7164);
+                        rsBB.writeByte(ConnectionInfo.NEWS_CONNECTION_INFO != null && ConnectionInfo.GAME_CONNECTION_INFO.worldId == ConnectionInfo.NEWS_CONNECTION_INFO.worldId ? 0 : 1);
                         int i_9 = ConnectionInfo.GAME_CONNECTION_INFO.worldId;
-                        rsbitsbuffer_22.writeInt(i_9);
-                        QuestDefinitions.writeCRCs(rsbitsbuffer_22);
+                        rsBB.writeInt(i_9);
+                        QuestDefinitions.writeCRCs(rsBB);
                     } else {
                         if (Class9.socialNetworkLogin) {
-                            outgoingloginpacket_20 = LoginProt.SOCIAL_NETWORK_LOGIN;
+                            opcode = LoginProt.SOCIAL_NETWORK_LOGIN;
                         } else {
-                            outgoingloginpacket_20 = LoginProt.LOBBYLOGIN;
+                            opcode = LoginProt.LOBBYLOGIN;
                         }
-                        rsbitsbuffer_22.writeByte(outgoingloginpacket_20.id);
-                        rsbitsbuffer_22.writeShort(0);
-                        i_5 = rsbitsbuffer_22.index;
-                        i_6 = rsbitsbuffer_22.index;
+                        rsBB.writeByte(opcode.id);
+                        rsBB.writeShort(0);
+                        i_5 = rsBB.index;
+                        i_6 = rsBB.index;
                         if (!Class9.socialNetworkLogin) {
-                            rsbitsbuffer_22.writeInt(727);
-                            rsbitsbuffer_22.writeInt(1);
-                            rsbytebuffer_7 = ChatLine.getLoginMod();
-                            rsbitsbuffer_22.writeBytes(rsbytebuffer_7.buffer, 0, rsbytebuffer_7.index);
-                            i_6 = rsbitsbuffer_22.index;
-                            rsbitsbuffer_22.writeByte(Class9.aLong77 == -1L ? 1 : 0);
+                            rsBB.writeInt(727);
+                            rsBB.writeInt(1);
+                            rsbytebuffer_7 = ChatLine.getLoginMod(true);
+                            rsBB.writeBytes(rsbytebuffer_7.buffer, 0, rsbytebuffer_7.index);
+                            i_6 = rsBB.index;
+                            rsBB.writeByte(Class9.aLong77 == -1L ? 1 : 0);
                             if (Class9.aLong77 == -1L) {
-                                rsbitsbuffer_22.writeString(Class9.aString99);
+                                rsBB.writeString(Class9.aString99);
                             } else {
-                                rsbitsbuffer_22.writeLong(Class9.aLong77);
+                                rsBB.writeLong(Class9.aLong77);
                             }
                         }
-                        rsbitsbuffer_22.writeByte(client.CURRENT_GAME.id);
-                        rsbitsbuffer_22.writeByte(Class223.CURRENT_LANGUAGE.getValue());
-                        IdentiKitIndexLoader.method809(rsbitsbuffer_22);
-                        rsbitsbuffer_22.writeString(client.aString7281);
+                        rsBB.writeByte(client.CURRENT_GAME.id);
+                        rsBB.writeByte(Class223.CURRENT_LANGUAGE.getValue());
+                        IdentiKitIndexLoader.method809(rsBB);
+                        rsBB.writeString(client.aString7281);
                         rsbytebuffer_7 = Class393.preferences.encode();
-                        rsbitsbuffer_22.writeByte(rsbytebuffer_7.index);
-                        rsbitsbuffer_22.writeBytes(rsbytebuffer_7.buffer, 0, rsbytebuffer_7.index);
-                        rsbitsbuffer_22.writeString(Class464.aString5555);
-                        rsbitsbuffer_22.writeInt(client.AFFILIATE);
-                        rsbitsbuffer_22.writeInt(client.anInt7163);
-                        rsbitsbuffer_22.writeString(client.aString7164);
-                        QuestDefinitions.writeCRCs(rsbitsbuffer_22);
+                        rsBB.writeByte(rsbytebuffer_7.index);
+                        rsBB.writeBytes(rsbytebuffer_7.buffer, 0, rsbytebuffer_7.index);
+                        rsBB.writeString(Class464.aString5555);
+                        rsBB.writeInt(client.AFFILIATE);
+                        rsBB.writeInt(client.anInt7163);
+                        rsBB.writeString(client.aString7164);
+                        QuestDefinitions.writeCRCs(rsBB);
                     }
-                    rsbitsbuffer_22.encryptWithXtea(Class500.ISAAC_SEED, i_6, rsbitsbuffer_22.index);
-                    rsbitsbuffer_22.method13281(rsbitsbuffer_22.index - i_5);
+                    rsBB.encryptWithXtea(Class500.ISAAC_SEED, i_6, rsBB.index);
+                    rsBB.method13281(rsBB.index - i_5);
                     Class9.CURRENT_CONNECTION_CONTEXT.queuePacket(tcpmessage_2);
                     Class9.CURRENT_CONNECTION_CONTEXT.flush();
                     Class9.CURRENT_CONNECTION_CONTEXT.outKeys = new ISAACCipher(Class500.ISAAC_SEED);
@@ -329,10 +329,10 @@ public class Login {
                 }
                 if (Class9.loginStage == 115) {
                     Class9.CURRENT_CONNECTION_CONTEXT.clearAllQueuedPackets();
-                    tcpmessage_2 = SkyboxDefinitions.method3558();
-                    rsbitsbuffer_22 = tcpmessage_2.buffer;
-                    rsbitsbuffer_22.setIsaacCipher(Class9.CURRENT_CONNECTION_CONTEXT.outKeys);
-                    rsbitsbuffer_22.writeIsaacByte(LoginProt.GAMELOGIN_CONTINUE.id);
+                    tcpmessage_2 = TCPPacket.create();
+                    rsBB = tcpmessage_2.buffer;
+                    rsBB.setIsaacCipher(Class9.CURRENT_CONNECTION_CONTEXT.outKeys);
+                    rsBB.writeIsaacByte(LoginProt.GAMELOGIN_CONTINUE.id);
                     Class9.CURRENT_CONNECTION_CONTEXT.queuePacket(tcpmessage_2);
                     Class9.CURRENT_CONNECTION_CONTEXT.flush();
                     Class9.loginStage = 97;
@@ -430,6 +430,7 @@ public class Login {
                             NPCMeshModifier.MESSAGES = buffer.readUnsignedShort();
                             Preference_Sub28.LASTLOGINLDAY = buffer.readUnsignedShort();
                             Class125.LAST_IP_ADDRESS = buffer.readInt();
+                            Static.LOBBY_AUTH_TOKEN = buffer.readString();
                             Class119.HOSTNAME_IDENTIFIER = new HostNameIdentifier(Class125.LAST_IP_ADDRESS);
                             (new Thread(Class119.HOSTNAME_IDENTIFIER)).start();
                             InputSubscriberType.EMAIL_STATUS = buffer.readUnsignedByte();

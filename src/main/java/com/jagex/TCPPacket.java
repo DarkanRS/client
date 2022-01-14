@@ -1,12 +1,14 @@
 package com.jagex;
 
+import com.jagex.ByteBuf.Bit;
+
 public class TCPPacket extends Node {
 
     static TCPPacket[] OUTGOING_PACKETS = new TCPPacket[300];
     static int index;
     public int anInt7680;
     public ByteBuf.Bit buffer;
-    int anInt7678;
+    int outgoingSize;
     ClientProt packet;
 
     static void method12366(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
@@ -34,16 +36,16 @@ public class TCPPacket extends Node {
     }
 
     public static TCPPacket createPacket(ClientProt outgoing, ISAACCipher cipher) {
-        TCPPacket packet = Class158_Sub2.method14356();
+        TCPPacket packet = TCPPacket.getQueueOrCreate();
         packet.packet = outgoing;
-        packet.anInt7678 = outgoing.size;
-        if (packet.anInt7678 == -1) {
+        packet.outgoingSize = outgoing.size;
+        if (packet.outgoingSize == -1) {
             packet.buffer = new ByteBuf.Bit(260);
-        } else if (packet.anInt7678 == -2) {
+        } else if (packet.outgoingSize == -2) {
             packet.buffer = new ByteBuf.Bit(10000);
-        } else if (packet.anInt7678 <= 18) {
+        } else if (packet.outgoingSize <= 18) {
             packet.buffer = new ByteBuf.Bit(20);
-        } else if (packet.anInt7678 <= 98) {
+        } else if (packet.outgoingSize <= 98) {
             packet.buffer = new ByteBuf.Bit(100);
         } else {
             packet.buffer = new ByteBuf.Bit(260);
@@ -60,5 +62,17 @@ public class TCPPacket extends Node {
         }
 
     }
+
+	static TCPPacket getQueueOrCreate() {
+	    return index == 0 ? new TCPPacket() : OUTGOING_PACKETS[--index];
+	}
+
+	public static TCPPacket create() {
+	    TCPPacket packet = getQueueOrCreate();
+	    packet.packet = null;
+	    packet.outgoingSize = 0;
+	    packet.buffer = new ByteBuf.Bit(5000);
+	    return packet;
+	}
 
 }
