@@ -11,10 +11,6 @@ public abstract class Class158_Sub2 extends Class158 {
         client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_3);
     }
 
-    static TCPPacket method14356() {
-        return TCPPacket.index == 0 ? new TCPPacket() : TCPPacket.OUTGOING_PACKETS[--TCPPacket.index];
-    }
-
     public abstract int method14344();
 
     public abstract int method14345(int var1, int var2);

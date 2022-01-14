@@ -9,6 +9,7 @@ public class Static {
     public static int COUNTRY;
     static Class194 aClass194_5794;
     static int UPDATE_ZONE_X;
+	public static String LOBBY_AUTH_TOKEN;
 
     public static boolean method2084(Index index_0, Index index_1, Index index_2, Node_Sub15_Sub2 class282_sub15_sub2_3, Class253 class253_4) {
         Class148.aClass317_1737 = index_0;
