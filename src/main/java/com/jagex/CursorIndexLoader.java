@@ -15,15 +15,15 @@ public class CursorIndexLoader {
         configIndex.filesCount(SharedConfigsType.CURSORS.id);
     }
 
-    public static void method7333(boolean bool_0) {
-        BufferedConnectionContext[] arr_2 = client.aClass184Array7220;
+    public static void killConnections(boolean keepLoggedIn) {
+        BufferedConnectionContext[] arr_2 = client.GAME_CONNECTION_CONTEXTS;
         for (int i_3 = 0; i_3 < arr_2.length; i_3++) {
             BufferedConnectionContext class184_4 = arr_2[i_3];
             try {
                 class184_4.flush();
             } catch (IOException ignored) {
             }
-            class184_4.method3051();
+            class184_4.end();
         }
         JS5StandardRequester.method5558();
         Class356.method6227(false);
@@ -38,10 +38,10 @@ public class CursorIndexLoader {
         Class459.method7678();
         Class204.method3367();
         Class42_Sub1.method14562();
-        if (bool_0) {
-            GameState.setGameState(12);
+        if (keepLoggedIn) {
+            GameState.setGameState(GameState.UNK_12);
         } else {
-            GameState.setGameState(5);
+            GameState.setGameState(GameState.UNK_5);
 //			try {
 //				Class441.method7377(SubInterface.suppliedApplet, "loggedout");
 //			} catch (Throwable ignored) {

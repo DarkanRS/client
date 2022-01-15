@@ -46,10 +46,6 @@ public class QuickChatValueType {
         }
     }
 
-    static boolean method4180(int i_0) {
-        return i_0 == 7 || i_0 == 6;
-    }
-
     public static QuickChatValueType get(int i_0) {
         QuickChatValueType[] arr_2 = CutsceneObject.getQuickChatDynamicValueTypes();
         for (int i_3 = 0; i_3 < arr_2.length; i_3++) {

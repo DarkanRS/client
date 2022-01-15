@@ -82,15 +82,15 @@ public abstract class Connection {
 
     public abstract int method3312() throws IOException;
 
-    public abstract void method3314();
+    public abstract void endDummy1();
 
     public abstract boolean available(int var1) throws IOException;
 
-    public abstract void method3316();
+    public abstract void endDummy2();
 
     public abstract boolean method3317(int var1) throws IOException;
 
-    public abstract void method3318();
+    public abstract void end();
 
     public abstract boolean method3319(int var1) throws IOException;
 
@@ -114,7 +114,7 @@ public abstract class Connection {
 
     public abstract boolean method3329(int var1) throws IOException;
 
-    public abstract void method3330();
+    public abstract void endDummy4();
 
     public abstract void method3331();
 

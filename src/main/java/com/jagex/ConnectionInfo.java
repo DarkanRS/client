@@ -65,7 +65,8 @@ public class ConnectionInfo {
 
     public Socket createSocket() throws IOException {
     	int port = Loader.getPort(worldId);
-    	System.out.println("Creating socket for world: " + worldId + " at " + host + ":" + port);
+    	if (Loader.DEBUG)
+    		System.out.println("Creating socket for world: " + worldId + " at " + host + ":" + port);
         return new Socket(host, port);
     }
 }

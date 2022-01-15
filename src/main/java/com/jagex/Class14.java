@@ -2,7 +2,7 @@ package com.jagex;
 
 public class Class14 {
 
-    static int[] LOGIN_XTEAS;
+    static int[] ACCOUNT_CREATION_ISAAC_KEYS;
 
     static int anInt133;
 

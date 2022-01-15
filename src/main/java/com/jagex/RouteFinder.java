@@ -580,16 +580,16 @@ public class RouteFinder {
                     return;
                 }
                 if ("clientdrop".equalsIgnoreCase(string_0)) {
-                    if (client.GAME_STATE == 13) {
-                        Class151.method2592();
-                    } else if (client.GAME_STATE == 18) {
+                    if (client.GAME_STATE == GameState.UNK_13) {
+                        Class151.killConnections();
+                    } else if (client.GAME_STATE == GameState.UNK_18) {
                         client.GAME_CONNECTION_CONTEXT.aBool2298 = true;
                     }
                     return;
                 }
                 int i_13;
                 if ("breakcon".equalsIgnoreCase(string_0)) {
-                    BufferedConnectionContext[] arr_26 = client.aClass184Array7220;
+                    BufferedConnectionContext[] arr_26 = client.GAME_CONNECTION_CONTEXTS;
                     for (i_13 = 0; i_13 < arr_26.length; i_13++) {
                         BufferedConnectionContext class184_28 = arr_26[i_13];
                         if (class184_28.getConnection() != null) {
@@ -667,7 +667,7 @@ public class RouteFinder {
                     String[] arr_12 = MovingAnimation.method12681(Class122.method2110(Node_Sub17_Sub7.method15439(bytes_5), '\r', ""), '\n');
                     Class341.method6074(arr_12);
                 }
-                if (client.GAME_STATE == 13) {
+                if (client.GAME_STATE == GameState.UNK_13) {
                     TCPPacket tcpmessage_21 = TCPPacket.createPacket(ClientProt.COMMAND, client.GAME_CONNECTION_CONTEXT.outKeys);
                     tcpmessage_21.buffer.writeByte(string_0.length() + 3);
                     tcpmessage_21.buffer.writeByte(bool_1 ? 1 : 0);
@@ -680,7 +680,7 @@ public class RouteFinder {
                 return;
             }
         }
-        if (client.GAME_STATE != 13) {
+        if (client.GAME_STATE != GameState.UNK_13) {
             Class209.printConsoleMessage(LocalizedText.UNKNOWN_DEV_COMMAND.translate(Class223.CURRENT_LANGUAGE) + string_0);
         }
     }

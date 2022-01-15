@@ -59,7 +59,7 @@ public class Preference_Sub20 extends Preference {
             }
         } else if (IndexLoaders.LOADING_STAGE == LoadingStage.aClass387_4701) {
             Comparable_Sub1.aClass306_3771 = null;
-            GameState.setGameState(5);
+            GameState.setGameState(GameState.UNK_5);
         } else {
             Class380.aString4636 = xloadingstage_1.aClass433_4714.translate(Class223.CURRENT_LANGUAGE);
             if (IndexLoaders.LOADING_STAGE.aBool4694) {
@@ -74,7 +74,7 @@ public class Preference_Sub20 extends Preference {
             Comparable_Sub1.aClass306_3771.method5422(Class302.aLong3562, Class380.aString4636, Class302.anInt3563, IndexLoaders.LOADING_STAGE);
             if (Class302.anInterface27Array3559 != null) {
                 for (int i_3 = Class302.anInt3560 + 1; i_3 < Class302.anInterface27Array3559.length; i_3++) {
-                    if (Class302.anInterface27Array3559[i_3].method191() >= 100 && i_3 - 1 == Class302.anInt3560 && client.GAME_STATE != 4 && Comparable_Sub1.aClass306_3771.method5450()) {
+                    if (Class302.anInterface27Array3559[i_3].method191() >= 100 && i_3 - 1 == Class302.anInt3560 && client.GAME_STATE != GameState.UNK_4 && Comparable_Sub1.aClass306_3771.method5450()) {
                         try {
                             Class302.anInterface27Array3559[i_3].method161();
                         } catch (Exception exception_5) {

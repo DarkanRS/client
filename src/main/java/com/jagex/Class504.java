@@ -8,10 +8,6 @@ public abstract class Class504 {
         throw new Error();
     }
 
-    static boolean loadingState(int i_0) {
-        return i_0 == 4 || i_0 == 15 || i_0 == 1;
-    }
-
     public static int getTerrainHeightAtPos(int i_0, int i_1, int i_2) {
         if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager() == null) {
             return 0;

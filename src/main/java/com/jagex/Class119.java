@@ -22,7 +22,7 @@ public class Class119 {
     }
 
     public static void method2074(String string_0, String string_1, int i_2, boolean bool_3) {
-        if (client.GAME_STATE == 3) {
+        if (client.GAME_STATE == GameState.IN_ACCOUNT_CREATION) {
             TCPPacket tcpmessage_5 = TCPPacket.createPacket(ClientProt.SEND_SIGN_UP_FORM, client.LOBBY_CONNECTION_CONTEXT.outKeys);
             tcpmessage_5.buffer.writeShort(0);
             int i_6 = tcpmessage_5.buffer.index;
@@ -31,7 +31,7 @@ public class Class119 {
             tcpmessage_5.buffer.writeByte(i_2);
             tcpmessage_5.buffer.writeByte(bool_3 ? 1 : 0);
             tcpmessage_5.buffer.index += 7;
-            tcpmessage_5.buffer.encryptWithXtea(Class14.LOGIN_XTEAS, i_6, tcpmessage_5.buffer.index);
+            tcpmessage_5.buffer.encryptWithXtea(Class14.ACCOUNT_CREATION_ISAAC_KEYS, i_6, tcpmessage_5.buffer.index);
             tcpmessage_5.buffer.method13281(tcpmessage_5.buffer.index - i_6);
             client.LOBBY_CONNECTION_CONTEXT.queuePacket(tcpmessage_5);
             if (i_2 < 13) {

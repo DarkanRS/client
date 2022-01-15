@@ -50,7 +50,7 @@ public class IdentiKitIndexLoader implements IndexLoader {
             IComponentDefinitions.redrawComponent(client.aClass118_7352);
             client.aClass118_7352 = null;
         }
-        OutputStream_Sub1.method12938();
+        ClosedOutputStream.method12938();
         if (parentDef != null) {
             HostNameIdentifier.method483(Interface.INTERFACES[parentDef.idHash >>> 16], parentDef, !bool_3);
         }

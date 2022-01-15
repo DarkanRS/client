@@ -7,7 +7,7 @@ public class Class362 {
     }
 
     public static void method6276() {
-        OutputStream_Sub1.anImage7953 = null;
+        ClosedOutputStream.anImage7953 = null;
         SpotAnimIndexLoader.aFont5893 = null;
     }
 

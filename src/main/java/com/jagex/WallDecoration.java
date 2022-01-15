@@ -83,7 +83,7 @@ public class WallDecoration extends GraphNode_Sub1_Sub4 implements WorldObject {
     }
 
     public static void method16088(int i_0) {
-        if (client.GAME_STATE == 3) {
+        if (client.GAME_STATE == GameState.IN_ACCOUNT_CREATION) {
             TCPPacket tcpmessage_2 = TCPPacket.createPacket(ClientProt.UNK_79, client.LOBBY_CONNECTION_CONTEXT.outKeys);
             tcpmessage_2.buffer.writeByte(i_0);
             client.LOBBY_CONNECTION_CONTEXT.queuePacket(tcpmessage_2);

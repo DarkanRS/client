@@ -164,7 +164,7 @@ public class HitbarDefinitions {
                 IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().method3447(client.CYCLES_20MS, IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX, Class109_Sub1.CAM_MOVE_ABSOLUTEZ, Class246.CAM_MOVE_ABSOLUTEY, IndexLoaders.MAP_REGION_DECODER.method4532(), client.anIntArray7198, client.anIntArray7303, client.anIntArray7194, client.anIntArray7305, client.anIntArray7306, VertexNormal.MY_PLAYER.plane + 1, b_15, Class393.preferences.flickeringEffects.method12943() == 0);
                 ++client.anInt7396;
                 MaterialPropTexture.method15391();
-                if (client.GAME_STATE == 13) {
+                if (client.GAME_STATE == GameState.UNK_13) {
                     Class423.method7066(i_01, i_13);
                     Class250.method4298(i_01, i_13, i_21, i_31);
                     CutsceneAction_Sub12.method14612(i_01, i_13);

@@ -37,10 +37,6 @@ public class Class176 {
         return Engine.FPS_MANAGER.method4852();
     }
 
-    static boolean method2980(int i_0) {
-        return i_0 == 5 || i_0 == 0 || i_0 == 7 || i_0 == 13;
-    }
-
     void method2968(Class176 class176_1) {
         aFloat2190 = class176_1.aFloat2190;
         aFloat2191 = class176_1.aFloat2191;

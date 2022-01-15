@@ -20,7 +20,7 @@ public class BufferedConnectionContext {
     ByteBuf.Bit recievedBuffer = new ByteBuf.Bit(15000);
     ServerProt currentPacket;
     int currentPacketSize;
-    boolean aBool2288 = true;
+    boolean readyToRead = true;
     int idleReadPulses;
     ConnectionPinger pinger = new ConnectionPinger();
     int anInt2293;
@@ -69,9 +69,9 @@ public class BufferedConnectionContext {
         pinger.setIp(ip);
     }
 
-    void method3051() {
+    void end() {
         if (connection != null) {
-            connection.method3318();
+            connection.end();
             connection = null;
         }
         pinger.setIp(null);

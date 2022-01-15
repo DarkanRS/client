@@ -25,7 +25,7 @@ public class Class86 {
 
     public static void method1478() {
         if (Class9.loginStage != 2) {
-            Class9.CURRENT_CONNECTION_CONTEXT.method3051();
+            Class9.CURRENT_CONNECTION_CONTEXT.end();
             JS5StandardRequester.method5558();
             Class361.method6270();
         }

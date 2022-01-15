@@ -35,7 +35,7 @@ public class client extends Engine {
 	public static boolean aBool7159;
 	public static int ENTITY_TARGET;
 	public static String aString7165;
-	public static int GAME_STATE = 4;
+	public static GameState GAME_STATE = GameState.UNK_4;
 	public static boolean aBool7171;
 	public static int anInt7173;
 	public static int CYCLES_20MS;
@@ -64,7 +64,7 @@ public class client extends Engine {
 	public static int[] NPC_UPDATE_INDICES = new int[1024];
 	public static BufferedConnectionContext LOBBY_CONNECTION_CONTEXT = new BufferedConnectionContext();
 	public static BufferedConnectionContext GAME_CONNECTION_CONTEXT = new BufferedConnectionContext();
-	public static BufferedConnectionContext[] aClass184Array7220;
+	public static BufferedConnectionContext[] GAME_CONNECTION_CONTEXTS;
 	public static PingRequester PING_REQUESTER;
 	public static volatile boolean aBool7225;
 	public static Object anObject7226;
@@ -321,7 +321,7 @@ public class client extends Engine {
 	static int anInt56;
 
 	static {
-		aClass184Array7220 = new BufferedConnectionContext[] { GAME_CONNECTION_CONTEXT, LOBBY_CONNECTION_CONTEXT };
+		GAME_CONNECTION_CONTEXTS = new BufferedConnectionContext[] { GAME_CONNECTION_CONTEXT, LOBBY_CONNECTION_CONTEXT };
 		anInt7221 = 0;
 		aBool7459 = false;
 		PING_REQUESTER = new PingRequester();
@@ -1913,7 +1913,7 @@ public class client extends Engine {
 	}
 
 	void pulse() {
-		if (GAME_STATE != 16) {
+		if (GAME_STATE != GameState.UNK_16) {
 			if (aBool7225) {
 				Object object_2 = anObject7227;
 				synchronized (anObject7227) {
@@ -2002,7 +2002,7 @@ public class client extends Engine {
 				Class301.method5333();
 			}
 
-			if (Class504.loadingState(GAME_STATE)) {
+			if (GameState.loadingState(GAME_STATE)) {
 				Preference_Sub20.method12808();
 				Node_Sub15_Sub1.method14840();
 			} else if (GameState.method7742(GAME_STATE)) {
@@ -2010,32 +2010,32 @@ public class client extends Engine {
 			}
 
 			if (GameState.loggedOut(GAME_STATE) && !GameState.method7742(GAME_STATE)) {
-				method12044();
+				pulseLobbyConnection();
 				WallObjectGraphNode.handleAccountCreationStart();
-				Login.method5018();
+				Login.pulseLogin();
 			} else if (GameState.inLobby(GAME_STATE) && !GameState.method7742(GAME_STATE)) {
-				method12044();
-				Login.method5018();
-			} else if (GAME_STATE == 12) {
-				Login.method5018();
+				pulseLobbyConnection();
+				Login.pulseLogin();
+			} else if (GAME_STATE == GameState.UNK_12) {
+				Login.pulseLogin();
 			} else if (GameState.loggedIn(GAME_STATE) && !GameState.method7742(GAME_STATE)) {
-				MaterialProp23.pulseLoggedInLogic();
-			} else if (GAME_STATE == 10 || GAME_STATE == 17) {
-				Login.method5018();
+				MaterialProp23.pulseWorldConnection();
+			} else if (GAME_STATE == GameState.UNK_10 || GAME_STATE == GameState.UNK_17) {
+				Login.pulseLogin();
 				if (Class9.anInt106 != -3 && Class9.anInt106 != 2 && Class9.anInt106 != 15) {
-					if (GAME_STATE == 17) {
+					if (GAME_STATE == GameState.UNK_17) {
 						Class9.anInt109 = Class9.anInt112;
 						Class9.anInt108 = Class9.anInt94;
 						Class9.anInt107 = Class9.anInt106;
 						if (ConnectionInfo.aBool5428) {
 							Class62.setGameHost(ConnectionInfo.aClass450_5429.worldId, ConnectionInfo.aClass450_5429.host);
 							GAME_CONNECTION_CONTEXT.reset();
-							GameState.setGameState(10);
+							GameState.setGameState(GameState.UNK_10);
 						} else {
-							CursorIndexLoader.method7333(Class9.aBool71);
+							CursorIndexLoader.killConnections(Class9.aBool71);
 						}
 					} else {
-						CursorIndexLoader.method7333(false);
+						CursorIndexLoader.killConnections(false);
 					}
 				}
 			}
@@ -2047,7 +2047,7 @@ public class client extends Engine {
 	}
 
 	void method11620() {
-		if (GAME_STATE != 16) {
+		if (GAME_STATE != GameState.UNK_16) {
 			long long_2 = Class176.method2979() / 1000000L - aLong7170;
 			aLong7170 = Class176.method2979() / 1000000L;
 			boolean bool_4 = ProcessorSpecs.method7730();
@@ -2055,7 +2055,7 @@ public class client extends Engine {
 				Class320.aClass253_3723.method4334();
 			}
 
-			if (Class176.method2980(GAME_STATE)) {
+			if (GameState.method2980(GAME_STATE)) {
 				if (aLong7307 != 0L && Utils.time() > aLong7307) {
 					UID192.method7373(Class158.getScreenMode(), -1, -1);
 				} else if (!Renderers.CURRENT_RENDERER.method8465() && aBool3257) {
@@ -2087,7 +2087,7 @@ public class client extends Engine {
 				}
 			}
 
-			if (Class475.supportsFullScreen && fullScreenFrame != null && !IFSubObjectPosition.appletHasFocus && Class176.method2980(GAME_STATE)) {
+			if (Class475.supportsFullScreen && fullScreenFrame != null && !IFSubObjectPosition.appletHasFocus && GameState.method2980(GAME_STATE)) {
 				UID192.method7373(Class393.preferences.screenSize.method12687(), -1, -1);
 			}
 
@@ -2105,11 +2105,11 @@ public class client extends Engine {
 				Static.method6378();
 			}
 
-			if (Class504.loadingState(GAME_STATE)) {
+			if (GameState.loadingState(GAME_STATE)) {
 				NodeCollection.method8144(bool_9);
-			} else if (Class245.method4198(GAME_STATE)) {
+			} else if (GameState.method4198(GAME_STATE)) {
 				ParticleProducer.method11501();
-			} else if (Class325.method5789(GAME_STATE)) {
+			} else if (GameState.method5789(GAME_STATE)) {
 				ParticleProducer.method11501();
 			} else if (GameState.method7742(GAME_STATE)) {
 				if (IndexLoaders.MAP_REGION_DECODER.method4420() == Class339.aClass339_3985) {
@@ -2121,11 +2121,11 @@ public class client extends Engine {
 				} else {
 					Class446.method7447(LocalizedText.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE), true, Renderers.CURRENT_RENDERER, Class16.aFontRenderer_144, Class16.aClass414_139);
 				}
-			} else if (GAME_STATE == 13) {
+			} else if (GAME_STATE == GameState.UNK_13) {
 				Class152.method2601(long_2);
-			} else if (GAME_STATE == 10) {
+			} else if (GAME_STATE == GameState.UNK_10) {
 				Class446.method7447(LocalizedText.CONNECTION_LOST.translate(Class223.CURRENT_LANGUAGE) + "<br>" + LocalizedText.ATTEMPTING_TO_REESTABLISH.translate(Class223.CURRENT_LANGUAGE), false, Renderers.CURRENT_RENDERER, Class16.aFontRenderer_144, Class16.aClass414_139);
-			} else if (GAME_STATE == 17) {
+			} else if (GAME_STATE == GameState.UNK_17) {
 				Class446.method7447(LocalizedText.PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE), false, Renderers.CURRENT_RENDERER, Class16.aFontRenderer_144, Class16.aClass414_139);
 			}
 
@@ -2144,7 +2144,7 @@ public class client extends Engine {
 				ObjectNode.method13409(Renderers.CURRENT_RENDERER);
 			}
 
-			if (!Class504.loadingState(GAME_STATE) && !GameState.method7742(GAME_STATE) && BASE_WINDOW_ID != -1) {
+			if (!GameState.loadingState(GAME_STATE) && !GameState.method7742(GAME_STATE) && BASE_WINDOW_ID != -1) {
 				try {
 					Renderers.CURRENT_RENDERER.method8393();
 				} catch (Exception_Sub3 exception_sub3_12) {
@@ -2169,7 +2169,7 @@ public class client extends Engine {
 				Class378.method6438();
 			}
 
-			if (Class393.preferences.safeMode.getValue() == 1 && GAME_STATE == 5 && BASE_WINDOW_ID != -1) {
+			if (Class393.preferences.safeMode.getValue() == 1 && GAME_STATE == GameState.UNK_5 && BASE_WINDOW_ID != -1) {
 				Class393.preferences.setValue(Class393.preferences.safeMode, 0);
 				Class190.savePreferences();
 			}
@@ -2269,23 +2269,23 @@ public class client extends Engine {
 
 			if (Class119.JS5_STANDARD_REQUESTER.anInt3657 >= 2 && Class119.JS5_STANDARD_REQUESTER.anInt3650 == 6) {
 				method4680("js5connect_outofdate");
-				GAME_STATE = 16;
+				GAME_STATE = GameState.UNK_16;
 				return;
 			}
 
 			if (Class119.JS5_STANDARD_REQUESTER.anInt3657 >= 1 && Class119.JS5_STANDARD_REQUESTER.anInt3650 == 48) {
 				method4680("sessionexpired");
-				GAME_STATE = 16;
+				GAME_STATE = GameState.UNK_16;
 				return;
 			}
 
 			if (Class119.JS5_STANDARD_REQUESTER.anInt3657 >= 4 && Class119.JS5_STANDARD_REQUESTER.anInt3650 == -1) {
 				method4680("js5crc");
-				GAME_STATE = 16;
+				GAME_STATE = GameState.UNK_16;
 				return;
 			}
 
-			if (Class119.JS5_STANDARD_REQUESTER.anInt3657 >= 4 && Class504.loadingState(GAME_STATE)) {
+			if (Class119.JS5_STANDARD_REQUESTER.anInt3657 >= 4 && GameState.loadingState(GAME_STATE)) {
 				if (Class119.JS5_STANDARD_REQUESTER.anInt3650 != 7 && Class119.JS5_STANDARD_REQUESTER.anInt3650 != 9) {
 					if (Class119.JS5_STANDARD_REQUESTER.anInt3650 > 0) {
 						if (aString7463 == null) {
@@ -2300,7 +2300,7 @@ public class client extends Engine {
 					method4680("js5connect_full");
 				}
 
-				GAME_STATE = 16;
+				GAME_STATE = GameState.UNK_16;
 				return;
 			}
 		}
@@ -2362,7 +2362,7 @@ public class client extends Engine {
 							arr_10[i_5].method7439(rsbytebuffer_4.readInt());
 						}
 
-						boolean loggedOut = Class504.loadingState(GAME_STATE) || GameState.loggedOut(GAME_STATE) || GameState.inLobby(GAME_STATE);
+						boolean loggedOut = GameState.loadingState(GAME_STATE) || GameState.loggedOut(GAME_STATE) || GameState.inLobby(GAME_STATE);
 						Class119.JS5_STANDARD_REQUESTER.init(Class47_Sub1.updateConnection, !loggedOut);
 						MaterialProp8.clientSocket = null;
 						Class47_Sub1.updateConnection = null;
@@ -2561,9 +2561,9 @@ public class client extends Engine {
 			fullScreenFrame = null;
 		}
 
-		GAME_CONNECTION_CONTEXT.method3051();
+		GAME_CONNECTION_CONTEXT.end();
 		GAME_CONNECTION_CONTEXT.pinger.finishPingRequest();
-		LOBBY_CONNECTION_CONTEXT.method3051();
+		LOBBY_CONNECTION_CONTEXT.end();
 		LOBBY_CONNECTION_CONTEXT.pinger.finishPingRequest();
 		VorbisFileReference.method13449();
 		Class119.JS5_STANDARD_REQUESTER.method5525();
@@ -2670,9 +2670,9 @@ public class client extends Engine {
 			fullScreenFrame = null;
 		}
 
-		GAME_CONNECTION_CONTEXT.method3051();
+		GAME_CONNECTION_CONTEXT.end();
 		GAME_CONNECTION_CONTEXT.pinger.finishPingRequest();
-		LOBBY_CONNECTION_CONTEXT.method3051();
+		LOBBY_CONNECTION_CONTEXT.end();
 		LOBBY_CONNECTION_CONTEXT.pinger.finishPingRequest();
 		VorbisFileReference.method13449();
 		Class119.JS5_STANDARD_REQUESTER.method5525();
@@ -2700,9 +2700,8 @@ public class client extends Engine {
 
 	}
 
-	void method12044() {
-		int i_2;
-		if (GAME_STATE == 0 && !JS5CacheFile.method3360() || GAME_STATE == 7 && Class9.anInt106 == 42 || GAME_STATE == 3) {
+	void pulseLobbyConnection() {
+		if (GAME_STATE == GameState.UNK_0 && !JS5CacheFile.method3360() || GAME_STATE == GameState.UNK_7 && Class9.anInt106 == 42 || GAME_STATE == GameState.IN_ACCOUNT_CREATION) {
 			if (REBOOT_TIMER > 1) {
 				--REBOOT_TIMER;
 				anInt7397 = anInt7347;
@@ -2712,8 +2711,7 @@ public class client extends Engine {
 				HitsplatDefinitions.method3851();
 			}
 
-			for (i_2 = 0; i_2 < 100 && FontRenderer_Sub3.method14338(LOBBY_CONNECTION_CONTEXT); i_2++) {
-			}
+			for (int i = 0; i < 100 && PacketDecoder.processIncoming(LOBBY_CONNECTION_CONTEXT); i++) { }
 		}
 
 		PulseEvent.processPulseEvents();
@@ -2724,8 +2722,8 @@ public class client extends Engine {
 		ServerEnvironment.pulseSubInterfaces();
 		++anInt7347;
 
-		for (i_2 = 0; i_2 < anInt7210; i_2++) {
-			NPCEntity npc_3 = (NPCEntity) NPC_ARRAY[i_2].anObject8068;
+		for (int i = 0; i < anInt7210; i++) {
+			NPCEntity npc_3 = (NPCEntity) NPC_ARRAY[i].anObject8068;
 			if (npc_3 != null) {
 				byte b_4 = npc_3.definitions.walkMask;
 				if ((b_4 & 0x1) != 0) {
@@ -2780,7 +2778,7 @@ public class client extends Engine {
 			}
 		}
 
-		if ((GAME_STATE == 5 || GAME_STATE == 7 || GAME_STATE == 0 || GAME_STATE == 3) && (!JS5CacheFile.method3360() || GAME_STATE == 7 && Class9.anInt106 == 42) && !Class85.method1466()) {
+		if ((GAME_STATE == GameState.UNK_5 || GAME_STATE == GameState.UNK_7 || GAME_STATE == GameState.UNK_0 || GAME_STATE == GameState.IN_ACCOUNT_CREATION) && (!JS5CacheFile.method3360() || GAME_STATE == GameState.UNK_7 && Class9.anInt106 == 42) && !Class85.method1466()) {
 			if (NativeLibraryLoader.anInt3240 == 5) {
 				Wall.method16113();
 			} else {
@@ -2815,7 +2813,7 @@ public class client extends Engine {
 												Class60.method1172();
 											}
 
-											if (GAME_STATE == 0 && !JS5CacheFile.method3360() || GAME_STATE == 7 && Class9.anInt106 == 42) {
+											if (GAME_STATE == GameState.UNK_0 && !JS5CacheFile.method3360() || GAME_STATE == GameState.UNK_7 && Class9.anInt106 == 42) {
 												FriendStatus.method7703();
 											}
 
@@ -2838,9 +2836,9 @@ public class client extends Engine {
 												}
 											}
 
-											if (GAME_STATE == 0 && !JS5CacheFile.method3360() || GAME_STATE == 7 && Class9.anInt106 == 42 || GAME_STATE == 3) {
-												if (GAME_STATE != 7 && LOBBY_CONNECTION_CONTEXT.getConnection() == null) {
-													CursorIndexLoader.method7333(false);
+											if (GAME_STATE == GameState.UNK_0 && !JS5CacheFile.method3360() || GAME_STATE == GameState.UNK_7 && Class9.anInt106 == 42 || GAME_STATE == GameState.IN_ACCOUNT_CREATION) {
+												if (GAME_STATE != GameState.UNK_7 && LOBBY_CONNECTION_CONTEXT.getConnection() == null) {
+													CursorIndexLoader.killConnections(false);
 												} else if (LOBBY_CONNECTION_CONTEXT != null) {
 													++LOBBY_CONNECTION_CONTEXT.anInt2290;
 													if (LOBBY_CONNECTION_CONTEXT.anInt2290 > 50) {
@@ -2851,10 +2849,10 @@ public class client extends Engine {
 													try {
 														LOBBY_CONNECTION_CONTEXT.flush();
 													} catch (IOException ioexception_15) {
-														if (GAME_STATE == 7) {
-															LOBBY_CONNECTION_CONTEXT.method3051();
+														if (GAME_STATE == GameState.UNK_7) {
+															LOBBY_CONNECTION_CONTEXT.end();
 														} else {
-															CursorIndexLoader.method7333(false);
+															CursorIndexLoader.killConnections(false);
 														}
 													}
 												}

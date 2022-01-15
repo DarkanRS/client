@@ -403,11 +403,11 @@ public class AsyncOutputStream implements Runnable {
         }
     }
 
-    void method5089() {
-        anOutputStream3442 = new OutputStream_Sub1();
+    void close() {
+        anOutputStream3442 = new ClosedOutputStream();
     }
 
-    void method5094() {
+    void end() {
         synchronized (this) {
             aBool3446 = true;
             notifyAll();
