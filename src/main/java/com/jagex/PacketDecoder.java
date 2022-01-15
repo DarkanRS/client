@@ -2,6 +2,7 @@ package com.jagex;
 
 import java.io.IOException;
 
+import com.Loader;
 import com.jagex.clans.ClanChannel;
 import com.jagex.clans.settings.ChangeClanSetting;
 import com.jagex.clans.settings.ClanSettings;
@@ -2665,8 +2666,10 @@ public class PacketDecoder {
 	            connection.reset();
 	            return false;
 	        } else {
-	        	System.err.println("Exception decoding packet");
-	        	ex.printStackTrace();
+	        	if (Loader.DEBUG) {
+		        	System.err.println("Exception decoding packet");
+		        	ex.printStackTrace();
+	        	}
 	            Class151.killConnections();
 	            return true;
 	        }
