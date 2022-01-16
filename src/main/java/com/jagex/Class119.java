@@ -32,7 +32,7 @@ public class Class119 {
             tcpmessage_5.buffer.writeByte(bool_3 ? 1 : 0);
             tcpmessage_5.buffer.index += 7;
             tcpmessage_5.buffer.encryptWithXtea(Class14.ACCOUNT_CREATION_ISAAC_KEYS, i_6, tcpmessage_5.buffer.index);
-            tcpmessage_5.buffer.method13281(tcpmessage_5.buffer.index - i_6);
+            tcpmessage_5.buffer.writeLength(tcpmessage_5.buffer.index - i_6);
             client.LOBBY_CONNECTION_CONTEXT.queuePacket(tcpmessage_5);
             if (i_2 < 13) {
                 client.aBool7189 = true;

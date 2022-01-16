@@ -9590,7 +9590,7 @@ public class CS2Interpreter {
             int startIndex = packet.buffer.index;
             packet.buffer.writeString(targetName);
             ByteBuf.writeHuffmanString(packet.buffer, message);
-            packet.buffer.method13281(packet.buffer.index - startIndex);
+            packet.buffer.writeLength(packet.buffer.index - startIndex);
             context.queuePacket(packet);
         }
     }

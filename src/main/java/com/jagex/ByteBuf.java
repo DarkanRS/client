@@ -601,7 +601,7 @@ public class ByteBuf extends Node {
         return long_2 + (long_4 << 32);
     }
 
-    public void method13281(int i_1) {
+    public void writeLength(int i_1) {
         buffer[index - i_1 - 2] = (byte) (i_1 >> 8);
         buffer[index - i_1 - 1] = (byte) i_1;
     }

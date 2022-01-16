@@ -15,7 +15,7 @@ public class Class493 {
             message.buffer.writeString(string_0);
             message.buffer.index += 7;
             message.buffer.encryptWithXtea(Class14.ACCOUNT_CREATION_ISAAC_KEYS, start, message.buffer.index);
-            message.buffer.method13281(message.buffer.index - start);
+            message.buffer.writeLength(message.buffer.index - start);
             client.LOBBY_CONNECTION_CONTEXT.queuePacket(message);
             Class404.aClass466_4831 = Class466.aClass466_5564;
         }

@@ -2011,7 +2011,7 @@ public class client extends Engine {
 
 			if (GameState.loggedOut(GAME_STATE) && !GameState.method7742(GAME_STATE)) {
 				pulseLobbyConnection();
-				WallObjectGraphNode.handleAccountCreationStart();
+				Login.handleAccountCreationLogin();
 				Login.pulseLogin();
 			} else if (GameState.inLobby(GAME_STATE) && !GameState.method7742(GAME_STATE)) {
 				pulseLobbyConnection();

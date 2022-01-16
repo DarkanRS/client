@@ -87,7 +87,7 @@ public class Login {
                         rsbytebuffer_4.writeByte((int) (Math.random() * 9.9999999E7D));
                         rsbytebuffer_4.applyRSA();
                         tcpmessage_2.buffer.writeBytes(rsbytebuffer_4.buffer, 0, rsbytebuffer_4.index);
-                        tcpmessage_2.buffer.method13281(tcpmessage_2.buffer.index - i_3);
+                        tcpmessage_2.buffer.writeLength(tcpmessage_2.buffer.index - i_3);
                     } else {
                         tcpmessage_2.buffer.writeByte(LoginProt.INIT_GAME_CONNECTION.id);
                     }
@@ -262,7 +262,7 @@ public class Login {
                         QuestDefinitions.writeCRCs(rsBB);
                     }
                     rsBB.encryptWithXtea(Class500.ISAAC_SEED, i_6, rsBB.index);
-                    rsBB.method13281(rsBB.index - i_5);
+                    rsBB.writeLength(rsBB.index - i_5);
                     Class9.CURRENT_CONNECTION_CONTEXT.queuePacket(tcpmessage_2);
                     Class9.CURRENT_CONNECTION_CONTEXT.flush();
                     Class9.CURRENT_CONNECTION_CONTEXT.outKeys = new ISAACCipher(Class500.ISAAC_SEED);
@@ -616,4 +616,90 @@ public class Login {
             aList3388.add(class285_1);
         }
     }
+
+	static void handleAccountCreationLogin() {
+		if (Class192.ACCOUNT_CREATION_STAGE != null) {
+			try {
+				short s_1;
+				if (Class14.anInt134 == 0) {
+					s_1 = 250;
+				} else {
+					s_1 = 2000;
+				}
+	
+				++Class14.anInt133;
+				if (Class14.anInt133 > s_1) {
+					Class5.method297();
+				}
+	
+				int rsaIndex;
+				if (Class192.ACCOUNT_CREATION_STAGE == AccountCreationStage.REQUEST) {
+					client.LOBBY_CONNECTION_CONTEXT.init(SunDefinitions.createAsyncConnection(ConnectionInfo.LOBBY_CONNECTION_INFO.createSocket(), 15000), ConnectionInfo.LOBBY_CONNECTION_INFO.host);
+					client.LOBBY_CONNECTION_CONTEXT.clearAllQueuedPackets();
+					TCPPacket packet = TCPPacket.create();
+					packet.buffer.writeByte(LoginProt.CREATE_ACCOUNT_CONNECT.id);
+					packet.buffer.writeShort(0);
+					rsaIndex = packet.buffer.index;
+					packet.buffer.writeShort(727);
+					packet.buffer.writeShort(1);
+					Class14.ACCOUNT_CREATION_ISAAC_KEYS = ProcessorSpecs.method7725(packet);
+					int i_4 = packet.buffer.index;
+					packet.buffer.writeString(client.aString7164);
+					packet.buffer.writeShort(client.AFFILIATE);
+					packet.buffer.writeLong(client.aLong7153);
+					packet.buffer.writeString(Class464.aString5555);
+					packet.buffer.writeByte(Class223.CURRENT_LANGUAGE.getValue());
+					packet.buffer.writeByte(client.CURRENT_GAME.id);
+					IdentiKitIndexLoader.method809(packet.buffer);
+					String string_5 = client.aString7156;
+					packet.buffer.writeByte(string_5 == null ? 0 : 1);
+					if (string_5 != null) {
+						packet.buffer.writeString(string_5);
+					}
+	
+					Class11.SYSTEM_INFO.writeMachineInformation(packet.buffer);
+					packet.buffer.index += 7;
+					packet.buffer.encryptWithXtea(Class14.ACCOUNT_CREATION_ISAAC_KEYS, i_4, packet.buffer.index);
+					packet.buffer.writeLength(packet.buffer.index - rsaIndex);
+					client.LOBBY_CONNECTION_CONTEXT.queuePacket(packet);
+					client.LOBBY_CONNECTION_CONTEXT.flush();
+					Class192.ACCOUNT_CREATION_STAGE = AccountCreationStage.RESPONSE;
+				}
+	
+				if (AccountCreationStage.RESPONSE == Class192.ACCOUNT_CREATION_STAGE) {
+					if (client.LOBBY_CONNECTION_CONTEXT.getConnection() == null) {
+						Class5.method297();
+					} else if (client.LOBBY_CONNECTION_CONTEXT.getConnection().available(1)) {
+						client.LOBBY_CONNECTION_CONTEXT.getConnection().read(client.LOBBY_CONNECTION_CONTEXT.recievedBuffer.buffer, 0, 1);
+						CutsceneAction_Sub9.RECIEVED_RESPONSE = (AccountCreationResponseOpcodes) Class386.identify(Interface.method1626(), client.LOBBY_CONNECTION_CONTEXT.recievedBuffer.buffer[0] & 0xff);
+						if (CutsceneAction_Sub9.RECIEVED_RESPONSE == AccountCreationResponseOpcodes.CONTINUE) {
+							client.LOBBY_CONNECTION_CONTEXT.outKeys = new ISAACCipher(Class14.ACCOUNT_CREATION_ISAAC_KEYS);
+							int[] ints_8 = new int[4];
+	
+							for (rsaIndex = 0; rsaIndex < 4; rsaIndex++) {
+								ints_8[rsaIndex] = Class14.ACCOUNT_CREATION_ISAAC_KEYS[rsaIndex] + 50;
+							}
+							client.LOBBY_CONNECTION_CONTEXT.inKeys = new ISAACCipher(ints_8);
+							client.LOBBY_CONNECTION_CONTEXT.recievedBuffer.setIsaacCipher(client.LOBBY_CONNECTION_CONTEXT.inKeys);
+							GameState.setGameState(GameState.IN_ACCOUNT_CREATION);
+							client.LOBBY_CONNECTION_CONTEXT.clearAllQueuedPackets();
+							client.LOBBY_CONNECTION_CONTEXT.recievedBuffer.index = 0;
+							client.LOBBY_CONNECTION_CONTEXT.lastPacket = null;
+							client.LOBBY_CONNECTION_CONTEXT.secondLastPacket = null;
+							client.LOBBY_CONNECTION_CONTEXT.thirdLastPacket = null;
+							client.LOBBY_CONNECTION_CONTEXT.idleReadPulses = 0;
+						} else {
+							client.LOBBY_CONNECTION_CONTEXT.end();
+						}
+	
+						client.LOBBY_CONNECTION_CONTEXT.currentPacket = null;
+						Class192.ACCOUNT_CREATION_STAGE = null;
+					}
+				}
+			} catch (IOException ex) {
+				Class5.method297();
+			}
+		}
+	
+	}
 }
