@@ -2425,7 +2425,7 @@ public class OpenGLRenderer extends AbstractRenderer {
 
     void method13624(int i_1) {
         if (anInt8366 != i_1) {
-            byte b_2;
+            int b_2;
             boolean bool_3;
             boolean bool_4;
             if (i_1 == 1) {
@@ -2479,7 +2479,7 @@ public class OpenGLRenderer extends AbstractRenderer {
             }
 
             anInt8366 = i_1;
-            anInt8382 &= -13;
+            anInt8382 &= ~0xc;
         }
 
     }
@@ -4195,12 +4195,12 @@ public class OpenGLRenderer extends AbstractRenderer {
     public void XA(int i_1, int i_2, int i_3, int i_4, int i_5) {
         method13659();
         method13624(i_5);
-        float f_6 = i_1 + 0.35F;
-        float f_7 = i_2 + 0.35F;
+        float f_6 = (float) i_1 + 0.35F;
+        float f_7 = (float) i_2 + 0.35F;
         OpenGL.glColor4ub((byte) (i_4 >> 16), (byte) (i_4 >> 8), (byte) i_4, (byte) (i_4 >> 24));
         OpenGL.glBegin(1);
         OpenGL.glVertex2f(f_6, f_7);
-        OpenGL.glVertex2f(f_6 + i_3, f_7);
+        OpenGL.glVertex2f(f_6 + (float) i_3, f_7);
         OpenGL.glEnd();
     }
 
