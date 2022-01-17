@@ -233,7 +233,6 @@ public abstract class FontRenderer {
                                 } catch (Exception ignored) {
                                 }
                             } else {
-                            	System.out.println(string_15);
                                 applySpecialEffects(string_15);
                             }
                             continue;
@@ -331,7 +330,6 @@ public abstract class FontRenderer {
                                 } catch (Exception ignored) {
                                 }
                             } else {
-                            	System.out.println(string_15);
                                 applySpecialEffects(string_15);
                             }
                             continue;
