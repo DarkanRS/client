@@ -1,7 +1,5 @@
 package com.jagex;
 
-import com.jagex.ByteBuf.Bit;
-
 public class TCPPacket extends Node {
 
     static TCPPacket[] OUTGOING_PACKETS = new TCPPacket[300];

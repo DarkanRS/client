@@ -164,7 +164,7 @@ public class IndexLoaders {
 
             Class487.aClass378_5752.method6403(client.anInterface35_7206);
             EditMemberSetting.method15476();
-            GameState.setGameState(15);
+            GameState.setGameState(GameState.UNK_15);
         }
 
         if (LOADING_STAGE == LoadingStage.aClass387_4699) {
@@ -232,7 +232,7 @@ public class IndexLoaders {
 
             Class89.method1496(bytes_7);
             NodeCollection.method8148();
-            GameState.setGameState(1);
+            GameState.setGameState(GameState.UNK_1);
         }
 
         if (LoadingStage.aClass387_4709 == LOADING_STAGE) {

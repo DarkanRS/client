@@ -87,13 +87,13 @@ public class Class151 {
         }
     }
 
-    static void method2592() {
+    static void killConnections() {
         if (!GameState.inLobby(client.GAME_STATE) && !GameState.loggedOut(client.GAME_STATE)) {
             ClanVarSettingsIndexLoader.aClass202_2883 = client.GAME_CONNECTION_CONTEXT.getConnection();
             client.GAME_CONNECTION_CONTEXT.reset();
-            GameState.setGameState(10);
+            GameState.setGameState(GameState.UNK_10);
         } else {
-            CursorIndexLoader.method7333(false);
+            CursorIndexLoader.killConnections(false);
         }
     }
 

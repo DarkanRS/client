@@ -13,21 +13,21 @@ public class MaterialProp23 extends MaterialProperty {
     }
 
     //Every 20ms pulsed (50 fps lock)
-    static void pulseLoggedInLogic() {
+    static void pulseWorldConnection() {
         if (client.REBOOT_TIMER > 1) {
             --client.REBOOT_TIMER;
             client.anInt7397 = client.anInt7347;
         }
         if (client.GAME_CONNECTION_CONTEXT.aBool2298) {
             client.GAME_CONNECTION_CONTEXT.aBool2298 = false;
-            Class151.method2592();
+            Class151.killConnections();
         } else {
             if (!Class20.aBool161) {
                 HitsplatDefinitions.method3851();
             }
-            for (int i_1 = 0; i_1 < 100 && FontRenderer_Sub3.method14338(client.GAME_CONNECTION_CONTEXT); i_1++) {
+            for (int i_1 = 0; i_1 < 100 && PacketDecoder.processIncoming(client.GAME_CONNECTION_CONTEXT); i_1++) {
             }
-            if (client.GAME_STATE == 13) {
+            if (client.GAME_STATE == GameState.UNK_13) {
                 int i_2;
                 TCPPacket tcpmessage_6;
                 while (HashTableIterator.hasValues()) {
@@ -69,7 +69,7 @@ public class MaterialProp23 extends MaterialProperty {
                     client.aFloat7266 /= 2.0F;
                 }
                 MaterialProp30.method15240();
-                if (client.GAME_STATE == 13) {
+                if (client.GAME_STATE == GameState.UNK_13) {
                     IndexLoaders.MAP_REGION_DECODER.method4435().method4037(IndexLoaders.MAP_REGION_DECODER);
                     Class350_Sub1.method12516();
                     Interface.method1623();
@@ -77,7 +77,7 @@ public class MaterialProp23 extends MaterialProperty {
                         ++client.GAME_CONNECTION_CONTEXT.idleReadPulses;
                     }
                     if (client.GAME_CONNECTION_CONTEXT.idleReadPulses > 2250) {
-                        Class151.method2592();
+                        Class151.killConnections();
                     } else {
                         if (client.anInt7341 == 1) {
                             Class155.method2636();
@@ -89,7 +89,7 @@ public class MaterialProp23 extends MaterialProperty {
                                 IndexLoaders.MAP_REGION_DECODER.loadMapScene(new Class335(Class256.aClass256_3153, null));
                                 client.anInt7341 = 0;
                             }
-                            if (client.anInt7341 == 0 && client.GAME_STATE != 18) {
+                            if (client.anInt7341 == 0 && client.GAME_STATE != GameState.UNK_18) {
                                 Class86.aClass465_823.method7749();
                                 client.anInt7341 = 4;
                                 client.anInt7357 = client.CYCLES_20MS;
@@ -268,7 +268,7 @@ public class MaterialProp23 extends MaterialProperty {
                                                             try {
                                                                 client.GAME_CONNECTION_CONTEXT.flush();
                                                             } catch (IOException ioexception_9) {
-                                                                Class151.method2592();
+                                                                Class151.killConnections();
                                                             }
                                                             return;
                                                         }

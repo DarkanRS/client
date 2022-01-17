@@ -22,8 +22,8 @@ public enum Class466 implements Identifiable {
     }
 
     public static void method7777() {
-        if (client.GAME_STATE == 0 && !JS5CacheFile.method3360() && !Class85.method1466()) {
-            GameState.setGameState(7);
+        if (client.GAME_STATE == GameState.UNK_0 && !JS5CacheFile.method3360() && !Class85.method1466()) {
+            GameState.setGameState(GameState.UNK_7);
         }
     }
 

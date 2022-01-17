@@ -56,18 +56,18 @@ public class Class361 {
     }
 
     static void method6270() {
-        if (QuickChatValueType.method4180(client.GAME_STATE)) {
+        if (GameState.method4180(client.GAME_STATE)) {
             if (client.LOBBY_CONNECTION_CONTEXT.getConnection() == null) {
-                GameState.setGameState(14);
+                GameState.setGameState(GameState.UNK_14);
             } else {
-                GameState.setGameState(0);
+                GameState.setGameState(GameState.UNK_0);
             }
-        } else if (client.GAME_STATE != 14 && client.GAME_STATE != 19) {
-            if (client.GAME_STATE == 12) {
-                GameState.setGameState(5);
+        } else if (client.GAME_STATE != GameState.UNK_14 && client.GAME_STATE != GameState.UNK_19) {
+            if (client.GAME_STATE == GameState.UNK_12) {
+                GameState.setGameState(GameState.UNK_5);
             }
         } else {
-            GameState.setGameState(5);
+            GameState.setGameState(GameState.UNK_5);
         }
     }
 

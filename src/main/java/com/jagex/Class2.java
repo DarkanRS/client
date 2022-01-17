@@ -11,7 +11,7 @@ public class Class2 {
             HeadbarIndexLoader.method5118();
             Class9.aString99 = string_0;
             Class9.aString102 = string_1;
-            GameState.setGameState(19);
+            GameState.setGameState(GameState.UNK_19);
         }
     }
 

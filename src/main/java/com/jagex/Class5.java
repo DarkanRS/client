@@ -82,7 +82,7 @@ public class Class5 {
     }
 
     static void method297() {
-        client.LOBBY_CONNECTION_CONTEXT.method3051();
+        client.LOBBY_CONNECTION_CONTEXT.end();
         if (Class14.anInt134 < 2) {
             ConnectionInfo.LOBBY_CONNECTION_INFO.swap();
             Class14.anInt133 = 0;
@@ -91,7 +91,7 @@ public class Class5 {
         } else {
             Class192.ACCOUNT_CREATION_STAGE = null;
             CutsceneAction_Sub9.RECIEVED_RESPONSE = AccountCreationResponseOpcodes.aClass483_5731;
-            GameState.setGameState(5);
+            GameState.setGameState(GameState.UNK_5);
         }
     }
 }

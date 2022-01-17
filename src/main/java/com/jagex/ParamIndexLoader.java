@@ -89,7 +89,7 @@ public class ParamIndexLoader {
     }
 
     public static void method7081() {
-        GameState.setGameState(18);
+        GameState.setGameState(GameState.UNK_18);
         Class459.method7678();
         System.gc();
     }

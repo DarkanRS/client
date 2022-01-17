@@ -9,7 +9,7 @@ public class Class298 implements Interface41 {
     }
 
     static boolean gameNotLoading() {
-        return !Class504.loadingState(client.GAME_STATE);
+        return !GameState.loadingState(client.GAME_STATE);
     }
 
     public static boolean method5304(int i_0) {

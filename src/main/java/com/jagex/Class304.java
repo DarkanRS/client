@@ -195,10 +195,10 @@ public class Class304 implements Interface27 {
                 try {
                     int i_33 = Comparable_Sub1.aClass306_3771.method5424();
                     String string_34 = Comparable_Sub1.aClass306_3771.method5425();
-                    if (OutputStream_Sub1.anImage7953 == null) {
-                        OutputStream_Sub1.anImage7953 = Class351.gameCanvas.createImage(-418109423 * ChangeClanSetting.BASE_WINDOW_WIDTH * 1426041429 * 765 * -1943418639, Engine.BASE_WINDOW_HEIGHT * -969250379 * -1929118563 * -969250379);
+                    if (ClosedOutputStream.anImage7953 == null) {
+                        ClosedOutputStream.anImage7953 = Class351.gameCanvas.createImage(-418109423 * ChangeClanSetting.BASE_WINDOW_WIDTH * 1426041429 * 765 * -1943418639, Engine.BASE_WINDOW_HEIGHT * -969250379 * -1929118563 * -969250379);
                     }
-                    Graphics graphics_35 = OutputStream_Sub1.anImage7953.getGraphics();
+                    Graphics graphics_35 = ClosedOutputStream.anImage7953.getGraphics();
                     graphics_35.setColor(Color.BLACK);
                     graphics_35.fillRect(0, 0, -418109423 * ChangeClanSetting.BASE_WINDOW_WIDTH * 1426041429 * 765 * -1943418639, -969250379 * Engine.BASE_WINDOW_HEIGHT * -969250379 * -1929118563);
                     int i_36 = anImage3579.getWidth(null);
@@ -267,7 +267,7 @@ public class Class304 implements Interface27 {
                     graphics_35.setFont(aFont3573);
                     graphics_35.setColor(aColor3582);
                     graphics_35.drawString(string_34, i_24 + (-1500311941 * anInt3587 * -1872715597 - aFontMetrics3570.stringWidth(string_34)) / 2, 4 + anInt3571 * 544546015 * 1149083423 / 2 + i_25 + -2097436733 * anInt3592 * -29425429);
-                    graphics_43.drawImage(OutputStream_Sub1.anImage7953, 0, 0, null);
+                    graphics_43.drawImage(ClosedOutputStream.anImage7953, 0, 0, null);
                 } catch (Exception exception_42) {
                     aBool3572 = true;
                 }
@@ -339,10 +339,10 @@ public class Class304 implements Interface27 {
                 try {
                     int i_33 = Comparable_Sub1.aClass306_3771.method5424();
                     String string_34 = Comparable_Sub1.aClass306_3771.method5425();
-                    if (OutputStream_Sub1.anImage7953 == null) {
-                        OutputStream_Sub1.anImage7953 = Class351.gameCanvas.createImage(-418109423 * ChangeClanSetting.BASE_WINDOW_WIDTH * 1426041429 * 765 * -1943418639, Engine.BASE_WINDOW_HEIGHT * -969250379 * -1929118563 * -969250379);
+                    if (ClosedOutputStream.anImage7953 == null) {
+                        ClosedOutputStream.anImage7953 = Class351.gameCanvas.createImage(-418109423 * ChangeClanSetting.BASE_WINDOW_WIDTH * 1426041429 * 765 * -1943418639, Engine.BASE_WINDOW_HEIGHT * -969250379 * -1929118563 * -969250379);
                     }
-                    Graphics graphics_35 = OutputStream_Sub1.anImage7953.getGraphics();
+                    Graphics graphics_35 = ClosedOutputStream.anImage7953.getGraphics();
                     graphics_35.setColor(Color.BLACK);
                     graphics_35.fillRect(0, 0, -418109423 * ChangeClanSetting.BASE_WINDOW_WIDTH * 1426041429 * 765 * -1943418639, -969250379 * Engine.BASE_WINDOW_HEIGHT * -969250379 * -1929118563);
                     int i_36 = anImage3579.getWidth(null);
@@ -411,7 +411,7 @@ public class Class304 implements Interface27 {
                     graphics_35.setFont(aFont3573);
                     graphics_35.setColor(aColor3582);
                     graphics_35.drawString(string_34, i_24 + (-1500311941 * anInt3587 * -1872715597 - aFontMetrics3570.stringWidth(string_34)) / 2, 4 + anInt3571 * 544546015 * 1149083423 / 2 + i_25 + -2097436733 * anInt3592 * -29425429);
-                    graphics_43.drawImage(OutputStream_Sub1.anImage7953, 0, 0, null);
+                    graphics_43.drawImage(ClosedOutputStream.anImage7953, 0, 0, null);
                 } catch (Exception exception_42) {
                     aBool3572 = true;
                 }
@@ -478,10 +478,10 @@ public class Class304 implements Interface27 {
                 try {
                     int i_34 = Comparable_Sub1.aClass306_3771.method5424();
                     String string_35 = Comparable_Sub1.aClass306_3771.method5425();
-                    if (OutputStream_Sub1.anImage7953 == null) {
-                        OutputStream_Sub1.anImage7953 = Class351.gameCanvas.createImage(ChangeClanSetting.BASE_WINDOW_WIDTH, Engine.BASE_WINDOW_HEIGHT * -969250379);
+                    if (ClosedOutputStream.anImage7953 == null) {
+                        ClosedOutputStream.anImage7953 = Class351.gameCanvas.createImage(ChangeClanSetting.BASE_WINDOW_WIDTH, Engine.BASE_WINDOW_HEIGHT * -969250379);
                     }
-                    Graphics graphics_36 = OutputStream_Sub1.anImage7953.getGraphics();
+                    Graphics graphics_36 = ClosedOutputStream.anImage7953.getGraphics();
                     graphics_36.setColor(Color.BLACK);
                     graphics_36.fillRect(0, 0, ChangeClanSetting.BASE_WINDOW_WIDTH, Engine.BASE_WINDOW_HEIGHT * -969250379);
                     int i_37 = anImage3579.getWidth(null);
@@ -550,7 +550,7 @@ public class Class304 implements Interface27 {
                     graphics_36.setFont(aFont3573);
                     graphics_36.setColor(aColor3582);
                     graphics_36.drawString(string_35, i_25 + (anInt3587 - aFontMetrics3570.stringWidth(string_35)) / 2, anInt3571 / 2 + i_26 + anInt3592 + 4);
-                    graphics_44.drawImage(OutputStream_Sub1.anImage7953, 0, 0, null);
+                    graphics_44.drawImage(ClosedOutputStream.anImage7953, 0, 0, null);
                 } catch (Exception exception_43) {
                     aBool3572 = true;
                 }
@@ -617,10 +617,10 @@ public class Class304 implements Interface27 {
                 try {
                     int i_33 = Comparable_Sub1.aClass306_3771.method5424();
                     String string_34 = Comparable_Sub1.aClass306_3771.method5425();
-                    if (OutputStream_Sub1.anImage7953 == null) {
-                        OutputStream_Sub1.anImage7953 = Class351.gameCanvas.createImage(-418109423 * ChangeClanSetting.BASE_WINDOW_WIDTH * 1426041429 * 765 * -1943418639, Engine.BASE_WINDOW_HEIGHT * -969250379 * -1929118563 * -969250379);
+                    if (ClosedOutputStream.anImage7953 == null) {
+                        ClosedOutputStream.anImage7953 = Class351.gameCanvas.createImage(-418109423 * ChangeClanSetting.BASE_WINDOW_WIDTH * 1426041429 * 765 * -1943418639, Engine.BASE_WINDOW_HEIGHT * -969250379 * -1929118563 * -969250379);
                     }
-                    Graphics graphics_35 = OutputStream_Sub1.anImage7953.getGraphics();
+                    Graphics graphics_35 = ClosedOutputStream.anImage7953.getGraphics();
                     graphics_35.setColor(Color.BLACK);
                     graphics_35.fillRect(0, 0, -418109423 * ChangeClanSetting.BASE_WINDOW_WIDTH * 1426041429 * 765 * -1943418639, -969250379 * Engine.BASE_WINDOW_HEIGHT * -969250379 * -1929118563);
                     int i_36 = anImage3579.getWidth(null);
@@ -689,7 +689,7 @@ public class Class304 implements Interface27 {
                     graphics_35.setFont(aFont3573);
                     graphics_35.setColor(aColor3582);
                     graphics_35.drawString(string_34, i_24 + (-1500311941 * anInt3587 * -1872715597 - aFontMetrics3570.stringWidth(string_34)) / 2, 4 + anInt3571 * 544546015 * 1149083423 / 2 + i_25 + -2097436733 * anInt3592 * -29425429);
-                    graphics_43.drawImage(OutputStream_Sub1.anImage7953, 0, 0, null);
+                    graphics_43.drawImage(ClosedOutputStream.anImage7953, 0, 0, null);
                 } catch (Exception exception_42) {
                     aBool3572 = true;
                 }

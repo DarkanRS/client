@@ -7,6 +7,7 @@ import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.Transferable;
 import java.io.File;
 
+import com.Loader;
 import com.jagex.clans.ClanChannel;
 import com.jagex.clans.settings.ClanSettings;
 
@@ -3317,7 +3318,7 @@ public class CS2Interpreter {
     }
 
     static void setPingWorlds(CS2Executor executor) {
-        if (client.GAME_STATE == 0) {
+        if (client.GAME_STATE == GameState.UNK_0) {
             ConnectionInfo.PING_WORLDS = executor.intStack[--executor.intStackPtr] == 1;
         }
     }
@@ -4272,7 +4273,7 @@ public class CS2Interpreter {
     }
 
     static void method775() {
-        CursorIndexLoader.method7333(false);
+        CursorIndexLoader.killConnections(false);
     }
 
     static void method777(CS2Executor executor) {
@@ -4344,7 +4345,7 @@ public class CS2Interpreter {
     static void method5010(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
         String string_3 = (String) executor.stringStack[--executor.stringStackPtr];
-        if (client.GAME_STATE == 0 && !JS5CacheFile.method3360()) {
+        if (client.GAME_STATE == GameState.UNK_0 && !JS5CacheFile.method3360()) {
             executor.intStack[++executor.intStackPtr - 1] = Class62.setGameHost(i_2, string_3) ? 1 : 0;
         } else {
             executor.intStack[++executor.intStackPtr - 1] = 0;
@@ -5215,7 +5216,7 @@ public class CS2Interpreter {
 
     static void sendAClass379_4624(CS2Executor executor) {
         String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
-        if (client.GAME_STATE == 0 && !JS5CacheFile.method3360()) {
+        if (client.GAME_STATE == GameState.UNK_0 && !JS5CacheFile.method3360()) {
             if (string_2.length() > 20) {
                 client.aByte7458 = -4;
             } else {
@@ -5896,7 +5897,7 @@ public class CS2Interpreter {
     }
 
     static void chooseFullScreen(CS2Executor executor) {
-        if(Class158.getScreenMode() == 1 && client.GAME_STATE != 0)
+        if(Class158.getScreenMode() == 1 && client.GAME_STATE != GameState.UNK_0)
             return;
         ChatLine.appendChatMessage("Fullscreen only works for OpenGL Java 16+");
         executor.intStackPtr -= 2;
@@ -7232,7 +7233,7 @@ public class CS2Interpreter {
     }
 
     static void method15437(CS2Executor executor) {
-        if (client.GAME_STATE == 0 && !JS5CacheFile.method3360()) {
+        if (client.GAME_STATE == GameState.UNK_0 && !JS5CacheFile.method3360()) {
             if (ConnectionInfo.aBool5422) {
                 executor.intStack[++executor.intStackPtr - 1] = 0;
             } else if (ConnectionInfo.aLong5425 > Utils.time() - 1000L) {
@@ -7823,10 +7824,13 @@ public class CS2Interpreter {
 
     static void resumeStringDialog(CS2Executor executor) {
         String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
-        TCPPacket tcpmessage_3 = TCPPacket.createPacket(ClientProt.RESUME_TEXTDIALOG, client.GAME_CONNECTION_CONTEXT.outKeys);
+        TCPPacket tcpmessage_3 = TCPPacket.createPacket(ClientProt.RESUME_TEXTDIALOG, client.GAME_STATE == GameState.UNK_0 ? client.LOBBY_CONNECTION_CONTEXT.outKeys : client.GAME_CONNECTION_CONTEXT.outKeys);
         tcpmessage_3.buffer.writeByte(string_2.length() + 1);
         tcpmessage_3.buffer.writeString(string_2);
-        client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_3);
+        if (client.GAME_STATE == GameState.UNK_0)
+        	client.LOBBY_CONNECTION_CONTEXT.queuePacket(tcpmessage_3);
+        else
+        	client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_3);
     }
 
     static void method1456(CS2Executor executor) {
@@ -9472,7 +9476,8 @@ public class CS2Interpreter {
 
     static void method6678(CS2Executor executor) {
         int renderType = executor.intStack[--executor.intStackPtr];
-        System.out.println(renderType);
+        if (Loader.DEBUG)
+        	System.out.println(renderType);
         if (renderType < 0 || renderType > 5) {
             renderType = 2;
         }
@@ -9588,7 +9593,7 @@ public class CS2Interpreter {
             int startIndex = packet.buffer.index;
             packet.buffer.writeString(targetName);
             ByteBuf.writeHuffmanString(packet.buffer, message);
-            packet.buffer.method13281(packet.buffer.index - startIndex);
+            packet.buffer.writeLength(packet.buffer.index - startIndex);
             context.queuePacket(packet);
         }
     }

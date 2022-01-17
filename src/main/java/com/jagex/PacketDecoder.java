@@ -2,6 +2,7 @@ package com.jagex;
 
 import java.io.IOException;
 
+import com.Loader;
 import com.jagex.clans.ClanChannel;
 import com.jagex.clans.settings.ChangeClanSetting;
 import com.jagex.clans.settings.ClanSettings;
@@ -14,14 +15,14 @@ public class PacketDecoder {
         if (connection == null)
             return false;
         if (context.currentPacket == null) {
-            if (context.aBool2288) {
+            if (context.readyToRead) {
                 if (!connection.available(1)) {
                     return false;
                 }
                 connection.read(context.recievedBuffer.buffer, 0, 1);
                 ++context.read;
                 context.idleReadPulses = 0;
-                context.aBool2288 = false;
+                context.readyToRead = false;
             }
             buffer.index = 0;
             if (buffer.peekIsIsaacSmart()) {
@@ -32,7 +33,7 @@ public class PacketDecoder {
                 ++context.read;
                 context.idleReadPulses = 0;
             }
-            context.aBool2288 = true;
+            context.readyToRead = true;
             int opcode = buffer.readEncryptedSmart();
             ServerProt packet = ServerProt.forId(opcode);
             if (packet == null) {
@@ -123,7 +124,7 @@ public class PacketDecoder {
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.LOGOUT_FULL) {
-            CursorIndexLoader.method7333(false);
+            CursorIndexLoader.killConnections(false);
             context.currentPacket = null;
             return false;
         } else if (context.currentPacket == ServerProt.MAP_PROJANIM_HALFSQ) {
@@ -698,11 +699,11 @@ public class PacketDecoder {
             ConnectionInfo.aClass450_5429 = ConnectionInfo.GAME_CONNECTION_INFO;
             ConnectionInfo.aBool5428 = reconnecting;
             Class62.setGameHost(port, host);
-            GameState.setGameState(17);
+            GameState.setGameState(GameState.UNK_17);
             context.currentPacket = null;
             return false;
         } else if (context.currentPacket == ServerProt.LOGOUT_LOBBY) {
-            CursorIndexLoader.method7333(Class9.aBool71);
+            CursorIndexLoader.killConnections(Class9.aBool71);
             context.currentPacket = null;
             return false;
         } else if (context.currentPacket == ServerProt.CLIENT_SETVARC_LARGE) {
@@ -2313,7 +2314,7 @@ public class PacketDecoder {
             return true;
         } else {
             Class151.method2594((context.currentPacket != null ? context.currentPacket.opcode : -1) + "," + (context.secondLastPacket != null ? context.secondLastPacket.opcode : -1) + "," + (context.thirdLastPacket != null ? context.thirdLastPacket.opcode : -1) + " " + context.currentPacketSize, new RuntimeException());
-            CursorIndexLoader.method7333(false);
+            CursorIndexLoader.killConnections(false);
             return true;
         }
     }
@@ -2653,8 +2654,35 @@ public class PacketDecoder {
             }
         } else {
             Class151.method2594("" + packet, new RuntimeException());
-            CursorIndexLoader.method7333(false);
+            CursorIndexLoader.killConnections(false);
         }
     }
+
+	static boolean processIncoming(BufferedConnectionContext connection) {
+	    try {
+	        return decode(connection);
+	    } catch (IOException ex) {
+	        if (client.GAME_STATE == GameState.UNK_7) {
+	            connection.reset();
+	            return false;
+	        } else {
+	        	if (Loader.DEBUG) {
+		        	System.err.println("Exception decoding packet");
+		        	ex.printStackTrace();
+	        	}
+	            Class151.killConnections();
+	            return true;
+	        }
+	    } catch (Exception exception_8) {
+	        CoordGrid coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getBase();
+	        String string_5 = (connection.currentPacket != null ? connection.currentPacket.opcode : -1) + "," + (connection.secondLastPacket != null ? connection.secondLastPacket.opcode : -1) + "," + (connection.thirdLastPacket != null ? connection.thirdLastPacket.opcode : -1) + " " + connection.currentPacketSize + "," + (VertexNormal.MY_PLAYER.regionBaseX[0] + coordgrid_4.x) + "," + (VertexNormal.MY_PLAYER.regionBaseY[0] + coordgrid_4.y) + " ";
+	        for (int i_6 = 0; i_6 < connection.currentPacketSize && i_6 < 50; i_6++) {
+	            string_5 = string_5 + connection.recievedBuffer.buffer[i_6] + ",";
+	        }
+	        Class151.method2594(string_5, exception_8);
+	        CursorIndexLoader.killConnections(false);
+	        return true;
+	    }
+	}
 
 }

@@ -25,7 +25,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
     public void init(Connection object_1, boolean bool_2) {
         if (aClass202_7778 != null) {
             try {
-                aClass202_7778.method3318();
+                aClass202_7778.end();
             } catch (Exception ignored) {
             }
 
@@ -53,7 +53,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
                                 aClass202_7778.write(aNode_Sub35_3655.buffer, aNode_Sub35_3655.buffer.length);
                             } catch (IOException ioexception_7) {
                                 try {
-                                    aClass202_7778.method3318();
+                                    aClass202_7778.end();
                                 } catch (Exception ignored) {
                                 }
 
@@ -86,7 +86,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
                 aClass202_7778.write(aNode_Sub35_3655.buffer, aNode_Sub35_3655.buffer.length);
             } catch (IOException ioexception_5) {
                 try {
-                    aClass202_7778.method3318();
+                    aClass202_7778.end();
                 } catch (Exception ignored) {
                 }
 
@@ -101,7 +101,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
     @Override
     public void method5549() {
         if (aClass202_7778 != null) {
-            aClass202_7778.method3318();
+            aClass202_7778.end();
         }
 
     }
@@ -109,7 +109,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
     @Override
     public void method5548() {
         if (aClass202_7778 != null) {
-            aClass202_7778.method3318();
+            aClass202_7778.end();
         }
 
     }
@@ -124,7 +124,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
                 aClass202_7778.write(aNode_Sub35_3655.buffer, aNode_Sub35_3655.buffer.length);
             } catch (IOException ioexception_6) {
                 try {
-                    aClass202_7778.method3318();
+                    aClass202_7778.end();
                 } catch (Exception ignored) {
                 }
 
@@ -146,7 +146,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
                 aClass202_7778.write(aNode_Sub35_3655.buffer, aNode_Sub35_3655.buffer.length);
             } catch (IOException ioexception_5) {
                 try {
-                    aClass202_7778.method3318();
+                    aClass202_7778.end();
                 } catch (Exception ignored) {
                 }
 
@@ -161,7 +161,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
     @Override
     public void method5525() {
         if (aClass202_7778 != null) {
-            aClass202_7778.method3318();
+            aClass202_7778.end();
         }
 
     }
@@ -177,7 +177,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
     @Override
     void method5538() {
         try {
-            aClass202_7778.method3318();
+            aClass202_7778.end();
         } catch (Exception ignored) {
         }
 
@@ -190,7 +190,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
     @Override
     void method5539() {
         try {
-            aClass202_7778.method3318();
+            aClass202_7778.end();
         } catch (Exception ignored) {
         }
 
@@ -203,7 +203,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
     @Override
     void method5540() {
         try {
-            aClass202_7778.method3318();
+            aClass202_7778.end();
         } catch (Exception ignored) {
         }
 
@@ -227,7 +227,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
             anInt3653 = (anInt3653 * -993989301 + i_3 * -993989301) * -1846332317;
             if (anInt3653 * -993989301 * -1846332317 > 30000) {
                 try {
-                    aClass202_7778.method3318();
+                    aClass202_7778.end();
                 } catch (Exception ignored) {
                 }
 
@@ -369,7 +369,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
                 return bool_19;
             } catch (IOException ioexception_23) {
                 try {
-                    aClass202_7778.method3318();
+                    aClass202_7778.end();
                 } catch (Exception ignored) {
                 }
 
@@ -395,7 +395,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
             anInt3653 = (anInt3653 * -993989301 + i_3 * -993989301) * -1846332317;
             if (anInt3653 * -993989301 * -1846332317 > 30000) {
                 try {
-                    aClass202_7778.method3318();
+                    aClass202_7778.end();
                 } catch (Exception ignored) {
                 }
 
@@ -537,7 +537,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
                 return bool_19;
             } catch (IOException ioexception_23) {
                 try {
-                    aClass202_7778.method3318();
+                    aClass202_7778.end();
                 } catch (Exception ignored) {
                 }
 
@@ -559,7 +559,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
                 aClass202_7778.write(aNode_Sub35_3655.buffer, aNode_Sub35_3655.buffer.length);
             } catch (IOException ioexception_5) {
                 try {
-                    aClass202_7778.method3318();
+                    aClass202_7778.end();
                 } catch (Exception ignored) {
                 }
 
@@ -575,7 +575,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
     public void method5544(Connection object_1, boolean bool_2) {
         if (aClass202_7778 != null) {
             try {
-                aClass202_7778.method3318();
+                aClass202_7778.end();
             } catch (Exception ignored) {
             }
 
@@ -603,7 +603,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
                                 aClass202_7778.write(aNode_Sub35_3655.buffer, aNode_Sub35_3655.buffer.length);
                             } catch (IOException ioexception_6) {
                                 try {
-                                    aClass202_7778.method3318();
+                                    aClass202_7778.end();
                                 } catch (Exception ignored) {
                                 }
 
@@ -630,7 +630,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
     public void method5545(Connection object_1, boolean bool_2) {
         if (aClass202_7778 != null) {
             try {
-                aClass202_7778.method3318();
+                aClass202_7778.end();
             } catch (Exception ignored) {
             }
 
@@ -658,7 +658,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
                                 aClass202_7778.write(aNode_Sub35_3655.buffer, aNode_Sub35_3655.buffer.length);
                             } catch (IOException ioexception_6) {
                                 try {
-                                    aClass202_7778.method3318();
+                                    aClass202_7778.end();
                                 } catch (Exception ignored) {
                                 }
 
@@ -695,7 +695,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
             anInt3653 += i_4;
             if (anInt3653 > 30000) {
                 try {
-                    aClass202_7778.method3318();
+                    aClass202_7778.end();
                 } catch (Exception ignored) {
                 }
 
@@ -837,7 +837,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
                 return bool_20;
             } catch (IOException ioexception_24) {
                 try {
-                    aClass202_7778.method3318();
+                    aClass202_7778.end();
                 } catch (Exception ignored) {
                 }
 
@@ -852,7 +852,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
     @Override
     public void method5547() {
         if (aClass202_7778 != null) {
-            aClass202_7778.method3318();
+            aClass202_7778.end();
         }
 
     }
@@ -871,7 +871,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
             anInt3653 = (anInt3653 * -993989301 + i_3 * -993989301) * -1846332317;
             if (anInt3653 * -993989301 * -1846332317 > 30000) {
                 try {
-                    aClass202_7778.method3318();
+                    aClass202_7778.end();
                 } catch (Exception ignored) {
                 }
 
@@ -1013,7 +1013,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
                 return bool_19;
             } catch (IOException ioexception_23) {
                 try {
-                    aClass202_7778.method3318();
+                    aClass202_7778.end();
                 } catch (Exception ignored) {
                 }
 
@@ -1035,7 +1035,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
                 aClass202_7778.write(aNode_Sub35_3655.buffer, aNode_Sub35_3655.buffer.length);
             } catch (IOException ioexception_4) {
                 try {
-                    aClass202_7778.method3318();
+                    aClass202_7778.end();
                 } catch (Exception ignored) {
                 }
 
@@ -1050,7 +1050,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
     @Override
     public void method5554() {
         if (aClass202_7778 != null) {
-            aClass202_7778.method3318();
+            aClass202_7778.end();
         }
 
     }
@@ -1073,7 +1073,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
                 aClass202_7778.write(aNode_Sub35_3655.buffer, aNode_Sub35_3655.buffer.length);
             } catch (IOException ioexception_4) {
                 try {
-                    aClass202_7778.method3318();
+                    aClass202_7778.end();
                 } catch (Exception ignored) {
                 }
 
@@ -1095,7 +1095,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
                 aClass202_7778.write(aNode_Sub35_3655.buffer, aNode_Sub35_3655.buffer.length);
             } catch (IOException ioexception_4) {
                 try {
-                    aClass202_7778.method3318();
+                    aClass202_7778.end();
                 } catch (Exception ignored) {
                 }
 
@@ -1117,7 +1117,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
                 aClass202_7778.write(aNode_Sub35_3655.buffer, aNode_Sub35_3655.buffer.length);
             } catch (IOException ioexception_4) {
                 try {
-                    aClass202_7778.method3318();
+                    aClass202_7778.end();
                 } catch (Exception ignored) {
                 }
 
@@ -1140,7 +1140,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
     @Override
     void method5520() {
         try {
-            aClass202_7778.method3318();
+            aClass202_7778.end();
         } catch (Exception ignored) {
         }
 

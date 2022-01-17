@@ -9,10 +9,10 @@ public class MaterialProp35 extends MaterialProperty {
     }
 
     static void lobbyLogin(String string_0, String string_1) {
-        if (false) {
-            ParticleArchive1Def.worldLogin(string_0, string_1);
-            return;
-        }
+//        if (false) { //DISABLES LOBBY LOGIN
+//            ParticleArchive1Def.worldLogin(string_0, string_1);
+//            return;
+//        }
         Class9.lobbyStage = 140;
         Class9.CURRENT_CONNECTION_CONTEXT = client.LOBBY_CONNECTION_CONTEXT;
         Class455.method7558(false, false, string_0, string_1, -1L);
