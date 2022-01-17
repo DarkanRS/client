@@ -1,5 +1,7 @@
 package com.jagex;
 
+import com.Loader;
+
 public enum GameState {
 
 	UNK_0, UNK_1, UNK_2, IN_ACCOUNT_CREATION, UNK_4, UNK_5, UNK_6, UNK_7, UNK_8, UNK_9, UNK_10, UNK_11, UNK_12, UNK_13, UNK_14, UNK_15, UNK_16, UNK_17, UNK_18, UNK_19, UNK_20, UNK_21;
@@ -167,7 +169,8 @@ public enum GameState {
 			if (method7742(state) || state == GameState.UNK_10 || state == GameState.UNK_17) {
 				Renderers.CURRENT_RENDERER.method8420();
 			}
-
+			if (Loader.DEBUG)
+				System.out.println("Game state: " + state);
 			client.GAME_STATE = state;
 		}
 

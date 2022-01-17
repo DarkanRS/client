@@ -1,7 +1,5 @@
 package com.jagex;
 
-import java.util.Arrays;
-
 public class WallObjectGraphNode extends GraphNode_Sub1_Sub5 implements WorldObject {
 
 	static int anInt10526;

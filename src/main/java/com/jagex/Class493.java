@@ -1,6 +1,5 @@
 package com.jagex;
 
-
 public class Class493 {
 
     Class493() throws Throwable {

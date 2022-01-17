@@ -7824,10 +7824,13 @@ public class CS2Interpreter {
 
     static void resumeStringDialog(CS2Executor executor) {
         String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
-        TCPPacket tcpmessage_3 = TCPPacket.createPacket(ClientProt.RESUME_TEXTDIALOG, client.GAME_CONNECTION_CONTEXT.outKeys);
+        TCPPacket tcpmessage_3 = TCPPacket.createPacket(ClientProt.RESUME_TEXTDIALOG, client.GAME_STATE == GameState.UNK_0 ? client.LOBBY_CONNECTION_CONTEXT.outKeys : client.GAME_CONNECTION_CONTEXT.outKeys);
         tcpmessage_3.buffer.writeByte(string_2.length() + 1);
         tcpmessage_3.buffer.writeString(string_2);
-        client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_3);
+        if (client.GAME_STATE == GameState.UNK_0)
+        	client.LOBBY_CONNECTION_CONTEXT.queuePacket(tcpmessage_3);
+        else
+        	client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_3);
     }
 
     static void method1456(CS2Executor executor) {
