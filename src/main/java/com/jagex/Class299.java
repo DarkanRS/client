@@ -114,32 +114,6 @@ public class Class299 implements Interface27 {
     }
 
     @Override
-    public void x() {
-        boolean bool_11 = true;
-        Interface2[] arr_2 = anInterface2Array3539;
-        for (int i_3 = 0; i_3 < arr_2.length; i_3++) {
-            Interface2 interface2_4 = arr_2[i_3];
-            if (interface2_4 != null) {
-                interface2_4.method20(bool_11 || aBool3546);
-            }
-        }
-        aBool3546 = false;
-    }
-
-    @Override
-    public void method194() {
-        boolean bool_11 = true;
-        Interface2[] arr_2 = anInterface2Array3539;
-        for (int i_3 = 0; i_3 < arr_2.length; i_3++) {
-            Interface2 interface2_4 = arr_2[i_3];
-            if (interface2_4 != null) {
-                interface2_4.method20(bool_11 || aBool3546);
-            }
-        }
-        aBool3546 = false;
-    }
-
-    @Override
     public void method157() {
     }
 
@@ -255,18 +229,5 @@ public class Class299 implements Interface27 {
     @Override
     public int method72() {
         return -1024317477 * anInt3544 * 1396538451;
-    }
-
-    @Override
-    public void method192() {
-        boolean bool_11 = true;
-        Interface2[] arr_2 = anInterface2Array3539;
-        for (int i_3 = 0; i_3 < arr_2.length; i_3++) {
-            Interface2 interface2_4 = arr_2[i_3];
-            if (interface2_4 != null) {
-                interface2_4.method20(bool_11 || aBool3546);
-            }
-        }
-        aBool3546 = false;
     }
 }
