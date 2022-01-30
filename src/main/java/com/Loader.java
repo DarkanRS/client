@@ -1,19 +1,16 @@
 package com;
 
+import com.jagex.WorldDescriptor;
+import com.jagex.client;
+
+import javax.swing.*;
 import java.applet.Applet;
 import java.applet.AppletStub;
-import java.awt.BorderLayout;
-import java.awt.Dimension;
+import java.awt.*;
 import java.math.BigInteger;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Properties;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-
-import com.jagex.WorldDescriptor;
-import com.jagex.client;
 
 public class Loader extends Applet implements AppletStub {
     private static final long serialVersionUID = 1L;
@@ -40,7 +37,7 @@ public class Loader extends Applet implements AppletStub {
     	if (args.length > 0 && args[0] != null)
     		IP_ADDRESS = args[0];
     	else
-    		IP_ADDRESS = "dev2.darkan.org"; //axios.trentonkress.com
+    		IP_ADDRESS = "dev.darkan.org"; //axios.trentonkress.com
     	if (args.length > 1 && args[1] != null)
     		LOBBY_PORT = Integer.valueOf(args[1]);
     	loadParams();
