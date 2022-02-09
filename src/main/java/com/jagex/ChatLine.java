@@ -1,7 +1,5 @@
 package com.jagex;
 
-import java.util.Iterator;
-
 public class ChatLine {
 
     public static String aString1093;
@@ -9,7 +7,7 @@ public class ChatLine {
     static ChatLine[] CHAT_LINES = new ChatLine[100];
     public int anInt1085 = MaterialProp25.method15396();
     public int time;
-    public int type;
+    public MessageType type;
     public int effectFlags;
     public String crownedName;
     public String name;
@@ -18,7 +16,7 @@ public class ChatLine {
     public int quickchatMessageId;
     public String message;
 
-    ChatLine(int type, int effectFlags, String crownedName, String name, String nameSimple, String clan, int i_7, String message) {
+    ChatLine(MessageType type, int effectFlags, String crownedName, String name, String nameSimple, String clan, int i_7, String message) {
         time = client.CYCLES_20MS;
         this.type = type;
         this.effectFlags = effectFlags;
@@ -31,18 +29,18 @@ public class ChatLine {
     }
 
     public static void appendGameMessage(String message) {
-        appendChatMessage(4, 0, "", "", "", message);
+        appendChatMessage(MessageType.GAME, 0, "", "", "", message);
     }
 
     public static void appendChatMessage(String message) {
-        appendChatMessage(0, 0, "", "", "", message);
+        appendChatMessage(MessageType.UNFILTERABLE, 0, "", "", "", message);
     }
 
-    public static void appendChatMessage(int type, int effectFlags, String crownedName, String name, String nameSimple, String message) {
+    public static void appendChatMessage(MessageType type, int effectFlags, String crownedName, String name, String nameSimple, String message) {
         appendChatMessage(type, effectFlags, crownedName, name, nameSimple, message, null, -1);
     }
 
-    public static void appendChatMessage(int type, int effectFlags, String crownedName, String name, String nameSimple, String message, String clan, int quickChatMessageId) {
+    public static void appendChatMessage(MessageType type, int effectFlags, String crownedName, String name, String nameSimple, String message, String clan, int quickChatMessageId) {
         ChatLine line = CHAT_LINES[99];
         System.arraycopy(CHAT_LINES, 0, CHAT_LINES, 1, 99);
         if (line == null) {
@@ -59,10 +57,10 @@ public class ChatLine {
         return string_0.length() + 1;
     }
 
-    static ByteBuf getLoginMod() {
+    static ByteBuf getLoginMod(boolean password) {
         ByteBuf rsbytebuffer_0 = Class94.method1587();
         rsbytebuffer_0.writeLong(0L);
-        rsbytebuffer_0.writeString(Class9.aString102);
+        rsbytebuffer_0.writeString(password ? Class9.aString102 : Static.LOBBY_AUTH_TOKEN);
         rsbytebuffer_0.writeLong(Class9.aLong86);
         rsbytebuffer_0.writeLong(client.aLong7409);
         rsbytebuffer_0.applyRSA();
@@ -81,7 +79,7 @@ public class ChatLine {
         return index >= 0 && index < 100 ? CHAT_LINES[index] : null;
     }
 
-    void set(int type, int i_2, String string_3, String string_4, String string_5, String string_6, int i_7, String string_8) {
+    void set(MessageType type, int i_2, String string_3, String string_4, String string_5, String string_6, int i_7, String string_8) {
         anInt1085 = MaterialProp25.method15396();
         time = client.CYCLES_20MS;
         this.type = type;

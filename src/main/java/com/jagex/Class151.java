@@ -40,7 +40,7 @@ public class Class151 {
                     CS2Executor.executeHookInner(hookrequest_3);
                 }
             }
-            TCPPacket tcpmessage_4 = TCPPacket.createPacket(ClientProt.IF_ON_IF, client.GAME_CONNECTION_CONTEXT.isaac);
+            TCPPacket tcpmessage_4 = TCPPacket.createPacket(ClientProt.IF_ON_IF, client.GAME_CONNECTION_CONTEXT.outKeys);
             tcpmessage_4.buffer.writeShortLE128(icomponentdefinitions_0.slotId);
             tcpmessage_4.buffer.writeShortLE(client.anInt7345);
             tcpmessage_4.buffer.writeShortLE128(icomponentdefinitions_0.containerItemId);
@@ -87,13 +87,13 @@ public class Class151 {
         }
     }
 
-    static void method2592() {
+    static void killConnections() {
         if (!GameState.inLobby(client.GAME_STATE) && !GameState.loggedOut(client.GAME_STATE)) {
             ClanVarSettingsIndexLoader.aClass202_2883 = client.GAME_CONNECTION_CONTEXT.getConnection();
             client.GAME_CONNECTION_CONTEXT.reset();
-            GameState.setGameState(10);
+            GameState.setGameState(GameState.UNK_10);
         } else {
-            CursorIndexLoader.method7333(false);
+            CursorIndexLoader.killConnections(false);
         }
     }
 
@@ -105,11 +105,11 @@ public class Class151 {
             }
             if (string_0 != null) {
                 if (throwable_1 != null) {
-                    str_3 += " | ";
+                    str_3 += "|";
                 }
                 str_3 += string_0;
             }
-            CS2Executor.method11251(str_3);
+            CS2Executor.printError(str_3);
             str_3 = Class475.method7926(str_3);
             if (RuntimeException_Sub3.anApplet10460 != null) {
                 String str_4 = "Unknown";

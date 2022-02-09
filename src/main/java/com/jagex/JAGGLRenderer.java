@@ -1,10 +1,10 @@
 package com.jagex;
 
+import java.awt.Canvas;
+
 import jaclib.memory.Stream;
 import jaggl.MapBuffer;
 import jaggl.OpenGL;
-
-import java.awt.*;
 
 public class JAGGLRenderer extends HardwareRenderer {
 

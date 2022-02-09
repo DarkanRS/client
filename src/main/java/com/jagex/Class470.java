@@ -1,25 +1,28 @@
 package com.jagex;
 
-import java.awt.*;
+import java.awt.DisplayMode;
+import java.awt.Frame;
+import java.awt.GraphicsDevice;
+import java.awt.GraphicsEnvironment;
 import java.lang.reflect.Field;
 import java.util.Stack;
 
 public class Class470 {
 
-    DisplayMode aDisplayMode5587;
+    DisplayMode displayMode;
 
-    GraphicsDevice aGraphicsDevice5586;
+    GraphicsDevice defaultMoniter;
 
     public Class470() throws Exception {
-        GraphicsEnvironment graphicsenvironment_1 = GraphicsEnvironment.getLocalGraphicsEnvironment();
-        aGraphicsDevice5586 = graphicsenvironment_1.getDefaultScreenDevice();
-        if (!aGraphicsDevice5586.isFullScreenSupported()) {
-            GraphicsDevice[] arr_2 = graphicsenvironment_1.getScreenDevices();
-            GraphicsDevice[] arr_3 = arr_2;
-            for (int i_4 = 0; i_4 < arr_3.length; i_4++) {
-                GraphicsDevice graphicsdevice_5 = arr_3[i_4];
-                if (graphicsdevice_5 != null && graphicsdevice_5.isFullScreenSupported()) {
-                    aGraphicsDevice5586 = graphicsdevice_5;
+        GraphicsEnvironment gfxEnvironment = GraphicsEnvironment.getLocalGraphicsEnvironment();
+        defaultMoniter = gfxEnvironment.getDefaultScreenDevice();
+        if (!defaultMoniter.isFullScreenSupported()) {
+            GraphicsDevice[] moniters = gfxEnvironment.getScreenDevices();
+            GraphicsDevice[] monitersArr = moniters;
+            for (int i = 0; i < monitersArr.length; i++) {
+                GraphicsDevice moniter = monitersArr[i];
+                if (moniter != null && moniter.isFullScreenSupported()) {
+                    defaultMoniter = moniter;
                     return;
                 }
             }
@@ -44,7 +47,7 @@ public class Class470 {
         }
         if (Class393.preferences.currentToolkit.getValue() != 2) {
             Class393.preferences.setValue(Class393.preferences.toolKit, 2);
-            ParticleProducer.method11500(2, false);
+            ParticleProducer.switchRenderType(2, false);
         } else {
             Class393.preferences.method13505(Class393.preferences.currentToolkit, true);
         }
@@ -73,7 +76,7 @@ public class Class470 {
     }
 
     int[] method7807() {
-        DisplayMode[] arr_2 = aGraphicsDevice5586.getDisplayModes();
+        DisplayMode[] arr_2 = defaultMoniter.getDisplayModes();
         int[] ints_3 = new int[arr_2.length << 2];
         for (int i_4 = 0; i_4 < arr_2.length; i_4++) {
             ints_3[i_4 << 2] = arr_2[i_4].getWidth();
@@ -84,33 +87,33 @@ public class Class470 {
         return ints_3;
     }
 
-    void method7808(Frame frame_1, int i_2, int i_3, int i_4, int i_5) {
+    void method7808(Frame window, int width, int height, int i_4, int i_5) {
         int i_51 = i_5;
-        aDisplayMode5587 = aGraphicsDevice5586.getDisplayMode();
-        if (aDisplayMode5587 == null) {
+        displayMode = defaultMoniter.getDisplayMode();
+        if (displayMode == null) {
             throw new NullPointerException();
         } else {
-            frame_1.setUndecorated(true);
-            frame_1.enableInputMethods(false);
-            method7809(frame_1);
+            window.setUndecorated(true);
+            window.enableInputMethods(false);
+            method7809(window);
             if (i_51 == 0) {
-                int i_7 = aDisplayMode5587.getRefreshRate();
-                DisplayMode[] arr_8 = aGraphicsDevice5586.getDisplayModes();
+                int refreshRate = displayMode.getRefreshRate();
+                DisplayMode[] displayModes = defaultMoniter.getDisplayModes();
                 boolean bool_9 = false;
-                for (int i_10 = 0; i_10 < arr_8.length; i_10++) {
-                    if (arr_8[i_10].getWidth() == i_2 && arr_8[i_10].getHeight() == i_3 && arr_8[i_10].getBitDepth() == i_4) {
-                        int i_11 = arr_8[i_10].getRefreshRate();
-                        if (!bool_9 || Math.abs(i_11 - i_7) < Math.abs(-i_7)) {
+                for (int i = 0; i < displayModes.length; i++) {
+                    if (displayModes[i].getWidth() == width && displayModes[i].getHeight() == height && displayModes[i].getBitDepth() == i_4) {
+                        int i_11 = displayModes[i].getRefreshRate();
+                        if (!bool_9 || Math.abs(i_11 - refreshRate) < Math.abs(-refreshRate)) {
                             i_51 = i_11;
                             bool_9 = true;
                         }
                     }
                 }
                 if (!bool_9) {
-                    i_51 = i_7;
+                    i_51 = refreshRate;
                 }
             }
-            aGraphicsDevice5586.setDisplayMode(new DisplayMode(i_2, i_3, i_4, i_51));
+            defaultMoniter.setDisplayMode(new DisplayMode(width, height, i_4, i_51));
         }
     }
 
@@ -119,20 +122,21 @@ public class Class470 {
         Field field_4;
         try {
             field_4 = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
+
             field_4.setAccessible(true);
-            boolean bool_5 = ((Boolean) field_4.get(aGraphicsDevice5586)).booleanValue();
+            boolean bool_5 = ((Boolean) field_4.get(defaultMoniter)).booleanValue();
             if (bool_5) {
-                field_4.set(aGraphicsDevice5586, Boolean.FALSE);
+                field_4.set(defaultMoniter, Boolean.FALSE);
                 bool_3 = true;
             }
         } catch (Throwable ignored) {
         }
         try {
-            aGraphicsDevice5586.setFullScreenWindow(frame_1);
+            defaultMoniter.setFullScreenWindow(frame_1);
             if (bool_3) {
                 try {
                     field_4 = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
-                    field_4.set(aGraphicsDevice5586, Boolean.TRUE);
+                    field_4.set(defaultMoniter, Boolean.TRUE);
                 } catch (Throwable ignored) {
                 }
             }
@@ -140,7 +144,7 @@ public class Class470 {
             if (bool_3) {
                 try {
                     Field field_6 = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
-                    field_6.set(aGraphicsDevice5586, Boolean.TRUE);
+                    field_6.set(defaultMoniter, Boolean.TRUE);
                 } catch (Throwable ignored) {
                 }
             }
@@ -148,14 +152,14 @@ public class Class470 {
     }
 
     void method7820() {
-        if (aDisplayMode5587 != null) {
-            DisplayMode[] arr_2 = aGraphicsDevice5586.getDisplayModes();
+        if (displayMode != null) {
+            DisplayMode[] arr_2 = defaultMoniter.getDisplayModes();
             boolean bool_3 = false;
             DisplayMode[] arr_4 = arr_2;
             for (int i_5 = 0; i_5 < arr_4.length; i_5++) {
                 DisplayMode displaymode_6 = arr_4[i_5];
-                if (displaymode_6.equals(aDisplayMode5587)) {
-                    aGraphicsDevice5586.setDisplayMode(aDisplayMode5587);
+                if (displaymode_6.equals(displayMode)) {
+                    defaultMoniter.setDisplayMode(displayMode);
                     bool_3 = true;
                     break;
                 }
@@ -164,11 +168,11 @@ public class Class470 {
                 try {
                     Field field_7 = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("defaultDisplayMode");
                     field_7.setAccessible(true);
-                    field_7.set(aGraphicsDevice5586, null);
+                    field_7.set(defaultMoniter, null);
                 } catch (Throwable ignored) {
                 }
             }
-            aDisplayMode5587 = null;
+            displayMode = null;
         }
         method7809(null);
     }

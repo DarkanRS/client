@@ -1,8 +1,10 @@
 package com.jagex;
 
-import javax.swing.*;
-import java.awt.*;
+import java.awt.Container;
+import java.awt.Frame;
 import java.io.File;
+
+import javax.swing.JFileChooser;
 
 public class Class191 implements Runnable {
 

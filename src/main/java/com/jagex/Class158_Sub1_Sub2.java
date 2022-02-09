@@ -1,8 +1,10 @@
 package com.jagex;
 
-import com.jagex.clans.settings.ChangeClanSetting;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics;
 
-import java.awt.*;
+import com.jagex.clans.settings.ChangeClanSetting;
 
 public class Class158_Sub1_Sub2 extends Class158_Sub1 {
 
@@ -42,11 +44,11 @@ public class Class158_Sub1_Sub2 extends Class158_Sub1 {
             int i_8;
             int i_9;
             try {
-                if (OutputStream_Sub1.anImage7953 == null) {
-                    OutputStream_Sub1.anImage7953 = Class351.gameCanvas.createImage(ChangeClanSetting.BASE_WINDOW_WIDTH, Engine.BASE_WINDOW_HEIGHT * -969250379);
+                if (ClosedOutputStream.anImage7953 == null) {
+                    ClosedOutputStream.anImage7953 = Class351.gameCanvas.createImage(ChangeClanSetting.BASE_WINDOW_WIDTH, Engine.BASE_WINDOW_HEIGHT * -969250379);
                 }
 
-                Graphics graphics_7 = OutputStream_Sub1.anImage7953.getGraphics();
+                Graphics graphics_7 = ClosedOutputStream.anImage7953.getGraphics();
                 graphics_7.setColor(Color.black);
                 graphics_7.fillRect(0, 0, ChangeClanSetting.BASE_WINDOW_WIDTH, Engine.BASE_WINDOW_HEIGHT * -969250379);
                 i_8 = ChangeClanSetting.BASE_WINDOW_WIDTH / 2 - 152;
@@ -67,7 +69,7 @@ public class Class158_Sub1_Sub2 extends Class158_Sub1 {
                     graphics_7.drawString(Engine.aString3252, ChangeClanSetting.BASE_WINDOW_WIDTH / 2 - Engine.aString3252.length() * 6 / 2, Engine.BASE_WINDOW_HEIGHT * -969250379 / 2 - 26);
                 }
 
-                graphics_6.drawImage(OutputStream_Sub1.anImage7953, 0, 0, null);
+                graphics_6.drawImage(ClosedOutputStream.anImage7953, 0, 0, null);
             } catch (Exception exception_10) {
                 graphics_6.setColor(Color.black);
                 graphics_6.fillRect(0, 0, ChangeClanSetting.BASE_WINDOW_WIDTH, Engine.BASE_WINDOW_HEIGHT * -969250379);

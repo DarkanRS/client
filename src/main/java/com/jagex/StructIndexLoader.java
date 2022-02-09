@@ -42,7 +42,7 @@ public class StructIndexLoader {
             int i_5 = ChangeClanSetting.BASE_WINDOW_WIDTH;
             int i_6 = client.BASE_WINDOW_HEIGHT * -969250379;
             int i_7 = GameTipsLoader.anInt4822;
-            int i_8 = Isaac.anInt5157;
+            int i_8 = ISAACCipher.anInt5157;
             int i_9;
             if (client.aClass118_7247 == InputSubscriberType.aClass118_2763) {
                 i_9 = -1;

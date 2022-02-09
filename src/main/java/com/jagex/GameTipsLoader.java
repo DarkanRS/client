@@ -1,8 +1,8 @@
 package com.jagex;
 
-import com.jagex.clans.settings.ChangeClanSetting;
-
 import java.util.Random;
+
+import com.jagex.clans.settings.ChangeClanSetting;
 
 public class GameTipsLoader {
 
@@ -138,7 +138,7 @@ public class GameTipsLoader {
         }
 
         try {
-            Class361.aClass361_4173.method6256(new Object[]{Integer.valueOf(i_1), Integer.valueOf(i_2), Integer.valueOf(Class158.windowedMode()), Integer.valueOf(Class393.preferences.maxScreenSize.method12666())});
+            Class361.aClass361_4173.method6256(new Object[]{Integer.valueOf(i_1), Integer.valueOf(i_2), Integer.valueOf(Class158.getScreenMode()), Integer.valueOf(Class393.preferences.maxScreenSize.method12666())});
         } catch (Throwable ignored) {
         }
 

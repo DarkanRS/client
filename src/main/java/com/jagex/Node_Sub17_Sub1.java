@@ -14,37 +14,37 @@ public class Node_Sub17_Sub1 extends Node_Sub17 {
         aString9931 = null;
     }
 
-    public static void method15402(int i_0, String string_1, boolean bool_2) {
-        if (i_0 == 0) {
+    public static void method15402(int renderType, String loadingText, boolean isFullScreen) {
+        if (renderType == 0) {
             Renderers.CURRENT_RENDERER = AbstractRenderer.createRenderer(0, Class351.gameCanvas, IndexLoaders.IMAGE_LOADER, IndexLoaders.SHADER_INDEX, Class393.preferences.aPreference_Sub4_8223.method12641() * 2);
-            if (string_1 != null) {
+            if (loadingText != null) {
                 Renderers.CURRENT_RENDERER.ba(1, 0);
                 FontMetrics fontmetrics_4 = Class94.getFontMetrics(IndexLoaders.FONT_METRICS_INDEX, Class16.p12FullIndex);
                 FontRenderer fontrenderer_5 = Renderers.CURRENT_RENDERER.createFont(fontmetrics_4, SpriteDefinitions.method1514(IndexLoaders.SPRITES_INDEX, Class16.p12FullIndex), true);
                 EntityNode.method4891();
-                Class446.method7447(string_1, true, Renderers.CURRENT_RENDERER, fontrenderer_5, fontmetrics_4);
+                Class446.method7447(loadingText, true, Renderers.CURRENT_RENDERER, fontrenderer_5, fontmetrics_4);
             }
         } else {
-            AbstractRenderer graphicalrenderer_16 = null;
+            AbstractRenderer renderer = null;
             FontMetrics fontmetrics_17;
             FontRenderer fontrenderer_6;
-            if (string_1 != null) {
-                graphicalrenderer_16 = AbstractRenderer.createRenderer(0, Class351.gameCanvas, IndexLoaders.IMAGE_LOADER, IndexLoaders.SHADER_INDEX, 0);
-                graphicalrenderer_16.ba(1, 0);
+            if (loadingText != null) {
+                renderer = AbstractRenderer.createRenderer(0, Class351.gameCanvas, IndexLoaders.IMAGE_LOADER, IndexLoaders.SHADER_INDEX, 0);
+                renderer.ba(1, 0);
                 fontmetrics_17 = Class94.getFontMetrics(IndexLoaders.FONT_METRICS_INDEX, Class16.p12FullIndex);
-                fontrenderer_6 = graphicalrenderer_16.createFont(fontmetrics_17, SpriteDefinitions.method1514(IndexLoaders.SPRITES_INDEX, Class16.p12FullIndex), true);
+                fontrenderer_6 = renderer.createFont(fontmetrics_17, SpriteDefinitions.method1514(IndexLoaders.SPRITES_INDEX, Class16.p12FullIndex), true);
                 EntityNode.method4891();
-                Class446.method7447(string_1, true, graphicalrenderer_16, fontrenderer_6, fontmetrics_17);
+                Class446.method7447(loadingText, true, renderer, fontrenderer_6, fontmetrics_17);
             }
             try {
                 try {
-                    Renderers.CURRENT_RENDERER = AbstractRenderer.createRenderer(i_0, Class351.gameCanvas, IndexLoaders.IMAGE_LOADER, IndexLoaders.SHADER_INDEX, Class393.preferences.aPreference_Sub4_8223.method12641() * 2);
-                    if (string_1 != null) {
-                        graphicalrenderer_16.ba(1, 0);
+                    Renderers.CURRENT_RENDERER = AbstractRenderer.createRenderer(renderType, Class351.gameCanvas, IndexLoaders.IMAGE_LOADER, IndexLoaders.SHADER_INDEX, Class393.preferences.aPreference_Sub4_8223.method12641() * 2);
+                    if (loadingText != null) {
+                        renderer.ba(1, 0);
                         fontmetrics_17 = Class94.getFontMetrics(IndexLoaders.FONT_METRICS_INDEX, Class16.p12FullIndex);
-                        fontrenderer_6 = graphicalrenderer_16.createFont(fontmetrics_17, SpriteDefinitions.method1514(IndexLoaders.SPRITES_INDEX, Class16.p12FullIndex), true);
+                        fontrenderer_6 = renderer.createFont(fontmetrics_17, SpriteDefinitions.method1514(IndexLoaders.SPRITES_INDEX, Class16.p12FullIndex), true);
                         EntityNode.method4891();
-                        Class446.method7447(string_1, true, graphicalrenderer_16, fontrenderer_6, fontmetrics_17);
+                        Class446.method7447(loadingText, true, renderer, fontrenderer_6, fontmetrics_17);
                     }
                     if (Renderers.CURRENT_RENDERER.method8399()) {
                         boolean bool_8 = true;
@@ -66,36 +66,36 @@ public class Node_Sub17_Sub1 extends Node_Sub17 {
                         client.aBool7171 = true;
                     }
                     Class393.preferences.setValue(Class393.preferences.currentToolkit, 0);
-                    method15402(i_9, string_1, bool_2);
-                    if (graphicalrenderer_16 != null) {
+                    method15402(i_9, loadingText, isFullScreen);
+                    if (renderer != null) {
                         try {
-                            graphicalrenderer_16.method8396();
+                            renderer.method8396();
                         } catch (Throwable ignored) {
                         }
                     }
                     return;
                 }
-                if (graphicalrenderer_16 != null) {
+                if (renderer != null) {
                     try {
-                        graphicalrenderer_16.method8396();
+                        renderer.method8396();
                     } catch (Throwable ignored) {
                     }
                 }
             } catch (Exception exception_15) {
-                if (graphicalrenderer_16 != null) {
+                if (renderer != null) {
                     try {
-                        graphicalrenderer_16.method8396();
+                        renderer.method8396();
                     } catch (Throwable ignored) {
                     }
                 }
             }
         }
-        if (bool_2) {
-            Class393.preferences.method13505(Class393.preferences.currentToolkit, !bool_2);
+        if (isFullScreen) {
+            Class393.preferences.method13505(Class393.preferences.currentToolkit, !isFullScreen);
         }
-        Class393.preferences.setValue(Class393.preferences.currentToolkit, i_0);
-        if (!bool_2) {
-            Class393.preferences.method13505(Class393.preferences.currentToolkit, !bool_2);
+        Class393.preferences.setValue(Class393.preferences.currentToolkit, renderType);
+        if (!isFullScreen) {
+            Class393.preferences.method13505(Class393.preferences.currentToolkit, !isFullScreen);
         }
         HostNameIdentifier.method482();
         Renderers.CURRENT_RENDERER.method8459();

@@ -17,8 +17,8 @@ public class Class388 implements Interface41 {
     }
 
     static void method6692() {
-        TCPPacket tcpmessage_1 = TCPPacket.createPacket(ClientProt.SCREEN_SIZE, client.GAME_CONNECTION_CONTEXT.isaac);
-        tcpmessage_1.buffer.writeByte(Class158.windowedMode());
+        TCPPacket tcpmessage_1 = TCPPacket.createPacket(ClientProt.SCREEN_SIZE, client.GAME_CONNECTION_CONTEXT.outKeys);
+        tcpmessage_1.buffer.writeByte(Class158.getScreenMode());
         tcpmessage_1.buffer.writeShort(ChangeClanSetting.BASE_WINDOW_WIDTH);
         tcpmessage_1.buffer.writeShort(client.BASE_WINDOW_HEIGHT * -969250379);
         tcpmessage_1.buffer.writeByte(Class393.preferences.aPreference_Sub4_8223.method12641());
@@ -26,7 +26,7 @@ public class Class388 implements Interface41 {
     }
 
     static boolean method6693() {
-        return client.GAME_STATE == 5 && (!JS5CacheFile.method3360() && !Class85.method1466());
+        return client.GAME_STATE == GameState.UNK_5 && (!JS5CacheFile.method3360() && !Class85.method1466());
     }
 
     static void method6694(Class200 class200_0, int i_1, int i_2, int i_3, MeshRasterizer meshrasterizer_4) {

@@ -5,12 +5,12 @@ import java.io.IOException;
 public class BufferedConnectionContext {
 
     static int anInt2300;
-    public Isaac isaac;
+    public ISAACCipher outKeys;
     public int anInt2290;
     public boolean aBool2298;
     ServerProt lastPacket;
     ServerProt thirdLastPacket;
-    Isaac aClass432_2295;
+    ISAACCipher inKeys;
     ServerProt secondLastPacket;
     int anInt2297;
     int readDataSize;
@@ -20,7 +20,7 @@ public class BufferedConnectionContext {
     ByteBuf.Bit recievedBuffer = new ByteBuf.Bit(15000);
     ServerProt currentPacket;
     int currentPacketSize;
-    boolean aBool2288 = true;
+    boolean readyToRead = true;
     int idleReadPulses;
     ConnectionPinger pinger = new ConnectionPinger();
     int anInt2293;
@@ -69,9 +69,9 @@ public class BufferedConnectionContext {
         pinger.setIp(ip);
     }
 
-    void method3051() {
+    void end() {
         if (connection != null) {
-            connection.method3318();
+            connection.end();
             connection = null;
         }
         pinger.setIp(null);

@@ -52,7 +52,7 @@ public class Class363 {
         }
         client.camAngleY += client.aFloat7266 * long_0 / 6.0F;
         client.camAngleX += client.aFloat7284 * long_0 / 6.0F;
-        Isaac.processCamera();
+        Static.processCamera();
     }
 
     static void method6287(PathingEntity animable_0, boolean bool_1) {

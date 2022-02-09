@@ -1,8 +1,8 @@
 package com.jagex;
 
-import com.Loader;
-
 import java.math.BigInteger;
+
+import com.Loader;
 
 public class ByteBuf extends Node {
 
@@ -282,7 +282,7 @@ public class ByteBuf extends Node {
         return i_3 | b_2;
     }
 
-    public void method13100(int[] ints_1) {
+    public void encryptXtea(int[] ints_1) {
         int i_3 = index / 8;
         index = 0;
         for (int i_4 = 0; i_4 < i_3; i_4++) {
@@ -601,26 +601,26 @@ public class ByteBuf extends Node {
         return long_2 + (long_4 << 32);
     }
 
-    public void method13281(int i_1) {
+    public void writeLength(int i_1) {
         buffer[index - i_1 - 2] = (byte) (i_1 >> 8);
         buffer[index - i_1 - 1] = (byte) i_1;
     }
 
     public static class Bit extends ByteBuf {
         static int[] anIntArray9610 = {0, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383, 32767, 65535, 131071, 262143, 524287, 1048575, 2097151, 4194303, 8388607, 16777215, 33554431, 67108863, 134217727, 268435455, 536870911, 1073741823, Integer.MAX_VALUE, -1};
-        Isaac isaac;
+        ISAACCipher isaac;
         int anInt9608;
 
         public Bit(int i_1) {
             super(i_1);
         }
 
-        public void setIsaacCipher(Isaac isaaccipher_1) {
+        public void setIsaacCipher(ISAACCipher isaaccipher_1) {
             isaac = isaaccipher_1;
         }
 
-        public boolean nextIsSmart() {
-            int i_2 = buffer[index] - isaac.method7255() & 0xff;
+        public boolean peekIsIsaacSmart() {
+            int i_2 = buffer[index] - isaac.peek() & 0xff;
             return i_2 >= 128;
         }
 

@@ -57,11 +57,11 @@ public class Class231 {
         aShortArray2875 = new short[4];
     }
 
-    static void method3914(int i_0, String string_1, boolean bool_2) {
+    static void method3914(int renderType, String loadingText, boolean bool_2) {
         Class28.method772();
         ParamDefinitions.method7323();
         Class250.method4297();
-        Node_Sub17_Sub1.method15402(i_0, string_1, bool_2);
+        Node_Sub17_Sub1.method15402(renderType, loadingText, bool_2);
         Class487.aClass378_5752.method6433();
         Class487.aClass378_5752.method6403(client.anInterface35_7206);
         EditMemberSetting.method15476();
@@ -70,17 +70,17 @@ public class Class231 {
         Class122.method2109(Class182.aNativeSpriteArray2261);
         Static.method6378();
         Class94.method1589();
-        if (client.GAME_STATE == 5) {
-            GameState.setGameState(11);
-        } else if (client.GAME_STATE == 0) {
-            GameState.setGameState(2);
-        } else if (client.GAME_STATE == 7) {
-            GameState.setGameState(6);
-        } else if (client.GAME_STATE == 13) {
-            GameState.setGameState(18);
-        } else if (client.GAME_STATE != 15 && client.GAME_STATE != 1) {
-            if (client.GAME_STATE == 3) {
-                GameState.setGameState(9);
+        if (client.GAME_STATE == GameState.UNK_5) {
+            GameState.setGameState(GameState.UNK_11);
+        } else if (client.GAME_STATE == GameState.UNK_0) {
+            GameState.setGameState(GameState.UNK_2);
+        } else if (client.GAME_STATE == GameState.UNK_7) {
+            GameState.setGameState(GameState.UNK_6);
+        } else if (client.GAME_STATE == GameState.UNK_13) {
+            GameState.setGameState(GameState.UNK_18);
+        } else if (client.GAME_STATE != GameState.UNK_15 && client.GAME_STATE != GameState.UNK_1) {
+            if (client.GAME_STATE == GameState.IN_ACCOUNT_CREATION) {
+                GameState.setGameState(GameState.UNK_9);
             }
         } else {
             Class386.method6673();

@@ -164,7 +164,7 @@ public class IndexLoaders {
 
             Class487.aClass378_5752.method6403(client.anInterface35_7206);
             EditMemberSetting.method15476();
-            GameState.setGameState(15);
+            GameState.setGameState(GameState.UNK_15);
         }
 
         if (LOADING_STAGE == LoadingStage.aClass387_4699) {
@@ -232,7 +232,7 @@ public class IndexLoaders {
 
             Class89.method1496(bytes_7);
             NodeCollection.method8148();
-            GameState.setGameState(1);
+            GameState.setGameState(GameState.UNK_1);
         }
 
         if (LoadingStage.aClass387_4709 == LOADING_STAGE) {
@@ -397,12 +397,12 @@ public class IndexLoaders {
 
             Class190.savePreferences();
             if (client.aBool7465) {
-                ParticleProducer.method11500(0, false);
+                ParticleProducer.switchRenderType(0, false);
             } else {
-                ParticleProducer.method11500(Class393.preferences.toolKit.getValue(), false);
+                ParticleProducer.switchRenderType(Class393.preferences.toolKit.getValue(), false);
             }
 
-            UID192.method7373(Class393.preferences.screenSize.method12687(), -1, -1, false);
+            UID192.method7373(Class393.preferences.screenSize.method12687(), -1, -1);
             Class487.aClass378_5752.method6403(client.anInterface35_7206);
             EditMemberSetting.method15476();
             Class188.method3139(Renderers.CURRENT_RENDERER, SPRITES_INDEX);

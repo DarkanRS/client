@@ -1,6 +1,6 @@
 package com.jagex;
 
-import java.awt.*;
+import java.awt.Canvas;
 
 public class JavaRenderer extends AbstractRenderer {
 
@@ -82,12 +82,12 @@ public class JavaRenderer extends AbstractRenderer {
         }
     }
 
-    JavaRenderer(Canvas canvas_1, ImageLoader interface22_2, int i_3, int i_4) {
-        this(interface22_2);
+    JavaRenderer(Canvas canvas, ImageLoader imageLoader, int width, int height) {
+        this(imageLoader);
 
         try {
-            method8524(canvas_1, i_3, i_4);
-            method8412(canvas_1);
+            method8524(canvas, width, height);
+            method8412(canvas);
         } catch (Throwable throwable_6) {
             throwable_6.printStackTrace();
             method8396();
@@ -7878,8 +7878,8 @@ public class JavaRenderer extends AbstractRenderer {
         return null;
     }
 
-	public static AbstractRenderer create(Canvas canvas_0, ImageLoader interface22_1, int i_2, int i_3) {
-	    return new JavaRenderer(canvas_0, interface22_1, i_2, i_3);
+	public static AbstractRenderer create(Canvas canvas, ImageLoader imageLoader, int width, int height) {
+	    return new JavaRenderer(canvas, imageLoader, width, height);
 	}
 
 }

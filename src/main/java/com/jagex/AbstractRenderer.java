@@ -1,6 +1,7 @@
 package com.jagex;
 
-import java.awt.*;
+import java.awt.Canvas;
+import java.awt.Dimension;
 import java.util.Enumeration;
 import java.util.Hashtable;
 
@@ -32,29 +33,29 @@ public abstract class AbstractRenderer {
         }
     }
     
-	public static AbstractRenderer createRenderer(int i_0, Canvas canvas_1, ImageLoader interface22_2, Index index_3, int i_4) {
-	    int i_6 = 0;
-	    int i_7 = 0;
-	    if (canvas_1 != null) {
-	        Dimension dimension_8 = canvas_1.getSize();
-	        i_6 = dimension_8.width;
-	        i_7 = dimension_8.height;
+	public static AbstractRenderer createRenderer(int renderType, Canvas canvas, ImageLoader imageLoader, Index index_3, int i_4) {
+	    int width = 0;
+	    int height = 0;
+	    if (canvas != null) {
+	        Dimension dimension = canvas.getSize();
+	        width = dimension.width;
+	        height = dimension.height;
 	    }
-	    return createRenderer(i_0, canvas_1, interface22_2, index_3, i_4, i_6, i_7);
+        return createRenderer(renderType, canvas, imageLoader, index_3, i_4, width, height);
 	}
 	
 
-	static synchronized AbstractRenderer createRenderer(int type, Canvas canvas_1, ImageLoader interface22_2, Index index_3, int i_4, int i_5, int i_6) {
+	static synchronized AbstractRenderer createRenderer(int type, Canvas canvas, ImageLoader imageLoader, Index index_3, int i_4, int width, int height) {
 	    if (type == 0) {
-	        return JavaRenderer.create(canvas_1, interface22_2, i_5, i_6); //safe mode renderer
+	        return JavaRenderer.create(canvas, imageLoader, width, height); //safe mode renderer
 	    } else if (type == 2) {
-	        return ja.create(canvas_1, interface22_2, i_5, i_6); //jagex sw3d software renderer
+	        return ja.create(canvas, imageLoader, width, height); //jagex sw3d software renderer
 	    } else if (type == 1) {
-	        return OpenGLRenderer.create(canvas_1, interface22_2, i_4); //hardware accellerated opengl renderer
+	        return OpenGLRenderer.create(canvas, imageLoader, i_4); //hardware accellerated opengl renderer
 	    } else if (type == 5) {
-	        return JAGGLRenderer.create(canvas_1, interface22_2, index_3, i_4); //jagex gl library renderer
+	        return JAGGLRenderer.create(canvas, imageLoader, index_3, i_4); //jagex gl library renderer
 	    } else if (type == 3) {
-	        return DirectXRenderer.create(canvas_1, interface22_2, index_3, i_4); //directx renderer
+	        return DirectXRenderer.create(canvas, imageLoader, index_3, i_4); //directx renderer
 	    } else {
 	        throw new IllegalArgumentException("");
 	    }

@@ -1,14 +1,23 @@
 package com.jagex;
 
-import com.Loader;
-import com.jagex.clans.settings.ChangeClanSetting;
-import jaclib.ping.Ping;
-
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Container;
+import java.awt.Frame;
+import java.awt.Insets;
+import java.awt.Rectangle;
 import java.io.IOException;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-import java.util.*;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.Random;
+import java.util.TimeZone;
+import java.util.Vector;
+
+import com.Loader;
+import com.jagex.clans.settings.ChangeClanSetting;
+
+import jaclib.ping.Ping;
 
 public class client extends Engine {
 
@@ -26,7 +35,7 @@ public class client extends Engine {
 	public static boolean aBool7159;
 	public static int ENTITY_TARGET;
 	public static String aString7165;
-	public static int GAME_STATE = 4;
+	public static GameState GAME_STATE = GameState.UNK_4;
 	public static boolean aBool7171;
 	public static int anInt7173;
 	public static int CYCLES_20MS;
@@ -55,7 +64,7 @@ public class client extends Engine {
 	public static int[] NPC_UPDATE_INDICES = new int[1024];
 	public static BufferedConnectionContext LOBBY_CONNECTION_CONTEXT = new BufferedConnectionContext();
 	public static BufferedConnectionContext GAME_CONNECTION_CONTEXT = new BufferedConnectionContext();
-	public static BufferedConnectionContext[] aClass184Array7220;
+	public static BufferedConnectionContext[] GAME_CONNECTION_CONTEXTS;
 	public static PingRequester PING_REQUESTER;
 	public static volatile boolean aBool7225;
 	public static Object anObject7226;
@@ -295,8 +304,8 @@ public class client extends Engine {
 	static int[] anIntArray7263;
 	static Class163[] aClass163Array7419;
 	static int[] anIntArray7148;
-	static long[] aLongArray7424;
-	static int anInt7389;
+	static long[] QUICKCHAT_HASHES;
+	static int CURR_QUICKCHAT_INDEX;
 	static int anInt7429;
 	static boolean[] CAM_SHAKING;
 	static int[] anIntArray7268;
@@ -312,7 +321,7 @@ public class client extends Engine {
 	static int anInt56;
 
 	static {
-		aClass184Array7220 = new BufferedConnectionContext[] { GAME_CONNECTION_CONTEXT, LOBBY_CONNECTION_CONTEXT };
+		GAME_CONNECTION_CONTEXTS = new BufferedConnectionContext[] { GAME_CONNECTION_CONTEXT, LOBBY_CONNECTION_CONTEXT };
 		anInt7221 = 0;
 		aBool7459 = false;
 		PING_REQUESTER = new PingRequester();
@@ -508,8 +517,8 @@ public class client extends Engine {
 		anIntArray7148 = new int[] { 16776960, 16711680, 65280, 65535, 16711935, 16777215 };
 		PUBLIC_FILTER = 0;
 		TRADE_FILTER = 0;
-		aLongArray7424 = new long[100];
-		anInt7389 = 0;
+		QUICKCHAT_HASHES = new long[100];
+		CURR_QUICKCHAT_INDEX = 0;
 		FC_NAME = null;
 		FC_OWNER_NAME = null;
 		GRAND_EXCHANGE_SLOTS = new GrandExchangeSlot[6];
@@ -1895,7 +1904,7 @@ public class client extends Engine {
 			} catch (Throwable throwable_4) {
 				Class151.method2594(throwable_4.getMessage() + " " + method4669(), throwable_4);
 				aBool7171 = true;
-				ParticleProducer.method11500(0, false);
+				ParticleProducer.switchRenderType(0, false);
 			}
 		} else {
 			pulse();
@@ -1904,7 +1913,7 @@ public class client extends Engine {
 	}
 
 	void pulse() {
-		if (GAME_STATE != 16) {
+		if (GAME_STATE != GameState.UNK_16) {
 			if (aBool7225) {
 				Object object_2 = anObject7227;
 				synchronized (anObject7227) {
@@ -1993,7 +2002,7 @@ public class client extends Engine {
 				Class301.method5333();
 			}
 
-			if (Class504.loadingState(GAME_STATE)) {
+			if (GameState.loadingState(GAME_STATE)) {
 				Preference_Sub20.method12808();
 				Node_Sub15_Sub1.method14840();
 			} else if (GameState.method7742(GAME_STATE)) {
@@ -2001,32 +2010,32 @@ public class client extends Engine {
 			}
 
 			if (GameState.loggedOut(GAME_STATE) && !GameState.method7742(GAME_STATE)) {
-				method12044();
-				WallObjectGraphNode.handleAccountCreationStart();
-				Login.method5018();
+				pulseLobbyConnection();
+				Login.handleAccountCreationLogin();
+				Login.pulseLogin();
 			} else if (GameState.inLobby(GAME_STATE) && !GameState.method7742(GAME_STATE)) {
-				method12044();
-				Login.method5018();
-			} else if (GAME_STATE == 12) {
-				Login.method5018();
+				pulseLobbyConnection();
+				Login.pulseLogin();
+			} else if (GAME_STATE == GameState.UNK_12) {
+				Login.pulseLogin();
 			} else if (GameState.loggedIn(GAME_STATE) && !GameState.method7742(GAME_STATE)) {
-				MaterialProp23.pulseLoggedInLogic();
-			} else if (GAME_STATE == 10 || GAME_STATE == 17) {
-				Login.method5018();
+				MaterialProp23.pulseWorldConnection();
+			} else if (GAME_STATE == GameState.UNK_10 || GAME_STATE == GameState.UNK_17) {
+				Login.pulseLogin();
 				if (Class9.anInt106 != -3 && Class9.anInt106 != 2 && Class9.anInt106 != 15) {
-					if (GAME_STATE == 17) {
+					if (GAME_STATE == GameState.UNK_17) {
 						Class9.anInt109 = Class9.anInt112;
 						Class9.anInt108 = Class9.anInt94;
 						Class9.anInt107 = Class9.anInt106;
 						if (ConnectionInfo.aBool5428) {
 							Class62.setGameHost(ConnectionInfo.aClass450_5429.worldId, ConnectionInfo.aClass450_5429.host);
 							GAME_CONNECTION_CONTEXT.reset();
-							GameState.setGameState(10);
+							GameState.setGameState(GameState.UNK_10);
 						} else {
-							CursorIndexLoader.method7333(Class9.aBool71);
+							CursorIndexLoader.killConnections(Class9.aBool71);
 						}
 					} else {
-						CursorIndexLoader.method7333(false);
+						CursorIndexLoader.killConnections(false);
 					}
 				}
 			}
@@ -2038,7 +2047,7 @@ public class client extends Engine {
 	}
 
 	void method11620() {
-		if (GAME_STATE != 16) {
+		if (GAME_STATE != GameState.UNK_16) {
 			long long_2 = Class176.method2979() / 1000000L - aLong7170;
 			aLong7170 = Class176.method2979() / 1000000L;
 			boolean bool_4 = ProcessorSpecs.method7730();
@@ -2046,9 +2055,9 @@ public class client extends Engine {
 				Class320.aClass253_3723.method4334();
 			}
 
-			if (Class176.method2980(GAME_STATE)) {
+			if (GameState.method2980(GAME_STATE)) {
 				if (aLong7307 != 0L && Utils.time() > aLong7307) {
-					UID192.method7373(Class158.windowedMode(), -1, -1, false);
+					UID192.method7373(Class158.getScreenMode(), -1, -1);
 				} else if (!Renderers.CURRENT_RENDERER.method8465() && aBool3257) {
 					Class350_Sub2.method12571();
 				}
@@ -2078,8 +2087,8 @@ public class client extends Engine {
 				}
 			}
 
-			if (Class475.supportsFullScreen && fullScreenFrame != null && !IFSubObjectPosition.appletHasFocus && Class176.method2980(GAME_STATE)) {
-				UID192.method7373(Class393.preferences.screenSize.method12687(), -1, -1, false);
+			if (Class475.supportsFullScreen && fullScreenFrame != null && !IFSubObjectPosition.appletHasFocus && GameState.method2980(GAME_STATE)) {
+				UID192.method7373(Class393.preferences.screenSize.method12687(), -1, -1);
 			}
 
 			boolean bool_9 = false;
@@ -2092,15 +2101,15 @@ public class client extends Engine {
 				EntityNode.method4891();
 			}
 
-			if (Renderers.CURRENT_RENDERER != null && Renderers.CURRENT_RENDERER.method8465() || Class158.windowedMode() != 1) {
+			if (Renderers.CURRENT_RENDERER != null && Renderers.CURRENT_RENDERER.method8465() || Class158.getScreenMode() != 1) {
 				Static.method6378();
 			}
 
-			if (Class504.loadingState(GAME_STATE)) {
+			if (GameState.loadingState(GAME_STATE)) {
 				NodeCollection.method8144(bool_9);
-			} else if (Class245.method4198(GAME_STATE)) {
+			} else if (GameState.method4198(GAME_STATE)) {
 				ParticleProducer.method11501();
-			} else if (Class325.method5789(GAME_STATE)) {
+			} else if (GameState.method5789(GAME_STATE)) {
 				ParticleProducer.method11501();
 			} else if (GameState.method7742(GAME_STATE)) {
 				if (IndexLoaders.MAP_REGION_DECODER.method4420() == Class339.aClass339_3985) {
@@ -2112,11 +2121,11 @@ public class client extends Engine {
 				} else {
 					Class446.method7447(LocalizedText.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE), true, Renderers.CURRENT_RENDERER, Class16.aFontRenderer_144, Class16.aClass414_139);
 				}
-			} else if (GAME_STATE == 13) {
+			} else if (GAME_STATE == GameState.UNK_13) {
 				Class152.method2601(long_2);
-			} else if (GAME_STATE == 10) {
+			} else if (GAME_STATE == GameState.UNK_10) {
 				Class446.method7447(LocalizedText.CONNECTION_LOST.translate(Class223.CURRENT_LANGUAGE) + "<br>" + LocalizedText.ATTEMPTING_TO_REESTABLISH.translate(Class223.CURRENT_LANGUAGE), false, Renderers.CURRENT_RENDERER, Class16.aFontRenderer_144, Class16.aClass414_139);
-			} else if (GAME_STATE == 17) {
+			} else if (GAME_STATE == GameState.UNK_17) {
 				Class446.method7447(LocalizedText.PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE), false, Renderers.CURRENT_RENDERER, Class16.aFontRenderer_144, Class16.aClass414_139);
 			}
 
@@ -2135,12 +2144,12 @@ public class client extends Engine {
 				ObjectNode.method13409(Renderers.CURRENT_RENDERER);
 			}
 
-			if (!Class504.loadingState(GAME_STATE) && !GameState.method7742(GAME_STATE) && BASE_WINDOW_ID != -1) {
+			if (!GameState.loadingState(GAME_STATE) && !GameState.method7742(GAME_STATE) && BASE_WINDOW_ID != -1) {
 				try {
 					Renderers.CURRENT_RENDERER.method8393();
 				} catch (Exception_Sub3 exception_sub3_12) {
 					Class151.method2594(exception_sub3_12.getMessage() + " " + method4669(), exception_sub3_12);
-					ParticleProducer.method11500(0, false);
+					ParticleProducer.switchRenderType(0, false);
 				}
 			}
 
@@ -2160,7 +2169,7 @@ public class client extends Engine {
 				Class378.method6438();
 			}
 
-			if (Class393.preferences.safeMode.getValue() == 1 && GAME_STATE == 5 && BASE_WINDOW_ID != -1) {
+			if (Class393.preferences.safeMode.getValue() == 1 && GAME_STATE == GameState.UNK_5 && BASE_WINDOW_ID != -1) {
 				Class393.preferences.setValue(Class393.preferences.safeMode, 0);
 				Class190.savePreferences();
 			}
@@ -2181,7 +2190,7 @@ public class client extends Engine {
 				str_2 = str_2 + Class4.MY_PLAYER_PLANE + "," + Class4.MY_PLAYER_PLANE + "," + Class4.MY_PLAYER_PLANE + "," + " ";
 			}
 
-			str_2 = str_2 + Class393.preferences.currentToolkit.getValue() + " " + Class393.preferences.antiAliasingDefault.method12641() + " " + Class158.windowedMode() + " " + ChangeClanSetting.BASE_WINDOW_WIDTH + "," + BASE_WINDOW_HEIGHT * -969250379 + " ";
+			str_2 = str_2 + Class393.preferences.currentToolkit.getValue() + " " + Class393.preferences.antiAliasingDefault.method12641() + " " + Class158.getScreenMode() + " " + ChangeClanSetting.BASE_WINDOW_WIDTH + "," + BASE_WINDOW_HEIGHT * -969250379 + " ";
 			str_2 = str_2 + Class393.preferences.lightDetail.method12786() + " ";
 			str_2 = str_2 + Class393.preferences.sceneryShadows.method12624() + " ";
 			str_2 = str_2 + Class393.preferences.water.getValue() + " ";
@@ -2260,23 +2269,23 @@ public class client extends Engine {
 
 			if (Class119.JS5_STANDARD_REQUESTER.anInt3657 >= 2 && Class119.JS5_STANDARD_REQUESTER.anInt3650 == 6) {
 				method4680("js5connect_outofdate");
-				GAME_STATE = 16;
+				GAME_STATE = GameState.UNK_16;
 				return;
 			}
 
 			if (Class119.JS5_STANDARD_REQUESTER.anInt3657 >= 1 && Class119.JS5_STANDARD_REQUESTER.anInt3650 == 48) {
 				method4680("sessionexpired");
-				GAME_STATE = 16;
+				GAME_STATE = GameState.UNK_16;
 				return;
 			}
 
 			if (Class119.JS5_STANDARD_REQUESTER.anInt3657 >= 4 && Class119.JS5_STANDARD_REQUESTER.anInt3650 == -1) {
 				method4680("js5crc");
-				GAME_STATE = 16;
+				GAME_STATE = GameState.UNK_16;
 				return;
 			}
 
-			if (Class119.JS5_STANDARD_REQUESTER.anInt3657 >= 4 && Class504.loadingState(GAME_STATE)) {
+			if (Class119.JS5_STANDARD_REQUESTER.anInt3657 >= 4 && GameState.loadingState(GAME_STATE)) {
 				if (Class119.JS5_STANDARD_REQUESTER.anInt3650 != 7 && Class119.JS5_STANDARD_REQUESTER.anInt3650 != 9) {
 					if (Class119.JS5_STANDARD_REQUESTER.anInt3650 > 0) {
 						if (aString7463 == null) {
@@ -2291,7 +2300,7 @@ public class client extends Engine {
 					method4680("js5connect_full");
 				}
 
-				GAME_STATE = 16;
+				GAME_STATE = GameState.UNK_16;
 				return;
 			}
 		}
@@ -2353,7 +2362,7 @@ public class client extends Engine {
 							arr_10[i_5].method7439(rsbytebuffer_4.readInt());
 						}
 
-						boolean loggedOut = Class504.loadingState(GAME_STATE) || GameState.loggedOut(GAME_STATE) || GameState.inLobby(GAME_STATE);
+						boolean loggedOut = GameState.loadingState(GAME_STATE) || GameState.loggedOut(GAME_STATE) || GameState.inLobby(GAME_STATE);
 						Class119.JS5_STANDARD_REQUESTER.init(Class47_Sub1.updateConnection, !loggedOut);
 						MaterialProp8.clientSocket = null;
 						Class47_Sub1.updateConnection = null;
@@ -2448,7 +2457,7 @@ public class client extends Engine {
 			} catch (Throwable throwable_4) {
 				Class151.method2594(throwable_4.getMessage() + " " + method4669(), throwable_4);
 				aBool7171 = true;
-				ParticleProducer.method11500(0, false);
+				ParticleProducer.switchRenderType(0, false);
 			}
 		} else {
 			method11620();
@@ -2528,7 +2537,7 @@ public class client extends Engine {
 			} catch (Throwable throwable_3) {
 				Class151.method2594(throwable_3.getMessage() + " " + method4669(), throwable_3);
 				aBool7171 = true;
-				ParticleProducer.method11500(0, false);
+				ParticleProducer.switchRenderType(0, false);
 			}
 		} else {
 			method11620();
@@ -2552,9 +2561,9 @@ public class client extends Engine {
 			fullScreenFrame = null;
 		}
 
-		GAME_CONNECTION_CONTEXT.method3051();
+		GAME_CONNECTION_CONTEXT.end();
 		GAME_CONNECTION_CONTEXT.pinger.finishPingRequest();
-		LOBBY_CONNECTION_CONTEXT.method3051();
+		LOBBY_CONNECTION_CONTEXT.end();
 		LOBBY_CONNECTION_CONTEXT.pinger.finishPingRequest();
 		VorbisFileReference.method13449();
 		Class119.JS5_STANDARD_REQUESTER.method5525();
@@ -2661,9 +2670,9 @@ public class client extends Engine {
 			fullScreenFrame = null;
 		}
 
-		GAME_CONNECTION_CONTEXT.method3051();
+		GAME_CONNECTION_CONTEXT.end();
 		GAME_CONNECTION_CONTEXT.pinger.finishPingRequest();
-		LOBBY_CONNECTION_CONTEXT.method3051();
+		LOBBY_CONNECTION_CONTEXT.end();
 		LOBBY_CONNECTION_CONTEXT.pinger.finishPingRequest();
 		VorbisFileReference.method13449();
 		Class119.JS5_STANDARD_REQUESTER.method5525();
@@ -2691,9 +2700,8 @@ public class client extends Engine {
 
 	}
 
-	void method12044() {
-		int i_2;
-		if (GAME_STATE == 0 && !JS5CacheFile.method3360() || GAME_STATE == 7 && Class9.anInt106 == 42 || GAME_STATE == 3) {
+	void pulseLobbyConnection() {
+		if (GAME_STATE == GameState.UNK_0 && !JS5CacheFile.method3360() || GAME_STATE == GameState.UNK_7 && Class9.anInt106 == 42 || GAME_STATE == GameState.IN_ACCOUNT_CREATION) {
 			if (REBOOT_TIMER > 1) {
 				--REBOOT_TIMER;
 				anInt7397 = anInt7347;
@@ -2703,8 +2711,7 @@ public class client extends Engine {
 				HitsplatDefinitions.method3851();
 			}
 
-			for (i_2 = 0; i_2 < 100 && FontRenderer_Sub3.method14338(LOBBY_CONNECTION_CONTEXT); i_2++) {
-			}
+			for (int i = 0; i < 100 && PacketDecoder.processIncoming(LOBBY_CONNECTION_CONTEXT); i++) { }
 		}
 
 		PulseEvent.processPulseEvents();
@@ -2715,8 +2722,8 @@ public class client extends Engine {
 		ServerEnvironment.pulseSubInterfaces();
 		++anInt7347;
 
-		for (i_2 = 0; i_2 < anInt7210; i_2++) {
-			NPCEntity npc_3 = (NPCEntity) NPC_ARRAY[i_2].anObject8068;
+		for (int i = 0; i < anInt7210; i++) {
+			NPCEntity npc_3 = (NPCEntity) NPC_ARRAY[i].anObject8068;
 			if (npc_3 != null) {
 				byte b_4 = npc_3.definitions.walkMask;
 				if ((b_4 & 0x1) != 0) {
@@ -2771,7 +2778,7 @@ public class client extends Engine {
 			}
 		}
 
-		if ((GAME_STATE == 5 || GAME_STATE == 7 || GAME_STATE == 0 || GAME_STATE == 3) && (!JS5CacheFile.method3360() || GAME_STATE == 7 && Class9.anInt106 == 42) && !Class85.method1466()) {
+		if ((GAME_STATE == GameState.UNK_5 || GAME_STATE == GameState.UNK_7 || GAME_STATE == GameState.UNK_0 || GAME_STATE == GameState.IN_ACCOUNT_CREATION) && (!JS5CacheFile.method3360() || GAME_STATE == GameState.UNK_7 && Class9.anInt106 == 42) && !Class85.method1466()) {
 			if (NativeLibraryLoader.anInt3240 == 5) {
 				Wall.method16113();
 			} else {
@@ -2806,7 +2813,7 @@ public class client extends Engine {
 												Class60.method1172();
 											}
 
-											if (GAME_STATE == 0 && !JS5CacheFile.method3360() || GAME_STATE == 7 && Class9.anInt106 == 42) {
+											if (GAME_STATE == GameState.UNK_0 && !JS5CacheFile.method3360() || GAME_STATE == GameState.UNK_7 && Class9.anInt106 == 42) {
 												FriendStatus.method7703();
 											}
 
@@ -2818,34 +2825,34 @@ public class client extends Engine {
 											for (EntityNode_Sub4 class275_sub4_17 = (EntityNode_Sub4) aClass457_7350.method7659(); class275_sub4_17 != null; class275_sub4_17 = (EntityNode_Sub4) aClass457_7350.method7650()) {
 												if (class275_sub4_17.anInt7838 < Utils.time() / 1000L - 5L) {
 													if (class275_sub4_17.aShort7839 > 0) {
-														ChatLine.appendChatMessage(5, 0, "", "", "", class275_sub4_17.aString7837 + LocalizedText.HAS_LOGGED_IN.translate(Class223.CURRENT_LANGUAGE));
+														ChatLine.appendChatMessage(MessageType.FRIENDS_STATUS, 0, "", "", "", class275_sub4_17.aString7837 + LocalizedText.HAS_LOGGED_IN.translate(Class223.CURRENT_LANGUAGE));
 													}
 
 													if (class275_sub4_17.aShort7839 == 0) {
-														ChatLine.appendChatMessage(5, 0, "", "", "", class275_sub4_17.aString7837 + LocalizedText.HAS_LOGGED_OUT.translate(Class223.CURRENT_LANGUAGE));
+														ChatLine.appendChatMessage(MessageType.FRIENDS_STATUS, 0, "", "", "", class275_sub4_17.aString7837 + LocalizedText.HAS_LOGGED_OUT.translate(Class223.CURRENT_LANGUAGE));
 													}
 
 													class275_sub4_17.method4887();
 												}
 											}
 
-											if (GAME_STATE == 0 && !JS5CacheFile.method3360() || GAME_STATE == 7 && Class9.anInt106 == 42 || GAME_STATE == 3) {
-												if (GAME_STATE != 7 && LOBBY_CONNECTION_CONTEXT.getConnection() == null) {
-													CursorIndexLoader.method7333(false);
+											if (GAME_STATE == GameState.UNK_0 && !JS5CacheFile.method3360() || GAME_STATE == GameState.UNK_7 && Class9.anInt106 == 42 || GAME_STATE == GameState.IN_ACCOUNT_CREATION) {
+												if (GAME_STATE != GameState.UNK_7 && LOBBY_CONNECTION_CONTEXT.getConnection() == null) {
+													CursorIndexLoader.killConnections(false);
 												} else if (LOBBY_CONNECTION_CONTEXT != null) {
 													++LOBBY_CONNECTION_CONTEXT.anInt2290;
 													if (LOBBY_CONNECTION_CONTEXT.anInt2290 > 50) {
-														TCPPacket tcpmessage_18 = TCPPacket.createPacket(ClientProt.PING, LOBBY_CONNECTION_CONTEXT.isaac);
+														TCPPacket tcpmessage_18 = TCPPacket.createPacket(ClientProt.PING, LOBBY_CONNECTION_CONTEXT.outKeys);
 														LOBBY_CONNECTION_CONTEXT.queuePacket(tcpmessage_18);
 													}
 
 													try {
 														LOBBY_CONNECTION_CONTEXT.flush();
 													} catch (IOException ioexception_15) {
-														if (GAME_STATE == 7) {
-															LOBBY_CONNECTION_CONTEXT.method3051();
+														if (GAME_STATE == GameState.UNK_7) {
+															LOBBY_CONNECTION_CONTEXT.end();
 														} else {
-															CursorIndexLoader.method7333(false);
+															CursorIndexLoader.killConnections(false);
 														}
 													}
 												}

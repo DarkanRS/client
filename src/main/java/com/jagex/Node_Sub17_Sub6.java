@@ -1,6 +1,5 @@
 package com.jagex;
 
-import com.Loader;
 import com.jagex.clans.settings.ClanSettings;
 
 public class Node_Sub17_Sub6 extends Node_Sub17 {
@@ -47,11 +46,8 @@ public class Node_Sub17_Sub6 extends Node_Sub17 {
                 throw new RuntimeException();
             }
         } catch (Throwable throwable_10) {
-            if (Loader.DISABLE_XTEA_CRASH) {
-                return new byte[100];
-            } else {
-                throw new RuntimeException();
-            }
+        	return new byte[100];
+        	//throw new RuntimeException(); //Disables XTEA Crash
         }
     }
 

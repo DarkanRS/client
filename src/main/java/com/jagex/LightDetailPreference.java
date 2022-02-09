@@ -20,7 +20,7 @@ public class LightDetailPreference extends Preference {
             if (ccPlayer.rank == -1) {
                 String ccPlayerName = ccPlayer.name;
                 BufferedConnectionContext connection = BufferedConnectionContext.getConnectionContext();
-                TCPPacket packet = TCPPacket.createPacket(ClientProt.CLANCHANNEL_KICKUSER, connection.isaac);
+                TCPPacket packet = TCPPacket.createPacket(ClientProt.CLANCHANNEL_KICKUSER, connection.outKeys);
                 packet.buffer.writeByte(3 + ChatLine.getLength(ccPlayerName));
                 packet.buffer.writeByte(mainCC ? 1 : 0);
                 packet.buffer.writeShort(playerIndex);

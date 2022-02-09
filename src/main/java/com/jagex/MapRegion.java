@@ -183,20 +183,20 @@ public class MapRegion {
             hdWaterMapDataArchiveIds[regionId] = -1;
             hdWaterLandscapeDataArchiveIds[regionId] = -1;
         }
-        byte b_11;
-        if (client.GAME_STATE == 5) {
-            b_11 = 11;
-        } else if (client.GAME_STATE == 7) {
-            b_11 = 6;
-        } else if (client.GAME_STATE == 0) {
-            b_11 = 2;
+        GameState newState;
+        if (client.GAME_STATE == GameState.UNK_5) {
+        	newState = GameState.UNK_11;
+        } else if (client.GAME_STATE == GameState.UNK_7) {
+        	newState = GameState.UNK_6;
+        } else if (client.GAME_STATE == GameState.UNK_0) {
+        	newState = GameState.UNK_2;
         } else {
-            if (client.GAME_STATE != 3) {
+            if (client.GAME_STATE != GameState.IN_ACCOUNT_CREATION) {
                 throw new RuntimeException("" + client.GAME_STATE);
             }
-            b_11 = 9;
+            newState = GameState.UNK_9;
         }
-        method4458(mapBaseX, mapBaseY, b_11, false);
+        method4458(mapBaseX, mapBaseY, newState, false);
     }
 
     public int getSizeX() {
@@ -348,7 +348,7 @@ public class MapRegion {
                 }
             }
         }
-        method4458(regionX, regionY, 18, forceRefresh);
+        method4458(regionX, regionY, GameState.UNK_18, forceRefresh);
     }
 
     public void method4440(byte[][][] bytes_1) {
@@ -437,7 +437,7 @@ public class MapRegion {
                 ++i_6;
             }
         }
-        method4458(i_3, i_4, 18, bool_5);
+        method4458(i_3, i_4, GameState.UNK_18, bool_5);
     }
 
 	String getArchiveName(boolean settingsData, boolean underwaterMap, int regionX, int regionY) {
@@ -480,7 +480,7 @@ public class MapRegion {
         }
     }
 
-    void method4458(int i_1, int i_2, int i_3, boolean bool_4) {
+    void method4458(int i_1, int i_2, GameState state, boolean bool_4) {
         if (client.anInt7341 == 2) {
             if (aBool3171) {
                 throw new IllegalStateException();
@@ -492,7 +492,7 @@ public class MapRegion {
             anInt3170 = i_1;
             anInt3207 = i_2;
             if (!aBool3171) {
-                GameState.setGameState(i_3);
+                GameState.setGameState(state);
                 Class446.method7447(LocalizedText.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE), true, Renderers.CURRENT_RENDERER, Class16.aFontRenderer_144, Class16.aClass414_139);
             }
             if (coordGrid != null) {
@@ -504,19 +504,19 @@ public class MapRegion {
             aCacheableNode_Sub6_3176 = Class291.method5175(coordGrid.x, coordGrid.y);
             mapStaticElements = null;
             if (!aBool3171) {
-                method4459(i_3);
+                method4459(state);
             }
         }
     }
 
-    void method4459(int i_1) {
+    void method4459(GameState state) {
         int i_3 = coordGrid.x - aClass219_3169.x;
         int i_4 = coordGrid.y - aClass219_3169.y;
         int i_5;
         int i_6;
         int i_8;
         int i_16;
-        if (i_1 == 18) {
+        if (state == GameState.UNK_18) {
             for (i_5 = 0; i_5 < client.anInt7210; i_5++) {
                 ObjectNode class282_sub47_15 = client.NPC_ARRAY[i_5];
                 if (class282_sub47_15 != null) {
@@ -637,7 +637,7 @@ public class MapRegion {
         }
         Class16.method566();
         ClipFlagMap.method6008(false);
-        if (i_1 == 18) {
+        if (state == GameState.UNK_18) {
             client.anInt7262 -= i_3 * 512;
             client.anInt7376 -= i_4 * 512;
             Class11.anInt122 -= i_3 * 512;
@@ -958,7 +958,7 @@ public class MapRegion {
                     }
                     IndexLoaders.MAP_REGION_DECODER = this;
                     mapregion_12.method4460();
-                    method4459(18);
+                    method4459(GameState.UNK_18);
                     method4457();
                 } else {
                     MaterialPropTexture.method15391();
@@ -981,8 +981,8 @@ public class MapRegion {
                 ClanVarDefinitions.method6823();
                 Class48_Sub2.method14571();
                 TCPPacket tcpmessage_22;
-                if (NamedFileReference.method867() == Class279.aClass279_3368 && client.GAME_CONNECTION_CONTEXT.getConnection() != null && client.GAME_STATE == 18) {
-                    tcpmessage_22 = TCPPacket.createPacket(ClientProt.UNK_82, client.GAME_CONNECTION_CONTEXT.isaac);
+                if (NamedFileReference.method867() == Class279.aClass279_3368 && client.GAME_CONNECTION_CONTEXT.getConnection() != null && client.GAME_STATE == GameState.UNK_18) {
+                    tcpmessage_22 = TCPPacket.createPacket(ClientProt.UNK_82, client.GAME_CONNECTION_CONTEXT.outKeys);
                     tcpmessage_22.buffer.writeInt(1057001181);
                     client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_22);
                 }
@@ -1002,18 +1002,18 @@ public class MapRegion {
                         }
                     }
                 }
-                if (client.GAME_STATE == 11) {
-                    GameState.setGameState(5);
-                } else if (client.GAME_STATE == 2) {
-                    GameState.setGameState(0);
-                } else if (client.GAME_STATE == 6) {
-                    GameState.setGameState(7);
-                } else if (client.GAME_STATE == 9) {
-                    GameState.setGameState(3);
+                if (client.GAME_STATE == GameState.UNK_11) {
+                    GameState.setGameState(GameState.UNK_5);
+                } else if (client.GAME_STATE == GameState.UNK_2) {
+                    GameState.setGameState(GameState.UNK_0);
+                } else if (client.GAME_STATE == GameState.UNK_6) {
+                    GameState.setGameState(GameState.UNK_7);
+                } else if (client.GAME_STATE == GameState.UNK_9) {
+                    GameState.setGameState(GameState.IN_ACCOUNT_CREATION);
                 } else {
-                    GameState.setGameState(13);
+                    GameState.setGameState(GameState.UNK_13);
                     if (client.GAME_CONNECTION_CONTEXT.getConnection() != null) {
-                        tcpmessage_22 = TCPPacket.createPacket(ClientProt.REGION_LOADED_CONFIRM, client.GAME_CONNECTION_CONTEXT.isaac);
+                        tcpmessage_22 = TCPPacket.createPacket(ClientProt.REGION_LOADED_CONFIRM, client.GAME_CONNECTION_CONTEXT.outKeys);
                         client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_22);
                     }
                 }
@@ -1284,7 +1284,7 @@ public class MapRegion {
         }
         xteas = NativeLibraryLoader.CUTSCENE_MAP_XTEAS;
         NativeLibraryLoader.CUTSCENE_MAP_XTEAS = null;
-        method4458(sizeX >> 4, sizeY >> 4, 18, false);
+        method4458(sizeX >> 4, sizeY >> 4, GameState.UNK_18, false);
     }
 
     public void loadMapScene(Class335 class335_1) {
@@ -1364,16 +1364,16 @@ public class MapRegion {
             anInt3207 = mapregion_2.anInt3207;
             sizeX = mapregion_2.sizeX;
             sizeY = mapregion_2.sizeY;
-        } else if (client.GAME_STATE == 5) {
-            GameState.setGameState(11);
-        } else if (client.GAME_STATE == 0) {
-            GameState.setGameState(2);
-        } else if (client.GAME_STATE == 7) {
-            GameState.setGameState(6);
-        } else if (client.GAME_STATE == 13) {
-            GameState.setGameState(18);
-        } else if (client.GAME_STATE == 3) {
-            GameState.setGameState(9);
+        } else if (client.GAME_STATE == GameState.UNK_5) {
+            GameState.setGameState(GameState.UNK_11);
+        } else if (client.GAME_STATE == GameState.UNK_0) {
+            GameState.setGameState(GameState.UNK_2);
+        } else if (client.GAME_STATE == GameState.UNK_7) {
+            GameState.setGameState(GameState.UNK_6);
+        } else if (client.GAME_STATE == GameState.UNK_13) {
+            GameState.setGameState(GameState.UNK_18);
+        } else if (client.GAME_STATE == GameState.IN_ACCOUNT_CREATION) {
+            GameState.setGameState(GameState.UNK_9);
         }
     }
 

@@ -1,9 +1,9 @@
 package com.jagex;
 
-import com.jagex.clans.ClanChannel;
-
 import java.io.IOException;
 import java.net.Socket;
+
+import com.jagex.clans.ClanChannel;
 
 public class AsyncConnection extends Connection {
 
@@ -15,12 +15,12 @@ public class AsyncConnection extends Connection {
 
     AsyncOutputStream outputStream;
 
-    AsyncConnection(Socket socket_1, int i_2) throws IOException {
+    AsyncConnection(Socket socket_1, int bufferSize) throws IOException {
         socket = socket_1;
         socket.setSoTimeout(30000);
         socket.setTcpNoDelay(true);
-        inputStream = new AsyncInputStream(socket.getInputStream(), i_2);
-        outputStream = new AsyncOutputStream(socket.getOutputStream(), i_2);
+        inputStream = new AsyncInputStream(socket.getInputStream(), bufferSize);
+        outputStream = new AsyncOutputStream(socket.getOutputStream(), bufferSize);
     }
 
     @Override
@@ -30,12 +30,12 @@ public class AsyncConnection extends Connection {
 
     @Override
     public boolean available(int i_1) throws IOException {
-        return inputStream.method5030(i_1);
+        return inputStream.available(i_1);
     }
 
     @Override
-    public void method3330() {
-        outputStream.method5094();
+    public void endDummy4() {
+        outputStream.end();
         try {
             socket.close();
         } catch (IOException ignored) {
@@ -55,18 +55,18 @@ public class AsyncConnection extends Connection {
 
     @Override
     protected void finalize() {
-        method3318();
+        end();
     }
 
     @Override
     public void method3320() {
-        inputStream.method5031();
-        outputStream.method5089();
+        inputStream.close();
+        outputStream.close();
     }
 
     @Override
     public void method3310() {
-        outputStream.method5094();
+        outputStream.end();
         try {
             socket.close();
         } catch (IOException ignored) {
@@ -76,29 +76,29 @@ public class AsyncConnection extends Connection {
 
     @Override
     public boolean method3328(int i_1) throws IOException {
-        return inputStream.method5030(i_1);
+        return inputStream.available(i_1);
     }
 
     @Override
     public void method3332() {
-        inputStream.method5031();
-        outputStream.method5089();
+        inputStream.close();
+        outputStream.close();
     }
 
     @Override
     public void method3333() {
-        inputStream.method5031();
-        outputStream.method5089();
+        inputStream.close();
+        outputStream.close();
     }
 
     @Override
     public boolean method3329(int i_1) throws IOException {
-        return inputStream.method5030(i_1);
+        return inputStream.available(i_1);
     }
 
     @Override
     public boolean method3321(int i_1) throws IOException {
-        return inputStream.method5030(i_1);
+        return inputStream.available(i_1);
     }
 
     @Override
@@ -127,8 +127,8 @@ public class AsyncConnection extends Connection {
     }
 
     @Override
-    public void method3316() {
-        outputStream.method5094();
+    public void endDummy2() {
+        outputStream.end();
         try {
             socket.close();
         } catch (IOException ignored) {
@@ -137,8 +137,8 @@ public class AsyncConnection extends Connection {
     }
 
     @Override
-    public void method3318() {
-        outputStream.method5094();
+    public void end() {
+        outputStream.end();
         try {
             socket.close();
         } catch (IOException ignored) {
@@ -148,23 +148,23 @@ public class AsyncConnection extends Connection {
 
     @Override
     public boolean method3317(int i_1) throws IOException {
-        return inputStream.method5030(i_1);
+        return inputStream.available(i_1);
     }
 
     @Override
     public void method3331() {
-        inputStream.method5031();
-        outputStream.method5089();
+        inputStream.close();
+        outputStream.close();
     }
 
     @Override
     public boolean method3319(int i_1) throws IOException {
-        return inputStream.method5030(i_1);
+        return inputStream.available(i_1);
     }
 
     @Override
-    public void method3314() {
-        outputStream.method5094();
+    public void endDummy1() {
+        outputStream.end();
         try {
             socket.close();
         } catch (IOException ignored) {

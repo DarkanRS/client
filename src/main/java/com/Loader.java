@@ -25,9 +25,7 @@ public class Loader extends Applet implements AppletStub {
     public static final int DEFAULT_WORLD = 1;
     public static final BigInteger RSA_PUBLIC_MODULUS = new BigInteger("117525752735533423040644219776209926525585489242340044375332234679786347045466594509203355398209678968096551043842518449703703964361320462967286756268851663407950384008240524570966471744081769815157355561961607944067477858512067883877129283799853947605780903005188603658779539811385137666347647991072028080201");
     public static final BigInteger RSA_PUBLIC_EXPONENT = new BigInteger("65537");
-    public static final boolean USING_ISAAC = false;
-    public static final boolean LOBBY_ENABLED = true;
-    public static final boolean DISABLE_XTEA_CRASH = true;
+	public static final boolean DEBUG = false;
     public static String IP_ADDRESS;
     public static Properties clientParams = new Properties();
 
@@ -39,7 +37,7 @@ public class Loader extends Applet implements AppletStub {
     	if (args.length > 0 && args[0] != null)
     		IP_ADDRESS = args[0];
     	else
-    		IP_ADDRESS = "testlobby.darkan.org"; //axios.trentonkress.com
+    		IP_ADDRESS = "dev.darkan.org"; //axios.trentonkress.com
     	if (args.length > 1 && args[1] != null)
     		LOBBY_PORT = Integer.valueOf(args[1]);
     	loadParams();
@@ -132,7 +130,6 @@ public class Loader extends Applet implements AppletStub {
     }
 
     private void startClient() {
-
         client clnt = new client();
         clnt.supplyApplet(this);
         clnt.init();

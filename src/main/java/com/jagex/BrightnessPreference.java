@@ -26,7 +26,7 @@ public class BrightnessPreference extends Preference {
             Class276.aNode_Sub35_3346 = null;
             client.aBool7321 = false;
             Class79.method1390();
-            TCPPacket tcpmessage_5 = TCPPacket.createPacket(ClientProt.CUTSCENE_FINISHED, client.GAME_CONNECTION_CONTEXT.isaac);
+            TCPPacket tcpmessage_5 = TCPPacket.createPacket(ClientProt.CUTSCENE_FINISHED, client.GAME_CONNECTION_CONTEXT.outKeys);
             tcpmessage_5.buffer.writeByte(bool_0 ? 1 : 0);
             client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_5);
         }

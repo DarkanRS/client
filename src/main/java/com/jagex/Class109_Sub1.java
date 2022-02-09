@@ -1,7 +1,5 @@
 package com.jagex;
 
-import java.awt.*;
-
 class Class109_Sub1 extends Class109 {
 
     static int CAM_MOVE_ABSOLUTEZ;

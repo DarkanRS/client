@@ -1,10 +1,26 @@
 plugins {
     id 'java'
+    id 'java-library'
     id 'application'
 }
 
 sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
+
+tasks.withType(JavaCompile).configureEach {
+    javaCompiler = javaToolchains.compilerFor {
+        languageVersion = JavaLanguageVersion.of(8)
+    }
+}
+
+task('run8', type: JavaExec) {
+    javaLauncher = javaToolchains.launcherFor {
+        languageVersion = JavaLanguageVersion.of(8)
+    }
+
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = application.mainClass
+}
 
 mainClassName = 'com.Loader'
 
@@ -18,4 +34,24 @@ version '1.0-SNAPSHOT'
 
 dependencies {
 	
+}
+
+task buildJar(type: Jar) {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    manifest {
+        attributes(
+                'Main-Class': 'com.Loader'
+        )
+    }
+    classifier = 'all'
+    baseName = 'MyJar'
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+            {
+                exclude "META-INF/*.SF"
+                exclude "META-INF/*.DSA"
+                exclude "META-INF/*.RSA"
+            }
+    with jar
 }

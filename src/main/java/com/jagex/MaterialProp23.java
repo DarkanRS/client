@@ -13,25 +13,25 @@ public class MaterialProp23 extends MaterialProperty {
     }
 
     //Every 20ms pulsed (50 fps lock)
-    static void pulseLoggedInLogic() {
+    static void pulseWorldConnection() {
         if (client.REBOOT_TIMER > 1) {
             --client.REBOOT_TIMER;
             client.anInt7397 = client.anInt7347;
         }
         if (client.GAME_CONNECTION_CONTEXT.aBool2298) {
             client.GAME_CONNECTION_CONTEXT.aBool2298 = false;
-            Class151.method2592();
+            Class151.killConnections();
         } else {
             if (!Class20.aBool161) {
                 HitsplatDefinitions.method3851();
             }
-            for (int i_1 = 0; i_1 < 100 && FontRenderer_Sub3.method14338(client.GAME_CONNECTION_CONTEXT); i_1++) {
+            for (int i_1 = 0; i_1 < 100 && PacketDecoder.processIncoming(client.GAME_CONNECTION_CONTEXT); i_1++) {
             }
-            if (client.GAME_STATE == 13) {
+            if (client.GAME_STATE == GameState.UNK_13) {
                 int i_2;
                 TCPPacket tcpmessage_6;
                 while (HashTableIterator.hasValues()) {
-                    tcpmessage_6 = TCPPacket.createPacket(ClientProt.REFLECTION_CHECK, client.GAME_CONNECTION_CONTEXT.isaac);
+                    tcpmessage_6 = TCPPacket.createPacket(ClientProt.REFLECTION_CHECK, client.GAME_CONNECTION_CONTEXT.outKeys);
                     tcpmessage_6.buffer.writeByte(0);
                     i_2 = tcpmessage_6.buffer.index;
                     FontRenderer_Sub2.method14264(tcpmessage_6.buffer);
@@ -40,7 +40,7 @@ public class MaterialProp23 extends MaterialProperty {
                 }
                 if (PingRequest.CURRENT_REQUEST != null) {
                     if (PingRequest.CURRENT_REQUEST.ping != -1) {
-                        tcpmessage_6 = TCPPacket.createPacket(ClientProt.WRITE_PING, client.GAME_CONNECTION_CONTEXT.isaac);
+                        tcpmessage_6 = TCPPacket.createPacket(ClientProt.WRITE_PING, client.GAME_CONNECTION_CONTEXT.outKeys);
                         tcpmessage_6.buffer.writeShort(PingRequest.CURRENT_REQUEST.ping);
                         client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_6);
                         PingRequest.CURRENT_REQUEST = null;
@@ -69,7 +69,7 @@ public class MaterialProp23 extends MaterialProperty {
                     client.aFloat7266 /= 2.0F;
                 }
                 MaterialProp30.method15240();
-                if (client.GAME_STATE == 13) {
+                if (client.GAME_STATE == GameState.UNK_13) {
                     IndexLoaders.MAP_REGION_DECODER.method4435().method4037(IndexLoaders.MAP_REGION_DECODER);
                     Class350_Sub1.method12516();
                     Interface.method1623();
@@ -77,7 +77,7 @@ public class MaterialProp23 extends MaterialProperty {
                         ++client.GAME_CONNECTION_CONTEXT.idleReadPulses;
                     }
                     if (client.GAME_CONNECTION_CONTEXT.idleReadPulses > 2250) {
-                        Class151.method2592();
+                        Class151.killConnections();
                     } else {
                         if (client.anInt7341 == 1) {
                             Class155.method2636();
@@ -89,7 +89,7 @@ public class MaterialProp23 extends MaterialProperty {
                                 IndexLoaders.MAP_REGION_DECODER.loadMapScene(new Class335(Class256.aClass256_3153, null));
                                 client.anInt7341 = 0;
                             }
-                            if (client.anInt7341 == 0 && client.GAME_STATE != 18) {
+                            if (client.anInt7341 == 0 && client.GAME_STATE != GameState.UNK_18) {
                                 Class86.aClass465_823.method7749();
                                 client.anInt7341 = 4;
                                 client.anInt7357 = client.CYCLES_20MS;
@@ -147,7 +147,7 @@ public class MaterialProp23 extends MaterialProperty {
                         ++client.anInt7347;
                         TCPPacket tcpmessage_8;
                         if (client.aBool7375) {
-                            tcpmessage_8 = TCPPacket.createPacket(ClientProt.WORLD_MAP_CLICK, client.GAME_CONNECTION_CONTEXT.isaac);
+                            tcpmessage_8 = TCPPacket.createPacket(ClientProt.WORLD_MAP_CLICK, client.GAME_CONNECTION_CONTEXT.outKeys);
                             tcpmessage_8.buffer.writeIntLE(Node_Sub15_Sub5.anInt9859 << 28 | IdentikitDefinition.anInt431 << 14 | StructIndexLoader.anInt5015);
                             client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_8);
                             client.aBool7375 = false;
@@ -193,10 +193,10 @@ public class MaterialProp23 extends MaterialProperty {
                                                             for (EntityNode_Sub4 class275_sub4_15 = (EntityNode_Sub4) client.aClass457_7350.method7659(); class275_sub4_15 != null; class275_sub4_15 = (EntityNode_Sub4) client.aClass457_7350.method7650()) {
                                                                 if (class275_sub4_15.anInt7838 < Utils.time() / 1000L - 5L) {
                                                                     if (class275_sub4_15.aShort7839 > 0) {
-                                                                        ChatLine.appendChatMessage(5, 0, "", "", "", class275_sub4_15.aString7837 + LocalizedText.HAS_LOGGED_IN.translate(Class223.CURRENT_LANGUAGE));
+                                                                        ChatLine.appendChatMessage(MessageType.FRIENDS_STATUS, 0, "", "", "", class275_sub4_15.aString7837 + LocalizedText.HAS_LOGGED_IN.translate(Class223.CURRENT_LANGUAGE));
                                                                     }
                                                                     if (class275_sub4_15.aShort7839 == 0) {
-                                                                        ChatLine.appendChatMessage(5, 0, "", "", "", class275_sub4_15.aString7837 + LocalizedText.HAS_LOGGED_OUT.translate(Class223.CURRENT_LANGUAGE));
+                                                                        ChatLine.appendChatMessage(MessageType.FRIENDS_STATUS, 0, "", "", "", class275_sub4_15.aString7837 + LocalizedText.HAS_LOGGED_OUT.translate(Class223.CURRENT_LANGUAGE));
                                                                     }
                                                                     class275_sub4_15.method4887();
                                                                 }
@@ -258,7 +258,7 @@ public class MaterialProp23 extends MaterialProperty {
                                                             }
                                                             ++client.GAME_CONNECTION_CONTEXT.anInt2290;
                                                             if (client.GAME_CONNECTION_CONTEXT.anInt2290 > 50) {
-                                                                tcpmessage_8 = TCPPacket.createPacket(ClientProt.PING, client.GAME_CONNECTION_CONTEXT.isaac);
+                                                                tcpmessage_8 = TCPPacket.createPacket(ClientProt.PING, client.GAME_CONNECTION_CONTEXT.outKeys);
                                                                 client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_8);
                                                             }
                                                             if (client.aBool7459) {
@@ -268,7 +268,7 @@ public class MaterialProp23 extends MaterialProperty {
                                                             try {
                                                                 client.GAME_CONNECTION_CONTEXT.flush();
                                                             } catch (IOException ioexception_9) {
-                                                                Class151.method2592();
+                                                                Class151.killConnections();
                                                             }
                                                             return;
                                                         }

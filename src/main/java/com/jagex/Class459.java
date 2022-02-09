@@ -1,6 +1,6 @@
 package com.jagex;
 
-import java.awt.*;
+import java.awt.Canvas;
 import java.lang.reflect.Method;
 
 public class Class459 {
@@ -93,7 +93,7 @@ public class Class459 {
     static void method7678() {
         Class122.method2111(false);
         if (Class291_Sub1.anInt8021 >= 0 && Class291_Sub1.anInt8021 != 0) {
-            ParticleProducer.method11500(Class291_Sub1.anInt8021, false);
+            ParticleProducer.switchRenderType(Class291_Sub1.anInt8021, false);
             Class291_Sub1.anInt8021 = -1;
         }
     }

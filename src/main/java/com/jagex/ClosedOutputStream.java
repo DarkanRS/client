@@ -1,10 +1,10 @@
 package com.jagex;
 
-import java.awt.*;
+import java.awt.Image;
 import java.io.IOException;
 import java.io.OutputStream;
 
-public class OutputStream_Sub1 extends OutputStream {
+public class ClosedOutputStream extends OutputStream {
 
     public static Image anImage7953;
 

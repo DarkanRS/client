@@ -14,15 +14,9 @@ public interface Interface27 {
 
     int method190();
 
-    void x();
-
     int method191();
 
-    void method192();
-
     boolean method193(long var1);
-
-    void method194();
 
     int method71();
 

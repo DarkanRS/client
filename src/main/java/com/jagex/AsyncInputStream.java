@@ -6,18 +6,18 @@ import java.io.InputStream;
 
 public class AsyncInputStream implements Runnable {
 
-    IOException anIOException3401;
-    int anInt3400;
-    InputStream anInputStream3396;
-    int anInt3395;
-    int anInt3397;
-    byte[] aByteArray3399;
+    IOException exception;
+    int offset;
+    InputStream stream;
+    int currIndex;
+    int buffSize;
+    byte[] buffer;
     Thread aThread3398;
 
-    AsyncInputStream(InputStream inputstream_1, int i_2) {
-        anInputStream3396 = inputstream_1;
-        anInt3397 = i_2 + 1;
-        aByteArray3399 = new byte[anInt3397];
+    AsyncInputStream(InputStream inputstream_1, int bufferSize) {
+        stream = inputstream_1;
+        buffSize = bufferSize + 1;
+        buffer = new byte[buffSize];
         aThread3398 = new Thread(this);
         aThread3398.setDaemon(true);
         aThread3398.start();
@@ -87,27 +87,24 @@ public class AsyncInputStream implements Runnable {
         }
     }
 
-    boolean method5030(int i_1) throws IOException {
-        if (i_1 > 0 && i_1 < anInt3397) {
+    boolean available(int size) throws IOException {
+        if (size > 0 && size < buffSize) {
             synchronized (this) {
-                int i_4;
-                if (anInt3395 <= anInt3400) {
-                    i_4 = anInt3400 - anInt3395;
+                int avail;
+                if (currIndex <= offset) {
+                    avail = offset - currIndex;
                 } else {
-                    i_4 = anInt3397 - anInt3395 + anInt3400;
+                    avail = buffSize - currIndex + offset;
                 }
-                boolean bool_5;
-                if (i_4 < i_1) {
-                    if (anIOException3401 != null) {
-                        throw new IOException(anIOException3401.toString());
+                if (avail < size) {
+                    if (exception != null) {
+                        throw new IOException(exception.toString());
                     } else {
                         notifyAll();
-                        bool_5 = false;
-                        return bool_5;
+                        return false;
                     }
                 } else {
-                    bool_5 = true;
-                    return bool_5;
+                    return true;
                 }
             }
         } else {
@@ -118,20 +115,20 @@ public class AsyncInputStream implements Runnable {
     @Override
     public void run() {
         while (true) {
-            int i_1;
+            int readLen;
             synchronized (this) {
                 while (true) {
-                    if (anIOException3401 != null) {
+                    if (exception != null) {
                         return;
                     }
-                    if (anInt3395 == 0) {
-                        i_1 = anInt3397 - anInt3400 - 1;
-                    } else if (anInt3395 <= anInt3400) {
-                        i_1 = anInt3397 - anInt3400;
+                    if (currIndex == 0) {
+                        readLen = buffSize - offset - 1;
+                    } else if (currIndex <= offset) {
+                        readLen = buffSize - offset;
                     } else {
-                        i_1 = anInt3395 - anInt3400 - 1;
+                        readLen = currIndex - offset - 1;
                     }
-                    if (i_1 > 0) {
+                    if (readLen > 0) {
                         break;
                     }
                     try {
@@ -140,39 +137,40 @@ public class AsyncInputStream implements Runnable {
                     }
                 }
             }
-            int i_5;
+            int readBytes;
             try {
-                i_5 = anInputStream3396.read(aByteArray3399, anInt3400, i_1);
-                if (i_5 == -1) {
+                readBytes = stream.read(buffer, offset, readLen);
+                if (readBytes == -1) {
                     throw new EOFException();
                 }
-            } catch (IOException ioexception_9) {
-                IOException ioexception_3 = ioexception_9;
+            } catch (IOException ex) {
+            	//ex.printStackTrace();
+                IOException ioexception_3 = ex;
                 synchronized (this) {
-                    anIOException3401 = ioexception_3;
+                    exception = ioexception_3;
                     return;
                 }
             }
             synchronized (this) {
-                anInt3400 = (i_5 + anInt3400) % anInt3397;
+                offset = (readBytes + offset) % buffSize;
             }
         }
     }
 
-    void method5031() {
-        anInputStream3396 = new InputStream_Sub1();
+    void close() {
+        stream = new ClosedInputStream();
     }
 
     int method5034() throws IOException {
         synchronized (this) {
             int i_3;
-            if (anInt3395 <= anInt3400) {
-                i_3 = anInt3400 - anInt3395;
+            if (currIndex <= offset) {
+                i_3 = offset - currIndex;
             } else {
-                i_3 = anInt3397 - anInt3395 + anInt3400;
+                i_3 = buffSize - currIndex + offset;
             }
-            if (anIOException3401 != null) {
-                throw new IOException(anIOException3401.toString());
+            if (exception != null) {
+                throw new IOException(exception.toString());
             } else {
                 notifyAll();
                 return i_3;
@@ -182,8 +180,8 @@ public class AsyncInputStream implements Runnable {
 
     void method5042() {
         synchronized (this) {
-            if (anIOException3401 == null) {
-                anIOException3401 = new IOException("");
+            if (exception == null) {
+                exception = new IOException("");
             }
             notifyAll();
         }
@@ -198,25 +196,25 @@ public class AsyncInputStream implements Runnable {
         if (i_31 >= 0 && i_2 >= 0 && i_31 + i_2 <= bytes_1.length) {
             synchronized (this) {
                 int i_6;
-                if (anInt3395 <= anInt3400) {
-                    i_6 = anInt3400 - anInt3395;
+                if (currIndex <= offset) {
+                    i_6 = offset - currIndex;
                 } else {
-                    i_6 = anInt3397 - anInt3395 + anInt3400;
+                    i_6 = buffSize - currIndex + offset;
                 }
                 if (i_31 > i_6) {
                     i_31 = i_6;
                 }
-                if (i_31 == 0 && anIOException3401 != null) {
-                    throw new IOException(anIOException3401.toString());
+                if (i_31 == 0 && exception != null) {
+                    throw new IOException(exception.toString());
                 } else {
-                    if (i_31 + anInt3395 <= anInt3397) {
-                        System.arraycopy(aByteArray3399, anInt3395, bytes_1, i_2, i_31);
+                    if (i_31 + currIndex <= buffSize) {
+                        System.arraycopy(buffer, currIndex, bytes_1, i_2, i_31);
                     } else {
-                        int i_7 = anInt3397 - anInt3395;
-                        System.arraycopy(aByteArray3399, anInt3395, bytes_1, i_2, i_7);
-                        System.arraycopy(aByteArray3399, 0, bytes_1, i_7 + i_2, i_31 - i_7);
+                        int i_7 = buffSize - currIndex;
+                        System.arraycopy(buffer, currIndex, bytes_1, i_2, i_7);
+                        System.arraycopy(buffer, 0, bytes_1, i_7 + i_2, i_31 - i_7);
                     }
-                    anInt3395 = (i_31 + anInt3395) % anInt3397;
+                    currIndex = (i_31 + currIndex) % buffSize;
                     notifyAll();
                     return i_31;
                 }

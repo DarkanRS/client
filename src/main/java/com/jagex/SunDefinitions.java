@@ -1,9 +1,9 @@
 package com.jagex;
 
-import com.jagex.clans.settings.ChangeClanSetting;
-
 import java.io.IOException;
 import java.net.Socket;
+
+import com.jagex.clans.settings.ChangeClanSetting;
 
 public class SunDefinitions {
 
@@ -24,8 +24,8 @@ public class SunDefinitions {
         HintArrow.aClass229_2245.method3859();
     }
 
-    public static Connection createAsyncConnection(Socket socket_0, int i_1) throws IOException {
-        return new AsyncConnection(socket_0, i_1);
+    public static Connection createAsyncConnection(Socket socket_0, int bufferSize) throws IOException {
+        return new AsyncConnection(socket_0, bufferSize);
     }
 
     public static RouteStrategy method853(int i_0, int i_1) {

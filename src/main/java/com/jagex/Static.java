@@ -1,14 +1,15 @@
 package com.jagex;
 
-import com.jagex.clans.settings.ChangeClanSetting;
-
 import java.util.Calendar;
+
+import com.jagex.clans.settings.ChangeClanSetting;
 
 public class Static {
 
     public static int COUNTRY;
     static Class194 aClass194_5794;
     static int UPDATE_ZONE_X;
+	public static String LOBBY_AUTH_TOKEN;
 
     public static boolean method2084(Index index_0, Index index_1, Index index_2, Node_Sub15_Sub2 class282_sub15_sub2_3, Class253 class253_4) {
         Class148.aClass317_1737 = index_0;
@@ -420,6 +421,60 @@ public class Static {
 	        Class158_Sub2.anInt8975 = i_4;
 	        Class20.anInt156 = (int) (Math.random() * 24.0D);
 	        Class20.aBool161 = true;
+	    }
+	}
+
+	static void processCamera() {
+	    if (client.camAngleX < 1081.0F) {
+	        client.camAngleX = 1081.0F;
+	    }
+	    if (client.camAngleX > 2980.0F) {
+	        client.camAngleX = 2980.0F;
+	    }
+	    while (client.camAngleY >= 16384.0F) {
+	        client.camAngleY -= 16384.0F;
+	    }
+	    while (client.camAngleY < 0.0F) {
+	        client.camAngleY += 16384.0F;
+	    }
+	    RenderFlagMap regionmap_1 = IndexLoaders.MAP_REGION_DECODER.getRenderFlags();
+	    SceneObjectManager sceneobjectmanager_2 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager();
+	    int i_3 = Class11.anInt122 >> 9;
+	    int i_4 = LibraryBase.anInt3289 >> 9;
+	    int i_5 = Class504.getTerrainHeightAtPos(Class11.anInt122, LibraryBase.anInt3289, Class4.MY_PLAYER_PLANE);
+	    int i_6 = 0;
+	    if (i_3 > 3 && i_4 > 3 && i_3 < IndexLoaders.MAP_REGION_DECODER.getSizeX() - 4 && i_4 < IndexLoaders.MAP_REGION_DECODER.getSizeY() - 4) {
+	        for (int x = i_3 - 4; x <= i_3 + 4; x++) {
+	            for (int y = i_4 - 4; y <= i_4 + 4; y++) {
+	                int i_9 = Class4.MY_PLAYER_PLANE;
+	                if (i_9 < 3 && regionmap_1.isLowerObjectsToOverrideClipping(x, y)) {
+	                    ++i_9;
+	                }
+	                int i_10 = 0;
+	                byte[][] bytes_11 = IndexLoaders.MAP_REGION_DECODER.method4507(i_9);
+	                if (bytes_11 != null) {
+	                    i_10 = (bytes_11[x][y] & 0xff) * 8 << 2;
+	                }
+	                if (sceneobjectmanager_2.aGroundArray2591 != null && sceneobjectmanager_2.aGroundArray2591[i_9] != null) {
+	                    int i_12 = i_5 - (sceneobjectmanager_2.aGroundArray2591[i_9].getHeight(x, y) - i_10);
+	                    if (i_12 > i_6) {
+	                        i_6 = i_12;
+	                    }
+	                }
+	            }
+	        }
+	    }
+	    int i_7 = (i_6 >> 2) * 1536;
+	    if (i_7 > 786432) {
+	        i_7 = 786432;
+	    }
+	    if (i_7 < 262144) {
+	        i_7 = 262144;
+	    }
+	    if (i_7 > client.anInt7273) {
+	        client.anInt7273 += (i_7 - client.anInt7273) / 24;
+	    } else if (i_7 < client.anInt7273) {
+	        client.anInt7273 += (i_7 - client.anInt7273) / 80;
 	    }
 	}
 

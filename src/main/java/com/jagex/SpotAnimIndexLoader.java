@@ -1,6 +1,6 @@
 package com.jagex;
 
-import java.awt.*;
+import java.awt.Font;
 
 public class SpotAnimIndexLoader {
 
@@ -97,7 +97,7 @@ public class SpotAnimIndexLoader {
     public static void method8862(int i_0, int i_1, int i_2, boolean bool_3) {
         if (Class393.preferences.currentToolkit.getValue() != 0) {
             Class291_Sub1.anInt8021 = Class393.preferences.currentToolkit.getValue();
-            ParticleProducer.method11500(0, true);
+            ParticleProducer.switchRenderType(0, true);
         } else {
             Class122.method2111(false);
         }

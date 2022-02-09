@@ -1,13 +1,12 @@
 package com.jagex;
 
 import java.awt.Component;
-import java.awt.*;
 import java.util.Arrays;
 import java.util.Random;
 
 public abstract class FontRenderer {
 
-    static int anInt61 = -1;
+    static int STRIKETHROUGH_COLOR = -1;
     static int anInt62 = -1;
     static int anInt63;
     static int anInt64;
@@ -61,7 +60,7 @@ public abstract class FontRenderer {
 
     void method365(int i_1, int i_2) {
         int i_21 = i_2;
-        anInt61 = -1;
+        STRIKETHROUGH_COLOR = -1;
         anInt62 = -1;
         anInt63 = i_1;
         anInt64 = i_1;
@@ -122,7 +121,7 @@ public abstract class FontRenderer {
 
     public void method368(String string_1, int i_2, int i_3, int i_4, int i_6) {
         if (string_1 != null) {
-            method365(i_4, -16777216);
+            method365(i_4, ~0xffffff);
             int i_8 = string_1.length();
             int[] ints_9 = new int[i_8];
             int[] ints_10 = new int[i_8];
@@ -134,38 +133,38 @@ public abstract class FontRenderer {
         }
     }
 
-    void method369(String string_1) {
+    void applySpecialEffects(String s) {
         try {
-            if (string_1.startsWith("col=")) {
-                anInt64 = anInt64 & -16777216 | Class285.method5026(string_1.substring(4)) & 0xffffff;
-            } else if ("/col".equals(string_1)) {
-                anInt64 = anInt64 & -16777216 | anInt63 & 0xffffff;
+            if (s.startsWith("col=")) {
+                anInt64 = anInt64 & ~0xffffff | Class285.method5026(s.substring(4)) & 0xffffff;
+            } else if ("/col".equals(s)) {
+                anInt64 = anInt64 & ~0xffffff | anInt63 & 0xffffff;
             }
-            if ("argb=".startsWith(string_1)) {
-                anInt64 = Class285.method5026(string_1.substring(5));
-            } else if ("/argb".equals(string_1)) {
+            if (s.startsWith("argb=")) {
+                anInt64 = Class285.method5026(s.substring(5));
+            } else if ("/argb".equals(s)) {
                 anInt64 = anInt63;
-            } else if ("str=".startsWith(string_1)) {
-                anInt61 = anInt64 & -16777216 | Class285.method5026(string_1.substring(4));
-            } else if ("str".equals(string_1)) {
-                anInt61 = anInt64 & -16777216 | 0x800000;
-            } else if ("/str".equals(string_1)) {
-                anInt61 = -1;
-            } else if ("u=".startsWith(string_1)) {
-                anInt62 = anInt64 & -16777216 | Class285.method5026(string_1.substring(2));
-            } else if ("u".equals(string_1)) {
-                anInt62 = anInt64 & -16777216;
-            } else if ("/u".equals(string_1)) {
+            } else if (s.startsWith("str=")) {
+                STRIKETHROUGH_COLOR = anInt64 & ~0xffffff | Class285.method5026(s.substring(4));
+            } else if ("str".equals(s)) {
+                STRIKETHROUGH_COLOR = anInt64 & ~0xffffff | 0x800000;
+            } else if ("/str".equals(s)) {
+                STRIKETHROUGH_COLOR = -1;
+            } else if (s.startsWith("u=")) {
+                anInt62 = anInt64 & ~0xffffff | Class285.method5026(s.substring(2));
+            } else if ("u".equals(s)) {
+                anInt62 = anInt64 & ~0xffffff;
+            } else if ("/u".equals(s)) {
                 anInt62 = -1;
-            } else if ("shad=-1".equalsIgnoreCase(string_1)) {
+            } else if ("shad=-1".equalsIgnoreCase(s)) {
                 anInt57 = 0;
-            } else if ("shad=".startsWith(string_1)) {
-                anInt57 = anInt64 & -16777216 | Class285.method5026(string_1.substring(5));
-            } else if ("shad".equals(string_1)) {
-                anInt57 = anInt64 & -16777216;
-            } else if ("/shad".equals(string_1)) {
+            } else if (s.startsWith("shad=")) {
+                anInt57 = anInt64 & ~0xffffff | Class285.method5026(s.substring(5));
+            } else if ("shad".equals(s)) {
+                anInt57 = anInt64 & ~0xffffff;
+            } else if ("/shad".equals(s)) {
                 anInt57 = anInt65;
-            } else if ("br".equals(string_1)) {
+            } else if ("br".equals(s)) {
                 method365(anInt63, anInt65);
             }
         } catch (Exception ignored) {
@@ -224,17 +223,17 @@ public abstract class FontRenderer {
                                     int i_16 = Utils.parseInt(string_15.substring(4));
                                     NativeSprite nativesprite_17 = arr_4[i_16];
                                     int i_18 = ints_5 != null ? ints_5[i_16] : nativesprite_17.method2748();
-                                    if ((anInt64 & -16777216) == -16777216) {
+                                    if ((anInt64 & ~0xffffff) == ~0xffffff) {
                                         nativesprite_17.method2742(i_2, i_3 + fontMetrics.verticalSpacing - i_18, 1, 0, 1);
                                     } else {
-                                        nativesprite_17.method2742(i_2, i_3 + fontMetrics.verticalSpacing - i_18, 0, anInt64 & -16777216 | 0xffffff, 1);
+                                        nativesprite_17.method2742(i_2, i_3 + fontMetrics.verticalSpacing - i_18, 0, anInt64 & ~0xffffff | 0xffffff, 1);
                                     }
                                     i_2 += arr_4[i_16].scaleWidth();
                                     i_11 = -1;
                                 } catch (Exception ignored) {
                                 }
                             } else {
-                                method369(string_15);
+                                applySpecialEffects(string_15);
                             }
                             continue;
                         }
@@ -247,12 +246,12 @@ public abstract class FontRenderer {
                     }
                     if (var_14 != 32) {
                         if (class455_6 == null) {
-                            if ((anInt57 & -16777216) != 0) {
+                            if ((anInt57 & ~0xffffff) != 0) {
                                 UA(var_14, i_2 + 1, i_3 + 1, anInt57, true);
                             }
                             UA(var_14, i_2, i_3, anInt64, false);
                         } else {
-                            if ((anInt57 & -16777216) != 0) {
+                            if ((anInt57 & ~0xffffff) != 0) {
                                 method374(var_14, i_2 + 1, i_3 + 1, anInt57, true, class455_6, i_7, i_8);
                             }
                             method374(var_14, i_2, i_3, anInt64, false, class455_6, i_7, i_8);
@@ -263,8 +262,8 @@ public abstract class FontRenderer {
                         anInt68 &= 0xff;
                     }
                     int i_20 = fontMetrics.method6945(var_14);
-                    if (anInt61 != -1) {
-                        renderer.method8659(i_2, i_3 + (int) (0.7D * fontMetrics.verticalSpacing), i_20, anInt61);
+                    if (STRIKETHROUGH_COLOR != -1) {
+                        renderer.method8659(i_2, i_3 + (int) (0.7D * fontMetrics.verticalSpacing), i_20, STRIKETHROUGH_COLOR);
                     }
                     if (anInt62 != -1) {
                         renderer.method8659(i_2, i_3 + fontMetrics.verticalSpacing + 1, i_20, anInt62);
@@ -306,8 +305,9 @@ public abstract class FontRenderer {
                         var_14 = 8364;
                     } else if ("copy".equals(string_15)) {
                         var_14 = 169;
+                    } else if ("reg".equals(string_15)) {
+                    	var_14 = '\u00ae';
                     } else {
-                        if (!"reg".equals(string_15)) {
                             if (string_15.startsWith("img=")) {
                                 try {
                                     if (ints_6 != null) {
@@ -330,11 +330,9 @@ public abstract class FontRenderer {
                                 } catch (Exception ignored) {
                                 }
                             } else {
-                                method369(string_15);
+                                applySpecialEffects(string_15);
                             }
                             continue;
-                        }
-                        var_14 = 174;
                     }
                 }
                 if (i_9 == -1) {
@@ -354,7 +352,7 @@ public abstract class FontRenderer {
                     }
                     ++i_11;
                     if (var_14 != 32) {
-                        if ((anInt57 & -16777216) != 0) {
+                        if ((anInt57 & ~0xffffff) != 0) {
                             UA(var_14, i_22 + i_2 + 1, i_3 + i_16 + 1, anInt57, true);
                         }
                         UA(var_14, i_22 + i_2, i_3 + i_16, anInt64, false);
@@ -364,8 +362,8 @@ public abstract class FontRenderer {
                         anInt68 &= 0xff;
                     }
                     i_17 = fontMetrics.method6945(var_14);
-                    if (anInt61 != -1) {
-                        renderer.method8659(i_2, i_3 + (int) (fontMetrics.verticalSpacing * 0.7D), i_17, anInt61);
+                    if (STRIKETHROUGH_COLOR != -1) {
+                        renderer.method8659(i_2, i_3 + (int) (fontMetrics.verticalSpacing * 0.7D), i_17, STRIKETHROUGH_COLOR);
                     }
                     if (anInt62 != -1) {
                         renderer.method8659(i_2, i_3 + fontMetrics.verticalSpacing, i_17, anInt62);
@@ -458,7 +456,7 @@ public abstract class FontRenderer {
 
     public void method381(String string_1, int i_2, int i_3, int i_4, int i_6, int i_7) {
         if (string_1 != null) {
-            method365(i_4, -16777216);
+            method365(i_4, ~0xffffff);
             double d_9 = 7.0D - i_7 / 8.0D;
             if (d_9 < 0.0D) {
                 d_9 = 0.0D;
@@ -495,7 +493,7 @@ public abstract class FontRenderer {
 
     public void method387(String string_1, int i_2, int i_3, int i_4, int i_6) {
         if (string_1 != null) {
-            method365(i_4, -16777216);
+            method365(i_4, ~0xffffff);
             int i_8 = string_1.length();
             int[] ints_9 = new int[i_8];
             for (int i_10 = 0; i_10 < i_8; i_10++) {

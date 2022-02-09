@@ -1,7 +1,5 @@
 package com.jagex;
 
-import java.io.IOException;
-
 public class FontRenderer_Sub3 extends FontRenderer {
 
     JavaRenderer aGraphicalRenderer_Sub3_8968;
@@ -50,30 +48,6 @@ public class FontRenderer_Sub3 extends FontRenderer {
         int i_4 = 255 - i_2;
         i_1 = ((i_1 & 0xff00ff) * i_2 & -16711936 | (i_1 & 0xff00) * i_2 & 0xff0000) >>> 8;
         return ((i_4 * (i_0 & 0xff00ff) & -16711936 | (i_0 & 0xff00) * i_4 & 0xff0000) >>> 8) + i_1;
-    }
-
-    static boolean method14338(BufferedConnectionContext class184_0) {
-        try {
-            boolean bool_2 = PacketDecoder.decode(class184_0);
-            return bool_2;
-        } catch (IOException ioexception_7) {
-            if (client.GAME_STATE == 7) {
-                class184_0.reset();
-                return false;
-            } else {
-                Class151.method2592();
-                return true;
-            }
-        } catch (Exception exception_8) {
-            CoordGrid coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getBase();
-            String string_5 = (class184_0.currentPacket != null ? class184_0.currentPacket.opcode : -1) + "," + (class184_0.secondLastPacket != null ? class184_0.secondLastPacket.opcode : -1) + "," + (class184_0.thirdLastPacket != null ? class184_0.thirdLastPacket.opcode : -1) + " " + class184_0.currentPacketSize + "," + (VertexNormal.MY_PLAYER.regionBaseX[0] + coordgrid_4.x) + "," + (VertexNormal.MY_PLAYER.regionBaseY[0] + coordgrid_4.y) + " ";
-            for (int i_6 = 0; i_6 < class184_0.currentPacketSize && i_6 < 50; i_6++) {
-                string_5 = string_5 + class184_0.recievedBuffer.buffer[i_6] + ",";
-            }
-            Class151.method2594(string_5, exception_8);
-            CursorIndexLoader.method7333(false);
-            return true;
-        }
     }
 
     static void method14341() {

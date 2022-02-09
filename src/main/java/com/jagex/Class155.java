@@ -18,11 +18,11 @@ public class Class155 {
 
     public static void method2635(String string_0, String string_1) {
         if (string_0.length() <= 320 && Class388.method6693()) {
-            client.LOBBY_CONNECTION_CONTEXT.method3051();
+            client.LOBBY_CONNECTION_CONTEXT.end();
             HeadbarIndexLoader.method5118();
             Class9.aString99 = string_0;
             Class9.aString102 = string_1;
-            GameState.setGameState(14);
+            GameState.setGameState(GameState.UNK_14);
         }
     }
 

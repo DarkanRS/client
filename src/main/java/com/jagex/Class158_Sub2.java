@@ -5,14 +5,10 @@ public abstract class Class158_Sub2 extends Class158 {
     static int anInt8975;
 
     public static void method14355(int i_0, int i_1) {
-        TCPPacket tcpmessage_3 = TCPPacket.createPacket(ClientProt.IF_CONTINUE, client.GAME_CONNECTION_CONTEXT.isaac);
+        TCPPacket tcpmessage_3 = TCPPacket.createPacket(ClientProt.IF_CONTINUE, client.GAME_CONNECTION_CONTEXT.outKeys);
         tcpmessage_3.buffer.writeIntV1(i_0);
         tcpmessage_3.buffer.writeShortLE128(i_1);
         client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_3);
-    }
-
-    static TCPPacket method14356() {
-        return TCPPacket.index == 0 ? new TCPPacket() : TCPPacket.OUTGOING_PACKETS[--TCPPacket.index];
     }
 
     public abstract int method14344();

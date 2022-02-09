@@ -56,71 +56,68 @@ public class QuestIndexLoader {
         }
     }
 
-    public static byte getByteForChar(char var_0) {
-        byte b_1;
-        if ((var_0 <= 0 || var_0 >= 128) && (var_0 < 160 || var_0 > 255)) {
-            if (var_0 == 8364) {
-                b_1 = -128;
-            } else if (var_0 == 8218) {
-                b_1 = -126;
-            } else if (var_0 == 402) {
-                b_1 = -125;
-            } else if (var_0 == 8222) {
-                b_1 = -124;
-            } else if (var_0 == 8230) {
-                b_1 = -123;
-            } else if (var_0 == 8224) {
-                b_1 = -122;
-            } else if (var_0 == 8225) {
-                b_1 = -121;
-            } else if (var_0 == 710) {
-                b_1 = -120;
-            } else if (var_0 == 8240) {
-                b_1 = -119;
-            } else if (var_0 == 352) {
-                b_1 = -118;
-            } else if (var_0 == 8249) {
-                b_1 = -117;
-            } else if (var_0 == 338) {
-                b_1 = -116;
-            } else if (var_0 == 381) {
-                b_1 = -114;
-            } else if (var_0 == 8216) {
-                b_1 = -111;
-            } else if (var_0 == 8217) {
-                b_1 = -110;
-            } else if (var_0 == 8220) {
-                b_1 = -109;
-            } else if (var_0 == 8221) {
-                b_1 = -108;
-            } else if (var_0 == 8226) {
-                b_1 = -107;
-            } else if (var_0 == 8211) {
-                b_1 = -106;
-            } else if (var_0 == 8212) {
-                b_1 = -105;
-            } else if (var_0 == 732) {
-                b_1 = -104;
-            } else if (var_0 == 8482) {
-                b_1 = -103;
-            } else if (var_0 == 353) {
-                b_1 = -102;
-            } else if (var_0 == 8250) {
-                b_1 = -101;
-            } else if (var_0 == 339) {
-                b_1 = -100;
-            } else if (var_0 == 382) {
-                b_1 = -98;
-            } else if (var_0 == 376) {
-                b_1 = -97;
-            } else {
-                b_1 = 63;
-            }
-        } else {
-            b_1 = (byte) var_0;
-        }
-        return b_1;
-    }
+	public static byte getByteForChar(char c) {
+		byte i_6_;
+		if (c > 0 && c < '\u0080' || c >= '\u00a0' && c <= '\u00ff')
+			i_6_ = (byte) c;
+		else if (c == '\u20ac')
+			i_6_ = (byte) -128;
+		else if ('\u201a' == c)
+			i_6_ = (byte) -126;
+		else if ('\u0192' == c)
+			i_6_ = (byte) -125;
+		else if (c == '\u201e')
+			i_6_ = (byte) -124;
+		else if ('\u2026' == c)
+			i_6_ = (byte) -123;
+		else if (c == '\u2020')
+			i_6_ = (byte) -122;
+		else if (c == '\u2021')
+			i_6_ = (byte) -121;
+		else if (c == '\u02c6')
+			i_6_ = (byte) -120;
+		else if ('\u2030' == c)
+			i_6_ = (byte) -119;
+		else if ('\u0160' == c)
+			i_6_ = (byte) -118;
+		else if (c == '\u2039')
+			i_6_ = (byte) -117;
+		else if ('\u0152' == c)
+			i_6_ = (byte) -116;
+		else if ('\u017d' == c)
+			i_6_ = (byte) -114;
+		else if ('\u2018' == c)
+			i_6_ = (byte) -111;
+		else if (c == '\u2019')
+			i_6_ = (byte) -110;
+		else if (c == '\u201c')
+			i_6_ = (byte) -109;
+		else if (c == '\u201d')
+			i_6_ = (byte) -108;
+		else if (c == '\u2022')
+			i_6_ = (byte) -107;
+		else if (c == '\u2013')
+			i_6_ = (byte) -106;
+		else if ('\u2014' == c)
+			i_6_ = (byte) -105;
+		else if ('\u02dc' == c)
+			i_6_ = (byte) -104;
+		else if (c == '\u2122')
+			i_6_ = (byte) -103;
+		else if ('\u0161' == c)
+			i_6_ = (byte) -102;
+		else if (c == '\u203a')
+			i_6_ = (byte) -101;
+		else if (c == '\u0153')
+			i_6_ = (byte) -100;
+		else if (c == '\u017e')
+			i_6_ = (byte) -98;
+		else if (c == '\u0178')
+			i_6_ = (byte) -97;
+		else
+			i_6_ = (byte) 63;
+		return i_6_;
+	}
 
     static void method4164(int i_0, int i_1) {
         if (Class20.anInt167 == 1) {
@@ -152,7 +149,7 @@ public class QuestIndexLoader {
             for (int i_5 = 0; i_5 < i_3; i_5++) {
                 PlayerEntity player_6 = client.players[ints_4[i_5]];
                 if (player_6.displayName != null && player_6.displayName.equalsIgnoreCase(string_0) && (player_6 == VertexNormal.MY_PLAYER && (Class506.USE_OPTIONS_FLAGS & 0x10) != 0 || (Class506.USE_OPTIONS_FLAGS & 0x8) != 0)) {
-                    TCPPacket tcpmessage_7 = TCPPacket.createPacket(ClientProt.IF_ON_PLAYER, client.GAME_CONNECTION_CONTEXT.isaac);
+                    TCPPacket tcpmessage_7 = TCPPacket.createPacket(ClientProt.IF_ON_PLAYER, client.GAME_CONNECTION_CONTEXT.outKeys);
                     tcpmessage_7.buffer.writeShort(client.anInt7345);
                     tcpmessage_7.buffer.writeShortLE(ints_4[i_5]);
                     tcpmessage_7.buffer.write128Byte(0);

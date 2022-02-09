@@ -1,11 +1,11 @@
 package com.jagex;
 
+import java.io.IOException;
+
 import com.Loader;
 import com.jagex.clans.ClanChannel;
 import com.jagex.clans.settings.ChangeClanSetting;
 import com.jagex.clans.settings.ClanSettings;
-
-import java.io.IOException;
 
 public class PacketDecoder {
 
@@ -15,17 +15,17 @@ public class PacketDecoder {
         if (connection == null)
             return false;
         if (context.currentPacket == null) {
-            if (context.aBool2288) {
+            if (context.readyToRead) {
                 if (!connection.available(1)) {
                     return false;
                 }
                 connection.read(context.recievedBuffer.buffer, 0, 1);
                 ++context.read;
                 context.idleReadPulses = 0;
-                context.aBool2288 = false;
+                context.readyToRead = false;
             }
             buffer.index = 0;
-            if (buffer.nextIsSmart()) {
+            if (buffer.peekIsIsaacSmart()) {
                 if (!connection.available(1)) {
                     return false;
                 }
@@ -33,7 +33,7 @@ public class PacketDecoder {
                 ++context.read;
                 context.idleReadPulses = 0;
             }
-            context.aBool2288 = true;
+            context.readyToRead = true;
             int opcode = buffer.readEncryptedSmart();
             ServerProt packet = ServerProt.forId(opcode);
             if (packet == null) {
@@ -124,7 +124,7 @@ public class PacketDecoder {
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.LOGOUT_FULL) {
-            CursorIndexLoader.method7333(false);
+            CursorIndexLoader.killConnections(false);
             context.currentPacket = null;
             return false;
         } else if (context.currentPacket == ServerProt.MAP_PROJANIM_HALFSQ) {
@@ -225,42 +225,42 @@ public class PacketDecoder {
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.MESSAGE_QUICKCHAT_PRIVATE_ECHO) {
-            boolean bool_91 = buffer.readUnsignedByte() == 1;
-            String string_88 = buffer.readString();
-            String str_92 = string_88;
-            if (bool_91) {
-                str_92 = buffer.readString();
+            boolean displayNameChanged = buffer.readUnsignedByte() == 1;
+            String displayName = buffer.readString();
+            String oldDisplay = displayName;
+            if (displayNameChanged) {
+                oldDisplay = buffer.readString();
             }
-            long long_28 = buffer.readUnsignedShort();
-            long long_30 = buffer.read24BitUnsignedInteger();
-            int i_11 = buffer.readUnsignedByte();
-            int i_12 = buffer.readUnsignedShort();
-            long long_13 = long_30 + (long_28 << 32);
-            boolean bool_73 = false;
-            int i_81 = 0;
+            long unkp1 = buffer.readUnsignedShort();
+            long unkp2 = buffer.read24BitUnsignedInteger();
+            int rights = buffer.readUnsignedByte();
+            int fileId = buffer.readUnsignedShort();
+            long hash = unkp2 + (unkp1 << 32);
+            boolean ignored = false;
+            int index = 0;
             while (true) {
-                if (i_81 >= 100) {
-                    if (i_11 <= 1 && Class280.isIgnored(str_92)) {
-                        bool_73 = true;
+                if (index >= 100) {
+                    if (rights <= 1 && Class280.isIgnored(oldDisplay)) {
+                        ignored = true;
                     }
                     break;
                 }
-                if (client.aLongArray7424[i_81] == long_13) {
-                    bool_73 = true;
+                if (client.QUICKCHAT_HASHES[index] == hash) {
+                    ignored = true;
                     break;
                 }
-                ++i_81;
+                ++index;
             }
-            if (!bool_73) {
-                client.aLongArray7424[client.anInt7389] = long_13;
-                client.anInt7389 = (client.anInt7389 + 1) % 100;
-                String string_101 = IndexLoaders.QUICK_CHAT_MESSAGE_LOADER.getMessageDefinitions(i_12).fillDynamicValues(buffer);
-                if (i_11 == 2) {
-                    ChatLine.appendChatMessage(18, 0, Class76.getCrown(1) + string_88, Class76.getCrown(1) + str_92, string_88, string_101, null, i_12);
-                } else if (i_11 == 1) {
-                    ChatLine.appendChatMessage(18, 0, Class76.getCrown(0) + string_88, Class76.getCrown(0) + str_92, string_88, string_101, null, i_12);
+            if (!ignored) {
+                client.QUICKCHAT_HASHES[client.CURR_QUICKCHAT_INDEX] = hash;
+                client.CURR_QUICKCHAT_INDEX = (client.CURR_QUICKCHAT_INDEX + 1) % 100;
+                String string_101 = IndexLoaders.QUICK_CHAT_MESSAGE_LOADER.getMessageDefinitions(fileId).fillDynamicValues(buffer);
+                if (rights == 2) {
+                    ChatLine.appendChatMessage(MessageType.PRIVATE_QUICKCHAT_ECHO, 0, Class76.getCrown(1) + displayName, Class76.getCrown(1) + oldDisplay, displayName, string_101, null, fileId);
+                } else if (rights == 1) {
+                    ChatLine.appendChatMessage(MessageType.PRIVATE_QUICKCHAT_ECHO, 0, Class76.getCrown(0) + displayName, Class76.getCrown(0) + oldDisplay, displayName, string_101, null, fileId);
                 } else {
-                    ChatLine.appendChatMessage(18, 0, string_88, str_92, string_88, string_101, null, i_12);
+                    ChatLine.appendChatMessage(MessageType.PRIVATE_QUICKCHAT_ECHO, 0, displayName, oldDisplay, displayName, string_101, null, fileId);
                 }
             }
             context.currentPacket = null;
@@ -468,7 +468,8 @@ public class PacketDecoder {
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.GAME_MESSAGE) {
-            int type = buffer.readSmart();
+            int typeId = buffer.readSmart();
+            MessageType type = MessageType.forId(typeId);
             int effectFlags = buffer.readInt();
             int flags = buffer.readUnsignedByte();
             String nameSimple = "";
@@ -482,9 +483,9 @@ public class PacketDecoder {
                 }
             }
             String message = buffer.readString();
-            if (type == 99) {
+            if (type == MessageType.DEV_CONSOLE) {
                 Class209.printConsoleMessage(message);
-            } else if (type == 98) {
+            } else if (type == MessageType.DEV_CONSOLE_CLEAR) {
                 QuestDefinitions.setConsoleText(message);
             } else {
                 if (!nameFormatted.isEmpty() && Class280.isIgnored(nameFormatted)) {
@@ -501,7 +502,7 @@ public class PacketDecoder {
             return true;
         } else if (context.currentPacket == ServerProt.OPEN_URL) {
             if (Class475.supportsFullScreen && client.fullScreenFrame != null) {
-                UID192.method7373(Class393.preferences.screenSize.method12687(), -1, -1, false);
+                UID192.method7373(Class393.preferences.screenSize.method12687(), -1, -1);
             }
             byte[] bytes = new byte[context.currentPacketSize - 1];
             boolean bool_66 = buffer.readUnsignedByte() == 1;
@@ -556,11 +557,11 @@ public class PacketDecoder {
             if (!bool_74) {
                 String string_135 = Class182.method3044(Defaults7Loader.method8755(buffer));
                 if (i_7 == 2) {
-                    ChatLine.appendChatMessage(24, 0, Class76.getCrown(1) + string_88, Class76.getCrown(1) + str_92, string_88, string_135, null, -1);
+                    ChatLine.appendChatMessage(MessageType.GROUP_CHAT, 0, Class76.getCrown(1) + string_88, Class76.getCrown(1) + str_92, string_88, string_135, null, -1);
                 } else if (i_7 == 1) {
-                    ChatLine.appendChatMessage(24, 0, Class76.getCrown(0) + string_88, Class76.getCrown(0) + str_92, string_88, string_135, null, -1);
+                    ChatLine.appendChatMessage(MessageType.GROUP_CHAT, 0, Class76.getCrown(0) + string_88, Class76.getCrown(0) + str_92, string_88, string_135, null, -1);
                 } else {
-                    ChatLine.appendChatMessage(24, 0, string_88, str_92, string_88, string_135, null, -1);
+                    ChatLine.appendChatMessage(MessageType.GROUP_CHAT, 0, string_88, str_92, string_88, string_135, null, -1);
                 }
             }
             context.currentPacket = null;
@@ -581,11 +582,11 @@ public class PacketDecoder {
             if (!bool_69) {
                 String str_25 = IndexLoaders.QUICK_CHAT_MESSAGE_LOADER.getMessageDefinitions(i_8).fillDynamicValues(buffer);
                 if (i_7 == 2) {
-                    ChatLine.appendChatMessage(25, 0, Class76.getCrown(1) + string_88, Class76.getCrown(1) + str_92, string_88, str_25, null, i_8);
+                    ChatLine.appendChatMessage(MessageType.GROUP_QUICKCHAT, 0, Class76.getCrown(1) + string_88, Class76.getCrown(1) + str_92, string_88, str_25, null, i_8);
                 } else if (i_7 == 1) {
-                    ChatLine.appendChatMessage(25, 0, Class76.getCrown(0) + string_88, Class76.getCrown(0) + str_92, string_88, str_25, null, i_8);
+                    ChatLine.appendChatMessage(MessageType.GROUP_QUICKCHAT, 0, Class76.getCrown(0) + string_88, Class76.getCrown(0) + str_92, string_88, str_25, null, i_8);
                 } else {
-                    ChatLine.appendChatMessage(25, 0, string_88, str_92, string_88, str_25, null, i_8);
+                    ChatLine.appendChatMessage(MessageType.GROUP_QUICKCHAT, 0, string_88, str_92, string_88, str_25, null, i_8);
                 }
             }
             context.currentPacket = null;
@@ -651,11 +652,11 @@ public class PacketDecoder {
             if (player != null) {
                 int chatEffects = buffer.readUnsignedShort();
                 int icon = buffer.readUnsignedByte();
-                boolean is0x8000 = (chatEffects & 0x8000) != 0;
+                boolean isQuickChat = (chatEffects & 0x8000) != 0;
                 if (player.displayName != null && player.model != null) {
                     boolean bool_69 = false;
                     if (icon <= 1) {
-                        if (!is0x8000 && (client.USERDETAIL_QUICKCHAT && !client.VERIFIED_EMAIL_ADDRESS || client.IS_QUICKCHAT_ONLY)) {
+                        if (!isQuickChat && (client.USERDETAIL_QUICKCHAT && !client.VERIFIED_EMAIL_ADDRESS || client.IS_QUICKCHAT_ONLY)) {
                             bool_69 = true;
                         } else if (Class280.isIgnored(player.displayName)) {
                             bool_69 = true;
@@ -664,7 +665,7 @@ public class PacketDecoder {
                     if (!bool_69) {
                         int qcMessageId = -1;
                         String message;
-                        if (is0x8000) {
+                        if (isQuickChat) {
                             chatEffects &= 0x7fff;
                             QuickChatMessage quickchatMessage = Class175.decodeQuickchatMessage(buffer);
                             qcMessageId = quickchatMessage.qcMessageId;
@@ -673,11 +674,11 @@ public class PacketDecoder {
                             message = Class182.method3044(Defaults7Loader.method8755(buffer));
                         }
                         player.sendChat(message.trim(), chatEffects >> 8, chatEffects & 0xff);
-                        int messageType;
+                        MessageType messageType;
                         if (icon != 1 && icon != 2) {
-                            messageType = is0x8000 ? 17 : 2;
+                            messageType = isQuickChat ? MessageType.PUBLIC_QUICKCHAT : MessageType.PUBLIC_CHAT;
                         } else {
-                            messageType = is0x8000 ? 17 : 1;
+                            messageType = isQuickChat ? MessageType.PUBLIC_QUICKCHAT : MessageType.STAFF_CHAT;
                         }
                         if (icon == 2) {
                             ChatLine.appendChatMessage(messageType, 0, Class76.getCrown(1) + player.getUsernameWithTitle(), Class76.getCrown(1) + player.getDisplayName(), player.username, message, null, qcMessageId);
@@ -698,11 +699,11 @@ public class PacketDecoder {
             ConnectionInfo.aClass450_5429 = ConnectionInfo.GAME_CONNECTION_INFO;
             ConnectionInfo.aBool5428 = reconnecting;
             Class62.setGameHost(port, host);
-            GameState.setGameState(17);
+            GameState.setGameState(GameState.UNK_17);
             context.currentPacket = null;
             return false;
         } else if (context.currentPacket == ServerProt.LOGOUT_LOBBY) {
-            CursorIndexLoader.method7333(Class9.aBool71);
+            CursorIndexLoader.killConnections(Class9.aBool71);
             context.currentPacket = null;
             return false;
         } else if (context.currentPacket == ServerProt.CLIENT_SETVARC_LARGE) {
@@ -889,7 +890,7 @@ public class PacketDecoder {
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.MESSAGE_QUICKCHAT_CLANCHANNEL) {
-            boolean bool_91 = buffer.readUnsignedByte() == 1;
+            boolean notGuest = buffer.readUnsignedByte() == 1;
             String string_88 = buffer.readString();
             long long_49 = buffer.readUnsignedShort();
             long long_51 = buffer.read24BitUnsignedInteger();
@@ -897,14 +898,14 @@ public class PacketDecoder {
             int i_11 = buffer.readUnsignedShort();
             long long_53 = long_51 + (long_49 << 32);
             boolean bool_14 = false;
-            ClanChannel class282_sub4_102 = bool_91 ? Class113.CLAN_CHANNEL : AsyncConnection.LISTENED_CLAN_CHANNEL;
+            ClanChannel class282_sub4_102 = notGuest ? Class113.CLAN_CHANNEL : AsyncConnection.LISTENED_CLAN_CHANNEL;
             if (class282_sub4_102 == null) {
                 bool_14 = true;
             } else {
                 label2385:
                 {
                     for (int i_34 = 0; i_34 < 100; i_34++) {
-                        if (long_53 == client.aLongArray7424[i_34]) {
+                        if (long_53 == client.QUICKCHAT_HASHES[i_34]) {
                             bool_14 = true;
                             break label2385;
                         }
@@ -915,18 +916,18 @@ public class PacketDecoder {
                 }
             }
             if (!bool_14) {
-                client.aLongArray7424[client.anInt7389] = long_53;
-                client.anInt7389 = (client.anInt7389 + 1) % 100;
+                client.QUICKCHAT_HASHES[client.CURR_QUICKCHAT_INDEX] = long_53;
+                client.CURR_QUICKCHAT_INDEX = (client.CURR_QUICKCHAT_INDEX + 1) % 100;
                 String string_17 = IndexLoaders.QUICK_CHAT_MESSAGE_LOADER.getMessageDefinitions(i_11).fillDynamicValues(buffer);
-                int i_82 = bool_91 ? 42 : 45;
+                MessageType type = notGuest ? MessageType.CLAN_QUICKCHAT : MessageType.GUEST_CLAN_QUICKCHAT;
                 if (i_10 != 2 && i_10 != 3) {
                     if (i_10 == 1) {
-                        ChatLine.appendChatMessage(i_82, 0, Class76.getCrown(0) + string_88, Class76.getCrown(0) + string_88, string_88, string_17, class282_sub4_102.clanName, i_11);
+                        ChatLine.appendChatMessage(type, 0, Class76.getCrown(0) + string_88, Class76.getCrown(0) + string_88, string_88, string_17, class282_sub4_102.clanName, i_11);
                     } else {
-                        ChatLine.appendChatMessage(i_82, 0, string_88, string_88, string_88, string_17, class282_sub4_102.clanName, i_11);
+                        ChatLine.appendChatMessage(type, 0, string_88, string_88, string_88, string_17, class282_sub4_102.clanName, i_11);
                     }
                 } else {
-                    ChatLine.appendChatMessage(i_82, 0, Class76.getCrown(1) + string_88, Class76.getCrown(1) + string_88, string_88, string_17, class282_sub4_102.clanName, i_11);
+                    ChatLine.appendChatMessage(type, 0, Class76.getCrown(1) + string_88, Class76.getCrown(1) + string_88, string_88, string_17, class282_sub4_102.clanName, i_11);
                 }
             }
             context.currentPacket = null;
@@ -963,22 +964,22 @@ public class PacketDecoder {
                     }
                     break;
                 }
-                if (client.aLongArray7424[i_82] == long_57) {
+                if (client.QUICKCHAT_HASHES[i_82] == long_57) {
                     bool_115 = true;
                     break;
                 }
                 ++i_82;
             }
             if (!bool_115) {
-                client.aLongArray7424[client.anInt7389] = long_57;
-                client.anInt7389 = (client.anInt7389 + 1) % 100;
+                client.QUICKCHAT_HASHES[client.CURR_QUICKCHAT_INDEX] = long_57;
+                client.CURR_QUICKCHAT_INDEX = (client.CURR_QUICKCHAT_INDEX + 1) % 100;
                 String string_41 = IndexLoaders.QUICK_CHAT_MESSAGE_LOADER.getMessageDefinitions(i_77).fillDynamicValues(buffer);
                 if (i_35 == 2) {
-                    ChatLine.appendChatMessage(20, 0, Class76.getCrown(1) + string_88, Class76.getCrown(1) + str_92, string_88, string_41, Class179.method3018(long_28), i_77);
+                    ChatLine.appendChatMessage(MessageType.FC_QUICKCHAT, 0, Class76.getCrown(1) + string_88, Class76.getCrown(1) + str_92, string_88, string_41, Class179.method3018(long_28), i_77);
                 } else if (i_35 == 1) {
-                    ChatLine.appendChatMessage(20, 0, Class76.getCrown(0) + string_88, Class76.getCrown(0) + str_92, string_88, string_41, Class179.method3018(long_28), i_77);
+                    ChatLine.appendChatMessage(MessageType.FC_QUICKCHAT, 0, Class76.getCrown(0) + string_88, Class76.getCrown(0) + str_92, string_88, string_41, Class179.method3018(long_28), i_77);
                 } else {
-                    ChatLine.appendChatMessage(20, 0, string_88, str_92, string_88, string_41, Class179.method3018(long_28), i_77);
+                    ChatLine.appendChatMessage(MessageType.FC_QUICKCHAT, 0, string_88, str_92, string_88, string_41, Class179.method3018(long_28), i_77);
                 }
             }
             context.currentPacket = null;
@@ -987,7 +988,7 @@ public class PacketDecoder {
             String string_63 = buffer.readString();
             int flags = buffer.readUnsignedShort();
             String str_92 = IndexLoaders.QUICK_CHAT_MESSAGE_LOADER.getMessageDefinitions(flags).fillDynamicValues(buffer);
-            ChatLine.appendChatMessage(19, 0, string_63, string_63, string_63, str_92, null, flags);
+            ChatLine.appendChatMessage(MessageType.PRIVATE_QUICKCHAT, 0, string_63, string_63, string_63, str_92, null, flags);
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.VARCLAN_SET_INT) {
@@ -1080,7 +1081,7 @@ public class PacketDecoder {
         } else if (context.currentPacket == ServerProt.REQUEST_FPS) {
             int key = buffer.readInt();
             int flags = buffer.readInt();
-            TCPPacket tcpmessage_111 = TCPPacket.createPacket(ClientProt.SEND_FPS, context.isaac);
+            TCPPacket tcpmessage_111 = TCPPacket.createPacket(ClientProt.SEND_FPS, context.outKeys);
             tcpmessage_111.buffer.writeIntV2(key);
             tcpmessage_111.buffer.writeIntV1(flags);
             tcpmessage_111.buffer.write128Byte(client.FPS);
@@ -1718,7 +1719,7 @@ public class PacketDecoder {
         } else if (context.currentPacket == ServerProt.SEND_PRIVATE_MESSAGE) {
             String string_63 = buffer.readString();
             String string_88 = Class182.method3044(Defaults7Loader.method8755(buffer));
-            ChatLine.appendChatMessage(6, 0, string_63, string_63, string_63, string_88);
+            ChatLine.appendChatMessage(MessageType.PRIVATE_MESSAGE, 0, string_63, string_63, string_63, string_88);
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.CREATE_GROUND_ITEM) {
@@ -1763,13 +1764,13 @@ public class PacketDecoder {
             }
             long long_28 = buffer.readUnsignedShort();
             long long_30 = buffer.read24BitUnsignedInteger();
-            int i_11 = buffer.readUnsignedByte();
+            int rights = buffer.readUnsignedByte();
             long long_53 = (long_28 << 32) + long_30;
             boolean bool_14 = false;
             int i_15 = 0;
             while (true) {
                 if (i_15 >= 100) {
-                    if (i_11 <= 1) {
+                    if (rights <= 1) {
                         if ((!client.USERDETAIL_QUICKCHAT || client.VERIFIED_EMAIL_ADDRESS) && !client.IS_QUICKCHAT_ONLY) {
                             if (Class280.isIgnored(str_92)) {
                                 bool_14 = true;
@@ -1780,22 +1781,22 @@ public class PacketDecoder {
                     }
                     break;
                 }
-                if (client.aLongArray7424[i_15] == long_53) {
+                if (client.QUICKCHAT_HASHES[i_15] == long_53) {
                     bool_14 = true;
                     break;
                 }
                 ++i_15;
             }
             if (!bool_14) {
-                client.aLongArray7424[client.anInt7389] = long_53;
-                client.anInt7389 = (client.anInt7389 + 1) % 100;
+                client.QUICKCHAT_HASHES[client.CURR_QUICKCHAT_INDEX] = long_53;
+                client.CURR_QUICKCHAT_INDEX = (client.CURR_QUICKCHAT_INDEX + 1) % 100;
                 String string_118 = Class182.method3044(Defaults7Loader.method8755(buffer));
-                if (i_11 == 2) {
-                    ChatLine.appendChatMessage(7, 0, Class76.getCrown(1) + string_88, Class76.getCrown(1) + str_92, string_88, string_118, null, -1);
-                } else if (i_11 == 1) {
-                    ChatLine.appendChatMessage(7, 0, Class76.getCrown(0) + string_88, Class76.getCrown(0) + str_92, string_88, string_118, null, -1);
+                if (rights == 2) {
+                    ChatLine.appendChatMessage(MessageType.PRIVATE_STAFF, 0, Class76.getCrown(1) + string_88, Class76.getCrown(1) + str_92, string_88, string_118, null, -1);
+                } else if (rights == 1) {
+                    ChatLine.appendChatMessage(MessageType.PRIVATE_STAFF, 0, Class76.getCrown(0) + string_88, Class76.getCrown(0) + str_92, string_88, string_118, null, -1);
                 } else {
-                    ChatLine.appendChatMessage(3, 0, string_88, str_92, string_88, string_118, null, -1);
+                    ChatLine.appendChatMessage(MessageType.PRIVATE_MESSAGE_ECHO, 0, string_88, str_92, string_88, string_118, null, -1);
                 }
             }
             context.currentPacket = null;
@@ -1856,21 +1857,21 @@ public class PacketDecoder {
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.MESSAGE_CLANCHANNEL) {
-            boolean bool_91 = buffer.readUnsignedByte() == 1;
+            boolean notGuest = buffer.readUnsignedByte() == 1;
             String string_88 = buffer.readString();
             long long_49 = buffer.readUnsignedShort();
             long long_51 = buffer.read24BitUnsignedInteger();
             int i_10 = buffer.readUnsignedByte();
             long long_55 = long_51 + (long_49 << 32);
             boolean bool_112 = false;
-            ClanChannel class282_sub4_37 = bool_91 ? Class113.CLAN_CHANNEL : AsyncConnection.LISTENED_CLAN_CHANNEL;
+            ClanChannel class282_sub4_37 = notGuest ? Class113.CLAN_CHANNEL : AsyncConnection.LISTENED_CLAN_CHANNEL;
             if (class282_sub4_37 == null) {
                 bool_112 = true;
             } else {
                 label2419:
                 {
                     for (int i_81 = 0; i_81 < 100; i_81++) {
-                        if (client.aLongArray7424[i_81] == long_55) {
+                        if (client.QUICKCHAT_HASHES[i_81] == long_55) {
                             bool_112 = true;
                             break label2419;
                         }
@@ -1887,10 +1888,10 @@ public class PacketDecoder {
                 }
             }
             if (!bool_112) {
-                client.aLongArray7424[client.anInt7389] = long_55;
-                client.anInt7389 = (client.anInt7389 + 1) % 100;
+                client.QUICKCHAT_HASHES[client.CURR_QUICKCHAT_INDEX] = long_55;
+                client.CURR_QUICKCHAT_INDEX = (client.CURR_QUICKCHAT_INDEX + 1) % 100;
                 String string_101 = Class182.method3044(Defaults7Loader.method8755(buffer));
-                int i_34 = bool_91 ? 41 : 44;
+                MessageType i_34 = notGuest ? MessageType.CLAN_CHAT : MessageType.GUEST_CLAN_CHAT;
                 if (i_10 != 2 && i_10 != 3) {
                     if (i_10 == 1) {
                         ChatLine.appendChatMessage(i_34, 0, Class76.getCrown(0) + string_88, Class76.getCrown(0) + string_88, string_88, string_101, class282_sub4_37.clanName, -1);
@@ -1934,14 +1935,14 @@ public class PacketDecoder {
                 String username = buffer.readString();
                 int world = buffer.readUnsignedShort();
                 int fcFrank = buffer.readUnsignedByte();
-                boolean bool_69 = buffer.readUnsignedByte() == 1;
+                boolean referrer = buffer.readUnsignedByte() == 1;
                 String worldName = "";
-                int i_11 = -1;
-                int i_12 = 0;
+                int platform = -1;
+                int worldFlags = 0;
                 if (world > 0) {
                     worldName = buffer.readString();
-                    i_11 = buffer.readUnsignedByte();
-                    i_12 = buffer.readInt();
+                    platform = buffer.readUnsignedByte();
+                    worldFlags = buffer.readInt();
                 }
                 for (int i_35 = 0; i_35 < client.FRIEND_COUNT; i_35++) {
                     Friend friend = client.FRIENDS[i_35];
@@ -1968,9 +1969,9 @@ public class PacketDecoder {
                             friend.username = username;
                             friend.worldName = worldName;
                             friend.fcRank = fcFrank;
-                            friend.platform = i_11;
-                            friend.referrer = bool_69;
-                            friend.worldFlags = i_12;
+                            friend.platform = platform;
+                            friend.referrer = referrer;
+                            friend.worldFlags = worldFlags;
                             displayName = null;
                             break;
                         }
@@ -1989,9 +1990,9 @@ public class PacketDecoder {
                     friend.worldId = world;
                     friend.worldName = worldName;
                     friend.fcRank = fcFrank;
-                    friend.platform = i_11;
-                    friend.referrer = bool_69;
-                    friend.worldFlags = i_12;
+                    friend.platform = platform;
+                    friend.referrer = referrer;
+                    friend.worldFlags = worldFlags;
                     ++client.FRIEND_COUNT;
                 }
             }
@@ -2174,24 +2175,24 @@ public class PacketDecoder {
                     }
                     break;
                 }
-                if (long_60 == client.aLongArray7424[i_34]) {
+                if (long_60 == client.QUICKCHAT_HASHES[i_34]) {
                     bool_16 = true;
                     break;
                 }
                 ++i_34;
             }
             if (!bool_16) {
-                client.aLongArray7424[client.anInt7389] = long_60;
-                client.anInt7389 = (client.anInt7389 + 1) % 100;
+                client.QUICKCHAT_HASHES[client.CURR_QUICKCHAT_INDEX] = long_60;
+                client.CURR_QUICKCHAT_INDEX = (client.CURR_QUICKCHAT_INDEX + 1) % 100;
                 String string_17 = Class182.method3044(Defaults7Loader.method8755(buffer));
                 if (i_35 != 2 && i_35 != 3) {
                     if (i_35 == 1) {
-                        ChatLine.appendChatMessage(9, 0, Class76.getCrown(0) + string_88, Class76.getCrown(0) + str_92, string_88, string_17, Class179.method3018(long_28), -1);
+                        ChatLine.appendChatMessage(MessageType.FC_CHAT, 0, Class76.getCrown(0) + string_88, Class76.getCrown(0) + str_92, string_88, string_17, Class179.method3018(long_28), -1);
                     } else {
-                        ChatLine.appendChatMessage(9, 0, string_88, str_92, string_88, string_17, Class179.method3018(long_28), -1);
+                        ChatLine.appendChatMessage(MessageType.FC_CHAT, 0, string_88, str_92, string_88, string_17, Class179.method3018(long_28), -1);
                     }
                 } else {
-                    ChatLine.appendChatMessage(9, 0, Class76.getCrown(1) + string_88, Class76.getCrown(1) + str_92, string_88, string_17, Class179.method3018(long_28), -1);
+                    ChatLine.appendChatMessage(MessageType.FC_CHAT, 0, Class76.getCrown(1) + string_88, Class76.getCrown(1) + str_92, string_88, string_17, Class179.method3018(long_28), -1);
                 }
             }
             context.currentPacket = null;
@@ -2271,7 +2272,7 @@ public class PacketDecoder {
             return true;
         } else if (context.currentPacket == ServerProt.aClass375_4437) {
             if (Class475.supportsFullScreen && client.fullScreenFrame != null) {
-                UID192.method7373(Class393.preferences.screenSize.method12687(), -1, -1, false);
+                UID192.method7373(Class393.preferences.screenSize.method12687(), -1, -1);
             }
             byte[] bytes_64 = new byte[context.currentPacketSize];
             buffer.readBytes(bytes_64, context.currentPacketSize);
@@ -2313,7 +2314,7 @@ public class PacketDecoder {
             return true;
         } else {
             Class151.method2594((context.currentPacket != null ? context.currentPacket.opcode : -1) + "," + (context.secondLastPacket != null ? context.secondLastPacket.opcode : -1) + "," + (context.thirdLastPacket != null ? context.thirdLastPacket.opcode : -1) + " " + context.currentPacketSize, new RuntimeException());
-            CursorIndexLoader.method7333(false);
+            CursorIndexLoader.killConnections(false);
             return true;
         }
     }
@@ -2653,8 +2654,35 @@ public class PacketDecoder {
             }
         } else {
             Class151.method2594("" + packet, new RuntimeException());
-            CursorIndexLoader.method7333(false);
+            CursorIndexLoader.killConnections(false);
         }
     }
+
+	static boolean processIncoming(BufferedConnectionContext connection) {
+	    try {
+	        return decode(connection);
+	    } catch (IOException ex) {
+	        if (client.GAME_STATE == GameState.UNK_7) {
+	            connection.reset();
+	            return false;
+	        } else {
+	        	if (Loader.DEBUG) {
+		        	System.err.println("Exception decoding packet");
+		        	ex.printStackTrace();
+	        	}
+	            Class151.killConnections();
+	            return true;
+	        }
+	    } catch (Exception exception_8) {
+	        CoordGrid coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getBase();
+	        String string_5 = (connection.currentPacket != null ? connection.currentPacket.opcode : -1) + "," + (connection.secondLastPacket != null ? connection.secondLastPacket.opcode : -1) + "," + (connection.thirdLastPacket != null ? connection.thirdLastPacket.opcode : -1) + " " + connection.currentPacketSize + "," + (VertexNormal.MY_PLAYER.regionBaseX[0] + coordgrid_4.x) + "," + (VertexNormal.MY_PLAYER.regionBaseY[0] + coordgrid_4.y) + " ";
+	        for (int i_6 = 0; i_6 < connection.currentPacketSize && i_6 < 50; i_6++) {
+	            string_5 = string_5 + connection.recievedBuffer.buffer[i_6] + ",";
+	        }
+	        Class151.method2594(string_5, exception_8);
+	        CursorIndexLoader.killConnections(false);
+	        return true;
+	    }
+	}
 
 }

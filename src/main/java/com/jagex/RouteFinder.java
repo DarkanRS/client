@@ -1,10 +1,11 @@
 package com.jagex;
 
-import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+
+import javax.imageio.ImageIO;
 
 public class RouteFinder {
     private static final int DIR_NORTH = 0x1;
@@ -445,8 +446,8 @@ public class RouteFinder {
         if (ConnectionInfo.SERVER_ENVIRONMENT != ServerEnvironment.LIVE || client.PLAYER_RIGHTS >= 2) {
             try {
                 if ("wm1".equalsIgnoreCase(string_0)) {
-                    UID192.method7373(1, -1, -1, false);
-                    if (Class158.windowedMode() == 1) {
+                    UID192.method7373(1, -1, -1);
+                    if (Class158.getScreenMode() == 1) {
                         Class209.printConsoleMessage("Success");
                     } else {
                         Class209.printConsoleMessage("Failure");
@@ -454,8 +455,8 @@ public class RouteFinder {
                     return;
                 }
                 if ("wm2".equalsIgnoreCase(string_0)) {
-                    UID192.method7373(2, -1, -1, false);
-                    if (Class158.windowedMode() == 2) {
+                    UID192.method7373(2, -1, -1);
+                    if (Class158.getScreenMode() == 2) {
                         Class209.printConsoleMessage("Success");
                     } else {
                         Class209.printConsoleMessage("Failure");
@@ -463,8 +464,8 @@ public class RouteFinder {
                     return;
                 }
                 if (Class475.supportsFullScreen && "wm3".equalsIgnoreCase(string_0)) {
-                    UID192.method7373(3, 1024, 768, false);
-                    if (Class158.windowedMode() == 3) {
+                    UID192.method7373(3, 1024, 768);
+                    if (Class158.getScreenMode() == 3) {
                         Class209.printConsoleMessage("Success");
                     } else {
                         Class209.printConsoleMessage("Failure");
@@ -519,7 +520,7 @@ public class RouteFinder {
                     return;
                 }
                 if ("tk0".equalsIgnoreCase(string_0)) {
-                    ParticleProducer.method11500(0, false);
+                    ParticleProducer.switchRenderType(0, false);
                     if (Class393.preferences.currentToolkit.getValue() == 0) {
                         Class209.printConsoleMessage("Success");
                         Class393.preferences.setValue(Class393.preferences.toolKit, 0);
@@ -531,7 +532,7 @@ public class RouteFinder {
                     return;
                 }
                 if ("tk1".equalsIgnoreCase(string_0)) {
-                    ParticleProducer.method11500(1, false);
+                    ParticleProducer.switchRenderType(1, false);
                     if (Class393.preferences.currentToolkit.getValue() == 1) {
                         Class209.printConsoleMessage("Success");
                         Class393.preferences.setValue(Class393.preferences.toolKit, 1);
@@ -543,7 +544,7 @@ public class RouteFinder {
                     return;
                 }
                 if ("tk2".equalsIgnoreCase(string_0)) {
-                    ParticleProducer.method11500(2, false);
+                    ParticleProducer.switchRenderType(2, false);
                     if (Class393.preferences.currentToolkit.getValue() == 2) {
                         Class209.printConsoleMessage("Success");
                         Class393.preferences.setValue(Class393.preferences.toolKit, 2);
@@ -555,7 +556,7 @@ public class RouteFinder {
                     return;
                 }
                 if ("tk3".equalsIgnoreCase(string_0)) {
-                    ParticleProducer.method11500(3, false);
+                    ParticleProducer.switchRenderType(3, false);
                     if (Class393.preferences.currentToolkit.getValue() == 3) {
                         Class209.printConsoleMessage("Success");
                         Class393.preferences.setValue(Class393.preferences.toolKit, 3);
@@ -567,7 +568,7 @@ public class RouteFinder {
                     return;
                 }
                 if ("tk5".equalsIgnoreCase(string_0)) {
-                    ParticleProducer.method11500(5, false);
+                    ParticleProducer.switchRenderType(5, false);
                     if (Class393.preferences.currentToolkit.getValue() == 5) {
                         Class209.printConsoleMessage("Success");
                         Class393.preferences.setValue(Class393.preferences.toolKit, 5);
@@ -579,16 +580,16 @@ public class RouteFinder {
                     return;
                 }
                 if ("clientdrop".equalsIgnoreCase(string_0)) {
-                    if (client.GAME_STATE == 13) {
-                        Class151.method2592();
-                    } else if (client.GAME_STATE == 18) {
+                    if (client.GAME_STATE == GameState.UNK_13) {
+                        Class151.killConnections();
+                    } else if (client.GAME_STATE == GameState.UNK_18) {
                         client.GAME_CONNECTION_CONTEXT.aBool2298 = true;
                     }
                     return;
                 }
                 int i_13;
                 if ("breakcon".equalsIgnoreCase(string_0)) {
-                    BufferedConnectionContext[] arr_26 = client.aClass184Array7220;
+                    BufferedConnectionContext[] arr_26 = client.GAME_CONNECTION_CONTEXTS;
                     for (i_13 = 0; i_13 < arr_26.length; i_13++) {
                         BufferedConnectionContext class184_28 = arr_26[i_13];
                         if (class184_28.getConnection() != null) {
@@ -666,8 +667,8 @@ public class RouteFinder {
                     String[] arr_12 = MovingAnimation.method12681(Class122.method2110(Node_Sub17_Sub7.method15439(bytes_5), '\r', ""), '\n');
                     Class341.method6074(arr_12);
                 }
-                if (client.GAME_STATE == 13) {
-                    TCPPacket tcpmessage_21 = TCPPacket.createPacket(ClientProt.COMMAND, client.GAME_CONNECTION_CONTEXT.isaac);
+                if (client.GAME_STATE == GameState.UNK_13) {
+                    TCPPacket tcpmessage_21 = TCPPacket.createPacket(ClientProt.COMMAND, client.GAME_CONNECTION_CONTEXT.outKeys);
                     tcpmessage_21.buffer.writeByte(string_0.length() + 3);
                     tcpmessage_21.buffer.writeByte(bool_1 ? 1 : 0);
                     tcpmessage_21.buffer.writeByte(bool_2 ? 1 : 0);
@@ -679,7 +680,7 @@ public class RouteFinder {
                 return;
             }
         }
-        if (client.GAME_STATE != 13) {
+        if (client.GAME_STATE != GameState.UNK_13) {
             Class209.printConsoleMessage(LocalizedText.UNKNOWN_DEV_COMMAND.translate(Class223.CURRENT_LANGUAGE) + string_0);
         }
     }

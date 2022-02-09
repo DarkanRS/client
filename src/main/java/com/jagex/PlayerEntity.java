@@ -1,7 +1,5 @@
 package com.jagex;
 
-import com.Loader;
-
 import java.util.Arrays;
 
 public class PlayerEntity extends PathingEntity {

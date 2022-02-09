@@ -1,6 +1,6 @@
 package com.jagex;
 
-import java.awt.*;
+import java.awt.Dimension;
 
 public class Class383 implements Interface41 {
 

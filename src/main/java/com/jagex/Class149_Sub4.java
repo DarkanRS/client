@@ -1,7 +1,5 @@
 package com.jagex;
 
-import java.util.Iterator;
-
 public class Class149_Sub4 extends Class149 {
 
     int anInt9391;

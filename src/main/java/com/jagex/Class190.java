@@ -104,12 +104,12 @@ public class Class190 {
     }
 
     static void method3152() {
-        if (client.GAME_STATE == 17) {
+        if (client.GAME_STATE == GameState.UNK_17) {
             Class42_Sub1.method14562();
         }
 
         Class186.method3083();
-        client.LOBBY_CONNECTION_CONTEXT.method3051();
+        client.LOBBY_CONNECTION_CONTEXT.end();
         IFSubObjectPosition.appletHasFocus = true;
         Class250.method4296();
 

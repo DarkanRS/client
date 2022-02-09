@@ -1,15 +1,17 @@
 package com.jagex;
 
-import com.jagex.clans.ClanChannel;
-import com.jagex.clans.settings.ClanSettings;
-
-import java.awt.*;
+import java.awt.GraphicsDevice;
+import java.awt.GraphicsEnvironment;
+import java.awt.Point;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.Transferable;
 import java.io.File;
 
-public class CS2Interpreter {
+import com.Loader;
+import com.jagex.clans.ClanChannel;
+import com.jagex.clans.settings.ClanSettings;
 
+public class CS2Interpreter {
     public static void executeOperation(CS2Instruction operation, CS2Executor exec) {
         switch (operation) {
             case PUSH_INT:
@@ -190,10 +192,10 @@ public class CS2Interpreter {
                 method2620(exec);
                 break;
             case IF_SENDTOFRONT:
-                ifSetFront(true, exec);
+                ifSetPlace(true, exec);
                 break;
             case IF_SENDTOBACK:
-                ifSetFront(false, exec);
+                ifSetPlace(false, exec);
                 break;
             case CC_SENDTOFRONT:
                 ccSetFront(true, exec);
@@ -2091,8 +2093,8 @@ public class CS2Interpreter {
             case instr6818:
                 method15403();
                 break;
-            case instr6639:
-                method3804(exec);
+            case FULLSCREEN:
+                chooseFullScreen(exec);
                 break;
             case instr6488:
                 method3613();
@@ -2109,8 +2111,8 @@ public class CS2Interpreter {
             case instr6644:
                 method8199(exec);
                 break;
-            case instr6645:
-                method12933(exec);
+            case CHOOSE_RENDER_TYPE:
+                chooseRenderType(exec);
                 break;
             case instr6406:
                 method3358(exec);
@@ -2296,7 +2298,7 @@ public class CS2Interpreter {
                 method301(exec);
                 break;
             case instr6707:
-                method5925(exec);
+                loadLobby(exec);
                 break;
             case instr6623:
                 method775();
@@ -2409,7 +2411,7 @@ public class CS2Interpreter {
             case instr6744:
                 method1803(exec);
                 break;
-            case instr6745:
+            case CHANGE_RENDER:
                 method6678(exec);
                 break;
             case instr6922:
@@ -3047,14 +3049,14 @@ public class CS2Interpreter {
         }
     }
 
-    static void ifSetFront(boolean bool, CS2Executor executor) {
-        int i_3 = executor.intStack[--executor.intStackPtr];
-        IComponentDefinitions icomponentdefinitions_4 = IComponentDefinitions.getDefs(i_3);
-        Interface interface_5 = Interface.INTERFACES[i_3 >> 16];
-        if (bool) {
-            Interface.method7554(interface_5, icomponentdefinitions_4);
+    static void ifSetPlace(boolean front, CS2Executor executor) {
+        int interfaceId = executor.intStack[--executor.intStackPtr];
+        IComponentDefinitions iCompDefinitions = IComponentDefinitions.getDefs(interfaceId);
+        Interface inter = Interface.INTERFACES[interfaceId >> 16];
+        if (front) {
+            Interface.method7554(inter, iCompDefinitions);
         } else {
-            Interface.method3710(interface_5, icomponentdefinitions_4);
+            Interface.method3710(inter, iCompDefinitions);
         }
 
     }
@@ -3200,7 +3202,7 @@ public class CS2Interpreter {
         ChatLine chatline_3 = ChatLine.getChatLine(i_2);
         int i_4 = -1;
         if (chatline_3 != null) {
-            i_4 = chatline_3.type;
+            i_4 = chatline_3.type.getValue();
         }
         executor.intStack[++executor.intStackPtr - 1] = i_4;
     }
@@ -3229,7 +3231,7 @@ public class CS2Interpreter {
 
     static void method2866() {
         if (Class475.supportsFullScreen && Engine.fullScreenFrame != null) {
-            UID192.method7373(Class393.preferences.screenSize.method12687(), -1, -1, false);
+            UID192.method7373(Class393.preferences.screenSize.method12687(), -1, -1);
         }
         if (NamedFileReference.method867() == Class279.aClass279_3368) {
             ClanSetting.saveVarcsToFile();
@@ -3316,7 +3318,7 @@ public class CS2Interpreter {
     }
 
     static void setPingWorlds(CS2Executor executor) {
-        if (client.GAME_STATE == 0) {
+        if (client.GAME_STATE == GameState.UNK_0) {
             ConnectionInfo.PING_WORLDS = executor.intStack[--executor.intStackPtr] == 1;
         }
     }
@@ -3455,7 +3457,7 @@ public class CS2Interpreter {
 
     static void sendClanQuickChatMessage(CS2Executor executor) {
         BufferedConnectionContext context = BufferedConnectionContext.getConnectionContext();
-        TCPPacket packet = TCPPacket.createPacket(ClientProt.QUICKCHAT_PUBLIC, context.isaac);
+        TCPPacket packet = TCPPacket.createPacket(ClientProt.QUICKCHAT_PUBLIC, context.outKeys);
         packet.buffer.writeByte(0);
         int startIndex = packet.buffer.index;
         packet.buffer.writeByte(2);
@@ -3586,7 +3588,7 @@ public class CS2Interpreter {
 
     static void method8263(CS2Executor executor) {
         if (Class475.supportsFullScreen && Engine.fullScreenFrame != null) {
-            UID192.method7373(Class393.preferences.screenSize.method12687(), -1, -1, false);
+            UID192.method7373(Class393.preferences.screenSize.method12687(), -1, -1);
         }
         String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
         boolean bool_3 = executor.intStack[--executor.intStackPtr] == 1;
@@ -3779,7 +3781,7 @@ public class CS2Interpreter {
         boolean bool_3 = executor.intStack[executor.intStackPtr] == 1;
         boolean bool_4 = executor.intStack[executor.intStackPtr + 1] == 1;
         boolean bool_5 = executor.intStack[executor.intStackPtr + 2] == 1;
-        TCPPacket tcpmessage_6 = TCPPacket.createPacket(ClientProt.EMAIL_VALIDATION_ADD_NEW_ADDRESS, client.LOBBY_CONNECTION_CONTEXT.isaac);
+        TCPPacket tcpmessage_6 = TCPPacket.createPacket(ClientProt.EMAIL_VALIDATION_ADD_NEW_ADDRESS, client.LOBBY_CONNECTION_CONTEXT.outKeys);
         tcpmessage_6.buffer.writeShort(ChatLine.getLength(string_2) + 1);
         tcpmessage_6.buffer.writeString(string_2);
         int i_7 = 0;
@@ -4001,7 +4003,7 @@ public class CS2Interpreter {
     }
 
     static void method8199(CS2Executor executor) {
-        executor.intStack[++executor.intStackPtr - 1] = Class158.windowedMode();
+        executor.intStack[++executor.intStackPtr - 1] = Class158.getScreenMode();
     }
 
     static void method7006(CS2Executor executor) {
@@ -4271,7 +4273,7 @@ public class CS2Interpreter {
     }
 
     static void method775() {
-        CursorIndexLoader.method7333(false);
+        CursorIndexLoader.killConnections(false);
     }
 
     static void method777(CS2Executor executor) {
@@ -4343,7 +4345,7 @@ public class CS2Interpreter {
     static void method5010(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
         String string_3 = (String) executor.stringStack[--executor.stringStackPtr];
-        if (client.GAME_STATE == 0 && !JS5CacheFile.method3360()) {
+        if (client.GAME_STATE == GameState.UNK_0 && !JS5CacheFile.method3360()) {
             executor.intStack[++executor.intStackPtr - 1] = Class62.setGameHost(i_2, string_3) ? 1 : 0;
         } else {
             executor.intStack[++executor.intStackPtr - 1] = 0;
@@ -4625,11 +4627,15 @@ public class CS2Interpreter {
         method789(icomponentdefinitions_3, interface_4, executor);
     }
 
-    static void method12933(CS2Executor executor) {
-        int i_2 = executor.intStack[--executor.intStackPtr];
-        if (i_2 >= 1 && i_2 <= 2) {
-            UID192.method7373(i_2, -1, -1, false);
-        }
+    static void chooseRenderType(CS2Executor executor) {
+        int screenMode = executor.intStack[--executor.intStackPtr];
+        if (screenMode >= 1 && screenMode <= 2 && !Class158.justBecameFullscreen) {
+            GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
+            int width = gd.getDisplayMode().getWidth();
+            int height = gd.getDisplayMode().getHeight();
+            UID192.method7373(screenMode, width, height);
+        } else
+            Class158.justBecameFullscreen = false;
     }
 
     static void intLessThan(CS2Executor executor) {
@@ -4863,7 +4869,7 @@ public class CS2Interpreter {
         if (Class115.method1950(string_2)) {
             i_3 = Utils.parseInt(string_2);
         }
-        TCPPacket tcpmessage_4 = TCPPacket.createPacket(ClientProt.RESUME_COUNTDIALOG, client.GAME_CONNECTION_CONTEXT.isaac);
+        TCPPacket tcpmessage_4 = TCPPacket.createPacket(ClientProt.RESUME_COUNTDIALOG, client.GAME_CONNECTION_CONTEXT.outKeys);
         tcpmessage_4.buffer.writeInt(i_3);
         client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_4);
     }
@@ -4915,7 +4921,7 @@ public class CS2Interpreter {
 
     static void resumeClanForumQFCDialog(CS2Executor executor) {
         String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
-        TCPPacket tcpmessage_3 = TCPPacket.createPacket(ClientProt.RESUME_CLANFORUMQFCDIALOG, client.GAME_CONNECTION_CONTEXT.isaac);
+        TCPPacket tcpmessage_3 = TCPPacket.createPacket(ClientProt.RESUME_CLANFORUMQFCDIALOG, client.GAME_CONNECTION_CONTEXT.outKeys);
         tcpmessage_3.buffer.writeByte(string_2.length() + 1);
         tcpmessage_3.buffer.writeString(string_2);
         client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_3);
@@ -5000,7 +5006,7 @@ public class CS2Interpreter {
 
     static void sendFriendsChatQuickChatMessage(CS2Executor executor) {
         BufferedConnectionContext context = BufferedConnectionContext.getConnectionContext();
-        TCPPacket packet = TCPPacket.createPacket(ClientProt.QUICKCHAT_PUBLIC, context.isaac);
+        TCPPacket packet = TCPPacket.createPacket(ClientProt.QUICKCHAT_PUBLIC, context.outKeys);
         packet.buffer.writeByte(0);
         int i_4 = packet.buffer.index;
         packet.buffer.writeByte(1);
@@ -5210,12 +5216,12 @@ public class CS2Interpreter {
 
     static void sendAClass379_4624(CS2Executor executor) {
         String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
-        if (client.GAME_STATE == 0 && !JS5CacheFile.method3360()) {
+        if (client.GAME_STATE == GameState.UNK_0 && !JS5CacheFile.method3360()) {
             if (string_2.length() > 20) {
                 client.aByte7458 = -4;
             } else {
                 client.aByte7458 = -1;
-                TCPPacket tcpmessage_3 = TCPPacket.createPacket(ClientProt.DEPRECATED_97_SERVERPACKET_52, client.LOBBY_CONNECTION_CONTEXT.isaac);
+                TCPPacket tcpmessage_3 = TCPPacket.createPacket(ClientProt.DEPRECATED_97_SERVERPACKET_52, client.LOBBY_CONNECTION_CONTEXT.outKeys);
                 tcpmessage_3.buffer.writeByte(0);
                 int i_4 = tcpmessage_3.buffer.index;
                 tcpmessage_3.buffer.writeString(string_2);
@@ -5373,7 +5379,7 @@ public class CS2Interpreter {
 
     static void sendPublicQuickChatMessage(CS2Executor executor) {
         BufferedConnectionContext context = BufferedConnectionContext.getConnectionContext();
-        TCPPacket packet = TCPPacket.createPacket(ClientProt.QUICKCHAT_PUBLIC, context.isaac);
+        TCPPacket packet = TCPPacket.createPacket(ClientProt.QUICKCHAT_PUBLIC, context.outKeys);
         packet.buffer.writeByte(0);
         int startIndex = packet.buffer.index;
         packet.buffer.writeByte(0);
@@ -5666,7 +5672,7 @@ public class CS2Interpreter {
         executor.stringStack[++executor.stringStackPtr - 1] = executor.currentClanSettings.clanName;
     }
 
-    static void method5925(CS2Executor executor) {
+    static void loadLobby(CS2Executor executor) {
         executor.stringStackPtr -= 2;
         String string_2 = (String) executor.stringStack[executor.stringStackPtr];
         String string_3 = (String) executor.stringStack[executor.stringStackPtr + 1];
@@ -5890,10 +5896,19 @@ public class CS2Interpreter {
         executor.intStack[++executor.intStackPtr - 1] = i_4;
     }
 
-    static void method3804(CS2Executor executor) {
+    static void chooseFullScreen(CS2Executor executor) {
+        if(Class158.getScreenMode() == 1 && client.GAME_STATE != GameState.UNK_0)
+            return;
+        ChatLine.appendChatMessage("Fullscreen only works for OpenGL Java 16+");
         executor.intStackPtr -= 2;
         if (Class475.supportsFullScreen) {
+            ParticleProducer.switchRenderType(1/*renderOption*/, true);
             executor.intStack[++executor.intStackPtr - 1] = Engine.fullScreenFrame != null ? 1 : 0;
+            GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
+            int width = gd.getDisplayMode().getWidth();
+            int height = gd.getDisplayMode().getHeight();
+            Class158.justBecameFullscreen = true;
+            UID192.method7373(3, width, height);
         } else {
             executor.intStack[++executor.intStackPtr - 1] = 0;
         }
@@ -6061,7 +6076,7 @@ public class CS2Interpreter {
 
     static void method3613() {
         if (Class475.supportsFullScreen && Engine.fullScreenFrame != null) {
-            UID192.method7373(Class393.preferences.screenSize.method12687(), -1, -1, false);
+            UID192.method7373(Class393.preferences.screenSize.method12687(), -1, -1);
         }
     }
 
@@ -7103,7 +7118,7 @@ public class CS2Interpreter {
 
     static void method11594(CS2Executor executor) {
         String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
-        TCPPacket tcpmessage_3 = TCPPacket.createPacket(ClientProt.EMAIL_VALIDATION_SUBMIT_CODE, client.LOBBY_CONNECTION_CONTEXT.isaac);
+        TCPPacket tcpmessage_3 = TCPPacket.createPacket(ClientProt.EMAIL_VALIDATION_SUBMIT_CODE, client.LOBBY_CONNECTION_CONTEXT.outKeys);
         tcpmessage_3.buffer.writeByte(ChatLine.getLength(string_2));
         tcpmessage_3.buffer.writeString(string_2);
         client.LOBBY_CONNECTION_CONTEXT.queuePacket(tcpmessage_3);
@@ -7218,14 +7233,14 @@ public class CS2Interpreter {
     }
 
     static void method15437(CS2Executor executor) {
-        if (client.GAME_STATE == 0 && !JS5CacheFile.method3360()) {
+        if (client.GAME_STATE == GameState.UNK_0 && !JS5CacheFile.method3360()) {
             if (ConnectionInfo.aBool5422) {
                 executor.intStack[++executor.intStackPtr - 1] = 0;
             } else if (ConnectionInfo.aLong5425 > Utils.time() - 1000L) {
                 executor.intStack[++executor.intStackPtr - 1] = 1;
             } else {
                 ConnectionInfo.aBool5422 = true;
-                TCPPacket tcpmessage_2 = TCPPacket.createPacket(ClientProt.REQUEST_WORLD_LIST, client.LOBBY_CONNECTION_CONTEXT.isaac);
+                TCPPacket tcpmessage_2 = TCPPacket.createPacket(ClientProt.REQUEST_WORLD_LIST, client.LOBBY_CONNECTION_CONTEXT.outKeys);
                 tcpmessage_2.buffer.writeInt(MapSpriteDefinitions.WORLD_LIST_IDK);
                 client.LOBBY_CONNECTION_CONTEXT.queuePacket(tcpmessage_2);
                 executor.intStack[++executor.intStackPtr - 1] = 0;
@@ -7703,14 +7718,17 @@ public class CS2Interpreter {
 
     static void appendTypedMessage(CS2Executor executor) {
         executor.intStackPtr -= 2;
-        int type = executor.intStack[executor.intStackPtr];
+        int typeId = executor.intStack[executor.intStackPtr];
         int effectFlags = executor.intStack[executor.intStackPtr + 1];
         String message = (String) executor.stringStack[--executor.stringStackPtr];
-        if (type == 99) {
+        MessageType type = MessageType.forId(typeId);
+        if (type == MessageType.DEV_CONSOLE) {
             Class209.printConsoleMessage(message);
-        } else if (type == 98) {
+        } else if (type == MessageType.DEV_CONSOLE_CLEAR) {
             QuestDefinitions.setConsoleText(message);
         } else {
+        	if (type.name().startsWith("UNK"))
+        		System.out.println("UNIDENTIFIED CHAT TYPE: " + type.name() + " - " + message);
             ChatLine.appendChatMessage(type, effectFlags, "", "", "", message);
         }
     }
@@ -7806,10 +7824,13 @@ public class CS2Interpreter {
 
     static void resumeStringDialog(CS2Executor executor) {
         String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
-        TCPPacket tcpmessage_3 = TCPPacket.createPacket(ClientProt.RESUME_TEXTDIALOG, client.GAME_CONNECTION_CONTEXT.isaac);
+        TCPPacket tcpmessage_3 = TCPPacket.createPacket(ClientProt.RESUME_TEXTDIALOG, client.GAME_STATE == GameState.UNK_0 ? client.LOBBY_CONNECTION_CONTEXT.outKeys : client.GAME_CONNECTION_CONTEXT.outKeys);
         tcpmessage_3.buffer.writeByte(string_2.length() + 1);
         tcpmessage_3.buffer.writeString(string_2);
-        client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_3);
+        if (client.GAME_STATE == GameState.UNK_0)
+        	client.LOBBY_CONNECTION_CONTEXT.queuePacket(tcpmessage_3);
+        else
+        	client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_3);
     }
 
     static void method1456(CS2Executor executor) {
@@ -7975,7 +7996,7 @@ public class CS2Interpreter {
     static void method6005(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
         BufferedConnectionContext class184_3 = BufferedConnectionContext.getConnectionContext();
-        TCPPacket tcpmessage_4 = TCPPacket.createPacket(ClientProt.CHAT_TYPE, class184_3.isaac);
+        TCPPacket tcpmessage_4 = TCPPacket.createPacket(ClientProt.CHAT_TYPE, class184_3.outKeys);
         tcpmessage_4.buffer.writeByte(i_2);
         class184_3.queuePacket(tcpmessage_4);
     }
@@ -8023,7 +8044,7 @@ public class CS2Interpreter {
             string_3 = string_3.substring(0, 80);
         }
         BufferedConnectionContext class184_6 = BufferedConnectionContext.getConnectionContext();
-        TCPPacket tcpmessage_7 = TCPPacket.createPacket(ClientProt.REPORT_ABUSE, class184_6.isaac);
+        TCPPacket tcpmessage_7 = TCPPacket.createPacket(ClientProt.REPORT_ABUSE, class184_6.outKeys);
         tcpmessage_7.buffer.writeByte(ChatLine.getLength(string_2) + 2 + ChatLine.getLength(string_3));
         tcpmessage_7.buffer.writeString(string_2);
         tcpmessage_7.buffer.writeByte(i_4 - 1);
@@ -8580,7 +8601,7 @@ public class CS2Interpreter {
 
     static void sendGuestClanQuickChatMessage(CS2Executor executor) {
         BufferedConnectionContext context = BufferedConnectionContext.getConnectionContext();
-        TCPPacket packet = TCPPacket.createPacket(ClientProt.QUICKCHAT_PUBLIC, context.isaac);
+        TCPPacket packet = TCPPacket.createPacket(ClientProt.QUICKCHAT_PUBLIC, context.outKeys);
         packet.buffer.writeByte(0);
         int startIndex = packet.buffer.index;
         packet.buffer.writeByte(3);
@@ -8612,7 +8633,7 @@ public class CS2Interpreter {
 
     static void resumeNamedDialog(CS2Executor executor) {
         String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
-        TCPPacket tcpmessage_3 = TCPPacket.createPacket(ClientProt.RESUME_NAMEDIALOG, client.GAME_CONNECTION_CONTEXT.isaac);
+        TCPPacket tcpmessage_3 = TCPPacket.createPacket(ClientProt.RESUME_NAMEDIALOG, client.GAME_CONNECTION_CONTEXT.outKeys);
         tcpmessage_3.buffer.writeByte(string_2.length() + 1);
         tcpmessage_3.buffer.writeString(string_2);
         client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_3);
@@ -9203,7 +9224,7 @@ public class CS2Interpreter {
 
     static void method14647(CS2Executor executor) {
         Class393.preferences.setValue(Class393.preferences.aPreference_Sub4_8223, executor.intStack[--executor.intStackPtr]);
-        ParticleProducer.method11500(Class393.preferences.currentToolkit.getValue(), false);
+        ParticleProducer.switchRenderType(Class393.preferences.currentToolkit.getValue(), false);
         Class190.savePreferences();
     }
 
@@ -9337,7 +9358,7 @@ public class CS2Interpreter {
     static void sendPrivateQuickChatMessage(CS2Executor executor) {
         String message = (String) executor.stringStack[--executor.stringStackPtr];
         BufferedConnectionContext class184_3 = BufferedConnectionContext.getConnectionContext();
-        TCPPacket packet = TCPPacket.createPacket(ClientProt.QUICKCHAT_PRIVATE, class184_3.isaac);
+        TCPPacket packet = TCPPacket.createPacket(ClientProt.QUICKCHAT_PRIVATE, class184_3.outKeys);
         packet.buffer.writeByte(0);
         int startIndex = packet.buffer.index;
         packet.buffer.writeString(message);
@@ -9454,11 +9475,18 @@ public class CS2Interpreter {
     }
 
     static void method6678(CS2Executor executor) {
-        int i_2 = executor.intStack[--executor.intStackPtr];
-        if (i_2 < 0 || i_2 > 5) {
-            i_2 = 2;
+        int renderType = executor.intStack[--executor.intStackPtr];
+        if (Loader.DEBUG)
+        	System.out.println(renderType);
+        if (renderType < 0 || renderType > 5) {
+            renderType = 2;
         }
-        ParticleProducer.method11500(i_2, false);
+        if(Class158.getScreenMode() == 3) {
+            //Only OpenGL
+            ParticleProducer.switchRenderType(1, Class158.getScreenMode() == 3 ? true : false);//Switching render types in fullscreen doesnt work!
+        } else {
+            ParticleProducer.switchRenderType(renderType, false);
+        }
     }
 
     static void getFriendsChatCount(CS2Executor executor) {
@@ -9484,7 +9512,7 @@ public class CS2Interpreter {
 
     static void method12841(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
-        TCPPacket tcpmessage_3 = TCPPacket.createPacket(ClientProt.GRAND_EXCHANGE_ITEM_SELECT, client.GAME_CONNECTION_CONTEXT.isaac);
+        TCPPacket tcpmessage_3 = TCPPacket.createPacket(ClientProt.GRAND_EXCHANGE_ITEM_SELECT, client.GAME_CONNECTION_CONTEXT.outKeys);
         tcpmessage_3.buffer.writeShort(i_2);
         client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_3);
     }
@@ -9560,12 +9588,12 @@ public class CS2Interpreter {
         String message = (String) executor.stringStack[executor.stringStackPtr + 1];
         if (client.PLAYER_RIGHTS != 0 || (!client.USERDETAIL_QUICKCHAT || client.VERIFIED_EMAIL_ADDRESS) && !client.IS_QUICKCHAT_ONLY) {
             BufferedConnectionContext context = BufferedConnectionContext.getConnectionContext();
-            TCPPacket packet = TCPPacket.createPacket(ClientProt.SEND_PRIVATE_MESSAGE, context.isaac);
+            TCPPacket packet = TCPPacket.createPacket(ClientProt.SEND_PRIVATE_MESSAGE, context.outKeys);
             packet.buffer.writeShort(0);
             int startIndex = packet.buffer.index;
             packet.buffer.writeString(targetName);
             ByteBuf.writeHuffmanString(packet.buffer, message);
-            packet.buffer.method13281(packet.buffer.index - startIndex);
+            packet.buffer.writeLength(packet.buffer.index - startIndex);
             context.queuePacket(packet);
         }
     }
@@ -9683,7 +9711,7 @@ public class CS2Interpreter {
     static void method7501(CS2Executor executor) {
         String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
         String string_3 = (String) executor.stringStack[--executor.stringStackPtr];
-        TCPPacket tcpmessage_4 = TCPPacket.createPacket(ClientProt.EMAIL_VALIDATION_CHANGE_ADDRESS, client.LOBBY_CONNECTION_CONTEXT.isaac);
+        TCPPacket tcpmessage_4 = TCPPacket.createPacket(ClientProt.EMAIL_VALIDATION_CHANGE_ADDRESS, client.LOBBY_CONNECTION_CONTEXT.outKeys);
         tcpmessage_4.buffer.writeShort(ChatLine.getLength(string_2) + ChatLine.getLength(string_3));
         tcpmessage_4.buffer.writeString(string_2);
         tcpmessage_4.buffer.writeString(string_3);
@@ -10014,7 +10042,7 @@ public class CS2Interpreter {
                 }
             }
             BufferedConnectionContext context = BufferedConnectionContext.getConnectionContext();
-            TCPPacket packet = TCPPacket.createPacket(ClientProt.CHAT, context.isaac);
+            TCPPacket packet = TCPPacket.createPacket(ClientProt.CHAT, context.outKeys);
             packet.buffer.writeByte(0);
             int i_8 = packet.buffer.index;
             packet.buffer.writeByte(b_4);
@@ -10296,7 +10324,7 @@ public class CS2Interpreter {
         }
         client.TRADE_FILTER = executor.intStack[executor.intStackPtr + 2];
         BufferedConnectionContext context = BufferedConnectionContext.getConnectionContext();
-        TCPPacket packet = TCPPacket.createPacket(ClientProt.CHAT_SETFILTER, context.isaac);
+        TCPPacket packet = TCPPacket.createPacket(ClientProt.CHAT_SETFILTER, context.outKeys);
         packet.buffer.writeByte(client.PUBLIC_FILTER);
         packet.buffer.writeByte(Class149_Sub2.PRIVATE_FILTER.id);
         packet.buffer.writeByte(client.TRADE_FILTER);
@@ -10358,7 +10386,7 @@ public class CS2Interpreter {
 
     static void resumeHSLDialog(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
-        TCPPacket tcpmessage_3 = TCPPacket.createPacket(ClientProt.RESUME_HSLDIALOG, client.GAME_CONNECTION_CONTEXT.isaac);
+        TCPPacket tcpmessage_3 = TCPPacket.createPacket(ClientProt.RESUME_HSLDIALOG, client.GAME_CONNECTION_CONTEXT.outKeys);
         tcpmessage_3.buffer.writeShort(i_2);
         client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_3);
     }
@@ -11185,7 +11213,7 @@ public class CS2Interpreter {
         for (int i = params.length - 1; i >= 1; --i) {
             if (paramTypes.charAt(i - 1) == 's') {
                 params[i] = executor.stringStack[--executor.stringStackPtr];
-            } else if (paramTypes.charAt(i - 1) == 'º') {
+            } else if (paramTypes.charAt(i - 1) == '\u00BD') {
                 params[i] = new Long(executor.longStack[--executor.longStackPtr]);
             } else {
                 params[i] = new Integer(executor.intStack[--executor.intStackPtr]);

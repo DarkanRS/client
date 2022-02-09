@@ -1,6 +1,6 @@
 package com.jagex;
 
-import java.awt.*;
+import java.awt.Dimension;
 
 public class Class350_Sub2 extends Class350 {
 
@@ -24,7 +24,20 @@ public class Class350_Sub2 extends Class350 {
             Renderers.CURRENT_RENDERER.method8524(Class351.gameCanvas, dimension_1.width, dimension_1.height);
             Renderers.CURRENT_RENDERER.method8412(Class351.gameCanvas);
         } else {
-            ParticleProducer.method11500(Class393.preferences.currentToolkit.getValue(), false);
+            ParticleProducer.switchRenderType(Class393.preferences.currentToolkit.getValue(), false);
+        }
+        Static.method6378();
+    }
+
+    static void method12571(boolean fullScreen) {
+        if (Renderers.CURRENT_RENDERER.method8407()) {
+            Renderers.CURRENT_RENDERER.method8410(Class351.gameCanvas);
+            Class250.method4297();
+            Dimension dimension_1 = Class351.gameCanvas.getSize();
+            Renderers.CURRENT_RENDERER.method8524(Class351.gameCanvas, dimension_1.width, dimension_1.height);
+            Renderers.CURRENT_RENDERER.method8412(Class351.gameCanvas);
+        } else {
+            ParticleProducer.switchRenderType(Class393.preferences.currentToolkit.getValue(), fullScreen);
         }
         Static.method6378();
     }

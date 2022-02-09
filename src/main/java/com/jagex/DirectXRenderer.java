@@ -1,8 +1,17 @@
 package com.jagex;
 
-import jagdx.*;
+import java.awt.Canvas;
 
-import java.awt.*;
+import jagdx.D3DADAPTER_IDENTIFIER;
+import jagdx.D3DCAPS;
+import jagdx.D3DDISPLAYMODE;
+import jagdx.D3DLIGHT;
+import jagdx.D3DPRESENT_PARAMETERS;
+import jagdx.IDirect3D;
+import jagdx.IDirect3DDevice;
+import jagdx.IDirect3DEventQuery;
+import jagdx.IDirect3DSurface;
+import jagdx.IUnknown;
 
 public class DirectXRenderer extends HardwareRenderer {
 
@@ -95,8 +104,8 @@ public class DirectXRenderer extends HardwareRenderer {
 	    }
 	}
 
-    static AbstractRenderer method15638(Canvas canvas_0, ImageLoader interface22_1, Index index_2, Integer integer_3) {
-        DirectXRenderer class505_sub2_sub2_4 = null;
+    static AbstractRenderer method15638(Canvas canvas, ImageLoader imageLoader, Index index_2, Integer integer_3) {
+        DirectXRenderer renderer = null;
         byte b_6 = 0;
         byte b_7 = 1;
         long long_8 = IDirect3D.Direct3DCreate();
@@ -127,14 +136,14 @@ public class DirectXRenderer extends HardwareRenderer {
         } else if (d3dcaps_10.MaxStreams < 5) {
             throw new RuntimeException("");
         } else {
-            D3DPRESENT_PARAMETERS d3dpresent_parameters_11 = new D3DPRESENT_PARAMETERS(canvas_0);
-            d3dpresent_parameters_11.Windowed = true;
-            d3dpresent_parameters_11.EnableAutoDepthStencil = true;
-            d3dpresent_parameters_11.BackBufferWidth = canvas_0.getWidth();
-            d3dpresent_parameters_11.BackBufferHeight = canvas_0.getHeight();
-            d3dpresent_parameters_11.BackBufferCount = 1;
-            d3dpresent_parameters_11.PresentationInterval = Integer.MIN_VALUE;
-            if (!method15656(b_6, b_7, long_8, integer_3.intValue(), d3dpresent_parameters_11)) {
+            D3DPRESENT_PARAMETERS d3DPRESENTParameters = new D3DPRESENT_PARAMETERS(canvas);
+            d3DPRESENTParameters.Windowed = true;
+            d3DPRESENTParameters.EnableAutoDepthStencil = true;
+            d3DPRESENTParameters.BackBufferWidth = canvas.getWidth();
+            d3DPRESENTParameters.BackBufferHeight = canvas.getHeight();
+            d3DPRESENTParameters.BackBufferCount = 1;
+            d3DPRESENTParameters.PresentationInterval = Integer.MIN_VALUE;
+            if (!method15656(b_6, b_7, long_8, integer_3.intValue(), d3DPRESENTParameters)) {
                 throw new RuntimeException("");
             } else {
                 int i_12 = 0;
@@ -145,20 +154,19 @@ public class DirectXRenderer extends HardwareRenderer {
                 long long_13 = 0L;
 
                 try {
-                    long_13 = IDirect3D.CreateDeviceContext(long_8, b_6, b_7, canvas_0, i_12 | 0x40, d3dpresent_parameters_11);
+                    long_13 = IDirect3D.CreateDeviceContext(long_8, b_6, b_7, canvas, i_12 | 0x40, d3DPRESENTParameters);
                 } catch (RuntimeException_Sub1 runtimeexception_sub1_17) {
-                    long_13 = IDirect3D.CreateDeviceContext(long_8, b_6, b_7, canvas_0, i_12 & -1048577 | 0x20, d3dpresent_parameters_11);
+                    long_13 = IDirect3D.CreateDeviceContext(long_8, b_6, b_7, canvas, i_12 & -1048577 | 0x20, d3DPRESENTParameters);
+                }
+                renderer = new DirectXRenderer(b_6, b_7, long_8, long_13, d3DPRESENTParameters, d3dcaps_10, imageLoader, index_2, integer_3.intValue());
+                if (!renderer.mapCanvasToTBD.containsKey(canvas)) {
+                    Class459.method7679(canvas);
+                    renderer.method8411(canvas, new Class158_Sub2_Sub2_Sub2(renderer, canvas, canvas.getWidth(), canvas.getHeight(), true));
                 }
 
-                class505_sub2_sub2_4 = new DirectXRenderer(b_6, b_7, long_8, long_13, d3dpresent_parameters_11, d3dcaps_10, interface22_1, index_2, integer_3.intValue());
-                if (!class505_sub2_sub2_4.mapCanvasToTBD.containsKey(canvas_0)) {
-                    Class459.method7679(canvas_0);
-                    class505_sub2_sub2_4.method8411(canvas_0, new Class158_Sub2_Sub2_Sub2(class505_sub2_sub2_4, canvas_0, canvas_0.getWidth(), canvas_0.getHeight(), true));
-                }
-
-                class505_sub2_sub2_4.method8412(canvas_0);
-                class505_sub2_sub2_4.method14147();
-                return class505_sub2_sub2_4;
+                renderer.method8412(canvas);
+                renderer.method14147();
+                return renderer;
             }
         }
     }
