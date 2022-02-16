@@ -1,13 +1,11 @@
 package com.jagex;
 
+import com.Loader;
+import com.jagex.clans.settings.ChangeClanSetting;
+import jaclib.nanotime.QueryPerformanceCounter;
+
 import java.applet.Applet;
-import java.awt.Color;
-import java.awt.Container;
-import java.awt.Frame;
-import java.awt.Graphics;
-import java.awt.Insets;
-import java.awt.Rectangle;
-import java.awt.Toolkit;
+import java.awt.*;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import java.awt.event.WindowEvent;
@@ -16,10 +14,6 @@ import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.net.URL;
-
-import com.jagex.clans.settings.ChangeClanSetting;
-
-import jaclib.nanotime.QueryPerformanceCounter;
 
 public abstract class Engine implements Interface24, Runnable, FocusListener, WindowListener {
 
@@ -235,7 +229,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 
 	File method4657(String string_1, String string_2, int i_3) {
 		String str_5 = i_3 == 0 ? "" : "" + i_3;
-		Canvas_Sub1.aFile9453 = new File(Class110.aString1103, "dk_cl_" + string_1 + "_" + string_2 + str_5 + ".dat");
+		Canvas_Sub1.aFile9453 = new File(Class110.aString1103 + File.separatorChar + Loader.CACHE_DIR, "dk_cl_" + string_1 + "_" + string_2 + str_5 + ".dat");
 		String string_6 = null;
 		String string_7 = null;
 		boolean bool_8 = false;
@@ -301,7 +295,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 			}
 		}
 		if (string_6 == null) {
-			string_6 = Class110.aString1103 + File.separatorChar + "dkcache" + str_5 + File.separatorChar + string_1 + File.separatorChar + string_2 + File.separatorChar;
+			string_6 = Class110.aString1103 + File.separatorChar + Loader.CACHE_DIR + str_5 + File.separatorChar + string_1 + File.separatorChar + string_2 + File.separatorChar;
 			bool_8 = true;
 		}
 		if (string_7 != null) {

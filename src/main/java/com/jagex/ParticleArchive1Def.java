@@ -1,5 +1,7 @@
 package com.jagex;
 
+import com.Loader;
+
 import java.io.File;
 import java.io.IOException;
 
@@ -40,7 +42,7 @@ public class ParticleArchive1Def {
         } else if (Class514.anInt5887 == 34) {
             str_5 = "_wip";
         }
-        File file_6 = new File(Class110.aString1103, "dk_" + string_1 + "_preferences" + string_0 + str_5 + ".dat");
+        File file_6 = new File(Class110.aString1103 + File.separatorChar + Loader.CACHE_DIR, "dk_" + string_1 + "_preferences" + string_0 + str_5 + ".dat");
         Class442 class442_8;
         if (!bool_2 && file_6.exists()) {
             try {
