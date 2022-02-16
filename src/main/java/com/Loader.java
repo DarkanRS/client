@@ -43,7 +43,6 @@ public class Loader extends Applet implements AppletStub {
     		IP_ADDRESS = "dev.darkan.org"; //axios.trentonkress.com
     	if (args.length > 1 && args[1] != null)
     		LOBBY_PORT = Integer.valueOf(args[1]);
-    	loadParams();
         new Loader().doFrame();
     }
     
@@ -133,6 +132,7 @@ public class Loader extends Applet implements AppletStub {
     }
 
     private void startClient() {
+        loadParams();
         client clnt = new client();
         clnt.supplyApplet(this);
         clnt.init();
