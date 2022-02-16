@@ -7,12 +7,15 @@ import javax.swing.*;
 import java.applet.Applet;
 import java.applet.AppletStub;
 import java.awt.*;
+import java.io.File;
 import java.math.BigInteger;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Properties;
 
 public class Loader extends Applet implements AppletStub {
+    public static final String HOME_DIR = ".darkanrs";
+    public static final String CACHE_DIR = HOME_DIR + File.separatorChar + "caches";
     private static final long serialVersionUID = 1L;
 
     public static final int MAJOR_BUILD = 727;
