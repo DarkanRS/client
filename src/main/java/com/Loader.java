@@ -40,7 +40,7 @@ public class Loader extends Applet implements AppletStub {
     	if (args.length > 0 && args[0] != null)
     		IP_ADDRESS = args[0];
     	else
-    		IP_ADDRESS = "dev.darkan.org"; //axios.trentonkress.com
+    		IP_ADDRESS = "axios.trentonkress.com";
     	if (args.length > 1 && args[1] != null)
     		LOBBY_PORT = Integer.valueOf(args[1]);
         new Loader().doFrame();
