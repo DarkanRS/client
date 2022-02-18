@@ -40,7 +40,7 @@ public class Loader extends Applet implements AppletStub {
     	if (args.length > 0 && args[0] != null)
     		IP_ADDRESS = args[0];
     	else
-    		IP_ADDRESS = "dev.darkan.org"; //axios.trentonkress.com
+    		IP_ADDRESS = "axios.trentonkress.com";
     	if (args.length > 1 && args[1] != null)
     		LOBBY_PORT = Integer.valueOf(args[1]);
         new Loader().doFrame();
@@ -124,7 +124,7 @@ public class Loader extends Applet implements AppletStub {
         JPanel client_panel = new JPanel();
         client_panel.setLayout(new BorderLayout());
         client_panel.add(this);
-        client_panel.setPreferredSize(new Dimension(765, 553));
+        client_panel.setPreferredSize(new Dimension(774, 588));
         clientFrame.getContentPane().add(client_panel, "Center");
         clientFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         clientFrame.pack();
