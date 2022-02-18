@@ -124,7 +124,7 @@ public class Loader extends Applet implements AppletStub {
         JPanel client_panel = new JPanel();
         client_panel.setLayout(new BorderLayout());
         client_panel.add(this);
-        client_panel.setPreferredSize(new Dimension(765, 553));
+        client_panel.setPreferredSize(new Dimension(774, 588));
         clientFrame.getContentPane().add(client_panel, "Center");
         clientFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         clientFrame.pack();
