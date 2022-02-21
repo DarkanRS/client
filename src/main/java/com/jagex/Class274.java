@@ -1,5 +1,7 @@
 package com.jagex;
 
+import com.Loader;
+
 public class Class274 {
 
     protected static Class470 aClass470_3336;
@@ -20,7 +22,8 @@ public class Class274 {
 
     public static void method4884() {
         if (ConnectionInfo.NEWS_CONNECTION_INFO.worldId != -1) {
-            Class62.setGameHost(ConnectionInfo.NEWS_CONNECTION_INFO.worldId, ConnectionInfo.NEWS_CONNECTION_INFO.host);
+			Class62.setGameHost(Loader.DEFAULT_WORLD, Loader.DEFAULT_WORLD_HOST);
+            //Class62.setGameHost(ConnectionInfo.NEWS_CONNECTION_INFO.worldId, ConnectionInfo.NEWS_CONNECTION_INFO.host);
         }
     }
 
