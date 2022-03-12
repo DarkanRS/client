@@ -4,23 +4,8 @@ plugins {
     id 'application'
 }
 
-sourceCompatibility = '1.8'
-targetCompatibility = '1.8'
-
-tasks.withType(JavaCompile).configureEach {
-    javaCompiler = javaToolchains.compilerFor {
-        languageVersion = JavaLanguageVersion.of(8)
-    }
-}
-
-task('run8', type: JavaExec) {
-    javaLauncher = javaToolchains.launcherFor {
-        languageVersion = JavaLanguageVersion.of(8)
-    }
-
-    classpath = sourceSets.main.runtimeClasspath
-    mainClass = application.mainClass
-}
+sourceCompatibility = '17'
+targetCompatibility = '17'
 
 mainClassName = 'com.Loader'
 
