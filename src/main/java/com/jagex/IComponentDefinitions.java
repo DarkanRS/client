@@ -572,7 +572,7 @@ public class IComponentDefinitions {
             for (int i_5 = 0; i_5 < i_3; i_5++) {
                 int i_6 = rsbytebuffer_1.readUnsignedByte();
                 if (i_6 == 0) {
-                    arr_4[i_5] = new Integer(rsbytebuffer_1.readInt());
+                    arr_4[i_5] = Integer.valueOf(rsbytebuffer_1.readInt());
                 } else if (i_6 == 1) {
                     arr_4[i_5] = rsbytebuffer_1.readString();
                 }

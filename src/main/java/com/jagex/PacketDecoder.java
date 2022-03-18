@@ -938,7 +938,7 @@ public class PacketDecoder {
             if (Class46.CLAN_VARS == null) {
                 Class46.CLAN_VARS = new Object[IndexLoaders.CLAN_VAR_LOADER.size];
             }
-            Class46.CLAN_VARS[key] = new Long(long_47);
+            Class46.CLAN_VARS[key] = Long.valueOf(long_47);
             client.CLAN_VAR_KEYS[++client.CLAN_VAR_COUNTER - 1 & 0x1f] = key;
             context.currentPacket = null;
             return true;
@@ -997,7 +997,7 @@ public class PacketDecoder {
             if (Class46.CLAN_VARS == null) {
                 Class46.CLAN_VARS = new Object[IndexLoaders.CLAN_VAR_LOADER.size];
             }
-            Class46.CLAN_VARS[key] = new Integer(flags);
+            Class46.CLAN_VARS[key] = Integer.valueOf(flags);
             client.CLAN_VAR_KEYS[++client.CLAN_VAR_COUNTER - 1 & 0x1f] = key;
             context.currentPacket = null;
             return true;
@@ -1098,7 +1098,7 @@ public class PacketDecoder {
             if (Class46.CLAN_VARS == null) {
                 Class46.CLAN_VARS = new Object[IndexLoaders.CLAN_VAR_LOADER.size];
             }
-            Class46.CLAN_VARS[key] = new Integer(b_84);
+            Class46.CLAN_VARS[key] = Integer.valueOf(b_84);
             client.CLAN_VAR_KEYS[++client.CLAN_VAR_COUNTER - 1 & 0x1f] = key;
             context.currentPacket = null;
             return true;
@@ -2298,10 +2298,10 @@ public class PacketDecoder {
                 if (string_63.charAt(i_6) == 115) {
                     arr_26[i_6 + 1] = buffer.readString();
                 } else {
-                    arr_26[i_6 + 1] = new Integer(buffer.readInt());
+                    arr_26[i_6 + 1] = Integer.valueOf(buffer.readInt());
                 }
             }
-            arr_26[0] = new Integer(buffer.readInt());
+            arr_26[0] = Integer.valueOf(buffer.readInt());
             Class470.method7825();
             HookRequest hookrequest_27 = new HookRequest();
             hookrequest_27.params = arr_26;

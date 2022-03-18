@@ -1,13 +1,10 @@
 package com;
 
-import com.jagex.SubInterface;
 import com.jagex.WorldDescriptor;
 import com.jagex.client;
 
 import javax.accessibility.Accessible;
 import javax.swing.*;
-import java.applet.Applet;
-import java.applet.AppletStub;
 import java.awt.*;
 import java.awt.image.ImageObserver;
 import java.io.File;
@@ -41,7 +38,6 @@ public class Loader extends Panel implements ImageObserver, MenuContainer, Seria
     public JFrame clientFrame;
 
     public static void main(String[] args) {
-    	System.out.println(System.getProperty("java.ext.dirs"));
     	if (args.length > 0 && args[0] != null)
     		IP_ADDRESS = args[0];
     	else

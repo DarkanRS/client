@@ -685,7 +685,7 @@ public class Class291 {
                     aByteArray3453[i_5 * xLength + i_4] = (byte) i_14;
                     aByteArray3487[i_5 * xLength + i_4] = (byte) i_15;
                     if (i_16 == 1) {
-                        anObjectArray3488[i_5 * xLength + i_4] = new Integer(rsbytebuffer_1.readBigSmart());
+                        anObjectArray3488[i_5 * xLength + i_4] = Integer.valueOf(rsbytebuffer_1.readBigSmart());
                         aByteArray3475[i_5 * xLength + i_4] = rsbytebuffer_1.readByte();
                     } else if (i_16 > 1) {
                         ints_17 = new int[i_16];

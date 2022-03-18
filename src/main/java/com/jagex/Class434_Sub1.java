@@ -104,7 +104,7 @@ public class Class434_Sub1 extends Class434 {
                         Class class_6 = Class.forName("sun.net.www.protocol.http.AuthenticationInfo");
                         Method method_7 = class_6.getDeclaredMethod("getProxyAuth", String.class, Integer.TYPE);
                         method_7.setAccessible(true);
-                        Object object_8 = method_7.invoke(null, inetsocketaddress_4.getHostName(), new Integer(inetsocketaddress_4.getPort()));
+                        Object object_8 = method_7.invoke(null, inetsocketaddress_4.getHostName(), Integer.valueOf(inetsocketaddress_4.getPort()));
                         if (object_8 != null) {
                             Method method_9 = class_6.getDeclaredMethod("supportsPreemptiveAuthorization");
                             method_9.setAccessible(true);
