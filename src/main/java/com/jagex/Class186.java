@@ -39,7 +39,7 @@ public class Class186 {
         	return false;
         } else if (i_1 == 2) {
             try {
-                SubInterface.suppliedApplet.getAppletContext().showDocument(new URL(SubInterface.suppliedApplet.getCodeBase(), string_0), "_blank");
+            	SubInterface.suppliedApplet.showError(string_0);
                 bool_4 = true;
                 return bool_4;
             } catch (Exception exception_9) {
@@ -47,7 +47,7 @@ public class Class186 {
             }
         } else if (i_1 == 3) {
             try {
-                SubInterface.suppliedApplet.getAppletContext().showDocument(new URL(SubInterface.suppliedApplet.getCodeBase(), string_0), "_top");
+            	SubInterface.suppliedApplet.showError(string_0);
                 bool_4 = true;
                 return bool_4;
             } catch (Exception exception_10) {

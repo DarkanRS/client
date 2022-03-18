@@ -15,6 +15,8 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.net.URL;
 
+import javax.swing.JOptionPane;
+
 public abstract class Engine implements Interface24, Runnable, FocusListener, WindowListener {
 
 	public static int anInt3249;
@@ -88,8 +90,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 		}
 	}
 
-	@Override
-	public void supplyApplet(Applet applet_1) {
+	public void supplyApplet(Loader applet_1) {
 		SubInterface.suppliedApplet = applet_1;
 	}
 
@@ -575,7 +576,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 //			} catch (Throwable ignored) {
 //			}
 			try {
-				SubInterface.suppliedApplet.getAppletContext().showDocument(new URL(SubInterface.suppliedApplet.getCodeBase(), "error_game_" + string_1 + ".ws"), "_top");
+				SubInterface.suppliedApplet.showError("error_game_" + string_1);
 			} catch (Exception ignored) {
 			}
 		}
@@ -614,7 +615,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 	abstract void method4690();
 
 	@Override
-	public void method168(Applet applet_1) {
+	public void method168(Loader applet_1) {
 		SubInterface.suppliedApplet = applet_1;
 	}
 

@@ -1,19 +1,23 @@
 package com;
 
+import com.jagex.SubInterface;
 import com.jagex.WorldDescriptor;
 import com.jagex.client;
 
+import javax.accessibility.Accessible;
 import javax.swing.*;
 import java.applet.Applet;
 import java.applet.AppletStub;
 import java.awt.*;
+import java.awt.image.ImageObserver;
 import java.io.File;
+import java.io.Serializable;
 import java.math.BigInteger;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Properties;
 
-public class Loader extends Applet implements AppletStub {
+public class Loader extends Panel implements ImageObserver, MenuContainer, Serializable, Accessible {
     public static final String HOME_DIR = ".darkanrs";
     public static final String CACHE_DIR = HOME_DIR + File.separatorChar + "caches";
     private static final long serialVersionUID = 1L;
@@ -37,6 +41,7 @@ public class Loader extends Applet implements AppletStub {
     public JFrame clientFrame;
 
     public static void main(String[] args) {
+    	System.out.println(System.getProperty("java.ext.dirs"));
     	if (args.length > 0 && args[0] != null)
     		IP_ADDRESS = args[0];
     	else
@@ -102,7 +107,6 @@ public class Loader extends Applet implements AppletStub {
         clientParams.put("29", "false");
     }
 
-    @Override
     public void init() {
         doApplet();
     }
@@ -139,17 +143,10 @@ public class Loader extends Applet implements AppletStub {
         clnt.start();
     }
 
-    @Override
     public String getParameter(String arg0) {
         return (String) clientParams.get(arg0);
     }
 
-    @Override
-    public void appletResize(int arg, int arg1) {
-
-    }
-
-    @Override
     public URL getDocumentBase() {
         try {
             return new URL("http://" + IP_ADDRESS);
@@ -159,7 +156,6 @@ public class Loader extends Applet implements AppletStub {
         return null;
     }
 
-    @Override
     public URL getCodeBase() {
         try {
             return new URL("http://" + IP_ADDRESS);
@@ -168,5 +164,9 @@ public class Loader extends Applet implements AppletStub {
         }
         return null;
     }
+
+	public void showError(String string) {
+		JOptionPane.showMessageDialog(this, string);
+	}
 
 }
