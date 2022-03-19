@@ -154,7 +154,7 @@ public class Class170 {
             }
 
             aGraphicalRenderer_Sub1_2112.method13637();
-            aGraphicalRenderer_Sub1_2112.method13624(0);
+            aGraphicalRenderer_Sub1_2112.setColorRenderType(0);
             aGraphicalRenderer_Sub1_2112.method13612(1);
             aGraphicalRenderer_Sub1_2112.L();
             int i_1 = 0;

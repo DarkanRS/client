@@ -648,10 +648,10 @@ public abstract class PathingEntity extends GraphNode_Sub1_Sub1 {
     public void method15818(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
         if (!initInterface()) {
             if (i_1 != -1) {
-                client.aBoolArray7443[i_1] = true;
+                client.INTERFACE_107_BIT23[i_1] = true;
             } else {
                 for (int i_9 = 0; i_9 < 107; i_9++) {
-                    client.aBoolArray7443[i_9] = true;
+                    client.INTERFACE_107_BIT23[i_9] = true;
                 }
             }
         } else {

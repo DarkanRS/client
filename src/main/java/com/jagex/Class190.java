@@ -191,7 +191,7 @@ public class Class190 {
         client.aBool7172 = true;
 
         for (i_1 = 0; i_1 < 107; i_1++) {
-            client.aBoolArray7443[i_1] = true;
+            client.INTERFACE_107_BIT23[i_1] = true;
         }
 
         for (i_1 = 0; i_1 < 6; i_1++) {

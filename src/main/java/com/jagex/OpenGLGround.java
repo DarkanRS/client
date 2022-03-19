@@ -261,7 +261,7 @@ public class OpenGLGround extends Ground {
                 renderer.c(0, i_17, renderer.anInt8378);
                 renderer.method13620(false);
                 renderer.method13623(false);
-                renderer.method13624(128);
+                renderer.setColorRenderType(128);
                 renderer.method13581(-2);
                 renderer.method13654(renderer.aClass137_Sub1_8460);
                 renderer.method13717(8448, 7681);
@@ -688,7 +688,7 @@ public class OpenGLGround extends Ground {
             renderer.method13620(false);
             renderer.method13656(false);
             renderer.method13623(false);
-            renderer.method13624(0);
+            renderer.setColorRenderType(0);
             renderer.method13581(-2);
             renderer.method13654(null);
             GROUND_MATRIX[0] = 1024 / (128.0F * tileUnits * class158_9.method2714());
@@ -1898,7 +1898,7 @@ public class OpenGLGround extends Ground {
             renderer.method13620(false);
             renderer.method13656(false);
             renderer.method13623(false);
-            renderer.method13624(0);
+            renderer.setColorRenderType(0);
             renderer.method13581(-2);
             renderer.method13654(null);
             GROUND_MATRIX[0] = i_3 / (128.0F * (tileUnits) * class158_9.method2714());
@@ -2059,7 +2059,7 @@ public class OpenGLGround extends Ground {
             renderer.method13620(false);
             renderer.method13656(false);
             renderer.method13623(false);
-            renderer.method13624(0);
+            renderer.setColorRenderType(0);
             renderer.method13581(-2);
             renderer.method13654(null);
             GROUND_MATRIX[0] = i_3 / (128.0F * (tileUnits) * class158_9.method2714());

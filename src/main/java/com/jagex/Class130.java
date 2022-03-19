@@ -120,7 +120,7 @@ public class Class130 {
         aGraphicalRenderer_Sub1_1592.method13623(false);
         aGraphicalRenderer_Sub1_1592.method13581(-2);
         aGraphicalRenderer_Sub1_1592.method13612(1);
-        aGraphicalRenderer_Sub1_1592.method13624(1);
+        aGraphicalRenderer_Sub1_1592.setColorRenderType(1);
         float f_6 = 1.0F / (aGraphicalRenderer_Sub1_1592.anInt8466 * 128);
         int i_7;
         int i_8;

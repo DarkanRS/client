@@ -82,7 +82,7 @@ public class Class507 {
                 Class388.method6692();
             }
             for (int i_8 = 0; i_8 < 107; i_8++) {
-                client.aBoolArray7443[i_8] = true;
+                client.INTERFACE_107_BIT23[i_8] = true;
             }
             client.aBool3274 = true;
         }

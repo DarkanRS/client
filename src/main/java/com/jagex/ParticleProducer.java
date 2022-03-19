@@ -57,8 +57,8 @@ public class ParticleProducer {
 
         int i_1;
         for (i_1 = 0; i_1 < client.anInt7407; i_1++) {
-            client.aBoolArray7410[i_1] = client.aBoolArray7443[i_1];
-            client.aBoolArray7443[i_1] = false;
+            client.aBoolArray7410[i_1] = client.INTERFACE_107_BIT23[i_1];
+            client.INTERFACE_107_BIT23[i_1] = false;
         }
 
         client.anInt7408 = client.CYCLES_20MS;

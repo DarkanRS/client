@@ -119,8 +119,8 @@ public abstract class Class152 {
         }
         int i_2;
         for (i_2 = 0; i_2 < client.anInt7407; i_2++) {
-            client.aBoolArray7410[i_2] = client.aBoolArray7443[i_2];
-            client.aBoolArray7443[i_2] = false;
+            client.aBoolArray7410[i_2] = client.INTERFACE_107_BIT23[i_2];
+            client.INTERFACE_107_BIT23[i_2] = false;
         }
         client.anInt7408 = client.CYCLES_20MS;
         Class380.method6451(-1, -1);

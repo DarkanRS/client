@@ -3956,7 +3956,7 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
                     int i_13 = class145_5.anInt1714;
                     OpenGL.glColor4ub((byte) (i_13 >> 16), (byte) (i_13 >> 8), (byte) i_13, (byte) (i_13 >> 24));
                     aGraphicalRenderer_Sub1_8239.method13581(class162_4.aShort2022);
-                    aGraphicalRenderer_Sub1_8239.method13624(class162_4.aByte2024);
+                    aGraphicalRenderer_Sub1_8239.setColorRenderType(class162_4.aByte2024);
                     aGraphicalRenderer_Sub1_8239.method13603(4);
                 }
             }

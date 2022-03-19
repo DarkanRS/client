@@ -134,7 +134,7 @@ public class client extends Engine {
 	public static int anInt7399;
 	public static boolean NEEDS_VARC_SAVE;
 	public static NodeCollection PENDING_HOOK_REQUESTS;
-	public static boolean[] aBoolArray7443;
+	public static boolean[] INTERFACE_107_BIT23;
 	public static int PUBLIC_FILTER;
 	public static int TRADE_FILTER;
 	public static String FC_NAME;
@@ -498,7 +498,7 @@ public class client extends Engine {
 		ICOMPONENT_SETTINGS_SLOTS = new IterableNodeMap(512);
 		anInt7407 = 0;
 		anInt7408 = -2;
-		aBoolArray7443 = new boolean[107];
+		INTERFACE_107_BIT23 = new boolean[107];
 		aBoolArray7410 = new boolean[107];
 		aRectangleArray7411 = new Rectangle[107];
 

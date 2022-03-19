@@ -193,7 +193,7 @@ public class PacketDecoder {
             Class516.method8867(false);
             Class150.method2582(client.BASE_WINDOW_ID, xteas);
             for (int i_11 = 0; i_11 < 107; i_11++) {
-                client.aBoolArray7443[i_11] = true;
+                client.INTERFACE_107_BIT23[i_11] = true;
             }
             context.currentPacket = null;
             return true;
