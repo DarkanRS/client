@@ -103,14 +103,6 @@ public class Loader extends Panel implements ImageObserver, MenuContainer, Seria
         clientParams.put("29", "false");
     }
 
-    public void init() {
-        doApplet();
-    }
-
-    private void doApplet() {
-        startClient();
-    }
-
     private void doFrame() {
         INSTANCE = this;
         openFrame();
