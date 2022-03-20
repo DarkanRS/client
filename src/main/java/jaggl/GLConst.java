@@ -1813,8 +1813,8 @@ public class GLConst {
 	public static final int GL_ZOOM_X = 3350; // 0xd16
 	public static final int GL_ZOOM_Y = 3351; // 0xd17
 	public static final int GL_COMBINE = 34160; // 0x8570
-	public static final int GL_COMBINE_ALPHA = 34161; // 0x8571
-	public static final int GL_COMBINE_RGB = 34162; // 0x8572
+	public static final int GL_COMBINE_ALPHA = 34162; // 0x8572
+	public static final int GL_COMBINE_RGB = 34161; // 0x8571
 	public static final int GL_INTERPOLATE = 34165; // 0x8575
 	public static final int GL_CONSTANT = 34166;
 	public static final int GL_MAX_TEXTURE_UNITS = 34018;
