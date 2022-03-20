@@ -36,7 +36,7 @@ public class Class137_Sub1_Sub1 extends Class137_Sub1 {
         super(class505_sub1_1, i_2, class150_3, class76_4, i_5, i_6);
         anInt10136 = i_5;
         anInt10133 = i_6;
-        if (anInt1648 == 34037) {
+        if (bindId == 34037) {
             aFloat10134 = i_6;
             aFloat10132 = i_5;
             aBool10135 = false;
@@ -53,7 +53,7 @@ public class Class137_Sub1_Sub1 extends Class137_Sub1 {
         super(class505_sub1_1, i_2, i_3, i_4, i_5, i_6);
         anInt10136 = i_5;
         anInt10133 = i_6;
-        if (anInt1648 == 34037) {
+        if (bindId == 34037) {
             aFloat10134 = i_6;
             aFloat10132 = i_5;
             aBool10135 = false;
@@ -93,7 +93,7 @@ public class Class137_Sub1_Sub1 extends Class137_Sub1 {
         super(class505_sub1_1, i_2, i_3, i_4, false, ints_6, i_7, i_8, true);
         anInt10136 = i_3;
         anInt10133 = i_4;
-        if (anInt1648 == 34037) {
+        if (bindId == 34037) {
             aFloat10134 = i_4;
             aFloat10132 = i_3;
             aBool10135 = false;
@@ -110,7 +110,7 @@ public class Class137_Sub1_Sub1 extends Class137_Sub1 {
         super(class505_sub1_1, i_2, class150_3, class76_4, i_5, i_6, false, bytes_8, class150_9, true);
         anInt10136 = i_5;
         anInt10133 = i_6;
-        if (anInt1648 == 34037) {
+        if (bindId == 34037) {
             aFloat10134 = i_6;
             aFloat10132 = i_5;
             aBool10135 = false;
@@ -124,19 +124,19 @@ public class Class137_Sub1_Sub1 extends Class137_Sub1 {
     }
 
     static Class137_Sub1_Sub1 method15537(OpenGLRenderer class505_sub1_0, int i_1, int i_2, int[] ints_4, int i_5, int i_6) {
-        return !class505_sub1_0.aBool8498 && (!CutsceneAction_Sub9.method14585(i_1) || !CutsceneAction_Sub9.method14585(i_2)) ? (class505_sub1_0.aBool8401 ? new Class137_Sub1_Sub1(class505_sub1_0, 34037, i_1, i_2, ints_4, i_5, i_6) : new Class137_Sub1_Sub1(class505_sub1_0, i_1, i_2, Utils.nextPowerOfTwo(i_1), Utils.nextPowerOfTwo(i_2), ints_4)) : new Class137_Sub1_Sub1(class505_sub1_0, 3553, i_1, i_2, ints_4, i_5, i_6);
+        return !class505_sub1_0.aBool8498 && (!CutsceneAction_Sub9.method14585(i_1) || !CutsceneAction_Sub9.method14585(i_2)) ? (class505_sub1_0.supportsRectTextures ? new Class137_Sub1_Sub1(class505_sub1_0, 34037, i_1, i_2, ints_4, i_5, i_6) : new Class137_Sub1_Sub1(class505_sub1_0, i_1, i_2, Utils.nextPowerOfTwo(i_1), Utils.nextPowerOfTwo(i_2), ints_4)) : new Class137_Sub1_Sub1(class505_sub1_0, 3553, i_1, i_2, ints_4, i_5, i_6);
     }
 
     static Class137_Sub1_Sub1 method15538(OpenGLRenderer class505_sub1_0, int i_1, int i_2, int i_3, int i_4) {
-        return !class505_sub1_0.aBool8498 && (!CutsceneAction_Sub9.method14585(i_3) || !CutsceneAction_Sub9.method14585(i_4)) ? (class505_sub1_0.aBool8401 ? new Class137_Sub1_Sub1(class505_sub1_0, 34037, i_1, i_2, i_3, i_4) : new Class137_Sub1_Sub1(class505_sub1_0, i_1, i_2, i_3, i_4, Utils.nextPowerOfTwo(i_3), Utils.nextPowerOfTwo(i_4))) : new Class137_Sub1_Sub1(class505_sub1_0, 3553, i_1, i_2, i_3, i_4);
+        return !class505_sub1_0.aBool8498 && (!CutsceneAction_Sub9.method14585(i_3) || !CutsceneAction_Sub9.method14585(i_4)) ? (class505_sub1_0.supportsRectTextures ? new Class137_Sub1_Sub1(class505_sub1_0, 34037, i_1, i_2, i_3, i_4) : new Class137_Sub1_Sub1(class505_sub1_0, i_1, i_2, i_3, i_4, Utils.nextPowerOfTwo(i_3), Utils.nextPowerOfTwo(i_4))) : new Class137_Sub1_Sub1(class505_sub1_0, 3553, i_1, i_2, i_3, i_4);
     }
 
     static Class137_Sub1_Sub1 method15540(OpenGLRenderer class505_sub1_0, Class150 class150_1, Class76 class76_2, int i_3, int i_4, byte[] bytes_6, Class150 class150_7) {
-        return !class505_sub1_0.aBool8498 && (!CutsceneAction_Sub9.method14585(i_3) || !CutsceneAction_Sub9.method14585(i_4)) ? (class505_sub1_0.aBool8401 ? new Class137_Sub1_Sub1(class505_sub1_0, 34037, class150_1, class76_2, i_3, i_4, bytes_6, class150_7) : new Class137_Sub1_Sub1(class505_sub1_0, class150_1, class76_2, i_3, i_4, Utils.nextPowerOfTwo(i_3), Utils.nextPowerOfTwo(i_4), bytes_6, class150_7)) : new Class137_Sub1_Sub1(class505_sub1_0, 3553, class150_1, class76_2, i_3, i_4, bytes_6, class150_7);
+        return !class505_sub1_0.aBool8498 && (!CutsceneAction_Sub9.method14585(i_3) || !CutsceneAction_Sub9.method14585(i_4)) ? (class505_sub1_0.supportsRectTextures ? new Class137_Sub1_Sub1(class505_sub1_0, 34037, class150_1, class76_2, i_3, i_4, bytes_6, class150_7) : new Class137_Sub1_Sub1(class505_sub1_0, class150_1, class76_2, i_3, i_4, Utils.nextPowerOfTwo(i_3), Utils.nextPowerOfTwo(i_4), bytes_6, class150_7)) : new Class137_Sub1_Sub1(class505_sub1_0, 3553, class150_1, class76_2, i_3, i_4, bytes_6, class150_7);
     }
 
     static Class137_Sub1_Sub1 method15547(OpenGLRenderer class505_sub1_0, Class150 class150_1, Class76 class76_2, int i_3, int i_4) {
-        return !class505_sub1_0.aBool8498 && (!CutsceneAction_Sub9.method14585(i_3) || !CutsceneAction_Sub9.method14585(i_4)) ? (class505_sub1_0.aBool8401 ? new Class137_Sub1_Sub1(class505_sub1_0, 34037, class150_1, class76_2, i_3, i_4) : new Class137_Sub1_Sub1(class505_sub1_0, class150_1, class76_2, i_3, i_4, Utils.nextPowerOfTwo(i_3), Utils.nextPowerOfTwo(i_4))) : new Class137_Sub1_Sub1(class505_sub1_0, 3553, class150_1, class76_2, i_3, i_4);
+        return !class505_sub1_0.aBool8498 && (!CutsceneAction_Sub9.method14585(i_3) || !CutsceneAction_Sub9.method14585(i_4)) ? (class505_sub1_0.supportsRectTextures ? new Class137_Sub1_Sub1(class505_sub1_0, 34037, class150_1, class76_2, i_3, i_4) : new Class137_Sub1_Sub1(class505_sub1_0, class150_1, class76_2, i_3, i_4, Utils.nextPowerOfTwo(i_3), Utils.nextPowerOfTwo(i_4))) : new Class137_Sub1_Sub1(class505_sub1_0, 3553, class150_1, class76_2, i_3, i_4);
     }
 
     @Override

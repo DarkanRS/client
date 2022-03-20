@@ -35,9 +35,9 @@ public class Class86 {
         return Friend.method302(class232_0, null);
     }
 
-    static void method1482(IComponentDefinitions icomponentdefinitions_0) {
-        if (icomponentdefinitions_0.type == ComponentType.SPRITE && icomponentdefinitions_0.containerItemId != -1) {
-            VarcDefinitions.method6996(Renderers.CURRENT_RENDERER, icomponentdefinitions_0);
+    static void renderItemInvSprite(IComponentDefinitions component) {
+        if (component.type == ComponentType.SPRITE && component.containerItemId != -1) {
+            VarcDefinitions.renderItemInvSprite(Renderers.CURRENT_RENDERER, component);
         }
     }
 }

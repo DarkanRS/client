@@ -1,11 +1,11 @@
 package com.jagex;
 
-import java.applet.Applet;
+import com.Loader;
 
 public class SubInterface extends Node {
 
     public static int CAM_MOVE_LOCALY;
-    public static Applet suppliedApplet;
+    public static Loader suppliedApplet;
     public int interfaceId;
     public int overlay;
 

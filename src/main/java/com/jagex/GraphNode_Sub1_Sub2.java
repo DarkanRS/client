@@ -79,25 +79,25 @@ public abstract class GraphNode_Sub1_Sub2 extends GraphNode_Sub1 {
     }
 
     @Override
-    int method13024(Node_Sub24[] arr_1) {
+    int method13024(GLLight[] arr_1) {
         Vector3 vector3_2 = method11166().coords;
         return method13004((int) vector3_2.x >> aClass206_7970.anInt2592, (int) vector3_2.z >> aClass206_7970.anInt2592, arr_1);
     }
 
     @Override
-    int method13025(Node_Sub24[] arr_1) {
+    int method13025(GLLight[] arr_1) {
         Vector3 vector3_2 = method11166().coords;
         return method13004((int) vector3_2.x >> aClass206_7970.anInt2592, (int) vector3_2.z >> aClass206_7970.anInt2592, arr_1);
     }
 
     @Override
-    int method13031(Node_Sub24[] arr_1) {
+    int method13031(GLLight[] arr_1) {
         Vector3 vector3_2 = method11166().coords;
         return method13004((int) vector3_2.x >> aClass206_7970.anInt2592, (int) vector3_2.z >> aClass206_7970.anInt2592, arr_1);
     }
 
     @Override
-    int method12982(Node_Sub24[] arr_1) {
+    int method12982(GLLight[] arr_1) {
         Vector3 vector3_2 = method11166().coords;
         return method13004((int) vector3_2.x >> aClass206_7970.anInt2592, (int) vector3_2.z >> aClass206_7970.anInt2592, arr_1);
     }
@@ -108,7 +108,7 @@ public abstract class GraphNode_Sub1_Sub2 extends GraphNode_Sub1 {
     }
 
     @Override
-    int method13036(Node_Sub24[] arr_1) {
+    int method13036(GLLight[] arr_1) {
         Vector3 vector3_3 = method11166().coords;
         return method13004((int) vector3_3.x >> aClass206_7970.anInt2592, (int) vector3_3.z >> aClass206_7970.anInt2592, arr_1);
     }

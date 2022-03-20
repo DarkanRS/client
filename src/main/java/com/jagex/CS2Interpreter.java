@@ -11214,14 +11214,14 @@ public class CS2Interpreter {
             if (paramTypes.charAt(i - 1) == 's') {
                 params[i] = executor.stringStack[--executor.stringStackPtr];
             } else if (paramTypes.charAt(i - 1) == '\u00BD') {
-                params[i] = new Long(executor.longStack[--executor.longStackPtr]);
+                params[i] = Long.valueOf(executor.longStack[--executor.longStackPtr]);
             } else {
-                params[i] = new Integer(executor.intStack[--executor.intStackPtr]);
+                params[i] = Integer.valueOf(executor.intStack[--executor.intStackPtr]);
             }
         }
         int scriptId = executor.intStack[--executor.intStackPtr];
         if (scriptId != -1) {
-            params[0] = new Integer(scriptId);
+            params[0] = Integer.valueOf(scriptId);
         } else {
             params = null;
         }

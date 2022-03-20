@@ -1,5 +1,9 @@
 package com.jagex;
 
+import java.lang.reflect.Field;
+import java.util.Arrays;
+import java.util.HashMap;
+
 public class Utils {
 
     public static char cp1252ToChar(byte b) {
@@ -170,5 +174,42 @@ public class Utils {
             return null;
         }
     }
+
+    public static Object getFieldValue(Object object, Field field) throws Throwable {
+		field.setAccessible(true);
+		Class<?> type = field.getType();
+		if (type == int[][].class) {
+			return Arrays.deepToString((int[][]) field.get(object));
+		} else if (type == AnimationFrameSet[].class) {
+			return Arrays.toString((AnimationFrameSet[]) field.get(object));
+		} else if (type == Instrument[].class) {
+			return Arrays.toString((Instrument[]) field.get(object));
+		} else if (type == HashMap[].class) {
+			return Arrays.toString((HashMap[]) field.get(object));
+		} else if (type == CS2Instruction[].class) {
+			return Arrays.toString((CS2Instruction[]) field.get(object));
+		} else if (type == AnimationFrame[].class) {
+			return Arrays.toString((AnimationFrame[]) field.get(object));
+		} else if (type == byte[].class) {
+			return Arrays.toString((byte[]) field.get(object));
+		} else if (type == int[].class) {
+			return Arrays.toString((int[]) field.get(object));
+		} else if (type == byte[].class) {
+			return Arrays.toString((byte[]) field.get(object));
+		} else if (type == short[].class) {
+			return Arrays.toString((short[]) field.get(object));
+		} else if (type == double[].class) {
+			return Arrays.toString((double[]) field.get(object));
+		} else if (type == float[].class) {
+			return Arrays.toString((float[]) field.get(object));
+		} else if (type == boolean[].class) {
+			return Arrays.toString((boolean[]) field.get(object));
+		} else if (type == Object[].class) {
+			return Arrays.toString((Object[]) field.get(object));
+		} else if (type == String[].class) {
+			return Arrays.toString((String[]) field.get(object));
+		}
+		return field.get(object);
+	}
 
 }

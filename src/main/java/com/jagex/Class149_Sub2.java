@@ -80,7 +80,7 @@ public class Class149_Sub2 extends Class149 {
         int i_9 = i_2 * anInt9311 >> 12;
         int i_10 = anInt9312 * i_1 >> 12;
         int i_11 = i_2 * anInt9313 >> 12;
-        Node_Sub24.method12399(i_4, i_5, i_6, i_7, i_8, i_9, i_10, i_11, anInt1741);
+        GLLight.method12399(i_4, i_5, i_6, i_7, i_8, i_9, i_10, i_11, anInt1741);
     }
 
     @Override
@@ -101,7 +101,7 @@ public class Class149_Sub2 extends Class149 {
         int i_8 = i_2 * 1636198257 * anInt9311 * -1674872431 >> 12;
         int i_9 = i_1 * anInt9312 * -1310894617 * 905637335 >> 12;
         int i_10 = anInt9313 * 745027993 * 264374953 * i_2 >> 12;
-        Node_Sub24.method12399(i_3, i_4, i_5, i_6, i_7, i_8, i_9, i_10, -1525176857 * anInt1741 * -1378640425);
+        GLLight.method12399(i_3, i_4, i_5, i_6, i_7, i_8, i_9, i_10, -1525176857 * anInt1741 * -1378640425);
     }
 
     @Override
@@ -114,7 +114,7 @@ public class Class149_Sub2 extends Class149 {
         int i_8 = i_2 * 1636198257 * anInt9311 * -1674872431 >> 12;
         int i_9 = i_1 * anInt9312 * -1310894617 * 905637335 >> 12;
         int i_10 = anInt9313 * 745027993 * 264374953 * i_2 >> 12;
-        Node_Sub24.method12399(i_3, i_4, i_5, i_6, i_7, i_8, i_9, i_10, -1525176857 * anInt1741 * -1378640425);
+        GLLight.method12399(i_3, i_4, i_5, i_6, i_7, i_8, i_9, i_10, -1525176857 * anInt1741 * -1378640425);
     }
 
 }

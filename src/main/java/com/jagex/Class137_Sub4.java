@@ -2,7 +2,7 @@ package com.jagex;
 
 import jaggl.OpenGL;
 
-public class Class137_Sub4 extends Class137 {
+public class Class137_Sub4 extends GLTexture {
 
     int anInt9116;
     int anInt9117;
@@ -13,8 +13,8 @@ public class Class137_Sub4 extends Class137 {
         anInt9116 = 128;
         anInt9117 = 128;
         anInt9118 = 16;
-        openGLHardwareRenderer.method13654(this);
-        OpenGL.glTexImage3Dub(anInt1648, 0, OpenGLRenderer.method13630(aClass150_1650, aClass76_1651), anInt9116, anInt9117, anInt9118, 0, OpenGLRenderer.method13629(aClass150_1650), 5121, null, 0);
+        openGLHardwareRenderer.setTexture(this);
+        OpenGL.glTexImage3Dub(bindId, 0, OpenGLRenderer.method13630(aClass150_1650, aClass76_1651), anInt9116, anInt9117, anInt9118, 0, OpenGLRenderer.method13629(aClass150_1650), 5121, null, 0);
         method2351(true);
     }
 
@@ -23,16 +23,16 @@ public class Class137_Sub4 extends Class137 {
         anInt9116 = 128;
         anInt9117 = 128;
         anInt9118 = 16;
-        openGLHardwareRenderer.method13654(this);
+        openGLHardwareRenderer.setTexture(this);
         OpenGL.glPixelStorei(3317, 1);
-        OpenGL.glTexImage3Dub(anInt1648, 0, OpenGLRenderer.method13630(aClass150_1650, aClass76_1651), anInt9116, anInt9117, anInt9118, 0, OpenGLRenderer.method13629(class150_8), 5121, bytes_7, 0);
+        OpenGL.glTexImage3Dub(bindId, 0, OpenGLRenderer.method13630(aClass150_1650, aClass76_1651), anInt9116, anInt9117, anInt9118, 0, OpenGLRenderer.method13629(class150_8), 5121, bytes_7, 0);
         OpenGL.glPixelStorei(3317, 4);
         method2351(true);
     }
 
     void method14465(int i_3, int i_4, int i_5) {
-        openGLHardwareRenderer.method13654(this);
-        OpenGL.glCopyTexSubImage3D(anInt1648, 0, 0, 0, i_3, 0, 0, i_4, i_5);
+        openGLHardwareRenderer.setTexture(this);
+        OpenGL.glCopyTexSubImage3D(bindId, 0, 0, 0, i_3, 0, 0, i_4, i_5);
         OpenGL.glFlush();
     }
 

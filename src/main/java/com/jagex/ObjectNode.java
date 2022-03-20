@@ -24,7 +24,7 @@ public class ObjectNode extends Node<Object> {
             }
             graphicalrenderer_0.B(ChangeClanSetting.BASE_WINDOW_WIDTH - 16, i_5, 12, i_4, Class179.anInt2221 << 24 | 0x332277, 2);
             for (int i_6 = Class179.anInt2223; i_6 < i_2 + Class179.anInt2223 && i_6 < Class179.anInt2227; i_6++) {
-                String[] arr_7 = MovingAnimation.method12681(Class13.aStringArray129[i_6], '\b');
+                String[] arr_7 = MovingAnimation.split(Class13.aStringArray129[i_6], '\b');
                 int i_8 = (ChangeClanSetting.BASE_WINDOW_WIDTH - 8 - 16) / arr_7.length;
                 for (int i_9 = 0; i_9 < arr_7.length; i_9++) {
                     int i_10 = i_9 * i_8 + 8;

@@ -2,27 +2,27 @@ package com.jagex;
 
 import jaggl.OpenGL;
 
-public abstract class Class137 {
+public abstract class GLTexture {
 
     static int[] anIntArray1649 = new int[1];
     boolean aBool1652;
     boolean aBool1641;
-    int anInt1647;
+    int textureId;
     OpenGLRenderer openGLHardwareRenderer;
-    int anInt1648;
+    int bindId;
     Class150 aClass150_1650;
     Class76 aClass76_1651;
     int anInt1654;
 
-    Class137(OpenGLRenderer class505_sub1_1, int i_2, Class150 class150_3, Class76 class76_4, int i_5, boolean bool_6) {
+    GLTexture(OpenGLRenderer class505_sub1_1, int i_2, Class150 class150_3, Class76 class76_4, int i_5, boolean bool_6) {
         openGLHardwareRenderer = class505_sub1_1;
-        anInt1648 = i_2;
+        bindId = i_2;
         aClass150_1650 = class150_3;
         aClass76_1651 = class76_4;
         aBool1641 = bool_6;
         anInt1654 = i_5;
         OpenGL.glGenTextures(1, anIntArray1649, 0);
-        anInt1647 = anIntArray1649[0];
+        textureId = anIntArray1649[0];
         method2357(0);
     }
 
@@ -226,22 +226,22 @@ public abstract class Class137 {
     }
 
     void method2352() {
-        openGLHardwareRenderer.method13654(this);
+        openGLHardwareRenderer.setTexture(this);
         if (aBool1652) {
-            OpenGL.glTexParameteri(anInt1648, 10241, aBool1641 ? 9987 : 9729);
-            OpenGL.glTexParameteri(anInt1648, 10240, 9729);
+            OpenGL.glTexParameteri(bindId, 10241, aBool1641 ? 9987 : 9729);
+            OpenGL.glTexParameteri(bindId, 10240, 9729);
         } else {
-            OpenGL.glTexParameteri(anInt1648, 10241, aBool1641 ? 9984 : 9728);
-            OpenGL.glTexParameteri(anInt1648, 10240, 9728);
+            OpenGL.glTexParameteri(bindId, 10241, aBool1641 ? 9984 : 9728);
+            OpenGL.glTexParameteri(bindId, 10240, 9728);
         }
 
     }
 
     boolean method2353() {
-        if (openGLHardwareRenderer.aBool8472) {
+        if (openGLHardwareRenderer.supportsFBO) {
             int i_1 = method2358();
-            openGLHardwareRenderer.method13654(this);
-            OpenGL.glGenerateMipmapEXT(anInt1648);
+            openGLHardwareRenderer.setTexture(this);
+            OpenGL.glGenerateMipmapEXT(bindId);
             aBool1641 = true;
             method2352();
             method2357(i_1);
@@ -262,11 +262,11 @@ public abstract class Class137 {
     }
 
     void method2355() {
-        if (anInt1647 > 0) {
+        if (textureId > 0) {
             openGLHardwareRenderer.anInt8370 -= method2358();
-            int[] ints_1 = {anInt1647};
+            int[] ints_1 = {textureId};
             OpenGL.glDeleteTextures(1, ints_1, 0);
-            anInt1647 = 0;
+            textureId = 0;
         }
 
     }
@@ -288,9 +288,9 @@ public abstract class Class137 {
     }
 
     void method2378() {
-        if (anInt1647 > 0) {
-            openGLHardwareRenderer.method13625(anInt1647, method2358());
-            anInt1647 = 0;
+        if (textureId > 0) {
+            openGLHardwareRenderer.method13625(textureId, method2358());
+            textureId = 0;
         }
 
     }

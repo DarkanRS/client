@@ -23,7 +23,7 @@ public abstract class GraphNode_Sub1_Sub1 extends GraphNode_Sub1 {
     }
 
     @Override
-    int method13024(Node_Sub24[] arr_1) {
+    int method13024(GLLight[] arr_1) {
         int i_2 = 0;
 
         int i_3;
@@ -138,7 +138,7 @@ public abstract class GraphNode_Sub1_Sub1 extends GraphNode_Sub1 {
     }
 
     @Override
-    int method13036(Node_Sub24[] arr_1) {
+    int method13036(GLLight[] arr_1) {
         int i_3 = 0;
 
         int i_4;
@@ -272,7 +272,7 @@ public abstract class GraphNode_Sub1_Sub1 extends GraphNode_Sub1 {
     }
 
     @Override
-    int method13031(Node_Sub24[] arr_1) {
+    int method13031(GLLight[] arr_1) {
         int i_2 = 0;
 
         int i_3;
@@ -406,7 +406,7 @@ public abstract class GraphNode_Sub1_Sub1 extends GraphNode_Sub1 {
     }
 
     @Override
-    int method12982(Node_Sub24[] arr_1) {
+    int method12982(GLLight[] arr_1) {
         int i_2 = 0;
 
         int i_3;
@@ -528,7 +528,7 @@ public abstract class GraphNode_Sub1_Sub1 extends GraphNode_Sub1 {
     }
 
     @Override
-    int method13025(Node_Sub24[] arr_1) {
+    int method13025(GLLight[] arr_1) {
         int i_2 = 0;
 
         int i_3;

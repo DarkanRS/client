@@ -13,7 +13,7 @@ public class Class136 {
     boolean aBool1631;
 
     Class136(OpenGLRenderer class505_sub1_1) {
-        aBool1631 = class505_sub1_1.aBool8393;
+        aBool1631 = class505_sub1_1.supportsExtTex3d;
         method2348(class505_sub1_1);
         if (!aBool1631) {
             aClass137_Sub1Array1632 = new Class137_Sub1[16];

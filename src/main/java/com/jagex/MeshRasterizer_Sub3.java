@@ -3230,15 +3230,15 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
                         Vector3 vector3_13 = aGraphicalRenderer_Sub2_8917.aClass385_8707;
 
                         for (i_6 = 0; i_6 < i_4; i_6++) {
-                            Node_Sub24 class282_sub24_14 = aGraphicalRenderer_Sub2_8917.aNode_Sub24Array8716[i_6];
-                            i_15 = class282_sub24_14.method12371();
-                            vector3_13.copy(class282_sub24_14.aClass385_7687);
+                            GLLight class282_sub24_14 = aGraphicalRenderer_Sub2_8917.aNode_Sub24Array8716[i_6];
+                            i_15 = class282_sub24_14.getColor();
+                            vector3_13.copy(class282_sub24_14.position);
                             vector3_13.method6651(matrix44var_16);
                             class48_2.aFloatArray463[i_6 * 4] = vector3_13.x;
                             class48_2.aFloatArray463[i_6 * 4 + 1] = vector3_13.y;
                             class48_2.aFloatArray463[i_6 * 4 + 2] = vector3_13.z;
                             class48_2.aFloatArray463[i_6 * 4 + 3] = (class282_sub24_14.method12370() * class282_sub24_14.method12370());
-                            float f_9 = class282_sub24_14.method12395() / 255.0F;
+                            float f_9 = class282_sub24_14.getIntensity() / 255.0F;
                             class48_2.aFloatArray450[i_6 * 4] = (i_15 >> 16 & 0xff) * f_9;
                             class48_2.aFloatArray450[i_6 * 4 + 1] = (i_15 >> 8 & 0xff) * f_9;
                             class48_2.aFloatArray450[i_6 * 4 + 2] = (i_15 & 0xff) * f_9;

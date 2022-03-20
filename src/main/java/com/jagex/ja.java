@@ -638,16 +638,16 @@ public class ja extends AbstractRenderer implements Interface40 {
     native void YA(int var1, int var2, int var3, int var4, int var5, int var6);
 
     @Override
-    public void method8547(int i_1, Node_Sub24[] arr_2) {
+    public void method8547(int i_1, GLLight[] arr_2) {
         int i_3 = 0;
 
         for (int i_4 = 0; i_4 < i_1; i_4++) {
-            aq[i_3++] = arr_2[i_4].method12368();
-            aq[i_3++] = arr_2[i_4].method12369();
-            aq[i_3++] = arr_2[i_4].method12394();
+            aq[i_3++] = arr_2[i_4].getX();
+            aq[i_3++] = arr_2[i_4].getY();
+            aq[i_3++] = arr_2[i_4].getZ();
             aq[i_3++] = arr_2[i_4].method12370();
-            av[i_4] = arr_2[i_4].method12395();
-            aq[i_3++] = arr_2[i_4].method12371();
+            av[i_4] = arr_2[i_4].getIntensity();
+            aq[i_3++] = arr_2[i_4].getColor();
         }
 
         Q(i_1, aq, av);
@@ -1520,32 +1520,32 @@ public class ja extends AbstractRenderer implements Interface40 {
     }
 
     @Override
-    public void method8394(int i_1, Node_Sub24[] arr_2) {
+    public void method8394(int i_1, GLLight[] arr_2) {
         int i_3 = 0;
 
         for (int i_4 = 0; i_4 < i_1; i_4++) {
-            aq[i_3++] = arr_2[i_4].method12368();
-            aq[i_3++] = arr_2[i_4].method12369();
-            aq[i_3++] = arr_2[i_4].method12394();
+            aq[i_3++] = arr_2[i_4].getX();
+            aq[i_3++] = arr_2[i_4].getY();
+            aq[i_3++] = arr_2[i_4].getZ();
             aq[i_3++] = arr_2[i_4].method12370();
-            av[i_4] = arr_2[i_4].method12395();
-            aq[i_3++] = arr_2[i_4].method12371();
+            av[i_4] = arr_2[i_4].getIntensity();
+            aq[i_3++] = arr_2[i_4].getColor();
         }
 
         Q(i_1, aq, av);
     }
 
     @Override
-    public void method8426(int i_1, Node_Sub24[] arr_2) {
+    public void method8426(int i_1, GLLight[] arr_2) {
         int i_3 = 0;
 
         for (int i_4 = 0; i_4 < i_1; i_4++) {
-            aq[i_3++] = arr_2[i_4].method12368();
-            aq[i_3++] = arr_2[i_4].method12369();
-            aq[i_3++] = arr_2[i_4].method12394();
+            aq[i_3++] = arr_2[i_4].getX();
+            aq[i_3++] = arr_2[i_4].getY();
+            aq[i_3++] = arr_2[i_4].getZ();
             aq[i_3++] = arr_2[i_4].method12370();
-            av[i_4] = arr_2[i_4].method12395();
-            aq[i_3++] = arr_2[i_4].method12371();
+            av[i_4] = arr_2[i_4].getIntensity();
+            aq[i_3++] = arr_2[i_4].getColor();
         }
 
         Q(i_1, aq, av);
@@ -1880,16 +1880,16 @@ public class ja extends AbstractRenderer implements Interface40 {
     public native void hr(int var1, Class455 var2, int var3, int var4);
 
     @Override
-    public void method8579(int i_1, Node_Sub24[] arr_2) {
+    public void method8579(int i_1, GLLight[] arr_2) {
         int i_3 = 0;
 
         for (int i_4 = 0; i_4 < i_1; i_4++) {
-            aq[i_3++] = arr_2[i_4].method12368();
-            aq[i_3++] = arr_2[i_4].method12369();
-            aq[i_3++] = arr_2[i_4].method12394();
+            aq[i_3++] = arr_2[i_4].getX();
+            aq[i_3++] = arr_2[i_4].getY();
+            aq[i_3++] = arr_2[i_4].getZ();
             aq[i_3++] = arr_2[i_4].method12370();
-            av[i_4] = arr_2[i_4].method12395();
-            aq[i_3++] = arr_2[i_4].method12371();
+            av[i_4] = arr_2[i_4].getIntensity();
+            aq[i_3++] = arr_2[i_4].getColor();
         }
 
         Q(i_1, aq, av);

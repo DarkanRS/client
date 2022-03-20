@@ -1,25 +1,29 @@
 package com.jagex;
 
 import java.awt.Canvas;
+import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
 
 import jaclib.memory.Buffer;
 import jaclib.memory.Stream;
 import jaclib.memory.heap.NativeHeap;
 import jaggl.OpenGL;
 
+import static jaggl.GLConst.*;
+
 public class OpenGLRenderer extends AbstractRenderer {
 
     static int[] anIntArray8381 = new int[1000];
     static int anInt8421 = 4;
-    static float[] aFloatArray8497 = new float[4];
+    static float[] LIGHT_PARAMS = new float[4];
     static float[] aFloatArray8322 = new float[4];
-    Class137[] aClass137Array8482;
+    GLTexture[] textures;
     Class137_Sub1 aClass137_Sub1_8460;
     Class158_Sub1_Sub4 aClass158_Sub1_Sub4_8493;
-    int anInt8366;
-    int anInt8384;
-    boolean aBool8408;
-    boolean aBool8459;
+    int colorRenderType;
+    int blendType;
+    boolean enableAlphaTest;
+    boolean maskRgb;
     int anInt8441;
     int anInt8428 = -1;
     boolean aBool8367;
@@ -70,7 +74,7 @@ public class OpenGLRenderer extends AbstractRenderer {
     float aFloat8431 = 1.0F;
     float aFloat8433 = -1.0f;
     float aFloat8434 = -1.0f;
-    Node_Sub24[] aNode_Sub24Array8435;
+    GLLight[] lights;
     int anInt8358;
     int anInt8378;
     float aFloat8446;
@@ -78,8 +82,8 @@ public class OpenGLRenderer extends AbstractRenderer {
     boolean aBool8449;
     int anInt8455;
     int anInt8451;
-    float aFloat8489;
-    float aFloat8414;
+    float largestAntialiasedPointSize;
+    float smallestAntialiasedPointSize;
     MeshRasterizer_Sub1[] aMeshRasterizer_Sub1Array8479;
     MeshRasterizer_Sub1[] aMeshRasterizer_Sub1Array8492;
     Node_Sub35_Sub1 aNode_Sub35_Sub1_8499;
@@ -88,21 +92,21 @@ public class OpenGLRenderer extends AbstractRenderer {
     int[] anIntArray8502;
     byte[] aByteArray8503;
     int anInt8475;
-    OpenGL anOpenGL8352;
+    OpenGL openGLInstance;
     int anInt8410;
-    boolean aBool8472;
+    boolean supportsFBO;
     boolean aBool8487;
-    boolean aBool8312;
+    boolean supportsFloatTextures;
     Class167 aClass167_8481;
     Class164 aClass164_8363;
     Class170 aClass170_8357;
-    boolean aBool8401;
+    boolean supportsRectTextures;
     boolean aBool8362;
     boolean aBool8465;
     Node_Sub5_Sub1 aNode_Sub5_Sub1_8444;
     Class146 aClass146_8356;
-    boolean aBool8309;
-    boolean aBool8393;
+    boolean supportsVBO;
+    boolean supportsExtTex3d;
     NativeHeap aNativeHeap8445;
     Interface14 anInterface14_8496;
     OpenGlArrayBufferPointer aClass143_8494;
@@ -133,38 +137,46 @@ public class OpenGLRenderer extends AbstractRenderer {
     Interface14 anInterface14_8483;
     boolean aBool8457;
     int anInt8454;
-    int anInt8458;
+    int currActiveTexture;
     boolean aBool8422;
     boolean aBool8397;
     boolean aBool8388;
-    int anInt8436;
+    int maxLightIndex;
     boolean aBool8440;
     Class137_Sub1_Sub1 aClass137_Sub1_Sub1_8462;
-    String aString8463;
-    String aString8464;
-    int anInt8443;
-    int anInt8469;
-    int anInt8470;
-    int anInt8471;
+    String vendor;
+    String renderer;
+    int version;
+    int maxTextureUnits;
+    int maxTextureCoords;
+    int aluInstructions;
     boolean aBool8467;
-    boolean aBool8342;
-    boolean aBool8484;
-    boolean aBool8485;
-    boolean aBool8365;
-    boolean aBool8480;
+    boolean supportsMultiSample;
+    boolean supportsVertexPrograms;
+    boolean supportsFragmentPrograms;
+    boolean supportsVertexShaders;
+    boolean supportsFragmentShaders;
+    boolean supportsCubeMaps;
     boolean aBool8498;
-    boolean aBool8338;
-    boolean aBool8488;
-    boolean aBool8344;
-    boolean aBool8456;
-    int anInt8437;
-    boolean aBool8387;
+    boolean supportsFBOBlit;
+    boolean supportsFBOMultiSample;
+    boolean supportsPostProcessing;
+    boolean isMac;
+    int maxActiveLightIndex;
+    boolean depthTestEnabled;
     Class152_Sub1 aClass152_Sub1_8317;
     Interface15 anInterface15_8452;
+    
+    private static final int VENDOR_FLAG = 0x1;
+    private static final int LOW_VERSION_FLAG = 0x2;
+    private static final int WEIRD_VERSION_FLAG = 0x4;
+    private static final int MULTITEXTURE_FLAG = 0x8;
+    private static final int UNSUPPORTED_SHADER_INSTRUCTIONS = 0x10;
+    private static final int TEXTURE_ENV_COMBINE_FLAG = 0x20;
 
     OpenGLRenderer(Canvas canvas_1, ImageLoader interface22_2, int i_3) {
         super(interface22_2);
-        aNode_Sub24Array8435 = new Node_Sub24[anInt8421];
+        lights = new GLLight[anInt8421];
         anInt8441 = -1;
         anInt8358 = -1;
         anInt8378 = 0;
@@ -173,8 +185,8 @@ public class OpenGLRenderer extends AbstractRenderer {
         aBool8449 = false;
         anInt8455 = 8448;
         anInt8451 = 8448;
-        aFloat8489 = -1.0f;
-        aFloat8414 = -1.0f;
+        largestAntialiasedPointSize = -1.0f;
+        smallestAntialiasedPointSize = -1.0f;
         aMeshRasterizer_Sub1Array8479 = new MeshRasterizer_Sub1[7];
         aMeshRasterizer_Sub1Array8492 = new MeshRasterizer_Sub1[7];
         aNode_Sub35_Sub1_8499 = new Node_Sub35_Sub1(8192);
@@ -190,22 +202,36 @@ public class OpenGLRenderer extends AbstractRenderer {
             } else if (!LibraryLoader.getLoader().loadLibrary("jaggl")) {
                 throw new RuntimeException("");
             } else {
-                anOpenGL8352 = new OpenGL();
-                long long_4 = anOpenGL8352.init(canvas_1, 8, 8, 8, 24, 0, anInt8475);
+                openGLInstance = new OpenGL();
+                long long_4 = openGLInstance.init(canvas_1, 8, 8, 8, 24, 0, anInt8475);
                 if (long_4 == 0L) {
                     throw new RuntimeException("");
                 } else {
                     method13571();
-                    int i_6 = method13652();
-                    if (i_6 != 0) {
+                    int unsupportedFlags = getCapabilities();
+                    if (unsupportedFlags != 0) {
+                    	System.err.println(this);
+                    	System.err.println(unsupportedFlags);
+                    	if ((unsupportedFlags & VENDOR_FLAG) != 0)
+                    		System.err.println("Unsupported vendor: " + vendor);
+                    	if ((unsupportedFlags & LOW_VERSION_FLAG) != 0)
+                    		System.err.println("Unsupported version: " + version);
+                    	if ((unsupportedFlags & WEIRD_VERSION_FLAG) != 0)
+                    		System.err.println("Unsupported weird version: " + version);
+                    	if ((unsupportedFlags & MULTITEXTURE_FLAG) != 0)
+                    		System.err.println("Multitexture support required.");
+                    	if ((unsupportedFlags & UNSUPPORTED_SHADER_INSTRUCTIONS) != 0)
+                    		System.err.println("Shader instruction support required.");
+                    	if ((unsupportedFlags & TEXTURE_ENV_COMBINE_FLAG) != 0)
+                    		System.err.println("Texture env combine support required.");
                         throw new RuntimeException("");
                     } else {
                         anInt8410 = aBool8467 ? 33639 : 5121;
-                        if (aString8464.indexOf("radeon") != -1) {
+                        if (renderer.indexOf("radeon") != -1) {
                             int i_7 = 0;
                             boolean bool_8 = false;
                             boolean bool_9 = false;
-                            String[] arr_10 = MovingAnimation.method12681(aString8464.replace('/', ' '), ' ');
+                            String[] arr_10 = MovingAnimation.split(renderer.replace('/', ' '), ' ');
 
                             for (int i_11 = 0; i_11 < arr_10.length; i_11++) {
                                 String string_12 = arr_10[i_11];
@@ -237,29 +263,29 @@ public class OpenGLRenderer extends AbstractRenderer {
 
                             if (!bool_9 && !bool_8) {
                                 if (i_7 >= 7000 && i_7 <= 7999) {
-                                    aBool8309 = false;
+                                    supportsVBO = false;
                                 }
 
                                 if (i_7 >= 7000 && i_7 <= 9250) {
-                                    aBool8393 = false;
+                                    supportsExtTex3d = false;
                                 }
                             }
 
                             if (!bool_8 || i_7 < 4000) {
-                                aBool8312 = false;
+                                supportsFloatTextures = false;
                             }
 
-                            aBool8401 &= anOpenGL8352.supportsExtension("GL_ARB_half_float_pixel");
-                            aBool8362 = aBool8309;
+                            supportsRectTextures &= openGLInstance.supportsExtension("GL_ARB_half_float_pixel");
+                            aBool8362 = supportsVBO;
                             aBool8465 = true;
                         }
 
-                        if (aString8463.indexOf("intel") != -1) {
-                            aBool8472 = false;
+                        if (vendor.indexOf("intel") != -1) {
+                            supportsFBO = false;
                         }
 
-                        aBool8487 = !"s3 graphics".equals(aString8463);
-                        if (aBool8309) {
+                        aBool8487 = !"s3 graphics".equals(vendor);
+                        if (supportsVBO) {
                             try {
                                 int[] ints_14 = new int[1];
                                 OpenGL.glGenBuffersARB(1, ints_14, 0);
@@ -419,7 +445,7 @@ public class OpenGLRenderer extends AbstractRenderer {
     void method13571() {
         int i_1 = 0;
 
-        while (!anOpenGL8352.method2570()) {
+        while (!openGLInstance.method2570()) {
             if (i_1++ > 5) {
                 throw new RuntimeException("");
             }
@@ -442,27 +468,27 @@ public class OpenGLRenderer extends AbstractRenderer {
             int i_7 = anInt8419;
             int i_8 = anInt8347;
             method8421();
-            OpenGL.glReadBuffer(1028);
-            OpenGL.glDrawBuffer(1029);
+            OpenGL.glReadBuffer(GL_FRONT);
+            OpenGL.glDrawBuffer(GL_BACK);
             method13586();
             method13642(false);
             method13620(false);
-            method13656(false);
+            enableDepthTest(false);
             method13623(false);
-            method13654(null);
+            setTexture(null);
             method13581(-2);
             method13612(1);
-            method13624(0);
-            OpenGL.glMatrixMode(5889);
+            setColorRenderType(0);
+            OpenGL.glMatrixMode(GL_PROJECTION);
             OpenGL.glLoadIdentity();
             OpenGL.glOrtho(0.0D, 1.0D, 0.0D, 1.0D, -1.0, 1.0D);
-            OpenGL.glMatrixMode(5888);
+            OpenGL.glMatrixMode(GL_MODELVIEW);
             OpenGL.glLoadIdentity();
             OpenGL.glRasterPos2i(0, 0);
-            OpenGL.glCopyPixels(0, 0, aClass158_5853.method2714(), aClass158_5853.method2716(), 6144);
+            OpenGL.glCopyPixels(0, 0, aClass158_5853.method2714(), aClass158_5853.method2716(), GL_COLOR);
             OpenGL.glFlush();
-            OpenGL.glReadBuffer(1029);
-            OpenGL.glDrawBuffer(1029);
+            OpenGL.glReadBuffer(GL_BACK);
+            OpenGL.glDrawBuffer(GL_BACK);
             r(i_1, i_3, i_2, i_4);
             method8617(i_5, i_6, i_7, i_8);
         }
@@ -470,7 +496,7 @@ public class OpenGLRenderer extends AbstractRenderer {
     }
 
     void method13572() {
-        aClass137Array8482 = new Class137[anInt8469];
+        textures = new GLTexture[maxTextureUnits];
         aClass137_Sub1_8460 = new Class137_Sub1(this, 3553, Class150.aClass150_1949, Class76.aClass76_751, 1, 1);
         new Class137_Sub1(this, 3553, Class150.aClass150_1949, Class76.aClass76_751, 1, 1);
         new Class137_Sub1(this, 3553, Class150.aClass150_1949, Class76.aClass76_751, 1, 1);
@@ -480,7 +506,7 @@ public class OpenGLRenderer extends AbstractRenderer {
             aMeshRasterizer_Sub1Array8492[i_1] = new MeshRasterizer_Sub1(this);
         }
 
-        if (aBool8472) {
+        if (supportsFBO) {
             aClass158_Sub1_Sub4_8493 = new Class158_Sub1_Sub4(this);
             new Class158_Sub1_Sub4(this);
         }
@@ -490,55 +516,55 @@ public class OpenGLRenderer extends AbstractRenderer {
     void method13573() {
         method13581(-2);
 
-        for (int i_1 = anInt8469 - 1; i_1 >= 0; --i_1) {
-            method13610(i_1);
-            method13654(null);
-            OpenGL.glTexEnvi(8960, 8704, 34160);
+        for (int texId = maxTextureUnits - 1; texId >= 0; --texId) {
+            setActiveTexture(texId);
+            setTexture(null);
+            OpenGL.glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_COMBINE);
         }
 
-        method13717(8448, 8448);
-        method13595(2, 34168, 770);
-        method13618();
-        anInt8366 = 1;
-        OpenGL.glEnable(3042);
-        OpenGL.glBlendFunc(770, 771);
-        anInt8384 = 1;
-        OpenGL.glEnable(3008);
-        OpenGL.glAlphaFunc(516, 0.0F);
-        aBool8408 = true;
+        method13717(GL_MODULATE, GL_MODULATE);
+        method13595(2, GL_PREVIOUS, GL_SRC_ALPHA);
+        setTextureModelView();
+        colorRenderType = 1;
+        OpenGL.glEnable(GL_BLEND);
+        OpenGL.glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+        blendType = 1;
+        OpenGL.glEnable(GL_ALPHA_TEST);
+        OpenGL.glAlphaFunc(GL_GREATER, 0.0F);
+        enableAlphaTest = true;
         OpenGL.glColorMask(true, true, true, true);
-        aBool8459 = true;
+        maskRgb = true;
         method13642(true);
         method13620(true);
-        method13656(true);
+        enableDepthTest(true);
         method13623(true);
         GA();
         method13586();
-        anOpenGL8352.setSwapInterval(0);
-        OpenGL.glShadeModel(7425);
+        openGLInstance.setSwapInterval(0);
+        OpenGL.glShadeModel(GL_SMOOTH);
         OpenGL.glClearDepth(1.0F);
-        OpenGL.glDepthFunc(515);
-        OpenGL.glPolygonMode(1028, 6914);
-        OpenGL.glEnable(2884);
-        OpenGL.glCullFace(1029);
-        OpenGL.glMatrixMode(5888);
+        OpenGL.glDepthFunc(GL_LEQUAL);
+        OpenGL.glPolygonMode(GL_FRONT, GL_FILL);
+        OpenGL.glEnable(GL_CULL_FACE);
+        OpenGL.glCullFace(GL_BACK);
+        OpenGL.glMatrixMode(GL_MODELVIEW);
         OpenGL.glLoadIdentity();
-        OpenGL.glColorMaterial(1028, 5634);
-        OpenGL.glEnable(2903);
+        OpenGL.glColorMaterial(GL_FRONT, GL_AMBIENT_AND_DIFFUSE);
+        OpenGL.glEnable(GL_COLOR_MATERIAL);
         float[] floats_4 = {0.0F, 0.0F, 0.0F, 1.0F};
 
         for (int i_2 = 0; i_2 < 8; i_2++) {
-            int i_3 = i_2 + 16384;
-            OpenGL.glLightfv(i_3, 4608, floats_4, 0);
-            OpenGL.glLightf(i_3, 4615, 0.0F);
-            OpenGL.glLightf(i_3, 4616, 0.0F);
+            int i_3 = i_2 + GL_LIGHT0;
+            OpenGL.glLightfv(i_3, GL_AMBIENT, floats_4, 0);
+            OpenGL.glLightf(i_3, GL_CONSTANT_ATTENUATION, 0.0F);
+            OpenGL.glLightf(i_3, GL_LINEAR_ATTENUATION, 0.0F);
         }
 
-        OpenGL.glEnable(16384);
-        OpenGL.glEnable(16385);
-        OpenGL.glFogf(2914, 0.95F);
-        OpenGL.glFogi(2917, 9729);
-        OpenGL.glHint(3156, 4353);
+        OpenGL.glEnable(GL_LIGHT0);
+        OpenGL.glEnable(GL_LIGHT1);
+        OpenGL.glFogf(GL_FOG_DENSITY, 0.95F);
+        OpenGL.glFogi(GL_FOG_MODE, GL_LINEAR);
+        OpenGL.glHint(GL_FOG_HINT, GL_FASTEST);
         anInt8441 = -1;
         anInt8428 = -1;
         method8421();
@@ -592,7 +618,7 @@ public class OpenGLRenderer extends AbstractRenderer {
 
     @Override
     public boolean method8403() {
-        return aNode_Sub5_Sub1_8444 != null && (anInt8475 <= 1 || aBool8344);
+        return aNode_Sub5_Sub1_8444 != null && (anInt8475 <= 1 || supportsPostProcessing);
     }
 
     @Override
@@ -600,18 +626,18 @@ public class OpenGLRenderer extends AbstractRenderer {
         return true;
     }
 
-    void method13576() {
+    void pushMatrix() {
         OpenGL.glPushMatrix();
     }
 
     @Override
     public void fs(int i_1, int i_2, int i_3, int i_4, int i_5) {
         method13659();
-        method13624(i_5);
+        setColorRenderType(i_5);
         float f_6 = i_1 + 0.35F;
         float f_7 = i_2 + 0.35F;
         OpenGL.glColor4ub((byte) (i_4 >> 16), (byte) (i_4 >> 8), (byte) i_4, (byte) (i_4 >> 24));
-        OpenGL.glBegin(1);
+        OpenGL.glBegin(GL_LINES);
         OpenGL.glVertex2f(f_6, f_7);
         OpenGL.glVertex2f(f_6 + i_3, f_7);
         OpenGL.glEnd();
@@ -663,7 +689,7 @@ public class OpenGLRenderer extends AbstractRenderer {
             int i_6 = aClass158_5853.method2716();
 
             for (int i_7 = 0; i_7 < i_4; i_7++) {
-                OpenGL.glReadPixelsi(i_1, i_6 - i_2 - i_7 - 1, i_3, 1, 32993, anInt8410, ints_5, i_3 * i_7);
+                OpenGL.glReadPixelsi(i_1, i_6 - i_2 - i_7 - 1, i_3, 1, GL_BGRA, anInt8410, ints_5, i_3 * i_7);
             }
 
             return ints_5;
@@ -683,27 +709,27 @@ public class OpenGLRenderer extends AbstractRenderer {
             int i_7 = anInt8419;
             int i_8 = anInt8347;
             method8421();
-            OpenGL.glReadBuffer(1028);
-            OpenGL.glDrawBuffer(1029);
+            OpenGL.glReadBuffer(GL_FRONT);
+            OpenGL.glDrawBuffer(GL_BACK);
             method13586();
             method13642(false);
             method13620(false);
-            method13656(false);
+            enableDepthTest(false);
             method13623(false);
-            method13654(null);
+            setTexture(null);
             method13581(-2);
             method13612(1);
-            method13624(0);
-            OpenGL.glMatrixMode(5889);
+            setColorRenderType(0);
+            OpenGL.glMatrixMode(GL_PROJECTION);
             OpenGL.glLoadIdentity();
             OpenGL.glOrtho(0.0D, 1.0D, 0.0D, 1.0D, -1.0, 1.0D);
-            OpenGL.glMatrixMode(5888);
+            OpenGL.glMatrixMode(GL_MODELVIEW);
             OpenGL.glLoadIdentity();
             OpenGL.glRasterPos2i(0, 0);
-            OpenGL.glCopyPixels(0, 0, aClass158_5853.method2714(), aClass158_5853.method2716(), 6144);
+            OpenGL.glCopyPixels(0, 0, aClass158_5853.method2714(), aClass158_5853.method2716(), GL_COLOR);
             OpenGL.glFlush();
-            OpenGL.glReadBuffer(1029);
-            OpenGL.glDrawBuffer(1029);
+            OpenGL.glReadBuffer(GL_BACK);
+            OpenGL.glDrawBuffer(GL_BACK);
             r(i_1, i_3, i_2, i_4);
             method8617(i_5, i_6, i_7, i_8);
         }
@@ -731,26 +757,26 @@ public class OpenGLRenderer extends AbstractRenderer {
     }
 
     @Override
-    public void method8430(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
+    public void method8430(int i_1, int i_2, int i_3, int i_4, int color, int colorRenderType) {
         float f_7 = i_1 + 0.35F;
         float f_8 = i_2 + 0.35F;
         float f_9 = f_7 + i_3 - 1.0F;
         float f_10 = f_8 + i_4 - 1.0F;
         method13659();
-        method13624(i_6);
-        OpenGL.glColor4ub((byte) (i_5 >> 16), (byte) (i_5 >> 8), (byte) i_5, (byte) (i_5 >> 24));
-        if (aBool8342) {
-            OpenGL.glDisable(32925);
+        setColorRenderType(colorRenderType);
+        OpenGL.glColor4ub((byte) (color >> 16), (byte) (color >> 8), (byte) color, (byte) (color >> 24));
+        if (supportsMultiSample) {
+            OpenGL.glDisable(GL_MULTISAMPLE);
         }
 
-        OpenGL.glBegin(2);
+        OpenGL.glBegin(GL_LINE_LOOP);
         OpenGL.glVertex2f(f_7, f_8);
         OpenGL.glVertex2f(f_7, f_10);
         OpenGL.glVertex2f(f_9, f_10);
         OpenGL.glVertex2f(f_9, f_8);
         OpenGL.glEnd();
-        if (aBool8342) {
-            OpenGL.glEnable(32925);
+        if (supportsMultiSample) {
+            OpenGL.glEnable(GL_MULTISAMPLE);
         }
 
     }
@@ -762,20 +788,20 @@ public class OpenGLRenderer extends AbstractRenderer {
         float f_9 = f_7 + i_3;
         float f_10 = f_8 + i_4;
         method13659();
-        method13624(i_6);
+        setColorRenderType(i_6);
         OpenGL.glColor4ub((byte) (i_5 >> 16), (byte) (i_5 >> 8), (byte) i_5, (byte) (i_5 >> 24));
-        if (aBool8342) {
-            OpenGL.glDisable(32925);
+        if (supportsMultiSample) {
+            OpenGL.glDisable(GL_MULTISAMPLE);
         }
 
-        OpenGL.glBegin(7);
+        OpenGL.glBegin(GL_QUADS);
         OpenGL.glVertex2f(f_7, f_8);
         OpenGL.glVertex2f(f_7, f_10);
         OpenGL.glVertex2f(f_9, f_10);
         OpenGL.glVertex2f(f_9, f_8);
         OpenGL.glEnd();
-        if (aBool8342) {
-            OpenGL.glEnable(32925);
+        if (supportsMultiSample) {
+            OpenGL.glEnable(GL_MULTISAMPLE);
         }
 
     }
@@ -787,8 +813,8 @@ public class OpenGLRenderer extends AbstractRenderer {
     @Override
     public void method8658() {
         method13659();
-        method13624(1);
-        OpenGL.glBegin(4);
+        setColorRenderType(1);
+        OpenGL.glBegin(GL_TRIANGLES);
         OpenGL.glColor4ub((byte) (-65536 >> 16), (byte) (-65536 >> 8), (byte) -65536, (byte) (-65536 >> 24));
         OpenGL.glVertex3f(5.35f, 10.35f, (float) 100.0);
         OpenGL.glColor4ub((byte) (-65536 >> 16), (byte) (-65536 >> 8), (byte) -65536, (byte) (-65536 >> 24));
@@ -819,7 +845,7 @@ public class OpenGLRenderer extends AbstractRenderer {
     public void method8435(int i_1, int i_2, int i_3, int i_4, int i_5, int i_7, int i_8, int i_9) {
         if (i_3 != i_1 || i_2 != i_4) {
             method13659();
-            method13624(1);
+            setColorRenderType(1);
             float f_10 = (float) i_3 - i_1;
             float f_11 = (float) i_4 - i_2;
             float f_12 = (float) (1.0D / Math.sqrt(f_10 * f_10 + f_11 * f_11));
@@ -883,7 +909,7 @@ public class OpenGLRenderer extends AbstractRenderer {
                     }
                 }
 
-                OpenGL.glBegin(1);
+                OpenGL.glBegin(GL_LINES);
                 OpenGL.glVertex2f(f_19, f_20);
                 OpenGL.glVertex2f(f_19 + f_17, f_20 + f_18);
                 OpenGL.glEnd();
@@ -901,10 +927,10 @@ public class OpenGLRenderer extends AbstractRenderer {
         Class455_Sub2 class455_sub2_10 = (Class455_Sub2) class455_7;
         Class137_Sub1_Sub1 class137_sub1_sub1_11 = class455_sub2_10.aClass137_Sub1_Sub1_8974;
         method13637();
-        method13654(class455_sub2_10.aClass137_Sub1_Sub1_8974);
-        method13624(1);
+        setTexture(class455_sub2_10.aClass137_Sub1_Sub1_8974);
+        setColorRenderType(1);
         method13717(7681, 8448);
-        method13595(0, 34167, 768);
+        method13595(0, 34167, GL_SRC_COLOR);
         float f_12 = class137_sub1_sub1_11.aFloat10132 / class137_sub1_sub1_11.anInt10136;
         float f_13 = class137_sub1_sub1_11.aFloat10134 / class137_sub1_sub1_11.anInt10133;
         float f_14 = (float) i_3 - i_1;
@@ -913,13 +939,13 @@ public class OpenGLRenderer extends AbstractRenderer {
         f_14 *= f_16;
         f_15 *= f_16;
         OpenGL.glColor4ub((byte) (i_5 >> 16), (byte) (i_5 >> 8), (byte) i_5, (byte) (i_5 >> 24));
-        OpenGL.glBegin(1);
+        OpenGL.glBegin(GL_LINES);
         OpenGL.glTexCoord2f(f_12 * (i_1 - i_8), f_13 * (i_2 - i_9));
         OpenGL.glVertex2f(i_1 + 0.35F, i_2 + 0.35F);
         OpenGL.glTexCoord2f(f_12 * (i_3 - i_8), f_13 * (i_4 - i_9));
         OpenGL.glVertex2f(i_3 + f_14 + 0.35F, i_4 + f_15 + 0.35F);
         OpenGL.glEnd();
-        method13595(0, 5890, 768);
+        method13595(0, GL_TEXTURE, GL_SRC_COLOR);
     }
 
     @Override
@@ -928,10 +954,10 @@ public class OpenGLRenderer extends AbstractRenderer {
             Class455_Sub2 class455_sub2_13 = (Class455_Sub2) class455_7;
             Class137_Sub1_Sub1 class137_sub1_sub1_14 = class455_sub2_13.aClass137_Sub1_Sub1_8974;
             method13637();
-            method13654(class455_sub2_13.aClass137_Sub1_Sub1_8974);
-            method13624(1);
+            setTexture(class455_sub2_13.aClass137_Sub1_Sub1_8974);
+            setColorRenderType(1);
             method13717(7681, 8448);
-            method13595(0, 34167, 768);
+            method13595(0, 34167, GL_SRC_COLOR);
             float f_15 = class137_sub1_sub1_14.aFloat10132 / class137_sub1_sub1_14.anInt10136;
             float f_16 = class137_sub1_sub1_14.aFloat10134 / class137_sub1_sub1_14.anInt10133;
             float f_17 = (float) i_3 - i_1;
@@ -997,7 +1023,7 @@ public class OpenGLRenderer extends AbstractRenderer {
                     }
                 }
 
-                OpenGL.glBegin(1);
+                OpenGL.glBegin(GL_LINES);
                 OpenGL.glTexCoord2f(f_15 * (f_26 - i_8), f_16 * (f_27 - i_9));
                 OpenGL.glVertex2f(f_26, f_27);
                 OpenGL.glTexCoord2f(f_15 * (f_26 + f_24 - i_8), f_16 * (f_27 + f_25 - i_9));
@@ -1009,7 +1035,7 @@ public class OpenGLRenderer extends AbstractRenderer {
                 f_25 = f_21;
             }
 
-            method13595(0, 5890, 768);
+            method13595(0, GL_TEXTURE, GL_SRC_COLOR);
         }
 
     }
@@ -1066,7 +1092,7 @@ public class OpenGLRenderer extends AbstractRenderer {
     @Override
     public void method8433(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
         method13659();
-        method13624(i_6);
+        setColorRenderType(i_6);
         float f_7 = (float) i_3 - i_1;
         float f_8 = (float) i_4 - i_2;
         if (f_7 == 0.0F && f_8 == 0.0F) {
@@ -1078,7 +1104,7 @@ public class OpenGLRenderer extends AbstractRenderer {
         }
 
         OpenGL.glColor4ub((byte) (i_5 >> 16), (byte) (i_5 >> 8), (byte) i_5, (byte) (i_5 >> 24));
-        OpenGL.glBegin(1);
+        OpenGL.glBegin(GL_LINES);
         OpenGL.glVertex2f(i_1 + 0.35F, i_2 + 0.35F);
         OpenGL.glVertex2f(i_3 + f_7 + 0.35F, i_4 + f_8 + 0.35F);
         OpenGL.glEnd();
@@ -1201,14 +1227,14 @@ public class OpenGLRenderer extends AbstractRenderer {
         Class455_Sub2 class455_sub2_5 = (Class455_Sub2) class455_2;
         Class137_Sub1_Sub1 class137_sub1_sub1_6 = class455_sub2_5.aClass137_Sub1_Sub1_8974;
         method13637();
-        method13654(class455_sub2_5.aClass137_Sub1_Sub1_8974);
-        method13624(1);
-        method13717(7681, 8448);
-        method13595(0, 34167, 768);
+        setTexture(class455_sub2_5.aClass137_Sub1_Sub1_8974);
+        setColorRenderType(1);
+        method13717(GL_REPLACE, GL_MODULATE);
+        method13595(0, GL_PRIMARY_COLOR, GL_SRC_COLOR);
         float f_7 = class137_sub1_sub1_6.aFloat10132 / class137_sub1_sub1_6.anInt10136;
         float f_8 = class137_sub1_sub1_6.aFloat10134 / class137_sub1_sub1_6.anInt10133;
         OpenGL.glColor4ub((byte) (-16777216 >> 16), (byte) (-16777216 >> 8), (byte) -16777216, (byte) (-16777216 >> 24));
-        OpenGL.glBegin(7);
+        OpenGL.glBegin(GL_QUADS);
         OpenGL.glTexCoord2f(f_7 * (anInt8413 - i_3), f_8 * (anInt8415 - i_4));
         OpenGL.glVertex2i(anInt8413, anInt8415);
         OpenGL.glTexCoord2f(f_7 * (anInt8413 - i_3), f_8 * (anInt8478 - i_4));
@@ -1218,7 +1244,7 @@ public class OpenGLRenderer extends AbstractRenderer {
         OpenGL.glTexCoord2f(f_7 * (anInt8412 - i_3), f_8 * (anInt8415 - i_4));
         OpenGL.glVertex2i(anInt8412, anInt8415);
         OpenGL.glEnd();
-        method13595(0, 5890, 768);
+        method13595(0, GL_TEXTURE, GL_SRC_COLOR);
     }
 
     @Override
@@ -1342,7 +1368,7 @@ public class OpenGLRenderer extends AbstractRenderer {
             anInt8415 = 0;
             anInt8412 = aClass158_5853.method2714();
             anInt8478 = aClass158_5853.method2716();
-            OpenGL.glDisable(3089);
+            OpenGL.glDisable(GL_SCISSOR_TEST);
         }
 
     }
@@ -1374,7 +1400,7 @@ public class OpenGLRenderer extends AbstractRenderer {
             anInt8415 = i_21;
             anInt8412 = i_31;
             anInt8478 = i_41;
-            OpenGL.glEnable(3089);
+            OpenGL.glEnable(GL_SCISSOR_TEST);
             method13570();
         }
 
@@ -1398,7 +1424,7 @@ public class OpenGLRenderer extends AbstractRenderer {
             anInt8478 = i_4;
         }
 
-        OpenGL.glEnable(3089);
+        OpenGL.glEnable(GL_SCISSOR_TEST);
         method13570();
     }
 
@@ -1446,7 +1472,7 @@ public class OpenGLRenderer extends AbstractRenderer {
     public void in(float f_1) {
         if (aFloat8432 != f_1) {
             aFloat8432 = f_1;
-            method13689();
+            applyAmbientLightToModel();
         }
 
     }
@@ -1571,27 +1597,27 @@ public class OpenGLRenderer extends AbstractRenderer {
 
         if (i_3 + i_1 >= anInt8413 && i_1 - i_3 <= anInt8412 && i_3 + i_2 >= anInt8415 && i_2 - i_3 <= anInt8478) {
             method13659();
-            method13624(1);
+            setColorRenderType(1);
             OpenGL.glColor4ub((byte) (i_4 >> 16), (byte) (i_4 >> 8), (byte) i_4, (byte) (i_4 >> 24));
             float f_6 = i_1 + 0.35F;
             float f_7 = i_2 + 0.35F;
             int i_8 = i_3 << 1;
-            if (i_8 < aFloat8414) {
-                OpenGL.glBegin(7);
+            if (i_8 < smallestAntialiasedPointSize) {
+                OpenGL.glBegin(GL_QUADS);
                 OpenGL.glVertex2f(f_6 + 1.0F, f_7 + 1.0F);
                 OpenGL.glVertex2f(f_6 + 1.0F, f_7 - 1.0F);
                 OpenGL.glVertex2f(f_6 - 1.0F, f_7 - 1.0F);
                 OpenGL.glVertex2f(f_6 - 1.0F, f_7 + 1.0F);
                 OpenGL.glEnd();
-            } else if (i_8 <= aFloat8489) {
-                OpenGL.glEnable(2832);
+            } else if (i_8 <= largestAntialiasedPointSize) {
+                OpenGL.glEnable(GL_POINT_SMOOTH);
                 OpenGL.glPointSize(i_8);
-                OpenGL.glBegin(0);
+                OpenGL.glBegin(GL_POINTS);
                 OpenGL.glVertex2f(f_6, f_7);
                 OpenGL.glEnd();
-                OpenGL.glDisable(2832);
+                OpenGL.glDisable(GL_POINT_SMOOTH);
             } else {
-                OpenGL.glBegin(6);
+                OpenGL.glBegin(GL_TRIANGLE_FAN);
                 OpenGL.glVertex2f(f_6, f_7);
                 int i_9 = 262144 / (i_3 * 6);
                 if (i_9 <= 64) {
@@ -1644,21 +1670,21 @@ public class OpenGLRenderer extends AbstractRenderer {
 
     @Override
     public boolean method8501() {
-        return aBool8342 && (!method8471() || aBool8344);
+        return supportsMultiSample && (!method8471() || supportsPostProcessing);
     }
 
     @Override
     public RendererInfo method8481() {
         int i_1 = -1;
-        if (aString8463.indexOf("nvidia") != -1) {
+        if (vendor.indexOf("nvidia") != -1) {
             i_1 = 4318;
-        } else if (aString8463.indexOf("intel") != -1) {
+        } else if (vendor.indexOf("intel") != -1) {
             i_1 = 32902;
-        } else if (aString8463.indexOf("ati") != -1) {
+        } else if (vendor.indexOf("ati") != -1) {
             i_1 = 4098;
         }
 
-        return new RendererInfo(i_1, "OpenGL", anInt8443, aString8464, 0L);
+        return new RendererInfo(i_1, "OpenGL", version, renderer, 0L);
     }
 
     @Override
@@ -1682,7 +1708,7 @@ public class OpenGLRenderer extends AbstractRenderer {
             method13588();
             method13584();
             method13671();
-            OpenGL.glMatrixMode(5888);
+            OpenGL.glMatrixMode(GL_MODELVIEW);
             OpenGL.glLoadIdentity();
             anInt8382 &= -9;
         }
@@ -1730,7 +1756,7 @@ public class OpenGLRenderer extends AbstractRenderer {
     public void IA(float f_1) {
         if (aFloat8432 != f_1) {
             aFloat8432 = f_1;
-            method13689();
+            applyAmbientLightToModel();
         }
 
     }
@@ -1746,10 +1772,10 @@ public class OpenGLRenderer extends AbstractRenderer {
                 aFloat8429 = (anInt8428 & 0xff0000) / 1.671168E7F;
                 aFloat8430 = (anInt8428 & 0xff00) / 65280.0F;
                 aFloat8431 = (anInt8428 & 0xff) / 255.0F;
-                method13689();
+                applyAmbientLightToModel();
             }
 
-            method13592();
+            setLightDiffusion();
         }
 
         if (aFloatArray8424[0] != f_4 || aFloatArray8424[1] != f_5 || aFloatArray8424[2] != f_6) {
@@ -1766,7 +1792,7 @@ public class OpenGLRenderer extends AbstractRenderer {
             aFloatArray8427[0] = -aFloatArray8426[0];
             aFloatArray8427[1] = -aFloatArray8426[1];
             aFloatArray8427[2] = -aFloatArray8426[2];
-            method13593();
+            positionLights();
             anInt8438 = (int) (f_4 * 256.0F / f_5);
             anInt8439 = (int) (f_6 * 256.0F / f_5);
         }
@@ -1877,22 +1903,22 @@ public class OpenGLRenderer extends AbstractRenderer {
 
     }
 
-    void method13592() {
-        aFloatArray8497[0] = aFloat8433 * aFloat8429;
-        aFloatArray8497[1] = aFloat8433 * aFloat8430;
-        aFloatArray8497[2] = aFloat8433 * aFloat8431;
-        aFloatArray8497[3] = 1.0F;
-        OpenGL.glLightfv(16384, 4609, aFloatArray8497, 0);
-        aFloatArray8497[0] = -aFloat8434 * aFloat8429;
-        aFloatArray8497[1] = -aFloat8434 * aFloat8430;
-        aFloatArray8497[2] = -aFloat8434 * aFloat8431;
-        aFloatArray8497[3] = 1.0F;
-        OpenGL.glLightfv(16385, 4609, aFloatArray8497, 0);
+    void setLightDiffusion() {
+        LIGHT_PARAMS[0] = aFloat8433 * aFloat8429;
+        LIGHT_PARAMS[1] = aFloat8433 * aFloat8430;
+        LIGHT_PARAMS[2] = aFloat8433 * aFloat8431;
+        LIGHT_PARAMS[3] = 1.0F;
+        OpenGL.glLightfv(GL_LIGHT0, GL_DIFFUSE, LIGHT_PARAMS, 0);
+        LIGHT_PARAMS[0] = -aFloat8434 * aFloat8429;
+        LIGHT_PARAMS[1] = -aFloat8434 * aFloat8430;
+        LIGHT_PARAMS[2] = -aFloat8434 * aFloat8431;
+        LIGHT_PARAMS[3] = 1.0F;
+        OpenGL.glLightfv(GL_LIGHT1, GL_DIFFUSE, LIGHT_PARAMS, 0);
     }
 
-    void method13593() {
-        OpenGL.glLightfv(16384, 4611, aFloatArray8426, 0);
-        OpenGL.glLightfv(16385, 4611, aFloatArray8427, 0);
+    void positionLights() {
+        OpenGL.glLightfv(GL_LIGHT0, GL_POSITION, aFloatArray8426, 0);
+        OpenGL.glLightfv(GL_LIGHT1, GL_POSITION, aFloatArray8427, 0);
     }
 
     @Override
@@ -1907,27 +1933,27 @@ public class OpenGLRenderer extends AbstractRenderer {
             aFloat8406 = aFloat8403;
         }
 
-        OpenGL.glFogf(2915, aFloat8406);
-        OpenGL.glFogf(2916, aFloat8402);
-        aFloatArray8497[0] = (anInt8441 & 0xff0000) / 1.671168E7F;
-        aFloatArray8497[1] = (anInt8441 & 0xff00) / 65280.0F;
-        aFloatArray8497[2] = (anInt8441 & 0xff) / 255.0F;
-        OpenGL.glFogfv(2918, aFloatArray8497, 0);
+        OpenGL.glFogf(GL_FOG_START, aFloat8406);
+        OpenGL.glFogf(GL_FOG_END, aFloat8402);
+        LIGHT_PARAMS[0] = (anInt8441 & 0xff0000) / 1.671168E7F;
+        LIGHT_PARAMS[1] = (anInt8441 & 0xff00) / 65280.0F;
+        LIGHT_PARAMS[2] = (anInt8441 & 0xff) / 255.0F;
+        OpenGL.glFogfv(GL_FOG_COLOR, LIGHT_PARAMS, 0);
     }
 
     void method13595(int i_1, int i_2, int i_3) {
-        OpenGL.glTexEnvi(8960, i_1 + 34176, i_2);
-        OpenGL.glTexEnvi(8960, i_1 + 34192, i_3);
+        OpenGL.glTexEnvi(GL_TEXTURE_ENV, i_1 + GL_SRC0_RGB, i_2);
+        OpenGL.glTexEnvi(GL_TEXTURE_ENV, i_1 + GL_OPERAND0_RGB, i_3);
     }
 
     @Override
     public Class152 method8466(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
-        return aBool8480 ? new Class152_Sub1_Sub1(this, i_1, i_2, i_3, i_4, i_5, i_6) : null;
+        return supportsCubeMaps ? new Class152_Sub1_Sub1(this, i_1, i_2, i_3, i_4, i_5, i_6) : null;
     }
 
     @Override
     public Class152 method8467(Class152 class152_1, Class152 class152_2, float f_3, Class152 class152_4) {
-        if (class152_1 != null && class152_2 != null && aBool8480 && aBool8472) {
+        if (class152_1 != null && class152_2 != null && supportsCubeMaps && supportsFBO) {
             Class152_Sub1_Sub2 class152_sub1_sub2_5 = null;
             Class152_Sub1 class152_sub1_6 = (Class152_Sub1) class152_1;
             Class152_Sub1 class152_sub1_7 = (Class152_Sub1) class152_2;
@@ -1959,7 +1985,7 @@ public class OpenGLRenderer extends AbstractRenderer {
     public void iz(float f_1) {
         if (aFloat8432 != f_1) {
             aFloat8432 = f_1;
-            method13689();
+            applyAmbientLightToModel();
         }
 
     }
@@ -2033,21 +2059,21 @@ public class OpenGLRenderer extends AbstractRenderer {
     }
 
     Interface15 method13598(byte[] bytes_2, int i_3, boolean bool_4) {
-        return !aBool8309 || bool_4 && !aBool8362 ? new Class131_Sub2(this, bytes_2, i_3) : new Class135_Sub1(this, bytes_2, i_3, bool_4);
+        return !supportsVBO || bool_4 && !aBool8362 ? new Class131_Sub2(this, bytes_2, i_3) : new Class135_Sub1(this, bytes_2, i_3, bool_4);
     }
 
     Interface14 method13599(int i_1, byte[] bytes_2, int i_3, boolean bool_4) {
-        return !aBool8309 || bool_4 && !aBool8362 ? new Class131_Sub1(this, i_1, bytes_2, i_3) : new Class135_Sub2(this, i_1, bytes_2, i_3, bool_4);
+        return !supportsVBO || bool_4 && !aBool8362 ? new Class131_Sub1(this, i_1, bytes_2, i_3) : new Class135_Sub2(this, i_1, bytes_2, i_3, bool_4);
     }
 
     Interface14 createArrayBuffer(int i_1, Buffer buffer_2, int i_3) {
-        return !aBool8309 ? new Class131_Sub1(this, i_1, buffer_2) : new Class135_Sub2(this, i_1, buffer_2, i_3);
+        return !supportsVBO ? new Class131_Sub1(this, i_1, buffer_2) : new Class135_Sub2(this, i_1, buffer_2, i_3);
     }
 
     void method13601(Interface14 interface14_1) {
         if (interface14_1 != anInterface14_8483) {
-            if (aBool8309) {
-                OpenGL.glBindBufferARB(34962, interface14_1.method1());
+            if (supportsVBO) {
+                OpenGL.glBindBufferARB(GL_ARRAY_BUFFER, interface14_1.method1());
             }
 
             anInterface14_8483 = interface14_1;
@@ -2060,18 +2086,18 @@ public class OpenGLRenderer extends AbstractRenderer {
     }
 
     void method13602(float f_1, float f_2) {
-        OpenGL.glMatrixMode(5890);
+        OpenGL.glMatrixMode(GL_TEXTURE);
         if (aBool8457) {
             OpenGL.glLoadIdentity();
         }
 
         OpenGL.glTranslatef(f_1, f_2, (float) 0.0);
-        OpenGL.glMatrixMode(5888);
+        OpenGL.glMatrixMode(GL_MODELVIEW);
         aBool8457 = true;
     }
 
     void method13603(int i_3) {
-        OpenGL.glDrawArrays(7, 0, i_3);
+        OpenGL.glDrawArrays(GL_QUADS, 0, i_3);
     }
 
     @Override
@@ -2084,10 +2110,10 @@ public class OpenGLRenderer extends AbstractRenderer {
             method13587();
             method13642(false);
             method13620(false);
-            method13656(false);
+            enableDepthTest(false);
             method13623(false);
             method13581(-2);
-            method13624(1);
+            setColorRenderType(1);
             anInt8382 = 4;
         }
 
@@ -2097,9 +2123,9 @@ public class OpenGLRenderer extends AbstractRenderer {
         if (anInt8382 != 8) {
             method13645();
             method13642(true);
-            method13656(true);
+            enableDepthTest(true);
             method13623(true);
-            method13624(1);
+            setColorRenderType(1);
             anInt8382 = 8;
         }
 
@@ -2122,12 +2148,12 @@ public class OpenGLRenderer extends AbstractRenderer {
             int i_7 = 0;
             int i_8 = aBool8448 ? 3 : 0;
             if (i_1 < 0) {
-                method13618();
+                setTextureModelView();
             } else {
                 class137_sub1_4 = aClass167_8481.method2858(i_1);
                 TextureDetails class169_9 = textureCache.getTextureDetails(i_1);
                 if (class169_9.textureSpeedU == 0 && class169_9.textureSpeedV == 0) {
-                    method13618();
+                    setTextureModelView();
                 } else {
                     method13602((anInt8368 % 128000) / 1000.0F * class169_9.textureSpeedU / 64.0F % 1.0F, (anInt8368 % 128000) / 1000.0F * class169_9.textureSpeedV / 64.0F % 1.0F);
                 }
@@ -2143,7 +2169,7 @@ public class OpenGLRenderer extends AbstractRenderer {
 
             aClass146_8356.method2462(i_8, b_6, i_7, bool_2, bool_3);
             if (!aClass146_8356.method2463(class137_sub1_4, i_5)) {
-                method13654(class137_sub1_4);
+                setTexture(class137_sub1_4);
                 method13612(i_5);
             }
 
@@ -2154,61 +2180,61 @@ public class OpenGLRenderer extends AbstractRenderer {
         anInt8382 &= -8;
     }
 
-    void method13610(int i_1) {
-        if (anInt8458 != i_1) {
-            OpenGL.glActiveTexture(i_1 + 33984);
-            anInt8458 = i_1;
+    void setActiveTexture(int textureId) {
+        if (currActiveTexture != textureId) {
+            OpenGL.glActiveTexture(textureId + GL_TEXTURE0);
+            currActiveTexture = textureId;
         }
 
     }
 
     void method13611(Interface15 interface15_1, int i_3, int i_4) {
         method13663(interface15_1);
-        OpenGL.glDrawElements(4, i_4, 5123, interface15_1.method2() + (i_3 * 2));
+        OpenGL.glDrawElements(GL_TRIANGLES, i_4, GL_UNSIGNED_SHORT, interface15_1.method2() + (i_3 * 2));
     }
 
     void method13612(int i_1) {
         if (i_1 == 1) {
-            method13717(7681, 7681);
+            method13717(GL_REPLACE, GL_REPLACE);
         } else if (i_1 == 0) {
-            method13717(8448, 8448);
+            method13717(GL_MODULATE, GL_MODULATE);
         } else if (i_1 == 2) {
-            method13717(34165, 7681);
+            method13717(GL_INTERPOLATE, GL_REPLACE);
         } else if (i_1 == 3) {
-            method13717(260, 8448);
+            method13717(GL_ADD, GL_MODULATE);
         } else if (i_1 == 4) {
-            method13717(34023, 34023);
+            method13717(GL_SUBTRACT, GL_SUBTRACT);
         }
 
     }
 
     int method13613(int i_1) {
         if (i_1 == 1) {
-            return 7681;
+            return GL_REPLACE;
         } else if (i_1 == 0) {
-            return 8448;
+            return GL_MODULATE;
         } else if (i_1 == 2) {
-            return 34165;
+            return GL_INTERPOLATE;
         } else if (i_1 == 3) {
-            return 260;
+            return GL_ADD;
         } else if (i_1 == 4) {
-            return 34023;
+            return GL_SUBTRACT;
         } else {
             throw new IllegalArgumentException();
         }
     }
 
     void method13616(int i_1, int i_2) {
-        OpenGL.glTexEnvi(8960, i_1 + 34184, i_2);
-        OpenGL.glTexEnvi(8960, i_1 + 34200, 770);
+        OpenGL.glTexEnvi(GL_TEXTURE_ENV, i_1 + GL_SRC0_ALPHA, i_2);
+        OpenGL.glTexEnvi(GL_TEXTURE_ENV, i_1 + GL_OPERAND0_ALPHA, GL_SRC_ALPHA);
     }
 
     void method13617(int i_1) {
-        aFloatArray8497[0] = (i_1 & 0xff0000) / 1.671168E7F;
-        aFloatArray8497[1] = (i_1 & 0xff00) / 65280.0F;
-        aFloatArray8497[2] = (i_1 & 0xff) / 255.0F;
-        aFloatArray8497[3] = (i_1 >>> 24) / 255.0F;
-        OpenGL.glTexEnvfv(8960, 8705, aFloatArray8497, 0);
+        LIGHT_PARAMS[0] = (i_1 & 0xff0000) / 1.671168E7F;
+        LIGHT_PARAMS[1] = (i_1 & 0xff00) / 65280.0F;
+        LIGHT_PARAMS[2] = (i_1 & 0xff) / 255.0F;
+        LIGHT_PARAMS[3] = (i_1 >>> 24) / 255.0F;
+        OpenGL.glTexEnvfv(GL_TEXTURE_ENV, GL_TEXTURE_ENV_COLOR, LIGHT_PARAMS, 0);
     }
 
     @Override
@@ -2219,8 +2245,8 @@ public class OpenGLRenderer extends AbstractRenderer {
         IntNode class282_sub38_4;
         while (!aClass473_8486.method7861()) {
             class282_sub38_4 = (IntNode) aClass473_8486.popTail();
-            anIntArray8381[i_2++] = (int) (class282_sub38_4.pointer * -1253863389874800229L * -3442165056282524525L);
-            anInt8371 -= class282_sub38_4.value * 1270866345 * -570797415;
+            anIntArray8381[i_2++] = (int) (class282_sub38_4.pointer);
+            anInt8371 -= class282_sub38_4.value;
             if (i_2 == 1000) {
                 OpenGL.glDeleteBuffersARB(1000, anIntArray8381, 0);
                 i_2 = 0;
@@ -2234,8 +2260,8 @@ public class OpenGLRenderer extends AbstractRenderer {
 
         while (!aClass473_8375.method7861()) {
             class282_sub38_4 = (IntNode) aClass473_8375.popTail();
-            anIntArray8381[i_2++] = (int) (class282_sub38_4.pointer * -1253863389874800229L * -3442165056282524525L);
-            anInt8370 -= class282_sub38_4.value * 1270866345 * -570797415;
+            anIntArray8381[i_2++] = (int) (class282_sub38_4.pointer);
+            anInt8370 -= class282_sub38_4.value;
             if (i_2 == 1000) {
                 OpenGL.glDeleteTextures(1000, anIntArray8381, 0);
                 i_2 = 0;
@@ -2249,7 +2275,7 @@ public class OpenGLRenderer extends AbstractRenderer {
 
         while (!aClass473_8376.method7861()) {
             class282_sub38_4 = (IntNode) aClass473_8376.popTail();
-            anIntArray8381[i_2++] = class282_sub38_4.value * 1270866345 * -570797415;
+            anIntArray8381[i_2++] = class282_sub38_4.value;
             if (i_2 == 1000) {
                 OpenGL.glDeleteFramebuffersEXT(1000, anIntArray8381, 0);
                 i_2 = 0;
@@ -2263,8 +2289,8 @@ public class OpenGLRenderer extends AbstractRenderer {
 
         while (!aClass473_8377.method7861()) {
             class282_sub38_4 = (IntNode) aClass473_8377.popTail();
-            anIntArray8381[i_2++] = (int) (class282_sub38_4.pointer * -1253863389874800229L * -3442165056282524525L);
-            anInt8372 -= class282_sub38_4.value * 1270866345 * -570797415;
+            anIntArray8381[i_2++] = (int) (class282_sub38_4.pointer);
+            anInt8372 -= class282_sub38_4.value;
             if (i_2 == 1000) {
                 OpenGL.glDeleteRenderbuffersEXT(1000, anIntArray8381, 0);
                 i_2 = 0;
@@ -2278,23 +2304,23 @@ public class OpenGLRenderer extends AbstractRenderer {
 
         while (!aClass473_8373.method7861()) {
             class282_sub38_4 = (IntNode) aClass473_8373.popTail();
-            OpenGL.glDeleteLists((int) (class282_sub38_4.pointer * -1253863389874800229L * -3442165056282524525L), class282_sub38_4.value * 1270866345 * -570797415);
+            OpenGL.glDeleteLists((int) (class282_sub38_4.pointer), class282_sub38_4.value);
         }
 
         Node node_5;
         while (!aClass473_8461.method7861()) {
             node_5 = aClass473_8461.popTail();
-            OpenGL.glDeleteProgramARB((int) (node_5.pointer * -1253863389874800229L * -3442165056282524525L));
+            OpenGL.glDeleteProgramARB((int) (node_5.pointer));
         }
 
         while (!aClass473_8379.method7861()) {
             node_5 = aClass473_8379.popTail();
-            OpenGL.glDeleteShader((int) (node_5.pointer * -1253863389874800229L * -3442165056282524525L));
+            OpenGL.glDeleteShader((int) (node_5.pointer));
         }
 
         while (!aClass473_8373.method7861()) {
             class282_sub38_4 = (IntNode) aClass473_8373.popTail();
-            OpenGL.glDeleteLists((int) (class282_sub38_4.pointer * -1253863389874800229L * -3442165056282524525L), class282_sub38_4.value * 1270866345 * -570797415);
+            OpenGL.glDeleteLists((int) (class282_sub38_4.pointer), class282_sub38_4.value);
         }
 
         aClass167_8481.method2860();
@@ -2317,10 +2343,10 @@ public class OpenGLRenderer extends AbstractRenderer {
                 aFloat8429 = (anInt8428 & 0xff0000) / 1.671168E7F;
                 aFloat8430 = (anInt8428 & 0xff00) / 65280.0F;
                 aFloat8431 = (anInt8428 & 0xff) / 255.0F;
-                method13689();
+                applyAmbientLightToModel();
             }
 
-            method13592();
+            setLightDiffusion();
         }
 
         if (aFloatArray8424[0] != f_4 || aFloatArray8424[1] != f_5 || aFloatArray8424[2] != f_6) {
@@ -2337,18 +2363,18 @@ public class OpenGLRenderer extends AbstractRenderer {
             aFloatArray8427[0] = -aFloatArray8426[0];
             aFloatArray8427[1] = -aFloatArray8426[1];
             aFloatArray8427[2] = -aFloatArray8426[2];
-            method13593();
+            positionLights();
             anInt8438 = (int) (f_4 * 256.0F / f_5);
             anInt8439 = (int) (f_6 * 256.0F / f_5);
         }
 
     }
 
-    void method13618() {
+    void setTextureModelView() {
         if (aBool8457) {
-            OpenGL.glMatrixMode(5890);
+            OpenGL.glMatrixMode(GL_TEXTURE);
             OpenGL.glLoadIdentity();
-            OpenGL.glMatrixMode(5888);
+            OpenGL.glMatrixMode(GL_MODELVIEW);
             aBool8457 = false;
         }
 
@@ -2373,9 +2399,9 @@ public class OpenGLRenderer extends AbstractRenderer {
 
     void method13622() {
         if (aBool8422 && !aBool8397) {
-            OpenGL.glEnable(2896);
+            OpenGL.glEnable(GL_LIGHTING);
         } else {
-            OpenGL.glDisable(2896);
+            OpenGL.glDisable(GL_LIGHTING);
         }
 
     }
@@ -2423,62 +2449,62 @@ public class OpenGLRenderer extends AbstractRenderer {
         }
     }
 
-    void method13624(int i_1) {
-        if (anInt8366 != i_1) {
-            int b_2;
-            boolean bool_3;
-            boolean bool_4;
-            if (i_1 == 1) {
-                b_2 = 1;
-                bool_3 = true;
-                bool_4 = true;
-            } else if (i_1 == 2) {
-                b_2 = 2;
-                bool_3 = true;
-                bool_4 = false;
-            } else if (i_1 == 128) {
-                b_2 = 3;
-                bool_3 = true;
-                bool_4 = true;
+    void setColorRenderType(int _colorRenderType) {
+        if (colorRenderType != _colorRenderType) { 
+            int _blendType;
+            boolean _maskRgb;
+            boolean _enableAlphaTest;
+            if (_colorRenderType == 1) {
+                _blendType = 1;
+                _maskRgb = true;
+                _enableAlphaTest = true;
+            } else if (_colorRenderType == 2) {
+                _blendType = 2;
+                _maskRgb = true;
+                _enableAlphaTest = false;
+            } else if (_colorRenderType == 128) {
+                _blendType = 3;
+                _maskRgb = true;
+                _enableAlphaTest = true;
             } else {
-                b_2 = 0;
-                bool_3 = true;
-                bool_4 = false;
+                _blendType = 0;
+                _maskRgb = true;
+                _enableAlphaTest = false;
             }
 
-            if (bool_3 != aBool8459) {
-                OpenGL.glColorMask(bool_3, bool_3, bool_3, true);
-                aBool8459 = bool_3;
+            if (_maskRgb != maskRgb) {
+                OpenGL.glColorMask(_maskRgb, _maskRgb, _maskRgb, true);
+                maskRgb = _maskRgb;
             }
 
-            if (bool_4 != aBool8408) {
-                if (bool_4) {
-                    OpenGL.glEnable(3008);
+            if (_enableAlphaTest != enableAlphaTest) {
+                if (_enableAlphaTest) {
+                    OpenGL.glEnable(GL_ALPHA_TEST);
                 } else {
-                    OpenGL.glDisable(3008);
+                    OpenGL.glDisable(GL_ALPHA_TEST);
                 }
 
-                aBool8408 = bool_4;
+                enableAlphaTest = _enableAlphaTest;
             }
 
-            if (b_2 != anInt8384) {
-                if (b_2 == 1) {
-                    OpenGL.glEnable(3042);
-                    OpenGL.glBlendFunc(770, 771);
-                } else if (b_2 == 2) {
-                    OpenGL.glEnable(3042);
-                    OpenGL.glBlendFunc(1, 1);
-                } else if (b_2 == 3) {
-                    OpenGL.glEnable(3042);
-                    OpenGL.glBlendFunc(774, 1);
+            if (_blendType != blendType) {
+                if (_blendType == 1) {
+                    OpenGL.glEnable(GL_BLEND);
+                    OpenGL.glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+                } else if (_blendType == 2) {
+                    OpenGL.glEnable(GL_BLEND);
+                    OpenGL.glBlendFunc(GL_ONE, GL_ONE);
+                } else if (_blendType == 3) {
+                    OpenGL.glEnable(GL_BLEND);
+                    OpenGL.glBlendFunc(GL_DST_COLOR, GL_ONE);
                 } else {
-                    OpenGL.glDisable(3042);
+                    OpenGL.glDisable(GL_BLEND);
                 }
 
-                anInt8384 = b_2;
+                blendType = _blendType;
             }
 
-            anInt8366 = i_1;
+            colorRenderType = _colorRenderType;
             anInt8382 &= ~0xc;
         }
 
@@ -2641,11 +2667,11 @@ public class OpenGLRenderer extends AbstractRenderer {
     }
 
     void method13635(float f_1, float f_2, float f_3, float f_4) {
-        aFloatArray8497[0] = f_1;
-        aFloatArray8497[1] = f_2;
-        aFloatArray8497[2] = f_3;
-        aFloatArray8497[3] = f_4;
-        OpenGL.glTexEnvfv(8960, 8705, aFloatArray8497, 0);
+        LIGHT_PARAMS[0] = f_1;
+        LIGHT_PARAMS[1] = f_2;
+        LIGHT_PARAMS[2] = f_3;
+        LIGHT_PARAMS[3] = f_4;
+        OpenGL.glTexEnvfv(GL_TEXTURE_ENV, GL_TEXTURE_ENV_COLOR, LIGHT_PARAMS, 0);
     }
 
     @Override
@@ -2670,12 +2696,12 @@ public class OpenGLRenderer extends AbstractRenderer {
 
     @Override
     public boolean method8599() {
-        return aNode_Sub5_Sub1_8444 != null && (anInt8475 <= 1 || aBool8344);
+        return aNode_Sub5_Sub1_8444 != null && (anInt8475 <= 1 || supportsPostProcessing);
     }
 
     @Override
     public boolean method8464() {
-        return aNode_Sub5_Sub1_8444 != null && (anInt8475 <= 1 || aBool8344);
+        return aNode_Sub5_Sub1_8444 != null && (anInt8475 <= 1 || supportsPostProcessing);
     }
 
     @Override
@@ -2685,7 +2711,7 @@ public class OpenGLRenderer extends AbstractRenderer {
 
     @Override
     public boolean method8649() {
-        return aNode_Sub5_Sub1_8444 != null && (anInt8475 <= 1 || aBool8344);
+        return aNode_Sub5_Sub1_8444 != null && (anInt8475 <= 1 || supportsPostProcessing);
     }
 
     void method13637() {
@@ -2693,7 +2719,7 @@ public class OpenGLRenderer extends AbstractRenderer {
             method13587();
             method13642(false);
             method13620(false);
-            method13656(false);
+            enableDepthTest(false);
             method13623(false);
             method13581(-2);
             anInt8382 = 2;
@@ -2701,32 +2727,32 @@ public class OpenGLRenderer extends AbstractRenderer {
 
     }
 
-    void method13638() {
-        int i_1;
-        for (i_1 = 0; i_1 < anInt8437; i_1++) {
-            Node_Sub24 class282_sub24_2 = aNode_Sub24Array8435[i_1];
-            int i_3 = i_1 + 16386;
-            aFloatArray8322[0] = class282_sub24_2.method12368();
-            aFloatArray8322[1] = class282_sub24_2.method12369();
-            aFloatArray8322[2] = class282_sub24_2.method12394();
+    void renderLights() {
+        int lightIndex;
+        for (lightIndex = 0; lightIndex < maxActiveLightIndex; lightIndex++) {
+            GLLight light = lights[lightIndex];
+            int lightId = lightIndex + GL_LIGHT2;
+            aFloatArray8322[0] = light.getX();
+            aFloatArray8322[1] = light.getY();
+            aFloatArray8322[2] = light.getZ();
             aFloatArray8322[3] = 1.0F;
-            OpenGL.glLightfv(i_3, 4611, aFloatArray8322, 0);
-            int i_4 = class282_sub24_2.method12371();
-            float f_5 = class282_sub24_2.method12395() / 255.0F;
-            aFloatArray8322[0] = (i_4 >> 16 & 0xff) * f_5;
-            aFloatArray8322[1] = (i_4 >> 8 & 0xff) * f_5;
-            aFloatArray8322[2] = (i_4 & 0xff) * f_5;
-            OpenGL.glLightfv(i_3, 4609, aFloatArray8322, 0);
-            OpenGL.glLightf(i_3, 4617, 1.0F / (class282_sub24_2.method12370() * class282_sub24_2.method12370()));
-            OpenGL.glEnable(i_3);
+            OpenGL.glLightfv(lightId, GL_POSITION, aFloatArray8322, 0);
+            int color = light.getColor();
+            float intensity = light.getIntensity() / 255.0F;
+            aFloatArray8322[0] = (color >> 16 & 0xff) * intensity;
+            aFloatArray8322[1] = (color >> 8 & 0xff) * intensity;
+            aFloatArray8322[2] = (color & 0xff) * intensity;
+            OpenGL.glLightfv(lightId, GL_DIFFUSE, aFloatArray8322, 0);
+            OpenGL.glLightf(lightId, GL_QUADRATIC_ATTENUATION, 1.0F / (light.method12370() * light.method12370()));
+            OpenGL.glEnable(lightId);
         }
 
-        while (i_1 < anInt8436) {
-            OpenGL.glDisable(i_1 + 16386);
-            ++i_1;
+        while (lightIndex < maxLightIndex) {
+            OpenGL.glDisable(lightIndex + GL_LIGHT2);
+            ++lightIndex;
         }
 
-        anInt8436 = anInt8437;
+        maxLightIndex = maxActiveLightIndex;
     }
 
     void method13639() {
@@ -2800,27 +2826,27 @@ public class OpenGLRenderer extends AbstractRenderer {
             int i_7 = anInt8419;
             int i_8 = anInt8347;
             method8421();
-            OpenGL.glReadBuffer(1028);
-            OpenGL.glDrawBuffer(1029);
+            OpenGL.glReadBuffer(GL_FRONT);
+            OpenGL.glDrawBuffer(GL_BACK);
             method13586();
             method13642(false);
             method13620(false);
-            method13656(false);
+            enableDepthTest(false);
             method13623(false);
-            method13654(null);
+            setTexture(null);
             method13581(-2);
             method13612(1);
-            method13624(0);
-            OpenGL.glMatrixMode(5889);
+            setColorRenderType(0);
+            OpenGL.glMatrixMode(GL_PROJECTION);
             OpenGL.glLoadIdentity();
             OpenGL.glOrtho(0.0D, 1.0D, 0.0D, 1.0D, -1.0, 1.0D);
-            OpenGL.glMatrixMode(5888);
+            OpenGL.glMatrixMode(GL_MODELVIEW);
             OpenGL.glLoadIdentity();
             OpenGL.glRasterPos2i(0, 0);
-            OpenGL.glCopyPixels(0, 0, aClass158_5853.method2714(), aClass158_5853.method2716(), 6144);
+            OpenGL.glCopyPixels(0, 0, aClass158_5853.method2714(), aClass158_5853.method2716(), GL_COLOR);
             OpenGL.glFlush();
-            OpenGL.glReadBuffer(1029);
-            OpenGL.glDrawBuffer(1029);
+            OpenGL.glReadBuffer(GL_BACK);
+            OpenGL.glDrawBuffer(GL_BACK);
             r(i_1, i_3, i_2, i_4);
             method8617(i_5, i_6, i_7, i_8);
         }
@@ -2840,27 +2866,27 @@ public class OpenGLRenderer extends AbstractRenderer {
             int i_7 = anInt8419;
             int i_8 = anInt8347;
             method8421();
-            OpenGL.glReadBuffer(1028);
-            OpenGL.glDrawBuffer(1029);
+            OpenGL.glReadBuffer(GL_FRONT);
+            OpenGL.glDrawBuffer(GL_BACK);
             method13586();
             method13642(false);
             method13620(false);
-            method13656(false);
+            enableDepthTest(false);
             method13623(false);
-            method13654(null);
+            setTexture(null);
             method13581(-2);
             method13612(1);
-            method13624(0);
-            OpenGL.glMatrixMode(5889);
+            setColorRenderType(0);
+            OpenGL.glMatrixMode(GL_PROJECTION);
             OpenGL.glLoadIdentity();
             OpenGL.glOrtho(0.0D, 1.0D, 0.0D, 1.0D, -1.0, 1.0D);
-            OpenGL.glMatrixMode(5888);
+            OpenGL.glMatrixMode(GL_MODELVIEW);
             OpenGL.glLoadIdentity();
             OpenGL.glRasterPos2i(0, 0);
-            OpenGL.glCopyPixels(0, 0, aClass158_5853.method2714(), aClass158_5853.method2716(), 6144);
+            OpenGL.glCopyPixels(0, 0, aClass158_5853.method2714(), aClass158_5853.method2716(), GL_COLOR);
             OpenGL.glFlush();
-            OpenGL.glReadBuffer(1029);
-            OpenGL.glDrawBuffer(1029);
+            OpenGL.glReadBuffer(GL_BACK);
+            OpenGL.glDrawBuffer(GL_BACK);
             r(i_1, i_3, i_2, i_4);
             method8617(i_5, i_6, i_7, i_8);
         }
@@ -2916,7 +2942,7 @@ public class OpenGLRenderer extends AbstractRenderer {
             anInt8415 = 0;
             anInt8412 = aClass158_5853.method2714();
             anInt8478 = aClass158_5853.method2716();
-            OpenGL.glDisable(3089);
+            OpenGL.glDisable(GL_SCISSOR_TEST);
         }
 
     }
@@ -2928,7 +2954,7 @@ public class OpenGLRenderer extends AbstractRenderer {
             anInt8415 = 0;
             anInt8412 = aClass158_5853.method2714();
             anInt8478 = aClass158_5853.method2716();
-            OpenGL.glDisable(3089);
+            OpenGL.glDisable(GL_SCISSOR_TEST);
         }
 
     }
@@ -2960,7 +2986,7 @@ public class OpenGLRenderer extends AbstractRenderer {
             anInt8415 = i_21;
             anInt8412 = i_31;
             anInt8478 = i_41;
-            OpenGL.glEnable(3089);
+            OpenGL.glEnable(GL_SCISSOR_TEST);
             method13570();
         }
 
@@ -2993,7 +3019,7 @@ public class OpenGLRenderer extends AbstractRenderer {
             anInt8415 = i_21;
             anInt8412 = i_31;
             anInt8478 = i_41;
-            OpenGL.glEnable(3089);
+            OpenGL.glEnable(GL_SCISSOR_TEST);
             method13570();
         }
 
@@ -3017,7 +3043,7 @@ public class OpenGLRenderer extends AbstractRenderer {
             anInt8478 = i_4;
         }
 
-        OpenGL.glEnable(3089);
+        OpenGL.glEnable(GL_SCISSOR_TEST);
         method13570();
     }
 
@@ -3039,7 +3065,7 @@ public class OpenGLRenderer extends AbstractRenderer {
             anInt8478 = i_4;
         }
 
-        OpenGL.glEnable(3089);
+        OpenGL.glEnable(GL_SCISSOR_TEST);
         method13570();
     }
 
@@ -3181,20 +3207,20 @@ public class OpenGLRenderer extends AbstractRenderer {
         float f_9 = f_7 + i_3 - 1.0F;
         float f_10 = f_8 + i_4 - 1.0F;
         method13659();
-        method13624(i_6);
+        setColorRenderType(i_6);
         OpenGL.glColor4ub((byte) (i_5 >> 16), (byte) (i_5 >> 8), (byte) i_5, (byte) (i_5 >> 24));
-        if (aBool8342) {
-            OpenGL.glDisable(32925);
+        if (supportsMultiSample) {
+            OpenGL.glDisable(GL_MULTISAMPLE);
         }
 
-        OpenGL.glBegin(2);
+        OpenGL.glBegin(GL_LINE_LOOP);
         OpenGL.glVertex2f(f_7, f_8);
         OpenGL.glVertex2f(f_7, f_10);
         OpenGL.glVertex2f(f_9, f_10);
         OpenGL.glVertex2f(f_9, f_8);
         OpenGL.glEnd();
-        if (aBool8342) {
-            OpenGL.glEnable(32925);
+        if (supportsMultiSample) {
+            OpenGL.glEnable(GL_MULTISAMPLE);
         }
 
     }
@@ -3206,20 +3232,20 @@ public class OpenGLRenderer extends AbstractRenderer {
         float f_9 = f_7 + i_3 - 1.0F;
         float f_10 = f_8 + i_4 - 1.0F;
         method13659();
-        method13624(i_6);
+        setColorRenderType(i_6);
         OpenGL.glColor4ub((byte) (i_5 >> 16), (byte) (i_5 >> 8), (byte) i_5, (byte) (i_5 >> 24));
-        if (aBool8342) {
-            OpenGL.glDisable(32925);
+        if (supportsMultiSample) {
+            OpenGL.glDisable(GL_MULTISAMPLE);
         }
 
-        OpenGL.glBegin(2);
+        OpenGL.glBegin(GL_LINE_LOOP);
         OpenGL.glVertex2f(f_7, f_8);
         OpenGL.glVertex2f(f_7, f_10);
         OpenGL.glVertex2f(f_9, f_10);
         OpenGL.glVertex2f(f_9, f_8);
         OpenGL.glEnd();
-        if (aBool8342) {
-            OpenGL.glEnable(32925);
+        if (supportsMultiSample) {
+            OpenGL.glEnable(GL_MULTISAMPLE);
         }
 
     }
@@ -3231,20 +3257,20 @@ public class OpenGLRenderer extends AbstractRenderer {
         float f_9 = f_7 + i_3 - 1.0F;
         float f_10 = f_8 + i_4 - 1.0F;
         method13659();
-        method13624(i_6);
+        setColorRenderType(i_6);
         OpenGL.glColor4ub((byte) (i_5 >> 16), (byte) (i_5 >> 8), (byte) i_5, (byte) (i_5 >> 24));
-        if (aBool8342) {
-            OpenGL.glDisable(32925);
+        if (supportsMultiSample) {
+            OpenGL.glDisable(GL_MULTISAMPLE);
         }
 
-        OpenGL.glBegin(2);
+        OpenGL.glBegin(GL_LINE_LOOP);
         OpenGL.glVertex2f(f_7, f_8);
         OpenGL.glVertex2f(f_7, f_10);
         OpenGL.glVertex2f(f_9, f_10);
         OpenGL.glVertex2f(f_9, f_8);
         OpenGL.glEnd();
-        if (aBool8342) {
-            OpenGL.glEnable(32925);
+        if (supportsMultiSample) {
+            OpenGL.glEnable(GL_MULTISAMPLE);
         }
 
     }
@@ -3256,20 +3282,20 @@ public class OpenGLRenderer extends AbstractRenderer {
         float f_9 = f_7 + i_3;
         float f_10 = f_8 + i_4;
         method13659();
-        method13624(i_6);
+        setColorRenderType(i_6);
         OpenGL.glColor4ub((byte) (i_5 >> 16), (byte) (i_5 >> 8), (byte) i_5, (byte) (i_5 >> 24));
-        if (aBool8342) {
-            OpenGL.glDisable(32925);
+        if (supportsMultiSample) {
+            OpenGL.glDisable(GL_MULTISAMPLE);
         }
 
-        OpenGL.glBegin(7);
+        OpenGL.glBegin(GL_QUADS);
         OpenGL.glVertex2f(f_7, f_8);
         OpenGL.glVertex2f(f_7, f_10);
         OpenGL.glVertex2f(f_9, f_10);
         OpenGL.glVertex2f(f_9, f_8);
         OpenGL.glEnd();
-        if (aBool8342) {
-            OpenGL.glEnable(32925);
+        if (supportsMultiSample) {
+            OpenGL.glEnable(GL_MULTISAMPLE);
         }
 
     }
@@ -3281,20 +3307,20 @@ public class OpenGLRenderer extends AbstractRenderer {
         float f_9 = f_7 + i_3;
         float f_10 = f_8 + i_4;
         method13659();
-        method13624(i_6);
+        setColorRenderType(i_6);
         OpenGL.glColor4ub((byte) (i_5 >> 16), (byte) (i_5 >> 8), (byte) i_5, (byte) (i_5 >> 24));
-        if (aBool8342) {
-            OpenGL.glDisable(32925);
+        if (supportsMultiSample) {
+            OpenGL.glDisable(GL_MULTISAMPLE);
         }
 
-        OpenGL.glBegin(7);
+        OpenGL.glBegin(GL_QUADS);
         OpenGL.glVertex2f(f_7, f_8);
         OpenGL.glVertex2f(f_7, f_10);
         OpenGL.glVertex2f(f_9, f_10);
         OpenGL.glVertex2f(f_9, f_8);
         OpenGL.glEnd();
-        if (aBool8342) {
-            OpenGL.glEnable(32925);
+        if (supportsMultiSample) {
+            OpenGL.glEnable(GL_MULTISAMPLE);
         }
 
     }
@@ -3315,20 +3341,20 @@ public class OpenGLRenderer extends AbstractRenderer {
         }
 
         method13637();
-        method13654(aClass137_Sub1_Sub1_8462);
-        method13624(i_9);
+        setTexture(aClass137_Sub1_Sub1_8462);
+        setColorRenderType(i_9);
         OpenGL.glColor4ub((byte) (i_5 >> 16), (byte) (i_5 >> 8), (byte) i_5, (byte) (i_5 >> 24));
         method13617(i_6);
-        method13717(34165, 34165);
-        method13595(0, 34166, 768);
-        method13595(2, 5890, 770);
-        method13616(0, 34166);
-        method13616(2, 5890);
+        method13717(GL_INTERPOLATE, GL_INTERPOLATE);
+        method13595(0, GL_CONSTANT, GL_SRC_COLOR);
+        method13595(2, GL_TEXTURE, GL_SRC_ALPHA);
+        method13616(0, GL_CONSTANT);
+        method13616(2, GL_TEXTURE);
         float f_12 = i_1;
         float f_13 = i_2;
         float f_14 = f_12 + i_3;
         float f_15 = f_13 + i_4;
-        OpenGL.glBegin(7);
+        OpenGL.glBegin(GL_QUADS);
         OpenGL.glTexCoord2f(0.0F, 0.0F);
         OpenGL.glVertex2f(f_12, f_13);
         OpenGL.glTexCoord2f(0.0F, f_11);
@@ -3338,10 +3364,10 @@ public class OpenGLRenderer extends AbstractRenderer {
         OpenGL.glTexCoord2f(f_10, 0.0F);
         OpenGL.glVertex2f(f_14, f_13);
         OpenGL.glEnd();
-        method13595(0, 5890, 768);
-        method13595(2, 34166, 770);
-        method13616(0, 5890);
-        method13616(2, 34166);
+        method13595(0, GL_TEXTURE, GL_SRC_COLOR);
+        method13595(2, GL_CONSTANT, GL_SRC_ALPHA);
+        method13616(0, GL_TEXTURE);
+        method13616(2, GL_CONSTANT);
     }
 
     @Override
@@ -3361,27 +3387,27 @@ public class OpenGLRenderer extends AbstractRenderer {
 
         if (i_1 + i_3 >= anInt8413 && i_1 - i_3 <= anInt8412 && i_2 + i_3 >= anInt8415 && i_2 - i_3 <= anInt8478) {
             method13659();
-            method13624(i_5);
+            setColorRenderType(i_5);
             OpenGL.glColor4ub((byte) (i_4 >> 16), (byte) (i_4 >> 8), (byte) i_4, (byte) (i_4 >> 24));
             float f_6 = i_1 + 0.35F;
             float f_7 = i_2 + 0.35F;
             int i_8 = i_3 << 1;
-            if (i_8 < aFloat8414) {
-                OpenGL.glBegin(7);
+            if (i_8 < smallestAntialiasedPointSize) {
+                OpenGL.glBegin(GL_QUADS);
                 OpenGL.glVertex2f(f_6 + 1.0F, f_7 + 1.0F);
                 OpenGL.glVertex2f(f_6 + 1.0F, f_7 - 1.0F);
                 OpenGL.glVertex2f(f_6 - 1.0F, f_7 - 1.0F);
                 OpenGL.glVertex2f(f_6 - 1.0F, f_7 + 1.0F);
                 OpenGL.glEnd();
-            } else if (i_8 <= aFloat8489) {
-                OpenGL.glEnable(2832);
+            } else if (i_8 <= largestAntialiasedPointSize) {
+                OpenGL.glEnable(GL_POINT_SMOOTH);
                 OpenGL.glPointSize(i_8);
-                OpenGL.glBegin(0);
+                OpenGL.glBegin(GL_POINTS);
                 OpenGL.glVertex2f(f_6, f_7);
                 OpenGL.glEnd();
-                OpenGL.glDisable(2832);
+                OpenGL.glDisable(GL_POINT_SMOOTH);
             } else {
-                OpenGL.glBegin(6);
+                OpenGL.glBegin(GL_TRIANGLE_FAN);
                 OpenGL.glVertex2f(f_6, f_7);
                 int i_9 = 262144 / (6 * i_3);
                 if (i_9 <= 64) {
@@ -3412,27 +3438,27 @@ public class OpenGLRenderer extends AbstractRenderer {
 
         if (i_1 + i_3 >= anInt8413 && i_1 - i_3 <= anInt8412 && i_2 + i_3 >= anInt8415 && i_2 - i_3 <= anInt8478) {
             method13659();
-            method13624(i_5);
+            setColorRenderType(i_5);
             OpenGL.glColor4ub((byte) (i_4 >> 16), (byte) (i_4 >> 8), (byte) i_4, (byte) (i_4 >> 24));
             float f_6 = i_1 + 0.35F;
             float f_7 = i_2 + 0.35F;
             int i_8 = i_3 << 1;
-            if (i_8 < aFloat8414) {
-                OpenGL.glBegin(7);
+            if (i_8 < smallestAntialiasedPointSize) {
+                OpenGL.glBegin(GL_QUADS);
                 OpenGL.glVertex2f(f_6 + 1.0F, f_7 + 1.0F);
                 OpenGL.glVertex2f(f_6 + 1.0F, f_7 - 1.0F);
                 OpenGL.glVertex2f(f_6 - 1.0F, f_7 - 1.0F);
                 OpenGL.glVertex2f(f_6 - 1.0F, f_7 + 1.0F);
                 OpenGL.glEnd();
-            } else if (i_8 <= aFloat8489) {
-                OpenGL.glEnable(2832);
+            } else if (i_8 <= largestAntialiasedPointSize) {
+                OpenGL.glEnable(GL_POINT_SMOOTH);
                 OpenGL.glPointSize(i_8);
-                OpenGL.glBegin(0);
+                OpenGL.glBegin(GL_POINTS);
                 OpenGL.glVertex2f(f_6, f_7);
                 OpenGL.glEnd();
-                OpenGL.glDisable(2832);
+                OpenGL.glDisable(GL_POINT_SMOOTH);
             } else {
-                OpenGL.glBegin(6);
+                OpenGL.glBegin(GL_TRIANGLE_FAN);
                 OpenGL.glVertex2f(f_6, f_7);
                 int i_9 = 262144 / (6 * i_3);
                 if (i_9 <= 64) {
@@ -3458,8 +3484,8 @@ public class OpenGLRenderer extends AbstractRenderer {
     @Override
     public void method8516(int i_1, int i_2, float f_3, int i_4, int i_5, float f_6, int i_7, int i_8, float f_9, int i_10, int i_11, int i_12, int i_13) {
         method13659();
-        method13624(i_13);
-        OpenGL.glBegin(4);
+        setColorRenderType(i_13);
+        OpenGL.glBegin(GL_TRIANGLES);
         OpenGL.glColor4ub((byte) (i_10 >> 16), (byte) (i_10 >> 8), (byte) i_10, (byte) (i_10 >> 24));
         OpenGL.glVertex3f(i_1 + 0.35F, i_2 + 0.35F, f_3);
         OpenGL.glColor4ub((byte) (i_11 >> 16), (byte) (i_11 >> 8), (byte) i_11, (byte) (i_11 >> 24));
@@ -3472,11 +3498,11 @@ public class OpenGLRenderer extends AbstractRenderer {
     @Override
     public void fq(int i_1, int i_2, int i_3, int i_4, int i_5) {
         method13659();
-        method13624(i_5);
+        setColorRenderType(i_5);
         float f_6 = i_1 + 0.35F;
         float f_7 = i_2 + 0.35F;
         OpenGL.glColor4ub((byte) (i_4 >> 16), (byte) (i_4 >> 8), (byte) i_4, (byte) (i_4 >> 24));
-        OpenGL.glBegin(1);
+        OpenGL.glBegin(GL_LINES);
         OpenGL.glVertex2f(f_6, f_7);
         OpenGL.glVertex2f(f_6 + i_3, f_7);
         OpenGL.glEnd();
@@ -3490,11 +3516,11 @@ public class OpenGLRenderer extends AbstractRenderer {
     @Override
     public void fl(int i_1, int i_2, int i_3, int i_4, int i_5) {
         method13659();
-        method13624(i_5);
+        setColorRenderType(i_5);
         float f_6 = i_1 + 0.35F;
         float f_7 = i_2 + 0.35F;
         OpenGL.glColor4ub((byte) (i_4 >> 16), (byte) (i_4 >> 8), (byte) i_4, (byte) (i_4 >> 24));
-        OpenGL.glBegin(1);
+        OpenGL.glBegin(GL_LINES);
         OpenGL.glVertex2f(f_6, f_7);
         OpenGL.glVertex2f(f_6, f_7 + i_3);
         OpenGL.glEnd();
@@ -3503,7 +3529,7 @@ public class OpenGLRenderer extends AbstractRenderer {
     @Override
     public void method8415(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
         method13659();
-        method13624(i_6);
+        setColorRenderType(i_6);
         float f_7 = (float) i_3 - i_1;
         float f_8 = (float) i_4 - i_2;
         if (f_7 == 0.0F && f_8 == 0.0F) {
@@ -3515,7 +3541,7 @@ public class OpenGLRenderer extends AbstractRenderer {
         }
 
         OpenGL.glColor4ub((byte) (i_5 >> 16), (byte) (i_5 >> 8), (byte) i_5, (byte) (i_5 >> 24));
-        OpenGL.glBegin(1);
+        OpenGL.glBegin(GL_LINES);
         OpenGL.glVertex2f(i_1 + 0.35F, i_2 + 0.35F);
         OpenGL.glVertex2f(i_3 + f_7 + 0.35F, i_4 + f_8 + 0.35F);
         OpenGL.glEnd();
@@ -3524,7 +3550,7 @@ public class OpenGLRenderer extends AbstractRenderer {
     @Override
     public void method8526(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
         method13659();
-        method13624(i_6);
+        setColorRenderType(i_6);
         float f_7 = (float) i_3 - i_1;
         float f_8 = (float) i_4 - i_2;
         if (f_7 == 0.0F && f_8 == 0.0F) {
@@ -3536,7 +3562,7 @@ public class OpenGLRenderer extends AbstractRenderer {
         }
 
         OpenGL.glColor4ub((byte) (i_5 >> 16), (byte) (i_5 >> 8), (byte) i_5, (byte) (i_5 >> 24));
-        OpenGL.glBegin(1);
+        OpenGL.glBegin(GL_LINES);
         OpenGL.glVertex2f(i_1 + 0.35F, i_2 + 0.35F);
         OpenGL.glVertex2f(i_3 + f_7 + 0.35F, i_4 + f_8 + 0.35F);
         OpenGL.glEnd();
@@ -3546,7 +3572,7 @@ public class OpenGLRenderer extends AbstractRenderer {
     public void method8527(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9) {
         if (i_1 != i_3 || i_2 != i_4) {
             method13659();
-            method13624(i_6);
+            setColorRenderType(i_6);
             float f_10 = (float) i_3 - i_1;
             float f_11 = (float) i_4 - i_2;
             float f_12 = (float) (1.0D / Math.sqrt(f_10 * f_10 + f_11 * f_11));
@@ -3610,7 +3636,7 @@ public class OpenGLRenderer extends AbstractRenderer {
                     }
                 }
 
-                OpenGL.glBegin(1);
+                OpenGL.glBegin(GL_LINES);
                 OpenGL.glVertex2f(f_19, f_20);
                 OpenGL.glVertex2f(f_19 + f_17, f_20 + f_18);
                 OpenGL.glEnd();
@@ -3627,7 +3653,7 @@ public class OpenGLRenderer extends AbstractRenderer {
     public void method8529(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9) {
         if (i_1 != i_3 || i_2 != i_4) {
             method13659();
-            method13624(i_6);
+            setColorRenderType(i_6);
             float f_10 = (float) i_3 - i_1;
             float f_11 = (float) i_4 - i_2;
             float f_12 = (float) (1.0D / Math.sqrt(f_10 * f_10 + f_11 * f_11));
@@ -3691,7 +3717,7 @@ public class OpenGLRenderer extends AbstractRenderer {
                     }
                 }
 
-                OpenGL.glBegin(1);
+                OpenGL.glBegin(GL_LINES);
                 OpenGL.glVertex2f(f_19, f_20);
                 OpenGL.glVertex2f(f_19 + f_17, f_20 + f_18);
                 OpenGL.glEnd();
@@ -3707,11 +3733,11 @@ public class OpenGLRenderer extends AbstractRenderer {
     @Override
     public void fo(int i_1, int i_2, int i_3, int i_4, int i_5) {
         method13659();
-        method13624(i_5);
+        setColorRenderType(i_5);
         float f_6 = i_1 + 0.35F;
         float f_7 = i_2 + 0.35F;
         OpenGL.glColor4ub((byte) (i_4 >> 16), (byte) (i_4 >> 8), (byte) i_4, (byte) (i_4 >> 24));
-        OpenGL.glBegin(1);
+        OpenGL.glBegin(GL_LINES);
         OpenGL.glVertex2f(f_6, f_7);
         OpenGL.glVertex2f(f_6, f_7 + i_3);
         OpenGL.glEnd();
@@ -3722,10 +3748,10 @@ public class OpenGLRenderer extends AbstractRenderer {
         Class455_Sub2 class455_sub2_10 = (Class455_Sub2) class455_7;
         Class137_Sub1_Sub1 class137_sub1_sub1_11 = class455_sub2_10.aClass137_Sub1_Sub1_8974;
         method13637();
-        method13654(class455_sub2_10.aClass137_Sub1_Sub1_8974);
-        method13624(i_6);
+        setTexture(class455_sub2_10.aClass137_Sub1_Sub1_8974);
+        setColorRenderType(i_6);
         method13717(7681, 8448);
-        method13595(0, 34167, 768);
+        method13595(0, 34167, GL_SRC_COLOR);
         float f_12 = class137_sub1_sub1_11.aFloat10132 / class137_sub1_sub1_11.anInt10136;
         float f_13 = class137_sub1_sub1_11.aFloat10134 / class137_sub1_sub1_11.anInt10133;
         float f_14 = (float) i_3 - i_1;
@@ -3734,13 +3760,13 @@ public class OpenGLRenderer extends AbstractRenderer {
         f_14 *= f_16;
         f_15 *= f_16;
         OpenGL.glColor4ub((byte) (i_5 >> 16), (byte) (i_5 >> 8), (byte) i_5, (byte) (i_5 >> 24));
-        OpenGL.glBegin(1);
+        OpenGL.glBegin(GL_LINES);
         OpenGL.glTexCoord2f(f_12 * (i_1 - i_8), f_13 * (i_2 - i_9));
         OpenGL.glVertex2f(i_1 + 0.35F, i_2 + 0.35F);
         OpenGL.glTexCoord2f(f_12 * (i_3 - i_8), f_13 * (i_4 - i_9));
         OpenGL.glVertex2f(i_3 + f_14 + 0.35F, i_4 + f_15 + 0.35F);
         OpenGL.glEnd();
-        method13595(0, 5890, 768);
+        method13595(0, GL_TEXTURE, GL_SRC_COLOR);
     }
 
     @Override
@@ -3748,10 +3774,10 @@ public class OpenGLRenderer extends AbstractRenderer {
         Class455_Sub2 class455_sub2_10 = (Class455_Sub2) class455_7;
         Class137_Sub1_Sub1 class137_sub1_sub1_11 = class455_sub2_10.aClass137_Sub1_Sub1_8974;
         method13637();
-        method13654(class455_sub2_10.aClass137_Sub1_Sub1_8974);
-        method13624(i_6);
-        method13717(7681, 8448);
-        method13595(0, 34167, 768);
+        setTexture(class455_sub2_10.aClass137_Sub1_Sub1_8974);
+        setColorRenderType(i_6);
+        method13717(GL_REPLACE, GL_MODULATE);
+        method13595(0, GL_PRIMARY_COLOR, GL_SRC_COLOR);
         float f_12 = class137_sub1_sub1_11.aFloat10132 / class137_sub1_sub1_11.anInt10136;
         float f_13 = class137_sub1_sub1_11.aFloat10134 / class137_sub1_sub1_11.anInt10133;
         float f_14 = (float) i_3 - i_1;
@@ -3766,7 +3792,7 @@ public class OpenGLRenderer extends AbstractRenderer {
         OpenGL.glTexCoord2f(f_12 * (i_3 - i_8), f_13 * (i_4 - i_9));
         OpenGL.glVertex2f(i_3 + f_14 + 0.35F, i_4 + f_15 + 0.35F);
         OpenGL.glEnd();
-        method13595(0, 5890, 768);
+        method13595(0, GL_TEXTURE, GL_SRC_COLOR);
     }
 
     @Override
@@ -3774,10 +3800,10 @@ public class OpenGLRenderer extends AbstractRenderer {
         Class455_Sub2 class455_sub2_10 = (Class455_Sub2) class455_7;
         Class137_Sub1_Sub1 class137_sub1_sub1_11 = class455_sub2_10.aClass137_Sub1_Sub1_8974;
         method13637();
-        method13654(class455_sub2_10.aClass137_Sub1_Sub1_8974);
-        method13624(i_6);
-        method13717(7681, 8448);
-        method13595(0, 34167, 768);
+        setTexture(class455_sub2_10.aClass137_Sub1_Sub1_8974);
+        setColorRenderType(i_6);
+        method13717(GL_REPLACE, GL_MODULATE);
+        method13595(0, GL_PRIMARY_COLOR, GL_SRC_COLOR);
         float f_12 = class137_sub1_sub1_11.aFloat10132 / class137_sub1_sub1_11.anInt10136;
         float f_13 = class137_sub1_sub1_11.aFloat10134 / class137_sub1_sub1_11.anInt10133;
         float f_14 = (float) i_3 - i_1;
@@ -3786,13 +3812,13 @@ public class OpenGLRenderer extends AbstractRenderer {
         f_14 *= f_16;
         f_15 *= f_16;
         OpenGL.glColor4ub((byte) (i_5 >> 16), (byte) (i_5 >> 8), (byte) i_5, (byte) (i_5 >> 24));
-        OpenGL.glBegin(1);
+        OpenGL.glBegin(GL_LINES);
         OpenGL.glTexCoord2f(f_12 * (i_1 - i_8), f_13 * (i_2 - i_9));
         OpenGL.glVertex2f(i_1 + 0.35F, i_2 + 0.35F);
         OpenGL.glTexCoord2f(f_12 * (i_3 - i_8), f_13 * (i_4 - i_9));
         OpenGL.glVertex2f(i_3 + f_14 + 0.35F, i_4 + f_15 + 0.35F);
         OpenGL.glEnd();
-        method13595(0, 5890, 768);
+        method13595(0, GL_TEXTURE, GL_SRC_COLOR);
     }
 
     @Override
@@ -3800,10 +3826,10 @@ public class OpenGLRenderer extends AbstractRenderer {
         Class455_Sub2 class455_sub2_10 = (Class455_Sub2) class455_7;
         Class137_Sub1_Sub1 class137_sub1_sub1_11 = class455_sub2_10.aClass137_Sub1_Sub1_8974;
         method13637();
-        method13654(class455_sub2_10.aClass137_Sub1_Sub1_8974);
-        method13624(i_6);
-        method13717(7681, 8448);
-        method13595(0, 34167, 768);
+        setTexture(class455_sub2_10.aClass137_Sub1_Sub1_8974);
+        setColorRenderType(i_6);
+        method13717(GL_REPLACE, GL_MODULATE);
+        method13595(0, GL_PRIMARY_COLOR, GL_SRC_COLOR);
         float f_12 = class137_sub1_sub1_11.aFloat10132 / class137_sub1_sub1_11.anInt10136;
         float f_13 = class137_sub1_sub1_11.aFloat10134 / class137_sub1_sub1_11.anInt10133;
         float f_14 = (float) i_3 - i_1;
@@ -3812,13 +3838,13 @@ public class OpenGLRenderer extends AbstractRenderer {
         f_14 *= f_16;
         f_15 *= f_16;
         OpenGL.glColor4ub((byte) (i_5 >> 16), (byte) (i_5 >> 8), (byte) i_5, (byte) (i_5 >> 24));
-        OpenGL.glBegin(1);
+        OpenGL.glBegin(GL_LINES);
         OpenGL.glTexCoord2f(f_12 * (i_1 - i_8), f_13 * (i_2 - i_9));
         OpenGL.glVertex2f(i_1 + 0.35F, i_2 + 0.35F);
         OpenGL.glTexCoord2f(f_12 * (i_3 - i_8), f_13 * (i_4 - i_9));
         OpenGL.glVertex2f(i_3 + f_14 + 0.35F, i_4 + f_15 + 0.35F);
         OpenGL.glEnd();
-        method13595(0, 5890, 768);
+        method13595(0, GL_TEXTURE, GL_SRC_COLOR);
     }
 
     @Override
@@ -3827,10 +3853,10 @@ public class OpenGLRenderer extends AbstractRenderer {
             Class455_Sub2 class455_sub2_13 = (Class455_Sub2) class455_7;
             Class137_Sub1_Sub1 class137_sub1_sub1_14 = class455_sub2_13.aClass137_Sub1_Sub1_8974;
             method13637();
-            method13654(class455_sub2_13.aClass137_Sub1_Sub1_8974);
-            method13624(i_6);
-            method13717(7681, 8448);
-            method13595(0, 34167, 768);
+            setTexture(class455_sub2_13.aClass137_Sub1_Sub1_8974);
+            setColorRenderType(i_6);
+            method13717(GL_REPLACE, GL_MODULATE);
+            method13595(0, GL_PRIMARY_COLOR, GL_SRC_COLOR);
             float f_15 = class137_sub1_sub1_14.aFloat10132 / class137_sub1_sub1_14.anInt10136;
             float f_16 = class137_sub1_sub1_14.aFloat10134 / class137_sub1_sub1_14.anInt10133;
             float f_17 = (float) i_3 - i_1;
@@ -3896,7 +3922,7 @@ public class OpenGLRenderer extends AbstractRenderer {
                     }
                 }
 
-                OpenGL.glBegin(1);
+                OpenGL.glBegin(GL_LINES);
                 OpenGL.glTexCoord2f(f_15 * (f_26 - i_8), f_16 * (f_27 - i_9));
                 OpenGL.glVertex2f(f_26, f_27);
                 OpenGL.glTexCoord2f(f_15 * (f_26 + f_24 - i_8), f_16 * (f_27 + f_25 - i_9));
@@ -3908,7 +3934,7 @@ public class OpenGLRenderer extends AbstractRenderer {
                 f_25 = f_21;
             }
 
-            method13595(0, 5890, 768);
+            method13595(0, GL_TEXTURE, GL_SRC_COLOR);
         }
 
     }
@@ -3960,33 +3986,33 @@ public class OpenGLRenderer extends AbstractRenderer {
         if (class143_1 != null) {
             method13601(class143_1.anInterface14_1667);
             OpenGL.glVertexPointer(class143_1.aByte1670, class143_1.aShort1668, anInterface14_8483.method59(), anInterface14_8483.method109() + class143_1.aByte1669);
-            OpenGL.glEnableClientState(32884);
+            OpenGL.glEnableClientState(GL_VERTEX_ARRAY);
         } else {
-            OpenGL.glDisableClientState(32884);
+            OpenGL.glDisableClientState(GL_VERTEX_ARRAY);
         }
 
         if (class143_2 != null) {
             method13601(class143_2.anInterface14_1667);
             OpenGL.glNormalPointer(class143_2.aShort1668, anInterface14_8483.method59(), anInterface14_8483.method109() + class143_2.aByte1669);
-            OpenGL.glEnableClientState(32885);
+            OpenGL.glEnableClientState(GL_NORMAL_ARRAY);
         } else {
-            OpenGL.glDisableClientState(32885);
+            OpenGL.glDisableClientState(GL_NORMAL_ARRAY);
         }
 
         if (class143_3 != null) {
             method13601(class143_3.anInterface14_1667);
             OpenGL.glColorPointer(class143_3.aByte1670, class143_3.aShort1668, anInterface14_8483.method59(), anInterface14_8483.method109() + class143_3.aByte1669);
-            OpenGL.glEnableClientState(32886);
+            OpenGL.glEnableClientState(GL_COLOR_ARRAY);
         } else {
-            OpenGL.glDisableClientState(32886);
+            OpenGL.glDisableClientState(GL_COLOR_ARRAY);
         }
 
         if (class143_4 != null) {
             method13601(class143_4.anInterface14_1667);
             OpenGL.glTexCoordPointer(class143_4.aByte1670, class143_4.aShort1668, anInterface14_8483.method59(), anInterface14_8483.method109() + class143_4.aByte1669);
-            OpenGL.glEnableClientState(32888);
+            OpenGL.glEnableClientState(GL_TEXTURE_COORD_ARRAY);
         } else {
-            OpenGL.glDisableClientState(32888);
+            OpenGL.glDisableClientState(GL_TEXTURE_COORD_ARRAY);
         }
 
     }
@@ -4194,11 +4220,11 @@ public class OpenGLRenderer extends AbstractRenderer {
     @Override
     public void XA(int i_1, int i_2, int i_3, int i_4, int i_5) {
         method13659();
-        method13624(i_5);
+        setColorRenderType(i_5);
         float f_6 = (float) i_1 + 0.35F;
         float f_7 = (float) i_2 + 0.35F;
         OpenGL.glColor4ub((byte) (i_4 >> 16), (byte) (i_4 >> 8), (byte) i_4, (byte) (i_4 >> 24));
-        OpenGL.glBegin(1);
+        OpenGL.glBegin(GL_LINES);
         OpenGL.glVertex2f(f_6, f_7);
         OpenGL.glVertex2f(f_6 + (float) i_3, f_7);
         OpenGL.glEnd();
@@ -4307,14 +4333,14 @@ public class OpenGLRenderer extends AbstractRenderer {
         Class455_Sub2 class455_sub2_5 = (Class455_Sub2) class455_2;
         Class137_Sub1_Sub1 class137_sub1_sub1_6 = class455_sub2_5.aClass137_Sub1_Sub1_8974;
         method13637();
-        method13654(class455_sub2_5.aClass137_Sub1_Sub1_8974);
-        method13624(1);
-        method13717(7681, 8448);
-        method13595(0, 34167, 768);
+        setTexture(class455_sub2_5.aClass137_Sub1_Sub1_8974);
+        setColorRenderType(1);
+        method13717(GL_REPLACE, GL_MODULATE);
+        method13595(0, GL_PRIMARY_COLOR, GL_SRC_COLOR);
         float f_7 = class137_sub1_sub1_6.aFloat10132 / class137_sub1_sub1_6.anInt10136;
         float f_8 = class137_sub1_sub1_6.aFloat10134 / class137_sub1_sub1_6.anInt10133;
         OpenGL.glColor4ub((byte) (i_1 >> 16), (byte) (i_1 >> 8), (byte) i_1, (byte) (i_1 >> 24));
-        OpenGL.glBegin(7);
+        OpenGL.glBegin(GL_QUADS);
         OpenGL.glTexCoord2f(f_7 * (anInt8413 - i_3), f_8 * (anInt8415 - i_4));
         OpenGL.glVertex2i(anInt8413, anInt8415);
         OpenGL.glTexCoord2f(f_7 * (anInt8413 - i_3), f_8 * (anInt8478 - i_4));
@@ -4324,7 +4350,7 @@ public class OpenGLRenderer extends AbstractRenderer {
         OpenGL.glTexCoord2f(f_7 * (anInt8412 - i_3), f_8 * (anInt8415 - i_4));
         OpenGL.glVertex2i(anInt8412, anInt8415);
         OpenGL.glEnd();
-        method13595(0, 5890, 768);
+        method13595(0, GL_TEXTURE, GL_SRC_COLOR);
     }
 
     @Override
@@ -4332,14 +4358,14 @@ public class OpenGLRenderer extends AbstractRenderer {
         Class455_Sub2 class455_sub2_5 = (Class455_Sub2) class455_2;
         Class137_Sub1_Sub1 class137_sub1_sub1_6 = class455_sub2_5.aClass137_Sub1_Sub1_8974;
         method13637();
-        method13654(class455_sub2_5.aClass137_Sub1_Sub1_8974);
-        method13624(1);
-        method13717(7681, 8448);
-        method13595(0, 34167, 768);
+        setTexture(class455_sub2_5.aClass137_Sub1_Sub1_8974);
+        setColorRenderType(1);
+        method13717(GL_REPLACE, GL_MODULATE);
+        method13595(0, GL_PRIMARY_COLOR, GL_SRC_COLOR);
         float f_7 = class137_sub1_sub1_6.aFloat10132 / class137_sub1_sub1_6.anInt10136;
         float f_8 = class137_sub1_sub1_6.aFloat10134 / class137_sub1_sub1_6.anInt10133;
         OpenGL.glColor4ub((byte) (i_1 >> 16), (byte) (i_1 >> 8), (byte) i_1, (byte) (i_1 >> 24));
-        OpenGL.glBegin(7);
+        OpenGL.glBegin(GL_QUADS);
         OpenGL.glTexCoord2f(f_7 * (anInt8413 - i_3), f_8 * (anInt8415 - i_4));
         OpenGL.glVertex2i(anInt8413, anInt8415);
         OpenGL.glTexCoord2f(f_7 * (anInt8413 - i_3), f_8 * (anInt8478 - i_4));
@@ -4349,17 +4375,17 @@ public class OpenGLRenderer extends AbstractRenderer {
         OpenGL.glTexCoord2f(f_7 * (anInt8412 - i_3), f_8 * (anInt8415 - i_4));
         OpenGL.glVertex2i(anInt8412, anInt8415);
         OpenGL.glEnd();
-        method13595(0, 5890, 768);
+        method13595(0, GL_TEXTURE, GL_SRC_COLOR);
     }
 
     @Override
     public void G(int i_1, int i_2, int i_3, int i_4, int i_5) {
         method13659();
-        method13624(i_5);
+        setColorRenderType(i_5);
         float f_6 = i_1 + 0.35F;
         float f_7 = i_2 + 0.35F;
         OpenGL.glColor4ub((byte) (i_4 >> 16), (byte) (i_4 >> 8), (byte) i_4, (byte) (i_4 >> 24));
-        OpenGL.glBegin(1);
+        OpenGL.glBegin(GL_LINES);
         OpenGL.glVertex2f(f_6, f_7);
         OpenGL.glVertex2f(f_6, f_7 + i_3);
         OpenGL.glEnd();
@@ -4420,97 +4446,124 @@ public class OpenGLRenderer extends AbstractRenderer {
         return i_1 & i_2 ^ i_2;
     }
 
-    int method13652() {
-        int i_1 = 0;
-        aString8463 = OpenGL.glGetString(7936).toLowerCase();
-        aString8464 = OpenGL.glGetString(7937).toLowerCase();
-        if (aString8463.indexOf("microsoft") != -1) {
-            i_1 |= 0x1;
+    int getCapabilities() {
+        int doesntSupportFlags = 0;
+        vendor = OpenGL.glGetString(GL_VENDOR).toLowerCase();
+        renderer = OpenGL.glGetString(GL_RENDERER).toLowerCase();
+        if (vendor.indexOf("microsoft") != -1) {
+            doesntSupportFlags |= VENDOR_FLAG;
         }
 
-        if (aString8463.indexOf("brian paul") != -1 || aString8463.indexOf("mesa") != -1) {
-            i_1 |= 0x1;
+        if (vendor.indexOf("brian paul") != -1 || vendor.indexOf("mesa") != -1) {
+            doesntSupportFlags |= VENDOR_FLAG;
         }
 
-        String string_2 = OpenGL.glGetString(7938);
-        String[] arr_3 = MovingAnimation.method12681(string_2.replace('.', ' '), ' ');
-        if (arr_3.length >= 2) {
+        String versionStr = OpenGL.glGetString(GL_VERSION);
+        String[] versionSplit = MovingAnimation.split(versionStr.replace('.', ' '), ' ');
+        if (versionSplit.length >= 2) {
             try {
-                int i_4 = Utils.parseInt(arr_3[0]);
-                int i_5 = Utils.parseInt(arr_3[1]);
-                anInt8443 = i_4 * 10 + i_5;
+                int major = Utils.parseInt(versionSplit[0]);
+                int minor = Utils.parseInt(versionSplit[1]);
+                version = major * 10 + minor;
             } catch (NumberFormatException numberformatexception_7) {
-                i_1 |= 0x4;
+                doesntSupportFlags |= WEIRD_VERSION_FLAG;
             }
         } else {
-            i_1 |= 0x4;
+            doesntSupportFlags |= WEIRD_VERSION_FLAG;
         }
 
-        if (anInt8443 < 12) {
-            i_1 |= 0x2;
+        if (version < 12) {
+            doesntSupportFlags |= LOW_VERSION_FLAG;
         }
 
-        if (!anOpenGL8352.supportsExtension("GL_ARB_multitexture")) {
-            i_1 |= 0x8;
+        if (!openGLInstance.supportsExtension("GL_ARB_multitexture")) {
+            doesntSupportFlags |= MULTITEXTURE_FLAG;
         }
 
-        if (!anOpenGL8352.supportsExtension("GL_ARB_texture_env_combine")) {
-            i_1 |= 0x20;
+        if (!openGLInstance.supportsExtension("GL_ARB_texture_env_combine")) {
+            doesntSupportFlags |= TEXTURE_ENV_COMBINE_FLAG;
         }
 
-        int[] ints_6 = new int[1];
-        OpenGL.glGetIntegerv(34018, ints_6, 0);
-        anInt8469 = ints_6[0];
-        OpenGL.glGetIntegerv(34929, ints_6, 0);
-        anInt8470 = ints_6[0];
-        OpenGL.glGetIntegerv(34930, ints_6, 0);
-        anInt8471 = ints_6[0];
-        if (anInt8469 < 2 || anInt8470 < 2 || anInt8471 < 2) {
-            i_1 |= 0x10;
+        int[] returnVal = new int[1];
+        OpenGL.glGetIntegerv(GL_MAX_TEXTURE_UNITS, returnVal, 0);
+        maxTextureUnits = returnVal[0];
+        OpenGL.glGetIntegerv(GL_MAX_TEXTURE_COORDS_ARB, returnVal, 0);
+        maxTextureCoords = returnVal[0];
+        OpenGL.glGetIntegerv(GL_PROGRAM_ALU_INSTRUCTIONS_ARB, returnVal, 0);
+        aluInstructions = returnVal[0];
+        if (maxTextureUnits < 2 || maxTextureCoords < 2 || aluInstructions < 2) {
+            doesntSupportFlags |= UNSUPPORTED_SHADER_INSTRUCTIONS;
         }
 
         aBool8467 = Stream.method2926();
-        aBool8309 = anOpenGL8352.supportsExtension("GL_ARB_vertex_buffer_object");
-        aBool8342 = anOpenGL8352.supportsExtension("GL_ARB_multisample");
-        aBool8484 = anOpenGL8352.supportsExtension("GL_ARB_vertex_program");
-        anOpenGL8352.supportsExtension("GL_ARB_fragment_program");
-        aBool8485 = anOpenGL8352.supportsExtension("GL_ARB_vertex_shader");
-        aBool8365 = anOpenGL8352.supportsExtension("GL_ARB_fragment_shader");
-        aBool8393 = anOpenGL8352.supportsExtension("GL_EXT_texture3D");
-        aBool8401 = anOpenGL8352.supportsExtension("GL_ARB_texture_rectangle");
-        aBool8480 = anOpenGL8352.supportsExtension("GL_ARB_texture_cube_map");
-        aBool8312 = anOpenGL8352.supportsExtension("GL_ARB_texture_float");
+        supportsVBO = openGLInstance.supportsExtension("GL_ARB_vertex_buffer_object");
+        supportsMultiSample = openGLInstance.supportsExtension("GL_ARB_multisample");
+        supportsVertexPrograms = openGLInstance.supportsExtension("GL_ARB_vertex_program");
+        supportsFragmentPrograms = openGLInstance.supportsExtension("GL_ARB_fragment_program");
+        supportsVertexShaders = openGLInstance.supportsExtension("GL_ARB_vertex_shader");
+        supportsFragmentShaders = openGLInstance.supportsExtension("GL_ARB_fragment_shader");
+        supportsExtTex3d = openGLInstance.supportsExtension("GL_EXT_texture3D");
+        supportsRectTextures = openGLInstance.supportsExtension("GL_ARB_texture_rectangle");
+        supportsCubeMaps = openGLInstance.supportsExtension("GL_ARB_texture_cube_map");
+        supportsFloatTextures = openGLInstance.supportsExtension("GL_ARB_texture_float");
         aBool8498 = false;
-        aBool8472 = anOpenGL8352.supportsExtension("GL_EXT_framebuffer_object");
-        aBool8338 = anOpenGL8352.supportsExtension("GL_EXT_framebuffer_blit");
-        aBool8488 = anOpenGL8352.supportsExtension("GL_EXT_framebuffer_multisample");
-        aBool8344 = aBool8338 & aBool8488;
-        aBool8456 = Class396.OS_NAME.startsWith("mac");
-        OpenGL.glGetFloatv(2834, aFloatArray8497, 0);
-        aFloat8414 = aFloatArray8497[0];
-        aFloat8489 = aFloatArray8497[1];
-        return i_1;
+        supportsFBO = openGLInstance.supportsExtension("GL_EXT_framebuffer_object");
+        supportsFBOBlit = openGLInstance.supportsExtension("GL_EXT_framebuffer_blit");
+        supportsFBOMultiSample = openGLInstance.supportsExtension("GL_EXT_framebuffer_multisample");
+        supportsPostProcessing = supportsFBOBlit & supportsFBOMultiSample;
+        isMac = Class396.OS_NAME.startsWith("mac");
+        OpenGL.glGetFloatv(GL_POINT_SIZE_RANGE, LIGHT_PARAMS, 0);
+        smallestAntialiasedPointSize = LIGHT_PARAMS[0];
+        largestAntialiasedPointSize = LIGHT_PARAMS[1];
+        return doesntSupportFlags;
     }
+    
+	@Override
+	public String toString() {
+		StringBuilder result = new StringBuilder();
+		String newLine = System.getProperty("line.separator");
+		result.append(this.getClass().getName());
+		result.append(" {");
+		result.append(newLine);
 
-    void method13654(Class137 class137_1) {
-        Class137 class137_2 = aClass137Array8482[anInt8458];
-        if (class137_2 != class137_1) {
-            if (class137_1 != null) {
-                if (class137_2 != null) {
-                    if (class137_2.anInt1648 != class137_1.anInt1648) {
-                        OpenGL.glDisable(class137_2.anInt1648);
-                        OpenGL.glEnable(class137_1.anInt1648);
+		Field[] fields = this.getClass().getDeclaredFields();
+
+		for (Field field : fields) {
+			if (Modifier.isStatic(field.getModifiers()))
+				continue;
+			try {
+				result.append("  ");
+				result.append(field.getType().getCanonicalName() + " " + field.getName() + ": ");
+				result.append(Utils.getFieldValue(this, field));
+			} catch (Throwable ex) {
+				System.out.println(ex);
+			}
+			result.append(newLine);
+		}
+		result.append("}");
+
+		return result.toString();
+	}
+
+    void setTexture(GLTexture texture) {
+        GLTexture currTexture = textures[currActiveTexture];
+        if (currTexture != texture) {
+            if (texture != null) {
+                if (currTexture != null) {
+                    if (currTexture.bindId != texture.bindId) {
+                        OpenGL.glDisable(currTexture.bindId);
+                        OpenGL.glEnable(texture.bindId);
                     }
                 } else {
-                    OpenGL.glEnable(class137_1.anInt1648);
+                    OpenGL.glEnable(texture.bindId);
                 }
 
-                OpenGL.glBindTexture(class137_1.anInt1648, class137_1.anInt1647);
+                OpenGL.glBindTexture(texture.bindId, texture.textureId);
             } else {
-                OpenGL.glDisable(class137_2.anInt1648);
+                OpenGL.glDisable(currTexture.bindId);
             }
 
-            aClass137Array8482[anInt8458] = class137_1;
+            textures[currActiveTexture] = texture;
         }
 
         anInt8382 &= -2;
@@ -4532,34 +4585,34 @@ public class OpenGLRenderer extends AbstractRenderer {
     }
 
     @Override // dead code
-    public void method8394(int i_1, Node_Sub24[] arr_2) {
-        if (i_1 >= 0) System.arraycopy(arr_2, 0, aNode_Sub24Array8435, 0, i_1);
+    public void method8394(int i_1, GLLight[] arr_2) {
+        if (i_1 >= 0) System.arraycopy(arr_2, 0, lights, 0, i_1);
 
-        anInt8437 = i_1;
+        maxActiveLightIndex = i_1;
         if (anInt8409 != 1) {
-            method13638();
+            renderLights();
         }
 
     }
 
     @Override // dead code
-    public void method8426(int i_1, Node_Sub24[] arr_2) {
-        if (i_1 >= 0) System.arraycopy(arr_2, 0, aNode_Sub24Array8435, 0, i_1);
+    public void method8426(int i_1, GLLight[] arr_2) {
+        if (i_1 >= 0) System.arraycopy(arr_2, 0, lights, 0, i_1);
 
-        anInt8437 = i_1;
+        maxActiveLightIndex = i_1;
         if (anInt8409 != 1) {
-            method13638();
+            renderLights();
         }
 
     }
 
     @Override // dead code
-    public void method8579(int i_1, Node_Sub24[] arr_2) {
-        if (i_1 >= 0) System.arraycopy(arr_2, 0, aNode_Sub24Array8435, 0, i_1);
+    public void method8579(int i_1, GLLight[] arr_2) {
+        if (i_1 >= 0) System.arraycopy(arr_2, 0, lights, 0, i_1);
 
-        anInt8437 = i_1;
+        maxActiveLightIndex = i_1;
         if (anInt8409 != 1) {
-            method13638();
+            renderLights();
         }
 
     }
@@ -4584,15 +4637,15 @@ public class OpenGLRenderer extends AbstractRenderer {
         return new Matrix44Var(aClass294_8389);
     }
 
-    void method13656(boolean bool_1) {
-        if (aBool8387 != bool_1) {
-            if (bool_1) {
-                OpenGL.glEnable(2929);
+    void enableDepthTest(boolean enable) {
+        if (depthTestEnabled != enable) {
+            if (enable) {
+                OpenGL.glEnable(GL_DEPTH_TEST);
             } else {
-                OpenGL.glDisable(2929);
+                OpenGL.glDisable(GL_DEPTH_TEST);
             }
 
-            aBool8387 = bool_1;
+            depthTestEnabled = enable;
             anInt8382 &= -16;
         }
 
@@ -4626,9 +4679,9 @@ public class OpenGLRenderer extends AbstractRenderer {
             method13587();
             method13642(false);
             method13620(false);
-            method13656(false);
+            enableDepthTest(false);
             method13623(false);
-            method13654(null);
+            setTexture(null);
             method13581(-2);
             method13612(1);
             anInt8382 = 1;
@@ -4638,7 +4691,7 @@ public class OpenGLRenderer extends AbstractRenderer {
 
     @Override
     public boolean method8578() {
-        return aBool8342 && (!method8471() || aBool8344);
+        return supportsMultiSample && (!method8471() || supportsPostProcessing);
     }
 
     @Override
@@ -4652,10 +4705,10 @@ public class OpenGLRenderer extends AbstractRenderer {
                 aFloat8429 = (anInt8428 & 0xff0000) / 1.671168E7F;
                 aFloat8430 = (anInt8428 & 0xff00) / 65280.0F;
                 aFloat8431 = (anInt8428 & 0xff) / 255.0F;
-                method13689();
+                applyAmbientLightToModel();
             }
 
-            method13592();
+            setLightDiffusion();
         }
 
         if (aFloatArray8424[0] != f_4 || aFloatArray8424[1] != f_5 || aFloatArray8424[2] != f_6) {
@@ -4672,7 +4725,7 @@ public class OpenGLRenderer extends AbstractRenderer {
             aFloatArray8427[0] = -aFloatArray8426[0];
             aFloatArray8427[1] = -aFloatArray8426[1];
             aFloatArray8427[2] = -aFloatArray8426[2];
-            method13593();
+            positionLights();
             anInt8438 = (int) (f_4 * 256.0F / f_5);
             anInt8439 = (int) (f_6 * 256.0F / f_5);
         }
@@ -4748,7 +4801,7 @@ public class OpenGLRenderer extends AbstractRenderer {
 
     @Override
     public Class152 method8557(Class152 class152_1, Class152 class152_2, float f_3, Class152 class152_4) {
-        if (class152_1 != null && class152_2 != null && aBool8480 && aBool8472) {
+        if (class152_1 != null && class152_2 != null && supportsCubeMaps && supportsFBO) {
             Class152_Sub1_Sub2 class152_sub1_sub2_5 = null;
             Class152_Sub1 class152_sub1_6 = (Class152_Sub1) class152_1;
             Class152_Sub1 class152_sub1_7 = (Class152_Sub1) class152_2;
@@ -4847,8 +4900,8 @@ public class OpenGLRenderer extends AbstractRenderer {
 
     void method13663(Interface15 interface15_1) {
         if (interface15_1 != anInterface15_8452) {
-            if (aBool8309) {
-                OpenGL.glBindBufferARB(34963, interface15_1.method1());
+            if (supportsVBO) {
+                OpenGL.glBindBufferARB(GL_ELEMENT_ARRAY_BUFFER, interface15_1.method1());
             }
 
             anInterface15_8452 = interface15_1;
@@ -4982,7 +5035,7 @@ public class OpenGLRenderer extends AbstractRenderer {
             int i_6 = aClass158_5853.method2716();
 
             for (int i_7 = 0; i_7 < i_4; i_7++) {
-                OpenGL.glReadPixelsi(i_1, i_6 - i_2 - i_7 - 1, i_3, 1, 32993, anInt8410 * -1466767273 * 33639 * -1466767273 * 33639, ints_5, i_7 * i_3);
+                OpenGL.glReadPixelsi(i_1, i_6 - i_2 - i_7 - 1, i_3, 1, GL_BGRA, anInt8410 * GL_UNSIGNED_INT_8_8_8_8_REV, ints_5, i_7 * i_3);
             }
 
             return ints_5;
@@ -4998,7 +5051,7 @@ public class OpenGLRenderer extends AbstractRenderer {
             int i_6 = aClass158_5853.method2716();
 
             for (int i_7 = 0; i_7 < i_4; i_7++) {
-                OpenGL.glReadPixelsi(i_1, i_6 - i_2 - i_7 - 1, i_3, 1, 32993, anInt8410 * -1466767273 * 33639 * -1466767273 * 33639, ints_5, i_7 * i_3);
+                OpenGL.glReadPixelsi(i_1, i_6 - i_2 - i_7 - 1, i_3, 1, GL_BGRA, anInt8410 * GL_UNSIGNED_INT_8_8_8_8_REV, ints_5, i_7 * i_3);
             }
 
             return ints_5;
@@ -5014,7 +5067,7 @@ public class OpenGLRenderer extends AbstractRenderer {
             int i_6 = aClass158_5853.method2716();
 
             for (int i_7 = 0; i_7 < i_4; i_7++) {
-                OpenGL.glReadPixelsi(i_1, i_6 - i_2 - i_7 - 1, i_3, 1, 32993, anInt8410 * -1466767273 * 33639 * -1466767273 * 33639, ints_5, i_7 * i_3);
+                OpenGL.glReadPixelsi(i_1, i_6 - i_2 - i_7 - 1, i_3, 1, GL_BGRA, anInt8410 * GL_UNSIGNED_INT_8_8_8_8_REV, ints_5, i_7 * i_3);
             }
 
             return ints_5;
@@ -5024,8 +5077,8 @@ public class OpenGLRenderer extends AbstractRenderer {
     @Override
     public void method8627(int i_1, int i_2, float f_3, int i_4, int i_5, float f_6, int i_7, int i_8, float f_9, int i_10, int i_11, int i_12, int i_13) {
         method13659();
-        method13624(i_13);
-        OpenGL.glBegin(4);
+        setColorRenderType(i_13);
+        OpenGL.glBegin(GL_TRIANGLES);
         OpenGL.glColor4ub((byte) (i_10 >> 16), (byte) (i_10 >> 8), (byte) i_10, (byte) (i_10 >> 24));
         OpenGL.glVertex3f(i_1 + 0.35F, i_2 + 0.35F, f_3);
         OpenGL.glColor4ub((byte) (i_11 >> 16), (byte) (i_11 >> 8), (byte) i_11, (byte) (i_11 >> 24));
@@ -5043,8 +5096,8 @@ public class OpenGLRenderer extends AbstractRenderer {
     @Override
     public void method8629(int i_1, int i_2, float f_3, int i_4, int i_5, float f_6, int i_7, int i_8, float f_9, int i_10, int i_11, int i_12, int i_13) {
         method13659();
-        method13624(i_13);
-        OpenGL.glBegin(4);
+        setColorRenderType(i_13);
+        OpenGL.glBegin(GL_TRIANGLES);
         OpenGL.glColor4ub((byte) (i_10 >> 16), (byte) (i_10 >> 8), (byte) i_10, (byte) (i_10 >> 24));
         OpenGL.glVertex3f(i_1 + 0.35F, i_2 + 0.35F, f_3);
         OpenGL.glColor4ub((byte) (i_11 >> 16), (byte) (i_11 >> 8), (byte) i_11, (byte) (i_11 >> 24));
@@ -5114,15 +5167,16 @@ public class OpenGLRenderer extends AbstractRenderer {
     @Override
     public RendererInfo method8392() {
         int i_1 = -1;
-        if (aString8463.indexOf("nvidia") != -1) {
+        if (vendor.indexOf("nvidia") != -1) {
             i_1 = 4318;
-        } else if (aString8463.indexOf("intel") != -1) {
+        } else if (vendor.indexOf("intel") != -1) {
             i_1 = 32902;
-        } else if (aString8463.indexOf("ati") != -1) {
+        } else if (vendor.indexOf("ati") != -1) {
             i_1 = 4098;
+        } else if (vendor.indexOf("mesa") != -1) {
+        	i_1 = 1337; //TODO who the hell knows what the vendor id for mesa is
         }
-
-        return new RendererInfo(i_1, "OpenGL", anInt8443, aString8464, 0L);
+        return new RendererInfo(i_1, "OpenGL", version, renderer, 0L);
     }
 
     @Override
@@ -5130,12 +5184,12 @@ public class OpenGLRenderer extends AbstractRenderer {
         return new OpenGLSprite(this, i_1, i_2, bool_3);
     }
 
-    void method13689() {
-        aFloatArray8497[0] = aFloat8432 * aFloat8429;
-        aFloatArray8497[1] = aFloat8432 * aFloat8430;
-        aFloatArray8497[2] = aFloat8432 * aFloat8431;
-        aFloatArray8497[3] = 1.0F;
-        OpenGL.glLightModelfv(2899, aFloatArray8497, 0);
+    void applyAmbientLightToModel() {
+        LIGHT_PARAMS[0] = aFloat8432 * aFloat8429;
+        LIGHT_PARAMS[1] = aFloat8432 * aFloat8430;
+        LIGHT_PARAMS[2] = aFloat8432 * aFloat8431;
+        LIGHT_PARAMS[3] = 1.0F;
+        OpenGL.glLightModelfv(GL_LIGHT_MODEL_AMBIENT, LIGHT_PARAMS, 0);
     }
 
     @Override
@@ -5159,20 +5213,20 @@ public class OpenGLRenderer extends AbstractRenderer {
         }
 
         method13637();
-        method13654(aClass137_Sub1_Sub1_8462);
-        method13624(i_9);
+        setTexture(aClass137_Sub1_Sub1_8462);
+        setColorRenderType(i_9);
         OpenGL.glColor4ub((byte) (i_5 >> 16), (byte) (i_5 >> 8), (byte) i_5, (byte) (i_5 >> 24));
         method13617(i_6);
-        method13717(34165, 34165);
-        method13595(0, 34166, 768);
-        method13595(2, 5890, 770);
-        method13616(0, 34166);
-        method13616(2, 5890);
+        method13717(GL_INTERPOLATE, GL_INTERPOLATE);
+        method13595(0, GL_CONSTANT, GL_SRC_COLOR);
+        method13595(2, GL_TEXTURE, GL_SRC_ALPHA);
+        method13616(0, GL_CONSTANT);
+        method13616(2, GL_TEXTURE);
         float f_12 = i_1;
         float f_13 = i_2;
         float f_14 = f_12 + i_3;
         float f_15 = f_13 + i_4;
-        OpenGL.glBegin(7);
+        OpenGL.glBegin(GL_QUADS);
         OpenGL.glTexCoord2f(0.0F, 0.0F);
         OpenGL.glVertex2f(f_12, f_13);
         OpenGL.glTexCoord2f(0.0F, f_11);
@@ -5182,10 +5236,10 @@ public class OpenGLRenderer extends AbstractRenderer {
         OpenGL.glTexCoord2f(f_10, 0.0F);
         OpenGL.glVertex2f(f_14, f_13);
         OpenGL.glEnd();
-        method13595(0, 5890, 768);
-        method13595(2, 34166, 770);
-        method13616(0, 5890);
-        method13616(2, 34166);
+        method13595(0, GL_TEXTURE, GL_SRC_COLOR);
+        method13595(2, GL_CONSTANT, GL_SRC_ALPHA);
+        method13616(0, GL_TEXTURE);
+        method13616(2, GL_CONSTANT);
     }
 
     @Override
@@ -5206,13 +5260,13 @@ public class OpenGLRenderer extends AbstractRenderer {
     }
 
     @Override
-    public void method8547(int nodeCount, Node_Sub24[] nodes) {
+    public void method8547(int nodeCount, GLLight[] nodes) {
     	for(int index = 0; index < nodeCount; index++)
-    		aNode_Sub24Array8435[index] = nodes[index];
+    		lights[index] = nodes[index];
 
-        anInt8437 = nodeCount;
+        maxActiveLightIndex = nodeCount;
         if (anInt8409 != 1) {
-            method13638();
+            renderLights();
         }
 
     }
@@ -5243,14 +5297,14 @@ public class OpenGLRenderer extends AbstractRenderer {
         Class455_Sub2 class455_sub2_5 = (Class455_Sub2) class455_2;
         Class137_Sub1_Sub1 class137_sub1_sub1_6 = class455_sub2_5.aClass137_Sub1_Sub1_8974;
         method13637();
-        method13654(class455_sub2_5.aClass137_Sub1_Sub1_8974);
-        method13624(1);
-        method13717(7681, 8448);
-        method13595(0, 34167, 768);
+        setTexture(class455_sub2_5.aClass137_Sub1_Sub1_8974);
+        setColorRenderType(1);
+        method13717(GL_REPLACE, GL_MODULATE);
+        method13595(0, GL_PRIMARY_COLOR, GL_SRC_COLOR);
         float f_7 = class137_sub1_sub1_6.aFloat10132 / class137_sub1_sub1_6.anInt10136;
         float f_8 = class137_sub1_sub1_6.aFloat10134 / class137_sub1_sub1_6.anInt10133;
         OpenGL.glColor4ub((byte) (i_1 >> 16), (byte) (i_1 >> 8), (byte) i_1, (byte) (i_1 >> 24));
-        OpenGL.glBegin(7);
+        OpenGL.glBegin(GL_QUADS);
         OpenGL.glTexCoord2f(f_7 * (anInt8413 - i_3), f_8 * (anInt8415 - i_4));
         OpenGL.glVertex2i(anInt8413, anInt8415);
         OpenGL.glTexCoord2f(f_7 * (anInt8413 - i_3), f_8 * (anInt8478 - i_4));
@@ -5260,7 +5314,7 @@ public class OpenGLRenderer extends AbstractRenderer {
         OpenGL.glTexCoord2f(f_7 * (anInt8412 - i_3), f_8 * (anInt8415 - i_4));
         OpenGL.glVertex2i(anInt8412, anInt8415);
         OpenGL.glEnd();
-        method13595(0, 5890, 768);
+        method13595(0, GL_TEXTURE, GL_SRC_COLOR);
     }
 
     @Override
@@ -5279,20 +5333,20 @@ public class OpenGLRenderer extends AbstractRenderer {
         }
 
         method13637();
-        method13654(aClass137_Sub1_Sub1_8462);
-        method13624(i_9);
+        setTexture(aClass137_Sub1_Sub1_8462);
+        setColorRenderType(i_9);
         OpenGL.glColor4ub((byte) (i_5 >> 16), (byte) (i_5 >> 8), (byte) i_5, (byte) (i_5 >> 24));
         method13617(i_6);
-        method13717(34165, 34165);
-        method13595(0, 34166, 768);
-        method13595(2, 5890, 770);
-        method13616(0, 34166);
-        method13616(2, 5890);
+        method13717(GL_INTERPOLATE, GL_INTERPOLATE);
+        method13595(0, GL_CONSTANT, GL_SRC_COLOR);
+        method13595(2, GL_TEXTURE, GL_SRC_ALPHA);
+        method13616(0, GL_CONSTANT);
+        method13616(2, GL_TEXTURE);
         float f_12 = i_1;
         float f_13 = i_2;
         float f_14 = f_12 + i_3;
         float f_15 = f_13 + i_4;
-        OpenGL.glBegin(7);
+        OpenGL.glBegin(GL_QUADS);
         OpenGL.glTexCoord2f(0.0F, 0.0F);
         OpenGL.glVertex2f(f_12, f_13);
         OpenGL.glTexCoord2f(0.0F, f_11);
@@ -5302,10 +5356,10 @@ public class OpenGLRenderer extends AbstractRenderer {
         OpenGL.glTexCoord2f(f_10, 0.0F);
         OpenGL.glVertex2f(f_14, f_13);
         OpenGL.glEnd();
-        method13595(0, 5890, 768);
-        method13595(2, 34166, 770);
-        method13616(0, 5890);
-        method13616(2, 34166);
+        method13595(0, GL_TEXTURE, GL_SRC_COLOR);
+        method13595(2, GL_CONSTANT, GL_SRC_ALPHA);
+        method13616(0, GL_TEXTURE);
+        method13616(2, GL_CONSTANT);
     }
 
     @Override
@@ -5314,16 +5368,16 @@ public class OpenGLRenderer extends AbstractRenderer {
     }
 
     void method13717(int i_1, int i_2) {
-        if (anInt8458 == 0) {
+        if (currActiveTexture == 0) {
             boolean bool_3 = false;
             if (anInt8455 != i_1) {
-                OpenGL.glTexEnvi(8960, 34161, i_1);
+                OpenGL.glTexEnvi(GL_TEXTURE_ENV, GL_COMBINE_RGB, i_1);
                 anInt8455 = i_1;
                 bool_3 = true;
             }
 
             if (i_2 != anInt8451) {
-                OpenGL.glTexEnvi(8960, 34162, i_2);
+                OpenGL.glTexEnvi(GL_TEXTURE_ENV, GL_COMBINE_ALPHA, i_2);
                 anInt8451 = i_2;
                 bool_3 = true;
             }
@@ -5332,8 +5386,8 @@ public class OpenGLRenderer extends AbstractRenderer {
                 anInt8382 &= -14;
             }
         } else {
-            OpenGL.glTexEnvi(8960, 34161, i_1);
-            OpenGL.glTexEnvi(8960, 34162, i_2);
+            OpenGL.glTexEnvi(GL_TEXTURE_ENV, GL_COMBINE_RGB, i_1);
+            OpenGL.glTexEnvi(GL_TEXTURE_ENV, GL_COMBINE_ALPHA, i_2);
         }
 
     }
@@ -5345,14 +5399,14 @@ public class OpenGLRenderer extends AbstractRenderer {
         floats_2[5] = -floats_2[5];
         floats_2[9] = -floats_2[9];
         floats_2[13] = -floats_2[13];
-        OpenGL.glMatrixMode(5889);
+        OpenGL.glMatrixMode(GL_PROJECTION);
         OpenGL.glLoadMatrixf(floats_2, 0);
-        OpenGL.glMatrixMode(5888);
+        OpenGL.glMatrixMode(GL_MODELVIEW);
     }
 
     @Override
     public boolean method8462() {
-        return aBool8342 && (!method8471() || aBool8344);
+        return supportsMultiSample && (!method8471() || supportsPostProcessing);
     }
 
     @Override
@@ -5369,7 +5423,7 @@ public class OpenGLRenderer extends AbstractRenderer {
     public void method8494(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9) {
         if (i_1 != i_3 || i_2 != i_4) {
             method13659();
-            method13624(i_6);
+            setColorRenderType(i_6);
             float f_10 = (float) i_3 - i_1;
             float f_11 = (float) i_4 - i_2;
             float f_12 = (float) (1.0D / Math.sqrt(f_10 * f_10 + f_11 * f_11));
@@ -5433,7 +5487,7 @@ public class OpenGLRenderer extends AbstractRenderer {
                     }
                 }
 
-                OpenGL.glBegin(1);
+                OpenGL.glBegin(GL_LINES);
                 OpenGL.glVertex2f(f_19, f_20);
                 OpenGL.glVertex2f(f_19 + f_17, f_20 + f_18);
                 OpenGL.glEnd();
@@ -5462,7 +5516,7 @@ public class OpenGLRenderer extends AbstractRenderer {
     public void method8530(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9) {
         if (i_1 != i_3 || i_2 != i_4) {
             method13659();
-            method13624(i_6);
+            setColorRenderType(i_6);
             float f_10 = (float) i_3 - i_1;
             float f_11 = (float) i_4 - i_2;
             float f_12 = (float) (1.0D / Math.sqrt(f_10 * f_10 + f_11 * f_11));
@@ -5526,7 +5580,7 @@ public class OpenGLRenderer extends AbstractRenderer {
                     }
                 }
 
-                OpenGL.glBegin(1);
+                OpenGL.glBegin(GL_LINES);
                 OpenGL.glVertex2f(f_19, f_20);
                 OpenGL.glVertex2f(f_19 + f_17, f_20 + f_18);
                 OpenGL.glEnd();
@@ -5541,14 +5595,14 @@ public class OpenGLRenderer extends AbstractRenderer {
 
     @Override
     public boolean method8405() {
-        return aBool8342 && (!method8471() || aBool8344);
+        return supportsMultiSample && (!method8471() || supportsPostProcessing);
     }
 
     void method13747() {
         if (aBool8440 && anInt8358 >= 0) {
-            OpenGL.glEnable(2912);
+            OpenGL.glEnable(GL_FOG);
         } else {
-            OpenGL.glDisable(2912);
+            OpenGL.glDisable(GL_FOG);
         }
 
     }
@@ -5560,8 +5614,8 @@ public class OpenGLRenderer extends AbstractRenderer {
             aClass146_8356.aClass141_Sub4_1715.method14427();
         }
 
-        method13593();
-        method13638();
+        positionLights();
+        renderLights();
     }
 
     @Override
@@ -5576,12 +5630,12 @@ public class OpenGLRenderer extends AbstractRenderer {
 
     @Override
     public Class152 method8636(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
-        return aBool8480 ? new Class152_Sub1_Sub1(this, i_1, i_2, i_3, i_4, i_5, i_6) : null;
+        return supportsCubeMaps ? new Class152_Sub1_Sub1(this, i_1, i_2, i_3, i_4, i_5, i_6) : null;
     }
 
     @Override
     public Class152 method8400(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
-        return aBool8480 ? new Class152_Sub1_Sub1(this, i_1, i_2, i_3, i_4, i_5, i_6) : null;
+        return supportsCubeMaps ? new Class152_Sub1_Sub1(this, i_1, i_2, i_3, i_4, i_5, i_6) : null;
     }
 
 	public static AbstractRenderer create(Canvas canvas_0, ImageLoader interface22_1, int i_2) {

@@ -261,9 +261,9 @@ public class OpenGLGround extends Ground {
                 renderer.c(0, i_17, renderer.anInt8378);
                 renderer.method13620(false);
                 renderer.method13623(false);
-                renderer.method13624(128);
+                renderer.setColorRenderType(128);
                 renderer.method13581(-2);
-                renderer.method13654(renderer.aClass137_Sub1_8460);
+                renderer.setTexture(renderer.aClass137_Sub1_8460);
                 renderer.method13717(8448, 7681);
                 renderer.method13595(0, 34166, 770);
                 renderer.method13616(0, 34167);
@@ -275,7 +275,7 @@ public class OpenGLGround extends Ground {
 
                 renderer.method13595(0, 5890, 768);
                 renderer.method13616(0, 5890);
-                renderer.method13654(null);
+                renderer.setTexture(null);
                 renderer.c(i_16, i_17, renderer.anInt8378);
             }
 
@@ -686,11 +686,11 @@ public class OpenGLGround extends Ground {
             renderer.method13586();
             renderer.method13642(false);
             renderer.method13620(false);
-            renderer.method13656(false);
+            renderer.enableDepthTest(false);
             renderer.method13623(false);
-            renderer.method13624(0);
+            renderer.setColorRenderType(0);
             renderer.method13581(-2);
-            renderer.method13654(null);
+            renderer.setTexture(null);
             GROUND_MATRIX[0] = 1024 / (128.0F * tileUnits * class158_9.method2714());
             GROUND_MATRIX[1] = 0.0F;
             GROUND_MATRIX[2] = 0.0F;
@@ -729,7 +729,7 @@ public class OpenGLGround extends Ground {
             OpenGL.glLoadMatrixf(GROUND_MATRIX, 0);
             if ((flags & 0x7) != 0) {
                 renderer.method13620(true);
-                renderer.method13593();
+                renderer.positionLights();
             } else {
                 renderer.method13620(false);
             }
@@ -826,7 +826,7 @@ public class OpenGLGround extends Ground {
     }
 
     @Override
-    public void method6713(Node_Sub24 class282_sub24_1, int[] ints_2) {
+    public void method6713(GLLight class282_sub24_1, int[] ints_2) {
         aClass473_8673.insertBack(new Node_Sub19(renderer, this, class282_sub24_1, ints_2));
     }
 
@@ -1896,11 +1896,11 @@ public class OpenGLGround extends Ground {
             renderer.method13586();
             renderer.method13642(false);
             renderer.method13620(false);
-            renderer.method13656(false);
+            renderer.enableDepthTest(false);
             renderer.method13623(false);
-            renderer.method13624(0);
+            renderer.setColorRenderType(0);
             renderer.method13581(-2);
-            renderer.method13654(null);
+            renderer.setTexture(null);
             GROUND_MATRIX[0] = i_3 / (128.0F * (tileUnits) * class158_9.method2714());
             GROUND_MATRIX[1] = 0.0F;
             GROUND_MATRIX[2] = 0.0F;
@@ -1939,7 +1939,7 @@ public class OpenGLGround extends Ground {
             OpenGL.glLoadMatrixf(GROUND_MATRIX, 0);
             if ((flags & 0x7) != 0) {
                 renderer.method13620(true);
-                renderer.method13593();
+                renderer.positionLights();
             } else {
                 renderer.method13620(false);
             }
@@ -2020,12 +2020,12 @@ public class OpenGLGround extends Ground {
     }
 
     @Override
-    public void method6720(Node_Sub24 class282_sub24_1, int[] ints_2) {
+    public void method6720(GLLight class282_sub24_1, int[] ints_2) {
         aClass473_8673.insertBack(new Node_Sub19(renderer, this, class282_sub24_1, ints_2));
     }
 
     @Override
-    public void method6711(Node_Sub24 class282_sub24_1, int[] ints_2) {
+    public void method6711(GLLight class282_sub24_1, int[] ints_2) {
         aClass473_8673.insertBack(new Node_Sub19(renderer, this, class282_sub24_1, ints_2));
     }
 
@@ -2057,11 +2057,11 @@ public class OpenGLGround extends Ground {
             renderer.method13586();
             renderer.method13642(false);
             renderer.method13620(false);
-            renderer.method13656(false);
+            renderer.enableDepthTest(false);
             renderer.method13623(false);
-            renderer.method13624(0);
+            renderer.setColorRenderType(0);
             renderer.method13581(-2);
-            renderer.method13654(null);
+            renderer.setTexture(null);
             GROUND_MATRIX[0] = i_3 / (128.0F * (tileUnits) * class158_9.method2714());
             GROUND_MATRIX[1] = 0.0F;
             GROUND_MATRIX[2] = 0.0F;
@@ -2100,7 +2100,7 @@ public class OpenGLGround extends Ground {
             OpenGL.glLoadMatrixf(GROUND_MATRIX, 0);
             if ((flags & 0x7) != 0) {
                 renderer.method13620(true);
-                renderer.method13593();
+                renderer.positionLights();
             } else {
                 renderer.method13620(false);
             }
@@ -2176,7 +2176,7 @@ public class OpenGLGround extends Ground {
     }
 
     @Override
-    public void method6721(Node_Sub24 class282_sub24_1, int[] ints_2) {
+    public void method6721(GLLight class282_sub24_1, int[] ints_2) {
         aClass473_8673.insertBack(new Node_Sub19(renderer, this, class282_sub24_1, ints_2));
     }
 

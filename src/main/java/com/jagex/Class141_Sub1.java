@@ -11,8 +11,8 @@ public class Class141_Sub1 extends Class141 {
 
     Class141_Sub1(OpenGLRenderer class505_sub1_1) {
         super(class505_sub1_1);
-        if (class505_sub1_1.aBool8480) {
-            aBool9025 = class505_sub1_1.anInt8469 < 3;
+        if (class505_sub1_1.supportsCubeMaps) {
+            aBool9025 = class505_sub1_1.maxTextureUnits < 3;
             int i_2 = aBool9025 ? 48 : 127;
             byte[][] bytes_3 = new byte[6][4096];
             byte[][] bytes_4 = new byte[6][4096];
@@ -77,7 +77,7 @@ public class Class141_Sub1 extends Class141 {
     void method14411() {
         aClass138_9022 = new Class138(2);
         aClass138_9022.method2380(0);
-        aGraphicalRenderer_Sub1_1664.method13610(1);
+        aGraphicalRenderer_Sub1_1664.setActiveTexture(1);
         OpenGL.glTexGeni(8192, 9472, 34065);
         OpenGL.glTexGeni(8193, 9472, 34065);
         OpenGL.glTexGeni(8194, 9472, 34065);
@@ -91,7 +91,7 @@ public class Class141_Sub1 extends Class141 {
         if (!aBool9025) {
             aGraphicalRenderer_Sub1_1664.method13717(7681, 8448);
             aGraphicalRenderer_Sub1_1664.method13595(0, 34168, 768);
-            aGraphicalRenderer_Sub1_1664.method13610(2);
+            aGraphicalRenderer_Sub1_1664.setActiveTexture(2);
             aGraphicalRenderer_Sub1_1664.method13717(260, 7681);
             aGraphicalRenderer_Sub1_1664.method13595(0, 34168, 768);
             aGraphicalRenderer_Sub1_1664.method13595(1, 34168, 770);
@@ -101,10 +101,10 @@ public class Class141_Sub1 extends Class141 {
         }
         aGraphicalRenderer_Sub1_1664.method13616(0, 34167);
 
-        aGraphicalRenderer_Sub1_1664.method13610(0);
+        aGraphicalRenderer_Sub1_1664.setActiveTexture(0);
         aClass138_9022.method2381();
         aClass138_9022.method2380(1);
-        aGraphicalRenderer_Sub1_1664.method13610(1);
+        aGraphicalRenderer_Sub1_1664.setActiveTexture(1);
         OpenGL.glDisable(3168);
         OpenGL.glDisable(3169);
         OpenGL.glDisable(3170);
@@ -114,7 +114,7 @@ public class Class141_Sub1 extends Class141 {
         if (!aBool9025) {
             aGraphicalRenderer_Sub1_1664.method13717(8448, 8448);
             aGraphicalRenderer_Sub1_1664.method13595(0, 5890, 768);
-            aGraphicalRenderer_Sub1_1664.method13610(2);
+            aGraphicalRenderer_Sub1_1664.setActiveTexture(2);
             aGraphicalRenderer_Sub1_1664.method13717(8448, 8448);
             aGraphicalRenderer_Sub1_1664.method13595(0, 5890, 768);
             aGraphicalRenderer_Sub1_1664.method13595(1, 34168, 768);
@@ -124,7 +124,7 @@ public class Class141_Sub1 extends Class141 {
         }
         aGraphicalRenderer_Sub1_1664.method13616(0, 5890);
 
-        aGraphicalRenderer_Sub1_1664.method13610(0);
+        aGraphicalRenderer_Sub1_1664.setActiveTexture(0);
         aClass138_9022.method2381();
     }
 
@@ -142,9 +142,9 @@ public class Class141_Sub1 extends Class141 {
     void method2397(boolean bool_1) {
         if (aClass138_9022 != null && bool_1) {
             if (!aBool9025) {
-                aGraphicalRenderer_Sub1_1664.method13610(2);
-                aGraphicalRenderer_Sub1_1664.method13654(aGraphicalRenderer_Sub1_1664.aClass137_Sub1_8460);
-                aGraphicalRenderer_Sub1_1664.method13610(0);
+                aGraphicalRenderer_Sub1_1664.setActiveTexture(2);
+                aGraphicalRenderer_Sub1_1664.setTexture(aGraphicalRenderer_Sub1_1664.aClass137_Sub1_8460);
+                aGraphicalRenderer_Sub1_1664.setActiveTexture(0);
             }
 
             aClass138_9022.method2379('\u0000');
@@ -164,13 +164,13 @@ public class Class141_Sub1 extends Class141 {
     void method2398() {
         if (aBool9020) {
             if (!aBool9025) {
-                aGraphicalRenderer_Sub1_1664.method13610(2);
-                aGraphicalRenderer_Sub1_1664.method13654(null);
+                aGraphicalRenderer_Sub1_1664.setActiveTexture(2);
+                aGraphicalRenderer_Sub1_1664.setTexture(null);
             }
 
-            aGraphicalRenderer_Sub1_1664.method13610(1);
-            aGraphicalRenderer_Sub1_1664.method13654(null);
-            aGraphicalRenderer_Sub1_1664.method13610(0);
+            aGraphicalRenderer_Sub1_1664.setActiveTexture(1);
+            aGraphicalRenderer_Sub1_1664.setTexture(null);
+            aGraphicalRenderer_Sub1_1664.setActiveTexture(0);
             aClass138_9022.method2379('\u0001');
             aBool9020 = false;
         } else {
@@ -181,14 +181,14 @@ public class Class141_Sub1 extends Class141 {
     }
 
     @Override
-    void method2394(Class137 class137_1, int i_2) {
-        aGraphicalRenderer_Sub1_1664.method13654(class137_1);
+    void method2394(GLTexture class137_1, int i_2) {
+        aGraphicalRenderer_Sub1_1664.setTexture(class137_1);
         aGraphicalRenderer_Sub1_1664.method13612(i_2);
     }
 
     @Override
-    void method2400(Class137 class137_1, int i_2) {
-        aGraphicalRenderer_Sub1_1664.method13654(class137_1);
+    void method2400(GLTexture class137_1, int i_2) {
+        aGraphicalRenderer_Sub1_1664.setTexture(class137_1);
         aGraphicalRenderer_Sub1_1664.method13612(i_2);
     }
 
@@ -200,16 +200,16 @@ public class Class141_Sub1 extends Class141 {
     @Override
     void method2399(int i_1, int i_2) {
         if (aBool9020) {
-            aGraphicalRenderer_Sub1_1664.method13610(1);
-            aGraphicalRenderer_Sub1_1664.method13654(aClass137_Sub2Array9027[i_1 - 1]);
-            aGraphicalRenderer_Sub1_1664.method13610(0);
+            aGraphicalRenderer_Sub1_1664.setActiveTexture(1);
+            aGraphicalRenderer_Sub1_1664.setTexture(aClass137_Sub2Array9027[i_1 - 1]);
+            aGraphicalRenderer_Sub1_1664.setActiveTexture(0);
         }
 
     }
 
     @Override
-    void method2413(Class137 class137_1, int i_2) {
-        aGraphicalRenderer_Sub1_1664.method13654(class137_1);
+    void method2413(GLTexture class137_1, int i_2) {
+        aGraphicalRenderer_Sub1_1664.setTexture(class137_1);
         aGraphicalRenderer_Sub1_1664.method13612(i_2);
     }
 
@@ -222,9 +222,9 @@ public class Class141_Sub1 extends Class141 {
     void method2402(boolean bool_1) {
         if (aClass138_9022 != null && bool_1) {
             if (!aBool9025) {
-                aGraphicalRenderer_Sub1_1664.method13610(2);
-                aGraphicalRenderer_Sub1_1664.method13654(aGraphicalRenderer_Sub1_1664.aClass137_Sub1_8460);
-                aGraphicalRenderer_Sub1_1664.method13610(0);
+                aGraphicalRenderer_Sub1_1664.setActiveTexture(2);
+                aGraphicalRenderer_Sub1_1664.setTexture(aGraphicalRenderer_Sub1_1664.aClass137_Sub1_8460);
+                aGraphicalRenderer_Sub1_1664.setActiveTexture(0);
             }
 
             aClass138_9022.method2379('\u0000');
@@ -244,13 +244,13 @@ public class Class141_Sub1 extends Class141 {
     void method2411() {
         if (aBool9020) {
             if (!aBool9025) {
-                aGraphicalRenderer_Sub1_1664.method13610(2);
-                aGraphicalRenderer_Sub1_1664.method13654(null);
+                aGraphicalRenderer_Sub1_1664.setActiveTexture(2);
+                aGraphicalRenderer_Sub1_1664.setTexture(null);
             }
 
-            aGraphicalRenderer_Sub1_1664.method13610(1);
-            aGraphicalRenderer_Sub1_1664.method13654(null);
-            aGraphicalRenderer_Sub1_1664.method13610(0);
+            aGraphicalRenderer_Sub1_1664.setActiveTexture(1);
+            aGraphicalRenderer_Sub1_1664.setTexture(null);
+            aGraphicalRenderer_Sub1_1664.setActiveTexture(0);
             aClass138_9022.method2379('\u0001');
             aBool9020 = false;
         } else {
@@ -263,9 +263,9 @@ public class Class141_Sub1 extends Class141 {
     @Override
     void method2409(int i_1, int i_2) {
         if (aBool9020) {
-            aGraphicalRenderer_Sub1_1664.method13610(1);
-            aGraphicalRenderer_Sub1_1664.method13654(aClass137_Sub2Array9027[i_1 - 1]);
-            aGraphicalRenderer_Sub1_1664.method13610(0);
+            aGraphicalRenderer_Sub1_1664.setActiveTexture(1);
+            aGraphicalRenderer_Sub1_1664.setTexture(aClass137_Sub2Array9027[i_1 - 1]);
+            aGraphicalRenderer_Sub1_1664.setActiveTexture(0);
         }
 
     }
@@ -273,9 +273,9 @@ public class Class141_Sub1 extends Class141 {
     @Override
     void method2396(int i_1, int i_2) {
         if (aBool9020) {
-            aGraphicalRenderer_Sub1_1664.method13610(1);
-            aGraphicalRenderer_Sub1_1664.method13654(aClass137_Sub2Array9027[i_1 - 1]);
-            aGraphicalRenderer_Sub1_1664.method13610(0);
+            aGraphicalRenderer_Sub1_1664.setActiveTexture(1);
+            aGraphicalRenderer_Sub1_1664.setTexture(aClass137_Sub2Array9027[i_1 - 1]);
+            aGraphicalRenderer_Sub1_1664.setActiveTexture(0);
         }
 
     }
@@ -283,9 +283,9 @@ public class Class141_Sub1 extends Class141 {
     @Override
     void method2410(int i_1, int i_2) {
         if (aBool9020) {
-            aGraphicalRenderer_Sub1_1664.method13610(1);
-            aGraphicalRenderer_Sub1_1664.method13654(aClass137_Sub2Array9027[i_1 - 1]);
-            aGraphicalRenderer_Sub1_1664.method13610(0);
+            aGraphicalRenderer_Sub1_1664.setActiveTexture(1);
+            aGraphicalRenderer_Sub1_1664.setTexture(aClass137_Sub2Array9027[i_1 - 1]);
+            aGraphicalRenderer_Sub1_1664.setActiveTexture(0);
         }
 
     }
@@ -294,9 +294,9 @@ public class Class141_Sub1 extends Class141 {
     void method2403(boolean bool_1) {
         if (aClass138_9022 != null && bool_1) {
             if (!aBool9025) {
-                aGraphicalRenderer_Sub1_1664.method13610(2);
-                aGraphicalRenderer_Sub1_1664.method13654(aGraphicalRenderer_Sub1_1664.aClass137_Sub1_8460);
-                aGraphicalRenderer_Sub1_1664.method13610(0);
+                aGraphicalRenderer_Sub1_1664.setActiveTexture(2);
+                aGraphicalRenderer_Sub1_1664.setTexture(aGraphicalRenderer_Sub1_1664.aClass137_Sub1_8460);
+                aGraphicalRenderer_Sub1_1664.setActiveTexture(0);
             }
 
             aClass138_9022.method2379('\u0000');
@@ -308,8 +308,8 @@ public class Class141_Sub1 extends Class141 {
     }
 
     @Override
-    void method2412(Class137 class137_1, int i_2) {
-        aGraphicalRenderer_Sub1_1664.method13654(class137_1);
+    void method2412(GLTexture class137_1, int i_2) {
+        aGraphicalRenderer_Sub1_1664.setTexture(class137_1);
         aGraphicalRenderer_Sub1_1664.method13612(i_2);
     }
 
@@ -319,8 +319,8 @@ public class Class141_Sub1 extends Class141 {
     }
 
     @Override
-    void method2414(Class137 class137_1, int i_2) {
-        aGraphicalRenderer_Sub1_1664.method13654(class137_1);
+    void method2414(GLTexture class137_1, int i_2) {
+        aGraphicalRenderer_Sub1_1664.setTexture(class137_1);
         aGraphicalRenderer_Sub1_1664.method13612(i_2);
     }
 

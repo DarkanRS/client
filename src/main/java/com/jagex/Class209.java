@@ -15,7 +15,7 @@ public abstract class Class209 {
         int i_3 = client.aCalendar7278.get(Calendar.MINUTE);
         int i_4 = client.aCalendar7278.get(Calendar.SECOND);
         String string_5 = Integer.toString(i_2 / 10) + i_2 % 10 + ":" + i_3 / 10 + i_3 % 10 + ":" + i_4 / 10 + i_4 % 10;
-        String[] arr_6 = MovingAnimation.method12681(string_0, '\n');
+        String[] arr_6 = MovingAnimation.split(string_0, '\n');
         for (int i_7 = 0; i_7 < arr_6.length; i_7++) {
             if (Class179.anInt2227 >= 0)
                 System.arraycopy(Class13.aStringArray129, 0, Class13.aStringArray129, 1, Class179.anInt2227);

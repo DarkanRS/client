@@ -101,7 +101,7 @@ public abstract class Ground {
 
     public abstract void z(Shadow var1, int var2, int var3, int var4);
 
-    public abstract void method6711(Node_Sub24 var1, int[] var2);
+    public abstract void method6711(GLLight var1, int[] var2);
 
     public abstract void UA(Shadow var1, int var2, int var3, int var4);
 
@@ -109,7 +109,7 @@ public abstract class Ground {
 
     public abstract boolean method6712(Shadow var1, int var2, int var3, int var4);
 
-    public abstract void method6713(Node_Sub24 var1, int[] var2);
+    public abstract void method6713(GLLight var1, int[] var2);
 
     public abstract void m(int var1, int var2, int var3);
 
@@ -135,11 +135,11 @@ public abstract class Ground {
 
     public abstract void a(Shadow var1, int var2, int var3, int var4);
 
-    public abstract void method6720(Node_Sub24 var1, int[] var2);
+    public abstract void method6720(GLLight var1, int[] var2);
 
     public abstract Shadow s(int var1, int var2, Shadow var3);
 
-    public abstract void method6721(Node_Sub24 var1, int[] var2);
+    public abstract void method6721(GLLight var1, int[] var2);
 
     public int getHeight(int i_1, int i_2) {
         return tileHeights[i_1][i_2];

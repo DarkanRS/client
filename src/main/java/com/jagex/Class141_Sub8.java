@@ -12,7 +12,7 @@ public class Class141_Sub8 extends Class141 {
     Class141_Sub8(OpenGLRenderer class505_sub1_1, Class136 class136_2) {
         super(class505_sub1_1);
         aClass136_9093 = class136_2;
-        if (aClass136_9093.aClass137_Sub4_1638 != null && aGraphicalRenderer_Sub1_1664.aBool8485 && aGraphicalRenderer_Sub1_1664.aBool8365) {
+        if (aClass136_9093.aClass137_Sub4_1638 != null && aGraphicalRenderer_Sub1_1664.supportsVertexShaders && aGraphicalRenderer_Sub1_1664.supportsFragmentShaders) {
             Class140 class140_3 = Class140.method2393(aGraphicalRenderer_Sub1_1664, 35633, "uniform float time;\nuniform float scale;\nvarying vec3 wvVertex;\nvarying float waterDepth;\nvoid main() {\nwaterDepth = gl_MultiTexCoord0.z;\nvec4 ecVertex = gl_ModelViewMatrix*gl_Vertex;\nwvVertex.x = dot(gl_NormalMatrix[0], ecVertex.xyz);\nwvVertex.y = dot(gl_NormalMatrix[1], ecVertex.xyz);\nwvVertex.z = dot(gl_NormalMatrix[2], ecVertex.xyz);\ngl_TexCoord[0].x = dot(gl_TextureMatrix[0][0], gl_MultiTexCoord0)*scale;\ngl_TexCoord[0].y = dot(gl_TextureMatrix[0][1], gl_MultiTexCoord0)*scale;\ngl_TexCoord[0].z = time;\ngl_TexCoord[0].w = 1.0;\ngl_FogFragCoord = clamp((ecVertex.z-gl_Fog.start)*gl_Fog.scale, 0.0, 1.0);\ngl_Position = ftransform();\n}\n");
             Class140 class140_4 = Class140.method2393(aGraphicalRenderer_Sub1_1664, 35632, "varying vec3 wvVertex;\nvarying float waterDepth;\nuniform vec3 sunDir;\nuniform vec4 sunColour;\nuniform float sunExponent;\nuniform vec2 waveIntensity;\nuniform float waveExponent;\nuniform float breakWaterDepth;\nuniform float breakWaterOffset;\nuniform sampler3D normalSampler;\nuniform samplerCube envMapSampler;\nvoid main() {\nvec4 wnNormal = texture3D(normalSampler, gl_TexCoord[0].xyz).rbga;\nwnNormal.xyz = 2.0*wnNormal.xyz-1.0;\nvec3 wnVector = normalize(wvVertex);\nvec3 wnReflection = reflect(wnVector, wnNormal.xyz);\nvec3 envColour = textureCube(envMapSampler, wnReflection).rgb;\nvec4 specularColour = sunColour*pow(clamp(-dot(sunDir, wnReflection), 0.0, 1.0), sunExponent);\nfloat shoreFactor = clamp(waterDepth/breakWaterDepth-breakWaterOffset*wnNormal.w, 0.0, 1.0);\nfloat waveFactor = pow(1.0-shoreFactor, waveExponent)-0.5;\nwaveFactor = -4.0*waveFactor*waveFactor+1.0;\nfloat ndote = dot(wnVector, wnNormal.xyz);\nfloat fresnel = pow(1.0-abs(ndote), 1.0);\nvec4 surfaceColour = mix(vec4(envColour, fresnel*shoreFactor), (waveIntensity.x*wnNormal.wwww)+waveIntensity.y, waveFactor)+specularColour*shoreFactor;\ngl_FragColor = vec4(mix(surfaceColour.rgb, gl_Fog.color.rgb, gl_FogFragCoord), surfaceColour.a);\n}\n");
             aClass128_9092 = Class128.method2174(aGraphicalRenderer_Sub1_1664, new Class140[]{class140_3, class140_4});
@@ -33,10 +33,10 @@ public class Class141_Sub8 extends Class141 {
     @Override
     void method2398() {
         if (aBool9095) {
-            aGraphicalRenderer_Sub1_1664.method13610(1);
-            aGraphicalRenderer_Sub1_1664.method13654(null);
-            aGraphicalRenderer_Sub1_1664.method13610(0);
-            aGraphicalRenderer_Sub1_1664.method13654(null);
+            aGraphicalRenderer_Sub1_1664.setActiveTexture(1);
+            aGraphicalRenderer_Sub1_1664.setTexture(null);
+            aGraphicalRenderer_Sub1_1664.setActiveTexture(0);
+            aGraphicalRenderer_Sub1_1664.setTexture(null);
             OpenGL.glUseProgram(0);
             aBool9095 = false;
         }
@@ -48,9 +48,9 @@ public class Class141_Sub8 extends Class141 {
     }
 
     @Override
-    void method2400(Class137 class137_1, int i_2) {
+    void method2400(GLTexture class137_1, int i_2) {
         if (!aBool9095) {
-            aGraphicalRenderer_Sub1_1664.method13654(class137_1);
+            aGraphicalRenderer_Sub1_1664.setTexture(class137_1);
             aGraphicalRenderer_Sub1_1664.method13612(i_2);
         }
 
@@ -86,10 +86,10 @@ public class Class141_Sub8 extends Class141 {
         Class137_Sub2 class137_sub2_2 = aGraphicalRenderer_Sub1_1664.method13596();
         if (aBool9096 && class137_sub2_2 != null) {
             float f_3 = 1.0F + (1.0F - Math.abs(aGraphicalRenderer_Sub1_1664.aFloatArray8426[1])) * 2.0F;
-            aGraphicalRenderer_Sub1_1664.method13610(1);
-            aGraphicalRenderer_Sub1_1664.method13654(class137_sub2_2);
-            aGraphicalRenderer_Sub1_1664.method13610(0);
-            aGraphicalRenderer_Sub1_1664.method13654(aClass136_9093.aClass137_Sub4_1638);
+            aGraphicalRenderer_Sub1_1664.setActiveTexture(1);
+            aGraphicalRenderer_Sub1_1664.setTexture(class137_sub2_2);
+            aGraphicalRenderer_Sub1_1664.setActiveTexture(0);
+            aGraphicalRenderer_Sub1_1664.setTexture(aClass136_9093.aClass137_Sub4_1638);
             int i_4 = aClass128_9092.anInt1583;
             OpenGL.glUseProgram(i_4);
             OpenGL.glUniform1i(OpenGL.glGetUniformLocation(i_4, "normalSampler"), 0);
@@ -107,10 +107,10 @@ public class Class141_Sub8 extends Class141 {
         Class137_Sub2 class137_sub2_2 = aGraphicalRenderer_Sub1_1664.method13596();
         if (aBool9096 && class137_sub2_2 != null) {
             float f_3 = 1.0F + (1.0F - Math.abs(aGraphicalRenderer_Sub1_1664.aFloatArray8426[1])) * 2.0F;
-            aGraphicalRenderer_Sub1_1664.method13610(1);
-            aGraphicalRenderer_Sub1_1664.method13654(class137_sub2_2);
-            aGraphicalRenderer_Sub1_1664.method13610(0);
-            aGraphicalRenderer_Sub1_1664.method13654(aClass136_9093.aClass137_Sub4_1638);
+            aGraphicalRenderer_Sub1_1664.setActiveTexture(1);
+            aGraphicalRenderer_Sub1_1664.setTexture(class137_sub2_2);
+            aGraphicalRenderer_Sub1_1664.setActiveTexture(0);
+            aGraphicalRenderer_Sub1_1664.setTexture(aClass136_9093.aClass137_Sub4_1638);
             int i_4 = aClass128_9092.anInt1583;
             OpenGL.glUseProgram(i_4);
             OpenGL.glUniform1i(OpenGL.glGetUniformLocation(i_4, "normalSampler"), 0);
@@ -128,9 +128,9 @@ public class Class141_Sub8 extends Class141 {
     }
 
     @Override
-    void method2413(Class137 class137_1, int i_2) {
+    void method2413(GLTexture class137_1, int i_2) {
         if (!aBool9095) {
-            aGraphicalRenderer_Sub1_1664.method13654(class137_1);
+            aGraphicalRenderer_Sub1_1664.setTexture(class137_1);
             aGraphicalRenderer_Sub1_1664.method13612(i_2);
         }
 
@@ -142,9 +142,9 @@ public class Class141_Sub8 extends Class141 {
     }
 
     @Override
-    void method2394(Class137 class137_1, int i_2) {
+    void method2394(GLTexture class137_1, int i_2) {
         if (!aBool9095) {
-            aGraphicalRenderer_Sub1_1664.method13654(class137_1);
+            aGraphicalRenderer_Sub1_1664.setTexture(class137_1);
             aGraphicalRenderer_Sub1_1664.method13612(i_2);
         }
 
@@ -153,10 +153,10 @@ public class Class141_Sub8 extends Class141 {
     @Override
     void method2411() {
         if (aBool9095) {
-            aGraphicalRenderer_Sub1_1664.method13610(1);
-            aGraphicalRenderer_Sub1_1664.method13654(null);
-            aGraphicalRenderer_Sub1_1664.method13610(0);
-            aGraphicalRenderer_Sub1_1664.method13654(null);
+            aGraphicalRenderer_Sub1_1664.setActiveTexture(1);
+            aGraphicalRenderer_Sub1_1664.setTexture(null);
+            aGraphicalRenderer_Sub1_1664.setActiveTexture(0);
+            aGraphicalRenderer_Sub1_1664.setTexture(null);
             OpenGL.glUseProgram(0);
             aBool9095 = false;
         }
@@ -168,10 +168,10 @@ public class Class141_Sub8 extends Class141 {
         Class137_Sub2 class137_sub2_2 = aGraphicalRenderer_Sub1_1664.method13596();
         if (aBool9096 && class137_sub2_2 != null) {
             float f_3 = 1.0F + (1.0F - Math.abs(aGraphicalRenderer_Sub1_1664.aFloatArray8426[1])) * 2.0F;
-            aGraphicalRenderer_Sub1_1664.method13610(1);
-            aGraphicalRenderer_Sub1_1664.method13654(class137_sub2_2);
-            aGraphicalRenderer_Sub1_1664.method13610(0);
-            aGraphicalRenderer_Sub1_1664.method13654(aClass136_9093.aClass137_Sub4_1638);
+            aGraphicalRenderer_Sub1_1664.setActiveTexture(1);
+            aGraphicalRenderer_Sub1_1664.setTexture(class137_sub2_2);
+            aGraphicalRenderer_Sub1_1664.setActiveTexture(0);
+            aGraphicalRenderer_Sub1_1664.setTexture(aClass136_9093.aClass137_Sub4_1638);
             int i_4 = aClass128_9092.anInt1583;
             OpenGL.glUseProgram(i_4);
             OpenGL.glUniform1i(OpenGL.glGetUniformLocation(i_4, "normalSampler"), 0);
@@ -248,9 +248,9 @@ public class Class141_Sub8 extends Class141 {
     }
 
     @Override
-    void method2412(Class137 class137_1, int i_2) {
+    void method2412(GLTexture class137_1, int i_2) {
         if (!aBool9095) {
-            aGraphicalRenderer_Sub1_1664.method13654(class137_1);
+            aGraphicalRenderer_Sub1_1664.setTexture(class137_1);
             aGraphicalRenderer_Sub1_1664.method13612(i_2);
         }
 
@@ -261,9 +261,9 @@ public class Class141_Sub8 extends Class141 {
     }
 
     @Override
-    void method2414(Class137 class137_1, int i_2) {
+    void method2414(GLTexture class137_1, int i_2) {
         if (!aBool9095) {
-            aGraphicalRenderer_Sub1_1664.method13654(class137_1);
+            aGraphicalRenderer_Sub1_1664.setTexture(class137_1);
             aGraphicalRenderer_Sub1_1664.method13612(i_2);
         }
 

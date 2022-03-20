@@ -3935,7 +3935,7 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
     void method13535(Matrix44 matrix44_1) {
         if (aClass162Array8295 != null) {
             Matrix44 matrix44_2 = aGraphicalRenderer_Sub1_8239.aClass384_8361;
-            aGraphicalRenderer_Sub1_8239.method13576();
+            aGraphicalRenderer_Sub1_8239.pushMatrix();
             aGraphicalRenderer_Sub1_8239.RA(!aBool8245);
             aGraphicalRenderer_Sub1_8239.method13620(false);
             aGraphicalRenderer_Sub1_8239.method13647(aGraphicalRenderer_Sub1_8239.aClass143_8494, null, null, aGraphicalRenderer_Sub1_8239.aClass143_8495);
@@ -3956,7 +3956,7 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
                     int i_13 = class145_5.anInt1714;
                     OpenGL.glColor4ub((byte) (i_13 >> 16), (byte) (i_13 >> 8), (byte) i_13, (byte) (i_13 >> 24));
                     aGraphicalRenderer_Sub1_8239.method13581(class162_4.aShort2022);
-                    aGraphicalRenderer_Sub1_8239.method13624(class162_4.aByte2024);
+                    aGraphicalRenderer_Sub1_8239.setColorRenderType(class162_4.aByte2024);
                     aGraphicalRenderer_Sub1_8239.method13603(4);
                 }
             }

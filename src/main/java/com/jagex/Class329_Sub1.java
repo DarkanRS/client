@@ -189,16 +189,16 @@ public class Class329_Sub1 extends Class329 {
                                         class287_25.method5061(class416_19.anInt4986, class416_19.anInt4989, class416_19.anInt4988, class416_19.anInt4987);
                                     }
                                     if (renderer.method8463() > 0) {
-                                        Node_Sub24 class282_sub24_28 = class287_25.aNode_Sub24_3425;
-                                        i_29 = class282_sub24_28.method12368() >> 9;
-                                        i_21 = class282_sub24_28.method12394() >> 9;
+                                        GLLight class282_sub24_28 = class287_25.aNode_Sub24_3425;
+                                        i_29 = class282_sub24_28.getX() >> 9;
+                                        i_21 = class282_sub24_28.getZ() >> 9;
                                         if (class287_25.anInt3419 == i_6 && i_29 >= i_13 && i_29 < i_13 + 8 && i_21 >= i_14 && i_21 < i_14 + 8) {
-                                            i_22 = (x << 9) + MaterialProp38.method15436(class282_sub24_28.method12368() & 0xfff, class282_sub24_28.method12394() & 0xfff, i_9);
-                                            i_23 = (y << 9) + Class354.method6214(class282_sub24_28.method12368() & 0xfff, class282_sub24_28.method12394() & 0xfff, i_9);
+                                            i_22 = (x << 9) + MaterialProp38.method15436(class282_sub24_28.getX() & 0xfff, class282_sub24_28.getZ() & 0xfff, i_9);
+                                            i_23 = (y << 9) + Class354.method6214(class282_sub24_28.getX() & 0xfff, class282_sub24_28.getZ() & 0xfff, i_9);
                                             i_29 = i_22 >> 9;
                                             i_21 = i_23 >> 9;
                                             if (i_29 >= 0 && i_21 >= 0 && i_29 < maxX && i_21 < maxY) {
-                                                class282_sub24_28.method12374(i_22, tileHeights[i_6][i_29][i_21] - class282_sub24_28.method12369(), i_23);
+                                                class282_sub24_28.method12374(i_22, tileHeights[i_6][i_29][i_21] - class282_sub24_28.getY(), i_23);
                                                 sceneObjectManager.method3430(class287_25);
                                             }
                                         }
@@ -795,13 +795,13 @@ public class Class329_Sub1 extends Class329 {
                                         class287_17.method5061(class416_18.anInt4986, class416_18.anInt4989, class416_18.anInt4988, class416_18.anInt4987);
                                     }
                                     if (graphicalrenderer_1.method8463() > 0) {
-                                        Node_Sub24 class282_sub24_21 = class287_17.aNode_Sub24_3425;
-                                        i_13 = class282_sub24_21.method12368() + (i_3 << 9);
-                                        i_14 = class282_sub24_21.method12394() + (i_4 << 9);
+                                        GLLight class282_sub24_21 = class287_17.aNode_Sub24_3425;
+                                        i_13 = class282_sub24_21.getX() + (i_3 << 9);
+                                        i_14 = class282_sub24_21.getZ() + (i_4 << 9);
                                         i_15 = i_13 >> 9;
                                         int i_16 = i_14 >> 9;
                                         if (i_15 >= 0 && i_16 >= 0 && i_15 < maxX && i_16 < maxY) {
-                                            class282_sub24_21.method12374(i_13, tileHeights[class287_17.anInt3419][i_15][i_16] - class282_sub24_21.method12369(), i_14);
+                                            class282_sub24_21.method12374(i_13, tileHeights[class287_17.anInt3419][i_15][i_16] - class282_sub24_21.getY(), i_14);
                                             sceneObjectManager.method3430(class287_17);
                                         }
                                     }

@@ -4,7 +4,7 @@ public class Class287 {
 
     public int anInt3419;
     public int anInt3430;
-    public Node_Sub24 aNode_Sub24_3425;
+    public GLLight aNode_Sub24_3425;
     boolean aBool3426;
     boolean aBool3427;
     short[] aShortArray3429;

@@ -134,7 +134,7 @@ public class client extends Engine {
 	public static int anInt7399;
 	public static boolean NEEDS_VARC_SAVE;
 	public static NodeCollection PENDING_HOOK_REQUESTS;
-	public static boolean[] aBoolArray7443;
+	public static boolean[] INTERFACE_107_BIT23;
 	public static int PUBLIC_FILTER;
 	public static int TRADE_FILTER;
 	public static String FC_NAME;
@@ -498,7 +498,7 @@ public class client extends Engine {
 		ICOMPONENT_SETTINGS_SLOTS = new IterableNodeMap(512);
 		anInt7407 = 0;
 		anInt7408 = -2;
-		aBoolArray7443 = new boolean[107];
+		INTERFACE_107_BIT23 = new boolean[107];
 		aBoolArray7410 = new boolean[107];
 		aRectangleArray7411 = new Rectangle[107];
 
@@ -1007,9 +1007,9 @@ public class client extends Engine {
 					upperBound = Math.min(i_20, boundYMax);
 				}
 
-				if (iCompDef.type != ComponentType.CONTAINER && !iCompDef.usesScripts && getIComponentSettings(iCompDef).settingsHash == 0 && iCompDef != aClass118_7247 && iCompDef.contentType != IComponentDefinitions.CONTENT_TYPE_1338 && iCompDef.contentType != IComponentDefinitions.CONTENT_TYPE_1406 && iCompDef.contentType != IComponentDefinitions.CONTENT_TYPE_1337 && iCompDef.contentType != IComponentDefinitions.CONTENT_TYPE_1403) {
+				if (iCompDef.type != ComponentType.CONTAINER && !iCompDef.usesScripts && getIComponentSettings(iCompDef).settingsHash == 0 && iCompDef != aClass118_7247 && !ContentType.isGameSceneRelated(iCompDef.contentType)) {
 					if (leftBound < rightBound && lowerBound < upperBound) {
-						Class86.method1482(iCompDef);
+						Class86.renderItemInvSprite(iCompDef);
 					}
 				} else if (!method11651(iCompDef)) {
 					if (iCompDef == aClass118_7257 && ApplyHitmarkCutsceneAction.method14643(aClass118_7257)) {
@@ -1151,7 +1151,7 @@ public class client extends Engine {
 											aString7275 = "Null";
 										}
 
-										aString7356 = iCompDef.useOnName + Utils.rgbToColHexShortcut(16777215);
+										aString7356 = iCompDef.useOnName + Utils.rgbToColHexShortcut(0xFFFFFF);
 									}
 
 									i_27 = iCompDef.anIntArray1395[i_24];
@@ -1188,7 +1188,7 @@ public class client extends Engine {
 							anInt7476 = aClass118_7247.height;
 						}
 
-						if (iCompDef.usesScripts || iCompDef.contentType != 0) {
+						if (iCompDef.usesScripts || iCompDef.contentType != null) {
 							if (bool_48 && anInt7191 != 0 && iCompDef.anObjectArray1412 != null) {
 								HookRequest hookRequest = new HookRequest();
 								hookRequest.hasMousePosition = true;
@@ -1201,22 +1201,22 @@ public class client extends Engine {
 							if (aClass118_7257 != null) {
 								bool_49 = false;
 								bool_38 = false;
-							} else if (Class20.aBool161 || iCompDef.contentType != IComponentDefinitions.CONTENT_TYPE_1400 && anInt7184 > 0) {
+							} else if (Class20.aBool161 || iCompDef.contentType != ContentType.CONTENT_TYPE_1400 && anInt7184 > 0) {
 								bool_49 = false;
 								bool_38 = false;
 								bool_48 = false;
 							}
 
-							if (iCompDef.contentType != 0) {
+							if (iCompDef.contentType != null) {
 								int i_52;
-								if (iCompDef.contentType == IComponentDefinitions.CONTENT_TYPE_1337 || iCompDef.contentType == IComponentDefinitions.CONTENT_TYPE_1403) {
+								if (iCompDef.contentType == ContentType.MAIN_GAME_SCENE || iCompDef.contentType == ContentType.CONTENT_TYPE_1403) {
 									GAME_SCREEN_INTERFACE = iCompDef;
 									Atmosphere class535_59 = IndexLoaders.MAP_REGION_DECODER.method4435().method4038();
 									if (class535_59.method11451() != null && !IndexLoaders.MAP_REGION_LOADER_THREAD.method6051()) {
 										class535_59.method11451().method4217(Renderers.CURRENT_RENDERER, iCompDef.height, Class393.preferences.skyBoxes.method12728());
 									}
 
-									if (iCompDef.contentType == IComponentDefinitions.CONTENT_TYPE_1337 && !Class20.aBool161 && mouseX >= leftBound && mouseY >= lowerBound && mouseX < rightBound && mouseY < upperBound) {
+									if (iCompDef.contentType == ContentType.MAIN_GAME_SCENE && !Class20.aBool161 && mouseX >= leftBound && mouseY >= lowerBound && mouseX < rightBound && mouseY < upperBound) {
 										GraphNode_Sub1_Sub4_Sub1.iComponentOnGroundTile(Renderers.CURRENT_RENDERER, mouseX, mouseY);
 
 										for (EntityNode_Sub2 class275_sub2_57 = (EntityNode_Sub2) aClass457_7290.method7659(); class275_sub2_57 != null; class275_sub2_57 = (EntityNode_Sub2) aClass457_7290.method7650()) {
@@ -1249,7 +1249,7 @@ public class client extends Engine {
 									continue;
 								}
 
-								if (iCompDef.contentType == IComponentDefinitions.CONTENT_TYPE_1338) {
+								if (iCompDef.contentType == ContentType.CONTENT_TYPE_1338) {
 									class119_40 = iCompDef.method2046(Renderers.CURRENT_RENDERER);
 									if (class119_40 == null || Class187.anInt2363 != 0 && Class187.anInt2363 != 3 || Class20.aBool161 || mouseX < leftBound || mouseY < lowerBound || mouseX >= rightBound || mouseY >= upperBound) {
 										continue;
@@ -1309,7 +1309,7 @@ public class client extends Engine {
 									continue;
 								}
 
-								if (iCompDef.contentType == IComponentDefinitions.CONTENT_TYPE_1400) {
+								if (iCompDef.contentType == ContentType.CONTENT_TYPE_1400) {
 									MaterialPropTexture.aClass118_9884 = iCompDef;
 									if (bool_48) {
 										Class291_Sub1.aBool8022 = true;
@@ -1373,14 +1373,14 @@ public class client extends Engine {
 									continue;
 								}
 
-								if (iCompDef.contentType == IComponentDefinitions.MINIMAP) {
+								if (iCompDef.contentType == ContentType.MINIMAP) {
 									if (bool_38) {
 										Class306.method5458(Class163.mouseRecorder.getMouseX() - x, Class163.mouseRecorder.getMouseY() - y, iCompDef.width, iCompDef.height);
 									}
 									continue;
 								}
 
-								if (iCompDef.contentType == IComponentDefinitions.CONTENT_TYPE_1406) {
+								if (iCompDef.contentType == ContentType.CONTENT_TYPE_1406) {
 									Class15.method544(iCompDef, x, y);
 									continue;
 								}
@@ -1699,7 +1699,7 @@ public class client extends Engine {
 							iCompDef.method2027(IndexLoaders.SKYBOX_LOADER, IndexLoaders.SUN_LOADER).method4217(Renderers.CURRENT_RENDERER, iCompDef.height, Class393.preferences.skyBoxes.method12728());
 						}
 
-						Class86.method1482(iCompDef);
+						Class86.renderItemInvSprite(iCompDef);
 						if (iCompDef.type == ComponentType.CONTAINER) {
 							method11768(interface_0, components, iCompDef.idHash, leftBound, lowerBound, rightBound, upperBound, x - iCompDef.scrollX, y - iCompDef.scrollY, mouseX, mouseY);
 							if (iCompDef.itemSlots != null) {

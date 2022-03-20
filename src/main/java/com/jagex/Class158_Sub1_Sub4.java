@@ -14,7 +14,7 @@ public class Class158_Sub1_Sub4 extends Class158_Sub1 {
     Interface13 anInterface13_10232;
 
     Class158_Sub1_Sub4(OpenGLRenderer class505_sub1_1) {
-        if (!class505_sub1_1.aBool8472) {
+        if (!class505_sub1_1.supportsFBO) {
             throw new IllegalStateException("");
         } else {
             aGraphicalRenderer_Sub1_10227 = class505_sub1_1;

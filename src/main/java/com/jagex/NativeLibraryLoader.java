@@ -124,7 +124,7 @@ public class NativeLibraryLoader implements LibraryLoader {
                                         method_7.invoke(method_17, Boolean.TRUE);
                                         try {
                                             method_17.invoke(object_13);
-                                            field_16.set(object_13, new Integer(0));
+                                            field_16.set(object_13, Integer.valueOf(0));
                                             hashtable_2.remove(string_8);
                                         } catch (Throwable ignored) {
                                         }

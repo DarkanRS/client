@@ -64,7 +64,7 @@ public class ClanSettings {
             return null;
         } else {
             Node<Object> node_3 = variables.get(i_1);
-            return node_3 instanceof IntNode ? new Integer(((IntNode) node_3).value) : null;
+            return node_3 instanceof IntNode ? Integer.valueOf(((IntNode) node_3).value) : null;
         }
     }
 
@@ -73,7 +73,7 @@ public class ClanSettings {
             return null;
         } else {
             Node<Object> node_3 = variables.get(i_1);
-            return node_3 instanceof LongNode ? new Long(((LongNode) node_3).aLong8066) : null;
+            return node_3 instanceof LongNode ? Long.valueOf(((LongNode) node_3).aLong8066) : null;
         }
     }
 
@@ -351,7 +351,7 @@ public class ClanSettings {
             Node<Object> node_5 = variables.get(i_1);
             if (node_5 instanceof IntNode) {
                 int i_6 = i_3 == 31 ? -1 : (1 << i_3 + 1) - 1;
-                return new Integer((((IntNode) node_5).value & i_6) >>> i_2);
+                return Integer.valueOf((((IntNode) node_5).value & i_6) >>> i_2);
             } else {
                 return null;
             }

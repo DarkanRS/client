@@ -104,7 +104,7 @@ public class Class301 implements Interface41 {
                         if (transferable_6 != null) {
                             String string_11 = (String) transferable_6.getTransferData(DataFlavor.stringFlavor);
                             if (string_11 != null) {
-                                String[] arr_8 = MovingAnimation.method12681(string_11, '\n');
+                                String[] arr_8 = MovingAnimation.split(string_11, '\n');
                                 Class341.method6074(arr_8);
                             }
                         }

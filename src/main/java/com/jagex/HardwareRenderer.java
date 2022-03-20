@@ -82,7 +82,7 @@ public abstract class HardwareRenderer extends AbstractRenderer {
     protected Class37[] aClass37Array8783;
     protected Class68[] aClass68Array8784;
     protected Class68[] aClass68Array8785;
-    protected Node_Sub24[] aNode_Sub24Array8716;
+    protected GLLight[] aNode_Sub24Array8716;
     int anInt8696 = 4194304;
     Class428 aClass428_8772 = new Class428();
     LinkedNodeList aClass473_8700;
@@ -1297,7 +1297,7 @@ public abstract class HardwareRenderer extends AbstractRenderer {
     }
 
     @Override
-    public void method8547(int nodeCount, Node_Sub24[] node) {
+    public void method8547(int nodeCount, GLLight[] node) {
     	for(int index = 0; index < nodeCount; index++)
     		aNode_Sub24Array8716[index] = node[index];
 
@@ -1443,7 +1443,7 @@ public abstract class HardwareRenderer extends AbstractRenderer {
     abstract Interface1 method13962(Class150 var1, byte[] var6);
 
     @Override // dead code
-    public void method8426(int i_1, Node_Sub24[] arr_2) {
+    public void method8426(int i_1, GLLight[] arr_2) {
         if (i_1 >= 0) System.arraycopy(arr_2, 0, aNode_Sub24Array8716, 0, i_1);
 
         anInt8773 = i_1;
@@ -3023,7 +3023,7 @@ public abstract class HardwareRenderer extends AbstractRenderer {
     }
 
     @Override // dead code
-    public void method8394(int i_1, Node_Sub24[] arr_2) { 
+    public void method8394(int i_1, GLLight[] arr_2) { 
         if (i_1 >= 0) System.arraycopy(arr_2, 0, aNode_Sub24Array8716, 0, i_1);
 
         anInt8773 = i_1;
@@ -3039,7 +3039,7 @@ public abstract class HardwareRenderer extends AbstractRenderer {
     }
 
     @Override
-    public void method8579(int i_1, Node_Sub24[] arr_2) {
+    public void method8579(int i_1, GLLight[] arr_2) {
         if (i_1 >= 0) System.arraycopy(arr_2, 0, aNode_Sub24Array8716, 0, i_1);
 
         anInt8773 = i_1;
@@ -3931,7 +3931,7 @@ public abstract class HardwareRenderer extends AbstractRenderer {
             aClass384Array8782[i_1] = new Matrix44();
         }
 
-        aNode_Sub24Array8716 = new Node_Sub24[anInt8799 - 2];
+        aNode_Sub24Array8716 = new GLLight[anInt8799 - 2];
         int[] ints_3 = {-1};
         anInterface6_8788 = method14094(1, 1, false, ints_3, 0, 0);
         ints_3[0] = -16777216;
