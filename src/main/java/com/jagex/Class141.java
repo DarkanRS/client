@@ -8,7 +8,7 @@ public abstract class Class141 {
         aGraphicalRenderer_Sub1_1664 = class505_sub1_1;
     }
 
-    abstract void method2394(Class137 var1, int var2);
+    abstract void method2394(GLTexture var1, int var2);
 
     abstract boolean method2395();
 
@@ -20,7 +20,7 @@ public abstract class Class141 {
 
     abstract void method2399(int var1, int var2);
 
-    abstract void method2400(Class137 var1, int var2);
+    abstract void method2400(GLTexture var1, int var2);
 
     abstract boolean method2401();
 
@@ -44,10 +44,10 @@ public abstract class Class141 {
 
     abstract void method2411();
 
-    abstract void method2412(Class137 var1, int var2);
+    abstract void method2412(GLTexture var1, int var2);
 
-    abstract void method2413(Class137 var1, int var2);
+    abstract void method2413(GLTexture var1, int var2);
 
-    abstract void method2414(Class137 var1, int var2);
+    abstract void method2414(GLTexture var1, int var2);
 
 }

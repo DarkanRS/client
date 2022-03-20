@@ -13,7 +13,7 @@ public abstract class GraphNode_Sub1 extends GraphNode {
         aClass206_7970 = sceneobjectmanager_1;
     }
 
-    abstract int method12982(Node_Sub24[] var1);
+    abstract int method12982(GLLight[] var1);
 
     abstract boolean method12983(AbstractRenderer var1, int var2, int var3);
 
@@ -59,7 +59,7 @@ public abstract class GraphNode_Sub1 extends GraphNode {
 
     public abstract int method13003();
 
-    int method13004(int i_1, int i_2, Node_Sub24[] arr_3) {
+    int method13004(int i_1, int i_2, GLLight[] arr_3) {
         long long_5 = aClass206_7970.aLongArrayArrayArray2645[plane][i_1][i_2];
         long long_7 = 0L;
         int i_9;
@@ -116,9 +116,9 @@ public abstract class GraphNode_Sub1 extends GraphNode {
 
     abstract void method13023(AbstractRenderer var1);
 
-    abstract int method13024(Node_Sub24[] var1);
+    abstract int method13024(GLLight[] var1);
 
-    abstract int method13025(Node_Sub24[] var1);
+    abstract int method13025(GLLight[] var1);
 
     abstract boolean method13026();
 
@@ -126,7 +126,7 @@ public abstract class GraphNode_Sub1 extends GraphNode {
 
     abstract boolean method13030(AbstractRenderer var1);
 
-    abstract int method13031(Node_Sub24[] var1);
+    abstract int method13031(GLLight[] var1);
 
     abstract boolean method13032();
 
@@ -134,7 +134,7 @@ public abstract class GraphNode_Sub1 extends GraphNode {
 
     abstract boolean method13034();
 
-    abstract int method13036(Node_Sub24[] var1);
+    abstract int method13036(GLLight[] var1);
 
     abstract boolean method13037(AbstractRenderer var1);
 }

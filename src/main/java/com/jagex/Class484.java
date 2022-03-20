@@ -42,7 +42,7 @@ public class Class484 {
                 }
             }
         }
-        if (iCompDef.contentType == IComponentDefinitions.CONTENT_TYPE_1337) {
+        if (iCompDef.contentType == ContentType.MAIN_GAME_SCENE) {
             client.GAME_SCREEN_INTERFACE = iCompDef;
         }
         if (bool_3 && iCompDef.anObjectArray1271 != null && (i_5 != iCompDef.width || i_6 != iCompDef.height)) {

@@ -7,18 +7,6 @@ public class IComponentDefinitions {
     public static int anInt1283;
     public static int anInt1373 = 1;
     public static int anInt1265 = 2;
-    public static int CONTENT_TYPE_328 = 328;
-    public static int CONTENT_TYPE_1337 = 1337;
-    public static int CONTENT_TYPE_1403 = 1403;
-    public static int CONTENT_TYPE_1338 = 1338;
-    public static int CONTENT_TYPE_1339 = 1339;
-    public static int CONTENT_TYPE_1400 = 1400;
-    public static int MINIMAP = 1401;
-    public static int DEBUG_INFORMATION = 1405;
-    public static int CONTENT_TYPE_1406 = 1406;
-    public static int CONTENT_TYPE_1407 = 1407;
-    public static int CONTENT_TYPE_1408 = 1408;
-    public static int CONTENT_TYPE_1409 = 1409;
     public static LRUCache aClass229_1280 = new LRUCache(3000000, 200);
     public static LRUCache aClass229_1341 = new LRUCache(50);
     public static boolean aBool1399;
@@ -44,7 +32,7 @@ public class IComponentDefinitions {
     public IComponentDefinitions[] itemSlots;
     public ComponentType type;
     public String name;
-    public int contentType;
+    public ContentType contentType;
     public int basePositionX;
     public int basePositionY;
     public int baseWidth;
@@ -267,7 +255,7 @@ public class IComponentDefinitions {
             name = rsbytebuffer_1.readString();
         }
         type = ComponentType.forId(typeId);
-        contentType = rsbytebuffer_1.readUnsignedShort();
+        contentType = ContentType.forId(rsbytebuffer_1.readUnsignedShort());
         basePositionX = rsbytebuffer_1.readShort();
         basePositionY = rsbytebuffer_1.readShort();
         baseWidth = rsbytebuffer_1.readUnsignedShort();
@@ -940,7 +928,7 @@ public class IComponentDefinitions {
 	            inter.anInt1449 = i_13;
 	            inter.anInt1450 = client.CYCLES_20MS;
 	            if (!client.method11651(inter)) {
-	                if (inter.contentType != 0) {
+	                if (inter.contentType != null) {
 	                    Class28.method776(inter);
 	                }
 	                int drawEndX = inter.x + i_6;
@@ -1007,16 +995,16 @@ public class IComponentDefinitions {
 	                    fromY = Math.min(drawStartY, startY);
 	                }
 	                if (toX < fromX && toY < fromY) {
-	                    if (inter.contentType != 0) {
-	                        if (inter.contentType == CONTENT_TYPE_1337 || inter.contentType == CONTENT_TYPE_1403) {
-	                            HitbarDefinitions.method3231(drawEndX, drawEndY, inter.width, inter.height, inter.contentType == CONTENT_TYPE_1403);
+	                    if (inter.contentType != null) {
+	                        if (inter.contentType == ContentType.MAIN_GAME_SCENE || inter.contentType == ContentType.CONTENT_TYPE_1403) {
+	                            HitbarDefinitions.method3231(drawEndX, drawEndY, inter.width, inter.height, inter.contentType == ContentType.CONTENT_TYPE_1403);
 	                            TCPPacket.method12366(i_13, toX, toY, fromX, fromY, drawEndX, drawEndY);
 	                            Renderers.CURRENT_RENDERER.method8421();
 	                            Renderers.CURRENT_RENDERER.r(endX, endY, startX, startY);
 	                            client.INTERFACE_107_BIT23[i_13] = true;
 	                            continue;
 	                        }
-	                        if (inter.contentType == CONTENT_TYPE_1338 && client.anInt7341 == 1) {
+	                        if (inter.contentType == ContentType.CONTENT_TYPE_1338 && client.anInt7341 == 1) {
 	                            if (inter.method2046(Renderers.CURRENT_RENDERER) != null) {
 	                                MaterialPropTexture.method15391();
 	                                Item.method12574(Renderers.CURRENT_RENDERER, inter, drawEndX, drawEndY);
@@ -1024,34 +1012,34 @@ public class IComponentDefinitions {
 	                            }
 	                            continue;
 	                        }
-	                        if (inter.contentType == CONTENT_TYPE_1408) {
+	                        if (inter.contentType == ContentType.CONTENT_TYPE_1408) {
 	                            Shadow.method15506(Renderers.CURRENT_RENDERER, drawEndX, drawEndY, inter);
 	                            continue;
 	                        }
-	                        if (inter.contentType == CONTENT_TYPE_1409) {
+	                        if (inter.contentType == ContentType.CONTENT_TYPE_1409) {
 	                            Class366.method6301(Renderers.CURRENT_RENDERER, drawEndX, drawEndY, inter, inter.color % 64);
 	                            continue;
 	                        }
-	                        if (inter.contentType == CONTENT_TYPE_1339) {
+	                        if (inter.contentType == ContentType.CONTENT_TYPE_1339) {
 	                            if (inter.method2046(Renderers.CURRENT_RENDERER) != null) {
 	                                VorbisFileReference.method13448(inter, drawEndX, drawEndY);
 	                                Renderers.CURRENT_RENDERER.r(endX, endY, startX, startY);
 	                            }
 	                            continue;
 	                        }
-	                        if (inter.contentType == CONTENT_TYPE_1400) {
+	                        if (inter.contentType == ContentType.CONTENT_TYPE_1400) {
 	                            Node_Sub46.method13407(Renderers.CURRENT_RENDERER, IndexLoaders.IMAGE_LOADER, drawEndX, drawEndY, inter.width, inter.height);
 	                            client.INTERFACE_107_BIT23[i_13] = true;
 	                            Renderers.CURRENT_RENDERER.r(endX, endY, startX, startY);
 	                            continue;
 	                        }
-	                        if (inter.contentType == MINIMAP) {
+	                        if (inter.contentType == ContentType.MINIMAP) {
 	                            LoadingStage.renderMiniMiniMap(Renderers.CURRENT_RENDERER, drawEndX, drawEndY, inter.width, inter.height);
 	                            client.INTERFACE_107_BIT23[i_13] = true;
 	                            Renderers.CURRENT_RENDERER.r(endX, endY, startX, startY);
 	                            continue;
 	                        }
-	                        if (inter.contentType == DEBUG_INFORMATION) {
+	                        if (inter.contentType == ContentType.DEBUG_INFORMATION) {
 	                            if (client.DRAW_DEBUG || client.aBool7177) {
 	                                NPCDirection.drawDebugInformation(drawEndX, drawEndY, inter);
 	                                client.INTERFACE_107_BIT23[i_13] = true;
@@ -1063,7 +1051,7 @@ public class IComponentDefinitions {
 	                    int i_24;
 	                    int i_25;
 	                    if (inter.type == ComponentType.CONTAINER) {
-	                        if (inter.contentType == CONTENT_TYPE_1407 && Renderers.CURRENT_RENDERER.method8471()) {
+	                        if (inter.contentType == ContentType.CONTENT_TYPE_1407 && Renderers.CURRENT_RENDERER.method8471()) {
 	                            Renderers.CURRENT_RENDERER.method8525(ChangeClanSetting.BASE_WINDOW_WIDTH, client.BASE_WINDOW_HEIGHT * -969250379);
 	                        }
 	                        render(arr_0, inter.idHash, toX, toY, fromX, fromY, drawEndX - inter.scrollX, drawEndY - inter.scrollY, i_13, bool_9);
@@ -1074,7 +1062,7 @@ public class IComponentDefinitions {
 	                        if (class282_sub44_33 != null) {
 	                            RenderAnimIndexLoader.method3629(class282_sub44_33.interfaceId, toX, toY, fromX, fromY, drawEndX, drawEndY, i_13);
 	                        }
-	                        if (inter.contentType == CONTENT_TYPE_1407) {
+	                        if (inter.contentType == ContentType.CONTENT_TYPE_1407) {
 	                            if (Renderers.CURRENT_RENDERER.method8471()) {
 	                                Renderers.CURRENT_RENDERER.method8474();
 	                            }

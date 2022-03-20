@@ -6,11 +6,11 @@ public class VarcDefinitions {
     public int anInt4983 = 1;
     public char aChar4984;
 
-    static void method6996(AbstractRenderer graphicalrenderer_0, IComponentDefinitions icomponentdefinitions_1) {
-        boolean bool_3 = IndexLoaders.ITEM_LOADER.softwareRender(graphicalrenderer_0, icomponentdefinitions_1.containerItemId, icomponentdefinitions_1.anInt1427, icomponentdefinitions_1.borderThickness, -16777216 | icomponentdefinitions_1.spriteShadow, icomponentdefinitions_1.renderStack, icomponentdefinitions_1.wearCol ? VertexNormal.MY_PLAYER.model : null) == null;
+    static void renderItemInvSprite(AbstractRenderer renderer, IComponentDefinitions comp) {
+        boolean bool_3 = IndexLoaders.ITEM_LOADER.softwareRender(renderer, comp.containerItemId, comp.anInt1427, comp.borderThickness, -16777216 | comp.spriteShadow, comp.renderStack, comp.wearCol ? VertexNormal.MY_PLAYER.model : null) == null;
         if (bool_3) {
-            Class182.ITEMS.append(new Item(icomponentdefinitions_1.containerItemId, icomponentdefinitions_1.anInt1427, icomponentdefinitions_1.borderThickness, -16777216 | icomponentdefinitions_1.spriteShadow, icomponentdefinitions_1.renderStack, icomponentdefinitions_1.wearCol));
-            IComponentDefinitions.redrawComponent(icomponentdefinitions_1);
+            Class182.ITEMS.append(new Item(comp.containerItemId, comp.anInt1427, comp.borderThickness, -16777216 | comp.spriteShadow, comp.renderStack, comp.wearCol));
+            IComponentDefinitions.redrawComponent(comp);
         }
     }
 

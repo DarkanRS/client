@@ -29,9 +29,9 @@ public class Class170 {
     Class170(OpenGLRenderer class505_sub1_1) {
         aClass76_2102 = Class76.aClass76_751;
         aGraphicalRenderer_Sub1_2112 = class505_sub1_1;
-        if (aGraphicalRenderer_Sub1_2112.aBool8472 && aGraphicalRenderer_Sub1_2112.aBool8401) {
+        if (aGraphicalRenderer_Sub1_2112.supportsFBO && aGraphicalRenderer_Sub1_2112.supportsRectTextures) {
             aClass158_Sub1_Sub4_2095 = aClass158_Sub1_Sub4_2092 = new Class158_Sub1_Sub4(aGraphicalRenderer_Sub1_2112);
-            if (aGraphicalRenderer_Sub1_2112.anInt8475 > 1 && aGraphicalRenderer_Sub1_2112.aBool8338 && aGraphicalRenderer_Sub1_2112.aBool8488) {
+            if (aGraphicalRenderer_Sub1_2112.anInt8475 > 1 && aGraphicalRenderer_Sub1_2112.supportsFBOBlit && aGraphicalRenderer_Sub1_2112.supportsFBOMultiSample) {
                 aClass158_Sub1_Sub4_2095 = aClass158_Sub1_Sub4_2101 = new Class158_Sub1_Sub4(aGraphicalRenderer_Sub1_2112);
             }
         }

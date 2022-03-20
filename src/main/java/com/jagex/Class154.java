@@ -19,7 +19,7 @@ public class Class154 implements Interface13 {
 
     @Override
     public void method103(int i_1) {
-        OpenGL.glFramebufferTexture2DEXT(36160, i_1, aClass137_Sub1_1966.anInt1648, aClass137_Sub1_1966.anInt1647, anInt1967);
+        OpenGL.glFramebufferTexture2DEXT(36160, i_1, aClass137_Sub1_1966.bindId, aClass137_Sub1_1966.textureId, anInt1967);
     }
 
     @Override
@@ -29,7 +29,7 @@ public class Class154 implements Interface13 {
 
     @Override
     public void method104(int i_1) {
-        OpenGL.glFramebufferTexture2DEXT(36160, i_1, aClass137_Sub1_1966.anInt1648, aClass137_Sub1_1966.anInt1647, anInt1967);
+        OpenGL.glFramebufferTexture2DEXT(36160, i_1, aClass137_Sub1_1966.bindId, aClass137_Sub1_1966.textureId, anInt1967);
     }
 
     @Override
@@ -63,17 +63,17 @@ public class Class154 implements Interface13 {
 
     @Override
     public void method101(int i_1) {
-        OpenGL.glFramebufferTexture2DEXT(36160, i_1, aClass137_Sub1_1966.anInt1648, aClass137_Sub1_1966.anInt1647, anInt1967);
+        OpenGL.glFramebufferTexture2DEXT(36160, i_1, aClass137_Sub1_1966.bindId, aClass137_Sub1_1966.textureId, anInt1967);
     }
 
     @Override
     public void method99(int i_1) {
-        OpenGL.glFramebufferTexture2DEXT(36160, i_1, aClass137_Sub1_1966.anInt1648, aClass137_Sub1_1966.anInt1647, anInt1967);
+        OpenGL.glFramebufferTexture2DEXT(36160, i_1, aClass137_Sub1_1966.bindId, aClass137_Sub1_1966.textureId, anInt1967);
     }
 
     @Override
     public void method100(int i_1) {
-        OpenGL.glFramebufferTexture2DEXT(36160, i_1, aClass137_Sub1_1966.anInt1648, aClass137_Sub1_1966.anInt1647, anInt1967);
+        OpenGL.glFramebufferTexture2DEXT(36160, i_1, aClass137_Sub1_1966.bindId, aClass137_Sub1_1966.textureId, anInt1967);
     }
 
     @Override
@@ -82,12 +82,12 @@ public class Class154 implements Interface13 {
 
     @Override
     public void method102(int i_1) {
-        OpenGL.glFramebufferTexture2DEXT(36160, i_1, aClass137_Sub1_1966.anInt1648, aClass137_Sub1_1966.anInt1647, anInt1967);
+        OpenGL.glFramebufferTexture2DEXT(36160, i_1, aClass137_Sub1_1966.bindId, aClass137_Sub1_1966.textureId, anInt1967);
     }
 
     @Override
     public void method105(int i_1) {
-        OpenGL.glFramebufferTexture2DEXT(36160, i_1, aClass137_Sub1_1966.anInt1648, aClass137_Sub1_1966.anInt1647, anInt1967);
+        OpenGL.glFramebufferTexture2DEXT(36160, i_1, aClass137_Sub1_1966.bindId, aClass137_Sub1_1966.textureId, anInt1967);
     }
 
 }

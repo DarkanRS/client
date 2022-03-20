@@ -3935,7 +3935,7 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
     void method13535(Matrix44 matrix44_1) {
         if (aClass162Array8295 != null) {
             Matrix44 matrix44_2 = aGraphicalRenderer_Sub1_8239.aClass384_8361;
-            aGraphicalRenderer_Sub1_8239.method13576();
+            aGraphicalRenderer_Sub1_8239.pushMatrix();
             aGraphicalRenderer_Sub1_8239.RA(!aBool8245);
             aGraphicalRenderer_Sub1_8239.method13620(false);
             aGraphicalRenderer_Sub1_8239.method13647(aGraphicalRenderer_Sub1_8239.aClass143_8494, null, null, aGraphicalRenderer_Sub1_8239.aClass143_8495);

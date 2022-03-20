@@ -16,7 +16,7 @@ public abstract class Class149 {
         anInt1742 = i_3;
     }
 
-    static int method2565(CharSequence charsequence_0, char var_1) {
+    static int indexOf(CharSequence charsequence_0, char var_1) {
         int i_3 = 0;
         int i_4 = charsequence_0.length();
         for (int i_5 = 0; i_5 < i_4; i_5++) {

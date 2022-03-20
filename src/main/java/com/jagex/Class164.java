@@ -12,7 +12,7 @@ public class Class164 {
     }
 
     boolean method2847() {
-        if (aGraphicalRenderer_Sub1_2033.aBool8472 && aGraphicalRenderer_Sub1_2033.aBool8365 && aClass128_2032 == null) {
+        if (aGraphicalRenderer_Sub1_2033.supportsFBO && aGraphicalRenderer_Sub1_2033.supportsFragmentShaders && aClass128_2032 == null) {
             Class140 class140_1 = Class140.method2393(aGraphicalRenderer_Sub1_2033, 35632, "uniform float rcpRelief;\nuniform vec2 sampleSize;\nuniform sampler3D heightMap;\nvoid main() {\nfloat dx = texture3D(heightMap, vec3(-sampleSize.x, 0.0, 0.0)+gl_TexCoord[0].xyz).r - texture3D(heightMap, vec3(sampleSize.x, 0.0, 0.0)+gl_TexCoord[0].xyz).r;\nfloat dy = texture3D(heightMap, vec3(0.0, -sampleSize.y, 0.0)+gl_TexCoord[0].xyz).r - texture3D(heightMap, vec3(0.0, sampleSize.y, 0.0)+gl_TexCoord[0].xyz).r;\ngl_FragColor = vec4(0.5+normalize(vec3(dx, dy, rcpRelief))*0.5, texture3D(heightMap, gl_TexCoord[0].xyz).r);\n}\n");
             if (class140_1 != null) {
                 aClass128_2032 = Class128.method2174(aGraphicalRenderer_Sub1_2033, new Class140[]{class140_1});
@@ -47,7 +47,7 @@ public class Class164 {
 
                 for (int i_7 = 0; i_7 < class137_sub4_1.anInt9118; i_7++) {
                     float f_8 = (float) i_7 / class137_sub4_1.anInt9118;
-                    aGraphicalRenderer_Sub1_2033.method13654(class137_sub4_2);
+                    aGraphicalRenderer_Sub1_2033.setTexture(class137_sub4_2);
                     OpenGL.glBegin(7);
                     OpenGL.glTexCoord3f(0.0F, 0.0F, f_8);
                     OpenGL.glVertex2f(0.0F, 0.0F);

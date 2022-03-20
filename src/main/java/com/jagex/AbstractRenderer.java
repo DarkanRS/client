@@ -92,7 +92,7 @@ public abstract class AbstractRenderer {
         method8555();
     }
 
-    public abstract void method8394(int var1, Node_Sub24[] var2);
+    public abstract void method8394(int var1, GLLight[] var2);
 
     public abstract void method8395();
 
@@ -239,7 +239,7 @@ public abstract class AbstractRenderer {
         B(i_1, i_2, i_3, i_4, i_5, 1);
     }
 
-    public abstract void method8426(int var1, Node_Sub24[] var2);
+    public abstract void method8426(int var1, GLLight[] var2);
 
     public abstract Class455 method8427(int var1, int var2, int[] var3, int[] var4);
 
@@ -540,7 +540,7 @@ public abstract class AbstractRenderer {
 
     public abstract int method8546(int var1, int var2);
 
-    public abstract void method8547(int var1, Node_Sub24[] var2);
+    public abstract void method8547(int var1, GLLight[] var2);
 
     public abstract NativeSprite method8548(int[] var1, int var2, int var3, int var4, int var5, boolean var6);
 
@@ -610,7 +610,7 @@ public abstract class AbstractRenderer {
 
     public abstract boolean method8578();
 
-    public abstract void method8579(int var1, Node_Sub24[] var2);
+    public abstract void method8579(int var1, GLLight[] var2);
 
     public abstract void method8580(Class151 var1);
 
@@ -646,8 +646,8 @@ public abstract class AbstractRenderer {
 
     public abstract int[] ke(int var1, int var2, int var3, int var4);
 
-    public Node_Sub24 method8593(int i_1, int i_2, int i_3, int i_4, int i_5) {
-        return new Node_Sub24(i_1, i_2, i_3, i_4, i_5);
+    public GLLight method8593(int i_1, int i_2, int i_3, int i_4, int i_5) {
+        return new GLLight(i_1, i_2, i_3, i_4, i_5);
     }
 
     public abstract void ib(int var1, int var2, int var3);

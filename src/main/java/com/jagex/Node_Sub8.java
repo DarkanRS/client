@@ -6,7 +6,7 @@ public class Node_Sub8 extends Node {
 
     int anInt7530;
     HardwareRenderer aGraphicalRenderer_Sub2_7533;
-    Node_Sub24 aNode_Sub24_7528;
+    GLLight aNode_Sub24_7528;
     HardwareGround aGround_Sub1_7524;
     int anInt7531;
     int anInt7527;
@@ -20,15 +20,15 @@ public class Node_Sub8 extends Node {
     HashTable aClass453_7537;
     int anInt7532;
 
-    Node_Sub8(HardwareRenderer class505_sub2_1, HardwareGround class390_sub1_2, Node_Sub24 class282_sub24_3, int[] ints_4) {
+    Node_Sub8(HardwareRenderer class505_sub2_1, HardwareGround class390_sub1_2, GLLight class282_sub24_3, int[] ints_4) {
         aGraphicalRenderer_Sub2_7533 = class505_sub2_1;
         aNode_Sub24_7528 = class282_sub24_3;
         aGround_Sub1_7524 = class390_sub1_2;
         int i_5 = aNode_Sub24_7528.method12370() - (class390_sub1_2.tileUnits >> 1);
-        anInt7531 = aNode_Sub24_7528.method12368() - i_5 >> class390_sub1_2.tileScale;
-        anInt7527 = aNode_Sub24_7528.method12368() + i_5 >> class390_sub1_2.tileScale;
-        anInt7526 = aNode_Sub24_7528.method12394() - i_5 >> class390_sub1_2.tileScale;
-        anInt7529 = aNode_Sub24_7528.method12394() + i_5 >> class390_sub1_2.tileScale;
+        anInt7531 = aNode_Sub24_7528.getX() - i_5 >> class390_sub1_2.tileScale;
+        anInt7527 = aNode_Sub24_7528.getX() + i_5 >> class390_sub1_2.tileScale;
+        anInt7526 = aNode_Sub24_7528.getZ() - i_5 >> class390_sub1_2.tileScale;
+        anInt7529 = aNode_Sub24_7528.getZ() + i_5 >> class390_sub1_2.tileScale;
         int i_6 = anInt7527 - anInt7531 + 1;
         int i_7 = anInt7529 - anInt7526 + 1;
         aFloatArrayArray7534 = new float[i_6 + 1][i_7 + 1];
@@ -247,9 +247,9 @@ public class Node_Sub8 extends Node {
             f_17 = f_22 + (f_25 - f_22) * f_19;
         }
 
-        f_18 = (aNode_Sub24_7528.method12368() - i_11);
-        f_19 = (aNode_Sub24_7528.method12369() - i_13);
-        f_20 = (aNode_Sub24_7528.method12394() - i_12);
+        f_18 = (aNode_Sub24_7528.getX() - i_11);
+        f_19 = (aNode_Sub24_7528.getY() - i_13);
+        f_20 = (aNode_Sub24_7528.getZ() - i_12);
         f_21 = (float) Math.sqrt(f_18 * f_18 + f_19 * f_19 + f_20 * f_20);
         f_22 = 1.0F / f_21;
         f_18 *= f_22;
@@ -271,7 +271,7 @@ public class Node_Sub8 extends Node {
             f_26 = 1.0F;
         }
 
-        int i_27 = aNode_Sub24_7528.method12371();
+        int i_27 = aNode_Sub24_7528.getColor();
         int i_28 = (int) (f_26 * (i_27 >> 16 & 0xff));
         if (i_28 > 255) {
             i_28 = 255;

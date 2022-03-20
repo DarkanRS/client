@@ -648,7 +648,7 @@ public class HardwareGround extends Ground {
     }
 
     @Override
-    public void method6711(Node_Sub24 class282_sub24_1, int[] ints_2) {
+    public void method6711(GLLight class282_sub24_1, int[] ints_2) {
         aClass473_8546.insertBack(new Node_Sub8(aGraphicalRenderer_Sub2_8528, this, class282_sub24_1, ints_2));
     }
 
@@ -1991,7 +1991,7 @@ public class HardwareGround extends Ground {
     }
 
     @Override
-    public void method6720(Node_Sub24 class282_sub24_1, int[] ints_2) {
+    public void method6720(GLLight class282_sub24_1, int[] ints_2) {
         aClass473_8546.insertBack(new Node_Sub8(aGraphicalRenderer_Sub2_8528, this, class282_sub24_1, ints_2));
     }
 
@@ -2322,12 +2322,12 @@ public class HardwareGround extends Ground {
     }
 
     @Override
-    public void method6713(Node_Sub24 class282_sub24_1, int[] ints_2) {
+    public void method6713(GLLight class282_sub24_1, int[] ints_2) {
         aClass473_8546.insertBack(new Node_Sub8(aGraphicalRenderer_Sub2_8528, this, class282_sub24_1, ints_2));
     }
 
     @Override
-    public void method6721(Node_Sub24 class282_sub24_1, int[] ints_2) {
+    public void method6721(GLLight class282_sub24_1, int[] ints_2) {
         aClass473_8546.insertBack(new Node_Sub8(aGraphicalRenderer_Sub2_8528, this, class282_sub24_1, ints_2));
     }
 

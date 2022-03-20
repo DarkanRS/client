@@ -33,16 +33,16 @@ public class Class152_Sub1_Sub2 extends Class152_Sub1 {
         OpenGL.glViewport(0, 0, aClass137_Sub2_10124.anInt9104, aClass137_Sub2_10124.anInt9104);
         aGraphicalRenderer_Sub1_10123.method13642(false);
         aGraphicalRenderer_Sub1_10123.method13620(false);
-        aGraphicalRenderer_Sub1_10123.method13656(false);
+        aGraphicalRenderer_Sub1_10123.enableDepthTest(false);
         aGraphicalRenderer_Sub1_10123.method13623(false);
         aGraphicalRenderer_Sub1_10123.method13581(-2);
-        aGraphicalRenderer_Sub1_10123.method13610(1);
+        aGraphicalRenderer_Sub1_10123.setActiveTexture(1);
         aGraphicalRenderer_Sub1_10123.method13635(0.0F, 0.0F, 0.0F, f_3);
         aGraphicalRenderer_Sub1_10123.method13717(34165, 34165);
-        aGraphicalRenderer_Sub1_10123.method13654(class137_sub2_2);
-        aGraphicalRenderer_Sub1_10123.method13610(0);
+        aGraphicalRenderer_Sub1_10123.setTexture(class137_sub2_2);
+        aGraphicalRenderer_Sub1_10123.setActiveTexture(0);
         aGraphicalRenderer_Sub1_10123.method13612(1);
-        aGraphicalRenderer_Sub1_10123.method13654(class137_sub2_1);
+        aGraphicalRenderer_Sub1_10123.setTexture(class137_sub2_1);
         aGraphicalRenderer_Sub1_10123.method8637(class158_sub1_sub4_5);
 
         for (int i_6 = 0; i_6 < 6; i_6++) {
@@ -146,11 +146,11 @@ public class Class152_Sub1_Sub2 extends Class152_Sub1 {
 
         class158_sub1_sub4_5.method13759(0, null);
         aGraphicalRenderer_Sub1_10123.method8416(class158_sub1_sub4_5);
-        aGraphicalRenderer_Sub1_10123.method13610(1);
-        aGraphicalRenderer_Sub1_10123.method13654(null);
+        aGraphicalRenderer_Sub1_10123.setActiveTexture(1);
+        aGraphicalRenderer_Sub1_10123.setTexture(null);
         aGraphicalRenderer_Sub1_10123.method13717(8448, 8448);
-        aGraphicalRenderer_Sub1_10123.method13610(0);
-        aGraphicalRenderer_Sub1_10123.method13654(null);
+        aGraphicalRenderer_Sub1_10123.setActiveTexture(0);
+        aGraphicalRenderer_Sub1_10123.setTexture(null);
         OpenGL.glPopAttrib();
         aGraphicalRenderer_Sub1_10123.r(anIntArray10125[0], anIntArray10125[1], anIntArray10125[2], anIntArray10125[3]);
         if (bool_4 && !aGraphicalRenderer_Sub1_10123.aBool8465) {

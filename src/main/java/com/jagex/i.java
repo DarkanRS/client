@@ -13,9 +13,9 @@ public class i extends Ground implements Interface40 {
     }
 
     @Override
-    public void method6721(Node_Sub24 class282_sub24_1, int[] ints_2) {
+    public void method6721(GLLight class282_sub24_1, int[] ints_2) {
         aClass482_7143.append(class282_sub24_1);
-        A(class282_sub24_1.hashCode(), class282_sub24_1.method12368(), class282_sub24_1.method12369(), class282_sub24_1.method12394(), class282_sub24_1.method12370(), class282_sub24_1.method12371(), ints_2);
+        A(class282_sub24_1.hashCode(), class282_sub24_1.getX(), class282_sub24_1.getY(), class282_sub24_1.getZ(), class282_sub24_1.method12370(), class282_sub24_1.getColor(), ints_2);
     }
 
     native void G(ja var1, ba var2, int var3, int var4, int[][] var5, int[][] var6, int var7, int var8, int var9);
@@ -227,8 +227,8 @@ public class i extends Ground implements Interface40 {
         int i_7 = 0;
         float[] floats_8 = new float[aClass482_7143.size()];
 
-        for (Node_Sub24 class282_sub24_9 = (Node_Sub24) aClass482_7143.head(); class282_sub24_9 != null; class282_sub24_9 = (Node_Sub24) aClass482_7143.next()) {
-            floats_8[i_7++] = class282_sub24_9.method12395();
+        for (GLLight class282_sub24_9 = (GLLight) aClass482_7143.head(); class282_sub24_9 != null; class282_sub24_9 = (GLLight) aClass482_7143.next()) {
+            floats_8[i_7++] = class282_sub24_9.getIntensity();
         }
 
         t(floats_8);
@@ -265,9 +265,9 @@ public class i extends Ground implements Interface40 {
     public native void u(Shadow var1, int var2, int var3, int var4);
 
     @Override
-    public void method6713(Node_Sub24 class282_sub24_1, int[] ints_2) {
+    public void method6713(GLLight class282_sub24_1, int[] ints_2) {
         aClass482_7143.append(class282_sub24_1);
-        A(class282_sub24_1.hashCode(), class282_sub24_1.method12368(), class282_sub24_1.method12369(), class282_sub24_1.method12394(), class282_sub24_1.method12370(), class282_sub24_1.method12371(), ints_2);
+        A(class282_sub24_1.hashCode(), class282_sub24_1.getX(), class282_sub24_1.getY(), class282_sub24_1.getZ(), class282_sub24_1.method12370(), class282_sub24_1.getColor(), ints_2);
     }
 
     native void A(int var1, int var2, int var3, int var4, int var5, int var6, int[] var7);
@@ -303,8 +303,8 @@ public class i extends Ground implements Interface40 {
         int i_7 = 0;
         float[] floats_8 = new float[aClass482_7143.size()];
 
-        for (Node_Sub24 class282_sub24_9 = (Node_Sub24) aClass482_7143.head(); class282_sub24_9 != null; class282_sub24_9 = (Node_Sub24) aClass482_7143.next()) {
-            floats_8[i_7++] = class282_sub24_9.method12395();
+        for (GLLight class282_sub24_9 = (GLLight) aClass482_7143.head(); class282_sub24_9 != null; class282_sub24_9 = (GLLight) aClass482_7143.next()) {
+            floats_8[i_7++] = class282_sub24_9.getIntensity();
         }
 
         t(floats_8);
@@ -351,18 +351,18 @@ public class i extends Ground implements Interface40 {
     public native void ma(boolean var1);
 
     @Override
-    public void method6720(Node_Sub24 class282_sub24_1, int[] ints_2) {
+    public void method6720(GLLight class282_sub24_1, int[] ints_2) {
         aClass482_7143.append(class282_sub24_1);
-        A(class282_sub24_1.hashCode(), class282_sub24_1.method12368(), class282_sub24_1.method12369(), class282_sub24_1.method12394(), class282_sub24_1.method12370(), class282_sub24_1.method12371(), ints_2);
+        A(class282_sub24_1.hashCode(), class282_sub24_1.getX(), class282_sub24_1.getY(), class282_sub24_1.getZ(), class282_sub24_1.method12370(), class282_sub24_1.getColor(), ints_2);
     }
 
     @Override
     public native void x(boolean var1);
 
     @Override
-    public void method6711(Node_Sub24 class282_sub24_1, int[] ints_2) {
+    public void method6711(GLLight class282_sub24_1, int[] ints_2) {
         aClass482_7143.append(class282_sub24_1);
-        A(class282_sub24_1.hashCode(), class282_sub24_1.method12368(), class282_sub24_1.method12369(), class282_sub24_1.method12394(), class282_sub24_1.method12370(), class282_sub24_1.method12371(), ints_2);
+        A(class282_sub24_1.hashCode(), class282_sub24_1.getX(), class282_sub24_1.getY(), class282_sub24_1.getZ(), class282_sub24_1.method12370(), class282_sub24_1.getColor(), ints_2);
     }
 
     @Override

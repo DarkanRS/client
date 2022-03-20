@@ -32,7 +32,7 @@ public class QuickchatMessageDefinitions extends CacheableNode {
 
     void decode(ByteBuf buffer, int opcode) {
         if (opcode == 1) {
-            message = MovingAnimation.method12681(buffer.readString(), '<');
+            message = MovingAnimation.split(buffer.readString(), '<');
         } else if (opcode == 2) {
             int i_4 = buffer.readUnsignedByte();
             responses = new int[i_4];

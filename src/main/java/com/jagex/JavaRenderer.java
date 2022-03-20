@@ -2002,7 +2002,7 @@ public class JavaRenderer extends AbstractRenderer {
     }
 
     @Override
-    public void method8547(int i_1, Node_Sub24[] arr_2) {
+    public void method8547(int i_1, GLLight[] arr_2) {
     }
 
     @Override
@@ -6769,11 +6769,11 @@ public class JavaRenderer extends AbstractRenderer {
     }
 
     @Override
-    public void method8426(int i_1, Node_Sub24[] arr_2) {
+    public void method8426(int i_1, GLLight[] arr_2) {
     }
 
     @Override
-    public void method8579(int i_1, Node_Sub24[] arr_2) {
+    public void method8579(int i_1, GLLight[] arr_2) {
     }
 
     @Override
@@ -6889,7 +6889,7 @@ public class JavaRenderer extends AbstractRenderer {
     }
 
     @Override
-    public void method8394(int i_1, Node_Sub24[] arr_2) {
+    public void method8394(int i_1, GLLight[] arr_2) {
     }
 
     @Override
@@ -7400,7 +7400,7 @@ public class JavaRenderer extends AbstractRenderer {
     }
 
     @Override
-    public Node_Sub24 method8593(int i_1, int i_2, int i_3, int i_4, int i_5) {
+    public GLLight method8593(int i_1, int i_2, int i_3, int i_4, int i_5) {
         return null;
     }
 

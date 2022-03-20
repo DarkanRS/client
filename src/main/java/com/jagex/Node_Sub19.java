@@ -4,7 +4,7 @@ public class Node_Sub19 extends Node {
 
     int anInt7646;
     OpenGLRenderer aGraphicalRenderer_Sub1_7650;
-    Node_Sub24 aNode_Sub24_7641;
+    GLLight aNode_Sub24_7641;
     OpenGLGround aGround_Sub2_7654;
     int anInt7642;
     int anInt7653;
@@ -22,15 +22,15 @@ public class Node_Sub19 extends Node {
     HashTable aClass453_7657;
     int anInt7640;
 
-    Node_Sub19(OpenGLRenderer class505_sub1_1, OpenGLGround class390_sub2_2, Node_Sub24 class282_sub24_3, int[] ints_4) {
+    Node_Sub19(OpenGLRenderer class505_sub1_1, OpenGLGround class390_sub2_2, GLLight class282_sub24_3, int[] ints_4) {
         aGraphicalRenderer_Sub1_7650 = class505_sub1_1;
         aNode_Sub24_7641 = class282_sub24_3;
         aGround_Sub2_7654 = class390_sub2_2;
         int i_5 = aNode_Sub24_7641.method12370() - (class390_sub2_2.tileUnits >> 1);
-        anInt7642 = aNode_Sub24_7641.method12368() - i_5 >> class390_sub2_2.tileScale;
-        anInt7653 = aNode_Sub24_7641.method12368() + i_5 >> class390_sub2_2.tileScale;
-        anInt7644 = aNode_Sub24_7641.method12394() - i_5 >> class390_sub2_2.tileScale;
-        anInt7656 = aNode_Sub24_7641.method12394() + i_5 >> class390_sub2_2.tileScale;
+        anInt7642 = aNode_Sub24_7641.getX() - i_5 >> class390_sub2_2.tileScale;
+        anInt7653 = aNode_Sub24_7641.getX() + i_5 >> class390_sub2_2.tileScale;
+        anInt7644 = aNode_Sub24_7641.getZ() - i_5 >> class390_sub2_2.tileScale;
+        anInt7656 = aNode_Sub24_7641.getZ() + i_5 >> class390_sub2_2.tileScale;
         int i_6 = anInt7653 - anInt7642 + 1;
         int i_7 = anInt7656 - anInt7644 + 1;
         aFloatArrayArray7652 = new float[i_6 + 1][i_7 + 1];
@@ -256,9 +256,9 @@ public class Node_Sub19 extends Node {
             f_15 = f_20 + (f_23 - f_20) * f_17;
         }
 
-        f_16 = (aNode_Sub24_7641.method12368() - i_9);
-        f_17 = (aNode_Sub24_7641.method12369() - i_11);
-        f_18 = (aNode_Sub24_7641.method12394() - i_10);
+        f_16 = (aNode_Sub24_7641.getX() - i_9);
+        f_17 = (aNode_Sub24_7641.getY() - i_11);
+        f_18 = (aNode_Sub24_7641.getZ() - i_10);
         f_19 = (float) Math.sqrt(f_16 * f_16 + f_17 * f_17 + f_18 * f_18);
         f_20 = 1.0F / f_19;
         f_16 *= f_20;
@@ -280,7 +280,7 @@ public class Node_Sub19 extends Node {
             f_24 = 1.0F;
         }
 
-        int i_25 = aNode_Sub24_7641.method12371();
+        int i_25 = aNode_Sub24_7641.getColor();
         int i_26 = (int) (f_24 * (i_25 >> 16 & 0xff));
         if (i_26 > 255) {
             i_26 = 255;
@@ -320,7 +320,7 @@ public class Node_Sub19 extends Node {
                     int i_7 = i_6 - i_1;
                     int i_8 = i_5 - i_2;
                     if (i_7 > -i_3 && i_7 < i_3 && i_8 > -i_3 && i_8 < i_3 && bools_4[i_3 + i_7][i_3 + i_8]) {
-                        aGraphicalRenderer_Sub1_7650.method13617((int) (aNode_Sub24_7641.method12395() * 255.0F) << 24);
+                        aGraphicalRenderer_Sub1_7650.method13617((int) (aNode_Sub24_7641.getIntensity() * 255.0F) << 24);
                         aGraphicalRenderer_Sub1_7650.method13647(aClass143_7647, null, aClass143_7643, null);
                         aGraphicalRenderer_Sub1_7650.method13611(anInterface15_7639, 0, anInt7640);
                         return;

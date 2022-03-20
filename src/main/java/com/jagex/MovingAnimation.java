@@ -10,22 +10,22 @@ public class MovingAnimation extends Animation {
         aTransform_Sub1_Sub1_Sub2_7892 = animable_1;
     }
 
-    public static String[] method12681(String string_0, char var_1) {
-        int i_3 = Class149.method2565(string_0, var_1);
-        String[] arr_4 = new String[i_3 + 1];
+    public static String[] split(String string, char character) {
+        int index = Class149.indexOf(string, character);
+        String[] arr_4 = new String[index + 1];
         int i_5 = 0;
         int i_6 = 0;
 
-        for (int i_7 = 0; i_7 < i_3; i_7++) {
+        for (int i_7 = 0; i_7 < index; i_7++) {
             int i_8;
-            for (i_8 = i_6; string_0.charAt(i_8) != var_1; i_8++) {
+            for (i_8 = i_6; string.charAt(i_8) != character; i_8++) {
             }
 
-            arr_4[i_5++] = string_0.substring(i_6, i_8);
+            arr_4[i_5++] = string.substring(i_6, i_8);
             i_6 = i_8 + 1;
         }
 
-        arr_4[i_3] = string_0.substring(i_6);
+        arr_4[index] = string.substring(i_6);
         return arr_4;
     }
 

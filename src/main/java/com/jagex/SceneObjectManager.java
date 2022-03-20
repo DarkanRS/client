@@ -46,7 +46,7 @@ public class SceneObjectManager {
     int anInt2634 = 10072;
     int anInt2643 = 1;
     float[] aFloatArray2639;
-    Node_Sub24[] aNode_Sub24Array2642;
+    GLLight[] aNode_Sub24Array2642;
     AbstractRenderer aAbstractRenderer_2596;
     boolean aBool2598;
     int anInt2593;
@@ -75,7 +75,7 @@ public class SceneObjectManager {
         anInt2618 = 5015;
         anInt2619 = 5040;
         aFloatArray2639 = new float[3];
-        aNode_Sub24Array2642 = new Node_Sub24[8];
+        aNode_Sub24Array2642 = new GLLight[8];
         anInt2643 = 1;
         aAbstractRenderer_2596 = renderer;
         aBool2598 = aAbstractRenderer_2596.method8463() > 0;
@@ -751,7 +751,7 @@ public class SceneObjectManager {
 
     public void method3430(Class287 class287_1) {
         if (anInt2615 < 65361) {
-            Node_Sub24 class282_sub24_3 = class287_1.aNode_Sub24_3425;
+            GLLight class282_sub24_3 = class287_1.aNode_Sub24_3425;
             aClass287Array2646[anInt2615] = class287_1;
             aBoolArray2647[anInt2615] = false;
             ++anInt2615;
@@ -765,18 +765,18 @@ public class SceneObjectManager {
             }
             for (int i_6 = i_4; i_6 <= i_5; i_6++) {
                 int i_7 = 0;
-                int i_8 = class282_sub24_3.method12394() - class282_sub24_3.method12370() + anInt2594 >> anInt2592;
+                int i_8 = class282_sub24_3.getZ() - class282_sub24_3.method12370() + anInt2594 >> anInt2592;
                 if (i_8 < 0) {
                     i_7 -= i_8;
                     i_8 = 0;
                 }
-                int i_9 = class282_sub24_3.method12394() + class282_sub24_3.method12370() - anInt2594 >> anInt2592;
+                int i_9 = class282_sub24_3.getZ() + class282_sub24_3.method12370() - anInt2594 >> anInt2592;
                 if (i_9 >= sizeY) {
                     i_9 = sizeY - 1;
                 }
                 for (int i_10 = i_8; i_10 <= i_9; i_10++) {
                     short s_11 = class287_1.aShortArray3429[i_7++];
-                    int i_12 = (class282_sub24_3.method12368() - class282_sub24_3.method12370() + anInt2594 >> anInt2592) + (s_11 >>> 8);
+                    int i_12 = (class282_sub24_3.getX() - class282_sub24_3.method12370() + anInt2594 >> anInt2592) + (s_11 >>> 8);
                     int i_13 = (s_11 & 0xff) + i_12 - 1;
                     if (i_12 < 0) {
                         i_12 = 0;
@@ -805,15 +805,15 @@ public class SceneObjectManager {
         for (int i_2 = 0; i_2 < anInt2615; i_2++) {
             if (!aBoolArray2647[i_2]) {
                 Class287 class287_3 = aClass287Array2646[i_2];
-                Node_Sub24 class282_sub24_4 = class287_3.aNode_Sub24_3425;
+                GLLight class282_sub24_4 = class287_3.aNode_Sub24_3425;
                 int i_5 = class287_3.anInt3419;
                 int i_6 = class282_sub24_4.method12370() - anInt2594;
                 int i_7 = (i_6 * 2 >> anInt2592) + 1;
                 int i_8 = 0;
                 int[] ints_9 = new int[i_7 * i_7];
-                int i_10 = class282_sub24_4.method12368() - i_6 >> anInt2592;
-                int i_11 = class282_sub24_4.method12394() - i_6 >> anInt2592;
-                int i_12 = class282_sub24_4.method12394() + i_6 >> anInt2592;
+                int i_10 = class282_sub24_4.getX() - i_6 >> anInt2592;
+                int i_11 = class282_sub24_4.getZ() - i_6 >> anInt2592;
+                int i_12 = class282_sub24_4.getZ() + i_6 >> anInt2592;
                 if (i_11 < 0) {
                     i_8 -= i_11;
                     i_11 = 0;
@@ -1306,7 +1306,7 @@ public class SceneObjectManager {
         return class293_5 == null ? null : class293_5.aClass208_3504;
     }
 
-    void method3508(GraphNode_Sub1 class521_sub1_1, Node_Sub24[] arr_2) {
+    void method3508(GraphNode_Sub1 class521_sub1_1, GLLight[] arr_2) {
         if (aBool2598) {
             int i_3 = class521_sub1_1.method13036(arr_2);
             aAbstractRenderer_2596.method8547(i_3, arr_2);

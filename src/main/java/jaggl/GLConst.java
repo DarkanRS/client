@@ -1,6 +1,11 @@
 package jaggl;
 
 public class GLConst {
+	public static final int GL_SRC0_RGB = 34176;
+	public static final int GL_OPERAND0_RGB = 34192;
+	public static final int GL_OPERAND0_ALPHA = 34200;
+	public static final int GL_SRC0_ALPHA = 34184;
+	public static final int GL_SUBTRACT = 34023;
 	public static final int GL_2D = 1536; // 0x600
 	public static final int GL_2_BYTES = 5127; // 0x1407
 	public static final int GL_3D = 1537; // 0x601
@@ -1812,4 +1817,9 @@ public class GLConst {
 	public static final int GL_COMBINE_RGB = 34162; // 0x8572
 	public static final int GL_INTERPOLATE = 34165; // 0x8575
 	public static final int GL_CONSTANT = 34166;
+	public static final int GL_MAX_TEXTURE_UNITS = 34018;
+	public static final int GL_MAX_TEXTURE_COORDS_ARB = 34929;
+	public static final int GL_PROGRAM_ALU_INSTRUCTIONS_ARB = 34930;
+	public static final int GL_PRIMARY_COLOR = 34167;
+	public static final int GL_PREVIOUS = 34168;
 }

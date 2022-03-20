@@ -29,7 +29,7 @@ public class Class28 implements Interface2 {
     }
 
     static void method776(IComponentDefinitions icomponentdefinitions_0) {
-        if (icomponentdefinitions_0.contentType == IComponentDefinitions.CONTENT_TYPE_328) {
+        if (icomponentdefinitions_0.contentType == ContentType.LOCAL_PLAYER_MODEL) {
             if (VertexNormal.MY_PLAYER.displayName == null) {
                 icomponentdefinitions_0.modelId = 0;
                 icomponentdefinitions_0.anInt1339 = 0;

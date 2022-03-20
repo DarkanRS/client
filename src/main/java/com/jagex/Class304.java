@@ -147,7 +147,7 @@ public class Class304 implements Interface27 {
     public void method187() {
         if (!aBool3572 && aFont3573 == null) {
             try {
-                String[] arr_3 = MovingAnimation.method12681(client.aString7157, ',');
+                String[] arr_3 = MovingAnimation.split(client.aString7157, ',');
                 if (arr_3.length != 23) {
                     aBool3572 = true;
                 }

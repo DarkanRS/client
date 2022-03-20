@@ -13,7 +13,7 @@ public class Class141_Sub5 extends Class141 {
         aClass136_9080 = class136_2;
         aClass138_9082 = new Class138(2);
         aClass138_9082.method2380(0);
-        aGraphicalRenderer_Sub1_1664.method13610(1);
+        aGraphicalRenderer_Sub1_1664.setActiveTexture(1);
         if (aClass136_9080.aBool1631) {
             OpenGL.glTexGeni(8194, 9472, 9217);
             OpenGL.glEnable(3170);
@@ -23,17 +23,17 @@ public class Class141_Sub5 extends Class141 {
         OpenGL.glTexGeni(8193, 9472, 9216);
         OpenGL.glEnable(3168);
         OpenGL.glEnable(3169);
-        aGraphicalRenderer_Sub1_1664.method13610(0);
+        aGraphicalRenderer_Sub1_1664.setActiveTexture(0);
         aClass138_9082.method2381();
         aClass138_9082.method2380(1);
-        aGraphicalRenderer_Sub1_1664.method13610(1);
+        aGraphicalRenderer_Sub1_1664.setActiveTexture(1);
         if (aClass136_9080.aBool1631) {
             OpenGL.glDisable(3170);
         }
 
         OpenGL.glDisable(3168);
         OpenGL.glDisable(3169);
-        aGraphicalRenderer_Sub1_1664.method13610(0);
+        aGraphicalRenderer_Sub1_1664.setActiveTexture(0);
         aClass138_9082.method2381();
     }
 
@@ -43,7 +43,7 @@ public class Class141_Sub5 extends Class141 {
         float f_4 = 5.0E-4F * ((i_1 >> 3 & 0x3) + 1);
         float f_5 = (i_1 & 0x40) == 0 ? 4.8828125E-4F : 9.765625E-4F;
         boolean bool_6 = (i_1 & 0x80) != 0;
-        aGraphicalRenderer_Sub1_1664.method13610(1);
+        aGraphicalRenderer_Sub1_1664.setActiveTexture(1);
         if (bool_6) {
             aFloatArray9084[0] = f_5;
             aFloatArray9084[1] = 0.0F;
@@ -63,7 +63,7 @@ public class Class141_Sub5 extends Class141 {
         OpenGL.glTexGenfv(8193, 9474, aFloatArray9084, 0);
         if (!aClass136_9080.aBool1631) {
             int i_7 = (int) (f_4 * aGraphicalRenderer_Sub1_1664.anInt8368 * 16.0F);
-            aGraphicalRenderer_Sub1_1664.method13654(aClass136_9080.aClass137_Sub1Array1634[i_7 % 16]);
+            aGraphicalRenderer_Sub1_1664.setTexture(aClass136_9080.aClass137_Sub1Array1634[i_7 % 16]);
         } else {
             aFloatArray9084[0] = 0.0F;
             aFloatArray9084[1] = 0.0F;
@@ -72,7 +72,7 @@ public class Class141_Sub5 extends Class141 {
             OpenGL.glTexGenfv(8194, 9473, aFloatArray9084, 0);
         }
 
-        aGraphicalRenderer_Sub1_1664.method13610(0);
+        aGraphicalRenderer_Sub1_1664.setActiveTexture(0);
     }
 
     @Override
@@ -88,9 +88,9 @@ public class Class141_Sub5 extends Class141 {
     void method2397(boolean bool_1) {
         aClass138_9082.method2379('\u0000');
         if (aClass136_9080.aBool1631) {
-            aGraphicalRenderer_Sub1_1664.method13610(1);
-            aGraphicalRenderer_Sub1_1664.method13654(aClass136_9080.aClass137_Sub4_1636);
-            aGraphicalRenderer_Sub1_1664.method13610(0);
+            aGraphicalRenderer_Sub1_1664.setActiveTexture(1);
+            aGraphicalRenderer_Sub1_1664.setTexture(aClass136_9080.aClass137_Sub4_1636);
+            aGraphicalRenderer_Sub1_1664.setActiveTexture(0);
         }
 
     }
@@ -101,14 +101,14 @@ public class Class141_Sub5 extends Class141 {
     }
 
     @Override
-    void method2394(Class137 class137_1, int i_2) {
-        aGraphicalRenderer_Sub1_1664.method13654(class137_1);
+    void method2394(GLTexture class137_1, int i_2) {
+        aGraphicalRenderer_Sub1_1664.setTexture(class137_1);
         aGraphicalRenderer_Sub1_1664.method13612(i_2);
     }
 
     @Override
-    void method2414(Class137 class137_1, int i_2) {
-        aGraphicalRenderer_Sub1_1664.method13654(class137_1);
+    void method2414(GLTexture class137_1, int i_2) {
+        aGraphicalRenderer_Sub1_1664.setTexture(class137_1);
         aGraphicalRenderer_Sub1_1664.method13612(i_2);
     }
 
@@ -116,9 +116,9 @@ public class Class141_Sub5 extends Class141 {
     void method2402(boolean bool_1) {
         aClass138_9082.method2379('\u0000');
         if (aClass136_9080.aBool1631) {
-            aGraphicalRenderer_Sub1_1664.method13610(1);
-            aGraphicalRenderer_Sub1_1664.method13654(aClass136_9080.aClass137_Sub4_1636);
-            aGraphicalRenderer_Sub1_1664.method13610(0);
+            aGraphicalRenderer_Sub1_1664.setActiveTexture(1);
+            aGraphicalRenderer_Sub1_1664.setTexture(aClass136_9080.aClass137_Sub4_1636);
+            aGraphicalRenderer_Sub1_1664.setActiveTexture(0);
         }
 
     }
@@ -127,9 +127,9 @@ public class Class141_Sub5 extends Class141 {
     void method2403(boolean bool_1) {
         aClass138_9082.method2379('\u0000');
         if (aClass136_9080.aBool1631) {
-            aGraphicalRenderer_Sub1_1664.method13610(1);
-            aGraphicalRenderer_Sub1_1664.method13654(aClass136_9080.aClass137_Sub4_1636);
-            aGraphicalRenderer_Sub1_1664.method13610(0);
+            aGraphicalRenderer_Sub1_1664.setActiveTexture(1);
+            aGraphicalRenderer_Sub1_1664.setTexture(aClass136_9080.aClass137_Sub4_1636);
+            aGraphicalRenderer_Sub1_1664.setActiveTexture(0);
         }
 
     }
@@ -137,9 +137,9 @@ public class Class141_Sub5 extends Class141 {
     @Override
     void method2398() {
         aClass138_9082.method2379('\u0001');
-        aGraphicalRenderer_Sub1_1664.method13610(1);
-        aGraphicalRenderer_Sub1_1664.method13654(null);
-        aGraphicalRenderer_Sub1_1664.method13610(0);
+        aGraphicalRenderer_Sub1_1664.setActiveTexture(1);
+        aGraphicalRenderer_Sub1_1664.setTexture(null);
+        aGraphicalRenderer_Sub1_1664.setActiveTexture(0);
     }
 
     @Override
@@ -157,9 +157,9 @@ public class Class141_Sub5 extends Class141 {
     @Override
     void method2411() {
         aClass138_9082.method2379('\u0001');
-        aGraphicalRenderer_Sub1_1664.method13610(1);
-        aGraphicalRenderer_Sub1_1664.method13654(null);
-        aGraphicalRenderer_Sub1_1664.method13610(0);
+        aGraphicalRenderer_Sub1_1664.setActiveTexture(1);
+        aGraphicalRenderer_Sub1_1664.setTexture(null);
+        aGraphicalRenderer_Sub1_1664.setActiveTexture(0);
     }
 
     @Override
@@ -168,7 +168,7 @@ public class Class141_Sub5 extends Class141 {
         float f_4 = 5.0E-4F * ((i_1 >> 3 & 0x3) + 1);
         float f_5 = (i_1 & 0x40) == 0 ? 4.8828125E-4F : 9.765625E-4F;
         boolean bool_6 = (i_1 & 0x80) != 0;
-        aGraphicalRenderer_Sub1_1664.method13610(1);
+        aGraphicalRenderer_Sub1_1664.setActiveTexture(1);
         if (bool_6) {
             aFloatArray9084[0] = f_5;
             aFloatArray9084[1] = 0.0F;
@@ -188,7 +188,7 @@ public class Class141_Sub5 extends Class141 {
         OpenGL.glTexGenfv(8193, 9474, aFloatArray9084, 0);
         if (!aClass136_9080.aBool1631) {
             int i_7 = (int) (f_4 * aGraphicalRenderer_Sub1_1664.anInt8368 * 16.0F);
-            aGraphicalRenderer_Sub1_1664.method13654(aClass136_9080.aClass137_Sub1Array1634[i_7 % 16]);
+            aGraphicalRenderer_Sub1_1664.setTexture(aClass136_9080.aClass137_Sub1Array1634[i_7 % 16]);
         } else {
             aFloatArray9084[0] = 0.0F;
             aFloatArray9084[1] = 0.0F;
@@ -197,7 +197,7 @@ public class Class141_Sub5 extends Class141 {
             OpenGL.glTexGenfv(8194, 9473, aFloatArray9084, 0);
         }
 
-        aGraphicalRenderer_Sub1_1664.method13610(0);
+        aGraphicalRenderer_Sub1_1664.setActiveTexture(0);
     }
 
     @Override
@@ -206,7 +206,7 @@ public class Class141_Sub5 extends Class141 {
         float f_4 = 5.0E-4F * ((i_1 >> 3 & 0x3) + 1);
         float f_5 = (i_1 & 0x40) == 0 ? 4.8828125E-4F : 9.765625E-4F;
         boolean bool_6 = (i_1 & 0x80) != 0;
-        aGraphicalRenderer_Sub1_1664.method13610(1);
+        aGraphicalRenderer_Sub1_1664.setActiveTexture(1);
         if (bool_6) {
             aFloatArray9084[0] = f_5;
             aFloatArray9084[1] = 0.0F;
@@ -226,7 +226,7 @@ public class Class141_Sub5 extends Class141 {
         OpenGL.glTexGenfv(8193, 9474, aFloatArray9084, 0);
         if (!aClass136_9080.aBool1631) {
             int i_7 = (int) (f_4 * aGraphicalRenderer_Sub1_1664.anInt8368 * 16.0F);
-            aGraphicalRenderer_Sub1_1664.method13654(aClass136_9080.aClass137_Sub1Array1634[i_7 % 16]);
+            aGraphicalRenderer_Sub1_1664.setTexture(aClass136_9080.aClass137_Sub1Array1634[i_7 % 16]);
         } else {
             aFloatArray9084[0] = 0.0F;
             aFloatArray9084[1] = 0.0F;
@@ -235,7 +235,7 @@ public class Class141_Sub5 extends Class141 {
             OpenGL.glTexGenfv(8194, 9473, aFloatArray9084, 0);
         }
 
-        aGraphicalRenderer_Sub1_1664.method13610(0);
+        aGraphicalRenderer_Sub1_1664.setActiveTexture(0);
     }
 
     @Override
@@ -244,7 +244,7 @@ public class Class141_Sub5 extends Class141 {
         float f_4 = 5.0E-4F * ((i_1 >> 3 & 0x3) + 1);
         float f_5 = (i_1 & 0x40) == 0 ? 4.8828125E-4F : 9.765625E-4F;
         boolean bool_6 = (i_1 & 0x80) != 0;
-        aGraphicalRenderer_Sub1_1664.method13610(1);
+        aGraphicalRenderer_Sub1_1664.setActiveTexture(1);
         if (bool_6) {
             aFloatArray9084[0] = f_5;
             aFloatArray9084[1] = 0.0F;
@@ -264,7 +264,7 @@ public class Class141_Sub5 extends Class141 {
         OpenGL.glTexGenfv(8193, 9474, aFloatArray9084, 0);
         if (!aClass136_9080.aBool1631) {
             int i_7 = (int) (f_4 * aGraphicalRenderer_Sub1_1664.anInt8368 * 16.0F);
-            aGraphicalRenderer_Sub1_1664.method13654(aClass136_9080.aClass137_Sub1Array1634[i_7 % 16]);
+            aGraphicalRenderer_Sub1_1664.setTexture(aClass136_9080.aClass137_Sub1Array1634[i_7 % 16]);
         } else {
             aFloatArray9084[0] = 0.0F;
             aFloatArray9084[1] = 0.0F;
@@ -273,7 +273,7 @@ public class Class141_Sub5 extends Class141 {
             OpenGL.glTexGenfv(8194, 9473, aFloatArray9084, 0);
         }
 
-        aGraphicalRenderer_Sub1_1664.method13610(0);
+        aGraphicalRenderer_Sub1_1664.setActiveTexture(0);
     }
 
     @Override
@@ -281,20 +281,20 @@ public class Class141_Sub5 extends Class141 {
     }
 
     @Override
-    void method2412(Class137 class137_1, int i_2) {
-        aGraphicalRenderer_Sub1_1664.method13654(class137_1);
+    void method2412(GLTexture class137_1, int i_2) {
+        aGraphicalRenderer_Sub1_1664.setTexture(class137_1);
         aGraphicalRenderer_Sub1_1664.method13612(i_2);
     }
 
     @Override
-    void method2413(Class137 class137_1, int i_2) {
-        aGraphicalRenderer_Sub1_1664.method13654(class137_1);
+    void method2413(GLTexture class137_1, int i_2) {
+        aGraphicalRenderer_Sub1_1664.setTexture(class137_1);
         aGraphicalRenderer_Sub1_1664.method13612(i_2);
     }
 
     @Override
-    void method2400(Class137 class137_1, int i_2) {
-        aGraphicalRenderer_Sub1_1664.method13654(class137_1);
+    void method2400(GLTexture class137_1, int i_2) {
+        aGraphicalRenderer_Sub1_1664.setTexture(class137_1);
         aGraphicalRenderer_Sub1_1664.method13612(i_2);
     }
 
