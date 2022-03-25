@@ -21,9 +21,4 @@ public class Class244 {
             client.aBool7269 = true;
         }
     }
-
-    public static void method4196(int i_0) {
-        PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(22, i_0);
-        class282_sub50_sub12_2.method14965();
-    }
 }

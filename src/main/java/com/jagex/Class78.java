@@ -140,9 +140,4 @@ public class Class78 {
             }
         }
     }
-
-    public static void method1389(int i_0) {
-        PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(7, i_0);
-        class282_sub50_sub12_2.method14965();
-    }
 }

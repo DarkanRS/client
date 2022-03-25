@@ -49,7 +49,7 @@ public class LRUCache {
             }
             CacheableNode_Sub1_Sub1 class282_sub50_sub1_sub1_7 = new CacheableNode_Sub1_Sub1(object_1, i_4);
             aClass465_2854.put(class282_sub50_sub1_sub1_7, long_2);
-            aClass477_2855.method7936(class282_sub50_sub1_sub1_7);
+            aClass477_2855.add(class282_sub50_sub1_sub1_7);
             class282_sub50_sub1_sub1_7.key = 0L;
         }
     }
@@ -129,12 +129,12 @@ public class LRUCache {
                 if (class282_sub50_sub1_3.method14691()) {
                     CacheableNode_Sub1_Sub1 class282_sub50_sub1_sub1_5 = new CacheableNode_Sub1_Sub1(object_4, class282_sub50_sub1_3.anInt9451);
                     aClass465_2854.put(class282_sub50_sub1_sub1_5, class282_sub50_sub1_3.pointer);
-                    aClass477_2855.method7936(class282_sub50_sub1_sub1_5);
+                    aClass477_2855.add(class282_sub50_sub1_sub1_5);
                     class282_sub50_sub1_sub1_5.key = 0L;
                     class282_sub50_sub1_3.unlink();
                     class282_sub50_sub1_3.method13452();
                 } else {
-                    aClass477_2855.method7936(class282_sub50_sub1_3);
+                    aClass477_2855.add(class282_sub50_sub1_3);
                     class282_sub50_sub1_3.key = 0L;
                 }
                 return object_4;

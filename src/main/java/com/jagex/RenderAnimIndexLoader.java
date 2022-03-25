@@ -45,11 +45,6 @@ public class RenderAnimIndexLoader {
         }
     }
 
-    public static void method3631(int i_0) {
-        PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(3, i_0);
-        class282_sub50_sub12_2.method14965();
-    }
-
     public void method3615() {
         LRUCache softcache_3 = renderAnimCache;
         synchronized (renderAnimCache) {

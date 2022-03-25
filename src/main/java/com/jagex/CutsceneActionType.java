@@ -75,11 +75,6 @@ public class CutsceneActionType {
         Class244.aBool3007 = true;
     }
 
-    public static void method6914(int i_0) {
-        PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(9, i_0);
-        class282_sub50_sub12_2.method14965();
-    }
-
     public static Class350 method6915(ByteBuf rsbytebuffer_0) {
         Class350 class350_2 = Class383.method6512(rsbytebuffer_0);
         int i_3 = rsbytebuffer_0.readInt();

@@ -2,8 +2,8 @@ package com.jagex;
 
 public class Class187 {
 
-    public static int anInt2361 = -1;
-    public static int anInt2359 = -1;
+    public static int MINIMAP_FLAG_X = -1;
+    public static int MINIMAP_FLAG_Y = -1;
     static boolean aBool2358;
     static boolean aBool2352;
     static int anInt2351 = -1;
@@ -12,7 +12,7 @@ public class Class187 {
     static int[] anIntArray2355 = new int[1001];
     static int[] anIntArray2357 = new int[1010];
     static NodeCollection aClass482_2350 = new NodeCollection();
-    static boolean aBool2360 = true;
+    static boolean MINIMAP_FLAG_IS_OVERRIDE = true;
 
     static boolean aBool2356;
 

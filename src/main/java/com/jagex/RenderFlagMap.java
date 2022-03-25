@@ -57,11 +57,6 @@ public class RenderFlagMap {
         }
     }
 
-    public static void method5513(int i_0, int i_1) {
-        PulseEvent class282_sub50_sub12_3 = PulseEvent.createPulseEvent(18, (long) i_1 << 32 | i_0);
-        class282_sub50_sub12_3.method14965();
-    }
-
     public void reset() {
         for (int i_2 = 0; i_2 < tileMasks.length; i_2++) {
             for (int i_3 = 0; i_3 < tileMasks[0].length; i_3++) {

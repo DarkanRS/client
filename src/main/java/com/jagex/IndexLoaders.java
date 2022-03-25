@@ -402,7 +402,7 @@ public class IndexLoaders {
                 ParticleProducer.switchRenderType(Class393.preferences.toolKit.getValue(), false);
             }
 
-            UID192.method7373(Class393.preferences.screenSize.method12687(), -1, -1);
+            UID192.method7373(Class393.preferences.screenSize.getValue(), -1, -1);
             Class487.aClass378_5752.method6403(client.anInterface35_7206);
             EditMemberSetting.method15476();
             Class188.method3139(Renderers.CURRENT_RENDERER, SPRITES_INDEX);

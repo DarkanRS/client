@@ -86,7 +86,7 @@ public class Class291 {
 
         for (WorldMapDef class282_sub50_sub6_3 = (WorldMapDef) aClass465_3461.method7750(); class282_sub50_sub6_3 != null; class282_sub50_sub6_3 = (WorldMapDef) aClass465_3461.method7751()) {
             if (class282_sub50_sub6_3.aBool9543 && class282_sub50_sub6_3.method14784(i_0, i_1)) {
-                class477_2.method7936(class282_sub50_sub6_3);
+                class477_2.add(class282_sub50_sub6_3);
             }
         }
 

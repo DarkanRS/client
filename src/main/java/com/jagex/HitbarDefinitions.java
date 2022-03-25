@@ -55,10 +55,10 @@ public class HitbarDefinitions {
                 Renderers.CURRENT_RENDERER.method8425(i_01, i_13, i_21, i_31, -16777216);
             } else {
                 ++client.anInt7286;
-                if (VertexNormal.MY_PLAYER != null && (int) vector3_6.x - (VertexNormal.MY_PLAYER.getSize() - 1) * 256 >> 9 == Class187.anInt2361 && (int) vector3_6.z - (VertexNormal.MY_PLAYER.getSize() - 1) * 256 >> 9 == Class187.anInt2359) {
-                    Class187.anInt2361 = -1;
-                    Class187.anInt2359 = -1;
-                    MaterialProp28.method15255();
+                if (VertexNormal.MY_PLAYER != null && (int) vector3_6.x - (VertexNormal.MY_PLAYER.getSize() - 1) * 256 >> 9 == Class187.MINIMAP_FLAG_X && (int) vector3_6.z - (VertexNormal.MY_PLAYER.getSize() - 1) * 256 >> 9 == Class187.MINIMAP_FLAG_Y) {
+                    Class187.MINIMAP_FLAG_X = -1;
+                    Class187.MINIMAP_FLAG_Y = -1;
+                    PulseEvent.method15255();
                 }
                 Class52_Sub3.method14519();
                 if (!bool_4) {

@@ -52,7 +52,7 @@ public class FontRenderer_Sub3 extends FontRenderer {
 
     static void method14341() {
         PulseEvent.aClass465_9667.method7749();
-        PulseEvent.aClass477_9655.method7935();
+        PulseEvent.PULSE_EVENT_QUEUE.method7935();
         PulseEvent.aClass477_9666.method7935();
     }
 

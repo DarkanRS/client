@@ -99,11 +99,11 @@ public class ObjectDefinition {
             class282_sub50_sub12_1.method13452();
         } else {
             do {
-                class282_sub50_sub12_1 = (PulseEvent) PulseEvent.aClass477_9655.method7941();
+                class282_sub50_sub12_1 = (PulseEvent) PulseEvent.PULSE_EVENT_QUEUE.method7941();
                 if (class282_sub50_sub12_1 == null) {
                     return null;
                 }
-                if (class282_sub50_sub12_1.method14955() > Utils.time()) {
+                if (class282_sub50_sub12_1.getTime() > Utils.time()) {
                     return null;
                 }
                 class282_sub50_sub12_1.unlink();

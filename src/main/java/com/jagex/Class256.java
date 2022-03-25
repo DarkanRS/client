@@ -58,8 +58,8 @@ public class Class256 {
 
     static void method4416() {
         Class187.anInt2363 = 0;
-        Class187.anInt2361 = -1;
-        Class187.anInt2359 = -1;
+        Class187.MINIMAP_FLAG_X = -1;
+        Class187.MINIMAP_FLAG_Y = -1;
     }
 
     public boolean method4401() {

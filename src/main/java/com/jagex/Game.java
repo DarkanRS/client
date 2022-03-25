@@ -21,9 +21,4 @@ public class Game {
     public static void method8204(int i_0) {
         HintTrail.anInt3376 = i_0;
     }
-
-    public static void method8207(int i_0) {
-        PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(16, i_0);
-        class282_sub50_sub12_2.method14965();
-    }
 }

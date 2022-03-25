@@ -1040,7 +1040,7 @@ public class client extends Engine {
 							}
 						}
 
-						boolean bool_47 = iCompDef.clickMask && iCompDef.type == ComponentType.SPRITE && iCompDef.transparency == 0 && iCompDef.anInt1404 < 0 && iCompDef.containerItemId == -1 && iCompDef.anInt1435 == -1 && !iCompDef.tiling && iCompDef.angle2d == 0;
+						boolean bool_47 = iCompDef.clickMask && iCompDef.type == ComponentType.SPRITE && iCompDef.transparency == 0 && iCompDef.anInt1404 < 0 && iCompDef.containerItemId == -1 && iCompDef.vorbisStringId == -1 && !iCompDef.tiling && iCompDef.angle2d == 0;
 						boolean bool_48 = false;
 						int i_24;
 						if (mouseX >= leftBound && mouseY >= lowerBound && mouseX < rightBound && mouseY < upperBound) {
@@ -2088,7 +2088,7 @@ public class client extends Engine {
 			}
 
 			if (Class475.supportsFullScreen && fullScreenFrame != null && !IFSubObjectPosition.appletHasFocus && GameState.method2980(GAME_STATE)) {
-				UID192.method7373(Class393.preferences.screenSize.method12687(), -1, -1);
+				UID192.method7373(Class393.preferences.screenSize.getValue(), -1, -1);
 			}
 
 			boolean bool_9 = false;

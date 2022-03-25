@@ -27,7 +27,7 @@ public class Class507 {
             }
         }
         if (desiredScreenMode == 3 && (!Class475.supportsFullScreen || client.fullScreenFrame == null)) {
-            method8725(currentScreenMode, Class393.preferences.screenSize.method12687(), -1, -1, true);
+            method8725(currentScreenMode, Class393.preferences.screenSize.getValue(), -1, -1, true);
         } else {
             Container container_6 = Class371.getActiveContainer();
             Insets insets_7;

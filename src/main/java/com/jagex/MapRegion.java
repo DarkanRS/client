@@ -64,10 +64,10 @@ public class MapRegion {
                 if (i_7 < 1) {
                     return false;
                 } else {
-                    Class187.anInt2361 = client.walkStepsX[i_7 - 1];
-                    Class187.anInt2359 = client.walkStepsY[i_7 - 1];
-                    Class187.aBool2360 = false;
-                    MaterialProp28.method15255();
+                    Class187.MINIMAP_FLAG_X = client.walkStepsX[i_7 - 1];
+                    Class187.MINIMAP_FLAG_Y = client.walkStepsY[i_7 - 1];
+                    Class187.MINIMAP_FLAG_IS_OVERRIDE = false;
+                    PulseEvent.method15255();
                     return true;
                 }
             } else {
@@ -95,12 +95,6 @@ public class MapRegion {
             KeyHoldInputSubscriber.method3922(ints_12, i_0, i_9, i_4);
             KeyHoldInputSubscriber.method3922(ints_12, i_10, i_1, i_4);
         }
-    }
-
-    static void method4562(int i_0, String string_1) {
-        PulseEvent class282_sub50_sub12_3 = PulseEvent.createPulseEvent(2, i_0);
-        class282_sub50_sub12_3.immediate();
-        class282_sub50_sub12_3.string = string_1;
     }
 
     public static Class350 method4564(ByteBuf rsbytebuffer_0) {
@@ -631,9 +625,9 @@ public class MapRegion {
                 }
             }
         }
-        if (Class187.anInt2361 != 0) {
-            Class187.anInt2361 -= i_3;
-            Class187.anInt2359 -= i_4;
+        if (Class187.MINIMAP_FLAG_X != 0) {
+            Class187.MINIMAP_FLAG_X -= i_3;
+            Class187.MINIMAP_FLAG_Y -= i_4;
         }
         Class16.method566();
         ClipFlagMap.method6008(false);

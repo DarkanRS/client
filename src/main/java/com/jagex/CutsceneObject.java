@@ -49,11 +49,6 @@ public class CutsceneObject {
         }
     }
 
-    public static void method1565(int i_0) {
-        PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(4, i_0);
-        class282_sub50_sub12_2.method14965();
-    }
-
     boolean method1557() {
         if (objectId < 0) {
             return true;

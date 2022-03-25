@@ -73,6 +73,19 @@ public class PacketDecoder {
         context.thirdLastPacket = context.secondLastPacket;
         context.secondLastPacket = context.lastPacket;
         context.lastPacket = context.currentPacket;
+//        switch(context.currentPacket) {
+//        case PING:
+//        case NPC_UPDATE:
+//        case RUN_ENERGY:
+//        case PLAYER_UPDATE:
+//        case UPDATE_STAT:
+//        case MUSIC_TRACK:
+//        	break;
+//		default:
+//			System.out.println("Incoming packet: " + context.currentPacket);
+//			break;
+//        
+//        }
         if (context.currentPacket == ServerProt.IF_SETMODEL) {
             int key = buffer.readInt();
             int flags = buffer.readIntV2();
@@ -173,7 +186,7 @@ public class PacketDecoder {
             String string_63 = buffer.readString();
             int flags = buffer.readIntV1();
             Class470.method7825();
-            SunDefinitions.setComponentText(flags, string_63);
+            PulseEvent.setComponentText(flags, string_63);
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.IF_OPENTOP) {
@@ -214,7 +227,7 @@ public class PacketDecoder {
             String string_63 = buffer.readString();
             int flags = buffer.readUnsignedShortLE128();
             Class470.method7825();
-            MapRegion.method4562(flags, string_63);
+            PulseEvent.method4562(flags, string_63);
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.IF_SETSCROLLPOS) {
@@ -502,7 +515,7 @@ public class PacketDecoder {
             return true;
         } else if (context.currentPacket == ServerProt.OPEN_URL) {
             if (Class475.supportsFullScreen && client.fullScreenFrame != null) {
-                UID192.method7373(Class393.preferences.screenSize.method12687(), -1, -1);
+                UID192.method7373(Class393.preferences.screenSize.getValue(), -1, -1);
             }
             byte[] bytes = new byte[context.currentPacketSize - 1];
             boolean bool_66 = buffer.readUnsignedByte() == 1;
@@ -2141,7 +2154,7 @@ public class PacketDecoder {
             int key = buffer.readShortLE();
             String string_88 = buffer.readString();
             Class470.method7825();
-            MapRegion.method4562(key, string_88);
+            PulseEvent.method4562(key, string_88);
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.NPC_UPDATE) {
@@ -2272,7 +2285,7 @@ public class PacketDecoder {
             return true;
         } else if (context.currentPacket == ServerProt.aClass375_4437) {
             if (Class475.supportsFullScreen && client.fullScreenFrame != null) {
-                UID192.method7373(Class393.preferences.screenSize.method12687(), -1, -1);
+                UID192.method7373(Class393.preferences.screenSize.getValue(), -1, -1);
             }
             byte[] bytes_64 = new byte[context.currentPacketSize];
             buffer.readBytes(bytes_64, context.currentPacketSize);
@@ -2283,7 +2296,7 @@ public class PacketDecoder {
             }
             context.currentPacket = null;
             return true;
-        } else if (context.currentPacket == ServerProt.OUTDATED_INTERFACE_PULSE_EVENT) {
+        } else if (context.currentPacket == ServerProt.DEPRECATED_PULSE_EVENT) {
             int key = buffer.readUnsignedShort128();
             int flags = buffer.readIntV2();
             int i_6 = buffer.readShortLE();

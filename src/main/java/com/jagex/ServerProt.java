@@ -100,7 +100,7 @@ public enum ServerProt {
     aClass375_3828(93, 11), //play sound song but with specific volume or something?
     VARCLAN_DISABLE(94, 0),
     MAP_PROJANIM_HALFSQ(95, 17),
-    OUTDATED_INTERFACE_PULSE_EVENT(96, 8),
+    DEPRECATED_PULSE_EVENT(96, 8),
     UPDATE_IGNORE_LIST(97, -2),
     REFLECTION_CHECK(98, -2),
     RUN_CS2_SCRIPT(99, -2),

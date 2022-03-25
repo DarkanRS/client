@@ -15,8 +15,8 @@ public class Preference_Sub7 extends Preference {
     }
 
     public void method12663() {
-        if (anInt5578 < 0 || anInt5578 > 2) {
-            anInt5578 = getDefaultValue();
+        if (value < 0 || value > 2) {
+            value = getDefaultValue();
         }
 
     }
@@ -31,16 +31,16 @@ public class Preference_Sub7 extends Preference {
     }
 
     public int method12666() {
-        return anInt5578;
+        return value;
     }
 
     void method7780(int i_1) {
-        anInt5578 = -754033619 * i_1 * -859024475;
+        value = -754033619 * i_1 * -859024475;
     }
 
     @Override
     void setValue(int i_1) {
-        anInt5578 = i_1;
+        value = i_1;
     }
 
     int method7786() {

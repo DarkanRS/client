@@ -68,11 +68,11 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
                         return;
                     }
 
-                    extras.method7936(class282_sub50_sub11_sub1_4);
+                    extras.add(class282_sub50_sub11_sub1_4);
                 }
             }
 
-            priorities.method7936(class282_sub50_sub11_sub1_4);
+            priorities.add(class282_sub50_sub11_sub1_4);
         }
     }
 
@@ -245,7 +245,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
                     aNode_Sub35_3655.writeByte(1);
                     aNode_Sub35_3655.method13204(class282_sub50_sub11_sub1_2.key * 5418180015864004923L * -7883876913471066125L);
                     aClass202_7778.write(aNode_Sub35_3655.buffer, aNode_Sub35_3655.buffer.length);
-                    waitingPriorities.method7936(class282_sub50_sub11_sub1_2);
+                    waitingPriorities.add(class282_sub50_sub11_sub1_2);
                 }
 
                 for (class282_sub50_sub11_sub1_2 = (PaddedJS5Request) extras.method7941(); class282_sub50_sub11_sub1_2 != null; class282_sub50_sub11_sub1_2 = (PaddedJS5Request) extras.method7955()) {
@@ -253,7 +253,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
                     aNode_Sub35_3655.writeByte(0);
                     aNode_Sub35_3655.method13204(class282_sub50_sub11_sub1_2.key * 5418180015864004923L * -7883876913471066125L);
                     aClass202_7778.write(aNode_Sub35_3655.buffer, aNode_Sub35_3655.buffer.length);
-                    waitingExtras.method7936(class282_sub50_sub11_sub1_2);
+                    waitingExtras.add(class282_sub50_sub11_sub1_2);
                 }
 
                 for (int i_17 = 0; i_17 < 100; i_17++) {
@@ -413,7 +413,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
                     aNode_Sub35_3655.writeByte(1);
                     aNode_Sub35_3655.method13204(class282_sub50_sub11_sub1_2.key * 5418180015864004923L * -7883876913471066125L);
                     aClass202_7778.write(aNode_Sub35_3655.buffer, aNode_Sub35_3655.buffer.length);
-                    waitingPriorities.method7936(class282_sub50_sub11_sub1_2);
+                    waitingPriorities.add(class282_sub50_sub11_sub1_2);
                 }
 
                 for (class282_sub50_sub11_sub1_2 = (PaddedJS5Request) extras.method7941(); class282_sub50_sub11_sub1_2 != null; class282_sub50_sub11_sub1_2 = (PaddedJS5Request) extras.method7955()) {
@@ -421,7 +421,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
                     aNode_Sub35_3655.writeByte(0);
                     aNode_Sub35_3655.method13204(class282_sub50_sub11_sub1_2.key * 5418180015864004923L * -7883876913471066125L);
                     aClass202_7778.write(aNode_Sub35_3655.buffer, aNode_Sub35_3655.buffer.length);
-                    waitingExtras.method7936(class282_sub50_sub11_sub1_2);
+                    waitingExtras.add(class282_sub50_sub11_sub1_2);
                 }
 
                 for (int i_17 = 0; i_17 < 100; i_17++) {
@@ -618,11 +618,11 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
                         return;
                     }
 
-                    extras.method7936(class282_sub50_sub11_sub1_3);
+                    extras.add(class282_sub50_sub11_sub1_3);
                 }
             }
 
-            priorities.method7936(class282_sub50_sub11_sub1_3);
+            priorities.add(class282_sub50_sub11_sub1_3);
         }
     }
 
@@ -673,11 +673,11 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
                         return;
                     }
 
-                    extras.method7936(class282_sub50_sub11_sub1_3);
+                    extras.add(class282_sub50_sub11_sub1_3);
                 }
             }
 
-            priorities.method7936(class282_sub50_sub11_sub1_3);
+            priorities.add(class282_sub50_sub11_sub1_3);
         }
     }
 
@@ -713,7 +713,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
                     aNode_Sub35_3655.writeByte(1);
                     aNode_Sub35_3655.method13204(class282_sub50_sub11_sub1_3.key);
                     aClass202_7778.write(aNode_Sub35_3655.buffer, aNode_Sub35_3655.buffer.length);
-                    waitingPriorities.method7936(class282_sub50_sub11_sub1_3);
+                    waitingPriorities.add(class282_sub50_sub11_sub1_3);
                 }
 
                 for (class282_sub50_sub11_sub1_3 = (PaddedJS5Request) extras.method7941(); class282_sub50_sub11_sub1_3 != null; class282_sub50_sub11_sub1_3 = (PaddedJS5Request) extras.method7955()) {
@@ -721,7 +721,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
                     aNode_Sub35_3655.writeByte(0);
                     aNode_Sub35_3655.method13204(class282_sub50_sub11_sub1_3.key);
                     aClass202_7778.write(aNode_Sub35_3655.buffer, aNode_Sub35_3655.buffer.length);
-                    waitingExtras.method7936(class282_sub50_sub11_sub1_3);
+                    waitingExtras.add(class282_sub50_sub11_sub1_3);
                 }
 
                 for (int i_18 = 0; i_18 < 100; i_18++) {
@@ -889,7 +889,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
                     aNode_Sub35_3655.writeByte(1);
                     aNode_Sub35_3655.method13204(class282_sub50_sub11_sub1_2.key * 5418180015864004923L * -7883876913471066125L);
                     aClass202_7778.write(aNode_Sub35_3655.buffer, aNode_Sub35_3655.buffer.length);
-                    waitingPriorities.method7936(class282_sub50_sub11_sub1_2);
+                    waitingPriorities.add(class282_sub50_sub11_sub1_2);
                 }
 
                 for (class282_sub50_sub11_sub1_2 = (PaddedJS5Request) extras.method7941(); class282_sub50_sub11_sub1_2 != null; class282_sub50_sub11_sub1_2 = (PaddedJS5Request) extras.method7955()) {
@@ -897,7 +897,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
                     aNode_Sub35_3655.writeByte(0);
                     aNode_Sub35_3655.method13204(class282_sub50_sub11_sub1_2.key * 5418180015864004923L * -7883876913471066125L);
                     aClass202_7778.write(aNode_Sub35_3655.buffer, aNode_Sub35_3655.buffer.length);
-                    waitingExtras.method7936(class282_sub50_sub11_sub1_2);
+                    waitingExtras.add(class282_sub50_sub11_sub1_2);
                 }
 
                 for (int i_17 = 0; i_17 < 100; i_17++) {

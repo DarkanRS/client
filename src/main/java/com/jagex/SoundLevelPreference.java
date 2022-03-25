@@ -11,8 +11,8 @@ public class SoundLevelPreference extends Preference {
     }
 
     public void method12712() {
-        if (anInt5578 < 0 && anInt5578 > 127) {
-            anInt5578 = getDefaultValue();
+        if (value < 0 && value > 127) {
+            value = getDefaultValue();
         }
     }
 
@@ -23,11 +23,11 @@ public class SoundLevelPreference extends Preference {
 
     @Override
     void setValue(int i_1) {
-        anInt5578 = i_1;
+        value = i_1;
     }
 
     public int method12714() {
-        return anInt5578;
+        return value;
     }
 
     int method7786() {
@@ -48,6 +48,6 @@ public class SoundLevelPreference extends Preference {
     }
 
     void method7780(int i_1) {
-        anInt5578 = -754033619 * i_1 * -859024475;
+        value = -754033619 * i_1 * -859024475;
     }
 }

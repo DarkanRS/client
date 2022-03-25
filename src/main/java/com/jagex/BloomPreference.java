@@ -17,11 +17,6 @@ public class BloomPreference extends Preference {
         Class9.aString99 = "";
     }
 
-    public static void method12709(int i_0) {
-        PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(12, i_0);
-        class282_sub50_sub12_2.method14965();
-    }
-
     public static void method12710(int i_0) {
         Node_Sub14.anInt7597 = i_0;
         IComponentDefinitions.aClass229_1341.method3859();
@@ -29,11 +24,11 @@ public class BloomPreference extends Preference {
 
     public void method12703() {
         if (manager.currentToolkit.method12777() && !Class60.method1166(manager.currentToolkit.getValue())) {
-            anInt5578 = 0;
+            value = 0;
         }
 
-        if (anInt5578 < 0 || anInt5578 > 1) {
-            anInt5578 = getDefaultValue();
+        if (value < 0 || value > 1) {
+            value = getDefaultValue();
         }
 
     }
@@ -45,11 +40,11 @@ public class BloomPreference extends Preference {
 
     @Override
     void setValue(int i_1) {
-        anInt5578 = i_1;
+        value = i_1;
     }
 
     public int method12706() {
-        return anInt5578;
+        return value;
     }
 
     public int method7784() {
@@ -57,7 +52,7 @@ public class BloomPreference extends Preference {
     }
 
     void method7780(int i_1) {
-        anInt5578 = -754033619 * i_1 * -859024475;
+        value = -754033619 * i_1 * -859024475;
     }
 
     int method7786() {

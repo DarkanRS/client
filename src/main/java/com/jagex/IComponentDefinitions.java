@@ -160,7 +160,7 @@ public class IComponentDefinitions {
     public int anInt1427;
     public boolean wearCol;
     public int anInt1404;
-    public int anInt1435;
+    public int vorbisStringId;
     public boolean aBool1440;
     public boolean aBool1286;
     public int anInt1442;
@@ -193,7 +193,7 @@ public class IComponentDefinitions {
         anInt1427 = 0;
         wearCol = false;
         anInt1404 = -1;
-        anInt1435 = -1;
+        vorbisStringId = -1;
         animation = -1;
         aBool1440 = false;
         aBool1286 = false;
@@ -1119,8 +1119,8 @@ public class IComponentDefinitions {
 	                                            string_35 = Utils.rgbToColHexShortcut(16748608) + string_35 + "</col>" + " x" + Class488.method8210(inter.anInt1427);
 	                                        }
 	                                    }
-	                                    if (inter.anInt1435 != -1) {
-	                                        string_35 = Class148.method2550(inter.anInt1435);
+	                                    if (inter.vorbisStringId != -1) {
+	                                        string_35 = Class148.method2550(inter.vorbisStringId);
 	                                        if (string_35 == null) {
 	                                            string_35 = "";
 	                                        }
@@ -1152,8 +1152,8 @@ public class IComponentDefinitions {
 	                                        if (inter.containerItemId != -1) {
 	                                            PlayerModel playerappearance_34 = inter.wearCol ? VertexNormal.MY_PLAYER.model : null;
 	                                            nativesprite_41 = IndexLoaders.ITEM_LOADER.softwareRender(Renderers.CURRENT_RENDERER, inter.containerItemId, inter.anInt1427, inter.borderThickness, -16777216 | inter.spriteShadow, inter.renderStack, playerappearance_34);
-	                                        } else if (inter.anInt1435 != -1) {
-	                                            nativesprite_41 = SpotAnimIndexLoader.method8858(Renderers.CURRENT_RENDERER, inter.anInt1435);
+	                                        } else if (inter.vorbisStringId != -1) {
+	                                            nativesprite_41 = SpotAnimIndexLoader.method8858(Renderers.CURRENT_RENDERER, inter.vorbisStringId);
 	                                        } else {
 	                                            nativesprite_41 = inter.method2048(Renderers.CURRENT_RENDERER);
 	                                        }

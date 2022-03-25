@@ -21,11 +21,6 @@ public class CutsceneAction_Sub17 extends CutsceneAction {
         anInt9389 = rsbytebuffer_1.readUnsignedShort();
     }
 
-    public static void method14656(int i_0) {
-        PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(20, i_0);
-        class282_sub50_sub12_2.method14965();
-    }
-
     @Override
     public void method1592() {
         ParticleProducerDefinition.method1161(Class4.MY_PLAYER_PLANE, anInt9385, anInt9386, Class504.getTerrainHeightAtPos(anInt9385, anInt9386, Class4.MY_PLAYER_PLANE), anInt9389, anInt9388, aString9387);

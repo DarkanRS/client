@@ -21,16 +21,16 @@ public class FogPreference extends Preference {
     }
 
     public void method13415() {
-        if (anInt5578 != 0 && manager.groundBlending.method12762() != 1) {
-            anInt5578 = 0;
+        if (value != 0 && manager.groundBlending.method12762() != 1) {
+            value = 0;
         }
 
-        if (anInt5578 != 0 && manager.toolkitDefault.method13050() == 2) {
-            anInt5578 = 0;
+        if (value != 0 && manager.toolkitDefault.method13050() == 2) {
+            value = 0;
         }
 
-        if (anInt5578 < 0 || anInt5578 > 1) {
-            anInt5578 = getDefaultValue();
+        if (value < 0 || value > 1) {
+            value = getDefaultValue();
         }
 
     }
@@ -46,7 +46,7 @@ public class FogPreference extends Preference {
     }
 
     public int method13417() {
-        return anInt5578;
+        return value;
     }
 
     public int method7784(int i_1) {
@@ -54,7 +54,7 @@ public class FogPreference extends Preference {
     }
 
     void method7780(int i_1) {
-        anInt5578 = i_1 * -754033619 * -859024475;
+        value = i_1 * -754033619 * -859024475;
     }
 
     int method7786() {
@@ -71,7 +71,7 @@ public class FogPreference extends Preference {
 
     @Override
     void setValue(int i_1) {
-        anInt5578 = i_1;
+        value = i_1;
     }
 
 }
