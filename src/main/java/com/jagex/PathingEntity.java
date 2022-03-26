@@ -323,7 +323,7 @@ public abstract class PathingEntity extends GraphNode_Sub1_Sub1 {
             }
 
             if ((aClass539_10369 == null || aClass539_10369.aBool7132) && (i_7 > 0 || i_9 > 0)) {
-                aClass539_10369 = ParticleSystem.method11557(client.CYCLES_20MS, true);
+                aClass539_10369 = ParticleSystem.method11557(client.FRAME_COUNT, true);
             }
 
             if (aClass539_10369 != null) {
@@ -359,11 +359,11 @@ public abstract class PathingEntity extends GraphNode_Sub1_Sub1 {
                     }
                 }
 
-                aClass539_10369.method11511(graphicalrenderer_1, client.CYCLES_20MS, arr_15, arr_17);
+                aClass539_10369.method11511(graphicalrenderer_1, client.FRAME_COUNT, arr_15, arr_17);
                 aBool10370 = true;
             }
         } else if (aClass539_10369 != null) {
-            aClass539_10369.method11512(client.CYCLES_20MS);
+            aClass539_10369.method11512(client.FRAME_COUNT);
         }
 
         if (aClass539_10369 != null) {
@@ -648,10 +648,10 @@ public abstract class PathingEntity extends GraphNode_Sub1_Sub1 {
     public void method15818(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
         if (!initInterface()) {
             if (i_1 != -1) {
-                client.INTERFACE_107_BIT23[i_1] = true;
+                client.IF_COMPONENTS_TO_RENDER[i_1] = true;
             } else {
                 for (int i_9 = 0; i_9 < 107; i_9++) {
-                    client.INTERFACE_107_BIT23[i_9] = true;
+                    client.IF_COMPONENTS_TO_RENDER[i_9] = true;
                 }
             }
         } else {

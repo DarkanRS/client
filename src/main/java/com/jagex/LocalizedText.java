@@ -198,11 +198,6 @@ public class LocalizedText {
         }
     }
 
-    public static void method7278(int i_0) {
-        PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(21, i_0);
-        class282_sub50_sub12_2.method14965();
-    }
-
     public String translate(Language xlanguage_1) {
         return aMap5279.get(xlanguage_1);
     }

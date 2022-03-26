@@ -64,7 +64,7 @@ public class NPCEntity extends PathingEntity {
             i_2 |= 0x7;
         }
 
-        boolean bool_10 = scalar != 0 && client.CYCLES_20MS >= anInt10347 && client.CYCLES_20MS < anInt10348;
+        boolean bool_10 = scalar != 0 && client.FRAME_COUNT >= anInt10347 && client.FRAME_COUNT < anInt10348;
         if (bool_10) {
             i_2 |= 0x80000;
         }

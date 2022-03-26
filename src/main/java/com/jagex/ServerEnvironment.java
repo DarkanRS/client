@@ -85,7 +85,7 @@ public enum ServerEnvironment implements Identifiable {
                 mouseX = class282_sub53_3.getX();
                 mouseY = class282_sub53_3.getY();
             }
-            if (client.aClass118_7257 != null && InputSubscriberType.aClass118_2763 == client.aClass118_7247) {
+            if (client.aClass118_7257 != null && InputSubscriberType.NO_LAYER == client.aClass118_7247) {
                 client.aBool7403 = true;
                 client.anInt7432 = 0;
                 client.anInt7265 = 0;

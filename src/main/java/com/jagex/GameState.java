@@ -4,7 +4,7 @@ import com.Loader;
 
 public enum GameState {
 
-	UNK_0, UNK_1, UNK_2, IN_ACCOUNT_CREATION, UNK_4, UNK_5, UNK_6, UNK_7, UNK_8, UNK_9, UNK_10, UNK_11, UNK_12, UNK_13, UNK_14, UNK_15, UNK_16, UNK_17, UNK_18, UNK_19, UNK_20, UNK_21;
+	UNK_0, UNK_1, UNK_2, IN_ACCOUNT_CREATION, UNK_4, UNK_5, UNK_6, UNK_7, UNK_8, UNK_9, UNK_10, UNK_11, UNK_12, LOGGED_INGAME, UNK_14, UNK_15, UNK_16, UNK_17, UNK_18, UNK_19, UNK_20, UNK_21;
 
 	public static boolean inLobby(GameState state) {
 		switch (state) {
@@ -49,7 +49,7 @@ public enum GameState {
 	public static boolean loggedIn(GameState state) {
 		switch (state) {
 		case UNK_12:
-		case UNK_13:
+		case LOGGED_INGAME:
 		case UNK_18:
 			return true;
 		default:
@@ -97,7 +97,7 @@ public enum GameState {
 		case UNK_0:
 		case UNK_5:
 		case UNK_7:
-		case UNK_13:
+		case LOGGED_INGAME:
 			return true;
 		default:
 			return false;

@@ -224,9 +224,4 @@ public class NewsItem {
             }
         }
     }
-
-    public static void method1807(int i_0) {
-        PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(14, i_0);
-        class282_sub50_sub12_2.method14965();
-    }
 }

@@ -4,17 +4,17 @@ import java.util.Calendar;
 
 public abstract class Preference {
 
-    protected int anInt5578;
+    protected int value;
     protected GamePreferences manager;
 
     Preference(int i_1, GamePreferences class282_sub54_2) {
-        anInt5578 = i_1;
+        value = i_1;
         manager = class282_sub54_2;
     }
 
     Preference(GamePreferences class282_sub54_1) {
         manager = class282_sub54_1;
-        anInt5578 = getDefaultValue();
+        value = getDefaultValue();
     }
 
     public static String method7788(long long_0, int i_2) {

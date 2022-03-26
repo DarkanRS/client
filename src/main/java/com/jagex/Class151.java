@@ -29,7 +29,7 @@ public class Class151 {
     }
 
     static void method2590(IComponentDefinitions icomponentdefinitions_0) {
-        if (client.aBool7344) {
+        if (client.IS_USE_SELECTED) {
             if (icomponentdefinitions_0.anObjectArray1393 != null) {
                 IComponentDefinitions icomponentdefinitions_2 = Index.getIComponentDefinitions(client.anInt56, client.anInt7345);
                 if (icomponentdefinitions_2 != null) {
@@ -51,27 +51,27 @@ public class Class151 {
         }
     }
 
-    static void method2591(IComponentDefinitions[] arr_0, int i_1) {
-        for (int i_3 = 0; i_3 < arr_0.length; i_3++) {
-            IComponentDefinitions icomponentdefinitions_4 = arr_0[i_3];
+    static void method2591(IComponentDefinitions[] components, int type) {
+        for (int i_3 = 0; i_3 < components.length; i_3++) {
+            IComponentDefinitions icomponentdefinitions_4 = components[i_3];
             if (icomponentdefinitions_4 != null) {
                 if (icomponentdefinitions_4.type == ComponentType.CONTAINER) {
                     if (icomponentdefinitions_4.itemSlots != null) {
-                        method2591(icomponentdefinitions_4.itemSlots, i_1);
+                        method2591(icomponentdefinitions_4.itemSlots, type);
                     }
                     SubInterface class282_sub44_5 = (SubInterface) client.OPEN_INTERFACES.get(icomponentdefinitions_4.idHash);
                     if (class282_sub44_5 != null) {
-                        Class383.method6514(class282_sub44_5.interfaceId, i_1);
+                        Class383.method6514(class282_sub44_5.interfaceId, type);
                     }
                 }
                 HookRequest hookrequest_6;
-                if (i_1 == 0 && icomponentdefinitions_4.anObjectArray1421 != null) {
+                if (type == 0 && icomponentdefinitions_4.anObjectArray1421 != null) {
                     hookrequest_6 = new HookRequest();
                     hookrequest_6.source = icomponentdefinitions_4;
                     hookrequest_6.params = icomponentdefinitions_4.anObjectArray1421;
                     CS2Executor.executeHookInner(hookrequest_6);
                 }
-                if (i_1 == 1 && icomponentdefinitions_4.anObjectArray1346 != null) {
+                if (type == 1 && icomponentdefinitions_4.anObjectArray1346 != null) {
                     if (icomponentdefinitions_4.slotId >= 0) {
                         IComponentDefinitions icomponentdefinitions_7 = IComponentDefinitions.getDefs(icomponentdefinitions_4.idHash);
                         if (icomponentdefinitions_7 == null || icomponentdefinitions_7.slotChildren == null || icomponentdefinitions_4.slotId >= icomponentdefinitions_7.slotChildren.length || icomponentdefinitions_4 != icomponentdefinitions_7.slotChildren[icomponentdefinitions_4.slotId]) {

@@ -73,6 +73,19 @@ public class PacketDecoder {
         context.thirdLastPacket = context.secondLastPacket;
         context.secondLastPacket = context.lastPacket;
         context.lastPacket = context.currentPacket;
+//        switch(context.currentPacket) {
+//        case PING:
+//        case NPC_UPDATE:
+//        case RUN_ENERGY:
+//        case PLAYER_UPDATE:
+//        case UPDATE_STAT:
+//        case MUSIC_TRACK:
+//        	break;
+//		default:
+//			System.out.println("Incoming packet: " + context.currentPacket);
+//			break;
+//        
+//        }
         if (context.currentPacket == ServerProt.IF_SETMODEL) {
             int key = buffer.readInt();
             int flags = buffer.readIntV2();
@@ -173,7 +186,7 @@ public class PacketDecoder {
             String string_63 = buffer.readString();
             int flags = buffer.readIntV1();
             Class470.method7825();
-            SunDefinitions.setComponentText(flags, string_63);
+            PulseEvent.setComponentText(flags, string_63);
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.IF_OPENTOP) {
@@ -193,7 +206,7 @@ public class PacketDecoder {
             Class516.method8867(false);
             Class150.method2582(client.BASE_WINDOW_ID, xteas);
             for (int i_11 = 0; i_11 < 107; i_11++) {
-                client.INTERFACE_107_BIT23[i_11] = true;
+                client.IF_COMPONENTS_TO_RENDER[i_11] = true;
             }
             context.currentPacket = null;
             return true;
@@ -214,7 +227,7 @@ public class PacketDecoder {
             String string_63 = buffer.readString();
             int flags = buffer.readUnsignedShortLE128();
             Class470.method7825();
-            MapRegion.method4562(flags, string_63);
+            PulseEvent.method4562(flags, string_63);
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.IF_SETSCROLLPOS) {
@@ -502,7 +515,7 @@ public class PacketDecoder {
             return true;
         } else if (context.currentPacket == ServerProt.OPEN_URL) {
             if (Class475.supportsFullScreen && client.fullScreenFrame != null) {
-                UID192.method7373(Class393.preferences.screenSize.method12687(), -1, -1);
+                UID192.method7373(Class393.preferences.screenSize.getValue(), -1, -1);
             }
             byte[] bytes = new byte[context.currentPacketSize - 1];
             boolean bool_66 = buffer.readUnsignedByte() == 1;
@@ -1001,7 +1014,7 @@ public class PacketDecoder {
             client.CLAN_VAR_KEYS[++client.CLAN_VAR_COUNTER - 1 & 0x1f] = key;
             context.currentPacket = null;
             return true;
-        } else if (context.currentPacket == ServerProt.IF_SETTARGETPARAM) {
+        } else if (context.currentPacket == ServerProt.IF_SETEVENTS) {
             int toSlot = buffer.readUnsignedShortLE128();
             if (toSlot == 65535) {
                 toSlot = -1;
@@ -1015,25 +1028,25 @@ public class PacketDecoder {
             Class470.method7825();
             for (int slot = fromSlot; slot <= toSlot; slot++) {
                 long slots = slot + ((long) interfaceHash << 32);
-                IFTargetParams currentSettings = (IFTargetParams) client.ICOMPONENT_SETTINGS_SLOTS.get(slots);
-                IFTargetParams newSettings;
+                IFEvents currentSettings = (IFEvents) client.ICOMPONENT_SETTINGS_SLOTS.get(slots);
+                IFEvents newSettings;
                 if (currentSettings == null) {
                     if (slot == -1) {
-                        newSettings = new IFTargetParams(settings, IComponentDefinitions.getDefs(interfaceHash).targetParams.interfaceId);
+                        newSettings = new IFEvents(settings, IComponentDefinitions.getDefs(interfaceHash).events.targetParam);
                     } else {
-                        newSettings = new IFTargetParams(settings, -1);
+                        newSettings = new IFEvents(settings, -1);
                     }
                 } else {
-                    newSettings = new IFTargetParams(settings, currentSettings.interfaceId);
+                    newSettings = new IFEvents(settings, currentSettings.targetParam);
                     currentSettings.unlink();
                 }
                 client.ICOMPONENT_SETTINGS_SLOTS.put(newSettings, slots);
             }
             context.currentPacket = null;
             return true;
-        } else if (context.currentPacket == ServerProt.IF_RESETTARGETPARAM) {
+        } else if (context.currentPacket == ServerProt.IF_SETTARGETPARAM) {
             int interfaceHash = buffer.readIntV1();
-            int interfaceId = buffer.readUnsignedShortLE128();
+            int paramId = buffer.readUnsignedShortLE128();
             int toSlot = buffer.readUnsignedShort();
             if (toSlot == 65535) {
                 toSlot = -1;
@@ -1045,16 +1058,16 @@ public class PacketDecoder {
             Class470.method7825();
             for (int slot = fromSlot; slot <= toSlot; slot++) {
                 long slots = slot + ((long) interfaceHash << 32);
-                IFTargetParams currentSettings = (IFTargetParams) client.ICOMPONENT_SETTINGS_SLOTS.get(slots);
-                IFTargetParams newSettings;
+                IFEvents currentSettings = (IFEvents) client.ICOMPONENT_SETTINGS_SLOTS.get(slots);
+                IFEvents newSettings;
                 if (currentSettings == null) {
                     if (slot == -1) {
-                        newSettings = new IFTargetParams(IComponentDefinitions.getDefs(interfaceHash).targetParams.settingsHash, interfaceId);
+                        newSettings = new IFEvents(IComponentDefinitions.getDefs(interfaceHash).events.eventsHash, paramId);
                     } else {
-                        newSettings = new IFTargetParams(0, interfaceId);
+                        newSettings = new IFEvents(0, paramId);
                     }
                 } else {
-                    newSettings = new IFTargetParams(currentSettings.settingsHash, interfaceId);
+                    newSettings = new IFEvents(currentSettings.eventsHash, paramId);
                     currentSettings.unlink();
                 }
                 client.ICOMPONENT_SETTINGS_SLOTS.put(newSettings, slots);
@@ -1210,40 +1223,38 @@ public class PacketDecoder {
                 arrow.targetType = targetType;
                 arrow.arrowSprite = buffer.readUnsignedByte();
                 if (arrow.arrowSprite >= 0 && arrow.arrowSprite < Class391.HINT_ARROW_SPRITES.length) {
-                    if (arrow.targetType != 1 && arrow.targetType != 10) {
-                        if (arrow.targetType >= 2 && arrow.targetType <= 6) {
-                            if (arrow.targetType == 2) {
-                                arrow.x = 256;
-                                arrow.y = 256;
-                            }
-                            if (arrow.targetType == 3) {
-                                arrow.x = 0;
-                                arrow.y = 256;
-                            }
-                            if (arrow.targetType == 4) {
-                                arrow.x = 512;
-                                arrow.y = 256;
-                            }
-                            if (arrow.targetType == 5) {
-                                arrow.x = 256;
-                                arrow.y = 0;
-                            }
-                            if (arrow.targetType == 6) {
-                                arrow.x = 256;
-                                arrow.y = 512;
-                            }
-                            arrow.targetType = 2;
-                            arrow.plane = buffer.readUnsignedByte();
-                            CoordGrid grid = IndexLoaders.MAP_REGION_DECODER.getBase();
-                            arrow.x += buffer.readUnsignedShort() - grid.x << 9;
-                            arrow.y += buffer.readUnsignedShort() - grid.y << 9;
-                            arrow.height = buffer.readUnsignedByte() << 2;
-                            arrow.distance = buffer.readUnsignedShort();
-                        }
-                    } else {
+                	if (arrow.targetType == 1 || arrow.targetType == 10) {
                         arrow.targetIndex = buffer.readUnsignedShort();
                         arrow.idk = buffer.readUnsignedShort();
                         buffer.index += 4;
+                    } else if (arrow.targetType >= 2 && arrow.targetType <= 6) {
+                        if (arrow.targetType == 2) {
+                            arrow.x = 256;
+                            arrow.y = 256;
+                        }
+                        if (arrow.targetType == 3) {
+                            arrow.x = 0;
+                            arrow.y = 256;
+                        }
+                        if (arrow.targetType == 4) {
+                            arrow.x = 512;
+                            arrow.y = 256;
+                        }
+                        if (arrow.targetType == 5) {
+                            arrow.x = 256;
+                            arrow.y = 0;
+                        }
+                        if (arrow.targetType == 6) {
+                            arrow.x = 256;
+                            arrow.y = 512;
+                        }
+                        arrow.targetType = 2;
+                        arrow.plane = buffer.readUnsignedByte();
+                        CoordGrid grid = IndexLoaders.MAP_REGION_DECODER.getBase();
+                        arrow.x += buffer.readUnsignedShort() - grid.x << 9;
+                        arrow.y += buffer.readUnsignedShort() - grid.y << 9;
+                        arrow.height = buffer.readUnsignedByte() << 2;
+                        arrow.distance = buffer.readUnsignedShort();
                     }
                     arrow.modelId = buffer.readInt();
                     client.HINT_ARROWS[iconIndex] = arrow;
@@ -1376,7 +1387,7 @@ public class PacketDecoder {
             Class320.method5731(i_10, i_11, key, i_6, i_7, flags);
             context.currentPacket = null;
             return true;
-        } else if (context.currentPacket == ServerProt.aClass375_4497) {
+        } else if (context.currentPacket == ServerProt.aClass375_4497) { //IF_SETEVENTS? ONDIALOGABORT?
             if (client.BASE_WINDOW_ID != -1) {
                 Class383.method6514(client.BASE_WINDOW_ID, 0);
             }
@@ -2141,7 +2152,7 @@ public class PacketDecoder {
             int key = buffer.readShortLE();
             String string_88 = buffer.readString();
             Class470.method7825();
-            MapRegion.method4562(key, string_88);
+            PulseEvent.method4562(key, string_88);
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.NPC_UPDATE) {
@@ -2272,7 +2283,7 @@ public class PacketDecoder {
             return true;
         } else if (context.currentPacket == ServerProt.aClass375_4437) {
             if (Class475.supportsFullScreen && client.fullScreenFrame != null) {
-                UID192.method7373(Class393.preferences.screenSize.method12687(), -1, -1);
+                UID192.method7373(Class393.preferences.screenSize.getValue(), -1, -1);
             }
             byte[] bytes_64 = new byte[context.currentPacketSize];
             buffer.readBytes(bytes_64, context.currentPacketSize);
@@ -2283,7 +2294,7 @@ public class PacketDecoder {
             }
             context.currentPacket = null;
             return true;
-        } else if (context.currentPacket == ServerProt.OUTDATED_INTERFACE_PULSE_EVENT) {
+        } else if (context.currentPacket == ServerProt.DEPRECATED_PULSE_EVENT) {
             int key = buffer.readUnsignedShort128();
             int flags = buffer.readIntV2();
             int i_6 = buffer.readShortLE();
@@ -2406,8 +2417,8 @@ public class PacketDecoder {
                 startHeight <<= 2;
                 endHeight <<= 2;
                 slope <<= 2;
-                ProjectileAnimation p = new ProjectileAnimation(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), spotAnimId, Class272.UPDATE_ZONE_PLANE, Class272.UPDATE_ZONE_PLANE, localX, localY, startHeight, startTime + client.CYCLES_20MS, endTime + client.CYCLES_20MS, angle, slope, 0, lockOn, endHeight, useFloorHeight, -1);
-                p.start(xOff, yOff, Class504.getTerrainHeightAtPos(xOff, yOff, Class272.UPDATE_ZONE_PLANE) - endHeight, startTime + client.CYCLES_20MS);
+                ProjectileAnimation p = new ProjectileAnimation(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), spotAnimId, Class272.UPDATE_ZONE_PLANE, Class272.UPDATE_ZONE_PLANE, localX, localY, startHeight, startTime + client.FRAME_COUNT, endTime + client.FRAME_COUNT, angle, slope, 0, lockOn, endHeight, useFloorHeight, -1);
+                p.start(xOff, yOff, Class504.getTerrainHeightAtPos(xOff, yOff, Class272.UPDATE_ZONE_PLANE) - endHeight, startTime + client.FRAME_COUNT);
                 client.PROJECTILES.append(new ProjectileNode(p));
             }
         } else if (packet == UpdateZonePacket.MIDI_SONG_LOCATION) {
@@ -2666,10 +2677,10 @@ public class PacketDecoder {
 	            connection.reset();
 	            return false;
 	        } else {
-	        	if (Loader.DEBUG) {
+	        	//if (Loader.DEBUG) {
 		        	System.err.println("Exception decoding packet");
 		        	ex.printStackTrace();
-	        	}
+	        	//}
 	            Class151.killConnections();
 	            return true;
 	        }

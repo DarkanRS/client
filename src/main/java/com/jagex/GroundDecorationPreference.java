@@ -11,15 +11,15 @@ public class GroundDecorationPreference extends Preference {
     }
 
     public int method12897() {
-        return anInt5578;
+        return value;
     }
 
     public void method12898() {
         if (manager.getGame() != Game.darkan) {
-            anInt5578 = 1;
+            value = 1;
         }
-        if (anInt5578 != 0 && anInt5578 != 1) {
-            anInt5578 = getDefaultValue();
+        if (value != 0 && value != 1) {
+            value = getDefaultValue();
         }
     }
 
@@ -38,7 +38,7 @@ public class GroundDecorationPreference extends Preference {
 
     @Override
     void setValue(int i_1) {
-        anInt5578 = i_1;
+        value = i_1;
     }
 
     public int method7784() {
@@ -46,7 +46,7 @@ public class GroundDecorationPreference extends Preference {
     }
 
     void method7780(int i_1) {
-        anInt5578 = i_1 * -754033619 * -859024475;
+        value = i_1 * -754033619 * -859024475;
     }
 
     int method7787() {

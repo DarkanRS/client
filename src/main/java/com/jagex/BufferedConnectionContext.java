@@ -87,7 +87,7 @@ public class BufferedConnectionContext {
     }
 
     void method3059() {
-        if (client.CYCLES_20MS % 50 == 0) {
+        if (client.FRAME_COUNT % 50 == 0) {
             anInt2293 = anInt2297;
             anInt2297 = 0;
             anInt2294 = read;

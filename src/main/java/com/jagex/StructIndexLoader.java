@@ -44,10 +44,10 @@ public class StructIndexLoader {
             int i_7 = GameTipsLoader.anInt4822;
             int i_8 = ISAACCipher.anInt5157;
             int i_9;
-            if (client.aClass118_7247 == InputSubscriberType.aClass118_2763) {
+            if (client.aClass118_7247 == InputSubscriberType.NO_LAYER) {
                 i_9 = -1;
             } else {
-                i_9 = client.aClass118_7247.anInt1449;
+                i_9 = client.aClass118_7247.layerIndex;
             }
 
             IComponentDefinitions.render(arr_1, i_2, b_3, b_4, i_5, i_6, i_7, i_8, i_9, true);

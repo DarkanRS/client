@@ -32,7 +32,7 @@ public class Class223 {
     public CacheableNode get(long long_1) {
         CacheableNode cacheablenode_3 = (CacheableNode) aClass465_2771.get(long_1);
         if (cacheablenode_3 != null) {
-            aClass477_2767.method7936(cacheablenode_3);
+            aClass477_2767.add(cacheablenode_3);
         }
         return cacheablenode_3;
     }
@@ -51,7 +51,7 @@ public class Class223 {
             --anInt2769;
         }
         aClass465_2771.put(cacheablenode_1, long_2);
-        aClass477_2767.method7936(cacheablenode_1);
+        aClass477_2767.add(cacheablenode_1);
     }
 
     public void method3760() {

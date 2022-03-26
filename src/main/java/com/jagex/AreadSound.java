@@ -52,9 +52,9 @@ public class AreadSound {
     }
 
     static void method4800() {
-        if ((Class20.anInt169 >= 2 || client.aBool7344) && client.aClass118_7257 == null) {
+        if ((Class20.anInt169 >= 2 || client.IS_USE_SELECTED) && client.aClass118_7257 == null) {
             String string_2;
-            if (client.aBool7344 && Class20.anInt169 < 2) {
+            if (client.IS_USE_SELECTED && Class20.anInt169 < 2) {
                 string_2 = client.aString7275 + LocalizedText.aClass433_5315.translate(Class223.CURRENT_LANGUAGE) + client.aString7356 + " " + "->";
             } else if (Preference_Sub1.method12619() && Class20.anInt169 > 2) {
                 string_2 = Static.method6380(CutsceneAction_Sub23.aCacheableNode_Sub7_9445);

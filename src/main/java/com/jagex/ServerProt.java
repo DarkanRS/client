@@ -100,7 +100,7 @@ public enum ServerProt {
     aClass375_3828(93, 11), //play sound song but with specific volume or something?
     VARCLAN_DISABLE(94, 0),
     MAP_PROJANIM_HALFSQ(95, 17),
-    OUTDATED_INTERFACE_PULSE_EVENT(96, 8),
+    DEPRECATED_PULSE_EVENT(96, 8),
     UPDATE_IGNORE_LIST(97, -2),
     REFLECTION_CHECK(98, -2),
     RUN_CS2_SCRIPT(99, -2),
@@ -125,7 +125,7 @@ public enum ServerProt {
     CAM_FORCEANGLE(118, 4),
     CLIENT_SETVARCSTR_LARGE(119, -2),
     RESET_SOUNDS(120, 0),
-    IF_SETTARGETPARAM(121, 12),
+    IF_SETEVENTS(121, 12),
     RESET_ALL_ANIMATIONS(122, 0),
     VARCLAN_SET_BYTE(123, 3),
     IF_SETTEXT(124, -2),
@@ -152,7 +152,7 @@ public enum ServerProt {
     ANIMATE_NPC(145, 19),
     aClass375_4497(146, 0), //load last interface? no idea maybe IF_SETEVENTS as it adds hook events to them somehow?
     IDENTIFY_HOST_NAME(147, 4),
-    IF_RESETTARGETPARAM(148, 10),
+    IF_SETTARGETPARAM(148, 10),
     HINT_TRAIL(149, -2),
     IF_SETCLICKMASK(150, 5),
     SET_DRAW_ORDER(151, 1),

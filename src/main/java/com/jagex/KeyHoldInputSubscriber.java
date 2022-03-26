@@ -20,7 +20,7 @@ public class KeyHoldInputSubscriber implements InputSubscriber {
     }
 
     static void method3920(int i_0) {
-        int i_2 = client.CYCLES_20MS - client.anInt7429;
+        int i_2 = client.FRAME_COUNT - client.anInt7429;
         if (i_2 >= 100) {
             NativeLibraryLoader.anInt3240 = 2;
             Class86.anInt833 = -1;

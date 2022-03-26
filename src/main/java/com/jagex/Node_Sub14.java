@@ -460,11 +460,6 @@ public class Node_Sub14 extends Node {
     static void method12222() {
     }
 
-    public static void method12223(int i_0) {
-        PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(6, i_0);
-        class282_sub50_sub12_2.method14965();
-    }
-
     boolean method12216(Class250 class250_1, byte[] bytes_2, int[] ints_3) {
         boolean bool_5 = true;
         int i_6 = 0;

@@ -96,14 +96,14 @@ public class IComponentDefinitions {
     public int animation;
     public int targetOverCursor = -1;
     public int mouseOverCursor = -1;
-    public IFTargetParams targetParams;
+    public IFEvents events;
     public int aspectWidth;
     public int targetLeaveCursor = -1;
     public Object[] onLoadScript;
     public Object[] onMouseHoverScript;
     public Object[] onMouseLeaveScript;
     public Object[] anObjectArray1396;
-    public Object[] anObjectArray1400;
+    public Object[] onUseScript;
     public Object[] anObjectArray1397;
     public Object[] mouseLeaveScript;
     public Object[] anObjectArray1387;
@@ -160,7 +160,7 @@ public class IComponentDefinitions {
     public int anInt1427;
     public boolean wearCol;
     public int anInt1404;
-    public int anInt1435;
+    public int vorbisStringId;
     public boolean aBool1440;
     public boolean aBool1286;
     public int anInt1442;
@@ -170,8 +170,8 @@ public class IComponentDefinitions {
     public int anInt1446;
     public int anInt1447;
     public int anInt1448;
-    public int anInt1449;
-    public int anInt1450;
+    public int layerIndex;
+    public int frameLastDrawn;
     IterableNodeMap aClass465_1365;
     short[] colorsToReplace;
     short[] colorsToReplaceWith;
@@ -179,7 +179,7 @@ public class IComponentDefinitions {
     short[] texturesToReplaceWith;
 
     public IComponentDefinitions() {
-        targetParams = IFTargetParams.DEFAULT_SETTINGS;
+        events = IFEvents.DEFAULT_EVENTS;
         aBool1424 = false;
         useOnName = "";
         anInt1378 = -1;
@@ -193,7 +193,7 @@ public class IComponentDefinitions {
         anInt1427 = 0;
         wearCol = false;
         anInt1404 = -1;
-        anInt1435 = -1;
+        vorbisStringId = -1;
         animation = -1;
         aBool1440 = false;
         aBool1286 = false;
@@ -204,8 +204,8 @@ public class IComponentDefinitions {
         anInt1446 = 0;
         anInt1447 = 0;
         anInt1448 = 0;
-        anInt1449 = -1;
-        anInt1450 = -1;
+        layerIndex = -1;
+        frameLastDrawn = -1;
     }
 
     public static IComponentDefinitions getDefs(int hash) {
@@ -238,9 +238,9 @@ public class IComponentDefinitions {
         }
     }
 
-    public static void redrawComponent(IComponentDefinitions icomponentdefinitions_0) {
-        if (icomponentdefinitions_0.anInt1450 == client.anInt7408) {
-            client.INTERFACE_107_BIT23[icomponentdefinitions_0.anInt1449] = true;
+    public static void redrawComponent(IComponentDefinitions component) {
+        if (component.frameLastDrawn == client.anInt7408) {
+            client.IF_COMPONENTS_TO_RENDER[component.layerIndex] = true;
         }
     }
 
@@ -418,7 +418,7 @@ public class IComponentDefinitions {
         anInt1382 = rsbytebuffer_1.readUnsignedByte();
         useOptionString = rsbytebuffer_1.readString();
         i_10 = -1;
-        if (IFTargetParams.getUseOptionFlags(optionMask) != 0) {
+        if (IFEvents.getUseOptionFlags(optionMask) != 0) {
             i_10 = rsbytebuffer_1.readUnsignedShort();
             if (i_10 == 65535) {
                 i_10 = -1;
@@ -438,7 +438,7 @@ public class IComponentDefinitions {
                 mouseOverCursor = -1;
             }
         }
-        targetParams = new IFTargetParams(optionMask, i_10);
+        events = new IFEvents(optionMask, i_10);
         if (i_3 >= 0) {
             i_11 = rsbytebuffer_1.readUnsignedByte();
             int i_12;
@@ -460,7 +460,7 @@ public class IComponentDefinitions {
         onMouseHoverScript = decodeScript(rsbytebuffer_1);
         onMouseLeaveScript = decodeScript(rsbytebuffer_1);
         anObjectArray1396 = decodeScript(rsbytebuffer_1);
-        anObjectArray1400 = decodeScript(rsbytebuffer_1);
+        onUseScript = decodeScript(rsbytebuffer_1);
         anObjectArray1397 = decodeScript(rsbytebuffer_1);
         mouseLeaveScript = decodeScript(rsbytebuffer_1);
         anObjectArray1387 = decodeScript(rsbytebuffer_1);
@@ -510,7 +510,7 @@ public class IComponentDefinitions {
         onMouseLeaveScript = null;
         anObjectArray1451 = null;
         anObjectArray1394 = null;
-        anObjectArray1400 = null;
+        onUseScript = null;
         anObjectArray1396 = null;
         anObjectArray1397 = null;
         varps = null;
@@ -913,20 +913,20 @@ public class IComponentDefinitions {
         }
     }
     
-    public static void render(IComponentDefinitions[] arr_0, int i_1, int endX, int endY, int startX, int startY, int i_6, int i_7, int i_8, boolean bool_9) {
+    public static void render(IComponentDefinitions[] components, int i_1, int endX, int endY, int startX, int startY, int i_6, int i_7, int layer, boolean bool_9) {
 	    Renderers.CURRENT_RENDERER.r(endX, endY, startX, startY);
-	    for (int i_11 = 0; i_11 < arr_0.length; i_11++) {
-	        IComponentDefinitions inter = arr_0[i_11];
+	    for (int i = 0; i < components.length; i++) {
+	        IComponentDefinitions inter = components[i];
 	        if (inter != null && (inter.parent == i_1 || i_1 == -1412584499 && inter == client.aClass118_7257)) {
-	            int i_13;
-	            if (i_8 == -1) {
-	                client.aRectangleArray7411[client.anInt7407].setBounds(inter.x + i_6, i_7 + inter.y, inter.width, inter.height);
-	                i_13 = ++client.anInt7407 - 1;
+	            int layerIndex;
+	            if (layer == -1) {
+	                client.IF_LAYER_BOUNDS[client.IF_CURR_LAYER].setBounds(inter.x + i_6, i_7 + inter.y, inter.width, inter.height);
+	                layerIndex = ++client.IF_CURR_LAYER - 1;
 	            } else {
-	                i_13 = i_8;
+	                layerIndex = layer;
 	            }
-	            inter.anInt1449 = i_13;
-	            inter.anInt1450 = client.CYCLES_20MS;
+	            inter.layerIndex = layerIndex;
+	            inter.frameLastDrawn = client.FRAME_COUNT;
 	            if (!client.method11651(inter)) {
 	                if (inter.contentType != null) {
 	                    Class28.method776(inter);
@@ -934,14 +934,14 @@ public class IComponentDefinitions {
 	                int drawEndX = inter.x + i_6;
 	                int drawEndY = i_7 + inter.y;
 	                int i_16 = inter.transparency;
-	                if (client.aBool7168 && (client.getIComponentSettings(inter).settingsHash != 0 || inter.type == ComponentType.CONTAINER) && i_16 > 127) {
+	                if (client.aBool7168 && (client.getIComponentSettings(inter).eventsHash != 0 || inter.type == ComponentType.CONTAINER) && i_16 > 127) {
 	                    i_16 = 127;
 	                }
 	                int toX;
 	                int toY;
 	                if (inter == client.aClass118_7257) {
-	                    if (i_1 != -1412584499 && (inter.anInt1382 == anInt1265 || inter.anInt1382 == anInt1283 || client.getIComponentSettings(inter).bit23Enabled())) {
-	                        Comparable_Sub1.aClass118Array3772 = arr_0;
+	                    if (i_1 != -1412584499 && (inter.anInt1382 == anInt1265 || inter.anInt1382 == anInt1283 || client.getIComponentSettings(inter).ignoresDepthFlags())) {
+	                        Comparable_Sub1.aClass118Array3772 = components;
 	                        GameTipsLoader.anInt4822 = i_6;
 	                        ISAACCipher.anInt5157 = i_7;
 	                        continue;
@@ -963,7 +963,7 @@ public class IComponentDefinitions {
 	                        if (toY + inter.height > client.anInt7265 + client.anInt7476) {
 	                            toY = client.anInt7476 + client.anInt7265 - inter.height;
 	                        }
-	                        if (client.getIComponentSettings(inter).bit23Enabled()) {
+	                        if (client.getIComponentSettings(inter).ignoresDepthFlags()) {
 	                            Class292.method5201(toX, toY, inter.width, inter.height);
 	                        }
 	                        drawEndX = toX;
@@ -998,10 +998,10 @@ public class IComponentDefinitions {
 	                    if (inter.contentType != null) {
 	                        if (inter.contentType == ContentType.MAIN_GAME_SCENE || inter.contentType == ContentType.CONTENT_TYPE_1403) {
 	                            HitbarDefinitions.method3231(drawEndX, drawEndY, inter.width, inter.height, inter.contentType == ContentType.CONTENT_TYPE_1403);
-	                            TCPPacket.method12366(i_13, toX, toY, fromX, fromY, drawEndX, drawEndY);
+	                            TCPPacket.method12366(layerIndex, toX, toY, fromX, fromY, drawEndX, drawEndY);
 	                            Renderers.CURRENT_RENDERER.method8421();
 	                            Renderers.CURRENT_RENDERER.r(endX, endY, startX, startY);
-	                            client.INTERFACE_107_BIT23[i_13] = true;
+	                            client.IF_COMPONENTS_TO_RENDER[layerIndex] = true;
 	                            continue;
 	                        }
 	                        if (inter.contentType == ContentType.CONTENT_TYPE_1338 && client.anInt7341 == 1) {
@@ -1029,20 +1029,20 @@ public class IComponentDefinitions {
 	                        }
 	                        if (inter.contentType == ContentType.CONTENT_TYPE_1400) {
 	                            Node_Sub46.method13407(Renderers.CURRENT_RENDERER, IndexLoaders.IMAGE_LOADER, drawEndX, drawEndY, inter.width, inter.height);
-	                            client.INTERFACE_107_BIT23[i_13] = true;
+	                            client.IF_COMPONENTS_TO_RENDER[layerIndex] = true;
 	                            Renderers.CURRENT_RENDERER.r(endX, endY, startX, startY);
 	                            continue;
 	                        }
 	                        if (inter.contentType == ContentType.MINIMAP) {
 	                            LoadingStage.renderMiniMiniMap(Renderers.CURRENT_RENDERER, drawEndX, drawEndY, inter.width, inter.height);
-	                            client.INTERFACE_107_BIT23[i_13] = true;
+	                            client.IF_COMPONENTS_TO_RENDER[layerIndex] = true;
 	                            Renderers.CURRENT_RENDERER.r(endX, endY, startX, startY);
 	                            continue;
 	                        }
 	                        if (inter.contentType == ContentType.DEBUG_INFORMATION) {
 	                            if (client.DRAW_DEBUG || client.aBool7177) {
 	                                NPCDirection.drawDebugInformation(drawEndX, drawEndY, inter);
-	                                client.INTERFACE_107_BIT23[i_13] = true;
+	                                client.IF_COMPONENTS_TO_RENDER[layerIndex] = true;
 	                            }
 	                            continue;
 	                        }
@@ -1054,13 +1054,13 @@ public class IComponentDefinitions {
 	                        if (inter.contentType == ContentType.CONTENT_TYPE_1407 && Renderers.CURRENT_RENDERER.method8471()) {
 	                            Renderers.CURRENT_RENDERER.method8525(ChangeClanSetting.BASE_WINDOW_WIDTH, client.BASE_WINDOW_HEIGHT * -969250379);
 	                        }
-	                        render(arr_0, inter.idHash, toX, toY, fromX, fromY, drawEndX - inter.scrollX, drawEndY - inter.scrollY, i_13, bool_9);
+	                        render(components, inter.idHash, toX, toY, fromX, fromY, drawEndX - inter.scrollX, drawEndY - inter.scrollY, layerIndex, bool_9);
 	                        if (inter.itemSlots != null) {
-	                            render(inter.itemSlots, inter.idHash, toX, toY, fromX, fromY, drawEndX - inter.scrollX, drawEndY - inter.scrollY, i_13, bool_9);
+	                            render(inter.itemSlots, inter.idHash, toX, toY, fromX, fromY, drawEndX - inter.scrollX, drawEndY - inter.scrollY, layerIndex, bool_9);
 	                        }
 	                        SubInterface class282_sub44_33 = (SubInterface) client.OPEN_INTERFACES.get(inter.idHash);
 	                        if (class282_sub44_33 != null) {
-	                            RenderAnimIndexLoader.method3629(class282_sub44_33.interfaceId, toX, toY, fromX, fromY, drawEndX, drawEndY, i_13);
+	                            RenderAnimIndexLoader.method3629(class282_sub44_33.interfaceId, toX, toY, fromX, fromY, drawEndX, drawEndY, layerIndex);
 	                        }
 	                        if (inter.contentType == ContentType.CONTENT_TYPE_1407) {
 	                            if (Renderers.CURRENT_RENDERER.method8471()) {
@@ -1071,8 +1071,8 @@ public class IComponentDefinitions {
 	                                i_23 = client.anInt7377;
 	                                i_24 = client.anInt7413;
 	                                i_25 = client.anInt7217;
-	                                if (client.CYCLES_20MS < client.anInt7237) {
-	                                    float f_26 = (client.CYCLES_20MS - client.anInt7236) * 1.0F / (client.anInt7237 - client.anInt7236);
+	                                if (client.FRAME_COUNT < client.anInt7237) {
+	                                    float f_26 = (client.FRAME_COUNT - client.anInt7236) * 1.0F / (client.anInt7237 - client.anInt7236);
 	                                    drawStartY = (int) (client.anInt7238 * f_26 + (1.0F - f_26) * SceneryShadowPreference.anInt7868);
 	                                    i_23 = (int) (client.anInt7377 * f_26 + Class350_Sub2.anInt7815 * (1.0F - f_26));
 	                                    i_24 = (int) (f_26 * client.anInt7413 + Class329_Sub1.anInt7726 * (1.0F - f_26));
@@ -1085,7 +1085,7 @@ public class IComponentDefinitions {
 	                        }
 	                        Renderers.CURRENT_RENDERER.r(endX, endY, startX, startY);
 	                    }
-	                    if (client.aBoolArray7410[i_13] || client.anInt7412 > 1) {
+	                    if (client.aBoolArray7410[layerIndex] || client.anInt7412 > 1) {
 	                        if (inter.type == ComponentType.FIGURE) {
 	                            if (i_16 == 0) {
 	                                if (inter.filled) {
@@ -1119,8 +1119,8 @@ public class IComponentDefinitions {
 	                                            string_35 = Utils.rgbToColHexShortcut(16748608) + string_35 + "</col>" + " x" + Class488.method8210(inter.anInt1427);
 	                                        }
 	                                    }
-	                                    if (inter.anInt1435 != -1) {
-	                                        string_35 = Class148.method2550(inter.anInt1435);
+	                                    if (inter.vorbisStringId != -1) {
+	                                        string_35 = Class148.method2550(inter.vorbisStringId);
 	                                        if (string_35 == null) {
 	                                            string_35 = "";
 	                                        }
@@ -1152,8 +1152,8 @@ public class IComponentDefinitions {
 	                                        if (inter.containerItemId != -1) {
 	                                            PlayerModel playerappearance_34 = inter.wearCol ? VertexNormal.MY_PLAYER.model : null;
 	                                            nativesprite_41 = IndexLoaders.ITEM_LOADER.softwareRender(Renderers.CURRENT_RENDERER, inter.containerItemId, inter.anInt1427, inter.borderThickness, -16777216 | inter.spriteShadow, inter.renderStack, playerappearance_34);
-	                                        } else if (inter.anInt1435 != -1) {
-	                                            nativesprite_41 = SpotAnimIndexLoader.method8858(Renderers.CURRENT_RENDERER, inter.anInt1435);
+	                                        } else if (inter.vorbisStringId != -1) {
+	                                            nativesprite_41 = SpotAnimIndexLoader.method8858(Renderers.CURRENT_RENDERER, inter.vorbisStringId);
 	                                        } else {
 	                                            nativesprite_41 = inter.method2048(Renderers.CURRENT_RENDERER);
 	                                        }
@@ -1307,7 +1307,7 @@ public class IComponentDefinitions {
 	                                            client.aClass294_7169.method5219((inter.offsetX << 2), (i_31 + i_23 + (inter.offsetY << 2)), (i_32 + (inter.offsetY << 2)));
 	                                            client.aClass294_7169.rotation(1.0F, 0.0F, 0.0F, Trig.degToRad(inter.spritePitch << 3));
 	                                        }
-	                                        inter.method1991(Renderers.CURRENT_RENDERER, meshRasterizer, client.aClass294_7169, client.CYCLES_20MS);
+	                                        inter.method1991(Renderers.CURRENT_RENDERER, meshRasterizer, client.aClass294_7169, client.FRAME_COUNT);
 	                                        if (client.aBool7358) {
 	                                            Renderers.CURRENT_RENDERER.o(drawEndX, drawEndY, drawEndX + inter.width, drawEndY + inter.height);
 	                                        }

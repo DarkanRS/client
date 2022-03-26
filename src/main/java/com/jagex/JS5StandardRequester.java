@@ -150,13 +150,13 @@ public abstract class JS5StandardRequester {
                 throw new RuntimeException();
             }
 
-            priorities.method7936(request);
+            priorities.add(request);
         } else {
             if (extras() >= 20) {
                 throw new RuntimeException();
             }
 
-            extras.method7936(request);
+            extras.add(request);
         }
 
         return request;

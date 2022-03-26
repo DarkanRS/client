@@ -39,7 +39,7 @@ public class ObjectNode extends Node<Object> {
         Class285.aFontRenderer_3394.renderText("--> " + GameTipsLoader.method6793(Class179.aString2225), 10, 350 - SkyboxIndexLoader.aClass414_3438.bottomPadding - 1, -1, -16777216);
         if (IFSubObjectPosition.appletHasFocus) {
             i_3 = -1;
-            if (client.CYCLES_20MS % 30 > 15) {
+            if (client.FRAME_COUNT % 30 > 15) {
                 i_3 = 16777215;
             }
             graphicalrenderer_0.method8428(10 + SkyboxIndexLoader.aClass414_3438.getWidthNoSprites("--> " + GameTipsLoader.method6793(Class179.aString2225).substring(0, Class179.anInt2220)), 350 - SkyboxIndexLoader.aClass414_3438.bottomPadding - 11, 12, i_3);

@@ -4454,7 +4454,7 @@ public class OpenGLRenderer extends AbstractRenderer {
             doesntSupportFlags |= VENDOR_FLAG;
         }
 
-        if (vendor.indexOf("brian paul") != -1 || vendor.indexOf("mesa") != -1) {
+        if (vendor.indexOf("brian paul") != -1) {
             doesntSupportFlags |= VENDOR_FLAG;
         }
 

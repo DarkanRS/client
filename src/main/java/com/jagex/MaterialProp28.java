@@ -20,11 +20,6 @@ public class MaterialProp28 extends MaterialProperty {
         super(0, true);
     }
 
-    static void method15255() {
-        PulseEvent class282_sub50_sub12_1 = PulseEvent.createPulseEvent(15, 0L);
-        class282_sub50_sub12_1.method14965();
-    }
-
     void method15253(Random random_1, int[][] ints_2, int i_3, int i_4, int i_5, int i_6) {
         int i_8 = anInt9790 > 0 ? 4096 - Class476.method7931(random_1, anInt9790) : 4096;
         int i_9 = anInt9780 * anInt9789 >> 12;

@@ -27,7 +27,7 @@ public class Class507 {
             }
         }
         if (desiredScreenMode == 3 && (!Class475.supportsFullScreen || client.fullScreenFrame == null)) {
-            method8725(currentScreenMode, Class393.preferences.screenSize.method12687(), -1, -1, true);
+            method8725(currentScreenMode, Class393.preferences.screenSize.getValue(), -1, -1, true);
         } else {
             Container container_6 = Class371.getActiveContainer();
             Insets insets_7;
@@ -82,7 +82,7 @@ public class Class507 {
                 Class388.method6692();
             }
             for (int i_8 = 0; i_8 < 107; i_8++) {
-                client.INTERFACE_107_BIT23[i_8] = true;
+                client.IF_COMPONENTS_TO_RENDER[i_8] = true;
             }
             client.aBool3274 = true;
         }

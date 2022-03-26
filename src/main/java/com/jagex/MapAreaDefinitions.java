@@ -59,9 +59,9 @@ public class MapAreaDefinitions {
                     String string_5 = client.CURRENT_GAME == Game.stellarDawn ? LocalizedText.RATING_.translate(Class223.CURRENT_LANGUAGE) : LocalizedText.LEVEL_.translate(Class223.CURRENT_LANGUAGE);
                     string_4 = string_4 + ItemIndexLoader.method7169(npc_0.anInt10582, VertexNormal.MY_PLAYER.combatLevel) + " (" + string_5 + npc_0.anInt10582 + ")";
                 }
-                if (client.aBool7344 && !bool_1) {
-                    ParamDefinitions attributedefault_10 = CutsceneAction_Sub12.USE_INTERFACE_ID != -1 ? IndexLoaders.PARAM_LOADER.getParam(CutsceneAction_Sub12.USE_INTERFACE_ID) : null;
-                    if ((Class506.USE_OPTIONS_FLAGS & 0x2) != 0 && (attributedefault_10 == null || npcDefinitions.method6876(CutsceneAction_Sub12.USE_INTERFACE_ID, attributedefault_10.defaultInt) != attributedefault_10.defaultInt)) {
+                if (client.IS_USE_SELECTED && !bool_1) {
+                    ParamDefinitions attributedefault_10 = CutsceneAction_Sub12.TARGET_PARAM != -1 ? IndexLoaders.PARAM_LOADER.getParam(CutsceneAction_Sub12.TARGET_PARAM) : null;
+                    if ((Class506.USE_OPTIONS_FLAGS & 0x2) != 0 && (attributedefault_10 == null || npcDefinitions.method6876(CutsceneAction_Sub12.TARGET_PARAM, attributedefault_10.defaultInt) != attributedefault_10.defaultInt)) {
                         PlayerModel.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + Utils.rgbToColHexShortcut(16776960) + string_4, Defaults8Loader.anInt5932, 8, -1, npc_0.index, 0, 0, true, false, npc_0.index, false);
                     }
                 }

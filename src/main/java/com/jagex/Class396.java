@@ -50,9 +50,4 @@ public class Class396 {
     Class396() throws Throwable {
         throw new Error();
     }
-
-    public static void method6774(int i_0) {
-        PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(11, i_0);
-        class282_sub50_sub12_2.method14965();
-    }
 }

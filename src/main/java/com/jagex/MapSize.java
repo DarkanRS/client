@@ -17,9 +17,4 @@ public enum MapSize {
     }
     
     static String[] aStringArray1077;
-
-    public static void method1818(int i_0) {
-        PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(8, i_0);
-        class282_sub50_sub12_2.method14965();
-    }
 }

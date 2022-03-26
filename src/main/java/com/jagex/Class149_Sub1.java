@@ -15,11 +15,6 @@ public class Class149_Sub1 extends Class149 {
         anInt9275 = i_4;
     }
 
-    public static void method14582(int i_0) {
-        PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(5, i_0);
-        class282_sub50_sub12_2.method14965();
-    }
-
     public static void method14584(int i_0, int i_1, int i_2, int i_3, int i_4) {
         if (i_3 == i_2) {
             UpdateZonePacket.method6292(i_0, i_1, i_2, i_4);

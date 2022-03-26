@@ -29,7 +29,7 @@ public class Class484 {
         if (iCompDef.aspectHeightType == 4) {
             iCompDef.height = iCompDef.width * iCompDef.aspectY / iCompDef.aspectX;
         }
-        if (client.aBool7168 && (client.getIComponentSettings(iCompDef).settingsHash != 0 || iCompDef.type == ComponentType.CONTAINER)) {
+        if (client.aBool7168 && (client.getIComponentSettings(iCompDef).eventsHash != 0 || iCompDef.type == ComponentType.CONTAINER)) {
             if (iCompDef.height < 5 && iCompDef.width < 5) {
                 iCompDef.height = 5;
                 iCompDef.width = 5;

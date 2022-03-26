@@ -13,11 +13,6 @@ public class JS5LocalRequester implements Runnable {
         aThread3663.setPriority(1);
     }
 
-    public static void method5581(int i_0) {
-        PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(17, i_0);
-        class282_sub50_sub12_2.method14965();
-    }
-
     CacheableNode_Sub11_Sub2 method5564(int i_1, byte[] bytes_2, JS5CacheFile js5cachefile_3) {
         CacheableNode_Sub11_Sub2 class282_sub50_sub11_sub2_5 = new CacheableNode_Sub11_Sub2();
         class282_sub50_sub11_sub2_5.anInt10467 = 2;
@@ -90,7 +85,7 @@ public class JS5LocalRequester implements Runnable {
     void method5569(CacheableNode_Sub11_Sub2 class282_sub50_sub11_sub2_1) {
         Queue class477_3 = aClass477_3664;
         synchronized (aClass477_3664) {
-            aClass477_3664.method7936(class282_sub50_sub11_sub2_1);
+            aClass477_3664.add(class282_sub50_sub11_sub2_1);
             ++anInt3662;
             aClass477_3664.notifyAll();
         }

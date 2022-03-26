@@ -76,7 +76,7 @@ public class Class231 {
             GameState.setGameState(GameState.UNK_2);
         } else if (client.GAME_STATE == GameState.UNK_7) {
             GameState.setGameState(GameState.UNK_6);
-        } else if (client.GAME_STATE == GameState.UNK_13) {
+        } else if (client.GAME_STATE == GameState.LOGGED_INGAME) {
             GameState.setGameState(GameState.UNK_18);
         } else if (client.GAME_STATE != GameState.UNK_15 && client.GAME_STATE != GameState.UNK_1) {
             if (client.GAME_STATE == GameState.IN_ACCOUNT_CREATION) {

@@ -262,8 +262,8 @@ public class NPCUpdate {
                 npc.forceMovementT1YOff = buffer.readByte128();
                 npc.forceMovementT2XOff = buffer.readByteC();
                 npc.forceMovementT2YOff = buffer.readByte128();
-                npc.forceMovementT1Delay = buffer.readShortLE() + client.CYCLES_20MS;
-                npc.forceMovementT2Delay = buffer.readShortLE() + client.CYCLES_20MS;
+                npc.forceMovementT1Delay = buffer.readShortLE() + client.FRAME_COUNT;
+                npc.forceMovementT2Delay = buffer.readShortLE() + client.FRAME_COUNT;
                 npc.forceMovementDir = buffer.readUnsignedShortLE128();
                 npc.forceMovementT1XOff += npc.regionBaseX[0];
                 npc.forceMovementT1YOff += npc.regionBaseY[0];
@@ -355,7 +355,7 @@ public class NPCUpdate {
                             i_8 = buffer.readUnsignedByte();
                         }
                         int i_11 = buffer.readSmart();
-                        npc.applyHit(i_10, i_8, i_7, i_9, client.CYCLES_20MS, i_11);
+                        npc.applyHit(i_10, i_8, i_7, i_9, client.FRAME_COUNT, i_11);
                     }
                 }
                 int i_6 = buffer.readUnsignedByte128();
@@ -367,7 +367,7 @@ public class NPCUpdate {
                             int i_10 = buffer.readSmart();
                             int i_11 = buffer.readUnsigned128Byte();
                             int i_12 = i_9 > 0 ? buffer.readUnsignedByte128() : i_11;
-                            npc.displayHitbar(i_8, client.CYCLES_20MS, i_9, i_10, i_11, i_12);
+                            npc.displayHitbar(i_8, client.FRAME_COUNT, i_9, i_10, i_11, i_12);
                         } else {
                             npc.method15857(i_8);
                         }
@@ -470,8 +470,8 @@ public class NPCUpdate {
                 npc.greenAdd = buffer.readByte();
                 npc.blueAdd = buffer.readByte();
                 npc.scalar = (byte) buffer.readUnsigned128Byte();
-                npc.anInt10347 = client.CYCLES_20MS + buffer.readShortLE();
-                npc.anInt10348 = client.CYCLES_20MS + buffer.readUnsignedShort();
+                npc.anInt10347 = client.FRAME_COUNT + buffer.readShortLE();
+                npc.anInt10348 = client.FRAME_COUNT + buffer.readUnsignedShort();
             }
             if ((i_4 & 0x800000) != 0) {
                 npc.modifiedName = buffer.readString();
