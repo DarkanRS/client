@@ -2121,7 +2121,7 @@ public class client extends Engine {
 				} else {
 					Class446.method7447(LocalizedText.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE), true, Renderers.CURRENT_RENDERER, Class16.aFontRenderer_144, Class16.aClass414_139);
 				}
-			} else if (GAME_STATE == GameState.UNK_13) {
+			} else if (GAME_STATE == GameState.LOGGED_INGAME) {
 				Class152.method2601(long_2);
 			} else if (GAME_STATE == GameState.UNK_10) {
 				Class446.method7447(LocalizedText.CONNECTION_LOST.translate(Class223.CURRENT_LANGUAGE) + "<br>" + LocalizedText.ATTEMPTING_TO_REESTABLISH.translate(Class223.CURRENT_LANGUAGE), false, Renderers.CURRENT_RENDERER, Class16.aFontRenderer_144, Class16.aClass414_139);

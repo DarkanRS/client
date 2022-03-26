@@ -1005,7 +1005,7 @@ public class MapRegion {
                 } else if (client.GAME_STATE == GameState.UNK_9) {
                     GameState.setGameState(GameState.IN_ACCOUNT_CREATION);
                 } else {
-                    GameState.setGameState(GameState.UNK_13);
+                    GameState.setGameState(GameState.LOGGED_INGAME);
                     if (client.GAME_CONNECTION_CONTEXT.getConnection() != null) {
                         tcpmessage_22 = TCPPacket.createPacket(ClientProt.REGION_LOADED_CONFIRM, client.GAME_CONNECTION_CONTEXT.outKeys);
                         client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_22);
@@ -1364,7 +1364,7 @@ public class MapRegion {
             GameState.setGameState(GameState.UNK_2);
         } else if (client.GAME_STATE == GameState.UNK_7) {
             GameState.setGameState(GameState.UNK_6);
-        } else if (client.GAME_STATE == GameState.UNK_13) {
+        } else if (client.GAME_STATE == GameState.LOGGED_INGAME) {
             GameState.setGameState(GameState.UNK_18);
         } else if (client.GAME_STATE == GameState.IN_ACCOUNT_CREATION) {
             GameState.setGameState(GameState.UNK_9);

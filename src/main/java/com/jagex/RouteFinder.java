@@ -580,7 +580,7 @@ public class RouteFinder {
                     return;
                 }
                 if ("clientdrop".equalsIgnoreCase(string_0)) {
-                    if (client.GAME_STATE == GameState.UNK_13) {
+                    if (client.GAME_STATE == GameState.LOGGED_INGAME) {
                         Class151.killConnections();
                     } else if (client.GAME_STATE == GameState.UNK_18) {
                         client.GAME_CONNECTION_CONTEXT.aBool2298 = true;
@@ -667,7 +667,7 @@ public class RouteFinder {
                     String[] arr_12 = MovingAnimation.split(Class122.method2110(Node_Sub17_Sub7.method15439(bytes_5), '\r', ""), '\n');
                     Class341.method6074(arr_12);
                 }
-                if (client.GAME_STATE == GameState.UNK_13) {
+                if (client.GAME_STATE == GameState.LOGGED_INGAME) {
                     TCPPacket tcpmessage_21 = TCPPacket.createPacket(ClientProt.COMMAND, client.GAME_CONNECTION_CONTEXT.outKeys);
                     tcpmessage_21.buffer.writeByte(string_0.length() + 3);
                     tcpmessage_21.buffer.writeByte(bool_1 ? 1 : 0);
@@ -680,7 +680,7 @@ public class RouteFinder {
                 return;
             }
         }
-        if (client.GAME_STATE != GameState.UNK_13) {
+        if (client.GAME_STATE != GameState.LOGGED_INGAME) {
             Class209.printConsoleMessage(LocalizedText.UNKNOWN_DEV_COMMAND.translate(Class223.CURRENT_LANGUAGE) + string_0);
         }
     }

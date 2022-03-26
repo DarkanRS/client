@@ -1223,40 +1223,38 @@ public class PacketDecoder {
                 arrow.targetType = targetType;
                 arrow.arrowSprite = buffer.readUnsignedByte();
                 if (arrow.arrowSprite >= 0 && arrow.arrowSprite < Class391.HINT_ARROW_SPRITES.length) {
-                    if (arrow.targetType != 1 && arrow.targetType != 10) {
-                        if (arrow.targetType >= 2 && arrow.targetType <= 6) {
-                            if (arrow.targetType == 2) {
-                                arrow.x = 256;
-                                arrow.y = 256;
-                            }
-                            if (arrow.targetType == 3) {
-                                arrow.x = 0;
-                                arrow.y = 256;
-                            }
-                            if (arrow.targetType == 4) {
-                                arrow.x = 512;
-                                arrow.y = 256;
-                            }
-                            if (arrow.targetType == 5) {
-                                arrow.x = 256;
-                                arrow.y = 0;
-                            }
-                            if (arrow.targetType == 6) {
-                                arrow.x = 256;
-                                arrow.y = 512;
-                            }
-                            arrow.targetType = 2;
-                            arrow.plane = buffer.readUnsignedByte();
-                            CoordGrid grid = IndexLoaders.MAP_REGION_DECODER.getBase();
-                            arrow.x += buffer.readUnsignedShort() - grid.x << 9;
-                            arrow.y += buffer.readUnsignedShort() - grid.y << 9;
-                            arrow.height = buffer.readUnsignedByte() << 2;
-                            arrow.distance = buffer.readUnsignedShort();
-                        }
-                    } else {
+                	if (arrow.targetType == 1 || arrow.targetType == 10) {
                         arrow.targetIndex = buffer.readUnsignedShort();
                         arrow.idk = buffer.readUnsignedShort();
                         buffer.index += 4;
+                    } else if (arrow.targetType >= 2 && arrow.targetType <= 6) {
+                        if (arrow.targetType == 2) {
+                            arrow.x = 256;
+                            arrow.y = 256;
+                        }
+                        if (arrow.targetType == 3) {
+                            arrow.x = 0;
+                            arrow.y = 256;
+                        }
+                        if (arrow.targetType == 4) {
+                            arrow.x = 512;
+                            arrow.y = 256;
+                        }
+                        if (arrow.targetType == 5) {
+                            arrow.x = 256;
+                            arrow.y = 0;
+                        }
+                        if (arrow.targetType == 6) {
+                            arrow.x = 256;
+                            arrow.y = 512;
+                        }
+                        arrow.targetType = 2;
+                        arrow.plane = buffer.readUnsignedByte();
+                        CoordGrid grid = IndexLoaders.MAP_REGION_DECODER.getBase();
+                        arrow.x += buffer.readUnsignedShort() - grid.x << 9;
+                        arrow.y += buffer.readUnsignedShort() - grid.y << 9;
+                        arrow.height = buffer.readUnsignedByte() << 2;
+                        arrow.distance = buffer.readUnsignedShort();
                     }
                     arrow.modelId = buffer.readInt();
                     client.HINT_ARROWS[iconIndex] = arrow;
@@ -2679,10 +2677,10 @@ public class PacketDecoder {
 	            connection.reset();
 	            return false;
 	        } else {
-	        	if (Loader.DEBUG) {
+	        	//if (Loader.DEBUG) {
 		        	System.err.println("Exception decoding packet");
 		        	ex.printStackTrace();
-	        	}
+	        	//}
 	            Class151.killConnections();
 	            return true;
 	        }

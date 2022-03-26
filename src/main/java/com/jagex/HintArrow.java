@@ -15,4 +15,8 @@ public class HintArrow {
     int height;
     int idk;
 
+    @Override
+    public String toString() {
+    	return "HINT_ARROW[ type: " + targetType + " targetIndex: " + targetIndex + " arrowSprite: " + arrowSprite + "(" + x + ", " + y + ", " + plane + ")";
+    }
 }

@@ -27,7 +27,7 @@ public class MaterialProp23 extends MaterialProperty {
             }
             for (int i_1 = 0; i_1 < 100 && PacketDecoder.processIncoming(client.GAME_CONNECTION_CONTEXT); i_1++) {
             }
-            if (client.GAME_STATE == GameState.UNK_13) {
+            if (client.GAME_STATE == GameState.LOGGED_INGAME) {
                 int i_2;
                 TCPPacket tcpmessage_6;
                 while (HashTableIterator.hasValues()) {
@@ -69,7 +69,7 @@ public class MaterialProp23 extends MaterialProperty {
                     client.aFloat7266 /= 2.0F;
                 }
                 MaterialProp30.method15240();
-                if (client.GAME_STATE == GameState.UNK_13) {
+                if (client.GAME_STATE == GameState.LOGGED_INGAME) {
                     IndexLoaders.MAP_REGION_DECODER.method4435().method4037(IndexLoaders.MAP_REGION_DECODER);
                     Class350_Sub1.method12516();
                     Interface.method1623();
