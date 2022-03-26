@@ -1062,12 +1062,12 @@ public class PacketDecoder {
                 IFEvents newSettings;
                 if (currentSettings == null) {
                     if (slot == -1) {
-                        newSettings = new IFEvents(IComponentDefinitions.getDefs(interfaceHash).events.settingsHash, paramId);
+                        newSettings = new IFEvents(IComponentDefinitions.getDefs(interfaceHash).events.eventsHash, paramId);
                     } else {
                         newSettings = new IFEvents(0, paramId);
                     }
                 } else {
-                    newSettings = new IFEvents(currentSettings.settingsHash, paramId);
+                    newSettings = new IFEvents(currentSettings.eventsHash, paramId);
                     currentSettings.unlink();
                 }
                 client.ICOMPONENT_SETTINGS_SLOTS.put(newSettings, slots);

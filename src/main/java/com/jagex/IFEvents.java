@@ -2,13 +2,13 @@ package com.jagex;
 
 public class IFEvents extends Node {
 
-    static IFEvents DEFAULT_SETTINGS = new IFEvents(0, -1);
-    public int settingsHash;
+    static IFEvents DEFAULT_EVENTS = new IFEvents(0, -1);
+    public int eventsHash;
     public int targetParam;
 
-    public IFEvents(int i_1, int i_2) {
-        settingsHash = i_1;
-        targetParam = i_2;
+    public IFEvents(int settingsHash, int targetParam) {
+        this.eventsHash = settingsHash;
+        this.targetParam = targetParam;
     }
 
     static int getUseOptionFlags(int settings) {
@@ -16,31 +16,31 @@ public class IFEvents extends Node {
     }
 
     public boolean dragEnabled() {
-        return (settingsHash >> 21 & 0x1) != 0;
+        return (eventsHash >> 21 & 0x1) != 0;
     }
 
     public boolean clickOptionEnabled(int option) {
-        return (settingsHash >> option + 1 & 0x1) != 0;
+        return (eventsHash >> option + 1 & 0x1) != 0;
     }
 
     public int getUseOptionFlags() {
-        return IFEvents.getUseOptionFlags(settingsHash);
+        return IFEvents.getUseOptionFlags(eventsHash);
     }
 
     public int depthFlags() {
-        return settingsHash >> 18 & 0x7;
+        return eventsHash >> 18 & 0x7;
     }
 
     public boolean canBeUsedWith() {
-        return (settingsHash >> 22 & 0x1) != 0;
+        return (eventsHash >> 22 & 0x1) != 0;
     }
 
     public boolean continueOptionEnabled() {
-        return (settingsHash & 0x1) != 0;
+        return (eventsHash & 0x1) != 0;
     }
 
     public boolean ignoresDepthFlags() {
-        return (settingsHash >> 23 & 0x1) != 0;
+        return (eventsHash >> 23 & 0x1) != 0;
     }
 
 }

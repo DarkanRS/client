@@ -179,7 +179,7 @@ public class IComponentDefinitions {
     short[] texturesToReplaceWith;
 
     public IComponentDefinitions() {
-        events = IFEvents.DEFAULT_SETTINGS;
+        events = IFEvents.DEFAULT_EVENTS;
         aBool1424 = false;
         useOnName = "";
         anInt1378 = -1;
@@ -934,7 +934,7 @@ public class IComponentDefinitions {
 	                int drawEndX = inter.x + i_6;
 	                int drawEndY = i_7 + inter.y;
 	                int i_16 = inter.transparency;
-	                if (client.aBool7168 && (client.getIComponentSettings(inter).settingsHash != 0 || inter.type == ComponentType.CONTAINER) && i_16 > 127) {
+	                if (client.aBool7168 && (client.getIComponentSettings(inter).eventsHash != 0 || inter.type == ComponentType.CONTAINER) && i_16 > 127) {
 	                    i_16 = 127;
 	                }
 	                int toX;

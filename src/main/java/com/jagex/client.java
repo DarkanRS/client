@@ -931,7 +931,7 @@ public class client extends Engine {
 
 	static boolean method11651(IComponentDefinitions icomponentdefinitions_0) {
 		if (aBool7168) {
-			if (getIComponentSettings(icomponentdefinitions_0).settingsHash != 0) {
+			if (getIComponentSettings(icomponentdefinitions_0).eventsHash != 0) {
 				return false;
 			}
 
@@ -1007,7 +1007,7 @@ public class client extends Engine {
 					upperBound = Math.min(i_20, boundYMax);
 				}
 
-				if (iCompDef.type != ComponentType.CONTAINER && !iCompDef.usesScripts && getIComponentSettings(iCompDef).settingsHash == 0 && iCompDef != aClass118_7247 && !ContentType.isGameSceneRelated(iCompDef.contentType)) {
+				if (iCompDef.type != ComponentType.CONTAINER && !iCompDef.usesScripts && getIComponentSettings(iCompDef).eventsHash == 0 && iCompDef != aClass118_7247 && !ContentType.isGameSceneRelated(iCompDef.contentType)) {
 					if (leftBound < rightBound && lowerBound < upperBound) {
 						Class86.renderItemInvSprite(iCompDef);
 					}
