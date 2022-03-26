@@ -20,7 +20,7 @@ public class CutsceneAction_Sub22 extends CutsceneAction {
     static void iComponentOnPlayer(PlayerEntity player_0, boolean bool_1) {
         if (Class20.anInt169 < 412) {
             if (VertexNormal.MY_PLAYER == player_0) {
-                if (client.aBool7344 && (Class506.USE_OPTIONS_FLAGS & 0x10) != 0) {
+                if (client.IS_USE_SELECTED && (Class506.USE_OPTIONS_FLAGS & 0x10) != 0) {
                     PlayerModel.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + Utils.rgbToColHexShortcut(16777215) + LocalizedText.aClass433_5299.translate(Class223.CURRENT_LANGUAGE), Defaults8Loader.anInt5932, 16, -1, 0L, 0, 0, true, false, player_0.index, false);
                 }
             } else {
@@ -48,7 +48,7 @@ public class CutsceneAction_Sub22 extends CutsceneAction {
                 } else {
                     string_3 = player_0.getUsernameWithTitle() + " (" + LocalizedText.SKILL_.translate(Class223.CURRENT_LANGUAGE) + player_0.elo + ")";
                 }
-                if (client.aBool7344 && !bool_1 && (Class506.USE_OPTIONS_FLAGS & 0x8) != 0) {
+                if (client.IS_USE_SELECTED && !bool_1 && (Class506.USE_OPTIONS_FLAGS & 0x8) != 0) {
                     PlayerModel.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + Utils.rgbToColHexShortcut(16777215) + string_3, Defaults8Loader.anInt5932, 15, -1, player_0.index, 0, 0, true, false, player_0.index, false);
                 }
                 if (bool_1) {

@@ -38,7 +38,7 @@ public class EntitySpotAnim {
             }
             int i_3;
             int i_4;
-            if (client.aClass118_7247 == InputSubscriberType.aClass118_2763) {
+            if (client.aClass118_7247 == InputSubscriberType.NO_LAYER) {
                 i_3 = i_1;
                 i_4 = i_2;
             } else {

@@ -1,14 +1,14 @@
 package com.jagex;
 
-public class IFTargetParams extends Node {
+public class IFEvents extends Node {
 
-    static IFTargetParams DEFAULT_SETTINGS = new IFTargetParams(0, -1);
+    static IFEvents DEFAULT_SETTINGS = new IFEvents(0, -1);
     public int settingsHash;
-    public int interfaceId;
+    public int targetParam;
 
-    public IFTargetParams(int i_1, int i_2) {
+    public IFEvents(int i_1, int i_2) {
         settingsHash = i_1;
-        interfaceId = i_2;
+        targetParam = i_2;
     }
 
     static int getUseOptionFlags(int settings) {
@@ -24,14 +24,14 @@ public class IFTargetParams extends Node {
     }
 
     public int getUseOptionFlags() {
-        return IFTargetParams.getUseOptionFlags(settingsHash);
+        return IFEvents.getUseOptionFlags(settingsHash);
     }
 
     public int depthFlags() {
         return settingsHash >> 18 & 0x7;
     }
 
-    public boolean bit22Enabled() {
+    public boolean canBeUsedWith() {
         return (settingsHash >> 22 & 0x1) != 0;
     }
 
@@ -39,7 +39,7 @@ public class IFTargetParams extends Node {
         return (settingsHash & 0x1) != 0;
     }
 
-    public boolean bit23Enabled() {
+    public boolean ignoresDepthFlags() {
         return (settingsHash >> 23 & 0x1) != 0;
     }
 

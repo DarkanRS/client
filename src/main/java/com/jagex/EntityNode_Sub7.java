@@ -22,7 +22,7 @@ public class EntityNode_Sub7 extends EntityNode {
         NativeLibraryLoader.anInt3240 = 1;
         Class86.anInt833 = -1;
         PingRequester.anInt5864 = -1;
-        client.anInt7429 = client.CYCLES_20MS;
+        client.anInt7429 = client.FRAME_COUNT;
         Class186.anInt2349 = IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX;
         GraphNode_Sub1_Sub2.anInt9461 = Class109_Sub1.CAM_MOVE_ABSOLUTEZ;
         Node_Sub15_Sub1.anInt9575 = Class246.CAM_MOVE_ABSOLUTEY;

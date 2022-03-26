@@ -50,20 +50,20 @@ public class ParticleProducer {
     }
 
     static void method11501() {
-        CutsceneAction_Sub12.method14614(Renderers.CURRENT_RENDERER, client.CYCLES_20MS);
+        CutsceneAction_Sub12.method14614(Renderers.CURRENT_RENDERER, client.FRAME_COUNT);
         if (client.BASE_WINDOW_ID != -1) {
             CS2Interface.method8777(client.BASE_WINDOW_ID);
         }
 
         int i_1;
-        for (i_1 = 0; i_1 < client.anInt7407; i_1++) {
-            client.aBoolArray7410[i_1] = client.INTERFACE_107_BIT23[i_1];
-            client.INTERFACE_107_BIT23[i_1] = false;
+        for (i_1 = 0; i_1 < client.IF_CURR_LAYER; i_1++) {
+            client.aBoolArray7410[i_1] = client.IF_COMPONENTS_TO_RENDER[i_1];
+            client.IF_COMPONENTS_TO_RENDER[i_1] = false;
         }
 
-        client.anInt7408 = client.CYCLES_20MS;
+        client.anInt7408 = client.FRAME_COUNT;
         if (client.BASE_WINDOW_ID != -1) {
-            client.anInt7407 = 0;
+            client.IF_CURR_LAYER = 0;
             StructIndexLoader.method7039();
         }
 

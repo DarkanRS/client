@@ -355,7 +355,7 @@ public class PlayerEntity extends PathingEntity {
         }
 
         int i_10 = aClass19_10359.method578();
-        boolean bool_11 = scalar != 0 && client.CYCLES_20MS >= anInt10347 && client.CYCLES_20MS < anInt10348;
+        boolean bool_11 = scalar != 0 && client.FRAME_COUNT >= anInt10347 && client.FRAME_COUNT < anInt10348;
         if (bool_11) {
             i_2 |= 0x80000;
         }

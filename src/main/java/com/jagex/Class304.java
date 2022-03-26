@@ -43,19 +43,19 @@ public class Class304 implements Interface27 {
         return i_0 < 100000 ? "<col=ffff00>" + i_0 + "</col>" : (i_0 < 10000000 ? "<col=ffffff>" + i_0 / 1000 + LocalizedText.aClass433_5297.translate(xlanguage_1) + "</col>" : "<col=00ff80>" + i_0 / 1000000 + LocalizedText.aClass433_5304.translate(xlanguage_1) + "</col>");
     }
 
-    public static void setUseOptionFlags(IComponentDefinitions componentDefs, int flags, int interfaceId) {
+    public static void setUseOptionFlags(IComponentDefinitions componentDefs, int flags, int targetParam) {
         if (componentDefs != null) {
-            if (componentDefs.anObjectArray1400 != null) {
+            if (componentDefs.onUseScript != null) {
                 HookRequest hookrequest_4 = new HookRequest();
                 hookrequest_4.source = componentDefs;
-                hookrequest_4.params = componentDefs.anObjectArray1400;
+                hookrequest_4.params = componentDefs.onUseScript;
                 CS2Executor.executeHookInner(hookrequest_4);
             }
-            client.aBool7344 = true;
+            client.IS_USE_SELECTED = true;
             client.anInt56 = componentDefs.idHash;
             client.anInt7345 = componentDefs.slotId;
             Class506.USE_OPTIONS_FLAGS = flags;
-            CutsceneAction_Sub12.USE_INTERFACE_ID = interfaceId;
+            CutsceneAction_Sub12.TARGET_PARAM = targetParam;
             client.anInt7346 = componentDefs.containerItemId;
             Defaults8Loader.anInt5932 = componentDefs.targetOverCursor;
             client.anInt7427 = componentDefs.targetLeaveCursor;

@@ -322,7 +322,7 @@ public class FriendStatus {
                     }
                 } else if (bool_16) {
                     if (CutsceneAction_Sub23.aCacheableNode_Sub7_9445 == null) {
-                        if (client.aBool7344) {
+                        if (client.IS_USE_SELECTED) {
                             Class60.method1170();
                         }
                     } else {

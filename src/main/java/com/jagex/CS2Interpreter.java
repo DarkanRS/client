@@ -932,7 +932,7 @@ public class CS2Interpreter {
             case instr6251:
                 method11593(exec);
                 break;
-            case instr6252:
+            case instr6252: //FIND (IF_SETONMISCTRANSMIT? IF_SETONDIALOGABORT?)
                 method4175(exec);
                 break;
             case instr6253:
@@ -5423,8 +5423,8 @@ public class CS2Interpreter {
         int i_4 = executor.intStack[executor.intStackPtr + 2];
         IComponentDefinitions icomponentdefinitions_5 = Index.getIComponentDefinitions(i_2 << 16 | i_3, i_4);
         Class60.method1170();
-        IFTargetParams class282_sub10_6 = client.getIComponentSettings(icomponentdefinitions_5);
-        Class304.setUseOptionFlags(icomponentdefinitions_5, class282_sub10_6.getUseOptionFlags(), class282_sub10_6.interfaceId);
+        IFEvents class282_sub10_6 = client.getIComponentSettings(icomponentdefinitions_5);
+        Class304.setUseOptionFlags(icomponentdefinitions_5, class282_sub10_6.getUseOptionFlags(), class282_sub10_6.targetParam);
     }
 
     static void method1140(CS2Executor executor) {
@@ -6271,7 +6271,7 @@ public class CS2Interpreter {
     }
 
     static void method6275(CS2Executor executor) {
-        executor.intStack[++executor.intStackPtr - 1] = client.aBool7344 ? 1 : 0;
+        executor.intStack[++executor.intStackPtr - 1] = client.IS_USE_SELECTED ? 1 : 0;
         executor.stringStack[++executor.stringStackPtr - 1] = client.aString7356 == null ? "" : client.aString7356;
         executor.stringStack[++executor.stringStackPtr - 1] = client.aString7275 == null ? "" : client.aString7275;
     }
@@ -9518,7 +9518,7 @@ public class CS2Interpreter {
     }
 
     static void method456(CS2Executor executor) {
-        executor.intStack[++executor.intStackPtr - 1] = client.CYCLES_20MS;
+        executor.intStack[++executor.intStackPtr - 1] = client.FRAME_COUNT;
     }
 
     static void method457(CS2Executor executor) {
@@ -11845,7 +11845,7 @@ public class CS2Interpreter {
         if (popIntArrayParam(string_4, cs2executor_2) != null) {
             string_4 = string_4.substring(0, string_4.length() - 1);
         }
-        icomponentdefinitions_0.anObjectArray1400 = popParamsDynamic(string_4, cs2executor_2);
+        icomponentdefinitions_0.onUseScript = popParamsDynamic(string_4, cs2executor_2);
         icomponentdefinitions_0.usesScripts = true;
     }
 

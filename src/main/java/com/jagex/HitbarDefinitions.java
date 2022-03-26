@@ -161,7 +161,7 @@ public class HitbarDefinitions {
                 Class412.method6934(client.aClass294_7457, client.aClass384_7167, i_21, i_31);
                 IndexLoaders.MAP_REGION_DECODER.method4435().method4037(IndexLoaders.MAP_REGION_DECODER);
                 byte b_15 = Class393.preferences.removeRoofsOptionOverride.method12952() == 2 ? (byte) client.anInt7286 : 1;
-                IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().method3447(client.CYCLES_20MS, IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX, Class109_Sub1.CAM_MOVE_ABSOLUTEZ, Class246.CAM_MOVE_ABSOLUTEY, IndexLoaders.MAP_REGION_DECODER.method4532(), client.anIntArray7198, client.anIntArray7303, client.anIntArray7194, client.anIntArray7305, client.anIntArray7306, VertexNormal.MY_PLAYER.plane + 1, b_15, Class393.preferences.flickeringEffects.method12943() == 0);
+                IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().method3447(client.FRAME_COUNT, IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX, Class109_Sub1.CAM_MOVE_ABSOLUTEZ, Class246.CAM_MOVE_ABSOLUTEY, IndexLoaders.MAP_REGION_DECODER.method4532(), client.anIntArray7198, client.anIntArray7303, client.anIntArray7194, client.anIntArray7305, client.anIntArray7306, VertexNormal.MY_PLAYER.plane + 1, b_15, Class393.preferences.flickeringEffects.method12943() == 0);
                 ++client.anInt7396;
                 MaterialPropTexture.method15391();
                 if (client.GAME_STATE == GameState.UNK_13) {

@@ -92,12 +92,12 @@ public class MaterialProp23 extends MaterialProperty {
                             if (client.anInt7341 == 0 && client.GAME_STATE != GameState.UNK_18) {
                                 Class86.aClass465_823.method7749();
                                 client.anInt7341 = 4;
-                                client.anInt7357 = client.CYCLES_20MS;
+                                client.anInt7357 = client.FRAME_COUNT;
                                 client.anInt7235 = 0;
                                 ParticleTriangle.method3953();
                             }
                             if (client.anInt7341 == 4) {
-                                i_2 = client.CYCLES_20MS - client.anInt7357;
+                                i_2 = client.FRAME_COUNT - client.anInt7357;
                                 if (client.anInt7235 < Class86.aCutsceneActionArray822.length) {
                                     do {
                                         CutsceneAction class96_3 = Class86.aCutsceneActionArray822[client.anInt7235];
@@ -140,7 +140,7 @@ public class MaterialProp23 extends MaterialProperty {
                         client.aBool7403 = false;
                         MaterialPropTexture.aClass118_9884 = null;
                         Class15.method544(null, -1, -1);
-                        if (!client.aBool7344) {
+                        if (!client.IS_USE_SELECTED) {
                             client.anInt7427 = -1;
                         }
                         ServerEnvironment.pulseSubInterfaces();

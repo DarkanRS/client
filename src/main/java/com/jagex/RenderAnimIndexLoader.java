@@ -21,10 +21,10 @@ public class RenderAnimIndexLoader {
     static void method3629(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
         if (!MovingAnimation.isInterfaceLoaded(i_0, null)) {
             if (i_7 != -1) {
-                client.INTERFACE_107_BIT23[i_7] = true;
+                client.IF_COMPONENTS_TO_RENDER[i_7] = true;
             } else {
                 for (int i_9 = 0; i_9 < 107; i_9++) {
-                    client.INTERFACE_107_BIT23[i_9] = true;
+                    client.IF_COMPONENTS_TO_RENDER[i_9] = true;
                 }
             }
         } else {

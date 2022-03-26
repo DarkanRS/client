@@ -1160,7 +1160,7 @@ public class MapRegion {
                         client.NPC_MAP.put(class282_sub47_17, i_7);
                         client.NPC_ARRAY[++client.anInt7210 - 1] = class282_sub47_17;
                         client.NPC_UPDATE_INDICES[++client.NPC_UPDATE_INDEX - 1] = i_7;
-                        npc_16.lastUpdate = client.CYCLES_20MS;
+                        npc_16.lastUpdate = client.FRAME_COUNT;
                         npc_16.setDefinition(npcdefinitions_14);
                         npc_16.setBoundSize(npc_16.definitions.size);
                         npc_16.anInt10340 = npc_16.definitions.contrast << 3;

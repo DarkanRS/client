@@ -103,7 +103,7 @@ public class Static {
 
     public static void method6378() {
         for (int i_1 = 0; i_1 < 107; i_1++) {
-            client.INTERFACE_107_BIT23[i_1] = true;
+            client.IF_COMPONENTS_TO_RENDER[i_1] = true;
         }
     }
 
@@ -121,7 +121,7 @@ public class Static {
     }
 
     static void method4281(PathingEntity animable_0) {
-        int i_2 = animable_0.forceMovementT1Delay - client.CYCLES_20MS;
+        int i_2 = animable_0.forceMovementT1Delay - client.FRAME_COUNT;
         int i_3 = animable_0.forceMovementT1XOff * 512 + animable_0.getSize() * 256;
         int i_4 = animable_0.forceMovementT1YOff * 512 + animable_0.getSize() * 256;
         Vector3 vector3_5 = animable_0.method11166().coords;

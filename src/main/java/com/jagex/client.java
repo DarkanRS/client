@@ -38,7 +38,7 @@ public class client extends Engine {
 	public static GameState GAME_STATE = GameState.UNK_4;
 	public static boolean aBool7171;
 	public static int anInt7173;
-	public static int CYCLES_20MS;
+	public static int FRAME_COUNT;
 	public static boolean aBool7175 = true;
 	public static int REBOOT_TIMER;
 	public static HintArrow[] HINT_ARROWS = new HintArrow[8];
@@ -120,7 +120,7 @@ public class client extends Engine {
 	public static int anInt7340;
 	public static int anInt7342;
 	public static int CURRENT_CURSOR;
-	public static boolean aBool7344;
+	public static boolean IS_USE_SELECTED;
 	public static String aString7275;
 	public static String aString7356;
 	public static volatile int BASE_WINDOW_ID;
@@ -134,7 +134,7 @@ public class client extends Engine {
 	public static int anInt7399;
 	public static boolean NEEDS_VARC_SAVE;
 	public static NodeCollection PENDING_HOOK_REQUESTS;
-	public static boolean[] INTERFACE_107_BIT23;
+	public static boolean[] IF_COMPONENTS_TO_RENDER;
 	public static int PUBLIC_FILTER;
 	public static int TRADE_FILTER;
 	public static String FC_NAME;
@@ -291,10 +291,10 @@ public class client extends Engine {
 	static NodeCollection aClass482_7233;
 	static NodeCollection aClass482_7404;
 	static IterableNodeMap ICOMPONENT_SETTINGS_SLOTS;
-	static int anInt7407;
+	static int IF_CURR_LAYER;
 	static int anInt7408;
 	static boolean[] aBoolArray7410;
-	static Rectangle[] aRectangleArray7411;
+	static Rectangle[] IF_LAYER_BOUNDS;
 	static int anInt7412;
 	static int[] anIntArray7438;
 	static int anInt7415;
@@ -437,7 +437,7 @@ public class client extends Engine {
 		anInt7427 = -1;
 		anInt7342 = -1;
 		CURRENT_CURSOR = -1;
-		aBool7344 = false;
+		IS_USE_SELECTED = false;
 		anInt7345 = -1;
 		anInt7346 = -1;
 		aString7275 = null;
@@ -496,14 +496,14 @@ public class client extends Engine {
 		aClass482_7233 = new NodeCollection();
 		aClass482_7404 = new NodeCollection();
 		ICOMPONENT_SETTINGS_SLOTS = new IterableNodeMap(512);
-		anInt7407 = 0;
+		IF_CURR_LAYER = 0;
 		anInt7408 = -2;
-		INTERFACE_107_BIT23 = new boolean[107];
+		IF_COMPONENTS_TO_RENDER = new boolean[107];
 		aBoolArray7410 = new boolean[107];
-		aRectangleArray7411 = new Rectangle[107];
+		IF_LAYER_BOUNDS = new Rectangle[107];
 
 		for (int i_0 = 0; i_0 < 107; i_0++) {
-			aRectangleArray7411[i_0] = new Rectangle();
+			IF_LAYER_BOUNDS[i_0] = new Rectangle();
 		}
 
 		anInt7412 = 0;
@@ -903,28 +903,28 @@ public class client extends Engine {
 
 	}
 
-	public static IFTargetParams getIComponentSettings(IComponentDefinitions icomponentdefinitions_0) {
-		IFTargetParams class282_sub10_1 = (IFTargetParams) ICOMPONENT_SETTINGS_SLOTS.get(((long) icomponentdefinitions_0.idHash << 32) + icomponentdefinitions_0.slotId);
-		return class282_sub10_1 != null ? class282_sub10_1 : icomponentdefinitions_0.targetParams;
+	public static IFEvents getIComponentSettings(IComponentDefinitions icomponentdefinitions_0) {
+		IFEvents class282_sub10_1 = (IFEvents) ICOMPONENT_SETTINGS_SLOTS.get(((long) icomponentdefinitions_0.idHash << 32) + icomponentdefinitions_0.slotId);
+		return class282_sub10_1 != null ? class282_sub10_1 : icomponentdefinitions_0.events;
 	}
 
-	static IComponentDefinitions method11634(IComponentDefinitions icomponentdefinitions_0) {
-		IFTargetParams class282_sub10_1 = getIComponentSettings(icomponentdefinitions_0);
-		if (class282_sub10_1.bit23Enabled()) {
-			return InputSubscriberType.aClass118_2763;
+	static IComponentDefinitions method11634(IComponentDefinitions component) {
+		IFEvents params = getIComponentSettings(component);
+		if (params.ignoresDepthFlags()) {
+			return InputSubscriberType.NO_LAYER;
 		} else {
-			int i_2 = class282_sub10_1.depthFlags();
-			if (i_2 == 0) {
+			int depth = params.depthFlags();
+			if (depth == 0) {
 				return null;
 			} else {
-				for (int i_3 = 0; i_3 < i_2; i_3++) {
-					icomponentdefinitions_0 = IComponentDefinitions.getParentLayer(CutsceneAction.method1605(icomponentdefinitions_0.idHash), icomponentdefinitions_0);
-					if (icomponentdefinitions_0 == null) {
-						return InputSubscriberType.aClass118_2763;
+				for (int i = 0; i < depth; i++) {
+					component = IComponentDefinitions.getParentLayer(CutsceneAction.getInterfaceByIdFromHash(component.idHash), component);
+					if (component == null) {
+						return InputSubscriberType.NO_LAYER;
 					}
 				}
 
-				return icomponentdefinitions_0;
+				return component;
 			}
 		}
 	}
@@ -1040,11 +1040,11 @@ public class client extends Engine {
 							}
 						}
 
-						boolean bool_47 = iCompDef.clickMask && iCompDef.type == ComponentType.SPRITE && iCompDef.transparency == 0 && iCompDef.anInt1404 < 0 && iCompDef.containerItemId == -1 && iCompDef.vorbisStringId == -1 && !iCompDef.tiling && iCompDef.angle2d == 0;
+						boolean clickable = iCompDef.clickMask && iCompDef.type == ComponentType.SPRITE && iCompDef.transparency == 0 && iCompDef.anInt1404 < 0 && iCompDef.containerItemId == -1 && iCompDef.vorbisStringId == -1 && !iCompDef.tiling && iCompDef.angle2d == 0;
 						boolean bool_48 = false;
 						int i_24;
 						if (mouseX >= leftBound && mouseY >= lowerBound && mouseX < rightBound && mouseY < upperBound) {
-							if (bool_47) {
+							if (clickable) {
 								Class119 class119_21 = iCompDef.method2046(Renderers.CURRENT_RENDERER);
 								if (class119_21 != null && class119_21.anInt1458 == iCompDef.width && iCompDef.height == class119_21.anInt1454) {
 									int i_22 = mouseX - x;
@@ -1063,7 +1063,7 @@ public class client extends Engine {
 							}
 						}
 
-						if (!aBool7344 && bool_48) {
+						if (!IS_USE_SELECTED && bool_48) {
 							if (iCompDef.mouseOverCursor >= 0) {
 								anInt7427 = iCompDef.mouseOverCursor;
 							} else if (iCompDef.noClickThrough) {
@@ -1080,14 +1080,14 @@ public class client extends Engine {
 							bool_38 = true;
 						}
 
-						boolean bool_49 = false;
+						boolean mouseClicked = false;
 						MouseRecord record = (MouseRecord) mouseRecords.head();
 						int i_25;
 						int i_26;
 						int i_27;
 						Class119 class119_40;
 						if (record != null && record.getClickType() == 0 && record.getX() >= leftBound && record.getY() >= lowerBound && record.getX() < rightBound && record.getY() < upperBound) {
-							if (bool_47) {
+							if (clickable) {
 								class119_40 = iCompDef.method2046(Renderers.CURRENT_RENDERER);
 								if (class119_40 != null && iCompDef.width == class119_40.anInt1458 && iCompDef.height == class119_40.anInt1454) {
 									i_25 = record.getX() - x;
@@ -1095,14 +1095,14 @@ public class client extends Engine {
 									if (i_26 >= 0 && i_26 < class119_40.anIntArray1457.length) {
 										i_27 = class119_40.anIntArray1457[i_26];
 										if (i_25 >= i_27 && i_25 <= i_27 + class119_40.anIntArray1455[i_26]) {
-											bool_49 = true;
+											mouseClicked = true;
 										}
 									}
 								} else {
-									bool_49 = true;
+									mouseClicked = true;
 								}
 							} else {
-								bool_49 = true;
+								mouseClicked = true;
 							}
 						}
 
@@ -1114,7 +1114,7 @@ public class client extends Engine {
 									for (i_27 = 0; i_27 < anInt7193; i_27++) {
 										if (iCompDef.anIntArray1267[i_24] == KEYS_PRESSED[i_27].getCharacter()) {
 											bool_50 = true;
-											if (iCompDef.anIntArray1425 == null || iCompDef.anIntArray1425[i_24] <= CYCLES_20MS) {
+											if (iCompDef.anIntArray1425 == null || iCompDef.anIntArray1425[i_24] <= FRAME_COUNT) {
 												bool_51 = true;
 											}
 											break;
@@ -1126,7 +1126,7 @@ public class client extends Engine {
 									for (i_27 = 0; i_27 < iCompDef.aByteArrayArray1366[i_24].length; i_27++) {
 										if (PlaySoundJingleCutsceneAction.keyRecorder.held(iCompDef.aByteArrayArray1366[i_24][i_27])) {
 											bool_50 = true;
-											if (iCompDef.anIntArray1425 != null && iCompDef.anIntArray1425[i_24] > CYCLES_20MS) {
+											if (iCompDef.anIntArray1425 != null && iCompDef.anIntArray1425[i_24] > FRAME_COUNT) {
 												break;
 											}
 
@@ -1144,8 +1144,8 @@ public class client extends Engine {
 										CutsceneAction_Sub10.method14603(i_24 + 1, iCompDef.idHash, iCompDef.slotId, "");
 									} else if (i_24 == 10) {
 										Class60.method1170();
-										IFTargetParams class282_sub10_41 = getIComponentSettings(iCompDef);
-										Class304.setUseOptionFlags(iCompDef, class282_sub10_41.getUseOptionFlags(), class282_sub10_41.interfaceId);
+										IFEvents class282_sub10_41 = getIComponentSettings(iCompDef);
+										Class304.setUseOptionFlags(iCompDef, class282_sub10_41.getUseOptionFlags(), class282_sub10_41.targetParam);
 										aString7275 = QuickChatMessage.method6157(iCompDef);
 										if (aString7275 == null) {
 											aString7275 = "Null";
@@ -1160,7 +1160,7 @@ public class client extends Engine {
 									}
 
 									if (i_27 != 0) {
-										iCompDef.anIntArray1425[i_24] = i_27 + CYCLES_20MS;
+										iCompDef.anIntArray1425[i_24] = i_27 + FRAME_COUNT;
 									} else {
 										iCompDef.anIntArray1425[i_24] = Integer.MAX_VALUE;
 									}
@@ -1172,7 +1172,7 @@ public class client extends Engine {
 							}
 						}
 
-						if (bool_49) {
+						if (mouseClicked) {
 							Node_Sub14.method12221(iCompDef, record.getX() - x, record.getY() - y);
 						}
 
@@ -1199,10 +1199,10 @@ public class client extends Engine {
 							}
 
 							if (aClass118_7257 != null) {
-								bool_49 = false;
+								mouseClicked = false;
 								bool_38 = false;
 							} else if (Class20.aBool161 || iCompDef.contentType != ContentType.CONTENT_TYPE_1400 && anInt7184 > 0) {
-								bool_49 = false;
+								mouseClicked = false;
 								bool_38 = false;
 								bool_48 = false;
 							}
@@ -1291,7 +1291,7 @@ public class client extends Engine {
 										i_34 = ((int) vector3_36.z - i_45 >> 9) - (i_32 >> 2);
 									}
 
-									if (aBool7344 && (Class506.USE_OPTIONS_FLAGS & 0x40) != 0) {
+									if (IS_USE_SELECTED && (Class506.USE_OPTIONS_FLAGS & 0x40) != 0) {
 										IComponentDefinitions icomponentdefinitions_35 = Index.getIComponentDefinitions(client.anInt56, anInt7345);
 										if (icomponentdefinitions_35 != null) {
 											PlayerModel.method4032(aString7275, " ->", Defaults8Loader.anInt5932, 59, iCompDef.containerItemId, 1L, i_33, i_34, true, false, iCompDef.slotId << 0 | iCompDef.idHash, true);
@@ -1315,7 +1315,7 @@ public class client extends Engine {
 										Class291_Sub1.aBool8022 = true;
 									}
 
-									if (bool_49) {
+									if (mouseClicked) {
 										i_24 = (int) ((record.getX() - x - iCompDef.width / 2) * 2.0D / Class291.aFloat3468);
 										i_25 = (int) (-((record.getY() - y - iCompDef.height / 2) * 2.0D / Class291.aFloat3468));
 										i_26 = i_24 + Class291.anInt3472 + MapSpriteIndexLoader.anInt5123;
@@ -1386,7 +1386,7 @@ public class client extends Engine {
 								}
 							}
 
-							if (!iCompDef.aBool1286 && bool_49) {
+							if (!iCompDef.aBool1286 && mouseClicked) {
 								iCompDef.aBool1286 = true;
 								if (iCompDef.anObjectArray1386 != null) {
 									HookRequest hookRequest = new HookRequest();
@@ -1930,10 +1930,10 @@ public class client extends Engine {
 
 				aBool7225 = false;
 			}
-			++CYCLES_20MS;
-			if (CYCLES_20MS % 1000 == 1) {
-				GregorianCalendar gregoriancalendar_10 = new GregorianCalendar();
-				Class455_Sub3.anInt9079 = gregoriancalendar_10.get(Calendar.HOUR_OF_DAY) * 600 + gregoriancalendar_10.get(Calendar.MINUTE) * 10 + gregoriancalendar_10.get(Calendar.SECOND) / 6;
+			++FRAME_COUNT;
+			if (FRAME_COUNT % 1000 == 1) { //20 seconds
+				GregorianCalendar cal = new GregorianCalendar();
+				Class455_Sub3.anInt9079 = cal.get(Calendar.HOUR_OF_DAY) * 600 + cal.get(Calendar.MINUTE) * 10 + cal.get(Calendar.SECOND) / 6;
 				aRandom7260.setSeed(Class455_Sub3.anInt9079);
 			}
 
@@ -2130,8 +2130,8 @@ public class client extends Engine {
 			}
 
 			if (anInt7412 == 3) {
-				for (width = 0; width < anInt7407; width++) {
-					Rectangle rectangle_10 = aRectangleArray7411[width];
+				for (width = 0; width < IF_CURR_LAYER; width++) {
+					Rectangle rectangle_10 = IF_LAYER_BOUNDS[width];
 					if (aBoolArray7410[width]) {
 						Renderers.CURRENT_RENDERER.method8562(rectangle_10.x, rectangle_10.y, rectangle_10.width, rectangle_10.height, -65281);
 					} else {
@@ -2389,7 +2389,7 @@ public class client extends Engine {
 		Frame frame_1 = new Frame(" ");
 		frame_1.pack();
 		frame_1.dispose();
-		InputSubscriberType.aClass118_2763 = new IComponentDefinitions();
+		InputSubscriberType.NO_LAYER = new IComponentDefinitions();
 		Class532_Sub1.method12840();
 		Whirlpool.JS5_LOCAL_REQUESTER = new JS5LocalRequester();
 		Class119.JS5_STANDARD_REQUESTER = new JS5StandardRequester_Sub1();
@@ -2470,7 +2470,7 @@ public class client extends Engine {
 		Frame frame_1 = new Frame(" ");
 		frame_1.pack();
 		frame_1.dispose();
-		InputSubscriberType.aClass118_2763 = new IComponentDefinitions();
+		InputSubscriberType.NO_LAYER = new IComponentDefinitions();
 		Class532_Sub1.method12840();
 		Whirlpool.JS5_LOCAL_REQUESTER = new JS5LocalRequester();
 		Class119.JS5_STANDARD_REQUESTER = new JS5StandardRequester_Sub1();
@@ -2596,7 +2596,7 @@ public class client extends Engine {
 		Frame frame_2 = new Frame(" ");
 		frame_2.pack();
 		frame_2.dispose();
-		InputSubscriberType.aClass118_2763 = new IComponentDefinitions();
+		InputSubscriberType.NO_LAYER = new IComponentDefinitions();
 		Class532_Sub1.method12840();
 		Whirlpool.JS5_LOCAL_REQUESTER = new JS5LocalRequester();
 		Class119.JS5_STANDARD_REQUESTER = new JS5StandardRequester_Sub1();
@@ -2809,7 +2809,7 @@ public class client extends Engine {
 												EntitySpotAnim.method2827();
 											}
 
-											if (CYCLES_20MS % 1500 == 0) {
+											if (FRAME_COUNT % 1500 == 0) {
 												Class60.method1172();
 											}
 
