@@ -33,7 +33,7 @@ public enum ServerProt {
     VARCLAN_SET_LONG(26, 10),
     CREATE_GROUND_ITEM(27, 5),
     CLANCHANNEL_DELTA(28, -2),
-    PING(29, 0),
+    KEEPALIVE(29, 0),
     CHAT_FILTER_SETTINGS(30, 2),
     MESSAGE_QUICKCHAT_PRIVATE_ECHO(31, -1),
     LOYALTY_UPDATE(32, 5),
@@ -150,7 +150,7 @@ public enum ServerProt {
     MAP_PROJANIM(143, 16),
     IF_SETRECOL(144, 9),
     ANIMATE_NPC(145, 19),
-    aClass375_4497(146, 0), //load last interface? no idea maybe IF_SETEVENTS as it adds hook events to them somehow?
+    TRIGGER_ONDIALOGABORT(146, 0), //load last interface? no idea maybe IF_SETEVENTS as it adds hook events to them somehow?
     IDENTIFY_HOST_NAME(147, 4),
     IF_SETTARGETPARAM(148, 10),
     HINT_TRAIL(149, -2),

@@ -1366,7 +1366,7 @@ public class PacketDecoder {
             client.anIntArray7381[++client.anInt7382 - 1 & 0x1f] = key;
             context.currentPacket = null;
             return true;
-        } else if (context.currentPacket == ServerProt.PING) {
+        } else if (context.currentPacket == ServerProt.KEEPALIVE) {
             context.currentPacket = null;
             return false;
         } else if (context.currentPacket == ServerProt.VARP_SMALL) {
@@ -1387,9 +1387,9 @@ public class PacketDecoder {
             Class320.method5731(i_10, i_11, key, i_6, i_7, flags);
             context.currentPacket = null;
             return true;
-        } else if (context.currentPacket == ServerProt.aClass375_4497) { //IF_SETEVENTS? ONDIALOGABORT?
+        } else if (context.currentPacket == ServerProt.TRIGGER_ONDIALOGABORT) {
             if (client.BASE_WINDOW_ID != -1) {
-                Class383.method6514(client.BASE_WINDOW_ID, 0);
+                Class383.triggerDialogAbort(client.BASE_WINDOW_ID, 0);
             }
             context.currentPacket = null;
             return true;
@@ -2071,7 +2071,7 @@ public class PacketDecoder {
                 HostNameIdentifier.method483(Interface.INTERFACES[parent2Def.idHash >>> 16], parent2Def, true);
             }
             if (client.BASE_WINDOW_ID != -1) {
-                Class383.method6514(client.BASE_WINDOW_ID, 1);
+                Class383.triggerDialogAbort(client.BASE_WINDOW_ID, 1);
             }
             context.currentPacket = null;
             return true;

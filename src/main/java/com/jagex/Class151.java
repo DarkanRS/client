@@ -61,7 +61,7 @@ public class Class151 {
                     }
                     SubInterface class282_sub44_5 = (SubInterface) client.OPEN_INTERFACES.get(icomponentdefinitions_4.idHash);
                     if (class282_sub44_5 != null) {
-                        Class383.method6514(class282_sub44_5.interfaceId, type);
+                        Class383.triggerDialogAbort(class282_sub44_5.interfaceId, type);
                     }
                 }
                 HookRequest hookrequest_6;

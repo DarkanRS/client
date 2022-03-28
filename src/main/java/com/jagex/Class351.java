@@ -28,7 +28,7 @@ public class Class351 implements Interface3 {
         }
         ClosedOutputStream.method12938();
         if (!bool_2 && client.BASE_WINDOW_ID != -1) {
-            Class383.method6514(client.BASE_WINDOW_ID, 1);
+            Class383.triggerDialogAbort(client.BASE_WINDOW_ID, 1);
         }
         HashTableIterator itr = new HashTableIterator(client.OPEN_INTERFACES);
         for (SubInterface class282_sub44_8 = (SubInterface) itr.first(); class282_sub44_8 != null; class282_sub44_8 = (SubInterface) itr.next()) {

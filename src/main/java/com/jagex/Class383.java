@@ -99,9 +99,9 @@ public class Class383 implements Interface41 {
         }
     }
 
-    static void method6514(int interfaceId, int i_1) {
+    static void triggerDialogAbort(int interfaceId, int type) {
         if (MovingAnimation.isInterfaceLoaded(interfaceId, null)) {
-            Class151.method2591(Interface.INTERFACES[interfaceId].components, i_1);
+            Class151.method2591(Interface.INTERFACES[interfaceId].components, type);
         }
     }
 
