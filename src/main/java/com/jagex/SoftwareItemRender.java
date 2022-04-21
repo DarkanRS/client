@@ -23,13 +23,13 @@ public class SoftwareItemRender implements Interface18 {
     public static void method7034(AnimationDefinitions defs, int i_1) {
         if (Class260.SOUNDS_SIZE < 50 && defs != null && defs.anIntArrayArray5913 != null && i_1 < defs.anIntArrayArray5913.length && defs.anIntArrayArray5913[i_1] != null) {
             int i_3 = defs.anIntArrayArray5913[i_1][0];
-            int i_4 = i_3 >> 8;
+            int soundID = i_3 >> 8;
             int i_5 = i_3 >> 5 & 0x7;
             int i_6;
             if (defs.anIntArrayArray5913[i_1].length > 1) {
                 i_6 = (int) (Math.random() * defs.anIntArrayArray5913[i_1].length);
                 if (i_6 > 0) {
-                    i_4 = defs.anIntArrayArray5913[i_1][i_6];
+                    soundID = defs.anIntArrayArray5913[i_1][i_6];
                 }
             }
             i_6 = 256;
@@ -38,9 +38,9 @@ public class SoftwareItemRender implements Interface18 {
             }
             int i_7 = defs.anIntArray5926 == null ? 255 : defs.anIntArray5926[i_1];
             if (defs.aBool5928) {
-                Class435.playSoundVorbis(i_4, i_5, 0, i_7, false, i_6);
+                Class435.playSoundVorbis(soundID, i_5, 0, i_7, false, i_6);
             } else {
-                VarNPCMap.playSoundSynth(i_4, i_5, 0, i_7, i_6);
+                VarNPCMap.playSoundSynth(soundID, i_5, 0, i_7, i_6);
             }
         }
     }

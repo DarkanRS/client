@@ -134,7 +134,7 @@ public class Interface {
                                 if (i_14 < 0) {
                                     i_14 = 0;
                                 }
-                                i_5 = (i_7 - i_14) * Class393.preferences.ambientSoundVolume.method12714() * sound.volume / i_7 >> 2;
+                                i_5 = (i_7 - i_14) * Class393.preferences.ambientSoundVolume.method12714() * sound.anInt123 / i_7 >> 2;
                                 if (sound.anInt3305 != -1) {
                                     i_10 = sound.anInt3305;
                                     i_12 = sound.anInt3306;
@@ -158,7 +158,7 @@ public class Interface {
                                 i_5 = 0;
                             }
                         } else {
-                            i_5 = sound.volume * (sound.type == 3 ? Class393.preferences.voiceOverVolume.method12714() : Class393.preferences.soundEffectVolume.method12714()) >> 2;
+                            i_5 = sound.anInt123 * (sound.type == 3 ? Class393.preferences.voiceOverVolume.method12714() : Class393.preferences.soundEffectVolume.method12714()) >> 2;
                         }
                         if (i_5 > 0) {
                             if (sound.type == 1) {

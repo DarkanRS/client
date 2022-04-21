@@ -104,11 +104,11 @@ public class QuickchatFiller implements Interface19 {
         return -1;
     }
 
-    public static void method1142(AreadSound class268_0) {
-        if (class268_0.aNode_Sub15_Sub5_3304 != null) {
-            Class79.aNode_Sub15_Sub4_783.method15276(class268_0.aNode_Sub15_Sub5_3304);
+    public static void method1142(AreadSound sound) {
+        if (sound.aNode_Sub15_Sub5_3304 != null) {
+            Class79.aNode_Sub15_Sub4_783.method15276(sound.aNode_Sub15_Sub5_3304);
         } else {
-            class268_0.delay = Integer.MIN_VALUE;
+            sound.delay = Integer.MIN_VALUE;
         }
     }
 

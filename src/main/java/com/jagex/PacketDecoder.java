@@ -2229,10 +2229,10 @@ public class PacketDecoder {
             if (id == 65535) {
                 id = -1;
             }
-            int soundType = buffer.readUnsignedByte();
+            int i_6 = buffer.readUnsignedByte();
             int delay = buffer.readUnsignedShort();
             int i_7 = buffer.readUnsignedByte();
-            Class435.playSoundVorbis(id, soundType, delay, i_7, true, 256);
+            Class435.playSoundVorbis(id, i_6, delay, i_7, true, 256);
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.UPDATE_IGNORE_LIST) {
@@ -2425,20 +2425,20 @@ public class PacketDecoder {
             int i_3 = buffer.readUnsignedByte();
             int i_21 = (i_3 >> 4 & 0x7) + Static.UPDATE_ZONE_X;
             int i_5 = (i_3 & 0x7) + Class158_Sub1_Sub2.UPDATE_ZONE_Y;
-            int i_6 = buffer.readUnsignedShort();
-            if (i_6 == 65535) {
-                i_6 = -1;
+            int soundID = buffer.readUnsignedShort();
+            if (soundID == 65535) {
+                soundID = -1;
             }
             int i_7 = buffer.readUnsignedByte();
             int i_8 = i_7 >> 4 & 0xf;
             int i_9 = i_7 & 0x7;
-            int i_10 = buffer.readUnsignedByte();
+            int delay = buffer.readUnsignedByte();
             int i_11 = buffer.readUnsignedByte();
             int i_23 = buffer.readUnsignedShort();
             if (IndexLoaders.MAP_REGION_DECODER.method4419() != Class256.aClass256_3153 && i_21 >= 0 && i_5 >= 0 && i_21 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && i_5 < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
                 int i_24 = i_8 + 1;
                 if (VertexNormal.MY_PLAYER.regionBaseX[0] >= i_21 - i_24 && VertexNormal.MY_PLAYER.regionBaseX[0] <= i_21 + i_24 && VertexNormal.MY_PLAYER.regionBaseY[0] >= i_5 - i_24 && VertexNormal.MY_PLAYER.regionBaseY[0] <= i_24 + i_5) {
-                    Class383.method6509(i_6, i_9, i_10, i_11, i_8 + (Class272.UPDATE_ZONE_PLANE << 24) + (i_5 << 8) + (i_21 << 16), i_23);
+                    Class383.method6509(soundID, i_9, delay, i_11, i_8 + (Class272.UPDATE_ZONE_PLANE << 24) + (i_5 << 8) + (i_21 << 16), i_23);
                 }
             }
         } else if (packet == UpdateZonePacket.DESTROY_OBJECT) {

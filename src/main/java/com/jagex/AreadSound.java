@@ -21,18 +21,18 @@ public class AreadSound {
 
     int delay;
 
-    int volume;
+    int anInt123;
 
     int anInt3298;
 
     int anInt3295;
 
-    AreadSound(byte type, int soundId, int i_3, int i_4, int i_5, int i_6, int i_7, GraphNode_Sub1 class521_sub1_8) {
+    AreadSound(byte type, int soundId, int i_3, int delay, int anInt123, int i_6, int i_7, GraphNode_Sub1 class521_sub1_8) {
         this.type = type;
         this.soundId = soundId;
         anInt3302 = i_3;
-        delay = i_4;
-        volume = i_5;
+        this.delay = delay;
+        this.anInt123 = anInt123;
         anInt3298 = i_6;
         anInt3295 = i_7;
         if (class521_sub1_8 instanceof GraphNode_Sub1_Sub1) {

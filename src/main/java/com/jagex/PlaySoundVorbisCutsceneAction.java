@@ -2,9 +2,9 @@ package com.jagex;
 
 public class PlaySoundVorbisCutsceneAction extends CutsceneAction {
 
-    AreadSound aClass268_9271;
+    AreadSound sound;
 
-    int anInt9270;
+    int soundID;
 
     int anInt9269;
 
@@ -14,7 +14,7 @@ public class PlaySoundVorbisCutsceneAction extends CutsceneAction {
 
     PlaySoundVorbisCutsceneAction(ByteBuf rsbytebuffer_1) {
         super(rsbytebuffer_1);
-        anInt9270 = rsbytebuffer_1.readUnsignedShort();
+        soundID = rsbytebuffer_1.readUnsignedShort();
         anInt9269 = rsbytebuffer_1.readUnsignedByte();
         anInt9272 = rsbytebuffer_1.readUnsignedByte();
         anInt9268 = rsbytebuffer_1.readUnsignedByte();
@@ -26,18 +26,18 @@ public class PlaySoundVorbisCutsceneAction extends CutsceneAction {
 
     @Override
     public void method1592() {
-        aClass268_9271 = Class435.playSoundVorbis(anInt9270, anInt9268, 0, anInt9269, false, anInt9272);
+        sound = Class435.playSoundVorbis(soundID, anInt9268, 0, anInt9269, false, anInt9272);
     }
 
     @Override
     void method1593() {
-        if (aClass268_9271 != null) {
-            QuickchatFiller.method1142(aClass268_9271);
-            aClass268_9271 = null;
+        if (sound != null) {
+            QuickchatFiller.method1142(sound);
+            sound = null;
         }
     }
 
     public void method1601() {
-        aClass268_9271 = Class435.playSoundVorbis(983294899 * anInt9270 * -1315470469, anInt9268 * 1609664985 * -573413783, 0, anInt9269 * -957613339 * -840420627, false, 177588843 * anInt9272 * -1529769405);
+        sound = Class435.playSoundVorbis(983294899 * soundID * -1315470469, anInt9268 * 1609664985 * -573413783, 0, anInt9269 * -957613339 * -840420627, false, 177588843 * anInt9272 * -1529769405);
     }
 }
