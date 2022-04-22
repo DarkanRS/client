@@ -16,7 +16,7 @@ public class Node_Sub48 extends Node {
     boolean aBool8092;
     Node_Sub15_Sub5 aNode_Sub15_Sub5_8096;
     ObjectDefinition aClass478_8104;
-    Node_Sub26_Sub1_Sub1 aNode_Sub26_Sub1_Sub1_8106;
+    AudioFormatUnknown2 aAudioFormatUnknown2_8106;
     int anInt8107;
     int soundEffectId;
     boolean aBool8098;
@@ -30,7 +30,7 @@ public class Node_Sub48 extends Node {
     int[] anIntArray8102;
     boolean aBool8103;
     Node_Sub15_Sub5 aNode_Sub15_Sub5_8099;
-    Node_Sub26_Sub1_Sub1 aNode_Sub26_Sub1_Sub1_8082;
+    AudioFormatUnknown2 aAudioFormatUnknown2_8082;
     MIDIInstrument aNode_Sub18_8097;
     int anInt8091;
 
@@ -97,9 +97,9 @@ public class Node_Sub48 extends Node {
             anInt8093 = 256;
         }
         if ((i_2 != soundEffectId || bool_3 != aBool8098) && aNode_Sub15_Sub5_8099 != null) {
-            Class79.aNode_Sub15_Sub4_783.method15276(aNode_Sub15_Sub5_8099);
+            Class79.aNode_Sub15_Sub4_783.methodUnlink15276(aNode_Sub15_Sub5_8099);
             aNode_Sub15_Sub5_8099 = null;
-            aNode_Sub26_Sub1_Sub1_8082 = null;
+            aAudioFormatUnknown2_8082 = null;
             aNode_Sub18_8097 = null;
         }
     }

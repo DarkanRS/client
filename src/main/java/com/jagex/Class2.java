@@ -20,9 +20,9 @@ public class Class2 {
         return i_2 == 0 ? i_1 : (i_2 == 1 ? 7 - i_0 : (i_2 == 2 ? 7 - i_1 : i_0));
     }
 
-    static void method263(MIDIInstrument class282_sub18_0) {
-        if (!Class337.aLinkedList3969.contains(class282_sub18_0)) {
-            Class337.aLinkedList3969.add(class282_sub18_0);
+    static void method263(MIDIInstrument midiInstrumentSound) {
+        if (!Class337.linkedListMidiInstruments39.contains(midiInstrumentSound)) {
+            Class337.linkedListMidiInstruments39.add(midiInstrumentSound);
         }
     }
 }

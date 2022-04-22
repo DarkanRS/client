@@ -20,7 +20,7 @@ public class Node_Sub15_Sub4 extends Node_Sub15 {
         aClass482_9824.method8098(class282_sub15_1);
     }
 
-    public synchronized void method15276(Node_Sub15 class282_sub15_1) {
+    public synchronized void methodUnlink15276(Node_Sub15 class282_sub15_1) {
         class282_sub15_1.unlink();
     }
 

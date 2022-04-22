@@ -12,7 +12,7 @@ public abstract class Node_Sub15_Sub5 extends Node_Sub15 {
     int anInt9850;
     int anInt9858;
     int anInt9854;
-    int anInt9846;
+    int volume;
     int anInt9853;
     int anInt9847;
     int anInt9849;
@@ -49,8 +49,8 @@ public abstract class Node_Sub15_Sub5 extends Node_Sub15 {
         int i_11 = i_1;
         if (1008956447 * anInt9858 * 1156515807 > 0) {
             if (i_11 >= 1008956447 * anInt9858 * 1156515807) {
-                if (anInt9846 * -298675253 * -1302038045 == Integer.MIN_VALUE) {
-                    anInt9846 = 0;
+                if (volume * -298675253 * -1302038045 == Integer.MIN_VALUE) {
+                    volume = 0;
                     anInt9850 = 0;
                     anInt9845 = 0;
                     anInt9848 = 0;
@@ -70,7 +70,7 @@ public abstract class Node_Sub15_Sub5 extends Node_Sub15 {
 
         int i_2 = anInt9844 * 900940833 * -99794975 << 8;
         int i_3 = anInt9856 * -628161865 * -1048610041 << 8;
-        int i_4 = ((Node_Sub26_Sub1) aNode_Sub26_7601).method15223() << 8;
+        int i_4 = ((Node_Sub26_Sub1) aNode_Sub26_7601).getAudioBufferLength() << 8;
         int i_5 = i_3 - i_2;
         if (i_5 <= 0) {
             anInt9854 = 0;
@@ -217,7 +217,7 @@ public abstract class Node_Sub15_Sub5 extends Node_Sub15 {
     }
 
     public synchronized int method15315() {
-        return anInt9846 == Integer.MIN_VALUE ? 0 : anInt9846;
+        return volume == Integer.MIN_VALUE ? 0 : volume;
     }
 
     public synchronized int method15316() {
@@ -226,7 +226,7 @@ public abstract class Node_Sub15_Sub5 extends Node_Sub15 {
 
     public synchronized void method15317(int i_1) {
         int i_11 = i_1;
-        int i_3 = ((Node_Sub26_Sub1) aNode_Sub26_7601).method15223() << 8;
+        int i_3 = ((Node_Sub26_Sub1) aNode_Sub26_7601).getAudioBufferLength() << 8;
         if (i_11 < -1) {
             i_11 = -1;
         }
@@ -239,7 +239,7 @@ public abstract class Node_Sub15_Sub5 extends Node_Sub15 {
     }
 
     public synchronized boolean method15319() {
-        return anInt9853 < 0 || anInt9853 >= ((Node_Sub26_Sub1) aNode_Sub26_7601).method15223() << 8;
+        return anInt9853 < 0 || anInt9853 >= ((Node_Sub26_Sub1) aNode_Sub26_7601).getAudioBufferLength() << 8;
     }
 
     @Override
@@ -287,7 +287,7 @@ public abstract class Node_Sub15_Sub5 extends Node_Sub15 {
                 }
 
                 anInt9858 = i_11;
-                anInt9846 = i_2;
+                volume = i_2;
                 anInt9847 = i_3;
                 anInt9849 = (i_2 - anInt9848) / i_11;
                 anInt9852 = (i_5 - anInt9845) / i_11;
@@ -304,7 +304,7 @@ public abstract class Node_Sub15_Sub5 extends Node_Sub15 {
             unlink();
         } else if (anInt9845 == 0 && anInt9850 == 0) {
             anInt9858 = 0;
-            anInt9846 = 0;
+            volume = 0;
             anInt9848 = 0;
             unlink();
         } else {
@@ -334,7 +334,7 @@ public abstract class Node_Sub15_Sub5 extends Node_Sub15 {
             }
 
             anInt9858 = i_11;
-            anInt9846 = Integer.MIN_VALUE;
+            volume = Integer.MIN_VALUE;
             anInt9849 = -anInt9848 / i_11;
             anInt9852 = -anInt9845 / i_11;
             anInt9851 = -anInt9850 / i_11;
@@ -344,7 +344,7 @@ public abstract class Node_Sub15_Sub5 extends Node_Sub15 {
 
     @Override
     int method12238() {
-        return -1302038045 * anInt9846 * -298675253 == 0 && anInt9858 * 1156515807 * 1008956447 == 0 ? 0 : 1;
+        return -1302038045 * volume * -298675253 == 0 && anInt9858 * 1156515807 * 1008956447 == 0 ? 0 : 1;
     }
 
     public synchronized int method15323() {
@@ -353,11 +353,11 @@ public abstract class Node_Sub15_Sub5 extends Node_Sub15 {
 
     @Override
     int method12228() {
-        return anInt9846 == 0 && anInt9858 == 0 ? 0 : 1;
+        return volume == 0 && anInt9858 == 0 ? 0 : 1;
     }
 
     boolean method15324() {
-        int i_2 = anInt9846;
+        int i_2 = volume;
         int i_3;
         int i_4;
         if (i_2 == Integer.MIN_VALUE) {
@@ -370,8 +370,8 @@ public abstract class Node_Sub15_Sub5 extends Node_Sub15 {
         }
 
         if (i_2 == anInt9848 && i_3 == anInt9845 && i_4 == anInt9850) {
-            if (anInt9846 == Integer.MIN_VALUE) {
-                anInt9846 = 0;
+            if (volume == Integer.MIN_VALUE) {
+                volume = 0;
                 anInt9850 = 0;
                 anInt9845 = 0;
                 anInt9848 = 0;
@@ -429,8 +429,8 @@ public abstract class Node_Sub15_Sub5 extends Node_Sub15 {
         int i_11 = i_1;
         if (anInt9858 > 0) {
             if (i_11 >= anInt9858) {
-                if (anInt9846 == Integer.MIN_VALUE) {
-                    anInt9846 = 0;
+                if (volume == Integer.MIN_VALUE) {
+                    volume = 0;
                     anInt9850 = 0;
                     anInt9845 = 0;
                     anInt9848 = 0;
@@ -450,7 +450,7 @@ public abstract class Node_Sub15_Sub5 extends Node_Sub15 {
 
         int i_2 = anInt9844 << 8;
         int i_3 = anInt9856 << 8;
-        int i_4 = ((Node_Sub26_Sub1) aNode_Sub26_7601).method15223() << 8;
+        int i_4 = ((Node_Sub26_Sub1) aNode_Sub26_7601).getAudioBufferLength() << 8;
         int i_5 = i_3 - i_2;
         if (i_5 <= 0) {
             anInt9854 = 0;
@@ -612,8 +612,8 @@ public abstract class Node_Sub15_Sub5 extends Node_Sub15 {
         int i_11 = i_1;
         if (1008956447 * anInt9858 * 1156515807 > 0) {
             if (i_11 >= 1008956447 * anInt9858 * 1156515807) {
-                if (anInt9846 * -298675253 * -1302038045 == Integer.MIN_VALUE) {
-                    anInt9846 = 0;
+                if (volume * -298675253 * -1302038045 == Integer.MIN_VALUE) {
+                    volume = 0;
                     anInt9850 = 0;
                     anInt9845 = 0;
                     anInt9848 = 0;
@@ -633,7 +633,7 @@ public abstract class Node_Sub15_Sub5 extends Node_Sub15 {
 
         int i_2 = anInt9844 * 900940833 * -99794975 << 8;
         int i_3 = anInt9856 * -628161865 * -1048610041 << 8;
-        int i_4 = ((Node_Sub26_Sub1) aNode_Sub26_7601).method15223() << 8;
+        int i_4 = ((Node_Sub26_Sub1) aNode_Sub26_7601).getAudioBufferLength() << 8;
         int i_5 = i_3 - i_2;
         if (i_5 <= 0) {
             anInt9854 = 0;
@@ -786,12 +786,12 @@ public abstract class Node_Sub15_Sub5 extends Node_Sub15 {
 
     @Override
     int method12224() {
-        return -1302038045 * anInt9846 * -298675253 == 0 && anInt9858 * 1156515807 * 1008956447 == 0 ? 0 : 1;
+        return -1302038045 * volume * -298675253 == 0 && anInt9858 * 1156515807 * 1008956447 == 0 ? 0 : 1;
     }
 
     @Override
     int method12244() {
-        return -1302038045 * anInt9846 * -298675253 == 0 && anInt9858 * 1156515807 * 1008956447 == 0 ? 0 : 1;
+        return -1302038045 * volume * -298675253 == 0 && anInt9858 * 1156515807 * 1008956447 == 0 ? 0 : 1;
     }
 
     @Override
@@ -801,9 +801,9 @@ public abstract class Node_Sub15_Sub5 extends Node_Sub15 {
     public abstract void method12242(int[] var1, int var2, int var3);
 
     void method15332() {
-        anInt9848 = anInt9846;
-        anInt9845 = HostNameIdentifier.method488(anInt9846, anInt9847);
-        anInt9850 = MaterialPropTexture.method15390(anInt9846, anInt9847);
+        anInt9848 = volume;
+        anInt9845 = HostNameIdentifier.method488(volume, anInt9847);
+        anInt9850 = MaterialPropTexture.method15390(volume, anInt9847);
     }
 
     @Override
@@ -816,9 +816,9 @@ public abstract class Node_Sub15_Sub5 extends Node_Sub15 {
         int i_1 = anInt9848 * 3 >> 6;
         i_1 = (i_1 ^ i_1 >> 31) + (i_1 >>> 31);
         if (anInt9854 == 0) {
-            i_1 -= i_1 * anInt9853 / (((Node_Sub26_Sub1) aNode_Sub26_7601).method15223() << 8);
+            i_1 -= i_1 * anInt9853 / (((Node_Sub26_Sub1) aNode_Sub26_7601).getAudioBufferLength() << 8);
         } else if (anInt9854 >= 0) {
-            i_1 -= i_1 * anInt9844 / ((Node_Sub26_Sub1) aNode_Sub26_7601).method15223();
+            i_1 -= i_1 * anInt9844 / ((Node_Sub26_Sub1) aNode_Sub26_7601).getAudioBufferLength();
         }
 
         return Math.min(255, i_1);
@@ -835,7 +835,7 @@ public abstract class Node_Sub15_Sub5 extends Node_Sub15 {
 
     @Override
     int method12227() {
-        return -1302038045 * anInt9846 * -298675253 == 0 && anInt9858 * 1156515807 * 1008956447 == 0 ? 0 : 1;
+        return -1302038045 * volume * -298675253 == 0 && anInt9858 * 1156515807 * 1008956447 == 0 ? 0 : 1;
     }
 
     @Override
@@ -848,8 +848,8 @@ public abstract class Node_Sub15_Sub5 extends Node_Sub15 {
 
     void method15354() {
         if (anInt9858 != 0) {
-            if (anInt9846 == Integer.MIN_VALUE) {
-                anInt9846 = 0;
+            if (volume == Integer.MIN_VALUE) {
+                volume = 0;
             }
 
             anInt9858 = 0;
@@ -859,7 +859,7 @@ public abstract class Node_Sub15_Sub5 extends Node_Sub15 {
     }
 
     synchronized void method15364(int i_1, int i_2) {
-        anInt9846 = i_1;
+        volume = i_1;
         anInt9847 = i_2;
         anInt9858 = 0;
         method15332();

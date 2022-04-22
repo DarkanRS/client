@@ -3635,7 +3635,7 @@ public class CS2Interpreter {
     }
 
     static void method4881(CS2Executor executor) {
-        executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.soundEffectVolume.method12714();
+        executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.soundEffectVolume.getVolumeRatio();
     }
 
     static void method4882(CS2Executor executor) {
@@ -4373,7 +4373,7 @@ public class CS2Interpreter {
     }
 
     static void method7143(CS2Executor executor) {
-        executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub13_8229.method12714();
+        executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub13_8229.getVolumeRatio();
     }
 
     static void ccSetAspect(CS2Executor executor) {
@@ -5068,7 +5068,7 @@ public class CS2Interpreter {
     }
 
     static void method5734(CS2Executor executor) {
-        executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.voiceOverVolume.method12714();
+        executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.voiceOverVolume.getVolumeRatio();
     }
 
     static void getParamWidth(CS2Executor executor) {
@@ -5739,7 +5739,7 @@ public class CS2Interpreter {
     }
 
     static void method3692(CS2Executor executor) {
-        executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.musicVolume.method12714();
+        executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.musicVolume.getVolumeRatio();
     }
 
     static void method3693(CS2Executor executor) {
@@ -6742,11 +6742,11 @@ public class CS2Interpreter {
 
     static void method2554(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
-        int i_3 = Class393.preferences.musicVolume.method12714();
-        if (i_2 != i_3) {
+        int volumeRatio = Class393.preferences.musicVolume.getVolumeRatio();
+        if (i_2 != volumeRatio) {
             if (GameState.loggedIn(client.GAME_STATE)) {
-                if (i_3 == 0 && Class260.anInt3223 != -1) {
-                    Class11.method13400(IndexLoaders.MUSIC_INDEX, Class260.anInt3223, i_2);
+                if (volumeRatio == 0 && Class260.musicId != -1) {
+                    Class11.method13400(IndexLoaders.MUSIC_INDEX, Class260.musicId, i_2);
                     GraphicsPreference.method12658();
                     Class260.aBool3220 = false;
                 } else if (i_2 == 0) {
@@ -7197,11 +7197,11 @@ public class CS2Interpreter {
 
     static void method4899(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
-        int i_3 = Class393.preferences.aPreference_Sub13_8229.method12714();
-        if (i_3 != i_2 && Class260.anInt3228 == Class260.anInt3223) {
+        int volumeRatio = Class393.preferences.aPreference_Sub13_8229.getVolumeRatio();
+        if (volumeRatio != i_2 && Class260.anInt3228 == Class260.musicId) {
             if (!GameState.loggedIn(client.GAME_STATE)) {
-                if (i_3 == 0) {
-                    Class11.method13400(IndexLoaders.MUSIC_INDEX, Class260.anInt3223, i_2);
+                if (volumeRatio == 0) {
+                    Class11.method13400(IndexLoaders.MUSIC_INDEX, Class260.musicId, i_2);
                     GraphicsPreference.method12658();
                     Class260.aBool3220 = false;
                 } else if (i_2 == 0) {
@@ -10430,7 +10430,7 @@ public class CS2Interpreter {
     }
 
     static void method13404(CS2Executor executor) {
-        executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.ambientSoundVolume.method12714();
+        executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.ambientSoundVolume.getVolumeRatio();
     }
 
     static void method8152(CS2Executor executor) {

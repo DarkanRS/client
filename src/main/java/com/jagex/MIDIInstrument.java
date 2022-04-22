@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class MIDIInstrument extends Node {
 
-    static boolean aBool7611;
+    static boolean bufferIsLoaded;
     static int anInt7635;
     static int anInt7637;
     static float[] aFloatArray7612;
@@ -25,7 +25,7 @@ public class MIDIInstrument extends Node {
     static byte[] aByteArray7607;
     static int anInt7614;
     static int anInt7613;
-    int anInt7605;
+    int hertz;
     int anInt7620;
     int anInt7616;
     int anInt7604;
@@ -35,16 +35,21 @@ public class MIDIInstrument extends Node {
     int anInt7623;
     int anInt7624;
     boolean aBool7625;
-    float[] aFloatArray7608;
+    float[] audioBuffer;
     int anInt7636;
     int anInt7626;
     int anInt7638;
 
+	/**
+	 * Starts off by allocating all the primitive arrays based on the sizes of the data bytes array
+	 * @param data
+	 * @throws IOException
+	 */
     MIDIInstrument(byte[] data) throws IOException {
-        method12265(data);
+        allocateObjectFromBuffer(data);
     }
 
-    static void method12261(byte[] data) {
+    static void createMidiSoundFromData(byte[] data) {
         method12262(data);
         anInt7635 = 1 << method12264(4);
         anInt7637 = 1 << method12264(4);
@@ -146,11 +151,11 @@ public class MIDIInstrument extends Node {
             anIntArray7621[i_6] = method12264(8);
         }
 
-        aBool7611 = true;
+        bufferIsLoaded = true;
     }
 
-    static void method12262(byte[] bytes_0) {
-        aByteArray7607 = bytes_0;
+    static void method12262(byte[] data) {
+        aByteArray7607 = data;
         anInt7614 = 0;
         anInt7613 = 0;
     }
@@ -186,59 +191,58 @@ public class MIDIInstrument extends Node {
         return i_1;
     }
 
-    static boolean method12268(Index midiInstrumentIndex) {
-        if (!aBool7611) {
+    static boolean bufferHasContent(Index midiInstrumentIndex) {
+        if (!bufferIsLoaded) {
             byte[] data = midiInstrumentIndex.getFile(0, 0);
             if (data == null) {
                 return false;
             }
-
-            method12261(data);
+            createMidiSoundFromData(data);
         }
 
         return true;
     }
 
-    public static MIDIInstrument method12270(Index index_0, int i_1) {
-        if (!method12268(index_0)) {
-            index_0.loadFile(i_1);
+    public static MIDIInstrument getMidiInstrumentSound(Index midiInstrumentIndex, int id) {
+        if (!bufferHasContent(midiInstrumentIndex)) {
+            midiInstrumentIndex.loadFile(id);
             return null;
         } else {
-            byte[] bytes_2 = index_0.getFile(i_1);
-            if (bytes_2 == null) {
+            byte[] data = midiInstrumentIndex.getFile(id);
+            if (data == null) {
                 return null;
             } else {
-                MIDIInstrument class282_sub18_3 = null;
+                MIDIInstrument midiInstrumentSound = null;
 
                 try {
-                    class282_sub18_3 = new MIDIInstrument(bytes_2);
-                } catch (IOException ioexception_5) {
-                    ioexception_5.printStackTrace();
+                    midiInstrumentSound = new MIDIInstrument(data);
+                } catch (IOException io) {
+                    io.printStackTrace();
                 }
 
-                return class282_sub18_3;
+                return midiInstrumentSound;
             }
         }
     }
 
-    static MIDIInstrument method12271(Index index_0, int i_1, int i_2) {
-        if (!method12268(index_0)) {
-            index_0.load(i_1, i_2);
+    static MIDIInstrument getMidiInstrumentSound2(Index midiInstrumentIndex, int id, int i_2) {
+        if (!bufferHasContent(midiInstrumentIndex)) {
+            midiInstrumentIndex.load(id, i_2);
             return null;
         } else {
-            byte[] bytes_3 = index_0.getFile(i_1, i_2);
-            if (bytes_3 == null) {
+            byte[] data = midiInstrumentIndex.getFile(id, i_2);
+            if (data == null) {
                 return null;
             } else {
-                MIDIInstrument class282_sub18_4 = null;
+                MIDIInstrument midiInstrumentSound = null;
 
                 try {
-                    class282_sub18_4 = new MIDIInstrument(bytes_3);
-                } catch (IOException ioexception_6) {
-                    ioexception_6.printStackTrace();
+                    midiInstrumentSound = new MIDIInstrument(data);
+                } catch (IOException io) {
+                    io.printStackTrace();
                 }
 
-                return class282_sub18_4;
+                return midiInstrumentSound;
             }
         }
     }
@@ -254,9 +258,9 @@ public class MIDIInstrument extends Node {
         return (float) (i_1 * Math.pow(2.0D, i_3 - 788));
     }
 
-    void method12265(byte[] data) throws IOException {
+    void allocateObjectFromBuffer(byte[] data) throws IOException {
         ByteBuf buffer = new ByteBuf(data);
-        anInt7605 = buffer.readInt();
+        hertz = buffer.readInt();
         anInt7620 = buffer.readInt();
         anInt7616 = buffer.readInt();
         anInt7604 = buffer.readInt();
@@ -539,17 +543,22 @@ public class MIDIInstrument extends Node {
         return floats_53;
     }
 
-    public Node_Sub26_Sub1_Sub1 method12272() {
+    public AudioFormatUnknown2 getAudio() {
         Class2.method263(this);
-        return !method12276() || anInt7636 > anInt7605 && anInt7638 > anInt7605 / Class204.getFpsCap() ? new Node_Sub26_Sub1_Sub1(anInt7605, aFloatArray7608, anInt7616, anInt7604, aBool7609) : null;
+        return !method12276() || anInt7636 > hertz && anInt7638 > hertz / Class204.getFpsCap() ? new AudioFormatUnknown2(hertz, audioBuffer, anInt7616, anInt7604, aBool7609) : null;
     }
 
+	/**
+	 * Central figure of this method is the audio buffer
+	 * @param i_1
+	 * @return
+	 */
     int method12273(int i_1) {
         int i_2 = 0;
-        if (aFloatArray7608 == null) {
+        if (audioBuffer == null) {
             anInt7623 = 0;
             aFloatArray7622 = new float[anInt7637];
-            aFloatArray7608 = new float[anInt7620];
+            audioBuffer = new float[anInt7620];
             anInt7636 = 0;
             anInt7626 = 0;
         }
@@ -564,7 +573,7 @@ public class MIDIInstrument extends Node {
                 }
 
                 for (int i_6 = 0; i_6 < i_5; i_6++) {
-                    aFloatArray7608[i_4++] = floats_3[i_6];
+                    audioBuffer[i_4++] = floats_3[i_6];
                 }
 
                 i_2 += i_4 - anInt7636;
@@ -583,8 +592,8 @@ public class MIDIInstrument extends Node {
         return anInt7636 < anInt7620 - 1;
     }
 
-    int method12277() {
-        return anInt7605;
+    int getHertz() {
+        return hertz;
     }
 
     void method12296(int i_1) {

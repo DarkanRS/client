@@ -31,7 +31,7 @@ public class CursorIndexLoader {
         IndexLoaders.MAP_REGION_DECODER.method4485();
         Class122.method2111(false);
         Class358.method6240();
-        Class260.anInt3223 = -1;
+        Class260.musicId = -1;
         Class260.aBool3220 = false;
         GraphicsPreference.method12658();
         ClipFlagMap.method6008(true);

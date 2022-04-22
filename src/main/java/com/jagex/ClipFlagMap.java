@@ -43,11 +43,11 @@ public class ClipFlagMap {
         Node_Sub48 class282_sub48_2;
         for (class282_sub48_2 = (Node_Sub48) Node_Sub48.aClass482_8073.head(); class282_sub48_2 != null; class282_sub48_2 = (Node_Sub48) Node_Sub48.aClass482_8073.next()) {
             if (class282_sub48_2.aNode_Sub15_Sub5_8099 != null) {
-                Class79.aNode_Sub15_Sub4_783.method15276(class282_sub48_2.aNode_Sub15_Sub5_8099);
+                Class79.aNode_Sub15_Sub4_783.methodUnlink15276(class282_sub48_2.aNode_Sub15_Sub5_8099);
                 class282_sub48_2.aNode_Sub15_Sub5_8099 = null;
             }
             if (class282_sub48_2.aNode_Sub15_Sub5_8096 != null) {
-                Class79.aNode_Sub15_Sub4_783.method15276(class282_sub48_2.aNode_Sub15_Sub5_8096);
+                Class79.aNode_Sub15_Sub4_783.methodUnlink15276(class282_sub48_2.aNode_Sub15_Sub5_8096);
                 class282_sub48_2.aNode_Sub15_Sub5_8096 = null;
             }
             class282_sub48_2.unlink();
@@ -55,14 +55,14 @@ public class ClipFlagMap {
         if (bool_0) {
             for (class282_sub48_2 = (Node_Sub48) Node_Sub48.aClass482_8074.head(); class282_sub48_2 != null; class282_sub48_2 = (Node_Sub48) Node_Sub48.aClass482_8074.next()) {
                 if (class282_sub48_2.aNode_Sub15_Sub5_8099 != null) {
-                    Class79.aNode_Sub15_Sub4_783.method15276(class282_sub48_2.aNode_Sub15_Sub5_8099);
+                    Class79.aNode_Sub15_Sub4_783.methodUnlink15276(class282_sub48_2.aNode_Sub15_Sub5_8099);
                     class282_sub48_2.aNode_Sub15_Sub5_8099 = null;
                 }
                 class282_sub48_2.unlink();
             }
             for (class282_sub48_2 = (Node_Sub48) Node_Sub48.aClass465_8075.method7750(); class282_sub48_2 != null; class282_sub48_2 = (Node_Sub48) Node_Sub48.aClass465_8075.method7751()) {
                 if (class282_sub48_2.aNode_Sub15_Sub5_8099 != null) {
-                    Class79.aNode_Sub15_Sub4_783.method15276(class282_sub48_2.aNode_Sub15_Sub5_8099);
+                    Class79.aNode_Sub15_Sub4_783.methodUnlink15276(class282_sub48_2.aNode_Sub15_Sub5_8099);
                     class282_sub48_2.aNode_Sub15_Sub5_8099 = null;
                 }
                 class282_sub48_2.unlink();

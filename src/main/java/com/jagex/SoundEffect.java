@@ -20,14 +20,14 @@ public class SoundEffect {
         loopEnd = buffer.readUnsignedShort();
     }
 
-    public static SoundEffect getSoundEffect(Index index_0, int i_1, int i_2) {
-        byte[] data = index_0.getFile(i_1, i_2);
+    public static SoundEffect getSoundEffect(Index soundEffectsIndex, int i_1, int i_2) {
+        byte[] data = soundEffectsIndex.getFile(i_1, i_2);
         return data == null ? null : new SoundEffect(new ByteBuf(data));
     }
 
-    public Node_Sub26_Sub1_Sub2 getMixedAudio() {
+    public AudioFormatUnknown getMixedAudio() {
         byte[] mixed = mix();
-        return new Node_Sub26_Sub1_Sub2(mixed, loopBegin * 22050 / 1000, loopEnd * 22050 / 1000);
+        return new AudioFormatUnknown(mixed, loopBegin * 22050 / 1000, loopEnd * 22050 / 1000);
     }
 
     public int getDelay() {

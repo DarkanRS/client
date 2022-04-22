@@ -817,13 +817,13 @@ public class PacketDecoder {
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.MUSIC_TRACK) {
-            int key = buffer.readUnsignedByte128();
-            int flags = buffer.readUnsignedByte128();
-            int i_6 = buffer.readUnsignedShort128();
-            if (i_6 == 65535) {
-                i_6 = -1;
+            int delay = buffer.readUnsignedByte128();
+            int volume = buffer.readUnsignedByte128();
+            int musicId = buffer.readUnsignedShort128();
+            if (musicId == 65535) {
+                musicId = -1;
             }
-            Class42.playSoundSong(i_6, flags, key);
+            Class42.playSoundSong(musicId, volume, delay);
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.IF_SETCLICKMASK) {

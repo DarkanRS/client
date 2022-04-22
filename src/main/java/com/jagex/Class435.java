@@ -9,7 +9,7 @@ public class Class435 {
     }
 
     public static AreadSound playSoundVorbis(int soundId, int i_6, int delay, int i_3, boolean voiceEffect, int i_5) {
-        if ((voiceEffect ? Class393.preferences.voiceOverVolume.method12714() : Class393.preferences.soundEffectVolume.method12714()) != 0 && i_6 != 0 && Class260.SOUNDS_SIZE < 50 && soundId != -1) {
+        if ((voiceEffect ? Class393.preferences.voiceOverVolume.getVolumeRatio() : Class393.preferences.soundEffectVolume.getVolumeRatio()) != 0 && i_6 != 0 && Class260.SOUNDS_SIZE < 50 && soundId != -1) {
             AreadSound sound = new AreadSound((byte) (voiceEffect ? 3 : 2), soundId, i_6, delay, i_3, 0, i_5, null);
             Class260.SOUNDS[++Class260.SOUNDS_SIZE - 1] = sound;
             return sound;

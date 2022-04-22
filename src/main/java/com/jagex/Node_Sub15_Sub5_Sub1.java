@@ -1,14 +1,20 @@
 package com.jagex;
 
 public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
-
-    Node_Sub15_Sub5_Sub1(Node_Sub26_Sub1_Sub1 class282_sub26_sub1_sub1_1, int i_2, int i_3, int i_4) {
-        aNode_Sub26_7601 = class282_sub26_sub1_sub1_1;
-        anInt9844 = class282_sub26_sub1_sub1_1.anInt9749;
-        anInt9856 = class282_sub26_sub1_sub1_1.anInt9751;
-        aBool9857 = class282_sub26_sub1_sub1_1.aBool9752;
+	/**
+	 * Converted from MidiInstrument
+	 * @param audio
+	 * @param i_2
+	 * @param volume
+	 * @param i_4
+	 */
+    Node_Sub15_Sub5_Sub1(AudioFormatUnknown2 audio, int i_2, int volume, int i_4) {
+        aNode_Sub26_7601 = audio;
+        anInt9844 = audio.anInt9749;
+        anInt9856 = audio.anInt9751;
+        aBool9857 = audio.aBool9752;
         anInt9855 = i_2;
-        anInt9846 = i_3;
+        this.volume = volume;
         anInt9847 = i_4;
         anInt9853 = 0;
         method15332();
@@ -712,12 +718,12 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
 
     @Override
     public synchronized void method12230(int[] ints_1, int i_2, int i_3) throws IllegalStateException {
-        if (anInt9846 == 0 && anInt9858 == 0) {
+        if (volume == 0 && anInt9858 == 0) {
             method12231(i_3);
         } else {
             int i_4 = anInt9844 << 8;
             int i_5 = anInt9856 << 8;
-            int i_6 = ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15223() << 8;
+            int i_6 = ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBufferLength() << 8;
             int i_7 = i_5 - i_4;
             if (i_7 <= 0) {
                 anInt9854 = 0;
@@ -748,7 +754,7 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
             if (anInt9854 < 0) {
                 if (aBool9857) {
                     if (anInt9855 < 0) {
-                        i_8 = method15732(ints_1, i_2, i_4, i_3, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778()[anInt9844]);
+                        i_8 = method15732(ints_1, i_2, i_4, i_3, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer()[anInt9844]);
                         if (anInt9853 >= i_4) {
                             return;
                         }
@@ -758,14 +764,14 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
                     }
 
                     while (true) {
-                        i_8 = method15769(ints_1, i_8, i_5, i_3, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778()[anInt9856 - 1]);
+                        i_8 = method15769(ints_1, i_8, i_5, i_3, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer()[anInt9856 - 1]);
                         if (anInt9853 < i_5) {
                             break;
                         }
 
                         anInt9853 = i_5 + i_5 - 1 - anInt9853;
                         anInt9855 = -(anInt9855 * 1927994969) * -177305111;
-                        i_8 = method15732(ints_1, i_8, i_4, i_3, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778()[anInt9844]);
+                        i_8 = method15732(ints_1, i_8, i_4, i_3, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer()[anInt9844]);
                         if (anInt9853 >= i_4) {
                             break;
                         }
@@ -775,7 +781,7 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
                     }
                 } else if (anInt9855 < 0) {
                     while (true) {
-                        i_8 = method15732(ints_1, i_8, i_4, i_3, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778()[anInt9856 - 1]);
+                        i_8 = method15732(ints_1, i_8, i_4, i_3, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer()[anInt9856 - 1]);
                         if (anInt9853 >= i_4) {
                             break;
                         }
@@ -784,7 +790,7 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
                     }
                 } else {
                     while (true) {
-                        i_8 = method15769(ints_1, i_8, i_5, i_3, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778()[anInt9844]);
+                        i_8 = method15769(ints_1, i_8, i_5, i_3, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer()[anInt9844]);
                         if (anInt9853 < i_5) {
                             break;
                         }
@@ -798,7 +804,7 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
                         label111:
                         {
                             if (anInt9855 < 0) {
-                                i_8 = method15732(ints_1, i_2, i_4, i_3, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778()[anInt9844]);
+                                i_8 = method15732(ints_1, i_2, i_4, i_3, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer()[anInt9844]);
                                 if (anInt9853 >= i_4) {
                                     return;
                                 }
@@ -811,7 +817,7 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
                             }
 
                             do {
-                                i_8 = method15769(ints_1, i_8, i_5, i_3, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778()[anInt9856 - 1]);
+                                i_8 = method15769(ints_1, i_8, i_5, i_3, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer()[anInt9856 - 1]);
                                 if (anInt9853 < i_5) {
                                     return;
                                 }
@@ -822,7 +828,7 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
                                     break;
                                 }
 
-                                i_8 = method15732(ints_1, i_8, i_4, i_3, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778()[anInt9844]);
+                                i_8 = method15732(ints_1, i_8, i_4, i_3, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer()[anInt9844]);
                                 if (anInt9853 >= i_4) {
                                     return;
                                 }
@@ -835,7 +841,7 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
                         int i_9;
                         if (anInt9855 < 0) {
                             while (true) {
-                                i_8 = method15732(ints_1, i_8, i_4, i_3, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778()[anInt9856 - 1]);
+                                i_8 = method15732(ints_1, i_8, i_4, i_3, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer()[anInt9856 - 1]);
                                 if (anInt9853 >= i_4) {
                                     return;
                                 }
@@ -852,7 +858,7 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
                             }
                         } else {
                             while (true) {
-                                i_8 = method15769(ints_1, i_8, i_5, i_3, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778()[anInt9844]);
+                                i_8 = method15769(ints_1, i_8, i_5, i_3, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer()[anInt9844]);
                                 if (anInt9853 < i_5) {
                                     return;
                                 }
@@ -893,12 +899,12 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
 
     @Override
     public synchronized void method12240(int[] ints_1, int i_2, int i_3) throws IllegalStateException {
-        if (anInt9846 * -298675253 * -1302038045 == 0 && anInt9858 * 1156515807 * 1008956447 == 0) {
+        if (volume * -298675253 * -1302038045 == 0 && anInt9858 * 1156515807 * 1008956447 == 0) {
             method12231(i_3);
         } else {
             int i_4 = anInt9844 * 900940833 * -99794975 << 8;
             int i_5 = anInt9856 * -628161865 * -1048610041 << 8;
-            int i_6 = ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15223() << 8;
+            int i_6 = ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBufferLength() << 8;
             int i_7 = i_5 - i_4;
             if (i_7 <= 0) {
                 anInt9854 = 0;
@@ -929,7 +935,7 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
             if (anInt9854 * -485012237 * 1507503163 < 0) {
                 if (aBool9857) {
                     if (anInt9855 * 1927994969 * -177305111 * 1927994969 * -177305111 < 0) {
-                        i_8 = method15732(ints_1, i_2, i_4, i_3, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778()[anInt9844 * 900940833 * -99794975]);
+                        i_8 = method15732(ints_1, i_2, i_4, i_3, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer()[anInt9844 * 900940833 * -99794975]);
                         if (anInt9853 * -834443097 * -354697449 >= i_4) {
                             return;
                         }
@@ -939,14 +945,14 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
                     }
 
                     while (true) {
-                        i_8 = method15769(ints_1, i_8, i_5, i_3, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778()[anInt9856 * -628161865 * -1048610041 - 1]);
+                        i_8 = method15769(ints_1, i_8, i_5, i_3, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer()[anInt9856 * -628161865 * -1048610041 - 1]);
                         if (anInt9853 * -834443097 * -354697449 < i_5) {
                             break;
                         }
 
                         anInt9853 = (i_5 + i_5 - 1 - anInt9853 * -834443097 * -354697449) * -834443097 * -354697449;
                         anInt9855 = -(anInt9855 * 1927994969 * -177305111 * 1927994969) * -177305111 * 1927994969 * -177305111;
-                        i_8 = method15732(ints_1, i_8, i_4, i_3, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778()[anInt9844 * 900940833 * -99794975]);
+                        i_8 = method15732(ints_1, i_8, i_4, i_3, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer()[anInt9844 * 900940833 * -99794975]);
                         if (anInt9853 * -834443097 * -354697449 >= i_4) {
                             break;
                         }
@@ -956,7 +962,7 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
                     }
                 } else if (anInt9855 * 1927994969 * -177305111 * 1927994969 * -177305111 < 0) {
                     while (true) {
-                        i_8 = method15732(ints_1, i_8, i_4, i_3, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778()[anInt9856 * -628161865 * -1048610041 - 1]);
+                        i_8 = method15732(ints_1, i_8, i_4, i_3, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer()[anInt9856 * -628161865 * -1048610041 - 1]);
                         if (anInt9853 * -834443097 * -354697449 >= i_4) {
                             break;
                         }
@@ -965,7 +971,7 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
                     }
                 } else {
                     while (true) {
-                        i_8 = method15769(ints_1, i_8, i_5, i_3, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778()[anInt9844 * 900940833 * -99794975]);
+                        i_8 = method15769(ints_1, i_8, i_5, i_3, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer()[anInt9844 * 900940833 * -99794975]);
                         if (anInt9853 * -834443097 * -354697449 < i_5) {
                             break;
                         }
@@ -980,7 +986,7 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
                         {
                             int i_10002;
                             if (anInt9855 * 1927994969 * -177305111 * 1927994969 * -177305111 < 0) {
-                                i_8 = method15732(ints_1, i_2, i_4, i_3, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778()[anInt9844 * 900940833 * -99794975]);
+                                i_8 = method15732(ints_1, i_2, i_4, i_3, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer()[anInt9844 * 900940833 * -99794975]);
                                 if (anInt9853 * -834443097 * -354697449 >= i_4) {
                                     return;
                                 }
@@ -995,7 +1001,7 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
                             }
 
                             do {
-                                i_8 = method15769(ints_1, i_8, i_5, i_3, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778()[anInt9856 * -628161865 * -1048610041 - 1]);
+                                i_8 = method15769(ints_1, i_8, i_5, i_3, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer()[anInt9856 * -628161865 * -1048610041 - 1]);
                                 if (anInt9853 * -834443097 * -354697449 < i_5) {
                                     return;
                                 }
@@ -1008,7 +1014,7 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
                                     break;
                                 }
 
-                                i_8 = method15732(ints_1, i_8, i_4, i_3, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778()[anInt9844 * 900940833 * -99794975]);
+                                i_8 = method15732(ints_1, i_8, i_4, i_3, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer()[anInt9844 * 900940833 * -99794975]);
                                 if (anInt9853 * -834443097 * -354697449 >= i_4) {
                                     return;
                                 }
@@ -1023,7 +1029,7 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
                         int i_9;
                         if (anInt9855 * 1927994969 * -177305111 * 1927994969 * -177305111 < 0) {
                             while (true) {
-                                i_8 = method15732(ints_1, i_8, i_4, i_3, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778()[anInt9856 * -628161865 * -1048610041 - 1]);
+                                i_8 = method15732(ints_1, i_8, i_4, i_3, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer()[anInt9856 * -628161865 * -1048610041 - 1]);
                                 if (anInt9853 * -834443097 * -354697449 >= i_4) {
                                     return;
                                 }
@@ -1040,7 +1046,7 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
                             }
                         } else {
                             while (true) {
-                                i_8 = method15769(ints_1, i_8, i_5, i_3, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778()[anInt9844 * 900940833 * -99794975]);
+                                i_8 = method15769(ints_1, i_8, i_5, i_3, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer()[anInt9844 * 900940833 * -99794975]);
                                 if (anInt9853 * -834443097 * -354697449 < i_5) {
                                     return;
                                 }
@@ -1084,17 +1090,17 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
             if (anInt9858 <= 0) {
                 if (anInt9855 == -256 && (anInt9853 & 0xff) == 0) {
                     if (Class253.aBool3115) {
-                        return method15731(0.0F, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778(), ints_1, anInt9853, i_2, anInt9845, anInt9850, 0, i_4, i_3, this);
+                        return method15731(0.0F, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer(), ints_1, anInt9853, i_2, anInt9845, anInt9850, 0, i_4, i_3, this);
                     }
 
-                    return method15774(((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778(), ints_1, anInt9853, i_2, anInt9848, 0, i_4, i_3, this);
+                    return method15774(((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer(), ints_1, anInt9853, i_2, anInt9848, 0, i_4, i_3, this);
                 }
 
                 if (Class253.aBool3115) {
-                    return method15729(0.0F, 0, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778(), ints_1, anInt9853, i_2, anInt9845, anInt9850, 0, i_4, i_3, this, anInt9855, f_5);
+                    return method15729(0.0F, 0, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer(), ints_1, anInt9853, i_2, anInt9845, anInt9850, 0, i_4, i_3, this, anInt9855, f_5);
                 }
 
-                return method15734(0.0F, 0, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778(), ints_1, anInt9853, i_2, anInt9848, 0, i_4, i_3, this, anInt9855, f_5);
+                return method15734(0.0F, 0, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer(), ints_1, anInt9853, i_2, anInt9848, 0, i_4, i_3, this, anInt9855, f_5);
             }
 
             int i_6 = i_2 + anInt9858;
@@ -1105,14 +1111,14 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
             anInt9858 += i_2;
             if (anInt9855 == -256 && (anInt9853 & 0xff) == 0) {
                 if (Class253.aBool3115) {
-                    i_2 = method15739(0.0F, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778(), ints_1, anInt9853, i_2, anInt9845, anInt9850, anInt9852, anInt9851, 0, i_6, i_3, this);
+                    i_2 = method15739(0.0F, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer(), ints_1, anInt9853, i_2, anInt9845, anInt9850, anInt9852, anInt9851, 0, i_6, i_3, this);
                 } else {
-                    i_2 = method15738(((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778(), ints_1, anInt9853, i_2, anInt9848, anInt9849, 0, i_6, i_3, this);
+                    i_2 = method15738(((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer(), ints_1, anInt9853, i_2, anInt9848, anInt9849, 0, i_6, i_3, this);
                 }
             } else if (Class253.aBool3115) {
-                i_2 = method15743(0.0F, 0, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778(), ints_1, anInt9853, i_2, anInt9845, anInt9850, anInt9852, anInt9851, 0, i_6, i_3, this, anInt9855, f_5);
+                i_2 = method15743(0.0F, 0, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer(), ints_1, anInt9853, i_2, anInt9845, anInt9850, anInt9852, anInt9851, 0, i_6, i_3, this, anInt9855, f_5);
             } else {
-                i_2 = method15742(0.0F, 0, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778(), ints_1, anInt9853, i_2, anInt9848, anInt9849, 0, i_6, i_3, this, anInt9855, f_5);
+                i_2 = method15742(0.0F, 0, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer(), ints_1, anInt9853, i_2, anInt9848, anInt9849, 0, i_6, i_3, this, anInt9855, f_5);
             }
 
             anInt9858 -= i_2;
@@ -1126,12 +1132,12 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
 
     @Override
     public synchronized void method12241(int[] ints_1, int i_2, int i_3) throws IllegalStateException {
-        if (anInt9846 * -298675253 * -1302038045 == 0 && anInt9858 * 1156515807 * 1008956447 == 0) {
+        if (volume * -298675253 * -1302038045 == 0 && anInt9858 * 1156515807 * 1008956447 == 0) {
             method12231(i_3);
         } else {
             int i_4 = anInt9844 * 900940833 * -99794975 << 8;
             int i_5 = anInt9856 * -628161865 * -1048610041 << 8;
-            int i_6 = ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15223() << 8;
+            int i_6 = ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBufferLength() << 8;
             int i_7 = i_5 - i_4;
             if (i_7 <= 0) {
                 anInt9854 = 0;
@@ -1162,7 +1168,7 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
             if (anInt9854 * -485012237 * 1507503163 < 0) {
                 if (aBool9857) {
                     if (anInt9855 * 1927994969 * -177305111 * 1927994969 * -177305111 < 0) {
-                        i_8 = method15732(ints_1, i_2, i_4, i_3, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778()[anInt9844 * 900940833 * -99794975]);
+                        i_8 = method15732(ints_1, i_2, i_4, i_3, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer()[anInt9844 * 900940833 * -99794975]);
                         if (anInt9853 * -834443097 * -354697449 >= i_4) {
                             return;
                         }
@@ -1172,14 +1178,14 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
                     }
 
                     while (true) {
-                        i_8 = method15769(ints_1, i_8, i_5, i_3, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778()[anInt9856 * -628161865 * -1048610041 - 1]);
+                        i_8 = method15769(ints_1, i_8, i_5, i_3, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer()[anInt9856 * -628161865 * -1048610041 - 1]);
                         if (anInt9853 * -834443097 * -354697449 < i_5) {
                             break;
                         }
 
                         anInt9853 = (i_5 + i_5 - 1 - anInt9853 * -834443097 * -354697449) * -834443097 * -354697449;
                         anInt9855 = -(anInt9855 * 1927994969 * -177305111 * 1927994969) * -177305111 * 1927994969 * -177305111;
-                        i_8 = method15732(ints_1, i_8, i_4, i_3, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778()[anInt9844 * 900940833 * -99794975]);
+                        i_8 = method15732(ints_1, i_8, i_4, i_3, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer()[anInt9844 * 900940833 * -99794975]);
                         if (anInt9853 * -834443097 * -354697449 >= i_4) {
                             break;
                         }
@@ -1189,7 +1195,7 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
                     }
                 } else if (anInt9855 * 1927994969 * -177305111 * 1927994969 * -177305111 < 0) {
                     while (true) {
-                        i_8 = method15732(ints_1, i_8, i_4, i_3, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778()[anInt9856 * -628161865 * -1048610041 - 1]);
+                        i_8 = method15732(ints_1, i_8, i_4, i_3, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer()[anInt9856 * -628161865 * -1048610041 - 1]);
                         if (anInt9853 * -834443097 * -354697449 >= i_4) {
                             break;
                         }
@@ -1198,7 +1204,7 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
                     }
                 } else {
                     while (true) {
-                        i_8 = method15769(ints_1, i_8, i_5, i_3, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778()[anInt9844 * 900940833 * -99794975]);
+                        i_8 = method15769(ints_1, i_8, i_5, i_3, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer()[anInt9844 * 900940833 * -99794975]);
                         if (anInt9853 * -834443097 * -354697449 < i_5) {
                             break;
                         }
@@ -1213,7 +1219,7 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
                         {
                             int i_10002;
                             if (anInt9855 * 1927994969 * -177305111 * 1927994969 * -177305111 < 0) {
-                                i_8 = method15732(ints_1, i_2, i_4, i_3, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778()[anInt9844 * 900940833 * -99794975]);
+                                i_8 = method15732(ints_1, i_2, i_4, i_3, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer()[anInt9844 * 900940833 * -99794975]);
                                 if (anInt9853 * -834443097 * -354697449 >= i_4) {
                                     return;
                                 }
@@ -1228,7 +1234,7 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
                             }
 
                             do {
-                                i_8 = method15769(ints_1, i_8, i_5, i_3, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778()[anInt9856 * -628161865 * -1048610041 - 1]);
+                                i_8 = method15769(ints_1, i_8, i_5, i_3, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer()[anInt9856 * -628161865 * -1048610041 - 1]);
                                 if (anInt9853 * -834443097 * -354697449 < i_5) {
                                     return;
                                 }
@@ -1241,7 +1247,7 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
                                     break;
                                 }
 
-                                i_8 = method15732(ints_1, i_8, i_4, i_3, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778()[anInt9844 * 900940833 * -99794975]);
+                                i_8 = method15732(ints_1, i_8, i_4, i_3, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer()[anInt9844 * 900940833 * -99794975]);
                                 if (anInt9853 * -834443097 * -354697449 >= i_4) {
                                     return;
                                 }
@@ -1256,7 +1262,7 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
                         int i_9;
                         if (anInt9855 * 1927994969 * -177305111 * 1927994969 * -177305111 < 0) {
                             while (true) {
-                                i_8 = method15732(ints_1, i_8, i_4, i_3, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778()[anInt9856 * -628161865 * -1048610041 - 1]);
+                                i_8 = method15732(ints_1, i_8, i_4, i_3, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer()[anInt9856 * -628161865 * -1048610041 - 1]);
                                 if (anInt9853 * -834443097 * -354697449 >= i_4) {
                                     return;
                                 }
@@ -1273,7 +1279,7 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
                             }
                         } else {
                             while (true) {
-                                i_8 = method15769(ints_1, i_8, i_5, i_3, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778()[anInt9844 * 900940833 * -99794975]);
+                                i_8 = method15769(ints_1, i_8, i_5, i_3, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer()[anInt9844 * 900940833 * -99794975]);
                                 if (anInt9853 * -834443097 * -354697449 < i_5) {
                                     return;
                                 }
@@ -1314,12 +1320,12 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
 
     @Override
     public synchronized void method12242(int[] ints_1, int i_2, int i_3) throws IllegalStateException {
-        if (anInt9846 * -298675253 * -1302038045 == 0 && anInt9858 * 1156515807 * 1008956447 == 0) {
+        if (volume * -298675253 * -1302038045 == 0 && anInt9858 * 1156515807 * 1008956447 == 0) {
             method12231(i_3);
         } else {
             int i_4 = anInt9844 * 900940833 * -99794975 << 8;
             int i_5 = anInt9856 * -628161865 * -1048610041 << 8;
-            int i_6 = ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15223() << 8;
+            int i_6 = ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBufferLength() << 8;
             int i_7 = i_5 - i_4;
             if (i_7 <= 0) {
                 anInt9854 = 0;
@@ -1350,7 +1356,7 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
             if (anInt9854 * -485012237 * 1507503163 < 0) {
                 if (aBool9857) {
                     if (anInt9855 * 1927994969 * -177305111 * 1927994969 * -177305111 < 0) {
-                        i_8 = method15732(ints_1, i_2, i_4, i_3, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778()[anInt9844 * 900940833 * -99794975]);
+                        i_8 = method15732(ints_1, i_2, i_4, i_3, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer()[anInt9844 * 900940833 * -99794975]);
                         if (anInt9853 * -834443097 * -354697449 >= i_4) {
                             return;
                         }
@@ -1360,14 +1366,14 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
                     }
 
                     while (true) {
-                        i_8 = method15769(ints_1, i_8, i_5, i_3, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778()[anInt9856 * -628161865 * -1048610041 - 1]);
+                        i_8 = method15769(ints_1, i_8, i_5, i_3, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer()[anInt9856 * -628161865 * -1048610041 - 1]);
                         if (anInt9853 * -834443097 * -354697449 < i_5) {
                             break;
                         }
 
                         anInt9853 = (i_5 + i_5 - 1 - anInt9853 * -834443097 * -354697449) * -834443097 * -354697449;
                         anInt9855 = -(anInt9855 * 1927994969 * -177305111 * 1927994969) * -177305111 * 1927994969 * -177305111;
-                        i_8 = method15732(ints_1, i_8, i_4, i_3, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778()[anInt9844 * 900940833 * -99794975]);
+                        i_8 = method15732(ints_1, i_8, i_4, i_3, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer()[anInt9844 * 900940833 * -99794975]);
                         if (anInt9853 * -834443097 * -354697449 >= i_4) {
                             break;
                         }
@@ -1377,7 +1383,7 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
                     }
                 } else if (anInt9855 * 1927994969 * -177305111 * 1927994969 * -177305111 < 0) {
                     while (true) {
-                        i_8 = method15732(ints_1, i_8, i_4, i_3, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778()[anInt9856 * -628161865 * -1048610041 - 1]);
+                        i_8 = method15732(ints_1, i_8, i_4, i_3, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer()[anInt9856 * -628161865 * -1048610041 - 1]);
                         if (anInt9853 * -834443097 * -354697449 >= i_4) {
                             break;
                         }
@@ -1386,7 +1392,7 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
                     }
                 } else {
                     while (true) {
-                        i_8 = method15769(ints_1, i_8, i_5, i_3, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778()[anInt9844 * 900940833 * -99794975]);
+                        i_8 = method15769(ints_1, i_8, i_5, i_3, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer()[anInt9844 * 900940833 * -99794975]);
                         if (anInt9853 * -834443097 * -354697449 < i_5) {
                             break;
                         }
@@ -1401,7 +1407,7 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
                         {
                             int i_10002;
                             if (anInt9855 * 1927994969 * -177305111 * 1927994969 * -177305111 < 0) {
-                                i_8 = method15732(ints_1, i_2, i_4, i_3, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778()[anInt9844 * 900940833 * -99794975]);
+                                i_8 = method15732(ints_1, i_2, i_4, i_3, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer()[anInt9844 * 900940833 * -99794975]);
                                 if (anInt9853 * -834443097 * -354697449 >= i_4) {
                                     return;
                                 }
@@ -1416,7 +1422,7 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
                             }
 
                             do {
-                                i_8 = method15769(ints_1, i_8, i_5, i_3, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778()[anInt9856 * -628161865 * -1048610041 - 1]);
+                                i_8 = method15769(ints_1, i_8, i_5, i_3, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer()[anInt9856 * -628161865 * -1048610041 - 1]);
                                 if (anInt9853 * -834443097 * -354697449 < i_5) {
                                     return;
                                 }
@@ -1429,7 +1435,7 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
                                     break;
                                 }
 
-                                i_8 = method15732(ints_1, i_8, i_4, i_3, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778()[anInt9844 * 900940833 * -99794975]);
+                                i_8 = method15732(ints_1, i_8, i_4, i_3, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer()[anInt9844 * 900940833 * -99794975]);
                                 if (anInt9853 * -834443097 * -354697449 >= i_4) {
                                     return;
                                 }
@@ -1444,7 +1450,7 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
                         int i_9;
                         if (anInt9855 * 1927994969 * -177305111 * 1927994969 * -177305111 < 0) {
                             while (true) {
-                                i_8 = method15732(ints_1, i_8, i_4, i_3, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778()[anInt9856 * -628161865 * -1048610041 - 1]);
+                                i_8 = method15732(ints_1, i_8, i_4, i_3, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer()[anInt9856 * -628161865 * -1048610041 - 1]);
                                 if (anInt9853 * -834443097 * -354697449 >= i_4) {
                                     return;
                                 }
@@ -1461,7 +1467,7 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
                             }
                         } else {
                             while (true) {
-                                i_8 = method15769(ints_1, i_8, i_5, i_3, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778()[anInt9844 * 900940833 * -99794975]);
+                                i_8 = method15769(ints_1, i_8, i_5, i_3, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer()[anInt9844 * 900940833 * -99794975]);
                                 if (anInt9853 * -834443097 * -354697449 < i_5) {
                                     return;
                                 }
@@ -1505,17 +1511,17 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
             if (anInt9858 <= 0) {
                 if (anInt9855 == 256 && (anInt9853 & 0xff) == 0) {
                     if (Class253.aBool3115) {
-                        return method15770(0.0F, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778(), ints_1, anInt9853, i_2, anInt9845, anInt9850, 0, i_4, i_3, this);
+                        return method15770(0.0F, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer(), ints_1, anInt9853, i_2, anInt9845, anInt9850, 0, i_4, i_3, this);
                     }
 
-                    return method15740(((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778(), ints_1, anInt9853, i_2, anInt9848, 0, i_4, i_3, this);
+                    return method15740(((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer(), ints_1, anInt9853, i_2, anInt9848, 0, i_4, i_3, this);
                 }
 
                 if (Class253.aBool3115) {
-                    return method15746(0.0F, 0, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778(), ints_1, anInt9853, i_2, anInt9845, anInt9850, 0, i_4, i_3, this, anInt9855, f_5);
+                    return method15746(0.0F, 0, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer(), ints_1, anInt9853, i_2, anInt9845, anInt9850, 0, i_4, i_3, this, anInt9855, f_5);
                 }
 
-                return method15747(0.0F, 0, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778(), ints_1, anInt9853, i_2, anInt9848, 0, i_4, i_3, this, anInt9855, f_5);
+                return method15747(0.0F, 0, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer(), ints_1, anInt9853, i_2, anInt9848, 0, i_4, i_3, this, anInt9855, f_5);
             }
 
             int i_6 = i_2 + anInt9858;
@@ -1526,14 +1532,14 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
             anInt9858 += i_2;
             if (anInt9855 == 256 && (anInt9853 & 0xff) == 0) {
                 if (Class253.aBool3115) {
-                    i_2 = method15737(0.0F, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778(), ints_1, anInt9853, i_2, anInt9845, anInt9850, anInt9852, anInt9851, 0, i_6, i_3, this);
+                    i_2 = method15737(0.0F, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer(), ints_1, anInt9853, i_2, anInt9845, anInt9850, anInt9852, anInt9851, 0, i_6, i_3, this);
                 } else {
-                    i_2 = method15777(((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778(), ints_1, anInt9853, i_2, anInt9848, anInt9849, 0, i_6, i_3, this);
+                    i_2 = method15777(((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer(), ints_1, anInt9853, i_2, anInt9848, anInt9849, 0, i_6, i_3, this);
                 }
             } else if (Class253.aBool3115) {
-                i_2 = method15741(0.0F, 0, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778(), ints_1, anInt9853, i_2, anInt9845, anInt9850, anInt9852, anInt9851, 0, i_6, i_3, this, anInt9855, f_5);
+                i_2 = method15741(0.0F, 0, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer(), ints_1, anInt9853, i_2, anInt9845, anInt9850, anInt9852, anInt9851, 0, i_6, i_3, this, anInt9855, f_5);
             } else {
-                i_2 = method15735(0.0F, 0, ((Node_Sub26_Sub1_Sub1) aNode_Sub26_7601).method15778(), ints_1, anInt9853, i_2, anInt9848, anInt9849, 0, i_6, i_3, this, anInt9855, f_5);
+                i_2 = method15735(0.0F, 0, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer(), ints_1, anInt9853, i_2, anInt9848, anInt9849, 0, i_6, i_3, this, anInt9855, f_5);
             }
 
             anInt9858 -= i_2;

@@ -109,7 +109,7 @@ public class Node_Sub15_Sub2 extends Node_Sub15 {
     }
 
     void method15099(Node_Sub13 class282_sub13_1, boolean bool_2) {
-        int i_4 = class282_sub13_1.aNode_Sub26_Sub1_7565.method15223();
+        int i_4 = class282_sub13_1.aNode_Sub26_Sub1_7565.getAudioBufferLength();
         int i_5;
         if (bool_2 && class282_sub13_1.aNode_Sub26_Sub1_7565.aBool9752) {
             int i_6 = i_4 + i_4 - class282_sub13_1.aNode_Sub26_Sub1_7565.anInt9749;
@@ -590,7 +590,7 @@ public class Node_Sub15_Sub2 extends Node_Sub15 {
             i_3 += (int) (d_7 * i_5);
         }
 
-        i_5 = (int) ((class282_sub13_1.aNode_Sub26_Sub1_7565.anInt9750 * 256) * Math.pow(2.0D, 3.255208333333333E-4D * i_3) / Class253.anInt3129 + 0.5D);
+        i_5 = (int) ((class282_sub13_1.aNode_Sub26_Sub1_7565.hertz * 256) * Math.pow(2.0D, 3.255208333333333E-4D * i_3) / Class253.anInt3129 + 0.5D);
         return Math.max(1, i_5);
     }
 

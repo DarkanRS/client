@@ -27,7 +27,7 @@ public class VarNPCMap {
     }
 
     public static AreadSound playSoundSynth(int i_0, int i_1, int i_2, int i_3, int sampleRate) {
-        if (Class393.preferences.soundEffectVolume.method12714() != 0 && i_1 != 0 && Class260.SOUNDS_SIZE < 50 && i_0 != -1) {
+        if (Class393.preferences.soundEffectVolume.getVolumeRatio() != 0 && i_1 != 0 && Class260.SOUNDS_SIZE < 50 && i_0 != -1) {
             AreadSound class268_6 = new AreadSound((byte) 1, i_0, i_1, i_2, i_3, 0, sampleRate, null);
             Class260.SOUNDS[++Class260.SOUNDS_SIZE - 1] = class268_6;
             return class268_6;

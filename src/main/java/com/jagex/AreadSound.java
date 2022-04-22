@@ -5,8 +5,8 @@ import java.util.Calendar;
 public class AreadSound {
 
     static int anInt3307;
-    MIDIInstrument aNode_Sub18_3294;
-    Node_Sub26_Sub1_Sub1 aNode_Sub26_Sub1_Sub1_3296;
+    MIDIInstrument midiInstrumentSound;
+    AudioFormatUnknown2 audio;
     SoundEffect soundEffect;
     Node_Sub15_Sub5 aNode_Sub15_Sub5_3304;
     int anInt3305 = -1;
@@ -83,7 +83,7 @@ public class AreadSound {
         }
     }
 
-    boolean method4793() {
+    boolean isMidiInstrumentSound() {
         return type == 2 || type == 3;
     }
 }

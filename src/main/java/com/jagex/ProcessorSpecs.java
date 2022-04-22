@@ -83,7 +83,7 @@ public class ProcessorSpecs {
                     }
                 }
                 if (Class454.aClass250_5450 == null) {
-                    Class454.aClass250_5450 = new Class250(Class148.aClass317_1732, Class148.aClass317_1731);
+                    Class454.aClass250_5450 = new Class250(Class148.soundEffectsIndex, Class148.midiInstrumentIndex);
                 }
                 Node_Sub15_Sub2 class282_sub15_sub2_2 = Class148.aNode_Sub15_Sub2_1735;
                 if (Node_Sub33.aNode_Sub15_Sub2_7836 != null) {

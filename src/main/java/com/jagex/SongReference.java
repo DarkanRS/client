@@ -137,7 +137,7 @@ public class SongReference {
             if (aNode_Sub7_1255 == null) {
                 return false;
             }
-            aClass250_1257 = new Class250(Class148.aClass317_1732, Class148.aClass317_1731);
+            aClass250_1257 = new Class250(Class148.soundEffectsIndex, Class148.midiInstrumentIndex);
             loadedStage = 1;
         }
         if (loadedStage == 1) {

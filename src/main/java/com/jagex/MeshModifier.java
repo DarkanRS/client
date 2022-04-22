@@ -39,13 +39,13 @@ public class MeshModifier {
     }
 
     public static void method7042() {
-        int i_1 = Class337.aLinkedList3969.size();
-        Iterator<MIDIInstrument> iterator_2 = Class337.aLinkedList3969.iterator();
-        while (iterator_2.hasNext()) {
-            MIDIInstrument class282_sub18_3 = iterator_2.next();
-            class282_sub18_3.method12296(class282_sub18_3.method12275() + class282_sub18_3.method12277() / (2 * i_1));
-            if (!class282_sub18_3.method12276()) {
-                iterator_2.remove();
+        int size = Class337.linkedListMidiInstruments39.size();
+        Iterator<MIDIInstrument> itMidiInstruments = Class337.linkedListMidiInstruments39.iterator();
+        while (itMidiInstruments.hasNext()) {
+            MIDIInstrument midiInstrumentSound = itMidiInstruments.next();
+            midiInstrumentSound.method12296(midiInstrumentSound.method12275() + midiInstrumentSound.getHertz() / (2 * size));
+            if (!midiInstrumentSound.method12276()) {
+                itMidiInstruments.remove();
             }
         }
     }

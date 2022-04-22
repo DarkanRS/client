@@ -10,7 +10,10 @@ public class SoundLevelPreference extends Preference {
         super(class282_sub54_1);
     }
 
-    public void method12712() {
+	/**
+	 * Volume ratio is between 0 and 127
+	 */
+    public void validateVolume() {
         if (value < 0 && value > 127) {
             value = getDefaultValue();
         }
@@ -26,28 +29,24 @@ public class SoundLevelPreference extends Preference {
         value = i_1;
     }
 
-    public int method12714() {
+	/**
+	 * A multiplier for raw volumes
+	 * @return
+	 */
+    public int getVolumeRatio() {
         return value;
     }
 
-    int method7786() {
+    int getMaxVolumeRatio() {
         return 127;
     }
 
-    int method7784() {
+    int getMinVolumeRatio() {
         return 1;
-    }
-
-    int method7787() {
-        return 127;
     }
 
     @Override
     int getDefaultValue() {
         return 127;
-    }
-
-    void method7780(int i_1) {
-        value = -754033619 * i_1 * -859024475;
     }
 }

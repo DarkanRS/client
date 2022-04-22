@@ -11,10 +11,10 @@ public class Static {
     static int UPDATE_ZONE_X;
 	public static String LOBBY_AUTH_TOKEN;
 
-    public static boolean method2084(Index index_0, Index index_1, Index index_2, Node_Sub15_Sub2 class282_sub15_sub2_3, Class253 class253_4) {
+    public static boolean method2084(Index index_0, Index midiInstrumentIndex, Index soundEffectsIndex, Node_Sub15_Sub2 class282_sub15_sub2_3, Class253 class253_4) {
         Class148.aClass317_1737 = index_0;
-        Class148.aClass317_1731 = index_1;
-        Class148.aClass317_1732 = index_2;
+        Class148.midiInstrumentIndex = midiInstrumentIndex;
+        Class148.soundEffectsIndex = soundEffectsIndex;
         Class148.aNode_Sub15_Sub2_1735 = class282_sub15_sub2_3;
         Class502.aClass253_5830 = class253_4;
         HashTable.anIntArray5449 = new int[16];

@@ -328,7 +328,7 @@ public class GamePreferences extends Node {
         if (i_2 >= 20) {
             voiceOverVolume = new SoundLevelPreference(rsbytebuffer_1.readUnsignedByte(), this);
         } else {
-            voiceOverVolume = new SoundLevelPreference(soundEffectVolume.method12714(), this);
+            voiceOverVolume = new SoundLevelPreference(soundEffectVolume.getVolumeRatio(), this);
         }
 
         musicVolume = new SoundLevelPreference(rsbytebuffer_1.readUnsignedByte(), this);
@@ -336,7 +336,7 @@ public class GamePreferences extends Node {
         if (i_2 >= 21) {
             aPreference_Sub13_8229 = new SoundLevelPreference(rsbytebuffer_1.readUnsignedByte(), this);
         } else {
-            aPreference_Sub13_8229 = new SoundLevelPreference(musicVolume.method12714(), this);
+            aPreference_Sub13_8229 = new SoundLevelPreference(musicVolume.getVolumeRatio(), this);
         }
 
         if (i_2 >= 1) {
@@ -474,15 +474,15 @@ public class GamePreferences extends Node {
         /*29*/
         rsbytebuffer_2.writeByte(aPreference_Sub3_8199.method12632());
         /*30*/
-        rsbytebuffer_2.writeByte(soundEffectVolume.method12714());
+        rsbytebuffer_2.writeByte(soundEffectVolume.getVolumeRatio());
         /*31*/
-        rsbytebuffer_2.writeByte(ambientSoundVolume.method12714());
+        rsbytebuffer_2.writeByte(ambientSoundVolume.getVolumeRatio());
         /*32*/
-        rsbytebuffer_2.writeByte(voiceOverVolume.method12714());
+        rsbytebuffer_2.writeByte(voiceOverVolume.getVolumeRatio());
         /*33*/
-        rsbytebuffer_2.writeByte(musicVolume.method12714());
+        rsbytebuffer_2.writeByte(musicVolume.getVolumeRatio());
         /*34*/
-        rsbytebuffer_2.writeByte(aPreference_Sub13_8229.method12714());
+        rsbytebuffer_2.writeByte(aPreference_Sub13_8229.getVolumeRatio());
         /*35*/
         rsbytebuffer_2.writeByte(monoStereo.method12691());
         return rsbytebuffer_2;
@@ -521,11 +521,11 @@ public class GamePreferences extends Node {
         aPreference_Sub11_8217.method12698();
         safeMode.method12928();
         aPreference_Sub3_8199.method12631();
-        soundEffectVolume.method12712();
-        ambientSoundVolume.method12712();
-        voiceOverVolume.method12712();
-        musicVolume.method12712();
-        aPreference_Sub13_8229.method12712();
+        soundEffectVolume.validateVolume();
+        ambientSoundVolume.validateVolume();
+        voiceOverVolume.validateVolume();
+        musicVolume.validateVolume();
+        aPreference_Sub13_8229.validateVolume();
         monoStereo.method12692();
     }
 

@@ -55,7 +55,7 @@ public class PlaySoundJingleCutsceneAction extends CutsceneAction {
                         if (class282_sub48_5.aNode_Sub15_Sub5_8099 != null) {
                             class282_sub48_5.anInt8089 -= 512;
                             if (class282_sub48_5.anInt8089 <= 0) {
-                                Class79.aNode_Sub15_Sub4_783.method15276(class282_sub48_5.aNode_Sub15_Sub5_8099);
+                                Class79.aNode_Sub15_Sub4_783.methodUnlink15276(class282_sub48_5.aNode_Sub15_Sub5_8099);
                                 class282_sub48_5.aNode_Sub15_Sub5_8099 = null;
                                 bool_11 = true;
                             }
@@ -65,7 +65,7 @@ public class PlaySoundJingleCutsceneAction extends CutsceneAction {
 
                         if (bool_11) {
                             class282_sub48_5.anInt8089 = npcdefinitions_10.anInt4909;
-                            class282_sub48_5.aNode_Sub26_Sub1_Sub1_8082 = null;
+                            class282_sub48_5.aAudioFormatUnknown2_8082 = null;
                             class282_sub48_5.aNode_Sub18_8097 = null;
                             class282_sub48_5.soundEffectId = i_9;
                             class282_sub48_5.aBool8098 = npcdefinitions_10.aBool4872;
@@ -114,7 +114,7 @@ public class PlaySoundJingleCutsceneAction extends CutsceneAction {
                     if (class282_sub48_5.aNode_Sub15_Sub5_8099 != null) {
                         class282_sub48_5.anInt8089 -= 512;
                         if (class282_sub48_5.anInt8089 <= 0) {
-                            Class79.aNode_Sub15_Sub4_783.method15276(class282_sub48_5.aNode_Sub15_Sub5_8099);
+                            Class79.aNode_Sub15_Sub4_783.methodUnlink15276(class282_sub48_5.aNode_Sub15_Sub5_8099);
                             class282_sub48_5.aNode_Sub15_Sub5_8099 = null;
                             bool_13 = true;
                         }
@@ -124,7 +124,7 @@ public class PlaySoundJingleCutsceneAction extends CutsceneAction {
 
                     if (bool_13) {
                         class282_sub48_5.anInt8089 = class282_sub48_5.aTransform_Sub1_Sub1_Sub2_Sub1_8086.specialByte;
-                        class282_sub48_5.aNode_Sub26_Sub1_Sub1_8082 = null;
+                        class282_sub48_5.aAudioFormatUnknown2_8082 = null;
                         class282_sub48_5.aNode_Sub18_8097 = null;
                         class282_sub48_5.soundEffectId = i_9;
                         class282_sub48_5.aBool8098 = class282_sub48_5.aTransform_Sub1_Sub1_Sub2_Sub1_8086.isTransformedNPC;

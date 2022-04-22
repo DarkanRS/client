@@ -8,6 +8,9 @@ import javax.sound.sampled.SourceDataLine;
 
 public class Class253_Sub1 extends Class253 {
 
+	/**
+	 * This is important to understanding sound...
+	 */
     AudioFormat anAudioFormat7824;
     byte[] aByteArray7825;
     boolean aBool7826;

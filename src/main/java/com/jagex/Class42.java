@@ -13,27 +13,27 @@ public class Class42 implements Interface2 {
         aClass357_416 = class357_2;
     }
 
-    public static void playSoundSong(int i_0, int volume, int i_2) {
-        if (Class260.aClass116_3229 != null && Class260.aClass116_3229.isLoaded() && i_0 == Class260.aClass116_3229.musicId) {
+    public static void playSoundSong(int musicId, int volume, int delay) {
+        if (Class260.aClass116_3229 != null && Class260.aClass116_3229.isLoaded() && musicId == Class260.aClass116_3229.musicId) {
             Class256.method4412(Class260.aClass116_3229, volume);
-            Class260.anInt3223 = i_0;
+            Class260.musicId = musicId;
             Class260.aClass116_3229 = null;
             Class260.aNode_Sub15_Sub2_3231 = null;
             TCPPacket tcpmessage_4 = TCPPacket.createPacket(ClientProt.SONG_LOADED, client.GAME_CONNECTION_CONTEXT.outKeys);
             tcpmessage_4.buffer.writeInt(-1);
             client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_4);
         } else {
-            volume = volume * Class393.preferences.musicVolume.method12714() >> 8;
-            if (i_0 == -1 && !Class260.aBool3220) {
+            volume = volume * Class393.preferences.musicVolume.getVolumeRatio() >> 8;
+            if (musicId == -1 && !Class260.aBool3220) {
                 VarBitDefinitions.method3805();
-            } else if (i_0 != -1 && (i_0 != Class260.anInt3223 || !SongReference.method1966()) && volume != 0 && !Class260.aBool3220) {
-                Node_Sub1.method11615(i_2, IndexLoaders.MUSIC_INDEX, i_0, volume, new Class109_Sub1());
+            } else if (musicId != -1 && (musicId != Class260.musicId || !SongReference.method1966()) && volume != 0 && !Class260.aBool3220) {
+                Node_Sub1.method11615(delay, IndexLoaders.MUSIC_INDEX, musicId, volume, new Class109_Sub1());
                 GraphicsPreference.method12658();
             }
-            if (i_0 != Class260.anInt3223) {
+            if (musicId != Class260.musicId) {
                 Class260.aNode_Sub15_Sub2_3231 = null;
             }
-            Class260.anInt3223 = i_0;
+            Class260.musicId = musicId;
             Class260.aClass277_3234 = null;
         }
     }

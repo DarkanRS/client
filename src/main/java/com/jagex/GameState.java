@@ -151,9 +151,9 @@ public enum GameState {
 			boolean currState = client.GAME_STATE == GameState.UNK_1 || loggedOut(client.GAME_STATE) || GameState.inLobby(client.GAME_STATE);
 			if (prevState != currState) {
 				if (prevState) {
-					Class260.anInt3223 = Class260.anInt3228;
-					if (Class393.preferences.aPreference_Sub13_8229.method12714() != 0) {
-						Class339.method6047(IndexLoaders.MUSIC_INDEX, Class260.anInt3228, Class393.preferences.aPreference_Sub13_8229.method12714());
+					Class260.musicId = Class260.anInt3228;
+					if (Class393.preferences.aPreference_Sub13_8229.getVolumeRatio() != 0) {
+						Class339.method6047(IndexLoaders.MUSIC_INDEX, Class260.anInt3228, Class393.preferences.aPreference_Sub13_8229.getVolumeRatio());
 						GraphicsPreference.method12658();
 					} else {
 						Class358.method6240();

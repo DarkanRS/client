@@ -2,7 +2,7 @@ package com.jagex;
 
 public class Class260 {
 
-    public static int anInt3223 = -1;
+    public static int musicId = -1;
     public static boolean aBool3220;
     public static int anInt3228 = -1;
     static SongReference aClass116_3229;

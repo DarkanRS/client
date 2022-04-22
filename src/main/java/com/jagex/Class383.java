@@ -16,7 +16,7 @@ public class Class383 implements Interface41 {
     }
 
     public static AreadSound method6509(int soundID, int i_1, int delay, int i_3, int i_4, int i_5) {
-        if (Class393.preferences.soundEffectVolume.method12714() != 0 && i_1 != 0 && Class260.SOUNDS_SIZE < 50 && soundID != -1) {
+        if (Class393.preferences.soundEffectVolume.getVolumeRatio() != 0 && i_1 != 0 && Class260.SOUNDS_SIZE < 50 && soundID != -1) {
             AreadSound class268_7 = new AreadSound((byte) 1, soundID, i_1, delay, i_3, i_4, i_5, null);
             Class260.SOUNDS[++Class260.SOUNDS_SIZE - 1] = class268_7;
             return class268_7;

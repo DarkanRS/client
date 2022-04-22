@@ -2,9 +2,9 @@ package com.jagex;
 
 public class Class148 {
 
-    static Index aClass317_1731;
+    static Index midiInstrumentIndex;
 
-    static Index aClass317_1732;
+    static Index soundEffectsIndex;
 
     static Node_Sub15_Sub2 aNode_Sub15_Sub2_1735;
 

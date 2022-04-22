@@ -35,10 +35,10 @@ public class WorldType {
                 }
             } else {
                 if (class521_sub1_2 == VertexNormal.MY_PLAYER) {
-                    if (Class393.preferences.soundEffectVolume.method12714() == 0) {
+                    if (Class393.preferences.soundEffectVolume.getVolumeRatio() == 0) {
                         return;
                     }
-                } else if (Class393.preferences.ambientSoundVolume.method12714() == 0) {
+                } else if (Class393.preferences.ambientSoundVolume.getVolumeRatio() == 0) {
                     return;
                 }
 

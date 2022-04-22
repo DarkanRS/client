@@ -75,9 +75,9 @@ public class Huffman {
     }
 
     public static void playSoundJingle(int i_0, int i_2) {
-        i_2 = i_2 * Class393.preferences.musicVolume.method12714() >> 8;
+        i_2 = i_2 * Class393.preferences.musicVolume.getVolumeRatio() >> 8;
         if (i_2 != 0 && i_0 != -1) {
-            if (!Class260.aBool3220 && Class260.anInt3223 != -1 && SongReference.method1966() && !ParticleArchive1Def.method6140()) {
+            if (!Class260.aBool3220 && Class260.musicId != -1 && SongReference.method1966() && !ParticleArchive1Def.method6140()) {
                 Class260.aNode_Sub15_Sub2_3231 = LocalizedText.method7272();
                 VarBitIndexLoader.method3912();
                 Node_Sub15_Sub2 class282_sub15_sub2_4 = MaterialProp8.method15262(Class260.aNode_Sub15_Sub2_3231);
