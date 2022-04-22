@@ -99,7 +99,7 @@ public class Node_Sub15_Sub3 extends Node_Sub15 {
     void method15233(Node_Sub13 class282_sub13_1, int i_2) {
         int i_21 = i_2;
         if ((aNode_Sub15_Sub2_9753.anIntArray9707[class282_sub13_1.anInt7582] & 0x4) != 0 && class282_sub13_1.anInt7579 < 0) {
-            int i_4 = aNode_Sub15_Sub2_9753.anIntArray9712[class282_sub13_1.anInt7582] / Class253.anInt3129;
+            int i_4 = aNode_Sub15_Sub2_9753.anIntArray9712[class282_sub13_1.anInt7582] / Class253.hertz;
             int i_5 = (i_4 + 1048575 - class282_sub13_1.anInt7583) / i_4;
             class282_sub13_1.anInt7583 = i_4 * i_21 + class282_sub13_1.anInt7583 & 0xfffff;
             if (i_5 <= i_21) {
@@ -130,7 +130,7 @@ public class Node_Sub15_Sub3 extends Node_Sub15 {
 
     void method15234(Node_Sub13 class282_sub13_1, int[] ints_2, int i_3, int i_4, int i_5) {
         if ((aNode_Sub15_Sub2_9753.anIntArray9707[class282_sub13_1.anInt7582] & 0x4) != 0 && class282_sub13_1.anInt7579 < 0) {
-            int i_7 = aNode_Sub15_Sub2_9753.anIntArray9712[class282_sub13_1.anInt7582] / Class253.anInt3129;
+            int i_7 = aNode_Sub15_Sub2_9753.anIntArray9712[class282_sub13_1.anInt7582] / Class253.hertz;
 
             while (true) {
                 int i_8 = (i_7 + 1048575 - class282_sub13_1.anInt7583) / i_7;
@@ -143,7 +143,7 @@ public class Node_Sub15_Sub3 extends Node_Sub15 {
                 i_3 += i_8;
                 i_4 -= i_8;
                 class282_sub13_1.anInt7583 += i_7 * i_8 - 1048576;
-                int i_9 = Class253.anInt3129 / 100;
+                int i_9 = Class253.hertz / 100;
                 int i_10 = 262144 / i_7;
                 if (i_10 < i_9) {
                     i_9 = i_10;

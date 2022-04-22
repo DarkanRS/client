@@ -1089,14 +1089,14 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
         do {
             if (anInt9858 <= 0) {
                 if (anInt9855 == -256 && (anInt9853 & 0xff) == 0) {
-                    if (Class253.aBool3115) {
+                    if (Class253.isStereo) {
                         return method15731(0.0F, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer(), ints_1, anInt9853, i_2, anInt9845, anInt9850, 0, i_4, i_3, this);
                     }
 
                     return method15774(((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer(), ints_1, anInt9853, i_2, anInt9848, 0, i_4, i_3, this);
                 }
 
-                if (Class253.aBool3115) {
+                if (Class253.isStereo) {
                     return method15729(0.0F, 0, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer(), ints_1, anInt9853, i_2, anInt9845, anInt9850, 0, i_4, i_3, this, anInt9855, f_5);
                 }
 
@@ -1110,12 +1110,12 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
 
             anInt9858 += i_2;
             if (anInt9855 == -256 && (anInt9853 & 0xff) == 0) {
-                if (Class253.aBool3115) {
+                if (Class253.isStereo) {
                     i_2 = method15739(0.0F, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer(), ints_1, anInt9853, i_2, anInt9845, anInt9850, anInt9852, anInt9851, 0, i_6, i_3, this);
                 } else {
                     i_2 = method15738(((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer(), ints_1, anInt9853, i_2, anInt9848, anInt9849, 0, i_6, i_3, this);
                 }
-            } else if (Class253.aBool3115) {
+            } else if (Class253.isStereo) {
                 i_2 = method15743(0.0F, 0, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer(), ints_1, anInt9853, i_2, anInt9845, anInt9850, anInt9852, anInt9851, 0, i_6, i_3, this, anInt9855, f_5);
             } else {
                 i_2 = method15742(0.0F, 0, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer(), ints_1, anInt9853, i_2, anInt9848, anInt9849, 0, i_6, i_3, this, anInt9855, f_5);
@@ -1510,14 +1510,14 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
         do {
             if (anInt9858 <= 0) {
                 if (anInt9855 == 256 && (anInt9853 & 0xff) == 0) {
-                    if (Class253.aBool3115) {
+                    if (Class253.isStereo) {
                         return method15770(0.0F, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer(), ints_1, anInt9853, i_2, anInt9845, anInt9850, 0, i_4, i_3, this);
                     }
 
                     return method15740(((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer(), ints_1, anInt9853, i_2, anInt9848, 0, i_4, i_3, this);
                 }
 
-                if (Class253.aBool3115) {
+                if (Class253.isStereo) {
                     return method15746(0.0F, 0, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer(), ints_1, anInt9853, i_2, anInt9845, anInt9850, 0, i_4, i_3, this, anInt9855, f_5);
                 }
 
@@ -1531,12 +1531,12 @@ public class Node_Sub15_Sub5_Sub1 extends Node_Sub15_Sub5 {
 
             anInt9858 += i_2;
             if (anInt9855 == 256 && (anInt9853 & 0xff) == 0) {
-                if (Class253.aBool3115) {
+                if (Class253.isStereo) {
                     i_2 = method15737(0.0F, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer(), ints_1, anInt9853, i_2, anInt9845, anInt9850, anInt9852, anInt9851, 0, i_6, i_3, this);
                 } else {
                     i_2 = method15777(((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer(), ints_1, anInt9853, i_2, anInt9848, anInt9849, 0, i_6, i_3, this);
                 }
-            } else if (Class253.aBool3115) {
+            } else if (Class253.isStereo) {
                 i_2 = method15741(0.0F, 0, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer(), ints_1, anInt9853, i_2, anInt9845, anInt9850, anInt9852, anInt9851, 0, i_6, i_3, this, anInt9855, f_5);
             } else {
                 i_2 = method15735(0.0F, 0, ((AudioFormatUnknown2) aNode_Sub26_7601).getAudioBuffer(), ints_1, anInt9853, i_2, anInt9848, anInt9849, 0, i_6, i_3, this, anInt9855, f_5);

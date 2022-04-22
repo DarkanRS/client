@@ -484,7 +484,7 @@ public class GamePreferences extends Node {
         /*34*/
         rsbytebuffer_2.writeByte(aPreference_Sub13_8229.getVolumeRatio());
         /*35*/
-        rsbytebuffer_2.writeByte(monoStereo.method12691());
+        rsbytebuffer_2.writeByte(monoStereo.getPref());
         return rsbytebuffer_2;
     }
 
@@ -526,7 +526,7 @@ public class GamePreferences extends Node {
         voiceOverVolume.validateVolume();
         musicVolume.validateVolume();
         aPreference_Sub13_8229.validateVolume();
-        monoStereo.method12692();
+        monoStereo.validatePref();
     }
 
     public ProcessorSpecs getProcessorSpecs() {

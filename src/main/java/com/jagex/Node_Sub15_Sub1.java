@@ -52,7 +52,7 @@ public class Node_Sub15_Sub1 extends Node_Sub15 {
                 }
             } else {
                 int i_4 = i_3 + i_2;
-                if (Class253.aBool3115) {
+                if (Class253.isStereo) {
                     i_4 <<= 1;
                 }
                 byte b_5 = 0;
@@ -67,7 +67,7 @@ public class Node_Sub15_Sub1 extends Node_Sub15 {
                     }
                     short[][] shorts_8;
                     for (shorts_8 = class282_sub39_7.aShortArrayArray8003; i_2 < i_4 && anInt9570 < shorts_8[0].length; anInt9570++) {
-                        if (Class253.aBool3115) {
+                        if (Class253.isStereo) {
                             ints_1[i_2++] = shorts_8[b_5][anInt9570] * anInt9565;
                             ints_1[i_2++] = shorts_8[b_6][anInt9570] * anInt9572;
                         } else {
@@ -168,7 +168,7 @@ public class Node_Sub15_Sub1 extends Node_Sub15 {
                 }
             } else {
                 int i_4 = i_2 + i_3;
-                if (Class253.aBool3115) {
+                if (Class253.isStereo) {
                     i_4 <<= 1;
                 }
                 byte b_5 = 0;
@@ -183,7 +183,7 @@ public class Node_Sub15_Sub1 extends Node_Sub15 {
                     }
                     short[][] shorts_8;
                     for (shorts_8 = class282_sub39_7.aShortArrayArray8003; i_2 < i_4 && anInt9570 * -235363691 * -1326835523 < shorts_8[0].length; anInt9570 = (anInt9570 * -235363691 + -235363691) * -1326835523) {
-                        if (Class253.aBool3115) {
+                        if (Class253.isStereo) {
                             ints_1[i_2++] = anInt9565 * 299218013 * 1644019701 * shorts_8[b_5][-1326835523 * anInt9570 * -235363691];
                             ints_1[i_2++] = shorts_8[b_6][-1326835523 * anInt9570 * -235363691] * -1731402595 * anInt9572 * 1802027445;
                         } else {
@@ -244,7 +244,7 @@ public class Node_Sub15_Sub1 extends Node_Sub15 {
                 }
             } else {
                 int i_4 = i_2 + i_3;
-                if (Class253.aBool3115) {
+                if (Class253.isStereo) {
                     i_4 <<= 1;
                 }
                 byte b_5 = 0;
@@ -259,7 +259,7 @@ public class Node_Sub15_Sub1 extends Node_Sub15 {
                     }
                     short[][] shorts_8;
                     for (shorts_8 = class282_sub39_7.aShortArrayArray8003; i_2 < i_4 && anInt9570 * -235363691 * -1326835523 < shorts_8[0].length; anInt9570 = (anInt9570 * -235363691 + -235363691) * -1326835523) {
-                        if (Class253.aBool3115) {
+                        if (Class253.isStereo) {
                             ints_1[i_2++] = anInt9565 * 299218013 * 1644019701 * shorts_8[b_5][-1326835523 * anInt9570 * -235363691];
                             ints_1[i_2++] = shorts_8[b_6][-1326835523 * anInt9570 * -235363691] * -1731402595 * anInt9572 * 1802027445;
                         } else {
@@ -285,7 +285,7 @@ public class Node_Sub15_Sub1 extends Node_Sub15 {
                 }
             } else {
                 int i_4 = i_2 + i_3;
-                if (Class253.aBool3115) {
+                if (Class253.isStereo) {
                     i_4 <<= 1;
                 }
                 byte b_5 = 0;
@@ -300,7 +300,7 @@ public class Node_Sub15_Sub1 extends Node_Sub15 {
                     }
                     short[][] shorts_8;
                     for (shorts_8 = class282_sub39_7.aShortArrayArray8003; i_2 < i_4 && anInt9570 * -235363691 * -1326835523 < shorts_8[0].length; anInt9570 = (anInt9570 * -235363691 + -235363691) * -1326835523) {
-                        if (Class253.aBool3115) {
+                        if (Class253.isStereo) {
                             ints_1[i_2++] = anInt9565 * 299218013 * 1644019701 * shorts_8[b_5][-1326835523 * anInt9570 * -235363691];
                             ints_1[i_2++] = shorts_8[b_6][-1326835523 * anInt9570 * -235363691] * -1731402595 * anInt9572 * 1802027445;
                         } else {
@@ -321,7 +321,7 @@ public class Node_Sub15_Sub1 extends Node_Sub15 {
             return -1.0;
         } else {
             Node_Sub39 class282_sub39_2 = (Node_Sub39) aClass482_9568.head();
-            return class282_sub39_2 == null ? -1.0 : class282_sub39_2.aDouble8004 - ((float) class282_sub39_2.aShortArrayArray8003[0].length / Class253.anInt3129);
+            return class282_sub39_2 == null ? -1.0 : class282_sub39_2.aDouble8004 - ((float) class282_sub39_2.aShortArrayArray8003[0].length / Class253.hertz);
         }
     }
 

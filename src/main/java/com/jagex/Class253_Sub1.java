@@ -5,6 +5,7 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.Mixer.Info;
 import javax.sound.sampled.SourceDataLine;
+import java.io.FileOutputStream;
 
 public class Class253_Sub1 extends Class253 {
 
@@ -12,10 +13,11 @@ public class Class253_Sub1 extends Class253 {
 	 * This is important to understanding sound...
 	 */
     AudioFormat anAudioFormat7824;
-    byte[] aByteArray7825;
+    byte[] soundBuffer;
     boolean aBool7826;
-    SourceDataLine aSourceDataLine7822;
+    SourceDataLine audioLine;
     int anInt7823;
+	static FileOutputStream output;
 
     @Override
     void method4370() {
@@ -31,21 +33,21 @@ public class Class253_Sub1 extends Class253 {
             }
         }
 
-        anAudioFormat7824 = new AudioFormat(anInt3129, 16, aBool3115 ? 2 : 1, true, false);
-        aByteArray7825 = new byte[256 << (aBool3115 ? 2 : 1)];
+        anAudioFormat7824 = new AudioFormat(hertz, 16, isStereo ? 2 : 1, true, false);
+        soundBuffer = new byte[256 << (isStereo ? 2 : 1)];
     }
 
     @Override
     void method4361(int i_1) throws LineUnavailableException {
         try {
-            javax.sound.sampled.DataLine.Info dataline$info_2 = new javax.sound.sampled.DataLine.Info(SourceDataLine.class, anAudioFormat7824, i_1 << (aBool3115 ? 2 : 1));
-            aSourceDataLine7822 = (SourceDataLine) AudioSystem.getLine(dataline$info_2);
-            aSourceDataLine7822.open();
-            aSourceDataLine7822.start();
+            javax.sound.sampled.DataLine.Info dataline$info_2 = new javax.sound.sampled.DataLine.Info(SourceDataLine.class, anAudioFormat7824, i_1 << (isStereo ? 2 : 1));
+            audioLine = (SourceDataLine) AudioSystem.getLine(dataline$info_2);
+            audioLine.open();
+            audioLine.start();
             anInt7823 = i_1;
         } catch (LineUnavailableException lineunavailableexception_3) {
             if (Class179.method3019(i_1) == 1) {
-                aSourceDataLine7822 = null;
+                audioLine = null;
                 throw lineunavailableexception_3;
             }
 
@@ -57,7 +59,7 @@ public class Class253_Sub1 extends Class253 {
     @Override
     void method4342() {
         int i_1 = 256;
-        if (aBool3115) {
+        if (isStereo) {
             i_1 <<= 1;
         }
 
@@ -67,39 +69,40 @@ public class Class253_Sub1 extends Class253 {
                 i_3 = 0x7fffff ^ i_3 >> 31;
             }
 
-            aByteArray7825[i_2 * 2] = (byte) (i_3 >> 8);
-            aByteArray7825[i_2 * 2 + 1] = (byte) (i_3 >> 16);
+            soundBuffer[i_2 * 2] = (byte) (i_3 >> 8);
+            soundBuffer[i_2 * 2 + 1] = (byte) (i_3 >> 16);
         }
 
-        aSourceDataLine7822.write(aByteArray7825, 0, i_1 << 1);
+		System.out.println(i_1);
+        audioLine.write(soundBuffer, 0, i_1 << 1);
     }
 
     @Override
     void method4343() {
-        if (aSourceDataLine7822 != null) {
-            aSourceDataLine7822.close();
-            aSourceDataLine7822 = null;
+        if (audioLine != null) {
+            audioLine.close();
+            audioLine = null;
         }
 
     }
 
     @Override
     void method4344() throws LineUnavailableException {
-        aSourceDataLine7822.flush();
+        audioLine.flush();
         if (aBool7826) {
-            aSourceDataLine7822.close();
-            aSourceDataLine7822 = null;
-            javax.sound.sampled.DataLine.Info dataline$info_1 = new javax.sound.sampled.DataLine.Info(SourceDataLine.class, anAudioFormat7824, anInt7823 << (aBool3115 ? 2 : 1));
-            aSourceDataLine7822 = (SourceDataLine) AudioSystem.getLine(dataline$info_1);
-            aSourceDataLine7822.open();
-            aSourceDataLine7822.start();
+            audioLine.close();
+            audioLine = null;
+            javax.sound.sampled.DataLine.Info dataline$info_1 = new javax.sound.sampled.DataLine.Info(SourceDataLine.class, anAudioFormat7824, anInt7823 << (isStereo ? 2 : 1));
+            audioLine = (SourceDataLine) AudioSystem.getLine(dataline$info_1);
+            audioLine.open();
+            audioLine.start();
         }
 
     }
 
     @Override
     int method4340() {
-        return anInt7823 - (aSourceDataLine7822.available() >> (aBool3115 ? 2 : 1));
+        return anInt7823 - (audioLine.available() >> (isStereo ? 2 : 1));
     }
 
 }

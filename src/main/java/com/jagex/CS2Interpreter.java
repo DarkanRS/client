@@ -7142,7 +7142,7 @@ public class CS2Interpreter {
     }
 
     static void method7082(CS2Executor executor) {
-        executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.monoStereo.method12691() == 1 ? 1 : 0;
+        executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.monoStereo.getPref() == 1 ? 1 : 0;
     }
 
     static void method7083(CS2Executor executor) {

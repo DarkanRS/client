@@ -876,14 +876,14 @@ public class Node_Sub15_Sub5_Sub2 extends Node_Sub15_Sub5 {
         do {
             if (anInt9858 <= 0) {
                 if (anInt9855 == 256 && (anInt9853 & 0xff) == 0) {
-                    if (Class253.aBool3115) {
+                    if (Class253.isStereo) {
                         return method16031(((AudioFormatUnknown) aNode_Sub26_7601).audioBuffer, ints_1, anInt9853, i_2, anInt9845, anInt9850, 0, i_4, i_3, this);
                     }
 
                     return method15992(((AudioFormatUnknown) aNode_Sub26_7601).audioBuffer, ints_1, anInt9853, i_2, anInt9848, 0, i_4, i_3, this);
                 }
 
-                if (Class253.aBool3115) {
+                if (Class253.isStereo) {
                     return method16019(0, 0, ((AudioFormatUnknown) aNode_Sub26_7601).audioBuffer, ints_1, anInt9853, i_2, anInt9845, anInt9850, 0, i_4, i_3, this, anInt9855, i_5);
                 }
 
@@ -897,12 +897,12 @@ public class Node_Sub15_Sub5_Sub2 extends Node_Sub15_Sub5 {
 
             anInt9858 += i_2;
             if (anInt9855 == 256 && (anInt9853 & 0xff) == 0) {
-                if (Class253.aBool3115) {
+                if (Class253.isStereo) {
                     i_2 = method16001(((AudioFormatUnknown) aNode_Sub26_7601).audioBuffer, ints_1, anInt9853, i_2, anInt9845, anInt9850, anInt9852, anInt9851, 0, i_6, i_3, this);
                 } else {
                     i_2 = method16000(((AudioFormatUnknown) aNode_Sub26_7601).audioBuffer, ints_1, anInt9853, i_2, anInt9848, anInt9849, 0, i_6, i_3, this);
                 }
-            } else if (Class253.aBool3115) {
+            } else if (Class253.isStereo) {
                 i_2 = method16005(0, 0, ((AudioFormatUnknown) aNode_Sub26_7601).audioBuffer, ints_1, anInt9853, i_2, anInt9845, anInt9850, anInt9852, anInt9851, 0, i_6, i_3, this, anInt9855, i_5);
             } else {
                 i_2 = method16004(0, ((AudioFormatUnknown) aNode_Sub26_7601).audioBuffer, ints_1, anInt9853, i_2, anInt9848, anInt9849, 0, i_6, i_3, this, anInt9855, i_5);
@@ -1297,14 +1297,14 @@ public class Node_Sub15_Sub5_Sub2 extends Node_Sub15_Sub5 {
         do {
             if (anInt9858 <= 0) {
                 if (anInt9855 == -256 && (anInt9853 & 0xff) == 0) {
-                    if (Class253.aBool3115) {
+                    if (Class253.isStereo) {
                         return method15995(((AudioFormatUnknown) aNode_Sub26_7601).audioBuffer, ints_1, anInt9853, i_2, anInt9845, anInt9850, 0, i_4, i_3, this);
                     }
 
                     return method15991(((AudioFormatUnknown) aNode_Sub26_7601).audioBuffer, ints_1, anInt9853, i_2, anInt9848, 0, i_4, i_3, this);
                 }
 
-                if (Class253.aBool3115) {
+                if (Class253.isStereo) {
                     return method15999(0, 0, ((AudioFormatUnknown) aNode_Sub26_7601).audioBuffer, ints_1, anInt9853, i_2, anInt9845, anInt9850, 0, i_4, i_3, this, anInt9855, i_5);
                 }
 
@@ -1318,12 +1318,12 @@ public class Node_Sub15_Sub5_Sub2 extends Node_Sub15_Sub5 {
 
             anInt9858 += i_2;
             if (anInt9855 == -256 && (anInt9853 & 0xff) == 0) {
-                if (Class253.aBool3115) {
+                if (Class253.isStereo) {
                     i_2 = method16003(((AudioFormatUnknown) aNode_Sub26_7601).audioBuffer, ints_1, anInt9853, i_2, anInt9845, anInt9850, anInt9852, anInt9851, 0, i_6, i_3, this);
                 } else {
                     i_2 = method16002(((AudioFormatUnknown) aNode_Sub26_7601).audioBuffer, ints_1, anInt9853, i_2, anInt9848, anInt9849, 0, i_6, i_3, this);
                 }
-            } else if (Class253.aBool3115) {
+            } else if (Class253.isStereo) {
                 i_2 = method16007(0, 0, ((AudioFormatUnknown) aNode_Sub26_7601).audioBuffer, ints_1, anInt9853, i_2, anInt9845, anInt9850, anInt9852, anInt9851, 0, i_6, i_3, this, anInt9855, i_5);
             } else {
                 i_2 = method16006(0, ((AudioFormatUnknown) aNode_Sub26_7601).audioBuffer, ints_1, anInt9853, i_2, anInt9848, anInt9849, 0, i_6, i_3, this, anInt9855, i_5);

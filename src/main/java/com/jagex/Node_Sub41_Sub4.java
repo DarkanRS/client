@@ -35,7 +35,7 @@ public class Node_Sub41_Sub4 extends Node_Sub41 {
                 }
                 aDSPState9600 = new DSPState(aVorbisInfo9605);
                 aVorbisBlock9601 = new VorbisBlock(aDSPState9600);
-                aClass344_9598 = new Class344(aVorbisInfo9605.rate, Class253.anInt3129);
+                aClass344_9598 = new Class344(aVorbisInfo9605.rate, Class253.hertz);
                 aNode_Sub15_Sub1_9603 = new Node_Sub15_Sub1(aVorbisInfo9605.channels);
             }
         } else {
@@ -94,7 +94,7 @@ public class Node_Sub41_Sub4 extends Node_Sub41 {
                 }
                 aDSPState9600 = new DSPState(aVorbisInfo9605);
                 aVorbisBlock9601 = new VorbisBlock(aDSPState9600);
-                aClass344_9598 = new Class344(aVorbisInfo9605.rate, Class253.anInt3129);
+                aClass344_9598 = new Class344(aVorbisInfo9605.rate, Class253.hertz);
                 aNode_Sub15_Sub1_9603 = new Node_Sub15_Sub1(aVorbisInfo9605.channels);
             }
         } else {
@@ -130,7 +130,7 @@ public class Node_Sub41_Sub4 extends Node_Sub41 {
                 }
                 aDSPState9600 = new DSPState(aVorbisInfo9605);
                 aVorbisBlock9601 = new VorbisBlock(aDSPState9600);
-                aClass344_9598 = new Class344(aVorbisInfo9605.rate, Class253.anInt3129);
+                aClass344_9598 = new Class344(aVorbisInfo9605.rate, Class253.hertz);
                 aNode_Sub15_Sub1_9603 = new Node_Sub15_Sub1(aVorbisInfo9605.channels);
             }
         } else {
@@ -176,7 +176,7 @@ public class Node_Sub41_Sub4 extends Node_Sub41 {
                 d_2 = aDouble9604;
             }
         }
-        return d_2 - (256.0F / Class253.anInt3129);
+        return d_2 - (256.0F / Class253.hertz);
     }
 
     @Override

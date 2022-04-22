@@ -26,15 +26,15 @@ public class MonoStereoPreference extends Preference {
         }
     }
 
-    static void method12696(ByteBuf rsbytebuffer_0) {
-        if (rsbytebuffer_0.buffer.length - rsbytebuffer_0.index >= 1) {
-            int i_2 = rsbytebuffer_0.readUnsignedByte();
-            if (i_2 >= 0 && i_2 <= 1 && rsbytebuffer_0.buffer.length - rsbytebuffer_0.index >= 2) {
-                int i_3 = rsbytebuffer_0.readUnsignedShort();
-                if (rsbytebuffer_0.buffer.length - rsbytebuffer_0.index >= i_3 * 6) {
+    static void method12696(ByteBuf buffer) {
+        if (buffer.buffer.length - buffer.index >= 1) {
+            int i_2 = buffer.readUnsignedByte();
+            if (i_2 >= 0 && i_2 <= 1 && buffer.buffer.length - buffer.index >= 2) {
+                int i_3 = buffer.readUnsignedShort();
+                if (buffer.buffer.length - buffer.index >= i_3 * 6) {
                     for (int i_4 = 0; i_4 < i_3; i_4++) {
-                        int i_5 = rsbytebuffer_0.readUnsignedShort();
-                        int i_6 = rsbytebuffer_0.readInt();
+                        int i_5 = buffer.readUnsignedShort();
+                        int i_6 = buffer.readInt();
                         if (i_5 < Class320.VARC_INT.length && Node_Sub17_Sub2.IS_VARC_SAVE_TO_FILE[i_5] && (IndexLoaders.VARC_LOADER.method6873(i_5).aChar4984 != 49 || i_6 >= -1 && i_6 <= 1)) {
                             Class320.VARC_INT[i_5] = i_6;
                         }
@@ -45,11 +45,11 @@ public class MonoStereoPreference extends Preference {
 
     }
 
-    public int method12691() {
+    public int getPref() {
         return value;
     }
 
-    public void method12692() {
+    public void validatePref() {
         if (value != 1 && value != 0) {
             value = getDefaultValue();
         }
@@ -61,19 +61,7 @@ public class MonoStereoPreference extends Preference {
         value = i_1;
     }
 
-    int method7787() {
-        return 1;
-    }
-
-    int method7784() {
-        return 1;
-    }
-
-    void method7780(int i_1) {
-        value = -754033619 * i_1 * -859024475;
-    }
-
-    int method7786() {
+    int getStereo() {
         return 1;
     }
 

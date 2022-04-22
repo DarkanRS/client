@@ -11,7 +11,7 @@ public class MaterialProp33 extends MaterialProperty {
 
     public static void method15418() {
         VorbisFileReference.method13449();
-        Class253.method4330(Class393.preferences.monoStereo.method12691() == 1);
+        Class253.setAudioToStereo(Class393.preferences.monoStereo.getPref() == 1);
         Class320.aClass253_3723 = Class253.method4331(0, 22050);
         Class42_Sub1.method14563(MaterialProp8.method15262(null));
         ShaderDecoder.aClass253_1008 = Class253.method4331(1, 2048);

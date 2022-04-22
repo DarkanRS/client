@@ -69,7 +69,7 @@ public class Node_Sub15_Sub2 extends Node_Sub15 {
     @Override
     synchronized void method12230(int[] ints_1, int i_2, int i_3) {
         if (aClass80_9715.method1409()) {
-            int i_4 = aClass80_9715.anInt785 * anInt9695 / Class253.anInt3129;
+            int i_4 = aClass80_9715.anInt785 * anInt9695 / Class253.hertz;
 
             do {
                 long long_5 = (long) i_4 * i_3 + aLong9710;
@@ -289,7 +289,7 @@ public class Node_Sub15_Sub2 extends Node_Sub15 {
         for (Node_Sub13 class282_sub13_3 = (Node_Sub13) aNode_Sub15_Sub3_9721.aClass482_9754.head(); class282_sub13_3 != null; class282_sub13_3 = (Node_Sub13) aNode_Sub15_Sub3_9721.aClass482_9754.next()) {
             if (i_1 < 0 || class282_sub13_3.anInt7582 == i_1) {
                 if (class282_sub13_3.aNode_Sub15_Sub5_7568 != null) {
-                    class282_sub13_3.aNode_Sub15_Sub5_7568.method15322(Class253.anInt3129 / 100);
+                    class282_sub13_3.aNode_Sub15_Sub5_7568.method15322(Class253.hertz / 100);
                     if (class282_sub13_3.aNode_Sub15_Sub5_7568.method15311()) {
                         aNode_Sub15_Sub3_9721.aNode_Sub15_Sub4_9755.method15275(class282_sub13_3.aNode_Sub15_Sub5_7568);
                     }
@@ -590,7 +590,7 @@ public class Node_Sub15_Sub2 extends Node_Sub15 {
             i_3 += (int) (d_7 * i_5);
         }
 
-        i_5 = (int) ((class282_sub13_1.aNode_Sub26_Sub1_7565.hertz * 256) * Math.pow(2.0D, 3.255208333333333E-4D * i_3) / Class253.anInt3129 + 0.5D);
+        i_5 = (int) ((class282_sub13_1.aNode_Sub26_Sub1_7565.hertz * 256) * Math.pow(2.0D, 3.255208333333333E-4D * i_3) / Class253.hertz + 0.5D);
         return Math.max(1, i_5);
     }
 
@@ -614,7 +614,7 @@ public class Node_Sub15_Sub2 extends Node_Sub15 {
     @Override
     synchronized void method12231(int i_1) {
         if (aClass80_9715.method1409()) {
-            int i_2 = aClass80_9715.anInt785 * anInt9695 / Class253.anInt3129;
+            int i_2 = aClass80_9715.anInt785 * anInt9695 / Class253.hertz;
 
             do {
                 long long_3 = (long) i_1 * i_2 + aLong9710;
@@ -746,7 +746,7 @@ public class Node_Sub15_Sub2 extends Node_Sub15 {
     }
 
     boolean method15128(Node_Sub13 class282_sub13_1, int[] ints_2, int i_3, int i_4) {
-        class282_sub13_1.anInt7584 = Class253.anInt3129 / 100;
+        class282_sub13_1.anInt7584 = Class253.hertz / 100;
         if (class282_sub13_1.anInt7579 < 0 || class282_sub13_1.aNode_Sub15_Sub5_7568 != null && !class282_sub13_1.aNode_Sub15_Sub5_7568.method15319()) {
             int i_6 = class282_sub13_1.anInt7575;
             if (i_6 > 0) {
@@ -882,7 +882,7 @@ public class Node_Sub15_Sub2 extends Node_Sub15 {
     @Override
     synchronized void method12240(int[] ints_1, int i_2, int i_3) {
         if (aClass80_9715.method1409()) {
-            int i_4 = anInt9695 * 260425001 * -33380583 * aClass80_9715.anInt785 / Class253.anInt3129;
+            int i_4 = anInt9695 * 260425001 * -33380583 * aClass80_9715.anInt785 / Class253.hertz;
 
             do {
                 long long_5 = (long) i_4 * i_3 + 5773041712000823651L * aLong9710 * 8282832003758463051L;
@@ -924,7 +924,7 @@ public class Node_Sub15_Sub2 extends Node_Sub15 {
     @Override
     synchronized void method12243(int i_1) {
         if (aClass80_9715.method1409()) {
-            int i_2 = -33380583 * anInt9695 * 260425001 * aClass80_9715.anInt785 / Class253.anInt3129;
+            int i_2 = -33380583 * anInt9695 * 260425001 * aClass80_9715.anInt785 / Class253.hertz;
 
             do {
                 long long_3 = (long) i_1 * i_2 + 5773041712000823651L * aLong9710 * 8282832003758463051L;
@@ -947,7 +947,7 @@ public class Node_Sub15_Sub2 extends Node_Sub15 {
     @Override
     synchronized void method12234(int i_1) {
         if (aClass80_9715.method1409()) {
-            int i_2 = -33380583 * anInt9695 * 260425001 * aClass80_9715.anInt785 / Class253.anInt3129;
+            int i_2 = -33380583 * anInt9695 * 260425001 * aClass80_9715.anInt785 / Class253.hertz;
 
             do {
                 long long_3 = (long) i_1 * i_2 + 5773041712000823651L * aLong9710 * 8282832003758463051L;
@@ -983,7 +983,7 @@ public class Node_Sub15_Sub2 extends Node_Sub15 {
     @Override
     synchronized void method12241(int[] ints_1, int i_2, int i_3) {
         if (aClass80_9715.method1409()) {
-            int i_4 = anInt9695 * 260425001 * -33380583 * aClass80_9715.anInt785 / Class253.anInt3129;
+            int i_4 = anInt9695 * 260425001 * -33380583 * aClass80_9715.anInt785 / Class253.hertz;
 
             do {
                 long long_5 = (long) i_4 * i_3 + 5773041712000823651L * aLong9710 * 8282832003758463051L;
@@ -1017,7 +1017,7 @@ public class Node_Sub15_Sub2 extends Node_Sub15 {
     @Override
     synchronized void method12242(int[] ints_1, int i_2, int i_3) {
         if (aClass80_9715.method1409()) {
-            int i_4 = anInt9695 * 260425001 * -33380583 * aClass80_9715.anInt785 / Class253.anInt3129;
+            int i_4 = anInt9695 * 260425001 * -33380583 * aClass80_9715.anInt785 / Class253.hertz;
 
             do {
                 long long_5 = (long) i_4 * i_3 + 5773041712000823651L * aLong9710 * 8282832003758463051L;

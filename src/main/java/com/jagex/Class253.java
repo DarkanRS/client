@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class Class253 {
 
-    public static int anInt3129;
-    public static boolean aBool3115;
+    public static int hertz;
+    public static boolean isStereo;
     static int anInt3139;
     static Class254 aClass254_3120;
     Node_Sub15 aNode_Sub15_3122;
@@ -26,10 +26,10 @@ public class Class253 {
     Node_Sub15[] aNode_Sub15Array3116 = new Node_Sub15[8];
     Node_Sub15[] aNode_Sub15Array3141 = new Node_Sub15[8];
 
-    public static void method4330(boolean bool_1) {
+    public static void setAudioToStereo(boolean stereo) {
         if (true) {
-            anInt3129 = 22050;
-            aBool3115 = bool_1;
+            hertz = 22050;
+            isStereo = stereo;
             anInt3139 = 2;
         } else {
             throw new IllegalArgumentException();
@@ -38,7 +38,7 @@ public class Class253 {
 
     public static Class253 method4331(int i_1, int i_2) {
         int i_21 = i_2;
-        if (anInt3129 == 0) {
+        if (hertz == 0) {
             throw new IllegalStateException();
         } else if (i_1 >= 0 && i_1 < 2) {
             if (i_21 < 256) {
@@ -47,7 +47,7 @@ public class Class253 {
 
             try {
                 Class253_Sub1 class253_sub1_4 = new Class253_Sub1();
-                class253_sub1_4.anIntArray3140 = new int[256 * (aBool3115 ? 2 : 1)];
+                class253_sub1_4.anIntArray3140 = new int[256 * (isStereo ? 2 : 1)];
                 class253_sub1_4.anInt3132 = i_21;
                 class253_sub1_4.method4370();
                 class253_sub1_4.anInt3121 = (i_21 & -1024) + 1024;
@@ -108,7 +108,7 @@ public class Class253 {
 
                 while (long_1 > aLong3124 + 5000L) {
                     method4373();
-                    aLong3124 += 256000 / anInt3129;
+                    aLong3124 += 256000 / hertz;
                     long_1 = Utils.time();
                 }
             } catch (Exception exception_7) {
@@ -231,14 +231,14 @@ public class Class253 {
 
     void method4337(int[] ints_1) {
         int i_3 = 256;
-        if (aBool3115) {
+        if (isStereo) {
             i_3 = 512;
         }
 
         Arrays.fill(ints_1, 0, i_3, 0);
         anInt3117 -= 256;
         if (aNode_Sub15_3122 != null && anInt3117 <= 0) {
-            anInt3117 += anInt3129 >> 4;
+            anInt3117 += hertz >> 4;
             method4338(aNode_Sub15_3122);
             method4339(aNode_Sub15_3122, aNode_Sub15_3122.method12225());
             int i_4 = 0;
