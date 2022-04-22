@@ -40,12 +40,12 @@ public class MIDIInstrument extends Node {
     int anInt7626;
     int anInt7638;
 
-    MIDIInstrument(byte[] bytes_1) throws IOException {
-        method12265(bytes_1);
+    MIDIInstrument(byte[] data) throws IOException {
+        method12265(data);
     }
 
-    static void method12261(byte[] bytes_0) {
-        method12262(bytes_0);
+    static void method12261(byte[] data) {
+        method12262(data);
         anInt7635 = 1 << method12264(4);
         anInt7637 = 1 << method12264(4);
         aFloatArray7612 = new float[anInt7637];
@@ -186,14 +186,14 @@ public class MIDIInstrument extends Node {
         return i_1;
     }
 
-    static boolean method12268(Index index_0) {
+    static boolean method12268(Index midiInstrumentIndex) {
         if (!aBool7611) {
-            byte[] bytes_1 = index_0.getFile(0, 0);
-            if (bytes_1 == null) {
+            byte[] data = midiInstrumentIndex.getFile(0, 0);
+            if (data == null) {
                 return false;
             }
 
-            method12261(bytes_1);
+            method12261(data);
         }
 
         return true;
@@ -254,18 +254,18 @@ public class MIDIInstrument extends Node {
         return (float) (i_1 * Math.pow(2.0D, i_3 - 788));
     }
 
-    void method12265(byte[] bytes_1) throws IOException {
-        ByteBuf rsbytebuffer_2 = new ByteBuf(bytes_1);
-        anInt7605 = rsbytebuffer_2.readInt();
-        anInt7620 = rsbytebuffer_2.readInt();
-        anInt7616 = rsbytebuffer_2.readInt();
-        anInt7604 = rsbytebuffer_2.readInt();
+    void method12265(byte[] data) throws IOException {
+        ByteBuf buffer = new ByteBuf(data);
+        anInt7605 = buffer.readInt();
+        anInt7620 = buffer.readInt();
+        anInt7616 = buffer.readInt();
+        anInt7604 = buffer.readInt();
         if (anInt7604 < 0) {
             anInt7604 = ~anInt7604;
             aBool7609 = true;
         }
 
-        int i_3 = rsbytebuffer_2.readInt();
+        int i_3 = buffer.readInt();
         if (i_3 < 0) {
             throw new IOException();
         } else {
@@ -276,12 +276,12 @@ public class MIDIInstrument extends Node {
 
                 int i_6;
                 do {
-                    i_6 = rsbytebuffer_2.readUnsignedByte();
+                    i_6 = buffer.readUnsignedByte();
                     i_5 += i_6;
                 } while (i_6 >= 255);
 
                 byte[] bytes_7 = new byte[i_5];
-                rsbytebuffer_2.readBytes(bytes_7, 0, i_5);
+                buffer.readBytes(bytes_7, 0, i_5);
                 aByteArrayArray7606[i_4] = bytes_7;
             }
 
