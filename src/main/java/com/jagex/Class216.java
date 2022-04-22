@@ -10,10 +10,10 @@ public class Class216 {
         throw new Error();
     }
 
-    static void method3675() {
-        if (Class260.aClass116_3229 != null && !Class260.aClass116_3229.isLoaded() && Class260.aClass116_3229.method1963()) {
+    static void sendSongStartedPacket() {
+        if (Class260.SongReference3229 != null && !Class260.SongReference3229.isLoaded() && Class260.SongReference3229.method1963()) {
             TCPPacket tcpmessage_1 = TCPPacket.createPacket(ClientProt.SONG_LOADED, client.GAME_CONNECTION_CONTEXT.outKeys);
-            tcpmessage_1.buffer.writeInt(Class260.aClass116_3229.musicId);
+            tcpmessage_1.buffer.writeInt(Class260.SongReference3229.musicId);
             client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_1);
         }
     }

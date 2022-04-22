@@ -1,11 +1,11 @@
 package com.jagex;
 
-public abstract class Node_Sub15 extends Node {
+public abstract class AbstractSoundNode_0 extends Node {
 
-    Node_Sub15 aNode_Sub15_7598;
+    AbstractSoundNode_0 aAbstractSoundNode_0_7598;
     int anInt7599;
-    Node_Sub26 aNode_Sub26_7601;
-    volatile boolean aBool7600 = true;
+    Node_Sub26 nodeWithAudioBuffer26;
+    volatile boolean aBoolNormTrue7600 = true;
 
     abstract int method12224();
 
@@ -13,30 +13,30 @@ public abstract class Node_Sub15 extends Node {
         return 255;
     }
 
-    abstract Node_Sub15 method12226();
+    abstract AbstractSoundNode_0 method12226();
 
     abstract int method12227();
 
     abstract int method12228();
 
-    abstract Node_Sub15 method12229();
+    abstract AbstractSoundNode_0 method12229();
 
     abstract void method12230(int[] var1, int var2, int var3);
 
     abstract void method12231(int var1);
 
-    abstract Node_Sub15 method12232();
+    abstract AbstractSoundNode_0 method12232();
 
-    abstract Node_Sub15 method12233();
+    abstract AbstractSoundNode_0 method12233();
 
     abstract void method12234(int var1);
 
-    abstract Node_Sub15 method12235();
+    abstract AbstractSoundNode_0 method12235();
 
-    abstract Node_Sub15 method12236();
+    abstract AbstractSoundNode_0 method12236();
 
     void method12237(int[] ints_1, int i_2, int i_3) {
-        if (aBool7600) {
+        if (aBoolNormTrue7600) {
             method12230(ints_1, i_2, i_3);
         } else {
             method12231(i_3);
@@ -46,7 +46,7 @@ public abstract class Node_Sub15 extends Node {
 
     abstract int method12238();
 
-    abstract Node_Sub15 method12239();
+    abstract AbstractSoundNode_0 method12239();
 
     abstract void method12240(int[] var1, int var2, int var3);
 

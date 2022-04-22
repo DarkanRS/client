@@ -1,6 +1,6 @@
 package com.jagex;
 
-public class Node_Sub15_Sub1 extends Node_Sub15 {
+public class Node_Sub15_Sub1 extends AbstractSoundNode_0 {
 
     static int anInt9575;
     static Class321 aClass321_9573;
@@ -200,27 +200,27 @@ public class Node_Sub15_Sub1 extends Node_Sub15 {
     }
 
     @Override
-    Node_Sub15 method12232() {
+	AbstractSoundNode_0 method12232() {
         return null;
     }
 
     @Override
-    Node_Sub15 method12233() {
+	AbstractSoundNode_0 method12233() {
         return null;
     }
 
     @Override
-    Node_Sub15 method12229() {
+	AbstractSoundNode_0 method12229() {
         return null;
     }
 
     @Override
-    Node_Sub15 method12235() {
+	AbstractSoundNode_0 method12235() {
         return null;
     }
 
     @Override
-    Node_Sub15 method12236() {
+	AbstractSoundNode_0 method12236() {
         return null;
     }
 
@@ -358,7 +358,7 @@ public class Node_Sub15_Sub1 extends Node_Sub15 {
     }
 
     @Override
-    Node_Sub15 method12239() {
+	AbstractSoundNode_0 method12239() {
         return null;
     }
 
@@ -385,7 +385,7 @@ public class Node_Sub15_Sub1 extends Node_Sub15 {
     }
 
     @Override
-    Node_Sub15 method12226() {
+	AbstractSoundNode_0 method12226() {
         return null;
     }
 }

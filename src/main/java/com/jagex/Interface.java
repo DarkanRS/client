@@ -84,22 +84,22 @@ public class Interface {
 
     }
 
-    public static void method1623() {
-        Class216.method3675();
+    public static void updateInGameSounds() {
+        Class216.sendSongStartedPacket();
         for (int i = 0; i < Class260.SOUNDS_SIZE; i++) {
             AreadSound areadSound_1 = Class260.SOUNDS[i];
-            boolean bool_3 = false;
+            boolean soundEnded = false;
             int i_4;
-            if (areadSound_1.aNode_Sub15_Sub5_3304 == null) {
-                --areadSound_1.delay;
-                if (areadSound_1.delay >= (areadSound_1.isMidiInstrumentSound() ? -1500 : -10)) {
+            if (areadSound_1.aSoundNode_1_3304 == null) {//Runs once and fills the node with the sound
+                --areadSound_1.timePosition;
+                if (areadSound_1.timePosition >= (areadSound_1.isRecordedAudio() ? -1500 : -10)) {
                     if (areadSound_1.type == 1 && areadSound_1.soundEffect == null) {
                         areadSound_1.soundEffect = SoundEffect.getSoundEffect(IndexLoaders.SOUND_EFFECT_INDEX, areadSound_1.soundId, 0);
                         if (areadSound_1.soundEffect == null) {
                             continue;
                         }
-                        areadSound_1.delay += areadSound_1.soundEffect.getDelay();
-                    } else if (areadSound_1.isMidiInstrumentSound() && (areadSound_1.midiInstrumentSound == null || areadSound_1.audio == null)) {
+                        areadSound_1.timePosition += areadSound_1.soundEffect.getDelay();
+                    } else if (areadSound_1.isRecordedAudio() && (areadSound_1.midiInstrumentSound == null || areadSound_1.audio == null)) {
                         if (areadSound_1.midiInstrumentSound == null) {
                             areadSound_1.midiInstrumentSound = MIDIInstrument.getMidiInstrumentSound(IndexLoaders.MIDI_INSTRUMENT_INDEX, areadSound_1.soundId);
                         }
@@ -113,7 +113,7 @@ public class Interface {
                             }
                         }
                     }
-                    if (areadSound_1.delay < 0) {
+                    if (areadSound_1.timePosition < 0) {//Play area sound up to 0
                         i_4 = 8192;
                         int volume;
                         if (areadSound_1.anInt3298 != 0) {
@@ -128,7 +128,7 @@ public class Interface {
                                 int i_13 = (i_12 << 9) + 256 - (int) vector3_9.z + i_8;
                                 int i_14 = Math.abs(i_11) + Math.abs(i_13) - 512;
                                 if (i_14 > i_7) {
-                                    areadSound_1.delay = -99999;
+                                    areadSound_1.timePosition = -99999;
                                     continue;
                                 }
                                 if (i_14 < 0) {
@@ -164,21 +164,21 @@ public class Interface {
                             if (areadSound_1.type == 1) {
                                 Object obj_18 = null;
                                 AudioFormatUnknown audio = areadSound_1.soundEffect.getMixedAudio().method16062(Class119.aClass344_1460);
-                                areadSound_1.aNode_Sub15_Sub5_3304 = audio.method15225(areadSound_1.anInt3295, volume, i_4);
-                            } else if (areadSound_1.isMidiInstrumentSound()) {
-                                areadSound_1.aNode_Sub15_Sub5_3304 = areadSound_1.audio.method15225(areadSound_1.anInt3295, volume, i_4);
+                                areadSound_1.aSoundNode_1_3304 = audio.getHeadSoundNode_4(areadSound_1.anInt3295, volume, i_4);
+                            } else if (areadSound_1.isRecordedAudio()) {
+                                areadSound_1.aSoundNode_1_3304 = areadSound_1.audio.getHeadSoundNode_4(areadSound_1.anInt3295, volume, i_4);
                             }
-                            areadSound_1.aNode_Sub15_Sub5_3304.method15325(areadSound_1.anInt3302 - 1);
-                            Class79.aNode_Sub15_Sub4_783.method15275(areadSound_1.aNode_Sub15_Sub5_3304);
+                            areadSound_1.aSoundNode_1_3304.method15325(areadSound_1.anInt3302 - 1);
+                            Class79.aNode_Sub15_Sub4_783.method15275(areadSound_1.aSoundNode_1_3304);
                         }
                     }
                 } else {
-                    bool_3 = true;
+                    soundEnded = true;
                 }
-            } else if (!areadSound_1.aNode_Sub15_Sub5_3304.linked()) {
-                bool_3 = true;
+            } else if (!areadSound_1.aSoundNode_1_3304.linked()) {
+                soundEnded = true;
             }
-            if (bool_3) {
+            if (soundEnded) {//Remove from sound queue
                 --Class260.SOUNDS_SIZE;
                 for (i_4 = i; i_4 < Class260.SOUNDS_SIZE; i_4++) {
                     Class260.SOUNDS[i_4] = Class260.SOUNDS[i_4 + 1];

@@ -1,6 +1,6 @@
 package com.jagex;
 
-public class Node_Sub15_Sub2 extends Node_Sub15 {
+public class Node_Sub15_Sub2 extends AbstractSoundNode_0 {
 
     int anInt9719;
     boolean aBool9724;
@@ -109,21 +109,21 @@ public class Node_Sub15_Sub2 extends Node_Sub15 {
     }
 
     void method15099(Node_Sub13 class282_sub13_1, boolean bool_2) {
-        int i_4 = class282_sub13_1.aNode_Sub26_Sub1_7565.getAudioBufferLength();
+        int i_4 = class282_sub13_1.aNode_WithAudioBuffer26_Sub1_7565.getAudioBufferLength();
         int i_5;
-        if (bool_2 && class282_sub13_1.aNode_Sub26_Sub1_7565.aBool9752) {
-            int i_6 = i_4 + i_4 - class282_sub13_1.aNode_Sub26_Sub1_7565.anInt9749;
+        if (bool_2 && class282_sub13_1.aNode_WithAudioBuffer26_Sub1_7565.aBoolNormFalse9752) {
+            int i_6 = i_4 + i_4 - class282_sub13_1.aNode_WithAudioBuffer26_Sub1_7565.anInt9749;
             i_5 = (int) ((long) anIntArray9704[class282_sub13_1.anInt7582] * i_6 >> 6);
             i_4 <<= 8;
             if (i_5 >= i_4) {
                 i_5 = i_4 + i_4 - 1 - i_5;
-                class282_sub13_1.aNode_Sub15_Sub5_7568.method15313();
+                class282_sub13_1.aSoundNode_1_7568.method15313();
             }
         } else {
             i_5 = (int) ((long) anIntArray9704[class282_sub13_1.anInt7582] * i_4 >> 6);
         }
 
-        class282_sub13_1.aNode_Sub15_Sub5_7568.method15317(i_5);
+        class282_sub13_1.aSoundNode_1_7568.method15317(i_5);
     }
 
     synchronized void method15100(Node_Sub7 class282_sub7_1, boolean bool_2, long long_4) {
@@ -175,12 +175,12 @@ public class Node_Sub15_Sub2 extends Node_Sub15 {
 
         Node_Sub14 class282_sub14_10 = (Node_Sub14) aClass465_9694.get(anIntArray9699[i_1]);
         if (class282_sub14_10 != null) {
-            Node_Sub26_Sub1 class282_sub26_sub1_6 = class282_sub14_10.aNode_Sub26_Sub1Array7589[i_2];
+            NodeWithAudioBuffer26_Sub1 class282_sub26_sub1_6 = class282_sub14_10.aNode_WithAudioBuffer26_Sub1Array7589[i_2];
             if (class282_sub26_sub1_6 != null) {
                 Node_Sub13 class282_sub13_7 = new Node_Sub13();
                 class282_sub13_7.anInt7582 = i_1;
                 class282_sub13_7.aNode_Sub14_7566 = class282_sub14_10;
-                class282_sub13_7.aNode_Sub26_Sub1_7565 = class282_sub26_sub1_6;
+                class282_sub13_7.aNode_WithAudioBuffer26_Sub1_7565 = class282_sub26_sub1_6;
                 class282_sub13_7.aClass110_7586 = class282_sub14_10.aClass110Array7594[i_2];
                 class282_sub13_7.anInt7567 = class282_sub14_10.aByteArray7595[i_2];
                 class282_sub13_7.anInt7569 = i_2;
@@ -193,14 +193,14 @@ public class Node_Sub15_Sub2 extends Node_Sub15 {
                 class282_sub13_7.anInt7579 = -1;
                 class282_sub13_7.anInt7580 = 0;
                 if (anIntArray9704[i_1] == 0) {
-                    class282_sub13_7.aNode_Sub15_Sub5_7568 = class282_sub26_sub1_6.method15225(method15120(class282_sub13_7), method15108(class282_sub13_7), method15122(class282_sub13_7));
+                    class282_sub13_7.aSoundNode_1_7568 = class282_sub26_sub1_6.getHeadSoundNode_4(method15120(class282_sub13_7), method15108(class282_sub13_7), method15122(class282_sub13_7));
                 } else {
-                    class282_sub13_7.aNode_Sub15_Sub5_7568 = class282_sub26_sub1_6.method15225(method15120(class282_sub13_7), 0, method15122(class282_sub13_7));
+                    class282_sub13_7.aSoundNode_1_7568 = class282_sub26_sub1_6.getHeadSoundNode_4(method15120(class282_sub13_7), 0, method15122(class282_sub13_7));
                     method15099(class282_sub13_7, class282_sub14_10.aShortArray7590[i_2] < 0);
                 }
 
                 if (class282_sub14_10.aShortArray7590[i_2] < 0) {
-                    class282_sub13_7.aNode_Sub15_Sub5_7568.method15325(-1);
+                    class282_sub13_7.aSoundNode_1_7568.method15325(-1);
                 }
 
                 if (class282_sub13_7.anInt7567 >= 0) {
@@ -288,10 +288,10 @@ public class Node_Sub15_Sub2 extends Node_Sub15 {
     void method15111(int i_1) {
         for (Node_Sub13 class282_sub13_3 = (Node_Sub13) aNode_Sub15_Sub3_9721.aClass482_9754.head(); class282_sub13_3 != null; class282_sub13_3 = (Node_Sub13) aNode_Sub15_Sub3_9721.aClass482_9754.next()) {
             if (i_1 < 0 || class282_sub13_3.anInt7582 == i_1) {
-                if (class282_sub13_3.aNode_Sub15_Sub5_7568 != null) {
-                    class282_sub13_3.aNode_Sub15_Sub5_7568.method15322(Class253.hertz / 100);
-                    if (class282_sub13_3.aNode_Sub15_Sub5_7568.method15311()) {
-                        aNode_Sub15_Sub3_9721.aNode_Sub15_Sub4_9755.method15275(class282_sub13_3.aNode_Sub15_Sub5_7568);
+                if (class282_sub13_3.aSoundNode_1_7568 != null) {
+                    class282_sub13_3.aSoundNode_1_7568.method15322(Class253.hertz / 100);
+                    if (class282_sub13_3.aSoundNode_1_7568.method15311()) {
+                        aNode_Sub15_Sub3_9721.aNode_Sub15_Sub4_9755.method15275(class282_sub13_3.aSoundNode_1_7568);
                     }
 
                     class282_sub13_3.method12213();
@@ -332,7 +332,7 @@ public class Node_Sub15_Sub2 extends Node_Sub15 {
     }
 
     boolean method15115(Node_Sub13 class282_sub13_1) {
-        if (class282_sub13_1.aNode_Sub15_Sub5_7568 == null) {
+        if (class282_sub13_1.aSoundNode_1_7568 == null) {
             if (class282_sub13_1.anInt7579 >= 0) {
                 class282_sub13_1.unlink();
                 if (class282_sub13_1.anInt7567 > 0 && class282_sub13_1 == aNode_Sub13ArrayArray9714[class282_sub13_1.anInt7582][class282_sub13_1.anInt7567]) {
@@ -590,7 +590,7 @@ public class Node_Sub15_Sub2 extends Node_Sub15 {
             i_3 += (int) (d_7 * i_5);
         }
 
-        i_5 = (int) ((class282_sub13_1.aNode_Sub26_Sub1_7565.hertz * 256) * Math.pow(2.0D, 3.255208333333333E-4D * i_3) / Class253.hertz + 0.5D);
+        i_5 = (int) ((class282_sub13_1.aNode_WithAudioBuffer26_Sub1_7565.hertz * 256) * Math.pow(2.0D, 3.255208333333333E-4D * i_3) / Class253.hertz + 0.5D);
         return Math.max(1, i_5);
     }
 
@@ -603,7 +603,7 @@ public class Node_Sub15_Sub2 extends Node_Sub15 {
     }
 
     @Override
-    synchronized Node_Sub15 method12226() {
+    synchronized AbstractSoundNode_0 method12226() {
         return aNode_Sub15_Sub3_9721;
     }
 
@@ -747,7 +747,7 @@ public class Node_Sub15_Sub2 extends Node_Sub15 {
 
     boolean method15128(Node_Sub13 class282_sub13_1, int[] ints_2, int i_3, int i_4) {
         class282_sub13_1.anInt7584 = Class253.hertz / 100;
-        if (class282_sub13_1.anInt7579 < 0 || class282_sub13_1.aNode_Sub15_Sub5_7568 != null && !class282_sub13_1.aNode_Sub15_Sub5_7568.method15319()) {
+        if (class282_sub13_1.anInt7579 < 0 || class282_sub13_1.aSoundNode_1_7568 != null && !class282_sub13_1.aSoundNode_1_7568.method15319()) {
             int i_6 = class282_sub13_1.anInt7575;
             if (i_6 > 0) {
                 i_6 -= (int) (16.0D * Math.pow(2.0D, anIntArray9703[class282_sub13_1.anInt7582] * 4.921259842519685E-4D) + 0.5D);
@@ -758,7 +758,7 @@ public class Node_Sub15_Sub2 extends Node_Sub15 {
                 class282_sub13_1.anInt7575 = i_6;
             }
 
-            class282_sub13_1.aNode_Sub15_Sub5_7568.method15308(method15120(class282_sub13_1));
+            class282_sub13_1.aSoundNode_1_7568.method15308(method15120(class282_sub13_1));
             Class110 class110_7 = class282_sub13_1.aClass110_7586;
             boolean bool_8 = false;
             ++class282_sub13_1.anInt7581;
@@ -809,15 +809,15 @@ public class Node_Sub15_Sub2 extends Node_Sub15 {
             }
 
             if (bool_8) {
-                class282_sub13_1.aNode_Sub15_Sub5_7568.method15322(class282_sub13_1.anInt7584);
+                class282_sub13_1.aSoundNode_1_7568.method15322(class282_sub13_1.anInt7584);
                 if (ints_2 != null) {
-                    class282_sub13_1.aNode_Sub15_Sub5_7568.method12230(ints_2, i_3, i_4);
+                    class282_sub13_1.aSoundNode_1_7568.method12230(ints_2, i_3, i_4);
                 } else {
-                    class282_sub13_1.aNode_Sub15_Sub5_7568.method12231(i_4);
+                    class282_sub13_1.aSoundNode_1_7568.method12231(i_4);
                 }
 
-                if (class282_sub13_1.aNode_Sub15_Sub5_7568.method15311()) {
-                    aNode_Sub15_Sub3_9721.aNode_Sub15_Sub4_9755.method15275(class282_sub13_1.aNode_Sub15_Sub5_7568);
+                if (class282_sub13_1.aSoundNode_1_7568.method15311()) {
+                    aNode_Sub15_Sub3_9721.aNode_Sub15_Sub4_9755.method15275(class282_sub13_1.aSoundNode_1_7568);
                 }
 
                 class282_sub13_1.method12213();
@@ -830,7 +830,7 @@ public class Node_Sub15_Sub2 extends Node_Sub15 {
 
                 return true;
             } else {
-                class282_sub13_1.aNode_Sub15_Sub5_7568.method15321(class282_sub13_1.anInt7584, method15108(class282_sub13_1), method15122(class282_sub13_1));
+                class282_sub13_1.aSoundNode_1_7568.method15321(class282_sub13_1.anInt7584, method15108(class282_sub13_1), method15122(class282_sub13_1));
                 return false;
             }
         } else {
@@ -845,22 +845,22 @@ public class Node_Sub15_Sub2 extends Node_Sub15 {
     }
 
     @Override
-    synchronized Node_Sub15 method12233() {
+    synchronized AbstractSoundNode_0 method12233() {
         return aNode_Sub15_Sub3_9721;
     }
 
     @Override
-    synchronized Node_Sub15 method12229() {
+    synchronized AbstractSoundNode_0 method12229() {
         return null;
     }
 
     @Override
-    synchronized Node_Sub15 method12235() {
+    synchronized AbstractSoundNode_0 method12235() {
         return null;
     }
 
     @Override
-    synchronized Node_Sub15 method12236() {
+    synchronized AbstractSoundNode_0 method12236() {
         return null;
     }
 
@@ -976,7 +976,7 @@ public class Node_Sub15_Sub2 extends Node_Sub15 {
     }
 
     @Override
-    synchronized Node_Sub15 method12239() {
+    synchronized AbstractSoundNode_0 method12239() {
         return null;
     }
 
@@ -1010,7 +1010,7 @@ public class Node_Sub15_Sub2 extends Node_Sub15 {
     }
 
     @Override
-    synchronized Node_Sub15 method12232() {
+    synchronized AbstractSoundNode_0 method12232() {
         return aNode_Sub15_Sub3_9721;
     }
 

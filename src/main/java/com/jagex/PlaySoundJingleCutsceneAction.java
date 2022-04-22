@@ -52,11 +52,11 @@ public class PlaySoundJingleCutsceneAction extends CutsceneAction {
                         class282_sub48_5.anInt8089 = npcdefinitions_10.anInt4909;
                     } else {
                         boolean bool_11 = false;
-                        if (class282_sub48_5.aNode_Sub15_Sub5_8099 != null) {
+                        if (class282_sub48_5.aSoundNode_1_8099 != null) {
                             class282_sub48_5.anInt8089 -= 512;
                             if (class282_sub48_5.anInt8089 <= 0) {
-                                Class79.aNode_Sub15_Sub4_783.methodUnlink15276(class282_sub48_5.aNode_Sub15_Sub5_8099);
-                                class282_sub48_5.aNode_Sub15_Sub5_8099 = null;
+                                Class79.aNode_Sub15_Sub4_783.methodUnlink15276(class282_sub48_5.aSoundNode_1_8099);
+                                class282_sub48_5.aSoundNode_1_8099 = null;
                                 bool_11 = true;
                             }
                         } else {
@@ -111,11 +111,11 @@ public class PlaySoundJingleCutsceneAction extends CutsceneAction {
                     class282_sub48_5.anInt8091 = b_6;
                 } else {
                     boolean bool_13 = false;
-                    if (class282_sub48_5.aNode_Sub15_Sub5_8099 != null) {
+                    if (class282_sub48_5.aSoundNode_1_8099 != null) {
                         class282_sub48_5.anInt8089 -= 512;
                         if (class282_sub48_5.anInt8089 <= 0) {
-                            Class79.aNode_Sub15_Sub4_783.methodUnlink15276(class282_sub48_5.aNode_Sub15_Sub5_8099);
-                            class282_sub48_5.aNode_Sub15_Sub5_8099 = null;
+                            Class79.aNode_Sub15_Sub4_783.methodUnlink15276(class282_sub48_5.aSoundNode_1_8099);
+                            class282_sub48_5.aSoundNode_1_8099 = null;
                             bool_13 = true;
                         }
                     } else {

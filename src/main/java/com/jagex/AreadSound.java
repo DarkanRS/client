@@ -8,7 +8,7 @@ public class AreadSound {
     MIDIInstrument midiInstrumentSound;
     AudioFormatUnknown2 audio;
     SoundEffect soundEffect;
-    Node_Sub15_Sub5 aNode_Sub15_Sub5_3304;
+    Sound_Node_1 aSoundNode_1_3304;
     int anInt3305 = -1;
 
     int anInt3306 = -1;
@@ -19,7 +19,7 @@ public class AreadSound {
 
     int anInt3302;
 
-    int delay;
+    int timePosition;
 
     int anInt123;
 
@@ -31,7 +31,7 @@ public class AreadSound {
         this.type = type;
         this.soundId = soundId;
         anInt3302 = i_3;
-        this.delay = delay;
+        this.timePosition = delay;//Starts from a negative number, audio ends when it hits 0
         this.anInt123 = anInt123;
         anInt3298 = i_6;
         anInt3295 = i_7;
@@ -83,7 +83,7 @@ public class AreadSound {
         }
     }
 
-    boolean isMidiInstrumentSound() {
+    boolean isRecordedAudio() {
         return type == 2 || type == 3;
     }
 }

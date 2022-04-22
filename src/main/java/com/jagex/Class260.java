@@ -5,7 +5,7 @@ public class Class260 {
     public static int musicId = -1;
     public static boolean aBool3220;
     public static int anInt3228 = -1;
-    static SongReference aClass116_3229;
+    static SongReference SongReference3229;
     static Node_Sub15_Sub2 aNode_Sub15_Sub2_3231;
     static int SOUNDS_SIZE;
 

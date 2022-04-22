@@ -4,7 +4,7 @@ public class Node_Sub14 extends Node {
 
     static int anInt7597;
     int[] anIntArray7596 = new int[128];
-    Node_Sub26_Sub1[] aNode_Sub26_Sub1Array7589 = new Node_Sub26_Sub1[128];
+    NodeWithAudioBuffer26_Sub1[] aNode_WithAudioBuffer26_Sub1Array7589 = new NodeWithAudioBuffer26_Sub1[128];
     short[] aShortArray7590 = new short[128];
     byte[] aByteArray7592 = new byte[128];
     byte[] aByteArray7591 = new byte[128];
@@ -463,7 +463,7 @@ public class Node_Sub14 extends Node {
     boolean method12216(Class250 class250_1, byte[] bytes_2, int[] ints_3) {
         boolean bool_5 = true;
         int i_6 = 0;
-        Node_Sub26_Sub1 obj_7 = null;
+        NodeWithAudioBuffer26_Sub1 obj_7 = null;
 
         for (int i_8 = 0; i_8 < 128; i_8++) {
             if (bytes_2 == null || bytes_2[i_8] != 0) {
@@ -483,7 +483,7 @@ public class Node_Sub14 extends Node {
                     }
 
                     if (obj_7 != null) {
-                        aNode_Sub26_Sub1Array7589[i_8] = obj_7;
+                        aNode_WithAudioBuffer26_Sub1Array7589[i_8] = obj_7;
                         anIntArray7596[i_8] = 0;
                     }
                 }

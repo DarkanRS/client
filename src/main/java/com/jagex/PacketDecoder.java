@@ -286,15 +286,15 @@ public class PacketDecoder {
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.VORBIS_SOUND) {
-            int key = buffer.readUnsignedShort();
-            if (key == 65535) {
-                key = -1;
+            int soundId = buffer.readUnsignedShort();
+            if (soundId == 65535) {
+                soundId = -1;
             }
             int flags = buffer.readUnsignedByte();
             int i_6 = buffer.readUnsignedShort();
             int i_7 = buffer.readUnsignedByte();
             int i_8 = buffer.readUnsignedShort();
-            Class435.playSoundVorbis(key, flags, i_6, i_7, false, i_8);
+            Class435.playSoundVorbis(soundId, flags, i_6, i_7, false, i_8);
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.RUN_ENERGY) {

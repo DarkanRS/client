@@ -77,11 +77,11 @@ public class Class175 {
                     }
                     i_11 = (16384 - i_18 >> 1) + i_17 * i_18 / 8192;
                 }
-                Node_Sub15_Sub5_Sub1 class282_sub15_sub5_sub1_14;
+                MidiInstrumentNode_2 class282_sub15_sub5_sub1_14;
                 AudioFormatUnknown class282_sub26_sub1_sub2_15;
-                Node_Sub15_Sub5_Sub2 class282_sub15_sub5_sub2_16;
+                SoundEffectNode_2 class282_sub15_sub5_sub2_16;
                 SoundEffect soundEffect19;
-                if (class282_sub48_0.aNode_Sub15_Sub5_8099 == null) {
+                if (class282_sub48_0.aSoundNode_1_8099 == null) {
                     if (class282_sub48_0.soundEffectId >= 0) {
                         i_12 = class282_sub48_0.anInt8094 == 256 && class282_sub48_0.anInt8093 == 256 ? 256 : Class76.method1356(class282_sub48_0.anInt8093, class282_sub48_0.anInt8094);
                         if (class282_sub48_0.aBool8098) {
@@ -93,28 +93,28 @@ public class Class175 {
                                     class282_sub48_0.aAudioFormatUnknown2_8082 = class282_sub48_0.aNode_Sub18_8097.getAudio();
                                 }
                                 if (class282_sub48_0.aAudioFormatUnknown2_8082 != null) {
-                                    class282_sub15_sub5_sub1_14 = (Node_Sub15_Sub5_Sub1) class282_sub48_0.aAudioFormatUnknown2_8082.method15225(i_12, i_9 << 6, i_11);
+                                    class282_sub15_sub5_sub1_14 = (MidiInstrumentNode_2) class282_sub48_0.aAudioFormatUnknown2_8082.getHeadSoundNode_4(i_12, i_9 << 6, i_11);
                                     class282_sub15_sub5_sub1_14.method15325(-1);
                                     Class79.aNode_Sub15_Sub4_783.method15275(class282_sub15_sub5_sub1_14);
-                                    class282_sub48_0.aNode_Sub15_Sub5_8099 = class282_sub15_sub5_sub1_14;
+                                    class282_sub48_0.aSoundNode_1_8099 = class282_sub15_sub5_sub1_14;
                                 }
                             }
                         } else {
                             soundEffect19 = SoundEffect.getSoundEffect(IndexLoaders.SOUND_EFFECT_INDEX, class282_sub48_0.soundEffectId, 0);
                             if (soundEffect19 != null) {
                                 class282_sub26_sub1_sub2_15 = soundEffect19.getMixedAudio().method16062(Class119.aClass344_1460);
-                                class282_sub15_sub5_sub2_16 = (Node_Sub15_Sub5_Sub2) class282_sub26_sub1_sub2_15.method15225(i_12, i_9 << 6, i_11);
+                                class282_sub15_sub5_sub2_16 = (SoundEffectNode_2) class282_sub26_sub1_sub2_15.getHeadSoundNode_4(i_12, i_9 << 6, i_11);
                                 class282_sub15_sub5_sub2_16.method15325(-1);
                                 Class79.aNode_Sub15_Sub4_783.method15275(class282_sub15_sub5_sub2_16);
-                                class282_sub48_0.aNode_Sub15_Sub5_8099 = class282_sub15_sub5_sub2_16;
+                                class282_sub48_0.aSoundNode_1_8099 = class282_sub15_sub5_sub2_16;
                             }
                         }
                     }
                 } else {
-                    class282_sub48_0.aNode_Sub15_Sub5_8099.method15312(i_9);
-                    class282_sub48_0.aNode_Sub15_Sub5_8099.method15340(i_11);
+                    class282_sub48_0.aSoundNode_1_8099.method15312(i_9);
+                    class282_sub48_0.aSoundNode_1_8099.method15340(i_11);
                 }
-                if (class282_sub48_0.aNode_Sub15_Sub5_8096 == null) {
+                if (class282_sub48_0.aSoundNode_1_8096 == null) {
                     if (class282_sub48_0.anIntArray8102 != null && (class282_sub48_0.anInt8080 -= i_4) <= 0) {
                         i_12 = class282_sub48_0.anInt8094 == 256 && class282_sub48_0.anInt8093 == 256 ? 256 : (int) (Math.random() * (class282_sub48_0.anInt8094 - class282_sub48_0.anInt8093)) + class282_sub48_0.anInt8093;
                         if (class282_sub48_0.aBool8103) {
@@ -127,10 +127,10 @@ public class Class175 {
                                     class282_sub48_0.aAudioFormatUnknown2_8106 = class282_sub48_0.aNode_Sub18_8087.getAudio();
                                 }
                                 if (class282_sub48_0.aAudioFormatUnknown2_8106 != null) {
-                                    class282_sub15_sub5_sub1_14 = (Node_Sub15_Sub5_Sub1) class282_sub48_0.aAudioFormatUnknown2_8106.method15225(i_12, i_9 << 6, i_11);
+                                    class282_sub15_sub5_sub1_14 = (MidiInstrumentNode_2) class282_sub48_0.aAudioFormatUnknown2_8106.getHeadSoundNode_4(i_12, i_9 << 6, i_11);
                                     class282_sub15_sub5_sub1_14.method15325(0);
                                     Class79.aNode_Sub15_Sub4_783.method15275(class282_sub15_sub5_sub1_14);
-                                    class282_sub48_0.aNode_Sub15_Sub5_8096 = class282_sub15_sub5_sub1_14;
+                                    class282_sub48_0.aSoundNode_1_8096 = class282_sub15_sub5_sub1_14;
                                     class282_sub48_0.anInt8080 = class282_sub48_0.anInt8072 + (int) (Math.random() * (class282_sub48_0.anInt8101 - class282_sub48_0.anInt8072));
                                 }
                             }
@@ -139,33 +139,33 @@ public class Class175 {
                             soundEffect19 = SoundEffect.getSoundEffect(IndexLoaders.SOUND_EFFECT_INDEX, class282_sub48_0.anIntArray8102[i_13], 0);
                             if (soundEffect19 != null) {
                                 class282_sub26_sub1_sub2_15 = soundEffect19.getMixedAudio().method16062(Class119.aClass344_1460);
-                                class282_sub15_sub5_sub2_16 = (Node_Sub15_Sub5_Sub2) class282_sub26_sub1_sub2_15.method15225(i_12, i_9 << 6, i_11);
+                                class282_sub15_sub5_sub2_16 = (SoundEffectNode_2) class282_sub26_sub1_sub2_15.getHeadSoundNode_4(i_12, i_9 << 6, i_11);
                                 class282_sub15_sub5_sub2_16.method15325(0);
                                 Class79.aNode_Sub15_Sub4_783.method15275(class282_sub15_sub5_sub2_16);
-                                class282_sub48_0.aNode_Sub15_Sub5_8096 = class282_sub15_sub5_sub2_16;
+                                class282_sub48_0.aSoundNode_1_8096 = class282_sub15_sub5_sub2_16;
                                 class282_sub48_0.anInt8080 = class282_sub48_0.anInt8072 + (int) (Math.random() * (class282_sub48_0.anInt8101 - class282_sub48_0.anInt8072));
                             }
                         }
                     }
                 } else {
-                    class282_sub48_0.aNode_Sub15_Sub5_8096.method15312(i_9);
-                    class282_sub48_0.aNode_Sub15_Sub5_8096.method15340(i_11);
-                    if (!class282_sub48_0.aNode_Sub15_Sub5_8096.linked()) {
-                        class282_sub48_0.aNode_Sub15_Sub5_8096 = null;
+                    class282_sub48_0.aSoundNode_1_8096.method15312(i_9);
+                    class282_sub48_0.aSoundNode_1_8096.method15340(i_11);
+                    if (!class282_sub48_0.aSoundNode_1_8096.linked()) {
+                        class282_sub48_0.aSoundNode_1_8096 = null;
                         class282_sub48_0.aNode_Sub18_8087 = null;
                         class282_sub48_0.aAudioFormatUnknown2_8106 = null;
                     }
                 }
             } else {
-                if (class282_sub48_0.aNode_Sub15_Sub5_8099 != null) {
-                    Class79.aNode_Sub15_Sub4_783.methodUnlink15276(class282_sub48_0.aNode_Sub15_Sub5_8099);
-                    class282_sub48_0.aNode_Sub15_Sub5_8099 = null;
+                if (class282_sub48_0.aSoundNode_1_8099 != null) {
+                    Class79.aNode_Sub15_Sub4_783.methodUnlink15276(class282_sub48_0.aSoundNode_1_8099);
+                    class282_sub48_0.aSoundNode_1_8099 = null;
                     class282_sub48_0.aAudioFormatUnknown2_8082 = null;
                     class282_sub48_0.aNode_Sub18_8097 = null;
                 }
-                if (class282_sub48_0.aNode_Sub15_Sub5_8096 != null) {
-                    Class79.aNode_Sub15_Sub4_783.methodUnlink15276(class282_sub48_0.aNode_Sub15_Sub5_8096);
-                    class282_sub48_0.aNode_Sub15_Sub5_8096 = null;
+                if (class282_sub48_0.aSoundNode_1_8096 != null) {
+                    Class79.aNode_Sub15_Sub4_783.methodUnlink15276(class282_sub48_0.aSoundNode_1_8096);
+                    class282_sub48_0.aSoundNode_1_8096 = null;
                     class282_sub48_0.aNode_Sub18_8087 = null;
                     class282_sub48_0.aAudioFormatUnknown2_8106 = null;
                 }

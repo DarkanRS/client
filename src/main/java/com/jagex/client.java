@@ -1334,7 +1334,7 @@ public class client extends Engine {
 											}
 
 											aBool7375 = true;
-											Node_Sub15_Sub5.anInt9859 = ints_43[0];
+											Sound_Node_1.anInt9859 = ints_43[0];
 											IdentikitDefinition.anInt431 = ints_43[1];
 											StructIndexLoader.anInt5015 = ints_43[2];
 										}

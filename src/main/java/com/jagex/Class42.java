@@ -14,10 +14,10 @@ public class Class42 implements Interface2 {
     }
 
     public static void playSoundSong(int musicId, int volume, int delay) {
-        if (Class260.aClass116_3229 != null && Class260.aClass116_3229.isLoaded() && musicId == Class260.aClass116_3229.musicId) {
-            Class256.method4412(Class260.aClass116_3229, volume);
+        if (Class260.SongReference3229 != null && Class260.SongReference3229.isLoaded() && musicId == Class260.SongReference3229.musicId) {
+            Class256.method4412(Class260.SongReference3229, volume);
             Class260.musicId = musicId;
-            Class260.aClass116_3229 = null;
+            Class260.SongReference3229 = null;
             Class260.aNode_Sub15_Sub2_3231 = null;
             TCPPacket tcpmessage_4 = TCPPacket.createPacket(ClientProt.SONG_LOADED, client.GAME_CONNECTION_CONTEXT.outKeys);
             tcpmessage_4.buffer.writeInt(-1);

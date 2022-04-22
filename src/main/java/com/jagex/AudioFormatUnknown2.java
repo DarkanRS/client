@@ -1,6 +1,6 @@
 package com.jagex;
 
-public class AudioFormatUnknown2 extends Node_Sub26_Sub1 {
+public class AudioFormatUnknown2 extends NodeWithAudioBuffer26_Sub1 {
 
     float[] audioBuffer;
 
@@ -9,15 +9,15 @@ public class AudioFormatUnknown2 extends Node_Sub26_Sub1 {
 	 * @param hertz
 	 * @param data
 	 * @param i_4
-	 * @param i_5
+	 * @param duration
 	 * @param bool_6
 	 */
-    AudioFormatUnknown2(int hertz, float[] data, int i_4, int i_5, boolean bool_6) {
+    AudioFormatUnknown2(int hertz, float[] data, int i_4, int duration, boolean bool_6) {
         this.hertz = hertz;
         audioBuffer = data;
         anInt9749 = i_4;
-        anInt9751 = i_5;
-        aBool9752 = bool_6;
+        this.duration = duration;
+        aBoolNormFalse9752 = bool_6;
     }
 
     @Override
@@ -26,8 +26,8 @@ public class AudioFormatUnknown2 extends Node_Sub26_Sub1 {
     }
 
     @Override
-    public Node_Sub15_Sub5 method15225(int i_1, int volume, int i_3) {
-        return audioBuffer != null && audioBuffer.length != 0 ? new Node_Sub15_Sub5_Sub1(this, i_1, volume, i_3) : null;
+    public Sound_Node_1 getHeadSoundNode_4(int i_1, int volume, int i_3) {
+        return audioBuffer != null && audioBuffer.length != 0 ? new MidiInstrumentNode_2(this, i_1, volume, i_3) : null;
     }
 
     float[] getAudioBuffer() {

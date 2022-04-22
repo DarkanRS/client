@@ -24,14 +24,14 @@ public class Node_Sub13 extends Node {
     int anInt7583;
     int anInt7584;
     Node_Sub14 aNode_Sub14_7566;
-    Node_Sub26_Sub1 aNode_Sub26_Sub1_7565;
+    NodeWithAudioBuffer26_Sub1 aNode_WithAudioBuffer26_Sub1_7565;
     Class110 aClass110_7586;
-    Node_Sub15_Sub5 aNode_Sub15_Sub5_7568;
+    Sound_Node_1 aSoundNode_1_7568;
 
     void method12213() {
         aNode_Sub14_7566 = null;
-        aNode_Sub26_Sub1_7565 = null;
+        aNode_WithAudioBuffer26_Sub1_7565 = null;
         aClass110_7586 = null;
-        aNode_Sub15_Sub5_7568 = null;
+        aSoundNode_1_7568 = null;
     }
 }

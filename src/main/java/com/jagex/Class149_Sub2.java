@@ -29,9 +29,9 @@ public class Class149_Sub2 extends Class149 {
     public static void method14609(PlayerEntity player_0) {
         Node_Sub48 class282_sub48_2 = (Node_Sub48) Node_Sub48.aClass465_8075.get(player_0.index);
         if (class282_sub48_2 != null) {
-            if (class282_sub48_2.aNode_Sub15_Sub5_8099 != null) {
-                Class79.aNode_Sub15_Sub4_783.methodUnlink15276(class282_sub48_2.aNode_Sub15_Sub5_8099);
-                class282_sub48_2.aNode_Sub15_Sub5_8099 = null;
+            if (class282_sub48_2.aSoundNode_1_8099 != null) {
+                Class79.aNode_Sub15_Sub4_783.methodUnlink15276(class282_sub48_2.aSoundNode_1_8099);
+                class282_sub48_2.aSoundNode_1_8099 = null;
             }
 
             class282_sub48_2.unlink();

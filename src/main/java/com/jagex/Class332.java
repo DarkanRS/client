@@ -32,7 +32,7 @@ public class Class332 {
         TCPPacket tcpmessage_2 = TCPPacket.createPacket(ClientProt.SONG_LOADED, client.GAME_CONNECTION_CONTEXT.outKeys);
         tcpmessage_2.buffer.writeInt(-1);
         client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_2);
-        Class260.aClass116_3229 = new SongReference(IndexLoaders.MUSIC_INDEX, songId);
+        Class260.SongReference3229 = new SongReference(IndexLoaders.MUSIC_INDEX, songId);
     }
 
 }

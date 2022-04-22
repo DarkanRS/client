@@ -14,7 +14,7 @@ public class Node_Sub48 extends Node {
     PlayerEntity aTransform_Sub1_Sub1_Sub2_Sub1_8086;
     MIDIInstrument aNode_Sub18_8087;
     boolean aBool8092;
-    Node_Sub15_Sub5 aNode_Sub15_Sub5_8096;
+    Sound_Node_1 aSoundNode_1_8096;
     ObjectDefinition aClass478_8104;
     AudioFormatUnknown2 aAudioFormatUnknown2_8106;
     int anInt8107;
@@ -29,7 +29,7 @@ public class Node_Sub48 extends Node {
     int anInt8101;
     int[] anIntArray8102;
     boolean aBool8103;
-    Node_Sub15_Sub5 aNode_Sub15_Sub5_8099;
+    Sound_Node_1 aSoundNode_1_8099;
     AudioFormatUnknown2 aAudioFormatUnknown2_8082;
     MIDIInstrument aNode_Sub18_8097;
     int anInt8091;
@@ -96,9 +96,9 @@ public class Node_Sub48 extends Node {
             anInt8094 = 256;
             anInt8093 = 256;
         }
-        if ((i_2 != soundEffectId || bool_3 != aBool8098) && aNode_Sub15_Sub5_8099 != null) {
-            Class79.aNode_Sub15_Sub4_783.methodUnlink15276(aNode_Sub15_Sub5_8099);
-            aNode_Sub15_Sub5_8099 = null;
+        if ((i_2 != soundEffectId || bool_3 != aBool8098) && aSoundNode_1_8099 != null) {
+            Class79.aNode_Sub15_Sub4_783.methodUnlink15276(aSoundNode_1_8099);
+            aSoundNode_1_8099 = null;
             aAudioFormatUnknown2_8082 = null;
             aNode_Sub18_8097 = null;
         }

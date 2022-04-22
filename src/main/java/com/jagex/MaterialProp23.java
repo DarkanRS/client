@@ -72,7 +72,7 @@ public class MaterialProp23 extends MaterialProperty {
                 if (client.GAME_STATE == GameState.LOGGED_INGAME) {
                     IndexLoaders.MAP_REGION_DECODER.method4435().method4037(IndexLoaders.MAP_REGION_DECODER);
                     Class350_Sub1.method12516();
-                    Interface.method1623();
+                    Interface.updateInGameSounds();
                     if (client.anInt7396 > 10) {
                         ++client.GAME_CONNECTION_CONTEXT.idleReadPulses;
                     }
@@ -148,7 +148,7 @@ public class MaterialProp23 extends MaterialProperty {
                         TCPPacket tcpmessage_8;
                         if (client.aBool7375) {
                             tcpmessage_8 = TCPPacket.createPacket(ClientProt.WORLD_MAP_CLICK, client.GAME_CONNECTION_CONTEXT.outKeys);
-                            tcpmessage_8.buffer.writeIntLE(Node_Sub15_Sub5.anInt9859 << 28 | IdentikitDefinition.anInt431 << 14 | StructIndexLoader.anInt5015);
+                            tcpmessage_8.buffer.writeIntLE(Sound_Node_1.anInt9859 << 28 | IdentikitDefinition.anInt431 << 14 | StructIndexLoader.anInt5015);
                             client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_8);
                             client.aBool7375 = false;
                         }

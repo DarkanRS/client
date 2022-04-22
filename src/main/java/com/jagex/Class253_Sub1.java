@@ -72,8 +72,6 @@ public class Class253_Sub1 extends Class253 {
             soundBuffer[i_2 * 2] = (byte) (i_3 >> 8);
             soundBuffer[i_2 * 2 + 1] = (byte) (i_3 >> 16);
         }
-
-		System.out.println(i_1);
         audioLine.write(soundBuffer, 0, i_1 << 1);
     }
 

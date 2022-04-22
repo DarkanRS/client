@@ -1,6 +1,6 @@
 package com.jagex;
 
-public class Node_Sub15_Sub4 extends Node_Sub15 {
+public class Node_Sub15_Sub4 extends AbstractSoundNode_0 {
 
     NodeCollection aClass482_9824 = new NodeCollection();
     NodeCollection aClass482_9825 = new NodeCollection();
@@ -16,11 +16,11 @@ public class Node_Sub15_Sub4 extends Node_Sub15 {
         anInt9827 = ((Node_Sub22) aClass482_9825.tail.next).anInt7676;
     }
 
-    public synchronized void method15275(Node_Sub15 class282_sub15_1) {
+    public synchronized void method15275(AbstractSoundNode_0 class282_sub15_1) {
         aClass482_9824.method8098(class282_sub15_1);
     }
 
-    public synchronized void methodUnlink15276(Node_Sub15 class282_sub15_1) {
+    public synchronized void methodUnlink15276(AbstractSoundNode_0 class282_sub15_1) {
         class282_sub15_1.unlink();
     }
 
@@ -49,7 +49,7 @@ public class Node_Sub15_Sub4 extends Node_Sub15 {
     }
 
     void method15280(int i_1) {
-        for (Node_Sub15 class282_sub15_2 = (Node_Sub15) aClass482_9824.head(); class282_sub15_2 != null; class282_sub15_2 = (Node_Sub15) aClass482_9824.next()) {
+        for (AbstractSoundNode_0 class282_sub15_2 = (AbstractSoundNode_0) aClass482_9824.head(); class282_sub15_2 != null; class282_sub15_2 = (AbstractSoundNode_0) aClass482_9824.next()) {
             class282_sub15_2.method12231(i_1);
         }
 
@@ -97,7 +97,7 @@ public class Node_Sub15_Sub4 extends Node_Sub15 {
     }
 
     void method15282(int[] ints_1, int i_2, int i_3) {
-        for (Node_Sub15 class282_sub15_4 = (Node_Sub15) aClass482_9824.head(); class282_sub15_4 != null; class282_sub15_4 = (Node_Sub15) aClass482_9824.next()) {
+        for (AbstractSoundNode_0 class282_sub15_4 = (AbstractSoundNode_0) aClass482_9824.head(); class282_sub15_4 != null; class282_sub15_4 = (AbstractSoundNode_0) aClass482_9824.next()) {
             class282_sub15_4.method12237(ints_1, i_2, i_3);
         }
 
@@ -216,28 +216,28 @@ public class Node_Sub15_Sub4 extends Node_Sub15 {
     }
 
     @Override
-    Node_Sub15 method12229() {
-        return (Node_Sub15) aClass482_9824.next();
+	AbstractSoundNode_0 method12229() {
+        return (AbstractSoundNode_0) aClass482_9824.next();
     }
 
     @Override
-    Node_Sub15 method12235() {
-        return (Node_Sub15) aClass482_9824.next();
+	AbstractSoundNode_0 method12235() {
+        return (AbstractSoundNode_0) aClass482_9824.next();
     }
 
     @Override
-    Node_Sub15 method12236() {
-        return (Node_Sub15) aClass482_9824.next();
+	AbstractSoundNode_0 method12236() {
+        return (AbstractSoundNode_0) aClass482_9824.next();
     }
 
     @Override
-    Node_Sub15 method12232() {
-        return (Node_Sub15) aClass482_9824.head();
+	AbstractSoundNode_0 method12232() {
+        return (AbstractSoundNode_0) aClass482_9824.head();
     }
 
     @Override
-    Node_Sub15 method12239() {
-        return (Node_Sub15) aClass482_9824.next();
+	AbstractSoundNode_0 method12239() {
+        return (AbstractSoundNode_0) aClass482_9824.next();
     }
 
     @Override
@@ -256,8 +256,8 @@ public class Node_Sub15_Sub4 extends Node_Sub15 {
     }
 
     @Override
-    Node_Sub15 method12233() {
-        return (Node_Sub15) aClass482_9824.head();
+	AbstractSoundNode_0 method12233() {
+        return (AbstractSoundNode_0) aClass482_9824.head();
     }
 
     @Override
@@ -331,8 +331,8 @@ public class Node_Sub15_Sub4 extends Node_Sub15 {
     }
 
     @Override
-    Node_Sub15 method12226() {
-        return (Node_Sub15) aClass482_9824.head();
+	AbstractSoundNode_0 method12226() {
+        return (AbstractSoundNode_0) aClass482_9824.head();
     }
 
     @Override
