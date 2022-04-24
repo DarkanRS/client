@@ -13,7 +13,7 @@ public class Class253_Sub1 extends Class253 {
 	 * This is important to understanding sound...
 	 */
     AudioFormat anAudioFormat7824;
-    byte[] soundBuffer;
+    byte[] audioData2;
     boolean aBool7826;
     SourceDataLine audioLine;
     int anInt7823;
@@ -34,7 +34,7 @@ public class Class253_Sub1 extends Class253 {
         }
 
         anAudioFormat7824 = new AudioFormat(hertz, 16, isStereo ? 2 : 1, true, false);
-        soundBuffer = new byte[256 << (isStereo ? 2 : 1)];
+        audioData2 = new byte[256 << (isStereo ? 2 : 1)];
     }
 
     @Override
@@ -57,22 +57,23 @@ public class Class253_Sub1 extends Class253 {
     }
 
     @Override
-    void method4342() {
-        int i_1 = 256;
+    void writeAudioDataToOutput() {
+        int dataLength = 256;//bytes per cycle
         if (isStereo) {
-            i_1 <<= 1;
+            dataLength <<= 1;//512, twice as much
         }
 
-        for (int i_2 = 0; i_2 < i_1; i_2++) {
-            int i_3 = anIntArray3140[i_2];
-            if ((i_3 + 8388608 & -16777216) != 0) {
-                i_3 = 0x7fffff ^ i_3 >> 31;
+        for (int r = 0; r < dataLength; r++) {
+
+            int byteFromSound = audioData1[r];
+            if ((byteFromSound + 8388608 & -16777216) != 0) {
+                byteFromSound = 0x7fffff ^ byteFromSound >> 31;
             }
 
-            soundBuffer[i_2 * 2] = (byte) (i_3 >> 8);
-            soundBuffer[i_2 * 2 + 1] = (byte) (i_3 >> 16);
+			audioData2[r * 2] = (byte) (byteFromSound >> 8);
+			audioData2[r * 2 + 1] = (byte) (byteFromSound >> 16);
         }
-        audioLine.write(soundBuffer, 0, i_1 << 1);
+        audioLine.write(audioData2, 0, dataLength << 1);
     }
 
     @Override

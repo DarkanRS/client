@@ -9,10 +9,10 @@ public class Class253 {
     static int anInt3139;
     static Class254 aClass254_3120;
     AbstractSoundNode_0 aAbstractSoundNode_0_3122;
-    int[] anIntArray3140;
+    int[] audioData1;
     int anInt3132;
     int anInt3121;
-    long aLong3124 = Utils.time();
+    long timeLong3124 = Utils.time();
     long aLong3128;
     boolean aBool3133 = true;
     int anInt3114;
@@ -47,7 +47,7 @@ public class Class253 {
 
             try {
                 Class253_Sub1 class253_sub1_4 = new Class253_Sub1();
-                class253_sub1_4.anIntArray3140 = new int[256 * (isStereo ? 2 : 1)];
+                class253_sub1_4.audioData1 = new int[256 * (isStereo ? 2 : 1)];
                 class253_sub1_4.anInt3132 = i_21;
                 class253_sub1_4.method4370();
                 class253_sub1_4.anInt3121 = (i_21 & -1024) + 1024;
@@ -99,26 +99,26 @@ public class Class253 {
 
     public synchronized void method4333() {
         if (!aBool3135) {
-            long long_1 = Utils.time();
+            long timeLong_1 = Utils.time();
 
             try {
-                if (long_1 > aLong3124 + 6000L) {
-                    aLong3124 = long_1 - 6000L;
+                if (timeLong_1 > timeLong3124 + 6000L) {
+                    timeLong3124 = timeLong_1 - 6000L;
                 }
 
-                while (long_1 > aLong3124 + 5000L) {
+                while (timeLong_1 > timeLong3124 + 5000L) {
                     method4373();
-                    aLong3124 += 256000 / hertz;
-                    long_1 = Utils.time();
+                    timeLong3124 += 256000 / hertz;
+                    timeLong_1 = Utils.time();
                 }
             } catch (Exception exception_7) {
-                aLong3124 = long_1;
+                timeLong3124 = timeLong_1;
             }
 
-            if (anIntArray3140 != null) {
+            if (audioData1 != null) {
                 try {
                     if (aLong3128 != 0L) {
-                        if (long_1 < aLong3128) {
+                        if (timeLong_1 < aLong3128) {
                             return;
                         }
 
@@ -154,16 +154,16 @@ public class Class253 {
                     }
 
                     while (i_5 < i_4) {
-                        method4337(anIntArray3140);
-                        method4342();
+                        clipAudioBufferToCurrent(audioData1);
+                        writeAudioDataToOutput();
                         i_5 += 256;
                     }
 
-                    if (long_1 > aLong3126) {
+                    if (timeLong_1 > aLong3126) {
                         if (!aBool3133) {
                             if (anInt3114 == 0 && anInt3130 == 0) {
                                 method4343();
-                                aLong3128 = long_1 + 2000L;
+                                aLong3128 = timeLong_1 + 2000L;
                                 return;
                             }
 
@@ -174,13 +174,13 @@ public class Class253 {
                         }
 
                         anInt3114 = 0;
-                        aLong3126 = long_1 + 2000L;
+                        aLong3126 = timeLong_1 + 2000L;
                     }
 
                     anInt3131 = i_5;
                 } catch (Exception exception_6) {
                     method4343();
-                    aLong3128 = long_1 + 2000L;
+                    aLong3128 = timeLong_1 + 2000L;
                 }
             }
         }
@@ -225,17 +225,17 @@ public class Class253 {
         }
 
         method4343();
-        anIntArray3140 = null;
+        audioData1 = null;
         aBool3135 = true;
     }
 
-    void method4337(int[] ints_1) {
-        int i_3 = 256;
+    void clipAudioBufferToCurrent(int[] audioDataClip) {
+        int dataLength = 256;
         if (isStereo) {
-            i_3 = 512;
+            dataLength = 512;
         }
 
-        Arrays.fill(ints_1, 0, i_3, 0);
+        Arrays.fill(audioDataClip, 0, dataLength, 0);
         anInt3117 -= 256;
         if (aAbstractSoundNode_0_3122 != null && anInt3117 <= 0) {
             anInt3117 += hertz >> 4;
@@ -245,7 +245,7 @@ public class Class253 {
             int i_5 = 255;
 
             int i_6;
-            AbstractSoundNode_0 class282_sub15_10;
+            AbstractSoundNode_0 abstractSoundNode15_10;
             label107:
             for (i_6 = 7; i_5 != 0; --i_6) {
                 int i_16;
@@ -261,53 +261,53 @@ public class Class253 {
                 for (int i_9 = i_5 >>> i_16 & 0x11111111; i_9 != 0; i_9 >>>= 4) {
                     if ((i_9 & 0x1) != 0) {
                         i_5 &= ~(1 << i_16);
-                        class282_sub15_10 = null;
-                        AbstractSoundNode_0 class282_sub15_11 = aAbstractSoundNode_0Array3116[i_16];
+                        abstractSoundNode15_10 = null;
+                        AbstractSoundNode_0 abstractSoundNode_0_11 = aAbstractSoundNode_0Array3116[i_16];
 
                         label101:
                         while (true) {
                             while (true) {
-                                if (class282_sub15_11 == null) {
+                                if (abstractSoundNode_0_11 == null) {
                                     break label101;
                                 }
 
-                                Node_Sub26 class282_sub26_12 = class282_sub15_11.nodeWithAudioBuffer26;
-                                if (class282_sub26_12 != null && class282_sub26_12.anInt7690 > i_17) {
+                                Node_Sub26 nodeWithAudioBuffer = abstractSoundNode_0_11.nodeWithAudioBuffer26;
+                                if (nodeWithAudioBuffer != null && nodeWithAudioBuffer.anInt7690 > i_17) {
                                     i_5 |= 1 << i_16;
-                                    class282_sub15_10 = class282_sub15_11;
-                                    class282_sub15_11 = class282_sub15_11.aAbstractSoundNode_0_7598;
+                                    abstractSoundNode15_10 = abstractSoundNode_0_11;
+                                    abstractSoundNode_0_11 = abstractSoundNode_0_11.aAbstractSoundNode_0_7598;
                                 } else {
-                                    class282_sub15_11.aBoolNormTrue7600 = true;
-                                    int i_13 = class282_sub15_11.method12228();
+                                    abstractSoundNode_0_11.aBoolNormTrue7600 = true;
+                                    int i_13 = abstractSoundNode_0_11.method12228();
                                     i_4 += i_13;
-                                    if (class282_sub26_12 != null) {
-                                        class282_sub26_12.anInt7690 += i_13;
+                                    if (nodeWithAudioBuffer != null) {
+                                        nodeWithAudioBuffer.anInt7690 += i_13;
                                     }
 
                                     if (i_4 >= anInt3123) {
                                         break label107;
                                     }
 
-                                    AbstractSoundNode_0 abstractSoundNode15_14 = class282_sub15_11.method12226();
+                                    AbstractSoundNode_0 abstractSoundNode15_14 = abstractSoundNode_0_11.method12226();
                                     if (abstractSoundNode15_14 != null) {
-                                        for (int i_15 = class282_sub15_11.anInt7599; abstractSoundNode15_14 != null; abstractSoundNode15_14 = class282_sub15_11.method12239()) {
+                                        for (int i_15 = abstractSoundNode_0_11.anInt7599; abstractSoundNode15_14 != null; abstractSoundNode15_14 = abstractSoundNode_0_11.method12239()) {
                                             method4339(abstractSoundNode15_14, i_15 * abstractSoundNode15_14.method12225() >> 8);
                                         }
                                     }
 
-                                    AbstractSoundNode_0 class282_sub15_18 = class282_sub15_11.aAbstractSoundNode_0_7598;
-                                    class282_sub15_11.aAbstractSoundNode_0_7598 = null;
-                                    if (class282_sub15_10 == null) {
+                                    AbstractSoundNode_0 class282_sub15_18 = abstractSoundNode_0_11.aAbstractSoundNode_0_7598;
+                                    abstractSoundNode_0_11.aAbstractSoundNode_0_7598 = null;
+                                    if (abstractSoundNode15_10 == null) {
                                         aAbstractSoundNode_0Array3116[i_16] = class282_sub15_18;
                                     } else {
-                                        class282_sub15_10.aAbstractSoundNode_0_7598 = class282_sub15_18;
+                                        abstractSoundNode15_10.aAbstractSoundNode_0_7598 = class282_sub15_18;
                                     }
 
                                     if (class282_sub15_18 == null) {
-                                        aAbstractSoundNode_0Array3141[i_16] = class282_sub15_10;
+                                        aAbstractSoundNode_0Array3141[i_16] = abstractSoundNode15_10;
                                     }
 
-                                    class282_sub15_11 = class282_sub15_18;
+                                    abstractSoundNode_0_11 = class282_sub15_18;
                                 }
                             }
                         }
@@ -323,8 +323,8 @@ public class Class253 {
                 AbstractSoundNode_0[] arr_8 = aAbstractSoundNode_0Array3116;
                 aAbstractSoundNode_0Array3141[i_6] = null;
 
-                for (arr_8[i_6] = null; class282_sub15_7 != null; class282_sub15_7 = class282_sub15_10) {
-                    class282_sub15_10 = class282_sub15_7.aAbstractSoundNode_0_7598;
+                for (arr_8[i_6] = null; class282_sub15_7 != null; class282_sub15_7 = abstractSoundNode15_10) {
+                    abstractSoundNode15_10 = class282_sub15_7.aAbstractSoundNode_0_7598;
                     class282_sub15_7.aAbstractSoundNode_0_7598 = null;
                 }
             }
@@ -335,10 +335,10 @@ public class Class253 {
         }
 
         if (aAbstractSoundNode_0_3122 != null) {
-            aAbstractSoundNode_0_3122.method12230(ints_1, 0, 256);
+            aAbstractSoundNode_0_3122.method12230(audioDataClip, 0, 256);
         }
 
-        aLong3124 = Utils.time();
+        timeLong3124 = Utils.time();
     }
 
     void method4339(AbstractSoundNode_0 class282_sub15_1, int i_2) {
@@ -358,7 +358,7 @@ public class Class253 {
         return anInt3121;
     }
 
-    void method4342() throws Exception {
+    void writeAudioDataToOutput() throws Exception {
     }
 
     void method4343() {

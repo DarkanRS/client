@@ -691,14 +691,20 @@ public class SoundEffectNode_2 extends Sound_Node_1 {
         return i_4 >> 1;
     }
 
+	/**
+	 * This is run continuously throughout the sound effect
+	 * @param audioDataClip
+	 * @param i_2
+	 * @param i_3
+	 */
     @Override
-    public synchronized void method12230(int[] ints_1, int i_2, int i_3) {
+    public synchronized void method12230(int[] audioDataClip, int i_2, int i_3) {
         if (volume == 0 && anInt9858 == 0) {
             method12231(i_3);
         } else {
             int i_4 = anInt9844 << 8;
             int i_5 = duration << 8;
-            int i_6 = ((AudioFormatUnknown) nodeWithAudioBuffer26).audioBuffer.length << 8;
+            int byteStreamLength = ((AudioFormatUnknown) nodeWithAudioBuffer26).audioBuffer.length << 8;
             int i_7 = i_5 - i_4;
             if (i_7 <= 0) {
                 anInt9854 = 0;
@@ -716,20 +722,20 @@ public class SoundEffectNode_2 extends Sound_Node_1 {
                 nodeIndex = 0;
             }
 
-            if (nodeIndex >= i_6) {
+            if (nodeIndex >= byteStreamLength) {
                 if (anInt9855 >= 0) {
                     method15354();
                     unlink();
                     return;
                 }
 
-                nodeIndex = i_6 - 1;
+                nodeIndex = byteStreamLength - 1;
             }
 
             if (anInt9854 < 0) {
                 if (aBoolNormFalse9857) {
                     if (anInt9855 < 0) {
-                        i_8 = method16018(ints_1, i_2, i_4, i_3, ((AudioFormatUnknown) nodeWithAudioBuffer26).audioBuffer[anInt9844]);
+                        i_8 = method16018(audioDataClip, i_2, i_4, i_3, ((AudioFormatUnknown) nodeWithAudioBuffer26).audioBuffer[anInt9844]);
                         if (nodeIndex >= i_4) {
                             return;
                         }
@@ -739,14 +745,14 @@ public class SoundEffectNode_2 extends Sound_Node_1 {
                     }
 
                     while (true) {
-                        i_8 = method15990(ints_1, i_8, i_5, i_3, ((AudioFormatUnknown) nodeWithAudioBuffer26).audioBuffer[duration - 1]);
+                        i_8 = method15990(audioDataClip, i_8, i_5, i_3, ((AudioFormatUnknown) nodeWithAudioBuffer26).audioBuffer[duration - 1]);
                         if (nodeIndex < i_5) {
                             break;
                         }
 
                         nodeIndex = i_5 + i_5 - 1 - nodeIndex;
                         anInt9855 = -(anInt9855 * 1927994969) * -177305111;
-                        i_8 = method16018(ints_1, i_8, i_4, i_3, ((AudioFormatUnknown) nodeWithAudioBuffer26).audioBuffer[anInt9844]);
+                        i_8 = method16018(audioDataClip, i_8, i_4, i_3, ((AudioFormatUnknown) nodeWithAudioBuffer26).audioBuffer[anInt9844]);
                         if (nodeIndex >= i_4) {
                             break;
                         }
@@ -756,7 +762,7 @@ public class SoundEffectNode_2 extends Sound_Node_1 {
                     }
                 } else if (anInt9855 < 0) {
                     while (true) {
-                        i_8 = method16018(ints_1, i_8, i_4, i_3, ((AudioFormatUnknown) nodeWithAudioBuffer26).audioBuffer[duration - 1]);
+                        i_8 = method16018(audioDataClip, i_8, i_4, i_3, ((AudioFormatUnknown) nodeWithAudioBuffer26).audioBuffer[duration - 1]);
                         if (nodeIndex >= i_4) {
                             break;
                         }
@@ -765,7 +771,7 @@ public class SoundEffectNode_2 extends Sound_Node_1 {
                     }
                 } else {
                     while (true) {
-                        i_8 = method15990(ints_1, i_8, i_5, i_3, ((AudioFormatUnknown) nodeWithAudioBuffer26).audioBuffer[anInt9844]);
+                        i_8 = method15990(audioDataClip, i_8, i_5, i_3, ((AudioFormatUnknown) nodeWithAudioBuffer26).audioBuffer[anInt9844]);
                         if (nodeIndex < i_5) {
                             break;
                         }
@@ -779,7 +785,7 @@ public class SoundEffectNode_2 extends Sound_Node_1 {
                         label111:
                         {
                             if (anInt9855 < 0) {
-                                i_8 = method16018(ints_1, i_2, i_4, i_3, ((AudioFormatUnknown) nodeWithAudioBuffer26).audioBuffer[anInt9844]);
+                                i_8 = method16018(audioDataClip, i_2, i_4, i_3, ((AudioFormatUnknown) nodeWithAudioBuffer26).audioBuffer[anInt9844]);
                                 if (nodeIndex >= i_4) {
                                     return;
                                 }
@@ -792,7 +798,7 @@ public class SoundEffectNode_2 extends Sound_Node_1 {
                             }
 
                             do {
-                                i_8 = method15990(ints_1, i_8, i_5, i_3, ((AudioFormatUnknown) nodeWithAudioBuffer26).audioBuffer[duration - 1]);
+                                i_8 = method15990(audioDataClip, i_8, i_5, i_3, ((AudioFormatUnknown) nodeWithAudioBuffer26).audioBuffer[duration - 1]);
                                 if (nodeIndex < i_5) {
                                     return;
                                 }
@@ -803,7 +809,7 @@ public class SoundEffectNode_2 extends Sound_Node_1 {
                                     break;
                                 }
 
-                                i_8 = method16018(ints_1, i_8, i_4, i_3, ((AudioFormatUnknown) nodeWithAudioBuffer26).audioBuffer[anInt9844]);
+                                i_8 = method16018(audioDataClip, i_8, i_4, i_3, ((AudioFormatUnknown) nodeWithAudioBuffer26).audioBuffer[anInt9844]);
                                 if (nodeIndex >= i_4) {
                                     return;
                                 }
@@ -816,7 +822,7 @@ public class SoundEffectNode_2 extends Sound_Node_1 {
                         int i_9;
                         if (anInt9855 < 0) {
                             while (true) {
-                                i_8 = method16018(ints_1, i_8, i_4, i_3, ((AudioFormatUnknown) nodeWithAudioBuffer26).audioBuffer[duration - 1]);
+                                i_8 = method16018(audioDataClip, i_8, i_4, i_3, ((AudioFormatUnknown) nodeWithAudioBuffer26).audioBuffer[duration - 1]);
                                 if (nodeIndex >= i_4) {
                                     return;
                                 }
@@ -833,7 +839,7 @@ public class SoundEffectNode_2 extends Sound_Node_1 {
                             }
                         } else {
                             while (true) {
-                                i_8 = method15990(ints_1, i_8, i_5, i_3, ((AudioFormatUnknown) nodeWithAudioBuffer26).audioBuffer[anInt9844]);
+                                i_8 = method15990(audioDataClip, i_8, i_5, i_3, ((AudioFormatUnknown) nodeWithAudioBuffer26).audioBuffer[anInt9844]);
                                 if (nodeIndex < i_5) {
                                     return;
                                 }
@@ -853,16 +859,16 @@ public class SoundEffectNode_2 extends Sound_Node_1 {
                 }
 
                 if (anInt9855 < 0) {
-                    method16018(ints_1, i_8, 0, i_3, 0);
+                    method16018(audioDataClip, i_8, 0, i_3, 0);
                     if (nodeIndex < 0) {
                         nodeIndex = -1;
                         method15354();
                         unlink();
                     }
                 } else {
-                    method15990(ints_1, i_8, i_6, i_3, 0);
-                    if (nodeIndex >= i_6) {
-                        nodeIndex = i_6;
+                    method15990(audioDataClip, i_8, byteStreamLength, i_3, 0);
+                    if (nodeIndex >= byteStreamLength) {
+                        nodeIndex = byteStreamLength;
                         method15354();
                         unlink();
                     }
@@ -1293,22 +1299,22 @@ public class SoundEffectNode_2 extends Sound_Node_1 {
 
     }
 
-    int method16018(int[] ints_1, int i_2, int i_3, int i_4, int i_5) {
+    int method16018(int[] audioDataClip, int i_2, int i_3, int i_4, int i_5) {
         do {
             if (anInt9858 <= 0) {
                 if (anInt9855 == -256 && (nodeIndex & 0xff) == 0) {
                     if (Class253.isStereo) {
-                        return method15995(((AudioFormatUnknown) nodeWithAudioBuffer26).audioBuffer, ints_1, nodeIndex, i_2, anInt9845, anInt9850, 0, i_4, i_3, this);
+                        return method15995(((AudioFormatUnknown) nodeWithAudioBuffer26).audioBuffer, audioDataClip, nodeIndex, i_2, anInt9845, anInt9850, 0, i_4, i_3, this);
                     }
 
-                    return method15991(((AudioFormatUnknown) nodeWithAudioBuffer26).audioBuffer, ints_1, nodeIndex, i_2, anInt9848, 0, i_4, i_3, this);
+                    return method15991(((AudioFormatUnknown) nodeWithAudioBuffer26).audioBuffer, audioDataClip, nodeIndex, i_2, anInt9848, 0, i_4, i_3, this);
                 }
 
                 if (Class253.isStereo) {
-                    return method15999(0, 0, ((AudioFormatUnknown) nodeWithAudioBuffer26).audioBuffer, ints_1, nodeIndex, i_2, anInt9845, anInt9850, 0, i_4, i_3, this, anInt9855, i_5);
+                    return method15999(0, 0, ((AudioFormatUnknown) nodeWithAudioBuffer26).audioBuffer, audioDataClip, nodeIndex, i_2, anInt9845, anInt9850, 0, i_4, i_3, this, anInt9855, i_5);
                 }
 
-                return method15998(0, ((AudioFormatUnknown) nodeWithAudioBuffer26).audioBuffer, ints_1, nodeIndex, i_2, anInt9848, 0, i_4, i_3, this, anInt9855, i_5);
+                return method15998(0, ((AudioFormatUnknown) nodeWithAudioBuffer26).audioBuffer, audioDataClip, nodeIndex, i_2, anInt9848, 0, i_4, i_3, this, anInt9855, i_5);
             }
 
             int i_6 = i_2 + anInt9858;
@@ -1319,14 +1325,14 @@ public class SoundEffectNode_2 extends Sound_Node_1 {
             anInt9858 += i_2;
             if (anInt9855 == -256 && (nodeIndex & 0xff) == 0) {
                 if (Class253.isStereo) {
-                    i_2 = method16003(((AudioFormatUnknown) nodeWithAudioBuffer26).audioBuffer, ints_1, nodeIndex, i_2, anInt9845, anInt9850, anInt9852, anInt9851, 0, i_6, i_3, this);
+                    i_2 = method16003(((AudioFormatUnknown) nodeWithAudioBuffer26).audioBuffer, audioDataClip, nodeIndex, i_2, anInt9845, anInt9850, anInt9852, anInt9851, 0, i_6, i_3, this);
                 } else {
-                    i_2 = method16002(((AudioFormatUnknown) nodeWithAudioBuffer26).audioBuffer, ints_1, nodeIndex, i_2, anInt9848, anInt9849, 0, i_6, i_3, this);
+                    i_2 = method16002(((AudioFormatUnknown) nodeWithAudioBuffer26).audioBuffer, audioDataClip, nodeIndex, i_2, anInt9848, anInt9849, 0, i_6, i_3, this);
                 }
             } else if (Class253.isStereo) {
-                i_2 = method16007(0, 0, ((AudioFormatUnknown) nodeWithAudioBuffer26).audioBuffer, ints_1, nodeIndex, i_2, anInt9845, anInt9850, anInt9852, anInt9851, 0, i_6, i_3, this, anInt9855, i_5);
+                i_2 = method16007(0, 0, ((AudioFormatUnknown) nodeWithAudioBuffer26).audioBuffer, audioDataClip, nodeIndex, i_2, anInt9845, anInt9850, anInt9852, anInt9851, 0, i_6, i_3, this, anInt9855, i_5);
             } else {
-                i_2 = method16006(0, ((AudioFormatUnknown) nodeWithAudioBuffer26).audioBuffer, ints_1, nodeIndex, i_2, anInt9848, anInt9849, 0, i_6, i_3, this, anInt9855, i_5);
+                i_2 = method16006(0, ((AudioFormatUnknown) nodeWithAudioBuffer26).audioBuffer, audioDataClip, nodeIndex, i_2, anInt9848, anInt9849, 0, i_6, i_3, this, anInt9855, i_5);
             }
 
             anInt9858 -= i_2;
