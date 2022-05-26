@@ -786,4 +786,13 @@ public class RouteFinder {
 	    }
 	}
 
+	public static RouteStrategy method6115(int i_0, int i_1, int i_2, int i_3) {
+	    RouteStrategies.PLAYER.approxDestinationX = i_0;
+	    RouteStrategies.PLAYER.approxDestinationY = i_1;
+	    RouteStrategies.PLAYER.approxDestinationSizeX = i_2;
+	    RouteStrategies.PLAYER.approxDestinationSizeY = i_3;
+	    RouteStrategies.PLAYER.anInt7929 = 0;
+	    return RouteStrategies.PLAYER;
+	}
+
 }

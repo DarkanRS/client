@@ -163,7 +163,7 @@ public class Interface {
                         if (i_5 > 0) {
                             if (sound.type == 1) {
                                 Object obj_18 = null;
-                                Node_Sub26_Sub1_Sub2 class282_sub26_sub1_sub2_19 = sound.soundEffect.getMixedAudio().method16062(Class119.aClass344_1460);
+                                Node_Sub26_Sub1_Sub2 class282_sub26_sub1_sub2_19 = sound.soundEffect.getMixedAudio().method16062(Class119.decimator);
                                 sound.aNode_Sub15_Sub5_3304 = class282_sub26_sub1_sub2_19.method15225(sound.anInt3295, i_5, i_4);
                             } else if (sound.method4793()) {
                                 sound.aNode_Sub15_Sub5_3304 = sound.aNode_Sub26_Sub1_Sub1_3296.method15225(sound.anInt3295, i_5, i_4);

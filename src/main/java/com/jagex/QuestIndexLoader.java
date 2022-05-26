@@ -157,7 +157,7 @@ public class QuestIndexLoader {
                     tcpmessage_7.buffer.writeShortLE(client.anInt7346);
                     client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_7);
                     int i_8 = player_6.getSize();
-                    MapRegion.routeTo(player_6.regionBaseX[0], player_6.regionBaseY[0], true, Class344.method6115(player_6.regionBaseX[0], player_6.regionBaseY[0], i_8, i_8));
+                    MapRegion.routeTo(player_6.regionBaseX[0], player_6.regionBaseY[0], true, RouteFinder.method6115(player_6.regionBaseX[0], player_6.regionBaseY[0], i_8, i_8));
                     bool_2 = true;
                     break;
                 }

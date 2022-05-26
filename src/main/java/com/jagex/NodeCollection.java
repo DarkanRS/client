@@ -49,7 +49,7 @@ public class NodeCollection implements Collection {
         ShaderDecoder.aClass253_1008 = Class253.method4331(1, 2048);
         Class79.aNode_Sub15_Sub4_783 = new Node_Sub15_Sub4();
         ShaderDecoder.aClass253_1008.method4329(Class79.aNode_Sub15_Sub4_783);
-        Class119.aClass344_1460 = new Class344(22050, Class253.anInt3129);
+        Class119.decimator = new Decimator(22050, Class253.anInt3129);
         GraphicsPreference.method12658();
     }
 

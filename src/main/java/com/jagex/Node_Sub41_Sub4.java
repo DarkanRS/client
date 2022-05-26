@@ -15,7 +15,7 @@ public class Node_Sub41_Sub4 extends Node_Sub41 {
     int anInt9602;
     DSPState aDSPState9600;
     VorbisBlock aVorbisBlock9601;
-    Class344 aClass344_9598;
+    Decimator decimator;
     Node_Sub15_Sub1 aNode_Sub15_Sub1_9603;
 
     Node_Sub41_Sub4(OggStreamState oggstreamstate_1) {
@@ -35,7 +35,7 @@ public class Node_Sub41_Sub4 extends Node_Sub41 {
                 }
                 aDSPState9600 = new DSPState(aVorbisInfo9605);
                 aVorbisBlock9601 = new VorbisBlock(aDSPState9600);
-                aClass344_9598 = new Class344(aVorbisInfo9605.rate, Class253.anInt3129);
+                decimator = new Decimator(aVorbisInfo9605.rate, Class253.anInt3129);
                 aNode_Sub15_Sub1_9603 = new Node_Sub15_Sub1(aVorbisInfo9605.channels);
             }
         } else {
@@ -52,7 +52,7 @@ public class Node_Sub41_Sub4 extends Node_Sub41 {
             Node_Sub39 class282_sub39_4 = aNode_Sub15_Sub1_9603.method14814(floats_6[0].length, aDouble9604);
             Preference_Sub20.method12805(floats_6, class282_sub39_4.aShortArrayArray8003);
             for (int i_5 = 0; i_5 < aVorbisInfo9605.channels; i_5++) {
-                class282_sub39_4.aShortArrayArray8003[i_5] = aClass344_9598.method6111(class282_sub39_4.aShortArrayArray8003[i_5]);
+                class282_sub39_4.aShortArrayArray8003[i_5] = decimator.resampleShorts(class282_sub39_4.aShortArrayArray8003[i_5]);
             }
             aNode_Sub15_Sub1_9603.method14815(class282_sub39_4);
         }
@@ -94,7 +94,7 @@ public class Node_Sub41_Sub4 extends Node_Sub41 {
                 }
                 aDSPState9600 = new DSPState(aVorbisInfo9605);
                 aVorbisBlock9601 = new VorbisBlock(aDSPState9600);
-                aClass344_9598 = new Class344(aVorbisInfo9605.rate, Class253.anInt3129);
+                decimator = new Decimator(aVorbisInfo9605.rate, Class253.anInt3129);
                 aNode_Sub15_Sub1_9603 = new Node_Sub15_Sub1(aVorbisInfo9605.channels);
             }
         } else {
@@ -111,7 +111,7 @@ public class Node_Sub41_Sub4 extends Node_Sub41 {
             Node_Sub39 class282_sub39_3 = aNode_Sub15_Sub1_9603.method14814(floats_5[0].length, aDouble9604);
             Preference_Sub20.method12805(floats_5, class282_sub39_3.aShortArrayArray8003);
             for (int i_4 = 0; i_4 < aVorbisInfo9605.channels; i_4++) {
-                class282_sub39_3.aShortArrayArray8003[i_4] = aClass344_9598.method6111(class282_sub39_3.aShortArrayArray8003[i_4]);
+                class282_sub39_3.aShortArrayArray8003[i_4] = decimator.resampleShorts(class282_sub39_3.aShortArrayArray8003[i_4]);
             }
             aNode_Sub15_Sub1_9603.method14815(class282_sub39_3);
         }
@@ -130,7 +130,7 @@ public class Node_Sub41_Sub4 extends Node_Sub41 {
                 }
                 aDSPState9600 = new DSPState(aVorbisInfo9605);
                 aVorbisBlock9601 = new VorbisBlock(aDSPState9600);
-                aClass344_9598 = new Class344(aVorbisInfo9605.rate, Class253.anInt3129);
+                decimator = new Decimator(aVorbisInfo9605.rate, Class253.anInt3129);
                 aNode_Sub15_Sub1_9603 = new Node_Sub15_Sub1(aVorbisInfo9605.channels);
             }
         } else {
@@ -147,7 +147,7 @@ public class Node_Sub41_Sub4 extends Node_Sub41 {
             Node_Sub39 class282_sub39_3 = aNode_Sub15_Sub1_9603.method14814(floats_5[0].length, aDouble9604);
             Preference_Sub20.method12805(floats_5, class282_sub39_3.aShortArrayArray8003);
             for (int i_4 = 0; i_4 < aVorbisInfo9605.channels; i_4++) {
-                class282_sub39_3.aShortArrayArray8003[i_4] = aClass344_9598.method6111(class282_sub39_3.aShortArrayArray8003[i_4]);
+                class282_sub39_3.aShortArrayArray8003[i_4] = decimator.resampleShorts(class282_sub39_3.aShortArrayArray8003[i_4]);
             }
             aNode_Sub15_Sub1_9603.method14815(class282_sub39_3);
         }
