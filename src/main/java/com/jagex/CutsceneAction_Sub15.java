@@ -9,7 +9,7 @@ public class CutsceneAction_Sub15 extends CutsceneAction {
         anInt9374 = rsbytebuffer_1.readUnsignedShort();
     }
 
-    public static int method14645(int i_0, int i_1) {
+    public static int scale(int i_0, int i_1) {
         int i_01 = i_0;
         int i_11 = i_1;
         int i_3;

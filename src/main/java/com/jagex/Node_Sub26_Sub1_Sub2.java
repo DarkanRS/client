@@ -11,14 +11,14 @@ public class Node_Sub26_Sub1_Sub2 extends Node_Sub26_Sub1 {
         anInt9751 = i_4;
     }
 
-    public Node_Sub26_Sub1_Sub2 method16062(Class344 class344_1) {
-        aByteArray10470 = class344_1.method6102(aByteArray10470);
-        anInt9750 = class344_1.method6112(anInt9750);
+    public Node_Sub26_Sub1_Sub2 method16062(Decimator decimator_1) {
+        aByteArray10470 = decimator_1.resampleBytes(aByteArray10470);
+        anInt9750 = decimator_1.scaleRate(anInt9750);
         if (anInt9749 == anInt9751) {
-            anInt9749 = anInt9751 = class344_1.method6114(anInt9749);
+            anInt9749 = anInt9751 = decimator_1.scalePosition(anInt9749);
         } else {
-            anInt9749 = class344_1.method6114(anInt9749);
-            anInt9751 = class344_1.method6114(anInt9751);
+            anInt9749 = decimator_1.scalePosition(anInt9749);
+            anInt9751 = decimator_1.scalePosition(anInt9751);
             if (anInt9749 == anInt9751) {
                 --anInt9749;
             }

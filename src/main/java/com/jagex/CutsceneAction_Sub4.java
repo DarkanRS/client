@@ -70,7 +70,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
                     tcpmessage_13.buffer.writeShort(i_7);
                     tcpmessage_13.buffer.write128Byte(VertexNormal.method1465() ? 1 : 0);
                     client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_13);
-                    MapRegion.routeTo(player_12.regionBaseX[0], player_12.regionBaseY[0], true, Class344.method6115(player_12.regionBaseX[0], player_12.regionBaseY[0], player_12.getSize(), player_12.getSize()));
+                    MapRegion.routeTo(player_12.regionBaseX[0], player_12.regionBaseY[0], true, RouteFinder.method6115(player_12.regionBaseX[0], player_12.regionBaseY[0], player_12.getSize(), player_12.getSize()));
                 }
             }
 
@@ -107,7 +107,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
                     tcpmessage_13.buffer.writeIntV2(client.anInt56);
                     tcpmessage_13.buffer.writeShortLE(client.anInt7346);
                     client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_13);
-                    MapRegion.routeTo(player_12.regionBaseX[0], player_12.regionBaseY[0], true, Class344.method6115(player_12.regionBaseX[0], player_12.regionBaseY[0], player_12.getSize(), player_12.getSize()));
+                    MapRegion.routeTo(player_12.regionBaseX[0], player_12.regionBaseY[0], true, RouteFinder.method6115(player_12.regionBaseX[0], player_12.regionBaseY[0], player_12.getSize(), player_12.getSize()));
                 }
             }
 
@@ -156,7 +156,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
                     tcpmessage_15.buffer.writeShort(i_7);
                     tcpmessage_15.buffer.writeByte(VertexNormal.method1465() ? 1 : 0);
                     client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_15);
-                    MapRegion.routeTo(npc_14.regionBaseX[0], npc_14.regionBaseY[0], true, Class344.method6115(npc_14.regionBaseX[0], npc_14.regionBaseY[0], npc_14.getSize(), npc_14.getSize()));
+                    MapRegion.routeTo(npc_14.regionBaseX[0], npc_14.regionBaseY[0], true, RouteFinder.method6115(npc_14.regionBaseX[0], npc_14.regionBaseY[0], npc_14.getSize(), npc_14.getSize()));
                 }
             }
 
@@ -310,7 +310,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
                         tcpmessage_16.buffer.writeShortLE128(client.anInt7346);
                         tcpmessage_16.buffer.writeShort128(client.anInt7345);
                         client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_16);
-                        MapRegion.routeTo(npc_25.regionBaseX[0], npc_25.regionBaseY[0], true, Class344.method6115(npc_25.regionBaseX[0], npc_25.regionBaseY[0], npc_25.getSize(), npc_25.getSize()));
+                        MapRegion.routeTo(npc_25.regionBaseX[0], npc_25.regionBaseY[0], true, RouteFinder.method6115(npc_25.regionBaseX[0], npc_25.regionBaseY[0], npc_25.getSize(), npc_25.getSize()));
                     }
                 }
 

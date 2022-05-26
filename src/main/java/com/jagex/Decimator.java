@@ -1,24 +1,24 @@
 package com.jagex;
 
-public class Class344 {
+public class Decimator {
 
-    int anInt4015;
+    int inputRate;
 
-    int anInt4012;
+    int outputRate;
 
-    int[][] anIntArrayArray4017;
+    int[][] table;
 
-    public Class344(int i_1, int i_2) {
-        if (i_2 != i_1) {
-            int i_3 = CutsceneAction_Sub15.method14645(i_1, i_2);
-            i_1 /= i_3;
-            i_2 /= i_3;
-            anInt4015 = i_1;
-            anInt4012 = i_2;
-            anIntArrayArray4017 = new int[i_1][14];
-            for (int i_4 = 0; i_4 < i_1; i_4++) {
-                int[] ints_5 = anIntArrayArray4017[i_4];
-                double d_6 = (double) i_4 / i_1 + 6.0D;
+    public Decimator(int inputRate, int outputRate) {
+        if (outputRate != inputRate) {
+            int scale = CutsceneAction_Sub15.scale(inputRate, outputRate);
+            inputRate /= scale;
+            outputRate /= scale;
+            this.inputRate = inputRate;
+            this.outputRate = outputRate;
+            table = new int[inputRate][14];
+            for (int i_4 = 0; i_4 < inputRate; i_4++) {
+                int[] ints_5 = table[i_4];
+                double d_6 = (double) i_4 / inputRate + 6.0D;
                 int i_8 = (int) Math.floor(d_6 - 7.0D + 1.0D);
                 if (i_8 < 0) {
                     i_8 = 0;
@@ -27,7 +27,7 @@ public class Class344 {
                 if (i_9 > 14) {
                     i_9 = 14;
                 }
-                for (double d_10 = (double) i_2 / i_1; i_8 < i_9; i_8++) {
+                for (double d_10 = (double) outputRate / inputRate; i_8 < i_9; i_8++) {
                     double d_12 = (i_8 - d_6) * 3.141592653589793D;
                     double d_14 = d_10;
                     if (d_12 < -1.0E-4 || d_12 > 1.0E-4D) {
@@ -40,44 +40,25 @@ public class Class344 {
         }
     }
 
-    public static RouteStrategy method6115(int i_0, int i_1, int i_2, int i_3) {
-        RouteStrategies.PLAYER.approxDestinationX = i_0;
-        RouteStrategies.PLAYER.approxDestinationY = i_1;
-        RouteStrategies.PLAYER.approxDestinationSizeX = i_2;
-        RouteStrategies.PLAYER.approxDestinationSizeY = i_3;
-        RouteStrategies.PLAYER.anInt7929 = 0;
-        return RouteStrategies.PLAYER;
-    }
-
-    public static void method6119(String string_0) {
-        if (Class467.FC_PLAYERS != null) {
-            BufferedConnectionContext class184_2 = BufferedConnectionContext.getConnectionContext();
-            TCPPacket tcpmessage_3 = TCPPacket.createPacket(ClientProt.FC_KICK, class184_2.outKeys);
-            tcpmessage_3.buffer.writeByte(ChatLine.getLength(string_0));
-            tcpmessage_3.buffer.writeString(string_0);
-            class184_2.queuePacket(tcpmessage_3);
-        }
-    }
-
-    byte[] method6102(byte[] bytes_1) {
+    byte[] resampleBytes(byte[] bytes_1) {
         byte[] bytes_11 = bytes_1;
-        if (anIntArrayArray4017 != null) {
-            int i_3 = (int) ((long) anInt4012 * bytes_11.length / anInt4015) + 14;
+        if (table != null) {
+            int i_3 = (int) ((long) outputRate * bytes_11.length / inputRate) + 14;
             int[] ints_4 = new int[i_3];
             int i_5 = 0;
             int i_6 = 0;
             int i_7;
             for (i_7 = 0; i_7 < bytes_11.length; i_7++) {
                 byte b_8 = bytes_11[i_7];
-                int[] ints_9 = anIntArrayArray4017[i_6];
+                int[] ints_9 = table[i_6];
                 int i_10;
                 for (i_10 = 0; i_10 < 14; i_10++) {
                     ints_4[i_5 + i_10] += b_8 * ints_9[i_10];
                 }
-                i_6 += anInt4012;
-                i_10 = i_6 / anInt4015;
+                i_6 += outputRate;
+                i_10 = i_6 / inputRate;
                 i_5 += i_10;
-                i_6 -= i_10 * anInt4015;
+                i_6 -= i_10 * inputRate;
             }
             bytes_11 = new byte[i_3];
             for (i_7 = 0; i_7 < i_3; i_7++) {
@@ -94,25 +75,25 @@ public class Class344 {
         return bytes_11;
     }
 
-    public short[] method6111(short[] shorts_1) {
+    public short[] resampleShorts(short[] shorts_1) {
         short[] shorts_11 = shorts_1;
-        if (anIntArrayArray4017 != null) {
-            int i_3 = (int) ((long) shorts_11.length * anInt4012 / anInt4015) + 14;
+        if (table != null) {
+            int i_3 = (int) ((long) shorts_11.length * outputRate / inputRate) + 14;
             int[] ints_4 = new int[i_3];
             int i_5 = 0;
             int i_6 = 0;
             int i_7;
             for (i_7 = 0; i_7 < shorts_11.length; i_7++) {
                 short s_8 = shorts_11[i_7];
-                int[] ints_9 = anIntArrayArray4017[i_6];
+                int[] ints_9 = table[i_6];
                 int i_10;
                 for (i_10 = 0; i_10 < 14; i_10++) {
                     ints_4[i_10 + i_5] += ints_9[i_10] * s_8 >> 2;
                 }
-                i_6 += anInt4012;
-                i_10 = i_6 / anInt4015;
+                i_6 += outputRate;
+                i_10 = i_6 / inputRate;
                 i_5 += i_10;
-                i_6 -= i_10 * anInt4015;
+                i_6 -= i_10 * inputRate;
             }
             shorts_11 = new short[i_3];
             for (i_7 = 0; i_7 < i_3; i_7++) {
@@ -129,17 +110,27 @@ public class Class344 {
         return shorts_11;
     }
 
-    int method6112(int i_1) {
-        if (anIntArrayArray4017 != null) {
-            i_1 = (int) ((long) anInt4012 * i_1 / anInt4015);
+    int scaleRate(int i_1) {
+        if (table != null) {
+            i_1 = (int) ((long) outputRate * i_1 / inputRate);
         }
         return i_1;
     }
 
-    int method6114(int i_1) {
-        if (anIntArrayArray4017 != null) {
-            i_1 = (int) ((long) anInt4012 * i_1 / anInt4015) + 6;
+    int scalePosition(int i_1) {
+        if (table != null) {
+            i_1 = (int) ((long) outputRate * i_1 / inputRate) + 6;
         }
         return i_1;
     }
+
+	public static void kickFriendsChat(String string_0) {
+	    if (Class467.FC_PLAYERS != null) {
+	        BufferedConnectionContext class184_2 = BufferedConnectionContext.getConnectionContext();
+	        TCPPacket tcpmessage_3 = TCPPacket.createPacket(ClientProt.FC_KICK, class184_2.outKeys);
+	        tcpmessage_3.buffer.writeByte(ChatLine.getLength(string_0));
+	        tcpmessage_3.buffer.writeString(string_0);
+	        class184_2.queuePacket(tcpmessage_3);
+	    }
+	}
 }

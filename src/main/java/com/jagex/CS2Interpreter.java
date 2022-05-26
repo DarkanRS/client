@@ -10203,7 +10203,7 @@ public class CS2Interpreter {
 
     static void method6152(CS2Executor executor) {
         String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
-        Class344.method6119(string_2);
+        Decimator.kickFriendsChat(string_2);
     }
 
     static void method6153(CS2Executor executor) {

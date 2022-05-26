@@ -4,7 +4,7 @@ public class Class119 {
 
     public static HostNameIdentifier HOSTNAME_IDENTIFIER;
     public static JS5StandardRequester JS5_STANDARD_REQUESTER;
-    static Class344 aClass344_1460;
+    static Decimator decimator;
     public int anInt1458;
     public int anInt1454;
     public int[] anIntArray1455;

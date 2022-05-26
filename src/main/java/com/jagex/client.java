@@ -1725,9 +1725,9 @@ public class client extends Engine {
 	static void method12073(int i_0, int i_1) {
 		if (Game.stellarDawn != CURRENT_GAME) {
 			if (!MapRegion.routeTo(i_0, i_1, false, Class371.method6352(i_0, i_1))) {
-				MapRegion.routeTo(i_0, i_1, false, Class344.method6115(i_0, i_1, 1, 1));
+				MapRegion.routeTo(i_0, i_1, false, RouteFinder.method6115(i_0, i_1, 1, 1));
 			}
-		} else if (!MapRegion.routeTo(i_0, i_1, false, Class344.method6115(i_0, i_1, 1, 1))) {
+		} else if (!MapRegion.routeTo(i_0, i_1, false, RouteFinder.method6115(i_0, i_1, 1, 1))) {
 			MapRegion.routeTo(i_0, i_1, false, Class371.method6352(i_0, i_1));
 		}
 
