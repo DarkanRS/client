@@ -57,7 +57,7 @@ public class MapAreaDefinitions {
             if (npcDefinitions.visible) {
                 if (npc_0.anInt10582 != 0) {
                     String string_5 = client.CURRENT_GAME == Game.stellarDawn ? LocalizedText.RATING_.translate(Class223.CURRENT_LANGUAGE) : LocalizedText.LEVEL_.translate(Class223.CURRENT_LANGUAGE);
-                    string_4 = string_4 + ItemIndexLoader.method7169(npc_0.anInt10582, VertexNormal.MY_PLAYER.combatLevel) + " (" + string_5 + npc_0.anInt10582 + ")";
+                    string_4 = string_4 + ItemIndexLoader.colorBasedOnCombatLevel(npc_0.anInt10582, VertexNormal.MY_PLAYER.combatLevel) + " (" + string_5 + npc_0.anInt10582 + ")";
                 }
                 if (client.IS_USE_SELECTED && !bool_1) {
                     ParamDefinitions attributedefault_10 = CutsceneAction_Sub12.TARGET_PARAM != -1 ? IndexLoaders.PARAM_LOADER.getParam(CutsceneAction_Sub12.TARGET_PARAM) : null;

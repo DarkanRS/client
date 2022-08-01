@@ -40,7 +40,7 @@ public class ItemIndexLoader implements IndexLoader {
         defaultInventoryOptions = new String[]{null, null, null, null, LocalizedText.DROP.translate(language)};
     }
 
-    static String method7169(int i_0, int i_1) {
+    static String colorBasedOnCombatLevel(int i_0, int i_1) {
         int i_3 = i_1 - i_0;
         return i_3 < -9 ? Utils.rgbToColHexShortcut(16711680) : (i_3 < -6 ? Utils.rgbToColHexShortcut(16723968) : (i_3 < -3 ? Utils.rgbToColHexShortcut(16740352) : (i_3 < 0 ? Utils.rgbToColHexShortcut(16756736) : (i_3 > 9 ? Utils.rgbToColHexShortcut(65280) : (i_3 > 6 ? Utils.rgbToColHexShortcut(4259584) : (i_3 > 3 ? Utils.rgbToColHexShortcut(8453888) : (i_3 > 0 ? Utils.rgbToColHexShortcut(12648192) : Utils.rgbToColHexShortcut(16776960))))))));
     }

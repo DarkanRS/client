@@ -11,7 +11,7 @@ public class PlayerEntity extends PathingEntity {
     public int headIconId = -1;
     public int combatLevel;
     public int cbLevelWithSumm;
-    public int cbLevelRelated = -1;
+    public int combatLevelThreshhold = -1;
     public int elo;
     public int faceDirection = -1;
     public boolean aBool10573;
@@ -929,13 +929,13 @@ public class PlayerEntity extends PathingEntity {
             }
 
             cbLevelWithSumm = combatLevel;
-            cbLevelRelated = -1;
+            combatLevelThreshhold = -1;
         } else {
             elo = 0;
             cbLevelWithSumm = buffer.readUnsignedByte();
-            cbLevelRelated = buffer.readUnsignedByte();
-            if (cbLevelRelated == 255) {
-                cbLevelRelated = -1;
+            combatLevelThreshhold = buffer.readUnsignedByte();
+            if (combatLevelThreshhold == 255) {
+                combatLevelThreshhold = -1;
             }
         }
 
