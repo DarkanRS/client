@@ -8,7 +8,7 @@ public class AnimationDefinitions {
     public int[] frameDurations;
     public int loopDelay = -1;
     public boolean[] aBoolArray5915;
-    public int[] frames;
+    public int[] frameHashes;
     public int priority = 5;
     public int leftHandItem = -1;
     public int rightHandItem = -1;
@@ -16,12 +16,12 @@ public class AnimationDefinitions {
     public int animatingPrecedence = -1;
     public int walkingPrecedence = -1;
     public int replayMode = 2;
-    public int[] anIntArray5911;
-    public int[][] anIntArrayArray5913;
+    public int[] interfaceFrames;
+    public int[][] soundSettings;
     public boolean aBool5923;
     public boolean tweened;
-    public boolean aBool5928;
-    public int[] anIntArray5926;
+    public boolean vorbisSound;
+    public int[] soundDurations;
     public int[] anIntArray5927;
     public int[] anIntArray5919;
     AnimationIndexLoader animationIndexLoader;
@@ -59,12 +59,12 @@ public class AnimationDefinitions {
             for (i_5 = 0; i_5 < i_4; i_5++) {
                 frameDurations[i_5] = rsbytebuffer_1.readUnsignedShort();
             }
-            frames = new int[i_4];
+            frameHashes = new int[i_4];
             for (i_5 = 0; i_5 < i_4; i_5++) {
-                frames[i_5] = rsbytebuffer_1.readUnsignedShort();
+                frameHashes[i_5] = rsbytebuffer_1.readUnsignedShort();
             }
             for (i_5 = 0; i_5 < i_4; i_5++) {
-                frames[i_5] += rsbytebuffer_1.readUnsignedShort() << 16;
+                frameHashes[i_5] += rsbytebuffer_1.readUnsignedShort() << 16;
             }
         } else if (i_2 == 2) {
             loopDelay = rsbytebuffer_1.readUnsignedShort();
@@ -90,25 +90,25 @@ public class AnimationDefinitions {
             replayMode = rsbytebuffer_1.readUnsignedByte();
         } else if (i_2 == 12) {
             i_4 = rsbytebuffer_1.readUnsignedByte();
-            anIntArray5911 = new int[i_4];
+            interfaceFrames = new int[i_4];
             for (i_5 = 0; i_5 < i_4; i_5++) {
-                anIntArray5911[i_5] = rsbytebuffer_1.readUnsignedShort();
+                interfaceFrames[i_5] = rsbytebuffer_1.readUnsignedShort();
             }
             for (i_5 = 0; i_5 < i_4; i_5++) {
-                anIntArray5911[i_5] += rsbytebuffer_1.readUnsignedShort() << 16;
+                interfaceFrames[i_5] += rsbytebuffer_1.readUnsignedShort() << 16;
             }
         } else {
             int i_7;
             if (i_2 == 13) {
                 i_4 = rsbytebuffer_1.readUnsignedShort();
-                anIntArrayArray5913 = new int[i_4][];
+                soundSettings = new int[i_4][];
                 for (i_5 = 0; i_5 < i_4; i_5++) {
                     int children = rsbytebuffer_1.readUnsignedByte();
                     if (children > 0) {
-                        anIntArrayArray5913[i_5] = new int[children];
-                        anIntArrayArray5913[i_5][0] = rsbytebuffer_1.read24BitUnsignedInteger();
+                        soundSettings[i_5] = new int[children];
+                        soundSettings[i_5][0] = rsbytebuffer_1.read24BitUnsignedInteger();
                         for (i_7 = 1; i_7 < children; i_7++) {
-                            anIntArrayArray5913[i_5][i_7] = rsbytebuffer_1.readUnsignedShort();
+                            soundSettings[i_5][i_7] = rsbytebuffer_1.readUnsignedShort();
                         }
                     }
                 }
@@ -118,20 +118,20 @@ public class AnimationDefinitions {
                 tweened = true;
             } else if (i_2 != 16) {
                 if (i_2 == 18) {
-                    aBool5928 = true;
+                    vorbisSound = true;
                 } else if (i_2 == 19) {
-                    if (anIntArray5926 == null) {
-                        anIntArray5926 = new int[anIntArrayArray5913.length];
-                        for (i_4 = 0; i_4 < anIntArrayArray5913.length; i_4++) {
-                            anIntArray5926[i_4] = 255;
+                    if (soundDurations == null) {
+                        soundDurations = new int[soundSettings.length];
+                        for (i_4 = 0; i_4 < soundSettings.length; i_4++) {
+                            soundDurations[i_4] = 255;
                         }
                     }
-                    anIntArray5926[rsbytebuffer_1.readUnsignedByte()] = rsbytebuffer_1.readUnsignedByte();
+                    soundDurations[rsbytebuffer_1.readUnsignedByte()] = rsbytebuffer_1.readUnsignedByte();
                 } else if (i_2 == 20) {
                     if (anIntArray5927 == null || anIntArray5919 == null) {
-                        anIntArray5927 = new int[anIntArrayArray5913.length];
-                        anIntArray5919 = new int[anIntArrayArray5913.length];
-                        for (i_4 = 0; i_4 < anIntArrayArray5913.length; i_4++) {
+                        anIntArray5927 = new int[soundSettings.length];
+                        anIntArray5919 = new int[soundSettings.length];
+                        for (i_4 = 0; i_4 < soundSettings.length; i_4++) {
                             anIntArray5927[i_4] = 256;
                             anIntArray5919[i_4] = 256;
                         }
@@ -162,11 +162,11 @@ public class AnimationDefinitions {
     }
 
     public boolean ready() {
-        if (frames == null) {
+        if (frameHashes == null) {
             return true;
         } else {
             boolean bool_1 = true;
-            int[] ints_2 = frames;
+            int[] ints_2 = frameHashes;
             for (int i_3 = 0; i_3 < ints_2.length; i_3++) {
                 int i_4 = ints_2[i_3];
                 if (animationIndexLoader.getAnimationFrame(i_4 >>> 16) == null) {

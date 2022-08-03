@@ -21,23 +21,23 @@ public class SoftwareItemRender implements Interface18 {
     }
 
     public static void method7034(AnimationDefinitions defs, int i_1) {
-        if (Class260.SOUNDS_SIZE < 50 && defs != null && defs.anIntArrayArray5913 != null && i_1 < defs.anIntArrayArray5913.length && defs.anIntArrayArray5913[i_1] != null) {
-            int i_3 = defs.anIntArrayArray5913[i_1][0];
+        if (Class260.SOUNDS_SIZE < 50 && defs != null && defs.soundSettings != null && i_1 < defs.soundSettings.length && defs.soundSettings[i_1] != null) {
+            int i_3 = defs.soundSettings[i_1][0];
             int i_4 = i_3 >> 8;
             int i_5 = i_3 >> 5 & 0x7;
             int i_6;
-            if (defs.anIntArrayArray5913[i_1].length > 1) {
-                i_6 = (int) (Math.random() * defs.anIntArrayArray5913[i_1].length);
+            if (defs.soundSettings[i_1].length > 1) {
+                i_6 = (int) (Math.random() * defs.soundSettings[i_1].length);
                 if (i_6 > 0) {
-                    i_4 = defs.anIntArrayArray5913[i_1][i_6];
+                    i_4 = defs.soundSettings[i_1][i_6];
                 }
             }
             i_6 = 256;
             if (defs.anIntArray5927 != null && defs.anIntArray5919 != null) {
                 i_6 = Class76.method1356(defs.anIntArray5927[i_1], defs.anIntArray5919[i_1]);
             }
-            int i_7 = defs.anIntArray5926 == null ? 255 : defs.anIntArray5926[i_1];
-            if (defs.aBool5928) {
+            int i_7 = defs.soundDurations == null ? 255 : defs.soundDurations[i_1];
+            if (defs.vorbisSound) {
                 Class435.playSoundVorbis(i_4, i_5, 0, i_7, false, i_6);
             } else {
                 VarNPCMap.playSoundSynth(i_4, i_5, 0, i_7, i_6);
