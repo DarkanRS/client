@@ -30,7 +30,7 @@ public class ObjectDefinition {
     public int ambientSoundHearDistance;
     public int anInt5667;
     public int anInt5698;
-    public int[] audioTracks;
+    public int[] soundEffectsTimed;
     public int[] transformTo;
     public boolean hidden;
     public boolean aBool5703 = true;
@@ -49,8 +49,8 @@ public class ObjectDefinition {
     public int mapIcon = -1;
     public int[] anIntArray5707;
     public int anInt5704;
-    public boolean aBool5696;
-    public boolean aBool5700;
+    public boolean midiSound;
+    public boolean midiSoundEffectsTimed;
     public int anInt5684 = 960;
     public int anInt5658;
     public int anInt5708 = 256;
@@ -248,9 +248,9 @@ public class ObjectDefinition {
                 anInt5698 = buffer.readUnsignedShort();
                 ambientSoundHearDistance = buffer.readUnsignedByte();
                 i_4 = buffer.readUnsignedByte();
-                audioTracks = new int[i_4];
+                soundEffectsTimed = new int[i_4];
                 for (i_5 = 0; i_5 < i_4; i_5++) {
-                    audioTracks[i_5] = buffer.readUnsignedShort();
+                    soundEffectsTimed[i_5] = buffer.readUnsignedShort();
                 }
             } else if (opcode == 81) {
                 groundContoured = 2;
@@ -333,9 +333,9 @@ public class ObjectDefinition {
             } else if (opcode == 167) {
                 anInt5704 = buffer.readUnsignedShort();
             } else if (opcode == 168) {
-                aBool5696 = true;
+                midiSound = true;
             } else if (opcode == 169) {
-                aBool5700 = true;
+                midiSoundEffectsTimed = true;
             } else if (opcode == 170) {
                 anInt5684 = buffer.readSmart();
             } else if (opcode == 171) {
@@ -571,12 +571,12 @@ public class ObjectDefinition {
 
     public boolean hasSound() {
         if (transformTo == null) {
-            return ambientSoundId != -1 || audioTracks != null;
+            return ambientSoundId != -1 || soundEffectsTimed != null;
         } else {
             for (int i_2 = 0; i_2 < transformTo.length; i_2++) {
                 if (transformTo[i_2] != -1) {
                     ObjectDefinition objectdefinitions_3 = loader.getObjectDefs(transformTo[i_2]);
-                    if (objectdefinitions_3.ambientSoundId != -1 || objectdefinitions_3.audioTracks != null) {
+                    if (objectdefinitions_3.ambientSoundId != -1 || objectdefinitions_3.soundEffectsTimed != null) {
                         return true;
                     }
                 }
