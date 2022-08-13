@@ -126,11 +126,11 @@ public class Class301 implements Interface41 {
                 Class179.anInt2220 = Class179.aString2225.length();
             } else if (i_10 == 104 && Class179.anInt2226 < Class13.aStringArray129.length) {
                 ++Class179.anInt2226;
-                Class534.method11441();
+                MouseMovementRecord.method11441();
                 Class179.anInt2220 = Class179.aString2225.length();
             } else if (i_10 == 105 && Class179.anInt2226 > 0) {
                 --Class179.anInt2226;
-                Class534.method11441();
+                MouseMovementRecord.method11441();
                 Class179.anInt2220 = Class179.aString2225.length();
             } else if (Class380.method6450(var_4) || "\\/.:, _-+[]~@".indexOf(var_4) != -1) {
                 Class179.aString2225 = Class179.aString2225.substring(0, Class179.anInt2220) + client.KEYS_PRESSED[i_1].getCharacter() + Class179.aString2225.substring(Class179.anInt2220);

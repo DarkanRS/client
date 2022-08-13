@@ -24,11 +24,11 @@ public class JS5CacheFile {
         anInt2572 = 1500000;
     }
 
-    public static void record(MouseRecord class282_sub53_0) {
+    public static void record(MouseRecord record) {
         if (!GameState.loggedIn(client.GAME_STATE)) {
-            class282_sub53_0.cache();
+            record.cache();
         } else {
-            Class236.aClass534_Sub2_2911.method11410(class282_sub53_0);
+            Class236.MOUSE_MOVEMENT_WINDOW.addRecord(record);
         }
     }
 

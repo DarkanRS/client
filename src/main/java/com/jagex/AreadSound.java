@@ -64,7 +64,7 @@ public class AreadSound {
                     return;
                 }
                 string_2 = Static.method6380(class282_sub50_sub7_3);
-                int[] ints_4 = Class534_Sub1.method12815(class282_sub50_sub7_3);
+                int[] ints_4 = MouseMovementICMP.method12815(class282_sub50_sub7_3);
                 if (ints_4 != null) {
                     string_2 += Class15.method547(ints_4);
                 }

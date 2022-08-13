@@ -117,7 +117,7 @@ public class MouseRecord_Sub2 extends MouseRecord {
     }
 
     @Override
-    public long method13471() {
+    public long getTime() {
         return aLong9634;
     }
 

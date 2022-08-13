@@ -13,8 +13,8 @@ public abstract class Class434 {
 
     public static void method7292() {
         Class373.method6365();
-        Class236.aClass534_Sub2_2911.method11417();
-        Class236.aClass534_Sub1_2913.method11417();
+        Class236.MOUSE_MOVEMENT_WINDOW.sendPackets();
+        Class236.MOUSE_MOVEMENT_CANVAS.sendPackets();
         TCPPacket tcpmessage_1;
         int i_2;
         if (client.maximumHeldKeys > 0) {

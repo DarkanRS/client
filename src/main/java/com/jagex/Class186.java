@@ -74,7 +74,7 @@ public class Class186 {
         Class467.FC_PLAYERS = null;
         Node_Sub13.GUEST_CLAN_SETTINGS = null;
         QuickchatFiller.CLAN_SETTINGS = null;
-        Class237.method3990();
+        Class237.clearMouseMovementRecords();
 
         for (int i_1 = 0; i_1 < 25; i_1++) {
             client.SKILL_LEVEL_VISIBLE[i_1] = 0;

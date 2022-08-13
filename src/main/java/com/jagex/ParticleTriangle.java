@@ -17,7 +17,7 @@ public class ParticleTriangle {
     public static void method3953() {
         Class86.aShort828 = client.aShort7214;
         Class86.aShort829 = client.aShort7474;
-        Class534.aShort7079 = client.aShort7276;
+        MouseMovementRecord.aShort7079 = client.aShort7276;
         Class86.aShort830 = client.aShort7441;
         Class86.aBool826 = true;
         if (Class86.anInt824 != 0 && Class86.anInt825 != 0) {

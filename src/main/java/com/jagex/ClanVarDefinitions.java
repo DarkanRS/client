@@ -11,16 +11,16 @@ public class ClanVarDefinitions {
         int i_1 = Class393.preferences.removeRoofsOptionOverride.method12952();
         if (i_1 == 0) {
             IndexLoaders.MAP_REGION_DECODER.method4440(null);
-            Class534_Sub2.method12847(0);
+            MouseMovementJav.method12847(0);
         } else if (i_1 == 1) {
             PingRequest.method8744((byte) 0);
-            Class534_Sub2.method12847(512);
+            MouseMovementJav.method12847(512);
             if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager() != null) {
                 Class17.method570();
             }
         } else {
             PingRequest.method8744((byte) (client.anInt7286 - 4 & 0xff));
-            Class534_Sub2.method12847(2);
+            MouseMovementJav.method12847(2);
         }
 
         client.anInt7472 = Class4.MY_PLAYER_PLANE;

@@ -3,7 +3,7 @@ package com.jagex;
 import java.util.Collection;
 import java.util.Iterator;
 
-public class NodeCollection implements Collection {
+public class NodeCollection<T> implements Collection<T> {
 
     public Node tail = new Node();
     Node current;
@@ -92,7 +92,7 @@ public class NodeCollection implements Collection {
     }
 
     @Override
-    public Iterator iterator() {
+    public Iterator<T> iterator() {
         return new NodeIterator(this);
     }
 

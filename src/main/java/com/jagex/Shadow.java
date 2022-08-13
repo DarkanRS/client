@@ -21,7 +21,7 @@ public abstract class Shadow extends CacheableNode {
 
     static int method15507(CacheableNode_Sub7 class282_sub50_sub7_0, FontMetrics fontmetrics_1) {
         String string_3 = Static.method6380(class282_sub50_sub7_0);
-        int[] ints_4 = Class534_Sub1.method12815(class282_sub50_sub7_0);
+        int[] ints_4 = MouseMovementICMP.method12815(class282_sub50_sub7_0);
         if (ints_4 != null) {
             string_3 += Class15.method547(ints_4);
         }

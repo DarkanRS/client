@@ -15,7 +15,7 @@ public class Node_Sub25 extends Node {
         if (i_0 > i_2 && i_0 < i_2 + i_4 && i_1 > i_6 - fontmetrics_9.topPadding - 1 && i_1 < fontmetrics_9.bottomPadding + i_6 && class282_sub50_sub7_7.aBool9583) {
             i_101 = i_11;
         }
-        int[] ints_13 = Class534_Sub1.method12815(class282_sub50_sub7_7);
+        int[] ints_13 = MouseMovementICMP.method12815(class282_sub50_sub7_7);
         String string_14 = Static.method6380(class282_sub50_sub7_7);
         if (ints_13 != null) {
             string_14 += Class15.method547(ints_13);

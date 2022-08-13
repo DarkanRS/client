@@ -20,7 +20,7 @@ class Class79 implements VarProvider {
         if (Class86.aBool826) {
             client.aShort7214 = Class86.aShort828;
             client.aShort7474 = Class86.aShort829;
-            client.aShort7276 = Class534.aShort7079;
+            client.aShort7276 = MouseMovementRecord.aShort7079;
             client.aShort7441 = Class86.aShort830;
             Class86.aBool826 = false;
         }

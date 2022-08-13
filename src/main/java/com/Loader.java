@@ -38,6 +38,10 @@ public class Loader extends Panel implements ImageObserver, MenuContainer, Seria
     public JFrame clientFrame;
 
     public static void main(String[] args) {
+    	System.setProperty("sun.java2d.uiScale", "1.0");
+		System.setProperty("sun.java2d.win.uiScaleX", "1.0");
+		System.setProperty("sun.java2d.win.uiScaleY", "1.0");
+		System.setProperty("sun.java2d.uiScale.enabled", "false");
     	if (args.length > 0 && args[0] != null)
     		IP_ADDRESS = args[0];
     	else
@@ -124,6 +128,10 @@ public class Loader extends Panel implements ImageObserver, MenuContainer, Seria
     }
 
     private void startClient() {
+    	System.setProperty("sun.java2d.uiScale", "1.0");
+		System.setProperty("sun.java2d.win.uiScaleX", "1.0");
+		System.setProperty("sun.java2d.win.uiScaleY", "1.0");
+		System.setProperty("sun.java2d.uiScale.enabled", "false");
         loadParams();
         client clnt = new client();
         clnt.supplyApplet(this);
