@@ -107,14 +107,14 @@ public class Loader extends Panel implements ImageObserver, MenuContainer, Seria
         clientParams.put("29", "false");
     }
 
-    private void doFrame() {
+    public void doFrame() {
         INSTANCE = this;
         openFrame();
         startClient();
         clientFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
-    private void openFrame() {
+    public void openFrame() {
         clientFrame = new JFrame("Darkan Client");
         clientFrame.setLayout(new BorderLayout());
         JPanel client_panel = new JPanel();
@@ -127,7 +127,7 @@ public class Loader extends Panel implements ImageObserver, MenuContainer, Seria
         clientFrame.setVisible(true);
     }
 
-    private void startClient() {
+    public void startClient() {
     	System.setProperty("sun.java2d.uiScale", "1.0");
 		System.setProperty("sun.java2d.win.uiScaleX", "1.0");
 		System.setProperty("sun.java2d.win.uiScaleY", "1.0");
