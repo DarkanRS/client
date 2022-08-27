@@ -206,7 +206,7 @@ public class PlayerUpdate {
 
             for (int i_9 = 0; i_9 < size; i_9++) {
                 int i_10 = stream.readUnsignedShort128();
-                if ((i_10 & 0xc000) == 49152) {
+                if ((i_10 & 0xc000) == 0xc000) {
                     int i_19 = stream.readUnsignedShort128();
                     ints_14[i_9] = i_10 << 16 | i_19;
                 } else {
@@ -216,7 +216,7 @@ public class PlayerUpdate {
                 ints_15[i_9] = stream.readUnsignedShort();
             }
 
-            player.method15797(ints_14, ints_15);
+            player.applyModelRotations(ints_14, ints_15);
         }
 
         if ((flags & 0x4000) != 0) {

@@ -360,7 +360,7 @@ public class PlayerEntity extends PathingEntity {
             i_2 |= 0x80000;
         }
 
-        MeshRasterizer meshrasterizer_12 = aMeshRasterizerArray10372[0] = model.getBodyModel(graphicalrenderer_1, i_2, IndexLoaders.RENDER_ANIM_LOADER, IndexLoaders.IDENTIKIT_LOADER, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, animation_6, class456_sub3_7, aAnimation_Sub2_Sub1Array10354, anIntArray10362, i_10, LinkedNodeList.EQUIPMENT_DEFAULTS);
+        MeshRasterizer meshrasterizer_12 = aMeshRasterizerArray10372[0] = model.getBodyModel(graphicalrenderer_1, i_2, IndexLoaders.RENDER_ANIM_LOADER, IndexLoaders.IDENTIKIT_LOADER, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, animation_6, class456_sub3_7, aAnimation_Sub2_Sub1Array10354, modelRotations, i_10, LinkedNodeList.EQUIPMENT_DEFAULTS);
         int i_13 = Class46.method932();
         if (Engine.MAX_MEMORY < 96 && i_13 > 50) {
             JS5CacheFile.method3359();
