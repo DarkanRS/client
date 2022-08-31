@@ -145,7 +145,7 @@ public class PacketDecoder {
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.CLANCHANNEL_FULL) {
-            client.anInt7395 = client.anInt7347;
+            client.CLANCHANNEL_LAST_RECEIVED = client.CS2_TIMER_COUNT;
             boolean nonGuest = buffer.readUnsignedByte() == 1;
             if (context.currentPacketSize == 1) {
                 if (nonGuest) {
@@ -170,7 +170,7 @@ public class PacketDecoder {
                 --buffer.index;
                 client.GRAND_EXCHANGE_SLOTS[key] = new GrandExchangeSlot(buffer);
             }
-            client.anInt7320 = client.anInt7347;
+            client.anInt7320 = client.CS2_TIMER_COUNT;
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.IF_SETANGLE) {
@@ -299,7 +299,7 @@ public class PacketDecoder {
             return true;
         } else if (context.currentPacket == ServerProt.RUN_ENERGY) {
             client.RUN_ENERGY = buffer.readUnsignedByte();
-            client.anInt7397 = client.anInt7347;
+            client.anInt7397 = client.CS2_TIMER_COUNT;
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.IF_SETPLAYERHEAD_OTHER) {
@@ -741,7 +741,7 @@ public class PacketDecoder {
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.FRIENDS_CHAT_CHANNEL) {
-            client.anInt7179 = client.anInt7347;
+            client.anInt7179 = client.CS2_TIMER_COUNT;
             if (context.currentPacketSize == 0) {
                 client.FC_NAME = null;
                 client.FC_OWNER_NAME = null;
@@ -859,7 +859,7 @@ public class PacketDecoder {
             return true;
         } else if (context.currentPacket == ServerProt.PLAYER_WEIGHT) {
             client.RUN_WEIGHT = buffer.readShort();
-            client.anInt7397 = client.anInt7347;
+            client.anInt7397 = client.CS2_TIMER_COUNT;
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.aClass375_4399) {
@@ -1133,7 +1133,7 @@ public class PacketDecoder {
             } else {
                 client.REBOOT_TIMER = buffer.readUnsignedShort() * 30;
             }
-            client.anInt7397 = client.anInt7347;
+            client.anInt7397 = client.CS2_TIMER_COUNT;
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.MIDI_SONG_LOCATION) {
@@ -1325,7 +1325,7 @@ public class PacketDecoder {
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.CLANSETTINGS_FULL) {
-            client.anInt7192 = client.anInt7347;
+            client.anInt7192 = client.CS2_TIMER_COUNT;
             boolean bool_91 = buffer.readUnsignedByte() == 1;
             if (context.currentPacketSize == 1) {
                 if (bool_91) {
@@ -1443,7 +1443,7 @@ public class PacketDecoder {
                         if (username.equals(VertexNormal.MY_PLAYER.displayName)) {
                             Class48_Sub2.MY_PLAYER_FC_RANK = rank;
                         }
-                        client.anInt7179 = client.anInt7347;
+                        client.anInt7179 = client.CS2_TIMER_COUNT;
                         context.currentPacket = null;
                         return true;
                     }
@@ -1466,7 +1466,7 @@ public class PacketDecoder {
                     Class48_Sub2.MY_PLAYER_FC_RANK = rank;
                 }
             }
-            client.anInt7179 = client.anInt7347;
+            client.anInt7179 = client.CS2_TIMER_COUNT;
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.IF_SETHIDE) {
@@ -1477,7 +1477,7 @@ public class PacketDecoder {
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.CLANCHANNEL_DELTA) {
-            client.anInt7395 = client.anInt7347;
+            client.CLANCHANNEL_LAST_RECEIVED = client.CS2_TIMER_COUNT;
             boolean bool_91 = buffer.readUnsignedByte() == 1;
             ChangeClanSetting changeClanSetting = new ChangeClanSetting(buffer);
             ClanChannel clanChannel;
@@ -1605,7 +1605,7 @@ public class PacketDecoder {
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.CLANSETTINGS_DELTA) {
-            client.anInt7192 = client.anInt7347;
+            client.anInt7192 = client.CS2_TIMER_COUNT;
             boolean bool_91 = buffer.readUnsignedByte() == 1;
             Class348 class348_97 = new Class348(buffer);
             ClanSettings class61_99;
@@ -1739,7 +1739,7 @@ public class PacketDecoder {
             return true;
         } else if (context.currentPacket == ServerProt.FRIENDLIST_LOADED) {
             client.anInt7434 = 1;
-            client.anInt7386 = client.anInt7347;
+            client.anInt7386 = client.CS2_TIMER_COUNT;
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.IF_SETPLAYERHEAD) {
@@ -2008,7 +2008,7 @@ public class PacketDecoder {
                 }
             }
             client.anInt7434 = 2;
-            client.anInt7386 = client.anInt7347;
+            client.anInt7386 = client.CS2_TIMER_COUNT;
             boolean bool_91 = false;
             int flags = client.FRIEND_COUNT;
             while (flags > 0) {
@@ -2145,7 +2145,7 @@ public class PacketDecoder {
                     }
                 }
             }
-            client.anInt7386 = client.anInt7347;
+            client.anInt7386 = client.CS2_TIMER_COUNT;
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.CLIENT_SETVARCSTR_LARGE) {
@@ -2244,7 +2244,7 @@ public class PacketDecoder {
                 ignored.lastDisplayName = buffer.readString();
                 ignored.temporary = false;
             }
-            client.anInt7386 = client.anInt7347;
+            client.anInt7386 = client.CS2_TIMER_COUNT;
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.IF_SETRETEX) {
