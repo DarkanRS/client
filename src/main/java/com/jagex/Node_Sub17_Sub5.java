@@ -5,13 +5,13 @@ import java.util.Arrays;
 
 import com.jagex.clans.settings.ClanSettings;
 
-public class Node_Sub17_Sub5 extends Node_Sub17 {
+public class Node_Sub17_Sub5 extends ClanSettingDeltaUpdate {
 
     int anInt9941;
     String aString9942;
-    Class348 this$0;
+    ClanSettingsDelta this$0;
 
-    Node_Sub17_Sub5(Class348 class348_1) {
+    Node_Sub17_Sub5(ClanSettingsDelta class348_1) {
         this$0 = class348_1;
     }
 
@@ -33,57 +33,14 @@ public class Node_Sub17_Sub5 extends Node_Sub17 {
     }
 
     @Override
-    void method12251(ClanSettings class61_1) {
-        class61_1.method1224(anInt9941, aString9942);
+    void applyUpdate(ClanSettings class61_1) {
+        class61_1.setVarString(anInt9941, aString9942);
     }
 
     @Override
-    void method12250(ByteBuf rsbytebuffer_1) {
+    void decode(ByteBuf rsbytebuffer_1) {
         anInt9941 = rsbytebuffer_1.readInt();
         aString9942 = rsbytebuffer_1.readString();
-    }
-
-    @Override
-    void method12255(ClanSettings class61_1) {
-        class61_1.method1224(anInt9941 * 2094172715 * -1507859325, aString9942);
-    }
-
-    @Override
-    void method12257(ByteBuf rsbytebuffer_1) {
-        anInt9941 = rsbytebuffer_1.readInt() * 2094172715 * -1507859325;
-        aString9942 = rsbytebuffer_1.readString();
-    }
-
-    @Override
-    void method12253(ByteBuf rsbytebuffer_1) {
-        anInt9941 = rsbytebuffer_1.readInt() * 2094172715 * -1507859325;
-        aString9942 = rsbytebuffer_1.readString();
-    }
-
-    @Override
-    void method12254(ClanSettings class61_1) {
-        class61_1.method1224(anInt9941 * 2094172715 * -1507859325, aString9942);
-    }
-
-    @Override
-    void method12258(ClanSettings class61_1) {
-        class61_1.method1224(anInt9941 * 2094172715 * -1507859325, aString9942);
-    }
-
-    @Override
-    void method12249(ByteBuf rsbytebuffer_1) {
-        anInt9941 = rsbytebuffer_1.readInt() * 2094172715 * -1507859325;
-        aString9942 = rsbytebuffer_1.readString();
-    }
-
-    @Override
-    void method12256(ClanSettings class61_1) {
-        class61_1.method1224(anInt9941 * 2094172715 * -1507859325, aString9942);
-    }
-
-    @Override
-    void method12252(ClanSettings class61_1) {
-        class61_1.method1224(anInt9941 * 2094172715 * -1507859325, aString9942);
     }
 
 }

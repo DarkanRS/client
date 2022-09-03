@@ -283,7 +283,7 @@ public class client extends Engine {
 	static int CLAN_VAR_COUNTER;
 	static int anInt7386;
 	static int anInt7179;
-	static int anInt7192;
+	static int LAST_CLANSETTINGS_UPDATE;
 	static int CLANCHANNEL_LAST_RECEIVED;
 	static int anInt7320;
 	static int anInt7397;
@@ -485,7 +485,7 @@ public class client extends Engine {
 		anInt7391 = 0;
 		anInt7386 = 0;
 		anInt7179 = 0;
-		anInt7192 = 0;
+		LAST_CLANSETTINGS_UPDATE = 0;
 		CLANCHANNEL_LAST_RECEIVED = 0;
 		anInt7320 = 0;
 		anInt7397 = 0;
@@ -1647,7 +1647,7 @@ public class client extends Engine {
 								PENDING_HOOK_REQUESTS.append(hookRequest);
 							}
 
-							if (anInt7192 > iCompDef.anInt1442 && iCompDef.anObjectArray1383 != null) {
+							if (LAST_CLANSETTINGS_UPDATE > iCompDef.anInt1442 && iCompDef.anObjectArray1383 != null) {
 								HookRequest hookRequest = new HookRequest();
 								hookRequest.source = iCompDef;
 								hookRequest.params = iCompDef.anObjectArray1383;

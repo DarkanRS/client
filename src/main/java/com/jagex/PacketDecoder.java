@@ -1325,7 +1325,7 @@ public class PacketDecoder {
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.CLANSETTINGS_FULL) {
-            client.anInt7192 = client.CS2_TIMER_COUNT;
+            client.LAST_CLANSETTINGS_UPDATE = client.CS2_TIMER_COUNT;
             boolean bool_91 = buffer.readUnsignedByte() == 1;
             if (context.currentPacketSize == 1) {
                 if (bool_91) {
@@ -1605,16 +1605,16 @@ public class PacketDecoder {
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.CLANSETTINGS_DELTA) {
-            client.anInt7192 = client.CS2_TIMER_COUNT;
-            boolean bool_91 = buffer.readUnsignedByte() == 1;
-            Class348 class348_97 = new Class348(buffer);
-            ClanSettings class61_99;
-            if (bool_91) {
-                class61_99 = QuickchatFiller.CLAN_SETTINGS;
+            client.LAST_CLANSETTINGS_UPDATE = client.CS2_TIMER_COUNT;
+            boolean affined = buffer.readUnsignedByte() == 1;
+            ClanSettingsDelta delta = new ClanSettingsDelta(buffer);
+            ClanSettings settings;
+            if (affined) {
+                settings = QuickchatFiller.CLAN_SETTINGS;
             } else {
-                class61_99 = Node_Sub13.GUEST_CLAN_SETTINGS;
+                settings = Node_Sub13.GUEST_CLAN_SETTINGS;
             }
-            class348_97.method6173(class61_99);
+            delta.applyUpdates(settings);
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.MINIMAP_FLAG) {

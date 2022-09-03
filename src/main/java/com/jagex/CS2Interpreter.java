@@ -5695,7 +5695,7 @@ public class CS2Interpreter {
         if (class537_3 == null) {
             throw new RuntimeException();
         } else {
-            Integer integer_4 = executor.currentClanSettings.method1225(client.CURRENT_GAME.id << 16 | class537_3.baseVar, class537_3.startBit, class537_3.endBit);
+            Integer integer_4 = executor.currentClanSettings.getVarBit(client.CURRENT_GAME.id << 16 | class537_3.baseVar, class537_3.startBit, class537_3.endBit);
             int i_5;
             if (integer_4 == null) {
                 i_5 = 0;
@@ -6181,7 +6181,7 @@ public class CS2Interpreter {
     }
 
     static void fromDate(CS2Executor executor) {
-        executor.stringStack[++executor.stringStackPtr - 1] = Static.method13045(Class302.method5363(executor.intStack[--executor.intStackPtr]), Class223.CURRENT_LANGUAGE.getValue());
+        executor.stringStack[++executor.stringStackPtr - 1] = Static.method13045(Class302.runeDateToTimestamp(executor.intStack[--executor.intStackPtr]), Class223.CURRENT_LANGUAGE.getValue());
     }
 
     static void method4968(CS2Executor executor) {
@@ -7389,7 +7389,7 @@ public class CS2Interpreter {
 
     static void method6741(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
-        executor.intStack[++executor.intStackPtr - 1] = executor.currentClanSettings.anIntArray634[i_2];
+        executor.intStack[++executor.intStackPtr - 1] = executor.currentClanSettings.memberShort1[i_2];
     }
 
     static void method541(CS2Executor executor) {
@@ -7686,7 +7686,7 @@ public class CS2Interpreter {
 
     static void method4194(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
-        executor.intStack[++executor.intStackPtr - 1] = (int) (Class302.method5363(i_2) / 60000L);
+        executor.intStack[++executor.intStackPtr - 1] = (int) (Class302.runeDateToTimestamp(i_2) / 60000L);
     }
 
     static void method6236(CS2Executor executor) {

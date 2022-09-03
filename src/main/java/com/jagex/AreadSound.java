@@ -44,7 +44,7 @@ public class AreadSound {
 
     public static int[] method4799(int i_0) {
         int[] ints_2 = new int[3];
-        Class155.method2634(Class302.method5363(i_0));
+        Class155.method2634(Class302.runeDateToTimestamp(i_0));
         ints_2[0] = Class407.aCalendar4848.get(Calendar.DATE);
         ints_2[1] = Class407.aCalendar4848.get(Calendar.MONTH);
         ints_2[2] = Class407.aCalendar4848.get(Calendar.YEAR);
