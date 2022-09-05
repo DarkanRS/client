@@ -166,7 +166,7 @@ public abstract class Class370 {
 
         for (i_2 = 0; i_2 < 255; i_2++) {
             int i_3 = 255 - i_2;
-            int i_4 = Class476.method7931(random_1, i_3);
+            int i_4 = ObjectMeshModifier.method7931(random_1, i_3);
             short s_5 = aShortArray4285[i_4];
             aShortArray4285[i_4] = aShortArray4285[i_3];
             aShortArray4285[i_3] = aShortArray4285[i_3 + 256] = s_5;

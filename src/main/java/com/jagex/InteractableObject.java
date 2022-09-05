@@ -105,7 +105,7 @@ public class InteractableObject extends GraphNode_Sub1_Sub1 implements WorldObje
         }
     }
 
-    public void method16096(Class476 class476_1) {
+    public void method16096(ObjectMeshModifier class476_1) {
         aClass123_10509.method2116(class476_1);
     }
 

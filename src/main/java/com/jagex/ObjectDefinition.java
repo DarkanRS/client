@@ -431,7 +431,7 @@ public class ObjectDefinition {
         }
     }
 
-    MeshRasterizer method7971(AbstractRenderer class505, int i, int i_35_, int i_36_, Class476 class476) {
+    MeshRasterizer method7971(AbstractRenderer class505, int i, int i_35_, int i_36_, ObjectMeshModifier class476) {
         int i_38_ = 64 + ambient;
         int i_39_ = 850 + contrast;
         int i_40_ = i;
@@ -464,7 +464,7 @@ public class ObjectDefinition {
             }
             if (i_41_ == -1)
                 return null;
-            int[] is = ((class476 != null && class476.anIntArray5626 != null) ? class476.anIntArray5626 : modelIds[i_41_]);
+            int[] is = ((class476 != null && class476.modifiedModels != null) ? class476.modifiedModels : modelIds[i_41_]);
             int i_43_ = is.length;
             if (i_43_ > 0) {
                 long l = class505.rendererId;
@@ -530,8 +530,8 @@ public class ObjectDefinition {
             class528_48_.S(12288);
         if (originalColors != null) {
             short[] is;
-            if (class476 != null && class476.aShortArray5628 != null)
-                is = class476.aShortArray5628;
+            if (class476 != null && class476.modifiedColors != null)
+                is = class476.modifiedColors;
             else
                 is = modifiedColors;
             for (int i_49_ = 0; i_49_ < originalColors.length; i_49_++) {
@@ -543,8 +543,8 @@ public class ObjectDefinition {
         }
         if (originalTextures != null) {
             short[] is;
-            if (class476 != null && class476.aShortArray5625 != null)
-                is = class476.aShortArray5625;
+            if (class476 != null && class476.modifiedTextures != null)
+                is = class476.modifiedTextures;
             else
                 is = modifiedTextures;
             for (int i_50_ = 0; i_50_ < originalTextures.length; i_50_++)
@@ -641,7 +641,7 @@ public class ObjectDefinition {
         return animations;
     }
 
-    public synchronized Class452 method8010(AbstractRenderer graphicalrenderer_1, int i_2, int i_3, int i_4, Ground class390_5, Ground class390_6, int i_7, int i_8, int i_9, boolean bool_10, Class476 class476_11) {
+    public synchronized Class452 method8010(AbstractRenderer graphicalrenderer_1, int i_2, int i_3, int i_4, Ground class390_5, Ground class390_6, int i_7, int i_8, int i_9, boolean bool_10, ObjectMeshModifier class476_11) {
         int i_31 = i_3;
         if (Class485.method8201(i_31)) {
             i_31 = ObjectType.STRAIGHT_INSIDE_WALL_DEC.id;
@@ -649,7 +649,7 @@ public class ObjectDefinition {
         long long_13 = (i_31 << 3) + i_4 + (id << 10);
         long_13 |= graphicalrenderer_1.rendererId << 29;
         if (class476_11 != null) {
-            long_13 |= class476_11.aLong5627 << 32;
+            long_13 |= class476_11.id << 32;
         }
         int i_15 = i_2;
         if (groundContoured == 3) {
@@ -724,7 +724,7 @@ public class ObjectDefinition {
         return loader.aClass452_5620;
     }
 
-    public synchronized MeshRasterizer method8012(AbstractRenderer graphicalrenderer_1, int i_2, int i_3, int i_4, Ground class390_5, Ground class390_6, int i_7, int i_8, int i_9, Animation animation_10, Class476 class476_11) {
+    public synchronized MeshRasterizer method8012(AbstractRenderer graphicalrenderer_1, int i_2, int i_3, int i_4, Ground class390_5, Ground class390_6, int i_7, int i_8, int i_9, Animation animation_10, ObjectMeshModifier class476_11) {
         int i_31 = i_3;
         if (Class485.method8201(i_31)) {
             i_31 = ObjectType.STRAIGHT_INSIDE_WALL_DEC.id;
@@ -732,7 +732,7 @@ public class ObjectDefinition {
         long long_13 = (i_31 << 3) + i_4 + (id << 10);
         long_13 |= graphicalrenderer_1.rendererId << 29;
         if (class476_11 != null) {
-            long_13 |= class476_11.aLong5627 << 32;
+            long_13 |= class476_11.id << 32;
         }
         if (animation_10 != null) {
             i_2 |= animation_10.method7640();

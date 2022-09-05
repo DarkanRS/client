@@ -4,7 +4,7 @@ public class Class123 {
 
     boolean aBool1546;
 
-    Class476 aClass476_1541;
+    ObjectMeshModifier aClass476_1541;
 
     MeshRasterizer aMeshRasterizer_1544;
 
@@ -88,7 +88,7 @@ public class Class123 {
         return anInt1554;
     }
 
-    void method2116(Class476 class476_1) {
+    void method2116(ObjectMeshModifier class476_1) {
         aClass476_1541 = class476_1;
         aMeshRasterizer_1544 = null;
     }

@@ -123,7 +123,7 @@ public class WallDecoration extends GraphNode_Sub1_Sub4 implements WorldObject {
         return aClass123_10501.method2121();
     }
 
-    public void method16082(Class476 class476_1) {
+    public void method16082(ObjectMeshModifier class476_1) {
         aClass123_10501.method2116(class476_1);
     }
 

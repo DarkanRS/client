@@ -2476,63 +2476,56 @@ public class PacketDecoder {
                 }
             }
         } else if (packet == UpdateZonePacket.CUSTOMIZE_OBJECT) {
-            int i_3 = buffer.readInt();
-            ObjectDefinition objectdefinitions_32 = IndexLoaders.MAP_REGION_DECODER.method4436().getObjectDefs(i_3);
-            int i_5 = buffer.readUnsignedByte128();
-            int i_6 = i_5 >> 2;
-            int i_7 = client.OBJECT_TYPE_SLOTS[i_6];
-            int i_8 = buffer.readUnsignedByte();
-            int i_9 = buffer.readUnsignedByte128();
-            int i_10 = (i_9 >> 4 & 0x7) + Static.UPDATE_ZONE_X;
-            int i_11 = (i_9 & 0x7) + Class158_Sub1_Sub2.UPDATE_ZONE_Y;
-            if (i_6 == ObjectType.GROUND_INTERACT.id) {
-                i_6 = ObjectType.SCENERY_INTERACT.id;
-            }
-            int i_23 = 0;
-            if (objectdefinitions_32.types != null) {
-                int i_24 = -1;
-                for (int i_14 = 0; i_14 < objectdefinitions_32.types.length; i_14++) {
-                    if (i_6 == objectdefinitions_32.types[i_14]) {
-                        i_24 = i_14;
+            int objectId = buffer.readInt();
+            ObjectDefinition objectDef = IndexLoaders.MAP_REGION_DECODER.method4436().getObjectDefs(objectId);
+            int hash = buffer.readUnsignedByte128();
+            int type = hash >> 2;
+            int slot = client.OBJECT_TYPE_SLOTS[type];
+            int modifierHash = buffer.readUnsignedByte();
+            int coords = buffer.readUnsignedByte128();
+            int x = (coords >> 4 & 0x7) + Static.UPDATE_ZONE_X;
+            int y = (coords & 0x7) + Class158_Sub1_Sub2.UPDATE_ZONE_Y;
+            if (type == ObjectType.GROUND_INTERACT.id)
+                type = ObjectType.SCENERY_INTERACT.id;
+            int modelSize = 0;
+            if (objectDef.types != null) {
+                int tId = -1;
+                for (int i = 0; i < objectDef.types.length; i++) {
+                    if (type == objectDef.types[i]) {
+                        tId = i;
                         break;
                     }
                 }
-                i_23 = objectdefinitions_32.modelIds[i_24].length;
+                modelSize = objectDef.modelIds[tId].length;
             }
-            int i_24 = 0;
-            if (objectdefinitions_32.modifiedColors != null) {
-                i_24 = objectdefinitions_32.modifiedColors.length;
-            }
-            int i_14 = 0;
-            if (objectdefinitions_32.modifiedTextures != null) {
-                i_14 = objectdefinitions_32.modifiedTextures.length;
-            }
-            if ((i_8 & 0x1) == 1) {
-                VarnBitDefinitions.method8217(Class272.UPDATE_ZONE_PLANE, i_10, i_11, i_7, i_3, i_6, null);
+            int modifiedColorSize = 0;
+            if (objectDef.modifiedColors != null)
+                modifiedColorSize = objectDef.modifiedColors.length;
+            int modifiedTextureSize = 0;
+            if (objectDef.modifiedTextures != null)
+                modifiedTextureSize = objectDef.modifiedTextures.length;
+            if ((modifierHash & 0x1) == 1) {
+                VarnBitDefinitions.modifyObject(Class272.UPDATE_ZONE_PLANE, x, y, slot, objectId, type, null);
             } else {
-                int[] ints_28 = null;
-                if ((i_8 & 0x2) == 2) {
-                    ints_28 = new int[i_23];
-                    for (int i_16 = 0; i_16 < i_23; i_16++) {
-                        ints_28[i_16] = buffer.readInt();
-                    }
+                int[] modifiedModels = null;
+                if ((modifierHash & 0x2) == 2) {
+                    modifiedModels = new int[modelSize];
+                    for (int i = 0; i < modelSize; i++)
+                        modifiedModels[i] = buffer.readInt();
                 }
-                short[] shorts_29 = null;
-                if ((i_8 & 0x4) == 4) {
-                    shorts_29 = new short[i_24];
-                    for (int i_30 = 0; i_30 < i_24; i_30++) {
-                        shorts_29[i_30] = (short) buffer.readUnsignedShort();
-                    }
+                short[] modifiedColors = null;
+                if ((modifierHash & 0x4) == 4) {
+                    modifiedColors = new short[modifiedColorSize];
+                    for (int i = 0; i < modifiedColorSize; i++)
+                        modifiedColors[i] = (short) buffer.readUnsignedShort();
                 }
-                short[] shorts_37 = null;
-                if ((i_8 & 0x8) == 8) {
-                    shorts_37 = new short[i_14];
-                    for (int i_18 = 0; i_18 < i_14; i_18++) {
-                        shorts_37[i_18] = (short) buffer.readUnsignedShort();
-                    }
+                short[] modifiedTextures = null;
+                if ((modifierHash & 0x8) == 8) {
+                    modifiedTextures = new short[modifiedTextureSize];
+                    for (int i = 0; i < modifiedTextureSize; i++)
+                        modifiedTextures[i] = (short) buffer.readUnsignedShort();
                 }
-                VarnBitDefinitions.method8217(Class272.UPDATE_ZONE_PLANE, i_10, i_11, i_7, i_3, i_6, new Class476(Node_Sub31.aLong7777, ints_28, shorts_29, shorts_37));
-                ++Node_Sub31.aLong7777;
+                VarnBitDefinitions.modifyObject(Class272.UPDATE_ZONE_PLANE, x, y, slot, objectId, type, new ObjectMeshModifier(Node_Sub31.OBJECT_MESH_MODIFIER_ID_COUNT++, modifiedModels, modifiedColors, modifiedTextures));
             }
         } else if (packet == UpdateZonePacket.TILE_MESSAGE) {
             buffer.readUnsignedByte();

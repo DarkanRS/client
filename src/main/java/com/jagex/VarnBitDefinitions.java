@@ -7,7 +7,7 @@ public class VarnBitDefinitions {
     public int anInt5763;
     public int anInt5762;
 
-    static void method8217(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, Class476 class476_6) {
+    static void modifyObject(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, ObjectMeshModifier class476_6) {
         Node_Sub31 class282_sub31_8 = null;
         for (Node_Sub31 class282_sub31_9 = (Node_Sub31) Node_Sub31.aClass482_7776.head(); class282_sub31_9 != null; class282_sub31_9 = (Node_Sub31) Node_Sub31.aClass482_7776.next()) {
             if (i_0 == class282_sub31_9.anInt7764 && class282_sub31_9.anInt7762 == i_1 && i_2 == class282_sub31_9.anInt7763 && i_3 == class282_sub31_9.anInt7766) {
