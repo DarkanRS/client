@@ -1591,7 +1591,7 @@ public class PacketDecoder {
             client.USERDETAIL_QUICKCHAT = buffer.readUnsignedByte() == 1;
             context.currentPacket = null;
             return true;
-        } else if (context.currentPacket == ServerProt.IF_OPENSUB_ACTIVE_NPC) {
+        } else if (context.currentPacket == ServerProt.IF_OPENSUB_ACTIVE_PLAYER) {
             int key = buffer.readIntLE();
             int flags = buffer.readUnsignedByte();
             int i_6 = buffer.readIntV1();
@@ -1601,7 +1601,7 @@ public class PacketDecoder {
             int i_10 = buffer.readIntV1();
             int i_11 = buffer.readShortLE();
             Class470.method7825();
-            IdentiKitIndexLoader.openSub(i_9, new Node_Sub44_Sub2(i_7, flags, i_11), new int[]{i_6, i_8, i_10, key}, false);
+            IdentiKitIndexLoader.openSub(i_9, new SubPlayer(i_7, flags, i_11), new int[]{i_6, i_8, i_10, key}, false);
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.CLANSETTINGS_DELTA) {
@@ -2110,7 +2110,7 @@ public class PacketDecoder {
             }
             context.currentPacket = null;
             return true;
-        } else if (context.currentPacket == ServerProt.IF_OPENSUB_ACTIVE_PLAYER) {
+        } else if (context.currentPacket == ServerProt.IF_OPENSUB_ACTIVE_NPC) {
             int key = buffer.readUnsignedShort128();
             int flags = buffer.readIntLE();
             int i_6 = buffer.readUnsignedByteC();
@@ -2120,7 +2120,7 @@ public class PacketDecoder {
             int i_10 = buffer.readInt();
             int i_11 = buffer.readInt();
             Class470.method7825();
-            IdentiKitIndexLoader.openSub(i_7, new Node_Sub44_Sub1(i_9, i_6, key), new int[]{i_11, flags, i_10, i_8}, false);
+            IdentiKitIndexLoader.openSub(i_7, new SubNPC(i_9, i_6, key), new int[]{i_11, flags, i_10, i_8}, false);
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.ADD_IGNORE) {
