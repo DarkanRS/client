@@ -110,8 +110,8 @@ public class Class302 {
         }
     }
 
-    public static long method5363(int i_0) {
-        return (i_0 + 11745) * 86400000L;
+    public static long runeDateToTimestamp(int days) {
+        return (days + 11745) * 86400000L;
     }
 
     public static int method5364(int i_0, int i_1, float f_2) {

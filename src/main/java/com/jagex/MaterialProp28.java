@@ -21,9 +21,9 @@ public class MaterialProp28 extends MaterialProperty {
     }
 
     void method15253(Random random_1, int[][] ints_2, int i_3, int i_4, int i_5, int i_6) {
-        int i_8 = anInt9790 > 0 ? 4096 - Class476.method7931(random_1, anInt9790) : 4096;
+        int i_8 = anInt9790 > 0 ? 4096 - ObjectMeshModifier.method7931(random_1, anInt9790) : 4096;
         int i_9 = anInt9780 * anInt9789 >> 12;
-        int i_10 = anInt9789 - (i_9 > 0 ? Class476.method7931(random_1, i_9) : 0);
+        int i_10 = anInt9789 - (i_9 > 0 ? ObjectMeshModifier.method7931(random_1, i_9) : 0);
         if (i_3 >= Class316.anInt3670) {
             i_3 -= Class316.anInt3670;
         }
@@ -178,8 +178,8 @@ public class MaterialProp28 extends MaterialProperty {
                 Random random_21 = new Random(anInt9782);
                 while (true) {
                     while (true) {
-                        int i_22 = i_14 + Class476.method7931(random_21, i_15 - i_14);
-                        int i_23 = i_16 + Class476.method7931(random_21, i_17 - i_16);
+                        int i_22 = i_14 + ObjectMeshModifier.method7931(random_21, i_15 - i_14);
+                        int i_23 = i_16 + ObjectMeshModifier.method7931(random_21, i_17 - i_16);
                         int i_24 = i_22 + i_8;
                         if (i_24 > Class316.anInt3670) {
                             i_22 = Class316.anInt3670 - i_8;
@@ -272,7 +272,7 @@ public class MaterialProp28 extends MaterialProperty {
                             i_12 = i_13;
                             i_13 = 0;
                             i_7 = i_6;
-                            i_6 = Class476.method7931(random_21, Class316.anInt3670);
+                            i_6 = ObjectMeshModifier.method7931(random_21, Class316.anInt3670);
                             i_5 = i_6 - i_7;
                             i_8 = 0;
                             i_28 = i_5;

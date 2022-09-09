@@ -1,6 +1,6 @@
 package com.jagex;
 
-public class Class534_Sub2 extends Class534 {
+public class MouseMovementJav extends MouseMovementRecord {
 
     static void method12847(int i_0) {
         client.anIntArray7198 = new int[i_0];
@@ -12,7 +12,7 @@ public class Class534_Sub2 extends Class534 {
 
     @Override
     boolean method11434() {
-        return method12842() != null || aLong7076 * 1203484888895588483L * 2966128844247041579L < Utils.time() - 2000L;
+        return method12842() != null || lastTime * 1203484888895588483L * 2966128844247041579L < Utils.time() - 2000L;
     }
 
     MouseRecord method12842() {
@@ -25,16 +25,16 @@ public class Class534_Sub2 extends Class534 {
 
     @Override
     boolean method11423() {
-        return method12842() != null || aLong7076 < Utils.time() - 2000L;
+        return method12842() != null || lastTime < Utils.time() - 2000L;
     }
 
     @Override
-    TCPPacket method11416() {
+    TCPPacket createMouseMovePacket() {
         return TCPPacket.createPacket(ClientProt.MOVE_MOUSE_2, client.GAME_CONNECTION_CONTEXT.outKeys);
     }
 
     @Override
-    void method11413(ByteBuf rsbytebuffer_1, MouseRecord class282_sub53_2) {
+    void writeExtra(ByteBuf rsbytebuffer_1, MouseRecord class282_sub53_2) {
     }
 
     @Override

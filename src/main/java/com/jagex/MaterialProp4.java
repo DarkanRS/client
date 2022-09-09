@@ -126,7 +126,7 @@ public class MaterialProp4 extends MaterialProperty {
             int i_7;
             if (i_5 > 0) {
                 i_6 = anInt9995;
-                i_7 = (Class476.method7931(random_2, 4096) - 2048) * anInt9990 >> 12;
+                i_7 = (ObjectMeshModifier.method7931(random_2, 4096) - 2048) * anInt9990 >> 12;
                 i_6 += i_7 * i_4 >> 12;
                 anIntArray9996[i_5] = i_6 + anIntArray9996[i_5 - 1];
             }
@@ -136,12 +136,12 @@ public class MaterialProp4 extends MaterialProperty {
             for (i_6 = 0; i_6 < anInt9982; i_6++) {
                 if (i_6 > 0) {
                     i_7 = anInt9988;
-                    int i_8 = (Class476.method7931(random_2, 4096) - 2048) * anInt9989 >> 12;
+                    int i_8 = (ObjectMeshModifier.method7931(random_2, 4096) - 2048) * anInt9989 >> 12;
                     i_7 += i_8 * i_3 >> 12;
                     anIntArrayArray9979[i_5][i_6] = anIntArrayArray9979[i_5][i_6 - 1] + i_7;
                 }
 
-                anIntArrayArray9992[i_5][i_6] = anInt9984 > 0 ? 4096 - Class476.method7931(random_2, anInt9984) : 4096;
+                anIntArrayArray9992[i_5][i_6] = anInt9984 > 0 ? 4096 - ObjectMeshModifier.method7931(random_2, anInt9984) : 4096;
             }
 
             anIntArrayArray9979[i_5][anInt9982] = 4096;

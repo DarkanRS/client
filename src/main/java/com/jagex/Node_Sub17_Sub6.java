@@ -2,16 +2,16 @@ package com.jagex;
 
 import com.jagex.clans.settings.ClanSettings;
 
-public class Node_Sub17_Sub6 extends Node_Sub17 {
+public class Node_Sub17_Sub6 extends ClanSettingDeltaUpdate {
 
     boolean aBool10016;
     byte aByte10015;
     byte aByte10014;
     byte aByte10017;
     byte aByte10018;
-    Class348 this$0;
+    ClanSettingsDelta this$0;
 
-    Node_Sub17_Sub6(Class348 class348_1) {
+    Node_Sub17_Sub6(ClanSettingsDelta class348_1) {
         this$0 = class348_1;
     }
 
@@ -52,92 +52,20 @@ public class Node_Sub17_Sub6 extends Node_Sub17 {
     }
 
     @Override
-    void method12253(ByteBuf rsbytebuffer_1) {
+    void applyUpdate(ClanSettings class61_1) {
+        class61_1.allowGuests = aBool10016;
+        class61_1.talkRank = aByte10015;
+        class61_1.kickRank = aByte10014;
+        class61_1.lootshareRank = aByte10017;
+        class61_1.coinShare = aByte10018;
+    }
+
+    @Override
+    void decode(ByteBuf rsbytebuffer_1) {
         aBool10016 = rsbytebuffer_1.readUnsignedByte() == 1;
         aByte10015 = rsbytebuffer_1.readByte();
         aByte10014 = rsbytebuffer_1.readByte();
         aByte10017 = rsbytebuffer_1.readByte();
         aByte10018 = rsbytebuffer_1.readByte();
-    }
-
-    @Override
-    void method12252(ClanSettings class61_1) {
-        class61_1.allowGuests = aBool10016;
-        class61_1.talkRank = aByte10015;
-        class61_1.kickRank = aByte10014;
-        class61_1.lootshareRank = aByte10017;
-        class61_1.coinShare = aByte10018;
-    }
-
-    @Override
-    void method12251(ClanSettings class61_1) {
-        class61_1.allowGuests = aBool10016;
-        class61_1.talkRank = aByte10015;
-        class61_1.kickRank = aByte10014;
-        class61_1.lootshareRank = aByte10017;
-        class61_1.coinShare = aByte10018;
-    }
-
-    @Override
-    void method12249(ByteBuf rsbytebuffer_1) {
-        aBool10016 = rsbytebuffer_1.readUnsignedByte() == 1;
-        aByte10015 = rsbytebuffer_1.readByte();
-        aByte10014 = rsbytebuffer_1.readByte();
-        aByte10017 = rsbytebuffer_1.readByte();
-        aByte10018 = rsbytebuffer_1.readByte();
-    }
-
-    @Override
-    void method12257(ByteBuf rsbytebuffer_1) {
-        aBool10016 = rsbytebuffer_1.readUnsignedByte() == 1;
-        aByte10015 = rsbytebuffer_1.readByte();
-        aByte10014 = rsbytebuffer_1.readByte();
-        aByte10017 = rsbytebuffer_1.readByte();
-        aByte10018 = rsbytebuffer_1.readByte();
-    }
-
-    @Override
-    void method12250(ByteBuf rsbytebuffer_1) {
-        aBool10016 = rsbytebuffer_1.readUnsignedByte() == 1;
-        aByte10015 = rsbytebuffer_1.readByte();
-        aByte10014 = rsbytebuffer_1.readByte();
-        aByte10017 = rsbytebuffer_1.readByte();
-        aByte10018 = rsbytebuffer_1.readByte();
-    }
-
-    @Override
-    void method12256(ClanSettings class61_1) {
-        class61_1.allowGuests = aBool10016;
-        class61_1.talkRank = aByte10015;
-        class61_1.kickRank = aByte10014;
-        class61_1.lootshareRank = aByte10017;
-        class61_1.coinShare = aByte10018;
-    }
-
-    @Override
-    void method12258(ClanSettings class61_1) {
-        class61_1.allowGuests = aBool10016;
-        class61_1.talkRank = aByte10015;
-        class61_1.kickRank = aByte10014;
-        class61_1.lootshareRank = aByte10017;
-        class61_1.coinShare = aByte10018;
-    }
-
-    @Override
-    void method12254(ClanSettings class61_1) {
-        class61_1.allowGuests = aBool10016;
-        class61_1.talkRank = aByte10015;
-        class61_1.kickRank = aByte10014;
-        class61_1.lootshareRank = aByte10017;
-        class61_1.coinShare = aByte10018;
-    }
-
-    @Override
-    void method12255(ClanSettings class61_1) {
-        class61_1.allowGuests = aBool10016;
-        class61_1.talkRank = aByte10015;
-        class61_1.kickRank = aByte10014;
-        class61_1.lootshareRank = aByte10017;
-        class61_1.coinShare = aByte10018;
     }
 }

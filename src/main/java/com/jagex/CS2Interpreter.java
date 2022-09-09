@@ -533,7 +533,7 @@ public class CS2Interpreter {
             case instr6782:
                 method3546(exec);
                 break;
-            case instr6119:
+            case CC_SETLINKACTIVECLANCHANNEL:
                 method741(exec);
                 break;
             case instr6120:
@@ -959,8 +959,8 @@ public class CS2Interpreter {
             case instr6260:
                 method2855(exec);
                 break;
-            case instr6261:
-                method4629(exec);
+            case IF_SETLINKACTIVECLANCHANNEL:
+                ifSetLinkActiveChannel(exec);
                 break;
             case instr6898:
                 method6372(exec);
@@ -3873,7 +3873,7 @@ public class CS2Interpreter {
         CS2Interface underlaydefinition_2 = executor.aBool7022 ? executor.hookedInterface2 : executor.hookedInterface1;
         IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.defs;
         Interface interface_4 = underlaydefinition_2.inter;
-        method5455(icomponentdefinitions_3, executor);
+        ifSetActiveCCLink(icomponentdefinitions_3, executor);
     }
 
     static void method742(CS2Executor executor) {
@@ -5695,7 +5695,7 @@ public class CS2Interpreter {
         if (class537_3 == null) {
             throw new RuntimeException();
         } else {
-            Integer integer_4 = executor.currentClanSettings.method1225(client.CURRENT_GAME.id << 16 | class537_3.baseVar, class537_3.startBit, class537_3.endBit);
+            Integer integer_4 = executor.currentClanSettings.getVarBit(client.CURRENT_GAME.id << 16 | class537_3.baseVar, class537_3.startBit, class537_3.endBit);
             int i_5;
             if (integer_4 == null) {
                 i_5 = 0;
@@ -6181,7 +6181,7 @@ public class CS2Interpreter {
     }
 
     static void fromDate(CS2Executor executor) {
-        executor.stringStack[++executor.stringStackPtr - 1] = Static.method13045(Class302.method5363(executor.intStack[--executor.intStackPtr]), Class223.CURRENT_LANGUAGE.getValue());
+        executor.stringStack[++executor.stringStackPtr - 1] = Static.method13045(Class302.runeDateToTimestamp(executor.intStack[--executor.intStackPtr]), Class223.CURRENT_LANGUAGE.getValue());
     }
 
     static void method4968(CS2Executor executor) {
@@ -7389,7 +7389,7 @@ public class CS2Interpreter {
 
     static void method6741(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
-        executor.intStack[++executor.intStackPtr - 1] = executor.currentClanSettings.anIntArray634[i_2];
+        executor.intStack[++executor.intStackPtr - 1] = executor.currentClanSettings.memberShort1[i_2];
     }
 
     static void method541(CS2Executor executor) {
@@ -7686,7 +7686,7 @@ public class CS2Interpreter {
 
     static void method4194(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
-        executor.intStack[++executor.intStackPtr - 1] = (int) (Class302.method5363(i_2) / 60000L);
+        executor.intStack[++executor.intStackPtr - 1] = (int) (Class302.runeDateToTimestamp(i_2) / 60000L);
     }
 
     static void method6236(CS2Executor executor) {
@@ -8469,11 +8469,11 @@ public class CS2Interpreter {
         executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.fontId;
     }
 
-    static void method4629(CS2Executor executor) {
+    static void ifSetLinkActiveChannel(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
         IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
         Interface interface_4 = Interface.INTERFACES[i_2 >> 16];
-        method5455(icomponentdefinitions_3, executor);
+        ifSetActiveCCLink(icomponentdefinitions_3, executor);
     }
 
     static void method4630(CS2Executor executor) {
@@ -11669,7 +11669,7 @@ public class CS2Interpreter {
         IComponentDefinitions.redrawComponent(icomponentdefinitions_0);
     }
 
-    static void method5455(IComponentDefinitions icomponentdefinitions_0, CS2Executor cs2executor_2) {
+    static void ifSetActiveCCLink(IComponentDefinitions icomponentdefinitions_0, CS2Executor cs2executor_2) {
         String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
         if (popIntArrayParam(string_4, cs2executor_2) != null) {
             string_4 = string_4.substring(0, string_4.length() - 1);

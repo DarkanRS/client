@@ -2,21 +2,21 @@ package com.jagex;
 
 import java.util.Random;
 
-public class Class476 {
+public class ObjectMeshModifier {
 
-    long aLong5627;
+    long id;
 
-    int[] anIntArray5626;
+    int[] modifiedModels;
 
-    short[] aShortArray5628;
+    short[] modifiedColors;
 
-    short[] aShortArray5625;
+    short[] modifiedTextures;
 
-    public Class476(long long_1, int[] ints_3, short[] shorts_4, short[] shorts_5) {
-        aLong5627 = long_1;
-        anIntArray5626 = ints_3;
-        aShortArray5628 = shorts_4;
-        aShortArray5625 = shorts_5;
+    public ObjectMeshModifier(long id, int[] modifiedModels, short[] modifiedColors, short[] modifiedTextures) {
+        this.id = id;
+        this.modifiedModels = modifiedModels;
+        this.modifiedColors = modifiedColors;
+        this.modifiedTextures = modifiedTextures;
     }
 
     public static int method7931(Random random_0, int i_1) {

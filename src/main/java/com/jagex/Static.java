@@ -159,13 +159,13 @@ public class Static {
             class282_sub48_8.anInt8079 = i_9 + i_1 << 9;
             class282_sub48_8.anInt8077 = i_10 + i_2 << 9;
             class282_sub48_8.soundEffectId = objectdefinitions_4.ambientSoundId;
-            class282_sub48_8.aBool8098 = objectdefinitions_4.aBool5696;
+            class282_sub48_8.midiSound = objectdefinitions_4.midiSound;
             class282_sub48_8.anInt8105 = objectdefinitions_4.ambientSoundHearDistance << 9;
             class282_sub48_8.anInt8089 = objectdefinitions_4.ambientSoundVolume;
             class282_sub48_8.anInt8072 = objectdefinitions_4.anInt5667;
             class282_sub48_8.anInt8101 = objectdefinitions_4.anInt5698;
-            class282_sub48_8.anIntArray8102 = objectdefinitions_4.audioTracks;
-            class282_sub48_8.aBool8103 = objectdefinitions_4.aBool5700;
+            class282_sub48_8.timedEffects = objectdefinitions_4.soundEffectsTimed;
+            class282_sub48_8.midiTimedEffects = objectdefinitions_4.midiSoundEffectsTimed;
             class282_sub48_8.anInt8094 = objectdefinitions_4.anInt5709;
             class282_sub48_8.anInt8093 = objectdefinitions_4.anInt5708;
             class282_sub48_8.anInt8081 = objectdefinitions_4.anInt5694 << 9;
@@ -173,7 +173,7 @@ public class Static {
                 class282_sub48_8.aBool8092 = true;
                 class282_sub48_8.method13426();
             }
-            if (class282_sub48_8.anIntArray8102 != null) {
+            if (class282_sub48_8.timedEffects != null) {
                 class282_sub48_8.anInt8080 = class282_sub48_8.anInt8072 + (int) (Math.random() * (class282_sub48_8.anInt8101 - class282_sub48_8.anInt8072));
             }
             Node_Sub48.aClass482_8073.append(class282_sub48_8);
@@ -188,7 +188,7 @@ public class Static {
                 class282_sub48_8.anInt8079 = npcdefinitions_11.size + i_1 << 9;
                 class282_sub48_8.anInt8077 = i_2 + npcdefinitions_11.size << 9;
                 class282_sub48_8.soundEffectId = RankSetting.method15433(npc_5);
-                class282_sub48_8.aBool8098 = npcdefinitions_11.aBool4872;
+                class282_sub48_8.midiSound = npcdefinitions_11.aBool4872;
                 class282_sub48_8.anInt8105 = npcdefinitions_11.specialByte << 9;
                 class282_sub48_8.anInt8089 = npcdefinitions_11.anInt4909;
                 class282_sub48_8.anInt8094 = npcdefinitions_11.anInt4919;
@@ -201,7 +201,7 @@ public class Static {
             class282_sub48_8.anInt8079 = i_1 + player_6.getSize() << 9;
             class282_sub48_8.anInt8077 = i_2 + player_6.getSize() << 9;
             class282_sub48_8.soundEffectId = Class149_Sub2.method14610(player_6);
-            class282_sub48_8.aBool8098 = player_6.isTransformedNPC;
+            class282_sub48_8.midiSound = player_6.isTransformedNPC;
             class282_sub48_8.anInt8105 = player_6.isNpc << 9;
             class282_sub48_8.anInt8089 = player_6.specialByte;
             class282_sub48_8.anInt8094 = 256;

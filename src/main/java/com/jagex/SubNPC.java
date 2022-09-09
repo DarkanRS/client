@@ -1,10 +1,10 @@
 package com.jagex;
 
-public class Node_Sub44_Sub1 extends SubInterface {
+public class SubNPC extends SubInterface {
 
     int anInt9460;
 
-    public Node_Sub44_Sub1(int i_1, int i_2, int i_3) {
+    public SubNPC(int i_1, int i_2, int i_3) {
         super(i_1, i_2);
         anInt9460 = i_3;
     }

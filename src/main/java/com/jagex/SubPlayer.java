@@ -1,10 +1,10 @@
 package com.jagex;
 
-public class Node_Sub44_Sub2 extends SubInterface {
+public class SubPlayer extends SubInterface {
 
     int anInt9482;
 
-    public Node_Sub44_Sub2(int i_1, int i_2, int i_3) {
+    public SubPlayer(int i_1, int i_2, int i_3) {
         super(i_1, i_2);
         anInt9482 = i_3;
     }

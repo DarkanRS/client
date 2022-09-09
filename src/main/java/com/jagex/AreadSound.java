@@ -44,7 +44,7 @@ public class AreadSound {
 
     public static int[] method4799(int i_0) {
         int[] ints_2 = new int[3];
-        Class155.method2634(Class302.method5363(i_0));
+        Class155.method2634(Class302.runeDateToTimestamp(i_0));
         ints_2[0] = Class407.aCalendar4848.get(Calendar.DATE);
         ints_2[1] = Class407.aCalendar4848.get(Calendar.MONTH);
         ints_2[2] = Class407.aCalendar4848.get(Calendar.YEAR);
@@ -64,7 +64,7 @@ public class AreadSound {
                     return;
                 }
                 string_2 = Static.method6380(class282_sub50_sub7_3);
-                int[] ints_4 = Class534_Sub1.method12815(class282_sub50_sub7_3);
+                int[] ints_4 = MouseMovementICMP.method12815(class282_sub50_sub7_3);
                 if (ints_4 != null) {
                     string_2 += Class15.method547(ints_4);
                 }

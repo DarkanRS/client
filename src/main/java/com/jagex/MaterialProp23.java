@@ -16,7 +16,7 @@ public class MaterialProp23 extends MaterialProperty {
     static void pulseWorldConnection() {
         if (client.REBOOT_TIMER > 1) {
             --client.REBOOT_TIMER;
-            client.anInt7397 = client.anInt7347;
+            client.anInt7397 = client.CS2_TIMER_COUNT;
         }
         if (client.GAME_CONNECTION_CONTEXT.aBool2298) {
             client.GAME_CONNECTION_CONTEXT.aBool2298 = false;
@@ -144,7 +144,7 @@ public class MaterialProp23 extends MaterialProperty {
                             client.anInt7427 = -1;
                         }
                         ServerEnvironment.pulseSubInterfaces();
-                        ++client.anInt7347;
+                        ++client.CS2_TIMER_COUNT;
                         TCPPacket tcpmessage_8;
                         if (client.aBool7375) {
                             tcpmessage_8 = TCPPacket.createPacket(ClientProt.WORLD_MAP_CLICK, client.GAME_CONNECTION_CONTEXT.outKeys);

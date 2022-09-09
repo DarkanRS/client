@@ -121,7 +121,7 @@ public enum GameState {
 			}
 
 			if (state == GameState.UNK_5) {
-				Class348.method6175(client.GAME_STATE == GameState.IN_ACCOUNT_CREATION || client.GAME_STATE == GameState.UNK_8 || client.BASE_WINDOW_ID != QuickchatFiller.ENTITY_DEFAULTS.loginWindow);
+				ClanSettingsDelta.method6175(client.GAME_STATE == GameState.IN_ACCOUNT_CREATION || client.GAME_STATE == GameState.UNK_8 || client.BASE_WINDOW_ID != QuickchatFiller.ENTITY_DEFAULTS.loginWindow);
 			}
 
 			if (state == GameState.UNK_0) {

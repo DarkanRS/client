@@ -368,7 +368,7 @@ public class IndexLoaders {
         }
 
         if (LoadingStage.aClass387_4698 == LOADING_STAGE) {
-            Class348.method6175(true);
+            ClanSettingsDelta.method6175(true);
         }
 
         if (LoadingStage.aClass387_4710 == LOADING_STAGE) {

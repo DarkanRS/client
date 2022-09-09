@@ -145,7 +145,7 @@ public class PacketDecoder {
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.CLANCHANNEL_FULL) {
-            client.anInt7395 = client.anInt7347;
+            client.CLANCHANNEL_LAST_RECEIVED = client.CS2_TIMER_COUNT;
             boolean nonGuest = buffer.readUnsignedByte() == 1;
             if (context.currentPacketSize == 1) {
                 if (nonGuest) {
@@ -170,7 +170,7 @@ public class PacketDecoder {
                 --buffer.index;
                 client.GRAND_EXCHANGE_SLOTS[key] = new GrandExchangeSlot(buffer);
             }
-            client.anInt7320 = client.anInt7347;
+            client.anInt7320 = client.CS2_TIMER_COUNT;
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.IF_SETANGLE) {
@@ -299,7 +299,7 @@ public class PacketDecoder {
             return true;
         } else if (context.currentPacket == ServerProt.RUN_ENERGY) {
             client.RUN_ENERGY = buffer.readUnsignedByte();
-            client.anInt7397 = client.anInt7347;
+            client.anInt7397 = client.CS2_TIMER_COUNT;
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.IF_SETPLAYERHEAD_OTHER) {
@@ -741,7 +741,7 @@ public class PacketDecoder {
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.FRIENDS_CHAT_CHANNEL) {
-            client.anInt7179 = client.anInt7347;
+            client.anInt7179 = client.CS2_TIMER_COUNT;
             if (context.currentPacketSize == 0) {
                 client.FC_NAME = null;
                 client.FC_OWNER_NAME = null;
@@ -859,7 +859,7 @@ public class PacketDecoder {
             return true;
         } else if (context.currentPacket == ServerProt.PLAYER_WEIGHT) {
             client.RUN_WEIGHT = buffer.readShort();
-            client.anInt7397 = client.anInt7347;
+            client.anInt7397 = client.CS2_TIMER_COUNT;
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.aClass375_4399) {
@@ -1133,7 +1133,7 @@ public class PacketDecoder {
             } else {
                 client.REBOOT_TIMER = buffer.readUnsignedShort() * 30;
             }
-            client.anInt7397 = client.anInt7347;
+            client.anInt7397 = client.CS2_TIMER_COUNT;
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.MIDI_SONG_LOCATION) {
@@ -1325,7 +1325,7 @@ public class PacketDecoder {
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.CLANSETTINGS_FULL) {
-            client.anInt7192 = client.anInt7347;
+            client.LAST_CLANSETTINGS_UPDATE = client.CS2_TIMER_COUNT;
             boolean bool_91 = buffer.readUnsignedByte() == 1;
             if (context.currentPacketSize == 1) {
                 if (bool_91) {
@@ -1443,7 +1443,7 @@ public class PacketDecoder {
                         if (username.equals(VertexNormal.MY_PLAYER.displayName)) {
                             Class48_Sub2.MY_PLAYER_FC_RANK = rank;
                         }
-                        client.anInt7179 = client.anInt7347;
+                        client.anInt7179 = client.CS2_TIMER_COUNT;
                         context.currentPacket = null;
                         return true;
                     }
@@ -1466,7 +1466,7 @@ public class PacketDecoder {
                     Class48_Sub2.MY_PLAYER_FC_RANK = rank;
                 }
             }
-            client.anInt7179 = client.anInt7347;
+            client.anInt7179 = client.CS2_TIMER_COUNT;
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.IF_SETHIDE) {
@@ -1477,7 +1477,7 @@ public class PacketDecoder {
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.CLANCHANNEL_DELTA) {
-            client.anInt7395 = client.anInt7347;
+            client.CLANCHANNEL_LAST_RECEIVED = client.CS2_TIMER_COUNT;
             boolean bool_91 = buffer.readUnsignedByte() == 1;
             ChangeClanSetting changeClanSetting = new ChangeClanSetting(buffer);
             ClanChannel clanChannel;
@@ -1591,7 +1591,7 @@ public class PacketDecoder {
             client.USERDETAIL_QUICKCHAT = buffer.readUnsignedByte() == 1;
             context.currentPacket = null;
             return true;
-        } else if (context.currentPacket == ServerProt.IF_OPENSUB_ACTIVE_NPC) {
+        } else if (context.currentPacket == ServerProt.IF_OPENSUB_ACTIVE_PLAYER) {
             int key = buffer.readIntLE();
             int flags = buffer.readUnsignedByte();
             int i_6 = buffer.readIntV1();
@@ -1601,20 +1601,20 @@ public class PacketDecoder {
             int i_10 = buffer.readIntV1();
             int i_11 = buffer.readShortLE();
             Class470.method7825();
-            IdentiKitIndexLoader.openSub(i_9, new Node_Sub44_Sub2(i_7, flags, i_11), new int[]{i_6, i_8, i_10, key}, false);
+            IdentiKitIndexLoader.openSub(i_9, new SubPlayer(i_7, flags, i_11), new int[]{i_6, i_8, i_10, key}, false);
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.CLANSETTINGS_DELTA) {
-            client.anInt7192 = client.anInt7347;
-            boolean bool_91 = buffer.readUnsignedByte() == 1;
-            Class348 class348_97 = new Class348(buffer);
-            ClanSettings class61_99;
-            if (bool_91) {
-                class61_99 = QuickchatFiller.CLAN_SETTINGS;
+            client.LAST_CLANSETTINGS_UPDATE = client.CS2_TIMER_COUNT;
+            boolean affined = buffer.readUnsignedByte() == 1;
+            ClanSettingsDelta delta = new ClanSettingsDelta(buffer);
+            ClanSettings settings;
+            if (affined) {
+                settings = QuickchatFiller.CLAN_SETTINGS;
             } else {
-                class61_99 = Node_Sub13.GUEST_CLAN_SETTINGS;
+                settings = Node_Sub13.GUEST_CLAN_SETTINGS;
             }
-            class348_97.method6173(class61_99);
+            delta.applyUpdates(settings);
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.MINIMAP_FLAG) {
@@ -1739,7 +1739,7 @@ public class PacketDecoder {
             return true;
         } else if (context.currentPacket == ServerProt.FRIENDLIST_LOADED) {
             client.anInt7434 = 1;
-            client.anInt7386 = client.anInt7347;
+            client.anInt7386 = client.CS2_TIMER_COUNT;
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.IF_SETPLAYERHEAD) {
@@ -2008,7 +2008,7 @@ public class PacketDecoder {
                 }
             }
             client.anInt7434 = 2;
-            client.anInt7386 = client.anInt7347;
+            client.anInt7386 = client.CS2_TIMER_COUNT;
             boolean bool_91 = false;
             int flags = client.FRIEND_COUNT;
             while (flags > 0) {
@@ -2110,7 +2110,7 @@ public class PacketDecoder {
             }
             context.currentPacket = null;
             return true;
-        } else if (context.currentPacket == ServerProt.IF_OPENSUB_ACTIVE_PLAYER) {
+        } else if (context.currentPacket == ServerProt.IF_OPENSUB_ACTIVE_NPC) {
             int key = buffer.readUnsignedShort128();
             int flags = buffer.readIntLE();
             int i_6 = buffer.readUnsignedByteC();
@@ -2120,7 +2120,7 @@ public class PacketDecoder {
             int i_10 = buffer.readInt();
             int i_11 = buffer.readInt();
             Class470.method7825();
-            IdentiKitIndexLoader.openSub(i_7, new Node_Sub44_Sub1(i_9, i_6, key), new int[]{i_11, flags, i_10, i_8}, false);
+            IdentiKitIndexLoader.openSub(i_7, new SubNPC(i_9, i_6, key), new int[]{i_11, flags, i_10, i_8}, false);
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.ADD_IGNORE) {
@@ -2145,7 +2145,7 @@ public class PacketDecoder {
                     }
                 }
             }
-            client.anInt7386 = client.anInt7347;
+            client.anInt7386 = client.CS2_TIMER_COUNT;
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.CLIENT_SETVARCSTR_LARGE) {
@@ -2244,7 +2244,7 @@ public class PacketDecoder {
                 ignored.lastDisplayName = buffer.readString();
                 ignored.temporary = false;
             }
-            client.anInt7386 = client.anInt7347;
+            client.anInt7386 = client.CS2_TIMER_COUNT;
             context.currentPacket = null;
             return true;
         } else if (context.currentPacket == ServerProt.IF_SETRETEX) {
@@ -2476,63 +2476,56 @@ public class PacketDecoder {
                 }
             }
         } else if (packet == UpdateZonePacket.CUSTOMIZE_OBJECT) {
-            int i_3 = buffer.readInt();
-            ObjectDefinition objectdefinitions_32 = IndexLoaders.MAP_REGION_DECODER.method4436().getObjectDefs(i_3);
-            int i_5 = buffer.readUnsignedByte128();
-            int i_6 = i_5 >> 2;
-            int i_7 = client.OBJECT_TYPE_SLOTS[i_6];
-            int i_8 = buffer.readUnsignedByte();
-            int i_9 = buffer.readUnsignedByte128();
-            int i_10 = (i_9 >> 4 & 0x7) + Static.UPDATE_ZONE_X;
-            int i_11 = (i_9 & 0x7) + Class158_Sub1_Sub2.UPDATE_ZONE_Y;
-            if (i_6 == ObjectType.GROUND_INTERACT.id) {
-                i_6 = ObjectType.SCENERY_INTERACT.id;
-            }
-            int i_23 = 0;
-            if (objectdefinitions_32.types != null) {
-                int i_24 = -1;
-                for (int i_14 = 0; i_14 < objectdefinitions_32.types.length; i_14++) {
-                    if (i_6 == objectdefinitions_32.types[i_14]) {
-                        i_24 = i_14;
+            int objectId = buffer.readInt();
+            ObjectDefinition objectDef = IndexLoaders.MAP_REGION_DECODER.method4436().getObjectDefs(objectId);
+            int hash = buffer.readUnsignedByte128();
+            int type = hash >> 2;
+            int slot = client.OBJECT_TYPE_SLOTS[type];
+            int modifierHash = buffer.readUnsignedByte();
+            int coords = buffer.readUnsignedByte128();
+            int x = (coords >> 4 & 0x7) + Static.UPDATE_ZONE_X;
+            int y = (coords & 0x7) + Class158_Sub1_Sub2.UPDATE_ZONE_Y;
+            if (type == ObjectType.GROUND_INTERACT.id)
+                type = ObjectType.SCENERY_INTERACT.id;
+            int modelSize = 0;
+            if (objectDef.types != null) {
+                int tId = -1;
+                for (int i = 0; i < objectDef.types.length; i++) {
+                    if (type == objectDef.types[i]) {
+                        tId = i;
                         break;
                     }
                 }
-                i_23 = objectdefinitions_32.modelIds[i_24].length;
+                modelSize = objectDef.modelIds[tId].length;
             }
-            int i_24 = 0;
-            if (objectdefinitions_32.modifiedColors != null) {
-                i_24 = objectdefinitions_32.modifiedColors.length;
-            }
-            int i_14 = 0;
-            if (objectdefinitions_32.modifiedTextures != null) {
-                i_14 = objectdefinitions_32.modifiedTextures.length;
-            }
-            if ((i_8 & 0x1) == 1) {
-                VarnBitDefinitions.method8217(Class272.UPDATE_ZONE_PLANE, i_10, i_11, i_7, i_3, i_6, null);
+            int modifiedColorSize = 0;
+            if (objectDef.modifiedColors != null)
+                modifiedColorSize = objectDef.modifiedColors.length;
+            int modifiedTextureSize = 0;
+            if (objectDef.modifiedTextures != null)
+                modifiedTextureSize = objectDef.modifiedTextures.length;
+            if ((modifierHash & 0x1) == 1) {
+                VarnBitDefinitions.modifyObject(Class272.UPDATE_ZONE_PLANE, x, y, slot, objectId, type, null);
             } else {
-                int[] ints_28 = null;
-                if ((i_8 & 0x2) == 2) {
-                    ints_28 = new int[i_23];
-                    for (int i_16 = 0; i_16 < i_23; i_16++) {
-                        ints_28[i_16] = buffer.readInt();
-                    }
+                int[] modifiedModels = null;
+                if ((modifierHash & 0x2) == 2) {
+                    modifiedModels = new int[modelSize];
+                    for (int i = 0; i < modelSize; i++)
+                        modifiedModels[i] = buffer.readInt();
                 }
-                short[] shorts_29 = null;
-                if ((i_8 & 0x4) == 4) {
-                    shorts_29 = new short[i_24];
-                    for (int i_30 = 0; i_30 < i_24; i_30++) {
-                        shorts_29[i_30] = (short) buffer.readUnsignedShort();
-                    }
+                short[] modifiedColors = null;
+                if ((modifierHash & 0x4) == 4) {
+                    modifiedColors = new short[modifiedColorSize];
+                    for (int i = 0; i < modifiedColorSize; i++)
+                        modifiedColors[i] = (short) buffer.readUnsignedShort();
                 }
-                short[] shorts_37 = null;
-                if ((i_8 & 0x8) == 8) {
-                    shorts_37 = new short[i_14];
-                    for (int i_18 = 0; i_18 < i_14; i_18++) {
-                        shorts_37[i_18] = (short) buffer.readUnsignedShort();
-                    }
+                short[] modifiedTextures = null;
+                if ((modifierHash & 0x8) == 8) {
+                    modifiedTextures = new short[modifiedTextureSize];
+                    for (int i = 0; i < modifiedTextureSize; i++)
+                        modifiedTextures[i] = (short) buffer.readUnsignedShort();
                 }
-                VarnBitDefinitions.method8217(Class272.UPDATE_ZONE_PLANE, i_10, i_11, i_7, i_3, i_6, new Class476(Node_Sub31.aLong7777, ints_28, shorts_29, shorts_37));
-                ++Node_Sub31.aLong7777;
+                VarnBitDefinitions.modifyObject(Class272.UPDATE_ZONE_PLANE, x, y, slot, objectId, type, new ObjectMeshModifier(Node_Sub31.OBJECT_MESH_MODIFIER_ID_COUNT++, modifiedModels, modifiedColors, modifiedTextures));
             }
         } else if (packet == UpdateZonePacket.TILE_MESSAGE) {
             buffer.readUnsignedByte();

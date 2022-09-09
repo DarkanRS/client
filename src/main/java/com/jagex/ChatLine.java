@@ -50,7 +50,7 @@ public class ChatLine {
         }
         CHAT_LINES[0] = line;
         ++NUM_CHAT_LINES;
-        client.anInt7391 = client.anInt7347;
+        client.anInt7391 = client.CS2_TIMER_COUNT;
     }
 
     public static int getLength(String string_0) {

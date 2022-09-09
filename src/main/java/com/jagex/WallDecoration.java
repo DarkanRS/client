@@ -21,63 +21,59 @@ public class WallDecoration extends GraphNode_Sub1_Sub4 implements WorldObject {
         Class532.anInt7068 = i_3;
     }
 
-    static void method16087(PathingEntity animable_0) {
-        if (animable_0.anIntArray10335 != null || animable_0.anIntArray10362 != null) {
-            boolean bool_2 = true;
-            CoordGrid coordgrid_3 = IndexLoaders.MAP_REGION_DECODER.getBase();
-            for (int i_4 = 0; i_4 < animable_0.anIntArray10335.length; i_4++) {
-                int i_5 = -1;
-                if (animable_0.anIntArray10335 != null) {
-                    i_5 = animable_0.anIntArray10335[i_4];
+    static void method16087(PathingEntity entity) {
+        if (entity.modelRotators != null || entity.modelRotations != null) {
+        	boolean updated = true;
+            CoordGrid region = IndexLoaders.MAP_REGION_DECODER.getBase();
+            for (int slot = 0; slot < entity.modelRotators.length; slot++) {
+                int modVal = -1;
+                if (entity.modelRotators != null) {
+                    modVal = entity.modelRotators[slot];
                 }
-                if (i_5 == -1) {
-                    if (!animable_0.method15798(i_4, -1)) {
-                        bool_2 = false;
-                    }
+                if (modVal == -1) {
+                    if (!entity.rotate(slot, -1))
+                        updated = false;
                 } else {
-                    bool_2 = false;
-                    boolean bool_6 = false;
-                    boolean bool_7 = false;
-                    Vector3 vector3_8 = animable_0.method11166().coords;
-                    int i_9;
-                    int i_10;
-                    int i_11;
-                    if ((i_5 & -1073741824) == -1073741824) {
-                        i_11 = i_5 & 0xfffffff;
-                        int i_12 = i_11 >> 14;
-                        int i_13 = i_11 & 0x3fff;
-                        i_9 = (int) vector3_8.x - ((i_12 - coordgrid_3.x) * 512 + 256);
-                        i_10 = (int) vector3_8.z - ((i_13 - coordgrid_3.y) * 512 + 256);
+                    updated = false;
+                    Vector3 entityCoords = entity.method11166().coords;
+                    int xOff;
+                    int yOff;
+                    if ((modVal & -0x40000000) == -0x40000000) {
+                        int hash = modVal & 0xfffffff;
+                        int x = hash >> 14;
+                        int y = hash & 0x3fff;
+                        xOff = (int) entityCoords.x - ((x - region.x) * 512 + 256);
+                        yOff = (int) entityCoords.z - ((y - region.y) * 512 + 256);
                     } else {
-                        Vector3 vector3_15;
-                        if ((i_5 & 0x8000) != 0) {
-                            i_11 = i_5 & 0x7fff;
-                            PlayerEntity player_14 = client.players[i_11];
-                            if (player_14 == null) {
-                                animable_0.method15798(i_4, -1);
+                        Vector3 targCoords;
+                        if ((modVal & 0x8000) != 0) {
+                            int pid = modVal & 0x7fff;
+                            PlayerEntity player = client.players[pid];
+                            if (player == null) {
+                                entity.rotate(slot, -1);
                                 continue;
                             }
-                            vector3_15 = player_14.method11166().coords;
+                            targCoords = player.method11166().coords;
                         } else {
-                            ObjectNode class282_sub47_16 = (ObjectNode) client.NPC_MAP.get(i_5);
+                            ObjectNode class282_sub47_16 = (ObjectNode) client.NPC_MAP.get(modVal);
                             if (class282_sub47_16 == null) {
-                                animable_0.method15798(i_4, -1);
+                                entity.rotate(slot, -1);
                                 continue;
                             }
                             NPCEntity npc_17 = (NPCEntity) class282_sub47_16.anObject8068;
-                            vector3_15 = npc_17.method11166().coords;
+                            targCoords = npc_17.method11166().coords;
                         }
-                        i_9 = (int) vector3_8.x - (int) vector3_15.x;
-                        i_10 = (int) vector3_8.z - (int) vector3_15.z;
+                        xOff = (int) entityCoords.x - (int) targCoords.x;
+                        yOff = (int) entityCoords.z - (int) targCoords.z;
                     }
-                    if (i_9 != 0 || i_10 != 0) {
-                        animable_0.method15798(i_4, (int) (Math.atan2(i_9, i_10) * 2607.5945876176133D) & 0x3fff);
+                    if (xOff != 0 || yOff != 0) {
+                        entity.rotate(slot, (int) (Math.atan2(xOff, yOff) * 2607.5945876176133D) & 0x3fff);
                     }
                 }
             }
-            if (bool_2) {
-                animable_0.anIntArray10335 = null;
-                animable_0.anIntArray10362 = null;
+            if (updated) {
+                entity.modelRotators = null;
+                entity.modelRotations = null;
             }
         }
     }
@@ -127,7 +123,7 @@ public class WallDecoration extends GraphNode_Sub1_Sub4 implements WorldObject {
         return aClass123_10501.method2121();
     }
 
-    public void method16082(Class476 class476_1) {
+    public void method16082(ObjectMeshModifier class476_1) {
         aClass123_10501.method2116(class476_1);
     }
 

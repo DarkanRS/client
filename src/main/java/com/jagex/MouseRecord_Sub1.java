@@ -80,7 +80,7 @@ public class MouseRecord_Sub1 extends MouseRecord {
     }
 
     @Override
-    public long method13471() {
+    public long getTime() {
         return time;
     }
 

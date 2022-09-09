@@ -410,40 +410,40 @@ public class NPCUpdate {
                 }
             }
             if ((i_4 & 0x40000) != 0) {
-                int i_14 = npc.definitions.headModels.length;
-                int i_6 = 0;
+                int modelLen = npc.definitions.headModels.length;
+                int colorLen = 0;
                 if (npc.definitions.modifiedColors != null) {
-                    i_6 = npc.definitions.modifiedColors.length;
+                    colorLen = npc.definitions.modifiedColors.length;
                 }
-                byte b_25 = 0;
+                int textureLen = 0;
                 if (npc.definitions.modifiedTextures != null) {
-                    i_6 = npc.definitions.modifiedTextures.length;
+                	textureLen = npc.definitions.modifiedTextures.length;
                 }
                 int i_8 = buffer.readUnsignedByte128();
                 if ((i_8 & 0x1) != 1) {
-                    int[] ints_18 = null;
+                    int[] modelModifiers = null;
                     if ((i_8 & 0x2) == 2) {
-                        ints_18 = new int[i_14];
-                        for (int i_10 = 0; i_10 < i_14; i_10++) {
-                            ints_18[i_10] = buffer.readBigSmart();
+                        modelModifiers = new int[modelLen];
+                        for (int i_10 = 0; i_10 < modelLen; i_10++) {
+                            modelModifiers[i_10] = buffer.readBigSmart();
                         }
                     }
-                    short[] shorts_19 = null;
+                    short[] colorModifiers = null;
                     if ((i_8 & 0x4) == 4) {
-                        shorts_19 = new short[i_6];
-                        for (int i_11 = 0; i_11 < i_6; i_11++) {
-                            shorts_19[i_11] = (short) buffer.readUnsignedShort();
+                        colorModifiers = new short[colorLen];
+                        for (int i_11 = 0; i_11 < colorLen; i_11++) {
+                            colorModifiers[i_11] = (short) buffer.readUnsignedShort();
                         }
                     }
-                    short[] shorts_20 = null;
+                    short[] textureModifiers = null;
                     if ((i_8 & 0x8) == 8) {
-                        shorts_20 = new short[b_25];
-                        for (int i_12 = 0; i_12 < b_25; i_12++) {
-                            shorts_20[i_12] = (short) buffer.readUnsignedShortLE128();
+                        textureModifiers = new short[textureLen];
+                        for (int i_12 = 0; i_12 < textureLen; i_12++) {
+                            textureModifiers[i_12] = (short) buffer.readUnsignedShortLE128();
                         }
                     }
                     long long_21 = i_2 | (long) (++npc.headMeshModifierCount - 1) << 32;
-                    new NPCMeshModifier(long_21, ints_18, shorts_19, shorts_20);
+                    new NPCMeshModifier(long_21, modelModifiers, colorModifiers, textureModifiers);
                 }
             }
             if ((i_4 & 0x10000) != 0) {
@@ -484,19 +484,19 @@ public class NPCUpdate {
             }
             if ((i_4 & 0x4000) != 0) {
                 int i_14 = buffer.readUnsigned128Byte();
-                int[] ints_15 = new int[i_14];
-                int[] ints_16 = new int[i_14];
+                int[] rotationData = new int[i_14];
+                int[] slotFlags = new int[i_14];
                 for (int i_8 = 0; i_8 < i_14; i_8++) {
                     int i_9 = buffer.readUnsignedShortLE128();
-                    if ((i_9 & 0xc000) == 49152) {
+                    if ((i_9 & 0xc000) == 0xc000) {
                         int i_10 = buffer.readUnsignedShort();
-                        ints_15[i_8] = i_9 << 16 | i_10;
+                        rotationData[i_8] = i_9 << 16 | i_10;
                     } else {
-                        ints_15[i_8] = i_9;
+                        rotationData[i_8] = i_9;
                     }
-                    ints_16[i_8] = buffer.readUnsignedShortLE128();
+                    slotFlags[i_8] = buffer.readUnsignedShortLE128();
                 }
-                npc.method15797(ints_15, ints_16);
+                npc.applyModelRotations(rotationData, slotFlags);
             }
             if ((i_4 & 0x20) != 0) {
                 int i_14 = buffer.readUnsignedShort();

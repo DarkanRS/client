@@ -43,7 +43,7 @@ public class Class316 {
             }
             for (i_5 = 0; i_5 < 255; i_5++) {
                 int i_6 = 255 - i_5;
-                int i_7 = Class476.method7931(random_4, i_6);
+                int i_7 = ObjectMeshModifier.method7931(random_4, i_6);
                 byte b_8 = bytes_3[i_7];
                 bytes_3[i_7] = bytes_3[i_6];
                 bytes_3[i_6] = bytes_3[511 - i_5] = b_8;

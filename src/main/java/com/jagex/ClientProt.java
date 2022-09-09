@@ -41,7 +41,7 @@ public enum ClientProt {
     UNK_37(37, 2), //index 36 and some hook/click type related
     OBJECT_OP3(38, 9, true),
     UNUSED_CLAN_OP(39, -1), //Packet is referenced by one CS2 instruction but that CS2 instruction is present in no scripts
-    MOVE_MOUSE(40, -1),
+    MOVE_MOUSE_HW(40, -1),
     IF_ON_NPC(41, 11, true),
     MINI_WALK(42, 18, true),
     GROUND_ITEM_OP5(43, 7, true),

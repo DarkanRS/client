@@ -24,22 +24,22 @@ public class Class373 {
             }
             while (true) {
                 while (true) {
-                    MouseRecord_Sub1 class282_sub53_sub1_3 = Class236.aQueue2914.poll();
-                    if (class282_sub53_sub1_3 == null) {
+                    MouseRecord_Sub1 record = Class236.aQueue2914.poll();
+                    if (record == null) {
                         return;
                     }
                     if (point_2 != null && Class351.gameCanvas.isShowing() && IFSubObjectPosition.appletHasFocus) {
-                        class282_sub53_sub1_3.method14732(point_2);
-                        if (!class282_sub53_sub1_3.method14731() && class282_sub53_sub1_3.getX() < ChangeClanSetting.BASE_WINDOW_WIDTH && class282_sub53_sub1_3.getY() < Engine.BASE_WINDOW_HEIGHT * -969250379 && class282_sub53_sub1_3.getX() >= 0 && class282_sub53_sub1_3.getY() >= 0) {
-                            int i_4 = class282_sub53_sub1_3.getClickType();
-                            if (class282_sub53_sub1_3.getClickType() == -1) {
-                                Class236.aClass534_Sub1_2913.method11410(class282_sub53_sub1_3);
+                        record.method14732(point_2);
+                        if (!record.method14731() && record.getX() < ChangeClanSetting.BASE_WINDOW_WIDTH && record.getY() < Engine.BASE_WINDOW_HEIGHT * -969250379 && record.getX() >= 0 && record.getY() >= 0) {
+                            int i_4 = record.getClickType();
+                            if (record.getClickType() == -1) {
+                                Class236.MOUSE_MOVEMENT_CANVAS.addRecord(record);
                             } else if (Class298.method5304(i_4)) {
-                                Class236.aClass534_Sub1_2913.method12809(class282_sub53_sub1_3);
+                                Class236.MOUSE_MOVEMENT_CANVAS.method12809(record);
                             }
                         }
                     } else {
-                        class282_sub53_sub1_3.cache();
+                        record.cache();
                     }
                 }
             }

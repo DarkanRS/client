@@ -129,7 +129,7 @@ public class client extends Engine {
 	public static int RUN_ENERGY;
 	public static int RUN_WEIGHT;
 	public static IComponentDefinitions GAME_SCREEN_INTERFACE;
-	public static int anInt7347;
+	public static int CS2_TIMER_COUNT;
 	public static int anInt7391;
 	public static int anInt7399;
 	public static boolean NEEDS_VARC_SAVE;
@@ -283,8 +283,8 @@ public class client extends Engine {
 	static int CLAN_VAR_COUNTER;
 	static int anInt7386;
 	static int anInt7179;
-	static int anInt7192;
-	static int anInt7395;
+	static int LAST_CLANSETTINGS_UPDATE;
+	static int CLANCHANNEL_LAST_RECEIVED;
 	static int anInt7320;
 	static int anInt7397;
 	static long aLong7401;
@@ -469,7 +469,7 @@ public class client extends Engine {
 		anInt7184 = 0;
 		aBool7374 = false;
 		aBool7375 = false;
-		anInt7347 = 1;
+		CS2_TIMER_COUNT = 1;
 		anIntArray7379 = new int[32];
 		anInt7453 = 0;
 		anIntArray7381 = new int[32];
@@ -485,8 +485,8 @@ public class client extends Engine {
 		anInt7391 = 0;
 		anInt7386 = 0;
 		anInt7179 = 0;
-		anInt7192 = 0;
-		anInt7395 = 0;
+		LAST_CLANSETTINGS_UPDATE = 0;
+		CLANCHANNEL_LAST_RECEIVED = 0;
 		anInt7320 = 0;
 		anInt7397 = 0;
 		anInt7399 = 0;
@@ -1647,14 +1647,14 @@ public class client extends Engine {
 								PENDING_HOOK_REQUESTS.append(hookRequest);
 							}
 
-							if (anInt7192 > iCompDef.anInt1442 && iCompDef.anObjectArray1383 != null) {
+							if (LAST_CLANSETTINGS_UPDATE > iCompDef.anInt1442 && iCompDef.anObjectArray1383 != null) {
 								HookRequest hookRequest = new HookRequest();
 								hookRequest.source = iCompDef;
 								hookRequest.params = iCompDef.anObjectArray1383;
 								PENDING_HOOK_REQUESTS.append(hookRequest);
 							}
 
-							if (anInt7395 > iCompDef.anInt1442 && iCompDef.anObjectArray1418 != null) {
+							if (CLANCHANNEL_LAST_RECEIVED > iCompDef.anInt1442 && iCompDef.anObjectArray1418 != null) {
 								HookRequest hookRequest = new HookRequest();
 								hookRequest.source = iCompDef;
 								hookRequest.params = iCompDef.anObjectArray1418;
@@ -1675,7 +1675,7 @@ public class client extends Engine {
 								PENDING_HOOK_REQUESTS.append(hookRequest);
 							}
 
-							iCompDef.anInt1442 = anInt7347;
+							iCompDef.anInt1442 = CS2_TIMER_COUNT;
 							if (iCompDef.anObjectArray1292 != null) {
 								for (i_24 = 0; i_24 < anInt7193; i_24++) {
 									HookRequest hookrequest_44 = new HookRequest();
@@ -2704,7 +2704,7 @@ public class client extends Engine {
 		if (GAME_STATE == GameState.UNK_0 && !JS5CacheFile.method3360() || GAME_STATE == GameState.UNK_7 && Class9.anInt106 == 42 || GAME_STATE == GameState.IN_ACCOUNT_CREATION) {
 			if (REBOOT_TIMER > 1) {
 				--REBOOT_TIMER;
-				anInt7397 = anInt7347;
+				anInt7397 = CS2_TIMER_COUNT;
 			}
 
 			if (!Class20.aBool161) {
@@ -2720,7 +2720,7 @@ public class client extends Engine {
 		Class380.method6451(-1, -1);
 		Class15.method544(null, -1, -1);
 		ServerEnvironment.pulseSubInterfaces();
-		++anInt7347;
+		++CS2_TIMER_COUNT;
 
 		for (int i = 0; i < anInt7210; i++) {
 			NPCEntity npc_3 = (NPCEntity) NPC_ARRAY[i].anObject8068;

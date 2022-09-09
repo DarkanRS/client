@@ -16,8 +16,8 @@ public abstract class PathingEntity extends GraphNode_Sub1_Sub1 {
     public byte redAdd;
     public int turnDirection;
     public int turningTicks;
-    public int[] anIntArray10335;
-    public int[] anIntArray10362;
+    public int[] modelRotators;
+    public int[] modelRotations;
     public int anInt10355;
     public int anInt10367;
     public Interface inter;
@@ -194,97 +194,92 @@ public abstract class PathingEntity extends GraphNode_Sub1_Sub1 {
         return i_5;
     }
 
-    public void method15797(int[] ints_1, int[] ints_2) {
-        if (anIntArray10335 == null && ints_1 != null) {
-            anIntArray10335 = new int[LinkedNodeList.EQUIPMENT_DEFAULTS.hidden.length];
-        } else if (ints_1 == null) {
-            anIntArray10335 = null;
+    public void applyModelRotations(int[] targetData, int[] maskData) {
+        if (modelRotators == null && targetData != null) {
+            modelRotators = new int[LinkedNodeList.EQUIPMENT_DEFAULTS.hidden.length];
+        } else if (targetData == null) {
+            modelRotators = null;
             return;
         }
 
-        int i_4;
-        for (i_4 = 0; i_4 < anIntArray10335.length; i_4++) {
-            anIntArray10335[i_4] = -1;
-        }
+        for (int i = 0; i < modelRotators.length; i++)
+            modelRotators[i] = -1;
 
-        for (i_4 = 0; i_4 < ints_1.length; i_4++) {
-            int i_5 = ints_2[i_4];
-
-            for (int i_6 = 0; i_6 < anIntArray10335.length; i_5 >>= 1) {
-                if ((i_5 & 0x1) != 0) {
-                    anIntArray10335[i_6] = ints_1[i_4];
-                }
-
-                ++i_6;
+        for (int i = 0; i < targetData.length; i++) {
+            int slotFlag = maskData[i];
+            for (int slot = 0; slot < modelRotators.length; slotFlag >>= 1) {
+                if ((slotFlag & 0x1) != 0)
+                    modelRotators[slot] = targetData[i];
+                ++slot;
             }
         }
 
     }
 
-    public boolean method15798(int i_1, int i_2) {
-        if (anIntArray10362 == null) {
-            if (i_2 == -1) {
+    public boolean rotate(int slot, int degrees) {
+        if (modelRotations == null) {
+            if (degrees == -1) {
                 return true;
             }
 
-            anIntArray10362 = new int[LinkedNodeList.EQUIPMENT_DEFAULTS.hidden.length];
+            modelRotations = new int[LinkedNodeList.EQUIPMENT_DEFAULTS.hidden.length];
 
             for (int i_10 = 0; i_10 < LinkedNodeList.EQUIPMENT_DEFAULTS.hidden.length; i_10++) {
-                anIntArray10362[i_10] = -1;
+                modelRotations[i_10] = -1;
             }
         }
 
-        BASDefinitions renderanimdefs_4 = getRenderAnimDefs();
+        BASDefinitions basDef = getRenderAnimDefs();
         int i_5 = 256;
-        if (renderanimdefs_4.anIntArray2818 != null && renderanimdefs_4.anIntArray2818[i_1] > 0) {
-            i_5 = renderanimdefs_4.anIntArray2818[i_1];
+        if (basDef.modelRotators != null && basDef.modelRotators[slot] > 0) {
+            i_5 = basDef.modelRotators[slot];
         }
 
         int i_6;
         int i_7;
-        if (i_2 == -1) {
-            if (anIntArray10362[i_1] == -1) {
+        if (degrees == -1) {
+            if (modelRotations[slot] == -1) {
                 return true;
             } else {
                 i_6 = aClass19_10359.method578();
-                i_7 = anIntArray10362[i_1];
+                i_7 = modelRotations[slot];
                 int i_8 = i_6 - i_7;
                 if (i_8 >= -i_5 && i_8 <= i_5) {
-                    anIntArray10362[i_1] = -1;
+                    modelRotations[slot] = -1;
 
                     for (int i_9 = 0; i_9 < LinkedNodeList.EQUIPMENT_DEFAULTS.hidden.length; i_9++) {
-                        if (anIntArray10362[i_9] != -1) {
+                        if (modelRotations[i_9] != -1) {
                             return true;
                         }
                     }
 
-                    anIntArray10362 = null;
+                    modelRotations = null;
                     return true;
                 } else {
                     if ((i_8 <= 0 || i_8 > 8192) && i_8 > -8192) {
-                        anIntArray10362[i_1] = i_7 - i_5 & 0x3fff;
+                        modelRotations[slot] = i_7 - i_5 & 0x3fff;
                     } else {
-                        anIntArray10362[i_1] = i_7 + i_5 & 0x3fff;
+                        modelRotations[slot] = i_7 + i_5 & 0x3fff;
                     }
 
                     return false;
                 }
             }
         } else {
-            if (anIntArray10362[i_1] == -1) {
-                anIntArray10362[i_1] = aClass19_10359.method578();
+            if (modelRotations[slot] == -1) {
+                modelRotations[slot] = aClass19_10359.method578();
             }
 
-            i_6 = anIntArray10362[i_1];
-            i_7 = i_2 - i_6;
+            i_6 = modelRotations[slot];
+            i_7 = degrees - i_6;
             if (i_7 >= -i_5 && i_7 <= i_5) {
-                anIntArray10362[i_1] = i_2;
+                modelRotations[slot] = degrees;
                 return true;
             } else {
                 if ((i_7 <= 0 || i_7 > 8192) && i_7 > -8192) {
-                    anIntArray10362[i_1] = i_6 - i_5 & 0x3fff;
+                    modelRotations[slot] = i_6 - i_5 & 0x3fff;
                 } else {
-                    anIntArray10362[i_1] = i_6 + i_5 & 0x3fff;
+                    modelRotations[slot] = i_6 + i_5 & 0x3fff;
                 }
 
                 return false;
@@ -755,12 +750,12 @@ public abstract class PathingEntity extends GraphNode_Sub1_Sub1 {
                         }
 
                         if (i_17 != 0 || i_15 != 0) {
-                            int i_18 = i_6;
-                            if (anIntArray10362 != null && anIntArray10362[class161_10.anInt2011] != -1) {
-                                i_18 = anIntArray10362[class161_10.anInt2011];
+                            int rotation = i_6;
+                            if (modelRotations != null && modelRotations[class161_10.anInt2011] != -1) {
+                                rotation = modelRotations[class161_10.anInt2011];
                             }
 
-                            int i_19 = i_18 + class161_10.rotation * 2048 - i_6 & 0x3fff;
+                            int i_19 = rotation + class161_10.rotation * 2048 - i_6 & 0x3fff;
                             if (i_19 != 0) {
                                 meshrasterizer_14.f(i_19);
                             }

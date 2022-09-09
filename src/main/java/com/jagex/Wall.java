@@ -206,7 +206,7 @@ public class Wall extends GraphNode_Sub1_Sub5 implements WorldObject {
         return aBool10528;
     }
 
-    public void method16108(Class476 class476_1) {
+    public void method16108(ObjectMeshModifier class476_1) {
         aClass123_10532.method2116(class476_1);
     }
 

@@ -170,7 +170,7 @@ public class GameTipsLoader {
                 System.arraycopy(class402_3.aClass399Array4827, 0, arr_6, 0, arr_6.length);
 
                 for (int i_7 = i_4; i_7 < arr_6.length; i_7++) {
-                    int i_8 = Class476.method7931(random_5, arr_6.length - i_4) + i_4;
+                    int i_8 = ObjectMeshModifier.method7931(random_5, arr_6.length - i_4) + i_4;
                     Class399 class399_9 = class402_3.aClass399Array4827[i_7];
                     arr_6[i_7] = arr_6[i_8];
                     arr_6[i_8] = class399_9;

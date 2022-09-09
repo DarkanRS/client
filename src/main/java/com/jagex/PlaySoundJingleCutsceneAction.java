@@ -47,7 +47,7 @@ public class PlaySoundJingleCutsceneAction extends CutsceneAction {
                 }
 
                 if (npcdefinitions_10 != null && i_9 != -1) {
-                    if (i_9 == class282_sub48_5.soundEffectId && class282_sub48_5.aBool8098 == npcdefinitions_10.aBool4872) {
+                    if (i_9 == class282_sub48_5.soundEffectId && class282_sub48_5.midiSound == npcdefinitions_10.aBool4872) {
                         class282_sub48_5.anInt8091 = b_6;
                         class282_sub48_5.anInt8089 = npcdefinitions_10.anInt4909;
                     } else {
@@ -68,13 +68,13 @@ public class PlaySoundJingleCutsceneAction extends CutsceneAction {
                             class282_sub48_5.aNode_Sub26_Sub1_Sub1_8082 = null;
                             class282_sub48_5.aNode_Sub18_8097 = null;
                             class282_sub48_5.soundEffectId = i_9;
-                            class282_sub48_5.aBool8098 = npcdefinitions_10.aBool4872;
+                            class282_sub48_5.midiSound = npcdefinitions_10.aBool4872;
                             class282_sub48_5.anInt8091 = b_6;
                         }
                     }
                 } else {
                     class282_sub48_5.soundEffectId = -1;
-                    class282_sub48_5.aBool8098 = false;
+                    class282_sub48_5.midiSound = false;
                     class282_sub48_5.anInt8091 = b_6;
                 }
             }
@@ -106,7 +106,7 @@ public class PlaySoundJingleCutsceneAction extends CutsceneAction {
 
             if (b_6 != class282_sub48_5.anInt8091) {
                 i_9 = Class149_Sub2.method14610(class282_sub48_5.aTransform_Sub1_Sub1_Sub2_Sub1_8086);
-                if (i_9 == class282_sub48_5.soundEffectId && class282_sub48_5.aTransform_Sub1_Sub1_Sub2_Sub1_8086.isTransformedNPC == class282_sub48_5.aBool8098) {
+                if (i_9 == class282_sub48_5.soundEffectId && class282_sub48_5.aTransform_Sub1_Sub1_Sub2_Sub1_8086.isTransformedNPC == class282_sub48_5.midiSound) {
                     class282_sub48_5.anInt8089 = class282_sub48_5.aTransform_Sub1_Sub1_Sub2_Sub1_8086.specialByte;
                     class282_sub48_5.anInt8091 = b_6;
                 } else {
@@ -127,7 +127,7 @@ public class PlaySoundJingleCutsceneAction extends CutsceneAction {
                         class282_sub48_5.aNode_Sub26_Sub1_Sub1_8082 = null;
                         class282_sub48_5.aNode_Sub18_8097 = null;
                         class282_sub48_5.soundEffectId = i_9;
-                        class282_sub48_5.aBool8098 = class282_sub48_5.aTransform_Sub1_Sub1_Sub2_Sub1_8086.isTransformedNPC;
+                        class282_sub48_5.midiSound = class282_sub48_5.aTransform_Sub1_Sub1_Sub2_Sub1_8086.isTransformedNPC;
                         class282_sub48_5.anInt8091 = b_6;
                     }
                 }

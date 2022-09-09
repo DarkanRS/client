@@ -22,7 +22,7 @@ public class ClanSettings {
     public String clanName;
     public String[] memberNames;
     public byte[] memberRanks;
-    public int[] anIntArray634;
+    public int[] memberShort1;
     public boolean allowGuests;
     public byte talkRank;
     public byte kickRank;
@@ -35,7 +35,7 @@ public class ClanSettings {
     public int updateCount;
     public int anInt623;
     public long[] memberHashes;
-    public int[] anIntArray633;
+    public int[] memberInt1;
     public boolean useHashes;
     public boolean useNames;
 
@@ -56,7 +56,7 @@ public class ClanSettings {
 
     public int method1198(int i_1, int i_2, int i_3) {
         int i_5 = i_3 == 31 ? -1 : (1 << i_3 + 1) - 1;
-        return (anIntArray633[i_1] & i_5) >>> i_2;
+        return (memberInt1[i_1] & i_5) >>> i_2;
     }
 
     public Integer getIntVar(int i_1) {
@@ -173,12 +173,12 @@ public class ClanSettings {
         int i_8 = i_7 ^ i_6;
         i_2 <<= i_3;
         i_2 &= i_8;
-        int i_9 = anIntArray633[i_1];
+        int i_9 = memberInt1[i_1];
         if ((i_9 & i_8) == i_2) {
             return -1;
         } else {
             i_9 &= ~i_8;
-            anIntArray633[i_1] = i_9 | i_2;
+            memberInt1[i_1] = i_9 | i_2;
             return i_1;
         }
     }
@@ -200,22 +200,22 @@ public class ClanSettings {
         }
     }
 
-    public boolean method1212(int i_1, int i_2, int i_3, int i_4) {
-        int i_6 = (1 << i_3) - 1;
-        int i_7 = i_4 == 31 ? -1 : (1 << i_4 + 1) - 1;
-        int i_8 = i_7 ^ i_6;
-        i_2 <<= i_3;
-        i_2 &= i_8;
+    public boolean setVarBit(int varId, int value, int startBit, int endBit) {
+        int startMask = (1 << startBit) - 1;
+        int endMask = endBit == 31 ? -1 : (1 << endBit + 1) - 1;
+        int mask = endMask ^ startMask;
+        value <<= startBit;
+        value &= mask;
         if (variables != null) {
-            Node<Object> node_9 = variables.get(i_1);
+            Node<Object> node_9 = variables.get(varId);
             if (node_9 != null) {
                 if (node_9 instanceof IntNode) {
                     IntNode class282_sub38_10 = (IntNode) node_9;
-                    if ((class282_sub38_10.value & i_8) == i_2) {
+                    if ((class282_sub38_10.value & mask) == value) {
                         return false;
                     }
-                    class282_sub38_10.value &= ~i_8;
-                    class282_sub38_10.value |= i_2;
+                    class282_sub38_10.value &= ~mask;
+                    class282_sub38_10.value |= value;
                     return true;
                 }
                 node_9.unlink();
@@ -223,20 +223,20 @@ public class ClanSettings {
         } else {
             variables = new IterableNodeMap<>(4);
         }
-        variables.put(new IntNode(i_2), i_1);
+        variables.put(new IntNode(value), varId);
         return true;
     }
 
-    public boolean method1213(int i_1, long long_2) {
+    public boolean setVarLong(int varId, long value) {
         if (variables != null) {
-            Node<Object> node_4 = variables.get(i_1);
+            Node<Object> node_4 = variables.get(varId);
             if (node_4 != null) {
                 if (node_4 instanceof LongNode) {
                     LongNode class282_sub45_5 = (LongNode) node_4;
-                    if (class282_sub45_5.aLong8066 == long_2) {
+                    if (class282_sub45_5.aLong8066 == value) {
                         return false;
                     }
-                    class282_sub45_5.aLong8066 = long_2;
+                    class282_sub45_5.aLong8066 = value;
                     return true;
                 }
                 node_4.unlink();
@@ -244,7 +244,7 @@ public class ClanSettings {
         } else {
             variables = new IterableNodeMap<>(4);
         }
-        variables.put(new LongNode(long_2), i_1);
+        variables.put(new LongNode(value), varId);
         return true;
     }
 
@@ -285,23 +285,23 @@ public class ClanSettings {
             } else {
                 memberRanks[memberCount] = 0;
             }
-            anIntArray633[memberCount] = 0;
-            anIntArray634[memberCount] = i_4;
+            memberInt1[memberCount] = 0;
+            memberShort1[memberCount] = i_4;
             ++memberCount;
             sortedAffinedSlots = null;
         }
     }
 
-    public boolean method1222(int i_1, int i_2) {
+    public boolean setVarInt(int varId, int value) {
         if (variables != null) {
-            Node<Object> node_4 = variables.get(i_1);
+            Node<Object> node_4 = variables.get(varId);
             if (node_4 != null) {
                 if (node_4 instanceof IntNode) {
                     IntNode class282_sub38_5 = (IntNode) node_4;
-                    if (i_2 == class282_sub38_5.value) {
+                    if (value == class282_sub38_5.value) {
                         return false;
                     }
-                    class282_sub38_5.value = i_2;
+                    class282_sub38_5.value = value;
                     return true;
                 }
                 node_4.unlink();
@@ -309,19 +309,19 @@ public class ClanSettings {
         } else {
             variables = new IterableNodeMap<>(4);
         }
-        variables.put(new IntNode(i_2), i_1);
+        variables.put(new IntNode(value), varId);
         return true;
     }
 
-    public boolean method1224(int i_1, String string_2) {
-        String string_21 = string_2;
+    public boolean setVarString(int varId, String value) {
+        String string_21 = value;
         if (string_21 == null) {
             string_21 = "";
         } else if (string_21.length() > 80) {
             string_21 = string_21.substring(0, 80);
         }
         if (variables != null) {
-            Node<Object> node_4 = variables.get(i_1);
+            Node<Object> node_4 = variables.get(varId);
             if (node_4 != null) {
                 if (node_4 instanceof ObjectNode) {
                     ObjectNode class282_sub47_5 = (ObjectNode) node_4;
@@ -340,18 +340,18 @@ public class ClanSettings {
         } else {
             variables = new IterableNodeMap<>(4);
         }
-        variables.put(new ObjectNode(string_21), i_1);
+        variables.put(new ObjectNode(string_21), varId);
         return true;
     }
 
-    public Integer method1225(int i_1, int i_2, int i_3) {
+    public Integer getVarBit(int varId, int startBit, int endBit) {
         if (variables == null) {
             return null;
         } else {
-            Node<Object> node_5 = variables.get(i_1);
+            Node<Object> node_5 = variables.get(varId);
             if (node_5 instanceof IntNode) {
-                int i_6 = i_3 == 31 ? -1 : (1 << i_3 + 1) - 1;
-                return Integer.valueOf((((IntNode) node_5).value & i_6) >>> i_2);
+                int endMask = endBit == 31 ? -1 : (1 << endBit + 1) - 1;
+                return Integer.valueOf((((IntNode) node_5).value & endMask) >>> startBit);
             } else {
                 return null;
             }
@@ -378,15 +378,15 @@ public class ClanSettings {
         } else {
             memberRanks = new byte[i_1];
         }
-        if (anIntArray633 != null) {
-            Class503.method8362(anIntArray633, 0, anIntArray633 = new int[i_1], 0, memberCount);
+        if (memberInt1 != null) {
+            Class503.method8362(memberInt1, 0, memberInt1 = new int[i_1], 0, memberCount);
         } else {
-            anIntArray633 = new int[i_1];
+            memberInt1 = new int[i_1];
         }
-        if (anIntArray634 != null) {
-            Class503.method8362(anIntArray634, 0, anIntArray634 = new int[i_1], 0, memberCount);
+        if (memberShort1 != null) {
+            Class503.method8362(memberShort1, 0, memberShort1 = new int[i_1], 0, memberCount);
         } else {
-            anIntArray634 = new int[i_1];
+            memberShort1 = new int[i_1];
         }
     }
 
@@ -398,14 +398,14 @@ public class ClanSettings {
                 memberHashes = null;
                 memberNames = null;
                 memberRanks = null;
-                anIntArray633 = null;
-                anIntArray634 = null;
+                memberInt1 = null;
+                memberShort1 = null;
                 currentOwner = -1;
                 replacementOwner = -1;
             } else {
                 Class503.method8352(memberRanks, i_1 + 1, memberRanks, i_1, memberCount - i_1);
-                Class503.method8362(anIntArray633, i_1 + 1, anIntArray633, i_1, memberCount - i_1);
-                Class503.method8362(anIntArray634, i_1 + 1, anIntArray634, i_1, memberCount - i_1);
+                Class503.method8362(memberInt1, i_1 + 1, memberInt1, i_1, memberCount - i_1);
+                Class503.method8362(memberShort1, i_1 + 1, memberShort1, i_1, memberCount - i_1);
                 if (memberHashes != null) {
                     Class503.method8351(memberHashes, i_1 + 1, memberHashes, i_1, memberCount - i_1);
                 }
@@ -455,7 +455,7 @@ public class ClanSettings {
             kickRank = buffer.readByte();
             lootshareRank = buffer.readByte();
             coinShare = buffer.readByte();
-            int i_5;
+            int varCount;
             if (memberCount > 0) {
                 if (useHashes && (memberHashes == null || memberHashes.length < memberCount)) {
                     memberHashes = new long[memberCount];
@@ -466,27 +466,27 @@ public class ClanSettings {
                 if (memberRanks == null || memberRanks.length < memberCount) {
                     memberRanks = new byte[memberCount];
                 }
-                if (anIntArray633 == null || anIntArray633.length < memberCount) {
-                    anIntArray633 = new int[memberCount];
+                if (memberInt1 == null || memberInt1.length < memberCount) {
+                    memberInt1 = new int[memberCount];
                 }
-                if (anIntArray634 == null || anIntArray634.length < memberCount) {
-                    anIntArray634 = new int[memberCount];
+                if (memberShort1 == null || memberShort1.length < memberCount) {
+                    memberShort1 = new int[memberCount];
                 }
-                for (i_5 = 0; i_5 < memberCount; i_5++) {
+                for (varCount = 0; varCount < memberCount; varCount++) {
                     if (useHashes) {
-                        memberHashes[i_5] = buffer.readLong();
+                        memberHashes[varCount] = buffer.readLong();
                     }
                     if (useNames) {
-                        memberNames[i_5] = buffer.readNullString();
+                        memberNames[varCount] = buffer.readNullString();
                     }
-                    memberRanks[i_5] = buffer.readByte();
+                    memberRanks[varCount] = buffer.readByte();
                     if (version >= 2) {
-                        anIntArray633[i_5] = buffer.readInt();
+                        memberInt1[varCount] = buffer.readInt();
                     }
                     if (version >= 5) {
-                        anIntArray634[i_5] = buffer.readUnsignedShort();
+                        memberShort1[varCount] = buffer.readUnsignedShort();
                     } else {
-                        anIntArray634[i_5] = 0;
+                        memberShort1[varCount] = 0;
                     }
                 }
                 updateOwners();
@@ -498,32 +498,32 @@ public class ClanSettings {
                 if (useNames && (bannedUserNames == null || bannedUserNames.length < banCount)) {
                     bannedUserNames = new String[banCount];
                 }
-                for (i_5 = 0; i_5 < banCount; i_5++) {
+                for (varCount = 0; varCount < banCount; varCount++) {
                     if (useHashes) {
-                        bannedUserHashes[i_5] = buffer.readLong();
+                        bannedUserHashes[varCount] = buffer.readLong();
                     }
                     if (useNames) {
-                        bannedUserNames[i_5] = buffer.readNullString();
+                        bannedUserNames[varCount] = buffer.readNullString();
                     }
                 }
             }
             if (version >= 3) {
-                i_5 = buffer.readUnsignedShort();
-                if (i_5 > 0) {
-                    variables = new IterableNodeMap<>(i_5 < 16 ? Utils.nextPowerOfTwo(i_5) : 16);
-                    while (i_5-- > 0) {
-                        int i_6 = buffer.readInt();
-                        int i_7 = i_6 & 0x3fffffff;
-                        int i_8 = i_6 >>> 30;
-                        if (i_8 == 0) {
+                varCount = buffer.readUnsignedShort();
+                if (varCount > 0) {
+                    variables = new IterableNodeMap<>(varCount < 16 ? Utils.nextPowerOfTwo(varCount) : 16);
+                    while (varCount-- > 0) {
+                        int varHash = buffer.readInt();
+                        int varId = varHash & 0x3fffffff;
+                        int varType = varHash >>> 30;
+                        if (varType == 0) {
                             int i_9 = buffer.readInt();
-                            variables.put(new IntNode(i_9), i_7);
-                        } else if (i_8 == 1) {
+                            variables.put(new IntNode(i_9), varId);
+                        } else if (varType == 1) {
                             long long_11 = buffer.readLong();
-                            variables.put(new LongNode(long_11), i_7);
-                        } else if (i_8 == 2) {
+                            variables.put(new LongNode(long_11), varId);
+                        } else if (varType == 2) {
                             String string_13 = buffer.readString();
-                            variables.put(new ObjectNode(string_13), i_7);
+                            variables.put(new ObjectNode(string_13), varId);
                         }
                     }
                 }

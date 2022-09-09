@@ -57,47 +57,40 @@ public class FontRenderer_Sub2 extends FontRenderer {
         Class291_Sub1.anInt8016 = i_1 - Class291_Sub1.anInt3473;
     }
 
-    public static void method14264(ByteBuf.Bit rsbitsbuffer_0) {
-        ReflectionCheck class282_sub42_2 = (ReflectionCheck) Class435.PENDING_REFLECTION_CHECKS.head();
-        if (class282_sub42_2 != null) {
-            int i_3 = rsbitsbuffer_0.index;
-            rsbitsbuffer_0.writeInt(class282_sub42_2.anInt8038);
+    public static void method14264(ByteBuf.Bit buffer) {
+        ReflectionCheck check = (ReflectionCheck) Class435.PENDING_REFLECTION_CHECKS.head();
+        if (check != null) {
+            int startIndex = buffer.index;
+            buffer.writeInt(check.id);
 
-            for (int i_4 = 0; i_4 < class282_sub42_2.anInt8033; i_4++) {
-                if (class282_sub42_2.anIntArray8036[i_4] != 0) {
-                    rsbitsbuffer_0.writeByte(class282_sub42_2.anIntArray8036[i_4]);
+            for (int i_4 = 0; i_4 < check.size; i_4++) {
+                if (check.exceptionCodes[i_4] != 0) {
+                    buffer.writeByte(check.exceptionCodes[i_4]);
                 } else {
                     try {
-                        int i_5 = class282_sub42_2.anIntArray8035[i_4];
-                        Field field_6;
+                        int type = check.types[i_4];
+                        Field field;
                         int i_7;
-                        if (i_5 == 0) {
-                            field_6 = class282_sub42_2.aFieldArray8037[i_4];
-                            i_7 = field_6.getInt(null);
-                            rsbitsbuffer_0.writeByte(0);
-                            rsbitsbuffer_0.writeInt(i_7);
-                        } else if (i_5 == 1) {
-                            field_6 = class282_sub42_2.aFieldArray8037[i_4];
-                            field_6.setInt(null, class282_sub42_2.anIntArray8040[i_4]);
-                            rsbitsbuffer_0.writeByte(0);
-                        } else if (i_5 == 2) {
-                            field_6 = class282_sub42_2.aFieldArray8037[i_4];
-                            i_7 = field_6.getModifiers();
-                            rsbitsbuffer_0.writeByte(0);
-                            rsbitsbuffer_0.writeInt(i_7);
+                        if (type == 0) {
+                            field = check.fields[i_4];
+                            i_7 = field.getInt(null);
+                            buffer.writeByte(0);
+                            buffer.writeInt(i_7);
+                        } else if (type == 1) {
+                            field = check.fields[i_4];
+                            field.setInt(null, check.fieldValues[i_4]);
+                            buffer.writeByte(0);
+                        } else if (type == 2) {
+                            field = check.fields[i_4];
+                            i_7 = field.getModifiers();
+                            buffer.writeByte(0);
+                            buffer.writeInt(i_7);
                         }
 
                         Method method_26;
-                        if (i_5 != 3) {
-                            if (i_5 == 4) {
-                                method_26 = class282_sub42_2.aMethodArray8034[i_4];
-                                i_7 = method_26.getModifiers();
-                                rsbitsbuffer_0.writeByte(0);
-                                rsbitsbuffer_0.writeInt(i_7);
-                            }
-                        } else {
-                            method_26 = class282_sub42_2.aMethodArray8034[i_4];
-                            byte[][] bytes_11 = class282_sub42_2.aByteArrayArrayArray8041[i_4];
+                        if (type == 3) {
+                            method_26 = check.methods[i_4];
+                            byte[][] bytes_11 = check.serializedObjectParams[i_4];
                             Object[] arr_8 = new Object[bytes_11.length];
 
                             for (int i_9 = 0; i_9 < bytes_11.length; i_9++) {
@@ -107,47 +100,52 @@ public class FontRenderer_Sub2 extends FontRenderer {
 
                             Object object_12 = method_26.invoke(null, arr_8);
                             if (object_12 == null) {
-                                rsbitsbuffer_0.writeByte(0);
+                                buffer.writeByte(0);
                             } else if (object_12 instanceof Number) {
-                                rsbitsbuffer_0.writeByte(1);
-                                rsbitsbuffer_0.writeLong(((Number) object_12).longValue());
+                                buffer.writeByte(1);
+                                buffer.writeLong(((Number) object_12).longValue());
                             } else if (object_12 instanceof String) {
-                                rsbitsbuffer_0.writeByte(2);
-                                rsbitsbuffer_0.writeString((String) object_12);
+                                buffer.writeByte(2);
+                                buffer.writeString((String) object_12);
                             } else {
-                                rsbitsbuffer_0.writeByte(4);
+                                buffer.writeByte(4);
                             }
+                        } else if (type == 4) {
+                            method_26 = check.methods[i_4];
+                            i_7 = method_26.getModifiers();
+                            buffer.writeByte(0);
+                            buffer.writeInt(i_7);
                         }
                     } catch (ClassNotFoundException classnotfoundexception_14) {
-                        rsbitsbuffer_0.writeByte(-10);
+                        buffer.writeByte(-10);
                     } catch (InvalidClassException invalidclassexception_15) {
-                        rsbitsbuffer_0.writeByte(-11);
+                        buffer.writeByte(-11);
                     } catch (StreamCorruptedException streamcorruptedexception_16) {
-                        rsbitsbuffer_0.writeByte(-12);
+                        buffer.writeByte(-12);
                     } catch (OptionalDataException optionaldataexception_17) {
-                        rsbitsbuffer_0.writeByte(-13);
+                        buffer.writeByte(-13);
                     } catch (IllegalAccessException illegalaccessexception_18) {
-                        rsbitsbuffer_0.writeByte(-14);
+                        buffer.writeByte(-14);
                     } catch (IllegalArgumentException illegalargumentexception_19) {
-                        rsbitsbuffer_0.writeByte(-15);
+                        buffer.writeByte(-15);
                     } catch (InvocationTargetException invocationtargetexception_20) {
-                        rsbitsbuffer_0.writeByte(-16);
+                        buffer.writeByte(-16);
                     } catch (SecurityException securityexception_21) {
-                        rsbitsbuffer_0.writeByte(-17);
+                        buffer.writeByte(-17);
                     } catch (IOException ioexception_22) {
-                        rsbitsbuffer_0.writeByte(-18);
+                        buffer.writeByte(-18);
                     } catch (NullPointerException nullpointerexception_23) {
-                        rsbitsbuffer_0.writeByte(-19);
+                        buffer.writeByte(-19);
                     } catch (Exception exception_24) {
-                        rsbitsbuffer_0.writeByte(-20);
+                        buffer.writeByte(-20);
                     } catch (Throwable throwable_25) {
-                        rsbitsbuffer_0.writeByte(-21);
+                        buffer.writeByte(-21);
                     }
                 }
             }
 
-            rsbitsbuffer_0.writeCRC(i_3);
-            class282_sub42_2.unlink();
+            buffer.writeCRC(startIndex);
+            check.unlink();
         }
 
     }
