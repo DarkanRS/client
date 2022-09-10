@@ -10,7 +10,7 @@ public abstract class CutsceneAction {
         anInt992 = rsbytebuffer_1.readUnsignedShort();
     }
 
-    public static Interface method1605(int i_0) {
+    public static Interface getInterfaceByIdFromHash(int i_0) {
         return Interface.INTERFACES[i_0 >> 16];
     }
 

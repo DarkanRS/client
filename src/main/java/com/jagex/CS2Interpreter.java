@@ -6,6 +6,7 @@ import java.awt.Point;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.Transferable;
 import java.io.File;
+import java.util.Arrays;
 
 import com.Loader;
 import com.jagex.clans.ClanChannel;
@@ -533,7 +534,7 @@ public class CS2Interpreter {
             case instr6782:
                 method3546(exec);
                 break;
-            case instr6119:
+            case CC_SETLINKACTIVECLANCHANNEL:
                 method741(exec);
                 break;
             case instr6120:
@@ -932,7 +933,7 @@ public class CS2Interpreter {
             case instr6251:
                 method11593(exec);
                 break;
-            case instr6252:
+            case instr6252: //FIND (IF_SETONMISCTRANSMIT? IF_SETONDIALOGABORT?)
                 method4175(exec);
                 break;
             case instr6253:
@@ -959,8 +960,8 @@ public class CS2Interpreter {
             case instr6260:
                 method2855(exec);
                 break;
-            case instr6261:
-                method4629(exec);
+            case IF_SETLINKACTIVECLANCHANNEL:
+                ifSetLinkActiveChannel(exec);
                 break;
             case instr6898:
                 method6372(exec);
@@ -2096,16 +2097,16 @@ public class CS2Interpreter {
             case FULLSCREEN:
                 chooseFullScreen(exec);
                 break;
-            case instr6488:
+            case instr6488: //Sets window mode?
                 method3613();
                 break;
-            case instr6704:
+            case FULLSCREEN_MODECOUNT:
                 method3066(exec);
                 break;
-            case instr6404:
+            case FULLSCREEN_GETMODE:
                 method5769(exec);
                 break;
-            case instr6643:
+            case FULLSCREEN_LASTMODE:
                 method14244(exec);
                 break;
             case instr6644:
@@ -3231,7 +3232,7 @@ public class CS2Interpreter {
 
     static void method2866() {
         if (Class475.supportsFullScreen && Engine.fullScreenFrame != null) {
-            UID192.method7373(Class393.preferences.screenSize.method12687(), -1, -1);
+            UID192.method7373(Class393.preferences.screenSize.getValue(), -1, -1);
         }
         if (NamedFileReference.method867() == Class279.aClass279_3368) {
             ClanSetting.saveVarcsToFile();
@@ -3588,7 +3589,7 @@ public class CS2Interpreter {
 
     static void method8263(CS2Executor executor) {
         if (Class475.supportsFullScreen && Engine.fullScreenFrame != null) {
-            UID192.method7373(Class393.preferences.screenSize.method12687(), -1, -1);
+            UID192.method7373(Class393.preferences.screenSize.getValue(), -1, -1);
         }
         String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
         boolean bool_3 = executor.intStack[--executor.intStackPtr] == 1;
@@ -3647,7 +3648,7 @@ public class CS2Interpreter {
     static void storeVarc(CS2Executor executor) {
         int i_2 = executor.intOpValues[executor.instrPtr];
         Class320.VARC_INT[i_2] = executor.intStack[--executor.intStackPtr];
-        MaterialProp26.method15264(i_2);
+        PulseEvent.method15264(i_2);
         client.NEEDS_VARC_SAVE |= Node_Sub17_Sub2.IS_VARC_SAVE_TO_FILE[i_2];
     }
 
@@ -3873,7 +3874,7 @@ public class CS2Interpreter {
         CS2Interface underlaydefinition_2 = executor.aBool7022 ? executor.hookedInterface2 : executor.hookedInterface1;
         IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.defs;
         Interface interface_4 = underlaydefinition_2.inter;
-        method5455(icomponentdefinitions_3, executor);
+        ifSetActiveCCLink(icomponentdefinitions_3, executor);
     }
 
     static void method742(CS2Executor executor) {
@@ -4052,7 +4053,7 @@ public class CS2Interpreter {
     static void storeVarcString(CS2Executor executor) {
         int i_2 = executor.intOpValues[executor.instrPtr];
         Class462.VARC_STRING[i_2] = (String) executor.stringStack[--executor.stringStackPtr];
-        MaterialProp8.method15263(i_2);
+        PulseEvent.method15263(i_2);
     }
 
     static void hideComp(CS2Executor executor) {
@@ -4439,7 +4440,7 @@ public class CS2Interpreter {
     }
 
     static void method3358(CS2Executor executor) {
-        executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.screenSize.method12687();
+        executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.screenSize.getValue();
     }
 
     static void method3361(CS2Executor executor) {
@@ -5423,8 +5424,8 @@ public class CS2Interpreter {
         int i_4 = executor.intStack[executor.intStackPtr + 2];
         IComponentDefinitions icomponentdefinitions_5 = Index.getIComponentDefinitions(i_2 << 16 | i_3, i_4);
         Class60.method1170();
-        IFTargetParams class282_sub10_6 = client.getIComponentSettings(icomponentdefinitions_5);
-        Class304.setUseOptionFlags(icomponentdefinitions_5, class282_sub10_6.getUseOptionFlags(), class282_sub10_6.interfaceId);
+        IFEvents class282_sub10_6 = client.getIComponentSettings(icomponentdefinitions_5);
+        Class304.setUseOptionFlags(icomponentdefinitions_5, class282_sub10_6.getUseOptionFlags(), class282_sub10_6.targetParam);
     }
 
     static void method1140(CS2Executor executor) {
@@ -5695,7 +5696,7 @@ public class CS2Interpreter {
         if (class537_3 == null) {
             throw new RuntimeException();
         } else {
-            Integer integer_4 = executor.currentClanSettings.method1225(client.CURRENT_GAME.id << 16 | class537_3.baseVar, class537_3.startBit, class537_3.endBit);
+            Integer integer_4 = executor.currentClanSettings.getVarBit(client.CURRENT_GAME.id << 16 | class537_3.baseVar, class537_3.startBit, class537_3.endBit);
             int i_5;
             if (integer_4 == null) {
                 i_5 = 0;
@@ -6076,7 +6077,7 @@ public class CS2Interpreter {
 
     static void method3613() {
         if (Class475.supportsFullScreen && Engine.fullScreenFrame != null) {
-            UID192.method7373(Class393.preferences.screenSize.method12687(), -1, -1);
+            UID192.method7373(Class393.preferences.screenSize.getValue(), -1, -1);
         }
     }
 
@@ -6181,7 +6182,7 @@ public class CS2Interpreter {
     }
 
     static void fromDate(CS2Executor executor) {
-        executor.stringStack[++executor.stringStackPtr - 1] = Static.method13045(Class302.method5363(executor.intStack[--executor.intStackPtr]), Class223.CURRENT_LANGUAGE.getValue());
+        executor.stringStack[++executor.stringStackPtr - 1] = Static.method13045(Class302.runeDateToTimestamp(executor.intStack[--executor.intStackPtr]), Class223.CURRENT_LANGUAGE.getValue());
     }
 
     static void method4968(CS2Executor executor) {
@@ -6271,7 +6272,7 @@ public class CS2Interpreter {
     }
 
     static void method6275(CS2Executor executor) {
-        executor.intStack[++executor.intStackPtr - 1] = client.aBool7344 ? 1 : 0;
+        executor.intStack[++executor.intStackPtr - 1] = client.IS_USE_SELECTED ? 1 : 0;
         executor.stringStack[++executor.stringStackPtr - 1] = client.aString7356 == null ? "" : client.aString7356;
         executor.stringStack[++executor.stringStackPtr - 1] = client.aString7275 == null ? "" : client.aString7275;
     }
@@ -7389,7 +7390,7 @@ public class CS2Interpreter {
 
     static void method6741(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
-        executor.intStack[++executor.intStackPtr - 1] = executor.currentClanSettings.anIntArray634[i_2];
+        executor.intStack[++executor.intStackPtr - 1] = executor.currentClanSettings.memberShort1[i_2];
     }
 
     static void method541(CS2Executor executor) {
@@ -7686,7 +7687,7 @@ public class CS2Interpreter {
 
     static void method4194(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
-        executor.intStack[++executor.intStackPtr - 1] = (int) (Class302.method5363(i_2) / 60000L);
+        executor.intStack[++executor.intStackPtr - 1] = (int) (Class302.runeDateToTimestamp(i_2) / 60000L);
     }
 
     static void method6236(CS2Executor executor) {
@@ -8469,11 +8470,11 @@ public class CS2Interpreter {
         executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.fontId;
     }
 
-    static void method4629(CS2Executor executor) {
+    static void ifSetLinkActiveChannel(CS2Executor executor) {
         int i_2 = executor.intStack[--executor.intStackPtr];
         IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
         Interface interface_4 = Interface.INTERFACES[i_2 >> 16];
-        method5455(icomponentdefinitions_3, executor);
+        ifSetActiveCCLink(icomponentdefinitions_3, executor);
     }
 
     static void method4630(CS2Executor executor) {
@@ -9518,7 +9519,7 @@ public class CS2Interpreter {
     }
 
     static void method456(CS2Executor executor) {
-        executor.intStack[++executor.intStackPtr - 1] = client.CYCLES_20MS;
+        executor.intStack[++executor.intStackPtr - 1] = client.FRAME_COUNT;
     }
 
     static void method457(CS2Executor executor) {
@@ -10642,7 +10643,7 @@ public class CS2Interpreter {
         icomponentdefinitions_0.spriteScale = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
         IComponentDefinitions.redrawComponent(icomponentdefinitions_0);
         if (icomponentdefinitions_0.slotId == -1 && !interface_1.aBool999) {
-            MapSize.method1818(icomponentdefinitions_0.idHash);
+            PulseEvent.method1818(icomponentdefinitions_0.idHash);
         }
     }
 
@@ -10779,7 +10780,7 @@ public class CS2Interpreter {
         }
         IComponentDefinitions.redrawComponent(icomponentdefinitions_0);
         if (icomponentdefinitions_0.slotId == -1 && !interface_1.aBool999) {
-            BloomPreference.method12709(icomponentdefinitions_0.idHash);
+            PulseEvent.method12709(icomponentdefinitions_0.idHash);
         }
     }
 
@@ -10906,7 +10907,7 @@ public class CS2Interpreter {
         icomponentdefinitions_0.color = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
         IComponentDefinitions.redrawComponent(icomponentdefinitions_0);
         if (icomponentdefinitions_0.slotId == -1 && !interface_1.aBool999) {
-            Node_Sub14.method12223(icomponentdefinitions_0.idHash);
+            PulseEvent.method12223(icomponentdefinitions_0.idHash);
         }
     }
 
@@ -11085,7 +11086,7 @@ public class CS2Interpreter {
             IComponentDefinitions.redrawComponent(icomponentdefinitions_0);
         }
         if (icomponentdefinitions_0.slotId == -1 && !interface_1.aBool999) {
-            NewsItem.method1807(icomponentdefinitions_0.idHash);
+            PulseEvent.method1807(icomponentdefinitions_0.idHash);
         }
     }
 
@@ -11118,7 +11119,7 @@ public class CS2Interpreter {
             IComponentDefinitions.redrawComponent(icomponentdefinitions_0);
         }
         if (icomponentdefinitions_0.slotId == -1 && !interface_1.aBool999) {
-            Class78.method1389(icomponentdefinitions_0.idHash);
+            PulseEvent.method1389(icomponentdefinitions_0.idHash);
         }
     }
 
@@ -11180,7 +11181,7 @@ public class CS2Interpreter {
         icomponentdefinitions_0.npcMeshModifier = null;
         icomponentdefinitions_0.modelId = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
         if (icomponentdefinitions_0.slotId == -1 && !interface_1.aBool999) {
-            CutsceneObject.method1565(icomponentdefinitions_0.idHash);
+            PulseEvent.method1565(icomponentdefinitions_0.idHash);
         }
     }
 
@@ -11188,7 +11189,7 @@ public class CS2Interpreter {
         icomponentdefinitions_0.textAntiMacro = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
         IComponentDefinitions.redrawComponent(icomponentdefinitions_0);
         if (icomponentdefinitions_0.slotId == -1 && !interface_1.aBool999) {
-            Class244.method4196(icomponentdefinitions_0.idHash);
+            PulseEvent.method4196(icomponentdefinitions_0.idHash);
         }
     }
 
@@ -11213,15 +11214,15 @@ public class CS2Interpreter {
         for (int i = params.length - 1; i >= 1; --i) {
             if (paramTypes.charAt(i - 1) == 's') {
                 params[i] = executor.stringStack[--executor.stringStackPtr];
-            } else if (paramTypes.charAt(i - 1) == '\u00BD') {
-                params[i] = new Long(executor.longStack[--executor.longStackPtr]);
+            } else if (paramTypes.charAt(i - 1) == '§') {
+                params[i] = Long.valueOf(executor.longStack[--executor.longStackPtr]);
             } else {
-                params[i] = new Integer(executor.intStack[--executor.intStackPtr]);
+                params[i] = Integer.valueOf(executor.intStack[--executor.intStackPtr]);
             }
         }
         int scriptId = executor.intStack[--executor.intStackPtr];
         if (scriptId != -1) {
-            params[0] = new Integer(scriptId);
+            params[0] = Integer.valueOf(scriptId);
         } else {
             params = null;
         }
@@ -11232,7 +11233,7 @@ public class CS2Interpreter {
         icomponentdefinitions_0.clickMask = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
         IComponentDefinitions.redrawComponent(icomponentdefinitions_0);
         if (icomponentdefinitions_0.slotId == -1 && !interface_1.aBool999) {
-            LocalizedText.method7278(icomponentdefinitions_0.idHash);
+            PulseEvent.method7278(icomponentdefinitions_0.idHash);
         }
     }
 
@@ -11250,9 +11251,9 @@ public class CS2Interpreter {
         int itemId = cs2executor_4.intStack[cs2executor_4.intStackPtr];
         int i_7 = cs2executor_4.intStack[cs2executor_4.intStackPtr + 1];
         if (ifComp.slotId == -1 && !interface_1.aBool999) {
-            CutsceneActionType.method6914(ifComp.idHash);
-            MapSize.method1818(ifComp.idHash);
-            Item.method12575(ifComp.idHash);
+            PulseEvent.method6914(ifComp.idHash);
+            PulseEvent.method1818(ifComp.idHash);
+            PulseEvent.method12575(ifComp.idHash);
         }
         if (itemId == -1) {
             ifComp.modelType = ModelType.RAW_MODEL;
@@ -11285,7 +11286,7 @@ public class CS2Interpreter {
             IComponentDefinitions.redrawComponent(icomponentdefinitions_0);
         }
         if (icomponentdefinitions_0.slotId == -1 && !interface_1.aBool999) {
-            RenderAnimIndexLoader.method3631(icomponentdefinitions_0.idHash);
+            PulseEvent.method3631(icomponentdefinitions_0.idHash);
         }
     }
 
@@ -11357,7 +11358,7 @@ public class CS2Interpreter {
         icomponentdefinitions_0.fontId = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
         IComponentDefinitions.redrawComponent(icomponentdefinitions_0);
         if (icomponentdefinitions_0.slotId == -1 && !interface_1.aBool999) {
-            Game.method8207(icomponentdefinitions_0.idHash);
+            PulseEvent.method8207(icomponentdefinitions_0.idHash);
         }
     }
 
@@ -11392,7 +11393,7 @@ public class CS2Interpreter {
             HostNameIdentifier.method483(interface_1, icomponentdefinitions_0, false);
         }
         if (icomponentdefinitions_0.slotId == -1 && !interface_1.aBool999) {
-            Class396.method6774(icomponentdefinitions_0.idHash);
+            PulseEvent.method6774(icomponentdefinitions_0.idHash);
         }
     }
 
@@ -11419,7 +11420,7 @@ public class CS2Interpreter {
         }
         icomponentdefinitions_0.wearCol = cs2executor_2.intStack[cs2executor_2.intStackPtr + 3] == 1;
         if (icomponentdefinitions_0.slotId == -1 && !interface_1.aBool999) {
-            CutsceneObject.method1565(icomponentdefinitions_0.idHash);
+            PulseEvent.method1565(icomponentdefinitions_0.idHash);
         }
     }
 
@@ -11464,7 +11465,7 @@ public class CS2Interpreter {
         icomponentdefinitions_0.modelId = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
         IComponentDefinitions.redrawComponent(icomponentdefinitions_0);
         if (icomponentdefinitions_0.slotId == -1 && !interface_1.aBool999) {
-            CutsceneObject.method1565(icomponentdefinitions_0.idHash);
+            PulseEvent.method1565(icomponentdefinitions_0.idHash);
         }
     }
 
@@ -11477,7 +11478,7 @@ public class CS2Interpreter {
             icomponentdefinitions_0.retexture(i_4, s_5, s_6);
             IComponentDefinitions.redrawComponent(icomponentdefinitions_0);
             if (icomponentdefinitions_0.slotId == -1 && !interface_1.aBool999) {
-                Class276.method4903(icomponentdefinitions_0.idHash, i_4);
+                PulseEvent.method4903(icomponentdefinitions_0.idHash, i_4);
             }
         }
     }
@@ -11526,7 +11527,7 @@ public class CS2Interpreter {
         icomponentdefinitions_0.modelId = client.myPlayerIndex;
         icomponentdefinitions_0.anInt1339 = 0;
         if (icomponentdefinitions_0.slotId == -1 && !interface_1.aBool999) {
-            CutsceneObject.method1565(icomponentdefinitions_0.idHash);
+            PulseEvent.method1565(icomponentdefinitions_0.idHash);
         }
     }
 
@@ -11559,7 +11560,7 @@ public class CS2Interpreter {
         icomponentdefinitions_0.modelId = client.myPlayerIndex;
         icomponentdefinitions_0.anInt1339 = 0;
         if (icomponentdefinitions_0.slotId == -1 && !interface_1.aBool999) {
-            CutsceneObject.method1565(icomponentdefinitions_0.idHash);
+            PulseEvent.method1565(icomponentdefinitions_0.idHash);
         }
     }
 
@@ -11578,8 +11579,8 @@ public class CS2Interpreter {
         icomponentdefinitions_0.spriteScale = cs2executor_2.intStack[cs2executor_2.intStackPtr + 5];
         IComponentDefinitions.redrawComponent(icomponentdefinitions_0);
         if (icomponentdefinitions_0.slotId == -1 && !interface_1.aBool999) {
-            MapSize.method1818(icomponentdefinitions_0.idHash);
-            Item.method12575(icomponentdefinitions_0.idHash);
+            PulseEvent.method1818(icomponentdefinitions_0.idHash);
+            PulseEvent.method12575(icomponentdefinitions_0.idHash);
         }
     }
 
@@ -11598,7 +11599,7 @@ public class CS2Interpreter {
         icomponentdefinitions_0.modelType = ModelType.PLAYER_MODEL;
         icomponentdefinitions_0.modelId = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
         if (icomponentdefinitions_0.slotId == -1 && !interface_1.aBool999) {
-            CutsceneObject.method1565(icomponentdefinitions_0.idHash);
+            PulseEvent.method1565(icomponentdefinitions_0.idHash);
         }
     }
 
@@ -11660,7 +11661,7 @@ public class CS2Interpreter {
             IComponentDefinitions.redrawComponent(icomponentdefinitions_0);
         }
         if (icomponentdefinitions_0.slotId == -1 && !interface_1.aBool999) {
-            Class149_Sub1.method14582(icomponentdefinitions_0.idHash);
+            PulseEvent.method14582(icomponentdefinitions_0.idHash);
         }
     }
 
@@ -11669,7 +11670,7 @@ public class CS2Interpreter {
         IComponentDefinitions.redrawComponent(icomponentdefinitions_0);
     }
 
-    static void method5455(IComponentDefinitions icomponentdefinitions_0, CS2Executor cs2executor_2) {
+    static void ifSetActiveCCLink(IComponentDefinitions icomponentdefinitions_0, CS2Executor cs2executor_2) {
         String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
         if (popIntArrayParam(string_4, cs2executor_2) != null) {
             string_4 = string_4.substring(0, string_4.length() - 1);
@@ -11680,12 +11681,12 @@ public class CS2Interpreter {
 
     static void method5459(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
         int i_4 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
-        if (i_4 != icomponentdefinitions_0.anInt1435) {
-            icomponentdefinitions_0.anInt1435 = i_4;
+        if (i_4 != icomponentdefinitions_0.vorbisStringId) {
+            icomponentdefinitions_0.vorbisStringId = i_4;
             IComponentDefinitions.redrawComponent(icomponentdefinitions_0);
         }
         if (icomponentdefinitions_0.slotId == -1 && !interface_1.aBool999) {
-            JS5LocalRequester.method5581(icomponentdefinitions_0.idHash);
+            PulseEvent.method5581(icomponentdefinitions_0.idHash);
         }
     }
 
@@ -11832,7 +11833,7 @@ public class CS2Interpreter {
         icomponentdefinitions_0.npcMeshModifier = null;
         icomponentdefinitions_0.modelId = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
         if (icomponentdefinitions_0.slotId == -1 && !interface_1.aBool999) {
-            CutsceneObject.method1565(icomponentdefinitions_0.idHash);
+            PulseEvent.method1565(icomponentdefinitions_0.idHash);
         }
     }
 
@@ -11845,7 +11846,7 @@ public class CS2Interpreter {
         if (popIntArrayParam(string_4, cs2executor_2) != null) {
             string_4 = string_4.substring(0, string_4.length() - 1);
         }
-        icomponentdefinitions_0.anObjectArray1400 = popParamsDynamic(string_4, cs2executor_2);
+        icomponentdefinitions_0.onUseScript = popParamsDynamic(string_4, cs2executor_2);
         icomponentdefinitions_0.usesScripts = true;
     }
 
@@ -11862,7 +11863,7 @@ public class CS2Interpreter {
             icomponentdefinitions_0.recolor(i_4, s_5, s_6);
             IComponentDefinitions.redrawComponent(icomponentdefinitions_0);
             if (icomponentdefinitions_0.slotId == -1 && !interface_1.aBool999) {
-                RenderFlagMap.method5513(icomponentdefinitions_0.idHash, i_4);
+                PulseEvent.method5513(icomponentdefinitions_0.idHash, i_4);
             }
         }
     }
@@ -11871,7 +11872,7 @@ public class CS2Interpreter {
         icomponentdefinitions_0.monospaced = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
         IComponentDefinitions.redrawComponent(icomponentdefinitions_0);
         if (icomponentdefinitions_0.slotId == -1 && !interface_1.aBool999) {
-            CutsceneAction_Sub17.method14656(icomponentdefinitions_0.idHash);
+            PulseEvent.method14656(icomponentdefinitions_0.idHash);
         }
     }
 }

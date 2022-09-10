@@ -69,8 +69,8 @@ public class OpenGLSprite extends NativeSprite {
         f_12 = f_4 + (f_6 - f_2);
         aClass137_Sub1_Sub1_9033.method2351((i_10 & 0x1) != 0);
         aGraphicalRenderer_Sub1_9032.method13637();
-        aGraphicalRenderer_Sub1_9032.method13654(aClass137_Sub1_Sub1_9033);
-        aGraphicalRenderer_Sub1_9032.method13624(i_9);
+        aGraphicalRenderer_Sub1_9032.setTexture(aClass137_Sub1_Sub1_9033);
+        aGraphicalRenderer_Sub1_9032.setColorRenderType(i_9);
         aGraphicalRenderer_Sub1_9032.method13612(i_7);
         OpenGL.glColor4ub((byte) (i_8 >> 16), (byte) (i_8 >> 8), (byte) i_8, (byte) (i_8 >> 24));
         OpenGL.glBegin(7);
@@ -96,7 +96,7 @@ public class OpenGLSprite extends NativeSprite {
 
     @Override
     public void method2767(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
-        if (aGraphicalRenderer_Sub1_9032.aBool8456) {
+        if (aGraphicalRenderer_Sub1_9032.isMac) {
             int[] ints_7 = aGraphicalRenderer_Sub1_9032.ab(i_5, i_6, i_3, i_4);
             if (ints_7 != null) {
                 for (int i_8 = 0; i_8 < ints_7.length; i_8++) {
@@ -142,7 +142,7 @@ public class OpenGLSprite extends NativeSprite {
 
     @Override
     public void method2750(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
-        if (aGraphicalRenderer_Sub1_9032.aBool8456) {
+        if (aGraphicalRenderer_Sub1_9032.isMac) {
             int[] ints_7 = aGraphicalRenderer_Sub1_9032.ab(i_5, i_6, i_3, i_4);
             if (ints_7 != null) {
                 for (int i_8 = 0; i_8 < ints_7.length; i_8++) {
@@ -185,8 +185,8 @@ public class OpenGLSprite extends NativeSprite {
         int i_9 = i_2 + i_4;
         aClass137_Sub1_Sub1_9033.method2351(false);
         aGraphicalRenderer_Sub1_9032.method13637();
-        aGraphicalRenderer_Sub1_9032.method13654(aClass137_Sub1_Sub1_9033);
-        aGraphicalRenderer_Sub1_9032.method13624(i_7);
+        aGraphicalRenderer_Sub1_9032.setTexture(aClass137_Sub1_Sub1_9033);
+        aGraphicalRenderer_Sub1_9032.setColorRenderType(i_7);
         aGraphicalRenderer_Sub1_9032.method13612(i_5);
         OpenGL.glColor4ub((byte) (i_6 >> 16), (byte) (i_6 >> 8), (byte) i_6, (byte) (i_6 >> 24));
         if (aClass137_Sub1_Sub1_9033.aBool10135 && !aBool9028) {
@@ -279,12 +279,12 @@ public class OpenGLSprite extends NativeSprite {
     }
 
     void method14415() {
-        aGraphicalRenderer_Sub1_9032.method13610(1);
-        aGraphicalRenderer_Sub1_9032.method13654(null);
+        aGraphicalRenderer_Sub1_9032.setActiveTexture(1);
+        aGraphicalRenderer_Sub1_9032.setTexture(null);
         aGraphicalRenderer_Sub1_9032.method13717(8448, 8448);
         aGraphicalRenderer_Sub1_9032.method13595(1, 34168, 768);
         aGraphicalRenderer_Sub1_9032.method13616(0, 5890);
-        aGraphicalRenderer_Sub1_9032.method13610(0);
+        aGraphicalRenderer_Sub1_9032.setActiveTexture(0);
         aGraphicalRenderer_Sub1_9032.method13595(1, 34168, 768);
     }
 
@@ -292,12 +292,12 @@ public class OpenGLSprite extends NativeSprite {
     public void method2742(int i_1, int i_2, int i_3, int i_4, int i_5) {
         aClass137_Sub1_Sub1_9033.method2351(false);
         aGraphicalRenderer_Sub1_9032.method13637();
-        aGraphicalRenderer_Sub1_9032.method13624(i_5);
+        aGraphicalRenderer_Sub1_9032.setColorRenderType(i_5);
         OpenGL.glColor4ub((byte) (i_4 >> 16), (byte) (i_4 >> 8), (byte) i_4, (byte) (i_4 >> 24));
         i_1 += anInt9030;
         i_2 += anInt9034;
         if (aClass137_Sub1_Sub1_9029 == null) {
-            aGraphicalRenderer_Sub1_9032.method13654(aClass137_Sub1_Sub1_9033);
+            aGraphicalRenderer_Sub1_9032.setTexture(aClass137_Sub1_Sub1_9033);
             aGraphicalRenderer_Sub1_9032.method13612(i_3);
             OpenGL.glBegin(7);
             OpenGL.glTexCoord2f(0.0F, aClass137_Sub1_Sub1_9033.aFloat10134);
@@ -337,13 +337,13 @@ public class OpenGLSprite extends NativeSprite {
         Class137_Sub1_Sub1 class137_sub1_sub1_7 = class455_sub2_6.aClass137_Sub1_Sub1_8974;
         aClass137_Sub1_Sub1_9033.method2351(false);
         aGraphicalRenderer_Sub1_9032.method13637();
-        aGraphicalRenderer_Sub1_9032.method13654(aClass137_Sub1_Sub1_9033);
+        aGraphicalRenderer_Sub1_9032.setTexture(aClass137_Sub1_Sub1_9033);
         aGraphicalRenderer_Sub1_9032.method13612(1);
-        aGraphicalRenderer_Sub1_9032.method13610(1);
-        aGraphicalRenderer_Sub1_9032.method13654(class137_sub1_sub1_7);
+        aGraphicalRenderer_Sub1_9032.setActiveTexture(1);
+        aGraphicalRenderer_Sub1_9032.setTexture(class137_sub1_sub1_7);
         aGraphicalRenderer_Sub1_9032.method13717(7681, 8448);
         aGraphicalRenderer_Sub1_9032.method13595(0, 34168, 768);
-        aGraphicalRenderer_Sub1_9032.method13624(1);
+        aGraphicalRenderer_Sub1_9032.setColorRenderType(1);
         i_1 += anInt9030;
         i_2 += anInt9034;
         int i_8 = aClass137_Sub1_Sub1_9033.anInt10136 + i_1;
@@ -371,15 +371,15 @@ public class OpenGLSprite extends NativeSprite {
         OpenGL.glEnd();
         aGraphicalRenderer_Sub1_9032.method13595(0, 5890, 768);
         aGraphicalRenderer_Sub1_9032.method13612(0);
-        aGraphicalRenderer_Sub1_9032.method13654(null);
-        aGraphicalRenderer_Sub1_9032.method13610(0);
+        aGraphicalRenderer_Sub1_9032.setTexture(null);
+        aGraphicalRenderer_Sub1_9032.setActiveTexture(0);
     }
 
     @Override
     void method2755(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
         aClass137_Sub1_Sub1_9033.method2351(true);
         aGraphicalRenderer_Sub1_9032.method13637();
-        aGraphicalRenderer_Sub1_9032.method13624(i_7);
+        aGraphicalRenderer_Sub1_9032.setColorRenderType(i_7);
         OpenGL.glColor4ub((byte) (i_6 >> 16), (byte) (i_6 >> 8), (byte) i_6, (byte) (i_6 >> 24));
         if (aBool9028) {
             float f_9 = (float) i_3 / scaleWidth();
@@ -389,7 +389,7 @@ public class OpenGLSprite extends NativeSprite {
             float f_13 = f_11 + aClass137_Sub1_Sub1_9033.anInt10136 * f_9;
             float f_14 = f_12 + aClass137_Sub1_Sub1_9033.anInt10133 * f_10;
             if (aClass137_Sub1_Sub1_9029 == null) {
-                aGraphicalRenderer_Sub1_9032.method13654(aClass137_Sub1_Sub1_9033);
+                aGraphicalRenderer_Sub1_9032.setTexture(aClass137_Sub1_Sub1_9033);
                 aGraphicalRenderer_Sub1_9032.method13612(i_5);
                 OpenGL.glBegin(7);
                 OpenGL.glTexCoord2f(0.0F, aClass137_Sub1_Sub1_9033.aFloat10134);
@@ -421,7 +421,7 @@ public class OpenGLSprite extends NativeSprite {
                 method14415();
             }
         } else if (aClass137_Sub1_Sub1_9029 == null) {
-            aGraphicalRenderer_Sub1_9032.method13654(aClass137_Sub1_Sub1_9033);
+            aGraphicalRenderer_Sub1_9032.setTexture(aClass137_Sub1_Sub1_9033);
             aGraphicalRenderer_Sub1_9032.method13612(i_5);
             OpenGL.glBegin(7);
             OpenGL.glTexCoord2f(0.0F, aClass137_Sub1_Sub1_9033.aFloat10134);
@@ -486,8 +486,8 @@ public class OpenGLSprite extends NativeSprite {
         f_12 = f_4 + (f_6 - f_2);
         aClass137_Sub1_Sub1_9033.method2351(true);
         aGraphicalRenderer_Sub1_9032.method13637();
-        aGraphicalRenderer_Sub1_9032.method13654(aClass137_Sub1_Sub1_9033);
-        aGraphicalRenderer_Sub1_9032.method13624(i_9);
+        aGraphicalRenderer_Sub1_9032.setTexture(aClass137_Sub1_Sub1_9033);
+        aGraphicalRenderer_Sub1_9032.setColorRenderType(i_9);
         aGraphicalRenderer_Sub1_9032.method13612(i_7);
         OpenGL.glColor4ub((byte) (i_8 >> 16), (byte) (i_8 >> 8), (byte) i_8, (byte) (i_8 >> 24));
         OpenGL.glBegin(7);
@@ -513,8 +513,8 @@ public class OpenGLSprite extends NativeSprite {
         int i_9 = i_2 + i_4;
         aClass137_Sub1_Sub1_9033.method2351(false);
         aGraphicalRenderer_Sub1_9032.method13637();
-        aGraphicalRenderer_Sub1_9032.method13654(aClass137_Sub1_Sub1_9033);
-        aGraphicalRenderer_Sub1_9032.method13624(i_7);
+        aGraphicalRenderer_Sub1_9032.setTexture(aClass137_Sub1_Sub1_9033);
+        aGraphicalRenderer_Sub1_9032.setColorRenderType(i_7);
         aGraphicalRenderer_Sub1_9032.method13612(i_5);
         OpenGL.glColor4ub((byte) (i_6 >> 16), (byte) (i_6 >> 8), (byte) i_6, (byte) (i_6 >> 24));
         if (aClass137_Sub1_Sub1_9033.aBool10135 && !aBool9028) {
@@ -608,7 +608,7 @@ public class OpenGLSprite extends NativeSprite {
 
     @Override
     public void method2769(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
-        if (aGraphicalRenderer_Sub1_9032.aBool8456) {
+        if (aGraphicalRenderer_Sub1_9032.isMac) {
             int[] ints_7 = aGraphicalRenderer_Sub1_9032.ab(i_5, i_6, i_3, i_4);
             if (ints_7 != null) {
                 for (int i_8 = 0; i_8 < ints_7.length; i_8++) {
@@ -657,13 +657,13 @@ public class OpenGLSprite extends NativeSprite {
         f_13 = f_4 + (f_6 - f_2);
         aClass137_Sub1_Sub1_9033.method2351((i_7 & 0x1) != 0);
         aGraphicalRenderer_Sub1_9032.method13637();
-        aGraphicalRenderer_Sub1_9032.method13654(aClass137_Sub1_Sub1_9033);
+        aGraphicalRenderer_Sub1_9032.setTexture(aClass137_Sub1_Sub1_9033);
         aGraphicalRenderer_Sub1_9032.method13612(1);
-        aGraphicalRenderer_Sub1_9032.method13610(1);
-        aGraphicalRenderer_Sub1_9032.method13654(class137_sub1_sub1_11);
+        aGraphicalRenderer_Sub1_9032.setActiveTexture(1);
+        aGraphicalRenderer_Sub1_9032.setTexture(class137_sub1_sub1_11);
         aGraphicalRenderer_Sub1_9032.method13717(7681, 8448);
         aGraphicalRenderer_Sub1_9032.method13595(0, 34168, 768);
-        aGraphicalRenderer_Sub1_9032.method13624(1);
+        aGraphicalRenderer_Sub1_9032.setColorRenderType(1);
         f_14 = class137_sub1_sub1_11.aFloat10132 / class137_sub1_sub1_11.anInt10136;
         f_15 = class137_sub1_sub1_11.aFloat10134 / class137_sub1_sub1_11.anInt10133;
         OpenGL.glBegin(7);
@@ -683,8 +683,8 @@ public class OpenGLSprite extends NativeSprite {
         OpenGL.glEnd();
         aGraphicalRenderer_Sub1_9032.method13595(0, 5890, 768);
         aGraphicalRenderer_Sub1_9032.method13612(0);
-        aGraphicalRenderer_Sub1_9032.method13654(null);
-        aGraphicalRenderer_Sub1_9032.method13610(0);
+        aGraphicalRenderer_Sub1_9032.setTexture(null);
+        aGraphicalRenderer_Sub1_9032.setActiveTexture(0);
     }
 
     @Override
@@ -716,13 +716,13 @@ public class OpenGLSprite extends NativeSprite {
         Class137_Sub1_Sub1 class137_sub1_sub1_7 = class455_sub2_6.aClass137_Sub1_Sub1_8974;
         aClass137_Sub1_Sub1_9033.method2351(false);
         aGraphicalRenderer_Sub1_9032.method13637();
-        aGraphicalRenderer_Sub1_9032.method13654(aClass137_Sub1_Sub1_9033);
+        aGraphicalRenderer_Sub1_9032.setTexture(aClass137_Sub1_Sub1_9033);
         aGraphicalRenderer_Sub1_9032.method13612(1);
-        aGraphicalRenderer_Sub1_9032.method13610(1);
-        aGraphicalRenderer_Sub1_9032.method13654(class137_sub1_sub1_7);
+        aGraphicalRenderer_Sub1_9032.setActiveTexture(1);
+        aGraphicalRenderer_Sub1_9032.setTexture(class137_sub1_sub1_7);
         aGraphicalRenderer_Sub1_9032.method13717(7681, 8448);
         aGraphicalRenderer_Sub1_9032.method13595(0, 34168, 768);
-        aGraphicalRenderer_Sub1_9032.method13624(1);
+        aGraphicalRenderer_Sub1_9032.setColorRenderType(1);
         i_1 += anInt9030;
         i_2 += anInt9034;
         int i_8 = i_1 + aClass137_Sub1_Sub1_9033.anInt10136;
@@ -750,8 +750,8 @@ public class OpenGLSprite extends NativeSprite {
         OpenGL.glEnd();
         aGraphicalRenderer_Sub1_9032.method13595(0, 5890, 768);
         aGraphicalRenderer_Sub1_9032.method13612(0);
-        aGraphicalRenderer_Sub1_9032.method13654(null);
-        aGraphicalRenderer_Sub1_9032.method13610(0);
+        aGraphicalRenderer_Sub1_9032.setTexture(null);
+        aGraphicalRenderer_Sub1_9032.setActiveTexture(0);
     }
 
     @Override
@@ -760,13 +760,13 @@ public class OpenGLSprite extends NativeSprite {
         Class137_Sub1_Sub1 class137_sub1_sub1_7 = class455_sub2_6.aClass137_Sub1_Sub1_8974;
         aClass137_Sub1_Sub1_9033.method2351(false);
         aGraphicalRenderer_Sub1_9032.method13637();
-        aGraphicalRenderer_Sub1_9032.method13654(aClass137_Sub1_Sub1_9033);
+        aGraphicalRenderer_Sub1_9032.setTexture(aClass137_Sub1_Sub1_9033);
         aGraphicalRenderer_Sub1_9032.method13612(1);
-        aGraphicalRenderer_Sub1_9032.method13610(1);
-        aGraphicalRenderer_Sub1_9032.method13654(class137_sub1_sub1_7);
+        aGraphicalRenderer_Sub1_9032.setActiveTexture(1);
+        aGraphicalRenderer_Sub1_9032.setTexture(class137_sub1_sub1_7);
         aGraphicalRenderer_Sub1_9032.method13717(7681, 8448);
         aGraphicalRenderer_Sub1_9032.method13595(0, 34168, 768);
-        aGraphicalRenderer_Sub1_9032.method13624(1);
+        aGraphicalRenderer_Sub1_9032.setColorRenderType(1);
         i_1 += anInt9030;
         i_2 += anInt9034;
         int i_8 = i_1 + aClass137_Sub1_Sub1_9033.anInt10136;
@@ -794,15 +794,15 @@ public class OpenGLSprite extends NativeSprite {
         OpenGL.glEnd();
         aGraphicalRenderer_Sub1_9032.method13595(0, 5890, 768);
         aGraphicalRenderer_Sub1_9032.method13612(0);
-        aGraphicalRenderer_Sub1_9032.method13654(null);
-        aGraphicalRenderer_Sub1_9032.method13610(0);
+        aGraphicalRenderer_Sub1_9032.setTexture(null);
+        aGraphicalRenderer_Sub1_9032.setActiveTexture(0);
     }
 
     @Override
     void method2775(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
         aClass137_Sub1_Sub1_9033.method2351((i_8 & 0x1) != 0);
         aGraphicalRenderer_Sub1_9032.method13637();
-        aGraphicalRenderer_Sub1_9032.method13624(i_7);
+        aGraphicalRenderer_Sub1_9032.setColorRenderType(i_7);
         OpenGL.glColor4ub((byte) (i_6 >> 16), (byte) (i_6 >> 8), (byte) i_6, (byte) (i_6 >> 24));
         if (aBool9028) {
             float f_9 = (float) i_3 / scaleWidth();
@@ -812,7 +812,7 @@ public class OpenGLSprite extends NativeSprite {
             float f_13 = f_11 + aClass137_Sub1_Sub1_9033.anInt10136 * f_9;
             float f_14 = f_12 + aClass137_Sub1_Sub1_9033.anInt10133 * f_10;
             if (aClass137_Sub1_Sub1_9029 == null) {
-                aGraphicalRenderer_Sub1_9032.method13654(aClass137_Sub1_Sub1_9033);
+                aGraphicalRenderer_Sub1_9032.setTexture(aClass137_Sub1_Sub1_9033);
                 aGraphicalRenderer_Sub1_9032.method13612(i_5);
                 OpenGL.glBegin(7);
                 OpenGL.glTexCoord2f(0.0F, aClass137_Sub1_Sub1_9033.aFloat10134);
@@ -844,7 +844,7 @@ public class OpenGLSprite extends NativeSprite {
                 method14415();
             }
         } else if (aClass137_Sub1_Sub1_9029 == null) {
-            aGraphicalRenderer_Sub1_9032.method13654(aClass137_Sub1_Sub1_9033);
+            aGraphicalRenderer_Sub1_9032.setTexture(aClass137_Sub1_Sub1_9033);
             aGraphicalRenderer_Sub1_9032.method13612(i_5);
             OpenGL.glBegin(7);
             OpenGL.glTexCoord2f(0.0F, aClass137_Sub1_Sub1_9033.aFloat10134);
@@ -912,13 +912,13 @@ public class OpenGLSprite extends NativeSprite {
         f_13 = f_4 + (f_6 - f_2);
         aClass137_Sub1_Sub1_9033.method2351((i_7 & 0x1) != 0);
         aGraphicalRenderer_Sub1_9032.method13637();
-        aGraphicalRenderer_Sub1_9032.method13654(aClass137_Sub1_Sub1_9033);
+        aGraphicalRenderer_Sub1_9032.setTexture(aClass137_Sub1_Sub1_9033);
         aGraphicalRenderer_Sub1_9032.method13612(1);
-        aGraphicalRenderer_Sub1_9032.method13610(1);
-        aGraphicalRenderer_Sub1_9032.method13654(class137_sub1_sub1_11);
+        aGraphicalRenderer_Sub1_9032.setActiveTexture(1);
+        aGraphicalRenderer_Sub1_9032.setTexture(class137_sub1_sub1_11);
         aGraphicalRenderer_Sub1_9032.method13717(7681, 8448);
         aGraphicalRenderer_Sub1_9032.method13595(0, 34168, 768);
-        aGraphicalRenderer_Sub1_9032.method13624(1);
+        aGraphicalRenderer_Sub1_9032.setColorRenderType(1);
         f_14 = class137_sub1_sub1_11.aFloat10132 / class137_sub1_sub1_11.anInt10136;
         f_15 = class137_sub1_sub1_11.aFloat10134 / class137_sub1_sub1_11.anInt10133;
         OpenGL.glBegin(7);
@@ -938,20 +938,20 @@ public class OpenGLSprite extends NativeSprite {
         OpenGL.glEnd();
         aGraphicalRenderer_Sub1_9032.method13595(0, 5890, 768);
         aGraphicalRenderer_Sub1_9032.method13612(0);
-        aGraphicalRenderer_Sub1_9032.method13654(null);
-        aGraphicalRenderer_Sub1_9032.method13610(0);
+        aGraphicalRenderer_Sub1_9032.setTexture(null);
+        aGraphicalRenderer_Sub1_9032.setActiveTexture(0);
     }
 
     @Override
     public void method2749(int i_1, int i_2, int i_3, int i_4, int i_5) {
         aClass137_Sub1_Sub1_9033.method2351(false);
         aGraphicalRenderer_Sub1_9032.method13637();
-        aGraphicalRenderer_Sub1_9032.method13624(i_5);
+        aGraphicalRenderer_Sub1_9032.setColorRenderType(i_5);
         OpenGL.glColor4ub((byte) (i_4 >> 16), (byte) (i_4 >> 8), (byte) i_4, (byte) (i_4 >> 24));
         i_1 += anInt9030;
         i_2 += anInt9034;
         if (aClass137_Sub1_Sub1_9029 == null) {
-            aGraphicalRenderer_Sub1_9032.method13654(aClass137_Sub1_Sub1_9033);
+            aGraphicalRenderer_Sub1_9032.setTexture(aClass137_Sub1_Sub1_9033);
             aGraphicalRenderer_Sub1_9032.method13612(i_3);
             OpenGL.glBegin(7);
             OpenGL.glTexCoord2f(0.0F, aClass137_Sub1_Sub1_9033.aFloat10134);
@@ -989,12 +989,12 @@ public class OpenGLSprite extends NativeSprite {
     public void method2778(int i_1, int i_2, int i_3, int i_4, int i_5) {
         aClass137_Sub1_Sub1_9033.method2351(false);
         aGraphicalRenderer_Sub1_9032.method13637();
-        aGraphicalRenderer_Sub1_9032.method13624(i_5);
+        aGraphicalRenderer_Sub1_9032.setColorRenderType(i_5);
         OpenGL.glColor4ub((byte) (i_4 >> 16), (byte) (i_4 >> 8), (byte) i_4, (byte) (i_4 >> 24));
         i_1 += anInt9030;
         i_2 += anInt9034;
         if (aClass137_Sub1_Sub1_9029 == null) {
-            aGraphicalRenderer_Sub1_9032.method13654(aClass137_Sub1_Sub1_9033);
+            aGraphicalRenderer_Sub1_9032.setTexture(aClass137_Sub1_Sub1_9033);
             aGraphicalRenderer_Sub1_9032.method13612(i_3);
             OpenGL.glBegin(7);
             OpenGL.glTexCoord2f(0.0F, aClass137_Sub1_Sub1_9033.aFloat10134);
@@ -1128,8 +1128,8 @@ public class OpenGLSprite extends NativeSprite {
         int i_9 = i_2 + i_4;
         aClass137_Sub1_Sub1_9033.method2351(false);
         aGraphicalRenderer_Sub1_9032.method13637();
-        aGraphicalRenderer_Sub1_9032.method13654(aClass137_Sub1_Sub1_9033);
-        aGraphicalRenderer_Sub1_9032.method13624(i_7);
+        aGraphicalRenderer_Sub1_9032.setTexture(aClass137_Sub1_Sub1_9033);
+        aGraphicalRenderer_Sub1_9032.setColorRenderType(i_7);
         aGraphicalRenderer_Sub1_9032.method13612(i_5);
         OpenGL.glColor4ub((byte) (i_6 >> 16), (byte) (i_6 >> 8), (byte) i_6, (byte) (i_6 >> 24));
         if (aClass137_Sub1_Sub1_9033.aBool10135 && !aBool9028) {
@@ -1252,8 +1252,8 @@ public class OpenGLSprite extends NativeSprite {
         f_12 = f_4 + (f_6 - f_2);
         aClass137_Sub1_Sub1_9033.method2351((i_10 & 0x1) != 0);
         aGraphicalRenderer_Sub1_9032.method13637();
-        aGraphicalRenderer_Sub1_9032.method13654(aClass137_Sub1_Sub1_9033);
-        aGraphicalRenderer_Sub1_9032.method13624(i_9);
+        aGraphicalRenderer_Sub1_9032.setTexture(aClass137_Sub1_Sub1_9033);
+        aGraphicalRenderer_Sub1_9032.setColorRenderType(i_9);
         aGraphicalRenderer_Sub1_9032.method13612(i_7);
         OpenGL.glColor4ub((byte) (i_8 >> 16), (byte) (i_8 >> 8), (byte) i_8, (byte) (i_8 >> 24));
         OpenGL.glBegin(7);
@@ -1299,8 +1299,8 @@ public class OpenGLSprite extends NativeSprite {
         f_12 = f_4 + (f_6 - f_2);
         aClass137_Sub1_Sub1_9033.method2351((i_10 & 0x1) != 0);
         aGraphicalRenderer_Sub1_9032.method13637();
-        aGraphicalRenderer_Sub1_9032.method13654(aClass137_Sub1_Sub1_9033);
-        aGraphicalRenderer_Sub1_9032.method13624(i_9);
+        aGraphicalRenderer_Sub1_9032.setTexture(aClass137_Sub1_Sub1_9033);
+        aGraphicalRenderer_Sub1_9032.setColorRenderType(i_9);
         aGraphicalRenderer_Sub1_9032.method13612(i_7);
         OpenGL.glColor4ub((byte) (i_8 >> 16), (byte) (i_8 >> 8), (byte) i_8, (byte) (i_8 >> 24));
         OpenGL.glBegin(7);
@@ -1317,7 +1317,7 @@ public class OpenGLSprite extends NativeSprite {
 
     @Override
     public void method2768(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
-        if (aGraphicalRenderer_Sub1_9032.aBool8456) {
+        if (aGraphicalRenderer_Sub1_9032.isMac) {
             int[] ints_7 = aGraphicalRenderer_Sub1_9032.ab(i_5, i_6, i_3, i_4);
             if (ints_7 != null) {
                 for (int i_8 = 0; i_8 < ints_7.length; i_8++) {
@@ -1366,13 +1366,13 @@ public class OpenGLSprite extends NativeSprite {
         f_13 = f_4 + (f_6 - f_2);
         aClass137_Sub1_Sub1_9033.method2351((i_7 & 0x1) != 0);
         aGraphicalRenderer_Sub1_9032.method13637();
-        aGraphicalRenderer_Sub1_9032.method13654(aClass137_Sub1_Sub1_9033);
+        aGraphicalRenderer_Sub1_9032.setTexture(aClass137_Sub1_Sub1_9033);
         aGraphicalRenderer_Sub1_9032.method13612(1);
-        aGraphicalRenderer_Sub1_9032.method13610(1);
-        aGraphicalRenderer_Sub1_9032.method13654(class137_sub1_sub1_11);
+        aGraphicalRenderer_Sub1_9032.setActiveTexture(1);
+        aGraphicalRenderer_Sub1_9032.setTexture(class137_sub1_sub1_11);
         aGraphicalRenderer_Sub1_9032.method13717(7681, 8448);
         aGraphicalRenderer_Sub1_9032.method13595(0, 34168, 768);
-        aGraphicalRenderer_Sub1_9032.method13624(1);
+        aGraphicalRenderer_Sub1_9032.setColorRenderType(1);
         f_14 = class137_sub1_sub1_11.aFloat10132 / class137_sub1_sub1_11.anInt10136;
         f_15 = class137_sub1_sub1_11.aFloat10134 / class137_sub1_sub1_11.anInt10133;
         OpenGL.glBegin(7);
@@ -1392,18 +1392,18 @@ public class OpenGLSprite extends NativeSprite {
         OpenGL.glEnd();
         aGraphicalRenderer_Sub1_9032.method13595(0, 5890, 768);
         aGraphicalRenderer_Sub1_9032.method13612(0);
-        aGraphicalRenderer_Sub1_9032.method13654(null);
-        aGraphicalRenderer_Sub1_9032.method13610(0);
+        aGraphicalRenderer_Sub1_9032.setTexture(null);
+        aGraphicalRenderer_Sub1_9032.setActiveTexture(0);
     }
 
     void method14419(int i_1) {
-        aGraphicalRenderer_Sub1_9032.method13610(1);
-        aGraphicalRenderer_Sub1_9032.method13654(aClass137_Sub1_Sub1_9033);
+        aGraphicalRenderer_Sub1_9032.setActiveTexture(1);
+        aGraphicalRenderer_Sub1_9032.setTexture(aClass137_Sub1_Sub1_9033);
         aGraphicalRenderer_Sub1_9032.method13717(aGraphicalRenderer_Sub1_9032.method13613(i_1), 7681);
         aGraphicalRenderer_Sub1_9032.method13595(1, 34167, 768);
         aGraphicalRenderer_Sub1_9032.method13616(0, 34168);
-        aGraphicalRenderer_Sub1_9032.method13610(0);
-        aGraphicalRenderer_Sub1_9032.method13654(aClass137_Sub1_Sub1_9029);
+        aGraphicalRenderer_Sub1_9032.setActiveTexture(0);
+        aGraphicalRenderer_Sub1_9032.setTexture(aClass137_Sub1_Sub1_9029);
         aGraphicalRenderer_Sub1_9032.method13717(34479, 7681);
         aGraphicalRenderer_Sub1_9032.method13595(1, 34166, 768);
         if (anInt9031 == 0) {
@@ -1430,7 +1430,7 @@ public class OpenGLSprite extends NativeSprite {
     void method2787(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
         aClass137_Sub1_Sub1_9033.method2351((i_8 & 0x1) != 0);
         aGraphicalRenderer_Sub1_9032.method13637();
-        aGraphicalRenderer_Sub1_9032.method13624(i_7);
+        aGraphicalRenderer_Sub1_9032.setColorRenderType(i_7);
         OpenGL.glColor4ub((byte) (i_6 >> 16), (byte) (i_6 >> 8), (byte) i_6, (byte) (i_6 >> 24));
         if (aBool9028) {
             float f_9 = (float) i_3 / scaleWidth();
@@ -1440,7 +1440,7 @@ public class OpenGLSprite extends NativeSprite {
             float f_13 = f_11 + aClass137_Sub1_Sub1_9033.anInt10136 * f_9;
             float f_14 = f_12 + aClass137_Sub1_Sub1_9033.anInt10133 * f_10;
             if (aClass137_Sub1_Sub1_9029 == null) {
-                aGraphicalRenderer_Sub1_9032.method13654(aClass137_Sub1_Sub1_9033);
+                aGraphicalRenderer_Sub1_9032.setTexture(aClass137_Sub1_Sub1_9033);
                 aGraphicalRenderer_Sub1_9032.method13612(i_5);
                 OpenGL.glBegin(7);
                 OpenGL.glTexCoord2f(0.0F, aClass137_Sub1_Sub1_9033.aFloat10134);
@@ -1472,7 +1472,7 @@ public class OpenGLSprite extends NativeSprite {
                 method14415();
             }
         } else if (aClass137_Sub1_Sub1_9029 == null) {
-            aGraphicalRenderer_Sub1_9032.method13654(aClass137_Sub1_Sub1_9033);
+            aGraphicalRenderer_Sub1_9032.setTexture(aClass137_Sub1_Sub1_9033);
             aGraphicalRenderer_Sub1_9032.method13612(i_5);
             OpenGL.glBegin(7);
             OpenGL.glTexCoord2f(0.0F, aClass137_Sub1_Sub1_9033.aFloat10134);

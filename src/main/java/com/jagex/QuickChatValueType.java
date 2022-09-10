@@ -29,7 +29,7 @@ public class QuickChatValueType {
         paramCount = i_4;
     }
 
-    static void method4179(int i_0, int i_1, int i_2, int i_3, Class476 class476_4) {
+    static void method4179(int i_0, int i_1, int i_2, int i_3, ObjectMeshModifier class476_4) {
         if (i_2 >= 1 && i_3 >= 1 && i_2 <= IndexLoaders.MAP_REGION_DECODER.getSizeX() - 2 && i_3 <= IndexLoaders.MAP_REGION_DECODER.getSizeY() - 2 && IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager() != null) {
             WorldObject sceneobject_6 = IndexLoaders.MAP_REGION_DECODER.method4441().getWorldObject(i_0, i_1, i_2, i_3);
             if (sceneobject_6 != null) {

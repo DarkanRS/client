@@ -53,7 +53,7 @@ public class JAGGLRenderer extends HardwareRenderer {
             aString10200 = OpenGL.glGetString(7937).toLowerCase();
             if (aString10185.indexOf("microsoft") == -1 && aString10185.indexOf("brian paul") == -1 && aString10185.indexOf("mesa") == -1) {
                 String string_9 = OpenGL.glGetString(7938);
-                String[] arr_10 = MovingAnimation.method12681(string_9.replace('.', ' '), ' ');
+                String[] arr_10 = MovingAnimation.split(string_9.replace('.', ' '), ' ');
                 if (arr_10.length >= 2) {
                     int i_11;
                     try {
@@ -103,7 +103,7 @@ public class JAGGLRenderer extends HardwareRenderer {
                                 i_11 = 0;
                                 boolean bool_23 = false;
                                 boolean bool_13 = false;
-                                String[] arr_14 = MovingAnimation.method12681(aString10200.replace('/', ' '), ' ');
+                                String[] arr_14 = MovingAnimation.split(aString10200.replace('/', ' '), ' ');
 
                                 for (int i_15 = 0; i_15 < arr_14.length; i_15++) {
                                     String string_16 = arr_14[i_15];
@@ -657,13 +657,13 @@ public class JAGGLRenderer extends HardwareRenderer {
 
         int i_1;
         for (i_1 = 0; i_1 < anInt8773; i_1++) {
-            Node_Sub24 class282_sub24_2 = aNode_Sub24Array8716[i_1];
-            int i_3 = class282_sub24_2.method12371();
+            GLLight class282_sub24_2 = aNode_Sub24Array8716[i_1];
+            int i_3 = class282_sub24_2.getColor();
             int i_4 = i_1 + 16386;
-            float f_5 = class282_sub24_2.method12395() / 255.0F;
-            aFloatArray10172[0] = class282_sub24_2.method12368();
-            aFloatArray10172[1] = class282_sub24_2.method12369();
-            aFloatArray10172[2] = class282_sub24_2.method12394();
+            float f_5 = class282_sub24_2.getIntensity() / 255.0F;
+            aFloatArray10172[0] = class282_sub24_2.getX();
+            aFloatArray10172[1] = class282_sub24_2.getY();
+            aFloatArray10172[2] = class282_sub24_2.getZ();
             aFloatArray10172[3] = 1.0F;
             OpenGL.glLightfv(i_4, 4611, aFloatArray10172, 0);
             aFloatArray10172[0] = (i_3 >> 16 & 0xff) * f_5;
@@ -1782,13 +1782,13 @@ public class JAGGLRenderer extends HardwareRenderer {
 
         int i_1;
         for (i_1 = 0; i_1 < anInt8773; i_1++) {
-            Node_Sub24 class282_sub24_2 = aNode_Sub24Array8716[i_1];
-            int i_3 = class282_sub24_2.method12371();
+            GLLight class282_sub24_2 = aNode_Sub24Array8716[i_1];
+            int i_3 = class282_sub24_2.getColor();
             int i_4 = 16386 + i_1;
-            float f_5 = class282_sub24_2.method12395() / 255.0F;
-            aFloatArray10172[0] = class282_sub24_2.method12368();
-            aFloatArray10172[1] = class282_sub24_2.method12369();
-            aFloatArray10172[2] = class282_sub24_2.method12394();
+            float f_5 = class282_sub24_2.getIntensity() / 255.0F;
+            aFloatArray10172[0] = class282_sub24_2.getX();
+            aFloatArray10172[1] = class282_sub24_2.getY();
+            aFloatArray10172[2] = class282_sub24_2.getZ();
             aFloatArray10172[3] = 1.0F;
             OpenGL.glLightfv(i_4, 4611, aFloatArray10172, 0);
             aFloatArray10172[0] = (i_3 >> 16 & 0xff) * f_5;
@@ -1814,13 +1814,13 @@ public class JAGGLRenderer extends HardwareRenderer {
 
         int i_1;
         for (i_1 = 0; i_1 < anInt8773; i_1++) {
-            Node_Sub24 class282_sub24_2 = aNode_Sub24Array8716[i_1];
-            int i_3 = class282_sub24_2.method12371();
+            GLLight class282_sub24_2 = aNode_Sub24Array8716[i_1];
+            int i_3 = class282_sub24_2.getColor();
             int i_4 = 16386 + i_1;
-            float f_5 = class282_sub24_2.method12395() / 255.0F;
-            aFloatArray10172[0] = class282_sub24_2.method12368();
-            aFloatArray10172[1] = class282_sub24_2.method12369();
-            aFloatArray10172[2] = class282_sub24_2.method12394();
+            float f_5 = class282_sub24_2.getIntensity() / 255.0F;
+            aFloatArray10172[0] = class282_sub24_2.getX();
+            aFloatArray10172[1] = class282_sub24_2.getY();
+            aFloatArray10172[2] = class282_sub24_2.getZ();
             aFloatArray10172[3] = 1.0F;
             OpenGL.glLightfv(i_4, 4611, aFloatArray10172, 0);
             aFloatArray10172[0] = (i_3 >> 16 & 0xff) * f_5;

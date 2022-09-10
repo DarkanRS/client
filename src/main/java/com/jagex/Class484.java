@@ -29,7 +29,7 @@ public class Class484 {
         if (iCompDef.aspectHeightType == 4) {
             iCompDef.height = iCompDef.width * iCompDef.aspectY / iCompDef.aspectX;
         }
-        if (client.aBool7168 && (client.getIComponentSettings(iCompDef).settingsHash != 0 || iCompDef.type == ComponentType.CONTAINER)) {
+        if (client.aBool7168 && (client.getIComponentSettings(iCompDef).eventsHash != 0 || iCompDef.type == ComponentType.CONTAINER)) {
             if (iCompDef.height < 5 && iCompDef.width < 5) {
                 iCompDef.height = 5;
                 iCompDef.width = 5;
@@ -42,7 +42,7 @@ public class Class484 {
                 }
             }
         }
-        if (iCompDef.contentType == IComponentDefinitions.CONTENT_TYPE_1337) {
+        if (iCompDef.contentType == ContentType.MAIN_GAME_SCENE) {
             client.GAME_SCREEN_INTERFACE = iCompDef;
         }
         if (bool_3 && iCompDef.anObjectArray1271 != null && (i_5 != iCompDef.width || i_6 != iCompDef.height)) {

@@ -113,7 +113,7 @@ public class GroundDecoration extends SceneObjectNode implements WorldObject {
         return aClass123_10507.anInt1542;
     }
 
-    public void method16091(Class476 class476_1) {
+    public void method16091(ObjectMeshModifier class476_1) {
         aClass123_10507.method2116(class476_1);
     }
 

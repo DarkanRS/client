@@ -670,11 +670,11 @@ public class DirectXRenderer extends HardwareRenderer {
     void method13953() {
         int i_1;
         for (i_1 = 0; i_1 < anInt8773; i_1++) {
-            Node_Sub24 class282_sub24_2 = aNode_Sub24Array8716[i_1];
+            GLLight class282_sub24_2 = aNode_Sub24Array8716[i_1];
             int i_3 = i_1 + 2;
-            int i_4 = class282_sub24_2.method12371();
-            float f_5 = class282_sub24_2.method12395() / 255.0F;
-            D3DLIGHT.SetPosition(aLong10253, class282_sub24_2.method12368(), class282_sub24_2.method12369(), class282_sub24_2.method12394());
+            int i_4 = class282_sub24_2.getColor();
+            float f_5 = class282_sub24_2.getIntensity() / 255.0F;
+            D3DLIGHT.SetPosition(aLong10253, class282_sub24_2.getX(), class282_sub24_2.getY(), class282_sub24_2.getZ());
             D3DLIGHT.SetDiffuse(aLong10253, (i_4 >> 16 & 0xff) * f_5, (i_4 >> 8 & 0xff) * f_5, (i_4 & 0xff) * f_5, 0.0F);
             D3DLIGHT.SetAttenuation(aLong10253, 0.0F, 0.0F, 1.0F / (class282_sub24_2.method12370() * class282_sub24_2.method12370()));
             D3DLIGHT.SetRange(aLong10253, class282_sub24_2.method12370());
@@ -896,11 +896,11 @@ public class DirectXRenderer extends HardwareRenderer {
     void method13982() {
         int i_1;
         for (i_1 = 0; i_1 < anInt8773; i_1++) {
-            Node_Sub24 class282_sub24_2 = aNode_Sub24Array8716[i_1];
+            GLLight class282_sub24_2 = aNode_Sub24Array8716[i_1];
             int i_3 = i_1 + 2;
-            int i_4 = class282_sub24_2.method12371();
-            float f_5 = class282_sub24_2.method12395() / 255.0F;
-            D3DLIGHT.SetPosition(aLong10253, class282_sub24_2.method12368(), class282_sub24_2.method12369(), class282_sub24_2.method12394());
+            int i_4 = class282_sub24_2.getColor();
+            float f_5 = class282_sub24_2.getIntensity() / 255.0F;
+            D3DLIGHT.SetPosition(aLong10253, class282_sub24_2.getX(), class282_sub24_2.getY(), class282_sub24_2.getZ());
             D3DLIGHT.SetDiffuse(aLong10253, (i_4 >> 16 & 0xff) * f_5, (i_4 >> 8 & 0xff) * f_5, (i_4 & 0xff) * f_5, 0.0F);
             D3DLIGHT.SetAttenuation(aLong10253, 0.0F, 0.0F, 1.0F / (class282_sub24_2.method12370() * class282_sub24_2.method12370()));
             D3DLIGHT.SetRange(aLong10253, class282_sub24_2.method12370());
@@ -1489,11 +1489,11 @@ public class DirectXRenderer extends HardwareRenderer {
     void method14132() {
         int i_1;
         for (i_1 = 0; i_1 < anInt8773; i_1++) {
-            Node_Sub24 class282_sub24_2 = aNode_Sub24Array8716[i_1];
+            GLLight class282_sub24_2 = aNode_Sub24Array8716[i_1];
             int i_3 = i_1 + 2;
-            int i_4 = class282_sub24_2.method12371();
-            float f_5 = class282_sub24_2.method12395() / 255.0F;
-            D3DLIGHT.SetPosition(aLong10253, class282_sub24_2.method12368(), class282_sub24_2.method12369(), class282_sub24_2.method12394());
+            int i_4 = class282_sub24_2.getColor();
+            float f_5 = class282_sub24_2.getIntensity() / 255.0F;
+            D3DLIGHT.SetPosition(aLong10253, class282_sub24_2.getX(), class282_sub24_2.getY(), class282_sub24_2.getZ());
             D3DLIGHT.SetDiffuse(aLong10253, (i_4 >> 16 & 0xff) * f_5, (i_4 >> 8 & 0xff) * f_5, (i_4 & 0xff) * f_5, 0.0F);
             D3DLIGHT.SetAttenuation(aLong10253, 0.0F, 0.0F, 1.0F / (class282_sub24_2.method12370() * class282_sub24_2.method12370()));
             D3DLIGHT.SetRange(aLong10253, class282_sub24_2.method12370());

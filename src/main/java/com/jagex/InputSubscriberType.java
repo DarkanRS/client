@@ -4,7 +4,7 @@ public class InputSubscriberType {
 
     public static int EMAIL_STATUS;
 
-    static IComponentDefinitions aClass118_2763;
+    static IComponentDefinitions NO_LAYER;
 
     static InputSubscriberType COMBINED = new InputSubscriberType(0);
     static InputSubscriberType KEY_PRESS = new InputSubscriberType(1);

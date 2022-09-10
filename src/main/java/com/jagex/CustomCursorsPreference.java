@@ -20,7 +20,7 @@ public class CustomCursorsPreference extends Preference {
 
     @Override
     void setValue(int i_1) {
-        anInt5578 = i_1;
+        value = i_1;
     }
 
     @Override
@@ -34,14 +34,14 @@ public class CustomCursorsPreference extends Preference {
     }
 
     public void method12674() {
-        if (anInt5578 != 1 && anInt5578 != 0) {
-            anInt5578 = getDefaultValue();
+        if (value != 1 && value != 0) {
+            value = getDefaultValue();
         }
 
     }
 
     public int method12675() {
-        return anInt5578;
+        return value;
     }
 
     int method7784() {
@@ -57,7 +57,7 @@ public class CustomCursorsPreference extends Preference {
     }
 
     void method7780(int i_1) {
-        anInt5578 = i_1 * -754033619 * -859024475;
+        value = i_1 * -754033619 * -859024475;
     }
 
 }

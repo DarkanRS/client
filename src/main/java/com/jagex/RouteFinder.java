@@ -580,7 +580,7 @@ public class RouteFinder {
                     return;
                 }
                 if ("clientdrop".equalsIgnoreCase(string_0)) {
-                    if (client.GAME_STATE == GameState.UNK_13) {
+                    if (client.GAME_STATE == GameState.LOGGED_INGAME) {
                         Class151.killConnections();
                     } else if (client.GAME_STATE == GameState.UNK_18) {
                         client.GAME_CONNECTION_CONTEXT.aBool2298 = true;
@@ -611,14 +611,14 @@ public class RouteFinder {
                 }
                 String[] arr_24;
                 if (string_0.startsWith("directlogin")) {
-                    arr_24 = MovingAnimation.method12681(string_0.substring(12), ' ');
+                    arr_24 = MovingAnimation.split(string_0.substring(12), ' ');
                     if (arr_24.length == 2) {
                         Class2.method257(arr_24[0], arr_24[1]);
                     }
                     return;
                 }
                 if (string_0.startsWith("snlogin ")) {
-                    arr_24 = MovingAnimation.method12681(string_0.substring(8), ' ');
+                    arr_24 = MovingAnimation.split(string_0.substring(8), ' ');
                     i_13 = Integer.parseInt(arr_24[0]);
                     Node_Sub1.method11614(i_13);
                     return;
@@ -664,10 +664,10 @@ public class RouteFinder {
                         Class209.printConsoleMessage("Failed to read file");
                         return;
                     }
-                    String[] arr_12 = MovingAnimation.method12681(Class122.method2110(Node_Sub17_Sub7.method15439(bytes_5), '\r', ""), '\n');
+                    String[] arr_12 = MovingAnimation.split(Class122.method2110(Node_Sub17_Sub7.method15439(bytes_5), '\r', ""), '\n');
                     Class341.method6074(arr_12);
                 }
-                if (client.GAME_STATE == GameState.UNK_13) {
+                if (client.GAME_STATE == GameState.LOGGED_INGAME) {
                     TCPPacket tcpmessage_21 = TCPPacket.createPacket(ClientProt.COMMAND, client.GAME_CONNECTION_CONTEXT.outKeys);
                     tcpmessage_21.buffer.writeByte(string_0.length() + 3);
                     tcpmessage_21.buffer.writeByte(bool_1 ? 1 : 0);
@@ -680,7 +680,7 @@ public class RouteFinder {
                 return;
             }
         }
-        if (client.GAME_STATE != GameState.UNK_13) {
+        if (client.GAME_STATE != GameState.LOGGED_INGAME) {
             Class209.printConsoleMessage(LocalizedText.UNKNOWN_DEV_COMMAND.translate(Class223.CURRENT_LANGUAGE) + string_0);
         }
     }

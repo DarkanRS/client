@@ -26,7 +26,7 @@ public class IcmpService_Sub1 extends IcmpService {
 		Iterator iterator = ((IcmpService_Sub1) this).aList7962.iterator();
 		while (iterator.hasNext()) {
 			Interface45 interface45 = (Interface45) iterator.next();
-			interface45.method245(i, i_0_, i_1_);
+			interface45.addMouseRecord(i, i_0_, i_1_);
 		}
 	}
 
@@ -51,7 +51,7 @@ public class IcmpService_Sub1 extends IcmpService {
     protected void method11599(int i_1, int i_2, int i_3) {
 
         for (Interface45 interface45_5 : aList7962) {
-            interface45_5.method245(i_1, i_2, i_3);
+            interface45_5.addMouseRecord(i_1, i_2, i_3);
         }
 
     }
@@ -60,7 +60,7 @@ public class IcmpService_Sub1 extends IcmpService {
     protected void method11600(int i_1, int i_2, int i_3) {
 
         for (Interface45 interface45_5 : aList7962) {
-            interface45_5.method245(i_1, i_2, i_3);
+            interface45_5.addMouseRecord(i_1, i_2, i_3);
         }
 
     }

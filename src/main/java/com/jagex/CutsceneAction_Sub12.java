@@ -4,7 +4,7 @@ import java.util.Iterator;
 
 public class CutsceneAction_Sub12 extends CutsceneAction {
 
-    static int USE_INTERFACE_ID;
+    static int TARGET_PARAM;
 
     String aString9318;
 
@@ -22,7 +22,7 @@ public class CutsceneAction_Sub12 extends CutsceneAction {
             HintArrow class180_9 = arr_7[i_8];
             if (class180_9 != null && class180_9.targetType == 2) {
                 Class407.method6871(class180_9.plane, class180_9.x, class180_9.y, class180_9.height * 2);
-                if (client.aFloatArray7292[0] > -1.0f && client.CYCLES_20MS % 20 < 10) {
+                if (client.aFloatArray7292[0] > -1.0f && client.FRAME_COUNT % 20 < 10) {
                     NativeSprite nativesprite_10 = Class391.HINT_ARROW_SPRITES[class180_9.arrowSprite];
                     int i_11 = (int) (client.aFloatArray7292[0] + i_0 - 12.0F);
                     int i_12 = (int) (client.aFloatArray7292[1] + i_1 - 28.0F);
@@ -39,7 +39,7 @@ public class CutsceneAction_Sub12 extends CutsceneAction {
             return 0;
         } else {
             int i_2 = class282_sub50_sub7_0.clickType;
-            return Class14.method539(i_2) ? 1 : (SunDefinitions.isItemClickType(i_2) ? 2 : (EnumDefinitions.isObjectClickType(i_2) ? 3 : (Class237.isNPCClickType(i_2) ? 4 : (Class348.method6176(i_2) ? 7 : (i_2 == 16 ? 8 : 5)))));
+            return Class14.method539(i_2) ? 1 : (SunDefinitions.isItemClickType(i_2) ? 2 : (EnumDefinitions.isObjectClickType(i_2) ? 3 : (Class237.isNPCClickType(i_2) ? 4 : (ClanSettingsDelta.method6176(i_2) ? 7 : (i_2 == 16 ? 8 : 5)))));
         }
     }
 

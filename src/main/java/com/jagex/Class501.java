@@ -45,10 +45,10 @@ public class Class501 {
         NativeLibraryLoader.anInt3240 = 2;
         Class86.anInt833 = -1;
         PingRequester.anInt5864 = -1;
-        GameState.setGameState(GameState.UNK_13);
+        GameState.setGameState(GameState.LOGGED_INGAME);
 
         for (i_1 = 0; i_1 < 107; i_1++) {
-            client.aBoolArray7443[i_1] = true;
+            client.IF_COMPONENTS_TO_RENDER[i_1] = true;
         }
 
         Class388.method6692();

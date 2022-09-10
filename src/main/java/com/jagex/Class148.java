@@ -44,7 +44,7 @@ public class Class148 {
         return RouteStrategies.NORMAL_OBJECT;
     }
 
-    static Class method2553(String string_0) throws ClassNotFoundException {
+    static Class classFromTypeString(String string_0) throws ClassNotFoundException {
         return "B".equals(string_0) ? Byte.TYPE : ("I".equals(string_0) ? Integer.TYPE : ("S".equals(string_0) ? Short.TYPE : ("J".equals(string_0) ? Long.TYPE : ("Z".equals(string_0) ? Boolean.TYPE : ("F".equals(string_0) ? Float.TYPE : ("D".equals(string_0) ? Double.TYPE : ("C".equals(string_0) ? Character.TYPE : ("void".equals(string_0) ? Void.TYPE : Class.forName(string_0)))))))));
     }
 }

@@ -465,7 +465,7 @@ public class Login {
                             } catch (Throwable throwable_16) {
                                 if (client.aBool7147) {
                                     try {
-                                        SubInterface.suppliedApplet.getAppletContext().showDocument(new URL(SubInterface.suppliedApplet.getCodeBase(), "blank.ws"), "tbi");
+                        				SubInterface.suppliedApplet.showError("error_game_tbi");
                                     } catch (Exception ignored) {
                                     }
                                 }

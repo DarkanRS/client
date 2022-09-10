@@ -14,8 +14,8 @@ public class GraphicsToolkitPreference extends Preference {
     }
 
     public void method12773() {
-        if (anInt5578 < 0 || anInt5578 > 5) {
-            anInt5578 = getDefaultValue();
+        if (value < 0 || value > 5) {
+            value = getDefaultValue();
         }
 
     }
@@ -33,7 +33,7 @@ public class GraphicsToolkitPreference extends Preference {
     @Override
     void setValue(int i_1) {
         aBool7914 = false;
-        anInt5578 = i_1;
+        value = i_1;
     }
 
     @Override
@@ -42,7 +42,7 @@ public class GraphicsToolkitPreference extends Preference {
     }
 
     public int getValue() {
-        return anInt5578;
+        return value;
     }
 
     boolean method12777() {
@@ -56,7 +56,7 @@ public class GraphicsToolkitPreference extends Preference {
 
     void method7780(int i_1) {
         aBool7914 = false;
-        anInt5578 = i_1 * -754033619 * -859024475;
+        value = i_1 * -754033619 * -859024475;
     }
 
     int method7787() {

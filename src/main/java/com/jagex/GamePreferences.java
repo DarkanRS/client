@@ -110,7 +110,7 @@ public class GamePreferences extends Node {
                 rsbytebuffer_1.readUnsignedByte();
                 water = new WaterPreference(rsbytebuffer_1.readUnsignedByte(), this);
                 screenSize = new ScreenSizePreference(rsbytebuffer_1.readUnsignedByte(), this);
-                aPreference_Sub9_8218 = new ScreenSizePreference(screenSize.method12687(), this);
+                aPreference_Sub9_8218 = new ScreenSizePreference(screenSize.getValue(), this);
                 customCursors = new CustomCursorsPreference(this);
                 graphics = new GraphicsPreference(rsbytebuffer_1.readUnsignedByte(), this);
                 cpu = new CPUMaxMemoryPreference(rsbytebuffer_1.readUnsignedByte(), this);
@@ -237,7 +237,7 @@ public class GamePreferences extends Node {
         }
 
         if (bool_1 || aPreference_Sub9_8218 == null) {
-            aPreference_Sub9_8218 = new ScreenSizePreference(screenSize.method12687(), this);
+            aPreference_Sub9_8218 = new ScreenSizePreference(screenSize.getValue(), this);
         }
 
         if (bool_1 || customCursors == null) {
@@ -460,7 +460,7 @@ public class GamePreferences extends Node {
         /*22*/
         rsbytebuffer_2.writeByte(water.getValue());
         /*23*/
-        rsbytebuffer_2.writeByte(screenSize.method12687());
+        rsbytebuffer_2.writeByte(screenSize.getValue());
         /*24*/
         rsbytebuffer_2.writeByte(customCursors.method12675());
         /*25*/

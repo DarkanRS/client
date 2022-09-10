@@ -64,13 +64,13 @@ public class NPCEntity extends PathingEntity {
             i_2 |= 0x7;
         }
 
-        boolean bool_10 = scalar != 0 && client.CYCLES_20MS >= anInt10347 && client.CYCLES_20MS < anInt10348;
+        boolean bool_10 = scalar != 0 && client.FRAME_COUNT >= anInt10347 && client.FRAME_COUNT < anInt10348;
         if (bool_10) {
             i_2 |= 0x80000;
         }
 
         int i_11 = aClass19_10359.method578();
-        MeshRasterizer meshrasterizer_12 = aMeshRasterizerArray10372[0] = definitions.renderFull(graphicalrenderer_1, i_2, IndexLoaders.RENDER_ANIM_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, animation_6, class456_sub3_7, aAnimation_Sub2_Sub1Array10354, anIntArray10362, i_11, meshModifiers, getRenderAnimation(), false);
+        MeshRasterizer meshrasterizer_12 = aMeshRasterizerArray10372[0] = definitions.renderFull(graphicalrenderer_1, i_2, IndexLoaders.RENDER_ANIM_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, animation_6, class456_sub3_7, aAnimation_Sub2_Sub1Array10354, modelRotations, i_11, meshModifiers, getRenderAnimation(), false);
         if (meshrasterizer_12 == null) {
             return false;
         } else {

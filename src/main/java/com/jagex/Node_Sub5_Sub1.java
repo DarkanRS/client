@@ -44,7 +44,7 @@ public class Node_Sub5_Sub1 extends Node_Sub5 {
                 OpenGL.glViewport(0, 0, i_4, i_5);
                 aClass158_Sub1_Sub4_10032.method13759(0, aClass137_Sub1Array10028[i_6].method14441());
                 if (i_6 == 0) {
-                    aGraphicalRenderer_Sub1_7507.method13654(class137_sub1_2);
+                    aGraphicalRenderer_Sub1_7507.setTexture(class137_sub1_2);
                     OpenGL.glBegin(7);
                     OpenGL.glTexCoord2f(0.0F, 0.0F);
                     OpenGL.glVertex2i(0, 0);
@@ -54,7 +54,7 @@ public class Node_Sub5_Sub1 extends Node_Sub5 {
                     OpenGL.glVertex2i(1, 1);
                     OpenGL.glTexCoord2f(0.0F, anInt10037);
                 } else {
-                    aGraphicalRenderer_Sub1_7507.method13654(aClass137_Sub1Array10028[i_6 - 1]);
+                    aGraphicalRenderer_Sub1_7507.setTexture(aClass137_Sub1Array10028[i_6 - 1]);
                     OpenGL.glBegin(7);
                     OpenGL.glTexCoord2f(0.0F, 0.0F);
                     OpenGL.glVertex2i(0, 0);
@@ -77,7 +77,7 @@ public class Node_Sub5_Sub1 extends Node_Sub5 {
             }
 
             aGraphicalRenderer_Sub1_7507.method8416(aClass158_Sub1_Sub4_10032);
-            aGraphicalRenderer_Sub1_7507.method13654(aClass137_Sub1Array10028[i_6 - 1]);
+            aGraphicalRenderer_Sub1_7507.setTexture(aClass137_Sub1Array10028[i_6 - 1]);
             aGraphicalRenderer_Sub1_7507.method8637(aClass158_Sub1_Sub4_10031);
             aClass158_Sub1_Sub4_10031.method15628(0);
             OpenGL.glViewport(0, 0, 256, 256);
@@ -94,7 +94,7 @@ public class Node_Sub5_Sub1 extends Node_Sub5 {
             OpenGL.glVertex2i(1, 1);
             OpenGL.glTexCoord2f(0.0F, 1.0F);
         } else {
-            aGraphicalRenderer_Sub1_7507.method13654(class137_sub1_2);
+            aGraphicalRenderer_Sub1_7507.setTexture(class137_sub1_2);
             aGraphicalRenderer_Sub1_7507.method8637(aClass158_Sub1_Sub4_10031);
             aClass158_Sub1_Sub4_10031.method15628(0);
             OpenGL.glViewport(0, 0, 256, 256);
@@ -115,7 +115,7 @@ public class Node_Sub5_Sub1 extends Node_Sub5 {
         OpenGL.glEnd();
 
         aClass158_Sub1_Sub4_10031.method15628(1);
-        aGraphicalRenderer_Sub1_7507.method13654(aClass137_Sub1_10038);
+        aGraphicalRenderer_Sub1_7507.setTexture(aClass137_Sub1_10038);
         i_4 = aClass128_10023.anInt1583;
         OpenGL.glUseProgram(i_4);
         OpenGL.glUniform1i(OpenGL.glGetUniformLocation(i_4, "baseTex"), 0);
@@ -131,7 +131,7 @@ public class Node_Sub5_Sub1 extends Node_Sub5 {
         OpenGL.glVertex2i(0, 1);
         OpenGL.glEnd();
         aClass158_Sub1_Sub4_10031.method15628(0);
-        aGraphicalRenderer_Sub1_7507.method13654(aClass137_Sub1_10034);
+        aGraphicalRenderer_Sub1_7507.setTexture(aClass137_Sub1_10034);
         OpenGL.glUniform3f(OpenGL.glGetUniformLocation(i_4, "step"), 0.0F, 0.00390625F, 0.0F);
         OpenGL.glBegin(7);
         OpenGL.glTexCoord2f(0.0F, 0.0F);
@@ -152,14 +152,14 @@ public class Node_Sub5_Sub1 extends Node_Sub5 {
         OpenGL.glUniform1i(OpenGL.glGetUniformLocation(i_5, "sceneTex"), 0);
         OpenGL.glUniform1i(OpenGL.glGetUniformLocation(i_5, "bloomTex"), 1);
         OpenGL.glUniform3f(OpenGL.glGetUniformLocation(i_5, "params"), aFloat10024, aFloat10025, 0.0F);
-        aGraphicalRenderer_Sub1_7507.method13610(1);
-        aGraphicalRenderer_Sub1_7507.method13654(aClass137_Sub1_10038);
-        aGraphicalRenderer_Sub1_7507.method13610(0);
-        aGraphicalRenderer_Sub1_7507.method13654(class137_sub1_2);
+        aGraphicalRenderer_Sub1_7507.setActiveTexture(1);
+        aGraphicalRenderer_Sub1_7507.setTexture(aClass137_Sub1_10038);
+        aGraphicalRenderer_Sub1_7507.setActiveTexture(0);
+        aGraphicalRenderer_Sub1_7507.setTexture(class137_sub1_2);
     }
 
     boolean method15445() {
-        return aGraphicalRenderer_Sub1_7507.aBool8472 && aGraphicalRenderer_Sub1_7507.aBool8365 && aGraphicalRenderer_Sub1_7507.aBool8312;
+        return aGraphicalRenderer_Sub1_7507.supportsFBO && aGraphicalRenderer_Sub1_7507.supportsFragmentShaders && aGraphicalRenderer_Sub1_7507.supportsFloatTextures;
     }
 
     @Override
@@ -169,7 +169,7 @@ public class Node_Sub5_Sub1 extends Node_Sub5 {
 
     @Override
     boolean method12136() {
-        if (aGraphicalRenderer_Sub1_7507.aBool8472 && aGraphicalRenderer_Sub1_7507.aBool8365 && aGraphicalRenderer_Sub1_7507.aBool8312) {
+        if (aGraphicalRenderer_Sub1_7507.supportsFBO && aGraphicalRenderer_Sub1_7507.supportsFragmentShaders && aGraphicalRenderer_Sub1_7507.supportsFloatTextures) {
             aClass158_Sub1_Sub4_10031 = new Class158_Sub1_Sub4(aGraphicalRenderer_Sub1_7507);
             aClass137_Sub1_10038 = new Class137_Sub1(aGraphicalRenderer_Sub1_7507, 3553, Class150.aClass150_1949, Class76.aClass76_755, 256, 256);
             aClass137_Sub1_10038.method14445(false, false);
@@ -272,9 +272,9 @@ public class Node_Sub5_Sub1 extends Node_Sub5 {
     @Override
     void method12121() {
         OpenGL.glUseProgram(0);
-        aGraphicalRenderer_Sub1_7507.method13610(1);
-        aGraphicalRenderer_Sub1_7507.method13654(null);
-        aGraphicalRenderer_Sub1_7507.method13610(0);
+        aGraphicalRenderer_Sub1_7507.setActiveTexture(1);
+        aGraphicalRenderer_Sub1_7507.setTexture(null);
+        aGraphicalRenderer_Sub1_7507.setActiveTexture(0);
     }
 
     @Override
@@ -296,7 +296,7 @@ public class Node_Sub5_Sub1 extends Node_Sub5 {
                 OpenGL.glViewport(0, 0, i_4, i_5);
                 aClass158_Sub1_Sub4_10032.method13759(0, aClass137_Sub1Array10028[i_6].method14441());
                 if (i_6 == 0) {
-                    aGraphicalRenderer_Sub1_7507.method13654(class137_sub1_2);
+                    aGraphicalRenderer_Sub1_7507.setTexture(class137_sub1_2);
                     OpenGL.glBegin(7);
                     OpenGL.glTexCoord2f(0.0F, 0.0F);
                     OpenGL.glVertex2i(0, 0);
@@ -306,7 +306,7 @@ public class Node_Sub5_Sub1 extends Node_Sub5 {
                     OpenGL.glVertex2i(1, 1);
                     OpenGL.glTexCoord2f(0.0F, anInt10037);
                 } else {
-                    aGraphicalRenderer_Sub1_7507.method13654(aClass137_Sub1Array10028[i_6 - 1]);
+                    aGraphicalRenderer_Sub1_7507.setTexture(aClass137_Sub1Array10028[i_6 - 1]);
                     OpenGL.glBegin(7);
                     OpenGL.glTexCoord2f(0.0F, 0.0F);
                     OpenGL.glVertex2i(0, 0);
@@ -329,7 +329,7 @@ public class Node_Sub5_Sub1 extends Node_Sub5 {
             }
 
             aGraphicalRenderer_Sub1_7507.method8416(aClass158_Sub1_Sub4_10032);
-            aGraphicalRenderer_Sub1_7507.method13654(aClass137_Sub1Array10028[i_6 - 1]);
+            aGraphicalRenderer_Sub1_7507.setTexture(aClass137_Sub1Array10028[i_6 - 1]);
             aGraphicalRenderer_Sub1_7507.method8637(aClass158_Sub1_Sub4_10031);
             aClass158_Sub1_Sub4_10031.method15628(0);
             OpenGL.glViewport(0, 0, 256, 256);
@@ -346,7 +346,7 @@ public class Node_Sub5_Sub1 extends Node_Sub5 {
             OpenGL.glVertex2i(1, 1);
             OpenGL.glTexCoord2f(0.0F, 1.0F);
         } else {
-            aGraphicalRenderer_Sub1_7507.method13654(class137_sub1_2);
+            aGraphicalRenderer_Sub1_7507.setTexture(class137_sub1_2);
             aGraphicalRenderer_Sub1_7507.method8637(aClass158_Sub1_Sub4_10031);
             aClass158_Sub1_Sub4_10031.method15628(0);
             OpenGL.glViewport(0, 0, 256, 256);
@@ -367,7 +367,7 @@ public class Node_Sub5_Sub1 extends Node_Sub5 {
         OpenGL.glEnd();
 
         aClass158_Sub1_Sub4_10031.method15628(1);
-        aGraphicalRenderer_Sub1_7507.method13654(aClass137_Sub1_10038);
+        aGraphicalRenderer_Sub1_7507.setTexture(aClass137_Sub1_10038);
         i_4 = aClass128_10023.anInt1583;
         OpenGL.glUseProgram(i_4);
         OpenGL.glUniform1i(OpenGL.glGetUniformLocation(i_4, "baseTex"), 0);
@@ -383,7 +383,7 @@ public class Node_Sub5_Sub1 extends Node_Sub5 {
         OpenGL.glVertex2i(0, 1);
         OpenGL.glEnd();
         aClass158_Sub1_Sub4_10031.method15628(0);
-        aGraphicalRenderer_Sub1_7507.method13654(aClass137_Sub1_10034);
+        aGraphicalRenderer_Sub1_7507.setTexture(aClass137_Sub1_10034);
         OpenGL.glUniform3f(OpenGL.glGetUniformLocation(i_4, "step"), 0.0F, 0.00390625F, 0.0F);
         OpenGL.glBegin(7);
         OpenGL.glTexCoord2f(0.0F, 0.0F);
@@ -404,10 +404,10 @@ public class Node_Sub5_Sub1 extends Node_Sub5 {
         OpenGL.glUniform1i(OpenGL.glGetUniformLocation(i_5, "sceneTex"), 0);
         OpenGL.glUniform1i(OpenGL.glGetUniformLocation(i_5, "bloomTex"), 1);
         OpenGL.glUniform3f(OpenGL.glGetUniformLocation(i_5, "params"), aFloat10024, aFloat10025, 0.0F);
-        aGraphicalRenderer_Sub1_7507.method13610(1);
-        aGraphicalRenderer_Sub1_7507.method13654(aClass137_Sub1_10038);
-        aGraphicalRenderer_Sub1_7507.method13610(0);
-        aGraphicalRenderer_Sub1_7507.method13654(class137_sub1_2);
+        aGraphicalRenderer_Sub1_7507.setActiveTexture(1);
+        aGraphicalRenderer_Sub1_7507.setTexture(aClass137_Sub1_10038);
+        aGraphicalRenderer_Sub1_7507.setActiveTexture(0);
+        aGraphicalRenderer_Sub1_7507.setTexture(class137_sub1_2);
     }
 
     @Override
@@ -417,7 +417,7 @@ public class Node_Sub5_Sub1 extends Node_Sub5 {
 
     @Override
     boolean method12130() {
-        if (aGraphicalRenderer_Sub1_7507.aBool8472 && aGraphicalRenderer_Sub1_7507.aBool8365 && aGraphicalRenderer_Sub1_7507.aBool8312) {
+        if (aGraphicalRenderer_Sub1_7507.supportsFBO && aGraphicalRenderer_Sub1_7507.supportsFragmentShaders && aGraphicalRenderer_Sub1_7507.supportsFloatTextures) {
             aClass158_Sub1_Sub4_10031 = new Class158_Sub1_Sub4(aGraphicalRenderer_Sub1_7507);
             aClass137_Sub1_10038 = new Class137_Sub1(aGraphicalRenderer_Sub1_7507, 3553, Class150.aClass150_1949, Class76.aClass76_755, 256, 256);
             aClass137_Sub1_10038.method14445(false, false);
@@ -445,7 +445,7 @@ public class Node_Sub5_Sub1 extends Node_Sub5 {
 
     @Override
     boolean method12131() {
-        if (aGraphicalRenderer_Sub1_7507.aBool8472 && aGraphicalRenderer_Sub1_7507.aBool8365 && aGraphicalRenderer_Sub1_7507.aBool8312) {
+        if (aGraphicalRenderer_Sub1_7507.supportsFBO && aGraphicalRenderer_Sub1_7507.supportsFragmentShaders && aGraphicalRenderer_Sub1_7507.supportsFloatTextures) {
             aClass158_Sub1_Sub4_10031 = new Class158_Sub1_Sub4(aGraphicalRenderer_Sub1_7507);
             aClass137_Sub1_10038 = new Class137_Sub1(aGraphicalRenderer_Sub1_7507, 3553, Class150.aClass150_1949, Class76.aClass76_755, 256, 256);
             aClass137_Sub1_10038.method14445(false, false);
@@ -558,9 +558,9 @@ public class Node_Sub5_Sub1 extends Node_Sub5 {
     @Override
     void method12135() {
         OpenGL.glUseProgram(0);
-        aGraphicalRenderer_Sub1_7507.method13610(1);
-        aGraphicalRenderer_Sub1_7507.method13654(null);
-        aGraphicalRenderer_Sub1_7507.method13610(0);
+        aGraphicalRenderer_Sub1_7507.setActiveTexture(1);
+        aGraphicalRenderer_Sub1_7507.setTexture(null);
+        aGraphicalRenderer_Sub1_7507.setActiveTexture(0);
     }
 
     @Override
@@ -597,7 +597,7 @@ public class Node_Sub5_Sub1 extends Node_Sub5 {
                 OpenGL.glViewport(0, 0, i_4, i_5);
                 aClass158_Sub1_Sub4_10032.method13759(0, aClass137_Sub1Array10028[i_6].method14441());
                 if (i_6 == 0) {
-                    aGraphicalRenderer_Sub1_7507.method13654(class137_sub1_2);
+                    aGraphicalRenderer_Sub1_7507.setTexture(class137_sub1_2);
                     OpenGL.glBegin(7);
                     OpenGL.glTexCoord2f(0.0F, 0.0F);
                     OpenGL.glVertex2i(0, 0);
@@ -607,7 +607,7 @@ public class Node_Sub5_Sub1 extends Node_Sub5 {
                     OpenGL.glVertex2i(1, 1);
                     OpenGL.glTexCoord2f(0.0F, anInt10037);
                 } else {
-                    aGraphicalRenderer_Sub1_7507.method13654(aClass137_Sub1Array10028[i_6 - 1]);
+                    aGraphicalRenderer_Sub1_7507.setTexture(aClass137_Sub1Array10028[i_6 - 1]);
                     OpenGL.glBegin(7);
                     OpenGL.glTexCoord2f(0.0F, 0.0F);
                     OpenGL.glVertex2i(0, 0);
@@ -630,7 +630,7 @@ public class Node_Sub5_Sub1 extends Node_Sub5 {
             }
 
             aGraphicalRenderer_Sub1_7507.method8416(aClass158_Sub1_Sub4_10032);
-            aGraphicalRenderer_Sub1_7507.method13654(aClass137_Sub1Array10028[i_6 - 1]);
+            aGraphicalRenderer_Sub1_7507.setTexture(aClass137_Sub1Array10028[i_6 - 1]);
             aGraphicalRenderer_Sub1_7507.method8637(aClass158_Sub1_Sub4_10031);
             aClass158_Sub1_Sub4_10031.method15628(0);
             OpenGL.glViewport(0, 0, 256, 256);
@@ -647,7 +647,7 @@ public class Node_Sub5_Sub1 extends Node_Sub5 {
             OpenGL.glVertex2i(1, 1);
             OpenGL.glTexCoord2f(0.0F, 1.0F);
         } else {
-            aGraphicalRenderer_Sub1_7507.method13654(class137_sub1_2);
+            aGraphicalRenderer_Sub1_7507.setTexture(class137_sub1_2);
             aGraphicalRenderer_Sub1_7507.method8637(aClass158_Sub1_Sub4_10031);
             aClass158_Sub1_Sub4_10031.method15628(0);
             OpenGL.glViewport(0, 0, 256, 256);
@@ -668,7 +668,7 @@ public class Node_Sub5_Sub1 extends Node_Sub5 {
         OpenGL.glEnd();
 
         aClass158_Sub1_Sub4_10031.method15628(1);
-        aGraphicalRenderer_Sub1_7507.method13654(aClass137_Sub1_10038);
+        aGraphicalRenderer_Sub1_7507.setTexture(aClass137_Sub1_10038);
         i_4 = aClass128_10023.anInt1583;
         OpenGL.glUseProgram(i_4);
         OpenGL.glUniform1i(OpenGL.glGetUniformLocation(i_4, "baseTex"), 0);
@@ -684,7 +684,7 @@ public class Node_Sub5_Sub1 extends Node_Sub5 {
         OpenGL.glVertex2i(0, 1);
         OpenGL.glEnd();
         aClass158_Sub1_Sub4_10031.method15628(0);
-        aGraphicalRenderer_Sub1_7507.method13654(aClass137_Sub1_10034);
+        aGraphicalRenderer_Sub1_7507.setTexture(aClass137_Sub1_10034);
         OpenGL.glUniform3f(OpenGL.glGetUniformLocation(i_4, "step"), 0.0F, 0.00390625F, 0.0F);
         OpenGL.glBegin(7);
         OpenGL.glTexCoord2f(0.0F, 0.0F);
@@ -705,10 +705,10 @@ public class Node_Sub5_Sub1 extends Node_Sub5 {
         OpenGL.glUniform1i(OpenGL.glGetUniformLocation(i_5, "sceneTex"), 0);
         OpenGL.glUniform1i(OpenGL.glGetUniformLocation(i_5, "bloomTex"), 1);
         OpenGL.glUniform3f(OpenGL.glGetUniformLocation(i_5, "params"), aFloat10024, aFloat10025, 0.0F);
-        aGraphicalRenderer_Sub1_7507.method13610(1);
-        aGraphicalRenderer_Sub1_7507.method13654(aClass137_Sub1_10038);
-        aGraphicalRenderer_Sub1_7507.method13610(0);
-        aGraphicalRenderer_Sub1_7507.method13654(class137_sub1_2);
+        aGraphicalRenderer_Sub1_7507.setActiveTexture(1);
+        aGraphicalRenderer_Sub1_7507.setTexture(aClass137_Sub1_10038);
+        aGraphicalRenderer_Sub1_7507.setActiveTexture(0);
+        aGraphicalRenderer_Sub1_7507.setTexture(class137_sub1_2);
     }
 
 }

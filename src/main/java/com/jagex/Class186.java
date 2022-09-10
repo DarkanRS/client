@@ -39,7 +39,7 @@ public class Class186 {
         	return false;
         } else if (i_1 == 2) {
             try {
-                SubInterface.suppliedApplet.getAppletContext().showDocument(new URL(SubInterface.suppliedApplet.getCodeBase(), string_0), "_blank");
+            	SubInterface.suppliedApplet.showError(string_0);
                 bool_4 = true;
                 return bool_4;
             } catch (Exception exception_9) {
@@ -47,7 +47,7 @@ public class Class186 {
             }
         } else if (i_1 == 3) {
             try {
-                SubInterface.suppliedApplet.getAppletContext().showDocument(new URL(SubInterface.suppliedApplet.getCodeBase(), string_0), "_top");
+            	SubInterface.suppliedApplet.showError(string_0);
                 bool_4 = true;
                 return bool_4;
             } catch (Exception exception_10) {
@@ -74,7 +74,7 @@ public class Class186 {
         Class467.FC_PLAYERS = null;
         Node_Sub13.GUEST_CLAN_SETTINGS = null;
         QuickchatFiller.CLAN_SETTINGS = null;
-        Class237.method3990();
+        Class237.clearMouseMovementRecords();
 
         for (int i_1 = 0; i_1 < 25; i_1++) {
             client.SKILL_LEVEL_VISIBLE[i_1] = 0;

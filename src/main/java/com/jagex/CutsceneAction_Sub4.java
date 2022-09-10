@@ -256,8 +256,8 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
                 icomponentdefinitions_23 = Index.getIComponentDefinitions(i_5, i_4);
                 if (icomponentdefinitions_23 != null) {
                     Class60.method1170();
-                    IFTargetParams class282_sub10_21 = client.getIComponentSettings(icomponentdefinitions_23);
-                    Class304.setUseOptionFlags(icomponentdefinitions_23, class282_sub10_21.getUseOptionFlags(), class282_sub10_21.interfaceId);
+                    IFEvents class282_sub10_21 = client.getIComponentSettings(icomponentdefinitions_23);
+                    Class304.setUseOptionFlags(icomponentdefinitions_23, class282_sub10_21.getUseOptionFlags(), class282_sub10_21.targetParam);
                     client.aString7275 = QuickChatMessage.method6157(icomponentdefinitions_23);
                     if (client.aString7275 == null) {
                         client.aString7275 = "Null";
@@ -347,7 +347,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
                     Friend.method303(clickType, i_7, i_4);
                 }
 
-                if (client.aBool7344) {
+                if (client.IS_USE_SELECTED) {
                     Class60.method1170();
                 }
 

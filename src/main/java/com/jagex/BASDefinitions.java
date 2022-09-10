@@ -46,7 +46,7 @@ public class BASDefinitions {
     public boolean aBool2787 = true;
     public int anInt2813;
     public int anInt2790;
-    public int[] anIntArray2818;
+    public int[] modelRotators;
     public int[][] anIntArrayArray2791;
     RenderAnimIndexLoader aClass211_2788;
     int totalChance;
@@ -158,11 +158,11 @@ public class BASDefinitions {
                 anInt2813 = rsbytebuffer_1.readUnsignedByte() << 6;
                 anInt2790 = rsbytebuffer_1.readUnsignedByte() << 6;
             } else if (i_2 == 55) {
-                if (anIntArray2818 == null) {
-                    anIntArray2818 = new int[aClass211_2788.aClass526_2672.hidden.length];
+                if (modelRotators == null) {
+                    modelRotators = new int[aClass211_2788.aClass526_2672.hidden.length];
                 }
                 i_4 = rsbytebuffer_1.readUnsignedByte();
-                anIntArray2818[i_4] = rsbytebuffer_1.readUnsignedShort();
+                modelRotators[i_4] = rsbytebuffer_1.readUnsignedShort();
             } else if (i_2 == 56) {
                 if (anIntArrayArray2791 == null) {
                     anIntArrayArray2791 = new int[aClass211_2788.aClass526_2672.hidden.length][];

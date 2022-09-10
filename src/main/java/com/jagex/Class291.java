@@ -86,7 +86,7 @@ public class Class291 {
 
         for (WorldMapDef class282_sub50_sub6_3 = (WorldMapDef) aClass465_3461.method7750(); class282_sub50_sub6_3 != null; class282_sub50_sub6_3 = (WorldMapDef) aClass465_3461.method7751()) {
             if (class282_sub50_sub6_3.aBool9543 && class282_sub50_sub6_3.method14784(i_0, i_1)) {
-                class477_2.method7936(class282_sub50_sub6_3);
+                class477_2.add(class282_sub50_sub6_3);
             }
         }
 
@@ -685,7 +685,7 @@ public class Class291 {
                     aByteArray3453[i_5 * xLength + i_4] = (byte) i_14;
                     aByteArray3487[i_5 * xLength + i_4] = (byte) i_15;
                     if (i_16 == 1) {
-                        anObjectArray3488[i_5 * xLength + i_4] = new Integer(rsbytebuffer_1.readBigSmart());
+                        anObjectArray3488[i_5 * xLength + i_4] = Integer.valueOf(rsbytebuffer_1.readBigSmart());
                         aByteArray3475[i_5 * xLength + i_4] = rsbytebuffer_1.readByte();
                     } else if (i_16 > 1) {
                         ints_17 = new int[i_16];

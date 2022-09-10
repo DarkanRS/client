@@ -2,15 +2,15 @@ package com.jagex;
 
 import com.jagex.clans.ClanChannel;
 
-public class Node_Sub24 extends Node {
+public class GLLight extends Node {
 
-    public Vector3 aClass385_7687 = new Vector3();
+    public Vector3 position = new Vector3();
     int anInt7684;
     int anInt7685;
     float aFloat7686;
 
-    Node_Sub24(int i_1, int i_2, int i_3, int i_4, int i_5) {
-        aClass385_7687.set(i_1, i_2, i_3);
+    GLLight(int i_1, int i_2, int i_3, int i_4, int i_5) {
+        position.set(i_1, i_2, i_3);
         anInt7684 = i_4;
         anInt7685 = i_5;
         aFloat7686 = (float) 1.0;
@@ -25,19 +25,19 @@ public class Node_Sub24 extends Node {
 
     }
 
-    public int method12368() {
-        return (int) aClass385_7687.x;
+    public int getX() {
+        return (int) position.x;
     }
 
-    public int method12369() {
-        return (int) aClass385_7687.y;
+    public int getY() {
+        return (int) position.y;
     }
 
     public int method12370() {
         return anInt7684;
     }
 
-    public int method12371() {
+    public int getColor() {
         return anInt7685;
     }
 
@@ -46,14 +46,14 @@ public class Node_Sub24 extends Node {
     }
 
     public void method12374(int i_1, int i_2, int i_3) {
-        aClass385_7687.set(i_1, i_2, i_3);
+        position.set(i_1, i_2, i_3);
     }
 
-    public int method12394() {
-        return (int) aClass385_7687.z;
+    public int getZ() {
+        return (int) position.z;
     }
 
-    public float method12395() {
+    public float getIntensity() {
         return aFloat7686;
     }
 

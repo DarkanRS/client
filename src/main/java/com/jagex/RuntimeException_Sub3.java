@@ -1,12 +1,12 @@
 package com.jagex;
 
-import java.applet.Applet;
+import com.Loader;
 
 public class RuntimeException_Sub3 extends RuntimeException {
-
-    public static int anInt10457;
+    private static final long serialVersionUID = -5853993057450971463L;
+	public static int anInt10457;
     public static String MY_PLAYER_USERNAME;
-    public static Applet anApplet10460;
+    public static Loader anApplet10460;
     static long aLong10459;
     String aString10461;
     Throwable aThrowable10462;

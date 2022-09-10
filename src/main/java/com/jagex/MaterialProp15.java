@@ -115,7 +115,7 @@ public class MaterialProp15 extends MaterialProperty {
         aShortArray9966 = new short[512];
         if (anInt9960 > 0) {
             for (int i_3 = 0; i_3 < 512; i_3++) {
-                aShortArray9966[i_3] = (short) Class476.method7931(random_2, anInt9960);
+                aShortArray9966[i_3] = (short) ObjectMeshModifier.method7931(random_2, anInt9960);
             }
         }
     }

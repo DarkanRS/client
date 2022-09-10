@@ -58,7 +58,7 @@ public class IdentiKitIndexLoader implements IndexLoader {
             Class150.method2582(sub.interfaceId, ints_2);
         }
         if (!bool_3 && client.BASE_WINDOW_ID != -1) {
-            Class383.method6514(client.BASE_WINDOW_ID, 1);
+            Class383.triggerDialogAbort(client.BASE_WINDOW_ID, 1);
         }
         return sub;
     }

@@ -30,7 +30,7 @@ public class Class60 {
     }
 
     public static void method1170() {
-        if (client.aBool7344) {
+        if (client.IS_USE_SELECTED) {
             IComponentDefinitions icomponentdefinitions_1 = Index.getIComponentDefinitions(client.anInt56, client.anInt7345);
             if (icomponentdefinitions_1 != null && icomponentdefinitions_1.anObjectArray1396 != null) {
                 HookRequest hookrequest_2 = new HookRequest();
@@ -40,7 +40,7 @@ public class Class60 {
             }
             client.anInt7427 = -1;
             client.anInt7346 = -1;
-            client.aBool7344 = false;
+            client.IS_USE_SELECTED = false;
             if (icomponentdefinitions_1 != null) {
                 IComponentDefinitions.redrawComponent(icomponentdefinitions_1);
             }

@@ -1,5 +1,8 @@
 package com.jagex;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public enum ComponentType {
     CONTAINER(0),
     TYPE_1(1),
@@ -11,6 +14,13 @@ public enum ComponentType {
     TYPE_7(7),
     TYPE_8(8),
     LINE(9);
+	
+	private static Map<Integer, ComponentType> MAP = new HashMap<>();
+	
+	static {
+		for (ComponentType t : ComponentType.values())
+			MAP.put(t.id, t);
+	}
 
     private final int id;
 
@@ -19,10 +29,6 @@ public enum ComponentType {
     }
 
     public static ComponentType forId(int id) {
-        for (ComponentType t : ComponentType.values()) {
-            if (t.id == id)
-                return t;
-        }
-        return null;
+        return MAP.get(id);
     }
 }

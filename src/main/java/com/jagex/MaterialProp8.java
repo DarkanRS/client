@@ -21,11 +21,6 @@ public class MaterialProp8 extends MaterialProperty {
         return class282_sub15_sub2_2;
     }
 
-    public static void method15263(int i_0) {
-        PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(2, i_0);
-        class282_sub50_sub12_2.method14965();
-    }
-
     @Override
     int[] method12319(int i_1) {
         int[] ints_3 = aClass320_7667.method5721(i_1);

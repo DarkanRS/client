@@ -25,7 +25,7 @@ public class Class13 {
             }
         }
         if (!bool_2) {
-            Class20.aClass477_182.method7936(class282_sub50_sub15_0);
+            Class20.aClass477_182.add(class282_sub50_sub15_0);
         }
     }
 

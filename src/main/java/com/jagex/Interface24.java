@@ -1,11 +1,12 @@
 package com.jagex;
 
-import java.applet.Applet;
 import java.awt.Graphics;
+
+import com.Loader;
 
 public interface Interface24 {
 
-    void supplyApplet(Applet var1);
+    void supplyApplet(Loader var1);
 
     void destroy();
 
@@ -19,7 +20,7 @@ public interface Interface24 {
 
     void start();
 
-    void method168(Applet var1);
+    void method168(Loader var1);
 
     void method169();
 

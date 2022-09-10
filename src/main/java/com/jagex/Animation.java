@@ -31,9 +31,9 @@ public class Animation {
 
     boolean method7562() {
         if (defs != null) {
-            boolean bool_2 = aClass462_5464.method7707(NamedFileReference.ANIMATION_INDEX_LOADER, defs, anInt5460, anInt5466, defs.frames);
-            if (bool_2 && aBool5463 && defs.anIntArray5911 != null) {
-                aClass462_5467.method7707(NamedFileReference.ANIMATION_INDEX_LOADER, defs, anInt5460, anInt5466, defs.anIntArray5911);
+            boolean bool_2 = aClass462_5464.method7707(NamedFileReference.ANIMATION_INDEX_LOADER, defs, anInt5460, anInt5466, defs.frameHashes);
+            if (bool_2 && aBool5463 && defs.interfaceFrames != null) {
+                aClass462_5467.method7707(NamedFileReference.ANIMATION_INDEX_LOADER, defs, anInt5460, anInt5466, defs.interfaceFrames);
             }
             return bool_2;
         } else {
@@ -94,14 +94,14 @@ public class Animation {
                 anInt5461 = i_3;
                 aBool5456 = bool_5;
                 if (bool_4) {
-                    anInt5460 = (int) (Math.random() * defs.frames.length);
+                    anInt5460 = (int) (Math.random() * defs.frameHashes.length);
                     anInt5457 = (int) (Math.random() * defs.frameDurations[anInt5460]);
                 } else {
                     anInt5460 = 0;
                     anInt5457 = 0;
                 }
                 anInt5466 = anInt5460 + 1;
-                if (anInt5466 < 0 || anInt5466 >= defs.frames.length) {
+                if (anInt5466 < 0 || anInt5466 >= defs.frameHashes.length) {
                     anInt5466 = -1;
                 }
                 if (this.speed == 0) {
@@ -126,27 +126,27 @@ public class Animation {
     }
 
     public void rasterize(MeshRasterizer meshrasterizer_1, int i_2) {
-        if (defs != null && defs.frames != null && method7562()) {
+        if (defs != null && defs.frameHashes != null && method7562()) {
             meshrasterizer_1.method11262(aClass462_5464.aCacheableNode_Sub13_5545, aClass462_5464.anInt5542, aClass462_5464.animationFrameSet, aClass462_5464.anInt5547, anInt5457, defs.frameDurations[anInt5460], i_2, defs.aBool5923);
-            if (aBool5463 && defs.anIntArray5911 != null && aClass462_5467.aBool5544) {
+            if (aBool5463 && defs.interfaceFrames != null && aClass462_5467.aBool5544) {
                 meshrasterizer_1.method11262(aClass462_5467.aCacheableNode_Sub13_5545, aClass462_5467.anInt5542, aClass462_5467.animationFrameSet, aClass462_5467.anInt5547, anInt5457, defs.frameDurations[anInt5460], i_2, defs.aBool5923);
             }
         }
     }
 
     public void method7578(MeshRasterizer meshrasterizer_1, int i_3) {
-        if (defs.frames != null && method7562()) {
+        if (defs.frameHashes != null && method7562()) {
             meshrasterizer_1.method11258(aClass462_5464.aCacheableNode_Sub13_5545, aClass462_5464.anInt5542, aClass462_5464.animationFrameSet, aClass462_5464.anInt5547, anInt5457, defs.frameDurations[anInt5460], i_3, defs.aBool5923, null);
-            if (aBool5463 && defs.anIntArray5911 != null && aClass462_5467.aBool5544) {
+            if (aBool5463 && defs.interfaceFrames != null && aClass462_5467.aBool5544) {
                 meshrasterizer_1.method11258(aClass462_5467.aCacheableNode_Sub13_5545, aClass462_5467.anInt5542, aClass462_5467.animationFrameSet, aClass462_5467.anInt5547, anInt5457, defs.frameDurations[anInt5460], i_3, defs.aBool5923, null);
             }
         }
     }
 
     public void method7579(MeshRasterizer meshrasterizer_1) {
-        if (defs.frames != null && method7562()) {
+        if (defs.frameHashes != null && method7562()) {
             meshrasterizer_1.method11284(aClass462_5464.aCacheableNode_Sub13_5545, aClass462_5464.anInt5542);
-            if (aBool5463 && defs.anIntArray5911 != null && aClass462_5467.aBool5544) {
+            if (aBool5463 && defs.interfaceFrames != null && aClass462_5467.aBool5544) {
                 meshrasterizer_1.method11284(aClass462_5467.aCacheableNode_Sub13_5545, aClass462_5467.anInt5542);
             }
         }
@@ -162,12 +162,12 @@ public class Animation {
 
     public void method7583(int i_1) {
         anInt5460 = 0;
-        anInt5466 = defs.frames.length > 1 ? 1 : -1;
+        anInt5466 = defs.frameHashes.length > 1 ? 1 : -1;
         anInt5457 = 0;
         aBool5462 = false;
         speed = i_1;
         anInt5459 = 0;
-        if (defs != null & defs.frames != null) {
+        if (defs != null & defs.frameHashes != null) {
             method7586(defs, anInt5460);
             method7588();
         }
@@ -214,12 +214,12 @@ public class Animation {
             boolean bool_3 = defs.tweened | AnimationDefinitions.aBool5925;
             if (i_1 > 100 && defs.loopDelay > 0) {
                 int i_4;
-                for (i_4 = defs.frames.length - defs.loopDelay; anInt5460 < i_4 && i_1 > defs.frameDurations[anInt5460]; anInt5460++) {
+                for (i_4 = defs.frameHashes.length - defs.loopDelay; anInt5460 < i_4 && i_1 > defs.frameDurations[anInt5460]; anInt5460++) {
                     i_1 -= defs.frameDurations[anInt5460];
                 }
                 if (anInt5460 >= i_4) {
                     int i_5 = 0;
-                    for (int i_6 = i_4; i_6 < defs.frames.length; i_6++) {
+                    for (int i_6 = i_4; i_6 < defs.frameHashes.length; i_6++) {
                         i_5 += defs.frameDurations[i_6];
                     }
                     if (anInt5461 == 0) {
@@ -228,13 +228,13 @@ public class Animation {
                     i_1 %= i_5;
                 }
                 anInt5466 = anInt5460 + 1;
-                if (anInt5466 >= defs.frames.length) {
+                if (anInt5466 >= defs.frameHashes.length) {
                     if (defs.loopDelay == -1 && aBool5456) {
                         anInt5466 = 0;
                     } else {
                         anInt5466 -= defs.loopDelay;
                     }
-                    if (anInt5466 < 0 || anInt5466 >= defs.frames.length) {
+                    if (anInt5466 < 0 || anInt5466 >= defs.frameHashes.length) {
                         anInt5466 = -1;
                     }
                 }
@@ -243,27 +243,27 @@ public class Animation {
             while (i_1 > defs.frameDurations[anInt5460]) {
                 bool_3 = true;
                 i_1 -= defs.frameDurations[++anInt5460 - 1];
-                if (anInt5460 >= defs.frames.length) {
+                if (anInt5460 >= defs.frameHashes.length) {
                     if (defs.loopDelay != -1 && anInt5461 != 2) {
                         anInt5460 -= defs.loopDelay;
                         if (anInt5461 == 0) {
                             ++anInt5459;
                         }
                     }
-                    if (anInt5459 >= defs.maxLoops || anInt5460 < 0 || anInt5460 >= defs.frames.length) {
+                    if (anInt5459 >= defs.maxLoops || anInt5460 < 0 || anInt5460 >= defs.frameHashes.length) {
                         aBool5462 = true;
                         break;
                     }
                 }
                 method7586(defs, anInt5460);
                 anInt5466 = anInt5460 + 1;
-                if (anInt5466 >= defs.frames.length) {
+                if (anInt5466 >= defs.frameHashes.length) {
                     if (defs.loopDelay == -1 && aBool5456) {
                         anInt5466 = 0;
                     } else {
                         anInt5466 -= defs.loopDelay;
                     }
-                    if (anInt5466 < 0 || anInt5466 >= defs.frames.length) {
+                    if (anInt5466 < 0 || anInt5466 >= defs.frameHashes.length) {
                         anInt5466 = -1;
                     }
                 }
@@ -283,7 +283,7 @@ public class Animation {
             int i_2 = 0;
             if (method7562()) {
                 i_2 |= aClass462_5464.anInt5543;
-                if (aBool5463 && defs.anIntArray5911 != null) {
+                if (aBool5463 && defs.interfaceFrames != null) {
                     i_2 |= aClass462_5467.anInt5543;
                 }
             }

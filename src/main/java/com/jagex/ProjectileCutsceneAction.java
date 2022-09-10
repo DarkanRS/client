@@ -76,7 +76,7 @@ public class ProjectileCutsceneAction extends CutsceneAction {
                         --client.IGNORE_LIST_COUNT;
                         if (client.IGNORE_LIST_COUNT - i_3 >= 0)
                             System.arraycopy(client.IGNORED_PLAYERS, i_3 + 1, client.IGNORED_PLAYERS, i_3, client.IGNORE_LIST_COUNT - i_3);
-                        client.anInt7386 = client.anInt7347;
+                        client.anInt7386 = client.CS2_TIMER_COUNT;
                         BufferedConnectionContext class184_9 = BufferedConnectionContext.getConnectionContext();
                         TCPPacket tcpmessage_8 = TCPPacket.createPacket(ClientProt.REMOVE_IGNORE, class184_9.outKeys);
                         tcpmessage_8.buffer.writeByte(ChatLine.getLength(string_0));
@@ -124,8 +124,8 @@ public class ProjectileCutsceneAction extends CutsceneAction {
             }
         }
         int i_7 = anInt9399 << 2;
-        ProjectileAnimation class521_sub1_sub1_sub3_12 = new ProjectileAnimation(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), anInt9410, i_4, i_4, i_2, i_3, anInt9405 << 2, client.CYCLES_20MS, anInt9409 + client.CYCLES_20MS, anInt9412, i_7, anInt9402 + 1, anInt9400 + 1, anInt9413 << 2, false, 0);
-        class521_sub1_sub1_sub3_12.start(i_5, i_6, anInt9413 << 2, anInt9409 + client.CYCLES_20MS);
+        ProjectileAnimation class521_sub1_sub1_sub3_12 = new ProjectileAnimation(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), anInt9410, i_4, i_4, i_2, i_3, anInt9405 << 2, client.FRAME_COUNT, anInt9409 + client.FRAME_COUNT, anInt9412, i_7, anInt9402 + 1, anInt9400 + 1, anInt9413 << 2, false, 0);
+        class521_sub1_sub1_sub3_12.start(i_5, i_6, anInt9413 << 2, anInt9409 + client.FRAME_COUNT);
         client.PROJECTILES.append(new ProjectileNode(class521_sub1_sub1_sub3_12));
     }
 
@@ -159,8 +159,8 @@ public class ProjectileCutsceneAction extends CutsceneAction {
             }
         }
         int i_6 = -716833811 * anInt9399 * 2139724261 << 2;
-        ProjectileAnimation class521_sub1_sub1_sub3_11 = new ProjectileAnimation(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), anInt9410 * 2035189521 * 899631601, i_3, i_3, i_1, i_2, anInt9405 * 2127134041 * -1118504215 << 2, client.CYCLES_20MS * 1968179203 * -1809259861, -1809259861 * client.CYCLES_20MS * 1968179203 + anInt9409 * -229470439 * -511484631, anInt9412 * -1446164009 * 1829419495, i_6, 1 + anInt9402 * -37939787 * -772738915, anInt9400 * 857868507 * 1060287315 + 1, -209777139 * anInt9413 * 885452997 << 2, false, 0);
-        class521_sub1_sub1_sub3_11.start(i_4, i_5, -209777139 * anInt9413 * 885452997 << 2, -511484631 * anInt9409 * -229470439 + client.CYCLES_20MS * 1968179203 * -1809259861);
+        ProjectileAnimation class521_sub1_sub1_sub3_11 = new ProjectileAnimation(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), anInt9410 * 2035189521 * 899631601, i_3, i_3, i_1, i_2, anInt9405 * 2127134041 * -1118504215 << 2, client.FRAME_COUNT * 1968179203 * -1809259861, -1809259861 * client.FRAME_COUNT * 1968179203 + anInt9409 * -229470439 * -511484631, anInt9412 * -1446164009 * 1829419495, i_6, 1 + anInt9402 * -37939787 * -772738915, anInt9400 * 857868507 * 1060287315 + 1, -209777139 * anInt9413 * 885452997 << 2, false, 0);
+        class521_sub1_sub1_sub3_11.start(i_4, i_5, -209777139 * anInt9413 * 885452997 << 2, -511484631 * anInt9409 * -229470439 + client.FRAME_COUNT * 1968179203 * -1809259861);
         client.PROJECTILES.append(new ProjectileNode(class521_sub1_sub1_sub3_11));
     }
 

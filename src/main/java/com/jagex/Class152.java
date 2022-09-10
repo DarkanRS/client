@@ -113,19 +113,19 @@ public abstract class Class152 {
                 Class363.method6286(long_0);
             }
         }
-        CutsceneAction_Sub12.method14614(Renderers.CURRENT_RENDERER, client.CYCLES_20MS);
+        CutsceneAction_Sub12.method14614(Renderers.CURRENT_RENDERER, client.FRAME_COUNT);
         if (client.BASE_WINDOW_ID != -1) {
             CS2Interface.method8777(client.BASE_WINDOW_ID);
         }
         int i_2;
-        for (i_2 = 0; i_2 < client.anInt7407; i_2++) {
-            client.aBoolArray7410[i_2] = client.aBoolArray7443[i_2];
-            client.aBoolArray7443[i_2] = false;
+        for (i_2 = 0; i_2 < client.IF_CURR_LAYER; i_2++) {
+            client.aBoolArray7410[i_2] = client.IF_COMPONENTS_TO_RENDER[i_2];
+            client.IF_COMPONENTS_TO_RENDER[i_2] = false;
         }
-        client.anInt7408 = client.CYCLES_20MS;
+        client.anInt7408 = client.FRAME_COUNT;
         Class380.method6451(-1, -1);
         if (client.BASE_WINDOW_ID != -1) {
-            client.anInt7407 = 0;
+            client.IF_CURR_LAYER = 0;
             StructIndexLoader.method7039();
         }
         Renderers.CURRENT_RENDERER.L();

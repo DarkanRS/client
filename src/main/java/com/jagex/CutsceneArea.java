@@ -37,12 +37,12 @@ public class CutsceneArea extends Node {
 
         CoordGrid coordgrid_5 = IndexLoaders.MAP_REGION_DECODER.getBase();
         tcpmessage_4.buffer.writeByte(VertexNormal.method1465() ? 1 : 0);
-        tcpmessage_4.buffer.writeShort(i_0 + coordgrid_5.x);
+        tcpmessage_4.buffer.writeShort(coordgrid_5.x + i_0);
         tcpmessage_4.buffer.writeShortLE(coordgrid_5.y + i_1);
-        Class187.anInt2361 = i_0;
-        Class187.anInt2359 = i_1;
-        Class187.aBool2360 = false;
-        MaterialProp28.method15255();
+        Class187.MINIMAP_FLAG_X = i_0;
+        Class187.MINIMAP_FLAG_Y = i_1;
+        Class187.MINIMAP_FLAG_IS_OVERRIDE = false;
+        PulseEvent.method15255();
         return tcpmessage_4;
     }
 

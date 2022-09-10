@@ -81,7 +81,7 @@ public class CutsceneEntity {
             if (id >= 0) {
                 npc = new NPCEntity(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager());
                 npc.index = index;
-                npc.lastUpdate = client.CYCLES_20MS;
+                npc.lastUpdate = client.FRAME_COUNT;
                 npc.setDefinition(IndexLoaders.NPC_INDEX_LOADER.getNPCType(id));
                 npc.setBoundSize(npc.definitions.size);
                 npc.anInt10340 = npc.definitions.contrast << 3;
@@ -90,7 +90,7 @@ public class CutsceneEntity {
                 player = new PlayerEntity(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager());
                 player.decodeAppearance(Class276.aNode_Sub35_3346);
                 player.index = index;
-                player.lastUpdate = client.CYCLES_20MS;
+                player.lastUpdate = client.FRAME_COUNT;
                 player.drawPriority = ++Class86.anInt819 - 1;
             }
         }

@@ -97,8 +97,8 @@ public class ProjectileAnimation extends GraphNode_Sub1_Sub1 {
                     if (i_5 != 0 || i_6 != 0) {
                         int i_7 = ((PathingEntity) obj_2).aClass19_10359.method578();
                         int i_8 = i_7;
-                        if (((PathingEntity) obj_2).anIntArray10362 != null && ((PathingEntity) obj_2).anIntArray10362[anInt10391] != -1) {
-                            i_8 = ((PathingEntity) obj_2).anIntArray10362[anInt10391];
+                        if (((PathingEntity) obj_2).modelRotations != null && ((PathingEntity) obj_2).modelRotations[anInt10391] != -1) {
+                            i_8 = ((PathingEntity) obj_2).modelRotations[anInt10391];
                         }
 
                         int i_9 = i_8 - i_7 & 0x3fff;
@@ -219,11 +219,11 @@ public class ProjectileAnimation extends GraphNode_Sub1_Sub1 {
         ParticleEmitterConfig[] arr_5 = meshrasterizer_2.method11253();
         SurfaceSkin[] arr_6 = meshrasterizer_2.method11274();
         if ((aClass539_10402 == null || aClass539_10402.aBool7132) && (arr_5 != null || arr_6 != null)) {
-            aClass539_10402 = ParticleSystem.method11557(client.CYCLES_20MS, true);
+            aClass539_10402 = ParticleSystem.method11557(client.FRAME_COUNT, true);
         }
 
         if (aClass539_10402 != null) {
-            aClass539_10402.method11511(graphicalrenderer_1, client.CYCLES_20MS, arr_5, arr_6);
+            aClass539_10402.method11511(graphicalrenderer_1, client.FRAME_COUNT, arr_5, arr_6);
             aClass539_10402.method11515(plane);
         }
 

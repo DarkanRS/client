@@ -95,10 +95,10 @@ public class Item extends Node {
                 Class82.method1457(i_8, i_9, icomponentdefinitions_1, class455_6, i_2, i_3);
                 Class190.method3151(i_8, i_9, icomponentdefinitions_1, class119_5, i_2, i_3);
                 if (NativeLibraryLoader.anInt3240 != 4) {
-                    if (Class187.anInt2361 != 0) {
-                        i_21 = Class187.anInt2361 * 4 + 2 - i_8 / 128 + (VertexNormal.MY_PLAYER.getSize() - 1) * 2;
-                        i_16 = 2 + Class187.anInt2359 * 4 - i_9 / 128 + (VertexNormal.MY_PLAYER.getSize() - 1) * 2;
-                        Class190.method3149(icomponentdefinitions_1, class455_6, i_2, i_3, i_21, i_16, Class16.aNativeSpriteArray145[Class187.aBool2360 ? 1 : 0]);
+                    if (Class187.MINIMAP_FLAG_X != 0) {
+                        i_21 = Class187.MINIMAP_FLAG_X * 4 + 2 - i_8 / 128 + (VertexNormal.MY_PLAYER.getSize() - 1) * 2;
+                        i_16 = 2 + Class187.MINIMAP_FLAG_Y * 4 - i_9 / 128 + (VertexNormal.MY_PLAYER.getSize() - 1) * 2;
+                        Class190.method3149(icomponentdefinitions_1, class455_6, i_2, i_3, i_21, i_16, Class16.aNativeSpriteArray145[Class187.MINIMAP_FLAG_IS_OVERRIDE ? 1 : 0]);
                     }
 
                     if (!VertexNormal.MY_PLAYER.hidden) {
@@ -110,11 +110,6 @@ public class Item extends Node {
             }
         }
 
-    }
-
-    public static void method12575(int i_0) {
-        PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(10, i_0);
-        class282_sub50_sub12_2.method14965();
     }
 
 }

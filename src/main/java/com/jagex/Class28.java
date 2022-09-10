@@ -29,13 +29,13 @@ public class Class28 implements Interface2 {
     }
 
     static void method776(IComponentDefinitions icomponentdefinitions_0) {
-        if (icomponentdefinitions_0.contentType == IComponentDefinitions.CONTENT_TYPE_328) {
+        if (icomponentdefinitions_0.contentType == ContentType.LOCAL_PLAYER_MODEL) {
             if (VertexNormal.MY_PLAYER.displayName == null) {
                 icomponentdefinitions_0.modelId = 0;
                 icomponentdefinitions_0.anInt1339 = 0;
             } else {
                 icomponentdefinitions_0.spritePitch = 150;
-                icomponentdefinitions_0.spriteRoll = (int) (Math.sin(client.CYCLES_20MS / 40.0D) * 256.0D) & 0x7ff;
+                icomponentdefinitions_0.spriteRoll = (int) (Math.sin(client.FRAME_COUNT / 40.0D) * 256.0D) & 0x7ff;
                 icomponentdefinitions_0.modelType = ModelType.PLAYER_MODEL;
                 icomponentdefinitions_0.modelId = client.myPlayerIndex;
                 icomponentdefinitions_0.anInt1339 = Class272.stringToInt(VertexNormal.MY_PLAYER.displayName);

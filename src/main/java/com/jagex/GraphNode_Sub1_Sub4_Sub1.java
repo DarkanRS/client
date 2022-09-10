@@ -63,7 +63,7 @@ public class GraphNode_Sub1_Sub4_Sub1 extends GraphNode_Sub1_Sub4 implements Wor
             int i_21;
             int i_22;
             int i_51;
-            if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager() != null && (!client.aBool7344 || (Class506.USE_OPTIONS_FLAGS & 0x40) != 0)) {
+            if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager() != null && (!client.IS_USE_SELECTED || (Class506.USE_OPTIONS_FLAGS & 0x40) != 0)) {
                 int i_8 = -1;
                 i_9 = -1;
                 float f_10 = 2.0F * i_6 / Class20.anInt176 - 1.0F;
@@ -91,7 +91,7 @@ public class GraphNode_Sub1_Sub4_Sub1 extends GraphNode_Sub1_Sub4 implements Wor
                 }
 
                 if (i_8 != -1 && i_9 != -1) {
-                    if (client.aBool7344 && (Class506.USE_OPTIONS_FLAGS & 0x40) != 0) {
+                    if (client.IS_USE_SELECTED && (Class506.USE_OPTIONS_FLAGS & 0x40) != 0) {
                         IComponentDefinitions icomponentdefinitions_30 = Index.getIComponentDefinitions(client.anInt56, client.anInt7345);
                         if (icomponentdefinitions_30 != null) {
                             PlayerModel.method4032(client.aString7275, " -> ", Defaults8Loader.anInt5932, 59, -1, 0L, i_8, i_9, true, false, i_8 << 0 | i_9, true);
@@ -169,13 +169,13 @@ public class GraphNode_Sub1_Sub4_Sub1 extends GraphNode_Sub1_Sub4 implements Wor
                                                 ObjectNode class282_sub47_24 = (ObjectNode) client.NPC_MAP.get(client.NPC_UPDATE_INDICES[i_51]);
                                                 if (class282_sub47_24 != null) {
                                                     NPCEntity npc_40 = (NPCEntity) class282_sub47_24.anObject8068;
-                                                    if (npc_40.anInt10375 != client.CYCLES_20MS && npc_40.aBool10318) {
+                                                    if (npc_40.anInt10375 != client.FRAME_COUNT && npc_40.aBool10318) {
                                                         vector3_26 = npc_40.method11166().coords;
                                                         i_41 = (int) vector3_26.x - (npc_40.definitions.size - 1 << 8);
                                                         i_28 = (int) vector3_26.z - (npc_40.definitions.size - 1 << 8);
                                                         if (i_41 >= i_21 && npc_40.definitions.size <= player_58.getSize() - (i_41 - i_21 >> 9) && i_28 >= i_22 && npc_40.definitions.size <= player_58.getSize() - (i_28 - i_22 >> 9)) {
                                                             MapAreaDefinitions.iComponentOnNPC(npc_40, class285_34.aTransform_Sub1_3391.plane != VertexNormal.MY_PLAYER.plane);
-                                                            npc_40.anInt10375 = client.CYCLES_20MS;
+                                                            npc_40.anInt10375 = client.FRAME_COUNT;
                                                         }
                                                     }
                                                 }
@@ -186,21 +186,21 @@ public class GraphNode_Sub1_Sub4_Sub1 extends GraphNode_Sub1_Sub4 implements Wor
 
                                             for (int i_25 = 0; i_25 < i_51; i_25++) {
                                                 PlayerEntity player_55 = client.players[ints_53[i_25]];
-                                                if (player_55 != null && player_55.anInt10375 != client.CYCLES_20MS && player_58 != player_55 && player_55.aBool10318) {
+                                                if (player_55 != null && player_55.anInt10375 != client.FRAME_COUNT && player_58 != player_55 && player_55.aBool10318) {
                                                     Vector3 vector3_27 = player_55.method11166().coords;
                                                     i_28 = (int) vector3_27.x - (player_55.getSize() - 1 << 8);
                                                     int i_29 = (int) vector3_27.z - (player_55.getSize() - 1 << 8);
                                                     if (i_28 >= i_21 && player_55.getSize() <= player_58.getSize() - (i_28 - i_21 >> 9) && i_29 >= i_22 && player_55.getSize() <= player_58.getSize() - (i_29 - i_22 >> 9)) {
                                                         CutsceneAction_Sub22.iComponentOnPlayer(player_55, class285_34.aTransform_Sub1_3391.plane != VertexNormal.MY_PLAYER.plane);
-                                                        player_55.anInt10375 = client.CYCLES_20MS;
+                                                        player_55.anInt10375 = client.FRAME_COUNT;
                                                     }
                                                 }
                                             }
                                         }
 
-                                        if (player_58.anInt10375 != client.CYCLES_20MS) {
+                                        if (player_58.anInt10375 != client.FRAME_COUNT) {
                                             CutsceneAction_Sub22.iComponentOnPlayer(player_58, class285_34.aTransform_Sub1_3391.plane != VertexNormal.MY_PLAYER.plane);
-                                            player_58.anInt10375 = client.CYCLES_20MS;
+                                            player_58.anInt10375 = client.FRAME_COUNT;
                                             break;
                                         }
                                     }
@@ -223,13 +223,13 @@ public class GraphNode_Sub1_Sub4_Sub1 extends GraphNode_Sub1_Sub4 implements Wor
                                             ObjectNode class282_sub47_37 = (ObjectNode) client.NPC_MAP.get(client.NPC_UPDATE_INDICES[i_22]);
                                             if (class282_sub47_37 != null) {
                                                 NPCEntity npc_54 = (NPCEntity) class282_sub47_37.anObject8068;
-                                                if (npc_54.anInt10375 != client.CYCLES_20MS && npc_59 != npc_54 && npc_54.aBool10318) {
+                                                if (npc_54.anInt10375 != client.FRAME_COUNT && npc_59 != npc_54 && npc_54.aBool10318) {
                                                     Vector3 vector3_66 = npc_54.method11166().coords;
                                                     i_42 = (int) vector3_66.x - (npc_54.definitions.size - 1 << 8);
                                                     i_41 = (int) vector3_66.z - (npc_54.definitions.size - 1 << 8);
                                                     if (i_42 >= i_50 && npc_54.definitions.size <= npc_59.definitions.size - (i_42 - i_50 >> 9) && i_41 >= i_21 && npc_54.definitions.size <= npc_59.definitions.size - (i_41 - i_21 >> 9)) {
                                                         MapAreaDefinitions.iComponentOnNPC(npc_54, class285_34.aTransform_Sub1_3391.plane != VertexNormal.MY_PLAYER.plane);
-                                                        npc_54.anInt10375 = client.CYCLES_20MS;
+                                                        npc_54.anInt10375 = client.FRAME_COUNT;
                                                     }
                                                 }
                                             }
@@ -240,21 +240,21 @@ public class GraphNode_Sub1_Sub4_Sub1 extends GraphNode_Sub1_Sub4 implements Wor
 
                                         for (i_38 = 0; i_38 < i_22; i_38++) {
                                             PlayerEntity player_67 = client.players[ints_64[i_38]];
-                                            if (player_67 != null && player_67.anInt10375 != client.CYCLES_20MS && player_67.aBool10318) {
+                                            if (player_67 != null && player_67.anInt10375 != client.FRAME_COUNT && player_67.aBool10318) {
                                                 vector3_26 = player_67.method11166().coords;
                                                 i_41 = (int) vector3_26.x - (player_67.getSize() - 1 << 8);
                                                 i_28 = (int) vector3_26.z - (player_67.getSize() - 1 << 8);
                                                 if (i_41 >= i_50 && player_67.getSize() <= npc_59.definitions.size - (i_41 - i_50 >> 9) && i_28 >= i_21 && player_67.getSize() <= npc_59.definitions.size - (i_28 - i_21 >> 9)) {
                                                     CutsceneAction_Sub22.iComponentOnPlayer(player_67, class285_34.aTransform_Sub1_3391.plane != VertexNormal.MY_PLAYER.plane);
-                                                    player_67.anInt10375 = client.CYCLES_20MS;
+                                                    player_67.anInt10375 = client.FRAME_COUNT;
                                                 }
                                             }
                                         }
                                     }
 
-                                    if (npc_59.anInt10375 != client.CYCLES_20MS) {
+                                    if (npc_59.anInt10375 != client.FRAME_COUNT) {
                                         MapAreaDefinitions.iComponentOnNPC(npc_59, class285_34.aTransform_Sub1_3391.plane != VertexNormal.MY_PLAYER.plane);
-                                        npc_59.anInt10375 = client.CYCLES_20MS;
+                                        npc_59.anInt10375 = client.FRAME_COUNT;
                                         break;
                                     }
                                 }
@@ -276,9 +276,9 @@ public class GraphNode_Sub1_Sub4_Sub1 extends GraphNode_Sub1_Sub4 implements Wor
                                                 i_38 = Class149_Sub2.DEFAULTS_LOADER_7.f2pTooltipColor;
                                             }
 
-                                            if (client.aBool7344 && class285_34.aTransform_Sub1_3391.plane == VertexNormal.MY_PLAYER.plane) {
-                                                ParamDefinitions attributedefault_68 = CutsceneAction_Sub12.USE_INTERFACE_ID != -1 ? IndexLoaders.PARAM_LOADER.getParam(CutsceneAction_Sub12.USE_INTERFACE_ID) : null;
-                                                if ((Class506.USE_OPTIONS_FLAGS & 0x1) != 0 && (attributedefault_68 == null || itemdefinitions_65.getCS2Integer(CutsceneAction_Sub12.USE_INTERFACE_ID, attributedefault_68.defaultInt) != attributedefault_68.defaultInt)) {
+                                            if (client.IS_USE_SELECTED && class285_34.aTransform_Sub1_3391.plane == VertexNormal.MY_PLAYER.plane) {
+                                                ParamDefinitions attributedefault_68 = CutsceneAction_Sub12.TARGET_PARAM != -1 ? IndexLoaders.PARAM_LOADER.getParam(CutsceneAction_Sub12.TARGET_PARAM) : null;
+                                                if ((Class506.USE_OPTIONS_FLAGS & 0x1) != 0 && (attributedefault_68 == null || itemdefinitions_65.getCS2Integer(CutsceneAction_Sub12.TARGET_PARAM, attributedefault_68.defaultInt) != attributedefault_68.defaultInt)) {
                                                     PlayerModel.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + Utils.rgbToColHexShortcut(i_38) + itemdefinitions_65.name, Defaults8Loader.anInt5932, 17, -1, class282_sub34_39.id, i_46, i_47, true, false, i_21, false);
                                                 }
                                             }
@@ -340,9 +340,9 @@ public class GraphNode_Sub1_Sub4_Sub1 extends GraphNode_Sub1_Sub4 implements Wor
                             }
                         } while (objectdefinitions_57 == null);
 
-                        if (client.aBool7344 && class285_34.aTransform_Sub1_3391.plane == VertexNormal.MY_PLAYER.plane) {
-                            ParamDefinitions attributedefault_62 = CutsceneAction_Sub12.USE_INTERFACE_ID != -1 ? IndexLoaders.PARAM_LOADER.getParam(CutsceneAction_Sub12.USE_INTERFACE_ID) : null;
-                            if ((Class506.USE_OPTIONS_FLAGS & 0x4) != 0 && (attributedefault_62 == null || objectdefinitions_57.method7963(CutsceneAction_Sub12.USE_INTERFACE_ID, attributedefault_62.defaultInt) != attributedefault_62.defaultInt)) {
+                        if (client.IS_USE_SELECTED && class285_34.aTransform_Sub1_3391.plane == VertexNormal.MY_PLAYER.plane) {
+                            ParamDefinitions attributedefault_62 = CutsceneAction_Sub12.TARGET_PARAM != -1 ? IndexLoaders.PARAM_LOADER.getParam(CutsceneAction_Sub12.TARGET_PARAM) : null;
+                            if ((Class506.USE_OPTIONS_FLAGS & 0x4) != 0 && (attributedefault_62 == null || objectdefinitions_57.method7963(CutsceneAction_Sub12.TARGET_PARAM, attributedefault_62.defaultInt) != attributedefault_62.defaultInt)) {
                                 PlayerModel.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + Utils.rgbToColHexShortcut(65535) + objectdefinitions_57.name, Defaults8Loader.anInt5932, 2, -1, Class329.method5905(sceneobject_60, i_46, i_47), i_46, i_47, true, false, sceneobject_60.hashCode(), false);
                             }
                         }

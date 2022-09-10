@@ -19,13 +19,13 @@ public class Class158_Sub2_Sub1 extends Class158_Sub2 {
         aBool10122 = false;
         aGraphicalRenderer_Sub1_10118 = class505_sub1_1;
         aCanvas10120 = canvas_2;
-        anOpenGL10119 = class505_sub1_1.anOpenGL8352;
+        anOpenGL10119 = class505_sub1_1.openGLInstance;
         aLong10117 = long_3;
         method15526();
     }
 
     Class158_Sub2_Sub1(OpenGLRenderer class505_sub1_1, Canvas canvas_2) {
-        this(class505_sub1_1, canvas_2, class505_sub1_1.anOpenGL8352.prepareSurface(canvas_2));
+        this(class505_sub1_1, canvas_2, class505_sub1_1.openGLInstance.prepareSurface(canvas_2));
     }
 
     @Override

@@ -64,10 +64,10 @@ public class MapRegion {
                 if (i_7 < 1) {
                     return false;
                 } else {
-                    Class187.anInt2361 = client.walkStepsX[i_7 - 1];
-                    Class187.anInt2359 = client.walkStepsY[i_7 - 1];
-                    Class187.aBool2360 = false;
-                    MaterialProp28.method15255();
+                    Class187.MINIMAP_FLAG_X = client.walkStepsX[i_7 - 1];
+                    Class187.MINIMAP_FLAG_Y = client.walkStepsY[i_7 - 1];
+                    Class187.MINIMAP_FLAG_IS_OVERRIDE = false;
+                    PulseEvent.method15255();
                     return true;
                 }
             } else {
@@ -95,12 +95,6 @@ public class MapRegion {
             KeyHoldInputSubscriber.method3922(ints_12, i_0, i_9, i_4);
             KeyHoldInputSubscriber.method3922(ints_12, i_10, i_1, i_4);
         }
-    }
-
-    static void method4562(int i_0, String string_1) {
-        PulseEvent class282_sub50_sub12_3 = PulseEvent.createPulseEvent(2, i_0);
-        class282_sub50_sub12_3.immediate();
-        class282_sub50_sub12_3.string = string_1;
     }
 
     public static Class350 method4564(ByteBuf rsbytebuffer_0) {
@@ -631,9 +625,9 @@ public class MapRegion {
                 }
             }
         }
-        if (Class187.anInt2361 != 0) {
-            Class187.anInt2361 -= i_3;
-            Class187.anInt2359 -= i_4;
+        if (Class187.MINIMAP_FLAG_X != 0) {
+            Class187.MINIMAP_FLAG_X -= i_3;
+            Class187.MINIMAP_FLAG_Y -= i_4;
         }
         Class16.method566();
         ClipFlagMap.method6008(false);
@@ -1011,7 +1005,7 @@ public class MapRegion {
                 } else if (client.GAME_STATE == GameState.UNK_9) {
                     GameState.setGameState(GameState.IN_ACCOUNT_CREATION);
                 } else {
-                    GameState.setGameState(GameState.UNK_13);
+                    GameState.setGameState(GameState.LOGGED_INGAME);
                     if (client.GAME_CONNECTION_CONTEXT.getConnection() != null) {
                         tcpmessage_22 = TCPPacket.createPacket(ClientProt.REGION_LOADED_CONFIRM, client.GAME_CONNECTION_CONTEXT.outKeys);
                         client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_22);
@@ -1166,7 +1160,7 @@ public class MapRegion {
                         client.NPC_MAP.put(class282_sub47_17, i_7);
                         client.NPC_ARRAY[++client.anInt7210 - 1] = class282_sub47_17;
                         client.NPC_UPDATE_INDICES[++client.NPC_UPDATE_INDEX - 1] = i_7;
-                        npc_16.lastUpdate = client.CYCLES_20MS;
+                        npc_16.lastUpdate = client.FRAME_COUNT;
                         npc_16.setDefinition(npcdefinitions_14);
                         npc_16.setBoundSize(npc_16.definitions.size);
                         npc_16.anInt10340 = npc_16.definitions.contrast << 3;
@@ -1370,7 +1364,7 @@ public class MapRegion {
             GameState.setGameState(GameState.UNK_2);
         } else if (client.GAME_STATE == GameState.UNK_7) {
             GameState.setGameState(GameState.UNK_6);
-        } else if (client.GAME_STATE == GameState.UNK_13) {
+        } else if (client.GAME_STATE == GameState.LOGGED_INGAME) {
             GameState.setGameState(GameState.UNK_18);
         } else if (client.GAME_STATE == GameState.IN_ACCOUNT_CREATION) {
             GameState.setGameState(GameState.UNK_9);

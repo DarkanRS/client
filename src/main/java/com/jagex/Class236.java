@@ -11,10 +11,8 @@ public class Class236 {
 
     static boolean aBool2909 = true;
 
-    static Class534_Sub2 aClass534_Sub2_2911 = new Class534_Sub2();
-
-    static Class534_Sub1 aClass534_Sub1_2913 = new Class534_Sub1();
-
+    static MouseMovementICMP MOUSE_MOVEMENT_CANVAS = new MouseMovementICMP();
+    static MouseMovementJav MOUSE_MOVEMENT_WINDOW = new MouseMovementJav();
     static Queue<MouseRecord_Sub1> aQueue2914 = new LinkedList<MouseRecord_Sub1>();
 
     Class236() throws Throwable {

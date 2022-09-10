@@ -144,8 +144,8 @@ public class PlayerUpdate {
             player.greenAdd = stream.readByteC();
             player.blueAdd = stream.read128Byte();
             player.scalar = (byte) stream.readUnsigned128Byte();
-            player.anInt10347 = client.CYCLES_20MS + stream.readUnsignedShort128();
-            player.anInt10348 = client.CYCLES_20MS + stream.readUnsignedShort();
+            player.anInt10347 = client.FRAME_COUNT + stream.readUnsignedShort128();
+            player.anInt10348 = client.FRAME_COUNT + stream.readUnsignedShort();
         }
 
         if ((flags & 0x400000) != 0) {
@@ -206,7 +206,7 @@ public class PlayerUpdate {
 
             for (int i_9 = 0; i_9 < size; i_9++) {
                 int i_10 = stream.readUnsignedShort128();
-                if ((i_10 & 0xc000) == 49152) {
+                if ((i_10 & 0xc000) == 0xc000) {
                     int i_19 = stream.readUnsignedShort128();
                     ints_14[i_9] = i_10 << 16 | i_19;
                 } else {
@@ -216,7 +216,7 @@ public class PlayerUpdate {
                 ints_15[i_9] = stream.readUnsignedShort();
             }
 
-            player.method15797(ints_14, ints_15);
+            player.applyModelRotations(ints_14, ints_15);
         }
 
         if ((flags & 0x4000) != 0) {
@@ -283,7 +283,7 @@ public class PlayerUpdate {
                     }
 
                     i_12 = stream.readSmart();
-                    player.applyHit(i_19, i_9, i_8, i_10, client.CYCLES_20MS, i_12);
+                    player.applyHit(i_19, i_9, i_8, i_10, client.FRAME_COUNT, i_12);
                 }
             }
 
@@ -296,7 +296,7 @@ public class PlayerUpdate {
                         int i_19 = stream.readSmart();
                         i_12 = stream.readUnsigned128Byte();
                         int i_13 = i_10 > 0 ? stream.readUnsignedByte128() : i_12;
-                        player.displayHitbar(i_9, client.CYCLES_20MS, i_10, i_19, i_12, i_13);
+                        player.displayHitbar(i_9, client.FRAME_COUNT, i_10, i_19, i_12, i_13);
                     } else {
                         player.method15857(i_9);
                     }
@@ -379,8 +379,8 @@ public class PlayerUpdate {
             player.forceMovementT1YOff = stream.read128Byte();
             player.forceMovementT2XOff = stream.readByte128();
             player.forceMovementT2YOff = stream.readByteC();
-            player.forceMovementT1Delay = stream.readUnsignedShortLE128() + client.CYCLES_20MS;
-            player.forceMovementT2Delay = stream.readShortLE() + client.CYCLES_20MS;
+            player.forceMovementT1Delay = stream.readUnsignedShortLE128() + client.FRAME_COUNT;
+            player.forceMovementT2Delay = stream.readShortLE() + client.FRAME_COUNT;
             player.forceMovementDir = stream.readUnsignedShort128();
             if (player.aBool10568) {
                 player.forceMovementT1XOff += player.anInt10569;

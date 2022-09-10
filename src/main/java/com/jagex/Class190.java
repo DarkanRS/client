@@ -68,7 +68,7 @@ public class Class190 {
 
         for (int i_8 = 0; i_8 < hintArrows.length; i_8++) {
             HintArrow arrow = hintArrows[i_8];
-            if (arrow != null && arrow.targetType != 0 && client.CYCLES_20MS % 20 < 10) {
+            if (arrow != null && arrow.targetType != 0 && client.FRAME_COUNT % 20 < 10) {
                 int i_13;
                 if (arrow.targetType == 1) {
                     ObjectNode class282_sub47_10 = (ObjectNode) client.NPC_MAP.get(arrow.targetIndex);
@@ -118,7 +118,7 @@ public class Class190 {
             client.HINT_ARROWS[i_1] = null;
         }
 
-        client.aBool7344 = false;
+        client.IS_USE_SELECTED = false;
         Class16.method566();
         client.anInt7248 = (int) (Math.random() * 100.0D) - 50;
         client.anInt7250 = (int) (Math.random() * 110.0D) - 55;
@@ -191,7 +191,7 @@ public class Class190 {
         client.aBool7172 = true;
 
         for (i_1 = 0; i_1 < 107; i_1++) {
-            client.aBoolArray7443[i_1] = true;
+            client.IF_COMPONENTS_TO_RENDER[i_1] = true;
         }
 
         for (i_1 = 0; i_1 < 6; i_1++) {

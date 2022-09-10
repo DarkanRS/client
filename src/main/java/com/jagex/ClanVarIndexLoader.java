@@ -18,8 +18,8 @@ public class ClanVarIndexLoader {
     static void method6763() {
         Class187.anInt2363 = 0;
         Class187.anInt2351 = -1;
-        Class187.anInt2361 = -1;
-        Class187.anInt2359 = -1;
+        Class187.MINIMAP_FLAG_X = -1;
+        Class187.MINIMAP_FLAG_Y = -1;
     }
 
     public ClanVarDefinitions method6753(int i_1) {

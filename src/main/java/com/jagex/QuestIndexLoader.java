@@ -142,7 +142,7 @@ public class QuestIndexLoader {
     }
 
     public static void method4167(String string_0) {
-        if (client.aBool7344 && (Class506.USE_OPTIONS_FLAGS & 0x18) != 0) {
+        if (client.IS_USE_SELECTED && (Class506.USE_OPTIONS_FLAGS & 0x18) != 0) {
             boolean bool_2 = false;
             int i_3 = Class197.NUM_PLAYER_INDICES;
             int[] ints_4 = Class197.PLAYER_INDICES;
@@ -165,7 +165,7 @@ public class QuestIndexLoader {
             if (!bool_2) {
                 ChatLine.appendGameMessage(LocalizedText.UNABLE_TO_FIND.translate(Class223.CURRENT_LANGUAGE) + string_0);
             }
-            if (client.aBool7344) {
+            if (client.IS_USE_SELECTED) {
                 Class60.method1170();
             }
         }

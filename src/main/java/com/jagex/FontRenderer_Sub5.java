@@ -156,7 +156,7 @@ public class FontRenderer_Sub5 extends FontRenderer {
         Class455_Sub2 class455_sub2_9 = (Class455_Sub2) class455_6;
         Class137_Sub1_Sub1 class137_sub1_sub1_10 = class455_sub2_9.aClass137_Sub1_Sub1_8974;
         aGraphicalRenderer_Sub1_9323.method13606();
-        aGraphicalRenderer_Sub1_9323.method13654(aClass137_Sub1_Sub1_9325);
+        aGraphicalRenderer_Sub1_9323.setTexture(aClass137_Sub1_Sub1_9325);
         if (!aBool9326 && !bool_5) {
             aGraphicalRenderer_Sub1_9323.method13717(7681, 7681);
         } else {
@@ -164,8 +164,8 @@ public class FontRenderer_Sub5 extends FontRenderer {
             aGraphicalRenderer_Sub1_9323.method13595(0, 34168, 768);
         }
 
-        aGraphicalRenderer_Sub1_9323.method13610(1);
-        aGraphicalRenderer_Sub1_9323.method13654(class137_sub1_sub1_10);
+        aGraphicalRenderer_Sub1_9323.setActiveTexture(1);
+        aGraphicalRenderer_Sub1_9323.setTexture(class137_sub1_sub1_10);
         aGraphicalRenderer_Sub1_9323.method13717(7681, 8448);
         aGraphicalRenderer_Sub1_9323.method13595(0, 34168, 768);
         OpenGL.glTexGeni(8192, 9472, 9216);
@@ -184,8 +184,8 @@ public class FontRenderer_Sub5 extends FontRenderer {
         OpenGL.glDisable(3169);
         aGraphicalRenderer_Sub1_9323.method13595(0, 5890, 768);
         aGraphicalRenderer_Sub1_9323.method13717(8448, 8448);
-        aGraphicalRenderer_Sub1_9323.method13654(null);
-        aGraphicalRenderer_Sub1_9323.method13610(0);
+        aGraphicalRenderer_Sub1_9323.setTexture(null);
+        aGraphicalRenderer_Sub1_9323.setActiveTexture(0);
         if (aBool9326 || bool_5) {
             aGraphicalRenderer_Sub1_9323.method13595(0, 5890, 768);
         }
@@ -197,7 +197,7 @@ public class FontRenderer_Sub5 extends FontRenderer {
         Class455_Sub2 class455_sub2_9 = (Class455_Sub2) class455_6;
         Class137_Sub1_Sub1 class137_sub1_sub1_10 = class455_sub2_9.aClass137_Sub1_Sub1_8974;
         aGraphicalRenderer_Sub1_9323.method13606();
-        aGraphicalRenderer_Sub1_9323.method13654(aClass137_Sub1_Sub1_9325);
+        aGraphicalRenderer_Sub1_9323.setTexture(aClass137_Sub1_Sub1_9325);
         if (!aBool9326 && !bool_5) {
             aGraphicalRenderer_Sub1_9323.method13717(7681, 7681);
         } else {
@@ -205,8 +205,8 @@ public class FontRenderer_Sub5 extends FontRenderer {
             aGraphicalRenderer_Sub1_9323.method13595(0, 34168, 768);
         }
 
-        aGraphicalRenderer_Sub1_9323.method13610(1);
-        aGraphicalRenderer_Sub1_9323.method13654(class137_sub1_sub1_10);
+        aGraphicalRenderer_Sub1_9323.setActiveTexture(1);
+        aGraphicalRenderer_Sub1_9323.setTexture(class137_sub1_sub1_10);
         aGraphicalRenderer_Sub1_9323.method13717(7681, 8448);
         aGraphicalRenderer_Sub1_9323.method13595(0, 34168, 768);
         OpenGL.glTexGeni(8192, 9472, 9216);
@@ -225,8 +225,8 @@ public class FontRenderer_Sub5 extends FontRenderer {
         OpenGL.glDisable(3169);
         aGraphicalRenderer_Sub1_9323.method13595(0, 5890, 768);
         aGraphicalRenderer_Sub1_9323.method13717(8448, 8448);
-        aGraphicalRenderer_Sub1_9323.method13654(null);
-        aGraphicalRenderer_Sub1_9323.method13610(0);
+        aGraphicalRenderer_Sub1_9323.setTexture(null);
+        aGraphicalRenderer_Sub1_9323.setActiveTexture(0);
         if (aBool9326 || bool_5) {
             aGraphicalRenderer_Sub1_9323.method13595(0, 5890, 768);
         }
@@ -236,7 +236,7 @@ public class FontRenderer_Sub5 extends FontRenderer {
     @Override
     void UA(char var_1, int i_2, int i_3, int i_4, boolean bool_5) {
         aGraphicalRenderer_Sub1_9323.method13606();
-        aGraphicalRenderer_Sub1_9323.method13654(aClass137_Sub1_Sub1_9325);
+        aGraphicalRenderer_Sub1_9323.setTexture(aClass137_Sub1_Sub1_9325);
         if (!aBool9326 && !bool_5) {
             aGraphicalRenderer_Sub1_9323.method13717(7681, 7681);
         } else {
@@ -257,7 +257,7 @@ public class FontRenderer_Sub5 extends FontRenderer {
     @Override
     void c(char var_1, int i_2, int i_3, int i_4, boolean bool_5) {
         aGraphicalRenderer_Sub1_9323.method13606();
-        aGraphicalRenderer_Sub1_9323.method13654(aClass137_Sub1_Sub1_9325);
+        aGraphicalRenderer_Sub1_9323.setTexture(aClass137_Sub1_Sub1_9325);
         if (!aBool9326 && !bool_5) {
             aGraphicalRenderer_Sub1_9323.method13717(7681, 7681);
         } else {
@@ -278,7 +278,7 @@ public class FontRenderer_Sub5 extends FontRenderer {
     @Override
     void t(char var_1, int i_2, int i_3, int i_4, boolean bool_5) {
         aGraphicalRenderer_Sub1_9323.method13606();
-        aGraphicalRenderer_Sub1_9323.method13654(aClass137_Sub1_Sub1_9325);
+        aGraphicalRenderer_Sub1_9323.setTexture(aClass137_Sub1_Sub1_9325);
         if (!aBool9326 && !bool_5) {
             aGraphicalRenderer_Sub1_9323.method13717(7681, 7681);
         } else {

@@ -11,7 +11,7 @@ public class PlayerEntity extends PathingEntity {
     public int headIconId = -1;
     public int combatLevel;
     public int cbLevelWithSumm;
-    public int cbLevelRelated = -1;
+    public int combatLevelThreshhold = -1;
     public int elo;
     public int faceDirection = -1;
     public boolean aBool10573;
@@ -355,12 +355,12 @@ public class PlayerEntity extends PathingEntity {
         }
 
         int i_10 = aClass19_10359.method578();
-        boolean bool_11 = scalar != 0 && client.CYCLES_20MS >= anInt10347 && client.CYCLES_20MS < anInt10348;
+        boolean bool_11 = scalar != 0 && client.FRAME_COUNT >= anInt10347 && client.FRAME_COUNT < anInt10348;
         if (bool_11) {
             i_2 |= 0x80000;
         }
 
-        MeshRasterizer meshrasterizer_12 = aMeshRasterizerArray10372[0] = model.getBodyModel(graphicalrenderer_1, i_2, IndexLoaders.RENDER_ANIM_LOADER, IndexLoaders.IDENTIKIT_LOADER, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, animation_6, class456_sub3_7, aAnimation_Sub2_Sub1Array10354, anIntArray10362, i_10, LinkedNodeList.EQUIPMENT_DEFAULTS);
+        MeshRasterizer meshrasterizer_12 = aMeshRasterizerArray10372[0] = model.getBodyModel(graphicalrenderer_1, i_2, IndexLoaders.RENDER_ANIM_LOADER, IndexLoaders.IDENTIKIT_LOADER, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, animation_6, class456_sub3_7, aAnimation_Sub2_Sub1Array10354, modelRotations, i_10, LinkedNodeList.EQUIPMENT_DEFAULTS);
         int i_13 = Class46.method932();
         if (Engine.MAX_MEMORY < 96 && i_13 > 50) {
             JS5CacheFile.method3359();
@@ -929,13 +929,13 @@ public class PlayerEntity extends PathingEntity {
             }
 
             cbLevelWithSumm = combatLevel;
-            cbLevelRelated = -1;
+            combatLevelThreshhold = -1;
         } else {
             elo = 0;
             cbLevelWithSumm = buffer.readUnsignedByte();
-            cbLevelRelated = buffer.readUnsignedByte();
-            if (cbLevelRelated == 255) {
-                cbLevelRelated = -1;
+            combatLevelThreshhold = buffer.readUnsignedByte();
+            if (combatLevelThreshhold == 255) {
+                combatLevelThreshhold = -1;
             }
         }
 

@@ -10,9 +10,9 @@ class Class237 implements Interface45 {
         return i_0 == 9 || i_0 == 10 || i_0 == 11 || i_0 == 12 || i_0 == 13 || i_0 == 1003 || i_0 == 8;
     }
 
-    public static void method3990() {
-        Class236.aClass534_Sub2_2911.method11409();
-        Class236.aClass534_Sub1_2913.method11409();
+    public static void clearMouseMovementRecords() {
+        Class236.MOUSE_MOVEMENT_WINDOW.clear();
+        Class236.MOUSE_MOVEMENT_CANVAS.clear();
         Class236.aLong2910 = -1L;
         Class236.aBool2909 = true;
     }
@@ -32,7 +32,7 @@ class Class237 implements Interface45 {
     }
 
     @Override
-    public void method245(int i_1, int i_2, int i_3) {
+    public void addMouseRecord(int i_1, int i_2, int i_3) {
         int i_5 = i_1 >> 16;
         int i_6 = i_1 & 0xffff;
         Queue<MouseRecord_Sub1> queue_7 = Class236.aQueue2914;

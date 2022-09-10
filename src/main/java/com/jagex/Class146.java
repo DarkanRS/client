@@ -74,7 +74,7 @@ public class Class146 {
 
     }
 
-    boolean method2463(Class137 class137_1, int i_2) {
+    boolean method2463(GLTexture class137_1, int i_2) {
         if (anInt1718 == 0) {
             return false;
         } else {

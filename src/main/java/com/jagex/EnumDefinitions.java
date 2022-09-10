@@ -50,7 +50,7 @@ public class EnumDefinitions {
                         if (opcode == 7) {
                             values[i_7] = stream.readString();
                         } else {
-                            values[i_7] = new Integer(stream.readInt());
+                            values[i_7] = Integer.valueOf(stream.readInt());
                         }
                     }
                 }
@@ -64,10 +64,10 @@ public class EnumDefinitions {
                     if (opcode == 5) {
                         obj_6 = stream.readString();
                     } else {
-                        obj_6 = new Integer(stream.readInt());
+                        obj_6 = Integer.valueOf(stream.readInt());
                     }
 
-                    aMap5144.put(new Integer(i_5), obj_6);
+                    aMap5144.put(Integer.valueOf(i_5), obj_6);
                 }
             }
         }
@@ -75,7 +75,7 @@ public class EnumDefinitions {
     }
 
     Object getValue(int key) {
-        return values != null ? (key >= 0 && key < values.length ? values[key] : null) : (aMap5144 != null ? aMap5144.get(new Integer(key)) : null);
+        return values != null ? (key >= 0 && key < values.length ? values[key] : null) : (aMap5144 != null ? aMap5144.get(Integer.valueOf(key)) : null);
     }
 
     public String getStringValue(int i_1) {
@@ -126,7 +126,7 @@ public class EnumDefinitions {
                         hashmap_2.put(object_4, obj_5);
                     }
 
-                    ((List) obj_5).add(new Integer(i_3));
+                    ((List) obj_5).add(Integer.valueOf(i_3));
                 }
             }
         } else {

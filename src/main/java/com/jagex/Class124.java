@@ -163,7 +163,7 @@ public class Class124 {
     void method2165(Interface15 interface15_1, int i_2) {
         if (i_2 != 0) {
             method2157();
-            aGraphicalRenderer_Sub1_1558.method13654(aClass137_Sub1_1560);
+            aGraphicalRenderer_Sub1_1558.setTexture(aClass137_Sub1_1560);
             aGraphicalRenderer_Sub1_1558.method13611(interface15_1, 0, i_2);
         }
 

@@ -152,12 +152,6 @@ public class SunDefinitions {
         return i_0 == 18 || i_0 == 19 || i_0 == 20 || i_0 == 21 || i_0 == 22 || i_0 == 1004 || i_0 == 17;
     }
 
-    static void setComponentText(int i_0, String string_1) {
-        PulseEvent class282_sub50_sub12_3 = PulseEvent.createPulseEvent(3, i_0);
-        class282_sub50_sub12_3.immediate();
-        class282_sub50_sub12_3.string = string_1;
-    }
-
     void method843(ByteBuf stream, int opcode) {
         if (opcode == 1) {
             anInt396 = stream.readUnsignedShort();

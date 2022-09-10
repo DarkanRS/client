@@ -31,7 +31,7 @@ public class Class175 {
     }
 
     static void method2964(Node_Sub48 class282_sub48_0, int i_1, int i_2, int i_3, int i_4) {
-        if (class282_sub48_0.soundEffectId != -1 || class282_sub48_0.anIntArray8102 != null) {
+        if (class282_sub48_0.soundEffectId != -1 || class282_sub48_0.timedEffects != null) {
             int i_6 = 0;
             int i_7 = class282_sub48_0.anInt8089 * Class393.preferences.ambientSoundVolume.method12714() >> 8;
             if (i_2 > class282_sub48_0.anInt8079) {
@@ -84,7 +84,7 @@ public class Class175 {
                 if (class282_sub48_0.aNode_Sub15_Sub5_8099 == null) {
                     if (class282_sub48_0.soundEffectId >= 0) {
                         i_12 = class282_sub48_0.anInt8094 == 256 && class282_sub48_0.anInt8093 == 256 ? 256 : Class76.method1356(class282_sub48_0.anInt8093, class282_sub48_0.anInt8094);
-                        if (class282_sub48_0.aBool8098) {
+                        if (class282_sub48_0.midiSound) {
                             if (class282_sub48_0.aNode_Sub18_8097 == null) {
                                 class282_sub48_0.aNode_Sub18_8097 = MIDIInstrument.method12270(IndexLoaders.MIDI_INSTRUMENT_INDEX, class282_sub48_0.soundEffectId);
                             }
@@ -115,12 +115,12 @@ public class Class175 {
                     class282_sub48_0.aNode_Sub15_Sub5_8099.method15340(i_11);
                 }
                 if (class282_sub48_0.aNode_Sub15_Sub5_8096 == null) {
-                    if (class282_sub48_0.anIntArray8102 != null && (class282_sub48_0.anInt8080 -= i_4) <= 0) {
+                    if (class282_sub48_0.timedEffects != null && (class282_sub48_0.anInt8080 -= i_4) <= 0) {
                         i_12 = class282_sub48_0.anInt8094 == 256 && class282_sub48_0.anInt8093 == 256 ? 256 : (int) (Math.random() * (class282_sub48_0.anInt8094 - class282_sub48_0.anInt8093)) + class282_sub48_0.anInt8093;
-                        if (class282_sub48_0.aBool8103) {
+                        if (class282_sub48_0.midiTimedEffects) {
                             if (class282_sub48_0.aNode_Sub18_8087 == null) {
-                                i_13 = (int) (Math.random() * class282_sub48_0.anIntArray8102.length);
-                                class282_sub48_0.aNode_Sub18_8087 = MIDIInstrument.method12270(IndexLoaders.MIDI_INSTRUMENT_INDEX, class282_sub48_0.anIntArray8102[i_13]);
+                                i_13 = (int) (Math.random() * class282_sub48_0.timedEffects.length);
+                                class282_sub48_0.aNode_Sub18_8087 = MIDIInstrument.method12270(IndexLoaders.MIDI_INSTRUMENT_INDEX, class282_sub48_0.timedEffects[i_13]);
                             }
                             if (class282_sub48_0.aNode_Sub18_8087 != null) {
                                 if (class282_sub48_0.aNode_Sub26_Sub1_Sub1_8106 == null) {
@@ -135,8 +135,8 @@ public class Class175 {
                                 }
                             }
                         } else {
-                            i_13 = (int) (Math.random() * class282_sub48_0.anIntArray8102.length);
-                            class343_19 = SoundEffect.getSoundEffect(IndexLoaders.SOUND_EFFECT_INDEX, class282_sub48_0.anIntArray8102[i_13], 0);
+                            i_13 = (int) (Math.random() * class282_sub48_0.timedEffects.length);
+                            class343_19 = SoundEffect.getSoundEffect(IndexLoaders.SOUND_EFFECT_INDEX, class282_sub48_0.timedEffects[i_13], 0);
                             if (class343_19 != null) {
                                 class282_sub26_sub1_sub2_15 = class343_19.getMixedAudio().method16062(Class119.aClass344_1460);
                                 class282_sub15_sub5_sub2_16 = (Node_Sub15_Sub5_Sub2) class282_sub26_sub1_sub2_15.method15225(i_12, i_9 << 6, i_11);

@@ -2,16 +2,16 @@ package com.jagex;
 
 import com.jagex.clans.settings.ClanSettings;
 
-public class Class348 {
+public class ClanSettingsDelta {
 
-    long aLong4073;
+    long unusedZero;
 
-    int anInt4060 = -1;
+    int updateCount = -1;
 
-    NodeCollection aClass482_4062 = new NodeCollection();
+    NodeCollection<ClanSettingDeltaUpdate> updateNodes = new NodeCollection<>();
 
-    public Class348(ByteBuf rsbytebuffer_1) {
-        method6171(rsbytebuffer_1);
+    public ClanSettingsDelta(ByteBuf rsbytebuffer_1) {
+        decode(rsbytebuffer_1);
     }
 
     public static void method6175(boolean bool_0) {
@@ -61,52 +61,52 @@ public class Class348 {
     }
 
     //details
-    void method6171(ByteBuf rsbytebuffer_1) {
-        aLong4073 = rsbytebuffer_1.readLong();
-        anInt4060 = rsbytebuffer_1.readInt();
-        for (int i_3 = rsbytebuffer_1.readUnsignedByte(); i_3 != 0; i_3 = rsbytebuffer_1.readUnsignedByte()) {
-            Object obj_4;
-            if (i_3 == 3) {
-                obj_4 = new Node_Sub17_Sub10(this);
-            } else if (i_3 == 1) {
-                obj_4 = new Node_Sub17_Sub1(this);
-            } else if (i_3 == 13) {
-                obj_4 = new Node_Sub17_Sub9(this);
-            } else if (i_3 == 4) {
-                obj_4 = new Node_Sub17_Sub6(this);
-            } else if (i_3 == 6) {
-                obj_4 = new Node_Sub17_Sub8(this);
-            } else if (i_3 == 5) {
-                obj_4 = new Node_Sub17_Sub2(this);
-            } else if (i_3 == 2) {
-                obj_4 = new Node_Sub17_Sub7(this);
-            } else if (i_3 == 7) {
-                obj_4 = new Node_Sub17_Sub12(this);
-            } else if (i_3 == 8) {
-                obj_4 = new Node_Sub17_Sub13(this);
-            } else if (i_3 == 9) {
-                obj_4 = new Node_Sub17_Sub11(this);
-            } else if (i_3 == 10) {
-                obj_4 = new Node_Sub17_Sub5(this);
-            } else if (i_3 == 11) {
-                obj_4 = new Node_Sub17_Sub4(this);
+    void decode(ByteBuf stream) {
+        unusedZero = stream.readLong();
+        updateCount = stream.readInt();
+        for (int updateType = stream.readUnsignedByte(); updateType != 0; updateType = stream.readUnsignedByte()) {
+        	ClanSettingDeltaUpdate updateNode;
+            if (updateType == 3) {
+                updateNode = new Node_Sub17_Sub10(this);
+            } else if (updateType == 1) {
+                updateNode = new Node_Sub17_Sub1(this);
+            } else if (updateType == 13) {
+                updateNode = new Node_Sub17_Sub9(this);
+            } else if (updateType == 4) {
+                updateNode = new Node_Sub17_Sub6(this);
+            } else if (updateType == 6) {
+                updateNode = new Node_Sub17_Sub8(this);
+            } else if (updateType == 5) {
+                updateNode = new Node_Sub17_Sub2(this);
+            } else if (updateType == 2) {
+                updateNode = new Node_Sub17_Sub7(this);
+            } else if (updateType == 7) {
+                updateNode = new Node_Sub17_Sub12(this);
+            } else if (updateType == 8) {
+                updateNode = new Node_Sub17_Sub13(this);
+            } else if (updateType == 9) {
+                updateNode = new Node_Sub17_Sub11(this);
+            } else if (updateType == 10) {
+                updateNode = new Node_Sub17_Sub5(this);
+            } else if (updateType == 11) {
+                updateNode = new Node_Sub17_Sub4(this);
             } else {
-                if (i_3 != 12) {
+                if (updateType != 12) {
                     throw new RuntimeException("");
                 }
-                obj_4 = new Node_Sub17_Sub3(this);
+                updateNode = new Node_Sub17_Sub3(this);
             }
-            ((Node_Sub17) obj_4).method12250(rsbytebuffer_1);
-            aClass482_4062.append((Node) obj_4);
+            updateNode.decode(stream);
+            updateNodes.append(updateNode);
         }
     }
 
-    public void method6173(ClanSettings class61_1) {
-        if (class61_1.aLong631 == aLong4073 && anInt4060 == class61_1.updateCount) {
-            for (Node_Sub17 class282_sub17_3 = (Node_Sub17) aClass482_4062.head(); class282_sub17_3 != null; class282_sub17_3 = (Node_Sub17) aClass482_4062.next()) {
-                class282_sub17_3.method12251(class61_1);
+    public void applyUpdates(ClanSettings originalSetting) {
+        if (originalSetting.aLong631 == unusedZero && updateCount == originalSetting.updateCount) {
+            for (ClanSettingDeltaUpdate update = (ClanSettingDeltaUpdate) updateNodes.head(); update != null; update = (ClanSettingDeltaUpdate) updateNodes.next()) {
+                update.applyUpdate(originalSetting);
             }
-            ++class61_1.updateCount;
+            ++originalSetting.updateCount;
         } else {
             throw new RuntimeException("");
         }

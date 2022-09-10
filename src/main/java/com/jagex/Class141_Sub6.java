@@ -12,8 +12,8 @@ public class Class141_Sub6 extends Class141 {
     }
 
     @Override
-    void method2400(Class137 class137_1, int i_2) {
-        aGraphicalRenderer_Sub1_1664.method13654(class137_1);
+    void method2400(GLTexture class137_1, int i_2) {
+        aGraphicalRenderer_Sub1_1664.setTexture(class137_1);
         aGraphicalRenderer_Sub1_1664.method13612(i_2);
     }
 
@@ -66,8 +66,8 @@ public class Class141_Sub6 extends Class141 {
     }
 
     @Override
-    void method2394(Class137 class137_1, int i_2) {
-        aGraphicalRenderer_Sub1_1664.method13654(class137_1);
+    void method2394(GLTexture class137_1, int i_2) {
+        aGraphicalRenderer_Sub1_1664.setTexture(class137_1);
         aGraphicalRenderer_Sub1_1664.method13612(i_2);
     }
 
@@ -90,20 +90,20 @@ public class Class141_Sub6 extends Class141 {
     }
 
     @Override
-    void method2412(Class137 class137_1, int i_2) {
-        aGraphicalRenderer_Sub1_1664.method13654(class137_1);
+    void method2412(GLTexture class137_1, int i_2) {
+        aGraphicalRenderer_Sub1_1664.setTexture(class137_1);
         aGraphicalRenderer_Sub1_1664.method13612(i_2);
     }
 
     @Override
-    void method2413(Class137 class137_1, int i_2) {
-        aGraphicalRenderer_Sub1_1664.method13654(class137_1);
+    void method2413(GLTexture class137_1, int i_2) {
+        aGraphicalRenderer_Sub1_1664.setTexture(class137_1);
         aGraphicalRenderer_Sub1_1664.method13612(i_2);
     }
 
     @Override
-    void method2414(Class137 class137_1, int i_2) {
-        aGraphicalRenderer_Sub1_1664.method13654(class137_1);
+    void method2414(GLTexture class137_1, int i_2) {
+        aGraphicalRenderer_Sub1_1664.setTexture(class137_1);
         aGraphicalRenderer_Sub1_1664.method13612(i_2);
     }
 

@@ -3,7 +3,7 @@ package com.jagex;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Class534_Sub1 extends Class534 {
+public class MouseMovementICMP extends MouseMovementRecord {
 
     Queue<MouseRecord_Sub1> aQueue7921 = new LinkedList<MouseRecord_Sub1>();
 
@@ -51,14 +51,14 @@ public class Class534_Sub1 extends Class534 {
 
     @Override
     void method11414() {
-        MouseRecord_Sub1 class282_sub53_sub1_2 = aQueue7921.poll();
-        if (class282_sub53_sub1_2 != null) {
+        MouseRecord_Sub1 mouseRecord = aQueue7921.poll();
+        if (mouseRecord != null) {
             TCPPacket tcpmessage_3 = TCPPacket.createPacket(ClientProt.MOUSE_BUTTON_CLICK, client.GAME_CONNECTION_CONTEXT.outKeys);
-            tcpmessage_3.buffer.writeIntLE(class282_sub53_sub1_2.getX() | class282_sub53_sub1_2.getY() << 16);
-            tcpmessage_3.buffer.writeByte128(class282_sub53_sub1_2.method14730() << 1 | class282_sub53_sub1_2.method14729() & 0x1);
-            tcpmessage_3.buffer.writeShortLE(method11408(class282_sub53_sub1_2, 65535));
+            tcpmessage_3.buffer.writeIntLE(mouseRecord.getX() | mouseRecord.getY() << 16);
+            tcpmessage_3.buffer.writeByte128(mouseRecord.method14730() << 1 | mouseRecord.method14729() & 0x1);
+            tcpmessage_3.buffer.writeShortLE(method11408(mouseRecord, 65535));
             client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_3);
-            class282_sub53_sub1_2.cache();
+            mouseRecord.cache();
         }
     }
 
@@ -68,7 +68,7 @@ public class Class534_Sub1 extends Class534 {
 
     @Override
     boolean method11423() {
-        return !aQueue7921.isEmpty() || aLong7076 < Utils.time() - 2000L;
+        return !aQueue7921.isEmpty() || lastTime < Utils.time() - 2000L;
     }
 
     @Override
@@ -114,27 +114,27 @@ public class Class534_Sub1 extends Class534 {
 
     @Override
     boolean method11434() {
-        return !aQueue7921.isEmpty() || 2966128844247041579L * aLong7076 * 1203484888895588483L < Utils.time() - 2000L;
+        return !aQueue7921.isEmpty() || 2966128844247041579L * lastTime * 1203484888895588483L < Utils.time() - 2000L;
     }
 
     @Override
-    TCPPacket method11416() {
-        return TCPPacket.createPacket(ClientProt.MOVE_MOUSE, client.GAME_CONNECTION_CONTEXT.outKeys);
+    TCPPacket createMouseMovePacket() {
+        return TCPPacket.createPacket(ClientProt.MOVE_MOUSE_HW, client.GAME_CONNECTION_CONTEXT.outKeys);
     }
 
     @Override
     TCPPacket method11420() {
-        return TCPPacket.createPacket(ClientProt.MOVE_MOUSE, client.GAME_CONNECTION_CONTEXT.outKeys);
+        return TCPPacket.createPacket(ClientProt.MOVE_MOUSE_HW, client.GAME_CONNECTION_CONTEXT.outKeys);
     }
 
     @Override
     TCPPacket method11428() {
-        return TCPPacket.createPacket(ClientProt.MOVE_MOUSE, client.GAME_CONNECTION_CONTEXT.outKeys);
+        return TCPPacket.createPacket(ClientProt.MOVE_MOUSE_HW, client.GAME_CONNECTION_CONTEXT.outKeys);
     }
 
     @Override
     TCPPacket method11422() {
-        return TCPPacket.createPacket(ClientProt.MOVE_MOUSE, client.GAME_CONNECTION_CONTEXT.outKeys);
+        return TCPPacket.createPacket(ClientProt.MOVE_MOUSE_HW, client.GAME_CONNECTION_CONTEXT.outKeys);
     }
 
     @Override
@@ -148,12 +148,12 @@ public class Class534_Sub1 extends Class534 {
     }
 
     @Override
-    void method11413(ByteBuf rsbytebuffer_1, MouseRecord class282_sub53_2) {
+    void writeExtra(ByteBuf rsbytebuffer_1, MouseRecord class282_sub53_2) {
         method12810(rsbytebuffer_1, (MouseRecord_Sub1) class282_sub53_2);
     }
 
     @Override
     TCPPacket method11421() {
-        return TCPPacket.createPacket(ClientProt.MOVE_MOUSE, client.GAME_CONNECTION_CONTEXT.outKeys);
+        return TCPPacket.createPacket(ClientProt.MOVE_MOUSE_HW, client.GAME_CONNECTION_CONTEXT.outKeys);
     }
 }

@@ -72,7 +72,7 @@ public class Preference_Sub1 extends Preference {
 
     @Override
     void setValue(int i_1) {
-        anInt5578 = i_1;
+        value = i_1;
     }
 
     @Override
@@ -97,7 +97,7 @@ public class Preference_Sub1 extends Preference {
     }
 
     void method7780(int i_1) {
-        anInt5578 = i_1 * -754033619 * -859024475;
+        value = i_1 * -754033619 * -859024475;
     }
 
     int method7786() {
@@ -109,21 +109,21 @@ public class Preference_Sub1 extends Preference {
     }
 
     public int method12615() {
-        return anInt5578;
+        return value;
     }
 
     public void method12616() {
         int i_2 = manager.getProcessorSpecs().getMaxMemory();
         if (i_2 < 245) {
-            anInt5578 = MapSize.SIZE_104.index;
+            value = MapSize.SIZE_104.index;
         }
 
-        if (anInt5578 == MapSize.SIZE_168.index && i_2 < 500) {
-            anInt5578 = MapSize.SIZE_136.index;
+        if (value == MapSize.SIZE_168.index && i_2 < 500) {
+            value = MapSize.SIZE_136.index;
         }
 
-        if (anInt5578 < MapSize.SIZE_104.index || anInt5578 > MapSize.SIZE_72.index) {
-            anInt5578 = getDefaultValue();
+        if (value < MapSize.SIZE_104.index || value > MapSize.SIZE_72.index) {
+            value = getDefaultValue();
         }
 
     }

@@ -32,11 +32,11 @@ public class SceneryShadowPreference extends Preference {
 
     @Override
     void setValue(int i_1) {
-        anInt5578 = i_1;
+        value = i_1;
     }
 
     public int method12624() {
-        return anInt5578;
+        return value;
     }
 
     public int method7784() {
@@ -44,7 +44,7 @@ public class SceneryShadowPreference extends Preference {
     }
 
     void method7780(int i_1) {
-        anInt5578 = i_1 * -754033619 * -859024475;
+        value = i_1 * -754033619 * -859024475;
     }
 
     int method7787() {
@@ -58,10 +58,10 @@ public class SceneryShadowPreference extends Preference {
 
     public void method12627() {
         if (manager.textures.method12873() == 0) {
-            anInt5578 = 0;
+            value = 0;
         }
-        if (anInt5578 < 0 || anInt5578 > 2) {
-            anInt5578 = getDefaultValue();
+        if (value < 0 || value > 2) {
+            value = getDefaultValue();
         }
     }
 }

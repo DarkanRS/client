@@ -38,7 +38,7 @@ public class Preference_Sub11 extends Preference {
 
     @Override
     void setValue(int i_1) {
-        anInt5578 = i_1;
+        value = i_1;
     }
 
     int method7784() {
@@ -59,11 +59,11 @@ public class Preference_Sub11 extends Preference {
     }
 
     public int method12699() {
-        return anInt5578;
+        return value;
     }
 
     void method7780(int i_1) {
-        anInt5578 = i_1 * -754033619 * -859024475;
+        value = i_1 * -754033619 * -859024475;
     }
 
     int method7786() {

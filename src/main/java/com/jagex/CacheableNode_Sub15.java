@@ -29,7 +29,7 @@ public class CacheableNode_Sub15 extends CacheableNode {
             class282_sub50_sub7_4 = (CacheableNode_Sub7) aClass477_9770.method7955();
         }
 
-        aClass477_9770.method7936(class282_sub50_sub7_1);
+        aClass477_9770.add(class282_sub50_sub7_1);
         ++anInt9769;
         return bool_3;
     }

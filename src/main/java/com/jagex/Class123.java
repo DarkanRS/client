@@ -4,7 +4,7 @@ public class Class123 {
 
     boolean aBool1546;
 
-    Class476 aClass476_1541;
+    ObjectMeshModifier aClass476_1541;
 
     MeshRasterizer aMeshRasterizer_1544;
 
@@ -88,7 +88,7 @@ public class Class123 {
         return anInt1554;
     }
 
-    void method2116(Class476 class476_1) {
+    void method2116(ObjectMeshModifier class476_1) {
         aClass476_1541 = class476_1;
         aMeshRasterizer_1544 = null;
     }
@@ -115,15 +115,15 @@ public class Class123 {
                 objectdefinitions_12 = objectdefinitions_12.getMultiLoc(client.anInt7341 == 4 ? Class86.anInterface42_832 : Class158_Sub1.PLAYER_VAR_PROVIDER);
             }
             if (objectdefinitions_12 != null) {
-                aClass539_1538 = ParticleSystem.method11557(client.CYCLES_20MS, true);
+                aClass539_1538 = ParticleSystem.method11557(client.FRAME_COUNT, true);
             }
         }
         if (aClass539_1538 != null) {
             meshrasterizer_2.method11273(matrix44var_3);
             if (bool_8) {
-                aClass539_1538.method11511(graphicalrenderer_1, client.CYCLES_20MS, arr_10, arr_11);
+                aClass539_1538.method11511(graphicalrenderer_1, client.FRAME_COUNT, arr_10, arr_11);
             } else {
-                aClass539_1538.method11512(client.CYCLES_20MS);
+                aClass539_1538.method11512(client.FRAME_COUNT);
             }
             aClass539_1538.method11515(aByte1537);
         }
@@ -181,7 +181,7 @@ public class Class123 {
             aAnimation_1545.method7569();
         } else {
             aAnimation_1545.animateFull(i_5, 0, i_31, bool_6);
-            anInt1548 = client.CYCLES_20MS;
+            anInt1548 = client.FRAME_COUNT;
             aBool1552 = false;
             aMeshRasterizer_1544 = null;
         }
@@ -278,7 +278,7 @@ public class Class123 {
 
     void method2133() {
         if (aAnimation_1545.hasDefs()) {
-            if (aAnimation_1545.method7627(client.CYCLES_20MS - anInt1548)) {
+            if (aAnimation_1545.method7627(client.FRAME_COUNT - anInt1548)) {
                 if (Class393.preferences.sceneryShadows.method12624() == 2) {
                     aBool1552 = false;
                 }
@@ -291,7 +291,7 @@ public class Class123 {
         } else {
             method2124(false, -1, 0);
         }
-        anInt1548 = client.CYCLES_20MS;
+        anInt1548 = client.FRAME_COUNT;
     }
 
     void method2136(AbstractRenderer graphicalrenderer_1) {

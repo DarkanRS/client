@@ -25,7 +25,7 @@ public class Class402 {
                         --client.FRIEND_COUNT;
                         if (client.FRIEND_COUNT - i_3 >= 0)
                             System.arraycopy(client.FRIENDS, i_3 + 1, client.FRIENDS, i_3, client.FRIEND_COUNT - i_3);
-                        client.anInt7386 = client.anInt7347;
+                        client.anInt7386 = client.CS2_TIMER_COUNT;
                         BufferedConnectionContext class184_9 = BufferedConnectionContext.getConnectionContext();
                         TCPPacket tcpmessage_8 = TCPPacket.createPacket(ClientProt.REMOVE_FRIEND, class184_9.outKeys);
                         tcpmessage_8.buffer.writeByte(ChatLine.getLength(string_0));

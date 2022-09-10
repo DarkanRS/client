@@ -57,7 +57,7 @@ public class Class212 {
 
             CacheableNode_Sub8_Sub1 class282_sub50_sub8_sub1_5 = new CacheableNode_Sub8_Sub1(interface18_2, object_1, 1);
             aClass465_2677.put(class282_sub50_sub8_sub1_5, interface18_2.method130());
-            aClass477_2675.method7936(class282_sub50_sub8_sub1_5);
+            aClass477_2675.add(class282_sub50_sub8_sub1_5);
             class282_sub50_sub8_sub1_5.key = 0L;
         }
     }
@@ -116,12 +116,12 @@ public class Class212 {
                     if (class282_sub50_sub8_4.method14865()) {
                         CacheableNode_Sub8_Sub1 class282_sub50_sub8_sub1_6 = new CacheableNode_Sub8_Sub1(interface18_1, object_5, class282_sub50_sub8_4.anInt9606);
                         aClass465_2677.put(class282_sub50_sub8_sub1_6, class282_sub50_sub8_4.pointer);
-                        aClass477_2675.method7936(class282_sub50_sub8_sub1_6);
+                        aClass477_2675.add(class282_sub50_sub8_sub1_6);
                         class282_sub50_sub8_sub1_6.key = 0L;
                         class282_sub50_sub8_4.unlink();
                         class282_sub50_sub8_4.method13452();
                     } else {
-                        aClass477_2675.method7936(class282_sub50_sub8_4);
+                        aClass477_2675.add(class282_sub50_sub8_4);
                         class282_sub50_sub8_4.key = 0L;
                     }
 

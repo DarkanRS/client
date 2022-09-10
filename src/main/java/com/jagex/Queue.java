@@ -25,7 +25,7 @@ public class Queue<T> implements Iterable<T> {
         }
     }
 
-    public void method7936(CacheableNode cacheablenode_1) {
+    public void add(CacheableNode cacheablenode_1) {
         if (cacheablenode_1.current != null) {
             cacheablenode_1.method13452();
         }

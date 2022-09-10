@@ -44,7 +44,7 @@ public class AreadSound {
 
     public static int[] method4799(int i_0) {
         int[] ints_2 = new int[3];
-        Class155.method2634(Class302.method5363(i_0));
+        Class155.method2634(Class302.runeDateToTimestamp(i_0));
         ints_2[0] = Class407.aCalendar4848.get(Calendar.DATE);
         ints_2[1] = Class407.aCalendar4848.get(Calendar.MONTH);
         ints_2[2] = Class407.aCalendar4848.get(Calendar.YEAR);
@@ -52,9 +52,9 @@ public class AreadSound {
     }
 
     static void method4800() {
-        if ((Class20.anInt169 >= 2 || client.aBool7344) && client.aClass118_7257 == null) {
+        if ((Class20.anInt169 >= 2 || client.IS_USE_SELECTED) && client.aClass118_7257 == null) {
             String string_2;
-            if (client.aBool7344 && Class20.anInt169 < 2) {
+            if (client.IS_USE_SELECTED && Class20.anInt169 < 2) {
                 string_2 = client.aString7275 + LocalizedText.aClass433_5315.translate(Class223.CURRENT_LANGUAGE) + client.aString7356 + " " + "->";
             } else if (Preference_Sub1.method12619() && Class20.anInt169 > 2) {
                 string_2 = Static.method6380(CutsceneAction_Sub23.aCacheableNode_Sub7_9445);
@@ -64,7 +64,7 @@ public class AreadSound {
                     return;
                 }
                 string_2 = Static.method6380(class282_sub50_sub7_3);
-                int[] ints_4 = Class534_Sub1.method12815(class282_sub50_sub7_3);
+                int[] ints_4 = MouseMovementICMP.method12815(class282_sub50_sub7_3);
                 if (ints_4 != null) {
                     string_2 += Class15.method547(ints_4);
                 }
