@@ -6,6 +6,7 @@ import java.awt.Point;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.Transferable;
 import java.io.File;
+import java.util.Arrays;
 
 import com.Loader;
 import com.jagex.clans.ClanChannel;
@@ -11213,7 +11214,7 @@ public class CS2Interpreter {
         for (int i = params.length - 1; i >= 1; --i) {
             if (paramTypes.charAt(i - 1) == 's') {
                 params[i] = executor.stringStack[--executor.stringStackPtr];
-            } else if (paramTypes.charAt(i - 1) == '\u00BD') {
+            } else if (paramTypes.charAt(i - 1) == '§') {
                 params[i] = Long.valueOf(executor.longStack[--executor.longStackPtr]);
             } else {
                 params[i] = Integer.valueOf(executor.intStack[--executor.intStackPtr]);
