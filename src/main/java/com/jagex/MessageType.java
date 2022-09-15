@@ -2,12 +2,12 @@
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
-// 
+//
 // This program is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU General Public License for more details.
-// 
+//
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
@@ -142,25 +142,25 @@ public enum MessageType {
 	UNK_119(119),
 	UNK_120(120),
 	UNK_121(121);
-	
+
 	private static Map<Integer, MessageType> MAP = new HashMap<>();
-	
+
 	static {
 		for (MessageType t : MessageType.values())
 			MAP.put(t.value, t);
 	}
-	
+
 	public static MessageType forId(int id) {
 		MessageType type = MAP.get(id);
 		return type != null ? type : MessageType.GAME;
 	}
-	
+
 	private int value;
-	
+
 	private MessageType(int value) {
 		this.value = value;
 	}
-	
+
 	public int getValue() {
 		return value;
 	}

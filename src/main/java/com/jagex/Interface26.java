@@ -2,18 +2,18 @@ package com.jagex;
 
 public interface Interface26 extends Interface9 {
 
-    void method184();
+	long method123();
 
-    long method2();
+	void method184();
 
-    @Override
-    void method26();
+	void method185();
 
-    @Override
-    void method32();
+	long method2();
 
-    void method185();
+	@Override
+	void method26();
 
-    long method123();
+	@Override
+	void method32();
 
 }

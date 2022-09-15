@@ -2,19 +2,17 @@ package com.jagex;
 
 public interface LibraryLoader {
 
-    boolean hasDxLibrary();
-
-    boolean unload();
-
-    boolean loadLibrary(String var1);
-
-    boolean containsLibrary(String var1);
-
 	static LibraryLoader getLoader() {
-	    if (Class404.LIBRARY_LOADER == null) {
-	        throw new IllegalStateException("");
-	    } else {
-	        return Class404.LIBRARY_LOADER;
-	    }
+		if (Class404.LIBRARY_LOADER == null)
+			throw new IllegalStateException("");
+		return Class404.LIBRARY_LOADER;
 	}
+
+	boolean containsLibrary(String var1);
+
+	boolean hasDxLibrary();
+
+	boolean loadLibrary(String var1);
+
+	boolean unload();
 }

@@ -6,6 +6,21 @@ public abstract class MouseMovementRecord {
 
 	static short aShort7079;
 
+	static void method11441() {
+		if (Class179.anInt2226 > 0) {
+			int i_1 = 0;
+			for (String element : Class13.aStringArray129)
+				if (element.indexOf("--> ") != -1) {
+					++i_1;
+					if (i_1 == Class179.anInt2226) {
+						Class179.aString2225 = element.substring(element.indexOf(62) + 2);
+						break;
+					}
+				}
+		} else
+			Class179.aString2225 = "";
+	}
+
 	long aLong7074 = -1L;
 
 	long lastTime = -1L;
@@ -16,35 +31,8 @@ public abstract class MouseMovementRecord {
 
 	NodeCollection<MouseRecord> mouseRecords = new NodeCollection<>();
 
-	static void method11441() {
-		if (Class179.anInt2226 > 0) {
-			int i_1 = 0;
-			for (int i_2 = 0; i_2 < Class13.aStringArray129.length; i_2++) {
-				if (Class13.aStringArray129[i_2].indexOf("--> ") != -1) {
-					++i_1;
-					if (i_1 == Class179.anInt2226) {
-						Class179.aString2225 = Class13.aStringArray129[i_2].substring(Class13.aStringArray129[i_2].indexOf(62) + 2);
-						break;
-					}
-				}
-			}
-		} else {
-			Class179.aString2225 = "";
-		}
-	}
-
-	int method11408(MouseRecord class282_sub53_1, int i_2) {
-		long long_4;
-		if (aLong7074 == -1L) {
-			long_4 = i_2;
-		} else {
-			long_4 = class282_sub53_1.getTime() - aLong7074;
-			if (long_4 > i_2) {
-				long_4 = i_2;
-			}
-		}
-		aLong7074 = class282_sub53_1.getTime();
-		return (int) long_4;
+	void addRecord(MouseRecord class282_sub53_1) {
+		mouseRecords.append(class282_sub53_1);
 	}
 
 	void clear() {
@@ -55,19 +43,50 @@ public abstract class MouseMovementRecord {
 		lastY = -1;
 	}
 
-	void addRecord(MouseRecord class282_sub53_1) {
-		mouseRecords.append(class282_sub53_1);
+	abstract TCPPacket createMouseMovePacket();
+
+	int method11408(MouseRecord class282_sub53_1, int i_2) {
+		long long_4;
+		if (aLong7074 == -1L)
+			long_4 = i_2;
+		else {
+			long_4 = class282_sub53_1.getTime() - aLong7074;
+			if (long_4 > i_2)
+				long_4 = i_2;
+		}
+		aLong7074 = class282_sub53_1.getTime();
+		return (int) long_4;
 	}
 
 	abstract int method11412();
-
-	abstract void writeExtra(ByteBuf var1, MouseRecord var2);
 
 	abstract void method11414();
 
 	abstract int method11415();
 
-	abstract TCPPacket createMouseMovePacket();
+	abstract void method11418();
+
+	abstract TCPPacket method11420();
+
+	abstract TCPPacket method11421();
+
+	abstract TCPPacket method11422();
+
+	abstract boolean method11423();
+
+	abstract int method11424();
+
+	abstract int method11425();
+
+	abstract void method11426(ByteBuf var1, MouseRecord var2);
+
+	abstract void method11427(ByteBuf var1, MouseRecord var2);
+
+	abstract TCPPacket method11428();
+
+	abstract void method11431();
+
+	abstract boolean method11434();
 
 	void sendPackets() {
 		if (method11423()) {
@@ -84,17 +103,15 @@ public abstract class MouseMovementRecord {
 					break;
 				mouse.unlink();
 				int mouseY = mouse.getY();
-				if (mouseY < -1) {
+				if (mouseY < -1)
 					mouseY = -1;
-				} else if (mouseY > 65534) {
+				else if (mouseY > 65534)
 					mouseY = 65534;
-				}
 				int mouseX = mouse.getX();
-				if (mouseX < -1) {
+				if (mouseX < -1)
 					mouseX = -1;
-				} else if (mouseX > 65534) {
+				else if (mouseX > 65534)
 					mouseX = 65534;
-				}
 				if (mouseX != lastX || mouseY != lastY) {
 					if (packet == null) {
 						packet = createMouseMovePacket();
@@ -130,18 +147,16 @@ public abstract class MouseMovementRecord {
 						packet.buffer.writeShort(dY + (dX << 8));
 					} else if (numFrames < 32) {
 						packet.buffer.writeByte(numFrames + 192);
-						if (mouseX != -1 && mouseY != -1) {
+						if (mouseX != -1 && mouseY != -1)
 							packet.buffer.writeInt(mouseX | mouseY << 16);
-						} else {
+						else
 							packet.buffer.writeInt(Integer.MIN_VALUE);
-						}
 					} else {
 						packet.buffer.writeShort((numFrames & 0x1fff) + 57344);
-						if (mouseX != -1 && mouseY != -1) {
+						if (mouseX != -1 && mouseY != -1)
 							packet.buffer.writeInt(mouseX | mouseY << 16);
-						} else {
+						else
 							packet.buffer.writeInt(Integer.MIN_VALUE);
-						}
 					}
 					++recordCount;
 					writeExtra(packet.buffer, mouse);
@@ -162,27 +177,5 @@ public abstract class MouseMovementRecord {
 		method11414();
 	}
 
-	abstract void method11418();
-
-	abstract TCPPacket method11420();
-
-	abstract TCPPacket method11421();
-
-	abstract TCPPacket method11422();
-
-	abstract boolean method11423();
-
-	abstract int method11424();
-
-	abstract int method11425();
-
-	abstract void method11426(ByteBuf var1, MouseRecord var2);
-
-	abstract void method11427(ByteBuf var1, MouseRecord var2);
-
-	abstract TCPPacket method11428();
-
-	abstract void method11431();
-
-	abstract boolean method11434();
+	abstract void writeExtra(ByteBuf var1, MouseRecord var2);
 }

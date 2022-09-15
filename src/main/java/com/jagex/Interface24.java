@@ -6,52 +6,52 @@ import com.Loader;
 
 public interface Interface24 {
 
-    void supplyApplet(Loader var1);
+	void destroy();
 
-    void destroy();
+	void init();
 
-    void method165();
+	void method165();
 
-    void method166();
+	void method166();
 
-    void method167();
+	void method167();
 
-    void stop();
+	void method168(Loader var1);
 
-    void start();
+	void method169();
 
-    void method168(Loader var1);
+	void method170();
 
-    void method169();
+	void method171();
 
-    void init();
+	void method172();
 
-    void method170();
+	void method173();
 
-    void method171();
+	void method174();
 
-    void paint(Graphics var1);
+	void method175();
 
-    void method172();
+	void method176(Graphics var1);
 
-    void method173();
+	void method177(Graphics var1);
 
-    void method174();
+	void method178(Graphics var1);
 
-    void method175();
+	void method179(Graphics var1);
 
-    void method176(Graphics var1);
+	void method180(Graphics var1);
 
-    void method177(Graphics var1);
+	void method181();
 
-    void method178(Graphics var1);
+	void paint(Graphics var1);
 
-    void method179(Graphics var1);
+	void start();
 
-    void method180(Graphics var1);
+	void stop();
 
-    void method181();
+	void supplyApplet(Loader var1);
 
-    void update(Graphics var1);
+	void update(Graphics var1);
 
 }

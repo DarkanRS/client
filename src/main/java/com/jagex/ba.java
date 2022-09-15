@@ -2,41 +2,40 @@ package com.jagex;
 
 public class ba extends Node_Sub1 implements Interface40 {
 
-    long nativeid;
+	long nativeid;
 
-    ba(ja ja_1, int i_2) {
-        sa(ja_1, i_2);
-    }
+	ba(ja ja_1, int i_2) {
+		sa(ja_1, i_2);
+	}
 
-    native void sa(ja var1, int var2);
+	@Override
+	protected void finalize() {
+		if (nativeid != 0L)
+			Class156.method2642(this);
 
-    @Override
-    public native void ma(boolean var1);
+	}
 
-    native void ha();
+	native void g(ja var1, int var2);
 
-    native void u();
+	native void ha();
 
-    native void v();
+	native void j();
 
-    @Override
-    public native void y(boolean var1);
+	@Override
+	public native void ma(boolean var1);
 
-    native void j();
+	native void n(ja var1, int var2);
 
-    native void n(ja var1, int var2);
+	native void sa(ja var1, int var2);
 
-    native void g(ja var1, int var2);
+	native void u();
 
-    @Override
-    public native void x(boolean var1);
+	native void v();
 
-    @Override
-    protected void finalize() {
-        if (nativeid != 0L) {
-            Class156.method2642(this);
-        }
+	@Override
+	public native void x(boolean var1);
 
-    }
+	@Override
+	public native void y(boolean var1);
 
 }

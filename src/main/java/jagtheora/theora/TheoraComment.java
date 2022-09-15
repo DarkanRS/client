@@ -6,23 +6,23 @@ package jagtheora.theora;
 import jagtheora.misc.SimplePeer;
 
 public class TheoraComment extends SimplePeer {
-    public TheoraComment() {
-        init();
-        if (method6698())
-            throw new IllegalStateException();
-    }
+	public TheoraComment() {
+		init();
+		if (method6698())
+			throw new IllegalStateException();
+	}
 
-    private native void init();
+	@Override
+	protected native void clear();
 
-    @Override
-    protected native void clear();
+	@Override
+	protected native void f();
 
-    @Override
-    protected native void q();
+	private native void init();
 
-    @Override
-    protected native void f();
+	@Override
+	protected native void m();
 
-    @Override
-    protected native void m();
+	@Override
+	protected native void q();
 }
