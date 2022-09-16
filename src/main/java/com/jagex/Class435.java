@@ -196,9 +196,9 @@ public class Class435 {
 		return !Class20.aBool161 && class282_sub50_sub7_0 != null ? ((class282_sub50_sub7_0.aString9588 == null || class282_sub50_sub7_0.aString9588.isEmpty()) && class282_sub50_sub7_0.aString9585 != null && !class282_sub50_sub7_0.aString9585.isEmpty() ? class282_sub50_sub7_0.aString9585 : class282_sub50_sub7_0.aString9588) : "";
 	}
 
-	public static AreadSound playSoundVorbis(int soundId, int type, int delay, int i_3, boolean voiceEffect, int i_5) {
-		if ((voiceEffect ? Class393.preferences.voiceOverVolume.method12714() : Class393.preferences.soundEffectVolume.method12714()) != 0 && type != 0 && Class260.SOUNDS_SIZE < 50 && soundId != -1) {
-			AreadSound class268_7 = new AreadSound((byte) (voiceEffect ? 3 : 2), soundId, type, delay, i_3, 0, i_5, null);
+	public static AreadSound playSoundVorbis(int soundId, int unk, int delay, int volume, boolean voiceEffect, int sampleRate) {
+		if ((voiceEffect ? Class393.preferences.voiceOverVolume.method12714() : Class393.preferences.soundEffectVolume.method12714()) != 0 && unk != 0 && Class260.SOUNDS_SIZE < 50 && soundId != -1) {
+			AreadSound class268_7 = new AreadSound((byte) (voiceEffect ? 3 : 2), soundId, unk, delay, volume, 0, sampleRate, null);
 			Class260.SOUNDS[++Class260.SOUNDS_SIZE - 1] = class268_7;
 			return class268_7;
 		}

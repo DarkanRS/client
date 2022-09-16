@@ -60,18 +60,18 @@ public class AreadSound {
 
 	int volume;
 
-	int anInt3298;
+	int sourceTile;
 
-	int anInt3295;
+	int sampleRate;
 
-	AreadSound(byte type, int soundId, int i_3, int i_4, int i_5, int i_6, int i_7, GraphNode_Sub1 class521_sub1_8) {
+	AreadSound(byte type, int soundId, int i_3, int delay, int volume, int sourceTile, int sampleRate, GraphNode_Sub1 class521_sub1_8) {
 		this.type = type;
 		this.soundId = soundId;
-		anInt3302 = i_3;
-		delay = i_4;
-		volume = i_5;
-		anInt3298 = i_6;
-		anInt3295 = i_7;
+		this.anInt3302 = i_3;
+		this.delay = delay;
+		this.volume = volume;
+		this.sourceTile = sourceTile;
+		this.sampleRate = sampleRate;
 		if (class521_sub1_8 instanceof GraphNode_Sub1_Sub1 class521_sub1_sub1_9) {
 			anInt3305 = class521_sub1_sub1_9.aShort9458;
 			anInt3306 = class521_sub1_sub1_9.aShort9456;
