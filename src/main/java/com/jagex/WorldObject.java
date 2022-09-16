@@ -2,46 +2,46 @@ package com.jagex;
 
 public interface WorldObject {
 
-    void method38();
+	int getId();
 
-    void method83(AbstractRenderer var1);
+	void method38();
 
-    int getId();
+	int method39();
 
-    void method85();
+	int method73();
 
-    boolean method86();
+	int method76();
 
-    void method87(AbstractRenderer var1);
+	int method77();
 
-    void method88(AbstractRenderer var1);
+	void method83(AbstractRenderer var1);
 
-    int method76();
+	void method85();
 
-    int method89();
+	boolean method86();
 
-    void method90();
+	void method87(AbstractRenderer var1);
 
-    int method77();
+	void method88(AbstractRenderer var1);
 
-    int method91();
+	int method89();
 
-    int method92();
+	void method90();
 
-    int method39();
+	int method91();
 
-    void method93(AbstractRenderer var1);
+	int method92();
 
-    boolean method94();
+	void method93(AbstractRenderer var1);
 
-    boolean method95();
+	boolean method94();
 
-    int method73();
+	boolean method95();
 
-    void method96();
+	void method96();
 
-    void method97(AbstractRenderer var1);
+	void method97(AbstractRenderer var1);
 
-    void method98(AbstractRenderer var1);
+	void method98(AbstractRenderer var1);
 
 }

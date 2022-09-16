@@ -6,38 +6,38 @@ package jagtheora.ogg;
 import jagtheora.misc.SimplePeer;
 
 public class OggStreamState extends SimplePeer {
-    public OggStreamState(int i) {
-        if (!init(i))
-            throw new IllegalStateException();
-    }
+	public OggStreamState(int i) {
+		if (!init(i))
+			throw new IllegalStateException();
+	}
 
-    private native boolean init(int i);
+	@Override
+	protected native void clear();
 
-    public native boolean isEOS();
+	@Override
+	protected native void f();
 
-    public native boolean pageIn(OggPage oggpage);
+	private native boolean init(int i);
 
-    public native int packetOut(OggPacket oggpacket);
+	public native boolean isEOS();
 
-    public native int packetOut();
+	@Override
+	protected native void m();
 
-    public native int packetPeek(OggPacket oggpacket);
+	public native int packetOut();
 
-    public native int packetPeek();
+	public native int packetOut(OggPacket oggpacket);
 
-    public native boolean resetSerialNo(int i);
+	public native int packetPeek();
 
-    public native boolean reset();
+	public native int packetPeek(OggPacket oggpacket);
 
-    @Override
-    protected native void clear();
+	public native boolean pageIn(OggPage oggpage);
 
-    @Override
-    protected native void q();
+	@Override
+	protected native void q();
 
-    @Override
-    protected native void f();
+	public native boolean reset();
 
-    @Override
-    protected native void m();
+	public native boolean resetSerialNo(int i);
 }

@@ -2,6 +2,6 @@ package com.jagex;
 
 public interface Identifiable {
 
-    int getValue();
+	int getValue();
 
 }

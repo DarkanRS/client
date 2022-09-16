@@ -1,11 +1,12 @@
 package com.jagex;
 
-import com.Loader;
-import com.jagex.clans.settings.ChangeClanSetting;
-import jaclib.nanotime.QueryPerformanceCounter;
-
-import java.applet.Applet;
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Container;
+import java.awt.Frame;
+import java.awt.Graphics;
+import java.awt.Insets;
+import java.awt.Rectangle;
+import java.awt.Toolkit;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import java.awt.event.WindowEvent;
@@ -13,9 +14,11 @@ import java.awt.event.WindowListener;
 import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
-import java.net.URL;
 
-import javax.swing.JOptionPane;
+import com.Loader;
+import com.jagex.clans.settings.ChangeClanSetting;
+
+import jaclib.nanotime.QueryPerformanceCounter;
 
 public abstract class Engine implements Interface24, Runnable, FocusListener, WindowListener {
 
@@ -47,17 +50,13 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 	static boolean SHUTDOWN;
 	static File aFile3264;
 	static int LOGIC_PULSES_TO_PROCESS;
-	boolean aBool3254;
-	boolean aBool3268;
-
 	static int method4777(int i_0, int i_1) {
 		return i_0 != ObjectType.WALL_DIAGONAL_CORNER.id && i_0 != ObjectType.WALL_STRAIGHT_CORNER.id ? Wall.anIntArray10531[i_1 & 0x3] : Wall.anIntArray10533[i_1 & 0x3];
 	}
-
 	static void method4779(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
-		if (i_0 == i_2 && i_3 == i_1 && i_4 == i_6 && i_5 == i_7) {
+		if (i_0 == i_2 && i_3 == i_1 && i_4 == i_6 && i_5 == i_7)
 			QuickChatMessage.method6159(i_0, i_1, i_6, i_7, i_8);
-		} else {
+		else {
 			int i_10 = i_0;
 			int i_11 = i_1;
 			int i_12 = i_0 * 3;
@@ -74,24 +73,187 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 			int i_23 = i_15 - i_13;
 			for (int i_24 = 128; i_24 <= 4096; i_24 += 128) {
 				int i_25 = i_24 * i_24 >> 12;
-				int i_26 = i_24 * i_25 >> 12;
-				int i_27 = i_18 * i_26;
-				int i_28 = i_19 * i_26;
-				int i_29 = i_25 * i_20;
-				int i_30 = i_21 * i_25;
-				int i_31 = i_22 * i_24;
-				int i_32 = i_24 * i_23;
-				int i_33 = i_0 + (i_29 + i_27 + i_31 >> 12);
-				int i_34 = (i_30 + i_28 + i_32 >> 12) + i_1;
-				QuickChatMessage.method6159(i_10, i_11, i_33, i_34, i_8);
-				i_10 = i_33;
-				i_11 = i_34;
+			int i_26 = i_24 * i_25 >> 12;
+			int i_27 = i_18 * i_26;
+			int i_28 = i_19 * i_26;
+			int i_29 = i_25 * i_20;
+			int i_30 = i_21 * i_25;
+			int i_31 = i_22 * i_24;
+			int i_32 = i_24 * i_23;
+			int i_33 = i_0 + (i_29 + i_27 + i_31 >> 12);
+			int i_34 = (i_30 + i_28 + i_32 >> 12) + i_1;
+			QuickChatMessage.method6159(i_10, i_11, i_33, i_34, i_8);
+			i_10 = i_33;
+			i_11 = i_34;
 			}
 		}
 	}
 
-	public void supplyApplet(Loader applet_1) {
+	boolean aBool3254;
+
+	boolean aBool3268;
+
+	@Override
+	public void destroy() {
+		if (!SHUTDOWN) {
+			GAME_LOOP_TIMEOUT = Utils.time();
+			Class89.sleep(5000L);
+			shutDown();
+		}
+	}
+
+	@Override
+	public void focusGained(FocusEvent focusevent_1) {
+		aBool3275 = true;
+		aBool3274 = true;
+	}
+
+	@Override
+	public void focusLost(FocusEvent focusevent_1) {
+		aBool3275 = false;
+	}
+
+	@Override
+	public abstract void init();
+
+	void loop() {
+		if (MaterialProp15.aString9967 != null) {
+			String string_2 = MaterialProp15.aString9967.toLowerCase();
+			if (string_2.indexOf("sun") != -1 || string_2.indexOf("apple") != -1) {
+				String string_3 = ChatLine.aString1093;
+				if ("1.1".equals(string_3) || string_3.startsWith("1.1.") || "1.2".equals(string_3) || string_3.startsWith("1.2.") || "1.3".equals(string_3) || string_3.startsWith("1.3.") || "1.4".equals(string_3) || string_3.startsWith("1.4.") || "1.5".equals(string_3) || string_3.startsWith("1.5.") || "1.6.0".equals(string_3)) {
+					method4680("wrongjava");
+					return;
+				}
+				if (string_3.startsWith("1.6.0_")) {
+					int i_4;
+					for (i_4 = 6; i_4 < string_3.length() && AnimationIndexLoader.method11219(string_3.charAt(i_4)); i_4++) {
+					}
+					String string_5 = string_3.substring(6, i_4);
+					if (Class115.method1950(string_5) && Utils.parseInt(string_5) < 10) {
+						method4680("wrongjava");
+						return;
+					}
+				}
+			}
+		}
+		Class371.getActiveContainer().setFocusCycleRoot(true);
+		MAX_MEMORY = (int) (Runtime.getRuntime().maxMemory() / 1048576L) + 1;
+		AVAILABLE_PROCESSORS = Runtime.getRuntime().availableProcessors();
+		method4704();
+		method4676();
+		FPS_MANAGER = FPSManager.createFPSManager();
+		while (GAME_LOOP_TIMEOUT == 0L || Utils.time() < GAME_LOOP_TIMEOUT) {
+			LOGIC_PULSES_TO_PROCESS = FPS_MANAGER.lockTime(NANOSECONDS_PER_FRAME);
+			for (int i = 0; i < LOGIC_PULSES_TO_PROCESS; i++)
+				processLogicPulse();
+			processUpdatePulse();
+			//MaterialProp7.method15395(Class351.gameCanvas);
+		}
+	}
+
+	@Override
+	public void method167() {
+		if (!SHUTDOWN)
+			GAME_LOOP_TIMEOUT = 0L;
+	}
+
+	@Override
+	public void method168(Loader applet_1) {
 		SubInterface.suppliedApplet = applet_1;
+	}
+
+	@Override
+	public void method169() {
+		if (!SHUTDOWN)
+			GAME_LOOP_TIMEOUT = 0L;
+	}
+
+	@Override
+	public void method170() {
+		if (!SHUTDOWN)
+			GAME_LOOP_TIMEOUT = 0L;
+	}
+
+	@Override
+	public void method171() {
+		if (!SHUTDOWN)
+			GAME_LOOP_TIMEOUT = (Utils.time() + 4000L) * -7135659755925244301L * 2009587532026748603L;
+	}
+
+	@Override
+	public void method172() {
+		if (!SHUTDOWN)
+			GAME_LOOP_TIMEOUT = (Utils.time() + 4000L) * -7135659755925244301L * 2009587532026748603L;
+	}
+
+	@Override
+	public void method173() {
+		if (!SHUTDOWN)
+			GAME_LOOP_TIMEOUT = (Utils.time() + 4000L) * -7135659755925244301L * 2009587532026748603L;
+	}
+
+	@Override
+	public void method174() {
+		if (!SHUTDOWN) {
+			GAME_LOOP_TIMEOUT = Utils.time() * -7135659755925244301L * 2009587532026748603L;
+			Class89.sleep(5000L);
+			shutDown();
+		}
+	}
+
+	@Override
+	public void method175() {
+		if (!SHUTDOWN) {
+			GAME_LOOP_TIMEOUT = Utils.time() * -7135659755925244301L * 2009587532026748603L;
+			Class89.sleep(5000L);
+			shutDown();
+		}
+	}
+
+	@Override
+	public void method176(Graphics graphics_1) {
+		paint(graphics_1);
+	}
+
+	@Override
+	public void method177(Graphics graphics_1) {
+		paint(graphics_1);
+	}
+
+	@Override
+	public void method178(Graphics graphics_1) {
+		paint(graphics_1);
+	}
+
+	@Override
+	public synchronized void method179(Graphics graphics_1) {
+		if (!SHUTDOWN) {
+			aBool3274 = true;
+			if (Utils.time() - -8855560604364028117L * aLong3280 * 3757206876099985283L > 1000L) {
+				Rectangle rectangle_2 = graphics_1.getClipBounds();
+				if (rectangle_2 == null || rectangle_2.width >= SunIndexLoader.anInt434 * 1426041429 * 765 * 1031248161 * -1016911135 && rectangle_2.height >= -499509193 * Class107.anInt1082 * -1929118563 * -969250379 * 685317511)
+					aBool3257 = true;
+			}
+		}
+	}
+
+	@Override
+	public synchronized void method180(Graphics graphics_1) {
+		if (!SHUTDOWN) {
+			aBool3274 = true;
+			if (Utils.time() - -8855560604364028117L * aLong3280 * 3757206876099985283L > 1000L) {
+				Rectangle rectangle_2 = graphics_1.getClipBounds();
+				if (rectangle_2 == null || rectangle_2.width >= SunIndexLoader.anInt434 * 1426041429 * 765 * 1031248161 * -1016911135 && rectangle_2.height >= -499509193 * Class107.anInt1082 * -1929118563 * -969250379 * 685317511)
+					aBool3257 = true;
+			}
+		}
+	}
+
+	@Override
+	public void method181() {
+		if (!SHUTDOWN)
+			GAME_LOOP_TIMEOUT = (Utils.time() + 4000L) * -7135659755925244301L * 2009587532026748603L;
 	}
 
 	void method4655(Class274 class274_1, String string_2, String string_3, int i_4, int i_5, boolean bool_8) {
@@ -146,27 +308,22 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 		}
 		try {
 			Class110.aString1103 = System.getProperty("user.home");
-			if (Class110.aString1103 != null) {
+			if (Class110.aString1103 != null)
 				Class110.aString1103 += "/";
-			}
 		} catch (Exception ignored) {
 		}
 		try {
 			if (GroundItemStrategy.aString8069.startsWith("win")) {
-				if (Class110.aString1103 == null) {
+				if (Class110.aString1103 == null)
 					Class110.aString1103 = System.getenv("USERPROFILE");
-				}
-			} else if (Class110.aString1103 == null) {
+			} else if (Class110.aString1103 == null)
 				Class110.aString1103 = System.getenv("HOME");
-			}
-			if (Class110.aString1103 != null) {
+			if (Class110.aString1103 != null)
 				Class110.aString1103 += "/";
-			}
 		} catch (Exception ignored) {
 		}
-		if (Class110.aString1103 == null) {
+		if (Class110.aString1103 == null)
 			Class110.aString1103 = "~/";
-		}
 		try {
 			Shadow.anEventQueue10074 = Toolkit.getDefaultToolkit().getSystemEventQueue();
 		} catch (Throwable ignored) {
@@ -176,19 +333,16 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 		int i_13 = 0;
 		label131: while (i_13 < 4) {
 			aFile3264 = method4657(string_1, string_2, i_13);
-			if (!aFile3264.exists()) {
+			if (!aFile3264.exists())
 				aFile3264.mkdirs();
-			}
 			File[] arr_9 = aFile3264.listFiles();
-			if (arr_9 == null) {
+			if (arr_9 == null)
 				break;
-			}
 			File[] arr_10 = arr_9;
 			int i_11 = 0;
 			while (true) {
-				if (i_11 >= arr_10.length) {
+				if (i_11 >= arr_10.length)
 					break label131;
-				}
 				File file_12 = arr_10[i_11];
 				if (!method4720(file_12, false)) {
 					++i_13;
@@ -202,9 +356,8 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 		aClass440_3270 = new UID192(new Class442(CutsceneAction_Sub23.method14681("main_file_cache.dat2"), 524288000L), 5200);
 		aClass440_3271 = new UID192(new Class442(CutsceneAction_Sub23.method14681("main_file_cache.idx255"), 1048576L), 6000);
 		Class97.aClass440Array996 = new UID192[HeadbarIndexLoader.anInt3451];
-		for (i_13 = 0; i_13 < HeadbarIndexLoader.anInt3451; i_13++) {
+		for (i_13 = 0; i_13 < HeadbarIndexLoader.anInt3451; i_13++)
 			Class97.aClass440Array996[i_13] = new UID192(new Class442(CutsceneAction_Sub23.method14681("main_file_cache.idx" + i_13), 1048576L), 6000);
-		}
 		try {
 			Class274.aClass470_3336 = new Class470();
 		} catch (Exception exception_15) {
@@ -212,16 +365,13 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 		}
 		MeshModifier.aClass267_5026 = new Class267();
 		ThreadGroup threadgroup_8 = Thread.currentThread().getThreadGroup();
-		for (ThreadGroup threadgroup_23 = threadgroup_8.getParent(); threadgroup_23 != null; threadgroup_23 = threadgroup_23.getParent()) {
+		for (ThreadGroup threadgroup_23 = threadgroup_8.getParent(); threadgroup_23 != null; threadgroup_23 = threadgroup_23.getParent())
 			threadgroup_8 = threadgroup_23;
-		}
 		Thread[] arr_24 = new Thread[1000];
 		threadgroup_8.enumerate(arr_24);
-		for (int i_14 = 0; i_14 < arr_24.length; i_14++) {
-			if (arr_24[i_14] != null && arr_24[i_14].getName().startsWith("AWT")) {
-				arr_24[i_14].setPriority(1);
-			}
-		}
+		for (Thread element : arr_24)
+			if (element != null && element.getName().startsWith("AWT"))
+				element.setPriority(1);
 		Thread thread_25 = new Thread(this);
 		thread_25.setDaemon(true);
 		thread_25.start();
@@ -242,29 +392,24 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 				ByteBuf rsbytebuffer_11;
 				for (rsbytebuffer_11 = new ByteBuf((int) class442_9.method7388()); rsbytebuffer_11.index < rsbytebuffer_11.buffer.length; rsbytebuffer_11.index += i_10) {
 					i_10 = class442_9.method7389(rsbytebuffer_11.buffer, rsbytebuffer_11.index, rsbytebuffer_11.buffer.length - rsbytebuffer_11.index);
-					if (i_10 == -1) {
+					if (i_10 == -1)
 						throw new IOException();
-					}
 				}
 				rsbytebuffer_11.index = 0;
 				i_10 = rsbytebuffer_11.readUnsignedByte();
-				if (i_10 < 1 || i_10 > 3) {
+				if (i_10 < 1 || i_10 > 3)
 					throw new IOException("" + i_10);
-				}
 				int i_12 = 0;
-				if (i_10 > 1) {
+				if (i_10 > 1)
 					i_12 = rsbytebuffer_11.readUnsignedByte();
-				}
 				if (i_10 <= 2) {
 					string_6 = rsbytebuffer_11.readGJString();
-					if (i_12 == 1) {
+					if (i_12 == 1)
 						string_7 = rsbytebuffer_11.readGJString();
-					}
 				} else {
 					string_6 = rsbytebuffer_11.method13248();
-					if (i_12 == 1) {
+					if (i_12 == 1)
 						string_7 = rsbytebuffer_11.method13248();
-					}
 				}
 				class442_9.method7385();
 			} catch (IOException ioexception_21) {
@@ -272,19 +417,17 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 			}
 			if (string_6 != null) {
 				file_22 = new File(string_6);
-				if (!file_22.exists()) {
+				if (!file_22.exists())
 					string_6 = null;
-				}
 			}
 			if (string_6 != null) {
 				file_22 = new File(string_6, "test.dat");
-				if (!method4720(file_22, true)) {
+				if (!method4720(file_22, true))
 					string_6 = null;
-				}
 			}
 		}
-		if (string_6 == null && i_3 == 0) {
-			label103: for (int i_17 = 0; i_17 < MapSize.aStringArray1077.length; i_17++) {
+		if (string_6 == null && i_3 == 0)
+			label103: for (int i_17 = 0; i_17 < MapSize.aStringArray1077.length; i_17++)
 				for (i_10 = 0; i_10 < Class246.aStringArray3028.length; i_10++) {
 					File file_23 = new File(Class246.aStringArray3028[i_10] + MapSize.aStringArray1077[i_17] + File.separatorChar + string_1 + File.separatorChar);
 					if (file_23.exists() && method4720(new File(file_23, "test.dat"), true)) {
@@ -293,8 +436,6 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 						break label103;
 					}
 				}
-			}
-		}
 		if (string_6 == null) {
 			string_6 = Class110.aString1103 + File.separatorChar + Loader.CACHE_DIR + str_5 + File.separatorChar + string_1 + File.separatorChar + string_2 + File.separatorChar;
 			bool_8 = true;
@@ -305,37 +446,28 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 			try {
 				File[] arr_24 = file_22.listFiles();
 				File[] arr_19 = arr_24;
-				for (int i_13 = 0; i_13 < arr_19.length; i_13++) {
-					File file_14 = arr_19[i_13];
+				for (File file_14 : arr_19) {
 					File file_15 = new File(file_18, file_14.getName());
 					boolean bool_16 = file_14.renameTo(file_15);
-					if (!bool_16) {
+					if (!bool_16)
 						throw new IOException();
-					}
 				}
 			} catch (Exception exception_20) {
 				exception_20.printStackTrace();
 			}
 			bool_8 = true;
 		}
-		if (bool_8) {
+		if (bool_8)
 			method4659(new File(string_6), null);
-		}
 		return new File(string_6);
 	}
 
 	public boolean method4658(File file_1) {
-		if (file_1 == null) {
+		if (file_1 == null)
 			return false;
-		} else if (!file_1.exists()) {
+		if (!file_1.exists() || !file_1.isDirectory() || (file_1.listFiles().length != 0) || !method4720(new File(file_1, "test.dat"), true))
 			return false;
-		} else if (!file_1.isDirectory()) {
-			return false;
-		} else if (file_1.listFiles().length != 0) {
-			return false;
-		} else if (!method4720(new File(file_1, "test.dat"), true)) {
-			return false;
-		} else {
+		else {
 			method4659(file_1, aFile3264);
 			return true;
 		}
@@ -348,9 +480,8 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 			rsbytebuffer_5.writeByte(3);
 			rsbytebuffer_5.writeByte(file_2 != null ? 1 : 0);
 			rsbytebuffer_5.method13071(file_1.getPath());
-			if (file_2 != null) {
+			if (file_2 != null)
 				rsbytebuffer_5.method13071(file_2.getPath());
-			}
 			class442_4.method7386(rsbytebuffer_5.buffer, 0, rsbytebuffer_5.index);
 			class442_4.method7385();
 		} catch (IOException ioexception_6) {
@@ -383,9 +514,8 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 		if (container_1 == engineFrame) {
 			Insets insets_3 = engineFrame.getInsets();
 			Class351.gameCanvas.setLocation(insets_3.left + GAME_CANVAS_X, insets_3.top + GAME_CANVAS_Y);
-		} else {
+		} else
 			Class351.gameCanvas.setLocation(GAME_CANVAS_X, GAME_CANVAS_Y);
-		}
 		Class351.gameCanvas.addFocusListener(this);
 		Class351.gameCanvas.requestFocus();
 		IFSubObjectPosition.appletHasFocus = true;
@@ -396,22 +526,98 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 		aLong3280 = Utils.time();
 	}
 
-	@Override
-	public void run() {
-		try {
+	String method4669() {
+		return null;
+	}
+
+	abstract void method4676();
+
+	void method4680(String string_1) {
+		if (!aBool3254) {
+			aBool3254 = true;
+			System.out.println("error_game_" + string_1);
+			//			try {
+			//				Class441.method7377(SubInterface.suppliedApplet, "loggedout");
+			//			} catch (Throwable ignored) {
+			//			}
 			try {
-				loop();
-			} catch (ThreadDeath threaddeath_2) {
-				throw threaddeath_2;
-			} catch (Throwable throwable_3) {
-				Class151.method2594(method4669(), throwable_3);
-				method4680("crash");
-				shutDown();
-				return;
+				SubInterface.suppliedApplet.showError("error_game_" + string_1);
+			} catch (Exception ignored) {
 			}
-			shutDown();
-		} catch (Exception exception_4) {
-			shutDown();
+		}
+	}
+
+	public boolean method4681() {
+		aBool3268 = LibraryLoader.getLoader().loadLibrary("jaclib");
+		if (aBool3268)
+			try {
+				QueryPerformanceCounter.init();
+			} catch (Throwable ignored) {
+			}
+		return aBool3268;
+	}
+
+	void method4683(Class279 class279_1, boolean bool_2) {
+		if (class279_1 == null)
+			throw new NullPointerException();
+		if (class279_1 != Class279.aClass279_3369 && class279_1 != Class279.aClass279_3368)
+			throw new IllegalStateException();
+		else {
+			aClass279_3267 = class279_1;
+			if (aClass279_3267 != Class279.aClass279_3368 && bool_2)
+				aClass279_3267 = Class279.aClass279_3367;
+		}
+	}
+
+	abstract void method4686();
+
+	abstract void method4690();
+
+	synchronized void method4704() {
+		method4729();
+		Container container_2 = Class371.getActiveContainer();
+		Class351.gameCanvas = new Canvas_Sub1(container_2);
+		method4663(container_2);
+	}
+
+	abstract void method4714();
+
+	boolean method4720(File file_1, boolean bool_2) {
+		try {
+			RandomAccessFile randomaccessfile_5 = new RandomAccessFile(file_1, "rw");
+			int i_6 = randomaccessfile_5.read();
+			randomaccessfile_5.seek(0L);
+			randomaccessfile_5.write(i_6);
+			randomaccessfile_5.seek(0L);
+			randomaccessfile_5.close();
+			if (bool_2)
+				file_1.delete();
+			boolean bool_4 = true;
+			return bool_4;
+		} catch (Exception exception_7) {
+			return false;
+		}
+	}
+
+	void method4729() {
+		if (Class351.gameCanvas != null) {
+			Class351.gameCanvas.removeFocusListener(this);
+			Class351.gameCanvas.getParent().setBackground(Color.black);
+			Class351.gameCanvas.getParent().remove(Class351.gameCanvas);
+		}
+	}
+
+	abstract void method4738();
+
+	@Override
+	public synchronized void paint(Graphics graphics_1) {
+		if (!SHUTDOWN) {
+			aBool3274 = true;
+			if (Utils.time() - aLong3280 > 1000L) {
+				Rectangle rectangle_2 = graphics_1.getClipBounds();
+				if (rectangle_2 == null || rectangle_2.width >= SunIndexLoader.anInt434 && rectangle_2.height >= Class107.anInt1082)
+					aBool3257 = true;
+			}
 		}
 	}
 
@@ -445,59 +651,102 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 			if (engineFrame != null && fullScreenFrame == null) {
 				Insets insets_7 = engineFrame.getInsets();
 				Class351.gameCanvas.setLocation(insets_7.left + GAME_CANVAS_X, insets_7.top + GAME_CANVAS_Y);
-			} else {
+			} else
 				Class351.gameCanvas.setLocation(GAME_CANVAS_X, GAME_CANVAS_Y);
-			}
 		}
 		pulseUpdate();
 	}
 
-	String method4669() {
-		return null;
-	}
+	abstract void pulseLogic();
+
+	abstract void pulseUpdate();
 
 	@Override
-	public void stop() {
-		if (!SHUTDOWN) {
-			GAME_LOOP_TIMEOUT = Utils.time() + 4000L;
-		}
-	}
-
-	@Override
-	public void destroy() {
-		if (!SHUTDOWN) {
-			GAME_LOOP_TIMEOUT = Utils.time();
-			Class89.sleep(5000L);
+	public void run() {
+		try {
+			try {
+				loop();
+			} catch (ThreadDeath threaddeath_2) {
+				throw threaddeath_2;
+			} catch (Throwable throwable_3) {
+				Class151.method2594(method4669(), throwable_3);
+				method4680("crash");
+				shutDown();
+				return;
+			}
+			shutDown();
+		} catch (Exception exception_4) {
 			shutDown();
 		}
 	}
 
-	@Override
-	public synchronized void paint(Graphics graphics_1) {
-		if (!SHUTDOWN) {
-			aBool3274 = true;
-			if (Utils.time() - aLong3280 > 1000L) {
-				Rectangle rectangle_2 = graphics_1.getClipBounds();
-				if (rectangle_2 == null || rectangle_2.width >= SunIndexLoader.anInt434 && rectangle_2.height >= Class107.anInt1082) {
-					aBool3257 = true;
-				}
+	void shutDown() {
+		synchronized (this) {
+			if (SHUTDOWN)
+				return;
+			SHUTDOWN = true;
+		}
+		try {
+			method4714();
+		} catch (Exception ignored) {
+		}
+		try {
+			aClass440_3270.method7346();
+			for (int i_4 = 0; i_4 < HeadbarIndexLoader.anInt3451; i_4++)
+				Class97.aClass440Array996[i_4].method7346();
+			aClass440_3271.method7346();
+			PLAYER_UID192.method7346();
+		} catch (Exception ignored) {
+		}
+		if (aBool3268)
+			try {
+				QueryPerformanceCounter.quit();
+			} catch (Throwable ignored) {
 			}
+		Class156.method2645();
+		if (Class187.method3118())
+			LibraryLoader.getLoader().unload();
+		if (Class351.gameCanvas != null)
+			try {
+				Class351.gameCanvas.removeFocusListener(this);
+				Class351.gameCanvas.getParent().remove(Class351.gameCanvas);
+			} catch (Exception ignored) {
+			}
+		if (engineFrame != null) {
+			engineFrame.setVisible(false);
+			engineFrame.dispose();
+			engineFrame = null;
 		}
 	}
 
 	@Override
-	public void focusGained(FocusEvent focusevent_1) {
-		aBool3275 = true;
-		aBool3274 = true;
+	public void start() {
+		if (!SHUTDOWN)
+			GAME_LOOP_TIMEOUT = 0L;
 	}
 
 	@Override
-	public void focusLost(FocusEvent focusevent_1) {
-		aBool3275 = false;
+	public void stop() {
+		if (!SHUTDOWN)
+			GAME_LOOP_TIMEOUT = Utils.time() + 4000L;
+	}
+
+	@Override
+	public void supplyApplet(Loader applet_1) {
+		SubInterface.suppliedApplet = applet_1;
+	}
+
+	@Override
+	public void update(Graphics graphics_1) {
+		paint(graphics_1);
 	}
 
 	@Override
 	public void windowActivated(WindowEvent windowevent_1) {
+	}
+
+	@Override
+	public void windowClosed(WindowEvent windowevent_1) {
 	}
 
 	@Override
@@ -510,314 +759,15 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 	public void windowDeactivated(WindowEvent windowevent_1) {
 	}
 
-	void shutDown() {
-		synchronized (this) {
-			if (SHUTDOWN) {
-				return;
-			}
-			SHUTDOWN = true;
-		}
-		try {
-			method4714();
-		} catch (Exception ignored) {
-		}
-		try {
-			aClass440_3270.method7346();
-			for (int i_4 = 0; i_4 < HeadbarIndexLoader.anInt3451; i_4++) {
-				Class97.aClass440Array996[i_4].method7346();
-			}
-			aClass440_3271.method7346();
-			PLAYER_UID192.method7346();
-		} catch (Exception ignored) {
-		}
-		if (aBool3268) {
-			try {
-				QueryPerformanceCounter.quit();
-			} catch (Throwable ignored) {
-			}
-		}
-		Class156.method2645();
-		if (Class187.method3118()) {
-			LibraryLoader.getLoader().unload();
-		}
-		if (Class351.gameCanvas != null) {
-			try {
-				Class351.gameCanvas.removeFocusListener(this);
-				Class351.gameCanvas.getParent().remove(Class351.gameCanvas);
-			} catch (Exception ignored) {
-			}
-		}
-		if (engineFrame != null) {
-			engineFrame.setVisible(false);
-			engineFrame.dispose();
-			engineFrame = null;
-		}
-	}
-
-	@Override
-	public void windowOpened(WindowEvent windowevent_1) {
-	}
-
-	@Override
-	public abstract void init();
-
-	abstract void method4676();
-
-	abstract void pulseLogic();
-
-	abstract void pulseUpdate();
-
-	void method4680(String string_1) {
-		if (!aBool3254) {
-			aBool3254 = true;
-			System.out.println("error_game_" + string_1);
-//			try {
-//				Class441.method7377(SubInterface.suppliedApplet, "loggedout");
-//			} catch (Throwable ignored) {
-//			}
-			try {
-				SubInterface.suppliedApplet.showError("error_game_" + string_1);
-			} catch (Exception ignored) {
-			}
-		}
-	}
-
-	public boolean method4681() {
-		aBool3268 = LibraryLoader.getLoader().loadLibrary("jaclib");
-		if (aBool3268) {
-			try {
-				QueryPerformanceCounter.init();
-			} catch (Throwable ignored) {
-			}
-		}
-		return aBool3268;
-	}
-
-	void method4683(Class279 class279_1, boolean bool_2) {
-		if (class279_1 == null) {
-			throw new NullPointerException();
-		} else if (class279_1 != Class279.aClass279_3369 && class279_1 != Class279.aClass279_3368) {
-			throw new IllegalStateException();
-		} else {
-			aClass279_3267 = class279_1;
-			if (aClass279_3267 != Class279.aClass279_3368 && bool_2) {
-				aClass279_3267 = Class279.aClass279_3367;
-			}
-		}
-	}
-
 	@Override
 	public void windowDeiconified(WindowEvent windowevent_1) {
 	}
 
-	abstract void method4686();
-
-	abstract void method4690();
-
-	@Override
-	public void method168(Loader applet_1) {
-		SubInterface.suppliedApplet = applet_1;
-	}
-
-	@Override
-	public void start() {
-		if (!SHUTDOWN) {
-			GAME_LOOP_TIMEOUT = 0L;
-		}
-	}
-
-	synchronized void method4704() {
-		method4729();
-		Container container_2 = Class371.getActiveContainer();
-		Class351.gameCanvas = new Canvas_Sub1(container_2);
-		method4663(container_2);
-	}
-
-	@Override
-	public synchronized void method180(Graphics graphics_1) {
-		if (!SHUTDOWN) {
-			aBool3274 = true;
-			if (Utils.time() - -8855560604364028117L * aLong3280 * 3757206876099985283L > 1000L) {
-				Rectangle rectangle_2 = graphics_1.getClipBounds();
-				if (rectangle_2 == null || rectangle_2.width >= SunIndexLoader.anInt434 * 1426041429 * 765 * 1031248161 * -1016911135 && rectangle_2.height >= -499509193 * Class107.anInt1082 * -1929118563 * -969250379 * 685317511) {
-					aBool3257 = true;
-				}
-			}
-		}
-	}
-
-	abstract void method4714();
-
-	boolean method4720(File file_1, boolean bool_2) {
-		try {
-			RandomAccessFile randomaccessfile_5 = new RandomAccessFile(file_1, "rw");
-			int i_6 = randomaccessfile_5.read();
-			randomaccessfile_5.seek(0L);
-			randomaccessfile_5.write(i_6);
-			randomaccessfile_5.seek(0L);
-			randomaccessfile_5.close();
-			if (bool_2) {
-				file_1.delete();
-			}
-			boolean bool_4 = true;
-			return bool_4;
-		} catch (Exception exception_7) {
-			return false;
-		}
-	}
-
-	void method4729() {
-		if (Class351.gameCanvas != null) {
-			Class351.gameCanvas.removeFocusListener(this);
-			Class351.gameCanvas.getParent().setBackground(Color.black);
-			Class351.gameCanvas.getParent().remove(Class351.gameCanvas);
-		}
-	}
-
-	abstract void method4738();
-
-	@Override
-	public void method169() {
-		if (!SHUTDOWN) {
-			GAME_LOOP_TIMEOUT = 0L;
-		}
-	}
-
-	@Override
-	public void method167() {
-		if (!SHUTDOWN) {
-			GAME_LOOP_TIMEOUT = 0L;
-		}
-	}
-
-	@Override
-	public void method170() {
-		if (!SHUTDOWN) {
-			GAME_LOOP_TIMEOUT = 0L;
-		}
-	}
-
-	@Override
-	public void method171() {
-		if (!SHUTDOWN) {
-			GAME_LOOP_TIMEOUT = (Utils.time() + 4000L) * -7135659755925244301L * 2009587532026748603L;
-		}
-	}
-
-	@Override
-	public void method181() {
-		if (!SHUTDOWN) {
-			GAME_LOOP_TIMEOUT = (Utils.time() + 4000L) * -7135659755925244301L * 2009587532026748603L;
-		}
-	}
-
-	@Override
-	public void method172() {
-		if (!SHUTDOWN) {
-			GAME_LOOP_TIMEOUT = (Utils.time() + 4000L) * -7135659755925244301L * 2009587532026748603L;
-		}
-	}
-
-	@Override
-	public void method173() {
-		if (!SHUTDOWN) {
-			GAME_LOOP_TIMEOUT = (Utils.time() + 4000L) * -7135659755925244301L * 2009587532026748603L;
-		}
-	}
-
-	@Override
-	public void update(Graphics graphics_1) {
-		paint(graphics_1);
-	}
-
-	@Override
-	public void method175() {
-		if (!SHUTDOWN) {
-			GAME_LOOP_TIMEOUT = Utils.time() * -7135659755925244301L * 2009587532026748603L;
-			Class89.sleep(5000L);
-			shutDown();
-		}
-	}
-
-	@Override
-	public void method176(Graphics graphics_1) {
-		paint(graphics_1);
-	}
-
-	@Override
-	public void method177(Graphics graphics_1) {
-		paint(graphics_1);
-	}
-
-	@Override
-	public void method178(Graphics graphics_1) {
-		paint(graphics_1);
-	}
-
-	@Override
-	public synchronized void method179(Graphics graphics_1) {
-		if (!SHUTDOWN) {
-			aBool3274 = true;
-			if (Utils.time() - -8855560604364028117L * aLong3280 * 3757206876099985283L > 1000L) {
-				Rectangle rectangle_2 = graphics_1.getClipBounds();
-				if (rectangle_2 == null || rectangle_2.width >= SunIndexLoader.anInt434 * 1426041429 * 765 * 1031248161 * -1016911135 && rectangle_2.height >= -499509193 * Class107.anInt1082 * -1929118563 * -969250379 * 685317511) {
-					aBool3257 = true;
-				}
-			}
-		}
-	}
-
-	void loop() {
-		if (MaterialProp15.aString9967 != null) {
-			String string_2 = MaterialProp15.aString9967.toLowerCase();
-			if (string_2.indexOf("sun") != -1 || string_2.indexOf("apple") != -1) {
-				String string_3 = ChatLine.aString1093;
-				if ("1.1".equals(string_3) || string_3.startsWith("1.1.") || "1.2".equals(string_3) || string_3.startsWith("1.2.") || "1.3".equals(string_3) || string_3.startsWith("1.3.") || "1.4".equals(string_3) || string_3.startsWith("1.4.") || "1.5".equals(string_3) || string_3.startsWith("1.5.") || "1.6.0".equals(string_3)) {
-					method4680("wrongjava");
-					return;
-				}
-				if (string_3.startsWith("1.6.0_")) {
-					int i_4;
-					for (i_4 = 6; i_4 < string_3.length() && AnimationIndexLoader.method11219(string_3.charAt(i_4)); i_4++) {
-					}
-					String string_5 = string_3.substring(6, i_4);
-					if (Class115.method1950(string_5) && Utils.parseInt(string_5) < 10) {
-						method4680("wrongjava");
-						return;
-					}
-				}
-			}
-		}
-		Class371.getActiveContainer().setFocusCycleRoot(true);
-		MAX_MEMORY = (int) (Runtime.getRuntime().maxMemory() / 1048576L) + 1;
-		AVAILABLE_PROCESSORS = Runtime.getRuntime().availableProcessors();
-		method4704();
-		method4676();
-		FPS_MANAGER = FPSManager.createFPSManager();
-		while (GAME_LOOP_TIMEOUT == 0L || Utils.time() < GAME_LOOP_TIMEOUT) {
-			LOGIC_PULSES_TO_PROCESS = FPS_MANAGER.lockTime(NANOSECONDS_PER_FRAME);
-			for (int i = 0; i < LOGIC_PULSES_TO_PROCESS; i++) {
-				processLogicPulse();
-			}
-			processUpdatePulse();
-			//MaterialProp7.method15395(Class351.gameCanvas);
-		}
-	}
-
-	@Override
-	public void windowClosed(WindowEvent windowevent_1) {
-	}
-
-	@Override
-	public void method174() {
-		if (!SHUTDOWN) {
-			GAME_LOOP_TIMEOUT = Utils.time() * -7135659755925244301L * 2009587532026748603L;
-			Class89.sleep(5000L);
-			shutDown();
-		}
-	}
-
 	@Override
 	public void windowIconified(WindowEvent windowevent_1) {
+	}
+
+	@Override
+	public void windowOpened(WindowEvent windowevent_1) {
 	}
 }

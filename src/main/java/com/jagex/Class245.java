@@ -2,9 +2,9 @@ package com.jagex;
 
 public class Class245 {
 
-    static NativeSprite[] aNativeSpriteArray3027;
+	static NativeSprite[] aNativeSpriteArray3027;
 
-    Class245() throws Throwable {
-        throw new Error();
-    }
+	Class245() throws Throwable {
+		throw new Error();
+	}
 }

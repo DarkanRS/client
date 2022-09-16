@@ -6,25 +6,25 @@ package jagtheora.ogg;
 import jagtheora.misc.SimplePeer;
 
 public class OggPacket extends SimplePeer {
-    public native int isHeader();
+	@Override
+	protected native void clear();
 
-    public native int isKeyFrame();
+	@Override
+	protected native void f();
 
-    public native boolean isTheora();
+	public native byte[] getData();
 
-    public native boolean isVorbis();
+	public native int isHeader();
 
-    public native byte[] getData();
+	public native int isKeyFrame();
 
-    @Override
-    protected native void clear();
+	public native boolean isTheora();
 
-    @Override
-    protected native void q();
+	public native boolean isVorbis();
 
-    @Override
-    protected native void f();
+	@Override
+	protected native void m();
 
-    @Override
-    protected native void m();
+	@Override
+	protected native void q();
 }

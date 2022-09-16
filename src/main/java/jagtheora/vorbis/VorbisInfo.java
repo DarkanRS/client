@@ -7,34 +7,34 @@ import jagtheora.misc.SimplePeer;
 import jagtheora.ogg.OggPacket;
 
 public class VorbisInfo extends SimplePeer {
-    static {
-        initFields();
-    }
+	static {
+		initFields();
+	}
 
-    public int channels;
-    public int rate;
+	private static native void initFields();
+	public int channels;
 
-    public VorbisInfo() {
-        init();
-        if (method6698())
-            throw new IllegalStateException();
-    }
+	public int rate;
 
-    private static native void initFields();
+	public VorbisInfo() {
+		init();
+		if (method6698())
+			throw new IllegalStateException();
+	}
 
-    private native void init();
+	@Override
+	protected native void clear();
 
-    public native int headerIn(VorbisComment vorbiscomment, OggPacket oggpacket);
+	@Override
+	protected native void f();
 
-    @Override
-    protected native void clear();
+	public native int headerIn(VorbisComment vorbiscomment, OggPacket oggpacket);
 
-    @Override
-    protected native void q();
+	private native void init();
 
-    @Override
-    protected native void f();
+	@Override
+	protected native void m();
 
-    @Override
-    protected native void m();
+	@Override
+	protected native void q();
 }

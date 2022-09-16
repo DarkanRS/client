@@ -2,18 +2,18 @@ package com.jagex;
 
 public interface Interface33 {
 
-    boolean method54();
+	void method186();
 
-    void method210();
+	void method210();
 
-    void method96();
+	boolean method211();
 
-    boolean method211();
+	void method212();
 
-    void method212();
+	boolean method213();
 
-    void method186();
+	boolean method54();
 
-    boolean method213();
+	void method96();
 
 }

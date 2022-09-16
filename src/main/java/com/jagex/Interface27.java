@@ -2,38 +2,38 @@ package com.jagex;
 
 public interface Interface27 {
 
-    void method186();
+	void method157();
 
-    void method161();
+	void method158();
 
-    void method187();
+	void method159();
 
-    void method188();
+	void method161();
 
-    boolean method189(long var1);
+	void method186();
 
-    int method190();
+	void method187();
 
-    int method191();
+	void method188();
 
-    boolean method193(long var1);
+	boolean method189(long var1);
 
-    int method71();
+	int method190();
 
-    void method159();
+	int method191();
 
-    void method195();
+	boolean method193(long var1);
 
-    int method196();
+	void method195();
 
-    void method158();
+	int method196();
 
-    int method197();
+	int method197();
 
-    int method198();
+	int method198();
 
-    void method157();
+	int method71();
 
-    int method72();
+	int method72();
 
 }

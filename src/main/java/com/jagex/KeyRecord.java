@@ -2,36 +2,36 @@ package com.jagex;
 
 public interface KeyRecord {
 
-    int method75();
+	char getCharacter();
 
-    char getCharacter();
+	int getCode();
 
-    int method4();
+	int getFlags();
 
-    int getType();
+	int getType();
 
-    int getCode();
+	long method119();
 
-    long method119();
+	char method120();
 
-    int method70();
+	char method121();
 
-    int method76();
+	long method122();
 
-    char method120();
+	long method123();
 
-    char method121();
+	long method124();
 
-    long method122();
+	int method4();
 
-    int method77();
+	int method57();
 
-    long method123();
+	int method70();
 
-    long method124();
+	int method75();
 
-    int method57();
+	int method76();
 
-    int getFlags();
+	int method77();
 
 }

@@ -6,45 +6,45 @@ package jagtheora.theora;
 import jagtheora.misc.SimplePeer;
 
 public class TheoraInfo extends SimplePeer {
-    static {
-        initFields();
-    }
+	static {
+		initFields();
+	}
 
-    public byte versionMajor;
-    public byte versionMinor;
-    public byte versionSubMinor;
-    public int frameWidth;
-    public int frameHeight;
-    public int picWidth;
-    public int picHeight;
-    public int picX;
-    public int picY;
-    public int fpsNumerator;
-    public int fpsDenominator;
-    public int aspectNumerator;
-    public int aspectDenominator;
-    public int colourSpace;
-    public int pixelFormat;
+	private static native void initFields();
+	public byte versionMajor;
+	public byte versionMinor;
+	public byte versionSubMinor;
+	public int frameWidth;
+	public int frameHeight;
+	public int picWidth;
+	public int picHeight;
+	public int picX;
+	public int picY;
+	public int fpsNumerator;
+	public int fpsDenominator;
+	public int aspectNumerator;
+	public int aspectDenominator;
+	public int colourSpace;
 
-    public TheoraInfo() {
-        init();
-        if (method6698())
-            throw new IllegalStateException();
-    }
+	public int pixelFormat;
 
-    private static native void initFields();
+	public TheoraInfo() {
+		init();
+		if (method6698())
+			throw new IllegalStateException();
+	}
 
-    private native void init();
+	@Override
+	protected native void clear();
 
-    @Override
-    protected native void clear();
+	@Override
+	protected native void f();
 
-    @Override
-    protected native void q();
+	private native void init();
 
-    @Override
-    protected native void f();
+	@Override
+	protected native void m();
 
-    @Override
-    protected native void m();
+	@Override
+	protected native void q();
 }
