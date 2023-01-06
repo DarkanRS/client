@@ -160,6 +160,7 @@ public class RouteFinder {
 				return;
 			}
 		} catch (Exception exception_19) {
+			exception_19.printStackTrace();
 			Class209.printConsoleMessage(LocalizedText.ERROR_EXECUTING_COMMAND.translate(Class223.CURRENT_LANGUAGE));
 			return;
 		}
@@ -381,6 +382,7 @@ public class RouteFinder {
 					client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_21);
 				}
 			} catch (Exception exception_18) {
+				exception_18.printStackTrace();
 				Class209.printConsoleMessage(LocalizedText.ERROR_EXECUTING_COMMAND.translate(Class223.CURRENT_LANGUAGE));
 				return;
 			}

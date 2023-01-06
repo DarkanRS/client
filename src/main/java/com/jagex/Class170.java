@@ -22,17 +22,17 @@ public class Class170 {
 	LinkedNodeList aClass473_2108 = new LinkedNodeList();
 	Class137_Sub1[] aClass137_Sub1Array2106 = new Class137_Sub1[2];
 	OpenGLRenderer aGraphicalRenderer_Sub1_2112;
-	Class158_Sub1_Sub4 aClass158_Sub1_Sub4_2092;
-	Class158_Sub1_Sub4 aClass158_Sub1_Sub4_2095;
-	Class158_Sub1_Sub4 aClass158_Sub1_Sub4_2101;
+	FrameBufferObject aClass158_Sub1_Sub4_2092;
+	FrameBufferObject aClass158_Sub1_Sub4_2095;
+	FrameBufferObject aClass158_Sub1_Sub4_2101;
 
 	Class170(OpenGLRenderer class505_sub1_1) {
 		aClass76_2102 = Class76.aClass76_751;
 		aGraphicalRenderer_Sub1_2112 = class505_sub1_1;
 		if (aGraphicalRenderer_Sub1_2112.supportsFBO && aGraphicalRenderer_Sub1_2112.supportsRectTextures) {
-			aClass158_Sub1_Sub4_2095 = aClass158_Sub1_Sub4_2092 = new Class158_Sub1_Sub4(aGraphicalRenderer_Sub1_2112);
+			aClass158_Sub1_Sub4_2095 = aClass158_Sub1_Sub4_2092 = new FrameBufferObject(aGraphicalRenderer_Sub1_2112);
 			if (aGraphicalRenderer_Sub1_2112.anInt8475 > 1 && aGraphicalRenderer_Sub1_2112.supportsFBOBlit && aGraphicalRenderer_Sub1_2112.supportsFBOMultiSample)
-				aClass158_Sub1_Sub4_2095 = aClass158_Sub1_Sub4_2101 = new Class158_Sub1_Sub4(aGraphicalRenderer_Sub1_2112);
+				aClass158_Sub1_Sub4_2095 = aClass158_Sub1_Sub4_2101 = new FrameBufferObject(aGraphicalRenderer_Sub1_2112);
 		}
 
 	}
@@ -225,7 +225,7 @@ public class Class170 {
 			anInt2096 = i_1;
 			anInt2097 = i_2;
 			aBool2100 = true;
-			aGraphicalRenderer_Sub1_2112.method13640(-anInt2096, anInt2099 + anInt2097 - aGraphicalRenderer_Sub1_2112.method8523().method2716());
+			aGraphicalRenderer_Sub1_2112.method13640(-anInt2096, anInt2099 + anInt2097 - aGraphicalRenderer_Sub1_2112.method8523().getHeight());
 			aGraphicalRenderer_Sub1_2112.method8637(aClass158_Sub1_Sub4_2095);
 			aGraphicalRenderer_Sub1_2112.ba(3, 0);
 			aClass158_Sub1_Sub4_2095.method15628(0);

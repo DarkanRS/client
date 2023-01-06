@@ -7,7 +7,7 @@ public class Node_Sub5_Sub1 extends Node_Sub5 {
 	static float aFloat10024 = 0.25F;
 	static float aFloat10025 = 1.0F;
 	static float aFloat10026 = 1.0F;
-	Class158_Sub1_Sub4 aClass158_Sub1_Sub4_10031;
+	FrameBufferObject aClass158_Sub1_Sub4_10031;
 	Class137_Sub1 aClass137_Sub1_10038;
 	Class137_Sub1 aClass137_Sub1_10034;
 	Class128 aClass128_10043;
@@ -16,7 +16,7 @@ public class Node_Sub5_Sub1 extends Node_Sub5 {
 	Class128 aClass128_10023;
 	int anInt10036;
 	int anInt10037;
-	Class158_Sub1_Sub4 aClass158_Sub1_Sub4_10032;
+	FrameBufferObject aClass158_Sub1_Sub4_10032;
 	Class137_Sub1[] aClass137_Sub1Array10028;
 	int anInt10039;
 	int anInt10033;
@@ -205,7 +205,7 @@ public class Node_Sub5_Sub1 extends Node_Sub5 {
 					while (true) {
 						if (i_5 <= 256 && i_6 <= 256) {
 							if (aClass158_Sub1_Sub4_10032 == null)
-								aClass158_Sub1_Sub4_10032 = new Class158_Sub1_Sub4(aGraphicalRenderer_Sub1_7507);
+								aClass158_Sub1_Sub4_10032 = new FrameBufferObject(aGraphicalRenderer_Sub1_7507);
 
 							aClass137_Sub1Array10028 = new Class137_Sub1[i_7];
 							i_5 = i_3;
@@ -270,7 +270,7 @@ public class Node_Sub5_Sub1 extends Node_Sub5 {
 	boolean method12130() {
 		if (!aGraphicalRenderer_Sub1_7507.supportsFBO || !aGraphicalRenderer_Sub1_7507.supportsFragmentShaders || !aGraphicalRenderer_Sub1_7507.supportsFloatTextures)
 			return false;
-		aClass158_Sub1_Sub4_10031 = new Class158_Sub1_Sub4(aGraphicalRenderer_Sub1_7507);
+		aClass158_Sub1_Sub4_10031 = new FrameBufferObject(aGraphicalRenderer_Sub1_7507);
 		aClass137_Sub1_10038 = new Class137_Sub1(aGraphicalRenderer_Sub1_7507, 3553, Class150.aClass150_1949, Class76.aClass76_755, 256, 256);
 		aClass137_Sub1_10038.method14445(false, false);
 		aClass137_Sub1_10034 = new Class137_Sub1(aGraphicalRenderer_Sub1_7507, 3553, Class150.aClass150_1949, Class76.aClass76_755, 256, 256);
@@ -296,7 +296,7 @@ public class Node_Sub5_Sub1 extends Node_Sub5 {
 	boolean method12131() {
 		if (!aGraphicalRenderer_Sub1_7507.supportsFBO || !aGraphicalRenderer_Sub1_7507.supportsFragmentShaders || !aGraphicalRenderer_Sub1_7507.supportsFloatTextures)
 			return false;
-		aClass158_Sub1_Sub4_10031 = new Class158_Sub1_Sub4(aGraphicalRenderer_Sub1_7507);
+		aClass158_Sub1_Sub4_10031 = new FrameBufferObject(aGraphicalRenderer_Sub1_7507);
 		aClass137_Sub1_10038 = new Class137_Sub1(aGraphicalRenderer_Sub1_7507, 3553, Class150.aClass150_1949, Class76.aClass76_755, 256, 256);
 		aClass137_Sub1_10038.method14445(false, false);
 		aClass137_Sub1_10034 = new Class137_Sub1(aGraphicalRenderer_Sub1_7507, 3553, Class150.aClass150_1949, Class76.aClass76_755, 256, 256);
@@ -344,7 +344,7 @@ public class Node_Sub5_Sub1 extends Node_Sub5 {
 					while (true) {
 						if (i_5 <= 256 && i_6 <= 256) {
 							if (aClass158_Sub1_Sub4_10032 == null)
-								aClass158_Sub1_Sub4_10032 = new Class158_Sub1_Sub4(aGraphicalRenderer_Sub1_7507);
+								aClass158_Sub1_Sub4_10032 = new FrameBufferObject(aGraphicalRenderer_Sub1_7507);
 
 							aClass137_Sub1Array10028 = new Class137_Sub1[i_7];
 							i_5 = i_3;
@@ -654,7 +654,7 @@ public class Node_Sub5_Sub1 extends Node_Sub5 {
 	boolean method12136() {
 		if (!aGraphicalRenderer_Sub1_7507.supportsFBO || !aGraphicalRenderer_Sub1_7507.supportsFragmentShaders || !aGraphicalRenderer_Sub1_7507.supportsFloatTextures)
 			return false;
-		aClass158_Sub1_Sub4_10031 = new Class158_Sub1_Sub4(aGraphicalRenderer_Sub1_7507);
+		aClass158_Sub1_Sub4_10031 = new FrameBufferObject(aGraphicalRenderer_Sub1_7507);
 		aClass137_Sub1_10038 = new Class137_Sub1(aGraphicalRenderer_Sub1_7507, 3553, Class150.aClass150_1949, Class76.aClass76_755, 256, 256);
 		aClass137_Sub1_10038.method14445(false, false);
 		aClass137_Sub1_10034 = new Class137_Sub1(aGraphicalRenderer_Sub1_7507, 3553, Class150.aClass150_1949, Class76.aClass76_755, 256, 256);

@@ -72,7 +72,7 @@ public class Class480 {
 			int[] ints_8 = Class197.PLAYER_INDICES;
 			int i_9;
 			for (i_9 = 0; i_9 < i_7; i_9++) {
-				PlayerEntity player_12 = client.players[ints_8[i_9]];
+				PlayerEntity player_12 = client.PLAYER_LIST[ints_8[i_9]];
 				if (player_12 != null)
 					player_12.method15795(i_4, i_5, bool_2);
 			}

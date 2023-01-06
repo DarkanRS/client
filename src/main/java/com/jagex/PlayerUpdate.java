@@ -3,23 +3,124 @@ package com.jagex;
 public class PlayerUpdate {
 
 	static void decode(ByteBuf.Bit buffer, int size) {
-		Class197.anInt2434 = 0;
-		decodeUpdate(buffer);
+		Class197.CURR_MASK_UPDATE_IDX = 0;
+		decodeAddRemove(buffer);
 		decodeMasks(buffer);
 		if (buffer.index != size)
 			throw new RuntimeException(buffer.index + " " + size);
 	}
 
+	static void decodeAddRemove(ByteBuf.Bit stream) {
+		int bytesLeft = 0;
+		stream.initBitAccess();
+		for (int count = 0; count < Class197.NUM_PLAYER_INDICES; count++) {
+			int pid = Class197.PLAYER_INDICES[count];
+			if ((Class197.PLAYER_UPDATE_SLOT_FLAGS[pid] & 0x1) == 0)
+				if (bytesLeft > 0) {
+					--bytesLeft;
+					Class197.PLAYER_UPDATE_SLOT_FLAGS[pid] |= 0x2;
+				} else {
+					int needsUpdate = stream.readBits(1);
+					System.out.println("Needs update local nsn0: [ PID: " + pid + " needsUpdate: " + needsUpdate + "]");
+					if (needsUpdate == 0) {
+						bytesLeft = decodeSkip(stream);
+						Class197.PLAYER_UPDATE_SLOT_FLAGS[pid] |= 0x2;
+					} else
+						decodeUpdate(stream, pid);
+				}
+		}
+		stream.finishBitAccess();
+		if (bytesLeft != 0)
+			throw new RuntimeException();
+		stream.initBitAccess();
+		for (int count = 0; count < Class197.NUM_PLAYER_INDICES; count++) {
+			int pid = Class197.PLAYER_INDICES[count];
+			if ((Class197.PLAYER_UPDATE_SLOT_FLAGS[pid] & 0x1) != 0)
+				if (bytesLeft > 0) {
+					--bytesLeft;
+					Class197.PLAYER_UPDATE_SLOT_FLAGS[pid] |= 0x2;
+				} else {
+					int needsUpdate = stream.readBits(1);
+					System.out.println("Needs update local nsn1: [ PID: " + pid + " needsUpdate: " + needsUpdate + "]");
+					if (needsUpdate == 0) {
+						bytesLeft = decodeSkip(stream);
+						Class197.PLAYER_UPDATE_SLOT_FLAGS[pid] |= 0x2;
+					} else
+						decodeUpdate(stream, pid);
+				}
+		}
+		stream.finishBitAccess();
+		if (bytesLeft != 0)
+			throw new RuntimeException();
+		else {
+			stream.initBitAccess();
+			for (int count = 0; count < Class197.anInt2431; count++) {
+				int pid = Class197.anIntArray2426[count];
+				if ((Class197.PLAYER_UPDATE_SLOT_FLAGS[pid] & 0x1) != 0)
+					if (bytesLeft > 0) {
+						--bytesLeft;
+						Class197.PLAYER_UPDATE_SLOT_FLAGS[pid] |= 0x2;
+					} else {
+						int needsUpdate = stream.readBits(1);
+						System.out.println("Needs update outside nsn0: [ PID: " + pid + " needsUpdate: " + needsUpdate + "]");
+						if (needsUpdate == 0) {
+							bytesLeft = decodeSkip(stream);
+							Class197.PLAYER_UPDATE_SLOT_FLAGS[pid] |= 0x2;
+						} else if (decodeRegionHash(stream, pid))
+							Class197.PLAYER_UPDATE_SLOT_FLAGS[pid] |= 0x2;
+					}
+			}
+			stream.finishBitAccess();
+			if (bytesLeft != 0)
+				throw new RuntimeException();
+			else {
+				stream.initBitAccess();
+				for (int count = 0; count < Class197.anInt2431; count++) {
+					int pid = Class197.anIntArray2426[count];
+					if ((Class197.PLAYER_UPDATE_SLOT_FLAGS[pid] & 0x1) == 0)
+						if (bytesLeft > 0) {
+							--bytesLeft;
+							Class197.PLAYER_UPDATE_SLOT_FLAGS[pid] |= 0x2;
+						} else {
+							int needsUpdate = stream.readBits(1);
+							System.out.println("Needs update outside nsn1: [ PID: " + pid + " needsUpdate: " + needsUpdate + "]");
+							if (needsUpdate == 0) {
+								bytesLeft = decodeSkip(stream);
+								Class197.PLAYER_UPDATE_SLOT_FLAGS[pid] |= 0x2;
+							} else if (decodeRegionHash(stream, pid))
+								Class197.PLAYER_UPDATE_SLOT_FLAGS[pid] |= 0x2;
+						}
+				}
+				stream.finishBitAccess();
+				if (bytesLeft != 0)
+					throw new RuntimeException();
+				else {
+					Class197.NUM_PLAYER_INDICES = 0;
+					Class197.anInt2431 = 0;
+					for (int count = 1; count < 2048; count++) {
+						Class197.PLAYER_UPDATE_SLOT_FLAGS[count] >>= 1;
+						PlayerEntity player_6 = client.PLAYER_LIST[count];
+						if (player_6 != null)
+							Class197.PLAYER_INDICES[++Class197.NUM_PLAYER_INDICES - 1] = count;
+						else
+							Class197.anIntArray2426[++Class197.anInt2431 - 1] = count;
+					}
+				}
+			}
+		}
+	}
+
 	static void decodeMasks(ByteBuf.Bit buffer) {
-		for (int i_2 = 0; i_2 < Class197.anInt2434; i_2++) {
-			int i_3 = Class197.anIntArray2435[i_2];
-			PlayerEntity player_4 = client.players[i_3];
+		for (int i = 0; i < Class197.CURR_MASK_UPDATE_IDX; i++) {
+			int pid = Class197.NEEDS_MASK_UPDATE[i];
+			System.out.println("Updating masks: PID: " + pid);
+			PlayerEntity player = client.PLAYER_LIST[pid];
 			int i_5 = buffer.readUnsignedByte();
 			if ((i_5 & 0x8) != 0)
 				i_5 += buffer.readUnsignedByte() << 8;
 			if ((i_5 & 0x100) != 0)
 				i_5 += buffer.readUnsignedByte() << 16;
-			decodeMasksBody(buffer, i_3, player_4, i_5);
+			decodeMasksBody(buffer, pid, player, i_5);
 		}
 	}
 
@@ -128,11 +229,11 @@ public class PlayerUpdate {
 			int i_8 = stream.readUnsignedByte128();
 			int i_9 = i_8 & 0x7;
 			int i_10 = i_8 >> 3 & 0xf;
-					if (i_10 == 15)
-						i_10 = -1;
+			if (i_10 == 15)
+				i_10 = -1;
 
-					boolean bool_11 = (i_8 >> 7 & 0x1) == 1;
-					player.sendSpotAnim(i_6, i_7, i_9, i_10, bool_11, 2);
+			boolean bool_11 = (i_8 >> 7 & 0x1) == 1;
+			player.sendSpotAnim(i_6, i_7, i_9, i_10, bool_11, 2);
 		}
 
 		if ((flags & 0x8000) != 0)
@@ -250,7 +351,7 @@ public class PlayerUpdate {
 			player.forceMovementT1Delay = stream.readUnsignedShortLE128() + client.FRAME_COUNT;
 			player.forceMovementT2Delay = stream.readShortLE() + client.FRAME_COUNT;
 			player.forceMovementDir = stream.readUnsignedShort128();
-			if (player.aBool10568) {
+			if (player.needsMaskUpdate) {
 				player.forceMovementT1XOff += player.anInt10569;
 				player.forceMovementT1YOff += player.anInt10570;
 				player.forceMovementT2XOff += player.anInt10569;
@@ -283,7 +384,7 @@ public class PlayerUpdate {
 			player.sendSpotAnim(spotAnimId, flags1, rotation, i_10, bool_11, 0);
 		}
 
-		if (player.aBool10568)
+		if (player.needsMaskUpdate)
 			if (tempMoveType == 127)
 				player.move(player.anInt10569, player.anInt10570);
 			else {
@@ -299,103 +400,287 @@ public class PlayerUpdate {
 
 	}
 
-	static void decodeUpdate(ByteBuf.Bit bitPacket) {
-		int i_2 = 0;
-		bitPacket.initBitAccess();
-		int i_3;
-		int i_4;
-		int i_5;
-		for (i_3 = 0; i_3 < Class197.NUM_PLAYER_INDICES; i_3++) {
-			i_4 = Class197.PLAYER_INDICES[i_3];
-			if ((Class197.aByteArray2424[i_4] & 0x1) == 0)
-				if (i_2 > 0) {
-					--i_2;
-					Class197.aByteArray2424[i_4] |= 0x2;
-				} else {
-					i_5 = bitPacket.readBits(1);
-					if (i_5 == 0) {
-						i_2 = Class399.decodeSkip(bitPacket);
-						Class197.aByteArray2424[i_4] |= 0x2;
-					} else
-						NewsItem.method1806(bitPacket, i_4);
-				}
-		}
-		bitPacket.finishBitAccess();
-		if (i_2 != 0)
-			throw new RuntimeException();
-		bitPacket.initBitAccess();
-		for (i_3 = 0; i_3 < Class197.NUM_PLAYER_INDICES; i_3++) {
-			i_4 = Class197.PLAYER_INDICES[i_3];
-			if ((Class197.aByteArray2424[i_4] & 0x1) != 0)
-				if (i_2 > 0) {
-					--i_2;
-					Class197.aByteArray2424[i_4] |= 0x2;
-				} else {
-					i_5 = bitPacket.readBits(1);
-					if (i_5 == 0) {
-						i_2 = Class399.decodeSkip(bitPacket);
-						Class197.aByteArray2424[i_4] |= 0x2;
-					} else
-						NewsItem.method1806(bitPacket, i_4);
-				}
-		}
-		bitPacket.finishBitAccess();
-		if (i_2 != 0)
-			throw new RuntimeException();
-		else {
-			bitPacket.initBitAccess();
-			for (i_3 = 0; i_3 < Class197.anInt2431; i_3++) {
-				i_4 = Class197.anIntArray2426[i_3];
-				if ((Class197.aByteArray2424[i_4] & 0x1) != 0)
-					if (i_2 > 0) {
-						--i_2;
-						Class197.aByteArray2424[i_4] |= 0x2;
-					} else {
-						i_5 = bitPacket.readBits(1);
-						if (i_5 == 0) {
-							i_2 = Class399.decodeSkip(bitPacket);
-							Class197.aByteArray2424[i_4] |= 0x2;
-						} else if (QuickChatMessage.method6155(bitPacket, i_4))
-							Class197.aByteArray2424[i_4] |= 0x2;
-					}
+	static void decodeUpdate(ByteBuf.Bit stream, int pid) {
+		CoordGrid mapBase = IndexLoaders.MAP_REGION_DECODER.getBase();
+		boolean needsMaskUpdate = stream.readBits(1) == 1;
+		if (needsMaskUpdate)
+			Class197.NEEDS_MASK_UPDATE[++Class197.CURR_MASK_UPDATE_IDX - 1] = pid;
+		int updateType = stream.readBits(2);
+		System.out.println("Decoding update: [ PID:" + pid + " needsMasksUpdate: " + needsMaskUpdate + " updateType: " + updateType + "]");
+		PlayerEntity player = client.PLAYER_LIST[pid];
+		switch (updateType) {
+		case 0 -> { //REMOVE FROM SCREEN
+			if (needsMaskUpdate)
+				player.needsMaskUpdate = false;
+			else {
+				if (client.myPlayerIndex == pid)
+					throw new RuntimeException();
+				Class4 class4_14 = Class197.aClass4Array2430[pid] = new Class4();
+				class4_14.regionHash = (player.plane << 28) + (mapBase.y + player.regionBaseY[0] >> 6) + (mapBase.x + player.regionBaseX[0] >> 6 << 14);
+				if (player.faceDirection != -1)
+					class4_14.faceAngle = player.faceDirection;
+				else
+					class4_14.faceAngle = player.aClass19_10359.method578();
+				class4_14.faceEntity = player.faceEntity;
+				class4_14.aBool29 = player.aBool10571;
+				class4_14.aBool33 = player.aBool10550;
+				if (player.isNpc > 0)
+					Class149_Sub2.method14609(player);
+				client.PLAYER_LIST[pid] = null;
+				if (stream.readBits(1) != 0)
+					decodeRegionHash(stream, pid);
 			}
-			bitPacket.finishBitAccess();
-			if (i_2 != 0)
+		}
+		case 1 -> { //WALKING
+			int walkOpcode = stream.readBits(3);
+			int xStart = player.regionBaseX[0];
+			int yStart = player.regionBaseY[0];
+			if (walkOpcode == 0) {
+				--xStart;
+				--yStart;
+			} else if (walkOpcode == 1)
+				--yStart;
+			else if (walkOpcode == 2) {
+				++xStart;
+				--yStart;
+			} else if (walkOpcode == 3)
+				--xStart;
+			else if (walkOpcode == 4)
+				++xStart;
+			else if (walkOpcode == 5) {
+				--xStart;
+				++yStart;
+			} else if (walkOpcode == 6)
+				++yStart;
+			else if (walkOpcode == 7) {
+				++xStart;
+				++yStart;
+			}
+			if (needsMaskUpdate) {
+				player.anInt10569 = xStart;
+				player.anInt10570 = yStart;
+				player.needsMaskUpdate = true;
+			} else
+				player.method16129(xStart, yStart, Class197.playerMovementTypes[pid]);
+		}
+		case 2 -> { //RUNNING
+			int runOpcode = stream.readBits(4);
+			int xStart = player.regionBaseX[0];
+			int yStart = player.regionBaseY[0];
+			if (runOpcode == 0) {
+				xStart -= 2;
+				yStart -= 2;
+			} else if (runOpcode == 1) {
+				--xStart;
+				yStart -= 2;
+			} else if (runOpcode == 2)
+				yStart -= 2;
+			else if (runOpcode == 3) {
+				++xStart;
+				yStart -= 2;
+			} else if (runOpcode == 4) {
+				xStart += 2;
+				yStart -= 2;
+			} else if (runOpcode == 5) {
+				xStart -= 2;
+				--yStart;
+			} else if (runOpcode == 6) {
+				xStart += 2;
+				--yStart;
+			} else if (runOpcode == 7)
+				xStart -= 2;
+			else if (runOpcode == 8)
+				xStart += 2;
+			else if (runOpcode == 9) {
+				xStart -= 2;
+				++yStart;
+			} else if (runOpcode == 10) {
+				xStart += 2;
+				++yStart;
+			} else if (runOpcode == 11) {
+				xStart -= 2;
+				yStart += 2;
+			} else if (runOpcode == 12) {
+				--xStart;
+				yStart += 2;
+			} else if (runOpcode == 13)
+				yStart += 2;
+			else if (runOpcode == 14) {
+				++xStart;
+				yStart += 2;
+			} else if (runOpcode == 15) {
+				xStart += 2;
+				yStart += 2;
+			}
+			if (needsMaskUpdate) {
+				player.anInt10569 = xStart;
+				player.anInt10570 = yStart;
+				player.needsMaskUpdate = true;
+			} else
+				player.method16129(xStart, yStart, Class197.playerMovementTypes[pid]);
+		}
+		default -> { //TELEPORT
+			boolean localTele = stream.readBits(1) == 0;
+			if (localTele) {
+				int posHash = stream.readBits(12);
+				int planeOffset = posHash >> 10;
+				int xOffset = posHash >> 5 & 0x1f;
+				if (xOffset > 15)
+					xOffset -= 32;
+				int yOffset = posHash & 0x1f;
+				if (yOffset > 15)
+					yOffset -= 32;
+				System.out.println("Teleport local offset: " + xOffset + ", " + yOffset + ", " + planeOffset);
+				int newX = xOffset + player.regionBaseX[0];
+				int newY = yOffset + player.regionBaseY[0];
+				if (needsMaskUpdate) {
+					player.anInt10569 = newX;
+					player.anInt10570 = newY;
+					player.needsMaskUpdate = true;
+				} else
+					player.method16129(newX, newY, Class197.playerMovementTypes[pid]);
+				player.plane = player.collisionPlane = (byte) (planeOffset + player.plane & 0x3);
+				if (IndexLoaders.MAP_REGION_DECODER.getRenderFlags().isLowerObjectsToOverrideClipping(newX, newY))
+					player.collisionPlane += 1;
+				if (client.myPlayerIndex == pid && player.plane != Class4.MY_PLAYER_PLANE)
+					Class4.MY_PLAYER_PLANE = player.plane;
+			} else {
+				int posHash = stream.readBits(30);
+				int plane = posHash >> 28;
+				int x = posHash >> 14 & 0x3fff;
+				int y = posHash & 0x3fff;
+				int localX = (x + mapBase.x + player.regionBaseX[0] & 0x3fff) - mapBase.x;
+				int localY = (y + mapBase.y + player.regionBaseY[0] & 0x3fff) - mapBase.y;
+				System.out.println("Teleport far: " + x + ", " + y + ", " + plane);
+				if (needsMaskUpdate) {
+					player.anInt10569 = localX;
+					player.anInt10570 = localY;
+					player.needsMaskUpdate = true;
+				} else
+					player.method16129(localX, localY, Class197.playerMovementTypes[pid]);
+				player.plane = player.collisionPlane = (byte) (plane + player.plane & 0x3);
+				if (IndexLoaders.MAP_REGION_DECODER.getRenderFlags().isLowerObjectsToOverrideClipping(localX, localY))
+					player.collisionPlane += 1;
+				if (client.myPlayerIndex == pid)
+					Class4.MY_PLAYER_PLANE = player.plane;
+			}
+		}
+		}
+	}
+
+	static int decodeSkip(ByteBuf.Bit rsbitsbuffer_0) {
+		int i_2 = rsbitsbuffer_0.readBits(2);
+		int i_3;
+		if (i_2 == 0)
+			i_3 = 0;
+		else if (i_2 == 1)
+			i_3 = rsbitsbuffer_0.readBits(5);
+		else if (i_2 == 2)
+			i_3 = rsbitsbuffer_0.readBits(8);
+		else
+			i_3 = rsbitsbuffer_0.readBits(11);
+
+		return i_3;
+	}
+
+	static boolean decodeRegionHash(ByteBuf.Bit stream, int pid) {
+		switch(stream.readBits(2)) {
+		case 0 -> {
+			if (stream.readBits(1) != 0)
+				decodeRegionHash(stream, pid);
+			int i_4 = stream.readBits(6);
+			int i_5 = stream.readBits(6);
+			boolean bool_18 = stream.readBits(1) == 1;
+			if (bool_18)
+				Class197.NEEDS_MASK_UPDATE[++Class197.CURR_MASK_UPDATE_IDX - 1] = pid;
+			if (client.PLAYER_LIST[pid] != null)
 				throw new RuntimeException();
 			else {
-				bitPacket.initBitAccess();
-				for (i_3 = 0; i_3 < Class197.anInt2431; i_3++) {
-					i_4 = Class197.anIntArray2426[i_3];
-					if ((Class197.aByteArray2424[i_4] & 0x1) == 0)
-						if (i_2 > 0) {
-							--i_2;
-							Class197.aByteArray2424[i_4] |= 0x2;
-						} else {
-							i_5 = bitPacket.readBits(1);
-							if (i_5 == 0) {
-								i_2 = Class399.decodeSkip(bitPacket);
-								Class197.aByteArray2424[i_4] |= 0x2;
-							} else if (QuickChatMessage.method6155(bitPacket, i_4))
-								Class197.aByteArray2424[i_4] |= 0x2;
-						}
-				}
-				bitPacket.finishBitAccess();
-				if (i_2 != 0)
-					throw new RuntimeException();
-				else {
-					Class197.NUM_PLAYER_INDICES = 0;
-					Class197.anInt2431 = 0;
-					for (i_3 = 1; i_3 < 2048; i_3++) {
-						Class197.aByteArray2424[i_3] >>= 1;
-					PlayerEntity player_6 = client.players[i_3];
-					if (player_6 != null)
-						Class197.PLAYER_INDICES[++Class197.NUM_PLAYER_INDICES - 1] = i_3;
-					else
-						Class197.anIntArray2426[++Class197.anInt2431 - 1] = i_3;
-					}
-				}
+				Class4 class4_7 = Class197.aClass4Array2430[pid];
+				PlayerEntity player_8 = client.PLAYER_LIST[pid] = new PlayerEntity(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager());
+				player_8.index = pid;
+				if (Class197.aNode_Sub35Array2428[pid] != null)
+					player_8.decodeAppearance(Class197.aNode_Sub35Array2428[pid]);
+				player_8.turn(class4_7.faceAngle, true);
+				player_8.faceEntity = class4_7.faceEntity;
+				int i_9 = class4_7.regionHash;
+				int i_10 = i_9 >> 28;
+				int i_11 = i_9 >> 14 & 0xff;
+				int i_12 = i_9 & 0xff;
+				CoordGrid coordgrid_13 = IndexLoaders.MAP_REGION_DECODER.getBase();
+				int i_14 = i_4 + (i_11 << 6) - coordgrid_13.x;
+				int i_15 = i_5 + (i_12 << 6) - coordgrid_13.y;
+				player_8.aBool10571 = class4_7.aBool29;
+				player_8.aBool10550 = class4_7.aBool33;
+				player_8.walkTypes[0] = Class197.playerMovementTypes[pid];
+				player_8.plane = player_8.collisionPlane = (byte) i_10;
+				if (IndexLoaders.MAP_REGION_DECODER.getRenderFlags().isLowerObjectsToOverrideClipping(i_14, i_15))
+					player_8.collisionPlane += 1;
+				player_8.move(i_14, i_15);
+				player_8.needsMaskUpdate = false;
+				Class197.aClass4Array2430[pid] = null;
+				return true;
 			}
 		}
+		
+		case 1 -> {
+			int planeOffset = stream.readBits(2);
+			int regionHash = Class197.aClass4Array2430[pid].regionHash;
+			Class197.aClass4Array2430[pid].regionHash = (regionHash & 0xfffffff) + (((regionHash >> 28) + planeOffset & 0x3) << 28);
+			return false;
+		}
+		
+		case 2 -> {
+			int smallOffsetHash = stream.readBits(5);
+			int planeOffset = smallOffsetHash >> 3;
+			int opcode = smallOffsetHash & 0x7;
+			int regionHash = Class197.aClass4Array2430[pid].regionHash;
+			int plane = (regionHash >> 28) + planeOffset & 0x3;
+			int x = regionHash >> 14 & 0xff;
+			int y = regionHash & 0xff;
+			if (opcode == 0) {
+				--x;
+				--y;
+			}
+			if (opcode == 1)
+				--y;
+			if (opcode == 2) {
+				++x;
+				--y;
+			}
+			if (opcode == 3)
+				--x;
+			if (opcode == 4)
+				++x;
+			if (opcode == 5) {
+				--x;
+				++y;
+			}
+			if (opcode == 6)
+				++y;
+			if (opcode == 7) {
+				++x;
+				++y;
+			}
+			Class197.aClass4Array2430[pid].regionHash = (x << 14) + y + (plane << 28);
+		}
+		
+		case 3 -> {
+			int updateHash = stream.readBits(18);
+			int planeOffset = updateHash >> 16;
+			int xOffset = updateHash >> 8 & 0xff;
+			int yOffset = updateHash & 0xff;
+			int oldHash = Class197.aClass4Array2430[pid].regionHash;
+			int plane = (oldHash >> 28) + planeOffset & 0x3;
+			int x = xOffset + (oldHash >> 14) & 0xff;
+			int y = yOffset + oldHash & 0xff;
+			Class197.aClass4Array2430[pid].regionHash = (x << 14) + y + (plane << 28);
+			return false;
+		}
+		
+		default -> throw new IllegalArgumentException("Unexpected region update type");
+		}
+		return false;
 	}
 
 }

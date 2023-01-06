@@ -15,7 +15,7 @@ public class MapSpriteIndexLoader {
 				if (class282_sub47_3 != null)
 					obj_2 = class282_sub47_3.anObject8068;
 			} else if (animable_0.faceEntity >= 32768)
-				obj_2 = client.players[animable_0.faceEntity - 32768];
+				obj_2 = client.PLAYER_LIST[animable_0.faceEntity - 32768];
 			if (obj_2 != null) {
 				vector3_9 = Vector3.method6632(animable_0.method11166().coords, ((PathingEntity) obj_2).method11166().coords);
 				int i_4 = (int) vector3_9.x;

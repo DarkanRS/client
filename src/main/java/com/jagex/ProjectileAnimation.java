@@ -304,7 +304,7 @@ public class ProjectileAnimation extends GraphNode_Sub1_Sub1 {
 					if (i_14 == client.myPlayerIndex)
 						obj_2 = VertexNormal.MY_PLAYER;
 					else
-						obj_2 = client.players[i_14];
+						obj_2 = client.PLAYER_LIST[i_14];
 				} else {
 					i_14 = entitySource - 1;
 					ObjectNode class282_sub47_4 = (ObjectNode) client.NPC_MAP.get(i_14);

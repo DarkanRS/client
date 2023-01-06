@@ -114,7 +114,7 @@ public class QuestIndexLoader {
 			int i_3 = Class197.NUM_PLAYER_INDICES;
 			int[] ints_4 = Class197.PLAYER_INDICES;
 			for (int i_5 = 0; i_5 < i_3; i_5++) {
-				PlayerEntity player_6 = client.players[ints_4[i_5]];
+				PlayerEntity player_6 = client.PLAYER_LIST[ints_4[i_5]];
 				if (player_6.displayName != null && player_6.displayName.equalsIgnoreCase(string_0) && (player_6 == VertexNormal.MY_PLAYER && (Class506.USE_OPTIONS_FLAGS & 0x10) != 0 || (Class506.USE_OPTIONS_FLAGS & 0x8) != 0)) {
 					TCPPacket tcpmessage_7 = TCPPacket.createPacket(ClientProt.IF_ON_PLAYER, client.GAME_CONNECTION_CONTEXT.outKeys);
 					tcpmessage_7.buffer.writeShort(client.anInt7345);

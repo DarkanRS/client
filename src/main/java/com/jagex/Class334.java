@@ -238,7 +238,7 @@ public class Class334 {
 			int i_11 = anInt3902 * 1024 / i_10;
 			Matrix44 matrix44_12 = graphicalrenderer_1.method8453();
 			Matrix44 matrix44_13 = graphicalrenderer_1.method8449();
-			matrix44_13.method6532((anInt3902 / 2), (anInt3902 / 2), i_11, i_11, 50.0F, 50000.0F, graphicalrenderer_1.method8523().method2714(), graphicalrenderer_1.method8523().method2716(), 1024.0F);
+			matrix44_13.method6532((anInt3902 / 2), (anInt3902 / 2), i_11, i_11, 50.0F, 50000.0F, graphicalrenderer_1.method8523().getWidth(), graphicalrenderer_1.method8523().getHeight(), 1024.0F);
 			graphicalrenderer_1.method8424(matrix44_13);
 			Matrix44Var matrix44var_14 = new Matrix44Var();
 			graphicalrenderer_1.method8457(matrix44var_14);
@@ -318,7 +318,7 @@ public class Class334 {
 
 		Matrix44 matrix44_14 = graphicalrenderer_1.method8453();
 		Matrix44 matrix44_9 = graphicalrenderer_1.method8449();
-		matrix44_9.method6532((anInt3902 / 2), (anInt3902 / 2), i_7, i_7, 50.0F, 50000.0F, graphicalrenderer_1.method8523().method2714(), graphicalrenderer_1.method8523().method2716(), 1024.0F);
+		matrix44_9.method6532((anInt3902 / 2), (anInt3902 / 2), i_7, i_7, 50.0F, 50000.0F, graphicalrenderer_1.method8523().getWidth(), graphicalrenderer_1.method8523().getHeight(), 1024.0F);
 		graphicalrenderer_1.method8424(matrix44_9);
 		graphicalrenderer_1.method8457(new Matrix44Var());
 		Matrix44Var matrix44var_10 = new Matrix44Var();

@@ -24,7 +24,7 @@ public class Class164 {
 	boolean method2848(Class137_Sub4 class137_sub4_1, Class137_Sub4 class137_sub4_2) {
 		if (!method2847())
 			return false;
-		Class158_Sub1_Sub4 class158_sub1_sub4_4 = aGraphicalRenderer_Sub1_2033.aClass158_Sub1_Sub4_8493;
+		FrameBufferObject class158_sub1_sub4_4 = aGraphicalRenderer_Sub1_2033.fbo;
 		CacheableNode_Sub19 class282_sub50_sub19_5 = new CacheableNode_Sub19(aGraphicalRenderer_Sub1_2033, Class150.aClass150_1949, Class76.aClass76_751, class137_sub4_1.anInt9116, class137_sub4_1.anInt9117);
 		boolean bool_6 = false;
 		aGraphicalRenderer_Sub1_2033.method8637(class158_sub1_sub4_4);

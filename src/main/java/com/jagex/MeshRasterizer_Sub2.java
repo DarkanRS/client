@@ -3388,8 +3388,8 @@ public class MeshRasterizer_Sub2 extends MeshRasterizer {
 		Matrix44 matrix44_6 = aClass185_8564.aClass384_2317;
 		matrix44_6.fromVarMatrix44(matrix44var_3);
 		Matrix44 matrix44_7 = aClass185_8564.aClass384_2318;
-		matrix44_7.method6562(matrix44_6);
-		matrix44_7.method6523(aGraphicalRenderer_Sub3_8638.aClass384_8996);
+		matrix44_7.copy(matrix44_6);
+		matrix44_7.multiply(aGraphicalRenderer_Sub3_8638.aClass384_8996);
 		boolean bool_8 = false;
 		int i_9 = Integer.MAX_VALUE;
 		int i_10 = Integer.MIN_VALUE;
@@ -3529,7 +3529,7 @@ public class MeshRasterizer_Sub2 extends MeshRasterizer {
 					class172_7 = class172_6.aClass172_2114;
 
 				if (class172_6.aClass384_2116 != null)
-					class172_6.aClass384_2116.method6562(matrix44_2);
+					class172_6.aClass384_2116.copy(matrix44_2);
 				else
 					class172_6.aClass384_2116 = new Matrix44(matrix44_2);
 
@@ -3932,8 +3932,8 @@ public class MeshRasterizer_Sub2 extends MeshRasterizer {
 		Matrix44 matrix44_6 = aClass185_8564.aClass384_2317;
 		matrix44_6.fromVarMatrix44(matrix44var_3);
 		Matrix44 matrix44_7 = aClass185_8564.aClass384_2318;
-		matrix44_7.method6562(matrix44_6);
-		matrix44_7.method6523(aGraphicalRenderer_Sub3_8638.aClass384_8996);
+		matrix44_7.copy(matrix44_6);
+		matrix44_7.multiply(aGraphicalRenderer_Sub3_8638.aClass384_8996);
 		boolean bool_8 = false;
 		int i_9 = Integer.MAX_VALUE;
 		int i_10 = Integer.MIN_VALUE;
@@ -4176,7 +4176,7 @@ public class MeshRasterizer_Sub2 extends MeshRasterizer {
 					class172_7 = class172_6.aClass172_2114;
 
 				if (class172_6.aClass384_2116 != null)
-					class172_6.aClass384_2116.method6562(matrix44_2);
+					class172_6.aClass384_2116.copy(matrix44_2);
 				else
 					class172_6.aClass384_2116 = new Matrix44(matrix44_2);
 
@@ -4391,8 +4391,8 @@ public class MeshRasterizer_Sub2 extends MeshRasterizer {
 		Matrix44 matrix44_6 = aClass185_8564.aClass384_2317;
 		matrix44_6.fromVarMatrix44(matrix44var_3);
 		Matrix44 matrix44_7 = aClass185_8564.aClass384_2318;
-		matrix44_7.method6562(matrix44_6);
-		matrix44_7.method6523(aGraphicalRenderer_Sub3_8638.aClass384_8996);
+		matrix44_7.copy(matrix44_6);
+		matrix44_7.multiply(aGraphicalRenderer_Sub3_8638.aClass384_8996);
 		boolean bool_8 = false;
 		int i_9 = Integer.MAX_VALUE;
 		int i_10 = Integer.MIN_VALUE;
@@ -4553,7 +4553,7 @@ public class MeshRasterizer_Sub2 extends MeshRasterizer {
 					class172_7 = class172_6.aClass172_2114;
 
 				if (class172_6.aClass384_2116 != null)
-					class172_6.aClass384_2116.method6562(matrix44_2);
+					class172_6.aClass384_2116.copy(matrix44_2);
 				else
 					class172_6.aClass384_2116 = new Matrix44(matrix44_2);
 
@@ -5361,8 +5361,8 @@ public class MeshRasterizer_Sub2 extends MeshRasterizer {
 
 			method13795(class185_4);
 			Matrix44 matrix44_22 = aClass185_8564.aClass384_2318;
-			matrix44_22.method6562(matrix44_5);
-			matrix44_22.method6523(aGraphicalRenderer_Sub3_8638.aClass384_8996);
+			matrix44_22.copy(matrix44_5);
+			matrix44_22.multiply(aGraphicalRenderer_Sub3_8638.aClass384_8996);
 			aClass144_8566.method2418((i_3 & 0x2) != 0);
 
 			boolean bool_47 = false;

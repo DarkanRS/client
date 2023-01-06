@@ -3,7 +3,7 @@ package com.jagex;
 public class Node_Sub39 extends Node {
 
 	static void method13296(Matrix44 matrix44_0) {
-		Class20.aClass384_185.method6562(matrix44_0);
+		Class20.aClass384_185.copy(matrix44_0);
 	}
 	static void method13297(AbstractRenderer graphicalrenderer_0, Node_Sub36 class282_sub36_1, MapAreaDefinitions worldmapareadefs_2) {
 		NativeSprite nativesprite_4 = worldmapareadefs_2.method3729(graphicalrenderer_0);

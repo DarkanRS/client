@@ -1,6 +1,6 @@
 package com.jagex;
 
-public class Class274 {
+public class GameDetails {
 
 	protected static Class470 aClass470_3336;
 
@@ -15,7 +15,7 @@ public class Class274 {
 
 	String name;
 
-	public Class274(int width, int height, int i_3, int i_4, String name) {
+	public GameDetails(int width, int height, int i_3, int i_4, String name) {
 		this.width = width;
 		this.height = height;
 		anInt3333 = i_3;

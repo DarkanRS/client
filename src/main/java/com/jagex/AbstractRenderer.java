@@ -8,7 +8,7 @@ import java.util.Hashtable;
 public abstract class AbstractRenderer {
 
 	static boolean[] aBoolArray5839 = new boolean[8];
-	public static AbstractRenderer createRenderer(int renderType, Canvas canvas, ImageLoader imageLoader, Index index_3, int i_4) {
+	public static AbstractRenderer createRenderer(int renderType, Canvas canvas, ImageLoader imageLoader, Index shaderIndex, int i_4) {
 		int width = 0;
 		int height = 0;
 		if (canvas != null) {
@@ -16,9 +16,9 @@ public abstract class AbstractRenderer {
 			width = dimension.width;
 			height = dimension.height;
 		}
-		return createRenderer(renderType, canvas, imageLoader, index_3, i_4, width, height);
+		return createRenderer(renderType, canvas, imageLoader, shaderIndex, i_4, width, height);
 	}
-	static synchronized AbstractRenderer createRenderer(int type, Canvas canvas, ImageLoader imageLoader, Index index_3, int i_4, int width, int height) {
+	static synchronized AbstractRenderer createRenderer(int type, Canvas canvas, ImageLoader imageLoader, Index shaderIndex, int i_4, int width, int height) {
 		if (type == 0)
 			return JavaRenderer.create(canvas, imageLoader, width, height); //safe mode renderer
 			if (type == 2)
@@ -26,9 +26,9 @@ public abstract class AbstractRenderer {
 			else if (type == 1)
 				return OpenGLRenderer.create(canvas, imageLoader, i_4); //hardware accellerated opengl renderer
 			else if (type == 5)
-				return JAGGLRenderer.create(canvas, imageLoader, index_3, i_4); //jagex gl library renderer
+				return JAGGLRenderer.create(canvas, imageLoader, shaderIndex, i_4); //jagex gl library renderer
 			else if (type == 3)
-				return DirectXRenderer.create(canvas, imageLoader, index_3, i_4); //directx renderer
+				return DirectXRenderer.create(canvas, imageLoader, shaderIndex, i_4); //directx renderer
 			else
 				throw new IllegalArgumentException("");
 	}
@@ -253,8 +253,8 @@ public abstract class AbstractRenderer {
 
 	public void method8408(int[] ints_1) {
 		if (aClass158_Sub2_5841 != null) {
-			ints_1[0] = aClass158_Sub2_5841.method2714();
-			ints_1[1] = aClass158_Sub2_5841.method2716();
+			ints_1[0] = aClass158_Sub2_5841.getWidth();
+			ints_1[1] = aClass158_Sub2_5841.getHeight();
 		} else {
 			ints_1[1] = 0;
 			ints_1[0] = 0;
@@ -313,7 +313,7 @@ public abstract class AbstractRenderer {
 		}
 	}
 
-	abstract Class158_Sub2 method8417(Canvas var1, int var2, int var3);
+	abstract Class158_Sub2 method8417(Canvas var1, int width, int height);
 
 	public abstract Class158_Sub1 method8418();
 
@@ -505,10 +505,10 @@ public abstract class AbstractRenderer {
 		return aClass158_5853;
 	}
 
-	public void method8524(Canvas canvas_1, int i_2, int i_3) {
+	public void method8524(Canvas canvas_1, int width, int height) {
 		if (!mapCanvasToTBD.containsKey(canvas_1)) {
 			Class459.method7679(canvas_1);
-			method8411(canvas_1, method8417(canvas_1, i_2, i_3));
+			method8411(canvas_1, method8417(canvas_1, width, height));
 		}
 	}
 

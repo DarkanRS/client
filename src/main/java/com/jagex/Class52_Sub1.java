@@ -4,8 +4,8 @@ import java.awt.Canvas;
 
 public class Class52_Sub1 extends Class52 {
 
-	static Class158_Sub2_Sub3 method14493(JavaRenderer hardwarerenderer_0, Canvas canvas_1, int i_2, int i_3) {
-		Class158_Sub2_Sub3_Sub1 class158_sub2_sub3_sub1_5 = new Class158_Sub2_Sub3_Sub1(hardwarerenderer_0, canvas_1, i_2, i_3);
+	static Class158_Sub2_Sub3 method14493(JavaRenderer javaRenderer, Canvas canvas_1, int width, int height) {
+		Class158_Sub2_Sub3_Sub1 class158_sub2_sub3_sub1_5 = new Class158_Sub2_Sub3_Sub1(javaRenderer, canvas_1, width, height);
 		return class158_sub2_sub3_sub1_5;
 	}
 

@@ -2,10 +2,10 @@ package com.jagex;
 
 public abstract class CacheableNode_Sub8 extends CacheableNode {
 
-	Interface18 anInterface18_9607;
+	Hashable anInterface18_9607;
 	int anInt9606;
 
-	CacheableNode_Sub8(Interface18 interface18_1, int i_2) {
+	CacheableNode_Sub8(Hashable interface18_1, int i_2) {
 		anInterface18_9607 = interface18_1;
 		anInt9606 = i_2;
 	}

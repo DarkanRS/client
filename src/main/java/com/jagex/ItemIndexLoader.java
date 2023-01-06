@@ -14,13 +14,13 @@ public class ItemIndexLoader implements IndexLoader {
 	static String method7171(IComponentDefinitions icomponentdefinitions_0, int i_1) {
 		return !client.getIComponentSettings(icomponentdefinitions_0).clickOptionEnabled(i_1) && icomponentdefinitions_0.params == null ? null : (icomponentdefinitions_0.optionNames != null && icomponentdefinitions_0.optionNames.length > i_1 && icomponentdefinitions_0.optionNames[i_1] != null && !icomponentdefinitions_0.optionNames[i_1].trim().isEmpty() ? icomponentdefinitions_0.optionNames[i_1] : (client.aBool7168 ? "Hidden-" + i_1 : null));
 	}
-	public Class212 aClass212_5114 = new Class212();
+	public NativeSpriteCache nativeSpriteCache = new NativeSpriteCache();
 	public int maxItemsCount;
 	boolean membersOnly;
 	int anInt5116;
 	LRUCache cache = new LRUCache(64);
 	LRUCache aClass229_5115 = new LRUCache(50);
-	SoftwareItemRender softwareItemRender = new SoftwareItemRender();
+	SoftwareRenderCall softwareItemRender = new SoftwareRenderCall();
 	Game game;
 	Language language;
 	ParamIndexLoader attrDefaults;
@@ -75,7 +75,7 @@ public class ItemIndexLoader implements IndexLoader {
 		itemdefinitions_3.inventoryOptions = defaultInventoryOptions.clone();
 		if (bytes_12 != null)
 			itemdefinitions_3.decode(new ByteBuf(bytes_12));
-
+		
 		itemdefinitions_3.postDecode();
 		if (itemdefinitions_3.certTemplateId != -1)
 			itemdefinitions_3.generateCert(getItemDefinitions(itemdefinitions_3.certTemplateId), getItemDefinitions(itemdefinitions_3.certId));
@@ -114,47 +114,47 @@ public class ItemIndexLoader implements IndexLoader {
 		}
 	}
 
-	public NativeSprite getSprite(AbstractRenderer graphicalrenderer_1, AbstractRenderer graphicalrenderer_2, int i_3, int i_4, int i_5, int i_6, boolean bool_7, boolean bool_8, int i_9, FontRenderer fontrenderer_10, PlayerModel playerappearance_11) {
-		if (!bool_8) {
-			NativeSprite nativesprite_13 = softwareRender(graphicalrenderer_2, i_3, i_4, i_5, i_6, i_9, playerappearance_11);
+	public NativeSprite getSprite(AbstractRenderer hardwareRenderer, AbstractRenderer currentRenderer, int itemId, int amount, int outlineSize, int shadowColor, boolean zoomedIn, boolean useHardwareRenderer, int renderStack, FontRenderer fontRenderer, PlayerModel appearance) {
+		if (!useHardwareRenderer) {
+			NativeSprite nativesprite_13 = softwareRender(currentRenderer, itemId, amount, outlineSize, shadowColor, renderStack, appearance);
 			if (nativesprite_13 != null)
 				return nativesprite_13;
 		}
 
-		ItemDefinitions itemdefinitions_19 = getItemDefinitions(i_3);
-		if (i_4 > 1 && itemdefinitions_19.stackIds != null) {
-			int i_14 = -1;
+		ItemDefinitions def = getItemDefinitions(itemId);
+		if (amount > 1 && def.stackIds != null) {
+			int stackId = -1;
 
-			for (int i_15 = 0; i_15 < 10; i_15++)
-				if (i_4 >= itemdefinitions_19.stackAmounts[i_15] && itemdefinitions_19.stackAmounts[i_15] != 0)
-					i_14 = itemdefinitions_19.stackIds[i_15];
+			for (int i = 0; i < 10; i++)
+				if (amount >= def.stackAmounts[i] && def.stackAmounts[i] != 0)
+					stackId = def.stackIds[i];
 
-			if (i_14 != -1)
-				itemdefinitions_19 = getItemDefinitions(i_14);
+			if (stackId != -1)
+				def = getItemDefinitions(stackId);
 		}
 
-		int[] ints_17 = itemdefinitions_19.getSprite(graphicalrenderer_1, graphicalrenderer_2, i_4, i_5, i_6, bool_7, i_9, fontrenderer_10, playerappearance_11);
-		if (ints_17 == null)
+		int[] itemSpriteData = def.getSprite(hardwareRenderer, currentRenderer, amount, outlineSize, shadowColor, zoomedIn, renderStack, fontRenderer, appearance);
+		if (itemSpriteData == null)
 			return null;
-		NativeSprite nativesprite_18;
-		if (bool_8)
-			nativesprite_18 = graphicalrenderer_1.createNativeSprite(ints_17, 36, 36, 32);
+		NativeSprite sprite;
+		if (useHardwareRenderer)
+			sprite = hardwareRenderer.createNativeSprite(itemSpriteData, 36, 36, 32);
 		else
-			nativesprite_18 = graphicalrenderer_2.createNativeSprite(ints_17, 36, 36, 32);
+			sprite = currentRenderer.createNativeSprite(itemSpriteData, 36, 36, 32);
 
-		if (!bool_8) {
-			SoftwareItemRender softwareitemrender_16 = new SoftwareItemRender();
-			softwareitemrender_16.rendererId = graphicalrenderer_2.rendererId;
-			softwareitemrender_16.itemId = i_3;
-			softwareitemrender_16.itemAmount = i_4;
-			softwareitemrender_16.outlineSize = i_5;
-			softwareitemrender_16.shadowColor = i_6;
-			softwareitemrender_16.renderStack = i_9;
-			softwareitemrender_16.hasPlayerAppearance = playerappearance_11 != null;
-			aClass212_5114.method3644(nativesprite_18, softwareitemrender_16);
+		if (!useHardwareRenderer) {
+			SoftwareRenderCall renderCall = new SoftwareRenderCall();
+			renderCall.rendererId = currentRenderer.rendererId;
+			renderCall.itemId = itemId;
+			renderCall.itemAmount = amount;
+			renderCall.outlineSize = outlineSize;
+			renderCall.shadowColor = shadowColor;
+			renderCall.renderStack = renderStack;
+			renderCall.hasPlayerAppearance = appearance != null;
+			nativeSpriteCache.cache(sprite, renderCall);
 		}
 
-		return nativesprite_18;
+		return sprite;
 	}
 
 	public void method7148(boolean bool_1) {
@@ -176,16 +176,16 @@ public class ItemIndexLoader implements IndexLoader {
 			aClass229_5115.method3859();
 		}
 
-		Class212 class212_6 = aClass212_5114;
-		synchronized (aClass212_5114) {
-			aClass212_5114.method3638();
+		NativeSpriteCache class212_6 = nativeSpriteCache;
+		synchronized (nativeSpriteCache) {
+			nativeSpriteCache.method3638();
 		}
 	}
 
 	public void method7151() {
-		Class212 class212_2 = aClass212_5114;
-		synchronized (aClass212_5114) {
-			aClass212_5114.method3638();
+		NativeSpriteCache class212_2 = nativeSpriteCache;
+		synchronized (nativeSpriteCache) {
+			nativeSpriteCache.method3638();
 		}
 	}
 
@@ -215,9 +215,9 @@ public class ItemIndexLoader implements IndexLoader {
 			aClass229_5115.method3858(5);
 		}
 
-		Class212 class212_7 = aClass212_5114;
-		synchronized (aClass212_5114) {
-			aClass212_5114.method3639();
+		NativeSpriteCache class212_7 = nativeSpriteCache;
+		synchronized (nativeSpriteCache) {
+			nativeSpriteCache.method3639();
 		}
 	}
 
@@ -232,9 +232,9 @@ public class ItemIndexLoader implements IndexLoader {
 			aClass229_5115.method3863();
 		}
 
-		Class212 class212_6 = aClass212_5114;
-		synchronized (aClass212_5114) {
-			aClass212_5114.method3641();
+		NativeSpriteCache class212_6 = nativeSpriteCache;
+		synchronized (nativeSpriteCache) {
+			nativeSpriteCache.method3641();
 		}
 	}
 
@@ -246,7 +246,7 @@ public class ItemIndexLoader implements IndexLoader {
 		softwareItemRender.shadowColor = i_5;
 		softwareItemRender.renderStack = i_6;
 		softwareItemRender.hasPlayerAppearance = playerappearance_7 != null;
-		return aClass212_5114.method3654(softwareItemRender);
+		return nativeSpriteCache.method3654(softwareItemRender);
 	}
 
 }

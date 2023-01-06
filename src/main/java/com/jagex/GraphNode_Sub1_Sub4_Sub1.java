@@ -14,7 +14,7 @@ public class GraphNode_Sub1_Sub4_Sub1 extends GraphNode_Sub1_Sub4 implements Wor
 			graphicalrenderer_0.r(Class20.anInt180, Class20.anInt181, Class20.anInt180 + Class20.anInt176, Class20.anInt184 + Class20.anInt181);
 			graphicalrenderer_0.method8617(Class20.anInt180, Class20.anInt181, Class20.anInt176, Class20.anInt184);
 			matrix44_5.fromVarMatrix44(Class20.aClass294_155);
-			matrix44_5.method6523(Class20.aClass384_158);
+			matrix44_5.multiply(Class20.aClass384_158);
 			matrix44_5.method6524();
 			int i_6 = i_1 - Class20.anInt180;
 			int i_7 = i_2 - Class20.anInt181;
@@ -137,7 +137,7 @@ public class GraphNode_Sub1_Sub4_Sub1 extends GraphNode_Sub1_Sub4 implements Wor
 											int[] ints_53 = Class197.PLAYER_INDICES;
 
 											for (int i_25 = 0; i_25 < i_51; i_25++) {
-												PlayerEntity player_55 = client.players[ints_53[i_25]];
+												PlayerEntity player_55 = client.PLAYER_LIST[ints_53[i_25]];
 												if (player_55 != null && player_55.anInt10375 != client.FRAME_COUNT && player_58 != player_55 && player_55.aBool10318) {
 													Vector3 vector3_27 = player_55.method11166().coords;
 													i_28 = (int) vector3_27.x - (player_55.getSize() - 1 << 8);
@@ -188,7 +188,7 @@ public class GraphNode_Sub1_Sub4_Sub1 extends GraphNode_Sub1_Sub4 implements Wor
 										int[] ints_64 = Class197.PLAYER_INDICES;
 
 										for (i_38 = 0; i_38 < i_22; i_38++) {
-											PlayerEntity player_67 = client.players[ints_64[i_38]];
+											PlayerEntity player_67 = client.PLAYER_LIST[ints_64[i_38]];
 											if (player_67 != null && player_67.anInt10375 != client.FRAME_COUNT && player_67.aBool10318) {
 												vector3_26 = player_67.method11166().coords;
 												i_41 = (int) vector3_26.x - (player_67.getSize() - 1 << 8);

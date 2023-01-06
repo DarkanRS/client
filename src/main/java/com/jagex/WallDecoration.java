@@ -34,7 +34,7 @@ public class WallDecoration extends GraphNode_Sub1_Sub4 implements WorldObject {
 						Vector3 targCoords;
 						if ((modVal & 0x8000) != 0) {
 							int pid = modVal & 0x7fff;
-							PlayerEntity player = client.players[pid];
+							PlayerEntity player = client.PLAYER_LIST[pid];
 							if (player == null) {
 								entity.rotate(slot, -1);
 								continue;

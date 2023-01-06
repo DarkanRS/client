@@ -149,7 +149,7 @@ public class ClanVarDefinitions {
 	}
 	public static Class467[] method6825() {
 		if (Class149_Sub3.aClass467Array9380 == null) {
-			Class467[] arr_1 = Class386.method6671(Class274.aClass470_3336);
+			Class467[] arr_1 = Class386.method6671(GameDetails.aClass470_3336);
 			Class467[] arr_2 = new Class467[arr_1.length];
 			int i_3 = 0;
 			int i_4 = Class393.preferences.maxScreenSize.method12666();

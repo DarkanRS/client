@@ -117,8 +117,8 @@ public class Class55_Sub1 extends Class55 {
 	@Override
 	void method1103(int i_1, Class158_Sub1 class158_sub1_2, Interface6 interface6_3, Interface6 interface6_5) {
 		float f_6 = aGraphicalRenderer_Sub2_514.method13905();
-		float f_7 = class158_sub1_2.method2714();
-		float f_8 = class158_sub1_2.method2716();
+		float f_7 = class158_sub1_2.getWidth();
+		float f_8 = class158_sub1_2.getHeight();
 		Interface6 interface6_9 = interface6_3;
 		float[] floats_10 = {-1.0f, 1.0F, 0.0F, 0.0F, -1.0f, -3.0f, 0.0F, 2.0F, 3.0F, 1.0F, 2.0F, 0.0F};
 		int i_11 = (int) f_7;
@@ -187,8 +187,8 @@ public class Class55_Sub1 extends Class55 {
 	@Override
 	void method1109(int i_1, Class158_Sub1 class158_sub1_2, Interface6 interface6_3, Interface6 interface6_5) {
 		float f_6 = aGraphicalRenderer_Sub2_514.method13905();
-		float f_7 = class158_sub1_2.method2714();
-		float f_8 = class158_sub1_2.method2716();
+		float f_7 = class158_sub1_2.getWidth();
+		float f_8 = class158_sub1_2.getHeight();
 		Interface6 interface6_9 = interface6_3;
 		float[] floats_10 = {-1.0f, 1.0F, 0.0F, 0.0F, -1.0f, -3.0f, 0.0F, 2.0F, 3.0F, 1.0F, 2.0F, 0.0F};
 		int i_11 = (int) f_7;
@@ -297,8 +297,8 @@ public class Class55_Sub1 extends Class55 {
 	@Override
 	void method1119(int i_1, Class158_Sub1 class158_sub1_2, Interface6 interface6_3, Interface6 interface6_5) {
 		float f_6 = aGraphicalRenderer_Sub2_514.method13905();
-		float f_7 = class158_sub1_2.method2714();
-		float f_8 = class158_sub1_2.method2716();
+		float f_7 = class158_sub1_2.getWidth();
+		float f_8 = class158_sub1_2.getHeight();
 		Interface6 interface6_9 = interface6_3;
 		float[] floats_10 = {-1.0f, 1.0F, 0.0F, 0.0F, -1.0f, -3.0f, 0.0F, 2.0F, 3.0F, 1.0F, 2.0F, 0.0F};
 		int i_11 = (int) f_7;

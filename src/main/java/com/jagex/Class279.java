@@ -25,13 +25,13 @@ public class Class279 {
 		}
 	}
 
-	static void renderItems(AbstractRenderer graphicalrenderer_0) {
+	static void renderItems(AbstractRenderer currentRenderer) {
 		if (!Class182.ITEMS.isEmpty()) {
-			Item item_2;
+			Item item;
 			if (Class393.preferences.currentToolkit.getValue() == 0) {
-				for (item_2 = (Item) Class182.ITEMS.head(); item_2 != null; item_2 = (Item) Class182.ITEMS.next()) {
-					IndexLoaders.ITEM_LOADER.getSprite(graphicalrenderer_0, graphicalrenderer_0, item_2.id, item_2.amount, item_2.outlineSize, item_2.shadowColor, false, false, item_2.anInt7819, Renderers.FONT_RENDERER, item_2.hasPlayerAppearance ? VertexNormal.MY_PLAYER.model : null);
-					item_2.unlink();
+				for (item = (Item) Class182.ITEMS.head(); item != null; item = (Item) Class182.ITEMS.next()) {
+					IndexLoaders.ITEM_LOADER.getSprite(currentRenderer, currentRenderer, item.id, item.amount, item.outlineSize, item.shadowColor, false, false, item.anInt7819, Renderers.FONT_RENDERER, item.hasPlayerAppearance ? VertexNormal.MY_PLAYER.model : null);
+					item.unlink();
 				}
 				Static.method6378();
 			} else {
@@ -41,9 +41,9 @@ public class Class279 {
 					Class182.HARDWARE_RENDERER = AbstractRenderer.createRenderer(0, canvas_3, IndexLoaders.IMAGE_LOADER, IndexLoaders.SHADER_INDEX, 0);
 					Class182.aFontRenderer_2259 = Class182.HARDWARE_RENDERER.createFont(Class94.getFontMetrics(IndexLoaders.FONT_METRICS_INDEX, Class16.p11FullIndex), SpriteDefinitions.method1514(IndexLoaders.SPRITES_INDEX, Class16.p11FullIndex), true);
 				}
-				for (item_2 = (Item) Class182.ITEMS.head(); item_2 != null; item_2 = (Item) Class182.ITEMS.next()) {
-					IndexLoaders.ITEM_LOADER.getSprite(Class182.HARDWARE_RENDERER, graphicalrenderer_0, item_2.id, item_2.amount, item_2.outlineSize, item_2.shadowColor, false, false, item_2.anInt7819, Class182.aFontRenderer_2259, item_2.hasPlayerAppearance ? VertexNormal.MY_PLAYER.model : null);
-					item_2.unlink();
+				for (item = (Item) Class182.ITEMS.head(); item != null; item = (Item) Class182.ITEMS.next()) {
+					IndexLoaders.ITEM_LOADER.getSprite(Class182.HARDWARE_RENDERER, currentRenderer, item.id, item.amount, item.outlineSize, item.shadowColor, false, false, item.anInt7819, Class182.aFontRenderer_2259, item.hasPlayerAppearance ? VertexNormal.MY_PLAYER.model : null);
+					item.unlink();
 				}
 			}
 		}

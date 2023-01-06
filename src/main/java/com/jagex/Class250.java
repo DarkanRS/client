@@ -58,7 +58,7 @@ public class Class250 {
 				}
 			} else {
 				if (i_10 < i_7)
-					obj_12 = client.players[ints_8[i_10]];
+					obj_12 = client.PLAYER_LIST[ints_8[i_10]];
 				else {
 					obj_12 = ((ObjectNode) client.NPC_MAP.get(client.NPC_UPDATE_INDICES[i_10 - i_7])).anObject8068;
 					npcdefinitions_91 = ((NPCEntity) obj_12).definitions;
@@ -97,7 +97,7 @@ public class Class250 {
 								class275_sub7_95.method4887();
 						} else {
 							HitbarDefinitions hitbardefinitions_96 = class275_sub7_95.aClass198_7863;
-							PlayerEntity player_97 = client.players[ints_8[i_10]];
+							PlayerEntity player_97 = client.PLAYER_LIST[ints_8[i_10]];
 							NativeSprite nativesprite_99;
 							if (player_97 != null && player_97.aBool10571) {
 								nativesprite_98 = hitbardefinitions_96.method3224(Renderers.CURRENT_RENDERER);
@@ -514,13 +514,13 @@ public class Class250 {
 		for (i_10 = 0; i_10 < client.anInt7304; i_10++) {
 			i_11 = client.anIntArray7287[i_10];
 			if (i_11 < 2048)
-				obj_12 = client.players[i_11];
+				obj_12 = client.PLAYER_LIST[i_11];
 			else
 				obj_12 = ((ObjectNode) client.NPC_MAP.get(i_11 - 2048)).anObject8068;
 			i_92 = client.anIntArray7288[i_10];
 			Object obj_14;
 			if (i_92 < 2048)
-				obj_14 = client.players[i_92];
+				obj_14 = client.PLAYER_LIST[i_92];
 			else
 				obj_14 = ((ObjectNode) client.NPC_MAP.get(i_92 - 2048)).anObject8068;
 			ItemDefinitions.method7140((PathingEntity) obj_12, (PathingEntity) obj_14, --((PathingEntity) obj_12).anInt10319, i_0, i_1);

@@ -613,7 +613,7 @@ public class MapRegion {
 			}
 		}
 		for (i_5 = 0; i_5 < 2048; i_5++) {
-			PlayerEntity player_25 = client.players[i_5];
+			PlayerEntity player_25 = client.PLAYER_LIST[i_5];
 			if (player_25 != null) {
 				for (i_16 = 0; i_16 < player_25.regionBaseX.length; i_16++) {
 					player_25.regionBaseX[i_16] -= i_3;
@@ -799,7 +799,7 @@ public class MapRegion {
 				MaterialPropTexture.method15391();
 			if (!aBool3171) {
 				for (i_2 = 0; i_2 < 2048; i_2++) {
-					PlayerEntity player_18 = client.players[i_2];
+					PlayerEntity player_18 = client.PLAYER_LIST[i_2];
 					if (player_18 != null)
 						player_18.aClass206_7970 = null;
 				}

@@ -23,7 +23,7 @@ public class PlayerEntity extends PathingEntity {
 	public boolean isTransformedNPC;
 	public int isNpc;
 	public int specialByte = 255;
-	public boolean aBool10568;
+	public boolean needsMaskUpdate;
 	public boolean aBool10571;
 	public boolean hidden;
 	public boolean aBool10550;
@@ -334,8 +334,8 @@ public class PlayerEntity extends PathingEntity {
 						method16136(graphicalrenderer_1, matrix44var_2, long_19, long_21, class180_25.modelId * -669014749 * 1869984395, long_15);
 					}
 
-					if (-379447335 * class180_25.targetType * -860161943 == 10 && 1505135749 * class180_25.targetIndex * -1443656627 >= 0 && 1505135749 * class180_25.targetIndex * -1443656627 < client.players.length) {
-						PlayerEntity player_28 = client.players[1505135749 * class180_25.targetIndex * -1443656627];
+					if (-379447335 * class180_25.targetType * -860161943 == 10 && 1505135749 * class180_25.targetIndex * -1443656627 >= 0 && 1505135749 * class180_25.targetIndex * -1443656627 < client.PLAYER_LIST.length) {
+						PlayerEntity player_28 = client.PLAYER_LIST[1505135749 * class180_25.targetIndex * -1443656627];
 						if (player_28 != null) {
 							Vector3 vector3_30 = Vector3.method6632(player_28.method11166().coords, VertexNormal.MY_PLAYER.method11166().coords);
 							int i_23 = (int) vector3_30.x;
@@ -440,8 +440,8 @@ public class PlayerEntity extends PathingEntity {
 						method16136(graphicalrenderer_1, matrix44var_3, long_20, long_22, class180_26.modelId, long_16);
 					}
 
-					if (class180_26.targetType == 10 && class180_26.targetIndex >= 0 && class180_26.targetIndex < client.players.length) {
-						PlayerEntity player_29 = client.players[class180_26.targetIndex];
+					if (class180_26.targetType == 10 && class180_26.targetIndex >= 0 && class180_26.targetIndex < client.PLAYER_LIST.length) {
+						PlayerEntity player_29 = client.PLAYER_LIST[class180_26.targetIndex];
 						if (player_29 != null) {
 							Vector3 vector3_31 = Vector3.method6632(player_29.method11166().coords, VertexNormal.MY_PLAYER.method11166().coords);
 							int i_24 = (int) vector3_31.x;
@@ -569,8 +569,8 @@ public class PlayerEntity extends PathingEntity {
 						method16136(graphicalrenderer_1, matrix44var_2, long_19, long_21, class180_25.modelId * -669014749 * 1869984395, long_15);
 					}
 
-					if (-379447335 * class180_25.targetType * -860161943 == 10 && 1505135749 * class180_25.targetIndex * -1443656627 >= 0 && 1505135749 * class180_25.targetIndex * -1443656627 < client.players.length) {
-						PlayerEntity player_28 = client.players[1505135749 * class180_25.targetIndex * -1443656627];
+					if (-379447335 * class180_25.targetType * -860161943 == 10 && 1505135749 * class180_25.targetIndex * -1443656627 >= 0 && 1505135749 * class180_25.targetIndex * -1443656627 < client.PLAYER_LIST.length) {
+						PlayerEntity player_28 = client.PLAYER_LIST[1505135749 * class180_25.targetIndex * -1443656627];
 						if (player_28 != null) {
 							Vector3 vector3_30 = Vector3.method6632(player_28.method11166().coords, VertexNormal.MY_PLAYER.method11166().coords);
 							int i_23 = (int) vector3_30.x;
@@ -675,8 +675,8 @@ public class PlayerEntity extends PathingEntity {
 						method16136(graphicalrenderer_1, matrix44var_2, long_19, long_21, class180_25.modelId * -669014749 * 1869984395, long_15);
 					}
 
-					if (-379447335 * class180_25.targetType * -860161943 == 10 && 1505135749 * class180_25.targetIndex * -1443656627 >= 0 && 1505135749 * class180_25.targetIndex * -1443656627 < client.players.length) {
-						PlayerEntity player_28 = client.players[1505135749 * class180_25.targetIndex * -1443656627];
+					if (-379447335 * class180_25.targetType * -860161943 == 10 && 1505135749 * class180_25.targetIndex * -1443656627 >= 0 && 1505135749 * class180_25.targetIndex * -1443656627 < client.PLAYER_LIST.length) {
+						PlayerEntity player_28 = client.PLAYER_LIST[1505135749 * class180_25.targetIndex * -1443656627];
 						if (player_28 != null) {
 							Vector3 vector3_30 = Vector3.method6632(player_28.method11166().coords, VertexNormal.MY_PLAYER.method11166().coords);
 							int i_23 = (int) vector3_30.x;

@@ -70,8 +70,8 @@ public class Class103_Sub1 extends Class103 {
 
 	@Override
 	public void method1786(Matrix44 matrix44_1) {
-		aClass384_9147.method6562(matrix44_1);
-		aClass384_9147.method6523(aGraphicalRenderer_Sub2_1057.aClass384_8729);
+		aClass384_9147.copy(matrix44_1);
+		aClass384_9147.multiply(aGraphicalRenderer_Sub2_1057.aClass384_8729);
 	}
 
 	@Override
@@ -82,14 +82,14 @@ public class Class103_Sub1 extends Class103 {
 
 	@Override
 	public void method1788(Matrix44 matrix44_1) {
-		aClass384_9147.method6562(matrix44_1);
-		aClass384_9147.method6523(aGraphicalRenderer_Sub2_1057.aClass384_8729);
+		aClass384_9147.copy(matrix44_1);
+		aClass384_9147.multiply(aGraphicalRenderer_Sub2_1057.aClass384_8729);
 	}
 
 	@Override
 	public void method1789(Matrix44 matrix44_1) {
-		aClass384_9147.method6562(matrix44_1);
-		aClass384_9147.method6523(aGraphicalRenderer_Sub2_1057.aClass384_8729);
+		aClass384_9147.copy(matrix44_1);
+		aClass384_9147.multiply(aGraphicalRenderer_Sub2_1057.aClass384_8729);
 	}
 
 	@Override

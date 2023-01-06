@@ -456,8 +456,8 @@ public class ja extends AbstractRenderer implements Interface40 {
 
 	@Override
 	public void method8421() {
-		az = method8523().method2714() / 2.0F;
-		ap = method8523().method2716() / 2.0F;
+		az = method8523().getWidth() / 2.0F;
+		ap = method8523().getHeight() / 2.0F;
 		ax = az;
 		al = ap;
 		k();
@@ -1684,8 +1684,8 @@ public class ja extends AbstractRenderer implements Interface40 {
 
 	@Override
 	public void method8633() {
-		az = method8523().method2714() / 2.0F;
-		ap = method8523().method2716() / 2.0F;
+		az = method8523().getWidth() / 2.0F;
+		ap = method8523().getHeight() / 2.0F;
 		ax = az;
 		al = ap;
 		k();
@@ -1693,8 +1693,8 @@ public class ja extends AbstractRenderer implements Interface40 {
 
 	@Override
 	public void method8634() {
-		az = method8523().method2714() / 2.0F;
-		ap = method8523().method2716() / 2.0F;
+		az = method8523().getWidth() / 2.0F;
+		ap = method8523().getHeight() / 2.0F;
 		ax = az;
 		al = ap;
 		k();
@@ -1702,8 +1702,8 @@ public class ja extends AbstractRenderer implements Interface40 {
 
 	@Override
 	public void method8635() {
-		az = method8523().method2714() / 2.0F;
-		ap = method8523().method2716() / 2.0F;
+		az = method8523().getWidth() / 2.0F;
+		ap = method8523().getHeight() / 2.0F;
 		ax = az;
 		al = ap;
 		k();

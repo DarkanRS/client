@@ -21,9 +21,9 @@ public class ParticleArchive1Def {
 			} catch (IOException ignored) {
 			}
 		String str_5 = "";
-		if (Class514.anInt5887 == 33)
+		if (Class514.INSTANCE_NUMBER == 33)
 			str_5 = "_rc";
-		else if (Class514.anInt5887 == 34)
+		else if (Class514.INSTANCE_NUMBER == 34)
 			str_5 = "_wip";
 		File file_6 = new File(Class110.aString1103 + File.separatorChar + Loader.CACHE_DIR, "dk_" + string_1 + "_preferences" + string_0 + str_5 + ".dat");
 		Class442 class442_8;

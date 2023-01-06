@@ -155,7 +155,7 @@ public class FontRenderer_Sub2 extends FontRenderer {
 			i_31 += anIntArray8890[var_1];
 			int i_6 = anIntArray8886[var_1];
 			int i_7 = anIntArray8888[var_1];
-			int i_8 = 444800403 * aGraphicalRenderer_Sub3_8889.anInt8980 * 299731099;
+			int i_8 = 444800403 * aGraphicalRenderer_Sub3_8889.width * 299731099;
 			int i_9 = i_21 + i_31 * i_8;
 			int i_10 = i_8 - i_6;
 			int i_11 = 0;
@@ -222,7 +222,7 @@ public class FontRenderer_Sub2 extends FontRenderer {
 		int i_20 = i_11;
 		if (i_15 > i_11) {
 			i_20 = i_15;
-			i_5 += aGraphicalRenderer_Sub3_8889.anInt8980 * (i_15 - i_11);
+			i_5 += aGraphicalRenderer_Sub3_8889.width * (i_15 - i_11);
 			i_4 += (i_15 - i_11) * i_12;
 		}
 
@@ -290,7 +290,7 @@ public class FontRenderer_Sub2 extends FontRenderer {
 				i_31 += anIntArray8890[var_1];
 				int i_9 = anIntArray8886[var_1];
 				int i_10 = anIntArray8888[var_1];
-				int i_11 = 444800403 * aGraphicalRenderer_Sub3_8889.anInt8980 * 299731099;
+				int i_11 = 444800403 * aGraphicalRenderer_Sub3_8889.width * 299731099;
 				int i_12 = i_21 + i_31 * i_11;
 				int i_13 = i_11 - i_9;
 				int i_14 = 0;
@@ -342,7 +342,7 @@ public class FontRenderer_Sub2 extends FontRenderer {
 				i_31 += anIntArray8890[var_1];
 				int i_9 = anIntArray8886[var_1];
 				int i_10 = anIntArray8888[var_1];
-				int i_11 = aGraphicalRenderer_Sub3_8889.anInt8980;
+				int i_11 = aGraphicalRenderer_Sub3_8889.width;
 				int i_12 = i_21 + i_31 * i_11;
 				int i_13 = i_11 - i_9;
 				int i_14 = 0;
@@ -391,7 +391,7 @@ public class FontRenderer_Sub2 extends FontRenderer {
 			i_31 += anIntArray8890[var_1];
 			int i_6 = anIntArray8886[var_1];
 			int i_7 = anIntArray8888[var_1];
-			int i_8 = 444800403 * aGraphicalRenderer_Sub3_8889.anInt8980 * 299731099;
+			int i_8 = 444800403 * aGraphicalRenderer_Sub3_8889.width * 299731099;
 			int i_9 = i_21 + i_31 * i_8;
 			int i_10 = i_8 - i_6;
 			int i_11 = 0;
@@ -440,7 +440,7 @@ public class FontRenderer_Sub2 extends FontRenderer {
 			i_31 += anIntArray8890[var_1];
 			int i_6 = anIntArray8886[var_1];
 			int i_7 = anIntArray8888[var_1];
-			int i_8 = aGraphicalRenderer_Sub3_8889.anInt8980;
+			int i_8 = aGraphicalRenderer_Sub3_8889.width;
 			int i_9 = i_21 + i_31 * i_8;
 			int i_10 = i_8 - i_6;
 			int i_11 = 0;

@@ -256,7 +256,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 			GAME_LOOP_TIMEOUT = (Utils.time() + 4000L) * -7135659755925244301L * 2009587532026748603L;
 	}
 
-	void method4655(Class274 class274_1, String string_2, String string_3, int i_4, int i_5, boolean bool_8) {
+	void method4655(GameDetails class274_1, String gameName, String buildEnv, int i_4, int i_5, boolean bool_8) {
 		try {
 			method4683(Class279.aClass279_3369, bool_8);
 			SunIndexLoader.anInt434 = ChangeClanSetting.BASE_WINDOW_WIDTH = class274_1.getWidth();
@@ -270,8 +270,8 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 				Class107.anInt1082 += 2 * class274_1.method4872();
 				method4661(class274_1.getName());
 			}
-			RuntimeException_Sub3.anApplet10460 = SubInterface.suppliedApplet;
-			method4656(string_2, string_3, i_4, i_5);
+			RuntimeException_Sub3.LOADER = SubInterface.suppliedApplet;
+			method4656(gameName, buildEnv, i_4, i_5);
 		} catch (Throwable throwable_11) {
 			Class151.method2594(null, throwable_11);
 			method4680("crash");
@@ -280,9 +280,9 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 
 	void method4656(String string_1, String string_2, int i_3, int i_4) throws Exception {
 		HeadbarIndexLoader.anInt3451 = i_4;
-		Class514.anInt5887 = i_3;
-		RuntimeException_Sub3.anInt10457 = 727;
-		InventoriesIndexLoader.anInt4781 = 1;
+		Class514.INSTANCE_NUMBER = i_3;
+		RuntimeException_Sub3.GAME_BUILD = 727;
+		InventoriesIndexLoader.GAME_SUB_BUILD = 1;
 		MaterialProp15.aString9967 = "Unknown";
 		ChatLine.aString1093 = "1.1";
 		try {
@@ -329,7 +329,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 		} catch (Throwable ignored) {
 		}
 		Class246.aStringArray3028 = new String[] { "c:/rscache/", "/rscache/", "c:/windows/", "c:/winnt/", "c:/", Class110.aString1103, "/tmp/", "" };
-		MapSize.aStringArray1077 = new String[] { ".dk_cache_" + Class514.anInt5887, ".file_store_" + Class514.anInt5887 };
+		MapSize.aStringArray1077 = new String[] { ".dk_cache_" + Class514.INSTANCE_NUMBER, ".file_store_" + Class514.INSTANCE_NUMBER };
 		int i_13 = 0;
 		label131: while (i_13 < 4) {
 			aFile3264 = method4657(string_1, string_2, i_13);
@@ -359,7 +359,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 		for (i_13 = 0; i_13 < HeadbarIndexLoader.anInt3451; i_13++)
 			Class97.aClass440Array996[i_13] = new UID192(new Class442(CutsceneAction_Sub23.method14681("main_file_cache.idx" + i_13), 1048576L), 6000);
 		try {
-			Class274.aClass470_3336 = new Class470();
+			GameDetails.aClass470_3336 = new Class470();
 		} catch (Exception exception_15) {
 			Class475.supportsFullScreen = false;
 		}

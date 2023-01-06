@@ -44,7 +44,7 @@ public class ChoppyItemFixClass {
 	ChoppyItemFixClass(JavaRenderer hardwarerenderer_1, Class185 class185_2) {
 		aGraphicalRenderer_Sub3_1686 = hardwarerenderer_1;
 		aClass185_1687 = class185_2;
-		anInt1705 = aGraphicalRenderer_Sub3_1686.anInt8980;
+		anInt1705 = aGraphicalRenderer_Sub3_1686.width;
 		anIntArray1689 = aGraphicalRenderer_Sub3_1686.anIntArray8979;
 		aFloatArray1690 = aGraphicalRenderer_Sub3_1686.aFloatArray9010;
 	}

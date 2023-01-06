@@ -1,13 +1,13 @@
 package com.jagex;
 
-public class Class212 {
+public class NativeSpriteCache {
 
 	int anInt2676;
 	Queue aClass477_2675 = new Queue();
 	int anInt2678;
 	IterableNodeMap aClass465_2677;
 
-	public Class212() {
+	public NativeSpriteCache() {
 		anInt2678 = 250;
 		anInt2676 = 250;
 
@@ -22,11 +22,11 @@ public class Class212 {
 		return anInt2678;
 	}
 
-	void method3634(Interface18 interface18_1) {
-		long long_2 = interface18_1.method130();
+	void method3634(Hashable interface18_1) {
+		long long_2 = interface18_1.getHashCode();
 
 		for (CacheableNode_Sub8 class282_sub50_sub8_4 = (CacheableNode_Sub8) aClass465_2677.get(long_2); class282_sub50_sub8_4 != null; class282_sub50_sub8_4 = (CacheableNode_Sub8) aClass465_2677.method7747())
-			if (class282_sub50_sub8_4.anInterface18_9607.method131(interface18_1)) {
+			if (class282_sub50_sub8_4.anInterface18_9607.isEqual(interface18_1)) {
 				method3635(class282_sub50_sub8_4);
 				break;
 			}
@@ -42,7 +42,7 @@ public class Class212 {
 
 	}
 
-	void method3637(NativeSprite object_1, Interface18 interface18_2) {
+	void cacheSprite(NativeSprite object_1, Hashable interface18_2) {
 		if (anInt2678 < 1)
 			throw new IllegalStateException();
 		method3634(interface18_2);
@@ -54,7 +54,7 @@ public class Class212 {
 		}
 
 		CacheableNode_Sub8_Sub1 class282_sub50_sub8_sub1_5 = new CacheableNode_Sub8_Sub1(interface18_2, object_1, 1);
-		aClass465_2677.put(class282_sub50_sub8_sub1_5, interface18_2.method130());
+		aClass465_2677.put(class282_sub50_sub8_sub1_5, interface18_2.getHashCode());
 		aClass477_2675.add(class282_sub50_sub8_sub1_5);
 		class282_sub50_sub8_sub1_5.key = 0L;
 	}
@@ -97,15 +97,15 @@ public class Class212 {
 
 	}
 
-	public void method3644(NativeSprite object_1, Interface18 interface18_2) {
-		method3637(object_1, interface18_2);
+	public void cache(NativeSprite object_1, Hashable interface18_2) {
+		cacheSprite(object_1, interface18_2);
 	}
 
-	public NativeSprite method3654(Interface18 interface18_1) {
-		long long_2 = interface18_1.method130();
+	public NativeSprite method3654(Hashable interface18_1) {
+		long long_2 = interface18_1.getHashCode();
 
 		for (CacheableNode_Sub8 class282_sub50_sub8_4 = (CacheableNode_Sub8) aClass465_2677.get(long_2); class282_sub50_sub8_4 != null; class282_sub50_sub8_4 = (CacheableNode_Sub8) aClass465_2677.method7747())
-			if (class282_sub50_sub8_4.anInterface18_9607.method131(interface18_1)) {
+			if (class282_sub50_sub8_4.anInterface18_9607.isEqual(interface18_1)) {
 				NativeSprite object_5 = class282_sub50_sub8_4.method14860();
 				if (object_5 != null) {
 					if (class282_sub50_sub8_4.method14865()) {

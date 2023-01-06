@@ -12,7 +12,7 @@ public class CursorIndexLoader {
 				if (playerId == client.myPlayerIndex)
 					entity = VertexNormal.MY_PLAYER;
 				else
-					entity = client.players[playerId];
+					entity = client.PLAYER_LIST[playerId];
 			} else {
 				int npcIndex = source - 1;
 				ObjectNode class282_sub47_18 = (ObjectNode) client.NPC_MAP.get(npcIndex);

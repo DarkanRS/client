@@ -8706,7 +8706,7 @@ public class CS2Interpreter {
 	}
 
 	static void method5816() {
-		Class274.method4884();
+		GameDetails.method4884();
 	}
 
 	static void method5829(CS2Executor executor) {

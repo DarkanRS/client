@@ -30,7 +30,7 @@ public class Class152_Sub1_Sub2 extends Class152_Sub1 {
 
 	boolean method15531(Class137_Sub2 class137_sub2_1, Class137_Sub2 class137_sub2_2, float f_3) {
 		boolean bool_4 = true;
-		Class158_Sub1_Sub4 class158_sub1_sub4_5 = aGraphicalRenderer_Sub1_10123.aClass158_Sub1_Sub4_8493;
+		FrameBufferObject class158_sub1_sub4_5 = aGraphicalRenderer_Sub1_10123.fbo;
 		aGraphicalRenderer_Sub1_10123.qa(anIntArray10125);
 		aGraphicalRenderer_Sub1_10123.L();
 		aGraphicalRenderer_Sub1_10123.method13586();

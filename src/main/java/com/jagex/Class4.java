@@ -36,9 +36,9 @@ public class Class4 {
 		return -1.0f;
 	}
 	boolean aBool29;
-	int anInt30;
-	int anInt31;
-	int anInt32;
+	int faceAngle;
+	int regionHash;
+	int faceEntity;
 
 	boolean aBool33;
 }

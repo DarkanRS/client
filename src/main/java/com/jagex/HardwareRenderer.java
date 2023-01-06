@@ -344,7 +344,7 @@ public abstract class HardwareRenderer extends AbstractRenderer {
 	@Override
 	public void DA(Class455 class455_2, int i_3, int i_4) {
 		RA(false);
-		aNativeSprite_Sub3_8791.method2766(0.0F, 0.0F, method8523().method2714(), 0.0F, 0.0F, method8523().method2716(), 0, class455_2, i_3, i_4);
+		aNativeSprite_Sub3_8791.method2766(0.0F, 0.0F, method8523().getWidth(), 0.0F, 0.0F, method8523().getHeight(), 0, class455_2, i_3, i_4);
 		RA(true);
 	}
 
@@ -373,8 +373,8 @@ public abstract class HardwareRenderer extends AbstractRenderer {
 		if (aClass158_5853 != null) {
 			anInt8822 = 0;
 			anInt8743 = 0;
-			anInt8744 = aClass158_5853.method2714();
-			anInt8742 = aClass158_5853.method2716();
+			anInt8744 = aClass158_5853.getWidth();
+			anInt8742 = aClass158_5853.getHeight();
 		} else {
 			anInt8742 = 0;
 			anInt8744 = 0;
@@ -414,8 +414,8 @@ public abstract class HardwareRenderer extends AbstractRenderer {
 		if (aClass158_5853 != null) {
 			anInt8822 = 0;
 			anInt8743 = 0;
-			anInt8744 = aClass158_5853.method2714();
-			anInt8742 = aClass158_5853.method2716();
+			anInt8744 = aClass158_5853.getWidth();
+			anInt8742 = aClass158_5853.getHeight();
 		} else {
 			anInt8742 = 0;
 			anInt8744 = 0;
@@ -446,8 +446,8 @@ public abstract class HardwareRenderer extends AbstractRenderer {
 		int i_5;
 		int i_6;
 		if (aClass158_5853 != null) {
-			i_6 = aClass158_5853.method2714();
-			i_5 = aClass158_5853.method2716();
+			i_6 = aClass158_5853.getWidth();
+			i_5 = aClass158_5853.getHeight();
 		} else {
 			i_5 = 0;
 			i_6 = 0;
@@ -475,8 +475,8 @@ public abstract class HardwareRenderer extends AbstractRenderer {
 		int i_5;
 		int i_6;
 		if (aClass158_5853 != null) {
-			i_6 = aClass158_5853.method2714();
-			i_5 = aClass158_5853.method2716();
+			i_6 = aClass158_5853.getWidth();
+			i_5 = aClass158_5853.getHeight();
 		} else {
 			i_5 = 0;
 			i_6 = 0;
@@ -535,8 +535,8 @@ public abstract class HardwareRenderer extends AbstractRenderer {
 		int i_5;
 		int i_6;
 		if (aClass158_5853 != null) {
-			i_6 = aClass158_5853.method2714();
-			i_5 = aClass158_5853.method2716();
+			i_6 = aClass158_5853.getWidth();
+			i_5 = aClass158_5853.getHeight();
 		} else {
 			i_5 = 0;
 			i_6 = 0;
@@ -588,8 +588,8 @@ public abstract class HardwareRenderer extends AbstractRenderer {
 		int i_5;
 		int i_6;
 		if (aClass158_5853 != null) {
-			i_6 = aClass158_5853.method2714();
-			i_5 = aClass158_5853.method2716();
+			i_6 = aClass158_5853.getWidth();
+			i_5 = aClass158_5853.getHeight();
 		} else {
 			i_5 = 0;
 			i_6 = 0;
@@ -677,21 +677,21 @@ public abstract class HardwareRenderer extends AbstractRenderer {
 	@Override
 	public void hi(int i_1, Class455 class455_2, int i_3, int i_4) {
 		RA(false);
-		aNativeSprite_Sub3_8791.method2766(0.0F, 0.0F, method8523().method2714(), 0.0F, 0.0F, method8523().method2716(), 0, class455_2, i_3, i_4);
+		aNativeSprite_Sub3_8791.method2766(0.0F, 0.0F, method8523().getWidth(), 0.0F, 0.0F, method8523().getHeight(), 0, class455_2, i_3, i_4);
 		RA(true);
 	}
 
 	@Override
 	public void hr(int i_1, Class455 class455_2, int i_3, int i_4) {
 		RA(false);
-		aNativeSprite_Sub3_8791.method2766(0.0F, 0.0F, method8523().method2714(), 0.0F, 0.0F, method8523().method2716(), 0, class455_2, i_3, i_4);
+		aNativeSprite_Sub3_8791.method2766(0.0F, 0.0F, method8523().getWidth(), 0.0F, 0.0F, method8523().getHeight(), 0, class455_2, i_3, i_4);
 		RA(true);
 	}
 
 	@Override
 	public void hz(int i_1, Class455 class455_2, int i_3, int i_4) {
 		RA(false);
-		aNativeSprite_Sub3_8791.method2766(0.0F, 0.0F, method8523().method2714(), 0.0F, 0.0F, method8523().method2716(), 0, class455_2, i_3, i_4);
+		aNativeSprite_Sub3_8791.method2766(0.0F, 0.0F, method8523().getWidth(), 0.0F, 0.0F, method8523().getHeight(), 0, class455_2, i_3, i_4);
 		RA(true);
 	}
 
@@ -882,8 +882,8 @@ public abstract class HardwareRenderer extends AbstractRenderer {
 		if (aClass158_5853 != null) {
 			anInt8822 = 0;
 			anInt8743 = 0;
-			anInt8744 = aClass158_5853.method2714();
-			anInt8742 = aClass158_5853.method2716();
+			anInt8744 = aClass158_5853.getWidth();
+			anInt8742 = aClass158_5853.getHeight();
 		} else {
 			anInt8742 = 0;
 			anInt8744 = 0;
@@ -1003,8 +1003,8 @@ public abstract class HardwareRenderer extends AbstractRenderer {
 		int i_2;
 		int i_3;
 		if (aClass158_5853 != null) {
-			i_2 = aClass158_5853.method2714();
-			i_3 = aClass158_5853.method2716();
+			i_2 = aClass158_5853.getWidth();
+			i_3 = aClass158_5853.getHeight();
 		} else {
 			i_3 = 0;
 			i_2 = 0;
@@ -1183,8 +1183,8 @@ public abstract class HardwareRenderer extends AbstractRenderer {
 		} else {
 			anInt8749 = 0;
 			anInt8776 = 0;
-			anInt8751 = aClass158_5853.method2714();
-			anInt8752 = aClass158_5853.method2716();
+			anInt8751 = aClass158_5853.getWidth();
+			anInt8752 = aClass158_5853.getHeight();
 			aFloat8735 = 0.0F;
 			aFloat8736 = 1.0F;
 		}
@@ -1216,15 +1216,15 @@ public abstract class HardwareRenderer extends AbstractRenderer {
 	abstract Interface4 method13925(boolean var1);
 
 	void method13926() {
-		aClass384_8728.method6562(aClass384_8740);
-		aClass384_8728.method6523(aClass384_8724);
+		aClass384_8728.copy(aClass384_8740);
+		aClass384_8728.multiply(aClass384_8724);
 		aClass384_8728.method6539(aFloatArrayArray8730[0]);
 		aClass384_8728.method6540(aFloatArrayArray8730[1]);
 		aClass384_8728.method6535(aFloatArrayArray8730[2]);
 		aClass384_8728.method6536(aFloatArrayArray8730[3]);
 		aClass384_8728.method6613(aFloatArrayArray8730[4]);
 		aClass384_8728.method6538(aFloatArrayArray8730[5]);
-		aClass384_8729.method6562(aClass384_8728);
+		aClass384_8729.copy(aClass384_8728);
 		method13933(aClass384_8729);
 	}
 
@@ -1250,8 +1250,8 @@ public abstract class HardwareRenderer extends AbstractRenderer {
 			int i_1;
 			int i_2;
 			if (aClass158_5853 != null) {
-				i_2 = aClass158_5853.method2714();
-				i_1 = aClass158_5853.method2716();
+				i_2 = aClass158_5853.getWidth();
+				i_1 = aClass158_5853.getHeight();
 			} else {
 				i_1 = 0;
 				i_2 = 0;
@@ -1263,7 +1263,7 @@ public abstract class HardwareRenderer extends AbstractRenderer {
 			else
 				matrix44_3.identity();
 
-			aClass384_8812.method6562(matrix44_3);
+			aClass384_8812.copy(matrix44_3);
 			method13933(aClass384_8812);
 			aBool8720 = true;
 		}
@@ -1685,7 +1685,7 @@ public abstract class HardwareRenderer extends AbstractRenderer {
 	abstract void method14026();
 
 	void method14030() {
-		aClass384_8727.method6562(aClass384_8708);
+		aClass384_8727.copy(aClass384_8708);
 		method13933(aClass384_8727);
 		aFloat8697 = (aClass384_8727.buf[14] - aClass384_8727.buf[15]) / (aClass384_8727.buf[11] - aClass384_8727.buf[10]);
 		aFloat8726 = -aClass384_8727.buf[14] / aClass384_8727.buf[10];
@@ -2086,8 +2086,8 @@ public abstract class HardwareRenderer extends AbstractRenderer {
 	public void method8421() {
 		anInt8745 = 0;
 		anInt8835 = 0;
-		anInt8722 = aClass158_5853.method2714();
-		anInt8748 = aClass158_5853.method2716();
+		anInt8722 = aClass158_5853.getWidth();
+		anInt8748 = aClass158_5853.getHeight();
 		method13918();
 	}
 
@@ -2106,7 +2106,7 @@ public abstract class HardwareRenderer extends AbstractRenderer {
 
 	@Override
 	public void method8424(Matrix44 matrix44_1) {
-		aClass384_8724.method6562(matrix44_1);
+		aClass384_8724.copy(matrix44_1);
 		method13926();
 		if (aClass33_8719 == Class33.aClass33_381)
 			method14030();
@@ -2318,7 +2318,7 @@ public abstract class HardwareRenderer extends AbstractRenderer {
 
 	@Override
 	public void method8446(Matrix44 matrix44_1) {
-		aClass384_8724.method6562(matrix44_1);
+		aClass384_8724.copy(matrix44_1);
 		method13926();
 		if (aClass33_8719 == Class33.aClass33_381)
 			method14030();
@@ -3465,7 +3465,7 @@ public abstract class HardwareRenderer extends AbstractRenderer {
 
 	@Override
 	public void method8586(Matrix44 matrix44_1) {
-		aClass384_8724.method6562(matrix44_1);
+		aClass384_8724.copy(matrix44_1);
 		method13926();
 		if (aClass33_8719 == Class33.aClass33_381)
 			method14030();
@@ -3754,8 +3754,8 @@ public abstract class HardwareRenderer extends AbstractRenderer {
 	public void method8633() {
 		anInt8745 = 0;
 		anInt8835 = 0;
-		anInt8722 = aClass158_5853.method2714();
-		anInt8748 = aClass158_5853.method2716();
+		anInt8722 = aClass158_5853.getWidth();
+		anInt8748 = aClass158_5853.getHeight();
 		method13918();
 	}
 
@@ -3763,8 +3763,8 @@ public abstract class HardwareRenderer extends AbstractRenderer {
 	public void method8634() {
 		anInt8745 = 0;
 		anInt8835 = 0;
-		anInt8722 = aClass158_5853.method2714();
-		anInt8748 = aClass158_5853.method2716();
+		anInt8722 = aClass158_5853.getWidth();
+		anInt8748 = aClass158_5853.getHeight();
 		method13918();
 	}
 
@@ -3772,8 +3772,8 @@ public abstract class HardwareRenderer extends AbstractRenderer {
 	public void method8635() {
 		anInt8745 = 0;
 		anInt8835 = 0;
-		anInt8722 = aClass158_5853.method2714();
-		anInt8748 = aClass158_5853.method2716();
+		anInt8722 = aClass158_5853.getWidth();
+		anInt8748 = aClass158_5853.getHeight();
 		method13918();
 	}
 
@@ -3867,8 +3867,8 @@ public abstract class HardwareRenderer extends AbstractRenderer {
 		int i_5;
 		int i_6;
 		if (aClass158_5853 != null) {
-			i_6 = aClass158_5853.method2714();
-			i_5 = aClass158_5853.method2716();
+			i_6 = aClass158_5853.getWidth();
+			i_5 = aClass158_5853.getHeight();
 		} else {
 			i_5 = 0;
 			i_6 = 0;
@@ -3928,8 +3928,8 @@ public abstract class HardwareRenderer extends AbstractRenderer {
 		int i_5;
 		int i_6;
 		if (aClass158_5853 != null) {
-			i_6 = aClass158_5853.method2714();
-			i_5 = aClass158_5853.method2716();
+			i_6 = aClass158_5853.getWidth();
+			i_5 = aClass158_5853.getHeight();
 		} else {
 			i_5 = 0;
 			i_6 = 0;

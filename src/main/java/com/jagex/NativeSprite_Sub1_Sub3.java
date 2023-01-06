@@ -2990,8 +2990,8 @@ public class NativeSprite_Sub1_Sub3 extends NativeSprite_Sub1 {
 			if (anInt8867 < i_17)
 				i_81 = ((anInt8867 << 16) - i_15 + i_19 - 1) / i_19;
 
-			i_20 = i_5 * renderer.anInt8980 + i_4;
-			int i_21 = renderer.anInt8980 - i_71;
+			i_20 = i_5 * renderer.width + i_4;
+			int i_21 = renderer.width - i_71;
 			if (i_5 + i_81 > renderer.anInt8986)
 				i_81 -= i_5 + i_81 - renderer.anInt8986;
 
@@ -2999,7 +2999,7 @@ public class NativeSprite_Sub1_Sub3 extends NativeSprite_Sub1 {
 			if (i_5 < renderer.anInt9009) {
 				i_22 = renderer.anInt9009 - i_5;
 				i_81 -= i_22;
-				i_20 += renderer.anInt8980 * i_22;
+				i_20 += renderer.width * i_22;
 				i_15 += i_19 * i_22;
 			}
 
@@ -4561,8 +4561,8 @@ public class NativeSprite_Sub1_Sub3 extends NativeSprite_Sub1 {
 			if (anInt8867 < i_17)
 				i_81 = ((anInt8867 << 16) - i_15 + i_19 - 1) / i_19;
 
-			i_20 = i_4 + i_5 * renderer.anInt8980 * 299731099 * 444800403;
-			int i_21 = renderer.anInt8980 * 299731099 * 444800403 - i_71;
+			i_20 = i_4 + i_5 * renderer.width * 299731099 * 444800403;
+			int i_21 = renderer.width * 299731099 * 444800403 - i_71;
 			if (i_5 + i_81 > renderer.anInt8986 * 760194793 * 1383960921)
 				i_81 -= i_5 + i_81 - renderer.anInt8986 * 760194793 * 1383960921;
 
@@ -4570,7 +4570,7 @@ public class NativeSprite_Sub1_Sub3 extends NativeSprite_Sub1 {
 			if (i_5 < renderer.anInt9009 * 1457972577 * 1516535457) {
 				i_22 = renderer.anInt9009 * 1457972577 * 1516535457 - i_5;
 				i_81 -= i_22;
-				i_20 += i_22 * renderer.anInt8980 * 299731099 * 444800403;
+				i_20 += i_22 * renderer.width * 299731099 * 444800403;
 				i_15 += i_19 * i_22;
 			}
 
@@ -6555,8 +6555,8 @@ public class NativeSprite_Sub1_Sub3 extends NativeSprite_Sub1 {
 			if (anInt8867 < i_17)
 				i_81 = ((anInt8867 << 16) - i_15 + i_19 - 1) / i_19;
 
-			i_20 = i_4 + i_5 * renderer.anInt8980 * 299731099 * 444800403;
-			int i_21 = renderer.anInt8980 * 299731099 * 444800403 - i_71;
+			i_20 = i_4 + i_5 * renderer.width * 299731099 * 444800403;
+			int i_21 = renderer.width * 299731099 * 444800403 - i_71;
 			if (i_5 + i_81 > renderer.anInt8986 * 760194793 * 1383960921)
 				i_81 -= i_5 + i_81 - renderer.anInt8986 * 760194793 * 1383960921;
 
@@ -6564,7 +6564,7 @@ public class NativeSprite_Sub1_Sub3 extends NativeSprite_Sub1 {
 			if (i_5 < renderer.anInt9009 * 1457972577 * 1516535457) {
 				i_22 = renderer.anInt9009 * 1457972577 * 1516535457 - i_5;
 				i_81 -= i_22;
-				i_20 += i_22 * renderer.anInt8980 * 299731099 * 444800403;
+				i_20 += i_22 * renderer.width * 299731099 * 444800403;
 				i_15 += i_19 * i_22;
 			}
 
@@ -7064,7 +7064,7 @@ public class NativeSprite_Sub1_Sub3 extends NativeSprite_Sub1 {
 			throw new IllegalStateException();
 		int[] ints_6 = renderer.anIntArray8979;
 		if (ints_6 != null) {
-			int i_7 = renderer.anInt8980;
+			int i_7 = renderer.width;
 			i_110 += anInt8853;
 			i_26 += anInt8854;
 			int i_8 = i_7 * i_26 + i_110;
@@ -7396,7 +7396,7 @@ public class NativeSprite_Sub1_Sub3 extends NativeSprite_Sub1 {
 			throw new IllegalStateException();
 		int[] ints_6 = renderer.anIntArray8979;
 		if (ints_6 != null) {
-			int i_7 = renderer.anInt8980 * 299731099 * 444800403;
+			int i_7 = renderer.width * 299731099 * 444800403;
 			i_110 += anInt8853;
 			i_26 += anInt8854;
 			int i_8 = i_26 * i_7 + i_110;
@@ -7745,7 +7745,7 @@ public class NativeSprite_Sub1_Sub3 extends NativeSprite_Sub1 {
 		if (false)
 			for (i_5 = 0; i_5 < anInt8867; i_5++) {
 				i_6 = i_5 * anInt8851;
-				i_7 = renderer.anInt8980 * (i_5);
+				i_7 = renderer.width * (i_5);
 
 				for (i_8 = 0; i_8 < anInt8851; i_8++)
 					anIntArray10235[i_6 + i_8] = anIntArray10235[i_6 + i_8] & 0xffffff | ints_4[i_7 + i_8] << 8 & -16777216;
@@ -7753,7 +7753,7 @@ public class NativeSprite_Sub1_Sub3 extends NativeSprite_Sub1 {
 		else if (false)
 			for (i_5 = 0; i_5 < anInt8867; i_5++) {
 				i_6 = i_5 * anInt8851;
-				i_7 = renderer.anInt8980 * (i_5);
+				i_7 = renderer.width * (i_5);
 
 				for (i_8 = 0; i_8 < anInt8851; i_8++)
 					anIntArray10235[i_6 + i_8] = anIntArray10235[i_6 + i_8] & 0xffffff | ints_4[i_7 + i_8] << 16 & -16777216;
@@ -7761,7 +7761,7 @@ public class NativeSprite_Sub1_Sub3 extends NativeSprite_Sub1 {
 		else if (false)
 			for (i_5 = 0; i_5 < anInt8867; i_5++) {
 				i_6 = i_5 * anInt8851;
-				i_7 = renderer.anInt8980 * (i_5);
+				i_7 = renderer.width * (i_5);
 
 				for (i_8 = 0; i_8 < anInt8851; i_8++)
 					anIntArray10235[i_6 + i_8] = anIntArray10235[i_6 + i_8] & 0xffffff | ints_4[i_7 + i_8] << 24 & -16777216;
@@ -7769,7 +7769,7 @@ public class NativeSprite_Sub1_Sub3 extends NativeSprite_Sub1 {
 		else
 			for (i_5 = 0; i_5 < anInt8867; i_5++) {
 				i_6 = i_5 * anInt8851;
-				i_7 = renderer.anInt8980 * (i_5);
+				i_7 = renderer.width * (i_5);
 
 				for (i_8 = 0; i_8 < anInt8851; i_8++)
 					anIntArray10235[i_6 + i_8] = anIntArray10235[i_6 + i_8] & 0xffffff | (ints_4[i_7 + i_8] != 0 ? -16777216 : 0);
@@ -7788,7 +7788,7 @@ public class NativeSprite_Sub1_Sub3 extends NativeSprite_Sub1 {
 			if (ints_9 != null) {
 				int i_10 = 0;
 				int i_11 = 0;
-				int i_12 = renderer.anInt8980;
+				int i_12 = renderer.width;
 				int i_13 = anInt8853 + anInt8851 + anInt8855;
 				int i_14 = anInt8854 + anInt8867 + anInt8856;
 				int i_15 = (i_13 << 16) / i_33;
@@ -8248,7 +8248,7 @@ public class NativeSprite_Sub1_Sub3 extends NativeSprite_Sub1 {
 		if (i_3 == 0)
 			for (i_5 = 0; i_5 < anInt8867; i_5++) {
 				i_6 = i_5 * anInt8851;
-				i_7 = (i_2 + i_5) * renderer.anInt8980 * 299731099 * 444800403 + i_1;
+				i_7 = (i_2 + i_5) * renderer.width * 299731099 * 444800403 + i_1;
 
 				for (i_8 = 0; i_8 < anInt8851; i_8++)
 					anIntArray10235[i_6 + i_8] = anIntArray10235[i_6 + i_8] & 0xffffff | ints_4[i_7 + i_8] << 8 & -16777216;
@@ -8256,7 +8256,7 @@ public class NativeSprite_Sub1_Sub3 extends NativeSprite_Sub1 {
 		else if (i_3 == 1)
 			for (i_5 = 0; i_5 < anInt8867; i_5++) {
 				i_6 = i_5 * anInt8851;
-				i_7 = (i_2 + i_5) * renderer.anInt8980 * 299731099 * 444800403 + i_1;
+				i_7 = (i_2 + i_5) * renderer.width * 299731099 * 444800403 + i_1;
 
 				for (i_8 = 0; i_8 < anInt8851; i_8++)
 					anIntArray10235[i_6 + i_8] = anIntArray10235[i_6 + i_8] & 0xffffff | ints_4[i_7 + i_8] << 16 & -16777216;
@@ -8264,7 +8264,7 @@ public class NativeSprite_Sub1_Sub3 extends NativeSprite_Sub1 {
 		else if (i_3 == 2)
 			for (i_5 = 0; i_5 < anInt8867; i_5++) {
 				i_6 = i_5 * anInt8851;
-				i_7 = (i_2 + i_5) * renderer.anInt8980 * 299731099 * 444800403 + i_1;
+				i_7 = (i_2 + i_5) * renderer.width * 299731099 * 444800403 + i_1;
 
 				for (i_8 = 0; i_8 < anInt8851; i_8++)
 					anIntArray10235[i_6 + i_8] = anIntArray10235[i_6 + i_8] & 0xffffff | ints_4[i_7 + i_8] << 24 & -16777216;
@@ -8272,7 +8272,7 @@ public class NativeSprite_Sub1_Sub3 extends NativeSprite_Sub1 {
 		else if (i_3 == 3)
 			for (i_5 = 0; i_5 < anInt8867; i_5++) {
 				i_6 = i_5 * anInt8851;
-				i_7 = (i_2 + i_5) * renderer.anInt8980 * 299731099 * 444800403 + i_1;
+				i_7 = (i_2 + i_5) * renderer.width * 299731099 * 444800403 + i_1;
 
 				for (i_8 = 0; i_8 < anInt8851; i_8++)
 					anIntArray10235[i_6 + i_8] = anIntArray10235[i_6 + i_8] & 0xffffff | (ints_4[i_7 + i_8] != 0 ? -16777216 : 0);
@@ -8291,7 +8291,7 @@ public class NativeSprite_Sub1_Sub3 extends NativeSprite_Sub1 {
 		if (i_3 == 0)
 			for (i_5 = 0; i_5 < anInt8867; i_5++) {
 				i_6 = i_5 * anInt8851;
-				i_7 = (i_2 + i_5) * renderer.anInt8980 * 299731099 * 444800403 + i_1;
+				i_7 = (i_2 + i_5) * renderer.width * 299731099 * 444800403 + i_1;
 
 				for (i_8 = 0; i_8 < anInt8851; i_8++)
 					anIntArray10235[i_6 + i_8] = anIntArray10235[i_6 + i_8] & 0xffffff | ints_4[i_7 + i_8] << 8 & -16777216;
@@ -8299,7 +8299,7 @@ public class NativeSprite_Sub1_Sub3 extends NativeSprite_Sub1 {
 		else if (i_3 == 1)
 			for (i_5 = 0; i_5 < anInt8867; i_5++) {
 				i_6 = i_5 * anInt8851;
-				i_7 = (i_2 + i_5) * renderer.anInt8980 * 299731099 * 444800403 + i_1;
+				i_7 = (i_2 + i_5) * renderer.width * 299731099 * 444800403 + i_1;
 
 				for (i_8 = 0; i_8 < anInt8851; i_8++)
 					anIntArray10235[i_6 + i_8] = anIntArray10235[i_6 + i_8] & 0xffffff | ints_4[i_7 + i_8] << 16 & -16777216;
@@ -8307,7 +8307,7 @@ public class NativeSprite_Sub1_Sub3 extends NativeSprite_Sub1 {
 		else if (i_3 == 2)
 			for (i_5 = 0; i_5 < anInt8867; i_5++) {
 				i_6 = i_5 * anInt8851;
-				i_7 = (i_2 + i_5) * renderer.anInt8980 * 299731099 * 444800403 + i_1;
+				i_7 = (i_2 + i_5) * renderer.width * 299731099 * 444800403 + i_1;
 
 				for (i_8 = 0; i_8 < anInt8851; i_8++)
 					anIntArray10235[i_6 + i_8] = anIntArray10235[i_6 + i_8] & 0xffffff | ints_4[i_7 + i_8] << 24 & -16777216;
@@ -8315,7 +8315,7 @@ public class NativeSprite_Sub1_Sub3 extends NativeSprite_Sub1 {
 		else if (i_3 == 3)
 			for (i_5 = 0; i_5 < anInt8867; i_5++) {
 				i_6 = i_5 * anInt8851;
-				i_7 = (i_2 + i_5) * renderer.anInt8980 * 299731099 * 444800403 + i_1;
+				i_7 = (i_2 + i_5) * renderer.width * 299731099 * 444800403 + i_1;
 
 				for (i_8 = 0; i_8 < anInt8851; i_8++)
 					anIntArray10235[i_6 + i_8] = anIntArray10235[i_6 + i_8] & 0xffffff | (ints_4[i_7 + i_8] != 0 ? -16777216 : 0);
@@ -8333,7 +8333,7 @@ public class NativeSprite_Sub1_Sub3 extends NativeSprite_Sub1 {
 			i_15 += anInt8853;
 			i_29 += anInt8854;
 			int i_7 = 0;
-			int i_8 = renderer.anInt8980;
+			int i_8 = renderer.width;
 			int i_9 = anInt8851;
 			int i_10 = anInt8867;
 			int i_11 = i_8 - i_9;
@@ -8440,7 +8440,7 @@ public class NativeSprite_Sub1_Sub3 extends NativeSprite_Sub1 {
 			i_15 += anInt8853;
 			i_29 += anInt8854;
 			int i_7 = 0;
-			int i_8 = renderer.anInt8980 * 299731099 * 444800403;
+			int i_8 = renderer.width * 299731099 * 444800403;
 			int i_9 = anInt8851;
 			int i_10 = anInt8867;
 			int i_11 = i_8 - i_9;
@@ -8548,7 +8548,7 @@ public class NativeSprite_Sub1_Sub3 extends NativeSprite_Sub1 {
 			if (ints_9 != null) {
 				int i_10 = 0;
 				int i_11 = 0;
-				int i_12 = renderer.anInt8980 * 299731099 * 444800403;
+				int i_12 = renderer.width * 299731099 * 444800403;
 				int i_13 = anInt8853 + anInt8851 + anInt8855;
 				int i_14 = anInt8854 + anInt8867 + anInt8856;
 				int i_15 = (i_13 << 16) / i_33;
@@ -8963,7 +8963,7 @@ public class NativeSprite_Sub1_Sub3 extends NativeSprite_Sub1 {
 			throw new IllegalStateException();
 		int[] ints_6 = renderer.anIntArray8979;
 		if (ints_6 != null) {
-			int i_7 = renderer.anInt8980 * 299731099 * 444800403;
+			int i_7 = renderer.width * 299731099 * 444800403;
 			i_110 += anInt8853;
 			i_26 += anInt8854;
 			int i_8 = i_26 * i_7 + i_110;
@@ -9297,7 +9297,7 @@ public class NativeSprite_Sub1_Sub3 extends NativeSprite_Sub1 {
 			i_15 += anInt8853;
 			i_29 += anInt8854;
 			int i_7 = 0;
-			int i_8 = renderer.anInt8980 * 299731099 * 444800403;
+			int i_8 = renderer.width * 299731099 * 444800403;
 			int i_9 = anInt8851;
 			int i_10 = anInt8867;
 			int i_11 = i_8 - i_9;
@@ -9405,7 +9405,7 @@ public class NativeSprite_Sub1_Sub3 extends NativeSprite_Sub1 {
 			if (ints_9 != null) {
 				int i_10 = 0;
 				int i_11 = 0;
-				int i_12 = renderer.anInt8980 * 299731099 * 444800403;
+				int i_12 = renderer.width * 299731099 * 444800403;
 				int i_13 = anInt8853 + anInt8851 + anInt8855;
 				int i_14 = anInt8854 + anInt8867 + anInt8856;
 				int i_15 = (i_13 << 16) / i_33;

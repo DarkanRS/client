@@ -301,7 +301,7 @@ public class JAGGLRenderer extends HardwareRenderer {
 	@Override
 	public int[] ab(int i_1, int i_2, int i_3, int i_4) {
 		int[] ints_5 = new int[i_3 * i_4];
-		int i_6 = aClass158_5853.method2716();
+		int i_6 = aClass158_5853.getHeight();
 
 		for (int i_7 = 0; i_7 < i_4; i_7++)
 			OpenGL.glReadPixelsi(i_1, i_6 - i_2 - i_7 - 1, i_3, 1, 32993, anInt10198, ints_5, i_3 * i_7);
@@ -392,7 +392,7 @@ public class JAGGLRenderer extends HardwareRenderer {
 	@Override
 	public int[] ke(int i_1, int i_2, int i_3, int i_4) {
 		int[] ints_5 = new int[i_3 * i_4];
-		int i_6 = aClass158_5853.method2716();
+		int i_6 = aClass158_5853.getHeight();
 
 		for (int i_7 = 0; i_7 < i_4; i_7++)
 			OpenGL.glReadPixelsi(i_1, i_6 - i_2 - i_7 - 1, i_3, 1, 32993, anInt10198 * -1466767273 * 33639 * -1466767273 * 33639, ints_5, i_7 * i_3);
@@ -403,7 +403,7 @@ public class JAGGLRenderer extends HardwareRenderer {
 	@Override
 	public int[] kf(int i_1, int i_2, int i_3, int i_4) {
 		int[] ints_5 = new int[i_3 * i_4];
-		int i_6 = aClass158_5853.method2716();
+		int i_6 = aClass158_5853.getHeight();
 
 		for (int i_7 = 0; i_7 < i_4; i_7++)
 			OpenGL.glReadPixelsi(i_1, i_6 - i_2 - i_7 - 1, i_3, 1, 32993, anInt10198 * -1466767273 * 33639 * -1466767273 * 33639, ints_5, i_7 * i_3);
@@ -414,7 +414,7 @@ public class JAGGLRenderer extends HardwareRenderer {
 	@Override
 	public int[] kh(int i_1, int i_2, int i_3, int i_4) {
 		int[] ints_5 = new int[i_3 * i_4];
-		int i_6 = aClass158_5853.method2716();
+		int i_6 = aClass158_5853.getHeight();
 
 		for (int i_7 = 0; i_7 < i_4; i_7++)
 			OpenGL.glReadPixelsi(i_1, i_6 - i_2 - i_7 - 1, i_3, 1, 32993, anInt10198 * -1466767273 * 33639 * -1466767273 * 33639, ints_5, i_7 * i_3);
@@ -562,7 +562,7 @@ public class JAGGLRenderer extends HardwareRenderer {
 	@Override
 	void method13920() {
 		if (aClass158_5853 != null)
-			OpenGL.glViewport(anInt8823 + anInt8749, anInt8754 + aClass158_5853.method2716() - anInt8776 - anInt8752, anInt8751, anInt8752);
+			OpenGL.glViewport(anInt8823 + anInt8749, anInt8754 + aClass158_5853.getHeight() - anInt8776 - anInt8752, anInt8751, anInt8752);
 
 		OpenGL.glDepthRange(aFloat8735, aFloat8736);
 	}
@@ -571,7 +571,7 @@ public class JAGGLRenderer extends HardwareRenderer {
 	void method13921() {
 		if (aClass158_5853 != null) {
 			int i_1 = anInt8823 + anInt8743;
-			int i_2 = anInt8754 + aClass158_5853.method2716() - anInt8742;
+			int i_2 = anInt8754 + aClass158_5853.getHeight() - anInt8742;
 			int i_3 = anInt8744 - anInt8743;
 			int i_4 = anInt8742 - anInt8822;
 			if (i_3 < 0)
@@ -1150,7 +1150,7 @@ public class JAGGLRenderer extends HardwareRenderer {
 	void method14019() {
 		if (aClass158_5853 != null) {
 			int i_1 = anInt8823 + anInt8743;
-			int i_2 = anInt8754 + aClass158_5853.method2716() - anInt8742;
+			int i_2 = anInt8754 + aClass158_5853.getHeight() - anInt8742;
 			int i_3 = anInt8744 - anInt8743;
 			int i_4 = anInt8742 - anInt8822;
 			if (i_3 < 0)
@@ -1314,7 +1314,7 @@ public class JAGGLRenderer extends HardwareRenderer {
 	@Override
 	void method14087() {
 		if (aClass158_5853 != null)
-			OpenGL.glViewport(anInt8823 + anInt8749, anInt8754 + aClass158_5853.method2716() - anInt8776 - anInt8752, anInt8751, anInt8752);
+			OpenGL.glViewport(anInt8823 + anInt8749, anInt8754 + aClass158_5853.getHeight() - anInt8776 - anInt8752, anInt8751, anInt8752);
 
 		OpenGL.glDepthRange(aFloat8735, aFloat8736);
 	}
@@ -1323,7 +1323,7 @@ public class JAGGLRenderer extends HardwareRenderer {
 	void method14088() {
 		if (aClass158_5853 != null) {
 			int i_1 = anInt8823 + anInt8743;
-			int i_2 = anInt8754 + aClass158_5853.method2716() - anInt8742;
+			int i_2 = anInt8754 + aClass158_5853.getHeight() - anInt8742;
 			int i_3 = anInt8744 - anInt8743;
 			int i_4 = anInt8742 - anInt8822;
 			if (i_3 < 0)
@@ -1816,7 +1816,7 @@ public class JAGGLRenderer extends HardwareRenderer {
 	@Override
 	void method14205() {
 		if (aClass158_5853 != null)
-			OpenGL.glViewport(anInt8823 + anInt8749, anInt8754 + aClass158_5853.method2716() - anInt8776 - anInt8752, anInt8751, anInt8752);
+			OpenGL.glViewport(anInt8823 + anInt8749, anInt8754 + aClass158_5853.getHeight() - anInt8776 - anInt8752, anInt8751, anInt8752);
 
 		OpenGL.glDepthRange(aFloat8735, aFloat8736);
 	}
@@ -2286,8 +2286,8 @@ public class JAGGLRenderer extends HardwareRenderer {
 	@Override
 	public void method8420() {
 		if (aClass158_5853 != null) {
-			int i_1 = aClass158_5853.method2714();
-			int i_2 = aClass158_5853.method2716();
+			int i_1 = aClass158_5853.getWidth();
+			int i_2 = aClass158_5853.getHeight();
 			if (i_1 > 0 || i_2 > 0) {
 				int i_3 = anInt8749;
 				int i_4 = anInt8776;
@@ -2329,8 +2329,8 @@ public class JAGGLRenderer extends HardwareRenderer {
 	@Override
 	public void method8445() {
 		if (aClass158_5853 != null) {
-			int i_1 = aClass158_5853.method2714();
-			int i_2 = aClass158_5853.method2716();
+			int i_1 = aClass158_5853.getWidth();
+			int i_2 = aClass158_5853.getHeight();
 			if (i_1 > 0 || i_2 > 0) {
 				int i_3 = anInt8749;
 				int i_4 = anInt8776;
@@ -2618,8 +2618,8 @@ public class JAGGLRenderer extends HardwareRenderer {
 	@Override
 	public void method8497() {
 		if (aClass158_5853 != null) {
-			int i_1 = aClass158_5853.method2714();
-			int i_2 = aClass158_5853.method2716();
+			int i_1 = aClass158_5853.getWidth();
+			int i_2 = aClass158_5853.getHeight();
 			if (i_1 > 0 || i_2 > 0) {
 				int i_3 = anInt8749;
 				int i_4 = anInt8776;
@@ -2661,8 +2661,8 @@ public class JAGGLRenderer extends HardwareRenderer {
 	@Override
 	public void method8507() {
 		if (aClass158_5853 != null) {
-			int i_1 = aClass158_5853.method2714();
-			int i_2 = aClass158_5853.method2716();
+			int i_1 = aClass158_5853.getWidth();
+			int i_2 = aClass158_5853.getHeight();
 			if (i_1 > 0 || i_2 > 0) {
 				int i_3 = anInt8749;
 				int i_4 = anInt8776;

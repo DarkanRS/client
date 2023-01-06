@@ -100,7 +100,7 @@ public class client extends Engine {
 	public static float[] aFloatArray7292;
 	public static int GAME_WIDTH;
 	public static int GAME_HEIGHT;
-	public static PlayerEntity[] players;
+	public static PlayerEntity[] PLAYER_LIST;
 	public static int myPlayerIndex;
 	public static boolean IS_MEMBER;
 	public static boolean membersWorld;
@@ -235,8 +235,8 @@ public class client extends Engine {
 	static int[] anIntArray7306;
 	static long aLong7307;
 	static boolean resizeableScreen;
-	static int anInt7309;
-	static int anInt7205;
+	static int int32Init;
+	static int int16Init;
 	static boolean aBool7322;
 	static boolean REDUCE_ATTACK_PRIORITY;
 	static short[] aShortArray7239;
@@ -404,11 +404,11 @@ public class client extends Engine {
 		anIntArray7306 = new int[2];
 		aLong7307 = 0L;
 		resizeableScreen = true;
-		anInt7309 = 32;
-		anInt7205 = 16;
+		int32Init = 32;
+		int16Init = 16;
 		GAME_WIDTH = 765;
 		GAME_HEIGHT = 553;
-		players = new PlayerEntity[2048];
+		PLAYER_LIST = new PlayerEntity[2048];
 		myPlayerIndex = -1;
 		IS_MEMBER = false;
 		membersWorld = false;
@@ -576,7 +576,7 @@ public class client extends Engine {
 				obj_4 = class75_5.method1342();
 			} else {
 				if (i_3 < i_0)
-					obj_4 = players[ints_1[i_3]];
+					obj_4 = PLAYER_LIST[ints_1[i_3]];
 				else
 					obj_4 = ((ObjectNode) NPC_MAP.get(NPC_UPDATE_INDICES[i_3 - i_0])).anObject8068;
 
@@ -607,7 +607,7 @@ public class client extends Engine {
 		int i_4;
 		int i_8;
 		for (i_4 = 0; i_4 < count; i_4++) {
-			PlayerEntity player_5 = players[playerIndices[i_4]];
+			PlayerEntity player_5 = PLAYER_LIST[playerIndices[i_4]];
 			if (!player_5.hasAppearance() || player_5.hidden)
 				player_5.drawPriority = -1;
 			else {
@@ -689,7 +689,7 @@ public class client extends Engine {
 							npc_7.drawPriority += 2048;
 					}
 				} else if (class180_10.targetType == 10) {
-					PlayerEntity player_11 = players[class180_10.targetIndex];
+					PlayerEntity player_11 = PLAYER_LIST[class180_10.targetIndex];
 					if (player_11 != null && player_11 != VertexNormal.MY_PLAYER && player_11.drawPriority >= 0)
 						player_11.drawPriority += 2048;
 				}
@@ -732,7 +732,7 @@ public class client extends Engine {
 				obj_7 = class75_8.method1342();
 			} else {
 				if (i_6 < i_1)
-					obj_7 = players[ints_2[i_6]];
+					obj_7 = PLAYER_LIST[ints_2[i_6]];
 				else
 					obj_7 = ((ObjectNode) NPC_MAP.get(NPC_UPDATE_INDICES[i_6 - i_1])).anObject8068;
 
@@ -798,7 +798,7 @@ public class client extends Engine {
 				obj_7 = class75_8.method1342();
 			} else {
 				if (i_6 < i_1)
-					obj_7 = players[ints_2[i_6]];
+					obj_7 = PLAYER_LIST[ints_2[i_6]];
 				else
 					obj_7 = ((ObjectNode) NPC_MAP.get(NPC_UPDATE_INDICES[i_6 - i_1])).anObject8068;
 
@@ -1149,7 +1149,7 @@ public class client extends Engine {
 									int[] ints_46 = Class197.PLAYER_INDICES;
 
 									for (i_27 = 0; i_27 < i_25; i_27++) {
-										PlayerEntity player_55 = players[ints_46[i_27]];
+										PlayerEntity player_55 = PLAYER_LIST[ints_46[i_27]];
 										if (player_55 != null) {
 											AccountCreationStage.method252(ClientTriggerType.aClass397_4806, -1, player_55, ints_46[i_27]);
 											player_55.method15880(leftBound, lowerBound, rightBound, upperBound, x - iCompDef.scrollX, y - iCompDef.scrollY, mouseX, mouseY);
@@ -1765,16 +1765,16 @@ public class client extends Engine {
 		if (aString7281 == null)
 			aString7281 = "";
 
-		Class274 class274_6 = new Class274(GAME_WIDTH, GAME_HEIGHT, anInt7309, anInt7205, CURRENT_GAME.formattedName);
+		GameDetails class274_6 = new GameDetails(GAME_WIDTH, GAME_HEIGHT, int32Init, int16Init, CURRENT_GAME.formattedName);
 		Class308.aclient3620 = this;
-		String string_8 = Class176.BUILD_ENVIRONMENT.name;
+		String buildEnv = Class176.BUILD_ENVIRONMENT.name;
 		int i_5 = Class176.BUILD_ENVIRONMENT.id + 32;
 		if (!str_1.isEmpty()) {
-			string_8 = string_8 + "_" + str_1;
+			buildEnv = buildEnv + "_" + str_1;
 			i_5 = 0;
 		}
 
-		method4655(class274_6, CURRENT_GAME.name, string_8, i_5, Class123.method2149(), aBool7161);
+		method4655(class274_6, CURRENT_GAME.name, buildEnv, i_5, Class123.method2149(), aBool7161);
 	}
 
 	void method11620() {
@@ -2217,7 +2217,7 @@ public class client extends Engine {
 			Renderers.CURRENT_RENDERER.method8396();
 
 		if (Class475.supportsFullScreen && fullScreenFrame != null) {
-			Class329.method5903(Class274.aClass470_3336, fullScreenFrame);
+			Class329.method5903(GameDetails.aClass470_3336, fullScreenFrame);
 			fullScreenFrame = null;
 		}
 
@@ -2260,7 +2260,7 @@ public class client extends Engine {
 			Renderers.CURRENT_RENDERER.method8396();
 
 		if (Class475.supportsFullScreen && fullScreenFrame != null) {
-			Class329.method5903(Class274.aClass470_3336, fullScreenFrame);
+			Class329.method5903(GameDetails.aClass470_3336, fullScreenFrame);
 			fullScreenFrame = null;
 		}
 

@@ -6,7 +6,7 @@ public class Class357 implements Interface3 {
 		int[] ints_1 = Class197.PLAYER_INDICES;
 		int i_2;
 		for (i_2 = 0; i_2 < Class197.NUM_PLAYER_INDICES; i_2++) {
-			PlayerEntity player_3 = client.players[ints_1[i_2]];
+			PlayerEntity player_3 = client.PLAYER_LIST[ints_1[i_2]];
 			if (player_3 != null)
 				player_3.method15812();
 		}

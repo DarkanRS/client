@@ -8,7 +8,7 @@ public class Class48_Sub1 extends Class48 {
 
 	void method14515() {
 		aGraphicalRenderer_Sub2_449.method14035(anInterface6_452);
-		aGraphicalRenderer_Sub2_449.method13973().method6562(aClass384_454);
+		aGraphicalRenderer_Sub2_449.method13973().copy(aClass384_454);
 		aGraphicalRenderer_Sub2_449.method13974(Class37.aClass37_388);
 		aGraphicalRenderer_Sub2_449.method14002(Class352.aClass352_4098, anInt467, anInt468, anInt469, anInt470);
 	}

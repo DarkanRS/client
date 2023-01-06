@@ -3,7 +3,7 @@ package com.jagex;
 public class Class197 {
 
 	static FontMetrics aClass414_2436;
-	static byte[] aByteArray2424 = new byte[2048];
+	static byte[] PLAYER_UPDATE_SLOT_FLAGS = new byte[2048];
 	static byte[] playerMovementTypes = new byte[2048];
 	static ByteBuf[] aNode_Sub35Array2428 = new ByteBuf[2048];
 	static int NUM_PLAYER_INDICES;
@@ -11,13 +11,13 @@ public class Class197 {
 	static int anInt2431;
 	static int[] anIntArray2426 = new int[2048];
 	static Class4[] aClass4Array2430 = new Class4[2048];
-	static int anInt2434;
-	static int[] anIntArray2435 = new int[2048];
+	static int CURR_MASK_UPDATE_IDX;
+	static int[] NEEDS_MASK_UPDATE = new int[2048];
 
 	static void method3203(ByteBuf.Bit packet) {
 		packet.initBitAccess();
 		int i_2 = client.myPlayerIndex;
-		PlayerEntity player_3 = VertexNormal.MY_PLAYER = client.players[i_2] = new PlayerEntity(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager());
+		PlayerEntity player_3 = VertexNormal.MY_PLAYER = client.PLAYER_LIST[i_2] = new PlayerEntity(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager());
 		player_3.index = i_2;
 		int i_4 = packet.readBits(30);
 		byte b_5 = (byte) (i_4 >> 28);
@@ -34,7 +34,7 @@ public class Class197 {
 			player_3.decodeAppearance(aNode_Sub35Array2428[i_2]);
 		NUM_PLAYER_INDICES = 0;
 		PLAYER_INDICES[++NUM_PLAYER_INDICES - 1] = i_2;
-		aByteArray2424[i_2] = 0;
+		PLAYER_UPDATE_SLOT_FLAGS[i_2] = 0;
 		anInt2431 = 0;
 		for (int i_9 = 1; i_9 < 2048; i_9++)
 			if (i_2 != i_9) {
@@ -43,13 +43,13 @@ public class Class197 {
 		int i_12 = i_10 >> 8 & 0xff;
 		int i_13 = i_10 & 0xff;
 		Class4 class4_14 = aClass4Array2430[i_9] = new Class4();
-		class4_14.anInt31 = (i_12 << 14) + i_13 + (i_11 << 28);
-		class4_14.anInt30 = 0;
-		class4_14.anInt32 = -1;
+		class4_14.regionHash = (i_12 << 14) + i_13 + (i_11 << 28);
+		class4_14.faceAngle = 0;
+		class4_14.faceEntity = -1;
 		class4_14.aBool29 = false;
 		class4_14.aBool33 = false;
 		anIntArray2426[++anInt2431 - 1] = i_9;
-		aByteArray2424[i_9] = 0;
+		PLAYER_UPDATE_SLOT_FLAGS[i_9] = 0;
 			}
 		packet.finishBitAccess();
 	}

@@ -108,7 +108,7 @@ public class Whirlpool {
 						} else if (id == 23) {
 							Class209.printConsoleMessage(IComponentDefinitions.aClass229_1280.method3861() + " " + IComponentDefinitions.aClass229_1280.method3860());
 							Class209.printConsoleMessage(IComponentDefinitions.aClass229_1341.method3861() + " " + IComponentDefinitions.aClass229_1341.method3860());
-							Class209.printConsoleMessage(IndexLoaders.ITEM_LOADER.aClass212_5114.method3640() + " " + IndexLoaders.ITEM_LOADER.aClass212_5114.method3632());
+							Class209.printConsoleMessage(IndexLoaders.ITEM_LOADER.nativeSpriteCache.method3640() + " " + IndexLoaders.ITEM_LOADER.nativeSpriteCache.method3632());
 						} else if (id == 16)
 							Class356.method6227(false);
 						else if (id == 15) {
@@ -128,6 +128,7 @@ public class Whirlpool {
 					}
 				}
 			} catch (Exception exception_6) {
+				exception_6.printStackTrace();
 				Class209.printConsoleMessage(LocalizedText.ERROR_EXECUTING_COMMAND.translate(Class223.CURRENT_LANGUAGE));
 			}
 	}

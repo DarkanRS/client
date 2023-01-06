@@ -16,7 +16,7 @@ public class Class42_Sub1 extends Class42 {
 		Class186.method3084();
 
 		for (i_1 = 0; i_1 < 2048; i_1++)
-			client.players[i_1] = null;
+			client.PLAYER_LIST[i_1] = null;
 
 		client.NPC_UPDATE_INDEX = 0;
 		client.NPC_MAP.method7749();

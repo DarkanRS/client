@@ -11,9 +11,9 @@ public class KeyPressInputSubscriber implements InputSubscriber {
 			return null;
 		int i_3 = 0;
 		int i_4;
-		for (i_4 = charsequence_0.length(); i_3 < i_4 && SoftwareItemRender.method7035(charsequence_0.charAt(i_3)); i_3++) {
+		for (i_4 = charsequence_0.length(); i_3 < i_4 && SoftwareRenderCall.method7035(charsequence_0.charAt(i_3)); i_3++) {
 		}
-		while (i_4 > i_3 && SoftwareItemRender.method7035(charsequence_0.charAt(i_4 - 1)))
+		while (i_4 > i_3 && SoftwareRenderCall.method7035(charsequence_0.charAt(i_4 - 1)))
 			--i_4;
 		int i_5 = i_4 - i_3;
 		if (i_5 >= 1 && i_5 <= Class78.method1386(class413_1)) {

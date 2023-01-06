@@ -170,8 +170,8 @@ public class FontRenderer_Sub4 extends FontRenderer {
 		Class47 class47_6 = aGraphicalRenderer_Sub2_9321.aClass47_8698;
 		class47_6.anInterface6_443 = anInterface6_9322;
 		class47_6.method937(3, i_4);
-		float f_7 = aGraphicalRenderer_Sub2_9321.method8523().method2714();
-		float f_8 = aGraphicalRenderer_Sub2_9321.method8523().method2716();
+		float f_7 = aGraphicalRenderer_Sub2_9321.method8523().getWidth();
+		float f_8 = aGraphicalRenderer_Sub2_9321.method8523().getHeight();
 		class47_6.aClass384_442.method6525(2.0F / f_7, 2.0F / f_8, 1.0F, 1.0F);
 		class47_6.aClass384_442.buf[12] = (i_2 + aGraphicalRenderer_Sub2_9321.method13905()) * 2.0F / f_7 - 1.0F;
 		class47_6.aClass384_442.buf[13] = (i_3 + aGraphicalRenderer_Sub2_9321.method13905()) * 2.0F / f_8 - 1.0F;
@@ -198,8 +198,8 @@ public class FontRenderer_Sub4 extends FontRenderer {
 		Class47 class47_6 = aGraphicalRenderer_Sub2_9321.aClass47_8698;
 		class47_6.anInterface6_443 = anInterface6_9322;
 		class47_6.method937(3, i_4);
-		float f_7 = aGraphicalRenderer_Sub2_9321.method8523().method2714();
-		float f_8 = aGraphicalRenderer_Sub2_9321.method8523().method2716();
+		float f_7 = aGraphicalRenderer_Sub2_9321.method8523().getWidth();
+		float f_8 = aGraphicalRenderer_Sub2_9321.method8523().getHeight();
 		class47_6.aClass384_442.method6525(2.0F / f_7, 2.0F / f_8, 1.0F, 1.0F);
 		class47_6.aClass384_442.buf[12] = (i_2 + aGraphicalRenderer_Sub2_9321.method13905()) * 2.0F / f_7 - 1.0F;
 		class47_6.aClass384_442.buf[13] = (i_3 + aGraphicalRenderer_Sub2_9321.method13905()) * 2.0F / f_8 - 1.0F;
@@ -218,8 +218,8 @@ public class FontRenderer_Sub4 extends FontRenderer {
 		Class47 class47_6 = aGraphicalRenderer_Sub2_9321.aClass47_8698;
 		class47_6.anInterface6_443 = anInterface6_9322;
 		class47_6.method937(3, i_4);
-		float f_7 = aGraphicalRenderer_Sub2_9321.method8523().method2714();
-		float f_8 = aGraphicalRenderer_Sub2_9321.method8523().method2716();
+		float f_7 = aGraphicalRenderer_Sub2_9321.method8523().getWidth();
+		float f_8 = aGraphicalRenderer_Sub2_9321.method8523().getHeight();
 		class47_6.aClass384_442.method6525(2.0F / f_7, 2.0F / f_8, 1.0F, 1.0F);
 		class47_6.aClass384_442.buf[12] = (i_2 + aGraphicalRenderer_Sub2_9321.method13905()) * 2.0F / f_7 - 1.0F;
 		class47_6.aClass384_442.buf[13] = (i_3 + aGraphicalRenderer_Sub2_9321.method13905()) * 2.0F / f_8 - 1.0F;

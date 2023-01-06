@@ -22,7 +22,7 @@ public class Class155 {
 		int i_1 = Class197.NUM_PLAYER_INDICES;
 		int[] ints_2 = Class197.PLAYER_INDICES;
 		for (int i_3 = 0; i_3 < i_1; i_3++) {
-			PlayerEntity player_4 = client.players[ints_2[i_3]];
+			PlayerEntity player_4 = client.PLAYER_LIST[ints_2[i_3]];
 			if (player_4 != null)
 				Class363.method6287(player_4, false);
 		}

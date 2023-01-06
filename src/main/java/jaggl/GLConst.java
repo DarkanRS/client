@@ -1,6 +1,26 @@
 package jaggl;
 
 public class GLConst {
+	public static final int	GL_ALPHA16F_ARB =	34844;
+	public static final int	GL_ALPHA32F_ARB =	34838;
+	public static final int	GL_INTENSITY16F_ARB =	34845;
+	public static final int	GL_INTENSITY32F_ARB =	34839;
+	public static final int	GL_LUMINANCE_ALPHA16F_ARB =	34847;
+	public static final int	GL_LUMINANCE_ALPHA32F_ARB =	34841;
+	public static final int	GL_LUMINANCE16F_ARB =	34846;
+	public static final int	GL_LUMINANCE32F_ARB =	34840;
+	public static final int	GL_RGB16F_ARB =	34843;
+	public static final int	GL_RGB32F_ARB =	34837;
+	public static final int	GL_RGBA16F_ARB =	34842;
+	public static final int	GL_RGBA32F_ARB =	34836;
+	public static final int	GL_TEXTURE_ALPHA_TYPE_ARB =	35859;
+	public static final int	GL_TEXTURE_BLUE_TYPE_ARB =	35858;
+	public static final int	GL_TEXTURE_DEPTH_TYPE_ARB =	35862;
+	public static final int	GL_TEXTURE_GREEN_TYPE_ARB =	35857;
+	public static final int	GL_TEXTURE_INTENSITY_TYPE_ARB =	35861;
+	public static final int	GL_TEXTURE_LUMINANCE_TYPE_ARB =	35860;
+	public static final int	GL_TEXTURE_RED_TYPE_ARB =	35856;
+	public static final int	GL_UNSIGNED_NORMALIZED_ARB =	35863;
 	public static final int GL_SRC0_RGB = 34176;
 	public static final int GL_OPERAND0_RGB = 34192;
 	public static final int GL_OPERAND0_ALPHA = 34200;
@@ -1237,6 +1257,7 @@ public class GLConst {
 	public static final int GL_RGB10_A2UI = 36975; // 0x906f
 	public static final int GL_RGB12 = 32851; // 0x8053
 	public static final int GL_RGB16 = 32852; // 0x8054
+	public static final int GL_LUMINANCE_ALPHA16UI_EXT = 36219;
 	public static final int GL_RGB16F = 34843; // 0x881b
 	public static final int GL_RGB16I = 36233; // 0x8d89
 	public static final int GL_RGB16UI = 36215; // 0x8d77

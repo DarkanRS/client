@@ -12,7 +12,7 @@ public class Class103_Sub2 extends Class103 {
 		aGraphicalRenderer_Sub2_1057.method13967(0, Class67.aClass67_680);
 		aGraphicalRenderer_Sub2_1057.method13969(0, Class67.aClass67_680);
 		aGraphicalRenderer_Sub2_1057.method13966(Class68.aClass68_683, Class68.aClass68_683);
-		aGraphicalRenderer_Sub2_1057.method13973().method6562(aClass384_1058);
+		aGraphicalRenderer_Sub2_1057.method13973().copy(aClass384_1058);
 		aGraphicalRenderer_Sub2_1057.method13974(Class37.aClass37_388);
 	}
 

@@ -4,7 +4,7 @@ public class CacheableNode_Sub8_Sub1 extends CacheableNode_Sub8 {
 
 	NativeSprite anObject10381;
 
-	CacheableNode_Sub8_Sub1(Interface18 interface18_1, NativeSprite object_2, int i_3) {
+	CacheableNode_Sub8_Sub1(Hashable interface18_1, NativeSprite object_2, int i_3) {
 		super(interface18_1, i_3);
 		anObject10381 = object_2;
 	}

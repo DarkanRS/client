@@ -189,7 +189,7 @@ public class Class158_Sub1_Sub2 extends Class158_Sub1 {
 	}
 
 	@Override
-	public int method2714() {
+	public int getWidth() {
 		return anInt10129;
 	}
 
@@ -199,7 +199,7 @@ public class Class158_Sub1_Sub2 extends Class158_Sub1 {
 	}
 
 	@Override
-	public int method2716() {
+	public int getHeight() {
 		return anInt10128;
 	}
 

@@ -12,7 +12,7 @@ public class Class412 {
 		if (Class20.aClass384_158 == null)
 			Class20.aClass384_158 = new Matrix44(matrix44_1);
 		else
-			Class20.aClass384_158.method6562(matrix44_1);
+			Class20.aClass384_158.copy(matrix44_1);
 		Class20.aClass294_155.method5209(matrix44var_0);
 		Class20.anInt176 = i_2;
 		Class20.anInt184 = i_3;

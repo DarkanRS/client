@@ -4,9 +4,9 @@ import com.Loader;
 
 public class RuntimeException_Sub3 extends RuntimeException {
 	private static final long serialVersionUID = -5853993057450971463L;
-	public static int anInt10457;
+	public static int GAME_BUILD;
 	public static String MY_PLAYER_USERNAME;
-	public static Loader anApplet10460;
+	public static Loader LOADER;
 	static long aLong10459;
 	String aString10461;
 	Throwable aThrowable10462;

@@ -27,7 +27,7 @@ public class ParamDefinitions {
 				class281_10000 = client.HINT_TRAILS[i_1];
 			int i_3;
 			for (i_1 = 0; i_1 < 2048; i_1++) {
-				PlayerEntity player_2 = client.players[i_1];
+				PlayerEntity player_2 = client.PLAYER_LIST[i_1];
 				if (player_2 != null)
 					for (i_3 = 0; i_3 < player_2.aMeshRasterizerArray10372.length; i_3++)
 						player_2.aMeshRasterizerArray10372[i_3] = null;

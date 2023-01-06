@@ -194,20 +194,20 @@ public class Class48_Sub2 extends Class48 {
 
 	@Override
 	public void method951(Matrix44 matrix44_1) {
-		aClass384_9259.method6562(matrix44_1);
-		aClass384_9259.method6523(aGraphicalRenderer_Sub2_449.aClass384_8729);
+		aClass384_9259.copy(matrix44_1);
+		aClass384_9259.multiply(aGraphicalRenderer_Sub2_449.aClass384_8729);
 	}
 
 	@Override
 	public void method952(Matrix44 matrix44_1) {
-		aClass384_9259.method6562(matrix44_1);
-		aClass384_9259.method6523(aGraphicalRenderer_Sub2_449.aClass384_8729);
+		aClass384_9259.copy(matrix44_1);
+		aClass384_9259.multiply(aGraphicalRenderer_Sub2_449.aClass384_8729);
 	}
 
 	@Override
 	public void method953(Matrix44 matrix44_1) {
-		aClass384_9259.method6562(matrix44_1);
-		aClass384_9259.method6523(aGraphicalRenderer_Sub2_449.aClass384_8729);
+		aClass384_9259.copy(matrix44_1);
+		aClass384_9259.multiply(aGraphicalRenderer_Sub2_449.aClass384_8729);
 	}
 
 	@Override
@@ -269,8 +269,8 @@ public class Class48_Sub2 extends Class48 {
 
 	@Override
 	public void method957(Matrix44 matrix44_1) {
-		aClass384_9259.method6562(matrix44_1);
-		aClass384_9259.method6523(aGraphicalRenderer_Sub2_449.aClass384_8729);
+		aClass384_9259.copy(matrix44_1);
+		aClass384_9259.multiply(aGraphicalRenderer_Sub2_449.aClass384_8729);
 	}
 
 	@Override
@@ -322,8 +322,8 @@ public class Class48_Sub2 extends Class48 {
 
 	@Override
 	public void method963(Matrix44 matrix44_1) {
-		aClass384_9259.method6562(matrix44_1);
-		aClass384_9259.method6523(aGraphicalRenderer_Sub2_449.aClass384_8729);
+		aClass384_9259.copy(matrix44_1);
+		aClass384_9259.multiply(aGraphicalRenderer_Sub2_449.aClass384_8729);
 	}
 
 	@Override
@@ -354,8 +354,8 @@ public class Class48_Sub2 extends Class48 {
 
 	@Override
 	public void method967(Matrix44 matrix44_1) {
-		aClass384_9259.method6562(matrix44_1);
-		aClass384_9259.method6523(aGraphicalRenderer_Sub2_449.aClass384_8729);
+		aClass384_9259.copy(matrix44_1);
+		aClass384_9259.multiply(aGraphicalRenderer_Sub2_449.aClass384_8729);
 	}
 
 }

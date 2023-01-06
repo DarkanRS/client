@@ -647,9 +647,9 @@ public class ItemDefinitions implements Definition {
 				zoom = modelZoom << 2;
 			Matrix44 matrix44_17 = hardwareRenderer.method8453();
 			Matrix44 matrix44_18 = hardwareRenderer.method8449();
-			matrix44_18.method6531(16.0F, 16.0F, 512.0F, 512.0F, 50.0F, 2.14748365E9F, hardwareRenderer.method8523().method2714(), hardwareRenderer.method8523().method2716());
+			matrix44_18.method6531(16.0F, 16.0F, 512.0F, 512.0F, 50.0F, 2.14748365E9F, hardwareRenderer.method8523().getWidth(), hardwareRenderer.method8523().getHeight());
 			hardwareRenderer.method8424(matrix44_18);
-			hardwareRenderer.method8617(0, 0, hardwareRenderer.method8523().method2714(), hardwareRenderer.method8523().method2716());
+			hardwareRenderer.method8617(0, 0, hardwareRenderer.method8523().getWidth(), hardwareRenderer.method8523().getHeight());
 			Matrix44Var matrix44var_19 = new Matrix44Var();
 			hardwareRenderer.method8457(matrix44var_19);
 			hardwareRenderer.IA(0.95F + (float) (Math.random() / 10.0D));

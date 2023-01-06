@@ -1,90 +1,6 @@
 package com.jagex;
 
-import static jaggl.GLConst.GL_ADD;
-import static jaggl.GLConst.GL_ALPHA_TEST;
-import static jaggl.GLConst.GL_AMBIENT;
-import static jaggl.GLConst.GL_AMBIENT_AND_DIFFUSE;
-import static jaggl.GLConst.GL_ARRAY_BUFFER;
-import static jaggl.GLConst.GL_BACK;
-import static jaggl.GLConst.GL_BGRA;
-import static jaggl.GLConst.GL_BLEND;
-import static jaggl.GLConst.GL_COLOR;
-import static jaggl.GLConst.GL_COLOR_ARRAY;
-import static jaggl.GLConst.GL_COLOR_MATERIAL;
-import static jaggl.GLConst.GL_COMBINE;
-import static jaggl.GLConst.GL_COMBINE_ALPHA;
-import static jaggl.GLConst.GL_COMBINE_RGB;
-import static jaggl.GLConst.GL_CONSTANT;
-import static jaggl.GLConst.GL_CONSTANT_ATTENUATION;
-import static jaggl.GLConst.GL_CULL_FACE;
-import static jaggl.GLConst.GL_DEPTH_TEST;
-import static jaggl.GLConst.GL_DIFFUSE;
-import static jaggl.GLConst.GL_DST_COLOR;
-import static jaggl.GLConst.GL_ELEMENT_ARRAY_BUFFER;
-import static jaggl.GLConst.GL_FASTEST;
-import static jaggl.GLConst.GL_FILL;
-import static jaggl.GLConst.GL_FOG;
-import static jaggl.GLConst.GL_FOG_COLOR;
-import static jaggl.GLConst.GL_FOG_DENSITY;
-import static jaggl.GLConst.GL_FOG_END;
-import static jaggl.GLConst.GL_FOG_HINT;
-import static jaggl.GLConst.GL_FOG_MODE;
-import static jaggl.GLConst.GL_FOG_START;
-import static jaggl.GLConst.GL_FRONT;
-import static jaggl.GLConst.GL_GREATER;
-import static jaggl.GLConst.GL_INTERPOLATE;
-import static jaggl.GLConst.GL_LEQUAL;
-import static jaggl.GLConst.GL_LIGHT0;
-import static jaggl.GLConst.GL_LIGHT1;
-import static jaggl.GLConst.GL_LIGHT2;
-import static jaggl.GLConst.GL_LIGHTING;
-import static jaggl.GLConst.GL_LIGHT_MODEL_AMBIENT;
-import static jaggl.GLConst.GL_LINEAR;
-import static jaggl.GLConst.GL_LINEAR_ATTENUATION;
-import static jaggl.GLConst.GL_LINES;
-import static jaggl.GLConst.GL_LINE_LOOP;
-import static jaggl.GLConst.GL_MAX_TEXTURE_COORDS_ARB;
-import static jaggl.GLConst.GL_MAX_TEXTURE_UNITS;
-import static jaggl.GLConst.GL_MODELVIEW;
-import static jaggl.GLConst.GL_MODULATE;
-import static jaggl.GLConst.GL_MULTISAMPLE;
-import static jaggl.GLConst.GL_NORMAL_ARRAY;
-import static jaggl.GLConst.GL_ONE;
-import static jaggl.GLConst.GL_ONE_MINUS_SRC_ALPHA;
-import static jaggl.GLConst.GL_OPERAND0_ALPHA;
-import static jaggl.GLConst.GL_OPERAND0_RGB;
-import static jaggl.GLConst.GL_POINTS;
-import static jaggl.GLConst.GL_POINT_SIZE_RANGE;
-import static jaggl.GLConst.GL_POINT_SMOOTH;
-import static jaggl.GLConst.GL_POSITION;
-import static jaggl.GLConst.GL_PREVIOUS;
-import static jaggl.GLConst.GL_PRIMARY_COLOR;
-import static jaggl.GLConst.GL_PROGRAM_ALU_INSTRUCTIONS_ARB;
-import static jaggl.GLConst.GL_PROJECTION;
-import static jaggl.GLConst.GL_QUADRATIC_ATTENUATION;
-import static jaggl.GLConst.GL_QUADS;
-import static jaggl.GLConst.GL_RENDERER;
-import static jaggl.GLConst.GL_REPLACE;
-import static jaggl.GLConst.GL_SCISSOR_TEST;
-import static jaggl.GLConst.GL_SMOOTH;
-import static jaggl.GLConst.GL_SRC0_ALPHA;
-import static jaggl.GLConst.GL_SRC0_RGB;
-import static jaggl.GLConst.GL_SRC_ALPHA;
-import static jaggl.GLConst.GL_SRC_COLOR;
-import static jaggl.GLConst.GL_SUBTRACT;
-import static jaggl.GLConst.GL_TEXTURE;
-import static jaggl.GLConst.GL_TEXTURE0;
-import static jaggl.GLConst.GL_TEXTURE_COORD_ARRAY;
-import static jaggl.GLConst.GL_TEXTURE_ENV;
-import static jaggl.GLConst.GL_TEXTURE_ENV_COLOR;
-import static jaggl.GLConst.GL_TEXTURE_ENV_MODE;
-import static jaggl.GLConst.GL_TRIANGLES;
-import static jaggl.GLConst.GL_TRIANGLE_FAN;
-import static jaggl.GLConst.GL_UNSIGNED_INT_8_8_8_8_REV;
-import static jaggl.GLConst.GL_UNSIGNED_SHORT;
-import static jaggl.GLConst.GL_VENDOR;
-import static jaggl.GLConst.GL_VERSION;
-import static jaggl.GLConst.GL_VERTEX_ARRAY;
+import static jaggl.GLConst.*;
 
 import java.awt.Canvas;
 import java.lang.reflect.Field;
@@ -112,69 +28,69 @@ public class OpenGLRenderer extends AbstractRenderer {
 	}
 	static int method13629(Class150 class150_0) {
 		return switch (class150_0.anInt1958) {
-		case 0 -> 6409;
-		case 1 -> 6406;
+		case 0 -> GL_LUMINANCE;
+		case 1 -> GL_ALPHA;
 		case 2, 3, 7 -> throw new IllegalStateException();
 		default -> throw new IllegalStateException();
-		case 4 -> 6410;
-		case 5 -> 6407;
-		case 6 -> 6408;
-		case 8 -> 6402;
+		case 4 -> GL_LUMINANCE_ALPHA;
+		case 5 -> GL_RGB;
+		case 6 -> GL_RGBA;
+		case 8 -> GL_DEPTH_COMPONENT;
 		};
 	}
 	static int method13630(Class150 class150_0, Class76 class76_1) {
 		if (class76_1 == Class76.aClass76_751)
 			return switch (class150_0.anInt1958) {
-			case 0 -> 6409;
-			case 1 -> 6406;
+			case 0 -> GL_LUMINANCE;
+			case 1 -> GL_ALPHA;
 			case 2, 3 -> throw new IllegalArgumentException();
 			default -> throw new IllegalArgumentException();
-			case 4 -> 6410;
-			case 5 -> 6407;
-			case 6 -> 6408;
+			case 4 -> GL_LUMINANCE_ALPHA;
+			case 5 -> GL_RGB;
+			case 6 -> GL_RGBA;
 			};
 		else if (class76_1 == Class76.aClass76_752)
 			return switch (class150_0.anInt1958) {
-			case 0 -> 32834;
-			case 1 -> 32830;
+			case 0 -> GL_LUMINANCE16;
+			case 1 -> GL_ALPHA16;
 			case 2, 3, 7 -> throw new IllegalArgumentException();
 			default -> throw new IllegalArgumentException();
-			case 4 -> 36219;
-			case 5 -> 32852;
-			case 6 -> 32859;
-			case 8 -> 33189;
+			case 4 -> GL_LUMINANCE_ALPHA16UI_EXT;
+			case 5 -> GL_RGB16;
+			case 6 -> GL_RGBA16;
+			case 8 -> GL_DEPTH_COMPONENT16;
 			};
 		else if (class76_1 == Class76.aClass76_749)
 			return switch (class150_0.anInt1958) {
-			case 8 -> 33190;
+			case 8 -> GL_DEPTH_COMPONENT24;
 			default -> throw new IllegalArgumentException();
 			};
 		else if (class76_1 == Class76.aClass76_755)
 			return switch (class150_0.anInt1958) {
-			case 0 -> 34846;
-			case 1 -> 34844;
+			case 0 -> GL_LUMINANCE16F_ARB;
+			case 1 -> GL_ALPHA16F_ARB;
 			case 2, 3 -> throw new IllegalArgumentException();
 			default -> throw new IllegalArgumentException();
-			case 4 -> 34847;
-			case 5 -> 34843;
-			case 6 -> 34842;
+			case 4 -> GL_LUMINANCE_ALPHA16F_ARB;
+			case 5 -> GL_RGB16F_ARB;
+			case 6 -> GL_RGBA16F_ARB;
 			};
 		else if (class76_1 == Class76.aClass76_758)
 			return switch (class150_0.anInt1958) {
-			case 0 -> 34840;
-			case 1 -> 34838;
+			case 0 -> GL_LUMINANCE32F_ARB;
+			case 1 -> GL_ALPHA32F_ARB;
 			case 2, 3 -> throw new IllegalArgumentException();
 			default -> throw new IllegalArgumentException();
-			case 4 -> 34841;
-			case 5 -> 34837;
-			case 6 -> 34836;
+			case 4 -> GL_LUMINANCE_ALPHA32F_ARB;
+			case 5 -> GL_RGB32F_ARB;
+			case 6 -> GL_RGBA32F_ARB;
 			};
 		else
 			throw new IllegalArgumentException();
 	}
 	GLTexture[] textures;
 	Class137_Sub1 aClass137_Sub1_8460;
-	Class158_Sub1_Sub4 aClass158_Sub1_Sub4_8493;
+	FrameBufferObject fbo;
 	int colorRenderType;
 	int blendType;
 	boolean enableAlphaTest;
@@ -477,7 +393,7 @@ public class OpenGLRenderer extends AbstractRenderer {
 		if (aClass158_5853 == null)
 			return null;
 		int[] ints_5 = new int[i_3 * i_4];
-		int i_6 = aClass158_5853.method2716();
+		int i_6 = aClass158_5853.getHeight();
 
 		for (int i_7 = 0; i_7 < i_4; i_7++)
 			OpenGL.glReadPixelsi(i_1, i_6 - i_2 - i_7 - 1, i_3, 1, GL_BGRA, anInt8410, ints_5, i_3 * i_7);
@@ -664,8 +580,8 @@ public class OpenGLRenderer extends AbstractRenderer {
 		if (aClass158_5853 != null) {
 			anInt8413 = 0;
 			anInt8415 = 0;
-			anInt8412 = aClass158_5853.method2714();
-			anInt8478 = aClass158_5853.method2716();
+			anInt8412 = aClass158_5853.getWidth();
+			anInt8478 = aClass158_5853.getHeight();
 			OpenGL.glDisable(GL_SCISSOR_TEST);
 		}
 
@@ -709,8 +625,8 @@ public class OpenGLRenderer extends AbstractRenderer {
 		if (aClass158_5853 != null) {
 			anInt8413 = 0;
 			anInt8415 = 0;
-			anInt8412 = aClass158_5853.method2714();
-			anInt8478 = aClass158_5853.method2716();
+			anInt8412 = aClass158_5853.getWidth();
+			anInt8478 = aClass158_5853.getHeight();
 			OpenGL.glDisable(GL_SCISSOR_TEST);
 		}
 
@@ -749,14 +665,14 @@ public class OpenGLRenderer extends AbstractRenderer {
 			if (i_11 < 0)
 				i_11 = 0;
 
-			if (i_31 > aClass158_5853.method2714())
-				i_31 = aClass158_5853.method2714();
+			if (i_31 > aClass158_5853.getWidth())
+				i_31 = aClass158_5853.getWidth();
 
 			if (i_21 < 0)
 				i_21 = 0;
 
-			if (i_41 > aClass158_5853.method2716())
-				i_41 = aClass158_5853.method2716();
+			if (i_41 > aClass158_5853.getHeight())
+				i_41 = aClass158_5853.getHeight();
 
 			anInt8413 = i_11;
 			anInt8415 = i_21;
@@ -918,14 +834,14 @@ public class OpenGLRenderer extends AbstractRenderer {
 			if (i_11 < 0)
 				i_11 = 0;
 
-			if (i_31 > aClass158_5853.method2714())
-				i_31 = aClass158_5853.method2714();
+			if (i_31 > aClass158_5853.getWidth())
+				i_31 = aClass158_5853.getWidth();
 
 			if (i_21 < 0)
 				i_21 = 0;
 
-			if (i_41 > aClass158_5853.method2716())
-				i_41 = aClass158_5853.method2716();
+			if (i_41 > aClass158_5853.getHeight())
+				i_41 = aClass158_5853.getHeight();
 
 			anInt8413 = i_11;
 			anInt8415 = i_21;
@@ -1509,7 +1425,7 @@ public class OpenGLRenderer extends AbstractRenderer {
 		if (aClass158_5853 == null)
 			return null;
 		int[] ints_5 = new int[i_3 * i_4];
-		int i_6 = aClass158_5853.method2716();
+		int i_6 = aClass158_5853.getHeight();
 
 		for (int i_7 = 0; i_7 < i_4; i_7++)
 			OpenGL.glReadPixelsi(i_1, i_6 - i_2 - i_7 - 1, i_3, 1, GL_BGRA, anInt8410 * GL_UNSIGNED_INT_8_8_8_8_REV, ints_5, i_7 * i_3);
@@ -1522,7 +1438,7 @@ public class OpenGLRenderer extends AbstractRenderer {
 		if (aClass158_5853 == null)
 			return null;
 		int[] ints_5 = new int[i_3 * i_4];
-		int i_6 = aClass158_5853.method2716();
+		int i_6 = aClass158_5853.getHeight();
 
 		for (int i_7 = 0; i_7 < i_4; i_7++)
 			OpenGL.glReadPixelsi(i_1, i_6 - i_2 - i_7 - 1, i_3, 1, GL_BGRA, anInt8410 * GL_UNSIGNED_INT_8_8_8_8_REV, ints_5, i_7 * i_3);
@@ -1535,7 +1451,7 @@ public class OpenGLRenderer extends AbstractRenderer {
 		if (aClass158_5853 == null)
 			return null;
 		int[] ints_5 = new int[i_3 * i_4];
-		int i_6 = aClass158_5853.method2716();
+		int i_6 = aClass158_5853.getHeight();
 
 		for (int i_7 = 0; i_7 < i_4; i_7++)
 			OpenGL.glReadPixelsi(i_1, i_6 - i_2 - i_7 - 1, i_3, 1, GL_BGRA, anInt8410 * GL_UNSIGNED_INT_8_8_8_8_REV, ints_5, i_7 * i_3);
@@ -1548,8 +1464,8 @@ public class OpenGLRenderer extends AbstractRenderer {
 		if (aClass158_5853 != null) {
 			anInt8413 = 0;
 			anInt8415 = 0;
-			anInt8412 = aClass158_5853.method2714();
-			anInt8478 = aClass158_5853.method2716();
+			anInt8412 = aClass158_5853.getWidth();
+			anInt8478 = aClass158_5853.getHeight();
 			OpenGL.glDisable(GL_SCISSOR_TEST);
 		}
 
@@ -1595,7 +1511,7 @@ public class OpenGLRenderer extends AbstractRenderer {
 
 	void method13570() {
 		if (aClass158_5853 != null && anInt8413 < anInt8412 && anInt8415 < anInt8478)
-			OpenGL.glScissor(anInt8453 + anInt8413, anInt8416 + aClass158_5853.method2716() - anInt8478, anInt8412 - anInt8413, anInt8478 - anInt8415);
+			OpenGL.glScissor(anInt8453 + anInt8413, anInt8416 + aClass158_5853.getHeight() - anInt8478, anInt8412 - anInt8413, anInt8478 - anInt8415);
 		else
 			OpenGL.glScissor(0, 0, 0, 0);
 
@@ -1615,9 +1531,9 @@ public class OpenGLRenderer extends AbstractRenderer {
 
 	void method13572() {
 		textures = new GLTexture[maxTextureUnits];
-		aClass137_Sub1_8460 = new Class137_Sub1(this, 3553, Class150.aClass150_1949, Class76.aClass76_751, 1, 1);
-		new Class137_Sub1(this, 3553, Class150.aClass150_1949, Class76.aClass76_751, 1, 1);
-		new Class137_Sub1(this, 3553, Class150.aClass150_1949, Class76.aClass76_751, 1, 1);
+		aClass137_Sub1_8460 = new Class137_Sub1(this, GL_TEXTURE_2D, Class150.aClass150_1949, Class76.aClass76_751, 1, 1);
+		new Class137_Sub1(this, GL_TEXTURE_2D, Class150.aClass150_1949, Class76.aClass76_751, 1, 1);
+		new Class137_Sub1(this, GL_TEXTURE_2D, Class150.aClass150_1949, Class76.aClass76_751, 1, 1);
 
 		for (int i_1 = 0; i_1 < 7; i_1++) {
 			aMeshRasterizer_Sub1Array8479[i_1] = new MeshRasterizer_Sub1(this);
@@ -1625,8 +1541,8 @@ public class OpenGLRenderer extends AbstractRenderer {
 		}
 
 		if (supportsFBO) {
-			aClass158_Sub1_Sub4_8493 = new Class158_Sub1_Sub4(this);
-			new Class158_Sub1_Sub4(this);
+			fbo = new FrameBufferObject(this);
+			new FrameBufferObject(this);
 		}
 
 	}
@@ -1715,8 +1631,8 @@ public class OpenGLRenderer extends AbstractRenderer {
 			} else {
 				i_1 = 0;
 				i_2 = 0;
-				i_3 = aClass158_5853.method2714();
-				i_4 = aClass158_5853.method2716();
+				i_3 = aClass158_5853.getWidth();
+				i_4 = aClass158_5853.getHeight();
 			}
 
 			if (i_3 < 1)
@@ -1725,7 +1641,7 @@ public class OpenGLRenderer extends AbstractRenderer {
 			if (i_4 < 1)
 				i_4 = 1;
 
-			OpenGL.glViewport(i_1 + anInt8453, anInt8416 + aClass158_5853.method2716() - i_2 - i_4, i_3, i_4);
+			OpenGL.glViewport(i_1 + anInt8453, anInt8416 + aClass158_5853.getHeight() - i_2 - i_4, i_3, i_4);
 			aFloat8398 = anInt8419 / 2.0F;
 			aFloat8400 = anInt8347 / 2.0F;
 			aFloat8315 = anInt8417 + aFloat8398;
@@ -1802,8 +1718,8 @@ public class OpenGLRenderer extends AbstractRenderer {
 	}
 
 	void method13597() {
-		aClass384_8394.method6562(aClass384_8348);
-		aClass384_8394.method6523(aClass384_8442);
+		aClass384_8394.copy(aClass384_8348);
+		aClass384_8394.multiply(aClass384_8442);
 		aClass384_8394.method6539(aFloatArrayArray8395[0]);
 		aClass384_8394.method6540(aFloatArrayArray8395[1]);
 		aClass384_8394.method6535(aFloatArrayArray8395[2]);
@@ -2039,8 +1955,8 @@ public class OpenGLRenderer extends AbstractRenderer {
 	}
 
 	void method13639() {
-		int i_1 = aClass158_5853.method2714();
-		int i_2 = aClass158_5853.method2716();
+		int i_1 = aClass158_5853.getWidth();
+		int i_2 = aClass158_5853.getHeight();
 		aClass384_8385.method6530(0.0F, i_1, 0.0F, i_2, -1.0f, 1.0F);
 		method8421();
 		method13586();
@@ -2224,7 +2140,7 @@ public class OpenGLRenderer extends AbstractRenderer {
 		if (vendor.indexOf("nvidia") != -1)
 			i_1 = 4318;
 		else if (vendor.indexOf("intel") != -1)
-			i_1 = 32902;
+			i_1 = 32902; //GL_INDEX_ARRAY_STRIDE
 		else if (vendor.indexOf("ati") != -1)
 			i_1 = 4098;
 		else if (vendor.indexOf("mesa") != -1)
@@ -2425,7 +2341,7 @@ public class OpenGLRenderer extends AbstractRenderer {
 
 	@Override
 	public Class158_Sub1 method8418() {
-		return new Class158_Sub1_Sub4(this);
+		return new FrameBufferObject(this);
 	}
 
 	@Override
@@ -2463,7 +2379,7 @@ public class OpenGLRenderer extends AbstractRenderer {
 			OpenGL.glMatrixMode(GL_MODELVIEW);
 			OpenGL.glLoadIdentity();
 			OpenGL.glRasterPos2i(0, 0);
-			OpenGL.glCopyPixels(0, 0, aClass158_5853.method2714(), aClass158_5853.method2716(), GL_COLOR);
+			OpenGL.glCopyPixels(0, 0, aClass158_5853.getWidth(), aClass158_5853.getHeight(), GL_COLOR);
 			OpenGL.glFlush();
 			OpenGL.glReadBuffer(GL_BACK);
 			OpenGL.glDrawBuffer(GL_BACK);
@@ -2477,8 +2393,8 @@ public class OpenGLRenderer extends AbstractRenderer {
 	public void method8421() {
 		anInt8417 = 0;
 		anInt8418 = 0;
-		anInt8419 = aClass158_5853.method2714();
-		anInt8347 = aClass158_5853.method2716();
+		anInt8419 = aClass158_5853.getWidth();
+		anInt8347 = aClass158_5853.getHeight();
 		method13584();
 	}
 
@@ -2497,7 +2413,7 @@ public class OpenGLRenderer extends AbstractRenderer {
 
 	@Override
 	public void method8424(Matrix44 matrix44_1) {
-		aClass384_8442.method6562(matrix44_1);
+		aClass384_8442.copy(matrix44_1);
 		method13597();
 		method13588();
 	}
@@ -2804,7 +2720,7 @@ public class OpenGLRenderer extends AbstractRenderer {
 			OpenGL.glMatrixMode(GL_MODELVIEW);
 			OpenGL.glLoadIdentity();
 			OpenGL.glRasterPos2i(0, 0);
-			OpenGL.glCopyPixels(0, 0, aClass158_5853.method2714(), aClass158_5853.method2716(), GL_COLOR);
+			OpenGL.glCopyPixels(0, 0, aClass158_5853.getWidth(), aClass158_5853.getHeight(), GL_COLOR);
 			OpenGL.glFlush();
 			OpenGL.glReadBuffer(GL_BACK);
 			OpenGL.glDrawBuffer(GL_BACK);
@@ -2816,7 +2732,7 @@ public class OpenGLRenderer extends AbstractRenderer {
 
 	@Override
 	public void method8446(Matrix44 matrix44_1) {
-		aClass384_8442.method6562(matrix44_1);
+		aClass384_8442.copy(matrix44_1);
 		method13597();
 		method13588();
 	}
@@ -3373,7 +3289,7 @@ public class OpenGLRenderer extends AbstractRenderer {
 			OpenGL.glMatrixMode(GL_MODELVIEW);
 			OpenGL.glLoadIdentity();
 			OpenGL.glRasterPos2i(0, 0);
-			OpenGL.glCopyPixels(0, 0, aClass158_5853.method2714(), aClass158_5853.method2716(), GL_COLOR);
+			OpenGL.glCopyPixels(0, 0, aClass158_5853.getWidth(), aClass158_5853.getHeight(), GL_COLOR);
 			OpenGL.glFlush();
 			OpenGL.glReadBuffer(GL_BACK);
 			OpenGL.glDrawBuffer(GL_BACK);
@@ -3443,7 +3359,7 @@ public class OpenGLRenderer extends AbstractRenderer {
 			OpenGL.glMatrixMode(GL_MODELVIEW);
 			OpenGL.glLoadIdentity();
 			OpenGL.glRasterPos2i(0, 0);
-			OpenGL.glCopyPixels(0, 0, aClass158_5853.method2714(), aClass158_5853.method2716(), GL_COLOR);
+			OpenGL.glCopyPixels(0, 0, aClass158_5853.getWidth(), aClass158_5853.getHeight(), GL_COLOR);
 			OpenGL.glFlush();
 			OpenGL.glReadBuffer(GL_BACK);
 			OpenGL.glDrawBuffer(GL_BACK);
@@ -4626,7 +4542,7 @@ public class OpenGLRenderer extends AbstractRenderer {
 
 	@Override
 	public void method8586(Matrix44 matrix44_1) {
-		aClass384_8442.method6562(matrix44_1);
+		aClass384_8442.copy(matrix44_1);
 		method13597();
 		method13588();
 	}
@@ -4920,7 +4836,7 @@ public class OpenGLRenderer extends AbstractRenderer {
 
 	@Override
 	public Class158_Sub1 method8620() {
-		return new Class158_Sub1_Sub4(this);
+		return new FrameBufferObject(this);
 	}
 
 	@Override
@@ -5004,8 +4920,8 @@ public class OpenGLRenderer extends AbstractRenderer {
 	public void method8633() {
 		anInt8417 = 0;
 		anInt8418 = 0;
-		anInt8419 = aClass158_5853.method2714();
-		anInt8347 = aClass158_5853.method2716();
+		anInt8419 = aClass158_5853.getWidth();
+		anInt8347 = aClass158_5853.getHeight();
 		method13584();
 	}
 
@@ -5013,8 +4929,8 @@ public class OpenGLRenderer extends AbstractRenderer {
 	public void method8634() {
 		anInt8417 = 0;
 		anInt8418 = 0;
-		anInt8419 = aClass158_5853.method2714();
-		anInt8347 = aClass158_5853.method2716();
+		anInt8419 = aClass158_5853.getWidth();
+		anInt8347 = aClass158_5853.getHeight();
 		method13584();
 	}
 
@@ -5022,8 +4938,8 @@ public class OpenGLRenderer extends AbstractRenderer {
 	public void method8635() {
 		anInt8417 = 0;
 		anInt8418 = 0;
-		anInt8419 = aClass158_5853.method2714();
-		anInt8347 = aClass158_5853.method2716();
+		anInt8419 = aClass158_5853.getWidth();
+		anInt8347 = aClass158_5853.getHeight();
 		method13584();
 	}
 
@@ -5233,14 +5149,14 @@ public class OpenGLRenderer extends AbstractRenderer {
 			if (i_11 < 0)
 				i_11 = 0;
 
-			if (i_31 > aClass158_5853.method2714())
-				i_31 = aClass158_5853.method2714();
+			if (i_31 > aClass158_5853.getWidth())
+				i_31 = aClass158_5853.getWidth();
 
 			if (i_21 < 0)
 				i_21 = 0;
 
-			if (i_41 > aClass158_5853.method2716())
-				i_41 = aClass158_5853.method2716();
+			if (i_41 > aClass158_5853.getHeight())
+				i_41 = aClass158_5853.getHeight();
 
 			anInt8413 = i_11;
 			anInt8415 = i_21;

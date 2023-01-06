@@ -3767,7 +3767,7 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 	public boolean method11270(int i_1, int i_2, Matrix44Var matrix44var_3, boolean bool_4, int i_5) {
 		Matrix44 matrix44_6 = aGraphicalRenderer_Sub1_8239.aClass384_8380;
 		matrix44_6.fromVarMatrix44(matrix44var_3);
-		matrix44_6.method6523(aGraphicalRenderer_Sub1_8239.aClass384_8394);
+		matrix44_6.multiply(aGraphicalRenderer_Sub1_8239.aClass384_8394);
 		boolean bool_7 = false;
 		int i_8 = Integer.MAX_VALUE;
 		int i_9 = Integer.MIN_VALUE;
@@ -3933,7 +3933,7 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 					class172_7 = class172_6.aClass172_2114;
 
 				if (class172_6.aClass384_2116 != null)
-					class172_6.aClass384_2116.method6562(matrix44_2);
+					class172_6.aClass384_2116.copy(matrix44_2);
 				else
 					class172_6.aClass384_2116 = new Matrix44(matrix44_2);
 
@@ -4356,8 +4356,8 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 			Matrix44 matrix44_5 = aGraphicalRenderer_Sub1_8239.aClass384_8380;
 			Matrix44 matrix44_6 = aGraphicalRenderer_Sub1_8239.aClass384_8407;
 			matrix44_5.fromVarMatrix44(matrix44var_1);
-			matrix44_6.method6562(matrix44_5);
-			matrix44_6.method6523(aGraphicalRenderer_Sub1_8239.aClass384_8394);
+			matrix44_6.copy(matrix44_5);
+			matrix44_6.multiply(aGraphicalRenderer_Sub1_8239.aClass384_8394);
 			if (!aBool8254)
 				method13528();
 
@@ -4450,7 +4450,7 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 			aGraphicalRenderer_Sub1_8239.method13633(matrix44_5);
 			method13534();
 			aGraphicalRenderer_Sub1_8239.method13641();
-			matrix44_5.method6523(aGraphicalRenderer_Sub1_8239.aClass384_8348);
+			matrix44_5.multiply(aGraphicalRenderer_Sub1_8239.aClass384_8348);
 			method13535(matrix44_5);
 			if ((i_3 & 0x2) != 0)
 				OpenGL.glPolygonMode(1028, 6914);
@@ -4471,7 +4471,7 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 	public boolean method11286(int i_1, int i_2, Matrix44Var matrix44var_3, boolean bool_4, int i_5) {
 		Matrix44 matrix44_6 = aGraphicalRenderer_Sub1_8239.aClass384_8380;
 		matrix44_6.fromVarMatrix44(matrix44var_3);
-		matrix44_6.method6523(aGraphicalRenderer_Sub1_8239.aClass384_8394);
+		matrix44_6.multiply(aGraphicalRenderer_Sub1_8239.aClass384_8394);
 		boolean bool_7 = false;
 		int i_8 = Integer.MAX_VALUE;
 		int i_9 = Integer.MIN_VALUE;
@@ -4701,8 +4701,8 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 			Matrix44 matrix44_5 = aGraphicalRenderer_Sub1_8239.aClass384_8380;
 			Matrix44 matrix44_6 = aGraphicalRenderer_Sub1_8239.aClass384_8407;
 			matrix44_5.fromVarMatrix44(matrix44var_1);
-			matrix44_6.method6562(matrix44_5);
-			matrix44_6.method6523(aGraphicalRenderer_Sub1_8239.aClass384_8394);
+			matrix44_6.copy(matrix44_5);
+			matrix44_6.multiply(aGraphicalRenderer_Sub1_8239.aClass384_8394);
 			if (!aBool8254)
 				method13528();
 
@@ -4795,7 +4795,7 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 			aGraphicalRenderer_Sub1_8239.method13633(matrix44_5);
 			method13534();
 			aGraphicalRenderer_Sub1_8239.method13641();
-			matrix44_5.method6523(aGraphicalRenderer_Sub1_8239.aClass384_8348);
+			matrix44_5.multiply(aGraphicalRenderer_Sub1_8239.aClass384_8348);
 			method13535(matrix44_5);
 			if ((i_3 & 0x2) != 0)
 				OpenGL.glPolygonMode(1028, 6914);
@@ -4834,7 +4834,7 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 					class172_7 = class172_6.aClass172_2114;
 
 				if (class172_6.aClass384_2116 != null)
-					class172_6.aClass384_2116.method6562(matrix44_2);
+					class172_6.aClass384_2116.copy(matrix44_2);
 				else
 					class172_6.aClass384_2116 = new Matrix44(matrix44_2);
 
@@ -5109,7 +5109,7 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 	public boolean method11309(int i_1, int i_2, Matrix44Var matrix44var_3, boolean bool_4, int i_5) {
 		Matrix44 matrix44_6 = aGraphicalRenderer_Sub1_8239.aClass384_8380;
 		matrix44_6.fromVarMatrix44(matrix44var_3);
-		matrix44_6.method6523(aGraphicalRenderer_Sub1_8239.aClass384_8394);
+		matrix44_6.multiply(aGraphicalRenderer_Sub1_8239.aClass384_8394);
 		boolean bool_7 = false;
 		int i_8 = Integer.MAX_VALUE;
 		int i_9 = Integer.MIN_VALUE;
@@ -5292,7 +5292,7 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 					class172_7 = class172_6.aClass172_2114;
 
 				if (class172_6.aClass384_2116 != null)
-					class172_6.aClass384_2116.method6562(matrix44_2);
+					class172_6.aClass384_2116.copy(matrix44_2);
 				else
 					class172_6.aClass384_2116 = new Matrix44(matrix44_2);
 

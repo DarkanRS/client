@@ -16,7 +16,7 @@ public class Class47_Sub2 extends Class47 {
 		aGraphicalRenderer_Sub2_439.method13969(0, Class67.aClass67_680);
 		aGraphicalRenderer_Sub2_439.method13967(1, Class67.aClass67_677);
 		aGraphicalRenderer_Sub2_439.method13969(1, Class67.aClass67_677);
-		aGraphicalRenderer_Sub2_439.method13973().method6562(aClass384_440);
+		aGraphicalRenderer_Sub2_439.method13973().copy(aClass384_440);
 		aGraphicalRenderer_Sub2_439.method13974(Class37.aClass37_388);
 		aGraphicalRenderer_Sub2_439.method14161(0, anInterface4_445);
 		aGraphicalRenderer_Sub2_439.method13996(aClass70_447);
@@ -38,7 +38,7 @@ public class Class47_Sub2 extends Class47 {
 	public void method938() {
 		aGraphicalRenderer_Sub2_439.method14163(1);
 		aGraphicalRenderer_Sub2_439.method14035(anInterface6_441);
-		aGraphicalRenderer_Sub2_439.method13973().method6562(aClass384_444);
+		aGraphicalRenderer_Sub2_439.method13973().copy(aClass384_444);
 		aGraphicalRenderer_Sub2_439.method13974(Class37.aClass37_388);
 		aGraphicalRenderer_Sub2_439.method13966(Class68.aClass68_687, Class68.aClass68_683);
 		aGraphicalRenderer_Sub2_439.method13967(0, Class67.aClass67_679);
@@ -68,7 +68,7 @@ public class Class47_Sub2 extends Class47 {
 	public void method942() {
 		aGraphicalRenderer_Sub2_439.method14163(1);
 		aGraphicalRenderer_Sub2_439.method14035(anInterface6_441);
-		aGraphicalRenderer_Sub2_439.method13973().method6562(aClass384_444);
+		aGraphicalRenderer_Sub2_439.method13973().copy(aClass384_444);
 		aGraphicalRenderer_Sub2_439.method13974(Class37.aClass37_388);
 		aGraphicalRenderer_Sub2_439.method13966(Class68.aClass68_687, Class68.aClass68_683);
 		aGraphicalRenderer_Sub2_439.method13967(0, Class67.aClass67_679);

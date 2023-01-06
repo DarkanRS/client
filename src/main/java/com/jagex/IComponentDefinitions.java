@@ -318,7 +318,7 @@ public class IComponentDefinitions {
 										} else if (inter.modelType == ModelType.PLAYER_HEAD) {
 											i_24 = inter.modelId;
 											if (i_24 >= 0 && i_24 < 2048) {
-												PlayerEntity player_37 = client.players[i_24];
+												PlayerEntity player_37 = client.PLAYER_LIST[i_24];
 												if (player_37 != null && (i_24 == client.myPlayerIndex || Class272.stringToInt(player_37.displayName) == inter.anInt1339)) {
 													meshRasterizer = inter.method2002(Renderers.CURRENT_RENDERER, drawStartY, IndexLoaders.RENDER_ANIM_LOADER, IndexLoaders.IDENTIKIT_LOADER, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, inter.anim, player_37.model);
 													if (meshRasterizer == null && aBool1399)
@@ -328,7 +328,7 @@ public class IComponentDefinitions {
 										} else if (inter.modelType == ModelType.PLAYER_MODEL) {
 											i_24 = inter.modelId;
 											if (i_24 >= 0 && i_24 < 2048) {
-												PlayerEntity player_37 = client.players[i_24];
+												PlayerEntity player_37 = client.PLAYER_LIST[i_24];
 												if (player_37 != null && (i_24 == client.myPlayerIndex || Class272.stringToInt(player_37.displayName) == inter.anInt1339))
 													meshRasterizer = player_37.model.getBodyModel(Renderers.CURRENT_RENDERER, drawStartY, IndexLoaders.RENDER_ANIM_LOADER, IndexLoaders.IDENTIKIT_LOADER, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, inter.anim, null, null, null, 0, LinkedNodeList.EQUIPMENT_DEFAULTS);
 											}

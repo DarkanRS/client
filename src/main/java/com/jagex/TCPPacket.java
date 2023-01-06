@@ -40,7 +40,7 @@ public class TCPPacket extends Node {
 
 			int i_10;
 			for (i_10 = 0; i_10 < i_8; i_10++) {
-				PlayerEntity player_13 = client.players[ints_9[i_10]];
+				PlayerEntity player_13 = client.PLAYER_LIST[ints_9[i_10]];
 				if (player_13 != null)
 					player_13.method15818(i_0, i_1, i_2, i_3, i_4, i_5, i_6);
 			}

@@ -39,12 +39,12 @@ public class JavaRenderer extends AbstractRenderer {
 	int size;
 	boolean lowResolution;
 	LRUCache aClass229_9013;
-	LRUCache aClass229_9006;
+	LRUCache cachedTextures;
 	Matrix44 aClass384_8994;
 	Matrix44 aClass384_8995;
 	Matrix44 aClass384_8996;
-	int anInt8980;
-	int anInt8981;
+	int width;
+	int height;
 	int[] anIntArray8979;
 
 	float[] aFloatArray9010;
@@ -82,7 +82,7 @@ public class JavaRenderer extends AbstractRenderer {
 		anInt9015 = -1;
 
 		try {
-			aClass229_9006 = new LRUCache(256);
+			cachedTextures = new LRUCache(256);
 			aClass294_8993 = new Matrix44Var();
 			aClass384_8994 = new Matrix44();
 			aClass384_8995 = new Matrix44();
@@ -107,7 +107,7 @@ public class JavaRenderer extends AbstractRenderer {
 		int i_6 = 0;
 
 		for (int i_7 = 0; i_7 < i_4; i_7++) {
-			int i_8 = (i_7 + i_2) * anInt8980 + i_1;
+			int i_8 = (i_7 + i_2) * width + i_1;
 
 			for (int i_9 = 0; i_9 < i_3; i_9++)
 				ints_5[i_6++] = anIntArray8979[i_8 + i_9];
@@ -140,8 +140,8 @@ public class JavaRenderer extends AbstractRenderer {
 				i_41 = anInt8986 - i_21;
 
 			if (i_31 > 0 && i_41 > 0 && i_15 <= anInt9002 && i_21 <= anInt8986) {
-				int i_7 = anInt8980 - i_31;
-				int i_8 = i_21 * anInt8980 + i_15;
+				int i_7 = width - i_31;
+				int i_8 = i_21 * width + i_15;
 				int i_9 = i_5 >>> 24;
 			int i_10;
 			int i_11;
@@ -228,7 +228,7 @@ public class JavaRenderer extends AbstractRenderer {
 	@Override
 	public void ba(int i_1, int i_2) {
 		if ((i_1 & 0x1) != 0)
-			B(0, 0, anInt8980, anInt8981, i_2, 0);
+			B(0, 0, width, height, i_2, 0);
 
 		if ((i_1 & 0x2) != 0)
 			method14410();
@@ -302,7 +302,7 @@ public class JavaRenderer extends AbstractRenderer {
 					if (i_16 > anInt9002)
 						i_16 = anInt9002;
 
-					i_17 = i_15 + i_8 * anInt8980;
+					i_17 = i_15 + i_8 * width;
 
 					for (i_18 = i_15; i_18 < i_16; i_18++)
 						anIntArray8979[i_17++] = i_4;
@@ -331,7 +331,7 @@ public class JavaRenderer extends AbstractRenderer {
 					if (i_16 > anInt9002 - 1)
 						i_16 = anInt9002 - 1;
 
-					i_17 = i_15 + i_8 * anInt8980;
+					i_17 = i_15 + i_8 * width;
 
 					for (i_18 = i_15; i_18 <= i_16; i_18++)
 						anIntArray8979[i_17++] = i_4;
@@ -361,7 +361,7 @@ public class JavaRenderer extends AbstractRenderer {
 					if (i_17 > anInt9002)
 						i_17 = anInt9002;
 
-					i_18 = i_16 + i_8 * anInt8980;
+					i_18 = i_16 + i_8 * width;
 
 					for (i_19 = i_16; i_19 < i_17; i_19++) {
 						i_20 = anIntArray8979[i_18];
@@ -392,7 +392,7 @@ public class JavaRenderer extends AbstractRenderer {
 					if (i_17 > anInt9002 - 1)
 						i_17 = anInt9002 - 1;
 
-					i_18 = i_16 + i_8 * anInt8980;
+					i_18 = i_16 + i_8 * width;
 
 					for (i_19 = i_16; i_19 <= i_17; i_19++) {
 						i_20 = anIntArray8979[i_18];
@@ -422,7 +422,7 @@ public class JavaRenderer extends AbstractRenderer {
 					if (i_16 > anInt9002)
 						i_16 = anInt9002;
 
-					i_17 = i_15 + i_8 * anInt8980;
+					i_17 = i_15 + i_8 * width;
 
 					for (i_18 = i_15; i_18 < i_16; i_18++) {
 						i_19 = anIntArray8979[i_17];
@@ -456,7 +456,7 @@ public class JavaRenderer extends AbstractRenderer {
 					if (i_16 > anInt9002 - 1)
 						i_16 = anInt9002 - 1;
 
-					i_17 = i_15 + i_8 * anInt8980;
+					i_17 = i_15 + i_8 * width;
 
 					for (i_18 = i_15; i_18 <= i_16; i_18++) {
 						i_19 = anIntArray8979[i_17];
@@ -530,7 +530,7 @@ public class JavaRenderer extends AbstractRenderer {
 				i_9 = 0;
 
 			if (i_8 - i_9 > 0) {
-				int i_10 = i_41 * anInt8980;
+				int i_10 = i_41 * width;
 
 				for (int i_11 = i_9; i_11 < i_8; i_11++) {
 					int i_12 = i_3 + ints_6[i_11];
@@ -548,7 +548,7 @@ public class JavaRenderer extends AbstractRenderer {
 					for (int i_14 = -i_13; i_14 < 0; i_14++)
 						anIntArray8979[i_12++] = -16777216;
 
-					i_10 += anInt8980;
+					i_10 += width;
 				}
 			}
 		}
@@ -579,8 +579,8 @@ public class JavaRenderer extends AbstractRenderer {
 	public void eh() {
 		anInt8983 = 0;
 		anInt9009 = 0;
-		anInt9002 = 1480196385 * anInt8980;
-		anInt8986 = anInt8981 * 1628550159;
+		anInt9002 = 1480196385 * width;
+		anInt8986 = height * 1628550159;
 		method14364();
 	}
 
@@ -622,8 +622,8 @@ public class JavaRenderer extends AbstractRenderer {
 	public void ez() {
 		anInt8983 = 0;
 		anInt9009 = 0;
-		anInt9002 = 1480196385 * anInt8980;
-		anInt8986 = anInt8981 * 1628550159;
+		anInt9002 = 1480196385 * width;
+		anInt8986 = height * 1628550159;
 		method14364();
 	}
 
@@ -651,8 +651,8 @@ public class JavaRenderer extends AbstractRenderer {
 				i_41 = anInt8986 - i_21;
 
 			if (i_31 > 0 && i_41 > 0 && i_15 <= anInt9002 && i_21 <= anInt8986) {
-				int i_7 = anInt8980 - i_31;
-				int i_8 = i_15 + i_21 * anInt8980;
+				int i_7 = width - i_31;
+				int i_8 = i_15 + i_21 * width;
 				int i_9 = i_5 >>> 24;
 			int i_10;
 			int i_11;
@@ -748,11 +748,11 @@ public class JavaRenderer extends AbstractRenderer {
 		if (i_21 < 0)
 			i_21 = 0;
 
-		if (i_31 > anInt8980)
-			i_31 = anInt8980;
+		if (i_31 > width)
+			i_31 = width;
 
-		if (i_41 > anInt8981)
-			i_41 = anInt8981;
+		if (i_41 > height)
+			i_41 = height;
 
 		anInt8983 = i_11;
 		anInt9002 = i_31;
@@ -764,7 +764,7 @@ public class JavaRenderer extends AbstractRenderer {
 	@Override
 	public void fd(int i_1, int i_2) {
 		if ((i_1 & 0x1) != 0)
-			B(0, 0, anInt8980, anInt8981, i_2, 0);
+			B(0, 0, width, height, i_2, 0);
 
 		if ((i_1 & 0x2) != 0)
 			method14410();
@@ -795,8 +795,8 @@ public class JavaRenderer extends AbstractRenderer {
 			int i_11 = 0;
 			int i_12 = (i_8 << 16) / i_3;
 			int i_13 = (bytes_7.length / i_8 << 16) / i_4;
-			int i_14 = i_1 + anInt8980 * i_2;
-			int i_15 = anInt8980 - i_3;
+			int i_14 = i_1 + width * i_2;
+			int i_15 = width - i_3;
 			if (i_2 + i_4 > anInt8986)
 				i_4 -= i_4 + i_2 - anInt8986;
 
@@ -804,7 +804,7 @@ public class JavaRenderer extends AbstractRenderer {
 			if (i_2 < anInt9009) {
 				i_16 = anInt9009 - i_2;
 				i_4 -= i_16;
-				i_14 += anInt8980 * i_16;
+				i_14 += width * i_16;
 				i_11 += i_16 * i_13;
 			}
 
@@ -921,7 +921,7 @@ public class JavaRenderer extends AbstractRenderer {
 	@Override
 	public void fi(int i_1, int i_2) {
 		if ((i_1 & 0x1) != 0)
-			B(0, 0, anInt8980, anInt8981, i_2, 0);
+			B(0, 0, width, height, i_2, 0);
 
 		if ((i_1 & 0x2) != 0)
 			method14410();
@@ -958,12 +958,12 @@ public class JavaRenderer extends AbstractRenderer {
 			if (i_21 + i_31 > anInt8986)
 				i_31 = anInt8986 - i_21;
 
-			int i_6 = i_21 * anInt8980 + i_1;
+			int i_6 = i_21 * width + i_1;
 			int i_7 = i_4 >>> 24;
 			int i_8;
 			if (i_5 == 0 || i_5 == 1 && i_7 == 255)
 				for (i_8 = 0; i_8 < i_31; i_8++)
-					anIntArray8979[i_6 + anInt8980 * i_8] = i_4;
+					anIntArray8979[i_6 + width * i_8] = i_4;
 			else {
 				int i_9;
 				int i_10;
@@ -973,7 +973,7 @@ public class JavaRenderer extends AbstractRenderer {
 					i_8 = 256 - i_7;
 
 					for (i_9 = 0; i_9 < i_31; i_9++) {
-						i_10 = i_6 + i_9 * anInt8980;
+						i_10 = i_6 + i_9 * width;
 						i_11 = anIntArray8979[i_10];
 						i_11 = ((i_11 & 0xff00ff) * i_8 >> 8 & 0xff00ff) + ((i_11 & 0xff00) * i_8 >> 8 & 0xff00);
 						anIntArray8979[i_10] = i_4 + i_11;
@@ -983,7 +983,7 @@ public class JavaRenderer extends AbstractRenderer {
 						throw new IllegalArgumentException();
 
 					for (i_8 = 0; i_8 < i_31; i_8++) {
-						i_9 = anInt8980 * i_8 + i_6;
+						i_9 = width * i_8 + i_6;
 						i_10 = anIntArray8979[i_9];
 						i_11 = i_10 + i_4;
 						int i_12 = (i_4 & 0xff00ff) + (i_10 & 0xff00ff);
@@ -1008,11 +1008,11 @@ public class JavaRenderer extends AbstractRenderer {
 		if (i_21 < 0)
 			i_21 = 0;
 
-		if (i_31 > anInt8980)
-			i_31 = anInt8980;
+		if (i_31 > width)
+			i_31 = width;
 
-		if (i_41 > anInt8981)
-			i_41 = anInt8981;
+		if (i_41 > height)
+			i_41 = height;
 
 		anInt8983 = i_11;
 		anInt9002 = i_31;
@@ -1034,12 +1034,12 @@ public class JavaRenderer extends AbstractRenderer {
 			if (i_21 + i_31 > anInt8986)
 				i_31 = anInt8986 - i_21;
 
-			int i_6 = i_21 * anInt8980 + i_1;
+			int i_6 = i_21 * width + i_1;
 			int i_7 = i_4 >>> 24;
 			int i_8;
 			if (i_5 == 0 || i_5 == 1 && i_7 == 255)
 				for (i_8 = 0; i_8 < i_31; i_8++)
-					anIntArray8979[i_6 + anInt8980 * i_8] = i_4;
+					anIntArray8979[i_6 + width * i_8] = i_4;
 			else {
 				int i_9;
 				int i_10;
@@ -1049,7 +1049,7 @@ public class JavaRenderer extends AbstractRenderer {
 					i_8 = 256 - i_7;
 
 					for (i_9 = 0; i_9 < i_31; i_9++) {
-						i_10 = i_6 + i_9 * anInt8980;
+						i_10 = i_6 + i_9 * width;
 						i_11 = anIntArray8979[i_10];
 						i_11 = ((i_11 & 0xff00ff) * i_8 >> 8 & 0xff00ff) + ((i_11 & 0xff00) * i_8 >> 8 & 0xff00);
 						anIntArray8979[i_10] = i_4 + i_11;
@@ -1059,7 +1059,7 @@ public class JavaRenderer extends AbstractRenderer {
 						throw new IllegalArgumentException();
 
 					for (i_8 = 0; i_8 < i_31; i_8++) {
-						i_9 = anInt8980 * i_8 + i_6;
+						i_9 = width * i_8 + i_6;
 						i_10 = anIntArray8979[i_9];
 						i_11 = i_10 + i_4;
 						int i_12 = (i_4 & 0xff00ff) + (i_10 & 0xff00ff);
@@ -1096,8 +1096,8 @@ public class JavaRenderer extends AbstractRenderer {
 				i_41 = anInt8986 - i_21;
 
 			if (i_31 > 0 && i_41 > 0 && i_15 <= anInt9002 && i_21 <= anInt8986) {
-				int i_7 = anInt8980 - i_31;
-				int i_8 = i_15 + i_21 * anInt8980;
+				int i_7 = width - i_31;
+				int i_8 = i_15 + i_21 * width;
 				int i_9 = i_5 >>> 24;
 			int i_10;
 			int i_11;
@@ -1194,7 +1194,7 @@ public class JavaRenderer extends AbstractRenderer {
 			if (i_31 + i_12 > anInt9002)
 				i_31 = anInt9002 - i_12;
 
-			int i_6 = i_2 * anInt8980 + i_12;
+			int i_6 = i_2 * width + i_12;
 			int i_7 = i_4 >>> 24;
 			int i_8;
 			if (i_5 == 0 || i_5 == 1 && i_7 == 255)
@@ -1273,7 +1273,7 @@ public class JavaRenderer extends AbstractRenderer {
 					if (i_16 > anInt9002)
 						i_16 = anInt9002;
 
-					i_17 = i_15 + i_8 * anInt8980;
+					i_17 = i_15 + i_8 * width;
 
 					for (i_18 = i_15; i_18 < i_16; i_18++)
 						anIntArray8979[i_17++] = i_4;
@@ -1302,7 +1302,7 @@ public class JavaRenderer extends AbstractRenderer {
 					if (i_16 > anInt9002 - 1)
 						i_16 = anInt9002 - 1;
 
-					i_17 = i_15 + i_8 * anInt8980;
+					i_17 = i_15 + i_8 * width;
 
 					for (i_18 = i_15; i_18 <= i_16; i_18++)
 						anIntArray8979[i_17++] = i_4;
@@ -1332,7 +1332,7 @@ public class JavaRenderer extends AbstractRenderer {
 					if (i_17 > anInt9002)
 						i_17 = anInt9002;
 
-					i_18 = i_16 + i_8 * anInt8980;
+					i_18 = i_16 + i_8 * width;
 
 					for (i_19 = i_16; i_19 < i_17; i_19++) {
 						i_20 = anIntArray8979[i_18];
@@ -1363,7 +1363,7 @@ public class JavaRenderer extends AbstractRenderer {
 					if (i_17 > anInt9002 - 1)
 						i_17 = anInt9002 - 1;
 
-					i_18 = i_16 + anInt8980 * i_8;
+					i_18 = i_16 + width * i_8;
 
 					for (i_19 = i_16; i_19 <= i_17; i_19++) {
 						i_20 = anIntArray8979[i_18];
@@ -1393,7 +1393,7 @@ public class JavaRenderer extends AbstractRenderer {
 					if (i_16 > anInt9002)
 						i_16 = anInt9002;
 
-					i_17 = i_15 + anInt8980 * i_8;
+					i_17 = i_15 + width * i_8;
 
 					for (i_18 = i_15; i_18 < i_16; i_18++) {
 						i_19 = anIntArray8979[i_17];
@@ -1427,7 +1427,7 @@ public class JavaRenderer extends AbstractRenderer {
 					if (i_16 > anInt9002 - 1)
 						i_16 = anInt9002 - 1;
 
-					i_17 = i_15 + anInt8980 * i_8;
+					i_17 = i_15 + width * i_8;
 
 					for (i_18 = i_15; i_18 <= i_16; i_18++) {
 						i_19 = anIntArray8979[i_17];
@@ -1458,7 +1458,7 @@ public class JavaRenderer extends AbstractRenderer {
 			if (i_31 + i_12 > anInt9002)
 				i_31 = anInt9002 - i_12;
 
-			int i_6 = i_2 * anInt8980 + i_12;
+			int i_6 = i_2 * width + i_12;
 			int i_7 = i_4 >>> 24;
 			int i_8;
 			if (i_5 == 0 || i_5 == 1 && i_7 == 255)
@@ -1504,7 +1504,7 @@ public class JavaRenderer extends AbstractRenderer {
 	@Override
 	public void fu(int i_1, int i_2) {
 		if ((i_1 & 0x1) != 0)
-			B(0, 0, anInt8980, anInt8981, i_2, 0);
+			B(0, 0, width, height, i_2, 0);
 
 		if ((i_1 & 0x2) != 0)
 			method14410();
@@ -1518,8 +1518,8 @@ public class JavaRenderer extends AbstractRenderer {
 			int i_11 = 0;
 			int i_12 = (i_8 << 16) / i_3;
 			int i_13 = (bytes_7.length / i_8 << 16) / i_4;
-			int i_14 = i_1 + anInt8980 * i_2;
-			int i_15 = anInt8980 - i_3;
+			int i_14 = i_1 + width * i_2;
+			int i_15 = width - i_3;
 			if (i_2 + i_4 > anInt8986)
 				i_4 -= i_4 + i_2 - anInt8986;
 
@@ -1527,7 +1527,7 @@ public class JavaRenderer extends AbstractRenderer {
 			if (i_2 < anInt9009) {
 				i_16 = anInt9009 - i_2;
 				i_4 -= i_16;
-				i_14 += anInt8980 * i_16;
+				i_14 += width * i_16;
 				i_11 += i_16 * i_13;
 			}
 
@@ -1677,7 +1677,7 @@ public class JavaRenderer extends AbstractRenderer {
 					if (i_16 > anInt9002)
 						i_16 = anInt9002;
 
-					i_17 = i_15 + i_8 * anInt8980;
+					i_17 = i_15 + i_8 * width;
 
 					for (i_18 = i_15; i_18 < i_16; i_18++)
 						anIntArray8979[i_17++] = i_4;
@@ -1706,7 +1706,7 @@ public class JavaRenderer extends AbstractRenderer {
 					if (i_16 > anInt9002 - 1)
 						i_16 = anInt9002 - 1;
 
-					i_17 = i_15 + i_8 * anInt8980;
+					i_17 = i_15 + i_8 * width;
 
 					for (i_18 = i_15; i_18 <= i_16; i_18++)
 						anIntArray8979[i_17++] = i_4;
@@ -1736,7 +1736,7 @@ public class JavaRenderer extends AbstractRenderer {
 					if (i_17 > anInt9002)
 						i_17 = anInt9002;
 
-					i_18 = i_16 + i_8 * anInt8980;
+					i_18 = i_16 + i_8 * width;
 
 					for (i_19 = i_16; i_19 < i_17; i_19++) {
 						i_20 = anIntArray8979[i_18];
@@ -1767,7 +1767,7 @@ public class JavaRenderer extends AbstractRenderer {
 					if (i_17 > anInt9002 - 1)
 						i_17 = anInt9002 - 1;
 
-					i_18 = i_16 + anInt8980 * i_8;
+					i_18 = i_16 + width * i_8;
 
 					for (i_19 = i_16; i_19 <= i_17; i_19++) {
 						i_20 = anIntArray8979[i_18];
@@ -1797,7 +1797,7 @@ public class JavaRenderer extends AbstractRenderer {
 					if (i_16 > anInt9002)
 						i_16 = anInt9002;
 
-					i_17 = i_15 + anInt8980 * i_8;
+					i_17 = i_15 + width * i_8;
 
 					for (i_18 = i_15; i_18 < i_16; i_18++) {
 						i_19 = anIntArray8979[i_17];
@@ -1831,7 +1831,7 @@ public class JavaRenderer extends AbstractRenderer {
 					if (i_16 > anInt9002 - 1)
 						i_16 = anInt9002 - 1;
 
-					i_17 = i_15 + anInt8980 * i_8;
+					i_17 = i_15 + width * i_8;
 
 					for (i_18 = i_15; i_18 <= i_16; i_18++) {
 						i_19 = anIntArray8979[i_17];
@@ -1862,12 +1862,12 @@ public class JavaRenderer extends AbstractRenderer {
 			if (i_31 + i_21 > anInt8986)
 				i_31 = anInt8986 - i_21;
 
-			int i_6 = i_21 * anInt8980 + i_1;
+			int i_6 = i_21 * width + i_1;
 			int i_7 = i_4 >>> 24;
 			int i_8;
 			if (i_5 == 0 || i_5 == 1 && i_7 == 255)
 				for (i_8 = 0; i_8 < i_31; i_8++)
-					anIntArray8979[i_6 + i_8 * anInt8980] = i_4;
+					anIntArray8979[i_6 + i_8 * width] = i_4;
 			else {
 				int i_9;
 				int i_10;
@@ -1877,7 +1877,7 @@ public class JavaRenderer extends AbstractRenderer {
 					i_8 = 256 - i_7;
 
 					for (i_9 = 0; i_9 < i_31; i_9++) {
-						i_10 = i_6 + i_9 * anInt8980;
+						i_10 = i_6 + i_9 * width;
 						i_11 = anIntArray8979[i_10];
 						i_11 = ((i_11 & 0xff00ff) * i_8 >> 8 & 0xff00ff) + (i_8 * (i_11 & 0xff00) >> 8 & 0xff00);
 						anIntArray8979[i_10] = i_11 + i_4;
@@ -1887,7 +1887,7 @@ public class JavaRenderer extends AbstractRenderer {
 						throw new IllegalArgumentException();
 
 					for (i_8 = 0; i_8 < i_31; i_8++) {
-						i_9 = i_6 + i_8 * anInt8980;
+						i_9 = i_6 + i_8 * width;
 						i_10 = anIntArray8979[i_9];
 						i_11 = i_10 + i_4;
 						int i_12 = (i_10 & 0xff00ff) + (i_4 & 0xff00ff);
@@ -1935,7 +1935,7 @@ public class JavaRenderer extends AbstractRenderer {
 				i_9 = 0;
 
 			if (i_8 - i_9 > 0) {
-				int i_10 = anInt8980 * i_41;
+				int i_10 = width * i_41;
 
 				for (int i_11 = i_9; i_11 < i_8; i_11++) {
 					int i_12 = ints_6[i_11] + i_3;
@@ -1953,7 +1953,7 @@ public class JavaRenderer extends AbstractRenderer {
 					for (int i_14 = -i_13; i_14 < 0; i_14++)
 						anIntArray8979[i_12++] = i_1;
 
-					i_10 += anInt8980;
+					i_10 += width;
 				}
 			}
 		}
@@ -1981,7 +1981,7 @@ public class JavaRenderer extends AbstractRenderer {
 				i_9 = 0;
 
 			if (i_8 - i_9 > 0) {
-				int i_10 = anInt8980 * i_41;
+				int i_10 = width * i_41;
 
 				for (int i_11 = i_9; i_11 < i_8; i_11++) {
 					int i_12 = ints_6[i_11] + i_3;
@@ -1999,7 +1999,7 @@ public class JavaRenderer extends AbstractRenderer {
 					for (int i_14 = -i_13; i_14 < 0; i_14++)
 						anIntArray8979[i_12++] = i_1;
 
-					i_10 += anInt8980;
+					i_10 += width;
 				}
 			}
 		}
@@ -2027,7 +2027,7 @@ public class JavaRenderer extends AbstractRenderer {
 				i_9 = 0;
 
 			if (i_8 - i_9 > 0) {
-				int i_10 = anInt8980 * i_41;
+				int i_10 = width * i_41;
 
 				for (int i_11 = i_9; i_11 < i_8; i_11++) {
 					int i_12 = ints_6[i_11] + i_3;
@@ -2045,7 +2045,7 @@ public class JavaRenderer extends AbstractRenderer {
 					for (int i_14 = -i_13; i_14 < 0; i_14++)
 						anIntArray8979[i_12++] = i_1;
 
-					i_10 += anInt8980;
+					i_10 += width;
 				}
 			}
 		}
@@ -2193,7 +2193,7 @@ public class JavaRenderer extends AbstractRenderer {
 		int i_6 = 0;
 
 		for (int i_7 = 0; i_7 < i_4; i_7++) {
-			int i_8 = i_1 + (i_2 + i_7) * anInt8980;
+			int i_8 = i_1 + (i_2 + i_7) * width;
 
 			for (int i_9 = 0; i_9 < i_3; i_9++)
 				ints_5[i_6++] = anIntArray8979[i_8 + i_9];
@@ -2210,7 +2210,7 @@ public class JavaRenderer extends AbstractRenderer {
 		int i_6 = 0;
 
 		for (int i_7 = 0; i_7 < i_4; i_7++) {
-			int i_8 = i_1 + (i_2 + i_7) * anInt8980;
+			int i_8 = i_1 + (i_2 + i_7) * width;
 
 			for (int i_9 = 0; i_9 < i_3; i_9++)
 				ints_5[i_6++] = anIntArray8979[i_8 + i_9];
@@ -2227,7 +2227,7 @@ public class JavaRenderer extends AbstractRenderer {
 		int i_6 = 0;
 
 		for (int i_7 = 0; i_7 < i_4; i_7++) {
-			int i_8 = i_1 + (i_2 + i_7) * anInt8980;
+			int i_8 = i_1 + (i_2 + i_7) * width;
 
 			for (int i_9 = 0; i_9 < i_3; i_9++)
 				ints_5[i_6++] = anIntArray8979[i_8 + i_9];
@@ -2240,8 +2240,8 @@ public class JavaRenderer extends AbstractRenderer {
 	public void L() {
 		anInt8983 = 0;
 		anInt9009 = 0;
-		anInt9002 = anInt8980;
-		anInt8986 = anInt8981;
+		anInt9002 = width;
+		anInt8986 = height;
 		method14364();
 	}
 
@@ -2257,15 +2257,15 @@ public class JavaRenderer extends AbstractRenderer {
 
 	int[] method14359(int textureId) {
 		Node_Sub27 class282_sub27;
-		synchronized (aClass229_9006) {
-			class282_sub27 = ((Node_Sub27) aClass229_9006.get(textureId | -9223372036854775808L));
+		synchronized (cachedTextures) {
+			class282_sub27 = ((Node_Sub27) cachedTextures.get(textureId | -9223372036854775808L));
 			if (class282_sub27 == null) {
 				if (!textureCache.loadTexture(textureId))
 					return null;
 				TextureDetails texDeets = textureCache.getTextureDetails(textureId);
 				int res = (texDeets.isHalfSize || lowResolution ? 64 : size);
 				class282_sub27 = (new Node_Sub27(textureId, res, textureCache.renderMaterialPixelsI(textureId, res, res), texDeets.blendType != 1));
-				aClass229_9006.put(class282_sub27, textureId | -9223372036854775808L);
+				cachedTextures.put(class282_sub27, textureId | -9223372036854775808L);
 			}
 		}
 		class282_sub27.aBool7693 = true;
@@ -2335,20 +2335,20 @@ public class JavaRenderer extends AbstractRenderer {
 			choppyitemfixclass_7.anInt1700 = i_2;
 		}
 
-		i_5 = anInt8980 * anInt9009 + anInt8983;
+		i_5 = width * anInt9009 + anInt8983;
 
 		for (int i_6 = anInt9009; i_6 < anInt8986; i_6++) {
 			for (int i_9 = 0; i_9 < anInt9008; i_9++)
 				aClass185Array8984[i_9].aClass144_2310.anIntArray1685[i_6 - anInt9009] = i_5;
 
-			i_5 += anInt8980;
+			i_5 += width;
 		}
 
 	}
 
 	void method14366(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
 		if (anIntArray8979 != null && i_2 >= anInt9009 && i_2 < anInt8986) {
-			int i_9 = i_2 * anInt8980 + i_1;
+			int i_9 = i_2 * width + i_1;
 			int i_10 = i_4 >>> 24;
 		int i_11 = i_7 + i_6;
 		int i_12 = i_8 % i_11;
@@ -2520,7 +2520,7 @@ public class JavaRenderer extends AbstractRenderer {
 							if (i_18 > anInt9002)
 								i_18 = anInt9002;
 
-							i_19 = i_17 + i_10 * anInt8980;
+							i_19 = i_17 + i_10 * width;
 
 							for (i_20 = i_17; i_20 < i_18; i_20++) {
 								if (!bool_1 || f_4 < aFloatArray9010[i_19])
@@ -2553,7 +2553,7 @@ public class JavaRenderer extends AbstractRenderer {
 							if (i_18 > anInt9002 - 1)
 								i_18 = anInt9002 - 1;
 
-							i_19 = i_17 + i_10 * anInt8980;
+							i_19 = i_17 + i_10 * width;
 
 							for (i_20 = i_17; i_20 <= i_18; i_20++) {
 								if (!bool_1 || f_4 < aFloatArray9010[i_19])
@@ -2587,7 +2587,7 @@ public class JavaRenderer extends AbstractRenderer {
 							if (i_19 > anInt9002)
 								i_19 = anInt9002;
 
-							i_20 = i_18 + i_10 * anInt8980;
+							i_20 = i_18 + i_10 * width;
 
 							for (i_21 = i_18; i_21 < i_19; i_21++) {
 								if (!bool_1 || f_4 < aFloatArray9010[i_20]) {
@@ -2622,7 +2622,7 @@ public class JavaRenderer extends AbstractRenderer {
 							if (i_19 > anInt9002 - 1)
 								i_19 = anInt9002 - 1;
 
-							i_20 = i_18 + i_10 * anInt8980;
+							i_20 = i_18 + i_10 * width;
 
 							for (i_21 = i_18; i_21 <= i_19; i_21++) {
 								if (!bool_1 || f_4 < aFloatArray9010[i_20]) {
@@ -2656,7 +2656,7 @@ public class JavaRenderer extends AbstractRenderer {
 							if (i_18 > anInt9002)
 								i_18 = anInt9002;
 
-							i_19 = i_17 + i_10 * anInt8980;
+							i_19 = i_17 + i_10 * width;
 
 							for (i_20 = i_17; i_20 < i_18; i_20++) {
 								if (!bool_1 || f_4 < aFloatArray9010[i_19]) {
@@ -2694,7 +2694,7 @@ public class JavaRenderer extends AbstractRenderer {
 							if (i_18 > anInt9002 - 1)
 								i_18 = anInt9002 - 1;
 
-							i_19 = i_17 + i_10 * anInt8980;
+							i_19 = i_17 + i_10 * width;
 
 							for (i_20 = i_17; i_20 <= i_18; i_20++) {
 								if (!bool_1 || f_4 < aFloatArray9010[i_19]) {
@@ -2718,8 +2718,8 @@ public class JavaRenderer extends AbstractRenderer {
 
 	void method14374() {
 		aClass384_8994.fromVarMatrix44(aClass294_8993);
-		aClass384_8996.method6562(aClass384_8994);
-		aClass384_8996.method6523(aClass384_8995);
+		aClass384_8996.copy(aClass384_8994);
+		aClass384_8996.multiply(aClass384_8995);
 		aClass384_8996.method6539(aFloatArrayArray8989[0]);
 		aClass384_8996.method6540(aFloatArrayArray8989[1]);
 		aClass384_8996.method6535(aFloatArrayArray8989[2]);
@@ -2739,11 +2739,11 @@ public class JavaRenderer extends AbstractRenderer {
 
 	}
 
-	void method14376(int i_1, int i_2, int[] ints_3, float[] floats_4) {
-		anInt8980 = i_1;
-		anInt8981 = i_2;
-		anIntArray8979 = ints_3;
-		aFloatArray9010 = floats_4;
+	void method14376(int width, int height, int[] ints_3, float[] floats_4) {
+		this.width = width;
+		this.height = height;
+		this.anIntArray8979 = ints_3;
+		this.aFloatArray9010 = floats_4;
 
 		for (int i_5 = 0; i_5 < anInt9008; i_5++)
 			aClass185Array8984[i_5].method3071();
@@ -2754,7 +2754,7 @@ public class JavaRenderer extends AbstractRenderer {
 
 	void method14399(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
 		if (anIntArray8979 != null && i_1 >= anInt8983 && i_1 < anInt9002) {
-			int i_9 = i_2 * anInt8980 + i_1;
+			int i_9 = i_2 * width + i_1;
 			int i_10 = i_4 >>> 24;
 		int i_11 = i_7 + i_6;
 		int i_12 = i_8 % i_11;
@@ -2762,7 +2762,7 @@ public class JavaRenderer extends AbstractRenderer {
 		if (i_5 == 0 || i_5 == 1 && i_10 == 255)
 			for (i_13 = 0; i_13 < i_3; i_12 %= i_11) {
 				if (i_13 + i_2 >= anInt9009 && i_13 + i_2 < anInt8986 && i_12 < i_6)
-					anIntArray8979[i_9 + i_13 * anInt8980] = i_4;
+					anIntArray8979[i_9 + i_13 * width] = i_4;
 
 				++i_13;
 				++i_12;
@@ -2777,7 +2777,7 @@ public class JavaRenderer extends AbstractRenderer {
 
 				for (i_14 = 0; i_14 < i_3; i_12 %= i_11) {
 					if (i_14 + i_2 >= anInt9009 && i_14 + i_2 < anInt8986 && i_12 < i_6) {
-						i_15 = i_9 + i_14 * anInt8980;
+						i_15 = i_9 + i_14 * width;
 						i_16 = anIntArray8979[i_15];
 						i_16 = (i_13 * (i_16 & 0xff00) >> 8 & 0xff00) + ((i_16 & 0xff00ff) * i_13 >> 8 & 0xff00ff);
 						anIntArray8979[i_15] = i_16 + i_4;
@@ -2792,7 +2792,7 @@ public class JavaRenderer extends AbstractRenderer {
 
 				for (i_13 = 0; i_13 < i_3; i_12 %= i_11) {
 					if (i_13 + i_2 >= anInt9009 && i_13 + i_2 < anInt8986 && i_12 < i_6) {
-						i_14 = i_9 + i_13 * anInt8980;
+						i_14 = i_9 + i_13 * width;
 						i_15 = anIntArray8979[i_14];
 						i_16 = i_15 + i_4;
 						int i_17 = (i_15 & 0xff00ff) + (i_4 & 0xff00ff);
@@ -2826,7 +2826,7 @@ public class JavaRenderer extends AbstractRenderer {
 			int i_1;
 			int i_2;
 			int i_3;
-			if (anInt8983 == 0 && anInt9002 == anInt8980 && anInt9009 == 0 && anInt8986 == anInt8981) {
+			if (anInt8983 == 0 && anInt9002 == width && anInt9009 == 0 && anInt8986 == height) {
 				i_1 = aFloatArray9010.length;
 				i_2 = i_1 - (i_1 & 0x7);
 
@@ -2845,8 +2845,8 @@ public class JavaRenderer extends AbstractRenderer {
 			} else {
 				i_1 = anInt9002 - anInt8983;
 				i_2 = anInt8986 - anInt9009;
-				i_3 = anInt8980 - i_1;
-				int i_4 = anInt8980 * anInt9009 + anInt8983;
+				i_3 = width - i_1;
+				int i_4 = width * anInt9009 + anInt8983;
 				int i_5 = i_1 >> 3;
 				int i_6 = i_1 & 0x7;
 				i_1 = i_4 - 1;
@@ -2921,7 +2921,7 @@ public class JavaRenderer extends AbstractRenderer {
 	public void method8398(int i_1) {
 		int i_2 = i_1 - anInt8977;
 
-		for (Node_Sub27 class282_sub27_3 = (Node_Sub27) aClass229_9006.method3866(); class282_sub27_3 != null; class282_sub27_3 = (Node_Sub27) aClass229_9006.method3867())
+		for (Node_Sub27 class282_sub27_3 = (Node_Sub27) cachedTextures.method3866(); class282_sub27_3 != null; class282_sub27_3 = (Node_Sub27) cachedTextures.method3867())
 			if (class282_sub27_3.aBool7693) {
 				class282_sub27_3.anInt7692 += i_2;
 				int i_4 = class282_sub27_3.anInt7692 / 50;
@@ -2937,7 +2937,7 @@ public class JavaRenderer extends AbstractRenderer {
 
 		anInt8977 = i_1;
 		aClass229_9013.method3858(5);
-		aClass229_9006.method3858(5);
+		cachedTextures.method3858(5);
 	}
 
 	@Override
@@ -2982,8 +2982,8 @@ public class JavaRenderer extends AbstractRenderer {
 
 	@Override
 	public void method8408(int[] ints_1) {
-		ints_1[0] = anInt8980;
-		ints_1[1] = anInt8981;
+		ints_1[0] = width;
+		ints_1[1] = height;
 	}
 
 	@Override
@@ -3042,7 +3042,7 @@ public class JavaRenderer extends AbstractRenderer {
 							for (i_9 = 256 - i_8; i_14 <= i_31; i_14++) {
 								i_10 = i_21 >> 16;
 							if (i_10 >= anInt9009 && i_10 < anInt8986) {
-								i_11 = i_14 + anInt8980 * i_10;
+								i_11 = i_14 + width * i_10;
 								i_12 = anIntArray8979[i_11];
 								i_12 = (i_9 * (i_12 & 0xff00ff) >> 8 & 0xff00ff) + (i_9 * (i_12 & 0xff00) >> 8 & 0xff00);
 								anIntArray8979[i_11] = i_5 + i_12;
@@ -3057,7 +3057,7 @@ public class JavaRenderer extends AbstractRenderer {
 							while (i_14 <= i_31) {
 								i_9 = i_21 >> 16;
 							if (i_9 >= anInt9009 && i_9 < anInt8986) {
-								i_10 = i_14 + i_9 * anInt8980;
+								i_10 = i_14 + i_9 * width;
 								i_11 = anIntArray8979[i_10];
 								i_12 = i_5 + i_11;
 								i_13 = (i_11 & 0xff00ff) + (i_5 & 0xff00ff);
@@ -3073,7 +3073,7 @@ public class JavaRenderer extends AbstractRenderer {
 						while (i_14 <= i_31) {
 							i_9 = i_21 >> 16;
 						if (i_9 >= anInt9009 && i_9 < anInt8986)
-							anIntArray8979[i_14 + i_9 * anInt8980] = i_5;
+							anIntArray8979[i_14 + i_9 * width] = i_5;
 
 						i_21 += i_7;
 						++i_14;
@@ -3097,7 +3097,7 @@ public class JavaRenderer extends AbstractRenderer {
 						while (i_21 <= i_41) {
 							i_9 = i_14 >> 16;
 						if (i_9 >= anInt8983 && i_9 < anInt9002)
-							anIntArray8979[i_9 + anInt8980 * i_21] = i_5;
+							anIntArray8979[i_9 + width * i_21] = i_5;
 
 						i_14 += i_7;
 						++i_21;
@@ -3108,10 +3108,10 @@ public class JavaRenderer extends AbstractRenderer {
 						for (i_9 = 256 - i_8; i_21 <= i_41; i_21++) {
 							i_10 = i_14 >> 16;
 						if (i_10 >= anInt8983 && i_10 < anInt9002) {
-							i_11 = anInt8980 * i_21 + i_10;
+							i_11 = width * i_21 + i_10;
 							i_12 = anIntArray8979[i_11];
 							i_12 = ((i_12 & 0xff00ff) * i_9 >> 8 & 0xff00ff) + ((i_12 & 0xff00) * i_9 >> 8 & 0xff00);
-							anIntArray8979[anInt8980 * i_21 + i_10] = i_5 + i_12;
+							anIntArray8979[width * i_21 + i_10] = i_5 + i_12;
 						}
 
 						i_14 += i_7;
@@ -3123,7 +3123,7 @@ public class JavaRenderer extends AbstractRenderer {
 						while (i_21 <= i_41) {
 							i_9 = i_14 >> 16;
 						if (i_9 >= anInt8983 && i_9 < anInt9002) {
-							i_10 = i_9 + i_21 * anInt8980;
+							i_10 = i_9 + i_21 * width;
 							i_11 = anIntArray8979[i_10];
 							i_12 = i_11 + i_5;
 							i_13 = (i_11 & 0xff00ff) + (i_5 & 0xff00ff);
@@ -3164,8 +3164,8 @@ public class JavaRenderer extends AbstractRenderer {
 	public void method8421() {
 		anInt8998 = 0;
 		anInt8999 = 0;
-		anInt9000 = anInt8980;
-		anInt9001 = anInt8981;
+		anInt9000 = width;
+		anInt9001 = height;
 		method14364();
 	}
 
@@ -3177,7 +3177,7 @@ public class JavaRenderer extends AbstractRenderer {
 
 	@Override
 	public void method8424(Matrix44 matrix44_1) {
-		aClass384_8995.method6562(matrix44_1);
+		aClass384_8995.copy(matrix44_1);
 		method14374();
 	}
 
@@ -3259,7 +3259,7 @@ public class JavaRenderer extends AbstractRenderer {
 							for (i_9 = 256 - i_8; i_14 <= i_31; i_14++) {
 								i_10 = i_21 >> 16;
 							if (i_10 >= anInt9009 && i_10 < anInt8986) {
-								i_11 = i_10 * anInt8980 + i_14;
+								i_11 = i_10 * width + i_14;
 								i_12 = anIntArray8979[i_11];
 								i_12 = (i_9 * (i_12 & 0xff00) >> 8 & 0xff00) + ((i_12 & 0xff00ff) * i_9 >> 8 & 0xff00ff);
 								anIntArray8979[i_11] = i_5 + i_12;
@@ -3274,7 +3274,7 @@ public class JavaRenderer extends AbstractRenderer {
 							while (i_14 <= i_31) {
 								i_9 = i_21 >> 16;
 							if (i_9 >= anInt9009 && i_9 < anInt8986) {
-								i_10 = i_9 * anInt8980 + i_14;
+								i_10 = i_9 * width + i_14;
 								i_11 = anIntArray8979[i_10];
 								i_12 = i_5 + i_11;
 								i_13 = (i_11 & 0xff00ff) + (i_5 & 0xff00ff);
@@ -3290,7 +3290,7 @@ public class JavaRenderer extends AbstractRenderer {
 						while (i_14 <= i_31) {
 							i_9 = i_21 >> 16;
 						if (i_9 >= anInt9009 && i_9 < anInt8986)
-							anIntArray8979[i_9 * anInt8980 + i_14] = i_5;
+							anIntArray8979[i_9 * width + i_14] = i_5;
 
 						i_21 += i_7;
 						++i_14;
@@ -3314,7 +3314,7 @@ public class JavaRenderer extends AbstractRenderer {
 						while (i_21 <= i_41) {
 							i_9 = i_14 >> 16;
 						if (i_9 >= anInt8983 && i_9 < anInt9002)
-							anIntArray8979[i_21 * anInt8980 + i_9] = i_5;
+							anIntArray8979[i_21 * width + i_9] = i_5;
 
 						i_14 += i_7;
 						++i_21;
@@ -3325,10 +3325,10 @@ public class JavaRenderer extends AbstractRenderer {
 						for (i_9 = 256 - i_8; i_21 <= i_41; i_21++) {
 							i_10 = i_14 >> 16;
 						if (i_10 >= anInt8983 && i_10 < anInt9002) {
-							i_11 = i_21 * anInt8980 + i_10;
+							i_11 = i_21 * width + i_10;
 							i_12 = anIntArray8979[i_11];
 							i_12 = ((i_12 & 0xff00ff) * i_9 >> 8 & 0xff00ff) + (i_9 * (i_12 & 0xff00) >> 8 & 0xff00);
-							anIntArray8979[i_21 * anInt8980 + i_10] = i_5 + i_12;
+							anIntArray8979[i_21 * width + i_10] = i_5 + i_12;
 						}
 
 						i_14 += i_7;
@@ -3340,7 +3340,7 @@ public class JavaRenderer extends AbstractRenderer {
 						while (i_21 <= i_41) {
 							i_9 = i_14 >> 16;
 						if (i_9 >= anInt8983 && i_9 < anInt9002) {
-							i_10 = i_21 * anInt8980 + i_9;
+							i_10 = i_21 * width + i_9;
 							i_11 = anIntArray8979[i_10];
 							i_12 = i_5 + i_11;
 							i_13 = (i_11 & 0xff00ff) + (i_5 & 0xff00ff);
@@ -3435,7 +3435,7 @@ public class JavaRenderer extends AbstractRenderer {
 						while (i_1 <= i_3) {
 							i_14 = i_2 >> 16;
 						if (i_1 >= anInt8983 && i_1 < anInt9002 && i_14 >= anInt9009 && i_14 < anInt8986 && i_9 < i_7)
-							anIntArray8979[i_14 * anInt8980 + i_1] = i_5;
+							anIntArray8979[i_14 * width + i_1] = i_5;
 
 						i_2 += i_11;
 						++i_1;
@@ -3448,7 +3448,7 @@ public class JavaRenderer extends AbstractRenderer {
 						for (i_14 = 256 - i_12; i_1 <= i_3; i_9 %= i_10) {
 							i_15 = i_2 >> 16;
 						if (i_1 >= anInt8983 && i_1 < anInt9002 && i_15 >= anInt9009 && i_15 < anInt8986 && i_9 < i_7) {
-							i_16 = i_15 * anInt8980 + i_1;
+							i_16 = i_15 * width + i_1;
 							i_17 = anIntArray8979[i_16];
 							i_17 = ((i_17 & 0xff00ff) * i_14 >> 8 & 0xff00ff) + (i_14 * (i_17 & 0xff00) >> 8 & 0xff00);
 							anIntArray8979[i_16] = i_5 + i_17;
@@ -3465,7 +3465,7 @@ public class JavaRenderer extends AbstractRenderer {
 						while (i_1 <= i_3) {
 							i_14 = i_2 >> 16;
 						if (i_1 >= anInt8983 && i_1 < anInt9002 && i_14 >= anInt9009 && i_14 < anInt8986 && i_9 < i_7) {
-							i_15 = i_14 * anInt8980 + i_1;
+							i_15 = i_14 * width + i_1;
 							i_16 = anIntArray8979[i_15];
 							i_17 = i_5 + i_16;
 							i_18 = (i_16 & 0xff00ff) + (i_5 & 0xff00ff);
@@ -3494,10 +3494,10 @@ public class JavaRenderer extends AbstractRenderer {
 							for (i_14 = 256 - i_12; i_2 <= i_4; i_9 %= i_10) {
 								i_15 = i_1 >> 16;
 							if (i_2 >= anInt9009 && i_2 < anInt8986 && i_15 >= anInt8983 && i_15 < anInt9002 && i_9 < i_7) {
-								i_16 = i_2 * anInt8980 + i_15;
+								i_16 = i_2 * width + i_15;
 								i_17 = anIntArray8979[i_16];
 								i_17 = (i_14 * (i_17 & 0xff00) >> 8 & 0xff00) + ((i_17 & 0xff00ff) * i_14 >> 8 & 0xff00ff);
-								anIntArray8979[i_2 * anInt8980 + i_15] = i_5 + i_17;
+								anIntArray8979[i_2 * width + i_15] = i_5 + i_17;
 							}
 
 							i_1 += i_11;
@@ -3511,7 +3511,7 @@ public class JavaRenderer extends AbstractRenderer {
 							while (i_2 <= i_4) {
 								i_14 = i_1 >> 16;
 							if (i_2 >= anInt9009 && i_2 < anInt8986 && i_14 >= anInt8983 && i_14 < anInt9002 && i_9 < i_7) {
-								i_15 = i_2 * anInt8980 + i_14;
+								i_15 = i_2 * width + i_14;
 								i_16 = anIntArray8979[i_15];
 								i_17 = i_5 + i_16;
 								i_18 = (i_16 & 0xff00ff) + (i_5 & 0xff00ff);
@@ -3529,7 +3529,7 @@ public class JavaRenderer extends AbstractRenderer {
 						while (i_2 <= i_4) {
 							i_14 = i_1 >> 16;
 						if (i_2 >= anInt9009 && i_2 < anInt8986 && i_14 >= anInt8983 && i_14 < anInt9002 && i_9 < i_7)
-							anIntArray8979[i_2 * anInt8980 + i_14] = i_5;
+							anIntArray8979[i_2 * width + i_14] = i_5;
 
 						i_1 += i_11;
 						++i_2;
@@ -3668,7 +3668,7 @@ public class JavaRenderer extends AbstractRenderer {
 
 	@Override
 	public void method8446(Matrix44 matrix44_1) {
-		aClass384_8995.method6562(matrix44_1);
+		aClass384_8995.copy(matrix44_1);
 		method14374();
 	}
 
@@ -3851,7 +3851,7 @@ public class JavaRenderer extends AbstractRenderer {
 	public void method8487(int i_1) {
 		int i_2 = i_1 - 1426154545 * anInt8977;
 
-		for (Node_Sub27 class282_sub27_3 = (Node_Sub27) aClass229_9006.method3866(); class282_sub27_3 != null; class282_sub27_3 = (Node_Sub27) aClass229_9006.method3867())
+		for (Node_Sub27 class282_sub27_3 = (Node_Sub27) cachedTextures.method3866(); class282_sub27_3 != null; class282_sub27_3 = (Node_Sub27) cachedTextures.method3867())
 			if (class282_sub27_3.aBool7693) {
 				class282_sub27_3.anInt7692 += i_2;
 				int i_4 = class282_sub27_3.anInt7692 / 50;
@@ -3867,14 +3867,14 @@ public class JavaRenderer extends AbstractRenderer {
 
 		anInt8977 = i_1;
 		aClass229_9013.method3858(5);
-		aClass229_9006.method3858(5);
+		cachedTextures.method3858(5);
 	}
 
 	@Override
 	public void method8488(int i_1) {
 		int i_2 = i_1 - 1426154545 * anInt8977;
 
-		for (Node_Sub27 class282_sub27_3 = (Node_Sub27) aClass229_9006.method3866(); class282_sub27_3 != null; class282_sub27_3 = (Node_Sub27) aClass229_9006.method3867())
+		for (Node_Sub27 class282_sub27_3 = (Node_Sub27) cachedTextures.method3866(); class282_sub27_3 != null; class282_sub27_3 = (Node_Sub27) cachedTextures.method3867())
 			if (class282_sub27_3.aBool7693) {
 				class282_sub27_3.anInt7692 += i_2;
 				int i_4 = class282_sub27_3.anInt7692 / 50;
@@ -3890,7 +3890,7 @@ public class JavaRenderer extends AbstractRenderer {
 
 		anInt8977 = i_1;
 		aClass229_9013.method3858(5);
-		aClass229_9006.method3858(5);
+		cachedTextures.method3858(5);
 	}
 
 	@Override
@@ -3983,7 +3983,7 @@ public class JavaRenderer extends AbstractRenderer {
 						while (i_1 <= i_3) {
 							i_14 = i_2 >> 16;
 						if (i_1 >= anInt8983 && i_1 < anInt9002 && i_14 >= anInt9009 && i_14 < anInt8986 && i_9 < i_7)
-							anIntArray8979[i_1 + anInt8980 * i_14] = i_5;
+							anIntArray8979[i_1 + width * i_14] = i_5;
 
 						i_2 += i_11;
 						++i_1;
@@ -3996,7 +3996,7 @@ public class JavaRenderer extends AbstractRenderer {
 						for (i_14 = 256 - i_12; i_1 <= i_3; i_9 %= i_10) {
 							i_15 = i_2 >> 16;
 						if (i_1 >= anInt8983 && i_1 < anInt9002 && i_15 >= anInt9009 && i_15 < anInt8986 && i_9 < i_7) {
-							i_16 = i_15 * anInt8980 + i_1;
+							i_16 = i_15 * width + i_1;
 							i_17 = anIntArray8979[i_16];
 							i_17 = ((i_17 & 0xff00ff) * i_14 >> 8 & 0xff00ff) + (i_14 * (i_17 & 0xff00) >> 8 & 0xff00);
 							anIntArray8979[i_16] = i_17 + i_5;
@@ -4013,7 +4013,7 @@ public class JavaRenderer extends AbstractRenderer {
 						while (i_1 <= i_3) {
 							i_14 = i_2 >> 16;
 						if (i_1 >= anInt8983 && i_1 < anInt9002 && i_14 >= anInt9009 && i_14 < anInt8986 && i_9 < i_7) {
-							i_15 = i_1 + i_14 * anInt8980;
+							i_15 = i_1 + i_14 * width;
 							i_16 = anIntArray8979[i_15];
 							i_17 = i_16 + i_5;
 							i_18 = (i_16 & 0xff00ff) + (i_5 & 0xff00ff);
@@ -4042,10 +4042,10 @@ public class JavaRenderer extends AbstractRenderer {
 							for (i_14 = 256 - i_12; i_2 <= i_4; i_9 %= i_10) {
 								i_15 = i_1 >> 16;
 							if (i_2 >= anInt9009 && i_2 < anInt8986 && i_15 >= anInt8983 && i_15 < anInt9002 && i_9 < i_7) {
-								i_16 = i_2 * anInt8980 + i_15;
+								i_16 = i_2 * width + i_15;
 								i_17 = anIntArray8979[i_16];
 								i_17 = (i_14 * (i_17 & 0xff00ff) >> 8 & 0xff00ff) + ((i_17 & 0xff00) * i_14 >> 8 & 0xff00);
-								anIntArray8979[i_15 + anInt8980 * i_2] = i_17 + i_5;
+								anIntArray8979[i_15 + width * i_2] = i_17 + i_5;
 							}
 
 							i_1 += i_11;
@@ -4059,7 +4059,7 @@ public class JavaRenderer extends AbstractRenderer {
 							while (i_2 <= i_4) {
 								i_14 = i_1 >> 16;
 							if (i_2 >= anInt9009 && i_2 < anInt8986 && i_14 >= anInt8983 && i_14 < anInt9002 && i_9 < i_7) {
-								i_15 = i_2 * anInt8980 + i_14;
+								i_15 = i_2 * width + i_14;
 								i_16 = anIntArray8979[i_15];
 								i_17 = i_16 + i_5;
 								i_18 = (i_5 & 0xff00ff) + (i_16 & 0xff00ff);
@@ -4077,7 +4077,7 @@ public class JavaRenderer extends AbstractRenderer {
 						while (i_2 <= i_4) {
 							i_14 = i_1 >> 16;
 						if (i_2 >= anInt9009 && i_2 < anInt8986 && i_14 >= anInt8983 && i_14 < anInt9002 && i_9 < i_7)
-							anIntArray8979[i_14 + i_2 * anInt8980] = i_5;
+							anIntArray8979[i_14 + i_2 * width] = i_5;
 
 						i_1 += i_11;
 						++i_2;
@@ -4428,7 +4428,7 @@ public class JavaRenderer extends AbstractRenderer {
 							for (i_9 = 256 - i_8; i_14 <= i_31; i_14++) {
 								i_10 = i_21 >> 16;
 							if (i_10 >= anInt9009 && i_10 < anInt8986) {
-								i_11 = i_14 + anInt8980 * i_10;
+								i_11 = i_14 + width * i_10;
 								i_12 = anIntArray8979[i_11];
 								i_12 = (i_9 * (i_12 & 0xff00ff) >> 8 & 0xff00ff) + (i_9 * (i_12 & 0xff00) >> 8 & 0xff00);
 								anIntArray8979[i_11] = i_5 + i_12;
@@ -4443,7 +4443,7 @@ public class JavaRenderer extends AbstractRenderer {
 							while (i_14 <= i_31) {
 								i_9 = i_21 >> 16;
 							if (i_9 >= anInt9009 && i_9 < anInt8986) {
-								i_10 = i_14 + i_9 * anInt8980;
+								i_10 = i_14 + i_9 * width;
 								i_11 = anIntArray8979[i_10];
 								i_12 = i_5 + i_11;
 								i_13 = (i_11 & 0xff00ff) + (i_5 & 0xff00ff);
@@ -4459,7 +4459,7 @@ public class JavaRenderer extends AbstractRenderer {
 						while (i_14 <= i_31) {
 							i_9 = i_21 >> 16;
 						if (i_9 >= anInt9009 && i_9 < anInt8986)
-							anIntArray8979[i_14 + i_9 * anInt8980] = i_5;
+							anIntArray8979[i_14 + i_9 * width] = i_5;
 
 						i_21 += i_7;
 						++i_14;
@@ -4483,7 +4483,7 @@ public class JavaRenderer extends AbstractRenderer {
 						while (i_21 <= i_41) {
 							i_9 = i_14 >> 16;
 						if (i_9 >= anInt8983 && i_9 < anInt9002)
-							anIntArray8979[i_9 + anInt8980 * i_21] = i_5;
+							anIntArray8979[i_9 + width * i_21] = i_5;
 
 						i_14 += i_7;
 						++i_21;
@@ -4494,10 +4494,10 @@ public class JavaRenderer extends AbstractRenderer {
 						for (i_9 = 256 - i_8; i_21 <= i_41; i_21++) {
 							i_10 = i_14 >> 16;
 						if (i_10 >= anInt8983 && i_10 < anInt9002) {
-							i_11 = anInt8980 * i_21 + i_10;
+							i_11 = width * i_21 + i_10;
 							i_12 = anIntArray8979[i_11];
 							i_12 = ((i_12 & 0xff00ff) * i_9 >> 8 & 0xff00ff) + ((i_12 & 0xff00) * i_9 >> 8 & 0xff00);
-							anIntArray8979[anInt8980 * i_21 + i_10] = i_5 + i_12;
+							anIntArray8979[width * i_21 + i_10] = i_5 + i_12;
 						}
 
 						i_14 += i_7;
@@ -4509,7 +4509,7 @@ public class JavaRenderer extends AbstractRenderer {
 						while (i_21 <= i_41) {
 							i_9 = i_14 >> 16;
 						if (i_9 >= anInt8983 && i_9 < anInt9002) {
-							i_10 = i_9 + i_21 * anInt8980;
+							i_10 = i_9 + i_21 * width;
 							i_11 = anIntArray8979[i_10];
 							i_12 = i_11 + i_5;
 							i_13 = (i_11 & 0xff00ff) + (i_5 & 0xff00ff);
@@ -4599,7 +4599,7 @@ public class JavaRenderer extends AbstractRenderer {
 						while (i_1 <= i_3) {
 							i_14 = i_2 >> 16;
 						if (i_1 >= anInt8983 && i_1 < anInt9002 && i_14 >= anInt9009 && i_14 < anInt8986 && i_9 < i_7)
-							anIntArray8979[i_1 + anInt8980 * i_14] = i_5;
+							anIntArray8979[i_1 + width * i_14] = i_5;
 
 						i_2 += i_11;
 						++i_1;
@@ -4612,7 +4612,7 @@ public class JavaRenderer extends AbstractRenderer {
 						for (i_14 = 256 - i_12; i_1 <= i_3; i_9 %= i_10) {
 							i_15 = i_2 >> 16;
 						if (i_1 >= anInt8983 && i_1 < anInt9002 && i_15 >= anInt9009 && i_15 < anInt8986 && i_9 < i_7) {
-							i_16 = i_15 * anInt8980 + i_1;
+							i_16 = i_15 * width + i_1;
 							i_17 = anIntArray8979[i_16];
 							i_17 = ((i_17 & 0xff00ff) * i_14 >> 8 & 0xff00ff) + (i_14 * (i_17 & 0xff00) >> 8 & 0xff00);
 							anIntArray8979[i_16] = i_17 + i_5;
@@ -4629,7 +4629,7 @@ public class JavaRenderer extends AbstractRenderer {
 						while (i_1 <= i_3) {
 							i_14 = i_2 >> 16;
 						if (i_1 >= anInt8983 && i_1 < anInt9002 && i_14 >= anInt9009 && i_14 < anInt8986 && i_9 < i_7) {
-							i_15 = i_1 + i_14 * anInt8980;
+							i_15 = i_1 + i_14 * width;
 							i_16 = anIntArray8979[i_15];
 							i_17 = i_16 + i_5;
 							i_18 = (i_16 & 0xff00ff) + (i_5 & 0xff00ff);
@@ -4658,10 +4658,10 @@ public class JavaRenderer extends AbstractRenderer {
 							for (i_14 = 256 - i_12; i_2 <= i_4; i_9 %= i_10) {
 								i_15 = i_1 >> 16;
 							if (i_2 >= anInt9009 && i_2 < anInt8986 && i_15 >= anInt8983 && i_15 < anInt9002 && i_9 < i_7) {
-								i_16 = i_2 * anInt8980 + i_15;
+								i_16 = i_2 * width + i_15;
 								i_17 = anIntArray8979[i_16];
 								i_17 = (i_14 * (i_17 & 0xff00ff) >> 8 & 0xff00ff) + ((i_17 & 0xff00) * i_14 >> 8 & 0xff00);
-								anIntArray8979[i_15 + anInt8980 * i_2] = i_17 + i_5;
+								anIntArray8979[i_15 + width * i_2] = i_17 + i_5;
 							}
 
 							i_1 += i_11;
@@ -4675,7 +4675,7 @@ public class JavaRenderer extends AbstractRenderer {
 							while (i_2 <= i_4) {
 								i_14 = i_1 >> 16;
 							if (i_2 >= anInt9009 && i_2 < anInt8986 && i_14 >= anInt8983 && i_14 < anInt9002 && i_9 < i_7) {
-								i_15 = i_2 * anInt8980 + i_14;
+								i_15 = i_2 * width + i_14;
 								i_16 = anIntArray8979[i_15];
 								i_17 = i_16 + i_5;
 								i_18 = (i_5 & 0xff00ff) + (i_16 & 0xff00ff);
@@ -4693,7 +4693,7 @@ public class JavaRenderer extends AbstractRenderer {
 						while (i_2 <= i_4) {
 							i_14 = i_1 >> 16;
 						if (i_2 >= anInt9009 && i_2 < anInt8986 && i_14 >= anInt8983 && i_14 < anInt9002 && i_9 < i_7)
-							anIntArray8979[i_14 + i_2 * anInt8980] = i_5;
+							anIntArray8979[i_14 + i_2 * width] = i_5;
 
 						i_1 += i_11;
 						++i_2;
@@ -4783,7 +4783,7 @@ public class JavaRenderer extends AbstractRenderer {
 						while (i_1 <= i_3) {
 							i_14 = i_2 >> 16;
 						if (i_1 >= anInt8983 && i_1 < anInt9002 && i_14 >= anInt9009 && i_14 < anInt8986 && i_9 < i_7)
-							anIntArray8979[i_1 + anInt8980 * i_14] = i_5;
+							anIntArray8979[i_1 + width * i_14] = i_5;
 
 						i_2 += i_11;
 						++i_1;
@@ -4796,7 +4796,7 @@ public class JavaRenderer extends AbstractRenderer {
 						for (i_14 = 256 - i_12; i_1 <= i_3; i_9 %= i_10) {
 							i_15 = i_2 >> 16;
 						if (i_1 >= anInt8983 && i_1 < anInt9002 && i_15 >= anInt9009 && i_15 < anInt8986 && i_9 < i_7) {
-							i_16 = i_15 * anInt8980 + i_1;
+							i_16 = i_15 * width + i_1;
 							i_17 = anIntArray8979[i_16];
 							i_17 = ((i_17 & 0xff00ff) * i_14 >> 8 & 0xff00ff) + (i_14 * (i_17 & 0xff00) >> 8 & 0xff00);
 							anIntArray8979[i_16] = i_17 + i_5;
@@ -4813,7 +4813,7 @@ public class JavaRenderer extends AbstractRenderer {
 						while (i_1 <= i_3) {
 							i_14 = i_2 >> 16;
 						if (i_1 >= anInt8983 && i_1 < anInt9002 && i_14 >= anInt9009 && i_14 < anInt8986 && i_9 < i_7) {
-							i_15 = i_1 + i_14 * anInt8980;
+							i_15 = i_1 + i_14 * width;
 							i_16 = anIntArray8979[i_15];
 							i_17 = i_16 + i_5;
 							i_18 = (i_16 & 0xff00ff) + (i_5 & 0xff00ff);
@@ -4842,10 +4842,10 @@ public class JavaRenderer extends AbstractRenderer {
 							for (i_14 = 256 - i_12; i_2 <= i_4; i_9 %= i_10) {
 								i_15 = i_1 >> 16;
 							if (i_2 >= anInt9009 && i_2 < anInt8986 && i_15 >= anInt8983 && i_15 < anInt9002 && i_9 < i_7) {
-								i_16 = i_2 * anInt8980 + i_15;
+								i_16 = i_2 * width + i_15;
 								i_17 = anIntArray8979[i_16];
 								i_17 = (i_14 * (i_17 & 0xff00ff) >> 8 & 0xff00ff) + ((i_17 & 0xff00) * i_14 >> 8 & 0xff00);
-								anIntArray8979[i_15 + anInt8980 * i_2] = i_17 + i_5;
+								anIntArray8979[i_15 + width * i_2] = i_17 + i_5;
 							}
 
 							i_1 += i_11;
@@ -4859,7 +4859,7 @@ public class JavaRenderer extends AbstractRenderer {
 							while (i_2 <= i_4) {
 								i_14 = i_1 >> 16;
 							if (i_2 >= anInt9009 && i_2 < anInt8986 && i_14 >= anInt8983 && i_14 < anInt9002 && i_9 < i_7) {
-								i_15 = i_2 * anInt8980 + i_14;
+								i_15 = i_2 * width + i_14;
 								i_16 = anIntArray8979[i_15];
 								i_17 = i_16 + i_5;
 								i_18 = (i_5 & 0xff00ff) + (i_16 & 0xff00ff);
@@ -4877,7 +4877,7 @@ public class JavaRenderer extends AbstractRenderer {
 						while (i_2 <= i_4) {
 							i_14 = i_1 >> 16;
 						if (i_2 >= anInt9009 && i_2 < anInt8986 && i_14 >= anInt8983 && i_14 < anInt9002 && i_9 < i_7)
-							anIntArray8979[i_14 + i_2 * anInt8980] = i_5;
+							anIntArray8979[i_14 + i_2 * width] = i_5;
 
 						i_1 += i_11;
 						++i_2;
@@ -4962,7 +4962,7 @@ public class JavaRenderer extends AbstractRenderer {
 						while (i_1 <= i_3) {
 							i_14 = i_2 >> 16;
 						if (i_1 >= anInt8983 && i_1 < anInt9002 && i_14 >= anInt9009 && i_14 < anInt8986 && i_9 < i_7)
-							anIntArray8979[i_1 + anInt8980 * i_14] = i_5;
+							anIntArray8979[i_1 + width * i_14] = i_5;
 
 						i_2 += i_11;
 						++i_1;
@@ -4975,7 +4975,7 @@ public class JavaRenderer extends AbstractRenderer {
 						for (i_14 = 256 - i_12; i_1 <= i_3; i_9 %= i_10) {
 							i_15 = i_2 >> 16;
 						if (i_1 >= anInt8983 && i_1 < anInt9002 && i_15 >= anInt9009 && i_15 < anInt8986 && i_9 < i_7) {
-							i_16 = i_15 * anInt8980 + i_1;
+							i_16 = i_15 * width + i_1;
 							i_17 = anIntArray8979[i_16];
 							i_17 = ((i_17 & 0xff00ff) * i_14 >> 8 & 0xff00ff) + (i_14 * (i_17 & 0xff00) >> 8 & 0xff00);
 							anIntArray8979[i_16] = i_17 + i_5;
@@ -4992,7 +4992,7 @@ public class JavaRenderer extends AbstractRenderer {
 						while (i_1 <= i_3) {
 							i_14 = i_2 >> 16;
 						if (i_1 >= anInt8983 && i_1 < anInt9002 && i_14 >= anInt9009 && i_14 < anInt8986 && i_9 < i_7) {
-							i_15 = i_1 + i_14 * anInt8980;
+							i_15 = i_1 + i_14 * width;
 							i_16 = anIntArray8979[i_15];
 							i_17 = i_16 + i_5;
 							i_18 = (i_16 & 0xff00ff) + (i_5 & 0xff00ff);
@@ -5021,10 +5021,10 @@ public class JavaRenderer extends AbstractRenderer {
 							for (i_14 = 256 - i_12; i_2 <= i_4; i_9 %= i_10) {
 								i_15 = i_1 >> 16;
 							if (i_2 >= anInt9009 && i_2 < anInt8986 && i_15 >= anInt8983 && i_15 < anInt9002 && i_9 < i_7) {
-								i_16 = i_2 * anInt8980 + i_15;
+								i_16 = i_2 * width + i_15;
 								i_17 = anIntArray8979[i_16];
 								i_17 = (i_14 * (i_17 & 0xff00ff) >> 8 & 0xff00ff) + ((i_17 & 0xff00) * i_14 >> 8 & 0xff00);
-								anIntArray8979[i_15 + anInt8980 * i_2] = i_17 + i_5;
+								anIntArray8979[i_15 + width * i_2] = i_17 + i_5;
 							}
 
 							i_1 += i_11;
@@ -5038,7 +5038,7 @@ public class JavaRenderer extends AbstractRenderer {
 							while (i_2 <= i_4) {
 								i_14 = i_1 >> 16;
 							if (i_2 >= anInt9009 && i_2 < anInt8986 && i_14 >= anInt8983 && i_14 < anInt9002 && i_9 < i_7) {
-								i_15 = i_2 * anInt8980 + i_14;
+								i_15 = i_2 * width + i_14;
 								i_16 = anIntArray8979[i_15];
 								i_17 = i_16 + i_5;
 								i_18 = (i_5 & 0xff00ff) + (i_16 & 0xff00ff);
@@ -5056,7 +5056,7 @@ public class JavaRenderer extends AbstractRenderer {
 						while (i_2 <= i_4) {
 							i_14 = i_1 >> 16;
 						if (i_2 >= anInt9009 && i_2 < anInt8986 && i_14 >= anInt8983 && i_14 < anInt9002 && i_9 < i_7)
-							anIntArray8979[i_14 + i_2 * anInt8980] = i_5;
+							anIntArray8979[i_14 + i_2 * width] = i_5;
 
 						i_1 += i_11;
 						++i_2;
@@ -5131,7 +5131,7 @@ public class JavaRenderer extends AbstractRenderer {
 					if (i_17 >= i_13 && i_17 < i_14) {
 						i_19 = ints_11[i_18] + i_8;
 						if (i_11 >= i_19 && i_11 < ints_12[i_18] + i_19)
-							anIntArray8979[i_17 * anInt8980 + i_11] = i_5;
+							anIntArray8979[i_17 * width + i_11] = i_5;
 					}
 
 					i_24 += i_15;
@@ -5146,7 +5146,7 @@ public class JavaRenderer extends AbstractRenderer {
 					if (i_18 >= i_13 && i_18 < i_14) {
 						i_20 = ints_11[i_19] + i_8;
 						if (i_11 >= i_20 && i_11 < i_20 + ints_12[i_19]) {
-							i_21 = i_11 + anInt8980 * i_18;
+							i_21 = i_11 + width * i_18;
 							i_22 = anIntArray8979[i_21];
 							i_22 = (i_17 * (i_22 & 0xff00) >> 8 & 0xff00) + (i_17 * (i_22 & 0xff00ff) >> 8 & 0xff00ff);
 							anIntArray8979[i_21] = i_5 + i_22;
@@ -5165,7 +5165,7 @@ public class JavaRenderer extends AbstractRenderer {
 					if (i_17 >= i_13 && i_17 < i_14) {
 						i_19 = i_8 + ints_11[i_18];
 						if (i_11 >= i_19 && i_11 < ints_12[i_18] + i_19) {
-							i_20 = i_17 * anInt8980 + i_11;
+							i_20 = i_17 * width + i_11;
 							i_21 = anIntArray8979[i_20];
 							i_22 = i_21 + i_5;
 							i_23 = (i_5 & 0xff00ff) + (i_21 & 0xff00ff);
@@ -5202,10 +5202,10 @@ public class JavaRenderer extends AbstractRenderer {
 						i_19 = i_24 - i_9;
 						i_20 = i_8 + ints_11[i_19];
 						if (i_18 >= anInt8983 && i_18 < anInt9002 && i_18 >= i_20 && i_18 < i_20 + ints_12[i_19]) {
-							i_21 = i_18 + i_24 * anInt8980;
+							i_21 = i_18 + i_24 * width;
 							i_22 = anIntArray8979[i_21];
 							i_22 = (i_17 * (i_22 & 0xff00ff) >> 8 & 0xff00ff) + (i_17 * (i_22 & 0xff00) >> 8 & 0xff00);
-							anIntArray8979[i_18 + i_24 * anInt8980] = i_22 + i_5;
+							anIntArray8979[i_18 + i_24 * width] = i_22 + i_5;
 						}
 
 						i_11 += i_15;
@@ -5219,7 +5219,7 @@ public class JavaRenderer extends AbstractRenderer {
 						i_18 = i_24 - i_9;
 						i_19 = ints_11[i_18] + i_8;
 						if (i_17 >= anInt8983 && i_17 < anInt9002 && i_17 >= i_19 && i_17 < i_19 + ints_12[i_18]) {
-							i_20 = anInt8980 * i_24 + i_17;
+							i_20 = width * i_24 + i_17;
 							i_21 = anIntArray8979[i_20];
 							i_22 = i_5 + i_21;
 							i_23 = (i_21 & 0xff00ff) + (i_5 & 0xff00ff);
@@ -5237,7 +5237,7 @@ public class JavaRenderer extends AbstractRenderer {
 					i_18 = i_24 - i_9;
 					i_19 = ints_11[i_18] + i_8;
 					if (i_17 >= anInt8983 && i_17 < anInt9002 && i_17 >= i_19 && i_17 < ints_12[i_18] + i_19)
-						anIntArray8979[i_17 + anInt8980 * i_24] = i_5;
+						anIntArray8979[i_17 + width * i_24] = i_5;
 
 					i_11 += i_15;
 					++i_24;
@@ -5299,7 +5299,7 @@ public class JavaRenderer extends AbstractRenderer {
 					if (i_17 >= i_13 && i_17 < i_14) {
 						i_19 = ints_11[i_18] + i_8;
 						if (i_11 >= i_19 && i_11 < ints_12[i_18] + i_19)
-							anIntArray8979[i_17 * anInt8980 + i_11] = i_5;
+							anIntArray8979[i_17 * width + i_11] = i_5;
 					}
 
 					i_24 += i_15;
@@ -5314,7 +5314,7 @@ public class JavaRenderer extends AbstractRenderer {
 					if (i_18 >= i_13 && i_18 < i_14) {
 						i_20 = ints_11[i_19] + i_8;
 						if (i_11 >= i_20 && i_11 < i_20 + ints_12[i_19]) {
-							i_21 = i_11 + anInt8980 * i_18;
+							i_21 = i_11 + width * i_18;
 							i_22 = anIntArray8979[i_21];
 							i_22 = (i_17 * (i_22 & 0xff00) >> 8 & 0xff00) + (i_17 * (i_22 & 0xff00ff) >> 8 & 0xff00ff);
 							anIntArray8979[i_21] = i_5 + i_22;
@@ -5333,7 +5333,7 @@ public class JavaRenderer extends AbstractRenderer {
 					if (i_17 >= i_13 && i_17 < i_14) {
 						i_19 = i_8 + ints_11[i_18];
 						if (i_11 >= i_19 && i_11 < ints_12[i_18] + i_19) {
-							i_20 = i_17 * anInt8980 + i_11;
+							i_20 = i_17 * width + i_11;
 							i_21 = anIntArray8979[i_20];
 							i_22 = i_21 + i_5;
 							i_23 = (i_5 & 0xff00ff) + (i_21 & 0xff00ff);
@@ -5370,10 +5370,10 @@ public class JavaRenderer extends AbstractRenderer {
 						i_19 = i_24 - i_9;
 						i_20 = i_8 + ints_11[i_19];
 						if (i_18 >= anInt8983 && i_18 < anInt9002 && i_18 >= i_20 && i_18 < i_20 + ints_12[i_19]) {
-							i_21 = i_18 + i_24 * anInt8980;
+							i_21 = i_18 + i_24 * width;
 							i_22 = anIntArray8979[i_21];
 							i_22 = (i_17 * (i_22 & 0xff00ff) >> 8 & 0xff00ff) + (i_17 * (i_22 & 0xff00) >> 8 & 0xff00);
-							anIntArray8979[i_18 + i_24 * anInt8980] = i_22 + i_5;
+							anIntArray8979[i_18 + i_24 * width] = i_22 + i_5;
 						}
 
 						i_11 += i_15;
@@ -5387,7 +5387,7 @@ public class JavaRenderer extends AbstractRenderer {
 						i_18 = i_24 - i_9;
 						i_19 = ints_11[i_18] + i_8;
 						if (i_17 >= anInt8983 && i_17 < anInt9002 && i_17 >= i_19 && i_17 < i_19 + ints_12[i_18]) {
-							i_20 = anInt8980 * i_24 + i_17;
+							i_20 = width * i_24 + i_17;
 							i_21 = anIntArray8979[i_20];
 							i_22 = i_5 + i_21;
 							i_23 = (i_21 & 0xff00ff) + (i_5 & 0xff00ff);
@@ -5405,7 +5405,7 @@ public class JavaRenderer extends AbstractRenderer {
 					i_18 = i_24 - i_9;
 					i_19 = ints_11[i_18] + i_8;
 					if (i_17 >= anInt8983 && i_17 < anInt9002 && i_17 >= i_19 && i_17 < ints_12[i_18] + i_19)
-						anIntArray8979[i_17 + anInt8980 * i_24] = i_5;
+						anIntArray8979[i_17 + width * i_24] = i_5;
 
 					i_11 += i_15;
 					++i_24;
@@ -5468,7 +5468,7 @@ public class JavaRenderer extends AbstractRenderer {
 					if (i_1 >= anInt8983 && i_1 < anInt9002 && i_22 >= i_16 && i_22 < i_17 && i_12 < i_10) {
 						i_24 = i_8 + ints_14[i_23];
 						if (i_1 >= i_24 && i_1 < ints_15[i_23] + i_24)
-							anIntArray8979[i_22 * anInt8980 + i_1] = i_5;
+							anIntArray8979[i_22 * width + i_1] = i_5;
 					}
 
 					i_2 += i_19;
@@ -5485,7 +5485,7 @@ public class JavaRenderer extends AbstractRenderer {
 					if (i_1 >= anInt8983 && i_1 < anInt9002 && i_23 >= i_16 && i_23 < i_17 && i_12 < i_10) {
 						i_25 = i_8 + ints_14[i_24];
 						if (i_1 >= i_25 && i_1 < i_25 + ints_15[i_24]) {
-							i_26 = anInt8980 * i_23 + i_1;
+							i_26 = width * i_23 + i_1;
 							i_27 = anIntArray8979[i_26];
 							i_27 = (i_22 * (i_27 & 0xff00ff) >> 8 & 0xff00ff) + (i_22 * (i_27 & 0xff00) >> 8 & 0xff00);
 							anIntArray8979[i_26] = i_27 + i_5;
@@ -5506,7 +5506,7 @@ public class JavaRenderer extends AbstractRenderer {
 					if (i_1 >= anInt8983 && i_1 < anInt9002 && i_22 >= i_16 && i_22 < i_17 && i_12 < i_10) {
 						i_24 = i_8 + ints_14[i_23];
 						if (i_1 >= i_24 && i_1 < i_24 + ints_15[i_23]) {
-							i_25 = i_1 + i_22 * anInt8980;
+							i_25 = i_1 + i_22 * width;
 							i_26 = anIntArray8979[i_25];
 							i_27 = i_26 + i_5;
 							int i_28 = (i_26 & 0xff00ff) + (i_5 & 0xff00ff);
@@ -5534,7 +5534,7 @@ public class JavaRenderer extends AbstractRenderer {
 						i_22 = i_1 >> 16;
 					i_23 = i_2 - i_9;
 					if (i_2 >= i_16 && i_2 < i_17 && i_22 >= anInt8983 && i_22 < anInt9002 && i_12 < i_10 && i_22 >= i_8 + ints_14[i_23] && i_22 < ints_14[i_23] + i_8 + ints_15[i_23])
-						anIntArray8979[i_2 * anInt8980 + i_22] = i_5;
+						anIntArray8979[i_2 * width + i_22] = i_5;
 
 					i_1 += i_19;
 					++i_2;
@@ -5548,10 +5548,10 @@ public class JavaRenderer extends AbstractRenderer {
 						i_23 = i_1 >> 16;
 					i_24 = i_2 - i_9;
 					if (i_2 >= i_16 && i_2 < i_17 && i_23 >= anInt8983 && i_23 < anInt9002 && i_12 < i_10 && i_23 >= i_8 + ints_14[i_24] && i_23 < i_8 + ints_14[i_24] + ints_15[i_24]) {
-						i_25 = i_2 * anInt8980 + i_23;
+						i_25 = i_2 * width + i_23;
 						i_26 = anIntArray8979[i_25];
 						i_26 = (i_22 * (i_26 & 0xff00) >> 8 & 0xff00) + (i_22 * (i_26 & 0xff00ff) >> 8 & 0xff00ff);
-						anIntArray8979[anInt8980 * i_2 + i_23] = i_26 + i_5;
+						anIntArray8979[width * i_2 + i_23] = i_26 + i_5;
 					}
 
 					i_1 += i_19;
@@ -5566,7 +5566,7 @@ public class JavaRenderer extends AbstractRenderer {
 						i_22 = i_1 >> 16;
 					i_23 = i_2 - i_9;
 					if (i_2 >= i_16 && i_2 < i_17 && i_22 >= anInt8983 && i_22 < anInt9002 && i_12 < i_10 && i_22 >= i_8 + ints_14[i_23] && i_22 < ints_15[i_23] + ints_14[i_23] + i_8) {
-						i_24 = i_22 + i_2 * anInt8980;
+						i_24 = i_22 + i_2 * width;
 						i_25 = anIntArray8979[i_24];
 						i_26 = i_5 + i_25;
 						i_27 = (i_25 & 0xff00ff) + (i_5 & 0xff00ff);
@@ -5827,8 +5827,8 @@ public class JavaRenderer extends AbstractRenderer {
 		if (anIntArray8979 == null)
 			throw new IllegalStateException("");
 		int[] ints_6 = new int[i_3 * i_4];
-		int i_7 = i_2 * anInt8980 + i_1;
-		int i_8 = anInt8980 - i_3;
+		int i_7 = i_2 * width + i_1;
+		int i_8 = width - i_3;
 
 		for (int i_9 = 0; i_9 < i_4; i_9++) {
 			int i_10 = i_9 * i_3;
@@ -5956,7 +5956,7 @@ public class JavaRenderer extends AbstractRenderer {
 					if (i_1 >= anInt8983 && i_1 < anInt9002 && i_22 >= i_16 && i_22 < i_17 && i_12 < i_10) {
 						i_24 = i_8 + ints_14[i_23];
 						if (i_1 >= i_24 && i_1 < i_24 + ints_15[i_23])
-							anIntArray8979[i_22 * anInt8980 + i_1] = i_5;
+							anIntArray8979[i_22 * width + i_1] = i_5;
 					}
 
 					i_2 += i_19;
@@ -5973,7 +5973,7 @@ public class JavaRenderer extends AbstractRenderer {
 					if (i_1 >= anInt8983 && i_1 < anInt9002 && i_23 >= i_16 && i_23 < i_17 && i_12 < i_10) {
 						i_25 = i_8 + ints_14[i_24];
 						if (i_1 >= i_25 && i_1 < i_25 + ints_15[i_24]) {
-							i_26 = i_23 * anInt8980 + i_1;
+							i_26 = i_23 * width + i_1;
 							i_27 = anIntArray8979[i_26];
 							i_27 = (i_22 * (i_27 & 0xff00) >> 8 & 0xff00) + ((i_27 & 0xff00ff) * i_22 >> 8 & 0xff00ff);
 							anIntArray8979[i_26] = i_5 + i_27;
@@ -5994,7 +5994,7 @@ public class JavaRenderer extends AbstractRenderer {
 					if (i_1 >= anInt8983 && i_1 < anInt9002 && i_22 >= i_16 && i_22 < i_17 && i_12 < i_10) {
 						i_24 = i_8 + ints_14[i_23];
 						if (i_1 >= i_24 && i_1 < i_24 + ints_15[i_23]) {
-							i_25 = i_22 * anInt8980 + i_1;
+							i_25 = i_22 * width + i_1;
 							i_26 = anIntArray8979[i_25];
 							i_27 = i_5 + i_26;
 							int i_28 = (i_26 & 0xff00ff) + (i_5 & 0xff00ff);
@@ -6022,7 +6022,7 @@ public class JavaRenderer extends AbstractRenderer {
 						i_22 = i_1 >> 16;
 					i_23 = i_2 - i_9;
 					if (i_2 >= i_16 && i_2 < i_17 && i_22 >= anInt8983 && i_22 < anInt9002 && i_12 < i_10 && i_22 >= i_8 + ints_14[i_23] && i_22 < i_8 + ints_14[i_23] + ints_15[i_23])
-						anIntArray8979[i_2 * anInt8980 + i_22] = i_5;
+						anIntArray8979[i_2 * width + i_22] = i_5;
 
 					i_1 += i_19;
 					++i_2;
@@ -6036,10 +6036,10 @@ public class JavaRenderer extends AbstractRenderer {
 						i_23 = i_1 >> 16;
 					i_24 = i_2 - i_9;
 					if (i_2 >= i_16 && i_2 < i_17 && i_23 >= anInt8983 && i_23 < anInt9002 && i_12 < i_10 && i_23 >= i_8 + ints_14[i_24] && i_23 < i_8 + ints_14[i_24] + ints_15[i_24]) {
-						i_25 = i_2 * anInt8980 + i_23;
+						i_25 = i_2 * width + i_23;
 						i_26 = anIntArray8979[i_25];
 						i_26 = (i_22 * (i_26 & 0xff00) >> 8 & 0xff00) + ((i_26 & 0xff00ff) * i_22 >> 8 & 0xff00ff);
-						anIntArray8979[i_2 * anInt8980 + i_23] = i_5 + i_26;
+						anIntArray8979[i_2 * width + i_23] = i_5 + i_26;
 					}
 
 					i_1 += i_19;
@@ -6054,7 +6054,7 @@ public class JavaRenderer extends AbstractRenderer {
 						i_22 = i_1 >> 16;
 					i_23 = i_2 - i_9;
 					if (i_2 >= i_16 && i_2 < i_17 && i_22 >= anInt8983 && i_22 < anInt9002 && i_12 < i_10 && i_22 >= i_8 + ints_14[i_23] && i_22 < i_8 + ints_15[i_23] + ints_14[i_23]) {
-						i_24 = i_2 * anInt8980 + i_22;
+						i_24 = i_2 * width + i_22;
 						i_25 = anIntArray8979[i_24];
 						i_26 = i_5 + i_25;
 						i_27 = (i_25 & 0xff00ff) + (i_5 & 0xff00ff);
@@ -6099,7 +6099,7 @@ public class JavaRenderer extends AbstractRenderer {
 	@Override
 	public void method8568() {
 		lowResolution = false;
-		aClass229_9006.method3859();
+		cachedTextures.method3859();
 	}
 
 	@Override
@@ -6192,7 +6192,7 @@ public class JavaRenderer extends AbstractRenderer {
 					if (i_17 >= i_13 && i_17 < i_14) {
 						i_19 = ints_11[i_18] + i_8;
 						if (i_11 >= i_19 && i_11 < ints_12[i_18] + i_19)
-							anIntArray8979[i_17 * anInt8980 + i_11] = i_5;
+							anIntArray8979[i_17 * width + i_11] = i_5;
 					}
 
 					i_24 += i_15;
@@ -6207,7 +6207,7 @@ public class JavaRenderer extends AbstractRenderer {
 					if (i_18 >= i_13 && i_18 < i_14) {
 						i_20 = ints_11[i_19] + i_8;
 						if (i_11 >= i_20 && i_11 < i_20 + ints_12[i_19]) {
-							i_21 = i_11 + anInt8980 * i_18;
+							i_21 = i_11 + width * i_18;
 							i_22 = anIntArray8979[i_21];
 							i_22 = (i_17 * (i_22 & 0xff00) >> 8 & 0xff00) + (i_17 * (i_22 & 0xff00ff) >> 8 & 0xff00ff);
 							anIntArray8979[i_21] = i_5 + i_22;
@@ -6226,7 +6226,7 @@ public class JavaRenderer extends AbstractRenderer {
 					if (i_17 >= i_13 && i_17 < i_14) {
 						i_19 = i_8 + ints_11[i_18];
 						if (i_11 >= i_19 && i_11 < ints_12[i_18] + i_19) {
-							i_20 = i_17 * anInt8980 + i_11;
+							i_20 = i_17 * width + i_11;
 							i_21 = anIntArray8979[i_20];
 							i_22 = i_21 + i_5;
 							i_23 = (i_5 & 0xff00ff) + (i_21 & 0xff00ff);
@@ -6263,10 +6263,10 @@ public class JavaRenderer extends AbstractRenderer {
 						i_19 = i_24 - i_9;
 						i_20 = i_8 + ints_11[i_19];
 						if (i_18 >= anInt8983 && i_18 < anInt9002 && i_18 >= i_20 && i_18 < i_20 + ints_12[i_19]) {
-							i_21 = i_18 + i_24 * anInt8980;
+							i_21 = i_18 + i_24 * width;
 							i_22 = anIntArray8979[i_21];
 							i_22 = (i_17 * (i_22 & 0xff00ff) >> 8 & 0xff00ff) + (i_17 * (i_22 & 0xff00) >> 8 & 0xff00);
-							anIntArray8979[i_18 + i_24 * anInt8980] = i_22 + i_5;
+							anIntArray8979[i_18 + i_24 * width] = i_22 + i_5;
 						}
 
 						i_11 += i_15;
@@ -6280,7 +6280,7 @@ public class JavaRenderer extends AbstractRenderer {
 						i_18 = i_24 - i_9;
 						i_19 = ints_11[i_18] + i_8;
 						if (i_17 >= anInt8983 && i_17 < anInt9002 && i_17 >= i_19 && i_17 < i_19 + ints_12[i_18]) {
-							i_20 = anInt8980 * i_24 + i_17;
+							i_20 = width * i_24 + i_17;
 							i_21 = anIntArray8979[i_20];
 							i_22 = i_5 + i_21;
 							i_23 = (i_21 & 0xff00ff) + (i_5 & 0xff00ff);
@@ -6298,7 +6298,7 @@ public class JavaRenderer extends AbstractRenderer {
 					i_18 = i_24 - i_9;
 					i_19 = ints_11[i_18] + i_8;
 					if (i_17 >= anInt8983 && i_17 < anInt9002 && i_17 >= i_19 && i_17 < ints_12[i_18] + i_19)
-						anIntArray8979[i_17 + anInt8980 * i_24] = i_5;
+						anIntArray8979[i_17 + width * i_24] = i_5;
 
 					i_11 += i_15;
 					++i_24;
@@ -6360,7 +6360,7 @@ public class JavaRenderer extends AbstractRenderer {
 					if (i_17 >= i_13 && i_17 < i_14) {
 						i_19 = ints_11[i_18] + i_8;
 						if (i_11 >= i_19 && i_11 < ints_12[i_18] + i_19)
-							anIntArray8979[i_17 * anInt8980 + i_11] = i_5;
+							anIntArray8979[i_17 * width + i_11] = i_5;
 					}
 
 					i_24 += i_15;
@@ -6375,7 +6375,7 @@ public class JavaRenderer extends AbstractRenderer {
 					if (i_18 >= i_13 && i_18 < i_14) {
 						i_20 = ints_11[i_19] + i_8;
 						if (i_11 >= i_20 && i_11 < i_20 + ints_12[i_19]) {
-							i_21 = i_11 + anInt8980 * i_18;
+							i_21 = i_11 + width * i_18;
 							i_22 = anIntArray8979[i_21];
 							i_22 = (i_17 * (i_22 & 0xff00) >> 8 & 0xff00) + (i_17 * (i_22 & 0xff00ff) >> 8 & 0xff00ff);
 							anIntArray8979[i_21] = i_5 + i_22;
@@ -6394,7 +6394,7 @@ public class JavaRenderer extends AbstractRenderer {
 					if (i_17 >= i_13 && i_17 < i_14) {
 						i_19 = i_8 + ints_11[i_18];
 						if (i_11 >= i_19 && i_11 < ints_12[i_18] + i_19) {
-							i_20 = i_17 * anInt8980 + i_11;
+							i_20 = i_17 * width + i_11;
 							i_21 = anIntArray8979[i_20];
 							i_22 = i_21 + i_5;
 							i_23 = (i_5 & 0xff00ff) + (i_21 & 0xff00ff);
@@ -6431,10 +6431,10 @@ public class JavaRenderer extends AbstractRenderer {
 						i_19 = i_24 - i_9;
 						i_20 = i_8 + ints_11[i_19];
 						if (i_18 >= anInt8983 && i_18 < anInt9002 && i_18 >= i_20 && i_18 < i_20 + ints_12[i_19]) {
-							i_21 = i_18 + i_24 * anInt8980;
+							i_21 = i_18 + i_24 * width;
 							i_22 = anIntArray8979[i_21];
 							i_22 = (i_17 * (i_22 & 0xff00ff) >> 8 & 0xff00ff) + (i_17 * (i_22 & 0xff00) >> 8 & 0xff00);
-							anIntArray8979[i_18 + i_24 * anInt8980] = i_22 + i_5;
+							anIntArray8979[i_18 + i_24 * width] = i_22 + i_5;
 						}
 
 						i_11 += i_15;
@@ -6448,7 +6448,7 @@ public class JavaRenderer extends AbstractRenderer {
 						i_18 = i_24 - i_9;
 						i_19 = ints_11[i_18] + i_8;
 						if (i_17 >= anInt8983 && i_17 < anInt9002 && i_17 >= i_19 && i_17 < i_19 + ints_12[i_18]) {
-							i_20 = anInt8980 * i_24 + i_17;
+							i_20 = width * i_24 + i_17;
 							i_21 = anIntArray8979[i_20];
 							i_22 = i_5 + i_21;
 							i_23 = (i_21 & 0xff00ff) + (i_5 & 0xff00ff);
@@ -6466,7 +6466,7 @@ public class JavaRenderer extends AbstractRenderer {
 					i_18 = i_24 - i_9;
 					i_19 = ints_11[i_18] + i_8;
 					if (i_17 >= anInt8983 && i_17 < anInt9002 && i_17 >= i_19 && i_17 < ints_12[i_18] + i_19)
-						anIntArray8979[i_17 + anInt8980 * i_24] = i_5;
+						anIntArray8979[i_17 + width * i_24] = i_5;
 
 					i_11 += i_15;
 					++i_24;
@@ -6523,7 +6523,7 @@ public class JavaRenderer extends AbstractRenderer {
 
 	@Override
 	public void method8586(Matrix44 matrix44_1) {
-		aClass384_8995.method6562(matrix44_1);
+		aClass384_8995.copy(matrix44_1);
 		method14374();
 	}
 
@@ -6559,13 +6559,13 @@ public class JavaRenderer extends AbstractRenderer {
 	@Override
 	public void method8594(boolean bool_1) {
 		lowResolution = bool_1;
-		aClass229_9006.method3859();
+		cachedTextures.method3859();
 	}
 
 	@Override
 	public void method8595(boolean bool_1) {
 		lowResolution = bool_1;
-		aClass229_9006.method3859();
+		cachedTextures.method3859();
 	}
 
 	@Override
@@ -6607,8 +6607,8 @@ public class JavaRenderer extends AbstractRenderer {
 		if (anIntArray8979 == null)
 			throw new IllegalStateException("");
 		int[] ints_6 = new int[i_3 * i_4];
-		int i_7 = i_2 * anInt8980 + i_1;
-		int i_8 = anInt8980 - i_3;
+		int i_7 = i_2 * width + i_1;
+		int i_8 = width - i_3;
 
 		for (int i_9 = 0; i_9 < i_4; i_9++) {
 			int i_10 = i_9 * i_3;
@@ -6925,8 +6925,8 @@ public class JavaRenderer extends AbstractRenderer {
 	public void method8633() {
 		anInt8998 = 0;
 		anInt8999 = 0;
-		anInt9000 = anInt8980;
-		anInt9001 = anInt8981;
+		anInt9000 = width;
+		anInt9001 = height;
 		method14364();
 	}
 
@@ -6934,8 +6934,8 @@ public class JavaRenderer extends AbstractRenderer {
 	public void method8634() {
 		anInt8998 = 0;
 		anInt8999 = 0;
-		anInt9000 = anInt8980;
-		anInt9001 = anInt8981;
+		anInt9000 = width;
+		anInt9001 = height;
 		method14364();
 	}
 
@@ -6943,8 +6943,8 @@ public class JavaRenderer extends AbstractRenderer {
 	public void method8635() {
 		anInt8998 = 0;
 		anInt8999 = 0;
-		anInt9000 = anInt8980;
-		anInt9001 = anInt8981;
+		anInt9000 = width;
+		anInt9001 = height;
 		method14364();
 	}
 
@@ -7036,8 +7036,8 @@ public class JavaRenderer extends AbstractRenderer {
 		if (anIntArray8979 == null)
 			throw new IllegalStateException("");
 		int[] ints_6 = new int[i_3 * i_4];
-		int i_7 = i_2 * anInt8980 + i_1;
-		int i_8 = anInt8980 - i_3;
+		int i_7 = i_2 * width + i_1;
+		int i_8 = width - i_3;
 
 		for (int i_9 = 0; i_9 < i_4; i_9++) {
 			int i_10 = i_3 * i_9;
@@ -7106,7 +7106,7 @@ public class JavaRenderer extends AbstractRenderer {
 					if (i_17 >= i_13 && i_17 < i_14) {
 						i_19 = i_8 + ints_11[i_18];
 						if (i_11 >= i_19 && i_11 < i_19 + ints_12[i_18])
-							anIntArray8979[i_17 * anInt8980 + i_11] = i_5;
+							anIntArray8979[i_17 * width + i_11] = i_5;
 					}
 
 					i_24 += i_15;
@@ -7121,7 +7121,7 @@ public class JavaRenderer extends AbstractRenderer {
 					if (i_18 >= i_13 && i_18 < i_14) {
 						i_20 = i_8 + ints_11[i_19];
 						if (i_11 >= i_20 && i_11 < i_20 + ints_12[i_19]) {
-							i_21 = i_18 * anInt8980 + i_11;
+							i_21 = i_18 * width + i_11;
 							i_22 = anIntArray8979[i_21];
 							i_22 = (i_17 * (i_22 & 0xff00) >> 8 & 0xff00) + ((i_22 & 0xff00ff) * i_17 >> 8 & 0xff00ff);
 							anIntArray8979[i_21] = i_5 + i_22;
@@ -7140,7 +7140,7 @@ public class JavaRenderer extends AbstractRenderer {
 					if (i_17 >= i_13 && i_17 < i_14) {
 						i_19 = i_8 + ints_11[i_18];
 						if (i_11 >= i_19 && i_11 < i_19 + ints_12[i_18]) {
-							i_20 = i_17 * anInt8980 + i_11;
+							i_20 = i_17 * width + i_11;
 							i_21 = anIntArray8979[i_20];
 							i_22 = i_5 + i_21;
 							i_23 = (i_21 & 0xff00ff) + (i_5 & 0xff00ff);
@@ -7177,10 +7177,10 @@ public class JavaRenderer extends AbstractRenderer {
 						i_19 = i_24 - i_9;
 						i_20 = i_8 + ints_11[i_19];
 						if (i_18 >= anInt8983 && i_18 < anInt9002 && i_18 >= i_20 && i_18 < i_20 + ints_12[i_19]) {
-							i_21 = i_24 * anInt8980 + i_18;
+							i_21 = i_24 * width + i_18;
 							i_22 = anIntArray8979[i_21];
 							i_22 = (i_17 * (i_22 & 0xff00) >> 8 & 0xff00) + ((i_22 & 0xff00ff) * i_17 >> 8 & 0xff00ff);
-							anIntArray8979[i_24 * anInt8980 + i_18] = i_5 + i_22;
+							anIntArray8979[i_24 * width + i_18] = i_5 + i_22;
 						}
 
 						i_11 += i_15;
@@ -7194,7 +7194,7 @@ public class JavaRenderer extends AbstractRenderer {
 						i_18 = i_24 - i_9;
 						i_19 = i_8 + ints_11[i_18];
 						if (i_17 >= anInt8983 && i_17 < anInt9002 && i_17 >= i_19 && i_17 < i_19 + ints_12[i_18]) {
-							i_20 = i_24 * anInt8980 + i_17;
+							i_20 = i_24 * width + i_17;
 							i_21 = anIntArray8979[i_20];
 							i_22 = i_5 + i_21;
 							i_23 = (i_21 & 0xff00ff) + (i_5 & 0xff00ff);
@@ -7212,7 +7212,7 @@ public class JavaRenderer extends AbstractRenderer {
 					i_18 = i_24 - i_9;
 					i_19 = i_8 + ints_11[i_18];
 					if (i_17 >= anInt8983 && i_17 < anInt9002 && i_17 >= i_19 && i_17 < i_19 + ints_12[i_18])
-						anIntArray8979[i_24 * anInt8980 + i_17] = i_5;
+						anIntArray8979[i_24 * width + i_17] = i_5;
 
 					i_11 += i_15;
 					++i_24;
@@ -7252,8 +7252,8 @@ public class JavaRenderer extends AbstractRenderer {
 			int i_11 = 0;
 			int i_12 = (i_8 << 16) / i_3;
 			int i_13 = (bytes_7.length / i_8 << 16) / i_4;
-			int i_14 = i_2 * anInt8980 + i_1;
-			int i_15 = anInt8980 - i_3;
+			int i_14 = i_2 * width + i_1;
+			int i_15 = width - i_3;
 			if (i_2 + i_4 > anInt8986)
 				i_4 -= i_2 + i_4 - anInt8986;
 
@@ -7261,7 +7261,7 @@ public class JavaRenderer extends AbstractRenderer {
 			if (i_2 < anInt9009) {
 				i_16 = anInt9009 - i_2;
 				i_4 -= i_16;
-				i_14 += i_16 * anInt8980;
+				i_14 += i_16 * width;
 				i_11 += i_16 * i_13;
 			}
 
@@ -7413,11 +7413,11 @@ public class JavaRenderer extends AbstractRenderer {
 		if (i_21 < 0)
 			i_21 = 0;
 
-		if (i_31 > anInt8980)
-			i_31 = anInt8980;
+		if (i_31 > width)
+			i_31 = width;
 
-		if (i_41 > anInt8981)
-			i_41 = anInt8981;
+		if (i_41 > height)
+			i_41 = height;
 
 		anInt8983 = i_11;
 		anInt9002 = i_31;
@@ -7445,7 +7445,7 @@ public class JavaRenderer extends AbstractRenderer {
 			if (i_31 + i_12 > anInt9002)
 				i_31 = anInt9002 - i_12;
 
-			int i_6 = i_2 * anInt8980 + i_12;
+			int i_6 = i_2 * width + i_12;
 			int i_7 = i_4 >>> 24;
 			int i_8;
 			if (i_5 == 0 || i_5 == 1 && i_7 == 255)

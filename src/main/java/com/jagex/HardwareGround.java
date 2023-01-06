@@ -737,8 +737,8 @@ public class HardwareGround extends Ground {
 				aGraphicalRenderer_Sub2_8528.method13996(aClass70_8550);
 				aGraphicalRenderer_Sub2_8528.method13997(interface32_9);
 				aGraphicalRenderer_Sub2_8528.method8457(Matrix44Var.aClass294_3518);
-				float f_22 = aGraphicalRenderer_Sub2_8528.method8523().method2714();
-				float f_23 = aGraphicalRenderer_Sub2_8528.method8523().method2716();
+				float f_22 = aGraphicalRenderer_Sub2_8528.method8523().getWidth();
+				float f_23 = aGraphicalRenderer_Sub2_8528.method8523().getHeight();
 				Matrix44Var matrix44var_24 = new Matrix44Var();
 				Matrix44Var matrix44var_18 = new Matrix44Var();
 				matrix44var_24.method5214();
@@ -890,8 +890,8 @@ public class HardwareGround extends Ground {
 				aGraphicalRenderer_Sub2_8528.method13996(aClass70_8550);
 				aGraphicalRenderer_Sub2_8528.method13997(interface32_9);
 				aGraphicalRenderer_Sub2_8528.method8457(Matrix44Var.aClass294_3518);
-				float f_22 = aGraphicalRenderer_Sub2_8528.method8523().method2714();
-				float f_23 = aGraphicalRenderer_Sub2_8528.method8523().method2716();
+				float f_22 = aGraphicalRenderer_Sub2_8528.method8523().getWidth();
+				float f_23 = aGraphicalRenderer_Sub2_8528.method8523().getHeight();
 				Matrix44Var matrix44var_24 = new Matrix44Var();
 				Matrix44Var matrix44var_18 = new Matrix44Var();
 				matrix44var_24.method5214();
@@ -976,7 +976,7 @@ public class HardwareGround extends Ground {
 				if (aGraphicalRenderer_Sub2_8528.anInt8811 > 0) {
 					class48_27.aClass303_460.set(0.0F, 0.0F, 1.0F, -aGraphicalRenderer_Sub2_8528.aFloat8813);
 					class48_27.aClass385_457.set((aGraphicalRenderer_Sub2_8528.anInt8810 >> 16 & 0xff) / 255.0F, (aGraphicalRenderer_Sub2_8528.anInt8810 >> 8 & 0xff) / 255.0F, (aGraphicalRenderer_Sub2_8528.anInt8810 & 0xff) / 255.0F);
-					aGraphicalRenderer_Sub2_8528.aClass384_8683.method6562(aGraphicalRenderer_Sub2_8528.aClass384_8740);
+					aGraphicalRenderer_Sub2_8528.aClass384_8683.copy(aGraphicalRenderer_Sub2_8528.aClass384_8740);
 					aGraphicalRenderer_Sub2_8528.aClass384_8683.method6520();
 					class48_27.aClass303_460.concat(aGraphicalRenderer_Sub2_8528.aClass384_8683);
 					class48_27.aClass303_460.scale(1.0F / (aGraphicalRenderer_Sub2_8528.aFloat8819 - aGraphicalRenderer_Sub2_8528.aFloat8813));
@@ -1071,7 +1071,7 @@ public class HardwareGround extends Ground {
 							case 9:
 								if (!aGraphicalRenderer_Sub2_8528.aBool8692 && (flags & 0x8) != 0) {
 									Class41_Sub1_Sub1 class41_sub1_sub1_31 = aGraphicalRenderer_Sub2_8528.aClass41_Sub1_Sub1_8691;
-									class41_sub1_sub1_31.aClass384_10090.method6562(aGraphicalRenderer_Sub2_8528.aClass384_8729);
+									class41_sub1_sub1_31.aClass384_10090.copy(aGraphicalRenderer_Sub2_8528.aClass384_8729);
 									class41_sub1_sub1_31.aClass384_10091.method6525(1.0F / (class282_sub6_20.aFloat7511 * (class282_sub6_20.hdWaterTile.hdWaterInt1)), 1.0F / (class282_sub6_20.aFloat7511 * (class282_sub6_20.hdWaterTile.hdWaterInt1)), 1.0F, 1.0F);
 									class41_sub1_sub1_31.aClass385_10089.set(aGraphicalRenderer_Sub2_8528.aClass384_8814.buf[12], aGraphicalRenderer_Sub2_8528.aClass384_8814.buf[13], aGraphicalRenderer_Sub2_8528.aClass384_8814.buf[14]);
 									TextureDetails class169_23 = aGraphicalRenderer_Sub2_8528.textureCache.getTextureDetails(class282_sub6_20.anInt7510);
@@ -1183,7 +1183,7 @@ public class HardwareGround extends Ground {
 				if (aGraphicalRenderer_Sub2_8528.anInt8811 > 0) {
 					class48_27.aClass303_460.set(0.0F, 0.0F, 1.0F, -aGraphicalRenderer_Sub2_8528.aFloat8813);
 					class48_27.aClass385_457.set((aGraphicalRenderer_Sub2_8528.anInt8810 >> 16 & 0xff) / 255.0F, (aGraphicalRenderer_Sub2_8528.anInt8810 >> 8 & 0xff) / 255.0F, (aGraphicalRenderer_Sub2_8528.anInt8810 & 0xff) / 255.0F);
-					aGraphicalRenderer_Sub2_8528.aClass384_8683.method6562(aGraphicalRenderer_Sub2_8528.aClass384_8740);
+					aGraphicalRenderer_Sub2_8528.aClass384_8683.copy(aGraphicalRenderer_Sub2_8528.aClass384_8740);
 					aGraphicalRenderer_Sub2_8528.aClass384_8683.method6520();
 					class48_27.aClass303_460.concat(aGraphicalRenderer_Sub2_8528.aClass384_8683);
 					class48_27.aClass303_460.scale(1.0F / (aGraphicalRenderer_Sub2_8528.aFloat8819 - aGraphicalRenderer_Sub2_8528.aFloat8813));
@@ -1279,7 +1279,7 @@ public class HardwareGround extends Ground {
 								// render shaders/ripples water
 								if (!aGraphicalRenderer_Sub2_8528.aBool8692 && (flags & 0x8) != 0) {
 									Class41_Sub1_Sub1 class41_sub1_sub1_31 = aGraphicalRenderer_Sub2_8528.aClass41_Sub1_Sub1_8691;
-									class41_sub1_sub1_31.aClass384_10090.method6562(aGraphicalRenderer_Sub2_8528.aClass384_8729);
+									class41_sub1_sub1_31.aClass384_10090.copy(aGraphicalRenderer_Sub2_8528.aClass384_8729);
 									class41_sub1_sub1_31.aClass384_10091.method6525(1.0F / (class282_sub6_20.aFloat7511 * class282_sub6_20.hdWaterTile.hdWaterInt1), 1.0F / (class282_sub6_20.aFloat7511 * class282_sub6_20.hdWaterTile.hdWaterInt1), 1.0F, 1.0F);
 									class41_sub1_sub1_31.aClass385_10089.set(aGraphicalRenderer_Sub2_8528.aClass384_8814.buf[12], aGraphicalRenderer_Sub2_8528.aClass384_8814.buf[13], aGraphicalRenderer_Sub2_8528.aClass384_8814.buf[14]);
 									TextureDetails class169_23 = aGraphicalRenderer_Sub2_8528.textureCache.getTextureDetails(class282_sub6_20.anInt7510);
@@ -1407,8 +1407,8 @@ public class HardwareGround extends Ground {
 				aGraphicalRenderer_Sub2_8528.method13996(aClass70_8550);
 				aGraphicalRenderer_Sub2_8528.method13997(interface32_9);
 				aGraphicalRenderer_Sub2_8528.method8457(Matrix44Var.aClass294_3518);
-				float f_22 = aGraphicalRenderer_Sub2_8528.method8523().method2714();
-				float f_23 = aGraphicalRenderer_Sub2_8528.method8523().method2716();
+				float f_22 = aGraphicalRenderer_Sub2_8528.method8523().getWidth();
+				float f_23 = aGraphicalRenderer_Sub2_8528.method8523().getHeight();
 				Matrix44Var matrix44var_24 = new Matrix44Var();
 				Matrix44Var matrix44var_18 = new Matrix44Var();
 				matrix44var_24.method5214();

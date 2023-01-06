@@ -100,7 +100,7 @@ public class Class151 {
 			}
 			CS2Executor.printError(str_3);
 			str_3 = Class475.method7926(str_3);
-			if (RuntimeException_Sub3.anApplet10460 != null) {
+			if (RuntimeException_Sub3.LOADER != null) {
 				String str_4 = "Unknown";
 				String str_5 = "1.1";
 				try {
@@ -108,7 +108,7 @@ public class Class151 {
 					str_5 = System.getProperty("java.version");
 				} catch (Exception ignored) {
 				}
-				URL url_6 = new URL(RuntimeException_Sub3.anApplet10460.getCodeBase(), "clienterror.ws?c=" + RuntimeException_Sub3.anInt10457 + "&cs=" + InventoriesIndexLoader.anInt4781 + "&u=" + (RuntimeException_Sub3.MY_PLAYER_USERNAME != null ? Class475.method7926(RuntimeException_Sub3.MY_PLAYER_USERNAME) : "" + RuntimeException_Sub3.aLong10459) + "&v1=" + Class475.method7926(str_4) + "&v2=" + Class475.method7926(str_5) + "&e=" + str_3);
+				URL url_6 = new URL(RuntimeException_Sub3.LOADER.getCodeBase(), "/clienterror?c=" + RuntimeException_Sub3.GAME_BUILD + "&cs=" + InventoriesIndexLoader.GAME_SUB_BUILD + "&u=" + (RuntimeException_Sub3.MY_PLAYER_USERNAME != null ? Class475.method7926(RuntimeException_Sub3.MY_PLAYER_USERNAME) : "" + RuntimeException_Sub3.aLong10459) + "&v1=" + Class475.method7926(str_4) + "&v2=" + Class475.method7926(str_5) + "&e=" + str_3);
 				DataInputStream datainputstream_7 = new DataInputStream(url_6.openStream());
 				datainputstream_7.read();
 				datainputstream_7.close();

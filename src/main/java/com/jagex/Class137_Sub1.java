@@ -105,7 +105,7 @@ public class Class137_Sub1 extends GLTexture {
 		openGLHardwareRenderer.setTexture(this);
 		Class158 class158_7 = openGLHardwareRenderer.method8523();
 		if (class158_7 != null) {
-			int i_8 = class158_7.method2716() - (i_4 + i_6);
+			int i_8 = class158_7.getHeight() - (i_4 + i_6);
 			int i_9 = OpenGLRenderer.method13630(aClass150_1650, aClass76_1651);
 			OpenGL.glCopyTexImage2D(bindId, 0, i_9, i_3, i_8, i_5, i_6, 0);
 		}
@@ -116,7 +116,7 @@ public class Class137_Sub1 extends GLTexture {
 	void method14439(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
 		Class158 class158_7 = openGLHardwareRenderer.method8523();
 		if (class158_7 != null) {
-			int i_8 = class158_7.method2716() - (i_4 + i_6);
+			int i_8 = class158_7.getHeight() - (i_4 + i_6);
 			openGLHardwareRenderer.setTexture(this);
 			OpenGL.glCopyTexSubImage2D(bindId, 0, i_1, anInt9086 - (i_2 + i_4), i_5, i_8, i_3, i_4);
 			OpenGL.glFlush();

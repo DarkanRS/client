@@ -97,8 +97,8 @@ public class NativeSprite_Sub3 extends NativeSprite {
 		class47_6.method937(i_3, i_4);
 		i_1 += anInt9055;
 		i_2 += anInt9057;
-		float f_7 = aGraphicalRenderer_Sub2_9052.method8523().method2714();
-		float f_8 = aGraphicalRenderer_Sub2_9052.method8523().method2716();
+		float f_7 = aGraphicalRenderer_Sub2_9052.method8523().getWidth();
+		float f_8 = aGraphicalRenderer_Sub2_9052.method8523().getHeight();
 		class47_6.aClass384_442.method6525(anInt9060 * 2.0F / f_7, anInt9053 * 2.0F / f_8, 1.0F, 1.0F);
 		class47_6.aClass384_442.buf[12] = (i_1 + aGraphicalRenderer_Sub2_9052.method13905()) * 2.0F / f_7 - 1.0F;
 		class47_6.aClass384_442.buf[13] = (i_2 + aGraphicalRenderer_Sub2_9052.method13905()) * 2.0F / f_8 - 1.0F;
@@ -146,8 +146,8 @@ public class NativeSprite_Sub3 extends NativeSprite {
 		class47_6.method937(i_3, i_4);
 		i_1 += anInt9055;
 		i_2 += anInt9057;
-		float f_7 = aGraphicalRenderer_Sub2_9052.method8523().method2714();
-		float f_8 = aGraphicalRenderer_Sub2_9052.method8523().method2716();
+		float f_7 = aGraphicalRenderer_Sub2_9052.method8523().getWidth();
+		float f_8 = aGraphicalRenderer_Sub2_9052.method8523().getHeight();
 		class47_6.aClass384_442.method6525(anInt9060 * 2.0F / f_7, anInt9053 * 2.0F / f_8, 1.0F, 1.0F);
 		class47_6.aClass384_442.buf[12] = (i_1 + aGraphicalRenderer_Sub2_9052.method13905()) * 2.0F / f_7 - 1.0F;
 		class47_6.aClass384_442.buf[13] = (i_2 + aGraphicalRenderer_Sub2_9052.method13905()) * 2.0F / f_8 - 1.0F;
@@ -230,8 +230,8 @@ public class NativeSprite_Sub3 extends NativeSprite {
 			i_2 += i_4 * anInt9057 / anInt9053;
 		}
 
-		float f_10 = aGraphicalRenderer_Sub2_9052.method8523().method2714();
-		float f_11 = aGraphicalRenderer_Sub2_9052.method8523().method2716();
+		float f_10 = aGraphicalRenderer_Sub2_9052.method8523().getWidth();
+		float f_11 = aGraphicalRenderer_Sub2_9052.method8523().getHeight();
 		class47_9.aClass384_442.method6525(i_3 * 2.0F / f_10, i_4 * 2.0F / f_11, 1.0F, 1.0F);
 		class47_9.aClass384_442.buf[12] = (i_1 + aGraphicalRenderer_Sub2_9052.method13905()) * 2.0F / f_10 - 1.0F;
 		class47_9.aClass384_442.buf[13] = (i_2 + aGraphicalRenderer_Sub2_9052.method13905()) * 2.0F / f_11 - 1.0F;
@@ -280,8 +280,8 @@ public class NativeSprite_Sub3 extends NativeSprite {
 		Class47 class47_25 = aGraphicalRenderer_Sub2_9052.aClass47_8698;
 		class47_25.anInterface6_443 = anInterface6_9050;
 		class47_25.method937(i_7, i_8);
-		f_12 = aGraphicalRenderer_Sub2_9052.method8523().method2714();
-		f_13 = aGraphicalRenderer_Sub2_9052.method8523().method2716();
+		f_12 = aGraphicalRenderer_Sub2_9052.method8523().getWidth();
+		f_13 = aGraphicalRenderer_Sub2_9052.method8523().getHeight();
 		class47_25.aClass384_442.identity();
 		class47_25.aClass384_442.buf[0] = (f_3 - f_1) * 2.0F / f_12;
 		class47_25.aClass384_442.buf[1] = (f_4 - f_2) * 2.0F / f_13;
@@ -308,8 +308,8 @@ public class NativeSprite_Sub3 extends NativeSprite {
 		Class47 class47_11 = aGraphicalRenderer_Sub2_9052.aClass47_8698;
 		class47_11.anInterface6_443 = anInterface6_9050;
 		class47_11.method937(1, -1);
-		float f_12 = aGraphicalRenderer_Sub2_9052.method8523().method2714();
-		float f_13 = aGraphicalRenderer_Sub2_9052.method8523().method2716();
+		float f_12 = aGraphicalRenderer_Sub2_9052.method8523().getWidth();
+		float f_13 = aGraphicalRenderer_Sub2_9052.method8523().getHeight();
 		class47_11.aClass384_442.identity();
 		if (aBool9051) {
 			float f_14 = (float) anInt9060 / scaleWidth();
@@ -336,7 +336,7 @@ public class NativeSprite_Sub3 extends NativeSprite {
 		matrix44_16.buf[12] = -1.0f;
 		matrix44_16.buf[13] = -1.0f;
 		matrix44_16.buf[14] = -1.0f;
-		class47_11.aClass384_442.method6523(matrix44_16);
+		class47_11.aClass384_442.multiply(matrix44_16);
 		class47_11.aClass384_440.method6525(anInterface6_9050.method47(anInt9060), anInterface6_9050.method62(anInt9053), 1.0F, 1.0F);
 		class47_11.anInterface4_445 = aGraphicalRenderer_Sub2_9052.anInterface4_8746;
 		class47_11.anInt446 = 0;
@@ -476,8 +476,8 @@ public class NativeSprite_Sub3 extends NativeSprite {
 		Class47 class47_8 = aGraphicalRenderer_Sub2_9052.aClass47_8698;
 		class47_8.anInterface6_443 = anInterface6_9050;
 		class47_8.method937(i_5, i_6);
-		float f_9 = aGraphicalRenderer_Sub2_9052.method8523().method2714();
-		float f_10 = aGraphicalRenderer_Sub2_9052.method8523().method2716();
+		float f_9 = aGraphicalRenderer_Sub2_9052.method8523().getWidth();
+		float f_10 = aGraphicalRenderer_Sub2_9052.method8523().getHeight();
 		class47_8.anInterface4_445 = aGraphicalRenderer_Sub2_9052.anInterface4_8746;
 		class47_8.anInt446 = 0;
 		class47_8.aClass70_447 = aGraphicalRenderer_Sub2_9052.aClass70_8786;
@@ -616,8 +616,8 @@ public class NativeSprite_Sub3 extends NativeSprite {
 		class47_6.method937(1, -1);
 		i_1 += anInt9055;
 		i_2 += anInt9057;
-		float f_7 = aGraphicalRenderer_Sub2_9052.method8523().method2714();
-		float f_8 = aGraphicalRenderer_Sub2_9052.method8523().method2716();
+		float f_7 = aGraphicalRenderer_Sub2_9052.method8523().getWidth();
+		float f_8 = aGraphicalRenderer_Sub2_9052.method8523().getHeight();
 		class47_6.aClass384_442.method6525(anInt9060 * 2.0F / f_7, anInt9053 * 2.0F / f_8, 1.0F, 1.0F);
 		class47_6.aClass384_442.buf[12] = (i_1 + aGraphicalRenderer_Sub2_9052.method13905()) * 2.0F / f_7 - 1.0F;
 		class47_6.aClass384_442.buf[13] = (i_2 + aGraphicalRenderer_Sub2_9052.method13905()) * 2.0F / f_8 - 1.0F;
@@ -642,8 +642,8 @@ public class NativeSprite_Sub3 extends NativeSprite {
 		class47_6.method937(1, -1);
 		i_1 += anInt9055;
 		i_2 += anInt9057;
-		float f_7 = aGraphicalRenderer_Sub2_9052.method8523().method2714();
-		float f_8 = aGraphicalRenderer_Sub2_9052.method8523().method2716();
+		float f_7 = aGraphicalRenderer_Sub2_9052.method8523().getWidth();
+		float f_8 = aGraphicalRenderer_Sub2_9052.method8523().getHeight();
 		class47_6.aClass384_442.method6525(anInt9060 * 2.0F / f_7, anInt9053 * 2.0F / f_8, 1.0F, 1.0F);
 		class47_6.aClass384_442.buf[12] = (i_1 + aGraphicalRenderer_Sub2_9052.method13905()) * 2.0F / f_7 - 1.0F;
 		class47_6.aClass384_442.buf[13] = (i_2 + aGraphicalRenderer_Sub2_9052.method13905()) * 2.0F / f_8 - 1.0F;
@@ -674,8 +674,8 @@ public class NativeSprite_Sub3 extends NativeSprite {
 			i_2 += anInt9057 * i_4 / anInt9053;
 		}
 
-		float f_10 = aGraphicalRenderer_Sub2_9052.method8523().method2714();
-		float f_11 = aGraphicalRenderer_Sub2_9052.method8523().method2716();
+		float f_10 = aGraphicalRenderer_Sub2_9052.method8523().getWidth();
+		float f_11 = aGraphicalRenderer_Sub2_9052.method8523().getHeight();
 		class47_9.aClass384_442.method6525(i_3 * 2.0F / f_10, i_4 * 2.0F / f_11, 1.0F, 1.0F);
 		class47_9.aClass384_442.buf[12] = (i_1 + aGraphicalRenderer_Sub2_9052.method13905()) * 2.0F / f_10 - 1.0F;
 		class47_9.aClass384_442.buf[13] = (i_2 + aGraphicalRenderer_Sub2_9052.method13905()) * 2.0F / f_11 - 1.0F;
@@ -704,8 +704,8 @@ public class NativeSprite_Sub3 extends NativeSprite {
 		class47_6.method937(i_3, i_4);
 		i_1 += anInt9055;
 		i_2 += anInt9057;
-		float f_7 = aGraphicalRenderer_Sub2_9052.method8523().method2714();
-		float f_8 = aGraphicalRenderer_Sub2_9052.method8523().method2716();
+		float f_7 = aGraphicalRenderer_Sub2_9052.method8523().getWidth();
+		float f_8 = aGraphicalRenderer_Sub2_9052.method8523().getHeight();
 		class47_6.aClass384_442.method6525(anInt9060 * 2.0F / f_7, anInt9053 * 2.0F / f_8, 1.0F, 1.0F);
 		class47_6.aClass384_442.buf[12] = (i_1 + aGraphicalRenderer_Sub2_9052.method13905()) * 2.0F / f_7 - 1.0F;
 		class47_6.aClass384_442.buf[13] = (i_2 + aGraphicalRenderer_Sub2_9052.method13905()) * 2.0F / f_8 - 1.0F;
@@ -760,8 +760,8 @@ public class NativeSprite_Sub3 extends NativeSprite {
 		class47_6.method937(1, -1);
 		i_1 += anInt9055;
 		i_2 += anInt9057;
-		float f_7 = aGraphicalRenderer_Sub2_9052.method8523().method2714();
-		float f_8 = aGraphicalRenderer_Sub2_9052.method8523().method2716();
+		float f_7 = aGraphicalRenderer_Sub2_9052.method8523().getWidth();
+		float f_8 = aGraphicalRenderer_Sub2_9052.method8523().getHeight();
 		class47_6.aClass384_442.method6525(anInt9060 * 2.0F / f_7, anInt9053 * 2.0F / f_8, 1.0F, 1.0F);
 		class47_6.aClass384_442.buf[12] = (i_1 + aGraphicalRenderer_Sub2_9052.method13905()) * 2.0F / f_7 - 1.0F;
 		class47_6.aClass384_442.buf[13] = (i_2 + aGraphicalRenderer_Sub2_9052.method13905()) * 2.0F / f_8 - 1.0F;
@@ -805,8 +805,8 @@ public class NativeSprite_Sub3 extends NativeSprite {
 			i_2 += anInt9057 * i_4 / anInt9053;
 		}
 
-		float f_10 = aGraphicalRenderer_Sub2_9052.method8523().method2714();
-		float f_11 = aGraphicalRenderer_Sub2_9052.method8523().method2716();
+		float f_10 = aGraphicalRenderer_Sub2_9052.method8523().getWidth();
+		float f_11 = aGraphicalRenderer_Sub2_9052.method8523().getHeight();
 		class47_9.aClass384_442.method6525(i_3 * 2.0F / f_10, i_4 * 2.0F / f_11, 1.0F, 1.0F);
 		class47_9.aClass384_442.buf[12] = (i_1 + aGraphicalRenderer_Sub2_9052.method13905()) * 2.0F / f_10 - 1.0F;
 		class47_9.aClass384_442.buf[13] = (i_2 + aGraphicalRenderer_Sub2_9052.method13905()) * 2.0F / f_11 - 1.0F;
@@ -855,8 +855,8 @@ public class NativeSprite_Sub3 extends NativeSprite {
 		Class47 class47_25 = aGraphicalRenderer_Sub2_9052.aClass47_8698;
 		class47_25.anInterface6_443 = anInterface6_9050;
 		class47_25.method937(i_7, i_8);
-		f_12 = aGraphicalRenderer_Sub2_9052.method8523().method2714();
-		f_13 = aGraphicalRenderer_Sub2_9052.method8523().method2716();
+		f_12 = aGraphicalRenderer_Sub2_9052.method8523().getWidth();
+		f_13 = aGraphicalRenderer_Sub2_9052.method8523().getHeight();
 		class47_25.aClass384_442.identity();
 		class47_25.aClass384_442.buf[0] = (f_3 - f_1) * 2.0F / f_12;
 		class47_25.aClass384_442.buf[1] = (f_4 - f_2) * 2.0F / f_13;
@@ -894,8 +894,8 @@ public class NativeSprite_Sub3 extends NativeSprite {
 		Class47 class47_8 = aGraphicalRenderer_Sub2_9052.aClass47_8698;
 		class47_8.anInterface6_443 = anInterface6_9050;
 		class47_8.method937(i_5, i_6);
-		float f_9 = aGraphicalRenderer_Sub2_9052.method8523().method2714();
-		float f_10 = aGraphicalRenderer_Sub2_9052.method8523().method2716();
+		float f_9 = aGraphicalRenderer_Sub2_9052.method8523().getWidth();
+		float f_10 = aGraphicalRenderer_Sub2_9052.method8523().getHeight();
 		class47_8.anInterface4_445 = aGraphicalRenderer_Sub2_9052.anInterface4_8746;
 		class47_8.anInt446 = 0;
 		class47_8.aClass70_447 = aGraphicalRenderer_Sub2_9052.aClass70_8786;
@@ -1058,8 +1058,8 @@ public class NativeSprite_Sub3 extends NativeSprite {
 		Class47 class47_25 = aGraphicalRenderer_Sub2_9052.aClass47_8698;
 		class47_25.anInterface6_443 = anInterface6_9050;
 		class47_25.method937(i_7, i_8);
-		f_12 = aGraphicalRenderer_Sub2_9052.method8523().method2714();
-		f_13 = aGraphicalRenderer_Sub2_9052.method8523().method2716();
+		f_12 = aGraphicalRenderer_Sub2_9052.method8523().getWidth();
+		f_13 = aGraphicalRenderer_Sub2_9052.method8523().getHeight();
 		class47_25.aClass384_442.identity();
 		class47_25.aClass384_442.buf[0] = (f_3 - f_1) * 2.0F / f_12;
 		class47_25.aClass384_442.buf[1] = (f_4 - f_2) * 2.0F / f_13;
@@ -1082,8 +1082,8 @@ public class NativeSprite_Sub3 extends NativeSprite {
 		Class47 class47_8 = aGraphicalRenderer_Sub2_9052.aClass47_8698;
 		class47_8.anInterface6_443 = anInterface6_9050;
 		class47_8.method937(i_5, i_6);
-		float f_9 = aGraphicalRenderer_Sub2_9052.method8523().method2714();
-		float f_10 = aGraphicalRenderer_Sub2_9052.method8523().method2716();
+		float f_9 = aGraphicalRenderer_Sub2_9052.method8523().getWidth();
+		float f_10 = aGraphicalRenderer_Sub2_9052.method8523().getHeight();
 		class47_8.anInterface4_445 = aGraphicalRenderer_Sub2_9052.anInterface4_8746;
 		class47_8.anInt446 = 0;
 		class47_8.aClass70_447 = aGraphicalRenderer_Sub2_9052.aClass70_8786;
@@ -1220,8 +1220,8 @@ public class NativeSprite_Sub3 extends NativeSprite {
 		Class47 class47_11 = aGraphicalRenderer_Sub2_9052.aClass47_8698;
 		class47_11.anInterface6_443 = anInterface6_9050;
 		class47_11.method937(1, -1);
-		float f_12 = aGraphicalRenderer_Sub2_9052.method8523().method2714();
-		float f_13 = aGraphicalRenderer_Sub2_9052.method8523().method2716();
+		float f_12 = aGraphicalRenderer_Sub2_9052.method8523().getWidth();
+		float f_13 = aGraphicalRenderer_Sub2_9052.method8523().getHeight();
 		class47_11.aClass384_442.identity();
 		if (aBool9051) {
 			float f_14 = (float) anInt9060 / scaleWidth();
@@ -1248,7 +1248,7 @@ public class NativeSprite_Sub3 extends NativeSprite {
 		matrix44_16.buf[12] = -1.0f;
 		matrix44_16.buf[13] = -1.0f;
 		matrix44_16.buf[14] = -1.0f;
-		class47_11.aClass384_442.method6523(matrix44_16);
+		class47_11.aClass384_442.multiply(matrix44_16);
 		class47_11.aClass384_440.method6525(anInterface6_9050.method47(anInt9060), anInterface6_9050.method62(anInt9053), 1.0F, 1.0F);
 		class47_11.anInterface4_445 = aGraphicalRenderer_Sub2_9052.anInterface4_8746;
 		class47_11.anInt446 = 0;
@@ -1289,8 +1289,8 @@ public class NativeSprite_Sub3 extends NativeSprite {
 		Class47 class47_11 = aGraphicalRenderer_Sub2_9052.aClass47_8698;
 		class47_11.anInterface6_443 = anInterface6_9050;
 		class47_11.method937(1, -1);
-		float f_12 = aGraphicalRenderer_Sub2_9052.method8523().method2714();
-		float f_13 = aGraphicalRenderer_Sub2_9052.method8523().method2716();
+		float f_12 = aGraphicalRenderer_Sub2_9052.method8523().getWidth();
+		float f_13 = aGraphicalRenderer_Sub2_9052.method8523().getHeight();
 		class47_11.aClass384_442.identity();
 		if (aBool9051) {
 			float f_14 = (float) anInt9060 / scaleWidth();
@@ -1317,7 +1317,7 @@ public class NativeSprite_Sub3 extends NativeSprite {
 		matrix44_16.buf[12] = -1.0f;
 		matrix44_16.buf[13] = -1.0f;
 		matrix44_16.buf[14] = -1.0f;
-		class47_11.aClass384_442.method6523(matrix44_16);
+		class47_11.aClass384_442.multiply(matrix44_16);
 		class47_11.aClass384_440.method6525(anInterface6_9050.method47(anInt9060), anInterface6_9050.method62(anInt9053), 1.0F, 1.0F);
 		class47_11.anInterface4_445 = aGraphicalRenderer_Sub2_9052.anInterface4_8746;
 		class47_11.anInt446 = 0;
@@ -1366,8 +1366,8 @@ public class NativeSprite_Sub3 extends NativeSprite {
 		Class47 class47_25 = aGraphicalRenderer_Sub2_9052.aClass47_8698;
 		class47_25.anInterface6_443 = anInterface6_9050;
 		class47_25.method937(i_7, i_8);
-		f_12 = aGraphicalRenderer_Sub2_9052.method8523().method2714();
-		f_13 = aGraphicalRenderer_Sub2_9052.method8523().method2716();
+		f_12 = aGraphicalRenderer_Sub2_9052.method8523().getWidth();
+		f_13 = aGraphicalRenderer_Sub2_9052.method8523().getHeight();
 		class47_25.aClass384_442.identity();
 		class47_25.aClass384_442.buf[0] = (f_3 - f_1) * 2.0F / f_12;
 		class47_25.aClass384_442.buf[1] = (f_4 - f_2) * 2.0F / f_13;

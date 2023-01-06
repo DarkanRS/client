@@ -379,7 +379,7 @@ public class PacketDecoder {
 						if (i_35 == client.myPlayerIndex)
 							player_117 = VertexNormal.MY_PLAYER;
 						else
-							player_117 = client.players[i_35];
+							player_117 = client.PLAYER_LIST[i_35];
 						if (player_117 != null) {
 							EntitySpotAnim class161_121 = player_117.spotAnims[idk];
 							if (spotAnimId == 65535)
@@ -606,7 +606,7 @@ public class PacketDecoder {
 			if (playerIndex == client.myPlayerIndex)
 				player = VertexNormal.MY_PLAYER;
 			else
-				player = client.players[playerIndex];
+				player = client.PLAYER_LIST[playerIndex];
 			if (player != null) {
 				int chatEffects = buffer.readUnsignedShort();
 				int icon = buffer.readUnsignedByte();
@@ -820,10 +820,10 @@ public class PacketDecoder {
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerProt.RESET_ALL_ANIMATIONS) {
-			for (int key = 0; key < client.players.length; key++)
-				if (client.players[key] != null) {
-					client.players[key].currentAnimations = null;
-					client.players[key].currentAnimation.update(-1);
+			for (int key = 0; key < client.PLAYER_LIST.length; key++)
+				if (client.PLAYER_LIST[key] != null) {
+					client.PLAYER_LIST[key].currentAnimations = null;
+					client.PLAYER_LIST[key].currentAnimation.update(-1);
 				}
 			for (int key = 0; key < client.anInt7210; key++) {
 				((PathingEntity) client.NPC_ARRAY[key].anObject8068).currentAnimations = null;

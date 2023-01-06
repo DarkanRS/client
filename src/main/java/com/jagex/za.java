@@ -203,7 +203,7 @@ public class za extends Class158_Sub2 implements Interface40 {
 	}
 
 	@Override
-	public int method2714() {
+	public int getWidth() {
 		return anInt10288;
 	}
 
@@ -213,7 +213,7 @@ public class za extends Class158_Sub2 implements Interface40 {
 	}
 
 	@Override
-	public int method2716() {
+	public int getHeight() {
 		return anInt10287;
 	}
 

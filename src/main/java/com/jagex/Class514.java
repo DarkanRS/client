@@ -2,7 +2,7 @@ package com.jagex;
 
 public class Class514 {
 
-	static int anInt5887;
+	static int INSTANCE_NUMBER;
 
 	static int method8840(char var_0) {
 		return var_0 >= 0 && var_0 < Class480.anIntArray5715.length ? Class480.anIntArray5715[var_0] : -1;

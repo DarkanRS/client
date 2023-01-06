@@ -69,7 +69,7 @@ public class Class119 {
 		boolean found = false;
 
 		for (int index = 0; index < indicesLength; index++) {
-			PlayerEntity player = client.players[indices[index]];
+			PlayerEntity player = client.PLAYER_LIST[indices[index]];
 			if (player != null && player != VertexNormal.MY_PLAYER && player.displayName != null && player.displayName.equalsIgnoreCase(playerName)) {
 				ClientProt outgoing = null;
 				if (option == 1)

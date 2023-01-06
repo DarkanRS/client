@@ -2,7 +2,7 @@ package com.jagex;
 
 import jaggl.OpenGL;
 
-public class Class158_Sub1_Sub4 extends Class158_Sub1 {
+public class FrameBufferObject extends Class158_Sub1 {
 
 	int anInt10228;
 	int anInt10226;
@@ -13,7 +13,7 @@ public class Class158_Sub1_Sub4 extends Class158_Sub1 {
 	OpenGLRenderer aGraphicalRenderer_Sub1_10227;
 	Interface13 anInterface13_10232;
 
-	Class158_Sub1_Sub4(OpenGLRenderer class505_sub1_1) {
+	FrameBufferObject(OpenGLRenderer class505_sub1_1) {
 		if (!class505_sub1_1.supportsFBO)
 			throw new IllegalStateException("");
 		aGraphicalRenderer_Sub1_10227 = class505_sub1_1;
@@ -111,7 +111,7 @@ public class Class158_Sub1_Sub4 extends Class158_Sub1 {
 	void method15624(int i_3, int i_4, boolean bool_8) {
 		if (true) {
 			int i_9 = anInt10230;
-			int i_10 = aGraphicalRenderer_Sub1_10227.method8523().method2716();
+			int i_10 = aGraphicalRenderer_Sub1_10227.method8523().getHeight();
 			int i_11 = 0;
 			if (bool_8)
 				i_11 |= 0x100;
@@ -189,7 +189,7 @@ public class Class158_Sub1_Sub4 extends Class158_Sub1 {
 	}
 
 	@Override
-	public int method2714() {
+	public int getWidth() {
 		return anInt10229;
 	}
 
@@ -200,7 +200,7 @@ public class Class158_Sub1_Sub4 extends Class158_Sub1 {
 	}
 
 	@Override
-	public int method2716() {
+	public int getHeight() {
 		return anInt10230;
 	}
 

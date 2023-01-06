@@ -39,7 +39,7 @@ public class Class113 {
 					if (i_6 == client.myPlayerIndex)
 						player_9 = VertexNormal.MY_PLAYER;
 					else
-						player_9 = client.players[i_6];
+						player_9 = client.PLAYER_LIST[i_6];
 					if (player_9 != null) {
 						vector3_5 = player_9.method11166().coords;
 						if ((int) vector3_5.x >= 0 && (int) vector3_5.x < IndexLoaders.MAP_REGION_DECODER.getSizeX() * 512 && (int) vector3_5.z >= 0 && (int) vector3_5.z < IndexLoaders.MAP_REGION_DECODER.getSizeY() * 512)

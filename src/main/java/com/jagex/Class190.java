@@ -64,8 +64,8 @@ public class Class190 {
 					Ground.method6728(icomponentdefinitions_2, class119_3, i_4, i_5, i_15, i_16, arrow.arrowSprite, long_17);
 				}
 
-				if (arrow.targetType == 10 && arrow.targetIndex >= 0 && arrow.targetIndex < client.players.length) {
-					PlayerEntity player_20 = client.players[arrow.targetIndex];
+				if (arrow.targetType == 10 && arrow.targetIndex >= 0 && arrow.targetIndex < client.PLAYER_LIST.length) {
+					PlayerEntity player_20 = client.PLAYER_LIST[arrow.targetIndex];
 					if (player_20 != null) {
 						Vector3 vector3_21 = player_20.method11166().coords;
 						int i_19 = (int) vector3_21.x / 128 - i_0 / 128;
@@ -102,7 +102,7 @@ public class Class190 {
 		ClanVarIndexLoader.method6763();
 
 		for (i_1 = 0; i_1 < 2048; i_1++)
-			client.players[i_1] = null;
+			client.PLAYER_LIST[i_1] = null;
 
 		VertexNormal.MY_PLAYER = null;
 		client.NPC_UPDATE_INDEX = 0;

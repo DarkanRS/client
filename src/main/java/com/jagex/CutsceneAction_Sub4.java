@@ -41,7 +41,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
 			PlayerEntity player_12;
 			TCPPacket tcpmessage_13;
 			if (outgoingpacket_11 != null) {
-				player_12 = client.players[i_7];
+				player_12 = client.PLAYER_LIST[i_7];
 				if (player_12 != null) {
 					client.anInt7293 = i_1;
 					client.anInt7294 = i_2;
@@ -74,7 +74,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
 				CutsceneAction_Sub10.method14603(i_7, i_5, i_4, class282_sub50_sub7_0.aString9588);
 
 			if (clickType == 15) {
-				player_12 = client.players[i_7];
+				player_12 = client.PLAYER_LIST[i_7];
 				if (player_12 != null) {
 					client.anInt7293 = i_1;
 					client.anInt7294 = i_2;

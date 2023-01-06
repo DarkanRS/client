@@ -212,7 +212,7 @@ public class Class158_Sub2_Sub2_Sub2 extends Class158_Sub2_Sub2 implements Inter
 	}
 
 	@Override
-	public int method2714() {
+	public int getWidth() {
 		return anInt10476;
 	}
 
@@ -223,7 +223,7 @@ public class Class158_Sub2_Sub2_Sub2 extends Class158_Sub2_Sub2 implements Inter
 	}
 
 	@Override
-	public int method2716() {
+	public int getHeight() {
 		return anInt10471;
 	}
 

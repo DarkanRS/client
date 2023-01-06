@@ -113,11 +113,11 @@ public abstract class Class158 {
 
 	abstract boolean method213();
 
-	public abstract int method2714();
+	public abstract int getWidth();
 
 	abstract boolean method2715();
 
-	public abstract int method2716();
+	public abstract int getHeight();
 
 	abstract boolean method2717();
 

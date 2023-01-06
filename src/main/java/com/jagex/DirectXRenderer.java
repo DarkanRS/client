@@ -614,7 +614,7 @@ public class DirectXRenderer extends HardwareRenderer {
 
 	@Override
 	public void method13933(Matrix44 matrix44_1) {
-		matrix44_1.method6523(aClass384_10261);
+		matrix44_1.multiply(aClass384_10261);
 	}
 
 	@Override
@@ -1127,7 +1127,7 @@ public class DirectXRenderer extends HardwareRenderer {
 
 	@Override
 	public void method14107(Matrix44 matrix44_1) {
-		matrix44_1.method6523(aClass384_10261);
+		matrix44_1.multiply(aClass384_10261);
 	}
 
 	@Override

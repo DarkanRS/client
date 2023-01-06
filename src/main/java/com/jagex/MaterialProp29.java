@@ -22,7 +22,7 @@ public class MaterialProp29 extends MaterialProperty {
 					aClass149Array9862[i_4] = Class514.method8842(rsbytebuffer_2);
 					break;
 				case 2:
-					aClass149Array9862[i_4] = SoftwareItemRender.method7033(rsbytebuffer_2);
+					aClass149Array9862[i_4] = SoftwareRenderCall.method7033(rsbytebuffer_2);
 					break;
 				case 3:
 					aClass149Array9862[i_4] = Animation.method7644(rsbytebuffer_2);

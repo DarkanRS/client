@@ -15,11 +15,11 @@ public class Class507 {
 
 	static void method8725(int currentScreenMode, int desiredScreenMode, int width, int height, boolean isFullScreen) {
 		if (Class475.supportsFullScreen && Engine.fullScreenFrame != null && (desiredScreenMode != 3 || width != Class363.anInt4203 || height != Engine.anInt3249)) {
-			Class329.method5903(Class274.aClass470_3336, Engine.fullScreenFrame);
+			Class329.method5903(GameDetails.aClass470_3336, Engine.fullScreenFrame);
 			Engine.fullScreenFrame = null;
 		}
 		if (Class475.supportsFullScreen && desiredScreenMode == 3 && Engine.fullScreenFrame == null) {
-			Engine.fullScreenFrame = ModeWhere.method7852(Class274.aClass470_3336, width, height, 0);
+			Engine.fullScreenFrame = ModeWhere.method7852(GameDetails.aClass470_3336, width, height, 0);
 			if (Engine.fullScreenFrame != null) {
 				Class363.anInt4203 = width;
 				Engine.anInt3249 = height;

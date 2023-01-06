@@ -141,7 +141,7 @@ public abstract class NativeSprite_Sub1 extends NativeSprite {
 		if (f_14 >= 0.0F)
 			return false;
 		else {
-			anInt8850 = renderer.anInt8980;
+			anInt8850 = renderer.width;
 			anInt8870 = (int) (((int) f_13 * anInt8850) + f_11);
 			f_15 = (f_3 - f_1) * (f_6 - f_2) - (f_4 - f_2) * (f_5 - f_1);
 			f_16 = (f_5 - f_1) * (f_4 - f_2) - (f_6 - f_2) * (f_3 - f_1);

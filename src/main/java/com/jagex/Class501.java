@@ -25,7 +25,7 @@ public class Class501 {
 
 		int i_1;
 		for (i_1 = 0; i_1 < 2048; i_1++)
-			client.players[i_1] = null;
+			client.PLAYER_LIST[i_1] = null;
 
 		VertexNormal.MY_PLAYER = null;
 

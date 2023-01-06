@@ -2,7 +2,7 @@ package com.jagex;
 
 public class InventoriesIndexLoader implements IndexLoader {
 
-	public static int anInt4781;
+	public static int GAME_SUB_BUILD;
 
 	static void renderAreaText(AbstractRenderer graphicalrenderer_0, Node_Sub36 class282_sub36_1, MapAreaDefinitions worldmapareadefs_2, int i_3, int i_4, int i_5, int i_6, Class194 class194_7) {
 		int i_9 = i_4 - i_6 / 2 - 5;

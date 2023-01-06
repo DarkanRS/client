@@ -12,7 +12,7 @@ public class Matrix44 {
 	}
 
 	public Matrix44(Matrix44 matrix44_1) {
-		method6562(matrix44_1);
+		copy(matrix44_1);
 	}
 
 	@Override
@@ -111,23 +111,23 @@ public class Matrix44 {
 		buf[15] = f_16;
 	}
 
-	public void method6523(Matrix44 matrix44_1) {
-		float f_2 = buf[0] * matrix44_1.buf[0] + buf[1] * matrix44_1.buf[4] + buf[2] * matrix44_1.buf[8] + buf[3] * matrix44_1.buf[12];
-		float f_3 = buf[0] * matrix44_1.buf[1] + buf[1] * matrix44_1.buf[5] + buf[2] * matrix44_1.buf[9] + buf[3] * matrix44_1.buf[13];
-		float f_4 = buf[0] * matrix44_1.buf[2] + buf[1] * matrix44_1.buf[6] + buf[2] * matrix44_1.buf[10] + buf[3] * matrix44_1.buf[14];
-		float f_5 = buf[0] * matrix44_1.buf[3] + buf[1] * matrix44_1.buf[7] + buf[2] * matrix44_1.buf[11] + buf[3] * matrix44_1.buf[15];
-		float f_6 = buf[4] * matrix44_1.buf[0] + buf[5] * matrix44_1.buf[4] + buf[6] * matrix44_1.buf[8] + buf[7] * matrix44_1.buf[12];
-		float f_7 = buf[4] * matrix44_1.buf[1] + buf[5] * matrix44_1.buf[5] + buf[6] * matrix44_1.buf[9] + buf[7] * matrix44_1.buf[13];
-		float f_8 = buf[4] * matrix44_1.buf[2] + buf[5] * matrix44_1.buf[6] + buf[6] * matrix44_1.buf[10] + buf[7] * matrix44_1.buf[14];
-		float f_9 = buf[4] * matrix44_1.buf[3] + buf[5] * matrix44_1.buf[7] + buf[6] * matrix44_1.buf[11] + buf[7] * matrix44_1.buf[15];
-		float f_10 = buf[8] * matrix44_1.buf[0] + buf[9] * matrix44_1.buf[4] + buf[10] * matrix44_1.buf[8] + buf[11] * matrix44_1.buf[12];
-		float f_11 = buf[8] * matrix44_1.buf[1] + buf[9] * matrix44_1.buf[5] + buf[10] * matrix44_1.buf[9] + buf[11] * matrix44_1.buf[13];
-		float f_12 = buf[8] * matrix44_1.buf[2] + buf[9] * matrix44_1.buf[6] + buf[10] * matrix44_1.buf[10] + buf[11] * matrix44_1.buf[14];
-		float f_13 = buf[8] * matrix44_1.buf[3] + buf[9] * matrix44_1.buf[7] + buf[10] * matrix44_1.buf[11] + buf[11] * matrix44_1.buf[15];
-		float f_14 = buf[12] * matrix44_1.buf[0] + buf[13] * matrix44_1.buf[4] + buf[14] * matrix44_1.buf[8] + buf[15] * matrix44_1.buf[12];
-		float f_15 = buf[12] * matrix44_1.buf[1] + buf[13] * matrix44_1.buf[5] + buf[14] * matrix44_1.buf[9] + buf[15] * matrix44_1.buf[13];
-		float f_16 = buf[12] * matrix44_1.buf[2] + buf[13] * matrix44_1.buf[6] + buf[14] * matrix44_1.buf[10] + buf[15] * matrix44_1.buf[14];
-		float f_17 = buf[12] * matrix44_1.buf[3] + buf[13] * matrix44_1.buf[7] + buf[14] * matrix44_1.buf[11] + buf[15] * matrix44_1.buf[15];
+	public void multiply(Matrix44 m2) {
+		float f_2 = buf[0] * m2.buf[0] + buf[1] * m2.buf[4] + buf[2] * m2.buf[8] + buf[3] * m2.buf[12];
+		float f_3 = buf[0] * m2.buf[1] + buf[1] * m2.buf[5] + buf[2] * m2.buf[9] + buf[3] * m2.buf[13];
+		float f_4 = buf[0] * m2.buf[2] + buf[1] * m2.buf[6] + buf[2] * m2.buf[10] + buf[3] * m2.buf[14];
+		float f_5 = buf[0] * m2.buf[3] + buf[1] * m2.buf[7] + buf[2] * m2.buf[11] + buf[3] * m2.buf[15];
+		float f_6 = buf[4] * m2.buf[0] + buf[5] * m2.buf[4] + buf[6] * m2.buf[8] + buf[7] * m2.buf[12];
+		float f_7 = buf[4] * m2.buf[1] + buf[5] * m2.buf[5] + buf[6] * m2.buf[9] + buf[7] * m2.buf[13];
+		float f_8 = buf[4] * m2.buf[2] + buf[5] * m2.buf[6] + buf[6] * m2.buf[10] + buf[7] * m2.buf[14];
+		float f_9 = buf[4] * m2.buf[3] + buf[5] * m2.buf[7] + buf[6] * m2.buf[11] + buf[7] * m2.buf[15];
+		float f_10 = buf[8] * m2.buf[0] + buf[9] * m2.buf[4] + buf[10] * m2.buf[8] + buf[11] * m2.buf[12];
+		float f_11 = buf[8] * m2.buf[1] + buf[9] * m2.buf[5] + buf[10] * m2.buf[9] + buf[11] * m2.buf[13];
+		float f_12 = buf[8] * m2.buf[2] + buf[9] * m2.buf[6] + buf[10] * m2.buf[10] + buf[11] * m2.buf[14];
+		float f_13 = buf[8] * m2.buf[3] + buf[9] * m2.buf[7] + buf[10] * m2.buf[11] + buf[11] * m2.buf[15];
+		float f_14 = buf[12] * m2.buf[0] + buf[13] * m2.buf[4] + buf[14] * m2.buf[8] + buf[15] * m2.buf[12];
+		float f_15 = buf[12] * m2.buf[1] + buf[13] * m2.buf[5] + buf[14] * m2.buf[9] + buf[15] * m2.buf[13];
+		float f_16 = buf[12] * m2.buf[2] + buf[13] * m2.buf[6] + buf[14] * m2.buf[10] + buf[15] * m2.buf[14];
+		float f_17 = buf[12] * m2.buf[3] + buf[13] * m2.buf[7] + buf[14] * m2.buf[11] + buf[15] * m2.buf[15];
 		buf[0] = f_2;
 		buf[1] = f_3;
 		buf[2] = f_4;
@@ -455,7 +455,7 @@ public class Matrix44 {
 		return floats_1;
 	}
 
-	public void method6562(Matrix44 matrix44_1) {
+	public void copy(Matrix44 matrix44_1) {
 		System.arraycopy(matrix44_1.buf, 0, buf, 0, 16);
 	}
 

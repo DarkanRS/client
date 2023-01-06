@@ -11,7 +11,7 @@ public class SubPlayer extends SubInterface {
 
 	@Override
 	public boolean load() {
-		PlayerEntity player_2 = client.players[anInt9482];
+		PlayerEntity player_2 = client.PLAYER_LIST[anInt9482];
 		if (player_2 != null) {
 			AccountCreationStage.method252(ClientTriggerType.aClass397_4807, interfaceId, player_2, anInt9482);
 			return true;
