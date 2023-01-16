@@ -1,5 +1,7 @@
 package com.jagex;
 
+import static jaggl.GLConst.*;
+
 import java.awt.Canvas;
 
 import jaclib.memory.Stream;
@@ -32,78 +34,78 @@ public class JAGGLRenderer extends HardwareRenderer {
 		}
 	}
 	static int method15566(Class76 class76_0) {
-		return switch (class76_0.anInt757) {
-		case 0 -> 5122;
-		case 1, 4 -> 5121;
-		default -> 5121;
-		case 2 -> 5125;
-		case 3 -> 5126;
-		case 5 -> 5123;
-		case 6 -> 5120;
-		case 7 -> 5124;
-		case 8 -> 5131;
+		return switch (class76_0.ordinal()) {
+		case 0 -> GL_SHORT;
+		case 1, 4 -> GL_UNSIGNED_BYTE;
+		default -> GL_UNSIGNED_BYTE;
+		case 2 -> GL_UNSIGNED_INT;
+		case 3 -> GL_FLOAT;
+		case 5 -> GL_UNSIGNED_SHORT;
+		case 6 -> GL_BYTE;
+		case 7 -> GL_INT;
+		case 8 -> GL_HALF_FLOAT;
 		};
 	}
 	static int method15567(Class67 class67_0) {
 		if (Class67.aClass67_680 == class67_0)
-			return 5890;
+			return GL_TEXTURE;
 		if (Class67.aClass67_678 == class67_0)
-			return 34167;
+			return GL_PRIMARY_COLOR;
 		else if (Class67.aClass67_679 == class67_0)
-			return 34168;
+			return GL_PREVIOUS;
 		else if (Class67.aClass67_677 == class67_0)
-			return 34166;
+			return GL_CONSTANT;
 		else
 			throw new IllegalArgumentException();
 	}
 	static int method15574(Class150 class150_0, Class76 class76_1) {
 		if (class76_1 == Class76.aClass76_751)
 			return switch (class150_0.anInt1958) {
-			case 0 -> 6409;
-			case 1 -> 6406;
+			case 0 -> GL_LUMINANCE;
+			case 1 -> GL_ALPHA;
 			case 2, 3, 8 -> throw new IllegalArgumentException();
 			default -> throw new IllegalArgumentException();
-			case 4 -> 6410;
-			case 5 -> 6407;
-			case 6 -> 6408;
-			case 7 -> 33777;
-			case 9 -> 33779;
+			case 4 -> GL_LUMINANCE_ALPHA;
+			case 5 -> GL_RGB;
+			case 6 -> GL_RGBA;
+			case 7 -> GL_COMPRESSED_RGBA_S3TC_DXT1_EXT;
+			case 9 -> GL_COMPRESSED_RGBA_S3TC_DXT5_EXT;
 			};
 		else if (class76_1 == Class76.aClass76_752)
 			return switch (class150_0.anInt1958) {
-			case 0 -> 32834;
-			case 1 -> 32830;
+			case 0 -> GL_LUMINANCE16;
+			case 1 -> GL_ALPHA16;
 			case 2, 3, 7 -> throw new IllegalArgumentException();
 			default -> throw new IllegalArgumentException();
-			case 4 -> 36219;
-			case 5 -> 32852;
-			case 6 -> 32859;
-			case 8 -> 33189;
+			case 4 -> GL_LUMINANCE_ALPHA16UI;
+			case 5 -> GL_RGB16;
+			case 6 -> GL_RGBA16;
+			case 8 -> GL_DEPTH_COMPONENT16;
 			};
 		else if (class76_1 == Class76.aClass76_749)
 			return switch (class150_0.anInt1958) {
-			case 8 -> 33190;
+			case 8 -> GL_DEPTH_COMPONENT24;
 			default -> throw new IllegalArgumentException();
 			};
 		else if (class76_1 == Class76.aClass76_755)
 			return switch (class150_0.anInt1958) {
-			case 0 -> 34846;
-			case 1 -> 34844;
+			case 0 -> GL_LUMINANCE16F_ARB;
+			case 1 -> GL_ALPHA_FLOAT16_APPLE;
 			case 2, 3 -> throw new IllegalArgumentException();
 			default -> throw new IllegalArgumentException();
-			case 4 -> 34847;
-			case 5 -> 34843;
-			case 6 -> 34842;
+			case 4 -> GL_LUMINANCE_ALPHA_FLOAT16_APPLE;
+			case 5 -> GL_RGB_FLOAT16_APPLE;
+			case 6 -> GL_RGBA_FLOAT16_APPLE;
 			};
 		else if (class76_1 == Class76.aClass76_758)
 			return switch (class150_0.anInt1958) {
-			case 0 -> 34840;
-			case 1 -> 34838;
+			case 0 -> GL_LUMINANCE32F_ARB;
+			case 1 -> GL_ALPHA_FLOAT32_APPLE;
 			case 2, 3 -> throw new IllegalArgumentException();
 			default -> throw new IllegalArgumentException();
-			case 4 -> 34841;
-			case 5 -> 34837;
-			case 6 -> 34836;
+			case 4 -> GL_LUMINANCE_ALPHA_FLOAT32_APPLE;
+			case 5 -> GL_RGB_FLOAT32_APPLE;
+			case 6 -> GL_RGBA_FLOAT32_APPLE;
 			};
 		else
 			throw new IllegalArgumentException();

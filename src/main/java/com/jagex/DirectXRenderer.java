@@ -101,7 +101,7 @@ public class DirectXRenderer extends HardwareRenderer {
 		};
 	}
 	static int method15652(Class150 class150_0, Class76 class76_1) {
-		switch (class76_1.anInt757) {
+		switch (class76_1.ordinal()) {
 		case 3:
 			if (Class150.aClass150_1949 == class150_0)
 				return 116;

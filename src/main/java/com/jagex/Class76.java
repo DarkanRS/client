@@ -1,16 +1,16 @@
 package com.jagex;
 
-public class Class76 {
-
-	public static Class76 aClass76_751 = new Class76(4, 1);
-	public static Class76 aClass76_752 = new Class76(5, 2);
-	public static Class76 aClass76_749 = new Class76(1, 3);
-	public static Class76 aClass76_755 = new Class76(8, 2);
-	public static Class76 aClass76_758 = new Class76(3, 4);
-	static Class76 aClass76_753 = new Class76(6, 1);
-	static Class76 aClass76_756 = new Class76(0, 2);
-	static Class76 aClass76_750 = new Class76(7, 4);
-	static Class76 aClass76_754 = new Class76(2, 4);
+public enum Class76 {
+	aClass76_756(2),
+	aClass76_749(3),
+	aClass76_754(4),
+	aClass76_758(4),
+	aClass76_751(1),
+	aClass76_752(2),
+	aClass76_753(1),
+	aClass76_750(4),
+	aClass76_755(2);
+	
 	public static String getCrown(int i_0) {
 		return "<img=" + i_0 + ">";
 	}
@@ -58,12 +58,9 @@ public class Class76 {
 		Class115.aNativeSpriteArray1248 = null;
 	}
 
-	public int anInt757;
-
 	public int anInt748;
 
-	Class76(int i_1, int i_2) {
-		anInt757 = i_1;
+	Class76(int i_2) {
 		anInt748 = i_2;
 	}
 }
