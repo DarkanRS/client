@@ -1,0 +1,87 @@
+package com.rs.jagex;
+
+import java.awt.Container;
+import java.awt.Insets;
+
+import com.rs.jagex.clans.settings.ChangeClanSetting;
+
+public class Class507 {
+
+	static Class208 aClass208_5860;
+
+	Class507() throws Throwable {
+		throw new Error();
+	}
+
+	static void method8725(int currentScreenMode, int desiredScreenMode, int width, int height, boolean isFullScreen) {
+		if (Class475.supportsFullScreen && Engine.fullScreenFrame != null && (desiredScreenMode != 3 || width != Class363.anInt4203 || height != Engine.anInt3249)) {
+			Class329.method5903(GameDetails.aClass470_3336, Engine.fullScreenFrame);
+			Engine.fullScreenFrame = null;
+		}
+		if (Class475.supportsFullScreen && desiredScreenMode == 3 && Engine.fullScreenFrame == null) {
+			Engine.fullScreenFrame = ModeWhere.method7852(GameDetails.aClass470_3336, width, height, 0);
+			if (Engine.fullScreenFrame != null) {
+				Class363.anInt4203 = width;
+				Engine.anInt3249 = height;
+				Class190.savePreferences();
+			}
+		}
+		if (desiredScreenMode == 3 && (!Class475.supportsFullScreen || Engine.fullScreenFrame == null))
+			method8725(currentScreenMode, Class393.preferences.screenSize.getValue(), -1, -1, true);
+		else {
+			Container container_6 = Class371.getActiveContainer();
+			Insets insets_7;
+			if (Engine.fullScreenFrame != null) {
+				SunIndexLoader.anInt434 = width;
+				Class107.anInt1082 = height;
+			} else if (Engine.engineFrame != null) {
+				insets_7 = Engine.engineFrame.getInsets();
+				int i_10001 = insets_7.left + insets_7.right;
+				SunIndexLoader.anInt434 = Engine.engineFrame.getSize().width - i_10001;
+				i_10001 = insets_7.bottom + insets_7.top;
+				Class107.anInt1082 = Engine.engineFrame.getSize().height - i_10001;
+			} else {
+				SunIndexLoader.anInt434 = container_6.getSize().width;
+				Class107.anInt1082 = container_6.getSize().height;
+			}
+			if (SunIndexLoader.anInt434 <= 0)
+				SunIndexLoader.anInt434 = 1;
+			if (Class107.anInt1082 <= 0)
+				Class107.anInt1082 = 1;
+			if (desiredScreenMode != 1)
+				Class46.method935();
+			else {
+				ChangeClanSetting.BASE_WINDOW_WIDTH = client.GAME_WIDTH;
+				Engine.GAME_CANVAS_X = (SunIndexLoader.anInt434 - client.GAME_WIDTH) / 2;
+				Engine.BASE_WINDOW_HEIGHT = client.GAME_HEIGHT * -1929118563;
+				Engine.GAME_CANVAS_Y = 0;
+			}
+			int i_10000;
+			if (ConnectionInfo.SERVER_ENVIRONMENT != ServerEnvironment.LIVE && ChangeClanSetting.BASE_WINDOW_WIDTH < 1024)
+				i_10000 = Engine.BASE_WINDOW_HEIGHT;
+			if (!isFullScreen) {
+				Class351.gameCanvas.setSize(ChangeClanSetting.BASE_WINDOW_WIDTH, Engine.BASE_WINDOW_HEIGHT * -969250379);
+				Renderers.CURRENT_RENDERER.method8414(Class351.gameCanvas, ChangeClanSetting.BASE_WINDOW_WIDTH, Engine.BASE_WINDOW_HEIGHT * -969250379);
+				if (container_6 == Engine.engineFrame) {
+					insets_7 = Engine.engineFrame.getInsets();
+					Class351.gameCanvas.setLocation(insets_7.left + Engine.GAME_CANVAS_X, insets_7.top + Engine.GAME_CANVAS_Y);
+				} else
+					Class351.gameCanvas.setLocation(Engine.GAME_CANVAS_X, Engine.GAME_CANVAS_Y);
+			} else
+				Class350_Sub2.method12571(true);
+			client.resizeableScreen = desiredScreenMode >= 2;
+			GameTipsLoader.method6795();
+			if (client.BASE_WINDOW_ID != -1)
+				Class516.method8867(true);
+			if (client.GAME_CONNECTION_CONTEXT.getConnection() != null && GameState.loggedIn(client.GAME_STATE))
+				Class388.method6692();
+			for (int i_8 = 0; i_8 < 107; i_8++)
+				client.IF_COMPONENTS_TO_RENDER[i_8] = true;
+			Engine.aBool3274 = true;
+		}
+	}
+
+	public static MenuActionEvent method8727() {
+		return Class20.aCacheableNode_Sub7_168;
+	}
+}

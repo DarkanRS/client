@@ -9,10 +9,10 @@ version = "1.0.1"
 description = "Darkan Client"
 
 application {
-    mainClass.set("com.Loader")
+    mainClass.set("com.rs.Loader")
 }
 
-project.setProperty("mainClassName", "com.Loader")
+project.setProperty("mainClassName", "com.rs.Loader")
 
 repositories {
     mavenLocal()
@@ -35,7 +35,7 @@ tasks {
 
     jar {
         manifest {
-            attributes(mutableMapOf("Main-Class" to "com.Loader"))
+            attributes(mutableMapOf("Main-Class" to "com.rs.Loader"))
         }
     }
 
