@@ -1,11 +1,11 @@
 package com.rs.jagex;
 
-import java.awt.Canvas;
-
 import jagdx.D3DPRESENT_PARAMETERS;
 import jagdx.IDirect3DDevice;
 import jagdx.IDirect3DSwapChain;
 import jagdx.IUnknown;
+
+import java.awt.*;
 
 public class Class158_Sub2_Sub2_Sub2 extends Class158_Sub2_Sub2 implements Interface33 {
 

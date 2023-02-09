@@ -1,9 +1,9 @@
 package com.rs.jagex.clans.settings.impl;
 
-import com.rs.jagex.clans.ClanChannel;
-import com.rs.jagex.clans.ClanChannelMember;
 import com.rs.jagex.ByteBuf;
 import com.rs.jagex.ClanSetting;
+import com.rs.jagex.clans.ClanChannel;
+import com.rs.jagex.clans.ClanChannelMember;
 
 public class AddMemberSetting extends ClanSetting {
 

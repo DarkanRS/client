@@ -1,10 +1,6 @@
 package com.rs.jagex;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.io.StringReader;
-import java.io.StringWriter;
+import java.io.*;
 
 public class ObjectAnimationCutsceneAction extends CutsceneAction {
 

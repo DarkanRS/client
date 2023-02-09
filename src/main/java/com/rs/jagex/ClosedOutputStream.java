@@ -1,6 +1,6 @@
 package com.rs.jagex;
 
-import java.awt.Image;
+import java.awt.*;
 import java.io.IOException;
 import java.io.OutputStream;
 

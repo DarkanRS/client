@@ -1,9 +1,6 @@
 package com.rs.jagex;
 
-import java.awt.DisplayMode;
-import java.awt.Frame;
-import java.awt.GraphicsDevice;
-import java.awt.GraphicsEnvironment;
+import java.awt.*;
 import java.lang.reflect.Field;
 import java.util.Stack;
 

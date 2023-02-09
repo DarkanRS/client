@@ -1,6 +1,6 @@
 package com.rs.jagex;
 
-import java.awt.Point;
+import java.awt.*;
 
 public class UnderlayIndexLoader {
 

@@ -3,7 +3,7 @@
  */
 package jagdx;
 
-import java.awt.Component;
+import java.awt.*;
 
 public class IDirect3D extends IUnknown {
 	public static native int CheckDepthStencilMatch(long l, int i, int i_12_, int i_13_, int i_14_, int i_15_);

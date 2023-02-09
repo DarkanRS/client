@@ -1,6 +1,6 @@
 package com.rs.jagex;
 
-import java.awt.Canvas;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 
 public class MaterialProp7 extends MaterialProperty {

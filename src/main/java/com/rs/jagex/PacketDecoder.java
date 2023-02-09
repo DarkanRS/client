@@ -1,10 +1,10 @@
 package com.rs.jagex;
 
-import java.io.IOException;
-
 import com.rs.jagex.clans.ClanChannel;
 import com.rs.jagex.clans.settings.ChangeClanSetting;
 import com.rs.jagex.clans.settings.ClanSettings;
+
+import java.io.IOException;
 
 public class PacketDecoder {
 

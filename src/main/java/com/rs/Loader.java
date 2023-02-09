@@ -1,9 +1,11 @@
 package com.rs;
 
-import java.awt.BorderLayout;
-import java.awt.Dimension;
-import java.awt.MenuContainer;
-import java.awt.Panel;
+import com.rs.jagex.WorldDescriptor;
+import com.rs.jagex.client;
+
+import javax.accessibility.Accessible;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.image.ImageObserver;
 import java.io.File;
 import java.io.Serializable;
@@ -11,15 +13,6 @@ import java.math.BigInteger;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Properties;
-
-import javax.accessibility.Accessible;
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.WindowConstants;
-
-import com.rs.jagex.WorldDescriptor;
-import com.rs.jagex.client;
 
 public class Loader extends Panel implements ImageObserver, MenuContainer, Serializable, Accessible {
 	public static final String HOME_DIR = ".darkanrs";

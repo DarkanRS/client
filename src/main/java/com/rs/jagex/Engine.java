@@ -1,12 +1,10 @@
 package com.rs.jagex;
 
-import java.awt.Color;
-import java.awt.Container;
-import java.awt.Frame;
-import java.awt.Graphics;
-import java.awt.Insets;
-import java.awt.Rectangle;
-import java.awt.Toolkit;
+import com.rs.Loader;
+import com.rs.jagex.clans.settings.ChangeClanSetting;
+import jaclib.nanotime.QueryPerformanceCounter;
+
+import java.awt.*;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import java.awt.event.WindowEvent;
@@ -14,11 +12,6 @@ import java.awt.event.WindowListener;
 import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
-
-import com.rs.Loader;
-import com.rs.jagex.clans.settings.ChangeClanSetting;
-
-import jaclib.nanotime.QueryPerformanceCounter;
 
 public abstract class Engine implements Interface24, Runnable, FocusListener, WindowListener {
 

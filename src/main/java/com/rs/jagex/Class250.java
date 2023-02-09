@@ -1,6 +1,6 @@
 package com.rs.jagex;
 
-import java.awt.Color;
+import java.awt.*;
 
 public class Class250 {
 

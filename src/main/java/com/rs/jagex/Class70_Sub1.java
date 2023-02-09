@@ -1,9 +1,9 @@
 package com.rs.jagex;
 
-import java.nio.ByteBuffer;
-
 import jagdx.IDirect3DDevice;
 import jagdx.IUnknown;
+
+import java.nio.ByteBuffer;
 
 public class Class70_Sub1 extends Class70 {
 

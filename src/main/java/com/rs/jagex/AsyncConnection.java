@@ -1,9 +1,9 @@
 package com.rs.jagex;
 
+import com.rs.jagex.clans.ClanChannel;
+
 import java.io.IOException;
 import java.net.Socket;
-
-import com.rs.jagex.clans.ClanChannel;
 
 public class AsyncConnection extends Connection {
 

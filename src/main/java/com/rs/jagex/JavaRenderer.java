@@ -1,6 +1,6 @@
 package com.rs.jagex;
 
-import java.awt.Canvas;
+import java.awt.*;
 
 public class JavaRenderer extends AbstractRenderer {
 

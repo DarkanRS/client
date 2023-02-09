@@ -1,7 +1,6 @@
 package com.rs.jagex;
 
-import java.awt.Canvas;
-import java.awt.Dimension;
+import java.awt.*;
 
 public class za extends Class158_Sub2 implements Interface40 {
 

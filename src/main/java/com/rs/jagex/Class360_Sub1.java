@@ -1,9 +1,9 @@
 package com.rs.jagex;
 
-import java.nio.ByteBuffer;
-
 import jagdx.IDirect3DDevice;
 import jagdx.IDirect3DVolumeTexture;
+
+import java.nio.ByteBuffer;
 
 public class Class360_Sub1 extends Class360 implements Interface1 {
 

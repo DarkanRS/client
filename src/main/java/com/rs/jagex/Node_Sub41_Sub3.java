@@ -2,12 +2,7 @@ package com.rs.jagex;
 
 import jagtheora.ogg.OggPacket;
 import jagtheora.ogg.OggStreamState;
-import jagtheora.theora.DecoderContext;
-import jagtheora.theora.Frame;
-import jagtheora.theora.GranulePos;
-import jagtheora.theora.SetupInfo;
-import jagtheora.theora.TheoraComment;
-import jagtheora.theora.TheoraInfo;
+import jagtheora.theora.*;
 
 public class Node_Sub41_Sub3 extends Node_Sub41 {
 

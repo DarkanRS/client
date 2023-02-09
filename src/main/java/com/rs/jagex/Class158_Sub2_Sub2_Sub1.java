@@ -1,9 +1,8 @@
 package com.rs.jagex;
 
-import java.awt.Canvas;
-import java.awt.Dimension;
-
 import jaggl.OpenGL;
+
+import java.awt.*;
 
 public class Class158_Sub2_Sub2_Sub1 extends Class158_Sub2_Sub2 {
 

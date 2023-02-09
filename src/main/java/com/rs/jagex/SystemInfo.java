@@ -1,8 +1,8 @@
 package com.rs.jagex;
 
-import java.util.HashMap;
-
 import jaclib.hardware_info.HardwareInfo;
+
+import java.util.HashMap;
 
 public class SystemInfo extends Node {
 

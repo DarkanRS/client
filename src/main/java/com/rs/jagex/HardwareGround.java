@@ -1,9 +1,9 @@
 package com.rs.jagex;
 
-import java.nio.ByteBuffer;
-
 import jaclib.memory.Stream;
 import jaclib.memory.heap.NativeHeapBuffer;
+
+import java.nio.ByteBuffer;
 
 public class HardwareGround extends Ground {
 

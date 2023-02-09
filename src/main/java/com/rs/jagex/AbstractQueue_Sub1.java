@@ -1,11 +1,6 @@
 package com.rs.jagex;
 
-import java.util.AbstractQueue;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 
 public class AbstractQueue_Sub1 extends AbstractQueue {
 

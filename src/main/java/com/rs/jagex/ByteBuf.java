@@ -1,8 +1,8 @@
 package com.rs.jagex;
 
-import java.math.BigInteger;
-
 import com.rs.Loader;
+
+import java.math.BigInteger;
 
 public class ByteBuf extends Node {
 

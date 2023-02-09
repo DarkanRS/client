@@ -1,9 +1,9 @@
 package com.rs.jagex;
 
+import com.rs.jagex.clans.settings.ChangeClanSetting;
+
 import java.io.IOException;
 import java.net.Socket;
-
-import com.rs.jagex.clans.settings.ChangeClanSetting;
 
 public class SunDefinitions {
 

@@ -1,10 +1,8 @@
 package com.rs.jagex;
 
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.Graphics;
-
 import com.rs.jagex.clans.settings.ChangeClanSetting;
+
+import java.awt.*;
 
 public class Class158_Sub1_Sub2 extends Class158_Sub1 {
 

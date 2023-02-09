@@ -1,8 +1,8 @@
 package com.rs.jagex;
 
-import java.util.Calendar;
-
 import jaclib.ping.IcmpService;
+
+import java.util.Calendar;
 
 public class CutsceneEntityMovement {
 

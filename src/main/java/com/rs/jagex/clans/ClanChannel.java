@@ -1,14 +1,8 @@
 package com.rs.jagex.clans;
 
-import java.util.BitSet;
+import com.rs.jagex.*;
 
-import com.rs.jagex.Class111;
-import com.rs.jagex.Class503;
-import com.rs.jagex.Node;
-import com.rs.jagex.AnimationIndexLoader;
-import com.rs.jagex.ByteBuf;
-import com.rs.jagex.Class291;
-import com.rs.jagex.Class291_Sub1;
+import java.util.BitSet;
 
 public class ClanChannel extends Node {
 

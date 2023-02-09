@@ -1,18 +1,8 @@
 package com.rs.jagex.clans.settings.impl;
 
-import com.rs.jagex.Node_Sub17_Sub2;
+import com.rs.jagex.*;
 import com.rs.jagex.clans.ClanChannel;
 import com.rs.jagex.clans.ClanChannelMember;
-import com.rs.jagex.ByteBuf;
-import com.rs.jagex.ClanSetting;
-import com.rs.jagex.Class16;
-import com.rs.jagex.Class285;
-import com.rs.jagex.Class395;
-import com.rs.jagex.Class487;
-import com.rs.jagex.FontRenderer;
-import com.rs.jagex.Renderers;
-import com.rs.jagex.SkyboxIndexLoader;
-import com.rs.jagex.client;
 
 public class EditMemberSetting extends ClanSetting {
 

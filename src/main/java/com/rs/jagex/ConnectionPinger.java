@@ -1,9 +1,9 @@
 package com.rs.jagex;
 
+import jaclib.ping.Ping;
+
 import java.net.InetAddress;
 import java.net.UnknownHostException;
-
-import jaclib.ping.Ping;
 
 public class ConnectionPinger implements Runnable {
 

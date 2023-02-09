@@ -1,11 +1,7 @@
 package com.rs.jagex;
 
-import java.awt.Component;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.event.MouseMotionListener;
-import java.awt.event.MouseWheelEvent;
-import java.awt.event.MouseWheelListener;
+import java.awt.*;
+import java.awt.event.*;
 
 public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotionListener, MouseWheelListener {
 

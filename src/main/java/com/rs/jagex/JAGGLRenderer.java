@@ -1,12 +1,12 @@
 package com.rs.jagex;
 
-import static jaggl.GLConst.*;
-
-import java.awt.Canvas;
-
 import jaclib.memory.Stream;
 import jaggl.MapBuffer;
 import jaggl.OpenGL;
+
+import java.awt.*;
+
+import static jaggl.GLConst.*;
 
 public class JAGGLRenderer extends HardwareRenderer {
 

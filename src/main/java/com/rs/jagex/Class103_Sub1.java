@@ -1,8 +1,6 @@
 package com.rs.jagex;
 
-import java.awt.Image;
-import java.awt.MediaTracker;
-import java.awt.Toolkit;
+import java.awt.*;
 import java.awt.image.PixelGrabber;
 
 public class Class103_Sub1 extends Class103 {

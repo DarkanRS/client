@@ -1,10 +1,10 @@
 package com.rs.jagex;
 
+import com.rs.Loader;
+
 import java.io.IOException;
 import java.net.Socket;
 import java.util.Calendar;
-
-import com.rs.Loader;
 
 public class ConnectionInfo {
 

@@ -1,8 +1,8 @@
 package com.rs.jagex;
 
-import java.util.Random;
-
 import com.rs.jagex.clans.settings.ChangeClanSetting;
+
+import java.util.Random;
 
 public class GameTipsLoader {
 

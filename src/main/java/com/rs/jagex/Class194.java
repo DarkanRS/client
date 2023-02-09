@@ -1,11 +1,7 @@
 package com.rs.jagex;
 
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Font;
 import java.awt.FontMetrics;
-import java.awt.Graphics;
-import java.awt.Image;
+import java.awt.*;
 import java.awt.image.PixelGrabber;
 
 public class Class194 {

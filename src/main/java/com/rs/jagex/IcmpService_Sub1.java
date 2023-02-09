@@ -1,9 +1,9 @@
 package com.rs.jagex;
 
+import jaclib.ping.IcmpService;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import jaclib.ping.IcmpService;
 
 public class IcmpService_Sub1 extends IcmpService {
 

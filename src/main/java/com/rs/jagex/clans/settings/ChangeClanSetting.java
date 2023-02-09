@@ -1,13 +1,9 @@
 package com.rs.jagex.clans.settings;
 
-import com.rs.jagex.RemoveMemberSetting;
+import com.rs.jagex.*;
 import com.rs.jagex.clans.ClanChannel;
-import com.rs.jagex.clans.settings.impl.EditMemberSetting;
-import com.rs.jagex.ByteBuf;
-import com.rs.jagex.ClanSetting;
-import com.rs.jagex.NodeCollection;
-import com.rs.jagex.RankSetting;
 import com.rs.jagex.clans.settings.impl.AddMemberSetting;
+import com.rs.jagex.clans.settings.impl.EditMemberSetting;
 
 public class ChangeClanSetting {
 

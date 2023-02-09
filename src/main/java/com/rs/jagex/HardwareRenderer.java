@@ -1,15 +1,15 @@
 package com.rs.jagex;
 
-import java.lang.reflect.Field;
-import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
-import java.util.ArrayList;
-
 import jaclib.memory.DirectBufferHelper;
 import jaclib.memory.Stream;
 import jaclib.memory.heap.NativeHeap;
 import jaclib.memory.heap.NativeHeapBuffer;
 import sun.misc.Unsafe;
+
+import java.lang.reflect.Field;
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
+import java.util.ArrayList;
 
 public abstract class HardwareRenderer extends AbstractRenderer {
 

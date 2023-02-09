@@ -1,6 +1,6 @@
 package com.rs.jagex;
 
-import java.awt.Container;
+import java.awt.*;
 
 public class Class371 {
 

@@ -1,8 +1,6 @@
 package com.rs.jagex;
 
-import java.awt.Component;
-import java.awt.Point;
-import java.awt.Robot;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 
 public class Class267 {

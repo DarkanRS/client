@@ -1,15 +1,15 @@
 package com.rs.jagex;
 
-import static jaggl.GLConst.*;
-
-import java.awt.Canvas;
-import java.lang.reflect.Field;
-import java.lang.reflect.Modifier;
-
 import jaclib.memory.Buffer;
 import jaclib.memory.Stream;
 import jaclib.memory.heap.NativeHeap;
 import jaggl.OpenGL;
+
+import java.awt.*;
+import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
+
+import static jaggl.GLConst.*;
 
 public class OpenGLRenderer extends AbstractRenderer {
 

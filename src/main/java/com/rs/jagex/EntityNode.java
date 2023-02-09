@@ -1,11 +1,8 @@
 package com.rs.jagex;
 
-import java.awt.Color;
-import java.awt.Container;
-import java.awt.Graphics;
-import java.awt.Insets;
-
 import com.rs.jagex.clans.settings.ChangeClanSetting;
+
+import java.awt.*;
 
 public class EntityNode {
 

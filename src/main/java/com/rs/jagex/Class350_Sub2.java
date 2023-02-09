@@ -1,6 +1,6 @@
 package com.rs.jagex;
 
-import java.awt.Dimension;
+import java.awt.*;
 
 public class Class350_Sub2 extends Class350 {
 

@@ -1,8 +1,8 @@
 package com.rs.jagex;
 
-import java.awt.Graphics;
-
 import com.rs.Loader;
+
+import java.awt.*;
 
 public interface Interface24 {
 

@@ -1,15 +1,13 @@
 package com.rs.jagex;
 
-import java.awt.GraphicsDevice;
-import java.awt.GraphicsEnvironment;
-import java.awt.Point;
-import java.awt.datatransfer.DataFlavor;
-import java.awt.datatransfer.Transferable;
-import java.io.File;
-
 import com.rs.Loader;
 import com.rs.jagex.clans.ClanChannel;
 import com.rs.jagex.clans.settings.ClanSettings;
+
+import java.awt.*;
+import java.awt.datatransfer.DataFlavor;
+import java.awt.datatransfer.Transferable;
+import java.io.File;
 
 public class CS2Interpreter {
 	static void add(CS2Executor executor) {

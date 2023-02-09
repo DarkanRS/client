@@ -1,9 +1,9 @@
 package com.rs.jagex;
 
+import com.rs.Loader;
+
 import java.io.File;
 import java.io.IOException;
-
-import com.rs.Loader;
 
 public class ParticleArchive1Def {
 

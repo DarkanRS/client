@@ -1,6 +1,6 @@
 package com.rs.jagex;
 
-import java.awt.Component;
+import java.awt.*;
 
 public class Class325 {
 

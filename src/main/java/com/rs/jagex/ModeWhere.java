@@ -1,6 +1,6 @@
 package com.rs.jagex;
 
-import java.awt.Frame;
+import java.awt.*;
 
 public enum ModeWhere {
 

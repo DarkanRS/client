@@ -3,7 +3,7 @@
  */
 package jaggl;
 
-import java.awt.Canvas;
+import java.awt.*;
 import java.util.Hashtable;
 
 public class OpenGL {

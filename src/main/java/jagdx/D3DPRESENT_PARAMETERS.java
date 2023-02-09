@@ -3,7 +3,7 @@
  */
 package jagdx;
 
-import java.awt.Component;
+import java.awt.*;
 
 public class D3DPRESENT_PARAMETERS {
 	public static final int anInt529 = -2147483648;

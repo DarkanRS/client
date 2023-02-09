@@ -1,9 +1,9 @@
 package com.rs.jagex;
 
+import com.rs.jagex.clans.settings.ClanSettings;
+
 import java.nio.ByteBuffer;
 import java.util.Arrays;
-
-import com.rs.jagex.clans.settings.ClanSettings;
 
 public class Node_Sub17_Sub5 extends ClanSettingDeltaUpdate {
 

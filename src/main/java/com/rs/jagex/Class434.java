@@ -1,9 +1,9 @@
 package com.rs.jagex;
 
+import com.rs.Loader;
+
 import java.io.IOException;
 import java.net.Socket;
-
-import com.rs.Loader;
 
 public abstract class Class434 {
 

@@ -1,23 +1,14 @@
 package com.rs.jagex;
 
-import java.awt.Color;
-import java.awt.Container;
-import java.awt.Frame;
-import java.awt.Insets;
-import java.awt.Rectangle;
+import com.rs.Loader;
+import com.rs.jagex.clans.settings.ChangeClanSetting;
+import jaclib.ping.Ping;
+
+import java.awt.*;
 import java.io.IOException;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
-import java.util.Random;
-import java.util.TimeZone;
-import java.util.Vector;
-
-import com.rs.Loader;
-import com.rs.jagex.clans.settings.ChangeClanSetting;
-
-import jaclib.ping.Ping;
+import java.util.*;
 
 public class client extends Engine {
 

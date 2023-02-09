@@ -1,10 +1,10 @@
 package com.rs.jagex;
 
+import com.rs.Loader;
+
 import java.math.BigInteger;
 import java.nio.ByteBuffer;
 import java.util.Arrays;
-
-import com.rs.Loader;
 
 public class JS5Manager {
 

@@ -1,8 +1,6 @@
 package com.rs.jagex;
 
-import java.awt.Canvas;
-import java.awt.Component;
-import java.awt.Graphics;
+import java.awt.*;
 import java.io.File;
 
 public class Canvas_Sub1 extends Canvas {
