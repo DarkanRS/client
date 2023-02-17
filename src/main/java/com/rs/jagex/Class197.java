@@ -14,7 +14,7 @@ public class Class197 {
 	static int CURR_MASK_UPDATE_IDX;
 	static int[] NEEDS_MASK_UPDATE = new int[2048];
 
-	static void method3203(ByteBuf.Bit packet) {
+	static void readLSWP(ByteBuf.Bit packet) {
 		packet.initBitAccess();
 		int i_2 = client.myPlayerIndex;
 		PlayerEntity player_3 = VertexNormal.MY_PLAYER = client.PLAYER_LIST[i_2] = new PlayerEntity(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager());

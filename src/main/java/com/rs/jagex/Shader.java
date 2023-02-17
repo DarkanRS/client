@@ -45,8 +45,8 @@ public abstract class Shader {
 	}
 
 	public static void method1774() {
-		if (Class9.loginStage == 105)
-			Class9.loginStage = 115;
+		if (Login.getLoginStage() == LoginStage.UNK9_105)
+			Login.setLoginStage(LoginStage.UNK10_115);
 	}
 
 	protected int anInt1015 = -1;

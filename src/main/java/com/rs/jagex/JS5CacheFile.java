@@ -29,7 +29,7 @@ public class JS5CacheFile {
 	}
 
 	public static boolean method3360() {
-		return Class9.loginStage != 2;
+		return Login.getLoginStage() != LoginStage.NONE_2;
 	}
 
 	public static void record(MouseRecord record) {

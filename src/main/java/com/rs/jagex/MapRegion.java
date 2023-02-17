@@ -49,7 +49,7 @@ public class MapRegion {
 	public long aLong3183;
 	public boolean aBool3206;
 	boolean aBool3171;
-	Class256 aClass256_3164;
+	RegionLoadType aRegionLoadType_3164;
 	CoordGrid aClass219_3169 = new CoordGrid();
 	int[][] xteas;
 	int[] regionIds;
@@ -63,7 +63,7 @@ public class MapRegion {
 	int[] hdWaterLandscapeDataArchiveIds;
 	byte[][] hdWaterMapDataBuffer;
 	byte[][] hdWaterLandscapeDataBuffer;
-	Class256 mapType;
+	RegionLoadType mapType;
 	byte[][][] aByteArrayArrayArray3162;
 	LocationIndexLoader objectDefsLoader;
 	SceneObjectManager sceneObjectManager;
@@ -209,12 +209,12 @@ public class MapRegion {
 	}
 
 	public void loadMapScene(Class335 class335_1) {
-		mapType = class335_1.aClass256_3915;
-		if (mapType == Class256.LOAD_MAP_SCENE_BACKGROUND)
+		mapType = class335_1.aRegionLoadType_3915;
+		if (mapType == RegionLoadType.LOAD_MAP_SCENE_BACKGROUND)
 			loadMapSceneBackground();
-		else if (mapType == Class256.LOAD_MAP_SCENE_NORMAL)
+		else if (mapType == RegionLoadType.LOAD_MAP_SCENE_NORMAL)
 			loadMapSceneNormal(class335_1.buffer);
-		else if (mapType == Class256.aClass256_3153)
+		else if (mapType == RegionLoadType.aRegionLoadType_3153)
 			method4498();
 		else if (mapType.allowDynamicMapScene())
 			loadMapSceneDynamic(class335_1.buffer);
@@ -287,13 +287,13 @@ public class MapRegion {
 		boolean forceRefresh = (forceRefreshFlags & 0x1) != 0;
 		int type = buffer.readUnsigned128Byte();
 		if (type == 1)
-			mapType = Class256.aClass256_3155;
+			mapType = RegionLoadType.aRegionLoadType_3155;
 		else if (type == 2)
-			mapType = Class256.aClass256_3156;
+			mapType = RegionLoadType.aRegionLoadType_3156;
 		else if (type == 3)
-			mapType = Class256.aClass256_3157;
+			mapType = RegionLoadType.aRegionLoadType_3157;
 		else if (type == 4)
-			mapType = Class256.aClass256_3161;
+			mapType = RegionLoadType.aRegionLoadType_3161;
 		int mapSize = buffer.readUnsignedByte128();
 		int regionY = buffer.readUnsignedShort128();
 		int regionX = buffer.readUnsignedShort();
@@ -400,15 +400,15 @@ public class MapRegion {
 		boolean bool_3 = mapregion_1.aBool3171;
 		mapregion_1.aBool3171 = aBool3171;
 		aBool3171 = bool_3;
-		Class256 class256_4 = mapregion_1.aClass256_3164;
-		mapregion_1.aClass256_3164 = aClass256_3164;
-		aClass256_3164 = class256_4;
+		RegionLoadType regionLoadType_4 = mapregion_1.aRegionLoadType_3164;
+		mapregion_1.aRegionLoadType_3164 = aRegionLoadType_3164;
+		aRegionLoadType_3164 = regionLoadType_4;
 		mapregion_1.aClass219_3169 = coordGrid;
 		aClass219_3169 = mapregion_1.coordGrid;
 		aClass239_3175.method4039(mapregion_1.method4435());
 	}
 
-	public Class256 method4419() {
+	public RegionLoadType method4419() {
 		return mapType;
 	}
 
@@ -509,13 +509,13 @@ public class MapRegion {
 	}
 
 	void method4457() {
-		if (mapType != Class256.aClass256_3153 && aClass256_3164 != Class256.aClass256_3153) {
-			if (mapType == Class256.aClass256_3155 || mapType == Class256.aClass256_3157 || aClass256_3164 != mapType && (mapType == Class256.LOAD_MAP_SCENE_NORMAL || aClass256_3164 == Class256.LOAD_MAP_SCENE_NORMAL)) {
+		if (mapType != RegionLoadType.aRegionLoadType_3153 && aRegionLoadType_3164 != RegionLoadType.aRegionLoadType_3153) {
+			if (mapType == RegionLoadType.aRegionLoadType_3155 || mapType == RegionLoadType.aRegionLoadType_3157 || aRegionLoadType_3164 != mapType && (mapType == RegionLoadType.LOAD_MAP_SCENE_NORMAL || aRegionLoadType_3164 == RegionLoadType.LOAD_MAP_SCENE_NORMAL)) {
 				client.NPC_UPDATE_INDEX = 0;
 				client.anInt7210 = 0;
 				client.NPC_MAP.method7749();
 			}
-			aClass256_3164 = mapType;
+			aRegionLoadType_3164 = mapType;
 		}
 	}
 
@@ -638,13 +638,13 @@ public class MapRegion {
 		for (class282_sub31_26 = (Node_Sub31) Node_Sub31.aClass482_7775.head(); class282_sub31_26 != null; class282_sub31_26 = (Node_Sub31) Node_Sub31.aClass482_7775.next()) {
 			class282_sub31_26.anInt7762 -= i_3;
 			class282_sub31_26.anInt7763 -= i_4;
-			if (mapType != Class256.aClass256_3161 && (class282_sub31_26.anInt7762 < 0 || class282_sub31_26.anInt7763 < 0 || class282_sub31_26.anInt7762 >= sizeX || class282_sub31_26.anInt7763 >= sizeY))
+			if (mapType != RegionLoadType.aRegionLoadType_3161 && (class282_sub31_26.anInt7762 < 0 || class282_sub31_26.anInt7763 < 0 || class282_sub31_26.anInt7762 >= sizeX || class282_sub31_26.anInt7763 >= sizeY))
 				class282_sub31_26.unlink();
 		}
 		for (class282_sub31_26 = (Node_Sub31) Node_Sub31.aClass482_7776.head(); class282_sub31_26 != null; class282_sub31_26 = (Node_Sub31) Node_Sub31.aClass482_7776.next()) {
 			class282_sub31_26.anInt7762 -= i_3;
 			class282_sub31_26.anInt7763 -= i_4;
-			if (mapType != Class256.aClass256_3161 && (class282_sub31_26.anInt7762 < 0 || class282_sub31_26.anInt7763 < 0 || class282_sub31_26.anInt7762 >= sizeX || class282_sub31_26.anInt7763 >= sizeY))
+			if (mapType != RegionLoadType.aRegionLoadType_3161 && (class282_sub31_26.anInt7762 < 0 || class282_sub31_26.anInt7763 < 0 || class282_sub31_26.anInt7762 >= sizeX || class282_sub31_26.anInt7763 >= sizeY))
 				class282_sub31_26.unlink();
 		}
 		for (Node_Sub29 class282_sub29_27 = (Node_Sub29) client.aClass465_7414.method7750(); class282_sub29_27 != null; class282_sub29_27 = (Node_Sub29) client.aClass465_7414.method7751()) {
@@ -657,7 +657,7 @@ public class MapRegion {
 				if (i_17 >= 0 && i_11 >= 0 && i_17 < sizeX && i_11 < sizeY && i_17 < sceneObjectManager.sizeX && i_11 < sceneObjectManager.sizeY) {
 					if (sceneObjectManager.aClass293ArrayArrayArray2604 != null)
 						sceneObjectManager.method3405(i_16, i_17, i_11);
-				} else if (mapType != Class256.aClass256_3161)
+				} else if (mapType != RegionLoadType.aRegionLoadType_3161)
 					class282_sub29_27.unlink();
 		}
 		if (Class187.MINIMAP_FLAG_X != 0) {
@@ -1074,7 +1074,7 @@ public class MapRegion {
 	}
 
 	void method4498() {
-		aClass256_3164 = mapType;
+		aRegionLoadType_3164 = mapType;
 		setMapSizes(MapSize.SIZE_104);
 		int i_2;
 		int i_4;

@@ -1,12 +1,12 @@
 package com.rs.jagex;
 
-public class Preference_Sub3 extends Preference {
+public class AsyncRegionLoadingPreference extends Preference {
 
-	public Preference_Sub3(GamePreferences class282_sub54_1) {
+	public AsyncRegionLoadingPreference(GamePreferences class282_sub54_1) {
 		super(class282_sub54_1);
 	}
 
-	public Preference_Sub3(int i_1, GamePreferences class282_sub54_2) {
+	public AsyncRegionLoadingPreference(int i_1, GamePreferences class282_sub54_2) {
 		super(i_1, class282_sub54_2);
 	}
 
@@ -41,7 +41,7 @@ public class Preference_Sub3 extends Preference {
 
 	}
 
-	public int method12632() {
+	public int getValue() {
 		return value;
 	}
 

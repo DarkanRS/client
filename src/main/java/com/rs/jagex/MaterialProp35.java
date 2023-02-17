@@ -7,7 +7,7 @@ public class MaterialProp35 extends MaterialProperty {
 		//            ParticleArchive1Def.worldLogin(string_0, string_1);
 		//            return;
 		//        }
-		Class9.lobbyStage = 140;
+		Login.setLobbyStage(LobbyStage.LOGGING_IN_LOBBY);
 		Class9.CURRENT_CONNECTION_CONTEXT = client.LOBBY_CONNECTION_CONTEXT;
 		Class455.method7558(false, false, string_0, string_1, -1L);
 	}

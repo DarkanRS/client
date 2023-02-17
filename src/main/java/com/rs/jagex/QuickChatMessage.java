@@ -87,7 +87,7 @@ public class QuickChatMessage {
 	}
 
 	static void method6160() {
-		Class9.lobbyStage = 140;
+		Login.setLobbyStage(LobbyStage.LOGGING_IN_LOBBY);
 		Class9.CURRENT_CONNECTION_CONTEXT = client.LOBBY_CONNECTION_CONTEXT;
 		if (client.aByteArray7152 != null) {
 			ByteBuf rsbytebuffer_1 = new ByteBuf(client.aByteArray7152);

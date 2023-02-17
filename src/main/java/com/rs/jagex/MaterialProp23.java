@@ -75,7 +75,7 @@ public class MaterialProp23 extends MaterialProperty {
 							BrightnessPreference.method12869(false);
 						else {
 							if (client.anInt7341 == 3 && CutsceneDefinitions.method6684(client.CURRENT_CUTSCENE)) {
-								IndexLoaders.MAP_REGION_DECODER.loadMapScene(new Class335(Class256.aClass256_3153, null));
+								IndexLoaders.MAP_REGION_DECODER.loadMapScene(new Class335(RegionLoadType.aRegionLoadType_3153, null));
 								client.anInt7341 = 0;
 							}
 							if (client.anInt7341 == 0 && client.GAME_STATE != GameState.UNK_18) {

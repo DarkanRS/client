@@ -114,14 +114,14 @@ public abstract class Class455 {
 		Class9.aString102 = string_3;
 		Class9.aLong77 = long_4;
 		if (Class9.aBool74 || !Class9.aString99.isEmpty() && !Class9.aString102.isEmpty()) {
-			if (Class9.lobbyStage != 140) {
+			if (Login.getLobbyStage() != LobbyStage.LOGGING_IN_LOBBY) {
 				Class9.anInt103 = 0;
 				Class9.anInt112 = -1;
 				Class9.anInt94 = -1;
 			}
 			Class9.CURRENT_CONNECTION_CONTEXT.aBool2298 = false;
 			FontRenderer_Sub1.method13784(-3);
-			Class9.loginStage = 18;
+			Login.setLoginStage(LoginStage.UNK1_18);
 			Class9.anInt90 = 0;
 			Class9.anInt104 = 0;
 		} else

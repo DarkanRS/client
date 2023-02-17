@@ -19,7 +19,7 @@ public class Class501 {
 		Class9.CURRENT_CONNECTION_CONTEXT.idleReadPulses = 0;
 		client.REBOOT_TIMER = 0;
 		Class350.method6189();
-		Class256.method4416();
+		RegionLoadType.method4416();
 
 		int i_1;
 		for (i_1 = 0; i_1 < 2048; i_1++)

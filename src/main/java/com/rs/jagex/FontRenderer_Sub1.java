@@ -32,9 +32,9 @@ public class FontRenderer_Sub1 extends FontRenderer {
 		Preference_Sub20.anIntArray7920 = Class492.method8266();
 	}
 	static void method13784(int i_0) {
-		if (Class9.lobbyStage == 140)
+		if (Login.getLobbyStage() == LobbyStage.LOGGING_IN_LOBBY)
 			Class9.anInt72 = i_0;
-		else if (Class9.lobbyStage == 273)
+		else if (Login.getLobbyStage() == LobbyStage.LOBBY_TO_WORLD)
 			Class9.anInt106 = i_0;
 
 	}

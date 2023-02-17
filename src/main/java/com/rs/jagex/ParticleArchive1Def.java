@@ -48,7 +48,7 @@ public class ParticleArchive1Def {
 		ItemContainer.aClass229_7712.method3859();
 	}
 	static void worldLogin(String string_0, String string_1) {
-		Class9.lobbyStage = 273;
+		Login.setLobbyStage(LobbyStage.LOBBY_TO_WORLD);
 		Class9.CURRENT_CONNECTION_CONTEXT = client.GAME_CONNECTION_CONTEXT;
 		Class455.method7558(false, false, string_0, string_1, -1L);
 	}

@@ -1,15 +1,15 @@
 package com.rs.jagex;
 
-public class Class256 {
+public enum RegionLoadType {
 
-	public static Class256 LOAD_MAP_SCENE_BACKGROUND = new Class256(false, false);
-	public static Class256 aClass256_3153 = new Class256(true, false);
-	public static Class256 LOAD_MAP_SCENE_NORMAL = new Class256(false, false);
-	public static Class256 aClass256_3155 = new Class256(true, false);
-	public static Class256 aClass256_3156 = new Class256(true, false);
-	public static Class256 aClass256_3157 = new Class256(true, true);
-	public static Class256 aClass256_3161 = new Class256(true, true);
-	public static Class256 aClass256_3152 = new Class256(false, false);
+	LOAD_MAP_SCENE_BACKGROUND(false, false),
+	aRegionLoadType_3153(true, false),
+	LOAD_MAP_SCENE_NORMAL(false, false),
+	aRegionLoadType_3155(true, false),
+	aRegionLoadType_3156(true, false),
+	aRegionLoadType_3157(true, true),
+	aRegionLoadType_3161(true, true),
+	aRegionLoadType_3152(false, false);
 
 	public static void method4412(SongReference class116_0, int volume) {
 		volume = volume * Class393.preferences.musicVolume.method12714() >> 8;
@@ -51,17 +51,17 @@ public class Class256 {
 		Class187.MINIMAP_FLAG_Y = -1;
 	}
 
-	boolean aBool3160;
+	boolean allowDynamicMapScene;
 
 	boolean aBool3159;
 
-	Class256(boolean bool_1, boolean bool_2) {
-		aBool3160 = bool_1;
+	RegionLoadType(boolean allowDynamicMapScene, boolean bool_2) {
+		this.allowDynamicMapScene = allowDynamicMapScene;
 		aBool3159 = bool_2;
 	}
 
 	boolean allowDynamicMapScene() {
-		return aBool3160;
+		return allowDynamicMapScene;
 	}
 
 	public boolean method4401() {

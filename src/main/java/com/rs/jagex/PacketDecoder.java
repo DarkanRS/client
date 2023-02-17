@@ -581,10 +581,10 @@ public class PacketDecoder {
 			ByteBuf.Bit rsbitsbuffer_65 = new ByteBuf.Bit(context.currentPacketSize);
 			System.arraycopy(context.recievedBuffer.buffer, context.recievedBuffer.index, rsbitsbuffer_65.buffer, 0, context.currentPacketSize);
 			FontMetrics.method6989();
-			if (Class393.preferences.aPreference_Sub3_8199.method12632() == 1)
-				IndexLoaders.MAP_REGION_LOADER_THREAD.method6049(new Class335(Class256.aClass256_3155, rsbitsbuffer_65));
+			if (Class393.preferences.asyncRegionLoadingPreference.getValue() == 1)
+				IndexLoaders.MAP_REGION_LOADER_THREAD.loadMapRegionAsync(new Class335(RegionLoadType.aRegionLoadType_3155, rsbitsbuffer_65));
 			else
-				IndexLoaders.MAP_REGION_DECODER.loadMapScene(new Class335(Class256.aClass256_3155, rsbitsbuffer_65));
+				IndexLoaders.MAP_REGION_DECODER.loadMapScene(new Class335(RegionLoadType.aRegionLoadType_3155, rsbitsbuffer_65));
 			context.currentPacket = null;
 			return false;
 		} else if (context.currentPacket == ServerProt.DEPRECATED_52_CLIENTPACKET_97) {
@@ -1382,10 +1382,10 @@ public class PacketDecoder {
 			ByteBuf.Bit rsbitsbuffer_65 = new ByteBuf.Bit(context.currentPacketSize);
 			System.arraycopy(context.recievedBuffer.buffer, context.recievedBuffer.index, rsbitsbuffer_65.buffer, 0, context.currentPacketSize);
 			FontMetrics.method6989();
-			if (Class393.preferences.aPreference_Sub3_8199.method12632() == 1)
-				IndexLoaders.MAP_REGION_LOADER_THREAD.method6049(new Class335(Class256.LOAD_MAP_SCENE_NORMAL, rsbitsbuffer_65));
+			if (Class393.preferences.asyncRegionLoadingPreference.getValue() == 1)
+				IndexLoaders.MAP_REGION_LOADER_THREAD.loadMapRegionAsync(new Class335(RegionLoadType.LOAD_MAP_SCENE_NORMAL, rsbitsbuffer_65));
 			else
-				IndexLoaders.MAP_REGION_DECODER.loadMapScene(new Class335(Class256.LOAD_MAP_SCENE_NORMAL, rsbitsbuffer_65));
+				IndexLoaders.MAP_REGION_DECODER.loadMapScene(new Class335(RegionLoadType.LOAD_MAP_SCENE_NORMAL, rsbitsbuffer_65));
 			context.currentPacket = null;
 			return false;
 		} else if (context.currentPacket == ServerProt.REMOVE_GROUND_ITEM) {
@@ -2206,7 +2206,7 @@ public class PacketDecoder {
 			int height = buffer.readUnsignedShort();
 			int speed = buffer.readUnsignedShort();
 			int rotation = buffer.readUnsignedByte();
-			if (IndexLoaders.MAP_REGION_DECODER.method4419() != Class256.aClass256_3153 && x >= 0 && y >= 0 && x < IndexLoaders.MAP_REGION_DECODER.getSizeX() && y < IndexLoaders.MAP_REGION_DECODER.getSizeY())
+			if (IndexLoaders.MAP_REGION_DECODER.method4419() != RegionLoadType.aRegionLoadType_3153 && x >= 0 && y >= 0 && x < IndexLoaders.MAP_REGION_DECODER.getSizeX() && y < IndexLoaders.MAP_REGION_DECODER.getSizeY())
 				if (spotAnimId == -1) {
 					CacheableNode_Sub10 class282_sub50_sub10_22 = (CacheableNode_Sub10) client.aClass465_7334.get(x << 16 | y);
 					if (class282_sub50_sub10_22 != null) {
@@ -2239,7 +2239,7 @@ public class PacketDecoder {
 			int slope = buffer.readUnsignedShort();
 			if (angle == 255)
 				angle = -1;
-			if (IndexLoaders.MAP_REGION_DECODER.method4419() != Class256.aClass256_3153 && localX >= 0 && localY >= 0 && localX < IndexLoaders.MAP_REGION_DECODER.getSizeX() && localY < IndexLoaders.MAP_REGION_DECODER.getSizeY() && xOff >= 0 && yOff >= 0 && xOff < IndexLoaders.MAP_REGION_DECODER.getSizeX() && yOff < IndexLoaders.MAP_REGION_DECODER.getSizeY() && spotAnimId != 65535) {
+			if (IndexLoaders.MAP_REGION_DECODER.method4419() != RegionLoadType.aRegionLoadType_3153 && localX >= 0 && localY >= 0 && localX < IndexLoaders.MAP_REGION_DECODER.getSizeX() && localY < IndexLoaders.MAP_REGION_DECODER.getSizeY() && xOff >= 0 && yOff >= 0 && xOff < IndexLoaders.MAP_REGION_DECODER.getSizeX() && yOff < IndexLoaders.MAP_REGION_DECODER.getSizeY() && spotAnimId != 65535) {
 				localX = localX * 512 + 256;
 				localY = localY * 512 + 256;
 				xOff = xOff * 512 + 256;
@@ -2264,7 +2264,7 @@ public class PacketDecoder {
 				int i_10 = buffer.readUnsignedByte();
 				int i_11 = buffer.readUnsignedByte();
 				int i_23 = buffer.readUnsignedShort();
-				if (IndexLoaders.MAP_REGION_DECODER.method4419() != Class256.aClass256_3153 && i_21 >= 0 && i_5 >= 0 && i_21 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && i_5 < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
+				if (IndexLoaders.MAP_REGION_DECODER.method4419() != RegionLoadType.aRegionLoadType_3153 && i_21 >= 0 && i_5 >= 0 && i_21 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && i_5 < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
 					int i_24 = i_8 + 1;
 					if (VertexNormal.MY_PLAYER.regionBaseX[0] >= i_21 - i_24 && VertexNormal.MY_PLAYER.regionBaseX[0] <= i_21 + i_24 && VertexNormal.MY_PLAYER.regionBaseY[0] >= i_5 - i_24 && VertexNormal.MY_PLAYER.regionBaseY[0] <= i_24 + i_5)
 						Class383.method6509(i_6, i_9, i_10, i_11, i_8 + (Class272.UPDATE_ZONE_PLANE << 24) + (i_5 << 8) + (i_21 << 16), i_23);
@@ -2359,7 +2359,7 @@ public class PacketDecoder {
 			int i_7 = buffer.readUnsignedByte();
 			int i_8 = buffer.read24BitUnsignedInteger();
 			String string_27 = buffer.readString();
-			if (IndexLoaders.MAP_REGION_DECODER.method4419() != Class256.aClass256_3153)
+			if (IndexLoaders.MAP_REGION_DECODER.method4419() != RegionLoadType.aRegionLoadType_3153)
 				ParticleProducerDefinition.method1161(Class272.UPDATE_ZONE_PLANE, i_21, i_5, i_7, i_6, i_8, string_27);
 		} else if (packet == UpdateZonePacket.SOUND_AREA) { //sound related again
 			int flags = buffer.readUnsignedByte();
@@ -2375,10 +2375,10 @@ public class PacketDecoder {
 					int i_11 = buffer.readUnsignedByte();
 					int i_23 = buffer.readUnsignedShort();
 					boolean soundType = buffer.readUnsignedByte() == 1;
-					if (IndexLoaders.MAP_REGION_DECODER.method4419() != Class256.aClass256_3153 && localX >= 0 && localY >= 0 && localX < IndexLoaders.MAP_REGION_DECODER.getSizeX() && localY < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
+					if (IndexLoaders.MAP_REGION_DECODER.method4419() != RegionLoadType.aRegionLoadType_3153 && localX >= 0 && localY >= 0 && localX < IndexLoaders.MAP_REGION_DECODER.getSizeX() && localY < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
 						int i_14 = i_8 + 1;
 						if (VertexNormal.MY_PLAYER.regionBaseX[0] >= localX - i_14 && VertexNormal.MY_PLAYER.regionBaseX[0] <= localX + i_14 && VertexNormal.MY_PLAYER.regionBaseY[0] >= localY - i_14 && VertexNormal.MY_PLAYER.regionBaseY[0] <= i_14 + localY)
-							Class256.method4414(soundId, i_9, i_10, i_11, i_8 + (Class272.UPDATE_ZONE_PLANE << 24) + (localY << 8) + (localX << 16), soundType, i_23);
+							RegionLoadType.method4414(soundId, i_9, i_10, i_11, i_8 + (Class272.UPDATE_ZONE_PLANE << 24) + (localY << 8) + (localX << 16), soundType, i_23);
 					}
 		} else if (packet == UpdateZonePacket.OBJ_ANIM) {
 			int i_3 = buffer.readUnsigned128Byte();
@@ -2389,7 +2389,7 @@ public class PacketDecoder {
 							int x = (i_7 >> 4 & 0x7) + Static.UPDATE_ZONE_X;
 							int y = (i_7 & 0x7) + Class158_Sub1_Sub2.UPDATE_ZONE_Y;
 							int animationId = buffer.readIntLE();
-							if (IndexLoaders.MAP_REGION_DECODER.method4419() != Class256.aClass256_3153)
+							if (IndexLoaders.MAP_REGION_DECODER.method4419() != RegionLoadType.aRegionLoadType_3153)
 								Class9.animateObject(Class272.UPDATE_ZONE_PLANE, x, y, slot, type, rotation, animationId);
 		} else if (packet == UpdateZonePacket.GROUND_ITEM_REVEAL) {
 			int playerId = buffer.readUnsignedShort();
@@ -2449,7 +2449,7 @@ public class PacketDecoder {
 			int slope = buffer.readUnsignedShort();
 			if (angle == 255)
 				angle = -1;
-			if (IndexLoaders.MAP_REGION_DECODER.method4419() != Class256.aClass256_3153 && localX >= 0 && localY >= 0 && localX < IndexLoaders.MAP_REGION_DECODER.getSizeX() * 2 && localY < IndexLoaders.MAP_REGION_DECODER.getSizeX() * 2 && xOff >= 0 && yOff >= 0 && xOff < IndexLoaders.MAP_REGION_DECODER.getSizeY() * 2 && yOff < IndexLoaders.MAP_REGION_DECODER.getSizeY() * 2 && spotAnimId != 65535) {
+			if (IndexLoaders.MAP_REGION_DECODER.method4419() != RegionLoadType.aRegionLoadType_3153 && localX >= 0 && localY >= 0 && localX < IndexLoaders.MAP_REGION_DECODER.getSizeX() * 2 && localY < IndexLoaders.MAP_REGION_DECODER.getSizeX() * 2 && xOff >= 0 && yOff >= 0 && xOff < IndexLoaders.MAP_REGION_DECODER.getSizeY() * 2 && yOff < IndexLoaders.MAP_REGION_DECODER.getSizeY() * 2 && spotAnimId != 65535) {
 				localX *= 256;
 				localY *= 256;
 				xOff *= 256;

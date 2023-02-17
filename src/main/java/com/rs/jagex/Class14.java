@@ -9,7 +9,7 @@ public class Class14 {
 	static int anInt134;
 
 	static void method537() {
-		Class9.lobbyStage = 273;
+		Login.setLobbyStage(LobbyStage.LOBBY_TO_WORLD);
 		Class9.CURRENT_CONNECTION_CONTEXT = client.GAME_CONNECTION_CONTEXT;
 		Class455.method7558(Class9.aLong77 == -1L, true, "", "", Class9.aLong77);
 	}

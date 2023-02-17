@@ -4,7 +4,7 @@ public class MapSpriteDefinitions {
 
 	public static int WORLD_LIST_IDK;
 	static void method7022() {
-		Class9.lobbyStage = 273;
+		Login.setLobbyStage(LobbyStage.LOBBY_TO_WORLD);
 		Class9.CURRENT_CONNECTION_CONTEXT = client.GAME_CONNECTION_CONTEXT;
 		if (client.aByteArray7152 != null) {
 			ByteBuf rsbytebuffer_1 = new ByteBuf(client.aByteArray7152);

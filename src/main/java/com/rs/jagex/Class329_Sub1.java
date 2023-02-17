@@ -822,7 +822,7 @@ public class Class329_Sub1 extends Class329 {
 			int type = object.method89();
 			int i_11 = object.method92();
 			if (objectdefinitions_9.hasSound())
-				Class256.method4415(i_2, x, y, objectdefinitions_9);
+				RegionLoadType.method4415(i_2, x, y, objectdefinitions_9);
 			if (object.method86())
 				object.method88(graphicalrenderer_1);
 			if (i_3 == 0) {

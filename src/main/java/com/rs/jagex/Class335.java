@@ -30,12 +30,12 @@ public class Class335 {
 		return new Class466[]{Class466.aClass466_5564, Class466.aClass466_5567, Class466.aClass466_5568, Class466.aClass466_5563, Class466.aClass466_5569, Class466.aClass466_5565};
 	}
 
-	Class256 aClass256_3915;
+	RegionLoadType aRegionLoadType_3915;
 
 	ByteBuf.Bit buffer;
 
-	public Class335(Class256 class256_1, ByteBuf.Bit rsbitsbuffer_2) {
-		aClass256_3915 = class256_1;
+	public Class335(RegionLoadType regionLoadType_1, ByteBuf.Bit rsbitsbuffer_2) {
+		aRegionLoadType_3915 = regionLoadType_1;
 		buffer = rsbitsbuffer_2;
 	}
 }

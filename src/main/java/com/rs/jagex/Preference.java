@@ -22,8 +22,8 @@ public abstract class Preference {
 		return i_2 == 3 ? ConnectionInfo.method7499(long_0) : Integer.toString(i_6 / 10) + i_6 % 10 + "-" + Class407.aStringArrayArray4849[i_2][i_7] + "-" + i_8 + " " + i_9 / 10 + i_9 % 10 + ":" + i_10 / 10 + i_10 % 10;
 	}
 	static void method7789() {
-		if (Class393.preferences.aPreference_Sub3_8199.method12632() == 1)
-			IndexLoaders.MAP_REGION_LOADER_THREAD.method6049(new Class335(Class256.aClass256_3152, null));
+		if (Class393.preferences.asyncRegionLoadingPreference.getValue() == 1)
+			IndexLoaders.MAP_REGION_LOADER_THREAD.loadMapRegionAsync(new Class335(RegionLoadType.aRegionLoadType_3152, null));
 		else {
 			IndexLoaders.MAP_REGION_DECODER.method4547();
 			QuickchatFiller.method1139();

@@ -33,7 +33,7 @@ public class GamePreferences extends Node {
 	public CPUMaxMemoryPreference cpu;
 	public Preference_Sub11 aPreference_Sub11_8217;
 	public SafeModePreference safeMode;
-	public Preference_Sub3 aPreference_Sub3_8199;
+	public AsyncRegionLoadingPreference asyncRegionLoadingPreference;
 	public SoundLevelPreference soundEffectVolume;
 	public SoundLevelPreference ambientSoundVolume;
 	public SoundLevelPreference voiceOverVolume;
@@ -113,7 +113,7 @@ public class GamePreferences extends Node {
 				aPreference_Sub11_8217 = new Preference_Sub11(rsbytebuffer_1.readUnsignedByte(), this);
 				safeMode = new SafeModePreference(rsbytebuffer_1.readUnsignedByte(), this);
 				if (i_3 >= 26)
-					aPreference_Sub3_8199 = new Preference_Sub3(rsbytebuffer_1.readUnsignedByte(), this);
+					asyncRegionLoadingPreference = new AsyncRegionLoadingPreference(rsbytebuffer_1.readUnsignedByte(), this);
 
 				soundEffectVolume = new SoundLevelPreference(rsbytebuffer_1.readUnsignedByte(), this);
 				ambientSoundVolume = new SoundLevelPreference(rsbytebuffer_1.readUnsignedByte(), this);
@@ -190,7 +190,7 @@ public class GamePreferences extends Node {
 		/*28*/
 		rsbytebuffer_2.writeByte(safeMode.getValue());
 		/*29*/
-		rsbytebuffer_2.writeByte(aPreference_Sub3_8199.method12632());
+		rsbytebuffer_2.writeByte(asyncRegionLoadingPreference.getValue());
 		/*30*/
 		rsbytebuffer_2.writeByte(soundEffectVolume.method12714());
 		/*31*/
@@ -308,8 +308,8 @@ public class GamePreferences extends Node {
 		if (bool_1 || safeMode == null)
 			safeMode = new SafeModePreference(this);
 
-		if (bool_1 || aPreference_Sub3_8199 == null)
-			aPreference_Sub3_8199 = new Preference_Sub3(this);
+		if (bool_1 || asyncRegionLoadingPreference == null)
+			asyncRegionLoadingPreference = new AsyncRegionLoadingPreference(this);
 
 		if (bool_1 || soundEffectVolume == null)
 			soundEffectVolume = new SoundLevelPreference(this);
@@ -464,7 +464,7 @@ public class GamePreferences extends Node {
 		cpu.method12648();
 		aPreference_Sub11_8217.method12698();
 		safeMode.method12928();
-		aPreference_Sub3_8199.method12631();
+		asyncRegionLoadingPreference.method12631();
 		soundEffectVolume.method12712();
 		ambientSoundVolume.method12712();
 		voiceOverVolume.method12712();

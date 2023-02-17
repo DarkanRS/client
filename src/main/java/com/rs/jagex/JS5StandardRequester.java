@@ -6,7 +6,7 @@ import java.lang.reflect.Method;
 public abstract class JS5StandardRequester {
 
 	public static void method5558() {
-		Class9.loginStage = 2;
+		Login.setLoginStage(LoginStage.NONE_2);
 		Class9.anInt106 = -2;
 		Class9.anInt72 = -2;
 	}

@@ -2090,7 +2090,7 @@ public class client extends Engine {
 			Class339.aByteArrayArray3986 = new byte[50][];
 
 		Class393.preferences = FixedTileStrategy.method12791();
-		if (Class393.preferences.aPreference_Sub3_8199.method12632() == 1)
+		if (Class393.preferences.asyncRegionLoadingPreference.getValue() == 1)
 			SceneObjectManager.aBool2644 = false;
 
 		if (ConnectionInfo.SERVER_ENVIRONMENT == ServerEnvironment.LIVE)
@@ -2149,7 +2149,7 @@ public class client extends Engine {
 			Class339.aByteArrayArray3986 = new byte[50][];
 
 		Class393.preferences = FixedTileStrategy.method12791();
-		if (Class393.preferences.aPreference_Sub3_8199.method12632() == 1)
+		if (Class393.preferences.asyncRegionLoadingPreference.getValue() == 1)
 			SceneObjectManager.aBool2644 = false;
 
 		if (ConnectionInfo.SERVER_ENVIRONMENT == ServerEnvironment.LIVE)
@@ -2294,7 +2294,7 @@ public class client extends Engine {
 			Class339.aByteArrayArray3986 = new byte[50][];
 
 		Class393.preferences = FixedTileStrategy.method12791();
-		if (Class393.preferences.aPreference_Sub3_8199.method12632() == 1)
+		if (Class393.preferences.asyncRegionLoadingPreference.getValue() == 1)
 			SceneObjectManager.aBool2644 = false;
 
 		if (ConnectionInfo.SERVER_ENVIRONMENT == ServerEnvironment.LIVE)
@@ -2557,7 +2557,7 @@ public class client extends Engine {
 				SpotAnimIndexLoader.method8860();
 
 			if (Camera.CAM_MOVE_ABSOLUTEX >> 9 < 14 || Camera.CAM_MOVE_ABSOLUTEX >> 9 >= IndexLoaders.MAP_REGION_DECODER.getSizeX() - 14 || Camera.CAM_MOVE_ABSOLUTEY >> 9 < 14 || Camera.CAM_MOVE_ABSOLUTEY >> 9 >= IndexLoaders.MAP_REGION_DECODER.getSizeY() - 14)
-				IndexLoaders.MAP_REGION_DECODER.loadMapScene(new Class335(Class256.LOAD_MAP_SCENE_BACKGROUND, null));
+				IndexLoaders.MAP_REGION_DECODER.loadMapScene(new Class335(RegionLoadType.LOAD_MAP_SCENE_BACKGROUND, null));
 		}
 
 		while (true) {

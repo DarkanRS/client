@@ -12,7 +12,7 @@ public class MapRegionLoaderTask implements Runnable {
 
 	LinkedList<Class335> aLinkedList3990 = new LinkedList<>();
 
-	public void method6049(Class335 class335_1) {
+	public void loadMapRegionAsync(Class335 class335_1) {
 		LinkedList<Class335> linkedlist_3 = aLinkedList3990;
 		synchronized (aLinkedList3990) {
 			aLinkedList3990.add(class335_1);
@@ -60,7 +60,7 @@ public class MapRegionLoaderTask implements Runnable {
 	}
 
 	void method6055(Class335 class335_1) {
-		if (Class256.aClass256_3152 == class335_1.aClass256_3915)
+		if (RegionLoadType.aRegionLoadType_3152 == class335_1.aRegionLoadType_3915)
 			region.method4547();
 		else
 			region.loadMapScene(class335_1);

@@ -12,12 +12,10 @@ public class Class9 {
 	public static int anInt112 = -1;
 	public static int anInt113;
 	static BufferedConnectionContext CURRENT_CONNECTION_CONTEXT;
-	static int lobbyStage;
 	static boolean aBool74;
 	static boolean socialNetworkLogin;
 	static int anInt76 = -1;
 	static long aLong77 = -1L;
-	static int loginStage = 2;
 	static long aLong86;
 	static String aString99 = "";
 	static String aString102 = "";

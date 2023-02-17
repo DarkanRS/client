@@ -10,7 +10,7 @@ public class Class42 implements Interface2 {
 
 	public static void playSoundSong(int i_0, int volume, int i_2) {
 		if (Class260.aClass116_3229 != null && Class260.aClass116_3229.isLoaded() && i_0 == Class260.aClass116_3229.musicId) {
-			Class256.method4412(Class260.aClass116_3229, volume);
+			RegionLoadType.method4412(Class260.aClass116_3229, volume);
 			Class260.anInt3223 = i_0;
 			Class260.aClass116_3229 = null;
 			Class260.aNode_Sub15_Sub2_3231 = null;
