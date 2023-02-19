@@ -23,6 +23,8 @@ public class Class197 {
 		byte b_5 = (byte) (i_4 >> 28);
 		int i_6 = i_4 >> 14 & 0x3fff;
 		int i_7 = i_4 & 0x3fff;
+		System.out.println(Class9.CURRENT_CONNECTION_CONTEXT.currentPacket);
+		System.out.println("Decoded: " + b_5 + " " + i_6 + " " + i_7);
 		CoordGrid coordgrid_8 = IndexLoaders.MAP_REGION_DECODER.getBase();
 		player_3.regionBaseX[0] = i_6 - coordgrid_8.x;
 		player_3.regionBaseY[0] = i_7 - coordgrid_8.y;
@@ -40,16 +42,16 @@ public class Class197 {
 			if (i_2 != i_9) {
 				int i_10 = packet.readBits(18);
 				int i_11 = i_10 >> 16;
-		int i_12 = i_10 >> 8 & 0xff;
-		int i_13 = i_10 & 0xff;
-		Class4 class4_14 = aClass4Array2430[i_9] = new Class4();
-		class4_14.regionHash = (i_12 << 14) + i_13 + (i_11 << 28);
-		class4_14.faceAngle = 0;
-		class4_14.faceEntity = -1;
-		class4_14.aBool29 = false;
-		class4_14.aBool33 = false;
-		anIntArray2426[++anInt2431 - 1] = i_9;
-		PLAYER_UPDATE_SLOT_FLAGS[i_9] = 0;
+				int i_12 = i_10 >> 8 & 0xff;
+				int i_13 = i_10 & 0xff;
+				Class4 class4_14 = aClass4Array2430[i_9] = new Class4();
+				class4_14.regionHash = (i_12 << 14) + i_13 + (i_11 << 28);
+				class4_14.faceAngle = 0;
+				class4_14.faceEntity = -1;
+				class4_14.aBool29 = false;
+				class4_14.aBool33 = false;
+				anIntArray2426[++anInt2431 - 1] = i_9;
+				PLAYER_UPDATE_SLOT_FLAGS[i_9] = 0;
 			}
 		packet.finishBitAccess();
 	}

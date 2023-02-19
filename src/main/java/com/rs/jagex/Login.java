@@ -510,21 +510,6 @@ public class Login {
 							if (ConnectionInfo.SERVER_ENVIRONMENT != ServerEnvironment.LOCAL && (ConnectionInfo.SERVER_ENVIRONMENT != ServerEnvironment.WTQA || client.PLAYER_RIGHTS < 2) && ConnectionInfo.GAME_CONNECTION_INFO.equals(ConnectionInfo.JS5_CONNECTION_INFO))
 								GameDetails.method4884();
 						}
-						if ((!client.USERDETAIL_QUICKCHAT || client.aBool7322) && !client.IS_MEMBER) {
-							//                            try {
-							//                                Class441.method7377(SubInterface.suppliedApplet, "unzap");
-							//                            } catch (Throwable ignored) {
-							//                            }
-						} else
-							try {
-								//Class441.method7377(SubInterface.suppliedApplet, "zap");
-							} catch (Throwable throwable_16) {
-								if (client.aBool7147)
-									try {
-										SubInterface.suppliedApplet.showError("error_game_tbi");
-									} catch (Exception ignored) {
-									}
-							}
 						if (ConnectionInfo.SERVER_ENVIRONMENT == ServerEnvironment.LIVE)
 							Class361.aClass361_4170.method6257();
 						if (getLobbyStage() != LobbyStage.LOBBY_TO_WORLD) {
