@@ -748,7 +748,7 @@ public enum CS2Instruction {
 	instr6627(722),
 	instr6236(396), //reset cam shake?
 			instr6013(365),
-			instr6122(151),
+			CAM_MODEISFOLLOWPLAYER(151),
 			instr6692(831),
 			instr6204(273),
 			instr6694(171),

@@ -1,5 +1,7 @@
 package com.rs.jagex;
 
+import com.rs.jagex.Camera.CamState;
+
 import java.util.HashMap;
 
 public class Class501 {
@@ -34,7 +36,7 @@ public class Class501 {
 		}
 
 		FontRenderer_Sub2.method14262();
-		Camera.STATE = 2;
+		Camera.STATE = CamState.FOLLOW_PLAYER;
 		Camera.anInt833 = -1;
 		Camera.anInt5864 = -1;
 		GameState.setGameState(GameState.LOGGED_INGAME);

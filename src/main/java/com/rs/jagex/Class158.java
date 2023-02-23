@@ -1,5 +1,7 @@
 package com.rs.jagex;
 
+import com.rs.jagex.Camera.CamState;
+
 public abstract class Class158 {
 
 	public static boolean justBecameFullscreen = false;
@@ -18,13 +20,13 @@ public abstract class Class158 {
 				int i_13;
 				int i_14;
 				for (i_11 = 0; i_11 < ints_10.length / 2; i_11++) {
-					if (Camera.STATE == 4)
+					if (Camera.STATE == CamState.IDK_4)
 						i_12 = (int) Camera.camAngleY & 0x3fff;
 					else
 						i_12 = (int) Camera.camAngleY + client.anInt7255 & 0x3fff;
 					i_13 = Trig.SINE[i_12];
 					i_14 = Trig.COSINE[i_12];
-					if (Camera.STATE != 4) {
+					if (Camera.STATE != CamState.IDK_4) {
 						i_13 = i_13 * 256 / (client.anInt7203 + 256);
 						i_14 = i_14 * 256 / (client.anInt7203 + 256);
 					}

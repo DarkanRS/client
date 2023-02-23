@@ -1,5 +1,7 @@
 package com.rs.jagex;
 
+import com.rs.jagex.Camera.CamState;
+
 public class CutsceneAction_Sub11 extends CutsceneAction {
 
 	int anInt9299;
@@ -35,7 +37,7 @@ public class CutsceneAction_Sub11 extends CutsceneAction {
 		client.anInt7182 = anInt9304;
 		client.anInt7448 = 1;
 		client.anInt7280 = anInt9302;
-		Camera.STATE = 3;
+		Camera.STATE = CamState.IDK_3;
 		SpotAnimIndexLoader.method8860();
 		client.aBool7321 = true;
 	}
@@ -50,7 +52,7 @@ public class CutsceneAction_Sub11 extends CutsceneAction {
 		client.anInt7182 = anInt9304 * -244194861 * -722833781 * 1448302961;
 		client.anInt7448 = 1044733407 * -74015201;
 		client.anInt7280 = anInt9302 * -692766461 * 1496611753 * -1508573389;
-		Camera.STATE = 1155732519 * -672443707;
+		Camera.STATE = CamState.IDK_3;
 		SpotAnimIndexLoader.method8860();
 		client.aBool7321 = true;
 	}

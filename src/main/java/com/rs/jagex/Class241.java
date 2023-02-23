@@ -1,5 +1,7 @@
 package com.rs.jagex;
 
+import com.rs.jagex.Camera.CamState;
+
 import java.awt.*;
 
 public class Class241 {
@@ -27,7 +29,7 @@ public class Class241 {
 
 	static void method4152(IComponentDefinitions icomponentdefinitions_0, Class455 class455_1, int i_2, int i_3, int i_4, int i_5, int i_6, String string_7, FontRenderer fontrenderer_8, FontMetrics fontmetrics_9, int i_10) {
 		int i_12;
-		if (Camera.STATE == 4)
+		if (Camera.STATE == CamState.IDK_4)
 			i_12 = (int) Camera.camAngleY & 0x3fff;
 		else
 			i_12 = (int) Camera.camAngleY + client.anInt7255 & 0x3fff;
@@ -36,7 +38,7 @@ public class Class241 {
 		if (i_14 <= i_13 * i_13) {
 			int i_15 = Trig.SINE[i_12];
 			int i_16 = Trig.COSINE[i_12];
-			if (Camera.STATE != 4) {
+			if (Camera.STATE != CamState.IDK_4) {
 				i_15 = i_15 * 256 / (client.anInt7203 + 256);
 				i_16 = i_16 * 256 / (client.anInt7203 + 256);
 			}

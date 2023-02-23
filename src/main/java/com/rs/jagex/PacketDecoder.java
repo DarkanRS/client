@@ -206,7 +206,7 @@ public class PacketDecoder {
 			return true;
 		} else if (context.currentPacket == ServerProt.CAM_SMOOTHRESET) {
 			Class470.method7825();
-			Camera.smoothReset();
+			Camera.resetHard();
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerProt.CLIENT_SETVARCSTR_SMALL) {
@@ -738,7 +738,7 @@ public class PacketDecoder {
 			}
 		} else if (context.currentPacket == ServerProt.CAM_RESET) {
 			Class470.method7825();
-			Camera.hardReset();
+			Camera.resetSmoothly();
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerProt.SET_CLAN_STRING) {

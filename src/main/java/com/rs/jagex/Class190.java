@@ -1,5 +1,7 @@
 package com.rs.jagex;
 
+import com.rs.jagex.Camera.CamState;
+
 public class Class190 {
 
 	static boolean aBool2383;
@@ -7,7 +9,7 @@ public class Class190 {
 	static void method3149(IComponentDefinitions icomponentdefinitions_0, Class455 class455_1, int i_2, int i_3, int i_4, int i_5, NativeSprite nativesprite_6) {
 		if (nativesprite_6 != null) {
 			int i_8;
-			if (Camera.STATE == 4)
+			if (Camera.STATE == CamState.IDK_4)
 				i_8 = (int) Camera.camAngleY & 0x3fff;
 			else
 				i_8 = (int) Camera.camAngleY + client.anInt7255 & 0x3fff;
@@ -17,7 +19,7 @@ public class Class190 {
 			if (i_10 <= i_9 * i_9) {
 				int i_11 = Trig.SINE[i_8];
 				int i_12 = Trig.COSINE[i_8];
-				if (Camera.STATE != 4) {
+				if (Camera.STATE != CamState.IDK_4) {
 					i_11 = i_11 * 256 / (client.anInt7203 + 256);
 					i_12 = i_12 * 256 / (client.anInt7203 + 256);
 				}

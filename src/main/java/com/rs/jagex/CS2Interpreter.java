@@ -1,6 +1,7 @@
 package com.rs.jagex;
 
 import com.rs.Loader;
+import com.rs.jagex.Camera.CamState;
 import com.rs.jagex.clans.ClanChannel;
 import com.rs.jagex.clans.settings.ClanSettings;
 
@@ -2693,7 +2694,7 @@ public class CS2Interpreter {
 		case instr6013:
 			method3038(exec);
 			break;
-		case instr6122:
+		case CAM_MODEISFOLLOWPLAYER:
 			method12115(exec);
 			break;
 		case instr6692:
@@ -4684,7 +4685,7 @@ public class CS2Interpreter {
 			i_4 = IndexLoaders.MAP_REGION_DECODER.getSizeY();
 		client.anInt7262 = (i_3 << 9) + 256;
 		client.anInt7376 = (i_4 << 9) + 256;
-		Camera.STATE = 4;
+		Camera.STATE = CamState.IDK_4;
 		Camera.anInt833 = -1;
 		Camera.anInt5864 = -1;
 	}
@@ -4770,7 +4771,7 @@ public class CS2Interpreter {
 	}
 
 	static void method12115(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Camera.STATE == 2 ? 1 : 0;
+		executor.intStack[++executor.intStackPtr - 1] = Camera.STATE == CamState.FOLLOW_PLAYER ? 1 : 0;
 	}
 
 	static void method12116(CS2Executor executor) {
@@ -5189,7 +5190,7 @@ public class CS2Interpreter {
 					throw new RuntimeException();
 				else {
 					client.anInt7280 = i_5;
-					Camera.STATE = 3;
+					Camera.STATE = CamState.IDK_3;
 					Camera.anInt833 = -1;
 					Camera.anInt5864 = -1;
 				}
@@ -6098,7 +6099,7 @@ public class CS2Interpreter {
 	}
 
 	static void method1837() {
-		Camera.smoothReset();
+		Camera.resetHard();
 	}
 
 	static void method1838(IComponentDefinitions icomponentdefinitions_0, byte[] bytes_1, byte[] bytes_2, CS2Executor cs2executor_3) {
@@ -10383,7 +10384,7 @@ public class CS2Interpreter {
 	}
 
 	static void method8742() {
-		Camera.hardReset();
+		Camera.resetSmoothly();
 	}
 
 	static void method8750(CS2Executor executor) {

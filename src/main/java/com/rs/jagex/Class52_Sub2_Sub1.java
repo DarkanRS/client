@@ -2,8 +2,8 @@ package com.rs.jagex;
 
 public class Class52_Sub2_Sub1 extends Class52_Sub2 {
 
-	static Class104[] method15631() {
-		return new Class104[]{Class104.aClass104_1062, Class104.aClass104_1061, Class104.aClass104_1060};
+	static RenderDistance[] method15631() {
+		return new RenderDistance[]{RenderDistance.HIGH, RenderDistance.LOW, RenderDistance.MED};
 	}
 
 	Class52_Sub2_Sub1(Index index_1, Index index_2, Class350_Sub3_Sub1 class350_sub3_sub1_3) {

@@ -1,5 +1,7 @@
 package com.rs.jagex;
 
+import com.rs.jagex.Camera.CamState;
+
 public abstract class Ground {
 
 	static int anInt4777;
@@ -8,13 +10,13 @@ public abstract class Ground {
 		int i_9 = i_5 * i_5 + i_4 * i_4;
 		if (i_9 <= long_7) {
 			int i_10;
-			if (Camera.STATE == 4)
+			if (Camera.STATE == CamState.IDK_4)
 				i_10 = (int) Camera.camAngleY & 0x3fff;
 			else
 				i_10 = (int) Camera.camAngleY + client.anInt7255 & 0x3fff;
 			int i_11 = Trig.SINE[i_10];
 			int i_12 = Trig.COSINE[i_10];
-			if (Camera.STATE != 4) {
+			if (Camera.STATE != CamState.IDK_4) {
 				i_11 = i_11 * 256 / (client.anInt7203 + 256);
 				i_12 = i_12 * 256 / (client.anInt7203 + 256);
 			}

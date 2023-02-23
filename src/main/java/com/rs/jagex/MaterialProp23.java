@@ -1,5 +1,7 @@
 package com.rs.jagex;
 
+import com.rs.jagex.Camera.CamState;
+
 import java.io.IOException;
 
 public class MaterialProp23 extends MaterialProperty {
@@ -46,9 +48,9 @@ public class MaterialProp23 extends MaterialProperty {
 				Class434.method7292();
 				MouseRecord class282_sub53_13 = (MouseRecord) client.mouseRecords.head();
 				if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager() != null)
-					if (Camera.STATE == 5)
+					if (Camera.STATE == CamState.IDK_5)
 						Wall.method16113();
-					else if (Camera.STATE == 3)
+					else if (Camera.STATE == CamState.IDK_3)
 						SpotAnimIndexLoader.method8860();
 				if (client.aBool7331)
 					client.aBool7331 = false;

@@ -1,6 +1,14 @@
 package com.rs.jagex;
 
 public class Camera {
+	public enum CamState {
+		IDK_0,
+		SMOOTH_RESETTING,
+		FOLLOW_PLAYER,
+		IDK_3,
+		IDK_4,
+		IDK_5
+	}
 	
 	static boolean[] SHAKING;
 	static int[] SHAKE_1;
@@ -17,7 +25,7 @@ public class Camera {
 	public static int anInt5930;
 	static int anInt3512;
 	static int anInt1525;
-	public static int STATE;
+	public static CamState STATE;
 	public static int anInt833;
 	public static int anInt5864;
 	public static int CAM_MOVE_LOCALX;
@@ -55,7 +63,7 @@ public class Camera {
 			if (anInt3512 > 3072)
 				anInt3512 = 3072;
 		}
-		STATE = 5;
+		STATE = CamState.IDK_5;
 		anInt833 = -1;
 		anInt5864 = -1;
 	}
@@ -71,7 +79,7 @@ public class Camera {
 			CAM_MOVE_ABSOLUTEY = CAM_MOVE_LOCALY * 512 + 256;
 			CAM_MOVE_ABSOLUTEZ = Class504.getTerrainHeightAtPos(CAM_MOVE_ABSOLUTEX, CAM_MOVE_ABSOLUTEY, Class4.MY_PLAYER_PLANE) - CAM_MOVE_Z;
 		}
-		STATE = 5;
+		STATE = CamState.IDK_5;
 		anInt833 = -1;
 		anInt5864 = -1;
 	}
@@ -124,7 +132,7 @@ public class Camera {
 		i_2 <<= 3;
 		camAngleX = i_0;
 		camAngleY = i_1;
-		if (STATE == 5) {
+		if (STATE == CamState.IDK_5) {
 			anInt3512 = i_0;
 			anInt5930 = i_1;
 			anInt1525 = i_2;
@@ -133,19 +141,19 @@ public class Camera {
 		client.aBool7371 = true;
 	}
 
-	public static void smoothReset() {
+	public static void resetHard() {
 		for (int i_1 = 0; i_1 < 5; i_1++)
 			SHAKING[i_1] = false;
 		client.anInt7277 = -1;
 		client.anInt7448 = -1;
 		anInt5606 = 0;
 		anInt5828 = 0;
-		STATE = 2;
+		STATE = CamState.FOLLOW_PLAYER;
 		anInt833 = -1;
 		anInt5864 = -1;
 	}
 	
-	public static void hardReset() {
+	public static void resetSmoothly() {
 		for (int i_1 = 0; i_1 < 5; i_1++)
 			SHAKING[i_1] = false;
 	
@@ -153,7 +161,7 @@ public class Camera {
 		client.anInt7448 = -1;
 		anInt5606 = 0;
 		anInt5828 = 0;
-		STATE = 1;
+		STATE = CamState.SMOOTH_RESETTING;
 		anInt833 = -1;
 		anInt5864 = -1;
 		client.anInt7429 = client.FRAME_COUNT;
@@ -162,5 +170,35 @@ public class Camera {
 		Node_Sub15_Sub1.anInt9575 = CAM_MOVE_ABSOLUTEY;
 		ClipFlagMap.anInt3968 = anInt3512;
 		ParamIndexLoader.anInt5029 = anInt5930;
+	}
+
+	static void processSmoothResetTick(int i_0) {
+		int i_2 = client.FRAME_COUNT - client.anInt7429;
+		if (i_2 >= 100) {
+			STATE = CamState.FOLLOW_PLAYER;
+			anInt833 = -1;
+			anInt5864 = -1;
+		} else {
+			int i_3 = (int) camAngleX;
+			if (anInt7273 >> 8 > i_3)
+				i_3 = anInt7273 >> 8;
+			if (SHAKING[4] && SHAKE_2[4] + 128 > i_3)
+				i_3 = SHAKE_2[4] + 128;
+			int i_4 = (int) camAngleY + client.anInt7343 & 0x3fff;
+			Vector3 vector3_5 = VertexNormal.MY_PLAYER.method11166().coords;
+			LoadingStage.method6683(anInt122, Class504.getTerrainHeightAtPos((int) vector3_5.x, (int) vector3_5.z, Class4.MY_PLAYER_PLANE) - 200, anInt3289, i_3, i_4, (i_3 >> 3) * 3 + 600 << 2, i_0);
+			float f_6 = 1.0F - ((100 - i_2) * (100 - i_2) * (100 - i_2)) / 1000000.0F;
+			CAM_MOVE_ABSOLUTEX = (int) (Class186.anInt2349 + f_6 * (CAM_MOVE_ABSOLUTEX - Class186.anInt2349));
+			CAM_MOVE_ABSOLUTEZ = (int) (GraphNode_Sub1_Sub2.anInt9461 + f_6 * (CAM_MOVE_ABSOLUTEZ - GraphNode_Sub1_Sub2.anInt9461));
+			CAM_MOVE_ABSOLUTEY = (int) ((CAM_MOVE_ABSOLUTEY - Node_Sub15_Sub1.anInt9575) * f_6 + Node_Sub15_Sub1.anInt9575);
+			anInt3512 = (int) (ClipFlagMap.anInt3968 + f_6 * (anInt3512 - ClipFlagMap.anInt3968));
+			int i_7 = anInt5930 - ParamIndexLoader.anInt5029;
+			if (i_7 > 8192)
+				i_7 -= 16384;
+			else if (i_7 < -8192)
+				i_7 += 16384;
+			anInt5930 = (int) (ParamIndexLoader.anInt5029 + f_6 * i_7);
+			anInt5930 &= 0x3fff;
+		}
 	}
 }

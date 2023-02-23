@@ -43,18 +43,18 @@ public class NativeNanoTimeFPSManager extends FPSManager {
 	}
 
 	@Override
-	int method4845(long long_1) {
+	int method4845(long nanoSecondsPerFrame) {
 		if (aLong7727 > aLong7730) {
 			prevTime += aLong7727 - aLong7730;
 			aLong7730 += aLong7727 - aLong7730;
-			aLong7727 += long_1;
+			aLong7727 += nanoSecondsPerFrame;
 			return 1;
 		}
 		int i_3 = 0;
 
 		do {
 			++i_3;
-			aLong7727 += long_1;
+			aLong7727 += nanoSecondsPerFrame;
 		} while (i_3 < 10 && aLong7727 < aLong7730);
 
 		if (aLong7727 < aLong7730)

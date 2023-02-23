@@ -1,5 +1,7 @@
 package com.rs.jagex;
 
+import com.rs.jagex.Camera.CamState;
+
 import java.io.IOException;
 
 public abstract class Class152 {
@@ -137,8 +139,8 @@ public abstract class Class152 {
 
 	static void method2601(long long_0) {
 		if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager() != null)
-			if (Camera.STATE != 2 && Camera.STATE != 1) {
-				if (Camera.STATE == 4)
+			if (Camera.STATE != CamState.FOLLOW_PLAYER && Camera.STATE != CamState.SMOOTH_RESETTING) {
+				if (Camera.STATE == CamState.IDK_4)
 					Class280.method4974(long_0);
 			} else
 				Class363.method6286(long_0);

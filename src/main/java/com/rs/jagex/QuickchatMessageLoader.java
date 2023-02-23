@@ -1,5 +1,7 @@
 package com.rs.jagex;
 
+import com.rs.jagex.Camera.CamState;
+
 public class QuickchatMessageLoader {
 
 	static void method7215() {
@@ -29,12 +31,12 @@ public class QuickchatMessageLoader {
 				RenderFlagMap regionmap_7 = IndexLoaders.MAP_REGION_DECODER.getRenderFlags();
 				SceneObjectManager sceneobjectmanager_8 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager();
 				int i_9;
-				if (Camera.STATE != 2 && Camera.anInt5864 == -1) {
+				if (Camera.STATE != CamState.FOLLOW_PLAYER && Camera.anInt5864 == -1) {
 					i_9 = Class504.getTerrainHeightAtPos(Camera.CAM_MOVE_ABSOLUTEX, Camera.CAM_MOVE_ABSOLUTEY, Class4.MY_PLAYER_PLANE);
 					if (i_9 - Camera.CAM_MOVE_ABSOLUTEZ < 3200 && (regionmap_7.tileMasks[Class4.MY_PLAYER_PLANE][Camera.CAM_MOVE_ABSOLUTEX >> 9][Camera.CAM_MOVE_ABSOLUTEY >> 9] & 0x4) != 0)
 						JS5Manager.method5492(sceneobjectmanager_8.aClass293ArrayArrayArray2604, 1, Camera.CAM_MOVE_ABSOLUTEX >> 9, Camera.CAM_MOVE_ABSOLUTEY >> 9, false);
 				} else {
-					if (Camera.STATE != 2) {
+					if (Camera.STATE != CamState.FOLLOW_PLAYER) {
 						i_5 = Camera.anInt5864;
 						i_6 = Camera.anInt833;
 					}

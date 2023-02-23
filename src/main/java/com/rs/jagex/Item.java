@@ -1,5 +1,7 @@
 package com.rs.jagex;
 
+import com.rs.jagex.Camera.CamState;
+
 public class Item extends Node {
 
 	static void method12574(AbstractRenderer graphicalrenderer_0, IComponentDefinitions icomponentdefinitions_1, int i_2, int i_3) {
@@ -16,7 +18,7 @@ public class Item extends Node {
 				int i_9;
 				int i_10;
 				int i_11;
-				if (Camera.STATE == 4) {
+				if (Camera.STATE == CamState.IDK_4) {
 					i_8 = client.anInt7262;
 					i_9 = client.anInt7376;
 					i_10 = (int) (-Camera.camAngleY) & 0x3fff;
@@ -76,7 +78,7 @@ public class Item extends Node {
 				Class469.method7805(graphicalrenderer_0, i_8, i_9, icomponentdefinitions_1, class455_6, i_2, i_3);
 				Class82.method1457(i_8, i_9, icomponentdefinitions_1, class455_6, i_2, i_3);
 				Class190.method3151(i_8, i_9, icomponentdefinitions_1, class119_5, i_2, i_3);
-				if (Camera.STATE != 4) {
+				if (Camera.STATE != CamState.IDK_4) {
 					if (Class187.MINIMAP_FLAG_X != 0) {
 						i_21 = Class187.MINIMAP_FLAG_X * 4 + 2 - i_8 / 128 + (VertexNormal.MY_PLAYER.getSize() - 1) * 2;
 						i_16 = 2 + Class187.MINIMAP_FLAG_Y * 4 - i_9 / 128 + (VertexNormal.MY_PLAYER.getSize() - 1) * 2;

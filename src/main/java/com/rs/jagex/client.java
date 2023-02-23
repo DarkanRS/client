@@ -1,6 +1,7 @@
 package com.rs.jagex;
 
 import com.rs.Loader;
+import com.rs.jagex.Camera.CamState;
 import com.rs.jagex.clans.settings.ChangeClanSetting;
 import jaclib.ping.Ping;
 
@@ -1163,14 +1164,14 @@ public class client extends Engine {
 
 									i_25 -= iCompDef.width / 2;
 									i_26 -= iCompDef.height / 2;
-									if (Camera.STATE == 4)
+									if (Camera.STATE == CamState.IDK_4)
 										i_52 = (int) Camera.camAngleY & 0x3fff;
 									else
 										i_52 = (int) Camera.camAngleY + anInt7255 & 0x3fff;
 
 									int i_29 = Trig.SINE[i_52];
 									int i_30 = Trig.COSINE[i_52];
-									if (Camera.STATE != 4) {
+									if (Camera.STATE != CamState.IDK_4) {
 										i_29 = (anInt7203 + 256) * i_29 >> 8;
 									i_30 = i_30 * (anInt7203 + 256) >> 8;
 									}
@@ -1179,7 +1180,7 @@ public class client extends Engine {
 										int i_32 = i_26 * i_30 - i_29 * i_25 >> 14;
 					int i_33;
 					int i_34;
-					if (Camera.STATE == 4) {
+					if (Camera.STATE == CamState.IDK_4) {
 						i_33 = (i_31 >> 2) + (anInt7262 >> 9);
 						i_34 = (anInt7376 >> 9) - (i_32 >> 2);
 					} else {
@@ -2551,7 +2552,7 @@ public class client extends Engine {
 		}
 
 		if ((GAME_STATE == GameState.UNK_5 || GAME_STATE == GameState.UNK_7 || GAME_STATE == GameState.UNK_0 || GAME_STATE == GameState.IN_ACCOUNT_CREATION) && (!JS5CacheFile.method3360() || GAME_STATE == GameState.UNK_7 && Class9.anInt106 == 42) && !Class85.method1466()) {
-			if (Camera.STATE == 5)
+			if (Camera.STATE == CamState.IDK_5)
 				Wall.method16113();
 			else
 				SpotAnimIndexLoader.method8860();

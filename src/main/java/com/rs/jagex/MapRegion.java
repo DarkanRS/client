@@ -1,5 +1,8 @@
 package com.rs.jagex;
 
+import com.rs.Loader;
+import com.rs.jagex.Camera.CamState;
+
 import java.util.Iterator;
 
 public class MapRegion {
@@ -505,7 +508,7 @@ public class MapRegion {
 		zFar <<= 2;
 		if (Renderers.CURRENT_RENDERER.method8454())
 			zFar += 512;
-		zFar += 3072;
+		zFar += 3072 * Loader.FOG_DISTANCE_MULTIPLIER;
 	}
 
 	void method4457() {
@@ -671,8 +674,8 @@ public class MapRegion {
 			client.anInt7376 -= i_4 * 512;
 			Camera.anInt122 -= i_3 * 512;
 			Camera.anInt3289 -= i_4 * 512;
-			if (Camera.STATE != 4) {
-				Camera.STATE = 2;
+			if (Camera.STATE != CamState.IDK_4) {
+				Camera.STATE = CamState.FOLLOW_PLAYER;
 				Camera.anInt833 = -1;
 				Camera.anInt5864 = -1;
 			}
@@ -821,7 +824,7 @@ public class MapRegion {
 						highDetailWater = true;
 						break;
 					}
-			chunkSize = Class5.method295(Class393.preferences.aPreference_Sub16_8198.method12750()).chunkSize * 8;
+			chunkSize = Class5.method295(Class393.preferences.renderDistance.method12750()).chunkSize * 8 * Loader.RENDER_DISTANCE_MULTIPLIER;
 			if (Renderers.CURRENT_RENDERER.method8454())
 				++chunkSize;
 			method4447();

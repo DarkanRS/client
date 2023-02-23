@@ -8,7 +8,7 @@ public class GamePreferences extends Node {
 	public BloomPreference bloom;
 	public BrightnessPreference brightness;
 	public Preference_Sub1 buildArea;
-	public Preference_Sub16 aPreference_Sub16_8198;
+	public RenderDistancePreference renderDistance;
 	public Preference_Sub26 flickeringEffects;
 	public FogPreference fog;
 	public Preference_Sub17 groundBlending;
@@ -77,7 +77,7 @@ public class GamePreferences extends Node {
 				brightness = new BrightnessPreference(rsbytebuffer_1.readUnsignedByte(), this);
 				buildArea = new Preference_Sub1(rsbytebuffer_1.readUnsignedByte(), this);
 				if (i_3 >= 27)
-					aPreference_Sub16_8198 = new Preference_Sub16(rsbytebuffer_1.readUnsignedByte(), this);
+					renderDistance = new RenderDistancePreference(rsbytebuffer_1.readUnsignedByte(), this);
 
 				flickeringEffects = new Preference_Sub26(rsbytebuffer_1.readUnsignedByte(), this);
 				fog = new FogPreference(rsbytebuffer_1.readUnsignedByte(), this);
@@ -142,7 +142,7 @@ public class GamePreferences extends Node {
 		/*4*/
 		rsbytebuffer_2.writeByte(buildArea.method12615());
 		/*5*/
-		rsbytebuffer_2.writeByte(aPreference_Sub16_8198.method12750());
+		rsbytebuffer_2.writeByte(renderDistance.method12750());
 		/*6*/
 		rsbytebuffer_2.writeByte(flickeringEffects.method12943());
 		/*7*/
@@ -230,8 +230,8 @@ public class GamePreferences extends Node {
 		if (bool_1 || buildArea == null)
 			buildArea = new Preference_Sub1(this);
 
-		if (bool_1 || aPreference_Sub16_8198 == null)
-			aPreference_Sub16_8198 = new Preference_Sub16(this);
+		if (bool_1 || renderDistance == null)
+			renderDistance = new RenderDistancePreference(this);
 
 		if (bool_1 || flickeringEffects == null)
 			flickeringEffects = new Preference_Sub26(this);
@@ -438,7 +438,7 @@ public class GamePreferences extends Node {
 		bloom.method12703();
 		brightness.method12861();
 		buildArea.method12616();
-		aPreference_Sub16_8198.method12749();
+		renderDistance.method12749();
 		flickeringEffects.method12941();
 		fog.method13415();
 		groundBlending.method12767();

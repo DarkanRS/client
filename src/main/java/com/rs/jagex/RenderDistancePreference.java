@@ -1,12 +1,12 @@
 package com.rs.jagex;
 
-public class Preference_Sub16 extends Preference {
+public class RenderDistancePreference extends Preference {
 
-	public Preference_Sub16(GamePreferences class282_sub54_1) {
+	public RenderDistancePreference(GamePreferences class282_sub54_1) {
 		super(class282_sub54_1);
 	}
 
-	public Preference_Sub16(int i_1, GamePreferences class282_sub54_2) {
+	public RenderDistancePreference(int i_1, GamePreferences class282_sub54_2) {
 		super(i_1, class282_sub54_2);
 	}
 
@@ -17,11 +17,11 @@ public class Preference_Sub16 extends Preference {
 
 	@Override
 	int getDefaultValue() {
-		return Class104.aClass104_1061.id;
+		return RenderDistance.LOW.ordinal();
 	}
 
 	public void method12749() {
-		if (value < Class104.aClass104_1061.id || value > Class104.aClass104_1062.id)
+		if (value < RenderDistance.LOW.ordinal() || value > RenderDistance.HIGH.ordinal())
 			value = getDefaultValue();
 
 	}
@@ -39,11 +39,11 @@ public class Preference_Sub16 extends Preference {
 	}
 
 	int method7786() {
-		return -1544200711 * Class104.aClass104_1061.id * 2087113801;
+		return -1544200711 * RenderDistance.LOW.ordinal() * 2087113801;
 	}
 
 	int method7787() {
-		return -1544200711 * Class104.aClass104_1061.id * 2087113801;
+		return -1544200711 * RenderDistance.LOW.ordinal() * 2087113801;
 	}
 
 	@Override

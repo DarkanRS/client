@@ -33,6 +33,9 @@ public class Loader extends Panel implements ImageObserver, MenuContainer, Seria
 	public static String IP_ADDRESS;
 	public static Properties clientParams = new Properties();
 
+	public static int RENDER_DISTANCE_MULTIPLIER = 4; //Default 1
+	public static int FOG_DISTANCE_MULTIPLIER = 30; //Default 1
+
 	public static Loader INSTANCE;
 
 	public static int getPort(int worldId) {

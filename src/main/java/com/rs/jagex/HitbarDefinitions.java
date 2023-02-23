@@ -1,5 +1,7 @@
 package com.rs.jagex;
 
+import com.rs.jagex.Camera.CamState;
+
 public class HitbarDefinitions {
 
 	public static int CAMERA_ZOOM = 600;
@@ -56,7 +58,7 @@ public class HitbarDefinitions {
 				Class380.method6451(i_01, i_13);
 				int i_8;
 				int i_9;
-				if (Camera.STATE == 2) {
+				if (Camera.STATE == CamState.FOLLOW_PLAYER) {
 					i_8 = (int) Camera.camAngleX;
 					if (Camera.anInt7273 >> 8 > i_8)
 						i_8 = Camera.anInt7273 >> 8;
@@ -64,7 +66,7 @@ public class HitbarDefinitions {
 							i_8 = Camera.SHAKE_2[4] + 128;
 						i_9 = (int) Camera.camAngleY + client.anInt7343 & 0x3fff;
 						LoadingStage.method6683(Camera.anInt122, Class504.getTerrainHeightAtPos((int) vector3_6.x, (int) vector3_6.z, Class4.MY_PLAYER_PLANE) - 200, Camera.anInt3289, i_8, i_9, (i_8 >> 3) * 3 + CAMERA_ZOOM << 2, i_31);
-				} else if (Camera.STATE == 4) {
+				} else if (Camera.STATE == CamState.IDK_4) {
 					i_8 = (int) Camera.camAngleX;
 					if (Camera.anInt7273 >> 8 > i_8)
 						i_8 = Camera.anInt7273 >> 8;
@@ -72,8 +74,8 @@ public class HitbarDefinitions {
 							i_8 = Camera.SHAKE_2[4] + 128;
 						i_9 = (int) Camera.camAngleY & 0x3fff;
 						LoadingStage.method6683(Camera.anInt122, Class504.getTerrainHeightAtPos(client.anInt7262, client.anInt7376, Class4.MY_PLAYER_PLANE) - 200, Camera.anInt3289, i_8, i_9, (i_8 >> 3) * 3 + CAMERA_ZOOM << 2, i_31);
-				} else if (Camera.STATE == 1)
-					KeyHoldInputSubscriber.method3920(i_31);
+				} else if (Camera.STATE == CamState.SMOOTH_RESETTING)
+					Camera.processSmoothResetTick(i_31);
 				i_8 = Camera.CAM_MOVE_ABSOLUTEX;
 				i_9 = Camera.CAM_MOVE_ABSOLUTEZ;
 				int i_10 = Camera.CAM_MOVE_ABSOLUTEY;

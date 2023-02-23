@@ -1,5 +1,6 @@
 package com.rs.jagex;
 
+import com.rs.jagex.Camera.CamState;
 import com.rs.jagex.clans.settings.ClanSettings;
 
 public class ClanSettingsDelta {
@@ -35,7 +36,7 @@ public class ClanSettingsDelta {
 		VertexNormal.MY_PLAYER.regionBaseY[0] = IndexLoaders.MAP_REGION_DECODER.getSizeY() / 2;
 		Camera.CAM_MOVE_ABSOLUTEY = 0;
 		Camera.CAM_MOVE_ABSOLUTEX = 0;
-		if (Camera.STATE == 5) {
+		if (Camera.STATE == CamState.IDK_5) {
 			Camera.CAM_MOVE_ABSOLUTEX = Camera.CAM_MOVE_LOCALX << 9;
 			Camera.CAM_MOVE_ABSOLUTEY = Camera.CAM_MOVE_LOCALY << 9;
 		} else

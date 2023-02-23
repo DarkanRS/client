@@ -56,11 +56,11 @@ public class Class5 {
 						return ((i_18 & 0xff) >> 2 << 10) + (i_20 >> 1) + (i_19 >> 5 << 7);
 	}
 
-	public static Class104 method295(int i_0) {
-		Class104[] arr_2 = Class52_Sub2_Sub1.method15631();
-		for (Class104 class104_4 : arr_2) {
-			if (i_0 == class104_4.id)
-				return class104_4;
+	public static RenderDistance method295(int i_0) {
+		RenderDistance[] arr_2 = Class52_Sub2_Sub1.method15631();
+		for (RenderDistance renderDistance_4 : arr_2) {
+			if (i_0 == renderDistance_4.ordinal())
+				return renderDistance_4;
 		}
 		return null;
 	}
